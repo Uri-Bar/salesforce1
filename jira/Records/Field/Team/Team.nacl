@@ -1,0 +1,10 @@
+jira.Field Team__c {
+  name = "Team"
+  description = "Associates a team to an issue. You can use this field to search and filter issues by team."
+  isLocked = true
+  searcherKey = "com.atlassian.jira.plugin.system.customfieldtypes:atlassian-team-searcher"
+  type = "com.atlassian.teams:rm-teams-custom-field-team"
+  contexts = [
+    jira.CustomFieldContext.instance.Team__c_Default_Configuration_Scheme_for_Team@uuussss,
+  ]
+}

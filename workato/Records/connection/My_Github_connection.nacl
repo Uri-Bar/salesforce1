@@ -1,0 +1,5 @@
+workato.connection My_Github_connection@s {
+  application = "github"
+  name = "My Github connection"
+  folder_id = workato.folder.instance.Root
+}

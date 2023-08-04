@@ -1,0 +1,6 @@
+okta.EmailTemplate LDAPSelfServiceUnlock {
+  name = "LDAPSelfServiceUnlock"
+  _parent = [
+    okta.Brand.instance,
+  ]
+}

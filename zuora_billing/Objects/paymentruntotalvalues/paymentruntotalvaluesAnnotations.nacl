@@ -1,0 +1,25 @@
+type zuora_billing.paymentruntotalvalues {
+  annotations {
+    string metadataType {
+    }
+    string label {
+    }
+    string description {
+    }
+    hidden_string id {
+    }
+    string objectType {
+    }
+  }
+  metadataType = "StandardObject"
+  objectType = "paymentruntotalvalues"
+  _generated_dependencies = [
+    {
+      reference = zuora_billing.paymentrun
+    },
+    {
+      reference = zuora_billing.user
+    },
+  ]
+  label = "PaymentRunTotalValues"
+}

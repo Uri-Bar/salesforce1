@@ -1,0 +1,214 @@
+salesforce.LightningPage Lead_Record_Page {
+  fullName = "Lead_Record_Page"
+  flexiPageRegions = [
+    {
+      itemInstances = [
+        {
+          componentInstance = {
+            componentInstanceProperties = [
+              {
+                name = "collapsed"
+                value = "false"
+              },
+            ]
+            componentName = "force:highlightsPanel"
+          }
+        },
+      ]
+      mode = "Replace"
+      name = "header"
+      type = "Region"
+    },
+    {
+      itemInstances = [
+        {
+          componentInstance = {
+            componentInstanceProperties = [
+              {
+                name = "active"
+                value = "true"
+              },
+              {
+                name = "body"
+                value = "activityTabContent"
+              },
+              {
+                name = "title"
+                value = "Standard.Tab.activity"
+              },
+            ]
+            componentName = "flexipage:tab"
+          }
+        },
+        {
+          componentInstance = {
+            componentInstanceProperties = [
+              {
+                name = "body"
+                value = "feedTabContent"
+              },
+              {
+                name = "title"
+                value = "Standard.Tab.collaborate"
+              },
+            ]
+            componentName = "flexipage:tab"
+          }
+        },
+        {
+          componentInstance = {
+            componentInstanceProperties = [
+              {
+                name = "body"
+                value = "detailTabContent"
+              },
+              {
+                name = "title"
+                value = "Standard.Tab.detail"
+              },
+            ]
+            componentName = "flexipage:tab"
+          }
+        },
+        {
+          componentInstance = {
+            componentInstanceProperties = [
+              {
+                name = "body"
+                value = "facet-ed271cea-4e18-46a4-a937-d18dae2e3c5d"
+              },
+              {
+                name = "title"
+                value = "News"
+              },
+            ]
+            componentName = "flexipage:tab"
+          }
+        },
+      ]
+      mode = "Replace"
+      name = "tabs"
+      type = "Facet"
+    },
+    {
+      itemInstances = [
+        {
+          componentInstance = {
+            componentInstanceProperties = [
+              {
+                name = "tabs"
+                value = "tabs"
+              },
+            ]
+            componentName = "flexipage:tabset"
+          }
+        },
+      ]
+      mode = "Replace"
+      name = "main"
+      type = "Region"
+    },
+    {
+      itemInstances = [
+        {
+          componentInstance = {
+            componentInstanceProperties = [
+              {
+                name = "hideUpdateButton"
+                value = "false"
+              },
+            ]
+            componentName = "runtime_sales_lead:pathAssistant"
+          }
+        },
+      ]
+      mode = "Replace"
+      name = "subheader"
+      type = "Region"
+    },
+    {
+      itemInstances = [
+        {
+          componentInstance = {
+            componentName = "runtime_sales_activities:activityPanel"
+          }
+        },
+      ]
+      mode = "Replace"
+      name = "activityTabContent"
+      type = "Facet"
+    },
+    {
+      itemInstances = [
+        {
+          componentInstance = {
+            componentName = "forceChatter:recordFeedContainer"
+          }
+        },
+      ]
+      mode = "Replace"
+      name = "feedTabContent"
+      type = "Facet"
+    },
+    {
+      itemInstances = [
+        {
+          componentInstance = {
+            componentName = "force:detailPanel"
+          }
+        },
+      ]
+      mode = "Replace"
+      name = "detailTabContent"
+      type = "Facet"
+    },
+    {
+      itemInstances = [
+        {
+          componentInstance = {
+            componentName = "runtime_sales_social:socialPanel"
+          }
+        },
+        {
+          componentInstance = {
+            componentName = "wits:newsPanel"
+          }
+        },
+      ]
+      name = "facet-ed271cea-4e18-46a4-a937-d18dae2e3c5d"
+      type = "Facet"
+    },
+    {
+      itemInstances = [
+        {
+          componentInstance = {
+            componentName = "runtime_sales_merge:mergeCandidatesPreviewCard"
+          }
+        },
+        {
+          componentInstance = {
+            componentName = "force:relatedListQuickLinksContainer"
+          }
+        },
+        {
+          componentInstance = {
+            componentName = "force:relatedListContainer"
+          }
+        },
+      ]
+      mode = "Replace"
+      name = "sidebar"
+      type = "Region"
+    },
+  ]
+  masterLabel = "Lead Record Page"
+  parentFlexiPage = "runtime_sales_lead__Lead_rec_L"
+  sobjectType = "Lead"
+  template = {
+    name = "flexipage:recordHomeWithSubheaderTemplateDesktop"
+  }
+  type = "RecordPage"
+  _parent = [
+    salesforce.Lead,
+  ]
+}

@@ -1,0 +1,33 @@
+zuora_billing.PublicEmailTemplate sample_template_534@s {
+  eventCategory = 1120
+  name = "sample template 534"
+  description = ""
+  encodingType = "UTF8"
+  fromName = "Salto Labs Ltd"
+  fromEmailType = "TenantEmail"
+  fromEmailAddress = "neta.marcus+zuora_email_test@salto.io"
+  replyToEmailType = "TenantEmail"
+  replyToEmailAddress = "neta.marcus+zuora_email_test@salto.io"
+  ccEmailType = "SpecificEmails"
+  ccEmailAddress = ""
+  bccEmailAddress = ""
+  toEmailType = "SpecificEmails"
+  toEmailAddress = "neta.marcus+zuora_recipient_test@salto.io"
+  emailSubject = "Account Past Due Summary edited"
+  emailBody = '''
+Dear <BillToContact.FirstName> <BillToContact.LastName>,<br />
+<br />
+We would like to inform you about the invoice past due situation on your account <Account.Name>. The following past due summary was prepared on <Today.Date> and your account had total invoice balance of <Account.Balance> <Account.Currency>.<br />
+<br />
+Past Due Invoices in the Account :<br />
+<br />
+<MergeTable.PastDueInvoice><br />
+<br />
+Please make proper payment arrangement for the invoices that are past due.<br />
+<br />
+Thank you for your business!
+'''
+  active = true
+  isHtml = true
+  useAdditionalAddresses = false
+}

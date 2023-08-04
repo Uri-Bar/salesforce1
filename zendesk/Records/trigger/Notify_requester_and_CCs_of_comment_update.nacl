@@ -1,0 +1,34 @@
+zendesk.trigger Notify_requester_and_CCs_of_comment_update@s {
+  title = "Notify requester and CCs of comment update"
+  active = true
+  actions = [
+    {
+      field = "notification_user"
+      value = [
+        "requester_and_ccs",
+        "[{{ticket.account}}] Re: {{ticket.title}}",
+        '''
+Your request ({{ticket.id}}) has been updated. To add additional comments, reply to this email.
+{{ticket.comments_formatted}}
+''',
+      ]
+    },
+  ]
+  conditions = {
+    all = [
+      {
+        field = "update_type"
+        operator = "is"
+        value = "Change"
+      },
+      {
+        field = "comment_is_public"
+        operator = "is"
+        value = true
+      },
+    ]
+  }
+  raw_title = "Notify requester and CCs of comment update"
+  category_id = zendesk.trigger_category.instance.Notifications
+  default = false
+}

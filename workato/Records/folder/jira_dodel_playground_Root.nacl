@@ -1,0 +1,4 @@
+workato.folder jira_dodel_playground_Root {
+  name = "jira"
+  parent_id = workato.folder.instance.dodel_playground_Root
+}

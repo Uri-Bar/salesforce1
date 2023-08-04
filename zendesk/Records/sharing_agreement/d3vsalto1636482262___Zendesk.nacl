@@ -1,0 +1,6 @@
+zendesk.sharing_agreement d3vsalto1636482262___Zendesk@sms {
+  name = "d3vsalto1636482262 @ Zendesk"
+  type = "outbound"
+  status = "pending"
+  remote_subdomain = "d3vsalto1636482262"
+}

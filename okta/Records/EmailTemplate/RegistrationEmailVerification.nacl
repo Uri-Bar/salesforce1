@@ -1,0 +1,6 @@
+okta.EmailTemplate RegistrationEmailVerification {
+  name = "RegistrationEmailVerification"
+  _parent = [
+    okta.Brand.instance,
+  ]
+}

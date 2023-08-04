@@ -1,0 +1,9 @@
+okta.AccessPolicy Seamless_access_based_on_risk_context@s {
+  status = "ACTIVE"
+  name = "Seamless access based on risk context"
+  description = "Allow seamless log in with Okta FastPass for low risk authentication scenarios with enhanced security for medium and high risk."
+  priority = 1
+  system = false
+  type = "ACCESS_POLICY"
+  
+}

@@ -1,0 +1,22 @@
+type zuora_billing.fxcustomrate {
+  annotations {
+    string metadataType {
+    }
+    string label {
+    }
+    string description {
+    }
+    hidden_string id {
+    }
+    string objectType {
+    }
+  }
+  metadataType = "StandardObject"
+  objectType = "fxcustomrate"
+  _generated_dependencies = [
+    {
+      reference = zuora_billing.user
+    },
+  ]
+  label = "FXCustomRate"
+}

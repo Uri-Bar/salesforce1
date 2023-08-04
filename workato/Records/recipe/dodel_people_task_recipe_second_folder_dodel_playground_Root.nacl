@@ -1,0 +1,22 @@
+workato.recipe dodel_people_task_recipe_second_folder_dodel_playground_Root {
+  name = "dodel_people_task_recipe"
+  action_applications = [
+    "workflow",
+  ]
+  applications = [
+    "workflow",
+  ]
+  description = "When there is a trigger event, do action"
+  folder_id = workato.folder.instance.second_folder_dodel_playground_Root
+  running = false
+  version_no = 2
+  config = [
+    {
+      keyword = "application"
+      name = "workflow"
+      provider = "workflow"
+      skip_validation = false
+    },
+  ]
+  code = workato.recipe__code.instance.dodel_people_task_recipe_second_folder_dodel_playground_Root
+}

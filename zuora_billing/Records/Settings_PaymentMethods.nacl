@@ -1,0 +1,10 @@
+zuora_billing.Settings_PaymentMethods {
+  paymentMethodTypes = [
+    "ACH",
+    "Cash",
+    "Check",
+    "CreditCard",
+    "PayPal",
+    "Other",
+  ]
+}

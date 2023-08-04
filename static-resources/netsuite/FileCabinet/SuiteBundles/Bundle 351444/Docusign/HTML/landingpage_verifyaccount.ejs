@@ -1,0 +1,95 @@
+<style>
+#dsDialog {
+	height: 270px;
+	width: 620px;
+	background-image: url('<%= backgroundImage %>');
+	background-repeat: repeat-x;
+	margin: 0px;
+	padding: 0px;
+	border: 0px;
+	font-family: Helvetica;
+}
+
+#dsDialog_header {
+	height: 46px;
+	font-size: 14px;
+	color: #20557A;
+	font-weight:normal;
+}
+
+#dsDialog_header_right {
+	height:47px;
+	float:right;
+}
+
+#ds_VerifyAcct_DialogBox_close {
+	width:34px;
+	height:46px;
+}
+
+#dsDialog_header_left {
+	height: 47px;
+	line-height: 47px;
+}
+
+#dsDialog_main {
+	text-align: center;
+	height: 273px;
+}
+
+#dsDialog_main_sentTo {
+	font-size: 15px;
+	color: #20557A;
+	font-weight: bold;
+}
+
+#dsDialog_main_instruction {
+	font-size: 14px;
+	color: #666666;
+	font-weight: normal;
+}
+
+#ds_verify_account_submit {
+	width: 103px;
+	height: 36px;
+}
+
+.ds_button {
+	background-image: url('<%= buttonImage %>');
+	cursor:pointer;
+	border: none;
+	width: 103px;
+	height: 36px;
+	color: #636363;
+	font-size: 12px;
+	font-family: Helvetica;
+	font-weight: bold;
+}
+
+#dsIEUserMsg {
+	font-size:10px;
+}
+</style>
+
+<div id="dsDialog" >
+	<div id="dsDialog_header">
+		<div id="dsDialog_header_right" >
+			<input id="ds_VerifyAcct_DialogBox_close" type="image" src="<%= closeImage %>" alt="close" />
+		</div>
+		<div id="dsDialog_header_left">
+			<span>&nbsp;&nbsp;<%= verifyText %></span>
+		</div>
+	</div>
+	<div id="dsDialog_main">
+		<br>
+		<span id="dsDialog_main_sentTo"><%= sentToText %><%= email %></span><br><br>
+		<span id="dsDialog_main_instruction"><%= instructionText %></span><br><br>
+		<input id="ds_dsAcct_password" type="password" value="" size="50" maxlength="50" />
+		<% if( navigator.userAgent.match(/msie/i) ){ %>
+			<br>
+			<label id="dsIEUserMsg" ><%= ieMsgText %></label>
+		<% } %>
+		<br><br>
+		<button id="ds_verify_account_submit" class="ds_button" type="button" ><%= dsVerifyText %></button>		
+	</div>
+</div>

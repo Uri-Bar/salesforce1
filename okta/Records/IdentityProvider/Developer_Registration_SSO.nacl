@@ -1,0 +1,62 @@
+okta.IdentityProvider Developer_Registration_SSO@s {
+  
+  issuerMode = "ORG_URL"
+  name = "Developer Registration SSO"
+  status = "ACTIVE"
+  protocol = {
+    type = "OIDC"
+    endpoints = {
+      authorization = {
+        url = "https://okta-devok12.okta.com/oauth2/v1/authorize"
+        binding = "HTTP-REDIRECT"
+      }
+      token = {
+        url = "https://okta-devok12.okta.com/oauth2/v1/token"
+        binding = "HTTP-POST"
+      }
+      jwks = {
+        url = "https://okta-devok12.okta.com/oauth2/v1/keys"
+        binding = "HTTP-REDIRECT"
+      }
+    }
+    scopes = [
+      "openid",
+      "email",
+      "profile",
+    ]
+    issuer = {
+      url = "https://okta-devok12.okta.com"
+    }
+    
+  }
+  policy = {
+    provisioning = {
+      action = "DISABLED"
+      profileMaster = false
+      groups = {
+        action = "NONE"
+      }
+      conditions = {
+        deprovisioned = {
+          action = "NONE"
+        }
+        suspended = {
+          action = "NONE"
+        }
+      }
+    }
+    accountLink = {
+      action = "AUTO"
+    }
+    subject = {
+      userNameTemplate = {
+        template = "idpuser.email"
+      }
+      matchType = "EMAIL"
+    }
+    maxClockSkew = 0
+  }
+  type = "OIDC"
+  
+  
+}

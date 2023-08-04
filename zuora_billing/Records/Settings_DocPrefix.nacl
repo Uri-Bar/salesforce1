@@ -1,0 +1,14 @@
+zuora_billing.Settings_DocPrefix {
+  invoice = {
+    prefix = "INV"
+    startNum = 1
+  }
+  creditMemo = {
+    prefix = "CM"
+    startNum = 1
+  }
+  debitMemo = {
+    prefix = "DM"
+    startNum = 1
+  }
+}

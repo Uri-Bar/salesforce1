@@ -1,0 +1,165 @@
+zendesk.view Test {
+  title = "Test"
+  active = true
+  description = "description test"
+  execution = {
+    group_by = "requester"
+    group_order = "asc"
+    sort_by = "nice_id"
+    sort_order = "desc"
+    group = {
+      id = "requester"
+      title = "Requester"
+      order = "asc"
+      filterable = true
+      sortable = true
+    }
+    sort = {
+      id = "ticket_id"
+      title = "ID"
+      order = "desc"
+      filterable = true
+      sortable = true
+    }
+    columns = [
+      {
+        id = "subject"
+        title = "Subject"
+        filterable = false
+        sortable = false
+      },
+      {
+        id = "assignee"
+        title = "Assignee"
+        filterable = true
+        sortable = true
+      },
+      {
+        id = "satisfaction_score"
+        title = "Satisfaction"
+        filterable = true
+        sortable = true
+      },
+      {
+        id = "requester"
+        title = "Requester"
+        filterable = true
+        sortable = true
+      },
+      {
+        id = zendesk.ticket_field.instance.regexp_zip_code_with_validation@usss
+        title = "zip code with validation"
+        type = "regexp"
+        filterable = false
+        sortable = true
+      },
+      {
+        id = "brand"
+        title = "Brand"
+        filterable = true
+        sortable = true
+      },
+      {
+        id = "updated_by_type"
+        title = "Updater"
+        filterable = false
+        sortable = true
+      },
+      {
+        id = "sla_next_breach_at"
+        title = "SLA"
+        filterable = true
+        sortable = true
+      },
+    ]
+    fields = [
+      {
+        id = "subject"
+        title = "Subject"
+        filterable = false
+        sortable = false
+      },
+      {
+        id = "assignee"
+        title = "Assignee"
+        filterable = true
+        sortable = true
+      },
+      {
+        id = "satisfaction_score"
+        title = "Satisfaction"
+        filterable = true
+        sortable = true
+      },
+      {
+        id = "requester"
+        title = "Requester"
+        filterable = true
+        sortable = true
+      },
+      {
+        id = "brand"
+        title = "Brand"
+        filterable = true
+        sortable = true
+      },
+      {
+        id = "updated_by_type"
+        title = "Updater"
+        filterable = false
+        sortable = true
+      },
+      {
+        id = "sla_next_breach_at"
+        title = "SLA"
+        filterable = true
+        sortable = true
+      },
+    ]
+    custom_fields = [
+      {
+        id = zendesk.ticket_field.instance.regexp_zip_code_with_validation@usss
+        title = "zip code with validation"
+        type = "regexp"
+        filterable = false
+        sortable = true
+      },
+    ]
+  }
+  conditions = {
+    all = [
+      {
+        field = "status"
+        operator = "is"
+        value = "open"
+      },
+      {
+        field = "brand_id"
+        operator = "is"
+        value = zendesk.brand.instance.Salto
+      },
+    ]
+    any = [
+      {
+        field = "priority"
+        operator = "is_not"
+        value = "low"
+      },
+      {
+        field = zendesk.ticket_field.instance.multiselect_agent_dropdown_643_for_agent@ussss
+        operator = "includes"
+        value = zendesk.ticket_field__custom_field_options.instance.multiselect_agent_dropdown_643_for_agent_ussss__v11@uuuuumuu
+      },
+    ]
+  }
+  restriction = {
+    type = "Group"
+    ids = [
+      zendesk.group.instance.Support,
+      zendesk.group.instance.Support2,
+    ]
+  }
+  
+  raw_title = "Test"
+  default = false
+}

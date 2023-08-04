@@ -1,0 +1,265 @@
+zuora_billing.Settings_Role ZBilling_Zuora_Billing_Standard_User@usss {
+  name = "Zuora Billing Standard User"
+  category = "ZBilling"
+  attributes = [
+    {
+      name = "AccountDelete"
+      scope = "Accounts"
+      activationLevel = "User"
+    },
+    {
+      name = "CancelAccount"
+      scope = "Accounts"
+      activationLevel = "User"
+    },
+    {
+      name = "ModifyAccount"
+      scope = "Accounts"
+      activationLevel = "User"
+    },
+    {
+      name = "accountCreate"
+      scope = "Accounts"
+      activationLevel = "User"
+    },
+    {
+      name = "changePaymentMethods"
+      scope = "Accounts"
+      activationLevel = "User"
+    },
+    {
+      name = "contactCreate"
+      scope = "Accounts"
+      activationLevel = "User"
+    },
+    {
+      name = "deletePaymentMethods"
+      scope = "Accounts"
+      activationLevel = "User"
+    },
+    {
+      name = "paymentMethodCreate"
+      scope = "Accounts"
+      activationLevel = "User"
+    },
+    {
+      name = "ChangeReasonCodeForIA"
+      scope = "Adjustments"
+      activationLevel = "User"
+    },
+    {
+      name = "adjustmentCancel"
+      scope = "Adjustments"
+      activationLevel = "EntityAndUser"
+    },
+    {
+      name = "adjustmentCreate"
+      scope = "Adjustments"
+      activationLevel = "EntityAndUser"
+    },
+    {
+      name = "adjustmentDelete"
+      scope = "Adjustments"
+      activationLevel = "EntityAndUser"
+    },
+    {
+      name = "manageAttachment"
+      scope = "Attachments"
+      activationLevel = "User"
+    },
+    {
+      name = "applyCreditMemo"
+      scope = "CreditMemos"
+      activationLevel = "User"
+    },
+    {
+      name = "cancelCreditMemo"
+      scope = "CreditMemos"
+      activationLevel = "User"
+    },
+    {
+      name = "createCreditMemo"
+      scope = "CreditMemos"
+      activationLevel = "User"
+    },
+    {
+      name = "deleteCreditMemo"
+      scope = "CreditMemos"
+      activationLevel = "User"
+    },
+    {
+      name = "enablePostForCreditMemo"
+      scope = "CreditMemos"
+      activationLevel = "User"
+    },
+    {
+      name = "modifyCreditMemo"
+      scope = "CreditMemos"
+      activationLevel = "User"
+    },
+    {
+      name = "overrideCreditMemoItemName"
+      scope = "CreditMemos"
+      activationLevel = "User"
+    },
+    {
+      name = "refundCreditMemo"
+      scope = "CreditMemos"
+      activationLevel = "User"
+    },
+    {
+      name = "unapplyCreditMemo"
+      scope = "CreditMemos"
+      activationLevel = "User"
+    },
+    {
+      name = "cancelDebitMemo"
+      scope = "DebitMemos"
+      activationLevel = "User"
+    },
+    {
+      name = "createDebitMemo"
+      scope = "DebitMemos"
+      activationLevel = "User"
+    },
+    {
+      name = "deleteDebitMemo"
+      scope = "DebitMemos"
+      activationLevel = "User"
+    },
+    {
+      name = "enablePostForDebitMemo"
+      scope = "DebitMemos"
+      activationLevel = "User"
+    },
+    {
+      name = "modifyDebitMemo"
+      scope = "DebitMemos"
+      activationLevel = "User"
+    },
+    {
+      name = "overrideDebitMemoItemName"
+      scope = "DebitMemos"
+      activationLevel = "User"
+    },
+    {
+      name = "GenerateMSWordDocument"
+      scope = "DocumentFiles"
+      activationLevel = "User"
+    },
+    {
+      name = "RegeneratePDF"
+      scope = "DocumentFiles"
+      activationLevel = "User"
+    },
+    {
+      name = "ChangeReasonCodeForIIA"
+      scope = "InvoiceItemAdjustments"
+      activationLevel = "User"
+    },
+    {
+      name = "cancelledInvoiceItemAdjustmentDelete"
+      scope = "InvoiceItemAdjustments"
+      activationLevel = "User"
+    },
+    {
+      name = "invoiceItemAdjustmentCancel"
+      scope = "InvoiceItemAdjustments"
+      activationLevel = "User"
+    },
+    {
+      name = "invoiceItemAdjustmentCreate"
+      scope = "InvoiceItemAdjustments"
+      activationLevel = "User"
+    },
+    {
+      name = "CancelInvoice"
+      scope = "Invoices"
+      activationLevel = "User"
+    },
+    {
+      name = "CreateStandaloneInvoice"
+      scope = "Invoices"
+      activationLevel = "User"
+    },
+    {
+      name = "DeleteInvoice"
+      scope = "Invoices"
+      activationLevel = "User"
+    },
+    {
+      name = "EmailInvoice"
+      scope = "Invoices"
+      activationLevel = "User"
+    },
+    {
+      name = "ModifyInvoice"
+      scope = "Invoices"
+      activationLevel = "User"
+    },
+    {
+      name = "invEdit"
+      scope = "Invoices"
+      activationLevel = "EntityAndUser"
+    },
+    {
+      name = "invPost"
+      scope = "Invoices"
+      activationLevel = "User"
+    },
+    {
+      name = "invUnpost"
+      scope = "Invoices"
+      activationLevel = "User"
+    },
+    {
+      name = "reverseInvoice"
+      scope = "Invoices"
+      activationLevel = "User"
+    },
+    {
+      name = "RevRecRuleChangedOnPRPC"
+      scope = "ProductCatalog"
+      activationLevel = "EntityAndUser"
+    },
+    {
+      name = "manageProductCatalog"
+      scope = "ProductCatalog"
+      activationLevel = "User"
+    },
+    {
+      name = "enableDeleteSubscriptionAmendment"
+      scope = "Subscription"
+      activationLevel = "User"
+    },
+    {
+      name = "subscriptionManagement"
+      scope = "Subscription"
+      activationLevel = "User"
+    },
+    {
+      name = "createUsageRecords"
+      scope = "UsageRecords"
+      activationLevel = "User"
+    },
+    {
+      name = "deleteUsageRecords"
+      scope = "UsageRecords"
+      activationLevel = "User"
+    },
+    {
+      name = "updateUsageRecords"
+      scope = "UsageRecords"
+      activationLevel = "User"
+    },
+    {
+      name = "billingSettingsManagement"
+      scope = "ZBillingAdmin"
+      activationLevel = "User"
+    },
+  ]
+  
+  description = "Standard User for the Zuora Billing Product"
+  entityId = "8ac6819b-7883-361b-0178-93726ba53eff"
+  custom = false
+}

@@ -1,0 +1,18 @@
+netsuite.customrecord_csegcseg_rg_seg_cc val_64859_6979138_sb1_761 {
+  scriptid = "val_64859_6979138_sb1_761"
+  isInactive = false
+  parent = netsuite.customrecord_csegcseg_rg_seg_cc.instance.val_64858_6979138_sb1_209
+  name = "1141 Brand Management"
+  translationsList = {
+    customRecordTranslations = {
+      _frenchFrance = {
+        locale = "_frenchFrance"
+        language = "French (France)"
+      }
+      _german = {
+        locale = "_german"
+        language = "German"
+      }
+    }
+  }
+}

@@ -1,0 +1,6 @@
+salesforce.SharingRules SocialPost {
+  fullName = "SocialPost"
+  _parent = [
+    salesforce.SocialPost,
+  ]
+}

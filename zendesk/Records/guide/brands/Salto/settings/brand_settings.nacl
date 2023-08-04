@@ -1,0 +1,32 @@
+zendesk.guide_settings Salto {
+  help_center = {
+    general_settings_attributes = {
+      article_sanitization_disabled = false
+      mobile_site_enabled = false
+      community_enabled = true
+      google_universal_analytics_enabled = false
+      content_moderation_enabled = true
+      moderate_all_content_enabled = false
+      sign_in_required = false
+      embeddables_web_widget = false
+      embeddables_automatic_answers = false
+      embeddables_connect_ipms = false
+      user_profiles_enabled = true
+      user_aliases_enabled = false
+      at_mentions_enabled = true
+      community_badges_shown = false
+      public_user_profiles_enabled = true
+      anonymous_kb_voting_enabled = false
+      powered_by_enabled = true
+      request_comments_order_asc = true
+      agent_requests_enabled = false
+      google_analytics_tracking_id = ""
+      community_post_content_tagging_enabled = false
+      google_analytics_4_enabled = false
+      google_analytics_4_tracking_id = ""
+      enable_article_notification_on_all_articles = false
+    }
+  }
+  brand = zendesk.brand.instance.Salto
+  default_locale = zendesk.guide_language_settings.instance.Salto_en_us@ub
+}

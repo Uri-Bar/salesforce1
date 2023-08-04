@@ -1,0 +1,33 @@
+zuora_billing.Task Suspend_Subscriptions_Tied_to_Unpaid_Invoices___10_Days_Limit_1__5_ssssssysssssu__Iterate_Unique_Subs@uuuuuuuuuuuuumuuss {
+  name = "Iterate Unique Subs"
+  parameters = {
+    iteration_type = "Unique-Field"
+    iteration_field = "Subscription.Id"
+  }
+  action_type = "Iterate"
+  object = "InvoiceItem__21.csv.zip"
+  call_type = "SOAP"
+  task_id = 21
+  concurrent_limit = 9999999
+  additionalProperties = {
+    css = {
+      top = "40px"
+      left = "754px"
+    }
+    priority = "Medium"
+    
+  }
+  _parent = [
+    zuora_billing.WorkflowExport.instance.Suspend_Subscriptions_Tied_to_Unpaid_Invoices___10_Days_Limit_1__5@ssssssysssssu,
+  ]
+  _generated_dependencies = [
+    {
+      reference = zuora_billing.subscription.field.Id
+      occurrences = [
+        {
+          location = zuora_billing.Task.instance.Suspend_Subscriptions_Tied_to_Unpaid_Invoices___10_Days_Limit_1__5_ssssssysssssu__Iterate_Unique_Subs@uuuuuuuuuuuuumuuss.parameters.iteration_field
+        },
+      ]
+    },
+  ]
+}

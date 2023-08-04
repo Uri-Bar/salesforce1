@@ -1,0 +1,11 @@
+okta.Feature Detect_lockouts_caused_by_unknown_devices@s {
+  
+  type = "self-service"
+  status = "DISABLED"
+  name = "Detect lockouts caused by unknown devices"
+  description = "This feature improves account lockout behavior by adding the ability to block suspicious login attempts from unknown devices. Users who log in to Okta with devices they have used before will not be locked out when unknown devices cause lockouts."
+  stage = {
+    value = "EA"
+  }
+  
+}

@@ -1,0 +1,9 @@
+zuora_billing.Settings_Currency JPY {
+  currencyCode = "JPY"
+  roundingMode = "HalfUp"
+  rate = 0
+  defaultIncrementForInclusiveTax = false
+  incrementForInvoiceTotal = false
+  active = false
+  default = false
+}

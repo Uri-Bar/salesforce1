@@ -1,0 +1,44 @@
+type zuora_billing.state {
+  string Id {
+    type = "string"
+    maxLength = 512
+    required = false
+    filterable = false
+    label = "Id"
+  }
+  string Name {
+    type = "string"
+    maxLength = 512
+    required = false
+    filterable = false
+    label = "Name"
+  }
+  string Label {
+    type = "string"
+    maxLength = 512
+    required = false
+    filterable = false
+    label = "Label"
+  }
+  string Description {
+    type = "string"
+    maxLength = 512
+    required = false
+    filterable = false
+    label = "Description"
+  }
+  string CountryId {
+    type = "string"
+    maxLength = 512
+    required = false
+    filterable = false
+    label = "CountryId"
+  }
+  string TwoDigitIsoCode {
+    type = "string"
+    maxLength = 512
+    required = false
+    filterable = false
+    label = "TwoDigitIsoCode"
+  }
+}

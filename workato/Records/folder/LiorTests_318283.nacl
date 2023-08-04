@@ -1,0 +1,4 @@
+workato.folder LiorTests_318283 {
+  name = "LiorTests"
+  parent_id = workato.folder.instance.Root
+}

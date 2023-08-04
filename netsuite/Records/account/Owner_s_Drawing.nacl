@@ -1,0 +1,15 @@
+netsuite.account Owner_s_Drawing@ts {
+  acctType = "_equity"
+  acctName = "Owner's Drawing"
+  includeChildren = true
+  generalRate = "_historical"
+  cashFlowRate = "_historical"
+  isInactive = false
+  inventory = false
+  subsidiaryList = [
+    netsuite.subsidiary.instance.Parent_Company@s,
+  ]
+  revalue = false
+  identifier = "Owner's Drawing"
+  custom_custrecord_acct_special = false
+}

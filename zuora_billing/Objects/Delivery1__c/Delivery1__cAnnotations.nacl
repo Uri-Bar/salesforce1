@@ -1,0 +1,28 @@
+type zuora_billing.Delivery1__c {
+  annotations {
+    string metadataType {
+    }
+    string label {
+    }
+    string description {
+    }
+    hidden_string id {
+    }
+    string objectType {
+    }
+  }
+  metadataType = "CustomObject"
+  label = "Delivery1"
+  objectType = "Delivery1"
+  _generated_dependencies = [
+    {
+      reference = zuora_billing.contact
+    },
+    {
+      reference = zuora_billing.subscription
+    },
+    {
+      reference = zuora_billing.user
+    },
+  ]
+}

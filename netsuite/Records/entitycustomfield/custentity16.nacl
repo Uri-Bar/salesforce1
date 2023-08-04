@@ -1,0 +1,34 @@
+netsuite.entitycustomfield custentity16 {
+  scriptid = "custentity16"
+  accesslevel = "2"
+  appliestocontact = false
+  appliestocustomer = false
+  appliestoemployee = true
+  appliestogenericrsrc = false
+  appliestogroup = false
+  appliestoothername = false
+  appliestopartner = false
+  appliestopricelist = false
+  appliestoproject = false
+  appliestoprojecttemplate = false
+  appliestostatement = false
+  appliestovendor = false
+  appliestowebsite = false
+  applyformatting = false
+  availableexternally = false
+  checkspelling = false
+  defaultchecked = false
+  description = "Created for testing"
+  displaytype = "NORMAL"
+  encryptatrest = false
+  fieldtype = "TEXT"
+  globalsearch = false
+  isformula = false
+  ismandatory = false
+  isparent = false
+  label = "custCreate17-08"
+  searchlevel = "2"
+  showhierarchy = false
+  showinlist = false
+  storevalue = true
+}

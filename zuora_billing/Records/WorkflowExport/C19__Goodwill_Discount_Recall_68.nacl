@@ -1,0 +1,125 @@
+zuora_billing.WorkflowExport C19__Goodwill_Discount_Recall_68@fsssu {
+  workflow = zuora_billing.Workflow.instance.C19__Goodwill_Discount_Recall_68_fsssu__C19__Goodwill_Discount_Recall@uuuuumuufsss
+  tasks = [
+    zuora_billing.Task.instance.C19__Goodwill_Discount_Recall_68_fsssu__JSONize_any_Input_Subs@uuuuumuusss,
+    zuora_billing.Task.instance.C19__Goodwill_Discount_Recall_68_fsssu__Pick_Applicable_Subscriptions@uuuuumuuss,
+    zuora_billing.Task.instance.C19__Goodwill_Discount_Recall_68_fsssu__Retrieve_the_RatePlan_for_Input_Discount@uuuuumuusssss,
+    zuora_billing.Task.instance.C19__Goodwill_Discount_Recall_68_fsssu__For_each_Subscription@uuuuumuuss,
+    zuora_billing.Task.instance.C19__Goodwill_Discount_Recall_68_fsssu__RemoveProduct_Amendment_of_Goodwill_discount_on____Data_LinkData_Name___@uuuuumuusssssst_00123_00123vv_00125_00125t,
+    zuora_billing.Task.instance.C19__Goodwill_Discount_Recall_68_fsssu__Executing_on_Orders_feature___Failure_message_will_tell_us_@uuuuumuusssasjssssk,
+    zuora_billing.Task.instance.C19__Goodwill_Discount_Recall_68_fsssu__Determine_what_type_of_tenant_we_are_executing_under@uuuuumuussssssss,
+    zuora_billing.Task.instance.C19__Goodwill_Discount_Recall_68_fsssu__Valid_Parameters_@uuuuumuusa,
+    zuora_billing.Task.instance.C19__Goodwill_Discount_Recall_68_fsssu__Validation_Kaput_@uuuuumuusl,
+    zuora_billing.Task.instance.C19__Goodwill_Discount_Recall_68_fsssu__Trigger_a_Failure@uuuuumuuss,
+    zuora_billing.Task.instance.C19__Goodwill_Discount_Recall_68_fsssu__Skipping_cEffs___TermEnd_@uuuuumuussysa,
+    zuora_billing.Task.instance.C19__Goodwill_Discount_Recall_68_fsssu__Retrieve_Skipped_Subs@uuuuumuuss,
+    zuora_billing.Task.instance.C19__Goodwill_Discount_Recall_68_fsssu__Summary_of_Amendments_Orders@uuuuumuussd,
+    zuora_billing.Task.instance.C19__Goodwill_Discount_Recall_68_fsssu__Retry_up_to_3_times@uuuuumuussss,
+    zuora_billing.Task.instance.C19__Goodwill_Discount_Recall_68_fsssu__Wait_for___Data_Liquid_waitSeconds___divided_by__60___mins@uuuuumuuss_00123_00123vvsgsufs_00125_00125s,
+  ]
+  linkages = [
+    {
+      source_task_id = zuora_billing.Task.instance.C19__Goodwill_Discount_Recall_68_fsssu__JSONize_any_Input_Subs@uuuuumuusss
+      target_task_id = zuora_billing.Task.instance.C19__Goodwill_Discount_Recall_68_fsssu__Retrieve_the_RatePlan_for_Input_Discount@uuuuumuusssss
+      linkage_type = "Success"
+      
+    },
+    {
+      source_task_id = zuora_billing.Task.instance.C19__Goodwill_Discount_Recall_68_fsssu__Pick_Applicable_Subscriptions@uuuuumuuss
+      target_task_id = zuora_billing.Task.instance.C19__Goodwill_Discount_Recall_68_fsssu__For_each_Subscription@uuuuumuuss
+      linkage_type = "Success"
+      
+    },
+    {
+      source_task_id = zuora_billing.Task.instance.C19__Goodwill_Discount_Recall_68_fsssu__For_each_Subscription@uuuuumuuss
+      target_task_id = zuora_billing.Task.instance.C19__Goodwill_Discount_Recall_68_fsssu__RemoveProduct_Amendment_of_Goodwill_discount_on____Data_LinkData_Name___@uuuuumuusssssst_00123_00123vv_00125_00125t
+      linkage_type = "For Each"
+      
+    },
+    {
+      source_task_id = zuora_billing.Task.instance.C19__Goodwill_Discount_Recall_68_fsssu__Executing_on_Orders_feature___Failure_message_will_tell_us_@uuuuumuusssasjssssk
+      target_task_id = zuora_billing.Task.instance.C19__Goodwill_Discount_Recall_68_fsssu__Determine_what_type_of_tenant_we_are_executing_under@uuuuumuussssssss
+      linkage_type = "Failure"
+      
+    },
+    {
+      source_workflow_id = zuora_billing.Workflow.instance.C19__Goodwill_Discount_Recall_68_fsssu__C19__Goodwill_Discount_Recall@uuuuumuufsss
+      target_task_id = zuora_billing.Task.instance.C19__Goodwill_Discount_Recall_68_fsssu__Valid_Parameters_@uuuuumuusa
+      linkage_type = "Start"
+      
+    },
+    {
+      source_task_id = zuora_billing.Task.instance.C19__Goodwill_Discount_Recall_68_fsssu__Valid_Parameters_@uuuuumuusa
+      target_task_id = zuora_billing.Task.instance.C19__Goodwill_Discount_Recall_68_fsssu__Validation_Kaput_@uuuuumuusl
+      linkage_type = "False"
+      
+    },
+    {
+      source_task_id = zuora_billing.Task.instance.C19__Goodwill_Discount_Recall_68_fsssu__Valid_Parameters_@uuuuumuusa
+      target_task_id = zuora_billing.Task.instance.C19__Goodwill_Discount_Recall_68_fsssu__Executing_on_Orders_feature___Failure_message_will_tell_us_@uuuuumuusssasjssssk
+      linkage_type = "True"
+      
+    },
+    {
+      source_task_id = zuora_billing.Task.instance.C19__Goodwill_Discount_Recall_68_fsssu__Valid_Parameters_@uuuuumuusa
+      target_task_id = zuora_billing.Task.instance.C19__Goodwill_Discount_Recall_68_fsssu__Trigger_a_Failure@uuuuumuuss
+      linkage_type = "False"
+      
+    },
+    {
+      source_task_id = zuora_billing.Task.instance.C19__Goodwill_Discount_Recall_68_fsssu__For_each_Subscription@uuuuumuuss
+      target_task_id = zuora_billing.Task.instance.C19__Goodwill_Discount_Recall_68_fsssu__Skipping_cEffs___TermEnd_@uuuuumuussysa
+      linkage_type = "Complete"
+      
+    },
+    {
+      source_task_id = zuora_billing.Task.instance.C19__Goodwill_Discount_Recall_68_fsssu__Skipping_cEffs___TermEnd_@uuuuumuussysa
+      target_task_id = zuora_billing.Task.instance.C19__Goodwill_Discount_Recall_68_fsssu__Retrieve_Skipped_Subs@uuuuumuuss
+      linkage_type = "True"
+      
+    },
+    {
+      source_task_id = zuora_billing.Task.instance.C19__Goodwill_Discount_Recall_68_fsssu__Retrieve_the_RatePlan_for_Input_Discount@uuuuumuusssss
+      target_task_id = zuora_billing.Task.instance.C19__Goodwill_Discount_Recall_68_fsssu__Pick_Applicable_Subscriptions@uuuuumuuss
+      linkage_type = "Success"
+      
+    },
+    {
+      source_task_id = zuora_billing.Task.instance.C19__Goodwill_Discount_Recall_68_fsssu__For_each_Subscription@uuuuumuuss
+      target_task_id = zuora_billing.Task.instance.C19__Goodwill_Discount_Recall_68_fsssu__Summary_of_Amendments_Orders@uuuuumuussd
+      linkage_type = "Complete"
+      
+    },
+    {
+      source_task_id = zuora_billing.Task.instance.C19__Goodwill_Discount_Recall_68_fsssu__Determine_what_type_of_tenant_we_are_executing_under@uuuuumuussssssss
+      target_task_id = zuora_billing.Task.instance.C19__Goodwill_Discount_Recall_68_fsssu__JSONize_any_Input_Subs@uuuuumuusss
+      linkage_type = "Success"
+      
+    },
+    {
+      source_task_id = zuora_billing.Task.instance.C19__Goodwill_Discount_Recall_68_fsssu__Pick_Applicable_Subscriptions@uuuuumuuss
+      target_task_id = zuora_billing.Task.instance.C19__Goodwill_Discount_Recall_68_fsssu__Retry_up_to_3_times@uuuuumuussss
+      linkage_type = "Failure"
+      
+    },
+    {
+      source_task_id = zuora_billing.Task.instance.C19__Goodwill_Discount_Recall_68_fsssu__Retry_up_to_3_times@uuuuumuussss
+      target_task_id = zuora_billing.Task.instance.C19__Goodwill_Discount_Recall_68_fsssu__Wait_for___Data_Liquid_waitSeconds___divided_by__60___mins@uuuuumuuss_00123_00123vvsgsufs_00125_00125s
+      linkage_type = "True"
+      
+    },
+    {
+      source_task_id = zuora_billing.Task.instance.C19__Goodwill_Discount_Recall_68_fsssu__Wait_for___Data_Liquid_waitSeconds___divided_by__60___mins@uuuuumuuss_00123_00123vvsgsufs_00125_00125s
+      target_task_id = zuora_billing.Task.instance.C19__Goodwill_Discount_Recall_68_fsssu__Pick_Applicable_Subscriptions@uuuuumuuss
+      linkage_type = "Success"
+      
+    },
+  ]
+  additionalProperties = {
+    workflow_definition = {
+      description = "Please see https://knowledgecenter.zuora.com/Covid-19_Response_Workflow_Guide/Goodwill_Discount for details"
+      category = "Default"
+      name = "C19: Goodwill Discount Recall"
+    }
+  }
+}

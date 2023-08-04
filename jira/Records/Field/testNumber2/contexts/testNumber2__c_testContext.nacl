@@ -1,0 +1,15 @@
+jira.CustomFieldContext testNumber2__c_testContext {
+  name = "testContext"
+  description = "testContext"
+  defaultValue = {
+    type = "float"
+  }
+  issueTypeIds = [
+    jira.IssueType.instance.Task,
+  ]
+  
+  _parent = [
+    jira.Field.instance.testNumber2__c,
+  ]
+  isGlobalContext = false
+}

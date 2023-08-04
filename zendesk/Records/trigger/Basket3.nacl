@@ -1,0 +1,186 @@
+zendesk.trigger Basket3 {
+  title = "Basket3"
+  active = true
+  actions = [
+    {
+      field = "status"
+      value = "solved"
+    },
+    {
+      field = "brand_id"
+      value = zendesk.brand.instance.Salto
+    },
+    {
+      field = "ticket_form_id"
+      value = zendesk.ticket_form.instance.Amazing_ticket_form@s
+    },
+    {
+      field = "priority"
+      value = "normal"
+    },
+    {
+      field = "type"
+      value = "incident"
+    },
+    {
+      field = "group_id"
+      value = zendesk.group.instance.Support
+    },
+    {
+      field = "set_schedule"
+      value = zendesk.business_hours_schedule.instance.New_schedule@s
+    },
+    {
+      field = zendesk.ticket_field.instance.multiselect_Product_components@us
+      value = zendesk.ticket_field__custom_field_options.instance.multiselect_Product_components_us__Component_A@uumuus
+    },
+    {
+      field = zendesk.ticket_field.instance.multiselect_agent_dropdown_643_for_agent@ussss
+      value = zendesk.ticket_field__custom_field_options.instance.multiselect_agent_dropdown_643_for_agent_ussss__v11@uuuuumuu
+    },
+    {
+      field = "notification_target"
+      value = [
+        zendesk.target.instance.missing_1900000033645,
+        "{\"hello\":\"hello\"}",
+      ]
+    },
+    {
+      field = "notification_group"
+      value = [
+        zendesk.group.instance.Support,
+        "hello",
+        "{{ticket.title}}",
+      ]
+    },
+    {
+      field = "notification_sms_user"
+      value = [
+        "gil.hoffer@salto.io",
+        1500000205802,
+        "{{ticket.title}}",
+      ]
+    },
+    {
+      field = "locale_id"
+      value = zendesk.locale.instance.he
+    },
+    {
+      field = zendesk.organization_field.instance.dropdown_26
+      value = zendesk.organization_field__custom_field_options.instance.dropdown_26__v1
+    },
+    {
+      field = zendesk.user_field.instance.f219
+      value = "3"
+    },
+    {
+      field = "notification_webhook"
+      value = [
+        zendesk.webhook.instance.missing_01FTBADQMTH2C95HAE0FTSXNN4,
+        [
+          [
+            "gfgf",
+            "gfggf",
+          ],
+        ],
+      ]
+    },
+  ]
+  conditions = {
+    all = [
+      {
+        field = "status"
+        operator = "greater_than"
+        value = "open"
+      },
+      {
+        field = "ticket_form_id"
+        operator = "value_previous"
+        value = zendesk.ticket_form.instance.Amazing_ticket_form@s
+      },
+      {
+        field = "brand_id"
+        operator = "value"
+        value = zendesk.brand.instance.Salto
+      },
+      {
+        field = "group_id"
+        operator = "is_not"
+        value = zendesk.group.instance.Support
+      },
+      {
+        field = "via_id"
+        operator = "is_not"
+        value = zendesk.channel.instance.Chat
+      },
+      {
+        field = "current_via_id"
+        operator = "is"
+        value = zendesk.channel.instance.Twitter_DM@s
+      },
+      {
+        field = "update_type"
+        operator = "is"
+        value = "Change"
+      },
+      {
+        field = "schedule_id"
+        operator = "is"
+        value = zendesk.business_hours_schedule.instance.New_schedule_test@s
+      },
+      {
+        field = "within_schedule"
+        operator = "is"
+        value = zendesk.business_hours_schedule.instance.New_schedule@s
+      },
+      {
+        field = zendesk.ticket_field.instance.multiselect_Product_components@us
+        operator = "includes"
+        value = zendesk.ticket_field__custom_field_options.instance.multiselect_Product_components_us__Component_A@uumuus
+      },
+      {
+        field = zendesk.ticket_field.instance.multiselect_Customer_Tier@us
+        operator = "includes"
+        value = zendesk.ticket_field__custom_field_options.instance.multiselect_Customer_Tier_us__Paying@uumuu
+      },
+      {
+        field = zendesk.ticket_field.instance.multiselect_agent_dropdown_643_for_agent@ussss
+        operator = "includes"
+        value = zendesk.ticket_field__custom_field_options.instance.multiselect_agent_dropdown_643_for_agent_ussss__v11@uuuuumuu
+      },
+      {
+        field = "requester_twitter_followers_count"
+        operator = "less_than"
+        value = "666"
+      },
+      {
+        field = zendesk.user_field.instance.decimal_765_field
+        operator = "greater_than"
+        value = "5"
+      },
+      {
+        field = zendesk.user_field.instance.f202
+        operator = "includes_words"
+        value = "urgent"
+      },
+      {
+        field = zendesk.user_field.instance.modified_multi75_key
+        operator = "present"
+      },
+      {
+        field = zendesk.organization_field.instance.dropdown_26
+        operator = "is"
+        value = zendesk.organization_field__custom_field_options.instance.dropdown_26__v1
+      },
+      {
+        field = zendesk.organization_field.instance.org_field_n403
+        operator = "is"
+        value = "5"
+      },
+    ]
+  }
+  description = "As many options as possible"
+  raw_title = "Basket3"
+  category_id = zendesk.trigger_category.instance.Notifications
+  default = false
+}

@@ -1,0 +1,72 @@
+workato.recipe__code first_api_recipe_first_folder_dodel_playground_Root {
+  number = 0
+  provider = "workato_api_platform"
+  name = "receive_request"
+  as = "55467a7b"
+  keyword = "trigger"
+  input = {
+    request = {
+      content_type = "json"
+    }
+    response = {
+      content_type = "json"
+    }
+  }
+  block = [
+    {
+      number = 1
+      provider = "workato_api_platform"
+      name = "return_response"
+      as = "8268f709"
+      description = "<span class=\"step-statement\">Return</span> API response"
+      keyword = "action"
+      uuid = "8395814a-ed56-4332-8cf4-06204c465592"
+    },
+    {
+      number = 2
+      provider = "workato_api_platform"
+      name = "return_response"
+      as = "d9840e81"
+      description = "<span class=\"step-statement\">Return</span> API response"
+      keyword = "action"
+      uuid = "aadbfae7-4ba4-4f58-8426-9a2da3558135"
+    },
+    {
+      number = 3
+      provider = "workato_app"
+      name = "get_recipe"
+      as = "893278b6"
+      keyword = "action"
+      uuid = "74ed313a-4106-496e-b227-fb43d2d09078"
+    },
+    {
+      number = 4
+      keyword = "if"
+      input = {
+        type = "compound"
+        operand = "and"
+        conditions = [
+          {
+            operand = ""
+            lhs = "#{_('data.workato_app.893278b6.lifetime_task_count')}"
+            rhs = ""
+            uuid = "condition-f42e9664-ab80-4360-a3b7-86da78fce0f2"
+          },
+        ]
+      }
+      block = [
+        {
+          number = 5
+          keyword = "action"
+          uuid = "cfa64b95-e91d-4d26-b882-47f9f9c06974"
+        },
+      ]
+      uuid = "d455818d-d1fb-4b73-a36d-951b4760c363"
+    },
+  ]
+  comment = "Define the request and response parameters for this API endpoint"
+  uuid = "1446206d-8bc3-4bf7-9eed-3d3c56768fb9"
+  _parent = [
+    workato.recipe.instance.first_api_recipe_first_folder_dodel_playground_Root,
+  ]
+}

@@ -1,0 +1,9 @@
+okta.AccessPolicy One_factor_access@s {
+  status = "ACTIVE"
+  name = "One factor access"
+  description = "Allow access with any one factor. Suggested for low risk or consumer-facing applications."
+  priority = 1
+  system = false
+  type = "ACCESS_POLICY"
+  
+}

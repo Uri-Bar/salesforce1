@@ -1,0 +1,23 @@
+jira.Screen AlonScreen {
+  name = "AlonScreen"
+  description = ""
+  tabs = {
+    tab2 = {
+      name = "tab2"
+      position = 0
+    }
+    Field_Tab@s = {
+      name = "Field Tab"
+      fields = [
+        jira.Field.instance.Approvers__c,
+        jira.Field.instance.__Progress2__c@_00931suu,
+        jira.Field.instance.Affects_versions@s,
+      ]
+      position = 1
+    }
+    tab3 = {
+      name = "tab3"
+      position = 2
+    }
+  }
+}

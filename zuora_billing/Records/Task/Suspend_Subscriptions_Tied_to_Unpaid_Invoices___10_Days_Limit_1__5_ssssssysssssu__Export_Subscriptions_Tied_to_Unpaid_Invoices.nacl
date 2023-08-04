@@ -1,0 +1,138 @@
+zuora_billing.Task Suspend_Subscriptions_Tied_to_Unpaid_Invoices___10_Days_Limit_1__5_ssssssysssssu__Export_Subscriptions_Tied_to_Unpaid_Invoices@uuuuuuuuuuuuumuusssss {
+  name = "Export Subscriptions Tied to Unpaid Invoices"
+  parameters = {
+    fields = {
+      Account = {
+        Name = "true"
+        AccountNumber = "true"
+      }
+      Invoice = {
+        Amount = "true"
+        Balance = "true"
+        DueDate = "true"
+        InvoiceDate = "true"
+        InvoiceNumber = "true"
+      }
+      Subscription = {
+        Id = "true"
+        Name = "true"
+        Status = "true"
+      }
+    }
+    where_clause = "Invoice.Balance > 0 AND Invoice.DueDate < 'today - 10 day' AND Invoice.Status = 'Posted' AND Subscription.Status ='Active'  Limit 1"
+  }
+  action_type = "Export"
+  object = zuora_billing.invoiceitem
+  call_type = "SOAP"
+  concurrent_limit = 9999999
+  additionalProperties = {
+    css = {
+      top = "40px"
+      left = "404px"
+    }
+    priority = "Medium"
+    
+  }
+  _parent = [
+    zuora_billing.WorkflowExport.instance.Suspend_Subscriptions_Tied_to_Unpaid_Invoices___10_Days_Limit_1__5@ssssssysssssu,
+  ]
+  _generated_dependencies = [
+    {
+      reference = zuora_billing.account.field.AccountNumber
+      occurrences = [
+        {
+          location = zuora_billing.Task.instance.Suspend_Subscriptions_Tied_to_Unpaid_Invoices___10_Days_Limit_1__5_ssssssysssssu__Export_Subscriptions_Tied_to_Unpaid_Invoices@uuuuuuuuuuuuumuusssss.parameters.fields.Account.AccountNumber
+        },
+      ]
+    },
+    {
+      reference = zuora_billing.account.field.Name
+      occurrences = [
+        {
+          location = zuora_billing.Task.instance.Suspend_Subscriptions_Tied_to_Unpaid_Invoices___10_Days_Limit_1__5_ssssssysssssu__Export_Subscriptions_Tied_to_Unpaid_Invoices@uuuuuuuuuuuuumuusssss.parameters.fields.Account.Name
+        },
+      ]
+    },
+    {
+      reference = zuora_billing.invoice.field.Amount
+      occurrences = [
+        {
+          location = zuora_billing.Task.instance.Suspend_Subscriptions_Tied_to_Unpaid_Invoices___10_Days_Limit_1__5_ssssssysssssu__Export_Subscriptions_Tied_to_Unpaid_Invoices@uuuuuuuuuuuuumuusssss.parameters.fields.Invoice.Amount
+        },
+      ]
+    },
+    {
+      reference = zuora_billing.invoice.field.Balance
+      occurrences = [
+        {
+          location = zuora_billing.Task.instance.Suspend_Subscriptions_Tied_to_Unpaid_Invoices___10_Days_Limit_1__5_ssssssysssssu__Export_Subscriptions_Tied_to_Unpaid_Invoices@uuuuuuuuuuuuumuusssss.parameters.fields.Invoice.Balance
+        },
+        {
+          location = zuora_billing.Task.instance.Suspend_Subscriptions_Tied_to_Unpaid_Invoices___10_Days_Limit_1__5_ssssssysssssu__Export_Subscriptions_Tied_to_Unpaid_Invoices@uuuuuuuuuuuuumuusssss.parameters.where_clause
+        },
+      ]
+    },
+    {
+      reference = zuora_billing.invoice.field.DueDate
+      occurrences = [
+        {
+          location = zuora_billing.Task.instance.Suspend_Subscriptions_Tied_to_Unpaid_Invoices___10_Days_Limit_1__5_ssssssysssssu__Export_Subscriptions_Tied_to_Unpaid_Invoices@uuuuuuuuuuuuumuusssss.parameters.fields.Invoice.DueDate
+        },
+        {
+          location = zuora_billing.Task.instance.Suspend_Subscriptions_Tied_to_Unpaid_Invoices___10_Days_Limit_1__5_ssssssysssssu__Export_Subscriptions_Tied_to_Unpaid_Invoices@uuuuuuuuuuuuumuusssss.parameters.where_clause
+        },
+      ]
+    },
+    {
+      reference = zuora_billing.invoice.field.InvoiceDate
+      occurrences = [
+        {
+          location = zuora_billing.Task.instance.Suspend_Subscriptions_Tied_to_Unpaid_Invoices___10_Days_Limit_1__5_ssssssysssssu__Export_Subscriptions_Tied_to_Unpaid_Invoices@uuuuuuuuuuuuumuusssss.parameters.fields.Invoice.InvoiceDate
+        },
+      ]
+    },
+    {
+      reference = zuora_billing.invoice.field.InvoiceNumber
+      occurrences = [
+        {
+          location = zuora_billing.Task.instance.Suspend_Subscriptions_Tied_to_Unpaid_Invoices___10_Days_Limit_1__5_ssssssysssssu__Export_Subscriptions_Tied_to_Unpaid_Invoices@uuuuuuuuuuuuumuusssss.parameters.fields.Invoice.InvoiceNumber
+        },
+      ]
+    },
+    {
+      reference = zuora_billing.invoice.field.Status
+      occurrences = [
+        {
+          location = zuora_billing.Task.instance.Suspend_Subscriptions_Tied_to_Unpaid_Invoices___10_Days_Limit_1__5_ssssssysssssu__Export_Subscriptions_Tied_to_Unpaid_Invoices@uuuuuuuuuuuuumuusssss.parameters.where_clause
+        },
+      ]
+    },
+    {
+      reference = zuora_billing.subscription.field.Id
+      occurrences = [
+        {
+          location = zuora_billing.Task.instance.Suspend_Subscriptions_Tied_to_Unpaid_Invoices___10_Days_Limit_1__5_ssssssysssssu__Export_Subscriptions_Tied_to_Unpaid_Invoices@uuuuuuuuuuuuumuusssss.parameters.fields.Subscription.Id
+        },
+      ]
+    },
+    {
+      reference = zuora_billing.subscription.field.Name
+      occurrences = [
+        {
+          location = zuora_billing.Task.instance.Suspend_Subscriptions_Tied_to_Unpaid_Invoices___10_Days_Limit_1__5_ssssssysssssu__Export_Subscriptions_Tied_to_Unpaid_Invoices@uuuuuuuuuuuuumuusssss.parameters.fields.Subscription.Name
+        },
+      ]
+    },
+    {
+      reference = zuora_billing.subscription.field.Status
+      occurrences = [
+        {
+          location = zuora_billing.Task.instance.Suspend_Subscriptions_Tied_to_Unpaid_Invoices___10_Days_Limit_1__5_ssssssysssssu__Export_Subscriptions_Tied_to_Unpaid_Invoices@uuuuuuuuuuuuumuusssss.parameters.fields.Subscription.Status
+        },
+        {
+          location = zuora_billing.Task.instance.Suspend_Subscriptions_Tied_to_Unpaid_Invoices___10_Days_Limit_1__5_ssssssysssssu__Export_Subscriptions_Tied_to_Unpaid_Invoices@uuuuuuuuuuuuumuusssss.parameters.where_clause
+        },
+      ]
+    },
+  ]
+}

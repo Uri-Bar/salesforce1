@@ -1,0 +1,259 @@
+type zuora_billing.updaterdetail {
+  string Id {
+    type = "string"
+    format = "uuid"
+    required = false
+    filterable = false
+    label = "Id"
+  }
+  string CreatedById {
+    type = "string"
+    format = "uuid"
+    required = false
+    filterable = false
+    referenceTo = [
+      zuora_billing.user.field.Id,
+    ]
+    cardinality = "manyToOne"
+    recordConstraints = {
+      create = {
+        enforceValidMapping = true
+      }
+    }
+    label = "CreatedById"
+  }
+  string CreatedDate {
+    type = "string"
+    format = "date-time"
+    required = false
+    filterable = false
+    label = "CreatedDate"
+  }
+  string UpdatedById {
+    type = "string"
+    format = "uuid"
+    required = false
+    filterable = false
+    referenceTo = [
+      zuora_billing.user.field.Id,
+    ]
+    cardinality = "manyToOne"
+    recordConstraints = {
+      create = {
+        enforceValidMapping = true
+      }
+    }
+    label = "UpdatedById"
+  }
+  string UpdatedDate {
+    type = "string"
+    format = "date-time"
+    required = false
+    filterable = false
+    label = "UpdatedDate"
+  }
+  string BillingAccountId {
+    type = "string"
+    format = "uuid"
+    required = false
+    filterable = false
+    label = "BillingAccountId"
+  }
+  number CardExpirationMonth {
+    type = "integer"
+    required = false
+    filterable = false
+    label = "CardExpirationMonth"
+  }
+  number CardExpirationYear {
+    type = "integer"
+    required = false
+    filterable = false
+    label = "CardExpirationYear"
+  }
+  string CardNumberMasked {
+    type = "string"
+    maxLength = 512
+    required = false
+    filterable = false
+    label = "CardNumberMasked"
+  }
+  string CardType {
+    type = "string"
+    maxLength = 512
+    required = false
+    filterable = false
+    label = "CardType"
+  }
+  boolean IsPaymentMethodUpdated {
+    type = "boolean"
+    required = false
+    filterable = false
+    label = "IsPaymentMethodUpdated"
+  }
+  number NewCardExpirationMonth {
+    type = "integer"
+    required = false
+    filterable = false
+    label = "NewCardExpirationMonth"
+  }
+  number NewCardExpirationYear {
+    type = "integer"
+    required = false
+    filterable = false
+    label = "NewCardExpirationYear"
+  }
+  string NewCardNumberMasked {
+    type = "string"
+    maxLength = 512
+    required = false
+    filterable = false
+    label = "NewCardNumberMasked"
+  }
+  string NewCardType {
+    type = "string"
+    maxLength = 512
+    required = false
+    filterable = false
+    label = "NewCardType"
+  }
+  string RecordId {
+    type = "string"
+    maxLength = 512
+    required = false
+    filterable = false
+    label = "RecordId"
+  }
+  string RetrieveRequestTransactionLog {
+    type = "string"
+    maxLength = 512
+    required = false
+    filterable = false
+    label = "RetrieveRequestTransactionLog"
+  }
+  string RetrieveResponseCode {
+    type = "string"
+    maxLength = 512
+    required = false
+    filterable = false
+    label = "RetrieveResponseCode"
+  }
+  string RetrieveResponseMessage {
+    type = "string"
+    maxLength = 512
+    required = false
+    filterable = false
+    label = "RetrieveResponseMessage"
+  }
+  string RetrieveResponseTransactionLog {
+    type = "string"
+    maxLength = 512
+    required = false
+    filterable = false
+    label = "RetrieveResponseTransactionLog"
+  }
+  string Status {
+    type = "string"
+    maxLength = 512
+    required = false
+    filterable = false
+    label = "Status"
+  }
+  string SubmitRequestTransactionLog {
+    type = "string"
+    maxLength = 512
+    required = false
+    filterable = false
+    label = "SubmitRequestTransactionLog"
+  }
+  string SubmitResponseCode {
+    type = "string"
+    maxLength = 512
+    required = false
+    filterable = false
+    label = "SubmitResponseCode"
+  }
+  string SubmitResponseMessage {
+    type = "string"
+    maxLength = 512
+    required = false
+    filterable = false
+    label = "SubmitResponseMessage"
+  }
+  string SubmitResponseTransactionLog {
+    type = "string"
+    maxLength = 512
+    required = false
+    filterable = false
+    label = "SubmitResponseTransactionLog"
+  }
+  string SubmittedResponseTime {
+    type = "string"
+    format = "date-time"
+    required = false
+    filterable = false
+    label = "SubmittedResponseTime"
+  }
+  string TransactionId {
+    type = "string"
+    maxLength = 512
+    required = false
+    filterable = false
+    label = "TransactionId"
+  }
+  string UpdateType {
+    type = "string"
+    maxLength = 512
+    required = false
+    filterable = false
+    label = "UpdateType"
+  }
+  string UpdaterBatchId {
+    type = "string"
+    format = "uuid"
+    required = false
+    filterable = false
+    referenceTo = [
+      zuora_billing.updaterbatch.field.Id,
+    ]
+    cardinality = "manyToOne"
+    recordConstraints = {
+      create = {
+        enforceValidMapping = true
+      }
+    }
+    label = "UpdaterBatchId"
+  }
+  string NewPaymentMethodId {
+    type = "string"
+    format = "uuid"
+    required = false
+    filterable = false
+    referenceTo = [
+      zuora_billing.paymentmethod.field.Id,
+    ]
+    cardinality = "manyToOne"
+    recordConstraints = {
+      create = {
+        enforceValidMapping = true
+      }
+    }
+    label = "NewPaymentMethodId"
+  }
+  string PaymentMethodId {
+    type = "string"
+    format = "uuid"
+    required = false
+    filterable = false
+    referenceTo = [
+      zuora_billing.paymentmethod.field.Id,
+    ]
+    cardinality = "manyToOne"
+    recordConstraints = {
+      create = {
+        enforceValidMapping = true
+      }
+    }
+    label = "PaymentMethodId"
+  }
+}

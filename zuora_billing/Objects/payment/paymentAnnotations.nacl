@@ -1,0 +1,31 @@
+type zuora_billing.payment {
+  annotations {
+    string metadataType {
+    }
+    string label {
+    }
+    string description {
+    }
+    hidden_string id {
+    }
+    string objectType {
+    }
+  }
+  metadataType = "StandardObject"
+  objectType = "payment"
+  _generated_dependencies = [
+    {
+      reference = zuora_billing.account
+    },
+    {
+      reference = zuora_billing.paymentmethod
+    },
+    {
+      reference = zuora_billing.paymentmethodsnapshot
+    },
+    {
+      reference = zuora_billing.user
+    },
+  ]
+  label = "Payment"
+}

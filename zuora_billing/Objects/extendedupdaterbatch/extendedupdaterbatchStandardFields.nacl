@@ -1,0 +1,184 @@
+type zuora_billing.extendedupdaterbatch {
+  string Id {
+    type = "string"
+    format = "uuid"
+    required = false
+    filterable = false
+    label = "Id"
+  }
+  string CreatedById {
+    type = "string"
+    format = "uuid"
+    required = false
+    filterable = false
+    label = "CreatedById"
+  }
+  string CreatedDate {
+    type = "string"
+    format = "date-time"
+    required = false
+    filterable = false
+    label = "CreatedDate"
+  }
+  string UpdatedById {
+    type = "string"
+    format = "uuid"
+    required = false
+    filterable = false
+    label = "UpdatedById"
+  }
+  string UpdatedDate {
+    type = "string"
+    format = "date-time"
+    required = false
+    filterable = false
+    label = "UpdatedDate"
+  }
+  number BatchId {
+    type = "integer"
+    required = false
+    filterable = false
+    label = "BatchId"
+  }
+  string BatchTransactionId {
+    type = "string"
+    maxLength = 512
+    required = false
+    filterable = false
+    label = "BatchTransactionId"
+  }
+  string CompletedTime {
+    type = "string"
+    format = "date-time"
+    required = false
+    filterable = false
+    label = "CompletedTime"
+  }
+  string InternalStatus {
+    type = "string"
+    maxLength = 512
+    required = false
+    filterable = false
+    label = "InternalStatus"
+  }
+  string PostDate {
+    type = "string"
+    format = "date"
+    required = false
+    filterable = false
+    label = "PostDate"
+  }
+  string RequestId {
+    type = "string"
+    maxLength = 512
+    required = false
+    filterable = false
+    label = "RequestId"
+  }
+  number Records {
+    type = "integer"
+    required = false
+    filterable = false
+    label = "Records"
+  }
+  number RecordsCancelled {
+    type = "integer"
+    required = false
+    filterable = false
+    label = "RecordsCancelled"
+  }
+  number RecordsChanged {
+    type = "integer"
+    required = false
+    filterable = false
+    label = "RecordsChanged"
+  }
+  number RecordsNotChanged {
+    type = "integer"
+    required = false
+    filterable = false
+    label = "RecordsNotChanged"
+  }
+  number RecordsProcessing {
+    type = "integer"
+    required = false
+    filterable = false
+    label = "RecordsProcessing"
+  }
+  number RecordsWarning {
+    type = "integer"
+    required = false
+    filterable = false
+    label = "RecordsWarning"
+  }
+  string RetrieveResponseCode {
+    type = "string"
+    maxLength = 512
+    required = false
+    filterable = false
+    label = "RetrieveResponseCode"
+  }
+  string RetrieveResponseMessage {
+    type = "string"
+    maxLength = 512
+    required = false
+    filterable = false
+    label = "RetrieveResponseMessage"
+  }
+  string Status {
+    type = "string"
+    maxLength = 512
+    required = false
+    filterable = false
+    label = "Status"
+  }
+  string SubmitResponseCode {
+    type = "string"
+    maxLength = 512
+    required = false
+    filterable = false
+    label = "SubmitResponseCode"
+  }
+  string SubmitResponseMessage {
+    type = "string"
+    maxLength = 512
+    required = false
+    filterable = false
+    label = "SubmitResponseMessage"
+  }
+  string SubmittedTime {
+    type = "string"
+    format = "date-time"
+    required = false
+    filterable = false
+    label = "SubmittedTime"
+  }
+  string SubmittingTime {
+    type = "string"
+    format = "date-time"
+    required = false
+    filterable = false
+    label = "SubmittingTime"
+  }
+  string UpdaterAccountId {
+    type = "string"
+    format = "uuid"
+    required = false
+    filterable = false
+    label = "UpdaterAccountId"
+  }
+  string UpdaterGatewayType {
+    type = "string"
+    maxLength = 512
+    required = false
+    filterable = false
+    label = "UpdaterGatewayType"
+  }
+  string UpdaterRequestId {
+    type = "string"
+    maxLength = 512
+    required = false
+    filterable = false
+    label = "UpdaterRequestId"
+  }
+}

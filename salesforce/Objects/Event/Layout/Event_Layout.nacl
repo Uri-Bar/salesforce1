@@ -1,0 +1,249 @@
+salesforce.Layout Event_Event_Layout@bs {
+  fullName = "Event-Event Layout"
+  layoutSections = [
+    {
+      customLabel = false
+      detailHeading = true
+      editHeading = true
+      label = "Calendar Event Details"
+      layoutColumns = [
+        {
+          layoutItems = [
+            {
+              behavior = "Required"
+              field = salesforce.Event.field.Subject
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.Event.field.Location
+            },
+            {
+              behavior = "Required"
+              field = salesforce.Event.field.StartDateTime
+            },
+            {
+              behavior = "Required"
+              field = salesforce.Event.field.EndDateTime
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.Event.field.IsAllDayEvent
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.Event.field.Type
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.Event.field.Description
+            },
+          ]
+        },
+        {
+          layoutItems = [
+            {
+              behavior = "Required"
+              field = salesforce.Event.field.OwnerId
+            },
+          ]
+        },
+      ]
+      style = "TwoColumnsTopToBottom"
+    },
+    {
+      customLabel = true
+      detailHeading = true
+      editHeading = true
+      label = "Related To"
+      layoutColumns = [
+        {
+          layoutItems = [
+            {
+              behavior = "Edit"
+              field = salesforce.Event.field.WhoId
+            },
+          ]
+        },
+        {
+          layoutItems = [
+            {
+              behavior = "Edit"
+              field = salesforce.Event.field.WhatId
+            },
+          ]
+        },
+      ]
+      style = "TwoColumnsLeftToRight"
+    },
+    {
+      customLabel = false
+      detailHeading = true
+      editHeading = true
+      label = "Other Information"
+      layoutColumns = [
+        {
+          layoutItems = [
+            {
+              behavior = "Edit"
+              field = salesforce.Event.field.IsReminderSet
+            },
+          ]
+        },
+        {
+        },
+      ]
+      style = "TwoColumnsTopToBottom"
+    },
+    {
+      customLabel = false
+      detailHeading = true
+      editHeading = true
+      label = "Description Information"
+      style = "OneColumn"
+      layoutColumns = [
+        {
+        },
+      ]
+    },
+    {
+      customLabel = false
+      detailHeading = true
+      editHeading = true
+      label = "Additional Information"
+      style = "TwoColumnsLeftToRight"
+    },
+    {
+      customLabel = false
+      detailHeading = true
+      editHeading = true
+      label = "System Information"
+      layoutColumns = [
+        {
+          layoutItems = [
+            {
+              behavior = "Readonly"
+              field = salesforce.Event.field.CreatedById
+            },
+          ]
+        },
+        {
+          layoutItems = [
+            {
+              behavior = "Readonly"
+              field = salesforce.Event.field.LastModifiedById
+            },
+          ]
+        },
+      ]
+      style = "TwoColumnsTopToBottom"
+    },
+    {
+      customLabel = false
+      detailHeading = true
+      editHeading = false
+      label = "Custom Links"
+      style = "CustomLinks"
+    },
+  ]
+  platformActionList = {
+    actionListContext = "Record"
+    platformActionListItems = [
+      {
+        actionName = "Edit"
+        actionType = "StandardButton"
+        sortOrder = 0
+      },
+      {
+        actionName = "Delete"
+        actionType = "StandardButton"
+        sortOrder = 1
+      },
+      {
+        actionName = "FeedItem.TextPost"
+        actionType = "QuickAction"
+        sortOrder = 2
+      },
+      {
+        actionName = "FeedItem.ContentPost"
+        actionType = "QuickAction"
+        sortOrder = 3
+      },
+      {
+        actionName = "FeedItem.PollPost"
+        actionType = "QuickAction"
+        sortOrder = 4
+      },
+    ]
+  }
+  quickActionList = {
+    quickActionListItems = [
+      {
+        quickActionName = "FeedItem.ContentNote"
+      },
+      {
+        quickActionName = "FeedItem.ContentPost"
+      },
+      {
+        quickActionName = "FeedItem.LinkPost"
+      },
+      {
+        quickActionName = "FeedItem.MobileSmartActions"
+      },
+      {
+        quickActionName = "FeedItem.PollPost"
+      },
+      {
+        quickActionName = "FeedItem.QuestionPost"
+      },
+      {
+        quickActionName = "FeedItem.RypplePost"
+      },
+      {
+        quickActionName = "FeedItem.TextPost"
+      },
+    ]
+  }
+  relatedContent = {
+    relatedContentItems = [
+      {
+        layoutItem = {
+          behavior = "Readonly"
+          field = salesforce.Event.field.WhoId
+        }
+      },
+      {
+        layoutItem = {
+          behavior = "Readonly"
+          field = salesforce.Event.field.WhatId
+        }
+      },
+    ]
+  }
+  relatedLists = [
+    {
+      relatedList = "RelatedFileList"
+    },
+    {
+      relatedList = "RelatedContentNoteList"
+    },
+    {
+      relatedList = "RelatedActivityAttachmentList"
+    },
+  ]
+  relatedObjects = [
+    "WhoId",
+    "WhatId",
+  ]
+  showEmailCheckbox = false
+  showRunAssignmentRulesCheckbox = false
+  showSubmitAndAttachButton = false
+  summaryLayout = {
+    masterLabel = "00h36000003jARk"
+    sizeX = 4
+    sizeY = 0
+    summaryLayoutStyle = "Default"
+  }
+  _parent = [
+    salesforce.Event,
+  ]
+}

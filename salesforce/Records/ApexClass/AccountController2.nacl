@@ -1,0 +1,14 @@
+salesforce.ApexClass AccountController2 {
+  apiVersion = 48
+  status = "Active"
+  fullName = "AccountController2"
+  content = file("salesforce/Records/ApexClass/AccountController2.cls")
+  _generated_dependencies = [
+    {
+      reference = salesforce.Account
+    },
+    {
+      reference = salesforce.Account.field.Tier__c
+    },
+  ]
+}

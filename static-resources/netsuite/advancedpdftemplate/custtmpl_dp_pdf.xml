@@ -1,0 +1,41 @@
+<?xml version="1.0"?><!DOCTYPE pdf PUBLIC "-//big.faceless.org//report" "report-1.1.dtd"><pdfset><#if results?size != 0><#list results as result>
+<pdf>
+<head>
+	<link name="NotoSans" type="font" subtype="truetype" src="${nsfont.NotoSans_Regular}" src-bold="${nsfont.NotoSans_Bold}" src-italic="${nsfont.NotoSans_Italic}" src-bolditalic="${nsfont.NotoSans_BoldItalic}" bytes="2" />
+	<#if .locale == "zh_CN">
+		<link name="NotoSansCJKsc" type="font" subtype="opentype" src="${nsfont.NotoSansCJKsc_Regular}" src-bold="${nsfont.NotoSansCJKsc_Bold}" bytes="2" />
+	<#elseif .locale == "zh_TW">
+		<link name="NotoSansCJKtc" type="font" subtype="opentype" src="${nsfont.NotoSansCJKtc_Regular}" src-bold="${nsfont.NotoSansCJKtc_Bold}" bytes="2" />
+	<#elseif .locale == "ja_JP">
+		<link name="NotoSansCJKjp" type="font" subtype="opentype" src="${nsfont.NotoSansCJKjp_Regular}" src-bold="${nsfont.NotoSansCJKjp_Bold}" bytes="2" />
+	<#elseif .locale == "ko_KR">
+		<link name="NotoSansCJKkr" type="font" subtype="opentype" src="${nsfont.NotoSansCJKkr_Regular}" src-bold="${nsfont.NotoSansCJKkr_Bold}" bytes="2" />
+	<#elseif .locale == "th_TH">
+		<link name="NotoSansThai" type="font" subtype="opentype" src="${nsfont.NotoSansThai_Regular}" src-bold="${nsfont.NotoSansThai_Bold}" bytes="2" />
+	</#if>
+    <style type="text/css">* {
+						<#if .locale == "zh_CN">
+							font-family: NotoSans, NotoSansCJKsc, sans-serif;
+						<#elseif .locale == "zh_TW">
+							font-family: NotoSans, NotoSansCJKtc, sans-serif;
+						<#elseif .locale == "ja_JP">
+							font-family: NotoSans, NotoSansCJKjp, sans-serif;
+						<#elseif .locale == "ko_KR">
+							font-family: NotoSans, NotoSansCJKkr, sans-serif;
+						<#elseif .locale == "th_TH">
+							font-family: NotoSans, NotoSansThai, sans-serif;
+						<#else>
+							font-family: NotoSans, sans-serif;
+						</#if>
+					}
+					td p { align:left }
+</style>
+</head>
+<body padding="0.5in 0.5in 0.5in 0.5in" size="Letter">
+    </body></pdf></#list><#else><pdf><head></head><body size="Letter">
+<table style="width: 100px; height: 50px; border: 1px dashed black; overflow: hidden; display: table"><tr>
+	<td>This is a field for&nbsp;${result.account}</td>
+	</tr></table>
+&nbsp;<pagenumber/>
+</body>
+</pdf></#if></pdfset>

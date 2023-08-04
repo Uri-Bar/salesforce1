@@ -1,0 +1,20 @@
+netsuite.file SuiteScripts_dp_dp_searchdemo_js@dduv {
+  bundleable = false
+  isinactive = false
+  availablewithoutlogin = false
+  generateurltimestamp = false
+  hideinbundle = false
+  path = "/SuiteScripts/dp/dp_searchdemo.js"
+  content = file("netsuite/FileCabinet/SuiteScripts/dp/dp_searchdemo.js")
+  _parent = [
+    netsuite.folder.instance.SuiteScripts_dp@d,
+  ]
+  _generated_dependencies = [
+    {
+      reference = netsuite.customrecord_dp_prospect.attr.scriptid
+    },
+    {
+      reference = netsuite.savedsearch.instance.customsearch_dp_scriptdemo.scriptid
+    },
+  ]
+}

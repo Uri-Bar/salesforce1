@@ -1,0 +1,26 @@
+zuora_billing.PublicEmailTemplate Debit_Memo_Created_Default_Email_Template@s {
+  eventCategory = 2810
+  name = "Debit Memo Created Default Email Template"
+  description = ""
+  encodingType = "UTF8"
+  fromName = "Admin"
+  fromEmailType = "SpecificEmail"
+  fromEmailAddress = "neta.marcus@salto.io"
+  replyToEmailType = "SpecificEmail"
+  replyToEmailAddress = "neta.marcus@salto.io"
+  ccEmailType = "SpecificEmails"
+  ccEmailAddress = ""
+  bccEmailAddress = ""
+  toEmailType = "BillToContact"
+  toEmailAddress = ""
+  emailSubject = "You have a new Debit Memo created"
+  emailBody = '''
+A Debit Memo is attached to this email as a PDF file. 
+
+To view this Debit Memo, click on the attachment. Adobe Acrobat should launch. If you do not have Acrobat installed on your computer, you can download it from 
+http://www.adobe.com/products/acrobat/readstep2.html
+'''
+  active = true
+  isHtml = false
+  useAdditionalAddresses = true
+}

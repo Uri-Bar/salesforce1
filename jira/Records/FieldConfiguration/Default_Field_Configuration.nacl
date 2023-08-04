@@ -1,0 +1,243 @@
+jira.FieldConfiguration Default_Field_Configuration@s {
+  name = "Default Field Configuration"
+  description = "The default field configuration"
+  isDefault = true
+  
+  fields = {
+    Summary = {
+      isHidden = false
+      isRequired = true
+    }
+    Issue_Type@s = {
+      isHidden = false
+      isRequired = true
+    }
+    Security_Level@s = {
+      isHidden = false
+      isRequired = false
+    }
+    Priority = {
+      isHidden = false
+      isRequired = false
+    }
+    Due_date@s = {
+      isHidden = false
+      isRequired = false
+    }
+    Components = {
+      isHidden = false
+      isRequired = false
+    }
+    Affects_versions@s = {
+      isHidden = false
+      isRequired = false
+    }
+    Fix_versions@s = {
+      isHidden = false
+      isRequired = false
+    }
+    Assignee = {
+      isHidden = false
+      isRequired = false
+    }
+    Reporter = {
+      isHidden = false
+      isRequired = true
+    }
+    Environment = {
+      description = "For example operating system, software platform and/or hardware specifications (include as appropriate for the issue)."
+      isHidden = false
+      isRequired = false
+      renderer = "wiki-renderer"
+    }
+    Description = {
+      isHidden = false
+      isRequired = false
+      renderer = "wiki-renderer"
+    }
+    Time_tracking@s = {
+      description = '''
+An estimate of how much work remains until this issue will be resolved.
+The format of this is ' *w *d *h *m ' (representing weeks, days, hours and minutes - where * can be any number).
+Examples: 4d, 5h 30m, 60m and 3w.
+'''
+      isHidden = false
+      isRequired = false
+    }
+    Resolution = {
+      isHidden = false
+      isRequired = false
+    }
+    Attachment = {
+      isHidden = false
+      isRequired = false
+    }
+    Comment = {
+      isHidden = false
+      isRequired = false
+      renderer = "wiki-renderer"
+    }
+    Labels = {
+      isHidden = false
+      isRequired = false
+    }
+    Log_Work@s = {
+      description = "Allows work to be logged whilst creating, editing or transitioning issues."
+      isHidden = false
+      isRequired = false
+      renderer = "wiki-renderer"
+    }
+    Linked_Issues@s = {
+      isHidden = false
+      isRequired = false
+    }
+    Approvers__c = {
+      description = "Contains users needed for approval. This custom field was created by Jira Service Desk."
+      isHidden = false
+      isRequired = false
+    }
+    Impact__c = {
+      isHidden = false
+      isRequired = false
+    }
+    Change_type__c@suu = {
+      isHidden = false
+      isRequired = false
+    }
+    Change_risk__c@suu = {
+      isHidden = false
+      isRequired = false
+    }
+    Change_reason__c@suu = {
+      description = "Choose the reason for the change request"
+      isHidden = false
+      isRequired = false
+    }
+    Change_start_date__c@ssuu = {
+      description = "Enter when the change actually started."
+      isHidden = false
+      isRequired = false
+    }
+    Change_completion_date__c@ssuu = {
+      description = "Enter when the change actually ended."
+      isHidden = false
+      isRequired = false
+    }
+    _CHART__Date_of_First_Response__c@hissssuu = {
+      description = ""
+      isHidden = false
+      isRequired = false
+    }
+    _CHART__Time_in_Status__c@hisssuu = {
+      description = ""
+      isHidden = false
+      isRequired = false
+    }
+    uuid__c = {
+      description = "Adding both UUID and Location fields to a project, will enable JIRA Mobile Connect for that project."
+      isHidden = false
+      isRequired = false
+    }
+    Location__c = {
+      description = "Adding both UUID and Location fields to a project, will enable JIRA Mobile Connect for that project."
+      isHidden = false
+      isRequired = false
+    }
+    testLabel__c = {
+      description = ""
+      isHidden = false
+      isRequired = false
+    }
+    CustomMultiSelect__c = {
+      description = ""
+      isHidden = false
+      isRequired = false
+    }
+    testNumber__c = {
+      description = ""
+      isHidden = false
+      isRequired = false
+    }
+    testNumber2__c = {
+      description = ""
+      isHidden = false
+      isRequired = false
+    }
+    CustomCheckboxes__c = {
+      description = ""
+      isHidden = false
+      isRequired = false
+    }
+    testSelectList2__c = {
+      description = "desc!"
+      isHidden = false
+      isRequired = false
+    }
+    CustomTestSelectList__c = {
+      description = "desc!"
+      isHidden = false
+      isRequired = false
+    }
+    testSelectList4__c = {
+      description = "desc!"
+      isHidden = false
+      isRequired = false
+    }
+    testVersionPicker__c = {
+      description = ""
+      isHidden = false
+      isRequired = false
+    }
+    testSelectList__c = {
+      description = "desc!"
+      isHidden = false
+      isRequired = false
+    }
+    __Progress2__c@_00931suu = {
+      description = "aaaaa"
+      isHidden = false
+      isRequired = false
+    }
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,22 @@
+salesforce.ListView Campaign_MyActiveCampaigns {
+  fullName = "Campaign.MyActiveCampaigns"
+  columns = [
+    "CAMPAIGN.NAME",
+    "CAMPAIGN.START_DATE",
+    "CAMPAIGN.END_DATE",
+    "CAMPAIGN.CAMPAIGN_TYPE",
+    "CAMPAIGN.STATUS",
+  ]
+  filterScope = "Mine"
+  filters = [
+    {
+      field = "CAMPAIGN.ACTIVE"
+      operation = "equals"
+      value = "1"
+    },
+  ]
+  label = "My Active Campaigns"
+  _parent = [
+    salesforce.Campaign,
+  ]
+}

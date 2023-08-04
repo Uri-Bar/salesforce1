@@ -1,0 +1,152 @@
+type zuora_billing.taxationitemfxdata {
+  string Id {
+    type = "string"
+    format = "uuid"
+    required = false
+    filterable = false
+    label = "Id"
+  }
+  string CreatedById {
+    type = "string"
+    format = "uuid"
+    required = false
+    filterable = false
+    label = "CreatedById"
+  }
+  string CreatedDate {
+    type = "string"
+    format = "date-time"
+    required = false
+    filterable = false
+    label = "CreatedDate"
+  }
+  string UpdatedById {
+    type = "string"
+    format = "uuid"
+    required = false
+    filterable = false
+    label = "UpdatedById"
+  }
+  string UpdatedDate {
+    type = "string"
+    format = "date-time"
+    required = false
+    filterable = false
+    label = "UpdatedDate"
+  }
+  string TransactionCurrency {
+    type = "string"
+    maxLength = 512
+    required = false
+    filterable = false
+    label = "TransactionCurrency"
+  }
+  string HomeCurrency {
+    type = "string"
+    maxLength = 512
+    required = false
+    filterable = false
+    label = "HomeCurrency"
+  }
+  string HomeRate {
+    type = "string"
+    maxLength = 512
+    required = false
+    filterable = false
+    label = "HomeRate"
+  }
+  string HomeRateDate {
+    type = "string"
+    maxLength = 512
+    required = false
+    filterable = false
+    label = "HomeRateDate"
+  }
+  string HomeProviderRateDate {
+    type = "string"
+    maxLength = 512
+    required = false
+    filterable = false
+    label = "HomeProviderRateDate"
+  }
+  string HomeRateSource {
+    type = "string"
+    maxLength = 512
+    required = false
+    filterable = false
+    label = "HomeRateSource"
+  }
+  
+  string ReportingRate {
+    type = "string"
+    maxLength = 512
+    required = false
+    filterable = false
+    label = "ReportingRate"
+  }
+  string ReportingRateDate {
+    type = "string"
+    maxLength = 512
+    required = false
+    filterable = false
+    label = "ReportingRateDate"
+  }
+  string ReportingProviderRateDate {
+    type = "string"
+    maxLength = 512
+    required = false
+    filterable = false
+    label = "ReportingProviderRateDate"
+  }
+  string ReportingRateSource {
+    type = "string"
+    maxLength = 512
+    required = false
+    filterable = false
+    label = "ReportingRateSource"
+  }
+  number Amount {
+    type = "number"
+    required = false
+    filterable = false
+    label = "Amount"
+  }
+  number HomeAmount {
+    type = "number"
+    required = false
+    filterable = false
+    label = "HomeAmount"
+  }
+  number HomeAmountRounding {
+    type = "number"
+    required = false
+    filterable = false
+    label = "HomeAmountRounding"
+  }
+  number ReportingAmount {
+    type = "number"
+    required = false
+    filterable = false
+    label = "ReportingAmount"
+  }
+  number ReportingAmountRounding {
+    type = "number"
+    required = false
+    filterable = false
+    label = "ReportingAmountRounding"
+  }
+  string TaxationItemId {
+    type = "string"
+    format = "uuid"
+    required = false
+    filterable = false
+    label = "TaxationItemId"
+  }
+  string ReportingCurrency {
+    type = "string"
+    maxLength = 512
+    required = false
+    filterable = false
+    label = "ReportingCurrency"
+  }
+}

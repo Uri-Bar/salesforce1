@@ -1,0 +1,140 @@
+type zuora_billing.extendedbillrunrecord {
+  string Id {
+    type = "string"
+    format = "uuid"
+    required = false
+    filterable = false
+    label = "Id"
+  }
+  string CreatedById {
+    type = "string"
+    format = "uuid"
+    required = false
+    filterable = false
+    label = "CreatedById"
+  }
+  string CreatedDate {
+    type = "string"
+    format = "date-time"
+    required = false
+    filterable = false
+    label = "CreatedDate"
+  }
+  string UpdatedById {
+    type = "string"
+    format = "uuid"
+    required = false
+    filterable = false
+    label = "UpdatedById"
+  }
+  string UpdatedDate {
+    type = "string"
+    format = "date-time"
+    required = false
+    filterable = false
+    label = "UpdatedDate"
+  }
+  boolean deleted {
+    type = "boolean"
+    required = false
+    filterable = false
+    label = "deleted"
+  }
+  string AccountId {
+    type = "string"
+    format = "uuid"
+    required = false
+    filterable = false
+    label = "AccountId"
+  }
+  string AccountSnapshotId {
+    type = "string"
+    format = "uuid"
+    required = false
+    filterable = false
+    label = "AccountSnapshotId"
+  }
+  string BillRunId {
+    type = "string"
+    format = "uuid"
+    required = false
+    filterable = false
+    label = "BillRunId"
+  }
+  string InvoiceId {
+    type = "string"
+    format = "uuid"
+    required = false
+    filterable = false
+    label = "InvoiceId"
+  }
+  string InvoiceScheduleId {
+    type = "string"
+    format = "uuid"
+    required = false
+    filterable = false
+    label = "InvoiceScheduleId"
+  }
+  string InvoiceScheduleItemId {
+    type = "string"
+    format = "uuid"
+    required = false
+    filterable = false
+    label = "InvoiceScheduleItemId"
+  }
+  string CreditMemoId {
+    type = "string"
+    format = "uuid"
+    required = false
+    filterable = false
+    label = "CreditMemoId"
+  }
+  number TotalTime {
+    type = "integer"
+    required = false
+    filterable = false
+    label = "TotalTime"
+  }
+  string InvoiceStatus {
+    type = "string"
+    maxLength = 512
+    required = false
+    filterable = false
+    label = "InvoiceStatus"
+  }
+  string InvoiceTaxStatus {
+    type = "string"
+    maxLength = 512
+    required = false
+    filterable = false
+    label = "InvoiceTaxStatus"
+  }
+  string CreditMemoStatus {
+    type = "string"
+    maxLength = 512
+    required = false
+    filterable = false
+    label = "CreditMemoStatus"
+  }
+  string CreditMemoTaxStatus {
+    type = "string"
+    maxLength = 512
+    required = false
+    filterable = false
+    label = "CreditMemoTaxStatus"
+  }
+  string InvoiceNumber {
+    type = "string"
+    maxLength = 512
+    required = false
+    filterable = false
+    label = "InvoiceNumber"
+  }
+  string CreditMemoNumber {
+    type = "string"
+    maxLength = 512
+    required = false
+    filterable = false
+    label = "CreditMemoNumber"
+  }
+}

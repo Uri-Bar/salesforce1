@@ -1,0 +1,128 @@
+netsuite.savedsearch customsearch337 {
+  scriptid = "customsearch337"
+  definition = "820fee1e5606fb1f6cf336d6d3eeeec2f70833814377795bb85ce625dff1e948@GZC@2023.1.14@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"
+  search_filter = [
+    {
+      FLAG_DATE_TIME_SECOND = false
+      FLAG_FROM_AVAILABLE_FILTER = false
+      FLAG_NOT = false
+      FLAG_OR = false
+      FIELD_OR_CLAUSE_STATUS = "N"
+      FIELD_NUM_LEFT_PARENS = 0
+      FIELD_NUM_RIGHT_PARENS = 0
+      FIELD_FILTER_NAME = "Entity_ENTITYID"
+      FIELD_ATTRIBUTE = "KEYWORDS"
+      FIELD_TYPE = "TEXT"
+      RECORDS = [
+        {
+          KEY_ID = 0
+          FIELD_VALUE = "Eshed"
+        },
+      ]
+    },
+    {
+      FLAG_DATE_TIME_SECOND = false
+      FLAG_FROM_AVAILABLE_FILTER = false
+      FLAG_NOT = false
+      FLAG_OR = false
+      FIELD_OR_CLAUSE_STATUS = "N"
+      FIELD_NUM_LEFT_PARENS = 0
+      FIELD_NUM_RIGHT_PARENS = 0
+      FIELD_FILTER_NAME = "Customer_ACCOUNTNUMBER"
+      FIELD_ATTRIBUTE = "STARTSWITH"
+      FIELD_TYPE = "TEXT"
+      RECORDS = [
+        {
+          KEY_ID = 0
+          FIELD_VALUE = "Acme"
+        },
+      ]
+    },
+  ]
+  return_fields = [
+    {
+      FIELD_ALIAS = "Entity_ENTITYID"
+      FIELD_INDEX = 1
+      FIELD_FORMULA_ERROR = false
+    },
+    {
+      FIELD_ALIAS = "Entity_ALTNAME"
+      FIELD_INDEX = 2
+      FIELD_FORMULA_ERROR = false
+    },
+    {
+      FIELD_ALIAS = "Entity_EMAIL"
+      FIELD_INDEX = 3
+      FIELD_FORMULA_ERROR = false
+    },
+    {
+      FIELD_ALIAS = "Entity_PHONE"
+      FIELD_INDEX = 4
+      FIELD_FORMULA_ERROR = false
+    },
+    {
+      FIELD_ALIAS = "Entity_ALTPHONE"
+      FIELD_INDEX = 5
+      FIELD_FORMULA_ERROR = false
+    },
+    {
+      FIELD_ALIAS = "Entity_FAX"
+      FIELD_INDEX = 6
+      FIELD_FORMULA_ERROR = false
+    },
+    {
+      FIELD_ALIAS = "Customer_CONTACT"
+      FIELD_INDEX = 7
+      FIELD_FORMULA_ERROR = false
+    },
+    {
+      FIELD_ALIAS = "Entity_ALTEMAIL"
+      FIELD_INDEX = 8
+      FIELD_FORMULA_ERROR = false
+    },
+  ]
+  sort_columns = [
+    {
+      KEY_FIELD = "Entity_ENTITYID"
+      FILELD_ORDER = 1
+      FLAG_DESCENDING = false
+    },
+  ]
+  KEY_SCRIPT_ID = "customsearch337"
+  FIELD_DEFAULT_NAME = "Eshed&apos;s Saved Search"
+  FIELD_SEARCH_TYPE = "Customer"
+  FLAG_PUBLIC = false
+  FLAG_LIST = true
+  FLAG_PORTLET = false
+  FLAG_MACHINE = false
+  FLAG_REMINDER = false
+  FLAG_SHOW_LINK = false
+  FLAG_PREFERRED_LIST = false
+  FLAG_PREFERRED_PORTLET = false
+  FLAG_PREFERRED_MACHINE = false
+  FLAG_PREFERRED_FORM = false
+  FLAG_PREFERRED_RESULTS = false
+  FLAG_VIEW_AS_REPORT = false
+  FLAG_VIEW_AS_GRAPH = false
+  FLAG_VIEW_AS_GRID = false
+  FLAG_UNRESTRICTED = false
+  FLAG_DISABLE_DRILL_DOWN = false
+  FLAG_HIDE_FILTER_DROPDOWNS = false
+  KEY_DEFAULT_TEXT_FIELD_FILTER = "STARTSWITH"
+  FLAG_AVAILABLE_AS_FEED = false
+  FLAG_GLOBAL_EDIT = false
+  FLAG_CSV = false
+  FLAG_EXCEL = false
+  FLAG_PDF = false
+  FLAG_TRIGGERED_ALERT = false
+  FLAG_SCHEDULED_ALERT = false
+  FLAG_SCHEDULED_ALERT_SUMMARIES = false
+  FLAG_SEND_EMPTY_RESULTS = false
+  FLAG_ALERT_ALLOW_SUBSCRIBE = false
+  FLAG_ALERT_INCLUDE_VIEW_LINK = false
+  FLAG_HAS_TOTALS = false
+  FLAG_INCLUDE_PERIOD_END_TRANSACTIONS = false
+  FLAG_BUILT_IN = false
+  FLAG_SEND_ON_UPDATE = false
+  FLAG_SHOW_AUDIT_TRAIL = false
+}

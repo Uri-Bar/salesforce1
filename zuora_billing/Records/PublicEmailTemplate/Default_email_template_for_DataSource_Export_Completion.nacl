@@ -1,0 +1,21 @@
+zuora_billing.PublicEmailTemplate Default_email_template_for_DataSource_Export_Completion@s {
+  eventCategory = 1610
+  name = "Default email template for DataSource Export Completion"
+  description = ""
+  encodingType = "UTF8"
+  fromName = "Admin"
+  fromEmailType = "SpecificEmail"
+  fromEmailAddress = "support@zuora.com"
+  replyToEmailType = "SpecificEmail"
+  replyToEmailAddress = "support@zuora.com"
+  ccEmailType = "SpecificEmails"
+  ccEmailAddress = ""
+  bccEmailAddress = ""
+  toEmailType = "TenantAdmin"
+  toEmailAddress = ""
+  emailSubject = "DataSource Export Finished Notification"
+  emailBody = "Dear Customer,\r<br />\r<br />      Your DataSource export <Export.Name> submitted on <Export.CreatedDate> has finished. \r<br />\r<br />      Export Encrypted:        <Export.Encrypted>\r<br />\r<br />      Export Format:             <Export.Format>\r<br />\r<br />      Export Size:                  <Export.Size>\r<br />\r<br />      Export Status:              <Export.Status>\r<br />\r<br />      Export StatusReason:  <Export.ErrorMessage>\r<br />\r<br />      Export Zip:                   <Export.Zip>\r<br />\r<br />      Download export file from the URL:              <Export.FileID>\r<br />\r<br />Thank you,\r<br />\r<br />-Zuora "
+  active = true
+  isHtml = true
+  useAdditionalAddresses = false
+}

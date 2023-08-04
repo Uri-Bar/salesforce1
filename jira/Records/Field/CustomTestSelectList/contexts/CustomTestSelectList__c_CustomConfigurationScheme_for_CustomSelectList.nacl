@@ -1,0 +1,59 @@
+jira.CustomFieldContext CustomTestSelectList__c_CustomConfigurationScheme_for_CustomSelectList@uuuss {
+  name = "CustomConfigurationScheme for CustomSelectList"
+  options = {
+    p1 = {
+      value = "p1"
+      disabled = false
+      cascadingOptions = {
+        c11 = {
+          value = "c11"
+          disabled = false
+          position = 0
+        }
+        c12 = {
+          value = "c12"
+          disabled = false
+          position = 1
+        }
+      }
+      position = 0
+    }
+    p2 = {
+      value = "p2"
+      disabled = false
+      cascadingOptions = {
+        c21 = {
+          value = "c21"
+          disabled = false
+          position = 0
+        }
+        c22 = {
+          value = "c22"
+          disabled = false
+          position = 1
+        }
+      }
+      position = 1
+    }
+    p3 = {
+      value = "p3"
+      disabled = true
+      position = 2
+    }
+  }
+  defaultValue = {
+    type = "option.cascading"
+    optionId = jira.CustomFieldContext.instance.CustomTestSelectList__c_CustomConfigurationScheme_for_CustomSelectList@uuuss.options.p1
+    cascadingOptionId = jira.CustomFieldContext.instance.CustomTestSelectList__c_CustomConfigurationScheme_for_CustomSelectList@uuuss.options.p1.cascadingOptions.c12
+  }
+  issueTypeIds = [
+    jira.IssueType.instance.Epic,
+    jira.IssueType.instance.Story,
+    jira.IssueType.instance.Custom_issue_type_two@s,
+  ]
+  
+  _parent = [
+    jira.Field.instance.CustomTestSelectList__c,
+  ]
+  isGlobalContext = false
+}

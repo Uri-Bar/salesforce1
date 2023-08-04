@@ -1,0 +1,10 @@
+zendesk.user_field modified_multi75_key {
+  type = "textarea"
+  key = "modified_multi75_key"
+  
+  
+  raw_title = "multi75"
+  raw_description = "abc"
+  active = true
+  system = false
+}

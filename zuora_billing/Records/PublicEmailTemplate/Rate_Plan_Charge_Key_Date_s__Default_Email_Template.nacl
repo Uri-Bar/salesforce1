@@ -1,0 +1,27 @@
+zuora_billing.PublicEmailTemplate Rate_Plan_Charge_Key_Date_s__Default_Email_Template@ssssjksss {
+  eventCategory = 1810
+  name = "Rate Plan Charge Key Date(s) Default Email Template"
+  description = ""
+  encodingType = "UTF8"
+  fromName = "Admin"
+  fromEmailType = "SpecificEmail"
+  fromEmailAddress = "neta.marcus@salto.io"
+  replyToEmailType = "SpecificEmail"
+  replyToEmailAddress = "neta.marcus@salto.io"
+  ccEmailType = "SpecificEmails"
+  ccEmailAddress = ""
+  bccEmailAddress = ""
+  toEmailType = "BillToContact"
+  toEmailAddress = ""
+  emailSubject = "Rate Plan Charge <DataSource.RatePlanCharge.Name> ended"
+  emailBody = '''
+Dear <DataSource.BillToContact.FirstName> <DataSource.BillToContact.LastName>,
+
+This is a friendly reminder that the charge <DataSource.RatePlanCharge.Name> has ended.
+
+Thank you for your business!
+'''
+  active = true
+  isHtml = false
+  useAdditionalAddresses = false
+}

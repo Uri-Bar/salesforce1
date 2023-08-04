@@ -1,0 +1,22 @@
+type zuora_billing.doodi_api_name__c {
+  annotations {
+    string metadataType {
+    }
+    string label {
+    }
+    string description {
+    }
+    hidden_string id {
+    }
+    string objectType {
+    }
+  }
+  metadataType = "CustomObject"
+  label = "doodi"
+  objectType = "doodi_api_name"
+  _generated_dependencies = [
+    {
+      reference = zuora_billing.user
+    },
+  ]
+}

@@ -1,0 +1,108 @@
+<style>
+#dsDialog {
+	height: 300px;
+	width: 700px;
+	background-image: url('<%= backgroundImage %>');
+	background-repeat: repeat-x;
+	margin: 0px;
+	padding: 0px;
+	border: 0px;
+	font-family: Helvetica;
+}
+
+#dsDialog_header {
+	height: 47px;
+	font-size: 14px;
+	color: #20557A;
+	font-weight: normal;
+}
+
+#dsDialog_header_right {
+	float: right;
+	height:47px;
+}
+
+#ds_Provision_DialogBox_close {	
+	width:34px;
+	height:46px
+}
+
+#dsDialog_header_left{
+	height: 47px;
+	line-height: 47px;
+	float: left;
+}
+
+#dsDialog_main {
+	text-align: center;
+	height: 204px;
+}
+
+#provision {
+	font-size: 15px;
+	color: #20557A;
+	font-weight: bold;
+}
+
+#ds_provision_new_user_submit {
+	width: 103px;
+	height: 36px;
+}
+
+.ds_button {
+	background-image: url('<%= buttonImage %>');
+	cursor:pointer;
+	border: none;
+	width: 103px;
+	height: 36px;
+	color: #636363;
+	font-size: 12px;
+	font-family: Helvetica;
+	font-weight: bold;
+}
+
+#dsIEUserMsg {
+	font-size:10px;
+}
+</style>
+
+<script>
+$(document).ready(function() {
+	$('[placeholder]').focus(function() {
+		var input = $(this);
+		if (input.val() == input.attr('placeholder')) {
+			input.val('');
+			input.removeClass('placeholder');
+		}
+	}).blur(function() {
+		var input = $(this);
+		if (input.val() == '' || input.val() == input.attr('placeholder')) {
+			input.addClass('placeholder');
+			input.val(input.attr('placeholder'));
+		}
+	}).blur();
+});
+</script>
+
+<div id="dsDialog" >
+	<div id="dsDialog_header">
+		<div id="dsDialog_header_right">
+			<input id="ds_Provision_DialogBox_close" type="image" src="<%= closeImage %>" alt="close" onclick="$.unblockUI();" />
+		</div>
+		<div id="dsDialog_header_left">
+			<span>&nbsp;&nbsp;<%= provisionText %></span>
+		</div>
+	</div>
+	<div id="dsDialog_main">
+		<br>
+		<span id="provision"><%= enterInfoText %></span><br><br>
+		<input id="ds_user_name" type="text" placeholder="Enter a new username" size="60" maxlength="60" />
+		<% if( navigator.userAgent.match(/msie/i) ){ %>
+			<br>
+			<label id="dsIEUserMsg" ><%= ieMsgText %></label>
+		<% } %>		
+		<br><br>
+		<input id="ds_user_email" type="text" size="60" maxlength="60" /><br><br>
+		<button id="ds_provision_new_user_submit" class="ds_button" type="button" ><%= dsSubmitText %></button>
+	</div>
+</div>

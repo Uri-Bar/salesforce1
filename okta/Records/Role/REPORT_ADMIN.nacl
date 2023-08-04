@@ -1,0 +1,5 @@
+okta.Role Report_Administrator@s {
+  
+  label = "Report Administrator"
+  type = "REPORT_ADMIN"
+}

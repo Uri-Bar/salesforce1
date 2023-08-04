@@ -1,0 +1,31 @@
+type zuora_billing.extendedaccount {
+  annotations {
+    string metadataType {
+    }
+    string label {
+    }
+    string description {
+    }
+    hidden_string id {
+    }
+    string objectType {
+    }
+  }
+  metadataType = "StandardObject"
+  objectType = "extendedaccount"
+  _generated_dependencies = [
+    {
+      reference = zuora_billing.contact
+    },
+    {
+      reference = zuora_billing.extendedaccount
+    },
+    {
+      reference = zuora_billing.extendeduser
+    },
+    {
+      reference = zuora_billing.paymentmethod
+    },
+  ]
+  label = "ExtendedAccount"
+}

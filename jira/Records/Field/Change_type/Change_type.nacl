@@ -1,0 +1,9 @@
+jira.Field Change_type__c@suu {
+  name = "Change type"
+  description = ""
+  searcherKey = "com.atlassian.jira.plugin.system.customfieldtypes:multiselectsearcher"
+  type = "com.atlassian.jira.plugin.system.customfieldtypes:select"
+  contexts = [
+    jira.CustomFieldContext.instance.Change_type__c_suu_Default_Configuration_Scheme_for_Change_type@uuumusssss,
+  ]
+}

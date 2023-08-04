@@ -1,0 +1,16 @@
+zendesk.macro Take_it_@sl {
+  title = "Take it!"
+  active = true
+  actions = [
+    {
+      field = "group_id"
+      value = zendesk.group.instance.Support
+    },
+    {
+      field = "assignee_id"
+      value = "current_user"
+    },
+  ]
+  raw_title = "Take it!"
+  default = false
+}

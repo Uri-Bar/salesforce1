@@ -1,0 +1,15 @@
+netsuite.account Postage___Delivery@ses {
+  acctType = "_expense"
+  acctName = "Postage & Delivery"
+  includeChildren = true
+  generalRate = "_average"
+  cashFlowRate = "_average"
+  isInactive = false
+  inventory = false
+  subsidiaryList = [
+    netsuite.subsidiary.instance.Parent_Company@s,
+  ]
+  revalue = false
+  identifier = "Postage & Delivery"
+  custom_custrecord_acct_special = false
+}

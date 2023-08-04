@@ -1,0 +1,11 @@
+zendesk.section_translation Announcements_General_AnotherSaltoBrand__AnotherSaltoBrand_en_us_ub@uuuuuum {
+  locale = zendesk.guide_language_settings.instance.AnotherSaltoBrand_en_us@ub
+  title = "Announcements"
+  outdated = false
+  draft = false
+  hidden = false
+  brand = zendesk.brand.instance.AnotherSaltoBrand
+  _parent = [
+    zendesk.section.instance.Announcements_General_AnotherSaltoBrand,
+  ]
+}

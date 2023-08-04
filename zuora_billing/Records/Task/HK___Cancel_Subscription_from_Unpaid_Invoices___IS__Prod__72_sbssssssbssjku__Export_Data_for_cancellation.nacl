@@ -1,0 +1,268 @@
+zuora_billing.Task HK___Cancel_Subscription_from_Unpaid_Invoices___IS__Prod__72_sbssssssbssjku__Export_Data_for_cancellation@uuuuuuuuuuuuuumuusss {
+  name = "Export Data for cancellation"
+  parameters = {
+    delay = "0"
+    fields = {
+      Account = {
+        Id = "true"
+      }
+      Invoice = {
+        Id = "true"
+        TargetDate = "true"
+      }
+      RatePlan = {
+        Id = "true"
+      }
+      InvoiceItem = {
+        ServiceStartDate = "true"
+      }
+      Subscription = {
+        Id = "true"
+        Name = "true"
+        Notes = "true"
+        Version = "true"
+      }
+      RatePlanCharge = {
+        ChargeType = "true"
+        ChargeModel = "true"
+        BillingTiming = "true"
+        ChargedThroughDate = "true"
+        ProcessedThroughDate = "true"
+      }
+    }
+    encrypt = "false"
+    where_clause = '''
+InvoiceItem.ChargeAmount > 0
+AND Account.Balance > 0
+AND Account.RetryStatus__c = 'Failure'
+AND Invoice.Status = 'Posted'
+AND Invoice.Balance > 0
+AND Invoice.DueDate < 'today - 7 days' 
+AND Invoice.NonPaymentWFDate__c is null
+AND RatePlanCharge.ChargeType != 'OneTime'
+AND RatePlanCharge.IsLastSegment=true
+AND Subscription.Status = 'Active'
+AND DefaultPaymentMethod.Type != 'Other'
+AND Account.Batch != 'Batch31'
+AND Account.Batch != 'Batch32'
+AND Account.Batch != 'Batch33'
+AND Account.Batch != 'Batch34'
+AND Account.Batch != 'Batch35'
+AND Account.Batch != 'Batch36'
+AND Account.Batch != 'Batch37'
+AND Account.Batch != 'Batch38'
+AND Account.Batch != 'Batch39'
+AND Account.Batch != 'Batch40'
+AND Account.Batch != 'Batch41'
+AND Account.Batch != 'Batch42'
+AND Account.Batch != 'Batch43'
+AND Account.Batch != 'Batch44'
+AND Account.Batch != 'Batch45'
+AND Account.Batch != 'Batch46'
+AND Account.Batch != 'Batch47'
+AND Account.Batch != 'Batch48'
+AND Account.Batch != 'Batch49'
+AND Account.Batch != 'Batch50'
+ORDER BY Invoice.DueDate
+Limit 500
+'''
+    strict_variables = "true"
+    zero_result_stop = "true"
+  }
+  action_type = "Export"
+  object = zuora_billing.invoiceitem
+  call_type = "SOAP"
+  concurrent_limit = 5
+  additionalProperties = {
+    css = {
+      top = "40px"
+      left = "360px"
+    }
+    priority = "Medium"
+    
+  }
+  _parent = [
+    zuora_billing.WorkflowExport.instance.HK___Cancel_Subscription_from_Unpaid_Invoices___IS__Prod__72@sbssssssbssjku,
+  ]
+  _generated_dependencies = [
+    {
+      reference = zuora_billing.account.field.Balance
+      occurrences = [
+        {
+          location = zuora_billing.Task.instance.HK___Cancel_Subscription_from_Unpaid_Invoices___IS__Prod__72_sbssssssbssjku__Export_Data_for_cancellation@uuuuuuuuuuuuuumuusss.parameters.where_clause
+        },
+      ]
+    },
+    {
+      reference = zuora_billing.account.field.Batch
+      occurrences = [
+        {
+          location = zuora_billing.Task.instance.HK___Cancel_Subscription_from_Unpaid_Invoices___IS__Prod__72_sbssssssbssjku__Export_Data_for_cancellation@uuuuuuuuuuuuuumuusss.parameters.where_clause
+        },
+      ]
+    },
+    {
+      reference = zuora_billing.account.field.Id
+      occurrences = [
+        {
+          location = zuora_billing.Task.instance.HK___Cancel_Subscription_from_Unpaid_Invoices___IS__Prod__72_sbssssssbssjku__Export_Data_for_cancellation@uuuuuuuuuuuuuumuusss.parameters.fields.Account.Id
+        },
+      ]
+    },
+    {
+      reference = zuora_billing.invoice.field.Balance
+      occurrences = [
+        {
+          location = zuora_billing.Task.instance.HK___Cancel_Subscription_from_Unpaid_Invoices___IS__Prod__72_sbssssssbssjku__Export_Data_for_cancellation@uuuuuuuuuuuuuumuusss.parameters.where_clause
+        },
+      ]
+    },
+    {
+      reference = zuora_billing.invoice.field.DueDate
+      occurrences = [
+        {
+          location = zuora_billing.Task.instance.HK___Cancel_Subscription_from_Unpaid_Invoices___IS__Prod__72_sbssssssbssjku__Export_Data_for_cancellation@uuuuuuuuuuuuuumuusss.parameters.where_clause
+        },
+      ]
+    },
+    {
+      reference = zuora_billing.invoice.field.Id
+      occurrences = [
+        {
+          location = zuora_billing.Task.instance.HK___Cancel_Subscription_from_Unpaid_Invoices___IS__Prod__72_sbssssssbssjku__Export_Data_for_cancellation@uuuuuuuuuuuuuumuusss.parameters.fields.Invoice.Id
+        },
+      ]
+    },
+    {
+      reference = zuora_billing.invoice.field.Status
+      occurrences = [
+        {
+          location = zuora_billing.Task.instance.HK___Cancel_Subscription_from_Unpaid_Invoices___IS__Prod__72_sbssssssbssjku__Export_Data_for_cancellation@uuuuuuuuuuuuuumuusss.parameters.where_clause
+        },
+      ]
+    },
+    {
+      reference = zuora_billing.invoice.field.TargetDate
+      occurrences = [
+        {
+          location = zuora_billing.Task.instance.HK___Cancel_Subscription_from_Unpaid_Invoices___IS__Prod__72_sbssssssbssjku__Export_Data_for_cancellation@uuuuuuuuuuuuuumuusss.parameters.fields.Invoice.TargetDate
+        },
+      ]
+    },
+    {
+      reference = zuora_billing.invoiceitem.field.ChargeAmount
+      occurrences = [
+        {
+          location = zuora_billing.Task.instance.HK___Cancel_Subscription_from_Unpaid_Invoices___IS__Prod__72_sbssssssbssjku__Export_Data_for_cancellation@uuuuuuuuuuuuuumuusss.parameters.where_clause
+        },
+      ]
+    },
+    {
+      reference = zuora_billing.invoiceitem.field.ServiceStartDate
+      occurrences = [
+        {
+          location = zuora_billing.Task.instance.HK___Cancel_Subscription_from_Unpaid_Invoices___IS__Prod__72_sbssssssbssjku__Export_Data_for_cancellation@uuuuuuuuuuuuuumuusss.parameters.fields.InvoiceItem.ServiceStartDate
+        },
+      ]
+    },
+    {
+      reference = zuora_billing.rateplan.field.Id
+      occurrences = [
+        {
+          location = zuora_billing.Task.instance.HK___Cancel_Subscription_from_Unpaid_Invoices___IS__Prod__72_sbssssssbssjku__Export_Data_for_cancellation@uuuuuuuuuuuuuumuusss.parameters.fields.RatePlan.Id
+        },
+      ]
+    },
+    {
+      reference = zuora_billing.rateplancharge.field.BillingTiming
+      occurrences = [
+        {
+          location = zuora_billing.Task.instance.HK___Cancel_Subscription_from_Unpaid_Invoices___IS__Prod__72_sbssssssbssjku__Export_Data_for_cancellation@uuuuuuuuuuuuuumuusss.parameters.fields.RatePlanCharge.BillingTiming
+        },
+      ]
+    },
+    {
+      reference = zuora_billing.rateplancharge.field.ChargeModel
+      occurrences = [
+        {
+          location = zuora_billing.Task.instance.HK___Cancel_Subscription_from_Unpaid_Invoices___IS__Prod__72_sbssssssbssjku__Export_Data_for_cancellation@uuuuuuuuuuuuuumuusss.parameters.fields.RatePlanCharge.ChargeModel
+        },
+      ]
+    },
+    {
+      reference = zuora_billing.rateplancharge.field.ChargeType
+      occurrences = [
+        {
+          location = zuora_billing.Task.instance.HK___Cancel_Subscription_from_Unpaid_Invoices___IS__Prod__72_sbssssssbssjku__Export_Data_for_cancellation@uuuuuuuuuuuuuumuusss.parameters.fields.RatePlanCharge.ChargeType
+        },
+        {
+          location = zuora_billing.Task.instance.HK___Cancel_Subscription_from_Unpaid_Invoices___IS__Prod__72_sbssssssbssjku__Export_Data_for_cancellation@uuuuuuuuuuuuuumuusss.parameters.where_clause
+        },
+      ]
+    },
+    {
+      reference = zuora_billing.rateplancharge.field.ChargedThroughDate
+      occurrences = [
+        {
+          location = zuora_billing.Task.instance.HK___Cancel_Subscription_from_Unpaid_Invoices___IS__Prod__72_sbssssssbssjku__Export_Data_for_cancellation@uuuuuuuuuuuuuumuusss.parameters.fields.RatePlanCharge.ChargedThroughDate
+        },
+      ]
+    },
+    {
+      reference = zuora_billing.rateplancharge.field.IsLastSegment
+      occurrences = [
+        {
+          location = zuora_billing.Task.instance.HK___Cancel_Subscription_from_Unpaid_Invoices___IS__Prod__72_sbssssssbssjku__Export_Data_for_cancellation@uuuuuuuuuuuuuumuusss.parameters.where_clause
+        },
+      ]
+    },
+    {
+      reference = zuora_billing.rateplancharge.field.ProcessedThroughDate
+      occurrences = [
+        {
+          location = zuora_billing.Task.instance.HK___Cancel_Subscription_from_Unpaid_Invoices___IS__Prod__72_sbssssssbssjku__Export_Data_for_cancellation@uuuuuuuuuuuuuumuusss.parameters.fields.RatePlanCharge.ProcessedThroughDate
+        },
+      ]
+    },
+    {
+      reference = zuora_billing.subscription.field.Id
+      occurrences = [
+        {
+          location = zuora_billing.Task.instance.HK___Cancel_Subscription_from_Unpaid_Invoices___IS__Prod__72_sbssssssbssjku__Export_Data_for_cancellation@uuuuuuuuuuuuuumuusss.parameters.fields.Subscription.Id
+        },
+      ]
+    },
+    {
+      reference = zuora_billing.subscription.field.Name
+      occurrences = [
+        {
+          location = zuora_billing.Task.instance.HK___Cancel_Subscription_from_Unpaid_Invoices___IS__Prod__72_sbssssssbssjku__Export_Data_for_cancellation@uuuuuuuuuuuuuumuusss.parameters.fields.Subscription.Name
+        },
+      ]
+    },
+    {
+      reference = zuora_billing.subscription.field.Notes
+      occurrences = [
+        {
+          location = zuora_billing.Task.instance.HK___Cancel_Subscription_from_Unpaid_Invoices___IS__Prod__72_sbssssssbssjku__Export_Data_for_cancellation@uuuuuuuuuuuuuumuusss.parameters.fields.Subscription.Notes
+        },
+      ]
+    },
+    {
+      reference = zuora_billing.subscription.field.Status
+      occurrences = [
+        {
+          location = zuora_billing.Task.instance.HK___Cancel_Subscription_from_Unpaid_Invoices___IS__Prod__72_sbssssssbssjku__Export_Data_for_cancellation@uuuuuuuuuuuuuumuusss.parameters.where_clause
+        },
+      ]
+    },
+    {
+      reference = zuora_billing.subscription.field.Version
+      occurrences = [
+        {
+          location = zuora_billing.Task.instance.HK___Cancel_Subscription_from_Unpaid_Invoices___IS__Prod__72_sbssssssbssjku__Export_Data_for_cancellation@uuuuuuuuuuuuuumuusss.parameters.fields.Subscription.Version
+        },
+      ]
+    },
+  ]
+}

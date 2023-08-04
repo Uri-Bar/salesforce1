@@ -1,0 +1,6 @@
+zuora_billing.Settings_ReasonCode InvoiceItemAdjustment_Incorrect_Charge@us {
+  isActive = true
+  reasonCodeName = "Incorrect Charge"
+  reasonCodeTransactionType = "InvoiceItemAdjustment"
+  isDefault = false
+}

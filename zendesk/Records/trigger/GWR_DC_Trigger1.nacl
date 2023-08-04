@@ -1,0 +1,36 @@
+zendesk.trigger GWR_DC_Trigger1@s {
+  title = "GWR DC Trigger1"
+  active = true
+  default = false
+  actions = [
+    {
+      field = "set_tags"
+      value = [
+        zendesk.tag.instance.gwrdc1,
+      ]
+    },
+    {
+      field = "notification_webhook"
+      value = [
+        zendesk.webhook.instance.missing_01GSF1JVANP0A4AVZS67HG5ZWB,
+        '''
+{
+ {{${ zendesk.dynamic_content_item.instance.GWR_webhook_content@s }}}
+} 
+''',
+      ]
+    },
+  ]
+  conditions = {
+    all = [
+      {
+        field = "assignee_id"
+        operator = "is"
+        value = "geoffrey.routledge@salto.io"
+      },
+    ]
+  }
+  description = "Trigger with dynamic content"
+  raw_title = "GWR DC Trigger1"
+  category_id = zendesk.trigger_category.instance.Notifications
+}

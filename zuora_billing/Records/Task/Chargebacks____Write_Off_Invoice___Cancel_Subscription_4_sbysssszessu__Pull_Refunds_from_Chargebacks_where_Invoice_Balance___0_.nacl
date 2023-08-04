@@ -1,0 +1,98 @@
+zuora_billing.Task Chargebacks____Write_Off_Invoice___Cancel_Subscription_4_sbysssszessu__Pull_Refunds_from_Chargebacks_where_Invoice_Balance___0_@uuuuuuuuuuumuusssssssyss {
+  name = "Pull Refunds from Chargebacks where Invoice Balance > 0 "
+  parameters = {
+    fields = {
+      Refund = {
+        Id = "true"
+        ReasonCode = "true"
+        RefundDate = "true"
+      }
+      Invoice = {
+        Id = "true"
+        Balance = "true"
+        InvoiceDate = "true"
+        InvoiceNumber = "true"
+      }
+    }
+    where_clause = "Refund.ReasonCode = 'Chargeback' and Invoice.Balance > 0"
+  }
+  action_type = "Export"
+  object = zuora_billing.refundinvoicepayment
+  call_type = "SOAP"
+  concurrent_limit = 4
+  additionalProperties = {
+    css = {
+      top = "39.9844px"
+      left = "339.984px"
+    }
+    priority = "Medium"
+    
+  }
+  _parent = [
+    zuora_billing.WorkflowExport.instance.Chargebacks____Write_Off_Invoice___Cancel_Subscription_4@sbysssszessu,
+  ]
+  _generated_dependencies = [
+    {
+      reference = zuora_billing.invoice.field.Balance
+      occurrences = [
+        {
+          location = zuora_billing.Task.instance.Chargebacks____Write_Off_Invoice___Cancel_Subscription_4_sbysssszessu__Pull_Refunds_from_Chargebacks_where_Invoice_Balance___0_@uuuuuuuuuuumuusssssssyss.parameters.fields.Invoice.Balance
+        },
+        {
+          location = zuora_billing.Task.instance.Chargebacks____Write_Off_Invoice___Cancel_Subscription_4_sbysssszessu__Pull_Refunds_from_Chargebacks_where_Invoice_Balance___0_@uuuuuuuuuuumuusssssssyss.parameters.where_clause
+        },
+      ]
+    },
+    {
+      reference = zuora_billing.invoice.field.Id
+      occurrences = [
+        {
+          location = zuora_billing.Task.instance.Chargebacks____Write_Off_Invoice___Cancel_Subscription_4_sbysssszessu__Pull_Refunds_from_Chargebacks_where_Invoice_Balance___0_@uuuuuuuuuuumuusssssssyss.parameters.fields.Invoice.Id
+        },
+      ]
+    },
+    {
+      reference = zuora_billing.invoice.field.InvoiceDate
+      occurrences = [
+        {
+          location = zuora_billing.Task.instance.Chargebacks____Write_Off_Invoice___Cancel_Subscription_4_sbysssszessu__Pull_Refunds_from_Chargebacks_where_Invoice_Balance___0_@uuuuuuuuuuumuusssssssyss.parameters.fields.Invoice.InvoiceDate
+        },
+      ]
+    },
+    {
+      reference = zuora_billing.invoice.field.InvoiceNumber
+      occurrences = [
+        {
+          location = zuora_billing.Task.instance.Chargebacks____Write_Off_Invoice___Cancel_Subscription_4_sbysssszessu__Pull_Refunds_from_Chargebacks_where_Invoice_Balance___0_@uuuuuuuuuuumuusssssssyss.parameters.fields.Invoice.InvoiceNumber
+        },
+      ]
+    },
+    {
+      reference = zuora_billing.refund.field.Id
+      occurrences = [
+        {
+          location = zuora_billing.Task.instance.Chargebacks____Write_Off_Invoice___Cancel_Subscription_4_sbysssszessu__Pull_Refunds_from_Chargebacks_where_Invoice_Balance___0_@uuuuuuuuuuumuusssssssyss.parameters.fields.Refund.Id
+        },
+      ]
+    },
+    {
+      reference = zuora_billing.refund.field.ReasonCode
+      occurrences = [
+        {
+          location = zuora_billing.Task.instance.Chargebacks____Write_Off_Invoice___Cancel_Subscription_4_sbysssszessu__Pull_Refunds_from_Chargebacks_where_Invoice_Balance___0_@uuuuuuuuuuumuusssssssyss.parameters.fields.Refund.ReasonCode
+        },
+        {
+          location = zuora_billing.Task.instance.Chargebacks____Write_Off_Invoice___Cancel_Subscription_4_sbysssszessu__Pull_Refunds_from_Chargebacks_where_Invoice_Balance___0_@uuuuuuuuuuumuusssssssyss.parameters.where_clause
+        },
+      ]
+    },
+    {
+      reference = zuora_billing.refund.field.RefundDate
+      occurrences = [
+        {
+          location = zuora_billing.Task.instance.Chargebacks____Write_Off_Invoice___Cancel_Subscription_4_sbysssszessu__Pull_Refunds_from_Chargebacks_where_Invoice_Balance___0_@uuuuuuuuuuumuusssssssyss.parameters.fields.Refund.RefundDate
+        },
+      ]
+    },
+  ]
+}

@@ -1,0 +1,39 @@
+zuora_billing.Task AllBrighter_Bundle_Set_Up_Workflow_67_ssssu__Update_Account_with_Shipping_Table_Name@uuuuumuusssss {
+  name = "Update Account with Shipping Table Name"
+  parameters = {
+    fields = {
+      Account = {
+        ShipOrder__c = "{{Data.Workflow.ship_zip}}-{{WorkflowInstance.id}}-1"
+        ShipTable__c = "shippingtable_{{WorkflowInstance.id}}"
+      }
+    }
+    strict_variables = "true"
+  }
+  action_type = "Update"
+  object = zuora_billing.account
+  object_id = "{{Data.Subscription[0].AccountId}}"
+  call_type = "SOAP"
+  task_id = 68
+  concurrent_limit = 9999999
+  additionalProperties = {
+    css = {
+      top = "-10px"
+      left = "270px"
+    }
+    priority = "Medium"
+    
+  }
+  _parent = [
+    zuora_billing.WorkflowExport.instance.AllBrighter_Bundle_Set_Up_Workflow_67@ssssu,
+  ]
+  _generated_dependencies = [
+    {
+      reference = zuora_billing.Workflow.instance.AllBrighter_Bundle_Set_Up_Workflow_67_ssssu__AllBrighter_Bundle_Set_Up_Workflow@uuuuumuussss.additionalProperties.parameters.fields
+      occurrences = [
+        {
+          location = zuora_billing.Task.instance.AllBrighter_Bundle_Set_Up_Workflow_67_ssssu__Update_Account_with_Shipping_Table_Name@uuuuumuusssss.parameters.fields.Account.ShipOrder__c
+        },
+      ]
+    },
+  ]
+}

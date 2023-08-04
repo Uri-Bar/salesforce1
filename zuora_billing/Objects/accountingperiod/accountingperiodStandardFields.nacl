@@ -1,0 +1,102 @@
+type zuora_billing.accountingperiod {
+  string Id {
+    type = "string"
+    format = "uuid"
+    required = false
+    filterable = false
+    label = "Id"
+  }
+  string CreatedById {
+    type = "string"
+    format = "uuid"
+    required = false
+    filterable = false
+    referenceTo = [
+      zuora_billing.user.field.Id,
+    ]
+    cardinality = "manyToOne"
+    recordConstraints = {
+      create = {
+        enforceValidMapping = true
+      }
+    }
+    label = "CreatedById"
+  }
+  string CreatedDate {
+    type = "string"
+    format = "date-time"
+    required = false
+    filterable = false
+    label = "CreatedDate"
+  }
+  string UpdatedById {
+    type = "string"
+    format = "uuid"
+    required = false
+    filterable = false
+    referenceTo = [
+      zuora_billing.user.field.Id,
+    ]
+    cardinality = "manyToOne"
+    recordConstraints = {
+      create = {
+        enforceValidMapping = true
+      }
+    }
+    label = "UpdatedById"
+  }
+  string UpdatedDate {
+    type = "string"
+    format = "date-time"
+    required = false
+    filterable = false
+    label = "UpdatedDate"
+  }
+  string EndDate {
+    type = "string"
+    format = "date"
+    required = false
+    filterable = false
+    label = "EndDate"
+  }
+  number FiscalQuarter {
+    type = "integer"
+    required = false
+    filterable = false
+    label = "FiscalQuarter"
+  }
+  number FiscalYear {
+    type = "integer"
+    required = false
+    filterable = false
+    label = "FiscalYear"
+  }
+  string Name {
+    type = "string"
+    maxLength = 512
+    required = false
+    filterable = false
+    label = "Name"
+  }
+  string Notes {
+    type = "string"
+    maxLength = 512
+    required = false
+    filterable = false
+    label = "Notes"
+  }
+  string StartDate {
+    type = "string"
+    format = "date"
+    required = false
+    filterable = false
+    label = "StartDate"
+  }
+  string Status {
+    type = "string"
+    maxLength = 512
+    required = false
+    filterable = false
+    label = "Status"
+  }
+}

@@ -1,0 +1,16 @@
+salesforce.ListView Contact_MyContacts {
+  fullName = "Contact.MyContacts"
+  columns = [
+    "FULL_NAME",
+    "ACCOUNT.NAME",
+    "CONTACT.TITLE",
+    "CONTACT.PHONE1",
+    "CONTACT.EMAIL",
+    "CORE.USERS.ALIAS",
+  ]
+  filterScope = "Mine"
+  label = "My Contacts"
+  _parent = [
+    salesforce.Contact,
+  ]
+}

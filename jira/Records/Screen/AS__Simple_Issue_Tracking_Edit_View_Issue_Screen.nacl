@@ -1,0 +1,24 @@
+jira.Screen AS__Simple_Issue_Tracking_Edit_View_Issue_Screen@fssssdss {
+  name = "AS: Simple Issue Tracking Edit/View Issue Screen"
+  description = ""
+  tabs = {
+    Field_Tab@s = {
+      name = "Field Tab"
+      fields = [
+        jira.Field.instance.Summary,
+        jira.Field.instance.Issue_Type@s,
+        jira.Field.instance.Components,
+        jira.Field.instance.Security_Level@s,
+        jira.Field.instance.Attachment,
+        jira.Field.instance.Due_date@s,
+        jira.Field.instance.Description,
+        jira.Field.instance.Reporter,
+        jira.Field.instance.Assignee,
+        jira.Field.instance.Priority,
+        jira.Field.instance.Labels,
+        jira.Field.instance.Time_tracking@s,
+      ]
+      position = 0
+    }
+  }
+}

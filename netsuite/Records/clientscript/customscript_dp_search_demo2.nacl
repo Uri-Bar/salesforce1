@@ -1,0 +1,30 @@
+netsuite.clientscript customscript_dp_search_demo2 {
+  scriptid = "customscript_dp_search_demo2"
+  isinactive = false
+  name = "DP Search Demo 2"
+  notifyadmins = false
+  notifyowner = true
+  notifyuser = false
+  scriptfile = netsuite.file.instance.SuiteScripts_lib_js@dv.path
+  scriptcustomfields = {
+    scriptcustomfield = {
+      custscript_dp_savedsearch_param = {
+        scriptid = "custscript_dp_savedsearch_param"
+        accesslevel = "2"
+        applyformatting = false
+        checkspelling = false
+        defaultchecked = false
+        displaytype = "NORMAL"
+        fieldtype = "SELECT"
+        isformula = false
+        ismandatory = false
+        label = "dp_savedsearch_param"
+        onparentdelete = "NO_ACTION"
+        searchlevel = "2"
+        selectrecordtype = "-119"
+        storevalue = true
+        index = 0
+      }
+    }
+  }
+}

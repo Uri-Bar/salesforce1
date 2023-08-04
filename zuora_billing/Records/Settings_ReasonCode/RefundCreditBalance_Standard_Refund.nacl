@@ -1,0 +1,6 @@
+zuora_billing.Settings_ReasonCode RefundCreditBalance_Standard_Refund@us {
+  isActive = true
+  reasonCodeName = "Standard Refund"
+  reasonCodeTransactionType = "RefundCreditBalance"
+  isDefault = true
+}

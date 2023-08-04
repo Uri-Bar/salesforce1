@@ -1,0 +1,70 @@
+okta.AuthorizationServer default {
+  
+  name = "default"
+  description = "Default Authorization Server for your Applications"
+  audiences = [
+    "api://default",
+  ]
+  
+  issuerMode = "ORG_URL"
+  status = "ACTIVE"
+  
+  
+  scopes = [
+    okta.OAuth2Scope.instance.default__okta_myAccount_appAuthenticator_maintenance_manage@uuvvvv,
+    okta.OAuth2Scope.instance.default__okta_myAccount_appAuthenticator_maintenance_read@uuvvvv,
+    okta.OAuth2Scope.instance.default__okta_myAccount_appAuthenticator_manage@uuvvv,
+    okta.OAuth2Scope.instance.default__okta_myAccount_appAuthenticator_read@uuvvv,
+    okta.OAuth2Scope.instance.default__okta_myAccount_customAuthenticator_manage@uuvvv,
+    okta.OAuth2Scope.instance.default__okta_myAccount_customAuthenticator_read@uuvvv,
+    okta.OAuth2Scope.instance.default__okta_myAccount_email_manage@uuvvv,
+    okta.OAuth2Scope.instance.default__okta_myAccount_email_read@uuvvv,
+    okta.OAuth2Scope.instance.default__okta_myAccount_manage@uuvv,
+    okta.OAuth2Scope.instance.default__okta_myAccount_phone_manage@uuvvv,
+    okta.OAuth2Scope.instance.default__okta_myAccount_phone_read@uuvvv,
+    okta.OAuth2Scope.instance.default__okta_myAccount_profile_manage@uuvvv,
+    okta.OAuth2Scope.instance.default__okta_myAccount_profile_read@uuvvv,
+    okta.OAuth2Scope.instance.default__okta_myAccount_read@uuvv,
+    okta.OAuth2Scope.instance.default__openid,
+    okta.OAuth2Scope.instance.default__profile,
+    okta.OAuth2Scope.instance.default__email,
+    okta.OAuth2Scope.instance.default__address,
+    okta.OAuth2Scope.instance.default__phone,
+    okta.OAuth2Scope.instance.default__offline_access,
+    okta.OAuth2Scope.instance.default__device_sso,
+  ]
+  claims = [
+    okta.OAuth2Claim.instance.default__sub,
+    okta.OAuth2Claim.instance.default__address,
+    okta.OAuth2Claim.instance.default__birthdate,
+    okta.OAuth2Claim.instance.default__email,
+    okta.OAuth2Claim.instance.default__email_verified,
+    okta.OAuth2Claim.instance.default__family_name,
+    okta.OAuth2Claim.instance.default__gender,
+    okta.OAuth2Claim.instance.default__given_name,
+    okta.OAuth2Claim.instance.default__locale,
+    okta.OAuth2Claim.instance.default__middle_name,
+    okta.OAuth2Claim.instance.default__name,
+    okta.OAuth2Claim.instance.default__nickname,
+    okta.OAuth2Claim.instance.default__phone_number,
+    okta.OAuth2Claim.instance.default__picture,
+    okta.OAuth2Claim.instance.default__preferred_username,
+    okta.OAuth2Claim.instance.default__profile,
+    okta.OAuth2Claim.instance.default__updated_at,
+    okta.OAuth2Claim.instance.default__website,
+    okta.OAuth2Claim.instance.default__zoneinfo,
+  ]
+  policies = [
+    okta.AuthorizationServerPolicy.instance.default__Default_Policy@uus,
+    okta.AuthorizationServerPolicyRule.instance.default__Default_Policy_uus__Default_Policy_Rule@uuumuuss,
+  ]
+  
+  
+  
+  default = true
+  credentials = {
+    signing = {
+      rotationMode = "AUTO"
+    }
+  }
+}

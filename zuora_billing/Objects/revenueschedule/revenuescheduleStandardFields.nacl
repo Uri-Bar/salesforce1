@@ -1,0 +1,178 @@
+type zuora_billing.revenueschedule {
+  string Id {
+    type = "string"
+    format = "uuid"
+    required = false
+    filterable = false
+    label = "Id"
+  }
+  string CreatedById {
+    type = "string"
+    format = "uuid"
+    required = false
+    filterable = false
+    referenceTo = [
+      zuora_billing.user.field.Id,
+    ]
+    cardinality = "manyToOne"
+    recordConstraints = {
+      create = {
+        enforceValidMapping = true
+      }
+    }
+    label = "CreatedById"
+  }
+  string CreatedDate {
+    type = "string"
+    format = "date-time"
+    required = false
+    filterable = false
+    label = "CreatedDate"
+  }
+  string UpdatedById {
+    type = "string"
+    format = "uuid"
+    required = false
+    filterable = false
+    referenceTo = [
+      zuora_billing.user.field.Id,
+    ]
+    cardinality = "manyToOne"
+    recordConstraints = {
+      create = {
+        enforceValidMapping = true
+      }
+    }
+    label = "UpdatedById"
+  }
+  string UpdatedDate {
+    type = "string"
+    format = "date-time"
+    required = false
+    filterable = false
+    label = "UpdatedDate"
+  }
+  boolean deleted {
+    type = "boolean"
+    required = false
+    filterable = false
+    label = "deleted"
+  }
+  number Amount {
+    type = "number"
+    required = false
+    filterable = false
+    label = "Amount"
+  }
+  string BillingTransactionId {
+    type = "string"
+    format = "uuid"
+    required = false
+    filterable = false
+    label = "BillingTransactionId"
+  }
+  string Currency {
+    type = "string"
+    maxLength = 512
+    required = false
+    filterable = false
+    label = "Currency"
+  }
+  string Description {
+    type = "string"
+    maxLength = 512
+    required = false
+    filterable = false
+    label = "Description"
+  }
+  string ExchangeRateDate {
+    type = "string"
+    format = "date"
+    required = false
+    filterable = false
+    label = "ExchangeRateDate"
+  }
+  string FinanceTransactionType {
+    type = "string"
+    maxLength = 512
+    required = false
+    filterable = false
+    label = "FinanceTransactionType"
+  }
+  string Number {
+    type = "string"
+    maxLength = 512
+    required = false
+    filterable = false
+    label = "Number"
+  }
+  string RecognitionPeriodEnd {
+    type = "string"
+    format = "date"
+    required = false
+    filterable = false
+    label = "RecognitionPeriodEnd"
+  }
+  string RecognitionPeriodStart {
+    type = "string"
+    format = "date"
+    required = false
+    filterable = false
+    label = "RecognitionPeriodStart"
+  }
+  string ReferenceId {
+    type = "string"
+    maxLength = 512
+    required = false
+    filterable = false
+    label = "ReferenceId"
+  }
+  string RevenueScheduleDate {
+    type = "string"
+    format = "date"
+    required = false
+    filterable = false
+    label = "RevenueScheduleDate"
+  }
+  string TransactionDate {
+    type = "string"
+    format = "date"
+    required = false
+    filterable = false
+    label = "TransactionDate"
+  }
+  string TransactionNumber {
+    type = "string"
+    maxLength = 512
+    required = false
+    filterable = false
+    label = "TransactionNumber"
+  }
+  number UndistributedAmount {
+    type = "number"
+    required = false
+    filterable = false
+    label = "UndistributedAmount"
+  }
+  string AccountId {
+    type = "string"
+    format = "uuid"
+    required = false
+    filterable = false
+    label = "AccountId"
+  }
+  string Rule {
+    type = "string"
+    maxLength = 512
+    required = false
+    filterable = false
+    label = "Rule"
+  }
+  string RevenueChargeSummaryId {
+    type = "string"
+    format = "uuid"
+    required = false
+    filterable = false
+    label = "RevenueChargeSummaryId"
+  }
+}

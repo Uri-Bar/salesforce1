@@ -1,0 +1,20 @@
+zuora_billing.Settings_Notification AQUA_Data_Export_Completion_Completed_Status_8ac6819b7883361b017893726f173fb1@sssusu {
+  profileId = zuora_billing.Settings_CommunicationProfile.instance.Default_Profile@s
+  eventName = "AQUA Data Export Completion"
+  name = "Completed Status"
+  description = "AQUA Data Export is completed."
+  active = false
+  hidden = false
+  param1 = ""
+  emailOption = false
+  calloutOption = true
+  calloutBaseUrl = "https://salto.io"
+  contentType = "APPLICATION_JSON"
+  httpMethod = "POST"
+  calloutRetriable = false
+  calloutAuth = false
+  calloutOauth2 = false
+  calloutPreemptiveAuth = false
+  useCustomRequestBody = false
+  calloutParams = "{}"
+}

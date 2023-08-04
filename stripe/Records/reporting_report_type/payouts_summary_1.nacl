@@ -1,0 +1,14 @@
+stripe.reporting_report_type payouts_summary_1@v {
+  id = "payouts.summary.1"
+  default_columns = [
+    "reporting_category",
+    "currency",
+    "count",
+    "gross",
+    "fee",
+    "net",
+  ]
+  livemode = false
+  name = "Payouts summary"
+  version = 1
+}

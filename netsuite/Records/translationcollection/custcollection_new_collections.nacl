@@ -1,0 +1,15 @@
+netsuite.translationcollection custcollection_new_collections {
+  scriptid = "custcollection_new_collections"
+  defaultlanguage = "en-US"
+  name = "New Setup"
+  strings = {
+    string = {
+      _custom_tiers = {
+        scriptid = "_custom_tiers"
+        defaulttranslation = "Customer Tiers"
+        description = "wefwefwe"
+        index = 0
+      }
+    }
+  }
+}

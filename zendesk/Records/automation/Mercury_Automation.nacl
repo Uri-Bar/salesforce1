@@ -1,0 +1,31 @@
+zendesk.automation Mercury_Automation@s {
+  title = "Mercury Automation"
+  active = true
+  actions = [
+    {
+      field = zendesk.ticket_field.instance.checkbox_MercuryField
+      value = "true"
+    },
+  ]
+  conditions = {
+    all = [
+      {
+        field = "ticket_form_id"
+        operator = "is"
+        value = zendesk.ticket_form.instance.Mercury_Form@s
+      },
+      {
+        field = "status"
+        operator = "is"
+        value = "new"
+      },
+      {
+        field = "NEW"
+        operator = "is"
+        value = "4"
+      },
+    ]
+  }
+  raw_title = "Mercury Automation"
+  default = false
+}

@@ -1,0 +1,16 @@
+okta.OAuth2Claim default__updated_at {
+  name = "updated_at"
+  status = "ACTIVE"
+  claimType = "IDENTITY"
+  valueType = "SYSTEM"
+  conditions = {
+    scopes = [
+      "profile",
+    ]
+  }
+  system = true
+  alwaysIncludeInToken = false
+  _parent = [
+    okta.AuthorizationServer.instance.default,
+  ]
+}

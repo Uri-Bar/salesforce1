@@ -1,0 +1,24 @@
+zuora_billing.Task C19__Goodwill_Discount_Recall_68_fsssu__JSONize_any_Input_Subs@uuuuumuusss {
+  name = "JSONize any Input Subs"
+  parameters = {
+    action = "to_json"
+    placement = "anyInputSubs"
+    replace_payload = "true"
+    strict_variables = "true"
+  }
+  action_type = "Logic::CSVTranslator"
+  object = "SubsNameFile"
+  call_type = "SOAP"
+  concurrent_limit = 9999999
+  additionalProperties = {
+    css = {
+      top = "40px"
+      left = "1010px"
+    }
+    priority = "Medium"
+    
+  }
+  _parent = [
+    zuora_billing.WorkflowExport.instance.C19__Goodwill_Discount_Recall_68@fsssu,
+  ]
+}

@@ -1,0 +1,31 @@
+zendesk.automation Platinum_Automation@s {
+  title = "Platinum Automation"
+  active = true
+  actions = [
+    {
+      field = zendesk.ticket_field.instance.checkbox_PlatinumField
+      value = "true"
+    },
+  ]
+  conditions = {
+    all = [
+      {
+        field = "ticket_form_id"
+        operator = "is"
+        value = zendesk.ticket_form.instance.Platinum_Form@s
+      },
+      {
+        field = "status"
+        operator = "is"
+        value = "new"
+      },
+      {
+        field = "NEW"
+        operator = "is"
+        value = "4"
+      },
+    ]
+  }
+  raw_title = "Platinum Automation"
+  default = false
+}

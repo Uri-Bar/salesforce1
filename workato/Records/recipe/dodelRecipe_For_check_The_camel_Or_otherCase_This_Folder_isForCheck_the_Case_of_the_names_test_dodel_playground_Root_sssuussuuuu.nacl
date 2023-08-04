@@ -1,0 +1,8 @@
+workato.recipe dodelRecipe_For_check_The_camel_Or_otherCase_This_Folder_isForCheck_the_Case_of_the_names_test_dodel_playground_Root_sssuussuuuu@sssuuuuuuuuuuuuuuum {
+  name = "dodelRecipe For check The_camel_Or_otherCase"
+  description = "When there is a trigger event, do action"
+  folder_id = workato.folder.instance.This_Folder_isForCheck_the_Case_of_the_names_test_dodel_playground_Root@sssuussuuuu
+  running = false
+  version_no = 1
+  code = workato.recipe__code.instance.dodelRecipe_For_check_The_camel_Or_otherCase_This_Folder_isForCheck_the_Case_of_the_names_test_dodel_playground_Root_sssuussuuuu_sssuuuuuuuuuuuuuuum@uuuuuuuuuuuuuuuuuuum
+}

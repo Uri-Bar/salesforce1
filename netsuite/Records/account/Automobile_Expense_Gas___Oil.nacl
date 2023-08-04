@@ -1,0 +1,16 @@
+netsuite.account Automobile_Expense_Gas___Oil@suses {
+  acctType = "_expense"
+  acctName = "Gas & Oil"
+  includeChildren = true
+  generalRate = "_average"
+  parent = netsuite.account.instance.Automobile_Expense@s
+  cashFlowRate = "_average"
+  isInactive = false
+  inventory = false
+  subsidiaryList = [
+    netsuite.subsidiary.instance.Parent_Company@s,
+  ]
+  revalue = false
+  identifier = "Automobile Expense_Gas & Oil"
+  custom_custrecord_acct_special = false
+}

@@ -1,0 +1,14 @@
+stripe.reporting_report_type connected_account_payout_reconciliation_by_id_summary_1@uuuvuvv {
+  id = "connected_account_payout_reconciliation.by_id.summary.1"
+  default_columns = [
+    "reporting_category",
+    "currency",
+    "count",
+    "gross",
+    "fee",
+    "net",
+  ]
+  livemode = false
+  name = "Connected account single payout reconciliation summary"
+  version = 1
+}

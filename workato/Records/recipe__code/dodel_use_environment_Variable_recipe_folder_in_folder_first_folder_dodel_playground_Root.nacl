@@ -1,0 +1,34 @@
+workato.recipe__code dodel_use_environment_Variable_recipe_folder_in_folder_first_folder_dodel_playground_Root {
+  number = 0
+  keyword = "trigger"
+  block = [
+    {
+      number = 1
+      keyword = "if"
+      input = {
+        type = "compound"
+        operand = "and"
+        conditions = [
+          {
+            operand = "contains"
+            lhs = "#{_('data.workato.job_context.account_properties.aaa_bbb', 'account_property', 'aaa bbb')}"
+            rhs = "#{_('data.workato.job_context.account_properties.p123', 'account_property', 'p123')}"
+            uuid = "condition-200e59d4-a245-416b-a0ba-d2720738e375"
+          },
+        ]
+      }
+      block = [
+        {
+          number = 2
+          keyword = "action"
+          uuid = "045a4787-d96b-4e4e-bfbc-374b724e5209"
+        },
+      ]
+      uuid = "0f6aacd0-9239-4f98-a773-a191d7fa7761"
+    },
+  ]
+  uuid = "ab6678c1-0865-4c5a-b283-e9fb7b861655"
+  _parent = [
+    workato.recipe.instance.dodel_use_environment_Variable_recipe_folder_in_folder_first_folder_dodel_playground_Root,
+  ]
+}

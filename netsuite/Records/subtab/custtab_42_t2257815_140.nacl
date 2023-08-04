@@ -1,0 +1,5 @@
+netsuite.subtab custtab_42_t2257815_140 {
+  scriptid = "custtab_42_t2257815_140"
+  tabtype = "ENTITY"
+  title = "test tab"
+}

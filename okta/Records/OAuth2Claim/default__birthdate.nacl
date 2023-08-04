@@ -1,0 +1,16 @@
+okta.OAuth2Claim default__birthdate {
+  name = "birthdate"
+  status = "ACTIVE"
+  claimType = "IDENTITY"
+  valueType = "SYSTEM"
+  conditions = {
+    scopes = [
+      "profile",
+    ]
+  }
+  system = true
+  alwaysIncludeInToken = false
+  _parent = [
+    okta.AuthorizationServer.instance.default,
+  ]
+}

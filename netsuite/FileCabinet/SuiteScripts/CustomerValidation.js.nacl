@@ -1,0 +1,17 @@
+netsuite.file SuiteScripts_CustomerValidation_js@dv {
+  bundleable = false
+  isinactive = false
+  availablewithoutlogin = false
+  generateurltimestamp = false
+  hideinbundle = false
+  path = "/SuiteScripts/CustomerValidation.js"
+  content = file("netsuite/FileCabinet/SuiteScripts/CustomerValidation.js")
+  _parent = [
+    netsuite.folder.instance.SuiteScripts,
+  ]
+  _generated_dependencies = [
+    {
+      reference = netsuite.file.instance.SuiteScripts_lib_js@dv.path
+    },
+  ]
+}

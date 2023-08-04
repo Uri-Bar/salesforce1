@@ -1,0 +1,7 @@
+netsuite.folder SuiteBundles {
+  description = "Folder for Bundled Objects"
+  bundleable = false
+  isinactive = false
+  isprivate = false
+  path = "/SuiteBundles"
+}

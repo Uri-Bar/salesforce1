@@ -1,0 +1,15 @@
+netsuite.account Insurance_Expense@s {
+  acctType = "_expense"
+  acctName = "Insurance Expense"
+  includeChildren = true
+  generalRate = "_average"
+  cashFlowRate = "_average"
+  isInactive = false
+  inventory = false
+  subsidiaryList = [
+    netsuite.subsidiary.instance.Parent_Company@s,
+  ]
+  revalue = false
+  identifier = "Insurance Expense"
+  custom_custrecord_acct_special = false
+}

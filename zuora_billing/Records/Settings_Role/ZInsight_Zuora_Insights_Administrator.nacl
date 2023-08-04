@@ -1,0 +1,20 @@
+zuora_billing.Settings_Role ZInsight_Zuora_Insights_Administrator@uss {
+  name = "Zuora Insights Administrator"
+  category = "ZInsight"
+  attributes = [
+    {
+      name = "manageZInsight"
+      scope = "ZInsightPerm"
+      activationLevel = "User"
+    },
+    {
+      name = "viewZInsight"
+      scope = "ZInsightPerm"
+      activationLevel = "User"
+    },
+  ]
+  
+  description = "Zuora Insights Application Permissions for Administrator"
+  entityId = "8ac6819b-7883-361b-0178-93726ba53eff"
+  custom = false
+}

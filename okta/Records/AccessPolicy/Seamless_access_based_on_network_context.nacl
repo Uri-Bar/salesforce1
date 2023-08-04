@@ -1,0 +1,9 @@
+okta.AccessPolicy Seamless_access_based_on_network_context@s {
+  status = "ACTIVE"
+  name = "Seamless access based on network context"
+  description = "Require 2FA if the user is off network. Configure your network zones to include them here."
+  priority = 1
+  system = false
+  type = "ACCESS_POLICY"
+  
+}

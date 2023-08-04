@@ -1,0 +1,16 @@
+stripe.coupon nm_test_once_81T4XAuf {
+  id = "81T4XAuf"
+  duration = "once"
+  livemode = false
+  max_redemptions = 5
+  metadata = {
+    additionalProperties = {
+      abc = "def"
+    }
+  }
+  name = "nm_test"
+  percent_off = 22
+  redeem_by = 1636495199
+  times_redeemed = 0
+  valid = false
+}

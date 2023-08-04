@@ -1,0 +1,93 @@
+netsuite.workflow customworkflow_dp_demo1 {
+  scriptid = "customworkflow_dp_demo1"
+  initcontexts = "ACTION|BANKCONNECTIVITY|BANKSTATEMENTPARSER|BUNDLEINSTALLATION|CLIENT|CSVIMPORT|CUSTOMGLLINES|CUSTOMMASSUPDATE|RECORDACTION|DATASETBUILDER|DEBUGGER|EMAILCAPTURE|FICONNECTIVITY|FIPARSER|MAPREDUCE|OFFLINECLIENT|OTHER|PAYMENTPOSTBACK|PAYMENTGATEWAY|PLATFORMEXTENSION|PORTLET|PROMOTIONS|CONSOLRATEADJUSTOR|RESTWEBSERVICES|RESTLET|ADVANCEDREVREC|SCHEDULED|SDFINSTALLATION|SHIPPINGPARTNERS|WEBSERVICES|SUITELET|TAXCALCULATION|USEREVENT|USERINTERFACE|WORKBOOKBUILDER|WORKFLOW"
+  initoncreate = true
+  initonvieworupdate = false
+  initsavedsearchcondition = netsuite.savedsearch.instance.customsearch_dp_search_1.scriptid
+  inittriggertype = "AFTERSUBMIT"
+  isinactive = false
+  islogenabled = false
+  keephistory = "ONLYWHENTESTING"
+  name = "DP Workflow"
+  recordtypes = "SALESORDER"
+  releasestatus = "TESTING"
+  runasadmin = false
+  initcondition = {
+    type = "VISUAL_BUILDER"
+  }
+  workflowstates = {
+    workflowstate = {
+      workflowstate434 = {
+        scriptid = "workflowstate434"
+        donotexitworkflow = false
+        name = "Set Eligible Date"
+        positionx = 243
+        positiony = 133
+        workflowactions = {
+          ONENTRY = {
+            triggertype = "ONENTRY"
+            setfieldvalueaction = {
+              
+              
+              
+              workflowaction_dp_action_1 = {
+                scriptid = "workflowaction_dp_action_1"
+                conditionsavedsearch = netsuite.savedsearch.instance.customsearch_dp_search_1.scriptid
+                contexttypes = "ACTION|BANKCONNECTIVITY|BANKSTATEMENTPARSER|BUNDLEINSTALLATION|CLIENT|CSVIMPORT|CUSTOMGLLINES|CUSTOMMASSUPDATE|RECORDACTION|DATASETBUILDER|DEBUGGER|EMAILCAPTURE|FICONNECTIVITY|FIPARSER|MAPREDUCE|OFFLINECLIENT|OTHER|PAYMENTPOSTBACK|PAYMENTGATEWAY|PLATFORMEXTENSION|PORTLET|PROMOTIONS|CONSOLRATEADJUSTOR|RESTWEBSERVICES|RESTLET|ADVANCEDREVREC|SCHEDULED|SDFINSTALLATION|SHIPPINGPARTNERS|WEBSERVICES|SUITELET|TAXCALCULATION|USEREVENT|USERINTERFACE|WORKBOOKBUILDER|WORKFLOW"
+                field = "STDBODYDATEELIGIBLE"
+                isinactive = false
+                schedulemode = "DELAY"
+                valuechecked = false
+                valuedate = "LBW"
+                valuetype = "DATE"
+                initcondition = {
+                  type = "VISUAL_BUILDER"
+                }
+                index = 0
+              }
+              
+            }
+            
+          }
+        }
+        index = 0
+      }
+      workflowstate460 = {
+        scriptid = "workflowstate460"
+        donotexitworkflow = false
+        name = "Update DP Prospect"
+        positionx = 273
+        positiony = 273
+        workflowactions = {
+          ONENTRY = {
+            triggertype = "ONENTRY"
+            createrecordaction = {
+              workflowaction1327 = {
+                scriptid = "workflowaction1327"
+                contexttypes = "ACTION|BANKCONNECTIVITY|BANKSTATEMENTPARSER|BUNDLEINSTALLATION|CLIENT|CSVIMPORT|CUSTOMGLLINES|CUSTOMMASSUPDATE|RECORDACTION|DATASETBUILDER|DEBUGGER|EMAILCAPTURE|FICONNECTIVITY|FIPARSER|MAPREDUCE|OCRPLUGIN|OFFLINECLIENT|OTHER|PAYMENTPOSTBACK|PAYMENTGATEWAY|PLATFORMEXTENSION|PORTLET|PROMOTIONS|CONSOLRATEADJUSTOR|RESTWEBSERVICES|RESTLET|ADVANCEDREVREC|SCHEDULED|SDFINSTALLATION|SHIPPINGPARTNERS|WEBSERVICES|SUITELET|TAXCALCULATION|USEREVENT|USERINTERFACE|WORKBOOKBUILDER|WORKFLOW"
+                eventtypes = "CREATE"
+                isinactive = false
+                recordtype = netsuite.customrecord_dp_prospect.attr.scriptid
+                schedulemode = "DELAY"
+                initcondition = {
+                  type = "VISUAL_BUILDER"
+                }
+                fieldsettings = {
+                  fieldsetting = {
+                    customrecord_dp_prospect_custrecord_dp_prospect_field@uuvuuu = {
+                      targetfield = netsuite.customrecord_dp_prospect.field.custom_custrecord_dp_prospect_field.scriptid
+                      valuetext = "Prospect has been set"
+                      index = 0
+                    }
+                  }
+                }
+                index = 0
+              }
+            }
+          }
+        }
+        index = 1
+      }
+    }
+  }
+}

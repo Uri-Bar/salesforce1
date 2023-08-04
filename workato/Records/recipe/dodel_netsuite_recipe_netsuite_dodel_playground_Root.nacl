@@ -1,0 +1,21 @@
+workato.recipe dodel_netsuite_recipe_netsuite_dodel_playground_Root@ssuuuu {
+  name = "dodel netsuite recipe"
+  trigger_application = "netsuite"
+  applications = [
+    "netsuite",
+  ]
+  description = "When there is a trigger event, do action"
+  folder_id = workato.folder.instance.netsuite_dodel_playground_Root
+  running = false
+  version_no = 24
+  config = [
+    {
+      keyword = "application"
+      name = "netsuite"
+      provider = "netsuite"
+      skip_validation = false
+      account_id = workato.connection.instance.Test_NetSuite_account@s
+    },
+  ]
+  code = workato.recipe__code.instance.dodel_netsuite_recipe_netsuite_dodel_playground_Root_ssuuuu@uuuuuum
+}

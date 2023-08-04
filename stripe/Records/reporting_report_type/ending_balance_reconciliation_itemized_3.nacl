@@ -1,0 +1,17 @@
+stripe.reporting_report_type ending_balance_reconciliation_itemized_3@uuvv {
+  id = "ending_balance_reconciliation.itemized.3"
+  default_columns = [
+    "balance_transaction_id",
+    "created",
+    "available_on",
+    "currency",
+    "gross",
+    "fee",
+    "net",
+    "reporting_category",
+    "description",
+  ]
+  livemode = false
+  name = "Itemized ending balance reconciliation"
+  version = 3
+}

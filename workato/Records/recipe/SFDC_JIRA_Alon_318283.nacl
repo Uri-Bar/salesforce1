@@ -1,0 +1,8 @@
+workato.recipe SFDC_JIRA_Alon_318283@suu {
+  name = "SFDC JIRA"
+  description = "When there is a trigger event, do action"
+  folder_id = workato.folder.instance.Alon_318283
+  running = false
+  version_no = 1
+  code = workato.recipe__code.instance.SFDC_JIRA_Alon_318283_suu@uuum
+}

@@ -1,0 +1,15 @@
+netsuite.account Less_Long_Term_Portion@sbs {
+  acctType = "_longTermLiability"
+  acctName = "Less Long-Term Portion"
+  includeChildren = true
+  generalRate = "_current"
+  cashFlowRate = "_average"
+  isInactive = false
+  inventory = false
+  subsidiaryList = [
+    netsuite.subsidiary.instance.Parent_Company@s,
+  ]
+  revalue = true
+  identifier = "Less Long-Term Portion"
+  custom_custrecord_acct_special = false
+}

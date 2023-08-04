@@ -1,0 +1,56 @@
+zuora_billing.WorkflowExport Invoice_30_Days_Past_Due__Account_Summary_2@sssszdssu {
+  workflow = zuora_billing.Workflow.instance.Invoice_30_Days_Past_Due__Account_Summary_2_sssszdssu__Invoice_30_Days_Past_Due__Account_Summary@uuuuuuuumuusssszdss
+  tasks = [
+    zuora_billing.Task.instance.Invoice_30_Days_Past_Due__Account_Summary_2_sssszdssu__Iterate_Unique_Accounts@uuuuuuuumuuss,
+    zuora_billing.Task.instance.Invoice_30_Days_Past_Due__Account_Summary_2_sssszdssu__30_Days_Past_Due_Email@uuuuuuuumuussss,
+    zuora_billing.Task.instance.Invoice_30_Days_Past_Due__Account_Summary_2_sssszdssu__Refetch_Matched_Invoices_Per_Account@uuuuuuuumuussss,
+    zuora_billing.Task.instance.Invoice_30_Days_Past_Due__Account_Summary_2_sssszdssu__Get_Invoice__30_Days@uuuuuuuumuussys,
+    zuora_billing.Task.instance.Invoice_30_Days_Past_Due__Account_Summary_2_sssszdssu__customObject_task@uuuuuuuumuus,
+    zuora_billing.Task.instance.Invoice_30_Days_Past_Due__Account_Summary_2_sssszdssu__delivery_task@uuuuuuuumuus,
+  ]
+  linkages = [
+    {
+      source_task_id = zuora_billing.Task.instance.Invoice_30_Days_Past_Due__Account_Summary_2_sssszdssu__Refetch_Matched_Invoices_Per_Account@uuuuuuuumuussss
+      target_task_id = zuora_billing.Task.instance.Invoice_30_Days_Past_Due__Account_Summary_2_sssszdssu__30_Days_Past_Due_Email@uuuuuuuumuussss
+      linkage_type = "Success"
+      
+    },
+    {
+      source_task_id = zuora_billing.Task.instance.Invoice_30_Days_Past_Due__Account_Summary_2_sssszdssu__Iterate_Unique_Accounts@uuuuuuuumuuss
+      target_task_id = zuora_billing.Task.instance.Invoice_30_Days_Past_Due__Account_Summary_2_sssszdssu__Refetch_Matched_Invoices_Per_Account@uuuuuuuumuussss
+      linkage_type = "For Each"
+      
+    },
+    {
+      source_task_id = zuora_billing.Task.instance.Invoice_30_Days_Past_Due__Account_Summary_2_sssszdssu__Get_Invoice__30_Days@uuuuuuuumuussys
+      target_task_id = zuora_billing.Task.instance.Invoice_30_Days_Past_Due__Account_Summary_2_sssszdssu__Iterate_Unique_Accounts@uuuuuuuumuuss
+      linkage_type = "Success"
+      
+    },
+    {
+      source_workflow_id = zuora_billing.Workflow.instance.Invoice_30_Days_Past_Due__Account_Summary_2_sssszdssu__Invoice_30_Days_Past_Due__Account_Summary@uuuuuuuumuusssszdss
+      target_task_id = zuora_billing.Task.instance.Invoice_30_Days_Past_Due__Account_Summary_2_sssszdssu__Get_Invoice__30_Days@uuuuuuuumuussys
+      linkage_type = "Start"
+      
+    },
+    {
+      source_workflow_id = zuora_billing.Workflow.instance.Invoice_30_Days_Past_Due__Account_Summary_2_sssszdssu__Invoice_30_Days_Past_Due__Account_Summary@uuuuuuuumuusssszdss
+      target_task_id = zuora_billing.Task.instance.Invoice_30_Days_Past_Due__Account_Summary_2_sssszdssu__customObject_task@uuuuuuuumuus
+      linkage_type = "Start"
+      
+    },
+    {
+      source_task_id = zuora_billing.Task.instance.Invoice_30_Days_Past_Due__Account_Summary_2_sssszdssu__customObject_task@uuuuuuuumuus
+      target_task_id = zuora_billing.Task.instance.Invoice_30_Days_Past_Due__Account_Summary_2_sssszdssu__delivery_task@uuuuuuuumuus
+      linkage_type = "Success"
+      
+    },
+  ]
+  additionalProperties = {
+    workflow_definition = {
+      description = ""
+      category = "Default"
+      name = "Invoice 30 Days Past Due, Account Summary"
+    }
+  }
+}

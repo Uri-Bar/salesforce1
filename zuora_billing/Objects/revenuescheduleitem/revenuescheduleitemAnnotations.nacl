@@ -1,0 +1,31 @@
+type zuora_billing.revenuescheduleitem {
+  annotations {
+    string metadataType {
+    }
+    string label {
+    }
+    string description {
+    }
+    hidden_string id {
+    }
+    string objectType {
+    }
+  }
+  metadataType = "StandardObject"
+  objectType = "revenuescheduleitem"
+  _generated_dependencies = [
+    {
+      reference = zuora_billing.accountingcode
+    },
+    {
+      reference = zuora_billing.accountingperiod
+    },
+    {
+      reference = zuora_billing.revenueschedule
+    },
+    {
+      reference = zuora_billing.user
+    },
+  ]
+  label = "RevenueScheduleItem"
+}

@@ -1,0 +1,56 @@
+zuora_billing.WorkflowExport Invoice_to_XML_Document___XSLT_Transform_70@ssssbssu {
+  workflow = zuora_billing.Workflow.instance.Invoice_to_XML_Document___XSLT_Transform_70_ssssbssu__Invoice_to_XML_Document___XSLT_Transform@uuuuuuuumuussssbss
+  tasks = [
+    zuora_billing.Task.instance.Invoice_to_XML_Document___XSLT_Transform_70_ssssbssu__Export_Invoice@uuuuuuuumuus,
+    zuora_billing.Task.instance.Invoice_to_XML_Document___XSLT_Transform_70_ssssbssu__XML_Transform@uuuuuuuumuus,
+    zuora_billing.Task.instance.Invoice_to_XML_Document___XSLT_Transform_70_ssssbssu__Get_Invoice_Iitems@uuuuuuuumuuss,
+    zuora_billing.Task.instance.Invoice_to_XML_Document___XSLT_Transform_70_ssssbssu__Fetch_Taxation_Items@uuuuuuuumuuss,
+    zuora_billing.Task.instance.Invoice_to_XML_Document___XSLT_Transform_70_ssssbssu__JSON_to_xml@uuuuuuuumuuss,
+    zuora_billing.Task.instance.Invoice_to_XML_Document___XSLT_Transform_70_ssssbssu__Iterate_Invoice@uuuuuuuumuus,
+  ]
+  linkages = [
+    {
+      source_workflow_id = zuora_billing.Workflow.instance.Invoice_to_XML_Document___XSLT_Transform_70_ssssbssu__Invoice_to_XML_Document___XSLT_Transform@uuuuuuuumuussssbss
+      target_task_id = zuora_billing.Task.instance.Invoice_to_XML_Document___XSLT_Transform_70_ssssbssu__Export_Invoice@uuuuuuuumuus
+      linkage_type = "Start"
+      
+    },
+    {
+      source_task_id = zuora_billing.Task.instance.Invoice_to_XML_Document___XSLT_Transform_70_ssssbssu__Export_Invoice@uuuuuuuumuus
+      target_task_id = zuora_billing.Task.instance.Invoice_to_XML_Document___XSLT_Transform_70_ssssbssu__Iterate_Invoice@uuuuuuuumuus
+      linkage_type = "Success"
+      
+    },
+    {
+      source_task_id = zuora_billing.Task.instance.Invoice_to_XML_Document___XSLT_Transform_70_ssssbssu__Iterate_Invoice@uuuuuuuumuus
+      target_task_id = zuora_billing.Task.instance.Invoice_to_XML_Document___XSLT_Transform_70_ssssbssu__Get_Invoice_Iitems@uuuuuuuumuuss
+      linkage_type = "For Each"
+      
+    },
+    {
+      source_task_id = zuora_billing.Task.instance.Invoice_to_XML_Document___XSLT_Transform_70_ssssbssu__Get_Invoice_Iitems@uuuuuuuumuuss
+      target_task_id = zuora_billing.Task.instance.Invoice_to_XML_Document___XSLT_Transform_70_ssssbssu__Fetch_Taxation_Items@uuuuuuuumuuss
+      linkage_type = "Success"
+      
+    },
+    {
+      source_task_id = zuora_billing.Task.instance.Invoice_to_XML_Document___XSLT_Transform_70_ssssbssu__Fetch_Taxation_Items@uuuuuuuumuuss
+      target_task_id = zuora_billing.Task.instance.Invoice_to_XML_Document___XSLT_Transform_70_ssssbssu__JSON_to_xml@uuuuuuuumuuss
+      linkage_type = "Success"
+      
+    },
+    {
+      source_task_id = zuora_billing.Task.instance.Invoice_to_XML_Document___XSLT_Transform_70_ssssbssu__JSON_to_xml@uuuuuuuumuuss
+      target_task_id = zuora_billing.Task.instance.Invoice_to_XML_Document___XSLT_Transform_70_ssssbssu__XML_Transform@uuuuuuuumuus
+      linkage_type = "Success"
+      
+    },
+  ]
+  additionalProperties = {
+    workflow_definition = {
+      description = "This template shows how to use data source export and convert JSON payload to XML document. The workflow continues by taking the XML document and converting it to another XML document that could be consumed by state tax authority. One may need to update the XSLT transform to ensure the conversion from original XML document to new document is in format desired by state. Once final XML document is created, it could be sent to remote endpoints via FTP/SFTP. "
+      category = "Default"
+      name = "Invoice to XML Document - XSLT Transform"
+    }
+  }
+}

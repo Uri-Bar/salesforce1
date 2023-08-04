@@ -1,0 +1,74 @@
+netsuite.workflow customworkflow_dp_custom_workflow {
+  scriptid = "customworkflow_dp_custom_workflow"
+  initcontexts = "ACTION|BANKCONNECTIVITY|BANKSTATEMENTPARSER|BUNDLEINSTALLATION|CLIENT|CSVIMPORT|CUSTOMGLLINES|CUSTOMMASSUPDATE|RECORDACTION|DATASETBUILDER|DEBUGGER|EMAILCAPTURE|FICONNECTIVITY|FIPARSER|MAPREDUCE|OFFLINECLIENT|OTHER|PAYMENTPOSTBACK|PAYMENTGATEWAY|PLATFORMEXTENSION|PORTLET|PROMOTIONS|CONSOLRATEADJUSTOR|RESTWEBSERVICES|RESTLET|ADVANCEDREVREC|SCHEDULED|SDFINSTALLATION|SHIPPINGPARTNERS|WEBSERVICES|SUITELET|TAXCALCULATION|USEREVENT|USERINTERFACE|WORKBOOKBUILDER|WORKFLOW"
+  initoncreate = false
+  initonvieworupdate = false
+  isinactive = false
+  islogenabled = false
+  keephistory = "ONLYWHENTESTING"
+  name = "DP - Custom Workflow"
+  recordtypes = "CHECK"
+  releasestatus = "TESTING"
+  runasadmin = false
+  initcondition = {
+    type = "VISUAL_BUILDER"
+  }
+  workflowstates = {
+    workflowstate = {
+      workflowstate451 = {
+        scriptid = "workflowstate451"
+        donotexitworkflow = false
+        name = "State 1"
+        positionx = 243
+        positiony = 133
+        workflowactions = {
+          ONENTRY = {
+            triggertype = "ONENTRY"
+            setfieldvalueaction = {
+              workflowaction1283 = {
+                scriptid = "workflowaction1283"
+                conditionsavedsearch = netsuite.savedsearch.instance.customsearch_dp_search_1.scriptid
+                contexttypes = "ACTION|BANKCONNECTIVITY|BANKSTATEMENTPARSER|BUNDLEINSTALLATION|CLIENT|CSVIMPORT|CUSTOMGLLINES|CUSTOMMASSUPDATE|RECORDACTION|DATASETBUILDER|DEBUGGER|EMAILCAPTURE|FICONNECTIVITY|FIPARSER|MAPREDUCE|OFFLINECLIENT|OTHER|PAYMENTPOSTBACK|PAYMENTGATEWAY|PLATFORMEXTENSION|PORTLET|PROMOTIONS|CONSOLRATEADJUSTOR|RESTWEBSERVICES|RESTLET|ADVANCEDREVREC|SCHEDULED|SDFINSTALLATION|SHIPPINGPARTNERS|WEBSERVICES|SUITELET|TAXCALCULATION|USEREVENT|USERINTERFACE|WORKBOOKBUILDER|WORKFLOW"
+                field = "STDBODYDATEELIGIBLE"
+                isinactive = false
+                schedulemode = "DELAY"
+                valuechecked = false
+                valuedate = "LFH"
+                valuetype = "DATE"
+                initcondition = {
+                  type = "VISUAL_BUILDER"
+                }
+                index = 0
+              }
+            }
+            
+            createrecordaction = {
+              workflowaction1328 = {
+                scriptid = "workflowaction1328"
+                contexttypes = "ACTION|BANKCONNECTIVITY|BANKSTATEMENTPARSER|BUNDLEINSTALLATION|CLIENT|CSVIMPORT|CUSTOMGLLINES|CUSTOMMASSUPDATE|RECORDACTION|DATASETBUILDER|DEBUGGER|EMAILCAPTURE|FICONNECTIVITY|FIPARSER|MAPREDUCE|OCRPLUGIN|OFFLINECLIENT|OTHER|PAYMENTPOSTBACK|PAYMENTGATEWAY|PLATFORMEXTENSION|PORTLET|PROMOTIONS|CONSOLRATEADJUSTOR|RESTWEBSERVICES|RESTLET|ADVANCEDREVREC|SCHEDULED|SDFINSTALLATION|SHIPPINGPARTNERS|WEBSERVICES|SUITELET|TAXCALCULATION|USEREVENT|USERINTERFACE|WORKBOOKBUILDER|WORKFLOW"
+                eventtypes = "CREATE"
+                isinactive = false
+                recordtype = netsuite.customrecord_dp_prospect.attr.scriptid
+                schedulemode = "DELAY"
+                initcondition = {
+                  type = "VISUAL_BUILDER"
+                }
+                fieldsettings = {
+                  fieldsetting = {
+                    customrecord_dp_prospect_custrecord_dp_prospect_field@uuvuuu = {
+                      targetfield = netsuite.customrecord_dp_prospect.field.custom_custrecord_dp_prospect_field.scriptid
+                      valuetext = "For DP Custom Workflow 2"
+                      index = 0
+                    }
+                  }
+                }
+                index = 0
+              }
+            }
+          }
+        }
+        index = 0
+      }
+    }
+  }
+}

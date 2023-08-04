@@ -1,0 +1,17 @@
+jira.Screen AS__Simple_Issue_Tracking_Resolve_Issue_Screen@fssssss {
+  name = "AS: Simple Issue Tracking Resolve Issue Screen"
+  description = ""
+  tabs = {
+    Field_Tab@s = {
+      name = "Field Tab"
+      fields = [
+        jira.Field.instance.Summary,
+        jira.Field.instance.Issue_Type@s,
+        jira.Field.instance.Reporter,
+        jira.Field.instance.Linked_Issues@s,
+        jira.Field.instance.Resolution,
+      ]
+      position = 0
+    }
+  }
+}

@@ -1,0 +1,16 @@
+type salesforce.Contact {
+  salesforce.Text Test_Property__c {
+    apiName = "Contact.Test_Property__c"
+    label = "Test Property"
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    length = 255
+    queryable = true
+    description = "This is a test property"
+    externalId = false
+    
+    
+  }
+}

@@ -1,0 +1,15 @@
+netsuite.account Professional_Fees@s {
+  acctType = "_expense"
+  acctName = "Professional Fees"
+  includeChildren = true
+  generalRate = "_average"
+  cashFlowRate = "_average"
+  isInactive = false
+  inventory = false
+  subsidiaryList = [
+    netsuite.subsidiary.instance.Parent_Company@s,
+  ]
+  revalue = false
+  identifier = "Professional Fees"
+  custom_custrecord_acct_special = false
+}

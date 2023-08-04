@@ -1,0 +1,11 @@
+okta.Feature Block_passkeys_for_FIDO2__WebAuthn__Authenticators@ssssjks {
+  
+  type = "self-service"
+  status = "DISABLED"
+  name = "Block passkeys for FIDO2 (WebAuthn) Authenticators"
+  description = "Passkeys are multi-device credentials that enable WebAuthn credentials to be backed up and synchronized across devices. NOTE: This block is best effort and is dependent on browser and OS configuration."
+  stage = {
+    value = "EA"
+  }
+  
+}

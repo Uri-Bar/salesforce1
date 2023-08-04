@@ -1,0 +1,174 @@
+type zuora_billing.notificationemailtemplate {
+  string Id {
+    type = "string"
+    format = "uuid"
+    required = false
+    filterable = false
+    label = "Id"
+  }
+  string CreatedDate {
+    type = "string"
+    format = "date-time"
+    required = false
+    filterable = false
+    label = "CreatedDate"
+  }
+  string UpdatedDate {
+    type = "string"
+    format = "date-time"
+    required = false
+    filterable = false
+    label = "UpdatedDate"
+  }
+  string Name {
+    type = "string"
+    maxLength = 512
+    required = false
+    filterable = false
+    label = "Name"
+  }
+  string Description {
+    type = "string"
+    maxLength = 512
+    required = false
+    filterable = false
+    label = "Description"
+  }
+  boolean Active {
+    type = "boolean"
+    required = false
+    filterable = false
+    label = "Active"
+  }
+  string BccEmailAddress {
+    type = "string"
+    maxLength = 512
+    required = false
+    filterable = false
+    label = "BccEmailAddress"
+  }
+  string CcEmailAddress {
+    type = "string"
+    maxLength = 512
+    required = false
+    filterable = false
+    label = "CcEmailAddress"
+  }
+  string CcEmailType {
+    type = "string"
+    maxLength = 512
+    required = false
+    filterable = false
+    label = "CcEmailType"
+  }
+  string EmailBody {
+    type = "string"
+    maxLength = 512
+    required = false
+    filterable = false
+    label = "EmailBody"
+  }
+  string EmailSubject {
+    type = "string"
+    maxLength = 512
+    required = false
+    filterable = false
+    label = "EmailSubject"
+  }
+  string EncodingType {
+    type = "string"
+    maxLength = 512
+    required = false
+    filterable = false
+    label = "EncodingType"
+  }
+  string EventNamespace {
+    type = "string"
+    maxLength = 512
+    required = false
+    filterable = false
+    label = "EventNamespace"
+  }
+  string FromEmailAddress {
+    type = "string"
+    maxLength = 512
+    required = false
+    filterable = false
+    label = "FromEmailAddress"
+  }
+  string FromEmailType {
+    type = "string"
+    maxLength = 512
+    required = false
+    filterable = false
+    label = "FromEmailType"
+  }
+  string FromName {
+    type = "string"
+    maxLength = 512
+    required = false
+    filterable = false
+    label = "FromName"
+  }
+  boolean IsHtml {
+    type = "boolean"
+    required = false
+    filterable = false
+    label = "IsHtml"
+  }
+  string ReplyToEmailAddress {
+    type = "string"
+    maxLength = 512
+    required = false
+    filterable = false
+    label = "ReplyToEmailAddress"
+  }
+  string ReplyToEmailType {
+    type = "string"
+    maxLength = 512
+    required = false
+    filterable = false
+    label = "ReplyToEmailType"
+  }
+  string ToEmailAddress {
+    type = "string"
+    maxLength = 512
+    required = false
+    filterable = false
+    label = "ToEmailAddress"
+  }
+  string ToEmailType {
+    type = "string"
+    maxLength = 512
+    required = false
+    filterable = false
+    label = "ToEmailType"
+  }
+  boolean UseAdditionalAddresses {
+    type = "boolean"
+    required = false
+    filterable = false
+    label = "UseAdditionalAddresses"
+  }
+  string CreatedBy {
+    type = "string"
+    maxLength = 512
+    required = false
+    filterable = false
+    label = "CreatedBy"
+  }
+  string UpdatedBy {
+    type = "string"
+    maxLength = 512
+    required = false
+    filterable = false
+    label = "UpdatedBy"
+  }
+  string EventName {
+    type = "string"
+    maxLength = 512
+    required = false
+    filterable = false
+    label = "EventName"
+  }
+}

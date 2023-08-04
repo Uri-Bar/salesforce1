@@ -1,0 +1,101 @@
+<style>
+#removeEnvStatusBtn{
+	width: 260px;
+}
+
+#removeLoginInfoBtn{
+	width: 230px;
+}
+
+#openCongigureDSBtn{
+	width: 200px;
+}
+
+#warningMsg{
+	width: 720px;
+}
+
+#warningMsg p{
+	font-size: 10px;
+}
+
+#dsRcdSttgsLabel {
+	font-size: 16px;
+	font-weight: bold;
+	color: #265885;
+	font-family: Helvetica;
+}
+
+#dsLineSeparator {
+	width: 730px;
+	float: left;
+}
+
+.ds_question_icon{
+	width: 10px;
+	height: 10px;
+}
+</style>
+
+<script>
+	$(document).ready(function() {
+		$.getScript('https://ajax.googleapis.com/ajax/libs/jqueryui/1.10.0/jquery-ui.min.js', function() {
+
+		});
+	});
+</script>
+
+<div id="ds_account_settings">
+	<div>
+		<%= configureAcctLabel %><br>
+		<%= dsAcctIDLabel %><%= dsUser %><br>
+		<%= dsEnvLabel %><%= dsEnv %>
+	</div>
+	<div>
+		<br>
+		<button id="removeEnvStatusBtn" type="button" onClick="if(confirm('<%= dsRemoveEnvStatusMsg %>')) deleteDSEnvelopeStatusRecord('all')"><%= dsRemoveEnvStatusBtn %></button>
+		&nbsp;&nbsp;&nbsp;
+		<button id="removeLoginInfoBtn" type="button" onClick="if(confirm('<%= dsRemoveLoginInfoMsg %>')) deleteDSAccountSettingsRecord()"><%= dsRemoveLoginInfoBtn %></button>
+		&nbsp;&nbsp;&nbsp;
+		<button id="openCongigureDSBtn" type="button" onClick="openConfigureDSAcctDialogBox('switchAcct')"><%= dsSwitchNewAcctBtn %></button>
+	</div>
+	<div><br><hr id="dsLineSeparator" /><br></div>
+	<span id="dsRcdSttgsLabel"><%= dsRecordSettingsLabel %></span>&nbsp;
+	<img class="ds_question_icon" src="<%= dsQuestionIcon %>" toolTipText="<%= dsWarningMsg %>" /><br><br>
+	<div id="ds_record_settings" style="height:520px;width:724px;background-color:#FFFFFF;font-family: Helvetica;">
+		<div style="height:520px;width:200px;float:left;border-style:solid;border-width:1px;border-color:#c9c9c9;">
+			<div id="ds_recordType_header" style="height:26px;width:200px;background-color:#265885;font-size:13px;font-weight:bold;color:#FFFFFF;line-height:26px;">&nbsp;&nbsp;
+				getLocalizationText(localizationJSON, DS_HEADER, 'dsRecordTypes')
+				&nbsp;&nbsp;&nbsp;
+				<a href="#" style="font-size:11px;color:#ffffff" onclick="window.open(\'https://system.netsuite.com/help/helpcenter/en_US/RecordsBrowser/2011_2/index.html\')" >list</a>
+			</div>
+			<div id="ds_recordType_picker" style="height:463px;width:200px;overflow-x:hidden;overflow-y:auto;">
+				<ul class="ds_recordTypes_list" style="margin:0;padding:0;">
+					if ( recordSettings ) {
+						for(var i = 0; i < recordSettings.length; i++) {
+							var recordSetting = recordSettings[i];
+							var recordName = recordSetting.getValue('name');
+							var nsInternalID = recordSetting.getValue('custrecord_ns_internal_id');
+							dsRecordSettingsHtml += '<li id="'+nsInternalID+'" style="width:200px;height:24px;color:#cccccc;font-weight:500" onclick="showRecordSettings(\'' + nsInternalID + '\', \'' + recordName + ' \' );';
+							dsRecordSettingsHtml += '$(\'.ds_recordTypes_list li\').removeClass(\'ds_selected_recordType\');$(this).addClass(\'ds_selected_recordType\');" /><label style="height:24px;display:block;line-height:24px;font-size:14px;cursor:pointer;" >&nbsp;&nbsp;'+recordName+'</label></li>
+						}
+					}
+				</ul>
+			</div>
+			<div id="ds_recordType_control" style="height:30px;width:200px;">
+				<image id="ds_add_recordType_btn" src="'+getFileUrl("ds_button_add.png")+'" alt="Add Record Type" style="width:94px;height:29px;float:left;border:none;padding: 0px 2px 0px 3px" onClick="addNewRecordType()" />
+				<image id="ds_remove_recordType_btn" src="'+getFileUrl("ds_button_remove.png")+'" alt="Remove Record Type" style="width:94px;height:29px;border:none;padding: 0px 3px 0px 2px" onClick="removeRecordType()" />
+			</div>
+		</div>
+		<div style="height:520px;width:520px;float:left;background-color:#FFFFFF;border-style:solid;border-width:1px;border-color:#c9c9c9;">
+			<div id="ds_recordSettings_header" style="height:26px;width:520px;float:left;background-color:#265885;font-size:13px;font-weight:bold;color:#FFFFFF;line-height:26px;"></div>
+			<div id="ds_recordSettings_controls" style="height:474px;width:510px;padding-left:10px;overflow-x:hidden;overflow-y:auto;font-size:12px">
+			<br>
+			getLocalizationText(localizationJSON, DS_LABEL, 'dsSelectRecordType');
+		</div>
+		</div>
+	</div>
+	<div style="width:720px"><br><p style="font-size:10px">'+getLocalizationText(localizationJSON, DS_LABEL, 'dsAdminSettingsWarningMsg')+'</p></div>
+	
+	
+</div>

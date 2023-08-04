@@ -1,0 +1,138 @@
+type zuora_billing.revenuescheduleiteminvoiceitemadjustment {
+  string Id {
+    type = "string"
+    format = "uuid"
+    required = false
+    filterable = false
+    label = "Id"
+  }
+  string CreatedById {
+    type = "string"
+    format = "uuid"
+    required = false
+    filterable = false
+    referenceTo = [
+      zuora_billing.user.field.Id,
+    ]
+    cardinality = "manyToOne"
+    recordConstraints = {
+      create = {
+        enforceValidMapping = true
+      }
+    }
+    label = "CreatedById"
+  }
+  string CreatedDate {
+    type = "string"
+    format = "date-time"
+    required = false
+    filterable = false
+    label = "CreatedDate"
+  }
+  string UpdatedById {
+    type = "string"
+    format = "uuid"
+    required = false
+    filterable = false
+    referenceTo = [
+      zuora_billing.user.field.Id,
+    ]
+    cardinality = "manyToOne"
+    recordConstraints = {
+      create = {
+        enforceValidMapping = true
+      }
+    }
+    label = "UpdatedById"
+  }
+  string UpdatedDate {
+    type = "string"
+    format = "date-time"
+    required = false
+    filterable = false
+    label = "UpdatedDate"
+  }
+  boolean deleted {
+    type = "boolean"
+    required = false
+    filterable = false
+    label = "deleted"
+  }
+  number Amount {
+    type = "number"
+    required = false
+    filterable = false
+    label = "Amount"
+  }
+  string Currency {
+    type = "string"
+    maxLength = 512
+    required = false
+    filterable = false
+    label = "Currency"
+  }
+  string AccountingPeriodId {
+    type = "string"
+    format = "uuid"
+    required = false
+    filterable = false
+    referenceTo = [
+      zuora_billing.accountingperiod.field.Id,
+    ]
+    cardinality = "manyToOne"
+    recordConstraints = {
+      create = {
+        enforceValidMapping = true
+      }
+    }
+    label = "AccountingPeriodId"
+  }
+  string RevenueScheduleInvoiceItemAdjustmentId {
+    type = "string"
+    format = "uuid"
+    required = false
+    filterable = false
+    referenceTo = [
+      zuora_billing.revenuescheduleinvoiceitemadjustment.field.Id,
+    ]
+    cardinality = "manyToOne"
+    recordConstraints = {
+      create = {
+        enforceValidMapping = true
+      }
+    }
+    label = "RevenueScheduleInvoiceItemAdjustmentId"
+  }
+  string RecognizedRevenueAccountingCodeId {
+    type = "string"
+    format = "uuid"
+    required = false
+    filterable = false
+    referenceTo = [
+      zuora_billing.accountingcode.field.Id,
+    ]
+    cardinality = "manyToOne"
+    recordConstraints = {
+      create = {
+        enforceValidMapping = true
+      }
+    }
+    label = "RecognizedRevenueAccountingCodeId"
+  }
+  string DeferredRevenueAccountingCodeId {
+    type = "string"
+    format = "uuid"
+    required = false
+    filterable = false
+    referenceTo = [
+      zuora_billing.accountingcode.field.Id,
+    ]
+    cardinality = "manyToOne"
+    recordConstraints = {
+      create = {
+        enforceValidMapping = true
+      }
+    }
+    label = "DeferredRevenueAccountingCodeId"
+  }
+}

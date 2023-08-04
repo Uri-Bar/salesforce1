@@ -1,0 +1,10 @@
+stripe.tax_rate Sales_tax_txr_1IcrqNHipyrr1EYiTpN0iuVj_AL_88@suuuu {
+  id = "txr_1IcrqNHipyrr1EYiTpN0iuVj"
+  active = true
+  country = "AL"
+  description = "test tax rate edited"
+  display_name = "Sales tax"
+  inclusive = false
+  livemode = false
+  percentage = 88
+}

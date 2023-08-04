@@ -1,0 +1,27 @@
+okta.AccessPolicyRule Seamless_access_based_on_risk_context_s__Catch_all_Rule@uuuuumuubs {
+  status = "ACTIVE"
+  name = "Catch-all Rule"
+  priority = 99
+  system = true
+  actions = {
+    appSignOn = {
+      access = "DENY"
+      verificationMethod = {
+        factorMode = "2FA"
+        type = "ASSURANCE"
+        reauthenticateIn = "PT12H"
+        constraints = [
+          {
+            possession = {
+              deviceBound = "REQUIRED"
+            }
+          },
+        ]
+      }
+    }
+  }
+  type = "ACCESS_POLICY"
+  _parent = [
+    okta.AccessPolicy.instance.Seamless_access_based_on_risk_context@s,
+  ]
+}

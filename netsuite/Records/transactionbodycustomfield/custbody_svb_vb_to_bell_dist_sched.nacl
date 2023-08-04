@@ -1,0 +1,59 @@
+netsuite.transactionbodycustomfield custbody_svb_vb_to_bell_dist_sched {
+  scriptid = "custbody_svb_vb_to_bell_dist_sched"
+  accesslevel = "2"
+  applyformatting = false
+  bodyassemblybuild = false
+  bodybom = false
+  bodycustomerpayment = false
+  bodydeposit = false
+  bodydepositapplication = false
+  bodyexpensereport = false
+  bodyinventoryadjustment = false
+  bodyitemfulfillment = false
+  bodyitemfulfillmentorder = false
+  bodyitemreceipt = false
+  bodyitemreceiptorder = false
+  bodyjournal = false
+  bodyopportunity = false
+  bodyothertransaction = false
+  bodyperiodendjournal = false
+  bodypickingticket = false
+  bodyprintflag = false
+  bodyprintpackingslip = false
+  bodyprintstatement = false
+  bodypurchase = true
+  bodysale = false
+  bodytransferorder = false
+  bodyvendorpayment = false
+  checkspelling = false
+  defaultchecked = false
+  displaytype = "NORMAL"
+  encryptatrest = false
+  fieldtype = "SELECT"
+  globalsearch = false
+  isformula = false
+  ismandatory = false
+  isparent = false
+  label = "VB header to Bill Distribution Schedule"
+  onparentdelete = "NO_ACTION"
+  searchlevel = "2"
+  selectrecordtype = netsuite.customrecord_svb_bill_dist_sched.attr.scriptid
+  showhierarchy = false
+  showinlist = false
+  sourcefilterby = netsuite.customrecord_svb_bill_dist_sched.field.custom_custrecord_svb_source_subsidiary.scriptid
+  sourcelist = "STDBODYSUBSIDIARY"
+  storevalue = true
+  subtab = "TRANSACTIONMAIN"
+  customfieldfilters = {
+    customfieldfilter = {
+      customrecord_svb_bill_dist_sched_custrecord_svb_is_alloc_wt_valid@uuuuvuuuuu = {
+        fldfilter = netsuite.customrecord_svb_bill_dist_sched.field.custom_custrecord_svb_is_alloc_wt_valid.scriptid
+        fldfilterchecked = true
+        fldfiltercomparetype = "EQ"
+        fldfilternotnull = false
+        fldfilternull = false
+        index = 0
+      }
+    }
+  }
+}

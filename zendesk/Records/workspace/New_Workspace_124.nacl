@@ -1,0 +1,34 @@
+zendesk.workspace New_Workspace_124@s {
+  title = "New Workspace 124"
+  description = ""
+  ticket_form_id = zendesk.ticket_form.instance.Default_Ticket_Form@s
+  apps = [
+    {
+      id = zendesk.app_installation.instance.Salesforce
+      expand = true
+      position = 1
+    },
+  ]
+  activated = true
+  conditions = {
+    all = [
+      {
+        field = "brand_id"
+        operator = "is"
+        value = zendesk.brand.instance.Salto
+      },
+      {
+        field = "priority"
+        operator = "greater_than"
+        value = "normal"
+      },
+    ]
+    any = [
+      {
+        field = "type"
+        operator = "is_not"
+        value = "question"
+      },
+    ]
+  }
+}

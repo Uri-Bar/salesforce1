@@ -1,0 +1,5 @@
+workato.connection Hadas_secondary@s {
+  application = "salesforce_secondary"
+  name = "Hadas secondary"
+  folder_id = workato.folder.instance.Root
+}

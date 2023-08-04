@@ -1,0 +1,8 @@
+zuora_billing.Settings_UnitOfMeasure GWR_UOM@s {
+  name = "GWR UOM"
+  displayAs = "GWR UOM"
+  precision = 0
+  roundingMode = "Up"
+  active = false
+  usageLogFileLabel = "GWR UOM"
+}

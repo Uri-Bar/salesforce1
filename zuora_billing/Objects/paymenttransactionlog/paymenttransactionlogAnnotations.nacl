@@ -1,0 +1,25 @@
+type zuora_billing.paymenttransactionlog {
+  annotations {
+    string metadataType {
+    }
+    string label {
+    }
+    string description {
+    }
+    hidden_string id {
+    }
+    string objectType {
+    }
+  }
+  metadataType = "StandardObject"
+  objectType = "paymenttransactionlog"
+  _generated_dependencies = [
+    {
+      reference = zuora_billing.account
+    },
+    {
+      reference = zuora_billing.payment
+    },
+  ]
+  label = "PaymentTransactionLog"
+}

@@ -1,0 +1,20 @@
+zuora_billing.Settings_Notification Reconciliation_Completed_Reconciliation_Completed_8ac6819b7883361b017893726f173fb1@susu {
+  profileId = zuora_billing.Settings_CommunicationProfile.instance.Default_Profile@s
+  eventName = "Reconciliation Completed"
+  name = "Reconciliation Completed"
+  description = "Gateway reconciliation job has completed."
+  active = false
+  hidden = false
+  param1 = ""
+  param2 = ""
+  param4 = ""
+  emailOption = true
+  emailTemplateName = zuora_billing.PublicEmailTemplate.instance.Gateway_Reconciliation_Job_Email_Template@s
+  calloutOption = false
+  contentType = "APPLICATION_JSON"
+  calloutRetriable = false
+  calloutAuth = false
+  calloutOauth2 = false
+  calloutPreemptiveAuth = false
+  useCustomRequestBody = false
+}

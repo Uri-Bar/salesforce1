@@ -1,0 +1,6 @@
+zuora_billing.Settings_ReasonCode RefundPayment_Chargeback {
+  isActive = true
+  reasonCodeName = "Chargeback"
+  reasonCodeTransactionType = "RefundPayment"
+  isDefault = false
+}

@@ -1,0 +1,38 @@
+zuora_billing.Workflow Iterate_Over_Callout_Data_73_sssu__Iterate_Over_Callout_Data@uuuumuusss {
+  id = 73
+  name = "Iterate Over Callout Data"
+  description = "This workflow demonstrates the ability to use a custom iterate/loop task across data retrieved from a callout."
+  type = "Workflow::Setup"
+  status = "Active"
+  version = "0.0.1"
+  additionalProperties = {
+    parameters = {
+      skipping_check = "redis"
+      file_encryption = "false"
+      callout_response = "workflow instance"
+      secure_error_msgs = "false"
+      disable_pending_status = true
+    }
+    ondemand_trigger = true
+    callout_trigger = true
+    scheduled_trigger = false
+    css = {
+      top = "40px"
+      left = "35px"
+    }
+    notifications = {
+      failure = false
+      pending = false
+      success = false
+    }
+    call_type = "ASYNC"
+    priority = "Medium"
+    delete_ttl = 30
+    
+    
+    event_trigger = false
+  }
+  _parent = [
+    zuora_billing.WorkflowExport.instance.Iterate_Over_Callout_Data_73@sssu,
+  ]
+}

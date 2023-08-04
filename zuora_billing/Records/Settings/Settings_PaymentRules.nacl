@@ -1,0 +1,6 @@
+zuora_billing.Settings_PaymentRules {
+  enableTransactionFutureDateFeature = false
+  enableCreditCardDateValidation = true
+  enableCBRefundInGR = false
+  enableCustomPaymentNumber = false
+}

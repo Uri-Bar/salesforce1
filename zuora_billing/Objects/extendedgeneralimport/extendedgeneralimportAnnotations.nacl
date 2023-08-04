@@ -1,0 +1,17 @@
+type zuora_billing.extendedgeneralimport {
+  annotations {
+    string metadataType {
+    }
+    string label {
+    }
+    string description {
+    }
+    hidden_string id {
+    }
+    string objectType {
+    }
+  }
+  metadataType = "StandardObject"
+  objectType = "extendedgeneralimport"
+  label = "ExtendedGeneralImport"
+}

@@ -1,0 +1,45 @@
+salesforce.CustomApplication Sales_Leadership {
+  fullName = "Sales_Leadership"
+  actionOverrides = [
+    {
+      actionName = "View"
+      comment = "Action override created by Lightning App Builder during activation."
+      content = "Account_Record_Page"
+      formFactor = "Large"
+      skipRecordTypeSelect = false
+      type = "Flexipage"
+      pageOrSobjectType = "Account"
+    },
+  ]
+  brand = {
+    headerColor = "#0070D2"
+    logoVersion = 1
+    shouldOverrideOrgTheme = false
+  }
+  description = "Monitor sales activity, and guide your team to help them meet and exceed sales targets."
+  formFactors = [
+    "Large",
+  ]
+  isNavAutoTempTabsDisabled = false
+  isNavPersonalizationDisabled = false
+  label = "Sales Leadership"
+  navType = "Standard"
+  tabs = [
+    "standard-home",
+    "standard-Account",
+    "standard-Opportunity",
+    "standard-Lead",
+    "standard-Dashboard",
+    "standard-report",
+    "standard-CollaborationGroup",
+    salesforce.CustomTab.instance.Yariv__c,
+  ]
+  uiType = "Lightning"
+  utilityBar = "Sales_Leadership_UtilityBar"
+  _generated_dependencies = [
+    {
+      reference = salesforce.LightningPage.instance.Sales_Leadership_UtilityBar
+    },
+  ]
+  isNavTabPersistenceDisabled = false
+}

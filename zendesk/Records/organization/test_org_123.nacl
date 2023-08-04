@@ -1,0 +1,11 @@
+zendesk.organization test_org_123@s {
+  name = "test org 123"
+  shared_tickets = false
+  shared_comments = false
+  domain_names = [
+    "test1.salto.io",
+    "test2.salto.io",
+  ]
+  details = ""
+  notes = ""
+}

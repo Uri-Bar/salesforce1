@@ -1,0 +1,26 @@
+okta.PasswordPolicyRule Default_Policy_s__Default_Rule@umuus {
+  status = "ACTIVE"
+  name = "Default Rule"
+  priority = 1
+  system = true
+  conditions = {
+    network = {
+      connection = "ANYWHERE"
+    }
+  }
+  actions = {
+    passwordChange = {
+      access = "ALLOW"
+    }
+    selfServicePasswordReset = {
+      access = "ALLOW"
+    }
+    selfServiceUnlock = {
+      access = "DENY"
+    }
+  }
+  type = "PASSWORD"
+  _parent = [
+    okta.PasswordPolicy.instance.Default_Policy@s,
+  ]
+}

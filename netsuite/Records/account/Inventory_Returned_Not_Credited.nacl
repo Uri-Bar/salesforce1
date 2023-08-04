@@ -1,0 +1,15 @@
+netsuite.account Inventory_Returned_Not_Credited@s {
+  acctType = "_otherCurrentAsset"
+  acctName = "Inventory Returned Not Credited"
+  includeChildren = true
+  generalRate = "_current"
+  cashFlowRate = "_average"
+  isInactive = false
+  inventory = false
+  subsidiaryList = [
+    netsuite.subsidiary.instance.Parent_Company@s,
+  ]
+  revalue = false
+  identifier = "Inventory Returned Not Credited"
+  custom_custrecord_acct_special = false
+}

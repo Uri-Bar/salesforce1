@@ -1,0 +1,146 @@
+type zuora_billing.TestEnvironment {
+  string Id {
+    format = "uuid"
+    label = "Id"
+    origin = "system"
+    type = "string"
+    required = true
+    filterable = true
+  }
+  string CreatedById {
+    label = "CreatedById"
+    origin = "system"
+    type = "string"
+    required = true
+    filterable = true
+    referenceTo = [
+      zuora_billing.user.field.Id,
+    ]
+    cardinality = "manyToOne"
+    recordConstraints = {
+      create = {
+        enforceValidMapping = true
+      }
+    }
+  }
+  string UpdatedById {
+    label = "UpdatedById"
+    origin = "system"
+    type = "string"
+    required = true
+    filterable = true
+    referenceTo = [
+      zuora_billing.user.field.Id,
+    ]
+    cardinality = "manyToOne"
+    recordConstraints = {
+      create = {
+        enforceValidMapping = true
+      }
+    }
+  }
+  string CreatedDate {
+    format = "date-time"
+    origin = "system"
+    type = "string"
+    label = "CreatedDate"
+    required = true
+    filterable = true
+  }
+  string UpdatedDate {
+    format = "date-time"
+    origin = "system"
+    type = "string"
+    label = "UpdatedDate"
+    required = true
+    filterable = true
+  }
+  string Status {
+    label = "Status"
+    origin = "system"
+    type = "string"
+    
+    
+    description = "The status of the test environment"
+    required = true
+    filterable = true
+  }
+  string TenantId {
+    label = "Tenant Id"
+    origin = "system"
+    type = "string"
+    description = "The tenant id associated to a test environment"
+    required = true
+    filterable = true
+  }
+  string LastRefreshTime {
+    format = "date-time"
+    label = "Last Refresh Time"
+    origin = "system"
+    type = "string"
+    description = "Time when the test environment was last refreshed"
+    required = false
+    filterable = true
+  }
+  string TenantName {
+    maxLength = 255
+    label = "Tenant Name"
+    origin = "system"
+    type = "string"
+    description = "The tenant name associated to a test environment"
+    required = true
+    filterable = true
+  }
+  string ProvisionTime {
+    format = "date-time"
+    label = "Provision Time"
+    origin = "system"
+    type = "string"
+    description = "Time when the test environment was provisioned"
+    required = false
+    filterable = true
+  }
+  string EnvironmentType {
+    label = "Environment Type"
+    origin = "system"
+    type = "string"
+    description = "Type of the test environment"
+    required = false
+    filterable = true
+  }
+  string DeactivationTime {
+    format = "date-time"
+    label = "Deactivation Time"
+    origin = "system"
+    type = "string"
+    description = "Time when the test environment will be deactivated"
+    required = false
+    filterable = true
+  }
+  string NextRefreshTime {
+    format = "date-time"
+    label = "Next Refresh Time"
+    origin = "system"
+    type = "string"
+    description = "Time when the test environment can be refreshed"
+    required = false
+    filterable = true
+  }
+  string RevenueTenantId {
+    label = "Revenue Tenant Id"
+    origin = "system"
+    type = "string"
+    description = "The revenue tenant id if a revenue sandbox is linked"
+    required = false
+    filterable = true
+  }
+  string RevenueTenantName {
+    maxLength = 255
+    label = "Revenue Tenant Name"
+    origin = "system"
+    type = "string"
+    description = "The revenue tenant name if a revenue sandbox is linked"
+    required = false
+    filterable = false
+  }
+}

@@ -1,0 +1,17 @@
+jira.Filter Filter_for_PROJ_board@s {
+  name = "Filter for PROJ board"
+  owner = {
+    id = "5fa91999b2633d0076583a61"
+    displayName = "Alon Stern"
+  }
+  jql = "${ jira.Field.instance.Project } = ${ jira.Project.instance.project.key } ORDER BY ${ jira.Field.instance.Rank__c.name } ASC"
+  sharePermissions = [
+    {
+      type = "project"
+      project = {
+        id = jira.Project.instance.project
+      }
+    },
+  ]
+  
+}

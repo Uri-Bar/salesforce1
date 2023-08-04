@@ -1,0 +1,23 @@
+netsuite.file SuiteBundles_Bundle_351444_Docusign_Scripts_ds_scheduler_js@dsddduv {
+  bundleable = false
+  isinactive = false
+  availablewithoutlogin = false
+  generateurltimestamp = false
+  hideinbundle = false
+  path = "/SuiteBundles/Bundle 351444/Docusign/Scripts/ds_scheduler.js"
+  content = file("netsuite/FileCabinet/SuiteBundles/Bundle 351444/Docusign/Scripts/ds_scheduler.js")
+  _parent = [
+    netsuite.folder.instance.SuiteBundles_Bundle_351444_Docusign_Scripts@dsdd,
+  ]
+  _generated_dependencies = [
+    {
+      reference = netsuite.file.instance.SuiteBundles_Bundle_351444_Docusign_Scripts_ds_api_js@dsddduv.path
+    },
+    {
+      reference = netsuite.file.instance.SuiteBundles_Bundle_351444_Docusign_Scripts_ds_common_js@dsddduv.path
+    },
+    {
+      reference = netsuite.file.instance.SuiteBundles_Bundle_351444_Docusign_Scripts_lib_JsLibraryConfig_json@dsddddv.path
+    },
+  ]
+}

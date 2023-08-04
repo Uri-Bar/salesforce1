@@ -1,0 +1,30 @@
+zendesk.trigger Notify_all_agents_of_received_request@s {
+  title = "Notify all agents of received request"
+  active = true
+  actions = [
+    {
+      field = "notification_user"
+      value = [
+        "all_agents",
+        "[{{ticket.account}}] {{ticket.title}}",
+        '''
+A ticket (#{{ticket.id}}) by {{ticket.requester.name}} has been received. It is unassigned.
+
+{{ticket.comments_formatted}}
+''',
+      ]
+    },
+  ]
+  conditions = {
+    all = [
+      {
+        field = "update_type"
+        operator = "is"
+        value = "Create"
+      },
+    ]
+  }
+  raw_title = "Notify all agents of received request"
+  category_id = zendesk.trigger_category.instance.Notifications
+  default = false
+}

@@ -1,0 +1,139 @@
+type zuora_billing.paymentmethodtransactionlog {
+  string Id {
+    type = "string"
+    format = "uuid"
+    required = false
+    filterable = false
+    label = "Id"
+  }
+  string CreatedDate {
+    type = "string"
+    format = "date-time"
+    required = false
+    filterable = false
+    label = "CreatedDate"
+  }
+  string GatewayReasonCode {
+    type = "string"
+    maxLength = 512
+    required = false
+    filterable = false
+    label = "GatewayReasonCode"
+  }
+  string GatewayReasonCodeDescription {
+    type = "string"
+    maxLength = 512
+    required = false
+    filterable = false
+    label = "GatewayReasonCodeDescription"
+  }
+  string GatewayTransactionType {
+    type = "string"
+    maxLength = 512
+    required = false
+    filterable = false
+    label = "GatewayTransactionType"
+  }
+  string PaymentMethodType {
+    type = "string"
+    maxLength = 512
+    required = false
+    filterable = false
+    label = "PaymentMethodType"
+  }
+  string RequestString {
+    type = "string"
+    maxLength = 512
+    required = false
+    filterable = false
+    label = "RequestString"
+  }
+  string ResponseString {
+    type = "string"
+    maxLength = 512
+    required = false
+    filterable = false
+    label = "ResponseString"
+  }
+  string TransactionDate {
+    type = "string"
+    format = "date-time"
+    required = false
+    filterable = false
+    label = "TransactionDate"
+  }
+  string TransactionId {
+    type = "string"
+    maxLength = 512
+    required = false
+    filterable = false
+    label = "TransactionId"
+  }
+  string AccountId {
+    type = "string"
+    format = "uuid"
+    required = false
+    filterable = false
+    referenceTo = [
+      zuora_billing.account.field.Id,
+    ]
+    cardinality = "manyToOne"
+    recordConstraints = {
+      create = {
+        enforceValidMapping = true
+      }
+    }
+    label = "AccountId"
+  }
+  string PaymentMethodId {
+    type = "string"
+    format = "uuid"
+    required = false
+    filterable = false
+    referenceTo = [
+      zuora_billing.paymentmethod.field.Id,
+    ]
+    cardinality = "manyToOne"
+    recordConstraints = {
+      create = {
+        enforceValidMapping = true
+      }
+    }
+    label = "PaymentMethodId"
+  }
+  string Gateway {
+    type = "string"
+    maxLength = 512
+    required = false
+    filterable = false
+    label = "Gateway"
+  }
+  string IpAddress {
+    type = "string"
+    maxLength = 512
+    required = false
+    filterable = false
+    label = "IpAddress"
+  }
+  string HostedPageId {
+    type = "string"
+    maxLength = 512
+    required = false
+    filterable = false
+    label = "HostedPageId"
+  }
+  string ServiceType {
+    type = "string"
+    maxLength = 512
+    required = false
+    filterable = false
+    label = "ServiceType"
+  }
+  string DeviceId {
+    type = "string"
+    maxLength = 512
+    required = false
+    filterable = false
+    label = "DeviceId"
+  }
+}

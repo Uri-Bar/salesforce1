@@ -1,0 +1,7 @@
+workato.property {
+  value = {
+    value_with_dots_and_special_chars@vvvzezb = "aaa@bbb~ccc"
+    aaa_bbb@s = "ccc"
+    p123 = "val456"
+  }
+}

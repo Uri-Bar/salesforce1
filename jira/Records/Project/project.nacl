@@ -1,0 +1,32 @@
+jira.Project project {
+  key = "PROJ"
+  description = ""
+  name = "project"
+  
+  projectTypeKey = "software"
+  
+  
+  
+  
+  workflowScheme = jira.WorkflowScheme.instance.PROJ__Software_Simplified_Workflow_Scheme@fssss
+  permissionScheme = jira.PermissionScheme.instance.PROJ_software_permission_scheme@s
+  notificationScheme = jira.NotificationScheme.instance.Default_Notification_Scheme@s
+  issueTypeScreenScheme = jira.IssueTypeScreenScheme.instance.PROJ__Kanban_Issue_Type_Screen_Scheme@fsssss
+  issueTypeScheme = jira.IssueTypeScheme.instance.PROJ__Kanban_Issue_Type_Scheme@fssss
+  fieldConfigurationScheme = jira.FieldConfigurationScheme.instance.Custom_field_config@s
+  
+  leadAccountId = {
+    id = "5fa91999b2633d0076583a61"
+    displayName = "Alon Stern"
+  }
+  
+  fieldContexts = [
+    jira.CustomFieldContext.instance.CustomTestSelectList__c_CustomConfigurationScheme_for_CustomSelectList@uuuss,
+    jira.CustomFieldContext.instance.__Progress2__c__00931suu_testContext1@uuuumuu,
+    jira.CustomFieldContext.instance.testNumber2__c_testContext,
+    jira.CustomFieldContext.instance.testNumber__c_Default_Configuration_Scheme_for_testNumber@uuussss,
+    jira.CustomFieldContext.instance.testSelectList2__c_CustomConfigurationScheme_for_CustomSelectList@uuuss,
+    jira.CustomFieldContext.instance.testSelectList4__c_CustomConfigurationScheme_for_CustomSelectList@uuuss,
+    jira.CustomFieldContext.instance.testSelectList__c_CustomConfigurationScheme_for_CustomSelectList@uuuss,
+  ]
+}

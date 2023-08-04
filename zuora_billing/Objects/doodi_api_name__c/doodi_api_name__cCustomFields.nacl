@@ -1,0 +1,11 @@
+type zuora_billing.doodi_api_name__c {
+  string aaaaa__c {
+    maxLength = 512
+    label = "aaaaa"
+    origin = "custom"
+    type = "string"
+    description = " "
+    required = false
+    filterable = false
+  }
+}

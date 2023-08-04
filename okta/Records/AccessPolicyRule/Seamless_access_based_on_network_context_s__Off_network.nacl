@@ -1,0 +1,31 @@
+okta.AccessPolicyRule Seamless_access_based_on_network_context_s__Off_network@uuuuumuus {
+  status = "ACTIVE"
+  name = "Off network"
+  priority = 1
+  system = false
+  conditions = {
+    network = {
+      connection = "ZONE"
+      exclude = [
+        okta.NetworkZone.instance.LegacyIpZone,
+      ]
+    }
+    riskScore = {
+      level = "ANY"
+    }
+  }
+  actions = {
+    appSignOn = {
+      access = "ALLOW"
+      verificationMethod = {
+        factorMode = "2FA"
+        type = "ASSURANCE"
+        reauthenticateIn = "PT12H"
+      }
+    }
+  }
+  type = "ACCESS_POLICY"
+  _parent = [
+    okta.AccessPolicy.instance.Seamless_access_based_on_network_context@s,
+  ]
+}

@@ -1,0 +1,28 @@
+type zuora_billing.journalentryitem {
+  annotations {
+    string metadataType {
+    }
+    string label {
+    }
+    string description {
+    }
+    hidden_string id {
+    }
+    string objectType {
+    }
+  }
+  metadataType = "StandardObject"
+  objectType = "journalentryitem"
+  _generated_dependencies = [
+    {
+      reference = zuora_billing.accountingcode
+    },
+    {
+      reference = zuora_billing.journalentry
+    },
+    {
+      reference = zuora_billing.user
+    },
+  ]
+  label = "Journal Entry Item"
+}

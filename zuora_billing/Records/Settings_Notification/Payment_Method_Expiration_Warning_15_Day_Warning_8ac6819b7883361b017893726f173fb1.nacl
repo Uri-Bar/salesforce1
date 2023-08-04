@@ -1,0 +1,18 @@
+zuora_billing.Settings_Notification Payment_Method_Expiration_Warning_15_Day_Warning_8ac6819b7883361b017893726f173fb1@sssussu {
+  profileId = zuora_billing.Settings_CommunicationProfile.instance.Default_Profile@s
+  eventName = "Payment Method Expiration Warning"
+  name = "15 Day Warning"
+  description = "The credit card set as the default payment method on the account is within 15 days of expiration."
+  active = false
+  hidden = false
+  param1 = "15"
+  emailOption = true
+  emailTemplateName = zuora_billing.PublicEmailTemplate.instance.Payment_Method_Expiration_Default_Email_Template@s
+  calloutOption = false
+  contentType = "APPLICATION_JSON"
+  calloutRetriable = false
+  calloutAuth = false
+  calloutOauth2 = false
+  calloutPreemptiveAuth = false
+  useCustomRequestBody = false
+}

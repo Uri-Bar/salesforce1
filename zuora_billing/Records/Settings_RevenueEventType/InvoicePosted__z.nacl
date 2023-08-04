@@ -1,0 +1,5 @@
+zuora_billing.Settings_RevenueEventType InvoicePosted__z {
+  label = "Invoice Posted"
+  systemId = "InvoicePosted__z"
+  active = true
+}

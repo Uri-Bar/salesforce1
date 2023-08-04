@@ -1,0 +1,17 @@
+salesforce.LightningComponentBundle testLightningWebComponent {
+  apiVersion = 48
+  isExposed = false
+  fullName = "testLightningWebComponent"
+  lwcResources = {
+    lwcResource = {
+      testLightningWebComponent_js@v = {
+        source = file("salesforce/Records/LightningComponentBundle/testLightningWebComponent/testLightningWebComponent.js")
+        filePath = "lwc/testLightningWebComponent/testLightningWebComponent.js"
+      }
+      testLightningWebComponent_html@v = {
+        source = file("salesforce/Records/LightningComponentBundle/testLightningWebComponent/testLightningWebComponent.html")
+        filePath = "lwc/testLightningWebComponent/testLightningWebComponent.html"
+      }
+    }
+  }
+}

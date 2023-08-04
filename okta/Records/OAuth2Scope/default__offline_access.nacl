@@ -1,0 +1,15 @@
+okta.OAuth2Scope default__offline_access {
+  name = "offline_access"
+  displayName = "Keep you signed in to the app."
+  description = "This keeps you signed in to the app, even when you are not using it."
+  system = true
+  metadataPublish = "ALL_CLIENTS"
+  consent = "IMPLICIT"
+  default = false
+  additionalProperties = {
+    optional = false
+  }
+  _parent = [
+    okta.AuthorizationServer.instance.default,
+  ]
+}

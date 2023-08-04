@@ -1,0 +1,7 @@
+netsuite.customrecord_amzn_brand_auth val_54646_t2257815_920 {
+  scriptid = "val_54646_t2257815_920"
+  isInactive = false
+  custom_custrecord_amzn_brand_name = "23r34r"
+  custom_custrecord_amzn_brand_is_authorised = false
+  custom_custrecord_amzn_brand_region = "34r34r"
+}

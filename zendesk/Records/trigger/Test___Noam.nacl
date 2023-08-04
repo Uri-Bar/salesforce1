@@ -1,0 +1,58 @@
+zendesk.trigger Test___Noam@sbs {
+  title = "Test - Noam"
+  active = true
+  actions = [
+    {
+      field = zendesk.organization_field.instance.org_field307
+      value = "jjnjn"
+    },
+    {
+      field = zendesk.ticket_field.instance.multiselect_Testticket_field5b22ccfd
+      value = zendesk.ticket_field__custom_field_options.instance.multiselect_Testticket_field5b22ccfd__B
+    },
+    {
+      field = zendesk.user_field.instance.f211
+      value = "onnk"
+    },
+  ]
+  conditions = {
+    all = [
+      {
+        field = "status"
+        operator = "greater_than"
+        value = "open"
+      },
+      {
+        field = zendesk.ticket_field.instance.tagger_Testticket_field8dfd3b2a
+        operator = "is"
+        value = zendesk.ticket_field__custom_field_options.instance.tagger_Testticket_field8dfd3b2a__Option28dfd3b2a
+      },
+      {
+        field = zendesk.user_field.instance.dropdown_25
+        operator = "is"
+        value = zendesk.user_field__custom_field_options.instance.dropdown_25__Choice1
+      },
+      {
+        field = zendesk.user_field.instance.f205
+        operator = "is"
+        value = "kkk"
+      },
+      {
+        field = zendesk.organization_field.instance.org_field306
+        operator = "includes_words"
+        value = "gdfgf"
+      },
+    ]
+    any = [
+      {
+        field = zendesk.user_field.instance.agent_ooo
+        operator = "is"
+        value = "true"
+      },
+    ]
+  }
+  description = "desc"
+  raw_title = "Test - Noam"
+  category_id = zendesk.trigger_category.instance.Notifications
+  default = false
+}

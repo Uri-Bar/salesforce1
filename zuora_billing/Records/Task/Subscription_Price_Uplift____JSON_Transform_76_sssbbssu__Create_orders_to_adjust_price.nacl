@@ -1,0 +1,57 @@
+zuora_billing.Task Subscription_Price_Uplift____JSON_Transform_76_sssbbssu__Create_orders_to_adjust_price@uuuuuuuumuussss {
+  name = "Create orders to adjust price"
+  parameters = {
+    url = "{{ Credentials.zuora.rest_endpoint }}orders"
+    method = "POST"
+    headers = [
+      {
+        key = "Content-Type"
+        value = "application/json"
+      },
+    ]
+    raw_body = "{{Data.JSONTransform | to_json}}"
+    body_type = "raw"
+    form_datas = [
+      {
+        key = ""
+        value = ""
+        upload = "false"
+      },
+    ]
+    validation = {
+      replace = "false"
+      zuora_call = "true"
+      status_codes = [
+        "",
+        "200",
+      ]
+      payload_location = "Callout"
+    }
+    retry_rules = {
+      retry_count = "0"
+      retry_window = "30"
+      current_retry_count = "0"
+    }
+    authorization = {
+      type = "zuora"
+    }
+    strict_variables = "true"
+    validate_response = "false"
+    validation_scheme = ""
+    include_response_code = "true"
+  }
+  action_type = "Callout"
+  call_type = "SOAP"
+  concurrent_limit = 9999999
+  additionalProperties = {
+    css = {
+      top = "50px"
+      left = "-120px"
+    }
+    priority = "Medium"
+    
+  }
+  _parent = [
+    zuora_billing.WorkflowExport.instance.Subscription_Price_Uplift____JSON_Transform_76@sssbbssu,
+  ]
+}

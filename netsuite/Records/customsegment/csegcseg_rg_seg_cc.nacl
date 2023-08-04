@@ -1,0 +1,188 @@
+netsuite.customsegment csegcseg_rg_seg_cc {
+  scriptid = "csegcseg_rg_seg_cc"
+  defaultrecordaccesslevel = "EDIT"
+  defaultsearchaccesslevel = "EDIT"
+  description = "Cost Center is the department where the costs/revenue can be allocated to."
+  displaytype = "NORMAL"
+  fieldtype = "SELECT"
+  hasglimpact = true
+  help = "Enter Segment Cost Center"
+  ismandatory = false
+  label = "Cost Center"
+  recordtype = netsuite.customrecord_csegcseg_rg_seg_cc.attr.scriptid
+  valuesdisplayorder = "SUBLIST"
+  segmentapplication = {
+    transactionbody = {
+      applications = {
+        application = {
+          EXPENSEREPORT = {
+            id = "EXPENSEREPORT"
+            isapplied = true
+            
+          }
+          INVENTORYADJUSTMENT = {
+            id = "INVENTORYADJUSTMENT"
+            isapplied = true
+            
+          }
+          ITEMFULFILLMENT = {
+            id = "ITEMFULFILLMENT"
+            isapplied = true
+            
+          }
+          ITEMRECEIPT = {
+            id = "ITEMRECEIPT"
+            isapplied = true
+            
+          }
+          JOURNALENTRY = {
+            id = "JOURNALENTRY"
+            isapplied = true
+            
+          }
+          OTHERTRANSACTION = {
+            id = "OTHERTRANSACTION"
+            isapplied = true
+            
+          }
+          PURCHASE = {
+            id = "PURCHASE"
+            isapplied = true
+            
+          }
+          SALE = {
+            id = "SALE"
+            isapplied = true
+            
+          }
+          TRANSFERORDER = {
+            id = "TRANSFERORDER"
+            isapplied = true
+            
+          }
+        }
+      }
+    }
+    transactionline = {
+      applications = {
+        application = {
+          EXPENSE = {
+            id = "EXPENSE"
+            isapplied = true
+            
+          }
+          EXPENSEREPORT = {
+            id = "EXPENSEREPORT"
+            isapplied = true
+            
+          }
+          INVENTORYADJUSTMENT = {
+            id = "INVENTORYADJUSTMENT"
+            isapplied = true
+            
+          }
+          ITEMFULFILLMENT = {
+            id = "ITEMFULFILLMENT"
+            isapplied = true
+            
+          }
+          ITEMRECEIPT = {
+            id = "ITEMRECEIPT"
+            isapplied = true
+            
+          }
+          JOURNALENTRY = {
+            id = "JOURNALENTRY"
+            isapplied = true
+            
+          }
+          PURCHASE = {
+            id = "PURCHASE"
+            isapplied = true
+            
+          }
+          SALE = {
+            id = "SALE"
+            isapplied = true
+            
+          }
+          TRANSFERORDER = {
+            id = "TRANSFERORDER"
+            isapplied = true
+            
+          }
+          customtransaction_bm_budget_transaction = {
+            id = netsuite.customtransactiontype.instance.customtransaction_bm_budget_transaction.scriptid
+            isapplied = true
+            
+          }
+        }
+      }
+    }
+    entities = {
+      applications = {
+        application = {
+          CUSTOMER = {
+            id = "CUSTOMER"
+            isapplied = true
+          }
+          EMPLOYEE = {
+            id = "EMPLOYEE"
+            isapplied = true
+          }
+          VENDOR = {
+            id = "VENDOR"
+            isapplied = true
+          }
+        }
+      }
+    }
+    items = {
+      subtype = "BOTH"
+      applications = {
+        application = {
+          INVENTORYITEM = {
+            id = "INVENTORYITEM"
+            isapplied = true
+          }
+          ITEMGROUP = {
+            id = "ITEMGROUP"
+            isapplied = true
+          }
+          KITITEM = {
+            id = "KITITEM"
+            isapplied = true
+          }
+          NONINVENTORYITEM = {
+            id = "NONINVENTORYITEM"
+            isapplied = true
+          }
+          OTHERCHARGEITEM = {
+            id = "OTHERCHARGEITEM"
+            isapplied = true
+          }
+          SERVICEITEM = {
+            id = "SERVICEITEM"
+            isapplied = true
+          }
+        }
+      }
+    }
+    customrecords = {
+      applications = {
+        application = {
+          customrecord_svb_line_is_source_sub = {
+            id = netsuite.customrecord_svb_line_is_source_sub.attr.scriptid
+            isapplied = true
+            
+          }
+          customrecord_svb_bill_dist_details = {
+            id = netsuite.customrecord_svb_bill_dist_details.attr.scriptid
+            isapplied = true
+            
+          }
+        }
+      }
+    }
+  }
+}

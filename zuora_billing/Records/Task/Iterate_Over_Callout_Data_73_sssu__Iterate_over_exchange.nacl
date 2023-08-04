@@ -1,0 +1,23 @@
+zuora_billing.Task Iterate_Over_Callout_Data_73_sssu__Iterate_over_exchange@uuuumuuss {
+  name = "Iterate over exchange"
+  parameters = {
+    iteration_type = "Default"
+    liquid_statement = "{{ Data.Callout | to_json}}"
+  }
+  action_type = "Iterate"
+  object = "CUSTOM LIQUID"
+  call_type = "SOAP"
+  task_id = 117
+  concurrent_limit = 9999999
+  additionalProperties = {
+    css = {
+      top = "40px"
+      left = "640px"
+    }
+    priority = "Medium"
+    
+  }
+  _parent = [
+    zuora_billing.WorkflowExport.instance.Iterate_Over_Callout_Data_73@sssu,
+  ]
+}

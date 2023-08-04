@@ -1,0 +1,20 @@
+zuora_billing.Settings_Role ZCommerce_Zuora_Commerce_Admin_User@usss {
+  name = "Zuora Commerce Admin User"
+  category = "ZCommerce"
+  attributes = [
+    {
+      name = "allowSfdcCleanUp"
+      scope = "ZCommerce360Sync"
+      activationLevel = "User"
+    },
+    {
+      name = "manage360Sync"
+      scope = "ZCommerce360Sync"
+      activationLevel = "User"
+    },
+  ]
+  
+  description = "Administer all functionality for the Zuora Commerce Product"
+  entityId = "8ac6819b-7883-361b-0178-93726ba53eff"
+  custom = false
+}

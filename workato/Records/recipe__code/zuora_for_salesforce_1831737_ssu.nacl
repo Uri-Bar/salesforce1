@@ -1,0 +1,43 @@
+workato.recipe__code zuora_for_salesforce_1831737_ssu@uuum {
+  number = 0
+  provider = "zuora_forcecom"
+  name = "object_created"
+  as = "55b27032"
+  title = "Expense created"
+  description = "<span class=\"provider\">Expense</span> created in <span class=\"provider\">Zuora for Salesforce</span>"
+  keyword = "trigger"
+  dynamicPickListSelection = {
+    sobject_name = "Expense"
+  }
+  input = {
+    sobject_name = "ExpenseT__Expense__c"
+  }
+  block = [
+    {
+      number = 1
+      provider = "zuora_forcecom"
+      name = "search_objects"
+      as = "0534198b"
+      title = "Search Processes"
+      description = "Search for <span class=\"provider\">Processes</span> in <span class=\"provider\">Zuora for Salesforce</span>"
+      keyword = "action"
+      dynamicPickListSelection = {
+        sobject_name = "Process"
+      }
+      input = {
+        sobject_name = "simplepay__Process__c"
+      }
+      visible_config_fields = [
+        "sobject_name",
+        "LastModifiedById",
+        "CreatedById",
+        "IsDeleted",
+      ]
+      uuid = "8d052f50-d5e5-422f-a5a7-58c0d36d8e37"
+    },
+  ]
+  uuid = "9855427b-18ab-4618-b78e-f1d6dbea8dd5"
+  _parent = [
+    workato.recipe.instance.zuora_for_salesforce_1831737@ssu,
+  ]
+}

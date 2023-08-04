@@ -1,0 +1,15 @@
+netsuite.account Credit_Card_Payable@s {
+  acctType = "_otherCurrentLiability"
+  acctName = "Credit Card Payable"
+  includeChildren = true
+  generalRate = "_current"
+  cashFlowRate = "_average"
+  isInactive = false
+  inventory = false
+  subsidiaryList = [
+    netsuite.subsidiary.instance.Parent_Company@s,
+  ]
+  revalue = true
+  identifier = "Credit Card Payable"
+  custom_custrecord_acct_special = false
+}

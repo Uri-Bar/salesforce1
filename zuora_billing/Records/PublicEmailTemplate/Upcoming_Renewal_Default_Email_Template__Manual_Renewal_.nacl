@@ -1,0 +1,21 @@
+zuora_billing.PublicEmailTemplate Upcoming_Renewal_Default_Email_Template__Manual_Renewal_@sssssjsk {
+  eventCategory = 1220
+  name = "Upcoming Renewal Default Email Template (Manual Renewal)"
+  description = ""
+  encodingType = "UTF8"
+  fromName = "Admin"
+  fromEmailType = "TenantEmail"
+  fromEmailAddress = "neta.marcus@salto.io"
+  replyToEmailType = "TenantEmail"
+  replyToEmailAddress = "neta.marcus@salto.io"
+  ccEmailType = "SpecificEmails"
+  ccEmailAddress = ""
+  bccEmailAddress = ""
+  toEmailType = "BillToContact"
+  toEmailAddress = ""
+  emailSubject = "Subscription <Subscription.SubscriptionName> is approaching its renewal date within <Event.HowManyDaysBefore> days"
+  emailBody = "Dear <BillToContact.FirstName> <BillToContact.LastName>,\r<br />\r<br />This is a friendly reminder that your subscription  <Subscription.SubscriptionName> will expire on <Subscription.TermEndDate>.\r<br />\r<br />Please make arrangement with your account representative for the renewal.\r<br />\r<br />Thank you for your business!"
+  active = true
+  isHtml = true
+  useAdditionalAddresses = false
+}

@@ -1,0 +1,22 @@
+salesforce.WebLink Lead_GoogleNews {
+  fullName = "Lead.GoogleNews"
+  availability = "online"
+  displayType = "link"
+  encodingKey = "UTF-8"
+  hasMenubar = false
+  hasScrollbars = true
+  hasToolbar = false
+  height = 600
+  isResizable = true
+  linkType = "url"
+  masterLabel = "Google News"
+  openType = "newWindow"
+  position = "none"
+  protected = false
+  showsLocation = false
+  showsStatus = false
+  url = "http://www.google.com/news?&q={!Lead_Company}&btnG=Search+News"
+  _parent = [
+    salesforce.Lead,
+  ]
+}

@@ -1,0 +1,21 @@
+zuora_billing.Task Iterate_Over_Callout_Data_73_sssu__Check_Iterate____Data_Callout_name___@uuuumuuss_00123_00123svvs_00125_00125 {
+  name = "Check Iterate {{ Data.Callout.name }}"
+  parameters = {
+    if_clause = "{% if Data.Callout.name == 'Bitcoin' %} True {% else %} False {% endif %}"
+  }
+  action_type = "If"
+  call_type = "SOAP"
+  task_id = 120
+  concurrent_limit = 9999999
+  additionalProperties = {
+    css = {
+      top = "40px"
+      left = "910px"
+    }
+    priority = "Medium"
+    
+  }
+  _parent = [
+    zuora_billing.WorkflowExport.instance.Iterate_Over_Callout_Data_73@sssu,
+  ]
+}

@@ -1,0 +1,14 @@
+stripe.reporting_report_type payout_reconciliation_summary_1@uvv {
+  id = "payout_reconciliation.summary.1"
+  default_columns = [
+    "reporting_category",
+    "currency",
+    "count",
+    "gross",
+    "fee",
+    "net",
+  ]
+  livemode = false
+  name = "Payouts reconciliation summary"
+  version = 1
+}

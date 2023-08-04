@@ -1,0 +1,86 @@
+workato.recipe__code with_lookup_1_a_neta1_1_Root_vu_uuum_ssuuuuum@uuuuuuuum {
+  number = 0
+  provider = "clock"
+  name = "scheduled_event"
+  as = "1dfbd9ee"
+  description = '''
+<span class="provider">Trigger</span> every 50 months at <span class="provider">12:00:00 AM</span>
+          on day 1 of the month
+'''
+  keyword = "trigger"
+  dynamicPickListSelection = {
+    time_unit = "Months"
+    days_of_month = [
+      {
+        label = "1"
+        value = "1"
+      },
+    ]
+  }
+  input = {
+    time_unit = "months"
+    trigger_every = "50"
+    days_of_month = "1"
+    trigger_at = "00:00:00"
+  }
+  filter = {
+    conditions = [
+      {
+        operand = "contains"
+        lhs = "aaa"
+        rhs = "bbb"
+        uuid = "condition-27fd225e-afd4-4480-ac70-6a501864695b"
+      },
+    ]
+    operand = "and"
+    type = "compound"
+  }
+  block = [
+    {
+      number = 1
+      provider = "salesforce"
+      name = "create_custom_object"
+      as = "f633ea1d"
+      title = "Create Fish"
+      description = "Create <span class=\"provider\">Fish</span> in <span class=\"provider\">Salesforce</span>"
+      keyword = "action"
+      dynamicPickListSelection = {
+        sobject_name = "Fish"
+      }
+      input = {
+        sobject_name = "Fish__c"
+      }
+      uuid = "9932c3e0-99a0-4191-9277-99a6f1e494d5"
+    },
+    {
+      number = 2
+      provider = "lookup_table"
+      name = "search_entries"
+      as = "4184a7bf"
+      description = '''
+
+      Search
+      <span class="provider">entries</span>
+      in
+      <span class="provider">lookupABC</span>
+      lookup table
+    
+'''
+      keyword = "action"
+      dynamicPickListSelection = {
+        lookup_table_id = "lookupABC"
+      }
+      input = {
+        lookup_table_id = "74694"
+        parameters = {
+          col1 = "a"
+        }
+      }
+      uuid = "61358448-086f-4248-a96d-2b7a2962b98c"
+    },
+  ]
+  uuid = "c0a5b877-9391-45c3-b46e-476135b25781"
+  _parent = [
+    workato.recipe.instance.with_lookup_1_a_neta1_1_Root_vu_uuum@ssuuuuum,
+  ]
+}

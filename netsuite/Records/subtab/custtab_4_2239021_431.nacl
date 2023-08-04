@@ -1,0 +1,6 @@
+netsuite.subtab custtab_4_2239021_431 {
+  scriptid = "custtab_4_2239021_431"
+  parent = netsuite.subtab.instance.custtab_2_2239021_106.scriptid
+  tabtype = "TRANSACTION"
+  title = "Salto Debug"
+}

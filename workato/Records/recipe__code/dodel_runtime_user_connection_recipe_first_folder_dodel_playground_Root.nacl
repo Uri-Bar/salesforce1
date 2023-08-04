@@ -1,0 +1,50 @@
+workato.recipe__code dodel_runtime_user_connection_recipe_first_folder_dodel_playground_Root {
+  number = 0
+  provider = "workato_recipe_function"
+  name = "execute"
+  as = "f0369d49"
+  keyword = "trigger"
+  input = {
+    parameters_schema_json = "[{\"name\":\"pasten\",\"type\":\"string\",\"optional\":false,\"control_type\":\"text\",\"label\":\"Pasten\"}]"
+    result_schema_json = "[{\"name\":\"pasten\",\"type\":\"string\",\"optional\":false,\"control_type\":\"text\",\"label\":\"Pasten\"}]"
+  }
+  block = [
+    {
+      number = 1
+      keyword = "if"
+      input = {
+        type = "compound"
+        operand = "and"
+        conditions = [
+          {
+            operand = ""
+            lhs = ""
+            rhs = ""
+            uuid = "condition-5646353f-b99e-40ba-b534-5e4789d77a51"
+          },
+        ]
+      }
+      block = [
+        {
+          number = 2
+          keyword = "action"
+          uuid = "6f506854-b21a-4853-9b66-6a51d9e36bae"
+        },
+      ]
+      uuid = "cca4864a-0aa0-465a-a023-ab84c1aa1978"
+    },
+    {
+      number = 3
+      provider = "workato_recipe_function"
+      name = "call_recipe"
+      as = "a15b09a3"
+      description = "Call a recipe function"
+      keyword = "action"
+      uuid = "185248ae-c64f-4010-bdd7-0d3d6226b22d"
+    },
+  ]
+  uuid = "763abdea-9015-4be9-bc53-328b0e3d914f"
+  _parent = [
+    workato.recipe.instance.dodel_runtime_user_connection_recipe_first_folder_dodel_playground_Root,
+  ]
+}

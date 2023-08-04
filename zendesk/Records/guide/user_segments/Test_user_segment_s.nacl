@@ -1,0 +1,5 @@
+zendesk.user_segment Test_user_segment@s {
+  user_type = "signed_in_users"
+  built_in = false
+  name = "Test user segment"
+}

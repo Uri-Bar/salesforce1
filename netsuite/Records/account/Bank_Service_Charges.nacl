@@ -1,0 +1,15 @@
+netsuite.account Bank_Service_Charges@s {
+  acctType = "_expense"
+  acctName = "Bank Service Charges"
+  includeChildren = true
+  generalRate = "_average"
+  cashFlowRate = "_average"
+  isInactive = false
+  inventory = false
+  subsidiaryList = [
+    netsuite.subsidiary.instance.Parent_Company@s,
+  ]
+  revalue = false
+  identifier = "Bank Service Charges"
+  custom_custrecord_acct_special = false
+}

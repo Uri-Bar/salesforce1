@@ -1,0 +1,9 @@
+okta.Feature Sign_In_Widget_third_generation@bsss {
+  type = "self-service"
+  status = "DISABLED"
+  name = "Sign-In Widget third generation"
+  description = "The third generation Sign-In Widget offers accessibility improvements in color contrast, focus management, and screen reader behavior. However, some features aren't supported yet. See the documentation to learn about the differences."
+  stage = {
+    value = "EA"
+  }
+}

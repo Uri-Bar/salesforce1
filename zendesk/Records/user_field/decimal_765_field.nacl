@@ -1,0 +1,10 @@
+zendesk.user_field decimal_765_field {
+  type = "decimal"
+  key = "decimal_765_field"
+  
+  
+  raw_title = "decimal 765 field"
+  raw_description = ""
+  active = true
+  system = false
+}

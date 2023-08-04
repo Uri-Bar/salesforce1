@@ -1,0 +1,24 @@
+workato.recipe zuora_for_salesforce_1831737@ssu {
+  name = "zuora for salesforce"
+  trigger_application = "zuora_forcecom"
+  action_applications = [
+    "zuora_forcecom",
+  ]
+  applications = [
+    "zuora_forcecom",
+  ]
+  description = "When there is a trigger event, do action"
+  folder_id = workato.folder.instance.Alon_318283
+  running = false
+  version_no = 2
+  config = [
+    {
+      keyword = "application"
+      name = "zuora_forcecom"
+      provider = "zuora_forcecom"
+      account_id = workato.connection.instance.My_second_Zuora_for_Salesforce_account@s
+      skip_validation = false
+    },
+  ]
+  code = workato.recipe__code.instance.zuora_for_salesforce_1831737_ssu@uuum
+}

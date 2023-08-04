@@ -1,0 +1,2166 @@
+salesforce.ForecastingObjectListSettings {
+  fullName = "ForecastingObjectList"
+  forecastingTypeObjectListSettings = [
+    {
+      forecastingObjectListLabelMappings = [
+        {
+          field = "CREATEDBY_USER.ALIAS"
+          label = "Created By Alias"
+        },
+        {
+          field = "OPPORTUNITY.AMOUNT"
+          label = "Amount"
+        },
+        {
+          field = "00N4J000006KouA"
+          label = "Loss Reason"
+        },
+        {
+          field = "OPPORTUNITY.CLOSE_DATE"
+          label = "Close Date"
+        },
+        {
+          field = "OPPORTUNITY.TYPE"
+          label = "Type"
+        },
+        {
+          field = "OPPORTUNITY.CREATED_DATE"
+          label = "Created Date"
+        },
+        {
+          field = "OPPORTUNITY.LAST_UPDATE"
+          label = "Last Modified Date"
+        },
+        {
+          field = "OPPORTUNITY.LEAD_SOURCE"
+          label = "Lead Source"
+        },
+        {
+          field = "00N4J000006Kou8"
+          label = "Discovery Completed"
+        },
+        {
+          field = "OPPORTUNITY.CLOSED"
+          label = "Closed"
+        },
+        {
+          field = "OPPORTUNITY.WON"
+          label = "Won"
+        },
+        {
+          field = "00N4J000006Kou7"
+          label = "Budget Confirmed"
+        },
+        {
+          field = "00N4J000006Kou9"
+          label = "ROI Analysis Completed"
+        },
+        {
+          field = "OPPORTUNITY.PROBABILITY"
+          label = "Probability (%)"
+        },
+        {
+          field = "CORE.USERS.ALIAS"
+          label = "Opportunity Owner Alias"
+        },
+        {
+          field = "00N3H000000xhSS"
+          label = "Netsuite URL"
+        },
+        {
+          field = "OPPORTUNITY.LAST_ACTIVITY"
+          label = "Last Activity"
+        },
+        {
+          field = "OPPORTUNITY.FISCAL_QUARTER"
+          label = "Fiscal Quarter"
+        },
+        {
+          field = "DESCRIPTION"
+          label = "Description"
+        },
+        {
+          field = "OPPORTUNITY.FISCAL_PERIOD"
+          label = "Fiscal Period"
+        },
+        {
+          field = "FULL_NAME"
+          label = "Owner Full Name"
+        },
+        {
+          field = "OPPORTUNITY.NEXT_STEP"
+          label = "Next Step"
+        },
+        {
+          field = "UPDATEDBY_USER.ALIAS"
+          label = "Last Modified By Alias"
+        },
+        {
+          field = "OPPORTUNITY.STAGE_NAME"
+          label = "Stage"
+        },
+        {
+          field = "00N3H000000oxyk"
+          label = "Health"
+        },
+        {
+          field = "OPPORTUNITY.NAME"
+          label = "Opportunity Name"
+        },
+        {
+          field = "CORE.USERS.LAST_NAME"
+          label = "Owner Last Name"
+        },
+        {
+          field = "SYNCEDQUOTE.NAME"
+          label = "Synced Quote"
+        },
+        {
+          field = "OPPORTUNITY.FISCAL_YEAR"
+          label = "Fiscal Year"
+        },
+        {
+          field = "CORE.USERS.FIRST_NAME"
+          label = "Owner First Name"
+        },
+        {
+          field = "ACCOUNT.NAME"
+          label = "Account Name"
+        },
+        {
+          field = "CONTRACT.CONTRACT_NUMBER"
+          label = "Contract Number"
+        },
+        {
+          field = "FORECAST_CATEGORY"
+          label = "Forecast Category"
+        },
+      ]
+      forecastingObjectListSelectedSettings = {
+        field = [
+          "OPPORTUNITY.NAME",
+          "ACCOUNT.NAME",
+          "OPPORTUNITY.AMOUNT",
+          "OPPORTUNITY.CLOSE_DATE",
+          "OPPORTUNITY.STAGE_NAME",
+          "OPPORTUNITY.PROBABILITY",
+          "FORECAST_CATEGORY",
+          "FULL_NAME",
+        ]
+      }
+      forecastingObjectListUnselectedSettings = {
+        field = [
+          "CONTRACT.CONTRACT_NUMBER",
+          "CORE.USERS.ALIAS",
+          "CORE.USERS.FIRST_NAME",
+          "CORE.USERS.LAST_NAME",
+          "DESCRIPTION",
+          "OPPORTUNITY.LEAD_SOURCE",
+          "OPPORTUNITY.NEXT_STEP",
+          "OPPORTUNITY.TYPE",
+          "UPDATEDBY_USER.ALIAS",
+          "CREATEDBY_USER.ALIAS",
+          "SYNCEDQUOTE.NAME",
+          "OPPORTUNITY.CLOSED",
+          "OPPORTUNITY.WON",
+          "OPPORTUNITY.FISCAL_YEAR",
+          "OPPORTUNITY.FISCAL_QUARTER",
+          "OPPORTUNITY.FISCAL_PERIOD",
+          "OPPORTUNITY.LAST_ACTIVITY",
+          "OPPORTUNITY.CREATED_DATE",
+          "OPPORTUNITY.LAST_UPDATE",
+          "00N4J000006Kou7",
+          "00N4J000006Kou8",
+          "00N3H000000oxyk",
+          "00N4J000006KouA",
+          "00N3H000000xhSS",
+          "00N4J000006Kou9",
+        ]
+      }
+      forecastingTypeDeveloperName = "OpportunityRevenue"
+    },
+    {
+      forecastingObjectListLabelMappings = [
+        {
+          field = "CREATEDBY_USER.ALIAS"
+          label = "Created By Alias"
+        },
+        {
+          field = "OPPORTUNITY.AMOUNT"
+          label = "Amount"
+        },
+        {
+          field = "00N4J000006KouA"
+          label = "Loss Reason"
+        },
+        {
+          field = "OPPORTUNITY.CLOSE_DATE"
+          label = "Close Date"
+        },
+        {
+          field = "OPPORTUNITY.TYPE"
+          label = "Type"
+        },
+        {
+          field = "OPPORTUNITY.CREATED_DATE"
+          label = "Created Date"
+        },
+        {
+          field = "OPPORTUNITY.LAST_UPDATE"
+          label = "Last Modified Date"
+        },
+        {
+          field = "OPPORTUNITY.LEAD_SOURCE"
+          label = "Lead Source"
+        },
+        {
+          field = "00N4J000006Kou8"
+          label = "Discovery Completed"
+        },
+        {
+          field = "OPPORTUNITY.CLOSED"
+          label = "Closed"
+        },
+        {
+          field = "OPPORTUNITY.WON"
+          label = "Won"
+        },
+        {
+          field = "00N4J000006Kou7"
+          label = "Budget Confirmed"
+        },
+        {
+          field = "00N4J000006Kou9"
+          label = "ROI Analysis Completed"
+        },
+        {
+          field = "OPPORTUNITY.PROBABILITY"
+          label = "Probability (%)"
+        },
+        {
+          field = "CORE.USERS.ALIAS"
+          label = "Opportunity Owner Alias"
+        },
+        {
+          field = "00N3H000000xhSS"
+          label = "Netsuite URL"
+        },
+        {
+          field = "OPPORTUNITY.LAST_ACTIVITY"
+          label = "Last Activity"
+        },
+        {
+          field = "OPPORTUNITY.FISCAL_QUARTER"
+          label = "Fiscal Quarter"
+        },
+        {
+          field = "DESCRIPTION"
+          label = "Description"
+        },
+        {
+          field = "OPPORTUNITY.FISCAL_PERIOD"
+          label = "Fiscal Period"
+        },
+        {
+          field = "FULL_NAME"
+          label = "Owner Full Name"
+        },
+        {
+          field = "OPPORTUNITY.NEXT_STEP"
+          label = "Next Step"
+        },
+        {
+          field = "UPDATEDBY_USER.ALIAS"
+          label = "Last Modified By Alias"
+        },
+        {
+          field = "OPPORTUNITY.STAGE_NAME"
+          label = "Stage"
+        },
+        {
+          field = "00N3H000000oxyk"
+          label = "Health"
+        },
+        {
+          field = "OPPORTUNITY.NAME"
+          label = "Opportunity Name"
+        },
+        {
+          field = "CORE.USERS.LAST_NAME"
+          label = "Owner Last Name"
+        },
+        {
+          field = "SYNCEDQUOTE.NAME"
+          label = "Synced Quote"
+        },
+        {
+          field = "OPPORTUNITY.FISCAL_YEAR"
+          label = "Fiscal Year"
+        },
+        {
+          field = "CORE.USERS.FIRST_NAME"
+          label = "Owner First Name"
+        },
+        {
+          field = "ACCOUNT.NAME"
+          label = "Account Name"
+        },
+        {
+          field = "CONTRACT.CONTRACT_NUMBER"
+          label = "Contract Number"
+        },
+        {
+          field = "FORECAST_CATEGORY"
+          label = "Forecast Category"
+        },
+      ]
+      forecastingObjectListSelectedSettings = {
+        field = [
+          "OPPORTUNITY.NAME",
+          "ACCOUNT.NAME",
+          "OPPORTUNITY.CLOSE_DATE",
+          "OPPORTUNITY.STAGE_NAME",
+          "OPPORTUNITY.PROBABILITY",
+          "FORECAST_CATEGORY",
+          "FULL_NAME",
+        ]
+      }
+      forecastingObjectListUnselectedSettings = {
+        field = [
+          "CONTRACT.CONTRACT_NUMBER",
+          "OPPORTUNITY.AMOUNT",
+          "CORE.USERS.ALIAS",
+          "CORE.USERS.FIRST_NAME",
+          "CORE.USERS.LAST_NAME",
+          "DESCRIPTION",
+          "OPPORTUNITY.LEAD_SOURCE",
+          "OPPORTUNITY.NEXT_STEP",
+          "OPPORTUNITY.TYPE",
+          "UPDATEDBY_USER.ALIAS",
+          "CREATEDBY_USER.ALIAS",
+          "SYNCEDQUOTE.NAME",
+          "OPPORTUNITY.CLOSED",
+          "OPPORTUNITY.WON",
+          "OPPORTUNITY.FISCAL_YEAR",
+          "OPPORTUNITY.FISCAL_QUARTER",
+          "OPPORTUNITY.FISCAL_PERIOD",
+          "OPPORTUNITY.LAST_ACTIVITY",
+          "OPPORTUNITY.CREATED_DATE",
+          "OPPORTUNITY.LAST_UPDATE",
+          "00N4J000006Kou7",
+          "00N4J000006Kou8",
+          "00N3H000000oxyk",
+          "00N4J000006KouA",
+          "00N3H000000xhSS",
+          "00N4J000006Kou9",
+        ]
+      }
+      forecastingTypeDeveloperName = "OpportunityQuantity"
+    },
+    {
+      forecastingObjectListLabelMappings = [
+        {
+          field = "CREATEDBY_USER.ALIAS"
+          label = "Created By Alias"
+        },
+        {
+          field = "OPPORTUNITY.AMOUNT"
+          label = "Amount"
+        },
+        {
+          field = "00N4J000006KouA"
+          label = "Loss Reason"
+        },
+        {
+          field = "OPPORTUNITY.CLOSE_DATE"
+          label = "Close Date"
+        },
+        {
+          field = "OPPORTUNITY.TYPE"
+          label = "Type"
+        },
+        {
+          field = "OPPORTUNITY.CREATED_DATE"
+          label = "Created Date"
+        },
+        {
+          field = "OPPORTUNITY.LAST_UPDATE"
+          label = "Last Modified Date"
+        },
+        {
+          field = "OPPORTUNITY.LEAD_SOURCE"
+          label = "Lead Source"
+        },
+        {
+          field = "00N4J000006Kou8"
+          label = "Discovery Completed"
+        },
+        {
+          field = "OPPORTUNITY.CLOSED"
+          label = "Closed"
+        },
+        {
+          field = "OPPORTUNITY.WON"
+          label = "Won"
+        },
+        {
+          field = "00N4J000006Kou7"
+          label = "Budget Confirmed"
+        },
+        {
+          field = "00N4J000006Kou9"
+          label = "ROI Analysis Completed"
+        },
+        {
+          field = "OPPORTUNITY.PROBABILITY"
+          label = "Probability (%)"
+        },
+        {
+          field = "CORE.USERS.ALIAS"
+          label = "Opportunity Owner Alias"
+        },
+        {
+          field = "00N3H000000xhSS"
+          label = "Netsuite URL"
+        },
+        {
+          field = "OPPORTUNITY.LAST_ACTIVITY"
+          label = "Last Activity"
+        },
+        {
+          field = "OPPORTUNITY.FISCAL_QUARTER"
+          label = "Fiscal Quarter"
+        },
+        {
+          field = "DESCRIPTION"
+          label = "Description"
+        },
+        {
+          field = "OPPORTUNITY.FISCAL_PERIOD"
+          label = "Fiscal Period"
+        },
+        {
+          field = "FULL_NAME"
+          label = "Owner Full Name"
+        },
+        {
+          field = "OPPORTUNITY.NEXT_STEP"
+          label = "Next Step"
+        },
+        {
+          field = "UPDATEDBY_USER.ALIAS"
+          label = "Last Modified By Alias"
+        },
+        {
+          field = "OPPORTUNITY.STAGE_NAME"
+          label = "Stage"
+        },
+        {
+          field = "00N3H000000oxyk"
+          label = "Health"
+        },
+        {
+          field = "SPLITAMOUNT"
+          label = "Forecasted Amount"
+        },
+        {
+          field = "OPPORTUNITY.NAME"
+          label = "Opportunity Name"
+        },
+        {
+          field = "CORE.USERS.LAST_NAME"
+          label = "Owner Last Name"
+        },
+        {
+          field = "SYNCEDQUOTE.NAME"
+          label = "Synced Quote"
+        },
+        {
+          field = "OPPORTUNITY.FISCAL_YEAR"
+          label = "Fiscal Year"
+        },
+        {
+          field = "CORE.USERS.FIRST_NAME"
+          label = "Owner First Name"
+        },
+        {
+          field = "ACCOUNT.NAME"
+          label = "Account Name"
+        },
+        {
+          field = "CONTRACT.CONTRACT_NUMBER"
+          label = "Contract Number"
+        },
+        {
+          field = "FORECAST_CATEGORY"
+          label = "Forecast Category"
+        },
+      ]
+      forecastingObjectListSelectedSettings = {
+        field = [
+          "OPPORTUNITY.NAME",
+          "ACCOUNT.NAME",
+          "SPLITAMOUNT",
+          "OPPORTUNITY.CLOSE_DATE",
+          "OPPORTUNITY.STAGE_NAME",
+          "OPPORTUNITY.PROBABILITY",
+          "FORECAST_CATEGORY",
+          "FULL_NAME",
+        ]
+      }
+      forecastingObjectListUnselectedSettings = {
+        field = [
+          "CONTRACT.CONTRACT_NUMBER",
+          "OPPORTUNITY.AMOUNT",
+          "CORE.USERS.ALIAS",
+          "CORE.USERS.FIRST_NAME",
+          "CORE.USERS.LAST_NAME",
+          "DESCRIPTION",
+          "OPPORTUNITY.LEAD_SOURCE",
+          "OPPORTUNITY.NEXT_STEP",
+          "OPPORTUNITY.TYPE",
+          "UPDATEDBY_USER.ALIAS",
+          "CREATEDBY_USER.ALIAS",
+          "SYNCEDQUOTE.NAME",
+          "OPPORTUNITY.CLOSED",
+          "OPPORTUNITY.WON",
+          "OPPORTUNITY.FISCAL_YEAR",
+          "OPPORTUNITY.FISCAL_QUARTER",
+          "OPPORTUNITY.FISCAL_PERIOD",
+          "OPPORTUNITY.LAST_ACTIVITY",
+          "OPPORTUNITY.CREATED_DATE",
+          "OPPORTUNITY.LAST_UPDATE",
+          "00N4J000006Kou7",
+          "00N4J000006Kou8",
+          "00N3H000000oxyk",
+          "00N4J000006KouA",
+          "00N3H000000xhSS",
+          "00N4J000006Kou9",
+        ]
+      }
+      forecastingTypeDeveloperName = "OpportunityLineItemRevenue"
+    },
+    {
+      forecastingObjectListLabelMappings = [
+        {
+          field = "CREATEDBY_USER.ALIAS"
+          label = "Created By Alias"
+        },
+        {
+          field = "OPPORTUNITY.AMOUNT"
+          label = "Amount"
+        },
+        {
+          field = "00N4J000006KouA"
+          label = "Loss Reason"
+        },
+        {
+          field = "OPPORTUNITY.CLOSE_DATE"
+          label = "Close Date"
+        },
+        {
+          field = "OPPORTUNITY.TYPE"
+          label = "Type"
+        },
+        {
+          field = "OPPORTUNITY.CREATED_DATE"
+          label = "Created Date"
+        },
+        {
+          field = "OPPORTUNITY.LAST_UPDATE"
+          label = "Last Modified Date"
+        },
+        {
+          field = "OPPORTUNITY.LEAD_SOURCE"
+          label = "Lead Source"
+        },
+        {
+          field = "00N4J000006Kou8"
+          label = "Discovery Completed"
+        },
+        {
+          field = "OPPORTUNITY.CLOSED"
+          label = "Closed"
+        },
+        {
+          field = "OPPORTUNITY.WON"
+          label = "Won"
+        },
+        {
+          field = "00N4J000006Kou7"
+          label = "Budget Confirmed"
+        },
+        {
+          field = "00N4J000006Kou9"
+          label = "ROI Analysis Completed"
+        },
+        {
+          field = "OPPORTUNITY.PROBABILITY"
+          label = "Probability (%)"
+        },
+        {
+          field = "CORE.USERS.ALIAS"
+          label = "Opportunity Owner Alias"
+        },
+        {
+          field = "00N3H000000xhSS"
+          label = "Netsuite URL"
+        },
+        {
+          field = "OPPORTUNITY.LAST_ACTIVITY"
+          label = "Last Activity"
+        },
+        {
+          field = "OPPORTUNITY.FISCAL_QUARTER"
+          label = "Fiscal Quarter"
+        },
+        {
+          field = "DESCRIPTION"
+          label = "Description"
+        },
+        {
+          field = "OPPORTUNITY.FISCAL_PERIOD"
+          label = "Fiscal Period"
+        },
+        {
+          field = "FULL_NAME"
+          label = "Owner Full Name"
+        },
+        {
+          field = "OPPORTUNITY.NEXT_STEP"
+          label = "Next Step"
+        },
+        {
+          field = "UPDATEDBY_USER.ALIAS"
+          label = "Last Modified By Alias"
+        },
+        {
+          field = "OPPORTUNITY.STAGE_NAME"
+          label = "Stage"
+        },
+        {
+          field = "00N3H000000oxyk"
+          label = "Health"
+        },
+        {
+          field = "OPPORTUNITY.NAME"
+          label = "Opportunity Name"
+        },
+        {
+          field = "CORE.USERS.LAST_NAME"
+          label = "Owner Last Name"
+        },
+        {
+          field = "SYNCEDQUOTE.NAME"
+          label = "Synced Quote"
+        },
+        {
+          field = "OPPORTUNITY.FISCAL_YEAR"
+          label = "Fiscal Year"
+        },
+        {
+          field = "CORE.USERS.FIRST_NAME"
+          label = "Owner First Name"
+        },
+        {
+          field = "ACCOUNT.NAME"
+          label = "Account Name"
+        },
+        {
+          field = "CONTRACT.CONTRACT_NUMBER"
+          label = "Contract Number"
+        },
+        {
+          field = "FORECAST_CATEGORY"
+          label = "Forecast Category"
+        },
+      ]
+      forecastingObjectListSelectedSettings = {
+        field = [
+          "OPPORTUNITY.NAME",
+          "ACCOUNT.NAME",
+          "OPPORTUNITY.CLOSE_DATE",
+          "OPPORTUNITY.STAGE_NAME",
+          "OPPORTUNITY.PROBABILITY",
+          "FORECAST_CATEGORY",
+          "FULL_NAME",
+        ]
+      }
+      forecastingObjectListUnselectedSettings = {
+        field = [
+          "CONTRACT.CONTRACT_NUMBER",
+          "OPPORTUNITY.AMOUNT",
+          "CORE.USERS.ALIAS",
+          "CORE.USERS.FIRST_NAME",
+          "CORE.USERS.LAST_NAME",
+          "DESCRIPTION",
+          "OPPORTUNITY.LEAD_SOURCE",
+          "OPPORTUNITY.NEXT_STEP",
+          "OPPORTUNITY.TYPE",
+          "UPDATEDBY_USER.ALIAS",
+          "CREATEDBY_USER.ALIAS",
+          "SYNCEDQUOTE.NAME",
+          "OPPORTUNITY.CLOSED",
+          "OPPORTUNITY.WON",
+          "OPPORTUNITY.FISCAL_YEAR",
+          "OPPORTUNITY.FISCAL_QUARTER",
+          "OPPORTUNITY.FISCAL_PERIOD",
+          "OPPORTUNITY.LAST_ACTIVITY",
+          "OPPORTUNITY.CREATED_DATE",
+          "OPPORTUNITY.LAST_UPDATE",
+          "00N4J000006Kou7",
+          "00N4J000006Kou8",
+          "00N3H000000oxyk",
+          "00N4J000006KouA",
+          "00N3H000000xhSS",
+          "00N4J000006Kou9",
+        ]
+      }
+      forecastingTypeDeveloperName = "OpportunityLineItemQuantity"
+    },
+    {
+      forecastingObjectListLabelMappings = [
+        {
+          field = "CREATEDBY_USER.ALIAS"
+          label = "Created By Alias"
+        },
+        {
+          field = "OPPORTUNITY.AMOUNT"
+          label = "Amount"
+        },
+        {
+          field = "00N4J000006KouA"
+          label = "Loss Reason"
+        },
+        {
+          field = "OPPORTUNITY.CLOSE_DATE"
+          label = "Close Date"
+        },
+        {
+          field = "OPPORTUNITY.TYPE"
+          label = "Type"
+        },
+        {
+          field = "OPPORTUNITY.CREATED_DATE"
+          label = "Created Date"
+        },
+        {
+          field = "OPPORTUNITY.LAST_UPDATE"
+          label = "Last Modified Date"
+        },
+        {
+          field = "OPPORTUNITY.LEAD_SOURCE"
+          label = "Lead Source"
+        },
+        {
+          field = "00N4J000006Kou8"
+          label = "Discovery Completed"
+        },
+        {
+          field = "OPPORTUNITY.CLOSED"
+          label = "Closed"
+        },
+        {
+          field = "OPPORTUNITY.WON"
+          label = "Won"
+        },
+        {
+          field = "00N4J000006Kou7"
+          label = "Budget Confirmed"
+        },
+        {
+          field = "00N4J000006Kou9"
+          label = "ROI Analysis Completed"
+        },
+        {
+          field = "OPPORTUNITY.PROBABILITY"
+          label = "Probability (%)"
+        },
+        {
+          field = "CORE.USERS.ALIAS"
+          label = "Opportunity Owner Alias"
+        },
+        {
+          field = "00N3H000000xhSS"
+          label = "Netsuite URL"
+        },
+        {
+          field = "OPPORTUNITY.LAST_ACTIVITY"
+          label = "Last Activity"
+        },
+        {
+          field = "OPPORTUNITY.FISCAL_QUARTER"
+          label = "Fiscal Quarter"
+        },
+        {
+          field = "DESCRIPTION"
+          label = "Description"
+        },
+        {
+          field = "OPPORTUNITY.FISCAL_PERIOD"
+          label = "Fiscal Period"
+        },
+        {
+          field = "FULL_NAME"
+          label = "Owner Full Name"
+        },
+        {
+          field = "OPPORTUNITY.NEXT_STEP"
+          label = "Next Step"
+        },
+        {
+          field = "UPDATEDBY_USER.ALIAS"
+          label = "Last Modified By Alias"
+        },
+        {
+          field = "OPPORTUNITY.STAGE_NAME"
+          label = "Stage"
+        },
+        {
+          field = "00N3H000000oxyk"
+          label = "Health"
+        },
+        {
+          field = "SPLITAMOUNT"
+          label = "Forecasted Amount"
+        },
+        {
+          field = "OPPORTUNITY.NAME"
+          label = "Opportunity Name"
+        },
+        {
+          field = "CORE.USERS.LAST_NAME"
+          label = "Owner Last Name"
+        },
+        {
+          field = "SYNCEDQUOTE.NAME"
+          label = "Synced Quote"
+        },
+        {
+          field = "OPPORTUNITY.FISCAL_YEAR"
+          label = "Fiscal Year"
+        },
+        {
+          field = "CORE.USERS.FIRST_NAME"
+          label = "Owner First Name"
+        },
+        {
+          field = "ACCOUNT.NAME"
+          label = "Account Name"
+        },
+        {
+          field = "CONTRACT.CONTRACT_NUMBER"
+          label = "Contract Number"
+        },
+        {
+          field = "FORECAST_CATEGORY"
+          label = "Forecast Category"
+        },
+      ]
+      forecastingObjectListSelectedSettings = {
+        field = [
+          "OPPORTUNITY.NAME",
+          "ACCOUNT.NAME",
+          "SPLITAMOUNT",
+          "OPPORTUNITY.CLOSE_DATE",
+          "OPPORTUNITY.STAGE_NAME",
+          "OPPORTUNITY.PROBABILITY",
+          "FORECAST_CATEGORY",
+          "FULL_NAME",
+        ]
+      }
+      forecastingObjectListUnselectedSettings = {
+        field = [
+          "CONTRACT.CONTRACT_NUMBER",
+          "OPPORTUNITY.AMOUNT",
+          "CORE.USERS.ALIAS",
+          "CORE.USERS.FIRST_NAME",
+          "CORE.USERS.LAST_NAME",
+          "DESCRIPTION",
+          "OPPORTUNITY.LEAD_SOURCE",
+          "OPPORTUNITY.NEXT_STEP",
+          "OPPORTUNITY.TYPE",
+          "UPDATEDBY_USER.ALIAS",
+          "CREATEDBY_USER.ALIAS",
+          "SYNCEDQUOTE.NAME",
+          "OPPORTUNITY.CLOSED",
+          "OPPORTUNITY.WON",
+          "OPPORTUNITY.FISCAL_YEAR",
+          "OPPORTUNITY.FISCAL_QUARTER",
+          "OPPORTUNITY.FISCAL_PERIOD",
+          "OPPORTUNITY.LAST_ACTIVITY",
+          "OPPORTUNITY.CREATED_DATE",
+          "OPPORTUNITY.LAST_UPDATE",
+          "00N4J000006Kou7",
+          "00N4J000006Kou8",
+          "00N3H000000oxyk",
+          "00N4J000006KouA",
+          "00N3H000000xhSS",
+          "00N4J000006Kou9",
+        ]
+      }
+      forecastingTypeDeveloperName = "OpportunityRevenueProductDate"
+    },
+    {
+      forecastingObjectListLabelMappings = [
+        {
+          field = "CREATEDBY_USER.ALIAS"
+          label = "Created By Alias"
+        },
+        {
+          field = "OPPORTUNITY.AMOUNT"
+          label = "Amount"
+        },
+        {
+          field = "00N4J000006KouA"
+          label = "Loss Reason"
+        },
+        {
+          field = "OPPORTUNITY.CLOSE_DATE"
+          label = "Close Date"
+        },
+        {
+          field = "OPPORTUNITY.TYPE"
+          label = "Type"
+        },
+        {
+          field = "OPPORTUNITY.CREATED_DATE"
+          label = "Created Date"
+        },
+        {
+          field = "OPPORTUNITY.LAST_UPDATE"
+          label = "Last Modified Date"
+        },
+        {
+          field = "OPPORTUNITY.LEAD_SOURCE"
+          label = "Lead Source"
+        },
+        {
+          field = "00N4J000006Kou8"
+          label = "Discovery Completed"
+        },
+        {
+          field = "OPPORTUNITY.CLOSED"
+          label = "Closed"
+        },
+        {
+          field = "OPPORTUNITY.WON"
+          label = "Won"
+        },
+        {
+          field = "00N4J000006Kou7"
+          label = "Budget Confirmed"
+        },
+        {
+          field = "00N4J000006Kou9"
+          label = "ROI Analysis Completed"
+        },
+        {
+          field = "OPPORTUNITY.PROBABILITY"
+          label = "Probability (%)"
+        },
+        {
+          field = "CORE.USERS.ALIAS"
+          label = "Opportunity Owner Alias"
+        },
+        {
+          field = "00N3H000000xhSS"
+          label = "Netsuite URL"
+        },
+        {
+          field = "OPPORTUNITY.LAST_ACTIVITY"
+          label = "Last Activity"
+        },
+        {
+          field = "OPPORTUNITY.FISCAL_QUARTER"
+          label = "Fiscal Quarter"
+        },
+        {
+          field = "DESCRIPTION"
+          label = "Description"
+        },
+        {
+          field = "OPPORTUNITY.FISCAL_PERIOD"
+          label = "Fiscal Period"
+        },
+        {
+          field = "FULL_NAME"
+          label = "Owner Full Name"
+        },
+        {
+          field = "OPPORTUNITY.NEXT_STEP"
+          label = "Next Step"
+        },
+        {
+          field = "UPDATEDBY_USER.ALIAS"
+          label = "Last Modified By Alias"
+        },
+        {
+          field = "OPPORTUNITY.STAGE_NAME"
+          label = "Stage"
+        },
+        {
+          field = "00N3H000000oxyk"
+          label = "Health"
+        },
+        {
+          field = "OPPORTUNITY.NAME"
+          label = "Opportunity Name"
+        },
+        {
+          field = "CORE.USERS.LAST_NAME"
+          label = "Owner Last Name"
+        },
+        {
+          field = "SYNCEDQUOTE.NAME"
+          label = "Synced Quote"
+        },
+        {
+          field = "OPPORTUNITY.FISCAL_YEAR"
+          label = "Fiscal Year"
+        },
+        {
+          field = "CORE.USERS.FIRST_NAME"
+          label = "Owner First Name"
+        },
+        {
+          field = "ACCOUNT.NAME"
+          label = "Account Name"
+        },
+        {
+          field = "CONTRACT.CONTRACT_NUMBER"
+          label = "Contract Number"
+        },
+        {
+          field = "FORECAST_CATEGORY"
+          label = "Forecast Category"
+        },
+      ]
+      forecastingObjectListSelectedSettings = {
+        field = [
+          "OPPORTUNITY.NAME",
+          "ACCOUNT.NAME",
+          "OPPORTUNITY.CLOSE_DATE",
+          "OPPORTUNITY.STAGE_NAME",
+          "OPPORTUNITY.PROBABILITY",
+          "FORECAST_CATEGORY",
+          "FULL_NAME",
+        ]
+      }
+      forecastingObjectListUnselectedSettings = {
+        field = [
+          "CONTRACT.CONTRACT_NUMBER",
+          "OPPORTUNITY.AMOUNT",
+          "CORE.USERS.ALIAS",
+          "CORE.USERS.FIRST_NAME",
+          "CORE.USERS.LAST_NAME",
+          "DESCRIPTION",
+          "OPPORTUNITY.LEAD_SOURCE",
+          "OPPORTUNITY.NEXT_STEP",
+          "OPPORTUNITY.TYPE",
+          "UPDATEDBY_USER.ALIAS",
+          "CREATEDBY_USER.ALIAS",
+          "SYNCEDQUOTE.NAME",
+          "OPPORTUNITY.CLOSED",
+          "OPPORTUNITY.WON",
+          "OPPORTUNITY.FISCAL_YEAR",
+          "OPPORTUNITY.FISCAL_QUARTER",
+          "OPPORTUNITY.FISCAL_PERIOD",
+          "OPPORTUNITY.LAST_ACTIVITY",
+          "OPPORTUNITY.CREATED_DATE",
+          "OPPORTUNITY.LAST_UPDATE",
+          "00N4J000006Kou7",
+          "00N4J000006Kou8",
+          "00N3H000000oxyk",
+          "00N4J000006KouA",
+          "00N3H000000xhSS",
+          "00N4J000006Kou9",
+        ]
+      }
+      forecastingTypeDeveloperName = "OpportunityQuantityProductDate"
+    },
+    {
+      forecastingObjectListLabelMappings = [
+        {
+          field = "CREATEDBY_USER.ALIAS"
+          label = "Created By Alias"
+        },
+        {
+          field = "OPPORTUNITY.AMOUNT"
+          label = "Amount"
+        },
+        {
+          field = "00N4J000006KouA"
+          label = "Loss Reason"
+        },
+        {
+          field = "OPPORTUNITY.CLOSE_DATE"
+          label = "Close Date"
+        },
+        {
+          field = "OPPORTUNITY.TYPE"
+          label = "Type"
+        },
+        {
+          field = "OPPORTUNITY.CREATED_DATE"
+          label = "Created Date"
+        },
+        {
+          field = "OPPORTUNITY.LAST_UPDATE"
+          label = "Last Modified Date"
+        },
+        {
+          field = "OPPORTUNITY.LEAD_SOURCE"
+          label = "Lead Source"
+        },
+        {
+          field = "00N4J000006Kou8"
+          label = "Discovery Completed"
+        },
+        {
+          field = "OPPORTUNITY.CLOSED"
+          label = "Closed"
+        },
+        {
+          field = "OPPORTUNITY.WON"
+          label = "Won"
+        },
+        {
+          field = "00N4J000006Kou7"
+          label = "Budget Confirmed"
+        },
+        {
+          field = "00N4J000006Kou9"
+          label = "ROI Analysis Completed"
+        },
+        {
+          field = "OPPORTUNITY.PROBABILITY"
+          label = "Probability (%)"
+        },
+        {
+          field = "CORE.USERS.ALIAS"
+          label = "Opportunity Owner Alias"
+        },
+        {
+          field = "00N3H000000xhSS"
+          label = "Netsuite URL"
+        },
+        {
+          field = "OPPORTUNITY.LAST_ACTIVITY"
+          label = "Last Activity"
+        },
+        {
+          field = "OPPORTUNITY.FISCAL_QUARTER"
+          label = "Fiscal Quarter"
+        },
+        {
+          field = "DESCRIPTION"
+          label = "Description"
+        },
+        {
+          field = "OPPORTUNITY.FISCAL_PERIOD"
+          label = "Fiscal Period"
+        },
+        {
+          field = "FULL_NAME"
+          label = "Owner Full Name"
+        },
+        {
+          field = "OPPORTUNITY.NEXT_STEP"
+          label = "Next Step"
+        },
+        {
+          field = "UPDATEDBY_USER.ALIAS"
+          label = "Last Modified By Alias"
+        },
+        {
+          field = "OPPORTUNITY.STAGE_NAME"
+          label = "Stage"
+        },
+        {
+          field = "00N3H000000oxyk"
+          label = "Health"
+        },
+        {
+          field = "SPLITAMOUNT"
+          label = "Forecasted Amount"
+        },
+        {
+          field = "OPPORTUNITY.NAME"
+          label = "Opportunity Name"
+        },
+        {
+          field = "CORE.USERS.LAST_NAME"
+          label = "Owner Last Name"
+        },
+        {
+          field = "SYNCEDQUOTE.NAME"
+          label = "Synced Quote"
+        },
+        {
+          field = "OPPORTUNITY.FISCAL_YEAR"
+          label = "Fiscal Year"
+        },
+        {
+          field = "CORE.USERS.FIRST_NAME"
+          label = "Owner First Name"
+        },
+        {
+          field = "ACCOUNT.NAME"
+          label = "Account Name"
+        },
+        {
+          field = "CONTRACT.CONTRACT_NUMBER"
+          label = "Contract Number"
+        },
+        {
+          field = "FORECAST_CATEGORY"
+          label = "Forecast Category"
+        },
+      ]
+      forecastingObjectListSelectedSettings = {
+        field = [
+          "OPPORTUNITY.NAME",
+          "ACCOUNT.NAME",
+          "SPLITAMOUNT",
+          "OPPORTUNITY.CLOSE_DATE",
+          "OPPORTUNITY.STAGE_NAME",
+          "OPPORTUNITY.PROBABILITY",
+          "FORECAST_CATEGORY",
+          "FULL_NAME",
+        ]
+      }
+      forecastingObjectListUnselectedSettings = {
+        field = [
+          "CONTRACT.CONTRACT_NUMBER",
+          "OPPORTUNITY.AMOUNT",
+          "CORE.USERS.ALIAS",
+          "CORE.USERS.FIRST_NAME",
+          "CORE.USERS.LAST_NAME",
+          "DESCRIPTION",
+          "OPPORTUNITY.LEAD_SOURCE",
+          "OPPORTUNITY.NEXT_STEP",
+          "OPPORTUNITY.TYPE",
+          "UPDATEDBY_USER.ALIAS",
+          "CREATEDBY_USER.ALIAS",
+          "SYNCEDQUOTE.NAME",
+          "OPPORTUNITY.CLOSED",
+          "OPPORTUNITY.WON",
+          "OPPORTUNITY.FISCAL_YEAR",
+          "OPPORTUNITY.FISCAL_QUARTER",
+          "OPPORTUNITY.FISCAL_PERIOD",
+          "OPPORTUNITY.LAST_ACTIVITY",
+          "OPPORTUNITY.CREATED_DATE",
+          "OPPORTUNITY.LAST_UPDATE",
+          "00N4J000006Kou7",
+          "00N4J000006Kou8",
+          "00N3H000000oxyk",
+          "00N4J000006KouA",
+          "00N3H000000xhSS",
+          "00N4J000006Kou9",
+        ]
+      }
+      forecastingTypeDeveloperName = "LineItemRevenueProductDate"
+    },
+    {
+      forecastingObjectListLabelMappings = [
+        {
+          field = "CREATEDBY_USER.ALIAS"
+          label = "Created By Alias"
+        },
+        {
+          field = "OPPORTUNITY.AMOUNT"
+          label = "Amount"
+        },
+        {
+          field = "00N4J000006KouA"
+          label = "Loss Reason"
+        },
+        {
+          field = "OPPORTUNITY.CLOSE_DATE"
+          label = "Close Date"
+        },
+        {
+          field = "OPPORTUNITY.TYPE"
+          label = "Type"
+        },
+        {
+          field = "OPPORTUNITY.CREATED_DATE"
+          label = "Created Date"
+        },
+        {
+          field = "OPPORTUNITY.LAST_UPDATE"
+          label = "Last Modified Date"
+        },
+        {
+          field = "OPPORTUNITY.LEAD_SOURCE"
+          label = "Lead Source"
+        },
+        {
+          field = "00N4J000006Kou8"
+          label = "Discovery Completed"
+        },
+        {
+          field = "OPPORTUNITY.CLOSED"
+          label = "Closed"
+        },
+        {
+          field = "OPPORTUNITY.WON"
+          label = "Won"
+        },
+        {
+          field = "00N4J000006Kou7"
+          label = "Budget Confirmed"
+        },
+        {
+          field = "00N4J000006Kou9"
+          label = "ROI Analysis Completed"
+        },
+        {
+          field = "OPPORTUNITY.PROBABILITY"
+          label = "Probability (%)"
+        },
+        {
+          field = "CORE.USERS.ALIAS"
+          label = "Opportunity Owner Alias"
+        },
+        {
+          field = "00N3H000000xhSS"
+          label = "Netsuite URL"
+        },
+        {
+          field = "OPPORTUNITY.LAST_ACTIVITY"
+          label = "Last Activity"
+        },
+        {
+          field = "OPPORTUNITY.FISCAL_QUARTER"
+          label = "Fiscal Quarter"
+        },
+        {
+          field = "DESCRIPTION"
+          label = "Description"
+        },
+        {
+          field = "OPPORTUNITY.FISCAL_PERIOD"
+          label = "Fiscal Period"
+        },
+        {
+          field = "FULL_NAME"
+          label = "Owner Full Name"
+        },
+        {
+          field = "OPPORTUNITY.NEXT_STEP"
+          label = "Next Step"
+        },
+        {
+          field = "UPDATEDBY_USER.ALIAS"
+          label = "Last Modified By Alias"
+        },
+        {
+          field = "OPPORTUNITY.STAGE_NAME"
+          label = "Stage"
+        },
+        {
+          field = "00N3H000000oxyk"
+          label = "Health"
+        },
+        {
+          field = "OPPORTUNITY.NAME"
+          label = "Opportunity Name"
+        },
+        {
+          field = "CORE.USERS.LAST_NAME"
+          label = "Owner Last Name"
+        },
+        {
+          field = "SYNCEDQUOTE.NAME"
+          label = "Synced Quote"
+        },
+        {
+          field = "OPPORTUNITY.FISCAL_YEAR"
+          label = "Fiscal Year"
+        },
+        {
+          field = "CORE.USERS.FIRST_NAME"
+          label = "Owner First Name"
+        },
+        {
+          field = "ACCOUNT.NAME"
+          label = "Account Name"
+        },
+        {
+          field = "CONTRACT.CONTRACT_NUMBER"
+          label = "Contract Number"
+        },
+        {
+          field = "FORECAST_CATEGORY"
+          label = "Forecast Category"
+        },
+      ]
+      forecastingObjectListSelectedSettings = {
+        field = [
+          "OPPORTUNITY.NAME",
+          "ACCOUNT.NAME",
+          "OPPORTUNITY.CLOSE_DATE",
+          "OPPORTUNITY.STAGE_NAME",
+          "OPPORTUNITY.PROBABILITY",
+          "FORECAST_CATEGORY",
+          "FULL_NAME",
+        ]
+      }
+      forecastingObjectListUnselectedSettings = {
+        field = [
+          "CONTRACT.CONTRACT_NUMBER",
+          "OPPORTUNITY.AMOUNT",
+          "CORE.USERS.ALIAS",
+          "CORE.USERS.FIRST_NAME",
+          "CORE.USERS.LAST_NAME",
+          "DESCRIPTION",
+          "OPPORTUNITY.LEAD_SOURCE",
+          "OPPORTUNITY.NEXT_STEP",
+          "OPPORTUNITY.TYPE",
+          "UPDATEDBY_USER.ALIAS",
+          "CREATEDBY_USER.ALIAS",
+          "SYNCEDQUOTE.NAME",
+          "OPPORTUNITY.CLOSED",
+          "OPPORTUNITY.WON",
+          "OPPORTUNITY.FISCAL_YEAR",
+          "OPPORTUNITY.FISCAL_QUARTER",
+          "OPPORTUNITY.FISCAL_PERIOD",
+          "OPPORTUNITY.LAST_ACTIVITY",
+          "OPPORTUNITY.CREATED_DATE",
+          "OPPORTUNITY.LAST_UPDATE",
+          "00N4J000006Kou7",
+          "00N4J000006Kou8",
+          "00N3H000000oxyk",
+          "00N4J000006KouA",
+          "00N3H000000xhSS",
+          "00N4J000006Kou9",
+        ]
+      }
+      forecastingTypeDeveloperName = "LineItemQuantityProductDate"
+    },
+    {
+      forecastingObjectListLabelMappings = [
+        {
+          field = "CREATEDBY_USER.ALIAS"
+          label = "Created By Alias"
+        },
+        {
+          field = "OPPORTUNITY.AMOUNT"
+          label = "Amount"
+        },
+        {
+          field = "00N4J000006KouA"
+          label = "Loss Reason"
+        },
+        {
+          field = "OPPORTUNITY.CLOSE_DATE"
+          label = "Close Date"
+        },
+        {
+          field = "OPPORTUNITY.TYPE"
+          label = "Type"
+        },
+        {
+          field = "OPPORTUNITY.CREATED_DATE"
+          label = "Created Date"
+        },
+        {
+          field = "OPPORTUNITY.LAST_UPDATE"
+          label = "Last Modified Date"
+        },
+        {
+          field = "OPPORTUNITY.LEAD_SOURCE"
+          label = "Lead Source"
+        },
+        {
+          field = "00N4J000006Kou8"
+          label = "Discovery Completed"
+        },
+        {
+          field = "OPPORTUNITY.CLOSED"
+          label = "Closed"
+        },
+        {
+          field = "OPPORTUNITY.WON"
+          label = "Won"
+        },
+        {
+          field = "00N4J000006Kou7"
+          label = "Budget Confirmed"
+        },
+        {
+          field = "00N4J000006Kou9"
+          label = "ROI Analysis Completed"
+        },
+        {
+          field = "OPPORTUNITY.PROBABILITY"
+          label = "Probability (%)"
+        },
+        {
+          field = "CORE.USERS.ALIAS"
+          label = "Opportunity Owner Alias"
+        },
+        {
+          field = "00N3H000000xhSS"
+          label = "Netsuite URL"
+        },
+        {
+          field = "OPPORTUNITY.LAST_ACTIVITY"
+          label = "Last Activity"
+        },
+        {
+          field = "OPPORTUNITY.FISCAL_QUARTER"
+          label = "Fiscal Quarter"
+        },
+        {
+          field = "DESCRIPTION"
+          label = "Description"
+        },
+        {
+          field = "OPPORTUNITY.FISCAL_PERIOD"
+          label = "Fiscal Period"
+        },
+        {
+          field = "FULL_NAME"
+          label = "Owner Full Name"
+        },
+        {
+          field = "OPPORTUNITY.NEXT_STEP"
+          label = "Next Step"
+        },
+        {
+          field = "UPDATEDBY_USER.ALIAS"
+          label = "Last Modified By Alias"
+        },
+        {
+          field = "OPPORTUNITY.STAGE_NAME"
+          label = "Stage"
+        },
+        {
+          field = "00N3H000000oxyk"
+          label = "Health"
+        },
+        {
+          field = "SPLITAMOUNT"
+          label = "Forecasted Amount"
+        },
+        {
+          field = "OPPORTUNITY.NAME"
+          label = "Opportunity Name"
+        },
+        {
+          field = "CORE.USERS.LAST_NAME"
+          label = "Owner Last Name"
+        },
+        {
+          field = "SYNCEDQUOTE.NAME"
+          label = "Synced Quote"
+        },
+        {
+          field = "OPPORTUNITY.FISCAL_YEAR"
+          label = "Fiscal Year"
+        },
+        {
+          field = "CORE.USERS.FIRST_NAME"
+          label = "Owner First Name"
+        },
+        {
+          field = "ACCOUNT.NAME"
+          label = "Account Name"
+        },
+        {
+          field = "CONTRACT.CONTRACT_NUMBER"
+          label = "Contract Number"
+        },
+        {
+          field = "FORECAST_CATEGORY"
+          label = "Forecast Category"
+        },
+      ]
+      forecastingObjectListSelectedSettings = {
+        field = [
+          "OPPORTUNITY.NAME",
+          "ACCOUNT.NAME",
+          "SPLITAMOUNT",
+          "OPPORTUNITY.CLOSE_DATE",
+          "OPPORTUNITY.STAGE_NAME",
+          "OPPORTUNITY.PROBABILITY",
+          "FORECAST_CATEGORY",
+          "FULL_NAME",
+        ]
+      }
+      forecastingObjectListUnselectedSettings = {
+        field = [
+          "CONTRACT.CONTRACT_NUMBER",
+          "OPPORTUNITY.AMOUNT",
+          "CORE.USERS.ALIAS",
+          "CORE.USERS.FIRST_NAME",
+          "CORE.USERS.LAST_NAME",
+          "DESCRIPTION",
+          "OPPORTUNITY.LEAD_SOURCE",
+          "OPPORTUNITY.NEXT_STEP",
+          "OPPORTUNITY.TYPE",
+          "UPDATEDBY_USER.ALIAS",
+          "CREATEDBY_USER.ALIAS",
+          "SYNCEDQUOTE.NAME",
+          "OPPORTUNITY.CLOSED",
+          "OPPORTUNITY.WON",
+          "OPPORTUNITY.FISCAL_YEAR",
+          "OPPORTUNITY.FISCAL_QUARTER",
+          "OPPORTUNITY.FISCAL_PERIOD",
+          "OPPORTUNITY.LAST_ACTIVITY",
+          "OPPORTUNITY.CREATED_DATE",
+          "OPPORTUNITY.LAST_UPDATE",
+          "00N4J000006Kou7",
+          "00N4J000006Kou8",
+          "00N3H000000oxyk",
+          "00N4J000006KouA",
+          "00N3H000000xhSS",
+          "00N4J000006Kou9",
+        ]
+      }
+      forecastingTypeDeveloperName = "OpportunityRevenueScheduleDate"
+    },
+    {
+      forecastingObjectListLabelMappings = [
+        {
+          field = "CREATEDBY_USER.ALIAS"
+          label = "Created By Alias"
+        },
+        {
+          field = "OPPORTUNITY.AMOUNT"
+          label = "Amount"
+        },
+        {
+          field = "00N4J000006KouA"
+          label = "Loss Reason"
+        },
+        {
+          field = "OPPORTUNITY.CLOSE_DATE"
+          label = "Close Date"
+        },
+        {
+          field = "OPPORTUNITY.TYPE"
+          label = "Type"
+        },
+        {
+          field = "OPPORTUNITY.CREATED_DATE"
+          label = "Created Date"
+        },
+        {
+          field = "OPPORTUNITY.LAST_UPDATE"
+          label = "Last Modified Date"
+        },
+        {
+          field = "OPPORTUNITY.LEAD_SOURCE"
+          label = "Lead Source"
+        },
+        {
+          field = "00N4J000006Kou8"
+          label = "Discovery Completed"
+        },
+        {
+          field = "OPPORTUNITY.CLOSED"
+          label = "Closed"
+        },
+        {
+          field = "OPPORTUNITY.WON"
+          label = "Won"
+        },
+        {
+          field = "00N4J000006Kou7"
+          label = "Budget Confirmed"
+        },
+        {
+          field = "00N4J000006Kou9"
+          label = "ROI Analysis Completed"
+        },
+        {
+          field = "OPPORTUNITY.PROBABILITY"
+          label = "Probability (%)"
+        },
+        {
+          field = "CORE.USERS.ALIAS"
+          label = "Opportunity Owner Alias"
+        },
+        {
+          field = "00N3H000000xhSS"
+          label = "Netsuite URL"
+        },
+        {
+          field = "OPPORTUNITY.LAST_ACTIVITY"
+          label = "Last Activity"
+        },
+        {
+          field = "OPPORTUNITY.FISCAL_QUARTER"
+          label = "Fiscal Quarter"
+        },
+        {
+          field = "DESCRIPTION"
+          label = "Description"
+        },
+        {
+          field = "OPPORTUNITY.FISCAL_PERIOD"
+          label = "Fiscal Period"
+        },
+        {
+          field = "FULL_NAME"
+          label = "Owner Full Name"
+        },
+        {
+          field = "OPPORTUNITY.NEXT_STEP"
+          label = "Next Step"
+        },
+        {
+          field = "UPDATEDBY_USER.ALIAS"
+          label = "Last Modified By Alias"
+        },
+        {
+          field = "OPPORTUNITY.STAGE_NAME"
+          label = "Stage"
+        },
+        {
+          field = "00N3H000000oxyk"
+          label = "Health"
+        },
+        {
+          field = "OPPORTUNITY.NAME"
+          label = "Opportunity Name"
+        },
+        {
+          field = "CORE.USERS.LAST_NAME"
+          label = "Owner Last Name"
+        },
+        {
+          field = "SYNCEDQUOTE.NAME"
+          label = "Synced Quote"
+        },
+        {
+          field = "OPPORTUNITY.FISCAL_YEAR"
+          label = "Fiscal Year"
+        },
+        {
+          field = "CORE.USERS.FIRST_NAME"
+          label = "Owner First Name"
+        },
+        {
+          field = "ACCOUNT.NAME"
+          label = "Account Name"
+        },
+        {
+          field = "CONTRACT.CONTRACT_NUMBER"
+          label = "Contract Number"
+        },
+        {
+          field = "FORECAST_CATEGORY"
+          label = "Forecast Category"
+        },
+      ]
+      forecastingObjectListSelectedSettings = {
+        field = [
+          "OPPORTUNITY.NAME",
+          "ACCOUNT.NAME",
+          "OPPORTUNITY.CLOSE_DATE",
+          "OPPORTUNITY.STAGE_NAME",
+          "OPPORTUNITY.PROBABILITY",
+          "FORECAST_CATEGORY",
+          "FULL_NAME",
+        ]
+      }
+      forecastingObjectListUnselectedSettings = {
+        field = [
+          "CONTRACT.CONTRACT_NUMBER",
+          "OPPORTUNITY.AMOUNT",
+          "CORE.USERS.ALIAS",
+          "CORE.USERS.FIRST_NAME",
+          "CORE.USERS.LAST_NAME",
+          "DESCRIPTION",
+          "OPPORTUNITY.LEAD_SOURCE",
+          "OPPORTUNITY.NEXT_STEP",
+          "OPPORTUNITY.TYPE",
+          "UPDATEDBY_USER.ALIAS",
+          "CREATEDBY_USER.ALIAS",
+          "SYNCEDQUOTE.NAME",
+          "OPPORTUNITY.CLOSED",
+          "OPPORTUNITY.WON",
+          "OPPORTUNITY.FISCAL_YEAR",
+          "OPPORTUNITY.FISCAL_QUARTER",
+          "OPPORTUNITY.FISCAL_PERIOD",
+          "OPPORTUNITY.LAST_ACTIVITY",
+          "OPPORTUNITY.CREATED_DATE",
+          "OPPORTUNITY.LAST_UPDATE",
+          "00N4J000006Kou7",
+          "00N4J000006Kou8",
+          "00N3H000000oxyk",
+          "00N4J000006KouA",
+          "00N3H000000xhSS",
+          "00N4J000006Kou9",
+        ]
+      }
+      forecastingTypeDeveloperName = "OpportunityQuantityScheduleDate"
+    },
+    {
+      forecastingObjectListLabelMappings = [
+        {
+          field = "CREATEDBY_USER.ALIAS"
+          label = "Created By Alias"
+        },
+        {
+          field = "OPPORTUNITY.AMOUNT"
+          label = "Amount"
+        },
+        {
+          field = "00N4J000006KouA"
+          label = "Loss Reason"
+        },
+        {
+          field = "OPPORTUNITY.CLOSE_DATE"
+          label = "Close Date"
+        },
+        {
+          field = "OPPORTUNITY.TYPE"
+          label = "Type"
+        },
+        {
+          field = "OPPORTUNITY.CREATED_DATE"
+          label = "Created Date"
+        },
+        {
+          field = "OPPORTUNITY.LAST_UPDATE"
+          label = "Last Modified Date"
+        },
+        {
+          field = "OPPORTUNITY.LEAD_SOURCE"
+          label = "Lead Source"
+        },
+        {
+          field = "00N4J000006Kou8"
+          label = "Discovery Completed"
+        },
+        {
+          field = "OPPORTUNITY.CLOSED"
+          label = "Closed"
+        },
+        {
+          field = "OPPORTUNITY.WON"
+          label = "Won"
+        },
+        {
+          field = "00N4J000006Kou7"
+          label = "Budget Confirmed"
+        },
+        {
+          field = "00N4J000006Kou9"
+          label = "ROI Analysis Completed"
+        },
+        {
+          field = "OPPORTUNITY.PROBABILITY"
+          label = "Probability (%)"
+        },
+        {
+          field = "CORE.USERS.ALIAS"
+          label = "Opportunity Owner Alias"
+        },
+        {
+          field = "00N3H000000xhSS"
+          label = "Netsuite URL"
+        },
+        {
+          field = "OPPORTUNITY.LAST_ACTIVITY"
+          label = "Last Activity"
+        },
+        {
+          field = "OPPORTUNITY.FISCAL_QUARTER"
+          label = "Fiscal Quarter"
+        },
+        {
+          field = "DESCRIPTION"
+          label = "Description"
+        },
+        {
+          field = "OPPORTUNITY.FISCAL_PERIOD"
+          label = "Fiscal Period"
+        },
+        {
+          field = "FULL_NAME"
+          label = "Owner Full Name"
+        },
+        {
+          field = "OPPORTUNITY.NEXT_STEP"
+          label = "Next Step"
+        },
+        {
+          field = "UPDATEDBY_USER.ALIAS"
+          label = "Last Modified By Alias"
+        },
+        {
+          field = "OPPORTUNITY.STAGE_NAME"
+          label = "Stage"
+        },
+        {
+          field = "00N3H000000oxyk"
+          label = "Health"
+        },
+        {
+          field = "SPLITAMOUNT"
+          label = "Forecasted Amount"
+        },
+        {
+          field = "OPPORTUNITY.NAME"
+          label = "Opportunity Name"
+        },
+        {
+          field = "CORE.USERS.LAST_NAME"
+          label = "Owner Last Name"
+        },
+        {
+          field = "SYNCEDQUOTE.NAME"
+          label = "Synced Quote"
+        },
+        {
+          field = "OPPORTUNITY.FISCAL_YEAR"
+          label = "Fiscal Year"
+        },
+        {
+          field = "CORE.USERS.FIRST_NAME"
+          label = "Owner First Name"
+        },
+        {
+          field = "ACCOUNT.NAME"
+          label = "Account Name"
+        },
+        {
+          field = "CONTRACT.CONTRACT_NUMBER"
+          label = "Contract Number"
+        },
+        {
+          field = "FORECAST_CATEGORY"
+          label = "Forecast Category"
+        },
+      ]
+      forecastingObjectListSelectedSettings = {
+        field = [
+          "OPPORTUNITY.NAME",
+          "ACCOUNT.NAME",
+          "SPLITAMOUNT",
+          "OPPORTUNITY.CLOSE_DATE",
+          "OPPORTUNITY.STAGE_NAME",
+          "OPPORTUNITY.PROBABILITY",
+          "FORECAST_CATEGORY",
+          "FULL_NAME",
+        ]
+      }
+      forecastingObjectListUnselectedSettings = {
+        field = [
+          "CONTRACT.CONTRACT_NUMBER",
+          "OPPORTUNITY.AMOUNT",
+          "CORE.USERS.ALIAS",
+          "CORE.USERS.FIRST_NAME",
+          "CORE.USERS.LAST_NAME",
+          "DESCRIPTION",
+          "OPPORTUNITY.LEAD_SOURCE",
+          "OPPORTUNITY.NEXT_STEP",
+          "OPPORTUNITY.TYPE",
+          "UPDATEDBY_USER.ALIAS",
+          "CREATEDBY_USER.ALIAS",
+          "SYNCEDQUOTE.NAME",
+          "OPPORTUNITY.CLOSED",
+          "OPPORTUNITY.WON",
+          "OPPORTUNITY.FISCAL_YEAR",
+          "OPPORTUNITY.FISCAL_QUARTER",
+          "OPPORTUNITY.FISCAL_PERIOD",
+          "OPPORTUNITY.LAST_ACTIVITY",
+          "OPPORTUNITY.CREATED_DATE",
+          "OPPORTUNITY.LAST_UPDATE",
+          "00N4J000006Kou7",
+          "00N4J000006Kou8",
+          "00N3H000000oxyk",
+          "00N4J000006KouA",
+          "00N3H000000xhSS",
+          "00N4J000006Kou9",
+        ]
+      }
+      forecastingTypeDeveloperName = "LineItemRevenueScheduleDate"
+    },
+    {
+      forecastingObjectListLabelMappings = [
+        {
+          field = "CREATEDBY_USER.ALIAS"
+          label = "Created By Alias"
+        },
+        {
+          field = "OPPORTUNITY.AMOUNT"
+          label = "Amount"
+        },
+        {
+          field = "00N4J000006KouA"
+          label = "Loss Reason"
+        },
+        {
+          field = "OPPORTUNITY.CLOSE_DATE"
+          label = "Close Date"
+        },
+        {
+          field = "OPPORTUNITY.TYPE"
+          label = "Type"
+        },
+        {
+          field = "OPPORTUNITY.CREATED_DATE"
+          label = "Created Date"
+        },
+        {
+          field = "OPPORTUNITY.LAST_UPDATE"
+          label = "Last Modified Date"
+        },
+        {
+          field = "OPPORTUNITY.LEAD_SOURCE"
+          label = "Lead Source"
+        },
+        {
+          field = "00N4J000006Kou8"
+          label = "Discovery Completed"
+        },
+        {
+          field = "OPPORTUNITY.CLOSED"
+          label = "Closed"
+        },
+        {
+          field = "OPPORTUNITY.WON"
+          label = "Won"
+        },
+        {
+          field = "00N4J000006Kou7"
+          label = "Budget Confirmed"
+        },
+        {
+          field = "00N4J000006Kou9"
+          label = "ROI Analysis Completed"
+        },
+        {
+          field = "OPPORTUNITY.PROBABILITY"
+          label = "Probability (%)"
+        },
+        {
+          field = "CORE.USERS.ALIAS"
+          label = "Opportunity Owner Alias"
+        },
+        {
+          field = "00N3H000000xhSS"
+          label = "Netsuite URL"
+        },
+        {
+          field = "OPPORTUNITY.LAST_ACTIVITY"
+          label = "Last Activity"
+        },
+        {
+          field = "OPPORTUNITY.FISCAL_QUARTER"
+          label = "Fiscal Quarter"
+        },
+        {
+          field = "DESCRIPTION"
+          label = "Description"
+        },
+        {
+          field = "OPPORTUNITY.FISCAL_PERIOD"
+          label = "Fiscal Period"
+        },
+        {
+          field = "FULL_NAME"
+          label = "Owner Full Name"
+        },
+        {
+          field = "OPPORTUNITY.NEXT_STEP"
+          label = "Next Step"
+        },
+        {
+          field = "UPDATEDBY_USER.ALIAS"
+          label = "Last Modified By Alias"
+        },
+        {
+          field = "OPPORTUNITY.STAGE_NAME"
+          label = "Stage"
+        },
+        {
+          field = "00N3H000000oxyk"
+          label = "Health"
+        },
+        {
+          field = "OPPORTUNITY.NAME"
+          label = "Opportunity Name"
+        },
+        {
+          field = "CORE.USERS.LAST_NAME"
+          label = "Owner Last Name"
+        },
+        {
+          field = "SYNCEDQUOTE.NAME"
+          label = "Synced Quote"
+        },
+        {
+          field = "OPPORTUNITY.FISCAL_YEAR"
+          label = "Fiscal Year"
+        },
+        {
+          field = "CORE.USERS.FIRST_NAME"
+          label = "Owner First Name"
+        },
+        {
+          field = "ACCOUNT.NAME"
+          label = "Account Name"
+        },
+        {
+          field = "CONTRACT.CONTRACT_NUMBER"
+          label = "Contract Number"
+        },
+        {
+          field = "FORECAST_CATEGORY"
+          label = "Forecast Category"
+        },
+      ]
+      forecastingObjectListSelectedSettings = {
+        field = [
+          "OPPORTUNITY.NAME",
+          "ACCOUNT.NAME",
+          "OPPORTUNITY.CLOSE_DATE",
+          "OPPORTUNITY.STAGE_NAME",
+          "OPPORTUNITY.PROBABILITY",
+          "FORECAST_CATEGORY",
+          "FULL_NAME",
+        ]
+      }
+      forecastingObjectListUnselectedSettings = {
+        field = [
+          "CONTRACT.CONTRACT_NUMBER",
+          "OPPORTUNITY.AMOUNT",
+          "CORE.USERS.ALIAS",
+          "CORE.USERS.FIRST_NAME",
+          "CORE.USERS.LAST_NAME",
+          "DESCRIPTION",
+          "OPPORTUNITY.LEAD_SOURCE",
+          "OPPORTUNITY.NEXT_STEP",
+          "OPPORTUNITY.TYPE",
+          "UPDATEDBY_USER.ALIAS",
+          "CREATEDBY_USER.ALIAS",
+          "SYNCEDQUOTE.NAME",
+          "OPPORTUNITY.CLOSED",
+          "OPPORTUNITY.WON",
+          "OPPORTUNITY.FISCAL_YEAR",
+          "OPPORTUNITY.FISCAL_QUARTER",
+          "OPPORTUNITY.FISCAL_PERIOD",
+          "OPPORTUNITY.LAST_ACTIVITY",
+          "OPPORTUNITY.CREATED_DATE",
+          "OPPORTUNITY.LAST_UPDATE",
+          "00N4J000006Kou7",
+          "00N4J000006Kou8",
+          "00N3H000000oxyk",
+          "00N4J000006KouA",
+          "00N3H000000xhSS",
+          "00N4J000006Kou9",
+        ]
+      }
+      forecastingTypeDeveloperName = "LineItemQuantityScheduleDate"
+    },
+  ]
+}

@@ -1,0 +1,36 @@
+netsuite.itemcustomfield custitem_slt_billable {
+  scriptid = "custitem_slt_billable"
+  accesslevel = "2"
+  appliestogroup = false
+  appliestoinventory = false
+  appliestokit = false
+  appliestononinventory = false
+  appliestoothercharge = false
+  appliestopricelist = false
+  appliestoservice = true
+  appliestospecificitems = false
+  appliestosubplan = false
+  applyformatting = false
+  checkspelling = false
+  defaultchecked = false
+  description = "is the line item billable - updated for BORN Group"
+  displaytype = "NORMAL"
+  encryptatrest = false
+  fieldtype = "CHECKBOX"
+  globalsearch = false
+  help = "adding a help text string"
+  includechilditems = false
+  isformula = false
+  ismandatory = false
+  isparent = false
+  itemmatrix = false
+  itemsubtype = "SALE"
+  label = "Billable"
+  searchlevel = "2"
+  showhierarchy = false
+  showinlist = false
+  storevalue = true
+  subtab = "ITEMMAIN"
+  appliestoexpense = false
+  appliestoitemassembly = false
+}

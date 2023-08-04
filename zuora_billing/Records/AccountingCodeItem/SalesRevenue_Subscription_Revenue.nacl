@@ -1,0 +1,6 @@
+zuora_billing.AccountingCodeItem SalesRevenue_Subscription_Revenue@us {
+  name = "Subscription Revenue"
+  type = "SalesRevenue"
+  category = "Revenue"
+  status = "Active"
+}

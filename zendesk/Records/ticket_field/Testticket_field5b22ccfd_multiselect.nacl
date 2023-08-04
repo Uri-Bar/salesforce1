@@ -1,0 +1,22 @@
+zendesk.ticket_field multiselect_Testticket_field5b22ccfd {
+  type = "multiselect"
+  
+  raw_title = "Testticket_field5b22ccfd"
+  
+  raw_description = "Test desc"
+  active = true
+  required = false
+  collapsed_for_agents = false
+  
+  raw_title_in_portal = "Testticket_field5b22ccfd"
+  visible_in_portal = false
+  editable_in_portal = false
+  required_in_portal = false
+  removable = true
+  agent_description = "List of tests"
+  custom_field_options = [
+    zendesk.ticket_field__custom_field_options.instance.multiselect_Testticket_field5b22ccfd__A,
+    zendesk.ticket_field__custom_field_options.instance.multiselect_Testticket_field5b22ccfd__B,
+  ]
+  default_custom_field_option = zendesk.ticket_field__custom_field_options.instance.multiselect_Testticket_field5b22ccfd__A
+}

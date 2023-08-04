@@ -1,0 +1,99 @@
+type zuora_billing.extendedbillrunfilter {
+  string Id {
+    type = "string"
+    format = "uuid"
+    required = false
+    filterable = false
+    label = "Id"
+  }
+  string CreatedById {
+    type = "string"
+    format = "uuid"
+    required = false
+    filterable = false
+    label = "CreatedById"
+  }
+  string CreatedDate {
+    type = "string"
+    format = "date-time"
+    required = false
+    filterable = false
+    label = "CreatedDate"
+  }
+  string UpdatedById {
+    type = "string"
+    format = "uuid"
+    required = false
+    filterable = false
+    label = "UpdatedById"
+  }
+  string UpdatedDate {
+    type = "string"
+    format = "date-time"
+    required = false
+    filterable = false
+    label = "UpdatedDate"
+  }
+  boolean deleted {
+    type = "boolean"
+    required = false
+    filterable = false
+    label = "deleted"
+  }
+  string AccountId {
+    type = "string"
+    format = "uuid"
+    required = false
+    filterable = false
+    label = "AccountId"
+  }
+  string BillRunId {
+    type = "string"
+    format = "uuid"
+    required = false
+    filterable = false
+    label = "BillRunId"
+  }
+  string FilterType {
+    type = "string"
+    maxLength = 512
+    required = false
+    filterable = false
+    label = "FilterType"
+  }
+  string SubscriptionId {
+    type = "string"
+    format = "uuid"
+    required = false
+    filterable = false
+    label = "SubscriptionId"
+  }
+  string SubscriptionOwnerId {
+    type = "string"
+    format = "uuid"
+    required = false
+    filterable = false
+    label = "SubscriptionOwnerId"
+  }
+  string InvoiceScheduleId {
+    type = "string"
+    format = "uuid"
+    required = false
+    filterable = false
+    label = "InvoiceScheduleId"
+  }
+  string InvoiceScheduleItemId {
+    type = "string"
+    format = "uuid"
+    required = false
+    filterable = false
+    label = "InvoiceScheduleItemId"
+  }
+  string SourceBillRunId {
+    type = "string"
+    label = "SourceBillRunId"
+    format = "uuid"
+    required = false
+    filterable = false
+  }
+}

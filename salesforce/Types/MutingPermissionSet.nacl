@@ -1,0 +1,59 @@
+type salesforce.MutingPermissionSet {
+  annotations {
+    serviceid metadataType {
+    }
+    boolean hasMetaFile {
+    }
+    string folderType {
+    }
+    string folderContentType {
+    }
+    string suffix {
+    }
+    string dirName {
+    }
+  }
+  serviceid fullName {
+  }
+  string description {
+  }
+  boolean hasActivationRequired {
+  }
+  string label {
+  }
+  string license {
+  }
+  string internalId {
+    _hidden_value = true
+    localOnly = true
+  }
+  suffix = "mutingpermissionset"
+  dirName = "mutingpermissionsets"
+  metadataType = "MutingPermissionSet"
+  salesforce.PermissionSetApplicationVisibility applicationVisibilities {
+  }
+  salesforce.PermissionSetApexClassAccess classAccesses {
+  }
+  salesforce.PermissionSetCustomMetadataTypeAccess customMetadataTypeAccesses {
+  }
+  salesforce.PermissionSetCustomPermissions customPermissions {
+  }
+  salesforce.PermissionSetCustomSettingAccess customSettingAccesses {
+  }
+  salesforce.PermissionSetExternalDataSourceAccess externalDataSourceAccesses {
+  }
+  salesforce.PermissionSetFieldPermissions fieldPermissions {
+  }
+  salesforce.PermissionSetFlowAccess flowAccesses {
+  }
+  salesforce.PermissionSetObjectPermissions objectPermissions {
+  }
+  salesforce.PermissionSetApexPageAccess pageAccesses {
+  }
+  salesforce.PermissionSetRecordTypeVisibility recordTypeVisibilities {
+  }
+  salesforce.PermissionSetTabSetting tabSettings {
+  }
+  salesforce.PermissionSetUserPermission userPermissions {
+  }
+}

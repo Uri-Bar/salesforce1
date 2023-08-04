@@ -1,0 +1,18 @@
+zendesk.ticket_field checkbox_The_bronzer_the_better@usss {
+  type = "checkbox"
+  
+  raw_title = "The bronzer the better"
+  
+  raw_description = ""
+  active = true
+  required = false
+  collapsed_for_agents = false
+  
+  raw_title_in_portal = "The bronzer the better"
+  visible_in_portal = false
+  editable_in_portal = false
+  required_in_portal = false
+  tag = ""
+  removable = true
+  agent_description = "Bronze is better than nothing"
+}

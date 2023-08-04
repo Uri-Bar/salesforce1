@@ -1,0 +1,262 @@
+type netsuite.customrecord2653 {
+  annotations {
+    serviceid scriptid {
+    }
+    string recordname {
+    }
+    string customsegment {
+    }
+    netsuite.customrecordtype_accesstype accesstype {
+    }
+    boolean allowattachments {
+    }
+    boolean allowinlineediting {
+    }
+    boolean allowinlinedeleting {
+    }
+    boolean allowinlinedetaching {
+    }
+    boolean allowmobileaccess {
+    }
+    boolean allownumberingoverride {
+    }
+    boolean allowquickadd {
+    }
+    boolean allowquicksearch {
+    }
+    boolean allowuiaccess {
+    }
+    string description {
+    }
+    boolean enabledle {
+    }
+    boolean enablekeywords {
+    }
+    boolean enablemailmerge {
+    }
+    boolean enablenametranslation {
+    }
+    boolean enablenumbering {
+    }
+    boolean enableoptimisticlocking {
+    }
+    boolean enablesystemnotes {
+    }
+    boolean hierarchical {
+    }
+    string numberingprefix {
+    }
+    string numberingsuffix {
+    }
+    string numberingmindigits {
+    }
+    string numberinginit {
+    }
+    string icon {
+    }
+    boolean iconbuiltin {
+    }
+    netsuite.generic_custom_record_icon iconindex {
+    }
+    boolean includeinsearchmenu {
+    }
+    boolean includename {
+    }
+    boolean isinactive {
+    }
+    boolean isordered {
+    }
+    boolean showcreationdate {
+    }
+    boolean showcreationdateonlist {
+    }
+    boolean showid {
+    }
+    boolean showlastmodified {
+    }
+    boolean showlastmodifiedonlist {
+    }
+    boolean shownotes {
+    }
+    boolean showowner {
+    }
+    boolean showownerallowchange {
+    }
+    boolean showowneronlist {
+    }
+    
+    netsuite.customrecordtype_links links {
+    }
+    netsuite.customrecordtype_permissions permissions {
+    }
+    netsuite.customrecordtype_recordsublists recordsublists {
+    }
+    netsuite.customrecordtype_subtabs subtabs {
+    }
+    string application_id {
+    }
+    hidden_string source {
+    }
+    hidden_string internalId {
+    }
+  }
+  serviceid scriptid {
+    _required = true
+  }
+  string internalId {
+    _hidden_value = true
+  }
+  unknown custom_custrecord178 {
+    scriptid = "custrecord178"
+    accesslevel = "2"
+    allowquickadd = false
+    applyformatting = false
+    checkspelling = false
+    defaultchecked = false
+    displaytype = "NORMAL"
+    encryptatrest = false
+    fieldtype = "SELECT"
+    globalsearch = false
+    isformula = false
+    ismandatory = false
+    isparent = false
+    label = "SKU"
+    onparentdelete = "SET_NULL"
+    rolerestrict = false
+    searchlevel = "2"
+    selectrecordtype = "-10"
+    showinlist = false
+    storevalue = true
+    index = 0
+  }
+  number custom_custrecord179 {
+    scriptid = "custrecord179"
+    accesslevel = "2"
+    allowquickadd = false
+    applyformatting = true
+    checkspelling = false
+    defaultchecked = false
+    displaytype = "NORMAL"
+    encryptatrest = false
+    fieldtype = "FLOAT"
+    globalsearch = false
+    isformula = false
+    ismandatory = false
+    isparent = false
+    label = "DImensions (l*b*h in cm)"
+    rolerestrict = false
+    searchlevel = "2"
+    showinlist = false
+    storevalue = true
+    index = 1
+  }
+  number custom_custrecord180 {
+    scriptid = "custrecord180"
+    accesslevel = "2"
+    allowquickadd = false
+    applyformatting = true
+    checkspelling = false
+    defaultchecked = false
+    displaytype = "NORMAL"
+    encryptatrest = false
+    fieldtype = "FLOAT"
+    globalsearch = false
+    isformula = false
+    ismandatory = false
+    isparent = false
+    label = "Weight (in g)"
+    rolerestrict = false
+    searchlevel = "2"
+    showinlist = false
+    storevalue = true
+    index = 2
+  }
+  number custom_custrecord181 {
+    scriptid = "custrecord181"
+    accesslevel = "2"
+    allowquickadd = false
+    applyformatting = true
+    checkspelling = false
+    defaultchecked = false
+    displaytype = "NORMAL"
+    encryptatrest = false
+    fieldtype = "INTEGER"
+    globalsearch = false
+    isformula = false
+    ismandatory = false
+    isparent = false
+    label = "Minimum Order Quantity"
+    rolerestrict = false
+    searchlevel = "2"
+    showinlist = false
+    storevalue = true
+    index = 3
+  }
+  number custom_custrecord182 {
+    scriptid = "custrecord182"
+    accesslevel = "2"
+    allowquickadd = false
+    applyformatting = true
+    checkspelling = false
+    defaultchecked = false
+    displaytype = "NORMAL"
+    encryptatrest = false
+    fieldtype = "INTEGER"
+    globalsearch = false
+    isformula = false
+    ismandatory = false
+    isparent = false
+    label = "Available On-Hand Units"
+    rolerestrict = false
+    searchlevel = "2"
+    showinlist = false
+    storevalue = true
+    index = 4
+  }
+  scriptid = "customrecord2653"
+  accesstype = "USEPERMISSIONLIST"
+  allowattachments = true
+  allowinlinedeleting = false
+  allowinlinedetaching = true
+  allowinlineediting = false
+  allowmobileaccess = false
+  allownumberingoverride = false
+  allowquickadd = true
+  allowquicksearch = false
+  allowuiaccess = true
+  enabledle = true
+  enablekeywords = true
+  enablemailmerge = false
+  enablenametranslation = false
+  enablenumbering = false
+  enableoptimisticlocking = true
+  enablesystemnotes = true
+  hierarchical = false
+  iconbuiltin = true
+  includeinsearchmenu = true
+  includename = true
+  isinactive = false
+  isordered = false
+  recordname = "SKU Details_Sample"
+  showcreationdate = false
+  showcreationdateonlist = false
+  showid = false
+  showlastmodified = false
+  showlastmodifiedonlist = false
+  shownotes = true
+  showowner = false
+  showownerallowchange = false
+  showowneronlist = false
+  permissions = {
+    permission = {
+      customrole1198 = {
+        permittedlevel = "EDIT"
+        permittedrole = netsuite.role.instance.customrole1198.scriptid
+        
+      }
+    }
+  }
+  metadataType = "customrecordtype"
+  netsuite.customRecordTranslationsList translationsList {
+  }
+}

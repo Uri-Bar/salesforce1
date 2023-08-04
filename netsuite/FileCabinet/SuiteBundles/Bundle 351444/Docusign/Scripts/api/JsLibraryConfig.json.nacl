@@ -1,0 +1,12 @@
+netsuite.file SuiteBundles_Bundle_351444_Docusign_Scripts_api_JsLibraryConfig_json@dsddddv {
+  bundleable = false
+  isinactive = false
+  availablewithoutlogin = false
+  generateurltimestamp = false
+  hideinbundle = false
+  path = "/SuiteBundles/Bundle 351444/Docusign/Scripts/api/JsLibraryConfig.json"
+  content = file("netsuite/FileCabinet/SuiteBundles/Bundle 351444/Docusign/Scripts/api/JsLibraryConfig.json")
+  _parent = [
+    netsuite.folder.instance.SuiteBundles_Bundle_351444_Docusign_Scripts_api@dsddd,
+  ]
+}

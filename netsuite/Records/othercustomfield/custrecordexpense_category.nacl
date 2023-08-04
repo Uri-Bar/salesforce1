@@ -1,0 +1,19 @@
+netsuite.othercustomfield custrecordexpense_category {
+  scriptid = "custrecordexpense_category"
+  accesslevel = "2"
+  applyformatting = false
+  checkspelling = false
+  defaultchecked = false
+  description = "This is used for expense categorization"
+  displaytype = "NORMAL"
+  encryptatrest = false
+  fieldtype = "TEXT"
+  isformula = false
+  ismandatory = false
+  label = "Expense Category"
+  rectype = "-126"
+  searchlevel = "2"
+  showhierarchy = false
+  showinlist = false
+  storevalue = true
+}

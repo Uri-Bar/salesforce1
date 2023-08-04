@@ -1,0 +1,18 @@
+salesforce.CustomApplication standard__Service {
+  fullName = "standard__Service"
+  defaultLandingTab = "standard-Case"
+  isNavAutoTempTabsDisabled = false
+  isNavPersonalizationDisabled = false
+  tabs = [
+    "standard-Case",
+    "standard-Solution",
+    "standard-Contact",
+    "standard-Account",
+    "standard-report",
+    "standard-Dashboard",
+    "standard-Chatter",
+    "standard-File",
+    salesforce.CustomTab.instance.Yariv__c,
+  ]
+  isNavTabPersistenceDisabled = false
+}

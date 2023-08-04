@@ -1,0 +1,8 @@
+zendesk.ticket_field__custom_field_options DP_Priority_tagger__maybe_someday {
+  name = "Maybe Someday"
+  raw_name = "Maybe Someday"
+  value = "maybe_someday"
+  _parent = [
+    zendesk.ticket_field.instance.DP_Priority_tagger,
+  ]
+}

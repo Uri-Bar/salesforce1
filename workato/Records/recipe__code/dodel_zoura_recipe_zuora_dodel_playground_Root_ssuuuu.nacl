@@ -1,0 +1,38 @@
+workato.recipe__code dodel_zoura_recipe_zuora_dodel_playground_Root_ssuuuu@uuuuuum {
+  number = 0
+  provider = "zuora"
+  name = "new_updated_order"
+  as = "75792d4d"
+  keyword = "trigger"
+  input = {
+    since = "#{_('data.workato.job_context.user_id')}#{_('data.workato.job_context.user_email')}"
+  }
+  block = [
+    {
+      number = 1
+      provider = "zuora"
+      name = "create_custom_object"
+      as = "26758da9"
+      description = "Create <span class=\"provider\">account</span> in <span class=\"provider\">Zuora</span>"
+      keyword = "action"
+      dynamicPickListSelection = {
+        object = "account"
+      }
+      toggleCfg = {
+        records.picklist123__c = true
+      }
+      input = {
+        object = "account"
+        allowPartialSuccess = "true"
+        records = {
+          picklist123__c = "value 1"
+        }
+      }
+      uuid = "48903ee4-f945-403e-b700-81832b06d698"
+    },
+  ]
+  uuid = "c80ae594-de41-41e2-8404-5a0172897c57"
+  _parent = [
+    workato.recipe.instance.dodel_zoura_recipe_zuora_dodel_playground_Root@ssuuuu,
+  ]
+}

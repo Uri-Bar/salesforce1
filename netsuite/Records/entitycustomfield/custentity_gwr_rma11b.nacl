@@ -1,0 +1,35 @@
+netsuite.entitycustomfield custentity_gwr_rma11b {
+  scriptid = "custentity_gwr_rma11b"
+  accesslevel = "2"
+  appliestocontact = false
+  appliestocustomer = false
+  appliestoemployee = false
+  appliestogenericrsrc = false
+  appliestogroup = false
+  appliestoothername = false
+  appliestopartner = false
+  appliestopricelist = false
+  appliestoproject = false
+  appliestoprojecttemplate = false
+  appliestostatement = false
+  appliestovendor = false
+  appliestowebsite = false
+  applyformatting = false
+  availableexternally = false
+  checkspelling = false
+  defaultchecked = false
+  displaytype = "NORMAL"
+  encryptatrest = false
+  fieldtype = "SELECT"
+  globalsearch = false
+  isformula = false
+  ismandatory = false
+  isparent = false
+  label = "GWR RMA 11b"
+  onparentdelete = "NO_ACTION"
+  searchlevel = "2"
+  selectrecordtype = netsuite.customlist.instance.customlist_gwr_l_rma11b.scriptid
+  showhierarchy = false
+  showinlist = false
+  storevalue = true
+}

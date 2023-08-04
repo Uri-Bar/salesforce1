@@ -1,0 +1,33 @@
+netsuite.entitycustomfield custentityproduct_type {
+  scriptid = "custentityproduct_type"
+  accesslevel = "2"
+  appliestocontact = false
+  appliestocustomer = true
+  appliestoemployee = false
+  appliestogroup = false
+  appliestoothername = false
+  appliestopartner = true
+  appliestopricelist = true
+  appliestoprojecttemplate = false
+  appliestostatement = false
+  appliestovendor = false
+  appliestowebsite = false
+  applyformatting = false
+  availableexternally = false
+  checkspelling = false
+  defaultchecked = false
+  displaytype = "NORMAL"
+  encryptatrest = false
+  fieldtype = "TEXT"
+  globalsearch = true
+  isformula = false
+  ismandatory = false
+  isparent = false
+  label = "Product Type"
+  searchlevel = "2"
+  showhierarchy = false
+  showinlist = false
+  storevalue = true
+  appliestogenericrsrc = false
+  appliestoproject = false
+}

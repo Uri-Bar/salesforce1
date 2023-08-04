@@ -1,0 +1,17 @@
+zendesk.ticket_field Hadas_test_checkbox {
+  type = "checkbox"
+  
+  raw_title = "Hadas_test"
+  
+  raw_description = ""
+  active = true
+  required = false
+  collapsed_for_agents = false
+  
+  raw_title_in_portal = "Hadas_test"
+  visible_in_portal = false
+  editable_in_portal = false
+  required_in_portal = false
+  tag = zendesk.tag.instance.hadas_test_tag
+  removable = true
+}

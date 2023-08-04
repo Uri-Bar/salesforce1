@@ -1,0 +1,34 @@
+type zuora_billing.extendedsubscription {
+  annotations {
+    string metadataType {
+    }
+    string label {
+    }
+    string description {
+    }
+    hidden_string id {
+    }
+    string objectType {
+    }
+  }
+  metadataType = "StandardObject"
+  objectType = "extendedsubscription"
+  _generated_dependencies = [
+    {
+      reference = zuora_billing.contact
+    },
+    {
+      reference = zuora_billing.extendedaccount
+    },
+    {
+      reference = zuora_billing.extendedamendment
+    },
+    {
+      reference = zuora_billing.extendedinvoiceschedule
+    },
+    {
+      reference = zuora_billing.extendeduser
+    },
+  ]
+  label = "ExtendedSubscription"
+}

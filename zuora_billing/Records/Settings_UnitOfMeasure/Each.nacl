@@ -1,0 +1,8 @@
+zuora_billing.Settings_UnitOfMeasure Each {
+  name = "Each"
+  displayAs = "Each"
+  precision = 0
+  roundingMode = "Up"
+  active = true
+  usageLogFileLabel = "Each"
+}

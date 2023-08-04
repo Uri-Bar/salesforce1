@@ -1,0 +1,5 @@
+workato.connection secondary_Neta_sfdev1@s {
+  application = "salesforce_secondary"
+  name = "secondary Neta sfdev1"
+  folder_id = workato.folder.instance.Root
+}

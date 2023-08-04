@@ -1,0 +1,122 @@
+workato.recipe__code Alon_s_reciepe_1806547_tsu@uuum {
+  number = 0
+  provider = "zuora"
+  name = "new_updated_record"
+  as = "eadbb773"
+  description = "New or updated <span class=\"provider\">accountingperiods</span> in <span class=\"provider\">Zuora</span>"
+  keyword = "trigger"
+  dynamicPickListSelection = {
+    object = "AccountingPeriod"
+  }
+  input = {
+    object = "AccountingPeriod"
+    since = "#{_('data.workato.job_context.user_id')}"
+  }
+  block = [
+    {
+      number = 1
+      keyword = "if"
+      input = {
+        type = "compound"
+        operand = "and"
+        conditions = [
+          {
+            operand = "greater_than"
+            lhs = "#{_('data.zuora.eadbb773.Name')}"
+            rhs = "111111111"
+            uuid = "condition-f98160b0-bff3-4257-8e06-8ffedcfb7b8d"
+          },
+        ]
+      }
+      block = [
+        {
+          number = 2
+          provider = "zuora"
+          name = "update_record"
+          as = "efe25cd2"
+          description = "Update <span class=\"provider\">accounting code</span> in <span class=\"provider\">Zuora</span>"
+          keyword = "action"
+          dynamicPickListSelection = {
+            object = "Accounting Code"
+          }
+          input = {
+            object = "AccountingCode"
+            Id = "=_('data.zuora.eadbb773.Notes').split(\"123123123123\")"
+          }
+          visible_config_fields = [
+            "object",
+            "Fax",
+          ]
+          uuid = "7468a1b1-bb58-470a-b414-5edaf2c7ffb6"
+        },
+      ]
+      uuid = "cecd3faa-6fdc-4452-938f-4546f6694a9a"
+    },
+    {
+      number = 3
+      provider = "zuora"
+      name = "search_records"
+      as = "dac4bc89"
+      description = "Search <span class=\"provider\">products</span> in <span class=\"provider\">Zuora</span>"
+      keyword = "action"
+      dynamicPickListSelection = {
+        object = "Product"
+      }
+      input = {
+        object = "Product"
+        SKU = "asdasdasd"
+      }
+      visible_config_fields = [
+        "object",
+        "Fax",
+        "Description",
+        "County",
+        "UpdatedById",
+        "SKU",
+        "Name",
+      ]
+      uuid = "38f0a9a3-0d68-4b58-829b-f85394861f3e"
+    },
+    {
+      number = 4
+      provider = "zuora"
+      name = "search_records"
+      as = "4821191a"
+      description = "Search <span class=\"provider\">contacts</span> in <span class=\"provider\">Zuora</span>"
+      keyword = "action"
+      dynamicPickListSelection = {
+        object = "Contact"
+      }
+      input = {
+        object = "Contact"
+      }
+      visible_config_fields = [
+        "object",
+        "Fax",
+        "AccountId",
+        "Id",
+      ]
+      uuid = "91d2c8f7-bde2-4691-8dc3-9dbbb7d203ad"
+    },
+    {
+      number = 5
+      provider = "zuora"
+      name = "update_record"
+      as = "a9b93b4c"
+      description = "Update <span class=\"provider\">contact</span> in <span class=\"provider\">Zuora</span>"
+      keyword = "action"
+      dynamicPickListSelection = {
+        object = "Contact"
+      }
+      input = {
+        object = "Contact"
+        Id = "#{_('data.zuora.eadbb773.Id')}"
+      }
+      uuid = "78ad7eb3-857d-4f4d-b061-747c2e058bb8"
+    },
+  ]
+  uuid = "12081212-4260-472b-90f8-16e5d2bbcdf7"
+  _parent = [
+    workato.recipe.instance.Alon_s_reciepe_1806547@tsu,
+  ]
+}

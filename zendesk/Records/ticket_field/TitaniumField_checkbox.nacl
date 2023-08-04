@@ -1,0 +1,18 @@
+zendesk.ticket_field checkbox_TitaniumField {
+  type = "checkbox"
+  
+  raw_title = "TitaniumField"
+  
+  raw_description = ""
+  active = true
+  required = false
+  collapsed_for_agents = false
+  
+  raw_title_in_portal = "TitaniumField"
+  visible_in_portal = false
+  editable_in_portal = false
+  required_in_portal = false
+  tag = ""
+  removable = true
+  agent_description = "Titanium worthy"
+}

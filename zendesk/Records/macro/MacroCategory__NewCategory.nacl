@@ -1,0 +1,13 @@
+zendesk.macro MacroCategory__NewCategory@f {
+  title = "MacroCategory::NewCategory"
+  active = true
+  description = "create a new category for macros"
+  actions = [
+    {
+      field = "status"
+      value = "solved"
+    },
+  ]
+  raw_title = "MacroCategory::NewCategory"
+  default = false
+}

@@ -1,0 +1,31 @@
+zuora_billing.Task C19__Goodwill_Discount_Recall_68_fsssu__Determine_what_type_of_tenant_we_are_executing_under@uuuuumuussssssss {
+  name = "Determine what type of tenant we are executing under"
+  parameters = {
+    code = '''
+{% if Data.Tasks.Previous.ErrorReason contains 'do not have' %}
+	{%- assign amendUrl = "action/amend" -%}
+{% elsif Data.Tasks.Previous.ErrorReason contains 'with creating' %}
+	{%- assign amendUrl = "orders" -%}
+{% else %}
+  {%comment%} This is weird, we should have known by now {% endcomment %}
+  {{unknownTenantTypeException}}
+{% endif %}
+'''
+    strict_variables = "true"
+  }
+  action_type = "Logic::Liquid"
+  call_type = "SOAP"
+  task_id = 85
+  concurrent_limit = 9999999
+  additionalProperties = {
+    css = {
+      top = "40px"
+      left = "740px"
+    }
+    priority = "Medium"
+    
+  }
+  _parent = [
+    zuora_billing.WorkflowExport.instance.C19__Goodwill_Discount_Recall_68@fsssu,
+  ]
+}

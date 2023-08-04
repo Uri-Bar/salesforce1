@@ -1,0 +1,5 @@
+okta.Role Organizational_Administrator@s {
+  
+  label = "Organizational Administrator"
+  type = "ORG_ADMIN"
+}

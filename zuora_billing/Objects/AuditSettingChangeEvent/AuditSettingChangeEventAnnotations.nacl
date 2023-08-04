@@ -1,0 +1,17 @@
+type zuora_billing.AuditSettingChangeEvent {
+  annotations {
+    string metadataType {
+    }
+    string label {
+    }
+    string description {
+    }
+    hidden_string id {
+    }
+    string objectType {
+    }
+  }
+  metadataType = "StandardObject"
+  label = "Setting change object definition"
+  objectType = "AuditSettingChangeEvent"
+}

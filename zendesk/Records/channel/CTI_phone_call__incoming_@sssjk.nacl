@@ -1,0 +1,3 @@
+zendesk.channel CTI_phone_call__incoming_@sssjk {
+  name = "CTI phone call (incoming)"
+}

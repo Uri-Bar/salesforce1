@@ -1,0 +1,7 @@
+zendesk.sla_policy_order {
+  active = [
+    zendesk.sla_policy.instance.SLA_501@s,
+    zendesk.sla_policy.instance.SLA_502@s,
+    zendesk.sla_policy.instance.Premier_Priority@s,
+  ]
+}

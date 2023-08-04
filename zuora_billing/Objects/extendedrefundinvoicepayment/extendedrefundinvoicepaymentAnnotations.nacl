@@ -1,0 +1,34 @@
+type zuora_billing.extendedrefundinvoicepayment {
+  annotations {
+    string metadataType {
+    }
+    string label {
+    }
+    string description {
+    }
+    hidden_string id {
+    }
+    string objectType {
+    }
+  }
+  metadataType = "StandardObject"
+  objectType = "extendedrefundinvoicepayment"
+  _generated_dependencies = [
+    {
+      reference = zuora_billing.accountingcode
+    },
+    {
+      reference = zuora_billing.extendedrefund
+    },
+    {
+      reference = zuora_billing.extendeduser
+    },
+    {
+      reference = zuora_billing.invoicepayment
+    },
+    {
+      reference = zuora_billing.journalentry
+    },
+  ]
+  label = "ExtendedRefundInvoicePayment"
+}

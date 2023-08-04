@@ -1,0 +1,59 @@
+salesforce.QuickAction Follow_Up {
+  fullName = "Follow_Up"
+  label = "Follow Up"
+  optionsCreateFeedItem = true
+  quickActionLayout = {
+    layoutSectionStyle = "TwoColumnsLeftToRight"
+    quickActionLayoutColumns = [
+      {
+        quickActionLayoutItems = [
+          {
+            emptySpace = false
+            field = "Subject"
+            uiBehavior = "Required"
+          },
+          {
+            emptySpace = false
+            field = "ActivityDate"
+            uiBehavior = "Edit"
+          },
+          {
+            emptySpace = false
+            field = "WhoId"
+            uiBehavior = "Edit"
+          },
+          {
+            emptySpace = false
+            field = "Description"
+            uiBehavior = "Edit"
+          },
+          {
+            emptySpace = false
+            field = "Priority"
+            uiBehavior = "Required"
+          },
+        ]
+      },
+      {
+        quickActionLayoutItems = [
+          {
+            emptySpace = true
+            uiBehavior = "Edit"
+          },
+          {
+            emptySpace = false
+            field = "OwnerId"
+            uiBehavior = "Required"
+          },
+          {
+            emptySpace = false
+            field = "WhatId"
+            uiBehavior = "Edit"
+          },
+        ]
+      },
+    ]
+  }
+  targetObject = salesforce.Task
+  type = "Create"
+}

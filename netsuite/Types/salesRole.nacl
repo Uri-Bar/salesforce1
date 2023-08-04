@@ -1,0 +1,28 @@
+type netsuite.salesRole {
+  annotations {
+    hidden_string source {
+    }
+  }
+  
+  
+  
+  
+  
+  string internalId {
+    isAttribute = true
+    _hidden_value = true
+  }
+  string externalId {
+    isAttribute = true
+  }
+  netsuite.nullField nullFieldList {
+  }
+  string name {
+  }
+  string description {
+  }
+  boolean isSalesRep {
+  }
+  boolean isInactive {
+  }
+}

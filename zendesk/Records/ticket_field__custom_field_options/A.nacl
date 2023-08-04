@@ -1,0 +1,8 @@
+zendesk.ticket_field__custom_field_options multiselect_Testticket_field5b22ccfd__A {
+  name = "A"
+  raw_name = "A"
+  value = "a"
+  _parent = [
+    zendesk.ticket_field.instance.multiselect_Testticket_field5b22ccfd,
+  ]
+}

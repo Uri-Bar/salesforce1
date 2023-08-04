@@ -1,0 +1,6 @@
+zuora_billing.Settings_ReasonCode CreditBalanceAdjustment_Cancellation {
+  isActive = true
+  reasonCodeName = "Cancellation"
+  reasonCodeTransactionType = "CreditBalanceAdjustment"
+  isDefault = false
+}

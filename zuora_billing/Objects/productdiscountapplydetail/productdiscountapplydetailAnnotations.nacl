@@ -1,0 +1,22 @@
+type zuora_billing.productdiscountapplydetail {
+  annotations {
+    string metadataType {
+    }
+    string label {
+    }
+    string description {
+    }
+    hidden_string id {
+    }
+    string objectType {
+    }
+  }
+  metadataType = "StandardObject"
+  objectType = "productdiscountapplydetail"
+  _generated_dependencies = [
+    {
+      reference = zuora_billing.user
+    },
+  ]
+  label = "ProductDiscountApplyDetail"
+}

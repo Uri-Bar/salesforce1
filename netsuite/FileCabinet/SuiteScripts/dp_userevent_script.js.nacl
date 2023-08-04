@@ -1,0 +1,12 @@
+netsuite.file SuiteScripts_dp_userevent_script_js@duuv {
+  bundleable = false
+  isinactive = false
+  availablewithoutlogin = false
+  generateurltimestamp = false
+  hideinbundle = false
+  path = "/SuiteScripts/dp_userevent_script.js"
+  content = file("netsuite/FileCabinet/SuiteScripts/dp_userevent_script.js")
+  _parent = [
+    netsuite.folder.instance.SuiteScripts,
+  ]
+}

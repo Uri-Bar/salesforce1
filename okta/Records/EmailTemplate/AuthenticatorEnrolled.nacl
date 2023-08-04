@@ -1,0 +1,6 @@
+okta.EmailTemplate AuthenticatorEnrolled {
+  name = "AuthenticatorEnrolled"
+  _parent = [
+    okta.Brand.instance,
+  ]
+}

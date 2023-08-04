@@ -1,0 +1,25 @@
+zendesk.routing_attribute_value Location__Kyoto {
+  name = "Kyoto"
+  conditions = {
+    all = [
+      {
+        subject = zendesk.user_field.instance.dropdown_25
+        operator = "is"
+        value = zendesk.user_field__custom_field_options.instance.dropdown_25__another_choice@uuus
+      },
+      {
+        subject = zendesk.organization_field.instance.dropdown_26
+        operator = "is"
+        value = zendesk.organization_field__custom_field_options.instance.dropdown_26__v1
+      },
+      {
+        subject = zendesk.ticket_field.instance.multiselect_agent_dropdown_643_for_agent@ussss
+        operator = "includes"
+        value = zendesk.ticket_field__custom_field_options.instance.multiselect_agent_dropdown_643_for_agent_ussss__v11@uuuuumuu
+      },
+    ]
+  }
+  _parent = [
+    zendesk.routing_attribute.instance.Location,
+  ]
+}

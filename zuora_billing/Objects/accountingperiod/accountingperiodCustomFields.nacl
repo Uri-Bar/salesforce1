@@ -1,0 +1,10 @@
+type zuora_billing.accountingperiod {
+  string testfield1__c {
+    type = "string"
+    maxLength = 512
+    required = false
+    filterable = false
+    label = "testfield1__c"
+    legacy = true
+  }
+}

@@ -1,0 +1,5 @@
+zendesk.user_segment Agents_and_admins@s {
+  user_type = "staff"
+  built_in = true
+  name = "Agents and admins"
+}

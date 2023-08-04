@@ -1,0 +1,15 @@
+netsuite.account Accrued_Wages@s {
+  acctType = "_otherCurrentLiability"
+  acctName = "Accrued Wages"
+  includeChildren = true
+  generalRate = "_current"
+  cashFlowRate = "_average"
+  isInactive = false
+  inventory = false
+  subsidiaryList = [
+    netsuite.subsidiary.instance.Parent_Company@s,
+  ]
+  revalue = true
+  identifier = "Accrued Wages"
+  custom_custrecord_acct_special = false
+}

@@ -1,0 +1,6 @@
+okta.Domain {
+  domain = "dev-82408681.okta.com"
+  certificateSourceType = "OKTA_MANAGED"
+  validationStatus = "COMPLETED"
+  brandId = okta.Brand.instance
+}

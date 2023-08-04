@@ -1,0 +1,18 @@
+zendesk.macro SRD___Access_request__Dark_Mode@sbssffs {
+  title = "SRD - Access request::Dark Mode"
+  active = true
+  default = false
+  actions = [
+    {
+      field = "comment_value_html"
+      value = "<p>Hi {{ticket.requester.first_name}}​,</p><p><br></p><p>Thank you for your interest in Dark Mode! Before we enable it in your account, could you let us know more about how you plan to use dark mode? And which of your users will need access to this feature? Thank you.</p>"
+    },
+    {
+      field = "current_tags"
+      value = [
+        zendesk.tag.instance.product_access_request_dark_mode@uufu,
+      ]
+    },
+  ]
+  raw_title = "SRD - Access request::Dark Mode"
+}

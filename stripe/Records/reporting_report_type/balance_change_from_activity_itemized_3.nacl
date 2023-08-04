@@ -1,0 +1,17 @@
+stripe.reporting_report_type balance_change_from_activity_itemized_3@uuuvv {
+  id = "balance_change_from_activity.itemized.3"
+  default_columns = [
+    "balance_transaction_id",
+    "created",
+    "available_on",
+    "currency",
+    "gross",
+    "fee",
+    "net",
+    "reporting_category",
+    "description",
+  ]
+  livemode = false
+  name = "Itemized balance change from activity"
+  version = 3
+}

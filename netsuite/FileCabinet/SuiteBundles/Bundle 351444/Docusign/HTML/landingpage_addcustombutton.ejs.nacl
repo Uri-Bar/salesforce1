@@ -1,0 +1,12 @@
+netsuite.file SuiteBundles_Bundle_351444_Docusign_HTML_landingpage_addcustombutton_ejs@dsddduv {
+  bundleable = false
+  isinactive = false
+  availablewithoutlogin = false
+  generateurltimestamp = false
+  hideinbundle = false
+  path = "/SuiteBundles/Bundle 351444/Docusign/HTML/landingpage_addcustombutton.ejs"
+  content = file("netsuite/FileCabinet/SuiteBundles/Bundle 351444/Docusign/HTML/landingpage_addcustombutton.ejs")
+  _parent = [
+    netsuite.folder.instance.SuiteBundles_Bundle_351444_Docusign_HTML@dsdd,
+  ]
+}

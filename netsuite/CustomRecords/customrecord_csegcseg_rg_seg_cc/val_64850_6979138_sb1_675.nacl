@@ -1,0 +1,18 @@
+netsuite.customrecord_csegcseg_rg_seg_cc val_64850_6979138_sb1_675 {
+  scriptid = "val_64850_6979138_sb1_675"
+  isInactive = false
+  parent = netsuite.customrecord_csegcseg_rg_seg_cc.instance.val_9569984_6979138_186
+  name = "1110 Management"
+  translationsList = {
+    customRecordTranslations = {
+      _frenchFrance = {
+        locale = "_frenchFrance"
+        language = "French (France)"
+      }
+      _german = {
+        locale = "_german"
+        language = "German"
+      }
+    }
+  }
+}

@@ -1,0 +1,15 @@
+netsuite.account Machinery___Equipment@ses {
+  acctType = "_fixedAsset"
+  acctName = "Machinery & Equipment"
+  includeChildren = true
+  generalRate = "_current"
+  cashFlowRate = "_average"
+  isInactive = false
+  inventory = false
+  subsidiaryList = [
+    netsuite.subsidiary.instance.Parent_Company@s,
+  ]
+  revalue = false
+  identifier = "Machinery & Equipment"
+  custom_custrecord_acct_special = false
+}

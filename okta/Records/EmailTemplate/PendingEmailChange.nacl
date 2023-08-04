@@ -1,0 +1,6 @@
+okta.EmailTemplate PendingEmailChange {
+  name = "PendingEmailChange"
+  _parent = [
+    okta.Brand.instance,
+  ]
+}

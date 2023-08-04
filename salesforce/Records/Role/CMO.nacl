@@ -1,0 +1,10 @@
+salesforce.Role CMO {
+  fullName = "CMO"
+  caseAccessLevel = "Edit"
+  contactAccessLevel = "Edit"
+  description = "Chief Marketing Officer"
+  mayForecastManagerShare = false
+  name = "CMO"
+  opportunityAccessLevel = "Edit"
+  parentRole = salesforce.Role.instance.CEO
+}

@@ -1,0 +1,70 @@
+workato.recipe__code ABC_lookup_1682660_su@uum {
+  number = 0
+  provider = "salesforce"
+  name = "updated_custom_object"
+  as = "ee6fc954"
+  title = "New/updated Opportunity"
+  description = "New/updated <span class=\"provider\">Opportunity</span> in <span class=\"provider\">Salesforce</span>"
+  keyword = "trigger"
+  dynamicPickListSelection = {
+    sobject_name = "Opportunity"
+  }
+  input = {
+    sobject_name = "Opportunity"
+    since_offset = "-3600"
+  }
+  block = [
+    {
+      number = 1
+      provider = "lookup_table"
+      name = "get_entry"
+      as = "6db4e33c"
+      description = '''
+
+      Lookup
+      <span class="provider">entry</span>
+      from
+      <span class="provider">lookupABC</span>
+      lookup table
+    
+'''
+      keyword = "action"
+      dynamicPickListSelection = {
+        lookup_table_id = "lookupABC"
+      }
+      input = {
+        lookup_table_id = "74694"
+        parameters = {
+          col1 = "#{_('data.salesforce.ee6fc954.AccountId')}"
+        }
+      }
+      uuid = "c2591345-f179-4df4-9d2d-b86c2546d2de"
+    },
+    {
+      number = 2
+      provider = "salesforce"
+      name = "update_sobject"
+      as = "d0def2e9"
+      title = "Update Opportunity"
+      description = "Update <span class=\"provider\">Opportunity</span> in <span class=\"provider\">Salesforce</span>"
+      keyword = "action"
+      dynamicPickListSelection = {
+        sobject_name = "Opportunity"
+        StageName = "Closed Won"
+      }
+      toggleCfg = {
+        StageName = true
+      }
+      input = {
+        sobject_name = "Opportunity"
+        id = "#{_('data.lookup_table.6db4e33c.entry.col1')}"
+        StageName = "Closed Won"
+      }
+      uuid = "0f7b8e8e-c89b-4f79-a00d-7fe617a3d169"
+    },
+  ]
+  uuid = "108c4db7-2e63-4b7e-a321-92e61c774196"
+  _parent = [
+    workato.recipe.instance.ABC_lookup_1682660@su,
+  ]
+}

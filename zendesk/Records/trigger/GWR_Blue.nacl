@@ -1,0 +1,30 @@
+zendesk.trigger GWR_Blue@s {
+  title = "GWR Blue"
+  active = true
+  default = false
+  actions = [
+    {
+      field = "set_tags"
+      value = [
+        zendesk.tag.instance.bluetag,
+      ]
+    },
+  ]
+  conditions = {
+    all = [
+      {
+        field = "status"
+        operator = "is"
+        value = "new"
+      },
+      {
+        field = "assignee_id"
+        operator = "is"
+        value = "geoffrey.routledge@salto.io"
+      },
+    ]
+  }
+  description = "New, more descriptive description for GWR Blue Trigger"
+  raw_title = "GWR Blue"
+  category_id = zendesk.trigger_category.instance.Notifications
+}

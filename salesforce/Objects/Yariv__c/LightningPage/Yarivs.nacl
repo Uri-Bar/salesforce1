@@ -1,0 +1,30 @@
+salesforce.LightningPage Yarivs {
+  fullName = "Yarivs"
+  flexiPageRegions = [
+    {
+      name = "header"
+      type = "Region"
+    },
+    {
+      name = "leftsidebar"
+      type = "Region"
+    },
+    {
+      name = "main"
+      type = "Region"
+    },
+    {
+      name = "rightsidebar"
+      type = "Region"
+    },
+  ]
+  masterLabel = "Yarivs"
+  sobjectType = "Yariv__c"
+  template = {
+    name = "flexipage:recordHomePinnedHeaderTemplateDesktop"
+  }
+  type = "RecordPage"
+  _parent = [
+    salesforce.Yariv__c,
+  ]
+}

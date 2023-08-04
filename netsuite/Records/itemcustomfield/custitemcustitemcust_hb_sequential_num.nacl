@@ -1,0 +1,33 @@
+netsuite.itemcustomfield custitemcustitemcust_hb_sequential_num {
+  scriptid = "custitemcustitemcust_hb_sequential_num"
+  accesslevel = "2"
+  appliestoexpense = false
+  appliestogroup = false
+  appliestoinventory = true
+  appliestokit = false
+  appliestononinventory = false
+  appliestoothercharge = false
+  appliestopricelist = false
+  appliestoservice = false
+  appliestospecificitems = false
+  appliestosubplan = false
+  applyformatting = false
+  checkspelling = false
+  defaultchecked = false
+  displaytype = "NORMAL"
+  encryptatrest = false
+  fieldtype = "TEXT"
+  globalsearch = false
+  includechilditems = false
+  isformula = false
+  ismandatory = false
+  isparent = false
+  itemmatrix = false
+  itemsubtype = "BOTH"
+  label = "Sequential Number"
+  searchlevel = "2"
+  showhierarchy = false
+  showinlist = false
+  storevalue = true
+  appliestoitemassembly = false
+}

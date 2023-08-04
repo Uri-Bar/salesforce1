@@ -1,0 +1,8 @@
+jira.Field Assignee {
+  name = "Assignee"
+  schema = {
+    type = "user"
+    system = "assignee"
+  }
+  description = ""
+}

@@ -1,0 +1,29 @@
+netsuite.file SuiteBundles_Bundle_351444_Docusign_Scripts_config_ds_setup_sobo_js@dsdddduuv {
+  bundleable = false
+  isinactive = false
+  availablewithoutlogin = false
+  generateurltimestamp = false
+  hideinbundle = false
+  path = "/SuiteBundles/Bundle 351444/Docusign/Scripts/config/ds_setup_sobo.js"
+  content = file("netsuite/FileCabinet/SuiteBundles/Bundle 351444/Docusign/Scripts/config/ds_setup_sobo.js")
+  _parent = [
+    netsuite.folder.instance.SuiteBundles_Bundle_351444_Docusign_Scripts_config@dsddd,
+  ]
+  _generated_dependencies = [
+    {
+      reference = netsuite.file.instance.SuiteBundles_Bundle_351444_Docusign_Scripts_config_JsLibraryConfig_json@dsddddv.path
+    },
+    {
+      reference = netsuite.file.instance.SuiteBundles_Bundle_351444_Docusign_Scripts_ds_api_js@dsddduv.path
+    },
+    {
+      reference = netsuite.file.instance.SuiteBundles_Bundle_351444_Docusign_Scripts_ds_cache_js@dsddduv.path
+    },
+    {
+      reference = netsuite.file.instance.SuiteBundles_Bundle_351444_Docusign_Scripts_ds_common_js@dsddduv.path
+    },
+    {
+      reference = netsuite.file.instance.SuiteBundles_Bundle_351444_Docusign_Scripts_types_ns_types_js@dsdddduv.path
+    },
+  ]
+}

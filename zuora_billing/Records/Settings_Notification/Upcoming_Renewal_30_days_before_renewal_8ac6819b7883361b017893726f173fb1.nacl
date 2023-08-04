@@ -1,0 +1,19 @@
+zuora_billing.Settings_Notification Upcoming_Renewal_30_days_before_renewal_8ac6819b7883361b017893726f173fb1@susssu {
+  profileId = zuora_billing.Settings_CommunicationProfile.instance.Default_Profile@s
+  eventName = "Upcoming Renewal"
+  name = "30 days before renewal"
+  description = " The subscription is within 30 days of its scheduled renewal."
+  active = false
+  hidden = false
+  param1 = "30"
+  param2 = "false"
+  emailOption = true
+  emailTemplateName = zuora_billing.PublicEmailTemplate.instance.Upcoming_Renewal_Default_Email_Template__Manual_Renewal_@sssssjsk
+  calloutOption = false
+  contentType = "APPLICATION_JSON"
+  calloutRetriable = false
+  calloutAuth = false
+  calloutOauth2 = false
+  calloutPreemptiveAuth = false
+  useCustomRequestBody = false
+}

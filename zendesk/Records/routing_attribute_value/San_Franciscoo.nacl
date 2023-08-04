@@ -1,0 +1,6 @@
+zendesk.routing_attribute_value Location__San_Franciscoo@uus {
+  name = "San Franciscoo"
+  _parent = [
+    zendesk.routing_attribute.instance.Location,
+  ]
+}

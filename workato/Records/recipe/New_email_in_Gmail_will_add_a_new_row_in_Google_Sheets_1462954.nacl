@@ -1,0 +1,32 @@
+workato.recipe New_email_in_Gmail_will_add_a_new_row_in_Google_Sheets_1462954@sssssssssssu {
+  name = "New email in Gmail will add a new row in Google Sheets"
+  trigger_application = "gmail"
+  action_applications = [
+    "google_sheets",
+  ]
+  applications = [
+    "gmail",
+    "google_sheets",
+  ]
+  description = "When there is a new email in Gmail, add a new row in Google Sheets"
+  folder_id = workato.folder.instance.Root
+  running = false
+  version_no = 1
+  config = [
+    {
+      keyword = "application"
+      provider = "gmail"
+      skip_validation = false
+      name = "gmail"
+      account_id = workato.connection.instance.My_Gmail_connection@s
+    },
+    {
+      keyword = "application"
+      provider = "google_sheets"
+      skip_validation = false
+      name = "google_sheets"
+      account_id = workato.connection.instance.My_Google_sheets_connection@s
+    },
+  ]
+  code = workato.recipe__code.instance.New_email_in_Gmail_will_add_a_new_row_in_Google_Sheets_1462954_sssssssssssu@uuuuuuuuuuuum
+}

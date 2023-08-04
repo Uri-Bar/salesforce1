@@ -1,0 +1,10 @@
+jira.Field Epic_Name__c@suu {
+  name = "Epic Name"
+  description = "Provide a short name to identify this epic."
+  isLocked = true
+  searcherKey = "com.pyxis.greenhopper.jira:gh-epic-label-searcher"
+  type = "com.pyxis.greenhopper.jira:gh-epic-label"
+  contexts = [
+    jira.CustomFieldContext.instance.Epic_Name__c_suu_Default_Configuration_Scheme_for_Epic_Name@uuumusssss,
+  ]
+}

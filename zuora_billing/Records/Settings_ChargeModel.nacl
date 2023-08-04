@@ -1,0 +1,11 @@
+zuora_billing.Settings_ChargeModel {
+  chargeModels = [
+    "DiscountFixedAmount",
+    "FlatFee",
+    "PerUnit",
+    "Overage",
+    "Volume",
+    "Tiered",
+    "TieredWithOverage",
+  ]
+}

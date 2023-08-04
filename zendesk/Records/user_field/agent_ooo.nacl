@@ -1,0 +1,11 @@
+zendesk.user_field agent_ooo {
+  type = "checkbox"
+  key = "agent_ooo"
+  
+  
+  raw_title = "[Out of Office] Agent Out?"
+  raw_description = "This field was created by the Out of Office app and is required in order for the app to run properly."
+  active = true
+  system = false
+  tag = zendesk.tag.instance.agent_ooo
+}

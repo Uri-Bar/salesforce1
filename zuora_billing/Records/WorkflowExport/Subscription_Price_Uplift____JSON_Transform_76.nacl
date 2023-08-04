@@ -1,0 +1,35 @@
+zuora_billing.WorkflowExport Subscription_Price_Uplift____JSON_Transform_76@sssbbssu {
+  workflow = zuora_billing.Workflow.instance.Subscription_Price_Uplift____JSON_Transform_76_sssbbssu__Subscription_Price_Uplift____JSON_Transform@uuuuuuuumuusssbbss
+  tasks = [
+    zuora_billing.Task.instance.Subscription_Price_Uplift____JSON_Transform_76_sssbbssu__Callout_to_query_a_subscription@uuuuuuuumuussss,
+    zuora_billing.Task.instance.Subscription_Price_Uplift____JSON_Transform_76_sssbbssu__Create_orders_to_adjust_price@uuuuuuuumuussss,
+    zuora_billing.Task.instance.Subscription_Price_Uplift____JSON_Transform_76_sssbbssu__JSON_Transform@uuuuuuuumuus,
+  ]
+  linkages = [
+    {
+      source_workflow_id = zuora_billing.Workflow.instance.Subscription_Price_Uplift____JSON_Transform_76_sssbbssu__Subscription_Price_Uplift____JSON_Transform@uuuuuuuumuusssbbss
+      target_task_id = zuora_billing.Task.instance.Subscription_Price_Uplift____JSON_Transform_76_sssbbssu__Callout_to_query_a_subscription@uuuuuuuumuussss
+      linkage_type = "Start"
+      
+    },
+    {
+      source_task_id = zuora_billing.Task.instance.Subscription_Price_Uplift____JSON_Transform_76_sssbbssu__Callout_to_query_a_subscription@uuuuuuuumuussss
+      target_task_id = zuora_billing.Task.instance.Subscription_Price_Uplift____JSON_Transform_76_sssbbssu__JSON_Transform@uuuuuuuumuus
+      linkage_type = "Success"
+      
+    },
+    {
+      source_task_id = zuora_billing.Task.instance.Subscription_Price_Uplift____JSON_Transform_76_sssbbssu__JSON_Transform@uuuuuuuumuus
+      target_task_id = zuora_billing.Task.instance.Subscription_Price_Uplift____JSON_Transform_76_sssbbssu__Create_orders_to_adjust_price@uuuuuuuumuussss
+      linkage_type = "Success"
+      
+    },
+  ]
+  additionalProperties = {
+    workflow_definition = {
+      description = "Applies a price uplift o recurring charges on the subscription. This is done by using a JSON Transform on the original subscription callout response. Once the transform is done, the resulting transform is used in an amendment callout."
+      category = "Default"
+      name = "Subscription Price Uplift -- JSON Transform"
+    }
+  }
+}

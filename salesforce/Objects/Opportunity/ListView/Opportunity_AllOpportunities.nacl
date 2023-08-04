@@ -1,0 +1,19 @@
+salesforce.ListView Opportunity_AllOpportunities {
+  fullName = "Opportunity.AllOpportunities"
+  columns = [
+    "OPPORTUNITY.NAME",
+    "ACCOUNT.NAME",
+    "OPPORTUNITY.AMOUNT",
+    "OPPORTUNITY.CLOSE_DATE",
+    "OPPORTUNITY.STAGE_NAME",
+    "OPPORTUNITY.PROBABILITY",
+    "OPPORTUNITY.TYPE",
+    "OPPORTUNITY.LEAD_SOURCE",
+    "CORE.USERS.FULL_NAME",
+  ]
+  filterScope = "Everything"
+  label = "All Opportunities"
+  _parent = [
+    salesforce.Opportunity,
+  ]
+}

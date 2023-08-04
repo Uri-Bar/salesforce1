@@ -1,0 +1,11 @@
+okta.Feature OFFICE365_GCC_High@s {
+  
+  type = "self-service"
+  status = "DISABLED"
+  name = "OFFICE365 GCC High"
+  description = "Support integration with Office365 GCC High Environment."
+  stage = {
+    value = "EA"
+  }
+  
+}

@@ -1,0 +1,6 @@
+zuora_billing.AccountingCodeItem SalesTaxPayable_Sales_Tax_Payable@uss {
+  name = "Sales Tax Payable"
+  type = "SalesTaxPayable"
+  category = "Liabilities"
+  status = "Active"
+}

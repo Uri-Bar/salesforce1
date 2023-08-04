@@ -1,0 +1,9 @@
+netsuite.folder SuiteScripts_mkd@d {
+  bundleable = false
+  isinactive = false
+  isprivate = false
+  path = "/SuiteScripts/mkd"
+  _parent = [
+    netsuite.folder.instance.SuiteScripts,
+  ]
+}

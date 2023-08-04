@@ -1,0 +1,20 @@
+zendesk.article_translation MKD___Test_Article_Lorem_Ipsum_General_AnotherSaltoBrand_suu_sbssuuuum__AnotherSaltoBrand_en_us_ub@uuuuuuuuumuuuum {
+  locale = zendesk.guide_language_settings.instance.AnotherSaltoBrand_en_us@ub
+  title = "MKD - Test Article"
+  body = '''
+<p>What happens if an image...</p>
+<p><img src="${ zendesk.brand.instance.AnotherSaltoBrand.brand_url }/hc/article_attachments/${ zendesk.article_attachment.instance.MKD___Test_Article_Lorem_Ipsum_General_AnotherSaltoBrand_suu_sbssuuuum__kirk_avatar_png_true@uuuuuuuuumuuuvu }" alt="kirk_avatar.png"></p>
+<p>Gets inserted multiple times in the same article?</p>
+<p>Let's find out...</p>
+<p><img src="${ zendesk.brand.instance.AnotherSaltoBrand.brand_url }/hc/article_attachments/${ zendesk.article_attachment.instance.MKD___Test_Article_Lorem_Ipsum_General_AnotherSaltoBrand_suu_sbssuuuum__kirk_avatar_png_true@uuuuuuuuumuuuvu }" alt="kirk_avatar.png"></p>
+<p>or maybe a third?</p>
+<p><img src="${ zendesk.brand.instance.AnotherSaltoBrand.brand_url }/hc/article_attachments/${ zendesk.article_attachment.instance.MKD___Test_Article_Lorem_Ipsum_General_AnotherSaltoBrand_suu_sbssuuuum__kirk_avatar_png_true@uuuuuuuuumuuuvu }" alt="kirk_avatar.png"></p>
+'''
+  outdated = false
+  draft = true
+  hidden = true
+  brand = zendesk.brand.instance.AnotherSaltoBrand
+  _parent = [
+    zendesk.article.instance.MKD___Test_Article_Lorem_Ipsum_General_AnotherSaltoBrand_suu@sbssuuuum,
+  ]
+}

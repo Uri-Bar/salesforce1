@@ -1,0 +1,6 @@
+workato.api_collection test1 {
+  name = "test1"
+  version = "1"
+  url = "https://apim.workato.com/workatos287/test1-v12"
+  api_spec_url = "https://app.workato.com/doc/service/test1-v12/swagger?api_group_id=12819&token=246ddf03daec9887a67a2f385eb9b8d8"
+}

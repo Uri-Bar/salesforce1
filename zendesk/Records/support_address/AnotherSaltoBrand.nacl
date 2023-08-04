@@ -1,0 +1,10 @@
+zendesk.support_address AnotherSaltoBrand_support_AnotherSaltoBrand_subdomain_zendesk_com@umvvv {
+  brand_id = zendesk.brand.instance.AnotherSaltoBrand
+  default = true
+  name = "AnotherSaltoBrand"
+  email = "support@${ zendesk.brand.instance.AnotherSaltoBrand.subdomain }.zendesk.com"
+  forwarding_status = "verified"
+  spf_status = "verified"
+  cname_status = "verified"
+  domain_verification_status = "verified"
+}

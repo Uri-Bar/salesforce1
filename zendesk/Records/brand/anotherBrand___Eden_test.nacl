@@ -1,0 +1,11 @@
+zendesk.brand anotherBrand___Eden_test@sbss {
+  name = "anotherBrand - Eden test"
+  brand_url = "https://salto870.zendesk.com"
+  subdomain = "salto870"
+  has_help_center = false
+  help_center_state = "disabled"
+  active = true
+  default = false
+  is_deleted = false
+  signature_template = "{{agent.signature}}"
+}

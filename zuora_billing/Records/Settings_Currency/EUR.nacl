@@ -1,0 +1,9 @@
+zuora_billing.Settings_Currency EUR {
+  currencyCode = "EUR"
+  roundingMode = "HalfUp"
+  rate = 0
+  defaultIncrementForInclusiveTax = false
+  incrementForInvoiceTotal = false
+  active = true
+  default = false
+}

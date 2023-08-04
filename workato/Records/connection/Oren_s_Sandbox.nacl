@@ -1,0 +1,5 @@
+workato.connection Oren_s_Sandbox@ts {
+  application = "salesforce"
+  name = "Salto Sandbox"
+  folder_id = workato.folder.instance.Oren_318283
+}

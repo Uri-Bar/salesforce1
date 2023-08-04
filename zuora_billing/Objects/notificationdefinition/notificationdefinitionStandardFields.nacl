@@ -1,0 +1,227 @@
+type zuora_billing.notificationdefinition {
+  string Id {
+    type = "string"
+    format = "uuid"
+    required = false
+    filterable = false
+    label = "Id"
+  }
+  string CreatedDate {
+    type = "string"
+    format = "date-time"
+    required = false
+    filterable = false
+    label = "CreatedDate"
+  }
+  string UpdatedDate {
+    type = "string"
+    format = "date-time"
+    required = false
+    filterable = false
+    label = "UpdatedDate"
+  }
+  string Name {
+    type = "string"
+    maxLength = 512
+    required = false
+    filterable = false
+    label = "Name"
+  }
+  string Description {
+    type = "string"
+    maxLength = 512
+    required = false
+    filterable = false
+    label = "Description"
+  }
+  boolean Active {
+    type = "boolean"
+    required = false
+    filterable = false
+    label = "Active"
+  }
+  boolean CalloutActive {
+    type = "boolean"
+    required = false
+    filterable = false
+    label = "CalloutActive"
+  }
+  string CalloutBaseUrl {
+    type = "string"
+    maxLength = 512
+    required = false
+    filterable = false
+    label = "CalloutBaseUrl"
+  }
+  string CalloutParameters {
+    type = "string"
+    maxLength = 512
+    required = false
+    filterable = false
+    label = "CalloutParameters"
+  }
+  boolean CalloutRetry {
+    type = "boolean"
+    required = false
+    filterable = false
+    label = "CalloutRetry"
+  }
+  boolean CalloutAuth {
+    type = "boolean"
+    required = false
+    filterable = false
+    label = "CalloutAuth"
+  }
+  boolean CalloutPreemptiveAuth {
+    type = "boolean"
+    required = false
+    filterable = false
+    label = "CalloutPreemptiveAuth"
+  }
+  string CalloutUsername {
+    type = "string"
+    maxLength = 512
+    required = false
+    filterable = false
+    label = "CalloutUsername"
+  }
+  string CalloutPassword {
+    type = "string"
+    maxLength = 512
+    required = false
+    filterable = false
+    label = "CalloutPassword"
+  }
+  string CalloutAuthDomain {
+    type = "string"
+    maxLength = 512
+    required = false
+    filterable = false
+    label = "CalloutAuthDomain"
+  }
+  boolean CalloutOAuth2 {
+    type = "boolean"
+    required = false
+    filterable = false
+    label = "CalloutOAuth2"
+  }
+  string CalloutOAuth2Id {
+    type = "string"
+    format = "uuid"
+    required = false
+    filterable = false
+    label = "CalloutOAuth2Id"
+  }
+  string CalloutContentType {
+    type = "string"
+    maxLength = 512
+    required = false
+    filterable = false
+    label = "CalloutContentType"
+  }
+  string CalloutHttpMethod {
+    type = "string"
+    maxLength = 512
+    required = false
+    filterable = false
+    label = "CalloutHttpMethod"
+  }
+  string CalloutCustomRequestBody {
+    type = "string"
+    maxLength = 512
+    required = false
+    filterable = false
+    label = "CalloutCustomRequestBody"
+  }
+  string CommunicationProfileId {
+    type = "string"
+    
+    required = false
+    filterable = false
+    maxLength = 512
+    label = "CommunicationProfileId"
+  }
+  boolean EmailActive {
+    type = "boolean"
+    required = false
+    filterable = false
+    label = "EmailActive"
+  }
+  string EmailTemplateId {
+    type = "string"
+    format = "uuid"
+    required = false
+    filterable = false
+    label = "EmailTemplateId"
+  }
+  string EventNamespace {
+    type = "string"
+    maxLength = 512
+    required = false
+    filterable = false
+    label = "EventNamespace"
+  }
+  string EventParameter1 {
+    type = "string"
+    maxLength = 512
+    required = false
+    filterable = false
+    label = "EventParameter1"
+  }
+  string EventParameter2 {
+    type = "string"
+    maxLength = 512
+    required = false
+    filterable = false
+    label = "EventParameter2"
+  }
+  string EventParameter3 {
+    type = "string"
+    maxLength = 512
+    required = false
+    filterable = false
+    label = "EventParameter3"
+  }
+  string EventParameter4 {
+    type = "string"
+    maxLength = 512
+    required = false
+    filterable = false
+    label = "EventParameter4"
+  }
+  string CreatedBy {
+    type = "string"
+    maxLength = 512
+    required = false
+    filterable = false
+    label = "CreatedBy"
+  }
+  string UpdatedBy {
+    type = "string"
+    maxLength = 512
+    required = false
+    filterable = false
+    label = "UpdatedBy"
+  }
+  string EventName {
+    type = "string"
+    maxLength = 512
+    required = false
+    filterable = false
+    label = "EventName"
+  }
+  string EmailTemplateName {
+    type = "string"
+    maxLength = 512
+    required = false
+    filterable = false
+    label = "EmailTemplateName"
+  }
+  string ProfileName {
+    type = "string"
+    maxLength = 512
+    required = false
+    filterable = false
+    label = "ProfileName"
+  }
+}

@@ -1,0 +1,7 @@
+zendesk.group Support6 {
+  name = "Support6"
+  description = "test2"
+  default = false
+  deleted = false
+  is_public = true
+}

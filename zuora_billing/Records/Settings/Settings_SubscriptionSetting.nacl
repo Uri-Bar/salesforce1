@@ -1,0 +1,25 @@
+zuora_billing.Settings_SubscriptionSetting {
+  termType = "TERMED"
+  initialTerm = 50
+  renewalTerm = 0
+  invoicePastEndOfTerm = false
+  contractRenewal = true
+  acceptanceOfOrders = false
+  implementationPeriod = true
+  subscriptionsInvoicedSeparately = false
+  increasePriceRenewSubscription = true
+  productFeatureOfSubscription = false
+  renewNoChargeSubscription = true
+  priceChangeOption = "NoChange"
+  priceIncreasePercentage = 0.1
+  autoRenewJobRunTimeType = "SystemDefault"
+  updateChargeTriggerCondition = false
+  orderMetricsTaxationOption = "YES"
+  updateSubscriptionActivationDate = true
+  enableAccountLevelDiscount = true
+  skipOwnerTransferValidationForDeletionAccount = false
+  enableOrderUI = false
+  autoRenewByOrder = false
+  enableOrderCpq = false
+  skipAmendmentGenerationBySubscribe = true
+}

@@ -1,0 +1,9 @@
+okta.Feature Enable_policy_testing_and_simulation_tools@s {
+  type = "self-service"
+  status = "DISABLED"
+  name = "Enable policy testing and simulation tools"
+  description = "Access Policy Simulation enables you to run simulations of your policies and test the outcome"
+  stage = {
+    value = "EA"
+  }
+}

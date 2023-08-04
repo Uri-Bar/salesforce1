@@ -1,0 +1,12 @@
+netsuite.currency DP_Dollar@s {
+  name = "DP Dollar"
+  symbol = "DPD"
+  isBaseCurrency = true
+  isInactive = false
+  overrideCurrencyFormat = false
+  symbolPlacement = "_beforeNumber"
+  locale = "_unitedStatesEnglish"
+  formatSample = "$1,234.56"
+  exchangeRate = 1
+  currencyPrecision = "_two"
+}

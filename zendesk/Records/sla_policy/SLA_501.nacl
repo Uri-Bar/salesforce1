@@ -1,0 +1,63 @@
+zendesk.sla_policy SLA_501@s {
+  title = "SLA 501"
+  description = "SLA description"
+  filter = {
+    all = [
+      {
+        field = "ticket_form_id"
+        operator = "is"
+        value = zendesk.ticket_form.instance.Form_11@s
+      },
+    ]
+  }
+  policy_metrics = [
+    {
+      priority = "low"
+      metric = "first_reply_time"
+      target = 1440
+      business_hours = false
+    },
+    {
+      priority = "low"
+      metric = "agent_work_time"
+      target = 2880
+      business_hours = false
+    },
+    {
+      priority = "normal"
+      metric = "first_reply_time"
+      target = 60
+      business_hours = false
+    },
+    {
+      priority = "normal"
+      metric = "agent_work_time"
+      target = 360
+      business_hours = false
+    },
+    {
+      priority = "high"
+      metric = "first_reply_time"
+      target = 10
+      business_hours = false
+    },
+    {
+      priority = "high"
+      metric = "agent_work_time"
+      target = 29
+      business_hours = false
+    },
+    {
+      priority = "urgent"
+      metric = "first_reply_time"
+      target = 5
+      business_hours = false
+    },
+    {
+      priority = "urgent"
+      metric = "agent_work_time"
+      target = 30
+      business_hours = false
+    },
+  ]
+}

@@ -1,0 +1,24 @@
+workato.recipe Alon_s_reciepe_1806547@tsu {
+  name = "Alon's reciepe"
+  trigger_application = "zuora"
+  action_applications = [
+    "zuora",
+  ]
+  applications = [
+    "zuora",
+  ]
+  description = "When there is a trigger event, do action"
+  folder_id = workato.folder.instance.Alon_318283
+  running = false
+  version_no = 8
+  config = [
+    {
+      keyword = "application"
+      name = "zuora"
+      provider = "zuora"
+      account_id = workato.connection.instance.Neta_Zuora_sandbox@s
+      skip_validation = false
+    },
+  ]
+  code = workato.recipe__code.instance.Alon_s_reciepe_1806547_tsu@uuum
+}

@@ -1,0 +1,202 @@
+salesforce.Layout CaseInteraction_Case_Feed_Layout@bss {
+  fullName = "CaseInteraction-Case Feed Layout"
+  feedLayout = {
+    autocollapsePublisher = false
+    compactFeed = false
+    feedFilterPosition = "LeftFixed"
+    feedFilters = [
+      {
+        feedFilterType = "AllUpdates"
+      },
+      {
+        feedFilterType = "FeedItemType"
+        feedItemType = "CallLogPost"
+      },
+      {
+        feedFilterType = "FeedItemType"
+        feedItemType = "TextPost"
+      },
+      {
+        feedFilterType = "FeedItemType"
+        feedItemType = "ChangeStatusPost"
+      },
+      {
+        feedFilterType = "FeedItemType"
+        feedItemType = "ActivityEvent"
+      },
+    ]
+    fullWidthFeed = false
+    hideSidebar = false
+    highlightExternalFeedItems = false
+    rightComponents = [
+      {
+        componentType = "HelpAndToolLinks"
+      },
+      {
+        componentType = "CustomButtons"
+      },
+      {
+        componentType = "Following"
+      },
+      {
+        componentType = "Followers"
+      },
+      {
+        componentType = "CustomLinks"
+      },
+    ]
+    useInlineFiltersInConsole = false
+  }
+  layoutSections = [
+    {
+      customLabel = false
+      detailHeading = false
+      editHeading = false
+      layoutColumns = [
+        {
+          layoutItems = [
+            {
+              behavior = "Edit"
+              field = "OwnerId"
+            },
+            {
+              behavior = "Edit"
+              field = "ContactId"
+            },
+            {
+              behavior = "Edit"
+              field = "AccountId"
+            },
+            {
+              behavior = "Required"
+              field = "Status"
+            },
+            {
+              behavior = "Edit"
+              field = "Priority"
+            },
+            {
+              behavior = "Readonly"
+              field = "ContactPhone"
+            },
+            {
+              behavior = "Readonly"
+              field = "ContactEmail"
+            },
+            {
+              behavior = "Edit"
+              field = "Origin"
+            },
+            {
+              behavior = "Edit"
+              field = "Subject"
+            },
+            {
+              behavior = "Edit"
+              field = "Description"
+            },
+            {
+              behavior = "Edit"
+              field = "SuppliedEmail"
+            },
+          ]
+        },
+        {
+        },
+      ]
+      style = "TwoColumnsLeftToRight"
+    },
+    {
+      customLabel = false
+      detailHeading = false
+      editHeading = false
+      style = "CustomLinks"
+      layoutColumns = [
+        {
+        },
+      ]
+    },
+  ]
+  miniLayout = {
+    fields = [
+      "OwnerId",
+      "ContactId",
+      "AccountId",
+      "Status",
+      "Priority",
+      "ContactPhone",
+      "ContactEmail",
+      "Origin",
+      "Subject",
+      "Description",
+      "SuppliedEmail",
+    ]
+  }
+  relatedObjects = [
+    "ContactId",
+    "AccountId",
+  ]
+  showEmailCheckbox = false
+  showHighlightsPanel = false
+  showInteractionLogPanel = false
+  showRunAssignmentRulesCheckbox = false
+  showSubmitAndAttachButton = false
+  summaryLayout = {
+    masterLabel = "00ha0000004ydtW"
+    sizeX = 3
+    sizeY = 4
+    summaryLayoutItems = [
+      {
+        field = "ContactId"
+        posX = 0
+        posY = 0
+      },
+      {
+        field = "AccountId"
+        posX = 0
+        posY = 1
+      },
+      {
+        field = "ContactPhone"
+        posX = 0
+        posY = 2
+      },
+      {
+        field = "CaseNumber"
+        posX = 1
+        posY = 0
+      },
+      {
+        field = "CreatedDate"
+        posX = 1
+        posY = 1
+      },
+      {
+        field = "Subject"
+        posX = 1
+        posY = 2
+      },
+      {
+        field = "Description"
+        posX = 1
+        posY = 3
+      },
+      {
+        field = "Status"
+        posX = 2
+        posY = 0
+      },
+      {
+        field = "Priority"
+        posX = 2
+        posY = 1
+      },
+      {
+        field = "OwnerId"
+        posX = 2
+        posY = 2
+      },
+    ]
+    summaryLayoutStyle = "CaseInteraction"
+  }
+}

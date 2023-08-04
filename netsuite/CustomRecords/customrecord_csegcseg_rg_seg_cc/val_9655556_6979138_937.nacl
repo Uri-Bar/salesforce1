@@ -1,0 +1,18 @@
+netsuite.customrecord_csegcseg_rg_seg_cc val_9655556_6979138_937 {
+  scriptid = "val_9655556_6979138_937"
+  isInactive = false
+  parent = netsuite.customrecord_csegcseg_rg_seg_cc.instance.val_64871_6979138_sb1_271
+  name = "1174 Marketing & Creative"
+  translationsList = {
+    customRecordTranslations = {
+      _frenchFrance = {
+        locale = "_frenchFrance"
+        language = "French (France)"
+      }
+      _german = {
+        locale = "_german"
+        language = "German"
+      }
+    }
+  }
+}

@@ -1,0 +1,262 @@
+type netsuite.customrecord_ven_record {
+  annotations {
+    serviceid scriptid {
+    }
+    string recordname {
+    }
+    string customsegment {
+    }
+    netsuite.customrecordtype_accesstype accesstype {
+    }
+    boolean allowattachments {
+    }
+    boolean allowinlineediting {
+    }
+    boolean allowinlinedeleting {
+    }
+    boolean allowinlinedetaching {
+    }
+    boolean allowmobileaccess {
+    }
+    boolean allownumberingoverride {
+    }
+    boolean allowquickadd {
+    }
+    boolean allowquicksearch {
+    }
+    boolean allowuiaccess {
+    }
+    string description {
+    }
+    boolean enabledle {
+    }
+    boolean enablekeywords {
+    }
+    boolean enablemailmerge {
+    }
+    boolean enablenametranslation {
+    }
+    boolean enablenumbering {
+    }
+    boolean enableoptimisticlocking {
+    }
+    boolean enablesystemnotes {
+    }
+    boolean hierarchical {
+    }
+    string numberingprefix {
+    }
+    string numberingsuffix {
+    }
+    string numberingmindigits {
+    }
+    string numberinginit {
+    }
+    string icon {
+    }
+    boolean iconbuiltin {
+    }
+    netsuite.generic_custom_record_icon iconindex {
+    }
+    boolean includeinsearchmenu {
+    }
+    boolean includename {
+    }
+    boolean isinactive {
+    }
+    boolean isordered {
+    }
+    boolean showcreationdate {
+    }
+    boolean showcreationdateonlist {
+    }
+    boolean showid {
+    }
+    boolean showlastmodified {
+    }
+    boolean showlastmodifiedonlist {
+    }
+    boolean shownotes {
+    }
+    boolean showowner {
+    }
+    boolean showownerallowchange {
+    }
+    boolean showowneronlist {
+    }
+    
+    netsuite.customrecordtype_links links {
+    }
+    netsuite.customrecordtype_permissions permissions {
+    }
+    netsuite.customrecordtype_recordsublists recordsublists {
+    }
+    netsuite.customrecordtype_subtabs subtabs {
+    }
+    string application_id {
+    }
+    hidden_string source {
+    }
+    hidden_string internalId {
+    }
+  }
+  serviceid scriptid {
+    _required = true
+  }
+  string internalId {
+    _hidden_value = true
+  }
+  string custom_custrecord167 {
+    scriptid = "custrecord167"
+    accesslevel = "2"
+    allowquickadd = false
+    applyformatting = false
+    checkspelling = false
+    defaultchecked = false
+    displaytype = "NORMAL"
+    encryptatrest = false
+    fieldtype = "PHONE"
+    globalsearch = false
+    isformula = false
+    ismandatory = false
+    isparent = false
+    label = "Phone Number"
+    rolerestrict = false
+    searchlevel = "2"
+    showinlist = false
+    storevalue = true
+    index = 0
+  }
+  string custom_custrecord168 {
+    scriptid = "custrecord168"
+    accesslevel = "2"
+    allowquickadd = false
+    applyformatting = false
+    checkspelling = false
+    defaultchecked = false
+    displaytype = "NORMAL"
+    encryptatrest = false
+    fieldtype = "EMAIL"
+    globalsearch = false
+    isformula = false
+    ismandatory = false
+    isparent = false
+    label = "E-mail"
+    rolerestrict = false
+    searchlevel = "2"
+    showinlist = false
+    storevalue = true
+    index = 1
+  }
+  string custom_custrecord169 {
+    scriptid = "custrecord169"
+    accesslevel = "2"
+    allowquickadd = false
+    applyformatting = false
+    checkspelling = false
+    defaultchecked = false
+    displaytype = "NORMAL"
+    encryptatrest = false
+    fieldtype = "CLOBTEXT"
+    globalsearch = false
+    isformula = false
+    ismandatory = false
+    isparent = false
+    label = "Address"
+    rolerestrict = false
+    searchlevel = "2"
+    showinlist = false
+    storevalue = true
+    index = 2
+  }
+  netsuite.customrecord_supp_pay_terms custom_custrecord170 {
+    scriptid = "custrecord170"
+    accesslevel = "2"
+    allowquickadd = false
+    applyformatting = false
+    checkspelling = false
+    defaultchecked = false
+    displaytype = "NORMAL"
+    encryptatrest = false
+    fieldtype = "SELECT"
+    globalsearch = false
+    isformula = false
+    ismandatory = false
+    isparent = false
+    label = "Supplier Payment Terms"
+    onparentdelete = "NO_ACTION"
+    rolerestrict = false
+    searchlevel = "2"
+    selectrecordtype = netsuite.customrecord_supp_pay_terms.attr.scriptid
+    showinlist = false
+    storevalue = true
+    index = 3
+  }
+  string custom_custrecord183 {
+    scriptid = "custrecord183"
+    accesslevel = "2"
+    allowquickadd = false
+    applyformatting = false
+    checkspelling = false
+    defaultchecked = false
+    displaytype = "NORMAL"
+    encryptatrest = false
+    fieldtype = "TEXT"
+    globalsearch = false
+    isformula = false
+    ismandatory = false
+    isparent = false
+    label = "Company Name"
+    rolerestrict = false
+    searchlevel = "2"
+    showinlist = false
+    storevalue = true
+    index = 4
+  }
+  scriptid = "customrecord_ven_record"
+  accesstype = "USEPERMISSIONLIST"
+  allowattachments = true
+  allowinlinedeleting = false
+  allowinlinedetaching = true
+  allowinlineediting = false
+  allowmobileaccess = false
+  allownumberingoverride = false
+  allowquickadd = true
+  allowquicksearch = false
+  allowuiaccess = true
+  enabledle = true
+  enablekeywords = true
+  enablemailmerge = false
+  enablenametranslation = false
+  enablenumbering = false
+  enableoptimisticlocking = true
+  enablesystemnotes = true
+  hierarchical = false
+  iconbuiltin = true
+  includeinsearchmenu = true
+  includename = false
+  isinactive = false
+  isordered = false
+  recordname = "Sample Onboarding Form"
+  showcreationdate = false
+  showcreationdateonlist = false
+  showid = true
+  showlastmodified = false
+  showlastmodifiedonlist = false
+  shownotes = true
+  showowner = false
+  showownerallowchange = false
+  showowneronlist = false
+  permissions = {
+    permission = {
+      customrole1198 = {
+        permittedlevel = "CREATE"
+        permittedrole = netsuite.role.instance.customrole1198.scriptid
+        
+      }
+    }
+  }
+  metadataType = "customrecordtype"
+  netsuite.customRecordTranslationsList translationsList {
+  }
+}

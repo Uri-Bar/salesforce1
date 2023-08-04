@@ -1,0 +1,43 @@
+zuora_billing.PublicEmailTemplate Gateway_Reconciliation_Job_Email_Template@s {
+  eventCategory = 2150
+  name = "Gateway Reconciliation Job Email Template"
+  description = ""
+  encodingType = "UTF8"
+  fromName = "Admin"
+  fromEmailType = "SpecificEmail"
+  fromEmailAddress = "support@zuora.com"
+  replyToEmailType = "SpecificEmail"
+  replyToEmailAddress = "support@zuora.com"
+  ccEmailType = "SpecificEmails"
+  ccEmailAddress = ""
+  bccEmailAddress = ""
+  toEmailType = "BillToContact"
+  toEmailAddress = ""
+  emailSubject = "Gateway Reconciliation Job <GatewayReconciliationJob.JobNumber> Status - <GatewayReconciliationJob.Status>"
+  emailBody = '''
+Dear Customer,
+
+Your gateway reconciliation job has completed.
+
+Job Information
+
+Job Number:               <GatewayReconciliationJob.JobNumber>
+
+Job Status:               <GatewayReconciliationJob.Status>
+
+Created On:               <GatewayReconciliationJob.CreatedDate>
+
+Reconciliation period:    <GatewayReconciliationJob.PeriodStart> - <GatewayReconciliationJob.PeriodEnd>
+
+Source Gateway:           <GatewayReconciliationJob.Gateway>
+
+For additional job details, please visit: <GatewayReconciliationJob.AccessURL>
+
+Thank you,
+
+-Zuora
+'''
+  active = true
+  isHtml = false
+  useAdditionalAddresses = false
+}

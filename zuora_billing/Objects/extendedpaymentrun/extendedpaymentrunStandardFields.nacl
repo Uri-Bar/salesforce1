@@ -1,0 +1,285 @@
+type zuora_billing.extendedpaymentrun {
+  string Id {
+    type = "string"
+    format = "uuid"
+    required = false
+    filterable = false
+    label = "Id"
+  }
+  string CreatedById {
+    type = "string"
+    format = "uuid"
+    required = false
+    filterable = false
+    label = "CreatedById"
+  }
+  string CreatedDate {
+    type = "string"
+    format = "date-time"
+    required = false
+    filterable = false
+    label = "CreatedDate"
+  }
+  string UpdatedById {
+    type = "string"
+    format = "uuid"
+    required = false
+    filterable = false
+    label = "UpdatedById"
+  }
+  string UpdatedDate {
+    type = "string"
+    format = "date-time"
+    required = false
+    filterable = false
+    label = "UpdatedDate"
+  }
+  boolean deleted {
+    type = "boolean"
+    required = false
+    filterable = false
+    label = "deleted"
+  }
+  string EndDate {
+    type = "string"
+    format = "date-time"
+    required = false
+    filterable = false
+    label = "EndDate"
+  }
+  string ExecutedDate {
+    type = "string"
+    format = "date-time"
+    required = false
+    filterable = false
+    label = "ExecutedDate"
+  }
+  number NumberOfCreditBalanceAdjustments {
+    type = "integer"
+    required = false
+    filterable = false
+    label = "NumberOfCreditBalanceAdjustments"
+  }
+  number NumberOfErrors {
+    type = "integer"
+    required = false
+    filterable = false
+    label = "NumberOfErrors"
+  }
+  number NumberOfInvoices {
+    type = "integer"
+    required = false
+    filterable = false
+    label = "NumberOfInvoices"
+  }
+  number NumberOfPayments {
+    type = "integer"
+    required = false
+    filterable = false
+    label = "NumberOfPayments"
+  }
+  number NumberOfUnprocessed {
+    type = "integer"
+    required = false
+    filterable = false
+    label = "NumberOfUnprocessed"
+  }
+  string PaymentRunNumber {
+    type = "string"
+    maxLength = 512
+    required = false
+    filterable = false
+    label = "PaymentRunNumber"
+  }
+  string Status {
+    type = "string"
+    maxLength = 512
+    required = false
+    filterable = false
+    label = "Status"
+  }
+  string TargetDate {
+    type = "string"
+    format = "date"
+    required = false
+    filterable = false
+    label = "TargetDate"
+  }
+  boolean ApplyCreditBalance {
+    type = "boolean"
+    required = false
+    filterable = false
+    label = "ApplyCreditBalance"
+  }
+  boolean ConsolidatedPayment {
+    type = "boolean"
+    required = false
+    filterable = false
+    label = "ConsolidatedPayment"
+  }
+  boolean ProcessPaymentWithClosedPM {
+    type = "boolean"
+    required = false
+    filterable = false
+    label = "ProcessPaymentWithClosedPM"
+  }
+  boolean CollectPayment {
+    type = "boolean"
+    required = false
+    filterable = false
+    label = "CollectPayment"
+  }
+  boolean AutoApplyCreditMemo {
+    type = "boolean"
+    required = false
+    filterable = false
+    label = "AutoApplyCreditMemo"
+  }
+  boolean AutoApplyUnappliedPayment {
+    type = "boolean"
+    required = false
+    filterable = false
+    label = "AutoApplyUnappliedPayment"
+  }
+  number NumberOfCreditMemos {
+    type = "integer"
+    required = false
+    filterable = false
+    label = "NumberOfCreditMemos"
+  }
+  number NumberOfDebitMemos {
+    type = "integer"
+    required = false
+    filterable = false
+    label = "NumberOfDebitMemos"
+  }
+  number NumberOfDebitMemosUnprocessed {
+    type = "integer"
+    required = false
+    filterable = false
+    label = "NumberOfDebitMemosUnprocessed"
+  }
+  number NumberofUnappliedPayments {
+    type = "integer"
+    required = false
+    filterable = false
+    label = "NumberofUnappliedPayments"
+  }
+  number TotalExecutionTime {
+    type = "integer"
+    required = false
+    filterable = false
+    label = "TotalExecutionTime"
+  }
+  string ErrorMessage {
+    type = "string"
+    maxLength = 512
+    required = false
+    filterable = false
+    label = "ErrorMessage"
+  }
+  string RunDate {
+    type = "string"
+    format = "date"
+    required = false
+    filterable = false
+    label = "RunDate"
+  }
+  string NextRunOn {
+    type = "string"
+    format = "date"
+    required = false
+    filterable = false
+    label = "NextRunOn"
+  }
+  string RepeatType {
+    type = "string"
+    maxLength = 512
+    required = false
+    filterable = false
+    label = "RepeatType"
+  }
+  string RepeatFrom {
+    type = "string"
+    maxLength = 512
+    required = false
+    filterable = false
+    label = "RepeatFrom"
+  }
+  string RepeatTo {
+    type = "string"
+    maxLength = 512
+    required = false
+    filterable = false
+    label = "RepeatTo"
+  }
+  number RunTime {
+    type = "integer"
+    required = false
+    filterable = false
+    label = "RunTime"
+  }
+  string TimeZone {
+    type = "string"
+    maxLength = 512
+    required = false
+    filterable = false
+    label = "TimeZone"
+  }
+  string MonthlyOnDay {
+    type = "string"
+    maxLength = 512
+    required = false
+    filterable = false
+    label = "MonthlyOnDay"
+  }
+  string WeeklyOnDay {
+    type = "string"
+    maxLength = 512
+    required = false
+    filterable = false
+    label = "WeeklyOnDay"
+  }
+  string AccountId {
+    type = "string"
+    maxLength = 512
+    required = false
+    filterable = false
+    label = "AccountId"
+  }
+  string Batch {
+    type = "string"
+    maxLength = 512
+    required = false
+    filterable = false
+    label = "Batch"
+  }
+  string BillingCycleDay {
+    type = "string"
+    maxLength = 512
+    required = false
+    filterable = false
+    label = "BillingCycleDay"
+  }
+  string Currency {
+    type = "string"
+    maxLength = 512
+    required = false
+    filterable = false
+    label = "Currency"
+  }
+  string PaymentGatewayId {
+    type = "string"
+    maxLength = 512
+    required = false
+    filterable = false
+    label = "PaymentGatewayId"
+  }
+  string BillingRunId {
+    type = "string"
+    maxLength = 512
+    required = false
+    filterable = false
+    label = "BillingRunId"
+  }
+}

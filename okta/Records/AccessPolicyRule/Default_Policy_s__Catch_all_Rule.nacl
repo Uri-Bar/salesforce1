@@ -1,0 +1,29 @@
+okta.AccessPolicyRule Default_Policy_s__Catch_all_Rule@umuubs {
+  status = "ACTIVE"
+  name = "Catch-all Rule"
+  priority = 99
+  system = true
+  actions = {
+    appSignOn = {
+      access = "ALLOW"
+      verificationMethod = {
+        factorMode = "1FA"
+        type = "ASSURANCE"
+        reauthenticateIn = "PT12H"
+        constraints = [
+          {
+            knowledge = {
+              types = [
+                "password",
+              ]
+            }
+          },
+        ]
+      }
+    }
+  }
+  type = "ACCESS_POLICY"
+  _parent = [
+    okta.AccessPolicy.instance.Default_Policy@s,
+  ]
+}

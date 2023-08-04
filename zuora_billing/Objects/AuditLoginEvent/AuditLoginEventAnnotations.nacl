@@ -1,0 +1,17 @@
+type zuora_billing.AuditLoginEvent {
+  annotations {
+    string metadataType {
+    }
+    string label {
+    }
+    string description {
+    }
+    hidden_string id {
+    }
+    string objectType {
+    }
+  }
+  metadataType = "StandardObject"
+  label = "Login history audit table"
+  objectType = "AuditLoginEvent"
+}

@@ -1,0 +1,172 @@
+zuora_billing.ProductRatePlanType SKU_00000002_b__Fixed_Bid_Plan@umuuss {
+  status = "Expired"
+  name = "Fixed Bid Plan"
+  description = "Pay for Professional Services up front on a fixed bid"
+  effectiveStartDate = "2021-07-23"
+  effectiveEndDate = "2023-03-23"
+  productRatePlanCharges = [
+    {
+      name = "test Component"
+      type = "Recurring"
+      model = "DiscountFixedAmount"
+      pricingSummary = [
+        "USD10 fixed amount discount",
+        "ILS100 fixed amount discount",
+        "EUR0 fixed amount discount",
+        "GBP0 fixed amount discount",
+      ]
+      pricing = [
+        {
+          currency = zuora_billing.Settings_Currency.instance.USD
+          discountAmount = 10
+        },
+        {
+          currency = zuora_billing.Settings_Currency.instance.ILS
+          discountAmount = 100
+        },
+        {
+          currency = zuora_billing.Settings_Currency.instance.EUR
+          discountAmount = 0
+        },
+        {
+          currency = zuora_billing.Settings_Currency.instance.GBP
+          discountAmount = 0
+        },
+      ]
+      applyDiscountTo = "RECURRING"
+      discountLevel = "subscription"
+      discountClass = zuora_billing.Settings_DiscountSetting.instance.vip_discount@s
+      productDiscountApplyDetails = [
+        {
+          appliedProductRatePlanId = zuora_billing.ProductRatePlanType.instance.SKU_00000004_b__Basic_Rate_Plan@umuuss
+          appliedProductRatePlanChargeId = "8ac680067b95d129017b994125df5d9a"
+        },
+      ]
+      endDateCondition = "Subscription_End"
+      billingDay = "DefaultFromCustomer"
+      billingPeriod = "Quarter"
+      billingPeriodAlignment = "AlignToCharge"
+      taxable = false
+      taxMode = "TaxInclusive"
+      triggerEvent = "ServiceActivation"
+      description = ""
+      revenueRecognitionRuleName = zuora_billing.Settings_RevenueRecognitionRule.instance.Recognize_upon_invoicing@s
+      useDiscountSpecificAccountingCode = true
+      financeInformation = {
+        deferredRevenueAccountingCode = ""
+        recognizedRevenueAccountingCode = ""
+        additionalProperties = {
+          accountsReceivableAccountingCode = "Accounts Receivable"
+          accountsReceivableAccountingCodeType = "AccountsReceivable"
+        }
+      }
+      additionalProperties = {
+        isStackedDiscount = false
+      }
+    },
+    {
+      name = "uom Component"
+      type = "Usage"
+      model = "PerUnit"
+      uom = zuora_billing.Settings_UnitOfMeasure.instance.Each
+      pricingSummary = [
+        "USD1/Each",
+        "ILS100/Each",
+        "EUR0/Each",
+        "GBP1/Each",
+      ]
+      pricing = [
+        {
+          currency = zuora_billing.Settings_Currency.instance.USD
+          price = 1
+        },
+        {
+          currency = zuora_billing.Settings_Currency.instance.ILS
+          price = 100
+        },
+        {
+          currency = zuora_billing.Settings_Currency.instance.EUR
+          price = 0
+        },
+        {
+          currency = zuora_billing.Settings_Currency.instance.GBP
+          price = 1
+        },
+      ]
+      endDateCondition = "Subscription_End"
+      billingDay = "ChargeTriggerDay"
+      ratingGroup = "ByUsageStartDate"
+      billingPeriod = "Annual"
+      billingPeriodAlignment = "AlignToSubscriptionStart"
+      usageRecordRatingOption = "EndOfBillingPeriod"
+      useTenantDefaultForPriceChange = true
+      taxable = true
+      taxCode = zuora_billing.Settings_TaxCode.instance.new_tax_code@s
+      taxMode = "TaxExclusive"
+      triggerEvent = "CustomerAcceptance"
+      description = ""
+      revenueRecognitionRuleName = zuora_billing.Settings_RevenueRecognitionRule.instance.Recognize_upon_invoicing@s
+      financeInformation = {
+        deferredRevenueAccountingCode = zuora_billing.AccountingCodeItem.instance.SalesTaxPayable_Sales_Tax_Payable@uss
+        recognizedRevenueAccountingCode = zuora_billing.AccountingCodeItem.instance.SalesDiscounts_Discounts
+        additionalProperties = {
+          accountsReceivableAccountingCode = "Accounts Receivable"
+          accountsReceivableAccountingCodeType = "AccountsReceivable"
+        }
+      }
+      additionalProperties = {
+        isStackedDiscount = false
+      }
+    },
+    {
+      name = "Professional Services Fixed Bid"
+      type = "OneTime"
+      model = "FlatFee"
+      pricingSummary = [
+        "USD120000",
+        "ILS100",
+        "EUR90000",
+        "GBP84000",
+      ]
+      pricing = [
+        {
+          currency = zuora_billing.Settings_Currency.instance.USD
+          price = 120000
+        },
+        {
+          currency = zuora_billing.Settings_Currency.instance.ILS
+          price = 100
+        },
+        {
+          currency = zuora_billing.Settings_Currency.instance.EUR
+          price = 90000
+        },
+        {
+          currency = zuora_billing.Settings_Currency.instance.GBP
+          price = 84000
+        },
+      ]
+      endDateCondition = "One_Time"
+      taxable = true
+      taxCode = zuora_billing.Settings_TaxCode.instance.new_tax_code@s
+      taxMode = "TaxExclusive"
+      triggerEvent = "ContractEffective"
+      description = ""
+      revenueRecognitionRuleName = zuora_billing.Settings_RevenueRecognitionRule.instance.Recognize_upon_invoicing@s
+      financeInformation = {
+        deferredRevenueAccountingCode = zuora_billing.AccountingCodeItem.instance.Cash_Credit_Card@us
+        recognizedRevenueAccountingCode = zuora_billing.AccountingCodeItem.instance.SalesTaxPayable_Sales_Tax_Payable@uss
+        additionalProperties = {
+          accountsReceivableAccountingCode = "Accounts Receivable"
+          accountsReceivableAccountingCodeType = "AccountsReceivable"
+        }
+      }
+      additionalProperties = {
+        isStackedDiscount = false
+      }
+    },
+  ]
+  _parent = [
+    zuora_billing.ProductType.instance.SKU_00000002@b,
+  ]
+}

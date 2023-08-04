@@ -1,0 +1,10 @@
+salesforce.Role VP_Products {
+  fullName = "VP_Products"
+  caseAccessLevel = "Edit"
+  contactAccessLevel = "Edit"
+  description = "Vice President of Products"
+  mayForecastManagerShare = false
+  name = "VP Products"
+  opportunityAccessLevel = "Edit"
+  parentRole = salesforce.Role.instance.CEO
+}

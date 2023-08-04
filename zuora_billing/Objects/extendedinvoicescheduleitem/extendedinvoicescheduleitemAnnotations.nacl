@@ -1,0 +1,28 @@
+type zuora_billing.extendedinvoicescheduleitem {
+  annotations {
+    string metadataType {
+    }
+    string label {
+    }
+    string description {
+    }
+    hidden_string id {
+    }
+    string objectType {
+    }
+  }
+  metadataType = "StandardObject"
+  objectType = "extendedinvoicescheduleitem"
+  _generated_dependencies = [
+    {
+      reference = zuora_billing.extendedinvoice
+    },
+    {
+      reference = zuora_billing.extendedinvoiceschedule
+    },
+    {
+      reference = zuora_billing.extendeduser
+    },
+  ]
+  label = "ExtendedInvoiceScheduleItem"
+}

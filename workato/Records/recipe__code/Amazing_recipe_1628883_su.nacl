@@ -1,0 +1,151 @@
+workato.recipe__code Amazing_recipe_1628883_su@uum {
+  number = 0
+  provider = "salesforce"
+  name = "updated_custom_object"
+  as = "a7101d32"
+  title = "New/updated Opportunity"
+  description = "New/updated <span class=\"provider\">Opportunity</span> in <span class=\"provider\">Salesforce</span>"
+  keyword = "trigger"
+  dynamicPickListSelection = {
+    sobject_name = salesforce.Opportunity
+  }
+  input = {
+    sobject_name = salesforce.Opportunity
+    since_offset = "-3600"
+  }
+  block = [
+    {
+      number = 1
+      keyword = "if"
+      input = {
+        type = "compound"
+        operand = "and"
+        conditions = [
+          {
+            operand = "greater_than"
+            lhs = "#{_('data.salesforce.a7101d32.Amount')}"
+            rhs = "99999"
+          },
+        ]
+      }
+      block = [
+        {
+          number = 2
+          provider = "netsuite"
+          name = "update_object"
+          as = "f0ea44be"
+          title = "Update Contact"
+          description = "Update <span class=\"provider\">Contact</span> in <span class=\"provider\">NetSuite</span>"
+          keyword = "action"
+          dynamicPickListSelection = {
+            netsuite_object = "Contact"
+            custom_list = [
+              netsuite.entitycustomfield.instance.custentity1,
+            ]
+          }
+          input = {
+            netsuite_object = netsuite.contact
+            custom_list = "entityCustomField@custentity1"
+          }
+          uuid = "3c710826-98df-45ba-95a0-78a06c0d36c4"
+        },
+        {
+          number = 3
+          provider = "salesforce"
+          name = "update_sobject"
+          as = "ad2815d6"
+          title = "Update Opportunity"
+          description = "Update <span class=\"provider\">Opportunity</span> in <span class=\"provider\">Salesforce</span>"
+          keyword = "action"
+          dynamicPickListSelection = {
+            sobject_name = salesforce.Opportunity
+            StageName = "Needs Analysis"
+          }
+          toggleCfg = {
+            StageName = true
+          }
+          input = {
+            sobject_name = salesforce.Opportunity
+            id = "#{_('data.salesforce.a7101d32.Id')}"
+            StageName = "Needs Analysis"
+          }
+          uuid = "645f08c0-cf73-479a-bec2-abd04623057a"
+        },
+      ]
+      uuid = "21ace16b-b63d-4e20-8ff6-5b3646088eeb"
+    },
+    {
+      number = 4
+      keyword = "stop"
+      input = {
+        stop_with_error = "false"
+      }
+      uuid = "6d9ae4b3-6d4f-40e2-8c7d-e5c41b0778dd"
+    },
+  ]
+  uuid = "059dd75a-2c90-4ee3-b089-46fbd28fbe44"
+  _parent = [
+    workato.recipe.instance.Amazing_recipe_1628883@su,
+  ]
+  
+  _generated_dependencies = [
+    {
+      reference = netsuite.contact
+      occurrences = [
+        {
+          location = workato.recipe__code.instance.Amazing_recipe_1628883_su@uum.block.0.block.0
+          direction = "output"
+        },
+      ]
+    },
+    {
+      reference = netsuite.entitycustomfield.instance.custentity1
+      occurrences = [
+        {
+          location = workato.recipe__code.instance.Amazing_recipe_1628883_su@uum.block.0.block.0
+          direction = "output"
+        },
+      ]
+    },
+    {
+      reference = salesforce.Opportunity
+      occurrences = [
+        {
+          location = workato.recipe__code.instance.Amazing_recipe_1628883_su@uum
+          direction = "input"
+        },
+        {
+          location = workato.recipe__code.instance.Amazing_recipe_1628883_su@uum.block.0.block.1
+          direction = "output"
+        },
+      ]
+    },
+    {
+      reference = salesforce.Opportunity.field.Amount
+      occurrences = [
+        {
+          location = workato.recipe__code.instance.Amazing_recipe_1628883_su@uum.block.0.input.conditions.0.lhs
+          direction = "input"
+        },
+      ]
+    },
+    {
+      reference = salesforce.Opportunity.field.Id
+      occurrences = [
+        {
+          location = workato.recipe__code.instance.Amazing_recipe_1628883_su@uum.block.0.block.1.input.id
+          direction = "input"
+        },
+      ]
+    },
+    {
+      reference = salesforce.Opportunity.field.StageName
+      occurrences = [
+        {
+          location = workato.recipe__code.instance.Amazing_recipe_1628883_su@uum.block.0.block.1
+          direction = "output"
+        },
+      ]
+    },
+  ]
+}

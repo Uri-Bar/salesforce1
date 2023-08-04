@@ -1,0 +1,106 @@
+zendesk.view Golden_View@s {
+  title = "Golden View"
+  active = true
+  description = "Everything that shines is ..."
+  execution = {
+    group_order = "desc"
+    sort_order = "desc"
+    columns = [
+      {
+        id = "satisfaction_score"
+        title = "Satisfaction"
+        filterable = true
+        sortable = true
+      },
+      {
+        id = "subject"
+        title = "Subject"
+        filterable = false
+        sortable = false
+      },
+      {
+        id = "requester"
+        title = "Requester"
+        filterable = true
+        sortable = true
+      },
+      {
+        id = "created"
+        title = "Requested"
+        filterable = false
+        sortable = true
+      },
+      {
+        id = "assignee"
+        title = "Assignee"
+        filterable = true
+        sortable = true
+      },
+      {
+        id = zendesk.ticket_field.instance.checkbox_GoldField
+        title = "GoldField"
+        type = "checkbox"
+        filterable = false
+        sortable = true
+      },
+    ]
+    fields = [
+      {
+        id = "satisfaction_score"
+        title = "Satisfaction"
+        filterable = true
+        sortable = true
+      },
+      {
+        id = "subject"
+        title = "Subject"
+        filterable = false
+        sortable = false
+      },
+      {
+        id = "requester"
+        title = "Requester"
+        filterable = true
+        sortable = true
+      },
+      {
+        id = "created"
+        title = "Requested"
+        filterable = false
+        sortable = true
+      },
+      {
+        id = "assignee"
+        title = "Assignee"
+        filterable = true
+        sortable = true
+      },
+    ]
+    custom_fields = [
+      {
+        id = zendesk.ticket_field.instance.checkbox_GoldField
+        title = "GoldField"
+        type = "checkbox"
+        filterable = false
+        sortable = true
+      },
+    ]
+  }
+  conditions = {
+    all = [
+      {
+        field = "ticket_form_id"
+        operator = "is"
+        value = zendesk.ticket_form.instance.GoldForm
+      },
+      {
+        field = "status"
+        operator = "is"
+        value = "pending"
+      },
+    ]
+  }
+  
+  raw_title = "Golden View"
+  default = false
+}

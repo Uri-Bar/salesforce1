@@ -1,0 +1,9 @@
+netsuite.folder Templates_E_mail_Templates_Inner_EmailTemplates_Folder@dbsdss {
+  bundleable = true
+  isinactive = false
+  isprivate = false
+  path = "/Templates/E-mail Templates/Inner EmailTemplates Folder"
+  _parent = [
+    netsuite.folder.instance.Templates_E_mail_Templates@dbs,
+  ]
+}

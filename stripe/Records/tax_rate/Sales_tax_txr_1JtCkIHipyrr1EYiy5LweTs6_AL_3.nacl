@@ -1,0 +1,10 @@
+stripe.tax_rate Sales_tax_txr_1JtCkIHipyrr1EYiy5LweTs6_AL_3@suuuu {
+  id = "txr_1JtCkIHipyrr1EYiy5LweTs6"
+  active = true
+  country = "AL"
+  description = "Albania Tax"
+  display_name = "Sales tax"
+  inclusive = false
+  livemode = false
+  percentage = 3
+}

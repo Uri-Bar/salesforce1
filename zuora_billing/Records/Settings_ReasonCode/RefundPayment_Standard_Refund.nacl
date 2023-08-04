@@ -1,0 +1,6 @@
+zuora_billing.Settings_ReasonCode RefundPayment_Standard_Refund@us {
+  isActive = true
+  reasonCodeName = "Standard Refund"
+  reasonCodeTransactionType = "RefundPayment"
+  isDefault = true
+}

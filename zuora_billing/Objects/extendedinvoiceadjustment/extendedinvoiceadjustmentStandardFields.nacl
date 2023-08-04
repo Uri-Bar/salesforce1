@@ -1,0 +1,199 @@
+type zuora_billing.extendedinvoiceadjustment {
+  string Id {
+    type = "string"
+    format = "uuid"
+    required = false
+    filterable = false
+    label = "Id"
+  }
+  string CreatedById {
+    type = "string"
+    format = "uuid"
+    required = false
+    filterable = false
+    label = "CreatedById"
+  }
+  string CreatedDate {
+    type = "string"
+    format = "date-time"
+    required = false
+    filterable = false
+    label = "CreatedDate"
+  }
+  string UpdatedById {
+    type = "string"
+    format = "uuid"
+    required = false
+    filterable = false
+    label = "UpdatedById"
+  }
+  string UpdatedDate {
+    type = "string"
+    format = "date-time"
+    required = false
+    filterable = false
+    label = "UpdatedDate"
+  }
+  boolean deleted {
+    type = "boolean"
+    required = false
+    filterable = false
+    label = "deleted"
+  }
+  string AccountId {
+    type = "string"
+    format = "uuid"
+    required = false
+    filterable = false
+    referenceTo = [
+      zuora_billing.account.field.Id,
+    ]
+    cardinality = "manyToOne"
+    recordConstraints = {
+      create = {
+        enforceValidMapping = true
+      }
+    }
+    label = "AccountId"
+  }
+  string InvoiceId {
+    type = "string"
+    format = "uuid"
+    required = false
+    filterable = false
+    referenceTo = [
+      zuora_billing.extendedinvoiceadjustment.field.Id,
+    ]
+    cardinality = "manyToOne"
+    recordConstraints = {
+      create = {
+        enforceValidMapping = true
+      }
+    }
+    label = "InvoiceId"
+  }
+  string AccountingCode {
+    type = "string"
+    maxLength = 512
+    required = false
+    filterable = false
+    label = "AccountingCode"
+  }
+  string AdjustmentDate {
+    type = "string"
+    format = "date"
+    required = false
+    filterable = false
+    label = "AdjustmentDate"
+  }
+  string AdjustmentNumber {
+    type = "string"
+    maxLength = 512
+    required = false
+    filterable = false
+    label = "AdjustmentNumber"
+  }
+  number Amount {
+    type = "number"
+    required = false
+    filterable = false
+    label = "Amount"
+  }
+  string CancelledById {
+    type = "string"
+    maxLength = 512
+    required = false
+    filterable = false
+    label = "CancelledById"
+  }
+  string CancelledOn {
+    type = "string"
+    format = "date-time"
+    required = false
+    filterable = false
+    label = "CancelledOn"
+  }
+  string Comments {
+    type = "string"
+    maxLength = 512
+    required = false
+    filterable = false
+    label = "Comments"
+  }
+  number ImpactAmount {
+    type = "number"
+    required = false
+    filterable = false
+    label = "ImpactAmount"
+  }
+  string InvoiceNumber {
+    type = "string"
+    maxLength = 512
+    required = false
+    filterable = false
+    label = "InvoiceNumber"
+  }
+  string AccountName {
+    type = "string"
+    maxLength = 512
+    required = false
+    filterable = false
+    label = "AccountName"
+  }
+  string ReasonCode {
+    type = "string"
+    maxLength = 512
+    required = false
+    filterable = false
+    label = "ReasonCode"
+  }
+  string ReferenceId {
+    type = "string"
+    maxLength = 512
+    required = false
+    filterable = false
+    label = "ReferenceId"
+  }
+  string Status {
+    type = "string"
+    maxLength = 512
+    required = false
+    filterable = false
+    label = "Status"
+  }
+  string TransferredToAccounting {
+    type = "string"
+    maxLength = 512
+    required = false
+    filterable = false
+    label = "TransferredToAccounting"
+  }
+  string Type {
+    type = "string"
+    maxLength = 512
+    required = false
+    filterable = false
+    label = "Type"
+  }
+  string AccountReceivableAccountingCodeId {
+    type = "string"
+    format = "uuid"
+    required = false
+    filterable = false
+    label = "AccountReceivableAccountingCodeId"
+  }
+  string DeferredRevenueAccountingCodeId {
+    type = "string"
+    format = "uuid"
+    required = false
+    filterable = false
+    label = "DeferredRevenueAccountingCodeId"
+  }
+  string JournalEntryId {
+    type = "string"
+    format = "uuid"
+    required = false
+    filterable = false
+    label = "JournalEntryId"
+  }
+}

@@ -1,0 +1,43 @@
+netsuite.customlist customlist_rg_warehouse_type {
+  scriptid = "customlist_rg_warehouse_type"
+  isinactive = false
+  ismatrixoption = false
+  isordered = true
+  name = netsuite.translationcollection.instance.custcollection_account_translations.strings.string.t_customlist_rg_warehouse_type.scriptid
+  customvalues = {
+    customvalue = {
+      val_3420444_6979138_680 = {
+        scriptid = "val_3420444_6979138_680"
+        abbreviation = "A"
+        isinactive = false
+        value = netsuite.translationcollection.instance.custcollection_account_translations.strings.string.t_val_3420444_6979138_680.scriptid
+        index = 0
+        valueTranslate = true
+      }
+      val_3420445_6979138_744 = {
+        scriptid = "val_3420445_6979138_744"
+        abbreviation = "E"
+        isinactive = false
+        value = netsuite.translationcollection.instance.custcollection_account_translations.strings.string.t_val_3420445_6979138_744.scriptid
+        index = 1
+        valueTranslate = true
+      }
+      val_3420446_6979138_364 = {
+        scriptid = "val_3420446_6979138_364"
+        abbreviation = "S"
+        isinactive = false
+        value = netsuite.translationcollection.instance.custcollection_account_translations.strings.string.t_val_3420446_6979138_364.scriptid
+        index = 2
+        valueTranslate = true
+      }
+      
+      
+      
+      
+      
+      
+      
+    }
+  }
+  nameTranslate = true
+}

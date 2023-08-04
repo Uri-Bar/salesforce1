@@ -1,0 +1,46 @@
+salesforce.CustomApplication Relationship_Management {
+  fullName = "Relationship_Management"
+  actionOverrides = [
+    {
+      actionName = "View"
+      comment = "Action override created by Lightning App Builder during activation."
+      content = "Account_Record_Page"
+      formFactor = "Large"
+      skipRecordTypeSelect = false
+      type = "Flexipage"
+      pageOrSobjectType = "Account"
+    },
+  ]
+  brand = {
+    headerColor = "#0070D2"
+    logoVersion = 1
+    shouldOverrideOrgTheme = false
+  }
+  description = "Build stronger customer relationships, manage renewals, and stay organized."
+  formFactors = [
+    "Large",
+  ]
+  isNavAutoTempTabsDisabled = false
+  isNavPersonalizationDisabled = false
+  label = "Relationship Management"
+  navType = "Standard"
+  tabs = [
+    "standard-home",
+    "standard-Account",
+    "standard-Contact",
+    "standard-Contract",
+    "standard-Event",
+    "standard-CollaborationGroup",
+    "standard-ContentNote",
+    "standard-Task",
+    salesforce.CustomTab.instance.Yariv__c,
+  ]
+  uiType = "Lightning"
+  utilityBar = "Relationship_Management_UtilityBar"
+  _generated_dependencies = [
+    {
+      reference = salesforce.LightningPage.instance.Relationship_Management_UtilityBar
+    },
+  ]
+  isNavTabPersistenceDisabled = false
+}

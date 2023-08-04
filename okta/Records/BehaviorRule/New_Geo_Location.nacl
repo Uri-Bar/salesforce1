@@ -1,0 +1,13 @@
+okta.BehaviorRule New_Geo_Location@sb {
+  name = "New Geo-Location"
+  status = "ACTIVE"
+  type = "ANOMALOUS_LOCATION"
+  additionalProperties = {
+    settings = {
+      minEventsNeededForEvaluation = 0
+      maxEventsUsedForEvaluation = 20
+      granularity = "LAT_LONG"
+      radiusKilometers = 20
+    }
+  }
+}

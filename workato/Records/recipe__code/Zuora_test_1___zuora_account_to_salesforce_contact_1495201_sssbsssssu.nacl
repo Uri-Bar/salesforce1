@@ -1,0 +1,72 @@
+workato.recipe__code Zuora_test_1___zuora_account_to_salesforce_contact_1495201_sssbsssssu@uuuuuuuuuum {
+  number = 0
+  provider = "zuora"
+  name = "new_updated_record"
+  as = "dc2d3a22"
+  description = "New or updated <span class=\"provider\">accounts</span> in <span class=\"provider\">Zuora</span>"
+  keyword = "trigger"
+  dynamicPickListSelection = {
+    object = "Account"
+  }
+  input = {
+    object = "Account"
+  }
+  filter = {
+    conditions = [
+      {
+        operand = "ends_with"
+        lhs = "#{_('data.zuora.dc2d3a22.Currency')}"
+        rhs = "U"
+      },
+    ]
+    operand = "and"
+    type = "compound"
+  }
+  block = [
+    {
+      number = 1
+      provider = "salesforce"
+      name = "create_custom_object"
+      as = "62e7db66"
+      title = "Create Contact"
+      description = "Create <span class=\"provider\">Contact</span> in <span class=\"provider\">Salesforce</span>"
+      keyword = "action"
+      dynamicPickListSelection = {
+        sobject_name = "Contact"
+      }
+      input = {
+        sobject_name = "Contact"
+        LastName = "From Zuora"
+        Email = "#{_('data.zuora.dc2d3a22.InvoiceDeliveryPrefsEmail')}"
+      }
+      uuid = "e962fdd9-3252-4b5b-967e-dd948736514c"
+    },
+    {
+      number = 2
+      provider = "zuora"
+      name = "create_record"
+      as = "523d87eb"
+      description = "Create <span class=\"provider\">contact</span> in <span class=\"provider\">Zuora</span>"
+      keyword = "action"
+      dynamicPickListSelection = {
+        object = "Contact"
+      }
+      input = {
+        object = "Contact"
+        AccountId = "#{_('data.zuora.dc2d3a22.CrmId')}"
+        FirstName = "#{_('data.zuora.dc2d3a22.Name')}"
+        LastName = "From Workato"
+        Description = "Salesforce contact id: #{_('data.salesforce.62e7db66.id')}"
+      }
+      visible_config_fields = [
+        "object",
+        "Description",
+      ]
+      uuid = "a0420e32-4952-463d-9421-bd09253add09"
+    },
+  ]
+  uuid = "56e09b3c-5318-4743-8ec4-bc5d9ffff778"
+  _parent = [
+    workato.recipe.instance.Zuora_test_1___zuora_account_to_salesforce_contact_1495201@sssbsssssu,
+  ]
+}

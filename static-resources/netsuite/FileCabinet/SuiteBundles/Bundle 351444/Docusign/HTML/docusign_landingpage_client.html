@@ -1,0 +1,10 @@
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script src="https://storage.googleapis.com/google-code-archive-downloads/v2/code.google.com/embeddedjavascript/ejs_0.9_alpha_1_production.js"></script>
+<script>
+$(document).ready(function() {
+	var data = @EJS_DATA@;
+	var html = new EJS({ url: '@EJS_URL@' }).render(data);
+	$('#content').append(html);
+});
+</script>
+<div id="content"></div>

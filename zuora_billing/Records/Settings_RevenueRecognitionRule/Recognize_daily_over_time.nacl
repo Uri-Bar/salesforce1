@@ -1,0 +1,31 @@
+zuora_billing.Settings_RevenueRecognitionRule Recognize_daily_over_time@s {
+  name = "Recognize daily over time"
+  recognitionModel = "Daily"
+  active = true
+  description = "This rule recognizes revenue evenly over the invoice item service period using a daily recognition calculation."
+  roundingRule = "RoundTrailing"
+  apClosedDistributionRule = "MergeToNextOpen"
+  transactionDateRule = "AccumulateToTransactionDate"
+  invoiceItemAdjustmentTransactionRule = {
+    termStartField = "IIAServicePeriodStart"
+    termStartNumberOfFixedPeriod = 0
+    termStartUnitOfFixedPeriod = "Months"
+    termEndField = "IIAServicePeriodEnd"
+    termEndNumberOfFixedPeriod = 0
+    termEndUnitOfFixedPeriod = "Months"
+    allocationPolicy = "EvenByDay"
+    id = "8ac698ea7883442001789372ea823218"
+    usedTheSameTransactionRuleAsInvoiceItem = false
+  }
+  invoiceItemTransactionRule = {
+    termStartField = "InvoiceItemServicePeriodStart"
+    termStartNumberOfFixedPeriod = 0
+    termStartUnitOfFixedPeriod = "Months"
+    termEndField = "InvoiceItemServicePeriodEnd"
+    termEndNumberOfFixedPeriod = 0
+    termEndUnitOfFixedPeriod = "Months"
+    allocationPolicy = "EvenByDay"
+    id = "8ac698ea7883442001789372ea823217"
+    usedTheSameTransactionRuleAsInvoiceItem = false
+  }
+}

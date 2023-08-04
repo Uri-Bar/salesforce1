@@ -1,0 +1,9 @@
+netsuite.folder SuiteBundles_Bundle_351444_Docusign_DocuSigned@dsdd {
+  bundleable = false
+  isinactive = false
+  isprivate = false
+  path = "/SuiteBundles/Bundle 351444/Docusign/DocuSigned"
+  _parent = [
+    netsuite.folder.instance.SuiteBundles_Bundle_351444_Docusign@dsd,
+  ]
+}

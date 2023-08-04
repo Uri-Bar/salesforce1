@@ -1,0 +1,216 @@
+type zuora_billing.billingpreviewrunresult {
+  string Id {
+    type = "string"
+    label = "Id"
+    format = "uuid"
+    required = false
+    filterable = false
+  }
+  string CreatedById {
+    type = "string"
+    label = "CreatedById"
+    format = "uuid"
+    required = false
+    filterable = false
+  }
+  string CreatedDate {
+    type = "string"
+    format = "date-time"
+    label = "CreatedDate"
+    required = false
+    filterable = false
+  }
+  string UpdatedById {
+    type = "string"
+    label = "UpdatedById"
+    format = "uuid"
+    required = false
+    filterable = false
+  }
+  string UpdatedDate {
+    type = "string"
+    format = "date-time"
+    label = "UpdatedDate"
+    required = false
+    filterable = false
+  }
+  string AccountId {
+    type = "string"
+    label = "AccountId"
+    format = "uuid"
+    required = false
+    filterable = false
+  }
+  string RatePlanChargeId {
+    type = "string"
+    label = "RatePlanChargeId"
+    maxLength = 512
+    required = false
+    filterable = false
+  }
+  string RatePlanChargeNumber {
+    type = "string"
+    label = "RatePlanChargeNumber"
+    maxLength = 512
+    required = false
+    filterable = false
+  }
+  number InvoiceItemChargeAmount {
+    type = "number"
+    label = "InvoiceItemChargeAmount"
+    required = false
+    filterable = false
+  }
+  number InvoiceItemQuantity {
+    type = "number"
+    label = "InvoiceItemQuantity"
+    required = false
+    filterable = false
+  }
+  string InvoiceItemProcessingType {
+    type = "string"
+    label = "InvoiceItemProcessingType"
+    maxLength = 512
+    required = false
+    filterable = false
+  }
+  string InvoiceItemServiceStartDate {
+    type = "string"
+    label = "InvoiceItemServiceStartDate"
+    format = "date-time"
+    required = false
+    filterable = false
+  }
+  string InvoiceItemServiceEndDate {
+    type = "string"
+    label = "InvoiceItemServiceEndDate"
+    format = "date-time"
+    required = false
+    filterable = false
+  }
+  string InvoiceItemChargeDate {
+    type = "string"
+    label = "InvoiceItemChargeDate"
+    format = "date-time"
+    required = false
+    filterable = false
+  }
+  string AppliedToInvoiceItemId {
+    type = "string"
+    label = "AppliedToInvoiceItemId"
+    maxLength = 512
+    required = false
+    filterable = false
+  }
+  string InvoiceItemUom {
+    type = "string"
+    label = "InvoiceItemUom"
+    maxLength = 512
+    required = false
+    filterable = false
+  }
+  string InvoiceItemChargeType {
+    type = "string"
+    label = "InvoiceItemChargeType"
+    maxLength = 512
+    required = false
+    filterable = false
+  }
+  string InvoiceItemId {
+    type = "string"
+    label = "InvoiceItemId"
+    format = "uuid"
+    required = false
+    filterable = false
+  }
+  string SubscriptionId {
+    type = "string"
+    label = "SubscriptionId"
+    format = "uuid"
+    required = false
+    filterable = false
+  }
+  string SubscriptionNumber {
+    type = "string"
+    label = "SubscriptionNumber"
+    
+    required = false
+    filterable = false
+    maxLength = 512
+  }
+  string LegalDocumentItemType {
+    type = "string"
+    label = "LegalDocumentItemType"
+    maxLength = 512
+    required = false
+    filterable = false
+  }
+  string CreditMemoItemId {
+    type = "string"
+    label = "CreditMemoItemId"
+    format = "uuid"
+    required = false
+    filterable = false
+  }
+  number CreditMemoItemAmount {
+    type = "number"
+    label = "CreditMemoItemAmount"
+    required = false
+    filterable = false
+  }
+  string CreditMemoItemDesc {
+    type = "string"
+    label = "CreditMemoItemDesc"
+    maxLength = 512
+    required = false
+    filterable = false
+  }
+  string Sku {
+    type = "string"
+    label = "Sku"
+    maxLength = 512
+    required = false
+    filterable = false
+  }
+  string SkuName {
+    type = "string"
+    label = "SkuName"
+    maxLength = 512
+    required = false
+    filterable = false
+  }
+  string CreditMemoItemServiceStartDate {
+    type = "string"
+    label = "CreditMemoItemServiceStartDate"
+    format = "date-time"
+    required = false
+    filterable = false
+  }
+  string CreditMemoItemServiceEndDate {
+    type = "string"
+    label = "CreditMemoItemServiceEndDate"
+    format = "date-time"
+    required = false
+    filterable = false
+  }
+  number CreditMemoItemQuantity {
+    type = "number"
+    label = "CreditMemoItemQuantity"
+    required = false
+    filterable = false
+  }
+  string CreditMemoItemUom {
+    type = "string"
+    label = "CreditMemoItemUom"
+    maxLength = 512
+    required = false
+    filterable = false
+  }
+  string BillingPreviewRunId {
+    type = "string"
+    label = "BillingPreviewRunId"
+    format = "uuid"
+    required = false
+    filterable = false
+  }
+}

@@ -1,0 +1,32 @@
+zendesk.guide_settings DP_Brand_s@um {
+  help_center = {
+    general_settings_attributes = {
+      agent_requests_enabled = false
+      anonymous_kb_voting_enabled = false
+      article_sanitization_disabled = false
+      at_mentions_enabled = true
+      community_badges_shown = false
+      community_enabled = true
+      community_post_content_tagging_enabled = false
+      content_moderation_enabled = true
+      embeddables_automatic_answers = false
+      embeddables_connect_ipms = false
+      embeddables_web_widget = false
+      google_universal_analytics_enabled = false
+      mobile_site_enabled = false
+      moderate_all_content_enabled = false
+      powered_by_enabled = true
+      public_user_profiles_enabled = true
+      request_comments_order_asc = true
+      sign_in_required = false
+      user_aliases_enabled = false
+      user_profiles_enabled = true
+      google_analytics_tracking_id = ""
+      google_analytics_4_enabled = false
+      google_analytics_4_tracking_id = ""
+      enable_article_notification_on_all_articles = false
+    }
+  }
+  brand = zendesk.brand.instance.DP_Brand@s
+  default_locale = zendesk.guide_language_settings.instance.DP_Brand_s_en_us@umub
+}

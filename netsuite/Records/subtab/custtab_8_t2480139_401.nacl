@@ -1,0 +1,5 @@
+netsuite.subtab custtab_8_t2480139_401 {
+  scriptid = "custtab_8_t2480139_401"
+  tabtype = "TRANSACTION"
+  title = "GWR Subtab"
+}

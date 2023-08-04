@@ -1,0 +1,26 @@
+netsuite.usereventscript customscript_erp012_ue1 {
+  scriptid = "customscript_erp012_ue1"
+  isinactive = false
+  name = "ERP 010 UE One"
+  notifyadmins = false
+  notifyowner = true
+  notifyuser = false
+  scriptfile = netsuite.file.instance.SuiteScripts_erp012_ue1_js@ddv.path
+  scriptdeployments = {
+    scriptdeployment = {
+      customdeploy_erp012_ue1 = {
+        scriptid = "customdeploy_erp012_ue1"
+        allemployees = false
+        alllocalizationcontexts = true
+        allpartners = false
+        allroles = false
+        executioncontext = "ACTION|ADVANCEDREVREC|BANKCONNECTIVITY|BANKSTATEMENTPARSER|BUNDLEINSTALLATION|CLIENT|CONSOLRATEADJUSTOR|CSVIMPORT|CUSTOMGLLINES|CUSTOMMASSUPDATE|DATASETBUILDER|DEBUGGER|EMAILCAPTURE|FICONNECTIVITY|FIPARSER|MAPREDUCE|OCRPLUGIN|OTHER|PAYMENTGATEWAY|PAYMENTPOSTBACK|PLATFORMEXTENSION|PORTLET|PROMOTIONS|RECORDACTION|RESTLET|RESTWEBSERVICES|SCHEDULED|SDFINSTALLATION|SHIPPINGPARTNERS|SUITELET|TAXCALCULATION|USEREVENT|USERINTERFACE|WEBSERVICES|WORKBOOKBUILDER|WORKFLOW"
+        isdeployed = true
+        loglevel = "DEBUG"
+        recordtype = "SALESORDER"
+        status = "TESTING"
+        
+      }
+    }
+  }
+}

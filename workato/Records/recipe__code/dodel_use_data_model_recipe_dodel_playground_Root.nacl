@@ -1,0 +1,51 @@
+workato.recipe__code dodel_use_data_model_recipe_dodel_playground_Root {
+  number = 0
+  provider = "workato_app"
+  keyword = "trigger"
+  block = [
+    {
+      number = 1
+      provider = "workato_app"
+      name = ""
+      as = ""
+      description = ""
+      keyword = "action"
+      uuid = "1d7018d9-754d-40d4-ac9e-9fe19989bd2a"
+    },
+    {
+      number = 2
+      provider = "workato_recipe_function"
+      keyword = "action"
+      uuid = "db880666-0957-4bb6-8635-e67dc2ce1af6"
+    },
+    {
+      number = 3
+      provider = "workato_mapper"
+      name = "map"
+      as = "d7630d69"
+      description = "<span class=\"provider\">Map</span> to <span class=\"provider\"><span class=\"provider\">Dodel - new data model</span></span>"
+      keyword = "action"
+      dynamicPickListSelection = {
+        workato_schema_id = "Dodel - new data model"
+      }
+      input = {
+        workato_schema_id = "25003"
+        data = {
+          dodel_first_field = "#{_('data.workato.job_context.user_email')}"
+          dodel_Date_field = "2023-01-17"
+        }
+      }
+      visible_config_fields = [
+        "workato_schema_id",
+        "data.dodel_Date_field",
+        "data.dodel_first_field",
+      ]
+      uuid = "cc6af7cf-019d-4e65-b522-18a4d7120b25"
+    },
+  ]
+  comment = "Build a recipe to monitor/ manage other recipes, jobs, or this account"
+  uuid = "e84f761f-9b94-4047-afe8-30b3d345a596"
+  _parent = [
+    workato.recipe.instance.dodel_use_data_model_recipe_dodel_playground_Root,
+  ]
+}

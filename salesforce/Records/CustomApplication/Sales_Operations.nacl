@@ -1,0 +1,44 @@
+salesforce.CustomApplication Sales_Operations {
+  fullName = "Sales_Operations"
+  actionOverrides = [
+    {
+      actionName = "View"
+      comment = "Action override created by Lightning App Builder during activation."
+      content = "Account_Record_Page"
+      formFactor = "Large"
+      skipRecordTypeSelect = false
+      type = "Flexipage"
+      pageOrSobjectType = "Account"
+    },
+  ]
+  brand = {
+    headerColor = "#0070D2"
+    logoVersion = 1
+    shouldOverrideOrgTheme = false
+  }
+  description = "Customize and automate the sales process, and analyze your data to make informed business decisions."
+  formFactors = [
+    "Large",
+  ]
+  isNavAutoTempTabsDisabled = false
+  isNavPersonalizationDisabled = false
+  label = "Sales Operations"
+  navType = "Standard"
+  tabs = [
+    "standard-home",
+    "standard-Dashboard",
+    "standard-report",
+    "standard-Pricebook2",
+    "standard-Product2",
+    "standard-CollaborationGroup",
+    salesforce.CustomTab.instance.Yariv__c,
+  ]
+  uiType = "Lightning"
+  utilityBar = "Sales_Operations_UtilityBar"
+  _generated_dependencies = [
+    {
+      reference = salesforce.LightningPage.instance.Sales_Operations_UtilityBar
+    },
+  ]
+  isNavTabPersistenceDisabled = false
+}

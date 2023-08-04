@@ -1,0 +1,18 @@
+salesforce.ValidationRule Account_Align_Account_Tier_and_Account_Revenue {
+  fullName = "Account.Align_Account_Tier_and_Account_Revenue"
+  active = true
+  description = "Account Tiering must make sense with the annual revenue the account has."
+  errorConditionFormula = '''
+IF(  AND(ISPICKVAL(Tier__c, "Small Business") ,AnnualRevenue > 50000000)   , 
+true, false)
+'''
+  errorMessage = "The chosen account tier does not match the annual revenue for this account. Please review the account Tier and Annual Revenue."
+  _parent = [
+    salesforce.Account,
+  ]
+  _generated_dependencies = [
+    {
+      reference = salesforce.Account.field.Tier__c
+    },
+  ]
+}

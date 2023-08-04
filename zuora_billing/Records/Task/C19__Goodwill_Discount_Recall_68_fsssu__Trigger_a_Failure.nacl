@@ -1,0 +1,22 @@
+zuora_billing.Task C19__Goodwill_Discount_Recall_68_fsssu__Trigger_a_Failure@uuuuumuuss {
+  name = "Trigger a Failure"
+  parameters = {
+    code = "{{ InvalidInputParametersException }}"
+    strict_variables = "true"
+  }
+  action_type = "Logic::Liquid"
+  call_type = "SOAP"
+  task_id = 88
+  concurrent_limit = 9999999
+  additionalProperties = {
+    css = {
+      top = "-170px"
+      left = "450px"
+    }
+    priority = "Medium"
+    
+  }
+  _parent = [
+    zuora_billing.WorkflowExport.instance.C19__Goodwill_Discount_Recall_68@fsssu,
+  ]
+}

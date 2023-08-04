@@ -1,0 +1,12 @@
+netsuite.file SuiteBundles_Bundle_351444_Docusign_Scripts_utils_ds_benchmark_js@dsdddduv {
+  bundleable = false
+  isinactive = false
+  availablewithoutlogin = false
+  generateurltimestamp = false
+  hideinbundle = false
+  path = "/SuiteBundles/Bundle 351444/Docusign/Scripts/utils/ds_benchmark.js"
+  content = file("netsuite/FileCabinet/SuiteBundles/Bundle 351444/Docusign/Scripts/utils/ds_benchmark.js")
+  _parent = [
+    netsuite.folder.instance.SuiteBundles_Bundle_351444_Docusign_Scripts_utils@dsddd,
+  ]
+}

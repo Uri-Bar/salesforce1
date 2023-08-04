@@ -1,0 +1,9 @@
+zendesk.category_order DP_Brand_s@um {
+  categories = [
+    zendesk.category.instance.General_DP_Brand_s@uum,
+  ]
+  brand = zendesk.brand.instance.DP_Brand@s
+  _parent = [
+    zendesk.brand.instance.DP_Brand@s,
+  ]
+}

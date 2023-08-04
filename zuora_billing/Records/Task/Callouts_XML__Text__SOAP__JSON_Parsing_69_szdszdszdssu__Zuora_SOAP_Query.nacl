@@ -1,0 +1,60 @@
+zuora_billing.Task Callouts_XML__Text__SOAP__JSON_Parsing_69_szdszdszdssu__Zuora_SOAP_Query@uuuuuuuuumuuss {
+  name = "Zuora SOAP Query"
+  parameters = {
+    url = "{{ Credentials.zuora.url }}"
+    datas = [
+      {
+        key = ""
+        value = ""
+      },
+    ]
+    method = "POST"
+    headers = [
+      {
+        key = "Content-Type"
+        value = "text/xml; charset=utf-8"
+      },
+      {
+        key = ""
+        value = ""
+      },
+    ]
+    raw_body = '''
+<?xml version="1.0" encoding="UTF-8"?>
+<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ns2="http://object.api.zuora.com/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ns1="http://api.zuora.com/">
+    <SOAP-ENV:Header>
+        <ns2:SessionHeader>
+            <ns2:session>{{ Credentials.zuora.session }}</ns2:session>
+        </ns2:SessionHeader>
+        <ns2:QueryOptions>
+            <ns2:batchSize>50</ns2:batchSize>
+        </ns2:QueryOptions>
+    </SOAP-ENV:Header>
+    <SOAP-ENV:Body>
+        <ns1:query>
+            <ns1:queryString>select id from account</ns1:queryString>
+        </ns1:query>
+    </SOAP-ENV:Body>
+</SOAP-ENV:Envelope>
+'''
+    body_type = "raw"
+    authorization = {
+      type = "none"
+    }
+  }
+  action_type = "Callout"
+  call_type = "SOAP"
+  task_id = 100
+  concurrent_limit = 9999999
+  additionalProperties = {
+    css = {
+      top = "150px"
+      left = "380px"
+    }
+    priority = "Medium"
+    
+  }
+  _parent = [
+    zuora_billing.WorkflowExport.instance.Callouts_XML__Text__SOAP__JSON_Parsing_69@szdszdszdssu,
+  ]
+}

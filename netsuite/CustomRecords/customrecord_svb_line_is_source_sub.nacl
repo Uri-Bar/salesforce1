@@ -1,0 +1,618 @@
+type netsuite.customrecord_svb_line_is_source_sub {
+  annotations {
+    serviceid scriptid {
+    }
+    string recordname {
+    }
+    string customsegment {
+    }
+    netsuite.customrecordtype_accesstype accesstype {
+    }
+    boolean allowattachments {
+    }
+    boolean allowinlineediting {
+    }
+    boolean allowinlinedeleting {
+    }
+    boolean allowinlinedetaching {
+    }
+    boolean allowmobileaccess {
+    }
+    boolean allownumberingoverride {
+    }
+    boolean allowquickadd {
+    }
+    boolean allowquicksearch {
+    }
+    boolean allowuiaccess {
+    }
+    string description {
+    }
+    boolean enabledle {
+    }
+    boolean enablekeywords {
+    }
+    boolean enablemailmerge {
+    }
+    boolean enablenametranslation {
+    }
+    boolean enablenumbering {
+    }
+    boolean enableoptimisticlocking {
+    }
+    boolean enablesystemnotes {
+    }
+    boolean hierarchical {
+    }
+    string numberingprefix {
+    }
+    string numberingsuffix {
+    }
+    string numberingmindigits {
+    }
+    string numberinginit {
+    }
+    string icon {
+    }
+    boolean iconbuiltin {
+    }
+    netsuite.generic_custom_record_icon iconindex {
+    }
+    boolean includeinsearchmenu {
+    }
+    boolean includename {
+    }
+    boolean isinactive {
+    }
+    boolean isordered {
+    }
+    boolean showcreationdate {
+    }
+    boolean showcreationdateonlist {
+    }
+    boolean showid {
+    }
+    boolean showlastmodified {
+    }
+    boolean showlastmodifiedonlist {
+    }
+    boolean shownotes {
+    }
+    boolean showowner {
+    }
+    boolean showownerallowchange {
+    }
+    boolean showowneronlist {
+    }
+    
+    netsuite.customrecordtype_links links {
+    }
+    netsuite.customrecordtype_permissions permissions {
+    }
+    netsuite.customrecordtype_recordsublists recordsublists {
+    }
+    netsuite.customrecordtype_subtabs subtabs {
+    }
+    string application_id {
+    }
+    hidden_string source {
+    }
+    hidden_string internalId {
+    }
+  }
+  serviceid scriptid {
+    _required = true
+  }
+  string internalId {
+    _hidden_value = true
+  }
+  netsuite.customrecord_svb_bill_dist_sched custom_custrecord_svb_line_parent_link {
+    scriptid = "custrecord_svb_line_parent_link"
+    accesslevel = "2"
+    allowquickadd = false
+    applyformatting = false
+    checkspelling = false
+    defaultchecked = false
+    displaytype = "NORMAL"
+    encryptatrest = false
+    fieldtype = "SELECT"
+    globalsearch = false
+    help = "The parent Bill Distribution Schedule to which the Bill Distribution Schedule line belongs."
+    isformula = false
+    ismandatory = false
+    isparent = true
+    label = "Bill Distribution Schedule - Parent"
+    onparentdelete = "NO_ACTION"
+    parentsubtab = netsuite.customrecord_svb_bill_dist_sched.attr.subtabs.subtab.tab_15_t1221897_841.scriptid
+    rolerestrict = false
+    searchlevel = "2"
+    selectrecordtype = netsuite.customrecord_svb_bill_dist_sched.attr.scriptid
+    showinlist = true
+    storevalue = true
+    index = 0
+  }
+  boolean custom_custrecord_svb_line_is_intercompany {
+    scriptid = "custrecord_svb_line_is_intercompany"
+    accesslevel = "2"
+    allowquickadd = false
+    applyformatting = false
+    checkspelling = false
+    defaultchecked = false
+    displaytype = "HIDDEN"
+    encryptatrest = false
+    fieldtype = "CHECKBOX"
+    globalsearch = false
+    help = '''
+&lt;html&gt;&lt;p&gt;Is Intercompany is enabled if the SVB | Bill Distribution Schedule is intercompany. &lt;/p&gt;
+&lt;p&gt;Is Intercompany is disabled if the SVB | Bill Distribution Schedule is intracompany.&lt;/p&gt;&lt;/html&gt;
+'''
+    isformula = false
+    ismandatory = false
+    isparent = false
+    label = "Is Intercompany"
+    rolerestrict = false
+    searchlevel = "2"
+    showinlist = false
+    sourcefrom = netsuite.customrecord_svb_bill_dist_sched.field.custom_custrecord_svb_parent_intercomany_alloc.scriptid
+    sourcelist = netsuite.customrecord_svb_line_is_source_sub.field.custom_custrecord_svb_line_parent_link.scriptid
+    storevalue = true
+    index = 1
+  }
+  netsuite.subsidiary custom_custrecord_svb_line_subsidiary {
+    scriptid = "custrecord_svb_line_subsidiary"
+    accesslevel = "2"
+    allowquickadd = false
+    applyformatting = false
+    checkspelling = false
+    defaultchecked = false
+    displaytype = "NORMAL"
+    encryptatrest = false
+    fieldtype = "SELECT"
+    globalsearch = false
+    help = "The subsidiary to which the billing expense or service items are distributed."
+    isformula = false
+    ismandatory = false
+    isparent = false
+    label = "Destination Subsidiary"
+    onparentdelete = "NO_ACTION"
+    rolerestrict = false
+    searchlevel = "2"
+    selectrecordtype = "-117"
+    showinlist = false
+    storevalue = true
+    index = 2
+  }
+  netsuite.department custom_custrecord_svb_line_department {
+    scriptid = "custrecord_svb_line_department"
+    accesslevel = "2"
+    allowquickadd = false
+    applyformatting = false
+    checkspelling = false
+    defaultchecked = false
+    displaytype = "NORMAL"
+    encryptatrest = false
+    fieldtype = "SELECT"
+    globalsearch = false
+    help = "The department to which the expenses are distributed."
+    isformula = false
+    ismandatory = false
+    isparent = false
+    label = "Destination Department"
+    onparentdelete = "NO_ACTION"
+    rolerestrict = false
+    searchlevel = "2"
+    selectrecordtype = "-102"
+    showinlist = false
+    storevalue = true
+    index = 3
+  }
+  netsuite.classification custom_custrecord_svb_line_class {
+    scriptid = "custrecord_svb_line_class"
+    accesslevel = "2"
+    allowquickadd = false
+    applyformatting = false
+    checkspelling = false
+    defaultchecked = false
+    displaytype = "NORMAL"
+    encryptatrest = false
+    fieldtype = "SELECT"
+    globalsearch = false
+    help = "The class to which the expenses are distributed."
+    isformula = false
+    ismandatory = false
+    isparent = false
+    label = "Destination Class"
+    onparentdelete = "NO_ACTION"
+    rolerestrict = false
+    searchlevel = "2"
+    selectrecordtype = "-101"
+    showinlist = false
+    storevalue = true
+    index = 4
+  }
+  netsuite.location custom_custrecord_svb_line_location {
+    scriptid = "custrecord_svb_line_location"
+    accesslevel = "2"
+    allowquickadd = false
+    applyformatting = false
+    checkspelling = false
+    defaultchecked = false
+    displaytype = "NORMAL"
+    encryptatrest = false
+    fieldtype = "SELECT"
+    globalsearch = false
+    help = "The Location to which the expenses are distributed."
+    isformula = false
+    ismandatory = false
+    isparent = false
+    label = "Destination Location"
+    onparentdelete = "NO_ACTION"
+    rolerestrict = false
+    searchlevel = "2"
+    selectrecordtype = "-103"
+    showinlist = false
+    storevalue = true
+    index = 5
+  }
+  netsuite.account custom_custrecord_svb_line_intercomp_account {
+    scriptid = "custrecord_svb_line_intercomp_account"
+    accesslevel = "2"
+    allowquickadd = false
+    applyformatting = false
+    checkspelling = false
+    defaultchecked = false
+    displaytype = "NORMAL"
+    encryptatrest = false
+    fieldtype = "SELECT"
+    globalsearch = false
+    help = "The Intercompany AR account for the intercompany journal entry."
+    isformula = false
+    ismandatory = false
+    isparent = false
+    label = "Intercompany AR Account"
+    onparentdelete = "NO_ACTION"
+    rolerestrict = false
+    searchlevel = "2"
+    selectrecordtype = "-112"
+    showinlist = false
+    storevalue = true
+    customfieldfilters = {
+      customfieldfilter = {
+        fldfilter = "STDRECORDACCOUNTELIMINATE"
+        fldfilterchecked = true
+        fldfiltercomparetype = "EQ"
+        fldfilternotnull = false
+        fldfilternull = false
+      }
+    }
+    index = 6
+  }
+  netsuite.account custom_custrecord_svb_line_account {
+    scriptid = "custrecord_svb_line_account"
+    accesslevel = "2"
+    allowquickadd = false
+    applyformatting = false
+    checkspelling = false
+    defaultchecked = false
+    displaytype = "NORMAL"
+    encryptatrest = false
+    fieldtype = "SELECT"
+    globalsearch = false
+    help = "The account to which the expenses are distributed."
+    isformula = false
+    ismandatory = false
+    isparent = false
+    label = "Destination Account"
+    onparentdelete = "NO_ACTION"
+    rolerestrict = false
+    searchlevel = "2"
+    selectrecordtype = "-112"
+    showinlist = true
+    storevalue = true
+    index = 7
+  }
+  number custom_custrecord_svb_line_allocation_weight {
+    scriptid = "custrecord_svb_line_allocation_weight"
+    accesslevel = "2"
+    allowquickadd = false
+    applyformatting = true
+    checkspelling = false
+    defaultchecked = false
+    displaytype = "NORMAL"
+    encryptatrest = false
+    fieldtype = "PERCENT"
+    globalsearch = false
+    help = "The percentage of the expense specified by the distribution schedule."
+    isformula = false
+    ismandatory = true
+    isparent = false
+    label = "Allocation Weight"
+    rolerestrict = false
+    searchlevel = "2"
+    showinlist = false
+    storevalue = true
+    index = 8
+  }
+  netsuite.customer custom_custrecord_svb_line_intercomp_customer {
+    scriptid = "custrecord_svb_line_intercomp_customer"
+    accesslevel = "2"
+    allowquickadd = false
+    applyformatting = false
+    checkspelling = false
+    defaultchecked = false
+    displaytype = "NORMAL"
+    encryptatrest = false
+    fieldtype = "SELECT"
+    globalsearch = false
+    help = "The customer representing the destination subsidiary."
+    isformula = false
+    ismandatory = false
+    isparent = false
+    label = "Intercompany Customer"
+    onparentdelete = "SET_NULL"
+    rolerestrict = false
+    searchlevel = "2"
+    selectrecordtype = "-2"
+    showinlist = false
+    storevalue = true
+    index = 9
+  }
+  unknown custom_custrecord_svb_line_intercomp_vendor {
+    scriptid = "custrecord_svb_line_intercomp_vendor"
+    accesslevel = "2"
+    allowquickadd = false
+    applyformatting = false
+    checkspelling = false
+    defaultchecked = false
+    displaytype = "NORMAL"
+    encryptatrest = false
+    fieldtype = "SELECT"
+    globalsearch = false
+    help = "The vendor representing the destination subsidiary."
+    isformula = false
+    ismandatory = false
+    isparent = false
+    label = "Intercompany Vendor"
+    onparentdelete = "SET_NULL"
+    rolerestrict = false
+    searchlevel = "2"
+    selectrecordtype = "-3"
+    showinlist = false
+    storevalue = true
+    index = 10
+  }
+  netsuite.account custom_custrecord_svb_line_intercomp_ap_account {
+    scriptid = "custrecord_svb_line_intercomp_ap_account"
+    accesslevel = "2"
+    allowquickadd = false
+    applyformatting = false
+    checkspelling = false
+    defaultchecked = false
+    description = "Intercompany AP account, represents the destination subs payable account"
+    displaytype = "NORMAL"
+    encryptatrest = false
+    fieldtype = "SELECT"
+    globalsearch = false
+    help = "The intercompany AP account for the intercompany journal entry."
+    isformula = false
+    ismandatory = false
+    isparent = false
+    label = "Intercompany AP Account"
+    onparentdelete = "NO_ACTION"
+    rolerestrict = false
+    searchlevel = "2"
+    selectrecordtype = "-112"
+    showinlist = true
+    storevalue = true
+    customfieldfilters = {
+      customfieldfilter = {
+        fldfilter = "STDRECORDACCOUNTELIMINATE"
+        fldfilterchecked = true
+        fldfiltercomparetype = "EQ"
+        fldfilternotnull = false
+        fldfilternull = false
+      }
+    }
+    index = 11
+  }
+  boolean custom_custrecord_svb_line_is_source_sub {
+    scriptid = "custrecord_svb_line_is_source_sub"
+    accesslevel = "2"
+    allowquickadd = false
+    applyformatting = false
+    checkspelling = false
+    defaultchecked = false
+    displaytype = "HIDDEN"
+    encryptatrest = false
+    fieldtype = "CHECKBOX"
+    globalsearch = false
+    help = "Whether the Bill Distribution Schedule Line is the source subsidiary."
+    isformula = false
+    ismandatory = false
+    isparent = false
+    label = "Is Source Subsidiary"
+    rolerestrict = false
+    searchlevel = "2"
+    showinlist = true
+    storevalue = true
+    index = 12
+  }
+  boolean custom_custrecord_svb_line_use_src_acct {
+    scriptid = "custrecord_svb_line_use_src_acct"
+    accesslevel = "2"
+    allowquickadd = false
+    applyformatting = false
+    checkspelling = false
+    defaultchecked = false
+    displaytype = "HIDDEN"
+    encryptatrest = false
+    fieldtype = "CHECKBOX"
+    globalsearch = false
+    isformula = false
+    ismandatory = false
+    isparent = false
+    label = "Use Source Account [Sourced]"
+    rolerestrict = false
+    searchlevel = "2"
+    showinlist = true
+    sourcefrom = netsuite.customrecord_svb_bill_dist_sched.field.custom_custrecord_svb_use_source_accounts.scriptid
+    sourcelist = netsuite.customrecord_svb_line_is_source_sub.field.custom_custrecord_svb_line_parent_link.scriptid
+    storevalue = true
+    index = 13
+  }
+  netsuite.subsidiary custom_custrecord_svb_source_subs_from_parent {
+    scriptid = "custrecord_svb_source_subs_from_parent"
+    accesslevel = "2"
+    allowquickadd = false
+    applyformatting = false
+    checkspelling = false
+    defaultchecked = false
+    displaytype = "HIDDEN"
+    encryptatrest = false
+    fieldtype = "SELECT"
+    globalsearch = false
+    isformula = false
+    ismandatory = false
+    isparent = false
+    label = "Source Subsidiary [Sourced From Parent]"
+    onparentdelete = "NO_ACTION"
+    rolerestrict = false
+    searchlevel = "2"
+    selectrecordtype = "-117"
+    showinlist = false
+    sourcefrom = netsuite.customrecord_svb_bill_dist_sched.field.custom_custrecord_svb_source_subsidiary.scriptid
+    sourcelist = netsuite.customrecord_svb_line_is_source_sub.field.custom_custrecord_svb_line_parent_link.scriptid
+    storevalue = true
+    index = 14
+  }
+  boolean custom_custrecord_svb_line_use_amt_based {
+    scriptid = "custrecord_svb_line_use_amt_based"
+    accesslevel = "2"
+    allowquickadd = false
+    applyformatting = false
+    checkspelling = false
+    defaultchecked = false
+    displaytype = "HIDDEN"
+    encryptatrest = false
+    fieldtype = "CHECKBOX"
+    globalsearch = false
+    isformula = false
+    ismandatory = false
+    isparent = false
+    label = "Use Amount Based [Sourced]"
+    rolerestrict = false
+    searchlevel = "2"
+    showinlist = false
+    sourcefrom = netsuite.customrecord_svb_bill_dist_sched.field.custom_custrecord_svb_amount_based_dist.scriptid
+    sourcelist = netsuite.customrecord_svb_line_is_source_sub.field.custom_custrecord_svb_line_parent_link.scriptid
+    storevalue = true
+    index = 15
+  }
+  netsuite.account custom_custrecord_svb_line_destination_tax_acct {
+    scriptid = "custrecord_svb_line_destination_tax_acct"
+    accesslevel = "2"
+    allowquickadd = false
+    applyformatting = false
+    checkspelling = false
+    defaultchecked = false
+    displaytype = "NORMAL"
+    encryptatrest = false
+    fieldtype = "SELECT"
+    globalsearch = false
+    isformula = false
+    ismandatory = false
+    isparent = false
+    label = "Destination Tax Account"
+    onparentdelete = "NO_ACTION"
+    rolerestrict = false
+    searchlevel = "2"
+    selectrecordtype = "-112"
+    showinlist = false
+    storevalue = true
+    index = 16
+  }
+  netsuite.customrecord_svb_subsidiary_tax_group custom_custrecord_svb_line_subsidiary_tax_group {
+    scriptid = "custrecord_svb_line_subsidiary_tax_group"
+    accesslevel = "2"
+    allowquickadd = false
+    applyformatting = false
+    checkspelling = false
+    defaultchecked = false
+    displaytype = "LOCKED"
+    encryptatrest = false
+    fieldtype = "SELECT"
+    globalsearch = false
+    help = "&lt;html&gt;&lt;p&gt;&lt;b&gt;For Australian customers only&lt;/b&gt; The subsidiary group&lt;/p&gt;&lt;/html&gt;"
+    isformula = false
+    ismandatory = false
+    isparent = false
+    label = "Subsidiary Tax Group"
+    onparentdelete = "NO_ACTION"
+    rolerestrict = false
+    searchlevel = "2"
+    selectrecordtype = netsuite.customrecord_svb_subsidiary_tax_group.attr.scriptid
+    showinlist = false
+    storevalue = true
+    index = 17
+  }
+  boolean custom_custrecord_svb_line_use_distribute_taxes {
+    scriptid = "custrecord_svb_line_use_distribute_taxes"
+    accesslevel = "2"
+    allowquickadd = false
+    applyformatting = false
+    checkspelling = false
+    defaultchecked = false
+    displaytype = "HIDDEN"
+    encryptatrest = false
+    fieldtype = "CHECKBOX"
+    globalsearch = false
+    isformula = false
+    ismandatory = false
+    isparent = false
+    label = "Distribute Taxes [Sourced]"
+    rolerestrict = false
+    searchlevel = "2"
+    showinlist = true
+    sourcefrom = netsuite.customrecord_svb_bill_dist_sched.field.custom_custrecord_svb_distribute_taxes.scriptid
+    sourcelist = netsuite.customrecord_svb_line_is_source_sub.field.custom_custrecord_svb_line_parent_link.scriptid
+    storevalue = true
+    index = 18
+  }
+  scriptid = "customrecord_svb_line_is_source_sub"
+  accesstype = "NONENEEDED"
+  allowattachments = false
+  allowinlinedeleting = false
+  allowinlinedetaching = false
+  allowinlineediting = false
+  allowmobileaccess = false
+  allownumberingoverride = false
+  allowquickadd = false
+  allowquicksearch = false
+  allowuiaccess = true
+  enabledle = false
+  enablekeywords = false
+  enablemailmerge = false
+  enablenametranslation = false
+  enablenumbering = false
+  enableoptimisticlocking = false
+  enablesystemnotes = true
+  hierarchical = false
+  iconbuiltin = true
+  includeinsearchmenu = true
+  includename = false
+  isinactive = false
+  isordered = false
+  recordname = "SVB | Bill Distribtn Sched Line"
+  showcreationdate = true
+  showcreationdateonlist = false
+  showid = false
+  showlastmodified = true
+  showlastmodifiedonlist = false
+  shownotes = false
+  showowner = true
+  showownerallowchange = false
+  showowneronlist = false
+  metadataType = "customrecordtype"
+  netsuite.customRecordTranslationsList translationsList {
+  }
+}

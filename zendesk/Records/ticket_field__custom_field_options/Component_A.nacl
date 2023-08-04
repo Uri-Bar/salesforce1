@@ -1,0 +1,8 @@
+zendesk.ticket_field__custom_field_options multiselect_Product_components_us__Component_A@uumuus {
+  name = "Component A"
+  raw_name = "Component A"
+  value = "component_a"
+  _parent = [
+    zendesk.ticket_field.instance.multiselect_Product_components@us,
+  ]
+}

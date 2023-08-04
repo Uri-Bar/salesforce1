@@ -1,0 +1,5 @@
+workato.connection Neta_test_slack@s {
+  application = "slack"
+  name = "Neta test slack"
+  folder_id = workato.folder.instance.neta1_318283
+}

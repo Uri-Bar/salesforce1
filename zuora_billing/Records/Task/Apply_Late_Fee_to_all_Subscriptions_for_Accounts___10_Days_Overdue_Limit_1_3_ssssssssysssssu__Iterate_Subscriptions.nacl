@@ -1,0 +1,22 @@
+zuora_billing.Task Apply_Late_Fee_to_all_Subscriptions_for_Accounts___10_Days_Overdue_Limit_1_3_ssssssssysssssu__Iterate_Subscriptions@uuuuuuuuuuuuuuumuus {
+  name = "Iterate Subscriptions"
+  parameters = {
+    iteration_type = "Default"
+  }
+  action_type = "Iterate"
+  object = "Subscription__12.csv.zip"
+  call_type = "SOAP"
+  task_id = 12
+  concurrent_limit = 9999999
+  additionalProperties = {
+    css = {
+      top = "40px"
+      left = "624px"
+    }
+    priority = "Medium"
+    
+  }
+  _parent = [
+    zuora_billing.WorkflowExport.instance.Apply_Late_Fee_to_all_Subscriptions_for_Accounts___10_Days_Overdue_Limit_1_3@ssssssssysssssu,
+  ]
+}

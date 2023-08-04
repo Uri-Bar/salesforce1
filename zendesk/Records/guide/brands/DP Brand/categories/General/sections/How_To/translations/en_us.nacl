@@ -1,0 +1,11 @@
+zendesk.section_translation How_To_General_DP_Brand_s_uum_suuuum__DP_Brand_s_en_us_umub@uuuuuumuuuuuum {
+  locale = zendesk.guide_language_settings.instance.DP_Brand_s_en_us@umub
+  title = "How To"
+  outdated = false
+  draft = false
+  hidden = false
+  brand = zendesk.brand.instance.DP_Brand@s
+  _parent = [
+    zendesk.section.instance.How_To_General_DP_Brand_s_uum@suuuum,
+  ]
+}

@@ -1,0 +1,102 @@
+netsuite.role customrole1198 {
+  scriptid = "customrole1198"
+  accountingbooksoption = "ALL"
+  centertype = "BASIC"
+  coreadminpermission = false
+  employeerestriction = "OWNONLY"
+  employeeselectionunrestricted = false
+  employeeviewingallowed = false
+  isinactive = false
+  ispartnerrole = false
+  issalesrole = false
+  issinglesignononly = false
+  issupportrole = false
+  iswebserviceonlyrole = false
+  name = "RG_Test Vendor Center"
+  restrictbydevice = false
+  restricttimeandexpenses = false
+  subsidiaryoption = "OWN"
+  subsidiaryviewingallowed = false
+  tfaduration = "0"
+  tfarequired = "OFF"
+  permissions = {
+    permission = {
+      TRAN_FIND = {
+        permkey = "TRAN_FIND"
+        permlevel = "VIEW"
+      }
+      TRAN_PURCHORD = {
+        permkey = "TRAN_PURCHORD"
+        permlevel = "VIEW"
+      }
+      TRAN_TIMEBILL = {
+        permkey = "TRAN_TIMEBILL"
+        permlevel = "VIEW"
+      }
+      REPO_NONPOSTING = {
+        permkey = "REPO_NONPOSTING"
+        permlevel = "VIEW"
+      }
+      REGT_ACCTPAY = {
+        permkey = "REGT_ACCTPAY"
+        permlevel = "VIEW"
+      }
+      REGT_NONPOSTING = {
+        permkey = "REGT_NONPOSTING"
+        permlevel = "VIEW"
+      }
+      LIST_HISTORY = {
+        permkey = "LIST_HISTORY"
+        permlevel = "VIEW"
+      }
+      ADMI_DELETEDRECORD = {
+        permkey = "ADMI_DELETEDRECORD"
+        permlevel = "FULL"
+      }
+      ADMI_LOGIN_OAUTH = {
+        permkey = "ADMI_LOGIN_OAUTH"
+        permlevel = "FULL"
+      }
+      ADMI_LOGIN_OAUTH2 = {
+        permkey = "ADMI_LOGIN_OAUTH2"
+        permlevel = "FULL"
+      }
+      ADMI_RESTWEBSERVICES = {
+        permkey = "ADMI_RESTWEBSERVICES"
+        permlevel = "FULL"
+      }
+      ADMI_WEBSERVICES = {
+        permkey = "ADMI_WEBSERVICES"
+        permlevel = "FULL"
+      }
+      ADMI_MANAGE_OWN_OAUTH_TOKENS = {
+        permkey = "ADMI_MANAGE_OWN_OAUTH_TOKENS"
+        permlevel = "FULL"
+      }
+      customrecord2653 = {
+        permkey = netsuite.customrecord2653.attr.scriptid
+        permlevel = "EDIT"
+      }
+      customrecord_ven_record = {
+        permkey = netsuite.customrecord_ven_record.attr.scriptid
+        permlevel = "CREATE"
+      }
+      customrecord2652 = {
+        permkey = netsuite.customrecord2652.attr.scriptid
+        permlevel = "CREATE"
+      }
+      customrecord2651 = {
+        permkey = netsuite.customrecord2651.attr.scriptid
+        permlevel = "CREATE"
+      }
+      LIST_BULK_PROCESSING = {
+        permkey = "LIST_BULK_PROCESSING"
+        permlevel = "VIEW"
+      }
+      LIST_OTHER_ADDRESS = {
+        permkey = "LIST_OTHER_ADDRESS"
+        permlevel = "FULL"
+      }
+    }
+  }
+}

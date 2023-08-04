@@ -1,0 +1,8 @@
+jira.Field Security_Level@s {
+  name = "Security Level"
+  schema = {
+    type = "securitylevel"
+    system = "security"
+  }
+  description = ""
+}

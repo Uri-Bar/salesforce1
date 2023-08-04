@@ -1,0 +1,11 @@
+okta.Group Everyone {
+  objectClass = [
+    "okta:user_group",
+  ]
+  type = "BUILT_IN"
+  profile = {
+    name = "Everyone"
+    description = "All users in your organization"
+  }
+  
+}

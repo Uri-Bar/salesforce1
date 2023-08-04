@@ -1,0 +1,9 @@
+zuora_billing.Settings_Segment Account_Account_Number2@s {
+  object = zuora_billing.account
+  field = zuora_billing.account.field.AccountNumber
+  segmentName = "Account Account Number2"
+  systemId = "AccountAccountNumber2"
+  additionalProperties = {
+    active = true
+  }
+}

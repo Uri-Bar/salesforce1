@@ -1,0 +1,50 @@
+netsuite.workflow customworkflowbillingclassapprovals {
+  scriptid = "customworkflowbillingclassapprovals"
+  initcontexts = "ACTION"
+  initeventtypes = "APPROVE"
+  initoncreate = false
+  initonvieworupdate = true
+  inittriggertype = "AFTERSUBMIT"
+  isinactive = false
+  islogenabled = false
+  keephistory = "ONLYWHENTESTING"
+  name = "Billing Class Approvals"
+  recordtypes = "BILLINGCLASS"
+  releasestatus = "TESTING"
+  runasadmin = false
+  initcondition = {
+    formula = "If 2=2"
+    type = "FORMULA"
+  }
+  workflowstates = {
+    workflowstate = {
+      workflowstate429 = {
+        scriptid = "workflowstate429"
+        donotexitworkflow = false
+        name = "State 1"
+        positionx = 243
+        positiony = 133
+        workflowactions = {
+          AFTERSUBMIT = {
+            triggertype = "AFTERSUBMIT"
+            gotopageaction = {
+              workflowaction1280 = {
+                scriptid = "workflowaction1280"
+                contexttypes = "CLIENT"
+                eventtypes = "EDIT"
+                isinactive = true
+                targetpage = "LIST_BILLINGCLASS"
+                initcondition = {
+                  type = "VISUAL_BUILDER"
+                }
+                index = 0
+              }
+            }
+            
+          }
+        }
+        index = 0
+      }
+    }
+  }
+}

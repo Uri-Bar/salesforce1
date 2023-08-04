@@ -1,0 +1,5 @@
+zuora_billing.Settings_RevenueEventType AccountingPeriodsCreated__z {
+  label = "Accounting Period(s) Created"
+  systemId = "AccountingPeriodsCreated__z"
+  active = true
+}

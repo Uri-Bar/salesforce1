@@ -1,0 +1,38 @@
+netsuite.itemcustomfield custitemhq_common_itemfield01 {
+  scriptid = "custitemhq_common_itemfield01"
+  accesslevel = "2"
+  appliestogroup = false
+  appliestoinventory = false
+  appliestokit = false
+  appliestononinventory = false
+  appliestoothercharge = false
+  appliestopricelist = false
+  appliestoservice = false
+  appliestospecificitems = false
+  appliestosubplan = false
+  applyformatting = false
+  checkspelling = false
+  defaultchecked = false
+  description = '''
+Add new description
+Update desc
+Test audit
+'''
+  displaytype = "NORMAL"
+  encryptatrest = false
+  fieldtype = "TEXT"
+  globalsearch = false
+  includechilditems = false
+  isformula = false
+  ismandatory = false
+  isparent = false
+  itemmatrix = false
+  itemsubtype = "BOTH"
+  label = "hq-common-itemfield01-01"
+  searchlevel = "2"
+  showhierarchy = false
+  showinlist = false
+  storevalue = true
+  appliestoexpense = false
+  appliestoitemassembly = false
+}

@@ -1,0 +1,17 @@
+netsuite.customrecord_csegcseg_rg_seg_cc val_64854_6979138_sb1_202 {
+  scriptid = "val_64854_6979138_sb1_202"
+  isInactive = false
+  name = "1130 HR"
+  translationsList = {
+    customRecordTranslations = {
+      _frenchFrance = {
+        locale = "_frenchFrance"
+        language = "French (France)"
+      }
+      _german = {
+        locale = "_german"
+        language = "German"
+      }
+    }
+  }
+}

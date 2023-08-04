@@ -1,0 +1,203 @@
+salesforce.LightningPage Account_Record_Page1 {
+  fullName = "Account_Record_Page1"
+  flexiPageRegions = [
+    {
+      itemInstances = [
+        {
+          componentInstance = {
+            componentName = "runtime_sales_social:socialPanel"
+          }
+        },
+        {
+          componentInstance = {
+            componentInstanceProperties = [
+              {
+                name = "flavor"
+                value = "list"
+              },
+            ]
+            componentName = "wits:newsPanel"
+          }
+        },
+      ]
+      mode = "Replace"
+      name = "newsTabContent"
+      type = "Facet"
+    },
+    {
+      itemInstances = [
+        {
+          componentInstance = {
+            componentInstanceProperties = [
+              {
+                name = "active"
+                value = "true"
+              },
+              {
+                name = "body"
+                value = "activityTabContent"
+              },
+              {
+                name = "title"
+                value = "Standard.Tab.activity"
+              },
+            ]
+            componentName = "flexipage:tab"
+          }
+        },
+        {
+          componentInstance = {
+            componentInstanceProperties = [
+              {
+                name = "body"
+                value = "feedTabContent"
+              },
+              {
+                name = "title"
+                value = "Standard.Tab.collaborate"
+              },
+            ]
+            componentName = "flexipage:tab"
+          }
+        },
+        {
+          componentInstance = {
+            componentInstanceProperties = [
+              {
+                name = "body"
+                value = "detailTabContent"
+              },
+              {
+                name = "title"
+                value = "Standard.Tab.detail"
+              },
+            ]
+            componentName = "flexipage:tab"
+          }
+        },
+        {
+          componentInstance = {
+            componentInstanceProperties = [
+              {
+                name = "body"
+                value = "newsTabContent"
+              },
+              {
+                name = "title"
+                value = "Standard.Tab.news"
+              },
+            ]
+            componentName = "flexipage:tab"
+          }
+        },
+      ]
+      mode = "Replace"
+      name = "tabs"
+      type = "Facet"
+    },
+    {
+      itemInstances = [
+        {
+          componentInstance = {
+            componentName = "force:relatedListQuickLinksContainer"
+          }
+        },
+        {
+          componentInstance = {
+            componentInstanceProperties = [
+              {
+                name = "tabs"
+                value = "tabs"
+              },
+            ]
+            componentName = "flexipage:tabset"
+          }
+        },
+      ]
+      mode = "Replace"
+      name = "main"
+      type = "Region"
+    },
+    {
+      itemInstances = [
+        {
+          componentInstance = {
+            componentInstanceProperties = [
+              {
+                name = "collapsed"
+                value = "false"
+              },
+            ]
+            componentName = "force:highlightsPanel"
+          }
+        },
+      ]
+      mode = "Replace"
+      name = "leftsidebar"
+      type = "Region"
+    },
+    {
+      itemInstances = [
+        {
+          componentInstance = {
+            componentName = "runtime_sales_activities:activityPanel"
+          }
+        },
+      ]
+      mode = "Replace"
+      name = "activityTabContent"
+      type = "Facet"
+    },
+    {
+      itemInstances = [
+        {
+          componentInstance = {
+            componentName = "forceChatter:recordFeedContainer"
+          }
+        },
+      ]
+      mode = "Replace"
+      name = "feedTabContent"
+      type = "Facet"
+    },
+    {
+      itemInstances = [
+        {
+          componentInstance = {
+            componentName = "force:detailPanel"
+          }
+        },
+      ]
+      mode = "Replace"
+      name = "detailTabContent"
+      type = "Facet"
+    },
+    {
+      itemInstances = [
+        {
+          componentInstance = {
+            componentName = "runtime_sales_merge:mergeCandidatesPreviewCard"
+          }
+        },
+        {
+          componentInstance = {
+            componentName = "force:relatedListContainer"
+          }
+        },
+      ]
+      mode = "Replace"
+      name = "rightsidebar"
+      type = "Region"
+    },
+  ]
+  masterLabel = "Account Record Page"
+  parentFlexiPage = "sfa__Account_rec_L_3col"
+  sobjectType = "Account"
+  template = {
+    name = "flexipage:recordHomeThreeColTemplateDesktop"
+  }
+  type = "RecordPage"
+  _parent = [
+    salesforce.Account,
+  ]
+}

@@ -1,0 +1,27 @@
+zendesk.workspace New_Workspace_125@s {
+  title = "New Workspace 125"
+  description = ""
+  ticket_form_id = zendesk.ticket_form.instance.Default_Ticket_Form@s
+  activated = true
+  conditions = {
+    all = [
+      {
+        field = "brand_id"
+        operator = "is"
+        value = zendesk.brand.instance.Salto
+      },
+      {
+        field = "priority"
+        operator = "greater_than"
+        value = "normal"
+      },
+    ]
+    any = [
+      {
+        field = "type"
+        operator = "is_not"
+        value = "question"
+      },
+    ]
+  }
+}

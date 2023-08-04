@@ -1,0 +1,34 @@
+zuora_billing.WorkflowExport Bill_Run_Callout___Print_Invoices_35@sssbssu {
+  workflow = zuora_billing.Workflow.instance.Bill_Run_Callout___Print_Invoices_35_sssbssu__Bill_Run_Callout___Print_Invoices@uuuuuuumuusssbss
+  tasks = [
+    zuora_billing.Task.instance.Bill_Run_Callout___Print_Invoices_35_sssbssu__Iterate_Invoices@uuuuuuumuus,
+    zuora_billing.Task.instance.Bill_Run_Callout___Print_Invoices_35_sssbssu__Get_Invoices_From_Bill_Run@uuuuuuumuussss,
+  ]
+  linkages = [
+    {
+      source_task_id = zuora_billing.Task.instance.Bill_Run_Callout___Print_Invoices_35_sssbssu__Get_Invoices_From_Bill_Run@uuuuuuumuussss
+      target_task_id = zuora_billing.Task.instance.Bill_Run_Callout___Print_Invoices_35_sssbssu__Iterate_Invoices@uuuuuuumuus
+      linkage_type = "Success"
+      
+    },
+    {
+      source_workflow_id = zuora_billing.Workflow.instance.Bill_Run_Callout___Print_Invoices_35_sssbssu__Bill_Run_Callout___Print_Invoices@uuuuuuumuusssbss
+      target_task_id = zuora_billing.Task.instance.Bill_Run_Callout___Print_Invoices_35_sssbssu__Get_Invoices_From_Bill_Run@uuuuuuumuussss
+      linkage_type = "Start"
+      
+    },
+    {
+      source_task_id = zuora_billing.Task.instance.Bill_Run_Callout___Print_Invoices_35_sssbssu__Iterate_Invoices@uuuuuuumuus
+      target_task_id = 38
+      linkage_type = "For Each"
+      
+    },
+  ]
+  additionalProperties = {
+    workflow_definition = {
+      description = ""
+      category = "Default"
+      name = "Bill Run Callout - Print Invoices"
+    }
+  }
+}

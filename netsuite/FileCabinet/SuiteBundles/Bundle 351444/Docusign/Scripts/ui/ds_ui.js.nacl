@@ -1,0 +1,32 @@
+netsuite.file SuiteBundles_Bundle_351444_Docusign_Scripts_ui_ds_ui_js@dsdddduv {
+  bundleable = false
+  isinactive = false
+  availablewithoutlogin = false
+  generateurltimestamp = false
+  hideinbundle = false
+  path = "/SuiteBundles/Bundle 351444/Docusign/Scripts/ui/ds_ui.js"
+  content = file("netsuite/FileCabinet/SuiteBundles/Bundle 351444/Docusign/Scripts/ui/ds_ui.js")
+  _parent = [
+    netsuite.folder.instance.SuiteBundles_Bundle_351444_Docusign_Scripts_ui@dsddd,
+  ]
+  _generated_dependencies = [
+    {
+      reference = netsuite.file.instance.SuiteBundles_Bundle_351444_Docusign_Scripts_ds_cache_js@dsddduv.path
+    },
+    {
+      reference = netsuite.file.instance.SuiteBundles_Bundle_351444_Docusign_Scripts_ds_common_js@dsddduv.path
+    },
+    {
+      reference = netsuite.file.instance.SuiteBundles_Bundle_351444_Docusign_Scripts_ui_JsLibraryConfig_json@dsddddv.path
+    },
+    {
+      reference = netsuite.file.instance.SuiteBundles_Bundle_351444_Docusign_Scripts_ui_ds_ui_admin_btn_js@dsdddduuuv.path
+    },
+    {
+      reference = netsuite.file.instance.SuiteBundles_Bundle_351444_Docusign_Scripts_ui_ds_ui_cs_js@dsdddduuv.path
+    },
+    {
+      reference = netsuite.file.instance.SuiteBundles_Bundle_351444_Docusign_Scripts_ui_ds_ui_please_configure_js@dsdddduuuv.path
+    },
+  ]
+}

@@ -1,0 +1,218 @@
+type netsuite.customrecord2652 {
+  annotations {
+    serviceid scriptid {
+    }
+    string recordname {
+    }
+    string customsegment {
+    }
+    netsuite.customrecordtype_accesstype accesstype {
+    }
+    boolean allowattachments {
+    }
+    boolean allowinlineediting {
+    }
+    boolean allowinlinedeleting {
+    }
+    boolean allowinlinedetaching {
+    }
+    boolean allowmobileaccess {
+    }
+    boolean allownumberingoverride {
+    }
+    boolean allowquickadd {
+    }
+    boolean allowquicksearch {
+    }
+    boolean allowuiaccess {
+    }
+    string description {
+    }
+    boolean enabledle {
+    }
+    boolean enablekeywords {
+    }
+    boolean enablemailmerge {
+    }
+    boolean enablenametranslation {
+    }
+    boolean enablenumbering {
+    }
+    boolean enableoptimisticlocking {
+    }
+    boolean enablesystemnotes {
+    }
+    boolean hierarchical {
+    }
+    string numberingprefix {
+    }
+    string numberingsuffix {
+    }
+    string numberingmindigits {
+    }
+    string numberinginit {
+    }
+    string icon {
+    }
+    boolean iconbuiltin {
+    }
+    netsuite.generic_custom_record_icon iconindex {
+    }
+    boolean includeinsearchmenu {
+    }
+    boolean includename {
+    }
+    boolean isinactive {
+    }
+    boolean isordered {
+    }
+    boolean showcreationdate {
+    }
+    boolean showcreationdateonlist {
+    }
+    boolean showid {
+    }
+    boolean showlastmodified {
+    }
+    boolean showlastmodifiedonlist {
+    }
+    boolean shownotes {
+    }
+    boolean showowner {
+    }
+    boolean showownerallowchange {
+    }
+    boolean showowneronlist {
+    }
+    
+    netsuite.customrecordtype_links links {
+    }
+    netsuite.customrecordtype_permissions permissions {
+    }
+    netsuite.customrecordtype_recordsublists recordsublists {
+    }
+    netsuite.customrecordtype_subtabs subtabs {
+    }
+    string application_id {
+    }
+    hidden_string source {
+    }
+    hidden_string internalId {
+    }
+  }
+  serviceid scriptid {
+    _required = true
+  }
+  string internalId {
+    _hidden_value = true
+  }
+  string custom_custrecord175 {
+    scriptid = "custrecord175"
+    accesslevel = "2"
+    allowquickadd = false
+    applyformatting = false
+    checkspelling = false
+    defaultchecked = false
+    displaytype = "NORMAL"
+    encryptatrest = false
+    fieldtype = "DATE"
+    globalsearch = false
+    isformula = false
+    ismandatory = false
+    isparent = false
+    label = "CRD"
+    rolerestrict = false
+    searchlevel = "2"
+    showinlist = false
+    storevalue = true
+    index = 0
+  }
+  netsuite.file custom_custrecord176 {
+    scriptid = "custrecord176"
+    accesslevel = "2"
+    allowquickadd = false
+    applyformatting = false
+    checkspelling = false
+    defaultchecked = false
+    displaytype = "NORMAL"
+    encryptatrest = false
+    fieldtype = "DOCUMENT"
+    globalsearch = false
+    isformula = false
+    ismandatory = false
+    isparent = false
+    label = "PL / BL"
+    rolerestrict = false
+    searchlevel = "2"
+    showinlist = false
+    storevalue = true
+    index = 1
+  }
+  string custom_custrecord177 {
+    scriptid = "custrecord177"
+    accesslevel = "2"
+    allowquickadd = false
+    applyformatting = false
+    checkspelling = false
+    defaultchecked = false
+    displaytype = "NORMAL"
+    encryptatrest = false
+    fieldtype = "CLOBTEXT"
+    globalsearch = false
+    isformula = false
+    ismandatory = false
+    isparent = false
+    label = "Supplier Memo"
+    rolerestrict = false
+    searchlevel = "2"
+    showinlist = false
+    storevalue = true
+    index = 2
+  }
+  scriptid = "customrecord2652"
+  accesstype = "USEPERMISSIONLIST"
+  allowattachments = true
+  allowinlinedeleting = false
+  allowinlinedetaching = true
+  allowinlineediting = false
+  allowmobileaccess = false
+  allownumberingoverride = false
+  allowquickadd = true
+  allowquicksearch = false
+  allowuiaccess = true
+  enabledle = true
+  enablekeywords = true
+  enablemailmerge = false
+  enablenametranslation = false
+  enablenumbering = false
+  enableoptimisticlocking = true
+  enablesystemnotes = true
+  hierarchical = false
+  iconbuiltin = true
+  includeinsearchmenu = true
+  includename = true
+  isinactive = false
+  isordered = false
+  recordname = "Update PO_Sample"
+  showcreationdate = false
+  showcreationdateonlist = false
+  showid = false
+  showlastmodified = false
+  showlastmodifiedonlist = false
+  shownotes = true
+  showowner = false
+  showownerallowchange = false
+  showowneronlist = false
+  permissions = {
+    permission = {
+      customrole1198 = {
+        permittedlevel = "CREATE"
+        permittedrole = netsuite.role.instance.customrole1198.scriptid
+        
+      }
+    }
+  }
+  metadataType = "customrecordtype"
+  netsuite.customRecordTranslationsList translationsList {
+  }
+}

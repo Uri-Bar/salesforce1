@@ -1,0 +1,77 @@
+netsuite.role customrole1030 {
+  scriptid = "customrole1030"
+  accountingbooksoption = "PRIMARY"
+  centertype = "ACCOUNTCENTER"
+  coreadminpermission = false
+  employeerestriction = "NONE"
+  employeeselectionunrestricted = false
+  isinactive = false
+  ispartnerrole = false
+  issalesrole = false
+  issinglesignononly = false
+  issupportrole = false
+  iswebserviceonlyrole = true
+  name = "Workato-Integration-Role"
+  restrictbydevice = false
+  restricttimeandexpenses = false
+  subsidiaryoption = "ALL"
+  subsidiaryviewingallowed = true
+  tfaduration = "0"
+  tfarequired = "OFF"
+  permissions = {
+    permission = {
+      TRAN_PURCHORD = {
+        permkey = "TRAN_PURCHORD"
+        permlevel = "FULL"
+      }
+      TRAN_SALESORD = {
+        permkey = "TRAN_SALESORD"
+        permlevel = "FULL"
+      }
+      ADMI_CUSTBODYFIELD = {
+        permkey = "ADMI_CUSTBODYFIELD"
+        permlevel = "FULL"
+      }
+      ADMI_LOGIN_OAUTH = {
+        permkey = "ADMI_LOGIN_OAUTH"
+        permlevel = "FULL"
+      }
+      ADMI_LOGIN_OAUTH2 = {
+        permkey = "ADMI_LOGIN_OAUTH2"
+        permlevel = "FULL"
+      }
+      ADMI_RESTWEBSERVICES = {
+        permkey = "ADMI_RESTWEBSERVICES"
+        permlevel = "FULL"
+      }
+      ADMI_WEBSERVICES = {
+        permkey = "ADMI_WEBSERVICES"
+        permlevel = "FULL"
+      }
+      ADMI_SETUPCOMPANY = {
+        permkey = "ADMI_SETUPCOMPANY"
+        permlevel = "FULL"
+      }
+      ADMI_WEBSERVICESSETUP = {
+        permkey = "ADMI_WEBSERVICESSETUP"
+        permlevel = "FULL"
+      }
+      ADMI_CUSTOMSCRIPT = {
+        permkey = "ADMI_CUSTOMSCRIPT"
+        permlevel = "FULL"
+      }
+      ADMI_MANAGE_OWN_OAUTH_TOKENS = {
+        permkey = "ADMI_MANAGE_OWN_OAUTH_TOKENS"
+        permlevel = "FULL"
+      }
+      LIST_GIFT_CERTIFICATE = {
+        permkey = "LIST_GIFT_CERTIFICATE"
+        permlevel = "FULL"
+      }
+      LIST_OTHER_ADDRESS = {
+        permkey = "LIST_OTHER_ADDRESS"
+        permlevel = "FULL"
+      }
+    }
+  }
+}

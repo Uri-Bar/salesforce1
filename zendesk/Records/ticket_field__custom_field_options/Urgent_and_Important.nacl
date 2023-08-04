@@ -1,0 +1,8 @@
+zendesk.ticket_field__custom_field_options DP_Priority_tagger__urgent_and_important {
+  name = "Urgent and Important"
+  raw_name = "Urgent and Important"
+  value = "urgent_and_important"
+  _parent = [
+    zendesk.ticket_field.instance.DP_Priority_tagger,
+  ]
+}

@@ -1,0 +1,85 @@
+netsuite.role customrole1178 {
+  scriptid = "customrole1178"
+  accountingbooksoption = "PRIMARY"
+  centertype = netsuite.center.instance.custcenter3.scriptid
+  coreadminpermission = false
+  employeerestriction = "NONE"
+  employeeselectionunrestricted = false
+  isinactive = false
+  ispartnerrole = false
+  issalesrole = false
+  issinglesignononly = false
+  issupportrole = false
+  iswebserviceonlyrole = false
+  name = "Razor - Celigo Support"
+  restrictbydevice = false
+  restricttimeandexpenses = false
+  subsidiaryoption = "SELECTED"
+  subsidiaryviewingallowed = true
+  tfaduration = "0"
+  tfarequired = "OFF"
+  permissions = {
+    permission = {
+      TRAN_VENDBILL = {
+        permkey = "TRAN_VENDBILL"
+        permlevel = "VIEW"
+      }
+      TRAN_CASHSALE = {
+        permkey = "TRAN_CASHSALE"
+        permlevel = "VIEW"
+      }
+      TRAN_CASHRFND = {
+        permkey = "TRAN_CASHRFND"
+        permlevel = "VIEW"
+      }
+      TRAN_CUSTINVC = {
+        permkey = "TRAN_CUSTINVC"
+        permlevel = "VIEW"
+      }
+      TRAN_ITEMSHIP = {
+        permkey = "TRAN_ITEMSHIP"
+        permlevel = "VIEW"
+      }
+      TRAN_ITEMRCPT = {
+        permkey = "TRAN_ITEMRCPT"
+        permlevel = "VIEW"
+      }
+      TRAN_PURCHORD = {
+        permkey = "TRAN_PURCHORD"
+        permlevel = "VIEW"
+      }
+      TRAN_RTNAUTH = {
+        permkey = "TRAN_RTNAUTH"
+        permlevel = "VIEW"
+      }
+      TRAN_SALESORD = {
+        permkey = "TRAN_SALESORD"
+        permlevel = "VIEW"
+      }
+      TRAN_TRNFRORD = {
+        permkey = "TRAN_TRNFRORD"
+        permlevel = "VIEW"
+      }
+      TRAN_VENDAUTHRETURN = {
+        permkey = "TRAN_VENDAUTHRETURN"
+        permlevel = "VIEW"
+      }
+      LIST_PUBLISHSEARCH = {
+        permkey = "LIST_PUBLISHSEARCH"
+        permlevel = "FULL"
+      }
+      customrecord_amzn_brand_auth = {
+        permkey = netsuite.customrecord_amzn_brand_auth.attr.scriptid
+        permlevel = "FULL"
+      }
+      LIST_GIFT_CERTIFICATE = {
+        permkey = "LIST_GIFT_CERTIFICATE"
+        permlevel = "VIEW"
+      }
+      LIST_OTHER_ADDRESS = {
+        permkey = "LIST_OTHER_ADDRESS"
+        permlevel = "FULL"
+      }
+    }
+  }
+}

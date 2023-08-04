@@ -1,0 +1,21 @@
+zuora_billing.PublicEmailTemplate Invoice_Posted_Default_Email_Template@s {
+  eventCategory = 1100
+  name = "Invoice Posted Default Email Template"
+  description = ""
+  encodingType = "UTF8"
+  fromName = "Admin"
+  fromEmailType = "SpecificEmail"
+  fromEmailAddress = "neta.marcus@salto.io"
+  replyToEmailType = "SpecificEmail"
+  replyToEmailAddress = "neta.marcus@salto.io"
+  ccEmailType = "SpecificEmails"
+  ccEmailAddress = ""
+  bccEmailAddress = ""
+  toEmailType = "BillToContact"
+  toEmailAddress = ""
+  emailSubject = "Invoice <Invoice.Number> is attached"
+  emailBody = "Dear <BillToContact.FirstName> <BillToContact.LastName>.\r<br />\r<br />Your invoice <Invoice.Number> is available:\r<br />\r<br />    Invoice Due Date:      <Invoice.DueDate>\r<br />    Invoice Total Amount: <Invoice.TotalAmount> <Account.Currency>\r<br />\r<br />Thank you for your business!"
+  active = true
+  isHtml = true
+  useAdditionalAddresses = true
+}

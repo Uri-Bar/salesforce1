@@ -1,0 +1,90 @@
+type salesforce.Yariv__c {
+  serviceid Id {
+    apiName = "Yariv__c.Id"
+    label = "Record ID"
+    queryable = true
+    _hidden_value = true
+    
+    
+  }
+  salesforce.Lookup OwnerId {
+    apiName = "Yariv__c.OwnerId"
+    label = "Owner ID"
+    referenceTo = [
+      salesforce.Group,
+      salesforce.User,
+    ]
+    createable = true
+    updateable = true
+    relationshipName = "Owner"
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Checkbox IsDeleted {
+    apiName = "Yariv__c.IsDeleted"
+    label = "Deleted"
+    defaultValue = false
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Text Name {
+    apiName = "Yariv__c.Name"
+    label = "Yariv Name"
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    length = 80
+    queryable = true
+  }
+  salesforce.DateTime CreatedDate {
+    apiName = "Yariv__c.CreatedDate"
+    label = "Created Date"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Lookup CreatedById {
+    apiName = "Yariv__c.CreatedById"
+    label = "Created By ID"
+    referenceTo = [
+      salesforce.User,
+    ]
+    createable = false
+    updateable = false
+    relationshipName = "CreatedBy"
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.DateTime LastModifiedDate {
+    apiName = "Yariv__c.LastModifiedDate"
+    label = "Last Modified Date"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Lookup LastModifiedById {
+    apiName = "Yariv__c.LastModifiedById"
+    label = "Last Modified By ID"
+    referenceTo = [
+      salesforce.User,
+    ]
+    createable = false
+    updateable = false
+    relationshipName = "LastModifiedBy"
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.DateTime SystemModstamp {
+    apiName = "Yariv__c.SystemModstamp"
+    label = "System Modstamp"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+}

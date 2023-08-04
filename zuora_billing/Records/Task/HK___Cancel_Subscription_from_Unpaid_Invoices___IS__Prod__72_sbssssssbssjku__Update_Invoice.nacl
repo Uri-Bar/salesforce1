@@ -1,0 +1,77 @@
+zuora_billing.Task HK___Cancel_Subscription_from_Unpaid_Invoices___IS__Prod__72_sbssssssbssjku__Update_Invoice@uuuuuuuuuuuuuumuus {
+  name = "Update Invoice"
+  parameters = {
+    url = "{{ Credentials.zuora.rest_endpoint }}action/update"
+    files = [
+      {
+        key = "InvoiceItem__110.csv.zip"
+        name = ""
+        upload = "false"
+      },
+    ]
+    method = "POST"
+    headers = [
+      {
+        key = "Content-Type"
+        value = "application/json"
+      },
+    ]
+    raw_body = '''
+{
+  "objects": [
+    {% for invId in Data.JSONTransform.invIds %}
+    {
+      "Id": "{{invId}}",
+      "NonPaymentWFDate__c": "{{Data.Workflow.ExecutionDate}}"
+    }{%- if forloop.last == false -%},{%- endif -%}
+    {% endfor %}
+  ],
+  "type": "Invoice"
+}
+'''
+    body_type = "raw"
+    form_datas = [
+      {
+        key = ""
+        value = ""
+        upload = "false"
+      },
+    ]
+    validation = {
+      replace = "false"
+      zuora_call = "false"
+      status_codes = [
+        "",
+        "200",
+      ]
+      payload_location = "Callout"
+    }
+    retry_rules = {
+      retry_count = "0"
+      retry_window = "30"
+      current_retry_count = "0"
+    }
+    authorization = {
+      type = "zuora"
+    }
+    strict_variables = "true"
+    validate_response = "false"
+    validation_scheme = ""
+    include_response_code = "true"
+  }
+  action_type = "Callout"
+  call_type = "SOAP"
+  task_id = 114
+  concurrent_limit = 9999999
+  additionalProperties = {
+    css = {
+      top = "340px"
+      left = "700px"
+    }
+    priority = "Medium"
+    
+  }
+  _parent = [
+    zuora_billing.WorkflowExport.instance.HK___Cancel_Subscription_from_Unpaid_Invoices___IS__Prod__72@sbssssssbssjku,
+  ]
+}

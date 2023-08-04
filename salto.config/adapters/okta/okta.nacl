@@ -1,0 +1,11 @@
+okta {
+  fetch = {
+    include = [
+      {
+        type = ".*"
+      },
+    ]
+    exclude = [
+    ]
+  }
+}

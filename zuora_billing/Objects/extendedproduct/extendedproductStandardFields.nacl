@@ -1,0 +1,109 @@
+type zuora_billing.extendedproduct {
+  string Id {
+    type = "string"
+    format = "uuid"
+    required = false
+    filterable = false
+    label = "Id"
+  }
+  string CreatedById {
+    type = "string"
+    format = "uuid"
+    required = false
+    filterable = false
+    referenceTo = [
+      zuora_billing.extendeduser.field.Id,
+    ]
+    cardinality = "manyToOne"
+    recordConstraints = {
+      create = {
+        enforceValidMapping = true
+      }
+    }
+    label = "CreatedById"
+  }
+  string CreatedDate {
+    type = "string"
+    format = "date-time"
+    required = false
+    filterable = false
+    label = "CreatedDate"
+  }
+  string UpdatedById {
+    type = "string"
+    format = "uuid"
+    required = false
+    filterable = false
+    referenceTo = [
+      zuora_billing.extendeduser.field.Id,
+    ]
+    cardinality = "manyToOne"
+    recordConstraints = {
+      create = {
+        enforceValidMapping = true
+      }
+    }
+    label = "UpdatedById"
+  }
+  string UpdatedDate {
+    type = "string"
+    format = "date-time"
+    required = false
+    filterable = false
+    label = "UpdatedDate"
+  }
+  boolean deleted {
+    type = "boolean"
+    required = false
+    filterable = false
+    label = "deleted"
+  }
+  boolean AllowFeatureChanges {
+    type = "boolean"
+    required = false
+    filterable = false
+    label = "AllowFeatureChanges"
+  }
+  string Description {
+    type = "string"
+    maxLength = 512
+    required = false
+    filterable = false
+    label = "Description"
+  }
+  string Name {
+    type = "string"
+    maxLength = 512
+    required = false
+    filterable = false
+    label = "Name"
+  }
+  string EffectiveEndDate {
+    type = "string"
+    format = "date"
+    required = false
+    filterable = false
+    label = "EffectiveEndDate"
+  }
+  string EffectiveStartDate {
+    type = "string"
+    format = "date"
+    required = false
+    filterable = false
+    label = "EffectiveStartDate"
+  }
+  string SKU {
+    type = "string"
+    maxLength = 512
+    required = false
+    filterable = false
+    label = "SKU"
+  }
+  string Category {
+    type = "string"
+    maxLength = 512
+    required = false
+    filterable = false
+    label = "Category"
+  }
+}

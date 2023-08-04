@@ -1,0 +1,11 @@
+stripe.coupon GoldRush_once_GoldRush {
+  id = "GoldRush"
+  duration = "once"
+  livemode = false
+  max_redemptions = 50
+  name = "GoldRush"
+  percent_off = 5
+  redeem_by = 1642802340
+  times_redeemed = 0
+  valid = false
+}

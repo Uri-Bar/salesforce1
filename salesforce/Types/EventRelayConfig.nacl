@@ -1,0 +1,131 @@
+type salesforce.EventRelayConfig {
+  annotations {
+    serviceid metadataType {
+    }
+    boolean hasMetaFile {
+    }
+    string folderType {
+    }
+    string folderContentType {
+    }
+    string suffix {
+    }
+    string dirName {
+    }
+  }
+  serviceid fullName {
+  }
+  string destinationResourceName {
+  }
+  string eventChannel {
+    _restriction = {
+      enforce_value = false
+      values = [
+        "AccountChangeEvent",
+        "AccountContactRoleChangeEvent",
+        "ActivityEngagementVirtualChannel",
+        "AssetChangeEvent",
+        "AssetTechnicalAttributesCDCEventChannel",
+        "AuthorizationFormConsentChangeEvent",
+        "BriefcaseAssignmentChangeEvent",
+        "BriefcaseDefinitionChangeEvent",
+        "CampaignChangeEvent",
+        "CampaignMemberChangeEvent",
+        "CampaignMemberStatusChangeEvent",
+        "CaseChangeEvent",
+        "ChangeDataCaptureDiffeoStandard",
+        "ChangeDataStandardSales",
+        "ChangeEvents",
+        "CommSubscriptionConsentChangeEvent",
+        "CommerceChangeEvents",
+        "CommerceSearchIncrementalIndex",
+        "ConsentCDCChannel",
+        "ConsentCDCStandardChannel",
+        "ContactChangeEvent",
+        "ContactPointAddressChangeEvent",
+        "ContactPointConsentChangeEvent",
+        "ContactPointEmailChangeEvent",
+        "ContactPointPhoneChangeEvent",
+        "ContactPointTypeConsentChangeEvent",
+        "ContentDocumentChangeEvent",
+        "ContentDocumentLinkChangeEvent",
+        "ContentVersionChangeEvent",
+        "ContractChangeEvent",
+        "ConversationIntelligenceVirtualChannel",
+        "CreChangeEvents",
+        "DataCloudEntities",
+        "EinsteinDiscoveryWBChannel",
+        "EinsteinPlatformStandardChannel",
+        "EmailMessageChangeEvent",
+        "EmailTemplateChangeEvent",
+        "EventBusRelayChangeEventChannel",
+        "EventChangeEvent",
+        "EventRelationChangeEvent",
+        "EventRelayConfigChangeEvent",
+        "FTestStandardChannel",
+        "FTestStandardInternalChannel",
+        "FlowBuilderChangeData",
+        "FlowRecordChangeListenerChannel",
+        "GlobalIdentityStandard",
+        "HighVolumePriming",
+        "IndividualChangeEvent",
+        "IsotopeStandardChangeEvents",
+        "LeadChangeEvent",
+        "LearningItemProgress",
+        "ListEmailChangeEvent",
+        "ListEmailSentResultChangeEvent",
+        "MacroChangeEvent",
+        "MacroInstructionChangeEvent",
+        "ManagedContentVariantChangeEvent",
+        "Merchandising",
+        "OpportunityChangeEvent",
+        "OpportunityContactRoleChangeEvent",
+        "OrderChangeEvent",
+        "OrderItemChangeEvent",
+        "PardotSyncStdChannel",
+        "PartyConsentChangeEvent",
+        "Pricebook2ChangeEvent",
+        "PricebookEntryChangeEvent",
+        "Product2ChangeEvent",
+        "QuickTextChangeEvent",
+        "QuoteChangeEvent",
+        "QuoteLineItemChangeEvent",
+        "RecommendationChangeEvent",
+        "RecommendationReactionChangeEvent",
+        "SlackAlertsEventChannel",
+        "SocialPostChangeEvent",
+        "TaskChangeEvent",
+        "TaskRelationChangeEvent",
+        "UserChangeEvent",
+        "VideoCall",
+        "WorkPlansCDCEventChannel",
+        "Yariv__ChangeEvent",
+      ]
+    }
+    foreignKeyDomain = [
+      "CustomObject",
+      salesforce.PlatformEventChannel,
+    ]
+  }
+  string relayOption {
+  }
+  string state {
+    _restriction = {
+      enforce_value = false
+      values = [
+        "PAUSE",
+        "RUN",
+        "STOP",
+      ]
+    }
+  }
+  string internalId {
+    _hidden_value = true
+    localOnly = true
+  }
+  suffix = "eventRelay"
+  dirName = "eventRelays"
+  metadataType = "EventRelayConfig"
+  string label {
+  }
+}

@@ -1,0 +1,68 @@
+zuora_billing.Task Suspend_Template_Test1_71_ssu__Get_Subscription_By_Key@uuumuusss {
+  name = "Get Subscription By Key"
+  parameters = {
+    url = "{{ Credentials.zuora.rest_endpoint }}subscriptions/{{Data.Workflow.subscriptionIdentifier}}"
+    datas = [
+      {
+        key = ""
+        value = ""
+      },
+    ]
+    method = "GET"
+    headers = [
+      {
+        key = "apiAccessKeyId"
+        value = "{{ Credentials.zuora.username }}"
+      },
+      {
+        key = "apiSecretAccessKey"
+        value = "{{ Credentials.zuora.password }}"
+      },
+      {
+        key = ""
+        value = ""
+      },
+    ]
+    raw_body = ""
+    body_type = "raw"
+    validation = {
+      zuora_call = "true"
+      status_codes = [
+        "",
+        "200",
+      ]
+    }
+    retry_rules = {
+      retry_count = "0"
+      retry_window = "30"
+      current_retry_count = 0
+    }
+    authorization = {
+      type = "none"
+    }
+  }
+  action_type = "Callout"
+  call_type = "SOAP"
+  concurrent_limit = 9999999
+  additionalProperties = {
+    css = {
+      top = "40px"
+      left = "360px"
+    }
+    priority = "Medium"
+    
+  }
+  _parent = [
+    zuora_billing.WorkflowExport.instance.Suspend_Template_Test1_71@ssu,
+  ]
+  _generated_dependencies = [
+    {
+      reference = zuora_billing.Workflow.instance.Suspend_Template_Test1_71_ssu__Suspend_Template_Test1@uuumuuss.additionalProperties.parameters.fields
+      occurrences = [
+        {
+          location = zuora_billing.Task.instance.Suspend_Template_Test1_71_ssu__Get_Subscription_By_Key@uuumuusss.parameters.url
+        },
+      ]
+    },
+  ]
+}

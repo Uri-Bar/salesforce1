@@ -1,0 +1,16 @@
+okta.OAuth2Claim default__nickname {
+  name = "nickname"
+  status = "ACTIVE"
+  claimType = "IDENTITY"
+  valueType = "SYSTEM"
+  conditions = {
+    scopes = [
+      "profile",
+    ]
+  }
+  system = true
+  alwaysIncludeInToken = false
+  _parent = [
+    okta.AuthorizationServer.instance.default,
+  ]
+}

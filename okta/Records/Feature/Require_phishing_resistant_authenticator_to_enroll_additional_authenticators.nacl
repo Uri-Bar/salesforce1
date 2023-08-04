@@ -1,0 +1,11 @@
+okta.Feature Require_phishing_resistant_authenticator_to_enroll_additional_authenticators@sbsssss {
+  
+  type = "self-service"
+  status = "DISABLED"
+  name = "Require phishing-resistant authenticator to enroll additional authenticators"
+  description = "Users must verify their identity using a phishing-resistant authenticator before enrolling in additional authenticators."
+  stage = {
+    value = "EA"
+  }
+  
+}

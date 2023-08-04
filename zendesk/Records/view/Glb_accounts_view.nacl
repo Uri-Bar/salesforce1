@@ -1,0 +1,89 @@
+zendesk.view Glb_accounts_view@s {
+  title = "Glb accounts view"
+  active = true
+  execution = {
+    group_order = "desc"
+    sort_order = "desc"
+    columns = [
+      {
+        id = "satisfaction_score"
+        title = "Satisfaction"
+        filterable = true
+        sortable = true
+      },
+      {
+        id = "subject"
+        title = "Subject"
+        filterable = false
+        sortable = false
+      },
+      {
+        id = "requester"
+        title = "Requester"
+        filterable = true
+        sortable = true
+      },
+      {
+        id = "created"
+        title = "Requested"
+        filterable = false
+        sortable = true
+      },
+      {
+        id = "assignee"
+        title = "Assignee"
+        filterable = true
+        sortable = true
+      },
+    ]
+    fields = [
+      {
+        id = "satisfaction_score"
+        title = "Satisfaction"
+        filterable = true
+        sortable = true
+      },
+      {
+        id = "subject"
+        title = "Subject"
+        filterable = false
+        sortable = false
+      },
+      {
+        id = "requester"
+        title = "Requester"
+        filterable = true
+        sortable = true
+      },
+      {
+        id = "created"
+        title = "Requested"
+        filterable = false
+        sortable = true
+      },
+      {
+        id = "assignee"
+        title = "Assignee"
+        filterable = true
+        sortable = true
+      },
+    ]
+  }
+  conditions = {
+    all = [
+      {
+        field = "ticket_form_id"
+        operator = "is"
+        value = zendesk.ticket_form.instance.missing_6108424454167
+      },
+      {
+        field = "assignee_id"
+        operator = "is"
+        value = ""
+      },
+    ]
+  }
+  
+  raw_title = "Glb accounts view"
+  default = false
+}

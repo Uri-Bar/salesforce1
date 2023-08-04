@@ -1,0 +1,10 @@
+stripe.webhook_endpoint we_1IcrkHHipyrr1EYiSGhlscV7 {
+  id = "we_1IcrkHHipyrr1EYiSGhlscV7"
+  enabled_events = [
+    "invoice.finalization_failed",
+    "account.updated",
+  ]
+  livemode = false
+  status = "enabled"
+  url = "https://exmp.url.com"
+}

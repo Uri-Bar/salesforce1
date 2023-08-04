@@ -1,0 +1,8 @@
+salesforce.CustomTab Yariv__c {
+  fullName = "Yariv__c"
+  customObject = true
+  motif = "Custom7: Square"
+  _parent = [
+    salesforce.Yariv__c,
+  ]
+}

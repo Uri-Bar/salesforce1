@@ -1,0 +1,11 @@
+stripe.reporting_report_type tax_transactions_summarized_1@v {
+  id = "tax.transactions.summarized.1"
+  default_columns = [
+    "transactions_data_available_start",
+    "transactions_data_available_end",
+    "filing_currency",
+  ]
+  livemode = false
+  name = "Summarized tax transactions"
+  version = 1
+}

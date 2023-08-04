@@ -1,0 +1,12 @@
+okta.Feature Event_Hook_Filtering@s {
+  
+  type = "self-service"
+  status = "DISABLED"
+  name = "Event Hook Filtering"
+  description = "Allows the addition of filters to Event Hooks to only fire on specific events"
+  stage = {
+    value = "EA"
+    
+  }
+  
+}

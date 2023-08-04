@@ -1,0 +1,8 @@
+jira.Field __Remaining_Estimate@_00931ss {
+  name = "Σ Remaining Estimate"
+  schema = {
+    type = "number"
+    system = "aggregatetimeestimate"
+  }
+  description = ""
+}

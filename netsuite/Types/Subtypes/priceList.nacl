@@ -1,0 +1,14 @@
+type netsuite.priceList {
+  annotations {
+    hidden_string source {
+    }
+  }
+  "List<netsuite.price>" price {
+  }
+  number custom_custentity_slt_tax_reg {
+    field_instance = netsuite.entitycustomfield.instance.custentity_slt_tax_reg.scriptid
+  }
+  string custom_custentityproduct_type {
+    field_instance = netsuite.entitycustomfield.instance.custentityproduct_type.scriptid
+  }
+}

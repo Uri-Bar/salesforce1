@@ -1,0 +1,12 @@
+netsuite.file SuiteBundles_SDF_Conversions_sdf_conversion_458768_zip@duduuv {
+  bundleable = false
+  isinactive = false
+  availablewithoutlogin = false
+  generateurltimestamp = false
+  hideinbundle = false
+  path = "/SuiteBundles/SDF_Conversions/sdf_conversion_458768.zip"
+  content = file("netsuite/FileCabinet/SuiteBundles/SDF_Conversions/sdf_conversion_458768.zip")
+  _parent = [
+    netsuite.folder.instance.SuiteBundles_SDF_Conversions@du,
+  ]
+}

@@ -1,0 +1,110 @@
+zuora_billing.Task Bill_Run_Callout___Print_Invoices_35_sssbssu__Get_Invoices_From_Bill_Run@uuuuuuumuussss {
+  name = "Get Invoices From Bill Run"
+  parameters = {
+    fields = {
+      Account = {
+        Id = "true"
+        Name = "true"
+      }
+      Invoice = {
+        Id = "true"
+      }
+      InvoiceItem = {
+        Id = "true"
+        Quantity = "true"
+        ChargeDate = "true"
+        ChargeName = "true"
+      }
+    }
+    where_clause = "Invoice.SourceId =  '{{Data.BillingRun.Id}}' "
+  }
+  action_type = "Export"
+  object = zuora_billing.invoiceitem
+  call_type = "SOAP"
+  concurrent_limit = 9999999
+  additionalProperties = {
+    css = {
+      top = "40px"
+      left = "330px"
+    }
+    priority = "Medium"
+    
+  }
+  _parent = [
+    zuora_billing.WorkflowExport.instance.Bill_Run_Callout___Print_Invoices_35@sssbssu,
+  ]
+  _generated_dependencies = [
+    {
+      reference = zuora_billing.account.field.Id
+      occurrences = [
+        {
+          location = zuora_billing.Task.instance.Bill_Run_Callout___Print_Invoices_35_sssbssu__Get_Invoices_From_Bill_Run@uuuuuuumuussss.parameters.fields.Account.Id
+        },
+      ]
+    },
+    {
+      reference = zuora_billing.account.field.Name
+      occurrences = [
+        {
+          location = zuora_billing.Task.instance.Bill_Run_Callout___Print_Invoices_35_sssbssu__Get_Invoices_From_Bill_Run@uuuuuuumuussss.parameters.fields.Account.Name
+        },
+      ]
+    },
+    {
+      reference = zuora_billing.billingrun.field.Id
+      occurrences = [
+        {
+          location = zuora_billing.Task.instance.Bill_Run_Callout___Print_Invoices_35_sssbssu__Get_Invoices_From_Bill_Run@uuuuuuumuussss.parameters.where_clause
+        },
+      ]
+    },
+    {
+      reference = zuora_billing.invoice.field.Id
+      occurrences = [
+        {
+          location = zuora_billing.Task.instance.Bill_Run_Callout___Print_Invoices_35_sssbssu__Get_Invoices_From_Bill_Run@uuuuuuumuussss.parameters.fields.Invoice.Id
+        },
+      ]
+    },
+    {
+      reference = zuora_billing.invoice.field.SourceId
+      occurrences = [
+        {
+          location = zuora_billing.Task.instance.Bill_Run_Callout___Print_Invoices_35_sssbssu__Get_Invoices_From_Bill_Run@uuuuuuumuussss.parameters.where_clause
+        },
+      ]
+    },
+    {
+      reference = zuora_billing.invoiceitem.field.ChargeDate
+      occurrences = [
+        {
+          location = zuora_billing.Task.instance.Bill_Run_Callout___Print_Invoices_35_sssbssu__Get_Invoices_From_Bill_Run@uuuuuuumuussss.parameters.fields.InvoiceItem.ChargeDate
+        },
+      ]
+    },
+    {
+      reference = zuora_billing.invoiceitem.field.ChargeName
+      occurrences = [
+        {
+          location = zuora_billing.Task.instance.Bill_Run_Callout___Print_Invoices_35_sssbssu__Get_Invoices_From_Bill_Run@uuuuuuumuussss.parameters.fields.InvoiceItem.ChargeName
+        },
+      ]
+    },
+    {
+      reference = zuora_billing.invoiceitem.field.Id
+      occurrences = [
+        {
+          location = zuora_billing.Task.instance.Bill_Run_Callout___Print_Invoices_35_sssbssu__Get_Invoices_From_Bill_Run@uuuuuuumuussss.parameters.fields.InvoiceItem.Id
+        },
+      ]
+    },
+    {
+      reference = zuora_billing.invoiceitem.field.Quantity
+      occurrences = [
+        {
+          location = zuora_billing.Task.instance.Bill_Run_Callout___Print_Invoices_35_sssbssu__Get_Invoices_From_Bill_Run@uuuuuuumuussss.parameters.fields.InvoiceItem.Quantity
+        },
+      ]
+    },
+  ]
+}

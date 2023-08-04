@@ -1,0 +1,15 @@
+netsuite.account Unapproved_Expense_Reports@s {
+  acctType = "_nonPosting"
+  acctName = "Unapproved Expense Reports"
+  includeChildren = true
+  generalRate = "_average"
+  cashFlowRate = "_average"
+  isInactive = false
+  inventory = false
+  subsidiaryList = [
+    netsuite.subsidiary.instance.Parent_Company@s,
+  ]
+  revalue = false
+  identifier = "Unapproved Expense Reports"
+  custom_custrecord_acct_special = false
+}

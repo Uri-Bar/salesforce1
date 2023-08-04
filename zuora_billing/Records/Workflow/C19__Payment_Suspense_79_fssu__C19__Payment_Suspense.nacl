@@ -1,0 +1,110 @@
+zuora_billing.Workflow C19__Payment_Suspense_79_fssu__C19__Payment_Suspense@uuuumuufss {
+  id = 79
+  name = "C19: Payment Suspense"
+  description = "Please see https://knowledgecenter.zuora.com/Covid-19_Response_Workflow_Guide/Payment_Suspense_Management for details."
+  type = "Workflow::Setup"
+  status = "Active"
+  version = "0.0.1"
+  additionalProperties = {
+    parameters = {
+      fields = [
+        {
+          index = "0"
+          default = true
+          datatype = "Boolean"
+          required = true
+          callout_id = "TermsOfUse"
+          field_name = "TermsOfUse"
+          instruction = "This is a sample workflow provided by Zuora without any expressed guarantees whatsoever. Customer can take this as a starting point to build their own version of a workflow to achieve the desired results. Zuora is not responsible nor provides support for the execution of this workflow within any of the Customer's tenants including, but not limited to Sandbox, Production, PCE"
+          object_name = "Workflow"
+        },
+        {
+          index = "1"
+          datatype = "File-Field"
+          required = true
+          callout_id = "AccountNumbersFile"
+          field_name = "AccountNumbersFile"
+          instruction = '''
+CSV file with the required column of "Account: AccountNumber". Other columns are optional, but ignored.
+....................................**FILE CAN BE EMPTY, so all applicable Subs will be effected**
+'''
+          object_name = "Files"
+        },
+        {
+          index = "2"
+          default = "suspend"
+          datatype = "Text"
+          required = false
+          callout_id = "SuspendOrResume"
+          field_name = "SuspendOrResume"
+          instruction = '''
+suspend: Disables the selected accounts "Auto Pay" flag.
+resume: Enables the selected accounts "Auto Pay" flag, 
+ASSUMING THEY WERE PREVIOUSLY SUSPENDED VIA THE WORKFLOW!!
+'''
+          object_name = "Workflow"
+        },
+        {
+          index = "3"
+          default = true
+          datatype = "Boolean"
+          required = false
+          callout_id = "justTestNDebug?"
+          field_name = "justTestNDebug?"
+          instruction = "False: Updates autoPay flag on Accounts. True: Prepares changes for up to 5 Accounts, but DOES NOT execute them"
+          object_name = "Workflow"
+        },
+        {
+          index = "4"
+          default = 1.5
+          datatype = "Decimal"
+          required = false
+          callout_id = "backOffMultiplier"
+          field_name = "backOffMultiplier"
+          instruction = '''
+Used internally to retry external running tasks that may glitch: Values > 1 would be used to stretch the interval time between retries.
+Values < 1 would actually shrink the interval between retries. Example, 1.5
+'''
+          object_name = "Workflow"
+        },
+        {
+          index = "5"
+          default = 3
+          datatype = "Integer"
+          required = false
+          callout_id = "retryMinutes"
+          field_name = "retryMinutes"
+          instruction = "Used internally to retry external running tasks that may glitch: Initial number of the interval minutes to wait between retries. As retries increase the wait time would change as well according to the backOffMultiplier. Example, 5"
+          object_name = "Workflow"
+        },
+      ]
+      avoid_skipping = "false"
+      skipping_check = "redis"
+      file_encryption = "false"
+      callout_response = "workflow instance"
+      secure_error_msgs = "false"
+      disable_pending_status = true
+    }
+    ondemand_trigger = true
+    callout_trigger = true
+    scheduled_trigger = false
+    css = {
+      top = "40px"
+      left = "-90px"
+    }
+    notifications = {
+      failure = false
+      pending = false
+      success = false
+    }
+    call_type = "ASYNC"
+    priority = "Medium"
+    delete_ttl = 30
+    
+    
+    event_trigger = false
+  }
+  _parent = [
+    zuora_billing.WorkflowExport.instance.C19__Payment_Suspense_79@fssu,
+  ]
+}

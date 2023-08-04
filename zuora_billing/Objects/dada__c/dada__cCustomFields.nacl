@@ -1,0 +1,11 @@
+type zuora_billing.dada__c {
+  string baba__c {
+    maxLength = 512
+    label = "baba"
+    origin = "custom"
+    type = "string"
+    description = " "
+    required = false
+    filterable = false
+  }
+}

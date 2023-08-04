@@ -1,0 +1,11 @@
+zendesk.user_field regex_6546 {
+  type = "regexp"
+  key = "regex_6546"
+  
+  
+  raw_title = "regex 6546"
+  raw_description = ""
+  active = true
+  system = false
+  regexp_for_validation = "^prefix"
+}

@@ -1,0 +1,30 @@
+zuora_billing.Task C19__Goodwill_Discount_Recall_68_fsssu__Summary_of_Amendments_Orders@uuuuumuussd {
+  name = "Summary of Amendments/Orders"
+  parameters = {
+    code = "200"
+    template = '''
+{
+  "success": true,
+  "stats":
+    {{ Data.Iterate.Tasks | to_json }}
+}
+'''
+    processor = "Liquid"
+    strict_variables = "true"
+  }
+  action_type = "Logic::ResponseFormatter"
+  call_type = "SOAP"
+  task_id = 83
+  concurrent_limit = 9999999
+  additionalProperties = {
+    css = {
+      top = "290px"
+      left = "940px"
+    }
+    priority = "Medium"
+    
+  }
+  _parent = [
+    zuora_billing.WorkflowExport.instance.C19__Goodwill_Discount_Recall_68@fsssu,
+  ]
+}

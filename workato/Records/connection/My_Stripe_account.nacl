@@ -1,0 +1,5 @@
+workato.connection My_Stripe_account@s {
+  application = "stripe"
+  name = "My Stripe account"
+  folder_id = workato.folder.instance.Gil_318283
+}

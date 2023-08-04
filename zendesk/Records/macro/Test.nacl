@@ -1,0 +1,18 @@
+zendesk.macro Test {
+  title = "Test"
+  active = true
+  actions = [
+    {
+      field = "status"
+      value = "solved"
+    },
+  ]
+  restriction = {
+    type = "Group"
+    ids = [
+      zendesk.group.instance.Support,
+    ]
+  }
+  raw_title = "Test"
+  default = false
+}

@@ -1,0 +1,58 @@
+zuora_billing.Task AllBrighter_Bundle_Set_Up_Workflow_67_ssssu__Get_Products@uuuuumuus {
+  name = "Get Products"
+  parameters = {
+    fields = {
+      Product = {
+        Id = "true"
+        SKU = "true"
+        Name = "true"
+      }
+    }
+    placement = ""
+    batch_size = "2000"
+    where_clause = "Name = 'AllBrighter Bundle'"
+    strict_variables = "true"
+    zero_query_proceed = "false"
+  }
+  action_type = "Query"
+  object = zuora_billing.product
+  call_type = "SOAP"
+  concurrent_limit = 9999999
+  additionalProperties = {
+    css = {
+      top = "-390px"
+      left = "50px"
+    }
+    priority = "Medium"
+    
+  }
+  _parent = [
+    zuora_billing.WorkflowExport.instance.AllBrighter_Bundle_Set_Up_Workflow_67@ssssu,
+  ]
+  _generated_dependencies = [
+    {
+      reference = zuora_billing.product.field.Id
+      occurrences = [
+        {
+          location = zuora_billing.Task.instance.AllBrighter_Bundle_Set_Up_Workflow_67_ssssu__Get_Products@uuuuumuus.parameters.fields.Product.Id
+        },
+      ]
+    },
+    {
+      reference = zuora_billing.product.field.Name
+      occurrences = [
+        {
+          location = zuora_billing.Task.instance.AllBrighter_Bundle_Set_Up_Workflow_67_ssssu__Get_Products@uuuuumuus.parameters.fields.Product.Name
+        },
+      ]
+    },
+    {
+      reference = zuora_billing.product.field.SKU
+      occurrences = [
+        {
+          location = zuora_billing.Task.instance.AllBrighter_Bundle_Set_Up_Workflow_67_ssssu__Get_Products@uuuuumuus.parameters.fields.Product.SKU
+        },
+      ]
+    },
+  ]
+}

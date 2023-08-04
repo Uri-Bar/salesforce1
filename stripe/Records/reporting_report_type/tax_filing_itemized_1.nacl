@@ -1,0 +1,24 @@
+stripe.reporting_report_type tax_filing_itemized_1@v {
+  id = "tax.filing.itemized.1"
+  default_columns = [
+    "transaction_date_start",
+    "transaction_date_end",
+    "filing_currency",
+    "country_code",
+    "state_code",
+    "jurisdiction_name",
+    "jurisdiction_level",
+    "tax_rate",
+    "filing_total_sales",
+    "filing_total_taxable_sales",
+    "filing_total_nontaxable_sales",
+    "filing_total_tax_collected",
+    "filing_total_refunds",
+    "filing_total_tax_refunded",
+    "filing_total_taxable_refunds",
+    "filing_tax_payable",
+  ]
+  livemode = false
+  name = "Summarized tax transactions"
+  version = 1
+}

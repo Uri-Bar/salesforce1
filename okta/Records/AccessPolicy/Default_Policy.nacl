@@ -1,0 +1,8 @@
+okta.AccessPolicy Default_Policy@s {
+  status = "ACTIVE"
+  name = "Default Policy"
+  priority = 1
+  system = true
+  type = "ACCESS_POLICY"
+  
+}

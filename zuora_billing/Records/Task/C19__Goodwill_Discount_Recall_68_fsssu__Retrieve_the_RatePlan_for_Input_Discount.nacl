@@ -1,0 +1,59 @@
+zuora_billing.Task C19__Goodwill_Discount_Recall_68_fsssu__Retrieve_the_RatePlan_for_Input_Discount@uuuuumuusssss {
+  name = "Retrieve the RatePlan for Input Discount"
+  parameters = {
+    fields = {
+      ProductRatePlan = {
+        Id = "true"
+        Name = "true"
+        Description = "true"
+      }
+    }
+    placement = "theGoodwillRatePlan"
+    batch_size = "2000"
+    where_clause = " Name =  '{{Data.DiscountClass.Name}}'"
+    strict_variables = "true"
+    zero_query_proceed = "false"
+  }
+  action_type = "Query"
+  object = zuora_billing.productrateplan
+  call_type = "SOAP"
+  task_id = 80
+  concurrent_limit = 9999999
+  additionalProperties = {
+    css = {
+      top = "210px"
+      left = "80px"
+    }
+    priority = "Medium"
+    
+  }
+  _parent = [
+    zuora_billing.WorkflowExport.instance.C19__Goodwill_Discount_Recall_68@fsssu,
+  ]
+  _generated_dependencies = [
+    {
+      reference = zuora_billing.productrateplan.field.Description
+      occurrences = [
+        {
+          location = zuora_billing.Task.instance.C19__Goodwill_Discount_Recall_68_fsssu__Retrieve_the_RatePlan_for_Input_Discount@uuuuumuusssss.parameters.fields.ProductRatePlan.Description
+        },
+      ]
+    },
+    {
+      reference = zuora_billing.productrateplan.field.Id
+      occurrences = [
+        {
+          location = zuora_billing.Task.instance.C19__Goodwill_Discount_Recall_68_fsssu__Retrieve_the_RatePlan_for_Input_Discount@uuuuumuusssss.parameters.fields.ProductRatePlan.Id
+        },
+      ]
+    },
+    {
+      reference = zuora_billing.productrateplan.field.Name
+      occurrences = [
+        {
+          location = zuora_billing.Task.instance.C19__Goodwill_Discount_Recall_68_fsssu__Retrieve_the_RatePlan_for_Input_Discount@uuuuumuusssss.parameters.fields.ProductRatePlan.Name
+        },
+      ]
+    },
+  ]
+}

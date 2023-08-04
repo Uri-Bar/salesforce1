@@ -1,0 +1,30 @@
+zuora_billing.Task C19__Goodwill_Discount_Recall_68_fsssu__Validation_Kaput_@uuuuumuusl {
+  name = "Validation Kaput!"
+  parameters = {
+    code = "400"
+    template = '''
+{
+  "success": false,
+  "errorMessages":
+    {{ Data.Liquid.myErrorMessages | split: '|' | to_json }}
+}
+'''
+    processor = "Liquid"
+    strict_variables = "true"
+  }
+  action_type = "Logic::ResponseFormatter"
+  call_type = "SOAP"
+  task_id = 87
+  concurrent_limit = 9999999
+  additionalProperties = {
+    css = {
+      top = "-170px"
+      left = "240px"
+    }
+    priority = "Medium"
+    
+  }
+  _parent = [
+    zuora_billing.WorkflowExport.instance.C19__Goodwill_Discount_Recall_68@fsssu,
+  ]
+}

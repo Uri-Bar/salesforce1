@@ -1,0 +1,31 @@
+workato.recipe New_Workbot_post_message_Root@sssu {
+  name = "New Workbot post message"
+  action_applications = [
+    "slack_bot",
+    "salesforce",
+  ]
+  applications = [
+    "slack_bot",
+    "salesforce",
+  ]
+  description = "When there is a trigger event, post message as Slack Workbot"
+  folder_id = workato.folder.instance.Root
+  running = false
+  version_no = 2
+  config = [
+    {
+      keyword = "application"
+      name = "slack_bot"
+      provider = "slack_bot"
+      account_id = workato.connection.instance.Dodel_Workbot_for_slack@s
+      skip_validation = false
+    },
+    {
+      keyword = "application"
+      name = "salesforce"
+      provider = "salesforce"
+      skip_validation = false
+    },
+  ]
+  code = workato.recipe__code.instance.New_Workbot_post_message_Root_sssu@uuuum
+}

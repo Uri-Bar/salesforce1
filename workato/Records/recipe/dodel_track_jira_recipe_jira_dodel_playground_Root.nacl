@@ -1,0 +1,21 @@
+workato.recipe dodel_track_jira_recipe_jira_dodel_playground_Root@sssuuuu {
+  name = "dodel track jira recipe"
+  trigger_application = "jira"
+  applications = [
+    "jira",
+  ]
+  description = "When there is a trigger event, do action"
+  folder_id = workato.folder.instance.jira_dodel_playground_Root
+  running = false
+  version_no = 5
+  config = [
+    {
+      keyword = "application"
+      name = "jira"
+      provider = "jira"
+      skip_validation = false
+      account_id = workato.connection.instance.Jira_track_connection@s
+    },
+  ]
+  code = workato.recipe__code.instance.dodel_track_jira_recipe_jira_dodel_playground_Root_sssuuuu@uuuuuuum
+}

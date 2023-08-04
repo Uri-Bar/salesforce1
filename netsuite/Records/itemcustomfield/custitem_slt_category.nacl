@@ -1,0 +1,36 @@
+netsuite.itemcustomfield custitem_slt_category {
+  scriptid = "custitem_slt_category"
+  accesslevel = "2"
+  appliestogroup = false
+  appliestoinventory = true
+  appliestokit = true
+  appliestononinventory = false
+  appliestoothercharge = false
+  appliestopricelist = false
+  appliestoservice = false
+  appliestospecificitems = false
+  appliestosubplan = false
+  applyformatting = false
+  checkspelling = true
+  defaultchecked = false
+  description = "Category item"
+  displaytype = "STATICTEXT"
+  encryptatrest = false
+  fieldtype = "CLOBTEXT"
+  globalsearch = false
+  help = "This is category"
+  includechilditems = false
+  isformula = false
+  ismandatory = false
+  isparent = false
+  itemmatrix = false
+  itemsubtype = "BOTH"
+  label = "Category"
+  searchlevel = "2"
+  showhierarchy = false
+  showinlist = false
+  storevalue = true
+  subtab = "ITEMBASIC"
+  appliestoexpense = false
+  appliestoitemassembly = false
+}

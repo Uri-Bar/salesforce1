@@ -1,0 +1,21 @@
+zendesk.ticket_field GWR_classification_tagger@su {
+  type = "tagger"
+  raw_title = "GWR classification"
+  raw_description = ""
+  active = true
+  required = false
+  collapsed_for_agents = false
+  raw_title_in_portal = "GWR ticket field"
+  visible_in_portal = true
+  editable_in_portal = true
+  required_in_portal = false
+  removable = true
+  custom_field_options = [
+    zendesk.ticket_field__custom_field_options.instance.GWR_classification_tagger_su__green@uumuu,
+    zendesk.ticket_field__custom_field_options.instance.GWR_classification_tagger_su__yellow@uumuu,
+    zendesk.ticket_field__custom_field_options.instance.GWR_classification_tagger_su__blue@uumuu,
+    zendesk.ticket_field__custom_field_options.instance.GWR_classification_tagger_su__red@uumuu,
+    zendesk.ticket_field__custom_field_options.instance.GWR_classification_tagger_su__purple@uumuu,
+    zendesk.ticket_field__custom_field_options.instance.GWR_classification_tagger_su__orange@uumuu,
+  ]
+}

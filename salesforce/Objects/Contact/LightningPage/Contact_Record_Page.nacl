@@ -1,0 +1,246 @@
+salesforce.LightningPage Contact_Record_Page {
+  fullName = "Contact_Record_Page"
+  flexiPageRegions = [
+    {
+      itemInstances = [
+        {
+          componentInstance = {
+            componentInstanceProperties = [
+              {
+                name = "collapsed"
+                value = "false"
+              },
+            ]
+            componentName = "force:highlightsPanel"
+          }
+        },
+      ]
+      mode = "Replace"
+      name = "header"
+      type = "Region"
+    },
+    {
+      itemInstances = [
+        {
+          componentInstance = {
+            componentInstanceProperties = [
+              {
+                name = "displayOption"
+                value = "CARD"
+              },
+            ]
+            componentName = "runtime_sales_merge:mergeCandidatesPreviewCard"
+          }
+        },
+        {
+          componentInstance = {
+            componentName = "force:relatedListQuickLinksContainer"
+          }
+        },
+        {
+          componentInstance = {
+            componentName = "force:relatedListContainer"
+          }
+        },
+      ]
+      mode = "Replace"
+      name = "relatedTabContent"
+      type = "Facet"
+    },
+    {
+      itemInstances = [
+        {
+          componentInstance = {
+            componentInstanceProperties = [
+              {
+                name = "active"
+                value = "true"
+              },
+              {
+                name = "body"
+                value = "relatedTabContent"
+              },
+              {
+                name = "title"
+                value = "Standard.Tab.relatedLists"
+              },
+            ]
+            componentName = "flexipage:tab"
+          }
+        },
+        {
+          componentInstance = {
+            componentInstanceProperties = [
+              {
+                name = "body"
+                value = "detailTabContent"
+              },
+              {
+                name = "title"
+                value = "Standard.Tab.detail"
+              },
+            ]
+            componentName = "flexipage:tab"
+          }
+        },
+        {
+          componentInstance = {
+            componentInstanceProperties = [
+              {
+                name = "body"
+                value = "facet-4a718b64-c93a-412d-99fb-a8fcd7ca1c57"
+              },
+              {
+                name = "title"
+                value = "News"
+              },
+            ]
+            componentName = "flexipage:tab"
+          }
+        },
+      ]
+      mode = "Replace"
+      name = "maintabs"
+      type = "Facet"
+    },
+    {
+      itemInstances = [
+        {
+          componentInstance = {
+            componentInstanceProperties = [
+              {
+                name = "tabs"
+                value = "maintabs"
+              },
+            ]
+            componentName = "flexipage:tabset"
+          }
+        },
+      ]
+      mode = "Replace"
+      name = "main"
+      type = "Region"
+    },
+    {
+      itemInstances = [
+        {
+          componentInstance = {
+            componentInstanceProperties = [
+              {
+                name = "active"
+                value = "true"
+              },
+              {
+                name = "body"
+                value = "activityTabContent"
+              },
+              {
+                name = "title"
+                value = "Standard.Tab.activity"
+              },
+            ]
+            componentName = "flexipage:tab"
+          }
+        },
+        {
+          componentInstance = {
+            componentInstanceProperties = [
+              {
+                name = "body"
+                value = "feedTabContent"
+              },
+              {
+                name = "title"
+                value = "Standard.Tab.collaborate"
+              },
+            ]
+            componentName = "flexipage:tab"
+          }
+        },
+      ]
+      mode = "Replace"
+      name = "sidebartabs"
+      type = "Facet"
+    },
+    {
+      itemInstances = [
+        {
+          componentInstance = {
+            componentInstanceProperties = [
+              {
+                name = "tabs"
+                value = "sidebartabs"
+              },
+            ]
+            componentName = "flexipage:tabset"
+          }
+        },
+      ]
+      mode = "Replace"
+      name = "sidebar"
+      type = "Region"
+    },
+    {
+      itemInstances = [
+        {
+          componentInstance = {
+            componentName = "force:detailPanel"
+          }
+        },
+      ]
+      mode = "Replace"
+      name = "detailTabContent"
+      type = "Facet"
+    },
+    {
+      itemInstances = [
+        {
+          componentInstance = {
+            componentName = "runtime_sales_social:socialPanel"
+          }
+        },
+        {
+          componentInstance = {
+            componentName = "wits:newsPanel"
+          }
+        },
+      ]
+      name = "facet-4a718b64-c93a-412d-99fb-a8fcd7ca1c57"
+      type = "Facet"
+    },
+    {
+      itemInstances = [
+        {
+          componentInstance = {
+            componentName = "runtime_sales_activities:activityPanel"
+          }
+        },
+      ]
+      mode = "Replace"
+      name = "activityTabContent"
+      type = "Facet"
+    },
+    {
+      itemInstances = [
+        {
+          componentInstance = {
+            componentName = "forceChatter:recordFeedContainer"
+          }
+        },
+      ]
+      mode = "Replace"
+      name = "feedTabContent"
+      type = "Facet"
+    },
+  ]
+  masterLabel = "Contact Record Page"
+  parentFlexiPage = "sfa__Contact_rec_L"
+  sobjectType = "Contact"
+  template = {
+    name = "flexipage:recordHomeTemplateDesktop"
+  }
+  type = "RecordPage"
+  _parent = [
+    salesforce.Contact,
+  ]
+}

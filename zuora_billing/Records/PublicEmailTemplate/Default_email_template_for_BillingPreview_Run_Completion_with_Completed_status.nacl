@@ -1,0 +1,21 @@
+zuora_billing.PublicEmailTemplate Default_email_template_for_BillingPreview_Run_Completion_with_Completed_status@s {
+  eventCategory = 1710
+  name = "Default email template for BillingPreview Run Completion with Completed status"
+  description = ""
+  encodingType = "UTF8"
+  fromName = "Admin"
+  fromEmailType = "SpecificEmail"
+  fromEmailAddress = "support@zuora.com"
+  replyToEmailType = "SpecificEmail"
+  replyToEmailAddress = "support@zuora.com"
+  ccEmailType = "SpecificEmails"
+  ccEmailAddress = ""
+  bccEmailAddress = ""
+  toEmailType = "RunOwner"
+  toEmailAddress = ""
+  emailSubject = "BillingPreview Run Notification: <BillingPreviewRun.Status>"
+  emailBody = "Dear Customer,\r<br />\r<br />The BillingPreview Run operation you requested has completed successfully.\r<br />\r<br />BillingPreview Run Information\r<br />BillingPreview Run Number:                      <BillingPreviewRun.Number>\r<br />Batch Included:                           <BillingPreviewRun.Batch>\r<br />Target Date:                              <BillingPreviewRun.TargetDate>\r<br />Charge Type To Exclude:                   <BillingPreviewRun.ChargeTypeToExclude>\r<br />Including Evergreen Subscription:         <BillingPreviewRun.IncludingEvergreenSubscription>\r<br />Executed On:                              <BillingPreviewRun.ExecutedOn>\r<br />BillingPreview Run Status:                      <BillingPreviewRun.Status>\r<br />Status Description:                       <BillingPreviewRun.StatusDescription>\r<br />Total Accounts Attempted:                 <BillingPreviewRun.TotalAccounts>\r<br />Total Accounts Succeeded:                 <BillingPreviewRun.SucceededAccounts>\r<br />\r<br />For additional BillingPreview Run result`s details, please visit: <BillingPreviewRun.ResultFileUrl>\r<br />\r<br />Thank you,\r<br />\r<br />-Zuora"
+  active = true
+  isHtml = true
+  useAdditionalAddresses = false
+}

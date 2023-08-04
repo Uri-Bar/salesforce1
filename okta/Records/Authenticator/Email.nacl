@@ -1,0 +1,12 @@
+okta.Authenticator Email {
+  type = "email"
+  
+  key = "okta_email"
+  status = "ACTIVE"
+  name = "Email"
+  settings = {
+    allowedFor = "recovery"
+    tokenLifetimeInMinutes = 5
+  }
+  
+}

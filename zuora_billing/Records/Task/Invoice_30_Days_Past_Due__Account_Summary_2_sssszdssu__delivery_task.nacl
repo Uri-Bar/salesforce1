@@ -1,0 +1,26 @@
+zuora_billing.Task Invoice_30_Days_Past_Due__Account_Summary_2_sssszdssu__delivery_task@uuuuuuuumuus {
+  name = "delivery task"
+  parameters = {
+    ids = ""
+    query = "status:Active"
+    strict_variables = "true"
+    zero_result_stop = "false"
+    alternate_location = ""
+  }
+  action_type = "CustomObject::Query"
+  object = zuora_billing.Delivery1__c
+  call_type = "SOAP"
+  task_id = 17120
+  concurrent_limit = 9999999
+  additionalProperties = {
+    css = {
+      top = "470px"
+      left = "680px"
+    }
+    priority = "Medium"
+    
+  }
+  _parent = [
+    zuora_billing.WorkflowExport.instance.Invoice_30_Days_Past_Due__Account_Summary_2@sssszdssu,
+  ]
+}

@@ -1,0 +1,37 @@
+type zuora_billing.extendedtaxationitem {
+  annotations {
+    string metadataType {
+    }
+    string label {
+    }
+    string description {
+    }
+    hidden_string id {
+    }
+    string objectType {
+    }
+  }
+  metadataType = "StandardObject"
+  objectType = "extendedtaxationitem"
+  _generated_dependencies = [
+    {
+      reference = zuora_billing.accountingcode
+    },
+    {
+      reference = zuora_billing.extendeddiscountinvoiceitem
+    },
+    {
+      reference = zuora_billing.extendedinvoice
+    },
+    {
+      reference = zuora_billing.extendedinvoiceitem
+    },
+    {
+      reference = zuora_billing.extendeduser
+    },
+    {
+      reference = zuora_billing.journalentry
+    },
+  ]
+  label = "ExtendedTaxationItem"
+}

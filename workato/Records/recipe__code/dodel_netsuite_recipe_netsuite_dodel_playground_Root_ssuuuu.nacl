@@ -1,0 +1,405 @@
+workato.recipe__code dodel_netsuite_recipe_netsuite_dodel_playground_Root_ssuuuu@uuuuuum {
+  number = 0
+  provider = "netsuite"
+  name = "updated_object"
+  as = "b1c4c79c"
+  title = "New/updated Customer"
+  description = '''
+          New or updated <span class="provider">Customer</span>
+          in <span class="provider">NetSuite</span>
+
+'''
+  keyword = "trigger"
+  dynamicPickListSelection = {
+    netsuite_object = "Deposit"
+    custom_list = [
+      {
+        label = "LSA Link"
+        value = "transactionBodyCustomField@custbody_link_lsa"
+      },
+    ]
+  }
+  input = {
+    netsuite_object = "deposit@@script"
+    since = "#{_('data.workato.job_context.user_id')}#{_('data.workato.job_context.user_email')}#{_('data.workato.job_context.recipe_name')}"
+    custom_list = "transactionBodyCustomField@custbody_link_lsa"
+  }
+  block = [
+    {
+      number = 1
+      keyword = "action"
+      uuid = "511ed1f6-c846-48cd-9cae-65ce3bc881b6"
+    },
+    {
+      number = 2
+      provider = "netsuite"
+      name = "search_object_v2"
+      as = "221513d0"
+      title = "Search Accounts"
+      description = "Search <span class=\"provider\">Accounts</span> in <span class=\"provider\">NetSuite</span>"
+      keyword = "action"
+      dynamicPickListSelection = {
+        netsuite_object = "Account"
+        field_list = [
+          {
+            label = "Balance"
+            value = "balance"
+          },
+          {
+            label = "Cash flow rate type"
+            value = "cashFlowRateType"
+          },
+          {
+            label = "Description"
+            value = "description"
+          },
+          {
+            label = "Subsidiary"
+            value = "subsidiary"
+          },
+        ]
+      }
+      input = {
+        netsuite_object = "account@@script"
+        limit = "25"
+        search_settings = {
+          string_fields = "contains"
+          integer_fields = "equalTo"
+          list_fields = "anyOf"
+        }
+        field_list = '''
+balance
+cashFlowRateType
+description
+subsidiary
+'''
+      }
+      uuid = "60a9ff09-eb68-4a32-b9f2-f1c09bef0537"
+    },
+    {
+      number = 3
+      provider = "netsuite"
+      name = "search_object_v2"
+      as = "19c71e17"
+      title = "Search Accounting  periods"
+      description = "Search <span class=\"provider\">Accounting  periods</span> in <span class=\"provider\">NetSuite</span>"
+      keyword = "action"
+      dynamicPickListSelection = {
+        netsuite_object = "Employee"
+      }
+      input = {
+        netsuite_object = "Employee@@script"
+        limit = "25"
+        search_settings = {
+          string_fields = "contains"
+          integer_fields = "equalTo"
+          list_fields = "anyOf"
+        }
+      }
+      uuid = "3f1c5221-a20e-41e3-bc82-43ad578a78df"
+    },
+    {
+      number = 4
+      provider = "netsuite"
+      name = "search_object_v2"
+      as = "34f44db1"
+      title = "Search Contact  roles"
+      description = "Search <span class=\"provider\">Contact  roles</span> in <span class=\"provider\">NetSuite</span>"
+      keyword = "action"
+      dynamicPickListSelection = {
+        netsuite_object = "Customer"
+        field_list = [
+          {
+            label = "Address"
+            value = "address"
+          },
+          {
+            label = "Addressee"
+            value = "addressee"
+          },
+          {
+            label = "Alt contact"
+            value = "altContact"
+          },
+        ]
+        custom_list = [
+          {
+            label = "No. of Employees"
+            value = "entityCustomField@custentity_esc_no_of_employees"
+          },
+          {
+            label = "Last Modified Date"
+            value = "entityCustomField@custentity_esc_last_modified_date"
+          },
+        ]
+      }
+      input = {
+        netsuite_object = "customer@@script"
+        limit = "25"
+        search_settings = {
+          string_fields = "contains"
+          integer_fields = "equalTo"
+          list_fields = "anyOf"
+        }
+        field_list = '''
+address
+addressee
+altContact
+'''
+        custom_list = '''
+entityCustomField@custentity_esc_no_of_employees
+entityCustomField@custentity_esc_last_modified_date
+'''
+      }
+      uuid = "c0dbc287-be48-4bc9-9323-c24a3a0fb4d7"
+    },
+    {
+      number = 5
+      provider = "netsuite"
+      name = "search_object_v2"
+      as = "1398e346"
+      keyword = "action"
+      dynamicPickListSelection = {
+        netsuite_object = "Customer"
+      }
+      input = {
+        netsuite_object = "customer@@script"
+        limit = "25"
+        search_settings = {
+          string_fields = "contains"
+          integer_fields = "equalTo"
+          list_fields = "anyOf"
+        }
+        searchId = "#{_('data.netsuite.221513d0.pageIndex')}#{_('data.netsuite.221513d0.totalPages')}"
+      }
+      visible_config_fields = [
+        "netsuite_object",
+        "limit",
+        "field_list",
+        "custom_list",
+        "custom_column_list",
+        "search_settings",
+        "search_settings.string_fields",
+        "search_settings.integer_fields",
+        "search_settings.list_fields",
+        "searchId",
+      ]
+      uuid = "27ad0c0d-8de4-465d-97f7-aa5b8c1cdeba"
+    },
+    {
+      number = 6
+      provider = "netsuite"
+      name = "search_object_v2"
+      as = "ba8cba2c"
+      keyword = "action"
+      dynamicPickListSelection = {
+        netsuite_object = "Account"
+      }
+      input = {
+        netsuite_object = "account@@script"
+        limit = "25"
+        search_settings = {
+          string_fields = "contains"
+          integer_fields = "equalTo"
+          list_fields = "anyOf"
+        }
+      }
+      uuid = "3401789e-8480-4f24-a694-23168178453b"
+    },
+    {
+      number = 7
+      provider = "netsuite"
+      name = "search_object_v2"
+      as = "7e524262"
+      keyword = "action"
+      dynamicPickListSelection = {
+        netsuite_object = "Customer"
+        field_list = [
+          {
+            label = "Account number"
+            value = "accountNumber"
+          },
+          {
+            label = "Address 2"
+            value = "address2"
+          },
+        ]
+      }
+      input = {
+        netsuite_object = "Customer"
+        limit = "25"
+        search_settings = {
+          string_fields = "contains"
+          integer_fields = "equalTo"
+          list_fields = "anyOf"
+        }
+        field_list = '''
+accountNumber
+address2
+'''
+      }
+      uuid = "209815cd-9489-47bb-b7b4-b3cee2a1f765"
+    },
+    {
+      number = 8
+      provider = "netsuite"
+      name = "search_object_v2"
+      as = "eac7615a"
+      keyword = "action"
+      dynamicPickListSelection = {
+        netsuite_object = "Customer"
+      }
+      input = {
+        netsuite_object = "Customer@@script"
+        limit = "25"
+        search_settings = {
+          string_fields = "contains"
+          integer_fields = "equalTo"
+          list_fields = "anyOf"
+        }
+        searchId = "#{_('data.netsuite.7e524262.pageIndex')}#{_('data.netsuite.7e524262.totalPages')}"
+      }
+      visible_config_fields = [
+        "netsuite_object",
+        "limit",
+        "field_list",
+        "custom_list",
+        "custom_column_list",
+        "search_settings",
+        "search_settings.string_fields",
+        "search_settings.integer_fields",
+        "search_settings.list_fields",
+        "searchId",
+      ]
+      uuid = "df944055-582a-4163-b10d-d516e19c558b"
+    },
+    {
+      number = 9
+      provider = "netsuite"
+      name = "search_object_v2"
+      as = "a7fe499c"
+      title = "Search Accounting  periods"
+      description = "Search <span class=\"provider\">Accounting  periods</span> in <span class=\"provider\">NetSuite</span>"
+      keyword = "action"
+      dynamicPickListSelection = {
+        netsuite_object = "Billing Account"
+      }
+      input = {
+        netsuite_object = "billingAccount@@script"
+        limit = "25"
+        search_settings = {
+          string_fields = "contains"
+          integer_fields = "equalTo"
+          list_fields = "anyOf"
+        }
+        searchId = "#{_('data.netsuite.34f44db1.searchId')}#{_('data.netsuite.1398e346.searchId')}#{_('data.netsuite.ba8cba2c.pageIndex')}"
+      }
+      visible_config_fields = [
+        "netsuite_object",
+        "limit",
+        "field_list",
+        "custom_list",
+        "custom_column_list",
+        "search_settings",
+        "search_settings.string_fields",
+        "search_settings.integer_fields",
+        "search_settings.list_fields",
+        "searchId",
+      ]
+      uuid = "1b9ac811-b3e9-46e3-aa90-d6064b8a1091"
+    },
+    {
+      number = 10
+      provider = "netsuite"
+      name = "delete_record"
+      as = "f7cb8ebf"
+      title = "Delete Accounting Period"
+      description = "Delete <span class=\"provider\">Accounting Period</span> by ID in <span class=\"provider\">NetSuite</span>"
+      keyword = "action"
+      dynamicPickListSelection = {
+        netsuite_object = "Accounting Period"
+      }
+      input = {
+        netsuite_object = "accountingPeriod@@script"
+        id = "#{_('data.netsuite.221513d0.totalPages')}#{_('data.netsuite.221513d0.pageIndex')}"
+      }
+      comment = "dodel I love you - What can I do?1"
+      uuid = "3593d347-e441-45c0-9675-e31ae840fabe"
+    },
+    {
+      number = 11
+      keyword = "if"
+      input = {
+        type = "compound"
+        operand = "and"
+        conditions = [
+          {
+            operand = "equals_to"
+            lhs = "#{_('data.netsuite.221513d0.pageIndex')}"
+            rhs = "5"
+            uuid = "condition-02fe9a47-d7fc-4312-ae34-b84a2ed3e792"
+          },
+        ]
+      }
+      block = [
+        {
+          number = 12
+          provider = "netsuite"
+          name = "add_object"
+          as = "e425b370"
+          keyword = "action"
+          dynamicPickListSelection = {
+            netsuite_object = "SalesOrder"
+            custom_list = [
+              {
+                label = "LSA Link"
+                value = "transactionBodyCustomField@23"
+              },
+              {
+                label = "Last Sales Activity"
+                value = "transactionBodyCustomField@19"
+              },
+              {
+                label = "LSA Link Name"
+                value = "transactionBodyCustomField@21"
+              },
+            ]
+            custom_column_list = [
+              {
+                label = "Stam2"
+                value = "transactionColumnCustomField@35"
+              },
+              {
+                label = "Amount"
+                value = "transactionColumnCustomField@166"
+              },
+              {
+                label = "Billable"
+                value = "transactionColumnCustomField@47"
+              },
+            ]
+          }
+          input = {
+            netsuite_object = "salesOrder@@script"
+            custom_list = '''
+transactionBodyCustomField@23
+transactionBodyCustomField@19
+transactionBodyCustomField@21
+'''
+            custom_column_list = '''
+transactionColumnCustomField@35
+transactionColumnCustomField@166
+transactionColumnCustomField@47
+'''
+          }
+          uuid = "2edd9085-89b4-48df-be93-a83fd12deede"
+        },
+      ]
+      uuid = "4417d43d-30a7-4419-9962-ec8c080ad6eb"
+    },
+  ]
+  uuid = "16590a9b-780c-4246-9fcf-9563f7a13f5d"
+  _parent = [
+    workato.recipe.instance.dodel_netsuite_recipe_netsuite_dodel_playground_Root@ssuuuu,
+  ]
+}

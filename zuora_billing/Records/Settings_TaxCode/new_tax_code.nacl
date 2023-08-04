@@ -1,0 +1,6 @@
+zuora_billing.Settings_TaxCode new_tax_code@s {
+  taxEngineId = zuora_billing.Settings_TaxEngine.instance.Zuora_Tax@s
+  active = true
+  name = "new tax code"
+  description = ""
+}

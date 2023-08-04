@@ -1,0 +1,59 @@
+workato.recipe__code first_recipe_first_folder_dodel_playground_Root {
+  number = 0
+  provider = "clock"
+  name = "scheduled_event"
+  as = "a96ec312"
+  description = "<span class=\"provider\">Trigger</span> on a <span class=\"provider\">specified schedule</span>"
+  keyword = "trigger"
+  input = {
+    time_unit = "minutes"
+    trigger_every = "5"
+  }
+  block = [
+    {
+      number = 1
+      provider = "salesforce"
+      name = ""
+      as = ""
+      description = ""
+      keyword = "action"
+      uuid = "e87492de-505f-4aa7-8609-f60e1be44735"
+    },
+    {
+      number = 2
+      keyword = "if"
+      input = {
+        type = "compound"
+        operand = "and"
+        conditions = [
+          {
+            operand = ""
+            lhs = ""
+            rhs = ""
+            uuid = "condition-1740815d-67b9-45ae-9bb6-3c98f062968c"
+          },
+        ]
+      }
+      block = [
+        {
+          number = 3
+          provider = "workato_app"
+          name = "stop_recipe"
+          as = "a93dc590"
+          keyword = "action"
+          uuid = "b64c9aa3-9c1c-4bc8-9e43-2b0ec9157111"
+        },
+      ]
+      uuid = "b8285d47-d69d-4dec-9611-9fad15e713b6"
+    },
+    {
+      number = 4
+      keyword = "action"
+      uuid = "64f317c5-8752-4998-8315-8c3366aa33bb"
+    },
+  ]
+  uuid = "157024a8-73ff-4d81-9d27-171428cc833b"
+  _parent = [
+    workato.recipe.instance.first_recipe_first_folder_dodel_playground_Root,
+  ]
+}

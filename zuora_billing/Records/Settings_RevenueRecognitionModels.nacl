@@ -1,0 +1,8 @@
+zuora_billing.Settings_RevenueRecognitionModels {
+  dailyRecognitionOverTime = true
+  monthlyRecognitionOverTime = false
+  fullRecognitionOnASpecificDate = true
+  fullRecognitionUponInvoicing = true
+  manualRecognition = true
+  unlimitedRecognition = false
+}

@@ -1,0 +1,16 @@
+zendesk.article How_do_I_customize_my_Help_Center__FAQ_General_DP_Brand_s_uum_uuuum@ssssssauuuuuum {
+  author_id = "neta.marcus+zendesk@salto.io"
+  comments_disabled = false
+  draft = false
+  promoted = false
+  section_id = zendesk.section.instance.FAQ_General_DP_Brand_s_uum@uuuum
+  source_locale = zendesk.guide_language_settings.instance.DP_Brand_s_en_us@umub
+  locale = zendesk.guide_language_settings.instance.DP_Brand_s_en_us@umub
+  outdated = false
+  permission_group_id = zendesk.permission_group.instance.Admins
+  translations = [
+    zendesk.article_translation.instance.How_do_I_customize_my_Help_Center__FAQ_General_DP_Brand_s_uum_uuuum_ssssssauuuuuum__DP_Brand_s_en_us_umub@uuuuuuuuuuuuuumuuuuuum,
+  ]
+  brand = zendesk.brand.instance.DP_Brand@s
+  user_segment_id = zendesk.user_segment.instance.Everyone
+}

@@ -1,0 +1,81 @@
+zuora_billing.Task HK___Cancel_Subscription_from_Unpaid_Invoices___IS__Prod__72_sbssssssbssjku__Cancel_Subscription@uuuuuuuuuuuuuumuus {
+  name = "Cancel Subscription"
+  parameters = {
+    url = "{{ Credentials.zuora.rest_endpoint }}subscriptions/{{Data.JSONTransform.subKey}}/cancel"
+    files = [
+      {
+        key = "InvoiceItem__110.csv.zip"
+        name = ""
+        upload = "false"
+      },
+    ]
+    method = "PUT"
+    headers = [
+      {
+        key = "Content-Type"
+        value = "application/json"
+      },
+      {
+        key = "zuora-version"
+        value = "211.0"
+      },
+      {
+        key = ""
+        value = ""
+      },
+    ]
+    raw_body = '''
+{
+  "cancellationEffectiveDate": "{{Data.JSONTransform.subCancelDate}}",
+  "cancellationPolicy": "SpecificDate",
+  "runBilling": true,
+  "targetDate": "{{Data.Workflow.ExecutionDate}}",
+  "contractEffectiveDate": "{{Data.Workflow.ExecutionDate}}"
+}
+'''
+    body_type = "raw"
+    form_datas = [
+      {
+        key = ""
+        value = ""
+        upload = "false"
+      },
+    ]
+    validation = {
+      replace = "true"
+      zuora_call = "true"
+      status_codes = [
+        "",
+        "200",
+      ]
+      payload_location = "CancelSubscriptioCallout"
+    }
+    retry_rules = {
+      retry_count = "0"
+      retry_window = "30"
+      current_retry_count = "0"
+    }
+    authorization = {
+      type = "zuora"
+    }
+    strict_variables = "true"
+    validate_response = "true"
+    validation_scheme = "{% if Data.ResponseBody.success == true %} true {% else %} false {% endif %}"
+    include_response_code = "true"
+  }
+  action_type = "Callout"
+  call_type = "SOAP"
+  task_id = 113
+  concurrent_limit = 9999999
+  additionalProperties = {
+    css = {
+      top = "170px"
+      left = "650px"
+    }
+    priority = "Medium"
+    
+  }
+  _parent = [
+    zuora_billing.WorkflowExport.instance.HK___Cancel_Subscription_from_Unpaid_Invoices___IS__Prod__72@sbssssssbssjku,
+  ]
+}

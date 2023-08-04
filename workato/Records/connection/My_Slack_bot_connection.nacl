@@ -1,0 +1,5 @@
+workato.connection My_Slack_bot_connection@s {
+  application = "slack_bot"
+  name = "My Slack bot connection"
+  folder_id = workato.folder.instance.Root
+}

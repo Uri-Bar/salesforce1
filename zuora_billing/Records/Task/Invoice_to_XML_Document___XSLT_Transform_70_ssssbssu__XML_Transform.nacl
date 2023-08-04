@@ -1,0 +1,94 @@
+zuora_billing.Task Invoice_to_XML_Document___XSLT_Transform_70_ssssbssu__XML_Transform@uuuuuuuumuus {
+  name = "XML Transform"
+  parameters = {
+    template = '''
+<?xml version="1.0"?>
+<xsl:stylesheet version="1.1" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:p="http://www.fatturapa.gov.it/sdi/fatturapa/v1.1">
+  <xsl:output method="xml" indent="yes" version="1.0" />
+  <xsl:template match="/Data">
+    <xsl:element name="output">
+      <xsl:element name="Account">
+        <xsl:element name="Address1">
+          <xsl:value-of select="BillToContact/Address1"/>
+        </xsl:element>
+        <xsl:element name="Address2">
+          <xsl:value-of select="BillToContact/Address2"/>
+        </xsl:element>      
+        <xsl:element name="City">
+          <xsl:value-of select="BillToContact/City"/>
+        </xsl:element>
+        <xsl:element name="Country">
+          <xsl:value-of select="BillToContact/Country"/>
+        </xsl:element>      
+      </xsl:element>
+      <xsl:element name="Invoice"> 
+        <xsl:element name="Id">
+          <xsl:value-of select="Invoice/Id"/>
+        </xsl:element>      
+        <xsl:element name="InvoiceNumber">
+          <xsl:value-of select="Invoice/InvoiceNumber"/>
+        </xsl:element>
+        <xsl:element name="Balance">
+          <xsl:value-of select="Invoice/Balance"/>
+        </xsl:element>
+        <xsl:element name="InvoiceItems">
+          <xsl:for-each select="InvoiceItems/InvoiceItem">
+            <xsl:element name="InvoiceItem">
+              <xsl:element name="Id">
+                <xsl:value-of select="Id"/>
+              </xsl:element>
+              <xsl:element name="Quantity">
+                <xsl:value-of select="Quantity"/>
+              </xsl:element>
+              <xsl:element name="ChargeAmount">
+                <xsl:value-of select="ChargeAmount"/>
+              </xsl:element>
+              <xsl:element name="ChargeDate">
+                <xsl:value-of select="ChargeDate"/>
+              </xsl:element>
+              <xsl:element name="TaxationItems">
+                <xsl:variable name='Id'><xsl:value-of select="Id"/></xsl:variable>
+                <xsl:for-each select="/Data/TaxationItems/TaxationItem[InvoiceItemId=$Id]">
+                  <xsl:element name="TaxationItem">
+                    <xsl:element name="Id">
+                      <xsl:value-of select="Id"/>
+                    </xsl:element>
+                    <xsl:element name="TaxAmount">
+                      <xsl:value-of select="TaxAmount"/>
+                    </xsl:element>
+                    <xsl:element name="ExemptAmount">
+                      <xsl:value-of select="ExemptAmount"/>
+                    </xsl:element>
+                    <xsl:element name="Jurisdiction">
+                      <xsl:value-of select="Jurisdiction"/>
+                    </xsl:element>
+                  </xsl:element>
+                </xsl:for-each>
+              </xsl:element>
+            </xsl:element>
+          </xsl:for-each>
+        </xsl:element>
+      </xsl:element>
+    </xsl:element>
+  </xsl:template>  
+</xsl:stylesheet>
+'''
+    strict_variables = "true"
+  }
+  action_type = "Logic::XMLTransform"
+  object = "JSONTransform__106.xml"
+  call_type = "SOAP"
+  task_id = 106
+  concurrent_limit = 9999999
+  additionalProperties = {
+    css = {
+      top = "180px"
+      left = "1430px"
+    }
+    priority = "Medium"
+    
+  }
+  _parent = [
+    zuora_billing.WorkflowExport.instance.Invoice_to_XML_Document___XSLT_Transform_70@ssssbssu,
+  ]
+}

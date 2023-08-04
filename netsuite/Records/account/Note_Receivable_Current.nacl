@@ -1,0 +1,15 @@
+netsuite.account Note_Receivable_Current@sb {
+  acctType = "_otherCurrentAsset"
+  acctName = "Note Receivable-Current"
+  includeChildren = true
+  generalRate = "_current"
+  cashFlowRate = "_average"
+  isInactive = false
+  inventory = false
+  subsidiaryList = [
+    netsuite.subsidiary.instance.Parent_Company@s,
+  ]
+  revalue = false
+  identifier = "Note Receivable-Current"
+  custom_custrecord_acct_special = false
+}

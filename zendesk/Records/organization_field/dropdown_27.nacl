@@ -1,0 +1,14 @@
+zendesk.organization_field dropdown_27 {
+  type = "dropdown"
+  key = "dropdown_27"
+  
+  
+  raw_title = "dropdown 27"
+  raw_description = "desc"
+  active = true
+  system = false
+  custom_field_options = [
+    zendesk.organization_field__custom_field_options.instance.dropdown_27__1234,
+    zendesk.organization_field__custom_field_options.instance.dropdown_27__v11,
+  ]
+}

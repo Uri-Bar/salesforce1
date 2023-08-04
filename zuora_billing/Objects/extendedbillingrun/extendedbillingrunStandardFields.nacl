@@ -1,0 +1,345 @@
+type zuora_billing.extendedbillingrun {
+  string Id {
+    type = "string"
+    format = "uuid"
+    required = false
+    filterable = false
+    label = "Id"
+  }
+  string CreatedById {
+    type = "string"
+    format = "uuid"
+    required = false
+    filterable = false
+    label = "CreatedById"
+  }
+  string CreatedDate {
+    type = "string"
+    format = "date-time"
+    required = false
+    filterable = false
+    label = "CreatedDate"
+  }
+  string UpdatedById {
+    type = "string"
+    format = "uuid"
+    required = false
+    filterable = false
+    label = "UpdatedById"
+  }
+  string UpdatedDate {
+    type = "string"
+    format = "date-time"
+    required = false
+    filterable = false
+    label = "UpdatedDate"
+  }
+  boolean deleted {
+    type = "boolean"
+    required = false
+    filterable = false
+    label = "deleted"
+  }
+  string BillingRunNumber {
+    type = "string"
+    maxLength = 512
+    required = false
+    filterable = false
+    label = "BillingRunNumber"
+  }
+  string BillingRunType {
+    type = "string"
+    maxLength = 512
+    required = false
+    filterable = false
+    label = "BillingRunType"
+  }
+  string EndDate {
+    type = "string"
+    format = "date-time"
+    required = false
+    filterable = false
+    label = "EndDate"
+  }
+  string ErrorMessage {
+    type = "string"
+    maxLength = 512
+    required = false
+    filterable = false
+    label = "ErrorMessage"
+  }
+  string ExecutedDate {
+    type = "string"
+    format = "date-time"
+    required = false
+    filterable = false
+    label = "ExecutedDate"
+  }
+  string InvoiceDate {
+    type = "string"
+    format = "date"
+    required = false
+    filterable = false
+    label = "InvoiceDate"
+  }
+  number NumberOfAccounts {
+    type = "integer"
+    required = false
+    filterable = false
+    label = "NumberOfAccounts"
+  }
+  number NumberOfInvoices {
+    type = "integer"
+    required = false
+    filterable = false
+    label = "NumberOfInvoices"
+  }
+  number NumberOfCreditMemos {
+    type = "integer"
+    required = false
+    filterable = false
+    label = "NumberOfCreditMemos"
+  }
+  string PostedDate {
+    type = "string"
+    format = "date-time"
+    required = false
+    filterable = false
+    label = "PostedDate"
+  }
+  string StartDate {
+    type = "string"
+    format = "date-time"
+    required = false
+    filterable = false
+    label = "StartDate"
+  }
+  string Status {
+    type = "string"
+    maxLength = 512
+    required = false
+    filterable = false
+    label = "Status"
+  }
+  string TargetDate {
+    type = "string"
+    format = "date"
+    required = false
+    filterable = false
+    label = "TargetDate"
+  }
+  string TargetType {
+    type = "string"
+    maxLength = 512
+    required = false
+    filterable = false
+    label = "TargetType"
+  }
+  number TotalTime {
+    type = "integer"
+    required = false
+    filterable = false
+    label = "TotalTime"
+  }
+  string AccountId {
+    type = "string"
+    maxLength = 512
+    required = false
+    filterable = false
+    label = "AccountId"
+  }
+  string BillCycleDay {
+    type = "string"
+    maxLength = 512
+    required = false
+    filterable = false
+    label = "BillCycleDay"
+  }
+  string Batches {
+    type = "string"
+    maxLength = 512
+    required = false
+    filterable = false
+    label = "Batches"
+  }
+  boolean NoEmailForZeroAmountInvoice {
+    type = "boolean"
+    required = false
+    filterable = false
+    label = "NoEmailForZeroAmountInvoice"
+  }
+  boolean AutoPost {
+    type = "boolean"
+    required = false
+    filterable = false
+    label = "AutoPost"
+  }
+  boolean AutoEmail {
+    type = "boolean"
+    required = false
+    filterable = false
+    label = "AutoEmail"
+  }
+  boolean AutoRenewal {
+    type = "boolean"
+    required = false
+    filterable = false
+    label = "AutoRenewal"
+  }
+  boolean InvoicesEmailed {
+    type = "boolean"
+    required = false
+    filterable = false
+    label = "InvoicesEmailed"
+  }
+  string LastEmailSentTime {
+    type = "string"
+    format = "date-time"
+    required = false
+    filterable = false
+    label = "LastEmailSentTime"
+  }
+  number TargetDateOffSet {
+    type = "integer"
+    required = false
+    filterable = false
+    label = "TargetDateOffSet"
+  }
+  number InvoiceDateOffSet {
+    type = "integer"
+    required = false
+    filterable = false
+    label = "InvoiceDateOffSet"
+  }
+  string ChargeTypeToExclude {
+    type = "string"
+    maxLength = 512
+    required = false
+    filterable = false
+    label = "ChargeTypeToExclude"
+  }
+  string ScheduledExecutionTime {
+    type = "string"
+    format = "date-time"
+    required = false
+    filterable = false
+    label = "ScheduledExecutionTime"
+  }
+  string RepeatType {
+    type = "string"
+    maxLength = 512
+    required = false
+    filterable = false
+    label = "RepeatType"
+  }
+  string RepeatFrom {
+    type = "string"
+    maxLength = 512
+    required = false
+    filterable = false
+    label = "RepeatFrom"
+  }
+  string RepeatTo {
+    type = "string"
+    maxLength = 512
+    required = false
+    filterable = false
+    label = "RepeatTo"
+  }
+  number RunTime {
+    type = "integer"
+    required = false
+    filterable = false
+    label = "RunTime"
+  }
+  string TimeZone {
+    type = "string"
+    maxLength = 512
+    required = false
+    filterable = false
+    label = "TimeZone"
+  }
+  string MonthlyOnDay {
+    type = "string"
+    maxLength = 512
+    required = false
+    filterable = false
+    label = "MonthlyOnDay"
+  }
+  string WeeklyOnDay {
+    type = "string"
+    maxLength = 512
+    required = false
+    filterable = false
+    label = "WeeklyOnDay"
+  }
+  string Name {
+    type = "string"
+    maxLength = 512
+    required = false
+    filterable = false
+    label = "Name"
+  }
+  number NumberOf0TotalInvoice {
+    type = "integer"
+    required = false
+    filterable = false
+    label = "NumberOf0TotalInvoice"
+  }
+  number TerminatingFlag {
+    type = "integer"
+    required = false
+    filterable = false
+    label = "TerminatingFlag"
+  }
+  string ScheduleType {
+    type = "string"
+    maxLength = 512
+    required = false
+    filterable = false
+    label = "ScheduleType"
+  }
+  number NumberOfDraftInvoices {
+    type = "integer"
+    required = false
+    filterable = false
+    label = "NumberOfDraftInvoices"
+  }
+  number NumberOfDraftCreditMemos {
+    type = "integer"
+    required = false
+    filterable = false
+    label = "NumberOfDraftCreditMemos"
+  }
+  number NumberOfPostedInvoices {
+    type = "integer"
+    required = false
+    filterable = false
+    label = "NumberOfPostedInvoices"
+  }
+  number NumberOfPostedCreditMemos {
+    type = "integer"
+    required = false
+    filterable = false
+    label = "NumberOfPostedCreditMemos"
+  }
+  string RootId {
+    type = "string"
+    format = "uuid"
+    required = false
+    filterable = false
+    label = "RootId"
+  }
+  number TotalInvoiceAmount {
+    type = "number"
+    required = false
+    filterable = false
+    label = "TotalInvoiceAmount"
+  }
+  number TotalCreditMemoAmount {
+    type = "number"
+    required = false
+    filterable = false
+    label = "TotalCreditMemoAmount"
+  }
+}

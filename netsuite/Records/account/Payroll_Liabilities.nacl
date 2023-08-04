@@ -1,0 +1,15 @@
+netsuite.account Payroll_Liabilities@s {
+  acctType = "_otherCurrentLiability"
+  acctName = "Payroll Liabilities"
+  includeChildren = true
+  generalRate = "_current"
+  cashFlowRate = "_average"
+  isInactive = false
+  inventory = false
+  subsidiaryList = [
+    netsuite.subsidiary.instance.Parent_Company@s,
+  ]
+  revalue = true
+  identifier = "Payroll Liabilities"
+  custom_custrecord_acct_special = false
+}

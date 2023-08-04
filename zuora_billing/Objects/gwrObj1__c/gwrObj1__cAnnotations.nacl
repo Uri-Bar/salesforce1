@@ -1,0 +1,22 @@
+type zuora_billing.gwrObj1__c {
+  annotations {
+    string metadataType {
+    }
+    string label {
+    }
+    string description {
+    }
+    hidden_string id {
+    }
+    string objectType {
+    }
+  }
+  metadataType = "CustomObject"
+  label = "gwrObj1"
+  objectType = "gwrObj1"
+  _generated_dependencies = [
+    {
+      reference = zuora_billing.user
+    },
+  ]
+}

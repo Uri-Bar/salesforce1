@@ -1,0 +1,12 @@
+netsuite.file SuiteBundles_Bundle_351444_Docusign_Images_ds_button_review_ds_now_jpg@dsddduuuuv {
+  bundleable = false
+  isinactive = false
+  availablewithoutlogin = false
+  generateurltimestamp = false
+  hideinbundle = false
+  path = "/SuiteBundles/Bundle 351444/Docusign/Images/ds_button_review_ds_now.jpg"
+  content = file("netsuite/FileCabinet/SuiteBundles/Bundle 351444/Docusign/Images/ds_button_review_ds_now.jpg")
+  _parent = [
+    netsuite.folder.instance.SuiteBundles_Bundle_351444_Docusign_Images@dsdd,
+  ]
+}

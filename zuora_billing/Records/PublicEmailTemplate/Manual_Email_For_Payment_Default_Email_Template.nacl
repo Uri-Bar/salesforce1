@@ -1,0 +1,21 @@
+zuora_billing.PublicEmailTemplate Manual_Email_For_Payment_Default_Email_Template@s {
+  eventCategory = 2130
+  name = "Manual Email For Payment Default Email Template"
+  description = ""
+  encodingType = "UTF8"
+  fromName = "Admin"
+  fromEmailType = "SpecificEmail"
+  fromEmailAddress = "neta.marcus@salto.io"
+  replyToEmailType = "SpecificEmail"
+  replyToEmailAddress = "neta.marcus@salto.io"
+  ccEmailType = "SpecificEmails"
+  ccEmailAddress = ""
+  bccEmailAddress = ""
+  toEmailType = "BillToContact"
+  toEmailAddress = ""
+  emailSubject = "Your payment was successfully processed."
+  emailBody = "Dear <BillToContact.FirstName> <BillToContact.LastName>,\r<br />\r<br />Thank you for your payment of <Payment.Amount> <Account.Currency> that was processed on <Payment.Date>.\r<br />\r<br />Thank you for your business!"
+  active = true
+  isHtml = true
+  useAdditionalAddresses = false
+}

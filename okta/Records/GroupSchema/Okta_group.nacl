@@ -1,0 +1,72 @@
+okta.GroupSchema Okta_group@s {
+  
+  
+  name = "group"
+  title = "Okta group"
+  description = "Okta group profile template"
+  definitions = {
+    custom = {
+      id = "#custom"
+      type = "object"
+      
+    }
+    base = {
+      id = "#base"
+      type = "object"
+      properties = {
+        name = {
+          title = "Name"
+          description = "Name"
+          type = "string"
+          required = true
+          mutability = "READ_WRITE"
+          scope = "NONE"
+          maxLength = 255
+          permissions = [
+            {
+              principal = "SELF"
+              action = "READ_WRITE"
+            },
+          ]
+          master = {
+            type = "PROFILE_MASTER"
+          }
+        }
+        description = {
+          title = "Description"
+          description = "Description"
+          type = "string"
+          mutability = "READ_WRITE"
+          scope = "NONE"
+          maxLength = 1024
+          permissions = [
+            {
+              principal = "SELF"
+              action = "READ_WRITE"
+            },
+          ]
+          master = {
+            type = "PROFILE_MASTER"
+          }
+        }
+      }
+      required = [
+        "name",
+      ]
+    }
+  }
+  type = "object"
+  properties = {
+    profile = {
+      allOf = [
+        {
+          "$ref" = "#/definitions/custom"
+        },
+        {
+          "$ref" = "#/definitions/base"
+        },
+      ]
+    }
+  }
+  
+}

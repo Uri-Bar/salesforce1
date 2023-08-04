@@ -1,0 +1,46 @@
+workato.recipe Batel___Copy_of_Q2C___New_Closed_Won_Opportunity_creates_a_new_Sales_Order_in_Netsuite_Root@sbssssbsssssssssssu {
+  name = "Batel - Copy of Q2C - New Closed Won Opportunity creates a new Sales Order in Netsuite"
+  trigger_application = "salesforce"
+  action_applications = [
+    "netsuite",
+    "workato_list",
+  ]
+  applications = [
+    "salesforce",
+    "netsuite",
+    "workato_list",
+  ]
+  description = '''
+1. A Salesforce opportunity is marked as "Closed Won".
+2. Workato creates a corresponding sales order in Netsuite.
+3. Workato updates the Salesforce opportunity with the NetSuite sales order ID.
+
+Original recipe: https://app.workato.com/recipes/546532-new-closed-won-opportunity-creates-a-new-sales-order-in-netsuite
+'''
+  folder_id = workato.folder.instance.Root
+  running = false
+  version_no = 1
+  config = [
+    {
+      keyword = "application"
+      name = "salesforce"
+      provider = "salesforce"
+      account_id = workato.connection.instance.Oren_s_Sandbox@ts
+      skip_validation = false
+    },
+    {
+      keyword = "application"
+      name = "netsuite"
+      provider = "netsuite"
+      account_id = workato.connection.instance.Oren_s_NetSuite@ts
+      skip_validation = false
+    },
+    {
+      keyword = "application"
+      name = "workato_list"
+      provider = "workato_list"
+      skip_validation = false
+    },
+  ]
+  code = workato.recipe__code.instance.Batel___Copy_of_Q2C___New_Closed_Won_Opportunity_creates_a_new_Sales_Order_in_Netsuite_Root_sbssssbsssssssssssu@uuuuuuuuuuuuuuuuuuum
+}

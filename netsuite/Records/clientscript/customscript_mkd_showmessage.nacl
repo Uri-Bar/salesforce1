@@ -1,0 +1,45 @@
+netsuite.clientscript customscript_mkd_showmessage {
+  scriptid = "customscript_mkd_showmessage"
+  description = "Popup for demos"
+  isinactive = false
+  name = "MKD Show Message"
+  notifyadmins = false
+  notifyowner = true
+  notifyuser = false
+  scriptfile = netsuite.file.instance.SuiteScripts_mkd_mkd_showmessage_js@dduv.path
+  scriptdeployments = {
+    scriptdeployment = {
+      customdeploy_mkd_showmessage_deployment = {
+        scriptid = "customdeploy_mkd_showmessage_deployment"
+        allemployees = false
+        alllocalizationcontexts = true
+        allpartners = false
+        allroles = true
+        executioncontext = "ACTION|ADVANCEDREVREC|BANKCONNECTIVITY|BANKSTATEMENTPARSER|BUNDLEINSTALLATION|CLIENT|CONSOLRATEADJUSTOR|CSVIMPORT|CUSTOMGLLINES|CUSTOMMASSUPDATE|DATASETBUILDER|DEBUGGER|EMAILCAPTURE|FICONNECTIVITY|FIPARSER|MAPREDUCE|OCRPLUGIN|OTHER|PAYMENTGATEWAY|PAYMENTPOSTBACK|PLATFORMEXTENSION|PORTLET|PROMOTIONS|RECORDACTION|RESTLET|RESTWEBSERVICES|SCHEDULED|SDFINSTALLATION|SHIPPINGPARTNERS|SUITELET|TAXCALCULATION|USEREVENT|USERINTERFACE|WEBSERVICES|WORKBOOKBUILDER|WORKFLOW"
+        isdeployed = true
+        loglevel = "DEBUG"
+        recordtype = "SALESORDER"
+        status = "TESTING"
+      }
+    }
+  }
+  scriptcustomfields = {
+    scriptcustomfield = {
+      custscript_mkd_remove_replace_script_par = {
+        scriptid = "custscript_mkd_remove_replace_script_par"
+        accesslevel = "2"
+        applyformatting = false
+        checkspelling = false
+        defaultchecked = false
+        displaytype = "NORMAL"
+        fieldtype = "TEXT"
+        isformula = false
+        ismandatory = false
+        label = "kirk new test"
+        searchlevel = "2"
+        storevalue = true
+        index = 0
+      }
+    }
+  }
+}

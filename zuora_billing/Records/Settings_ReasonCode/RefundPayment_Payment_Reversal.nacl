@@ -1,0 +1,6 @@
+zuora_billing.Settings_ReasonCode RefundPayment_Payment_Reversal@us {
+  isActive = true
+  reasonCodeName = "Payment Reversal"
+  reasonCodeTransactionType = "RefundPayment"
+  isDefault = false
+}

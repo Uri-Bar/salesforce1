@@ -1,0 +1,29 @@
+type netsuite.jobType {
+  annotations {
+    hidden_string source {
+    }
+  }
+  
+  
+  
+  
+  string internalId {
+    isAttribute = true
+    _hidden_value = true
+  }
+  string externalId {
+    isAttribute = true
+  }
+  
+  netsuite.nullField nullFieldList {
+  }
+  string name {
+  }
+  netsuite.jobType parent {
+    isReference = true
+  }
+  boolean isInactive {
+  }
+  serviceid identifier {
+  }
+}

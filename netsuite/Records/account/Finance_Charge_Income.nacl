@@ -1,0 +1,15 @@
+netsuite.account Finance_Charge_Income@s {
+  acctType = "_otherIncome"
+  acctName = "Finance Charge Income"
+  includeChildren = true
+  generalRate = "_average"
+  cashFlowRate = "_average"
+  isInactive = false
+  inventory = false
+  subsidiaryList = [
+    netsuite.subsidiary.instance.Parent_Company@s,
+  ]
+  revalue = false
+  identifier = "Finance Charge Income"
+  custom_custrecord_acct_special = false
+}

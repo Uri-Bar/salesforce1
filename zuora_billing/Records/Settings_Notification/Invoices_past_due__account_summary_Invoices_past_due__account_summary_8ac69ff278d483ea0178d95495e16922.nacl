@@ -1,0 +1,19 @@
+zuora_billing.Settings_Notification Invoices_past_due__account_summary_Invoices_past_due__account_summary_8ac69ff278d483ea0178d95495e16922@sszdssusszdssu {
+  profileId = zuora_billing.Settings_CommunicationProfile.instance.Neta_test@s
+  eventName = "Invoices past due, account summary"
+  name = "Invoices past due, account summary"
+  description = "Summary information of past due invoices of customer accounts, generally delivered on monthly basis."
+  active = false
+  hidden = false
+  param1 = "5"
+  param2 = "Day_of_the_month"
+  emailOption = true
+  emailTemplateName = zuora_billing.PublicEmailTemplate.instance.Invoices_Past_Due__Account_Summary_Default_Email_Template@sszdsssss
+  calloutOption = false
+  contentType = "APPLICATION_JSON"
+  calloutRetriable = false
+  calloutAuth = false
+  calloutOauth2 = false
+  calloutPreemptiveAuth = false
+  useCustomRequestBody = false
+}

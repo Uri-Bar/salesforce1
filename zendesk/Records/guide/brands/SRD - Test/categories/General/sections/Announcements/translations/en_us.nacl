@@ -1,0 +1,11 @@
+zendesk.section_translation Announcements_General_SRD___Test_sbs_uuuum_uuuuuum__SRD___Test_sbs_en_us_uuumub@uuuuuuumuuuuuuuum {
+  locale = zendesk.guide_language_settings.instance.SRD___Test_sbs_en_us@uuumub
+  title = "Announcements"
+  outdated = false
+  draft = false
+  hidden = false
+  brand = zendesk.brand.instance.SRD___Test@sbs
+  _parent = [
+    zendesk.section.instance.Announcements_General_SRD___Test_sbs_uuuum@uuuuuum,
+  ]
+}

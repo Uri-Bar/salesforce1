@@ -1,0 +1,20 @@
+netsuite.department GWR_Department1_GWR_sub_department@susb {
+  name = "GWR sub-department"
+  includeChildren = false
+  parent = netsuite.department.instance.GWR_Department1@s
+  isInactive = true
+  classTranslationList = {
+    classTranslation = {
+      German = {
+        language = "German"
+      }
+      French__France_@sjk = {
+        language = "French (France)"
+      }
+    }
+  }
+  subsidiaryList = [
+    netsuite.subsidiary.instance.Parent_Company@s,
+  ]
+  identifier = "GWR Department1_GWR sub-department"
+}

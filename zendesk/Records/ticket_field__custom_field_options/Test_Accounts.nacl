@@ -1,0 +1,8 @@
+zendesk.ticket_field__custom_field_options multiselect_Customer_Tier_us__test_accounts@uumuuu {
+  name = "Test Accounts"
+  raw_name = "Test Accounts"
+  value = "test_accounts"
+  _parent = [
+    zendesk.ticket_field.instance.multiselect_Customer_Tier@us,
+  ]
+}

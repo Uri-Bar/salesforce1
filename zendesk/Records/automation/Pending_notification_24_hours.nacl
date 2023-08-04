@@ -1,0 +1,34 @@
+zendesk.automation Pending_notification_24_hours@s {
+  title = "Pending notification 24 hours"
+  active = false
+  actions = [
+    {
+      field = "notification_user"
+      value = [
+        "requester_and_ccs",
+        "[{{ticket.account}}] Pending request: {{ticket.title}}",
+        '''
+This is an email to remind you that your request (#{{ticket.id}}) is pending and awaits your feedback.
+
+{{ticket.comments_formatted}}
+''',
+      ]
+    },
+  ]
+  conditions = {
+    all = [
+      {
+        field = "PENDING"
+        operator = "is"
+        value = "24"
+      },
+      {
+        field = "ticket_is_public"
+        operator = "is"
+        value = "public"
+      },
+    ]
+  }
+  raw_title = "Pending notification 24 hours"
+  default = true
+}

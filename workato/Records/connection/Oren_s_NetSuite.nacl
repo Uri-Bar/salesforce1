@@ -1,0 +1,5 @@
+workato.connection Oren_s_NetSuite@ts {
+  application = "netsuite"
+  name = "Salto Netsuite"
+  folder_id = workato.folder.instance.Oren_318283
+}

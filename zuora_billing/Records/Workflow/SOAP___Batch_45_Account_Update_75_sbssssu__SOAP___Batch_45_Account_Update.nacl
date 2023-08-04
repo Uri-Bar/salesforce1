@@ -1,0 +1,38 @@
+zuora_billing.Workflow SOAP___Batch_45_Account_Update_75_sbssssu__SOAP___Batch_45_Account_Update@uuuuuuumuusbssss {
+  id = 75
+  name = "SOAP - Batch 45 Account Update"
+  description = ""
+  type = "Workflow::Setup"
+  status = "Active"
+  version = "0.0.1"
+  additionalProperties = {
+    parameters = {
+      skipping_check = "redis"
+      file_encryption = "false"
+      callout_response = "workflow instance"
+      secure_error_msgs = "false"
+      disable_pending_status = true
+    }
+    ondemand_trigger = true
+    callout_trigger = true
+    scheduled_trigger = false
+    css = {
+      top = "40px"
+      left = "30px"
+    }
+    notifications = {
+      failure = false
+      pending = false
+      success = false
+    }
+    call_type = "ASYNC"
+    priority = "Medium"
+    delete_ttl = 30
+    
+    
+    event_trigger = false
+  }
+  _parent = [
+    zuora_billing.WorkflowExport.instance.SOAP___Batch_45_Account_Update_75@sbssssu,
+  ]
+}

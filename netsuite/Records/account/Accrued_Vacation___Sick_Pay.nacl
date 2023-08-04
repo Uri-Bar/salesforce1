@@ -1,0 +1,15 @@
+netsuite.account Accrued_Vacation___Sick_Pay@ssess {
+  acctType = "_otherCurrentLiability"
+  acctName = "Accrued Vacation & Sick Pay"
+  includeChildren = true
+  generalRate = "_current"
+  cashFlowRate = "_average"
+  isInactive = false
+  inventory = false
+  subsidiaryList = [
+    netsuite.subsidiary.instance.Parent_Company@s,
+  ]
+  revalue = true
+  identifier = "Accrued Vacation & Sick Pay"
+  custom_custrecord_acct_special = false
+}

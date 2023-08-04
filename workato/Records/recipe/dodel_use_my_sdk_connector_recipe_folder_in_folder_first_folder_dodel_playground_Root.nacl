@@ -1,0 +1,30 @@
+workato.recipe dodel_use_my_sdk_connector_recipe_folder_in_folder_first_folder_dodel_playground_Root {
+  name = "dodel_use_my_sdk_connector_recipe"
+  trigger_application = "clock"
+  action_applications = [
+    "dodel_demo_application_connector_212128_1673253480",
+  ]
+  applications = [
+    "clock",
+    "dodel_demo_application_connector_212128_1673253480",
+  ]
+  description = "When there is a trigger on a specified schedule, do action"
+  folder_id = workato.folder.instance.folder_in_folder_first_folder_dodel_playground_Root
+  running = false
+  version_no = 2
+  config = [
+    {
+      keyword = "application"
+      name = "clock"
+      provider = "clock"
+      skip_validation = false
+    },
+    {
+      keyword = "application"
+      name = "dodel_demo_application_connector_212128_1673253480"
+      provider = "dodel_demo_application_connector_212128_1673253480"
+      skip_validation = false
+    },
+  ]
+  code = workato.recipe__code.instance.dodel_use_my_sdk_connector_recipe_folder_in_folder_first_folder_dodel_playground_Root
+}

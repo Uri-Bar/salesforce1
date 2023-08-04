@@ -1,0 +1,28 @@
+zuora_billing.WorkflowExport Orders_Resume_78@su {
+  workflow = zuora_billing.Workflow.instance.Orders_Resume_78_su__Orders_Resume@uumuus
+  tasks = [
+    zuora_billing.Task.instance.Orders_Resume_78_su__Resume__and_or_Extend_@uumuusjdsk,
+    zuora_billing.Task.instance.Orders_Resume_78_su__Get_Subscription_By_Key@uumuusss,
+  ]
+  linkages = [
+    {
+      source_workflow_id = zuora_billing.Workflow.instance.Orders_Resume_78_su__Orders_Resume@uumuus
+      target_task_id = zuora_billing.Task.instance.Orders_Resume_78_su__Get_Subscription_By_Key@uumuusss
+      linkage_type = "Start"
+      
+    },
+    {
+      source_task_id = zuora_billing.Task.instance.Orders_Resume_78_su__Get_Subscription_By_Key@uumuusss
+      target_task_id = zuora_billing.Task.instance.Orders_Resume_78_su__Resume__and_or_Extend_@uumuusjdsk
+      linkage_type = "Success"
+      
+    },
+  ]
+  additionalProperties = {
+    workflow_definition = {
+      description = ""
+      category = "Default"
+      name = "Orders Resume"
+    }
+  }
+}

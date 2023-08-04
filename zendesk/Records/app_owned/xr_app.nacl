@@ -1,0 +1,49 @@
+zendesk.app_owned xr_app {
+  parameters = {
+    name = {
+      name = "name"
+      kind = "text"
+      required = true
+      position = 0
+      secure = false
+    }
+  }
+  owner_id = 10947530
+  name = "xr_app"
+  single_install = false
+  default_locale = "en"
+  author_name = "John Doe"
+  author_email = "jdoe@example.com"
+  short_description = "Play the famous zen tunes in your help desk."
+  long_description = '''
+<p>Play the famous zen tunes in your help desk and 
+ listen to the beats it has to offer.</p>
+
+'''
+  raw_long_description = '''
+Play the famous zen tunes in your help desk and 
+ listen to the beats it has to offer.
+'''
+  installation_instructions = '''
+<p>Simply click install.</p>
+
+'''
+  raw_installation_instructions = "Simply click install."
+  small_icon = "https://772507.apps.zdusercontent.com/772507/assets/1647463645-43b0264ed13de419bb9c8cd85a98983c/logo-small.png"
+  large_icon = "https://772507.apps.zdusercontent.com/772507/assets/1647463645-43b0264ed13de419bb9c8cd85a98983c/logo.png"
+  visibility = "private"
+  installable = true
+  framework_version = "2.0"
+  featured = false
+  promoted = false
+  products = [
+    "support",
+  ]
+  version = "1.0"
+  marketing_only = false
+  deprecated = false
+  obsolete = false
+  paid = false
+  state = "published"
+  closed_preview = false
+}

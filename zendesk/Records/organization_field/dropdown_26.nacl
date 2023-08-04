@@ -1,0 +1,16 @@
+zendesk.organization_field dropdown_26 {
+  type = "dropdown"
+  key = "dropdown_26"
+  
+  
+  raw_title = "dropdown 26"
+  raw_description = ""
+  active = true
+  system = false
+  custom_field_options = [
+    zendesk.organization_field__custom_field_options.instance.dropdown_26__123,
+    zendesk.organization_field__custom_field_options.instance.dropdown_26__v1,
+    zendesk.organization_field__custom_field_options.instance.dropdown_26__v2,
+    zendesk.organization_field__custom_field_options.instance.dropdown_26__v3,
+  ]
+}

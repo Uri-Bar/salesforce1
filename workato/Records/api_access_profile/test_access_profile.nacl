@@ -1,0 +1,9 @@
+workato.api_access_profile test_access_profile {
+  name = "test_access_profile"
+  api_client_id = workato.api_client.instance.testClient
+  api_collection_ids = [
+    workato.api_collection.instance.test1,
+  ]
+  active = true
+  auth_type = "token"
+}

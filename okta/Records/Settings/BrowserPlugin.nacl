@@ -1,0 +1,5 @@
+okta.BrowserPlugin {
+  adminManaged = false
+  enabledGroup = okta.Group.instance.Everyone
+  antiPhishingEnabled = false
+}

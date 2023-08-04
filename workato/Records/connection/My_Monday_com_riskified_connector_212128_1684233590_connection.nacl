@@ -1,0 +1,5 @@
+workato.connection My_Monday_com_riskified_connector_212128_1684233590_connection@s {
+  application = "monday_com_riskified_connector_212128_1684233590"
+  name = "My Monday com riskified connector 212128 1684233590 connection"
+  folder_id = workato.folder.instance.Root
+}

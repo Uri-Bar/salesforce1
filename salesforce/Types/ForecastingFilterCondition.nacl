@@ -1,0 +1,47 @@
+type salesforce.ForecastingFilterCondition {
+  annotations {
+    serviceid metadataType {
+    }
+    boolean hasMetaFile {
+    }
+    string folderType {
+    }
+    string folderContentType {
+    }
+    string suffix {
+    }
+    string dirName {
+    }
+  }
+  string colName {
+  }
+  string fieldName {
+  }
+  string forecastingFilter {
+    foreignKeyDomain = [
+      salesforce.ForecastingFilter,
+    ]
+  }
+  string forecastingSourceDefinition {
+    foreignKeyDomain = [
+      salesforce.ForecastingSourceDefinition,
+    ]
+  }
+  serviceid fullName {
+  }
+  boolean isProtected {
+  }
+  string masterLabel {
+  }
+  number sortOrder {
+  }
+  string value {
+  }
+  string internalId {
+    _hidden_value = true
+    localOnly = true
+  }
+  suffix = "forecastingFilterCondition"
+  dirName = "forecastingFilterConditions"
+  metadataType = "ForecastingFilterCondition"
+}

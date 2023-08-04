@@ -1,0 +1,25 @@
+type salesforce.Campaign {
+  salesforce.FormulaNumber Multiline_formula_33__c {
+    apiName = "Campaign.Multiline_formula_33__c"
+    label = "Multiline formula 33"
+    precision = 18
+    scale = 2
+    formula = '''
+33 +
+55 + 
+634 *  NumberOfWonOpportunities
+'''
+    createable = false
+    updateable = false
+    unique = false
+    queryable = true
+    externalId = false
+    formulaTreatBlanksAs = "BlankAsZero"
+    _hidden_value = true
+    _generated_dependencies = [
+      {
+        reference = salesforce.Campaign.field.NumberOfWonOpportunities
+      },
+    ]
+  }
+}

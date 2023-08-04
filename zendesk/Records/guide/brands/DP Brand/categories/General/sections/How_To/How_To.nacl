@@ -1,0 +1,12 @@
+zendesk.section How_To_General_DP_Brand_s_uum@suuuum {
+  category_id = zendesk.category.instance.General_DP_Brand_s@uum
+  sorting = "manual"
+  locale = zendesk.guide_language_settings.instance.DP_Brand_s_en_us@umub
+  source_locale = zendesk.guide_language_settings.instance.DP_Brand_s_en_us@umub
+  outdated = false
+  theme_template = "section_page"
+  translations = [
+    zendesk.section_translation.instance.How_To_General_DP_Brand_s_uum_suuuum__DP_Brand_s_en_us_umub@uuuuuumuuuuuum,
+  ]
+  brand = zendesk.brand.instance.DP_Brand@s
+}

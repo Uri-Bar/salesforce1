@@ -1,0 +1,33 @@
+workato.recipe netsuite_123_1462959@su {
+  name = "netsuite 123"
+  trigger_application = "netsuite"
+  action_applications = [
+    "salesforce",
+    "netsuite",
+  ]
+  applications = [
+    "netsuite",
+    "salesforce",
+  ]
+  description = "When there is a trigger event, do action"
+  folder_id = workato.folder.instance.Root
+  running = false
+  version_no = 1
+  config = [
+    {
+      keyword = "application"
+      provider = "netsuite"
+      skip_validation = false
+      name = "netsuite"
+      account_id = workato.connection.instance.Test_NetSuite_account@s
+    },
+    {
+      keyword = "application"
+      provider = "salesforce"
+      skip_validation = false
+      name = "salesforce"
+      account_id = workato.connection.instance.Astar_s_sandbox@ts
+    },
+  ]
+  code = workato.recipe__code.instance.netsuite_123_1462959_su@uum
+}

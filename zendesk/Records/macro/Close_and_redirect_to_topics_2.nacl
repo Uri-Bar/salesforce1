@@ -1,0 +1,36 @@
+zendesk.macro Close_and_redirect_to_topics_2@s {
+  title = "Close and redirect to topics 2"
+  active = true
+  actions = [
+    {
+      field = "status"
+      value = "solved"
+    },
+    {
+      field = "priority"
+      value = "normal"
+    },
+    {
+      field = "type"
+      value = "incident"
+    },
+    {
+      field = "assignee_id"
+      value = "current_user"
+    },
+    {
+      field = "group_id"
+      value = "current_groups"
+    },
+    {
+      field = "comment_value_html"
+      value = "<p>Thanks for your request. This issue you reported is a known issue. For more information, please visit our forums. </p>"
+    },
+  ]
+  attachments = [
+    zendesk.macro_attachment.instance.Close_and_redirect_to_topics_2__aws_png@sssssuuv,
+    zendesk.macro_attachment.instance.Close_and_redirect_to_topics_2__zendesk_png@sssssuuv,
+  ]
+  raw_title = "Close and redirect to topics 2"
+  default = false
+}

@@ -1,0 +1,215 @@
+type zuora_billing.contactsnapshot {
+  string Id {
+    type = "string"
+    format = "uuid"
+    required = false
+    filterable = false
+    label = "Id"
+  }
+  string CreatedById {
+    type = "string"
+    format = "uuid"
+    required = false
+    filterable = false
+    referenceTo = [
+      zuora_billing.user.field.Id,
+    ]
+    cardinality = "manyToOne"
+    recordConstraints = {
+      create = {
+        enforceValidMapping = true
+      }
+    }
+    label = "CreatedById"
+  }
+  string CreatedDate {
+    type = "string"
+    format = "date-time"
+    required = false
+    filterable = false
+    label = "CreatedDate"
+  }
+  string UpdatedById {
+    type = "string"
+    format = "uuid"
+    required = false
+    filterable = false
+    referenceTo = [
+      zuora_billing.user.field.Id,
+    ]
+    cardinality = "manyToOne"
+    recordConstraints = {
+      create = {
+        enforceValidMapping = true
+      }
+    }
+    label = "UpdatedById"
+  }
+  string UpdatedDate {
+    type = "string"
+    format = "date-time"
+    required = false
+    filterable = false
+    label = "UpdatedDate"
+  }
+  boolean deleted {
+    type = "boolean"
+    required = false
+    filterable = false
+    label = "deleted"
+  }
+  string AccountId {
+    type = "string"
+    format = "uuid"
+    required = false
+    filterable = false
+    label = "AccountId"
+  }
+  string Address1 {
+    type = "string"
+    maxLength = 512
+    required = false
+    filterable = false
+    label = "Address1"
+  }
+  string Address2 {
+    type = "string"
+    maxLength = 512
+    required = false
+    filterable = false
+    label = "Address2"
+  }
+  string City {
+    type = "string"
+    maxLength = 512
+    required = false
+    filterable = false
+    label = "City"
+  }
+  string ContactId {
+    type = "string"
+    format = "uuid"
+    required = false
+    filterable = false
+    label = "ContactId"
+  }
+  string Country {
+    type = "string"
+    maxLength = 512
+    required = false
+    filterable = false
+    label = "Country"
+  }
+  string County {
+    type = "string"
+    maxLength = 512
+    required = false
+    filterable = false
+    label = "County"
+  }
+  string Description {
+    type = "string"
+    maxLength = 512
+    required = false
+    filterable = false
+    label = "Description"
+  }
+  string Fax {
+    type = "string"
+    maxLength = 512
+    required = false
+    filterable = false
+    label = "Fax"
+  }
+  string FirstName {
+    type = "string"
+    maxLength = 512
+    required = false
+    filterable = false
+    label = "FirstName"
+  }
+  string HomePhone {
+    type = "string"
+    maxLength = 512
+    required = false
+    filterable = false
+    label = "HomePhone"
+  }
+  string LastName {
+    type = "string"
+    maxLength = 512
+    required = false
+    filterable = false
+    label = "LastName"
+  }
+  string MobilePhone {
+    type = "string"
+    maxLength = 512
+    required = false
+    filterable = false
+    label = "MobilePhone"
+  }
+  string NickName {
+    type = "string"
+    maxLength = 512
+    required = false
+    filterable = false
+    label = "NickName"
+  }
+  string OtherPhone {
+    type = "string"
+    maxLength = 512
+    required = false
+    filterable = false
+    label = "OtherPhone"
+  }
+  string OtherPhoneType {
+    type = "string"
+    maxLength = 512
+    required = false
+    filterable = false
+    label = "OtherPhoneType"
+  }
+  string PersonalEmail {
+    type = "string"
+    maxLength = 512
+    required = false
+    filterable = false
+    label = "PersonalEmail"
+  }
+  string PostalCode {
+    type = "string"
+    maxLength = 512
+    required = false
+    filterable = false
+    label = "PostalCode"
+  }
+  string State {
+    type = "string"
+    maxLength = 512
+    required = false
+    filterable = false
+    label = "State"
+  }
+  string TaxRegion {
+    type = "string"
+    maxLength = 512
+    required = false
+    filterable = false
+    label = "TaxRegion"
+  }
+  string WorkEmail {
+    type = "string"
+    maxLength = 512
+    required = false
+    filterable = false
+    label = "WorkEmail"
+  }
+  string WorkPhone {
+    type = "string"
+    maxLength = 512
+    required = false
+    filterable = false
+    label = "WorkPhone"
+  }
+}

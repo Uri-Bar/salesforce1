@@ -1,0 +1,21 @@
+zuora_billing.AccountingPeriod February_2021@s {
+  name = "February 2021"
+  startDate = "2021-02-01"
+  endDate = "2021-02-28"
+  status = "Open"
+  
+  
+  
+  fiscalYear = 2021
+  notes = ""
+  fileIds = {
+    accountsReceivableInvoiceAgingDetailExportFileId = "8ac683137d37e41e017d482f5d0229f3"
+    accountsReceivableAccountAgingDetailExportFileId = "8ac683137d37e41e017d482f5d6b29f4"
+    revenueDetailExcelFileId = "8ac69e077d37e41c017d482f3e2024e2"
+    revenueDetailCsvFileId = "8ac69e077d37e41c017d482f3ea224e3"
+    arRollForwardDetailExportFileId = "8ac69e077d37e41c017d482f654f24e8"
+  }
+  additionalProperties = {
+    testfield1__c = "1111"
+  }
+}

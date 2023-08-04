@@ -1,0 +1,49 @@
+salesforce.ConnectedApp Salto_CI {
+  fullName = "Salto_CI"
+  contactEmail = "roy.razon@salto.io"
+  label = "Salto CI"
+  oauthConfig = {
+    callbackUrl = "http://localhost:1717/OauthRedirect"
+    certificate = "MIIC3DCCAcQCCQDgs1P9BmNA5DANBgkqhkiG9w0BAQsFADAwMQswCQYDVQQGEwJJTDERMA8GA1UEBwwIVGVsIEF2aXYxDjAMBgNVBAoMBVNhbHRvMB4XDTE5MTEwMzEzMjU1NloXDTIwMTEwMjEzMjU1NlowMDELMAkGA1UEBhMCSUwxETAPBgNVBAcMCFRlbCBBdml2MQ4wDAYDVQQKDAVTYWx0bzCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBAKU4/7qrwVKh4zLhQc+94YoYIoiixMeCuVkedlR4VFOUXeIfxgOYu7Jeyh5ZdPiQRtUh3nuZwSQjUqa3KVIbGayrgKL8GTOfSEmarWUwxa+/lwBdwhp4NHUNmGUxFODLL2IAndcDqyH3RKcuc0qUlVHk28DAB49z6a3/8DSdY0JaAmpdjzkP/GY7xrPsAmah4B7GFXthFUXFDj80Yu06YiF8a69ZrtKQYA0mB7sLmeO15hZBVtbrCoQVI+R1b2sNEm51zJBIh0cED9JGmgRMfSNd6zBzjgtGxQUtKhL0xjxPHiOCacgBkmc0KHB3tFsxTPuldockLRKwRnklUpO1hqcCAwEAATANBgkqhkiG9w0BAQsFAAOCAQEAjhJHi4XSYRFy6tGCW5HoQ3s4srnKfHF2vxjJ6BQK5j3LEkW19AVNgSuHjAAYfASVz70bJe1zrazE14h2RwWsT6f57SFcTBpGjZ/OJ81dkNdc6R+Gr9oyJKphldT5+nicElBcG1SDe/lwbkasWZvWaLD1TaL9WlbcMMiZ/SonW8Cf3arku6cM5snClwzP4qJRFAuxn/JBsb+Xdc7Vx969PO3xAlog8Bw4BKF+uhIf9vlxV/paWldT9JCS7yJAMxlLzHzJ9d7TdryUFb5zqZuNTszPtzTYGmFTvut6edLRTKQdm5VIBOTXQHgFAFC6rd92GTzk5OOecu63hoHYBpWvtw=="
+    consumerKey = "3MVG9Lf04EwncL7mOf8fdrWEYGZNfhhu8lC51aCbTYaeC65228fYssxPZhk_SEOKQ94eAwV5cmsy4V0C0EeeB"
+    isAdminApproved = true
+    isConsumerSecretOptional = false
+    isIntrospectAllTokens = false
+    scopes = [
+      "Basic",
+      "Api",
+      "Web",
+      "Full",
+      "Chatter",
+      "CustomApplications",
+      "RefreshToken",
+      "OpenID",
+      "CustomPermissions",
+      "Wave",
+      "Eclair",
+    ]
+    isSecretRequiredForRefreshToken = false
+    isClientCredentialEnabled = false
+    isCodeCredentialEnabled = false
+    isCodeCredentialPostOnly = false
+    isNamedUserJwtEnabled = false
+  }
+  oauthPolicy = {
+    ipRelaxation = "ENFORCE"
+    refreshTokenPolicy = "infinite"
+  }
+  permissionSetName = "Sales User"
+  profileName = [
+    "Guest License User",
+    "CPQ Integration User",
+    "Contract Manager",
+    "System Administrator",
+    "Solution Manager",
+    "Standard User",
+    "Marketing User",
+    "Read Only",
+    "Chatter Moderator User",
+    "Chatter Free User",
+    "Chatter External User",
+  ]
+}

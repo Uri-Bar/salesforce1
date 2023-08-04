@@ -1,0 +1,8 @@
+jira.Field Approvers__c {
+  name = "Approvers"
+  description = "Contains users needed for approval. This custom field was created by Jira."
+  type = "com.atlassian.jira.plugin.system.customfieldtypes:multiuserpicker"
+  contexts = [
+    jira.CustomFieldContext.instance.Approvers__c_Default_Configuration_Scheme_for_Approvers@uuussss,
+  ]
+}

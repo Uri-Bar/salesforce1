@@ -1,0 +1,159 @@
+salesforce.Layout Yariv__c_Yariv_Layout@uubs {
+  fullName = "Yariv__c-Yariv Layout"
+  layoutSections = [
+    {
+      customLabel = false
+      detailHeading = false
+      editHeading = true
+      label = "Information"
+      layoutColumns = [
+        {
+          layoutItems = [
+            {
+              behavior = "Required"
+              field = salesforce.Yariv__c.field.Name
+            },
+            {
+              behavior = "Readonly"
+              field = salesforce.Yariv__c.field.Yariv_Auto__c
+            },
+            {
+              behavior = "Readonly"
+              field = salesforce.Yariv__c.field.Yariv_Formula__c
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.Yariv__c.field.Yariv_Checkbox__c
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.Yariv__c.field.Yariv_Currency__c
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.Yariv__c.field.Yariv_Date__c
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.Yariv__c.field.Yariv_Datetime__c
+            },
+            {
+              behavior = "Required"
+              field = salesforce.Yariv__c.field.Yariv_Email__c
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.Yariv__c.field.Yariv_Geolocation__c
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.Yariv__c.field.Yariv_Number__c
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.Yariv__c.field.Yariv_Percent__c
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.Yariv__c.field.Yariv_Phone__c
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.Yariv__c.field.Picklist_Yariv__c
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.Yariv__c.field.Yariv_Multipick__c
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.Yariv__c.field.Yariv_Text__c
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.Yariv__c.field.Yariv_Text_Area__c
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.Yariv__c.field.Yariv_Text_Area_Long__c
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.Yariv__c.field.Yariv_Text_Area_Rich__c
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.Yariv__c.field.Yariv_Text_Encvrypted__c
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.Yariv__c.field.Yariv_Time__c
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.Yariv__c.field.Yariv_URL__c
+            },
+          ]
+        },
+        {
+          layoutItems = [
+            {
+              behavior = "Edit"
+              field = salesforce.Yariv__c.field.OwnerId
+            },
+          ]
+        },
+      ]
+      style = "TwoColumnsTopToBottom"
+    },
+    {
+      customLabel = false
+      detailHeading = false
+      editHeading = true
+      label = "System Information"
+      layoutColumns = [
+        {
+          layoutItems = [
+            {
+              behavior = "Readonly"
+              field = salesforce.Yariv__c.field.CreatedById
+            },
+          ]
+        },
+        {
+          layoutItems = [
+            {
+              behavior = "Readonly"
+              field = salesforce.Yariv__c.field.LastModifiedById
+            },
+          ]
+        },
+      ]
+      style = "TwoColumnsTopToBottom"
+    },
+    {
+      customLabel = false
+      detailHeading = false
+      editHeading = true
+      style = "CustomLinks"
+    },
+  ]
+  relatedLists = [
+    {
+      fields = [
+        "ACCOUNT.NAME",
+        "ACCOUNT.ADDRESS1_CITY",
+        "ACCOUNT.PHONE1",
+      ]
+      relatedList = salesforce.Account.field.Yariv_ref__c
+    },
+  ]
+  showEmailCheckbox = false
+  showHighlightsPanel = false
+  showInteractionLogPanel = false
+  showRunAssignmentRulesCheckbox = false
+  showSubmitAndAttachButton = false
+  _parent = [
+    salesforce.Yariv__c,
+  ]
+}

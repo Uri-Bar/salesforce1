@@ -1,0 +1,22 @@
+type zuora_billing.account__c {
+  annotations {
+    string metadataType {
+    }
+    string label {
+    }
+    string description {
+    }
+    hidden_string id {
+    }
+    string objectType {
+    }
+  }
+  metadataType = "CustomObject"
+  label = "account"
+  objectType = "account"
+  _generated_dependencies = [
+    {
+      reference = zuora_billing.user
+    },
+  ]
+}

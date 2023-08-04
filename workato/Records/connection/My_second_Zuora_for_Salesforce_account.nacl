@@ -1,0 +1,5 @@
+workato.connection My_second_Zuora_for_Salesforce_account@s {
+  application = "zuora_forcecom"
+  name = "My second Zuora for Salesforce account"
+  folder_id = workato.folder.instance.Alon_318283
+}

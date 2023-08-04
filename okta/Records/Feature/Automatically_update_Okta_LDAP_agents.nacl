@@ -1,0 +1,9 @@
+okta.Feature Automatically_update_Okta_LDAP_agents@s {
+  type = "self-service"
+  status = "DISABLED"
+  name = "Automatically update Okta LDAP agents"
+  description = "Automatically update Okta LDAP agents to ensure your org has the latest agent features and functionality. You no longer need to manually uninstall and then reinstall outdated agents, you can schedule agent auto-updates to occur outside of business hours."
+  stage = {
+    value = "EA"
+  }
+}

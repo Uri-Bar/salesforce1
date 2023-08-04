@@ -1,0 +1,9 @@
+netsuite.folder SuiteBundles_Bundle_351444_Docusign_Scripts_types@dsddd {
+  bundleable = false
+  isinactive = false
+  isprivate = false
+  path = "/SuiteBundles/Bundle 351444/Docusign/Scripts/types"
+  _parent = [
+    netsuite.folder.instance.SuiteBundles_Bundle_351444_Docusign_Scripts@dsdd,
+  ]
+}

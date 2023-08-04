@@ -1,0 +1,35 @@
+netsuite.entitycustomfield custentitycust_slt_conflict1 {
+  scriptid = "custentitycust_slt_conflict1"
+  accesslevel = "2"
+  appliestocontact = false
+  appliestocustomer = true
+  appliestoemployee = false
+  appliestogroup = false
+  appliestoothername = false
+  appliestopartner = false
+  appliestopricelist = false
+  appliestoprojecttemplate = false
+  appliestostatement = false
+  appliestovendor = false
+  appliestowebsite = false
+  applyformatting = false
+  availableexternally = false
+  checkspelling = false
+  defaultchecked = false
+  description = "Field to demonstrate a conflict between feature branch and master."
+  displaytype = "NORMAL"
+  encryptatrest = false
+  fieldtype = "TEXT"
+  globalsearch = false
+  help = "text1"
+  isformula = false
+  ismandatory = false
+  isparent = false
+  label = "Conflict field1"
+  searchlevel = "2"
+  showhierarchy = false
+  showinlist = false
+  storevalue = true
+  appliestogenericrsrc = false
+  appliestoproject = false
+}

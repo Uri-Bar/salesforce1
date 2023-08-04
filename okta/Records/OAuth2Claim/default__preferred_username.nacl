@@ -1,0 +1,16 @@
+okta.OAuth2Claim default__preferred_username {
+  name = "preferred_username"
+  status = "ACTIVE"
+  claimType = "IDENTITY"
+  valueType = "SYSTEM"
+  conditions = {
+    scopes = [
+      "profile",
+    ]
+  }
+  system = true
+  alwaysIncludeInToken = true
+  _parent = [
+    okta.AuthorizationServer.instance.default,
+  ]
+}

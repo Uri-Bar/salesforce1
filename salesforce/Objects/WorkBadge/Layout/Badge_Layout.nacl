@@ -1,0 +1,67 @@
+salesforce.Layout WorkBadge_Badge_Layout@bs {
+  fullName = "WorkBadge-Badge Layout"
+  layoutSections = [
+    {
+      customLabel = false
+      detailHeading = false
+      editHeading = false
+      label = "Information"
+      layoutColumns = [
+        {
+          layoutItems = [
+            {
+              behavior = "Required"
+              field = salesforce.WorkBadge.field.GiverId
+            },
+            {
+              behavior = "Readonly"
+              field = salesforce.WorkBadge.field.CreatedById
+            },
+            {
+              behavior = "Required"
+              field = salesforce.WorkBadge.field.RecipientId
+            },
+            {
+              behavior = "Required"
+              field = salesforce.WorkBadge.field.SourceId
+            },
+          ]
+        },
+        {
+          layoutItems = [
+            {
+              behavior = "Readonly"
+              field = salesforce.WorkBadge.field.LastModifiedById
+            },
+            {
+              behavior = "Required"
+              field = salesforce.WorkBadge.field.DefinitionId
+            },
+          ]
+        },
+      ]
+      style = "TwoColumnsLeftToRight"
+    },
+    {
+      customLabel = false
+      detailHeading = false
+      editHeading = false
+      style = "CustomLinks"
+      layoutColumns = [
+        {
+        },
+      ]
+    },
+  ]
+  miniLayout = {
+    fields = [
+      "GiverId",
+    ]
+  }
+  showEmailCheckbox = false
+  showRunAssignmentRulesCheckbox = false
+  showSubmitAndAttachButton = false
+  _parent = [
+    salesforce.WorkBadge,
+  ]
+}

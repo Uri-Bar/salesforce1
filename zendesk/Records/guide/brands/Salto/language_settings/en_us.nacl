@@ -1,0 +1,5 @@
+zendesk.guide_language_settings Salto_en_us@ub {
+  locale = "en-us"
+  name = "Salto"
+  brand = zendesk.brand.instance.Salto
+}

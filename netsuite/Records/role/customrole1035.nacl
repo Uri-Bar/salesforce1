@@ -1,0 +1,29 @@
+netsuite.role customrole1035 {
+  scriptid = "customrole1035"
+  accountingbooksoption = "ALL"
+  centertype = "SUPPORTCENTER"
+  coreadminpermission = false
+  employeerestriction = "NONE"
+  employeeselectionunrestricted = true
+  isinactive = false
+  ispartnerrole = false
+  issalesrole = true
+  issinglesignononly = true
+  issupportrole = true
+  iswebserviceonlyrole = false
+  name = "Eshed's Custom Role"
+  restrictbydevice = false
+  restricttimeandexpenses = false
+  subsidiaryoption = "ALL"
+  subsidiaryviewingallowed = false
+  tfaduration = "0"
+  tfarequired = "OFF"
+  permissions = {
+    permission = {
+      TRAN_PURCHORD = {
+        permkey = "TRAN_PURCHORD"
+        permlevel = "VIEW"
+      }
+    }
+  }
+}

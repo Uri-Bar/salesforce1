@@ -1,0 +1,10 @@
+zendesk.dynamic_content_item__variants Dynamic_content_item_title_543_s__1@uuuumuu {
+  content = "Some content that should be modified to have placeholders"
+  locale_id = zendesk.locale.instance.en_US@b
+  outdated = false
+  active = true
+  default = true
+  _parent = [
+    zendesk.dynamic_content_item.instance.Dynamic_content_item_title_543@s,
+  ]
+}

@@ -1,0 +1,40 @@
+type zuora_billing.invoiceitem {
+  annotations {
+    string metadataType {
+    }
+    string label {
+    }
+    string description {
+    }
+    hidden_string id {
+    }
+    string objectType {
+    }
+  }
+  metadataType = "StandardObject"
+  objectType = "invoiceitem"
+  _generated_dependencies = [
+    {
+      reference = zuora_billing.accountingcode
+    },
+    {
+      reference = zuora_billing.invoice
+    },
+    {
+      reference = zuora_billing.journalentry
+    },
+    {
+      reference = zuora_billing.productrateplancharge
+    },
+    {
+      reference = zuora_billing.rateplancharge
+    },
+    {
+      reference = zuora_billing.subscription
+    },
+    {
+      reference = zuora_billing.user
+    },
+  ]
+  label = "Invoice Detail"
+}

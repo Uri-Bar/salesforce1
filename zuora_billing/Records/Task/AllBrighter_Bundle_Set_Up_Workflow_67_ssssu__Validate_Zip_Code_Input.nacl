@@ -1,0 +1,46 @@
+zuora_billing.Task AllBrighter_Bundle_Set_Up_Workflow_67_ssssu__Validate_Zip_Code_Input@uuuuumuusss {
+  name = "Validate Zip Code Input"
+  parameters = {
+    if_clause = '''
+{% comment %} Convert zipcode to a number and test to see if it is in valid zip code range, zip codes in USA start at 00501 and go to 99950 {% endcomment %}
+
+{% assign zipcode = Data.Workflow.ship_zip | plus: 0 %}
+
+{% if zipcode < 501 %}
+	False
+{% else %}
+	{% if zipcode > 99950 %}
+		False
+	{% else %}
+		True
+  {% endif %}
+{% endif %}
+
+'''
+    strict_variables = "true"
+  }
+  action_type = "If"
+  call_type = "SOAP"
+  concurrent_limit = 9999999
+  additionalProperties = {
+    css = {
+      top = "-410px"
+      left = "-220px"
+    }
+    priority = "Medium"
+    
+  }
+  _parent = [
+    zuora_billing.WorkflowExport.instance.AllBrighter_Bundle_Set_Up_Workflow_67@ssssu,
+  ]
+  _generated_dependencies = [
+    {
+      reference = zuora_billing.Workflow.instance.AllBrighter_Bundle_Set_Up_Workflow_67_ssssu__AllBrighter_Bundle_Set_Up_Workflow@uuuuumuussss.additionalProperties.parameters.fields
+      occurrences = [
+        {
+          location = zuora_billing.Task.instance.AllBrighter_Bundle_Set_Up_Workflow_67_ssssu__Validate_Zip_Code_Input@uuuuumuusss.parameters.if_clause
+        },
+      ]
+    },
+  ]
+}

@@ -1,0 +1,10 @@
+zendesk.article_order Announcements_General_Salto {
+  articles = [
+    zendesk.article.instance.Sample_article__Stellar_Skyonomy_refund_policies_Announcements_General_Salto@sfssssuuu,
+    zendesk.article.instance.Welcome_to_your_Help_Center__Announcements_General_Salto@ssssluuu,
+  ]
+  brand = zendesk.brand.instance.Salto
+  _parent = [
+    zendesk.section.instance.Announcements_General_Salto,
+  ]
+}

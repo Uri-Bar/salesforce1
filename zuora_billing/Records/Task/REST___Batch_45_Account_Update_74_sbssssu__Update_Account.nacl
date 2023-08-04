@@ -1,0 +1,89 @@
+zuora_billing.Task REST___Batch_45_Account_Update_74_sbssssu__Update_Account@uuuuuuumuus {
+  name = "Update Account"
+  parameters = {
+    url = "{{ Credentials.zuora.rest_endpoint }}action/update"
+    datas = [
+      {
+        key = ""
+        value = ""
+      },
+    ]
+    method = "POST"
+    headers = [
+      {
+        key = "apiAccessKeyId"
+        value = "{{ Credentials.zuora.username }}"
+      },
+      {
+        key = "apiSecretAccessKey"
+        value = "{{ Credentials.zuora.password }}"
+      },
+      {
+        key = "Content-Type"
+        value = "application/json"
+      },
+    ]
+    raw_body = '''
+{
+  "objects": [
+  {% for account in Data.Account %}
+    {
+      "Id": "{{account.Id}}",
+      "Notes":"{{account.Notes}}"
+    }{% if forloop.last == false %} , {% endif %}
+  {% endfor %}
+  ],
+  "type": "Account"
+}
+'''
+    body_type = "raw"
+    validation = {
+      zuora_call = "true"
+      status_codes = [
+        "",
+        "200",
+      ]
+    }
+    retry_rules = {
+      retry_count = "0"
+      retry_window = "30"
+      current_retry_count = 0
+    }
+    authorization = {
+      type = "none"
+    }
+  }
+  action_type = "Callout"
+  call_type = "SOAP"
+  task_id = 646658
+  concurrent_limit = 9999999
+  additionalProperties = {
+    css = {
+      top = "40px"
+      left = "900px"
+    }
+    priority = "Medium"
+    
+  }
+  _parent = [
+    zuora_billing.WorkflowExport.instance.REST___Batch_45_Account_Update_74@sbssssu,
+  ]
+  _generated_dependencies = [
+    {
+      reference = zuora_billing.account.field.Id
+      occurrences = [
+        {
+          location = zuora_billing.Task.instance.REST___Batch_45_Account_Update_74_sbssssu__Update_Account@uuuuuuumuus.parameters.raw_body
+        },
+      ]
+    },
+    {
+      reference = zuora_billing.account.field.Notes
+      occurrences = [
+        {
+          location = zuora_billing.Task.instance.REST___Batch_45_Account_Update_74_sbssssu__Update_Account@uuuuuuumuus.parameters.raw_body
+        },
+      ]
+    },
+  ]
+}

@@ -1,0 +1,7 @@
+netsuite.folder SuiteScripts {
+  description = "SuiteScripts Folder"
+  bundleable = false
+  isinactive = false
+  isprivate = false
+  path = "/SuiteScripts"
+}

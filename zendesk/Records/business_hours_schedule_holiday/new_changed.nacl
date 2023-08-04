@@ -1,0 +1,8 @@
+zendesk.business_hours_schedule_holiday eden_schedule2_b__new_changed@umuub {
+  name = "new-changed"
+  start_date = "2023-02-07"
+  end_date = "2023-02-07"
+  _parent = [
+    zendesk.business_hours_schedule.instance.eden_schedule2@b,
+  ]
+}

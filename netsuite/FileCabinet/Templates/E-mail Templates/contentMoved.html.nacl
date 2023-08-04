@@ -1,0 +1,13 @@
+netsuite.file Templates_E_mail_Templates_contentMoved_html@dbsdv {
+  description = "some description"
+  bundleable = false
+  isinactive = false
+  availablewithoutlogin = false
+  generateurltimestamp = false
+  hideinbundle = false
+  path = "/Templates/E-mail Templates/contentMoved.html"
+  content = file("netsuite/FileCabinet/Templates/E-mail Templates/contentMoved.html")
+  _parent = [
+    netsuite.folder.instance.Templates_E_mail_Templates@dbs,
+  ]
+}

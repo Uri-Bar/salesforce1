@@ -1,0 +1,39 @@
+zendesk.automation Pending_notification_5_days@s {
+  title = "Pending notification 5 days"
+  active = false
+  actions = [
+    {
+      field = "notification_user"
+      value = [
+        "requester_and_ccs",
+        "[{{ticket.account}}] Pending request: {{ticket.title}} - no response for 5 days",
+        '''
+This is an email to remind you that your request (#{{ticket.id}}) has been pending for 5 days and awaits your feedback.
+We have lowered the priority for this ticket on our side.
+
+{{ticket.comments_formatted}}
+''',
+      ]
+    },
+    {
+      field = "priority"
+      value = "low"
+    },
+  ]
+  conditions = {
+    all = [
+      {
+        field = "PENDING"
+        operator = "is"
+        value = "120"
+      },
+      {
+        field = "ticket_is_public"
+        operator = "is"
+        value = "public"
+      },
+    ]
+  }
+  raw_title = "Pending notification 5 days"
+  default = true
+}

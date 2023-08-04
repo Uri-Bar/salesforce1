@@ -1,0 +1,7 @@
+zuora_billing.Settings_BillingPeriod {
+  billingPeriods = [
+    "Quarter",
+    "Annual",
+    "Semi_Annual",
+  ]
+}

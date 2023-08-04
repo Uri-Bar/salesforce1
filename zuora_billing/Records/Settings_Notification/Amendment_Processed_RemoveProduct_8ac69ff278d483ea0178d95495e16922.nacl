@@ -1,0 +1,18 @@
+zuora_billing.Settings_Notification Amendment_Processed_RemoveProduct_8ac69ff278d483ea0178d95495e16922@suu {
+  profileId = zuora_billing.Settings_CommunicationProfile.instance.Neta_test@s
+  eventName = "Amendment Processed"
+  name = "RemoveProduct"
+  description = "A remove product amendment has been submitted and processed."
+  active = false
+  hidden = false
+  param1 = "16"
+  emailOption = true
+  emailTemplateName = zuora_billing.PublicEmailTemplate.instance.Default_Email_Template_for_Amendment_Processed___Remove_Product@ssssssbss
+  calloutOption = false
+  contentType = "APPLICATION_JSON"
+  calloutRetriable = false
+  calloutAuth = false
+  calloutOauth2 = false
+  calloutPreemptiveAuth = false
+  useCustomRequestBody = false
+}

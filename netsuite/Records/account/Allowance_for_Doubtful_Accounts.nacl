@@ -1,0 +1,15 @@
+netsuite.account Allowance_for_Doubtful_Accounts@s {
+  acctType = "_otherCurrentAsset"
+  acctName = "Allowance for Doubtful Accounts"
+  includeChildren = true
+  generalRate = "_current"
+  cashFlowRate = "_average"
+  isInactive = false
+  inventory = false
+  subsidiaryList = [
+    netsuite.subsidiary.instance.Parent_Company@s,
+  ]
+  revalue = false
+  identifier = "Allowance for Doubtful Accounts"
+  custom_custrecord_acct_special = false
+}

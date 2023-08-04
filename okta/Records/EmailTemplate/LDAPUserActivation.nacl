@@ -1,0 +1,6 @@
+okta.EmailTemplate LDAPUserActivation {
+  name = "LDAPUserActivation"
+  _parent = [
+    okta.Brand.instance,
+  ]
+}

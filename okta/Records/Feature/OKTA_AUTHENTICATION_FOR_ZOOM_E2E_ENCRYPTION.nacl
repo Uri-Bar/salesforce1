@@ -1,0 +1,9 @@
+okta.Feature OKTA_AUTHENTICATION_FOR_ZOOM_E2E_ENCRYPTION@s {
+  type = "self-service"
+  status = "DISABLED"
+  name = "OKTA AUTHENTICATION FOR ZOOM E2E ENCRYPTION"
+  description = "Use Okta to authenticate both the user account and encryption key for end-to-end encrypted Zoom meetings"
+  stage = {
+    value = "EA"
+  }
+}

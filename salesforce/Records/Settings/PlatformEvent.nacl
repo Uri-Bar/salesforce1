@@ -1,0 +1,4 @@
+salesforce.PlatformEventSettings {
+  fullName = "PlatformEvent"
+  enableEnhancedUsageMetrics = "false"
+}

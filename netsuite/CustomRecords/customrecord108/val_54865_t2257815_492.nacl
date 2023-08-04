@@ -1,0 +1,8 @@
+netsuite.customrecord108 val_54865_t2257815_492 {
+  scriptid = "val_54865_t2257815_492"
+  isInactive = false
+  name = "DA Insatnce"
+  custom_custrecord1396 = netsuite.customrecord108.instance.val_54865_t2257815_492
+  custom_custrecord1393 = "(Encrypted)"
+  custom_custrecord1394 = netsuite.file.instance.SuiteBundles_Bundle_351444_Docusign_Images_ds_button_png@dsddduv
+}

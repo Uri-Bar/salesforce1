@@ -1,0 +1,7 @@
+zuora_billing.Settings_BillingListPriceBase {
+  listPriceBase = [
+    "Per_Week",
+    "Per_Month",
+    "Per_Billing_Period",
+  ]
+}

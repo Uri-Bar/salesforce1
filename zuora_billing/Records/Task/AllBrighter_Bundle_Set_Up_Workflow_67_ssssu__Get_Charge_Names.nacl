@@ -1,0 +1,58 @@
+zuora_billing.Task AllBrighter_Bundle_Set_Up_Workflow_67_ssssu__Get_Charge_Names@uuuuumuuss {
+  name = "Get Charge Names"
+  parameters = {
+    fields = {
+      RatePlanCharge = {
+        Id = "true"
+        Name = "true"
+        ChargeNumber = "true"
+      }
+    }
+    placement = ""
+    batch_size = "2000"
+    where_clause = "Name = 'junk' {% for newplan in Data.Callout[2].ResponseBody.order.subscriptions[0].orderActions[0].createSubscription.subscribeToRatePlans %} or RatePlanId = '{{newplan.newRatePlanId}}' {% endfor %}"
+    strict_variables = "false"
+  }
+  action_type = "Query"
+  object = zuora_billing.rateplancharge
+  call_type = "SOAP"
+  task_id = 69
+  concurrent_limit = 9999999
+  additionalProperties = {
+    css = {
+      top = "-160px"
+      left = "260px"
+    }
+    priority = "Medium"
+    
+  }
+  _parent = [
+    zuora_billing.WorkflowExport.instance.AllBrighter_Bundle_Set_Up_Workflow_67@ssssu,
+  ]
+  _generated_dependencies = [
+    {
+      reference = zuora_billing.rateplancharge.field.ChargeNumber
+      occurrences = [
+        {
+          location = zuora_billing.Task.instance.AllBrighter_Bundle_Set_Up_Workflow_67_ssssu__Get_Charge_Names@uuuuumuuss.parameters.fields.RatePlanCharge.ChargeNumber
+        },
+      ]
+    },
+    {
+      reference = zuora_billing.rateplancharge.field.Id
+      occurrences = [
+        {
+          location = zuora_billing.Task.instance.AllBrighter_Bundle_Set_Up_Workflow_67_ssssu__Get_Charge_Names@uuuuumuuss.parameters.fields.RatePlanCharge.Id
+        },
+      ]
+    },
+    {
+      reference = zuora_billing.rateplancharge.field.Name
+      occurrences = [
+        {
+          location = zuora_billing.Task.instance.AllBrighter_Bundle_Set_Up_Workflow_67_ssssu__Get_Charge_Names@uuuuumuuss.parameters.fields.RatePlanCharge.Name
+        },
+      ]
+    },
+  ]
+}

@@ -1,0 +1,23 @@
+stripe.reporting_report_type radar_analytics_center_payments_matching_rule_v1@vuvuuv {
+  id = "radar.analytics_center.payments_matching_rule.v1"
+  default_columns = [
+    "rule_decision_created",
+    "charge_id",
+    "payment_intent_id",
+    "setup_intent_id",
+    "description",
+    "seller_message",
+    "amount",
+    "amount_refunded",
+    "currency",
+    "status",
+    "statement_descriptor",
+    "customer_id",
+    "captured",
+    "invoice_id",
+    "rule_id",
+  ]
+  livemode = false
+  name = "Payments Matching Rule Export V1"
+  version = 1
+}

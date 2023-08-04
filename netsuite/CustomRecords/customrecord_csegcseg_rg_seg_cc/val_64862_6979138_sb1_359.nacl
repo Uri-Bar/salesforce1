@@ -1,0 +1,18 @@
+netsuite.customrecord_csegcseg_rg_seg_cc val_64862_6979138_sb1_359 {
+  scriptid = "val_64862_6979138_sb1_359"
+  isInactive = false
+  parent = netsuite.customrecord_csegcseg_rg_seg_cc.instance.val_64861_6979138_sb1_602
+  name = "1151 Procurement"
+  translationsList = {
+    customRecordTranslations = {
+      _frenchFrance = {
+        locale = "_frenchFrance"
+        language = "French (France)"
+      }
+      _german = {
+        locale = "_german"
+        language = "German"
+      }
+    }
+  }
+}

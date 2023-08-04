@@ -1,0 +1,14 @@
+zendesk.organization Salto {
+  name = "Salto"
+  shared_tickets = false
+  shared_comments = false
+  details = "Test details"
+  notes = ""
+  group_id = zendesk.group.instance.Support
+  tags = [
+    "123",
+  ]
+  organization_fields = {
+    dropdown_26 = "123"
+  }
+}

@@ -1,0 +1,4 @@
+workato.folder zuora_dodel_playground_Root {
+  name = "zuora"
+  parent_id = workato.folder.instance.dodel_playground_Root
+}

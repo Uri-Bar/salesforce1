@@ -1,0 +1,21 @@
+zendesk.macro DP___Priority_Macro@sbss {
+  title = "DP - Priority Macro"
+  active = true
+  default = false
+  description = "Makes ticket urgent. important, and comments appropriately"
+  actions = [
+    {
+      field = "comment_value_html"
+      value = "<p>{{ticket.assignee.name}} - Note that the Priority has been raised to {{ticket.ticket_field_${ zendesk.ticket_field.instance.DP_Priority_tagger }}} -&nbsp;<br></p>"
+    },
+    {
+      field = zendesk.ticket_field.instance.DP_Priority_tagger
+      value = zendesk.ticket_field__custom_field_options.instance.DP_Priority_tagger__urgent_and_important
+    },
+    {
+      field = "comment_mode_is_public"
+      value = "true"
+    },
+  ]
+  raw_title = "DP - Priority Macro"
+}

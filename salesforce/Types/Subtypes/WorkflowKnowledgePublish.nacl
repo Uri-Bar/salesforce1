@@ -1,0 +1,29 @@
+type salesforce.WorkflowKnowledgePublish {
+  annotations {
+    serviceid metadataType {
+    }
+    boolean hasMetaFile {
+    }
+    string folderType {
+    }
+    string folderContentType {
+    }
+    string suffix {
+    }
+    string dirName {
+    }
+  }
+  string action {
+  }
+  string description {
+  }
+  serviceid fullName {
+  }
+  string label {
+  }
+  string language {
+  }
+  boolean protected {
+  }
+  metadataType = "WorkflowKnowledgePublish"
+}

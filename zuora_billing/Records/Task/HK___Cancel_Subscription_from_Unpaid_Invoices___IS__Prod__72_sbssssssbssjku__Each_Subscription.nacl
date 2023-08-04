@@ -1,0 +1,27 @@
+zuora_billing.Task HK___Cancel_Subscription_from_Unpaid_Invoices___IS__Prod__72_sbssssssbssjku__Each_Subscription@uuuuuuuuuuuuuumuus {
+  name = "Each Subscription"
+  parameters = {
+    iteration_type = "Default"
+    liquid_statement = "{{Data.JSONTransform | to_json}}"
+    strict_variables = "true"
+    delete_payload_paths = [
+      "",
+    ]
+  }
+  action_type = "Iterate"
+  object = "CUSTOM LIQUID"
+  call_type = "SOAP"
+  task_id = 112
+  concurrent_limit = 9999999
+  additionalProperties = {
+    css = {
+      top = "170px"
+      left = "360px"
+    }
+    priority = "Medium"
+    
+  }
+  _parent = [
+    zuora_billing.WorkflowExport.instance.HK___Cancel_Subscription_from_Unpaid_Invoices___IS__Prod__72@sbssssssbssjku,
+  ]
+}

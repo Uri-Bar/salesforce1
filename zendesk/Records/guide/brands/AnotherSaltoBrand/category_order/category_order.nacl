@@ -1,0 +1,9 @@
+zendesk.category_order AnotherSaltoBrand {
+  categories = [
+    zendesk.category.instance.General_AnotherSaltoBrand,
+  ]
+  brand = zendesk.brand.instance.AnotherSaltoBrand
+  _parent = [
+    zendesk.brand.instance.AnotherSaltoBrand,
+  ]
+}

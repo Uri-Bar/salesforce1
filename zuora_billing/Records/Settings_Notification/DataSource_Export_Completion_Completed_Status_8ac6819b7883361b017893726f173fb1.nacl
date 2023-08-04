@@ -1,0 +1,17 @@
+zuora_billing.Settings_Notification DataSource_Export_Completion_Completed_Status_8ac6819b7883361b017893726f173fb1@ssusu {
+  profileId = zuora_billing.Settings_CommunicationProfile.instance.Default_Profile@s
+  eventName = "DataSource Export Completion"
+  name = "Completed Status"
+  description = "DataSource Export is completed"
+  active = false
+  hidden = false
+  emailOption = true
+  emailTemplateName = zuora_billing.PublicEmailTemplate.instance.Default_email_template_for_DataSource_Export_Completion@s
+  calloutOption = false
+  contentType = "APPLICATION_JSON"
+  calloutRetriable = false
+  calloutAuth = false
+  calloutOauth2 = false
+  calloutPreemptiveAuth = false
+  useCustomRequestBody = false
+}

@@ -1,0 +1,23 @@
+zuora_billing.Task Iterate_Over_Callout_Data_73_sssu__Let_Approve_This____Data_Callout_name___@uuuumuusss_00123_00123svvs_00125_00125 {
+  name = "Let Approve This {{ Data.Callout.name }}"
+  parameters = {
+    approver_emails = [
+      "*",
+    ]
+  }
+  action_type = "Approval"
+  call_type = "SOAP"
+  task_id = 119
+  concurrent_limit = 9999999
+  additionalProperties = {
+    css = {
+      top = "170px"
+      left = "340px"
+    }
+    priority = "Medium"
+    
+  }
+  _parent = [
+    zuora_billing.WorkflowExport.instance.Iterate_Over_Callout_Data_73@sssu,
+  ]
+}

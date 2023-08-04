@@ -1,0 +1,26 @@
+netsuite.clientscript customscripthq_share_script01_lat {
+  scriptid = "customscripthq_share_script01_lat"
+  isinactive = false
+  name = "hq_share_script01_lat"
+  notifyadmins = false
+  notifyowner = true
+  notifyuser = false
+  scriptfile = netsuite.file.instance.SuiteScripts_hq_share_script01@duu.path
+  scriptdeployments = {
+    scriptdeployment = {
+      customdeploy1 = {
+        scriptid = "customdeploy1"
+        allemployees = false
+        alllocalizationcontexts = true
+        allpartners = false
+        allroles = false
+        executioncontext = "ACTION|ADVANCEDREVREC|BANKCONNECTIVITY|BANKSTATEMENTPARSER|BUNDLEINSTALLATION|CLIENT|CONSOLRATEADJUSTOR|CSVIMPORT|CUSTOMGLLINES|CUSTOMMASSUPDATE|DATASETBUILDER|DEBUGGER|EMAILCAPTURE|FICONNECTIVITY|FIPARSER|MAPREDUCE|OCRPLUGIN|OTHER|PAYMENTGATEWAY|PAYMENTPOSTBACK|PLATFORMEXTENSION|PORTLET|PROMOTIONS|RECORDACTION|RESTLET|RESTWEBSERVICES|SCHEDULED|SDFINSTALLATION|SHIPPINGPARTNERS|SUITELET|TAXCALCULATION|USEREVENT|USERINTERFACE|WEBSERVICES|WORKBOOKBUILDER|WORKFLOW"
+        isdeployed = true
+        loglevel = "DEBUG"
+        recordtype = "COMPETITOR"
+        status = "TESTING"
+        
+      }
+    }
+  }
+}

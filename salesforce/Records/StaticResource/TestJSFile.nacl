@@ -1,0 +1,6 @@
+salesforce.StaticResource TestJSFile {
+  cacheControl = "Private"
+  contentType = "text/javascript"
+  fullName = "TestJSFile"
+  content = file("salesforce/Records/StaticResource/TestJSFile.resource")
+}

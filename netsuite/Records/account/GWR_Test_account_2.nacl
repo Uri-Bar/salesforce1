@@ -1,0 +1,21 @@
+netsuite.account GWR_Test_account_2@s {
+  acctType = "_bank"
+  acctName = "GWR Test account 2"
+  includeChildren = false
+  currency = netsuite.currency.instance.Canadian_Dollar@s
+  generalRate = "_current"
+  cashFlowRate = "_average"
+  isInactive = false
+  restrictToAccountingBookList = {
+    recordRef = [
+      netsuite.recordRef.instance.account_restrictToAccountingBookList_1,
+    ]
+  }
+  inventory = false
+  subsidiaryList = [
+    netsuite.subsidiary.instance.Parent_Company@s,
+  ]
+  revalue = true
+  identifier = "GWR Test account 2"
+  custom_custrecord_acct_special = false
+}

@@ -1,0 +1,15 @@
+netsuite.account Opening_Balance@s {
+  acctType = "_equity"
+  acctName = "Opening Balance"
+  includeChildren = true
+  generalRate = "_historical"
+  cashFlowRate = "_historical"
+  isInactive = false
+  inventory = false
+  subsidiaryList = [
+    netsuite.subsidiary.instance.Parent_Company@s,
+  ]
+  revalue = false
+  identifier = "Opening Balance"
+  custom_custrecord_acct_special = false
+}

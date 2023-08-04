@@ -1,0 +1,9 @@
+zuora_billing.AccountingPeriod January_2021@s {
+  name = "January 2021"
+  startDate = "2021-01-01"
+  endDate = "2021-01-31"
+  status = "Open"
+  
+  fiscalYear = 2021
+  notes = ""
+}

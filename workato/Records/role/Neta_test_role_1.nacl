@@ -1,0 +1,140 @@
+workato.role Neta_test_role_1@s {
+  name = "Neta test role 1"
+  inheritable = false
+  privileges = {
+    Recipes = [
+      "read",
+      "create",
+      "update",
+      "delete",
+      "run",
+      "read_run_history",
+    ]
+    Folders = [
+      "read",
+      "create",
+      "update",
+      "delete",
+    ]
+    Projects = [
+      "read",
+      "create",
+      "update",
+      "delete",
+    ]
+    Connections = [
+      "read",
+      "create",
+      "update",
+      "delete",
+    ]
+    "Lookup tables" = [
+      "read",
+      "create",
+      "update_records",
+      "delete",
+      "update_schema",
+    ]
+    "People task" = [
+      "all",
+    ]
+    "Environment properties" = [
+      "read",
+      "update_records",
+      "create",
+      "delete",
+    ]
+    "Connector SDK" = [
+      "all",
+    ]
+    "Use in recipes" = [
+      "all",
+    ]
+    "Message templates" = [
+      "read",
+      "create",
+      "update",
+      "delete",
+    ]
+    Workbot = [
+      "read",
+      "create",
+      "update",
+      "delete",
+    ]
+    "Runtime user connections" = [
+      "read",
+      "update",
+      "delete",
+    ]
+    "Pub/Sub" = [
+      "read",
+      "create",
+      "update",
+      "delete",
+    ]
+    "Recipe lifecycle management" = [
+      "all",
+    ]
+    
+    "Common data models" = [
+      "read",
+      "create",
+      "update",
+      "delete",
+    ]
+    
+    
+    "Dashboard & logs" = [
+      "all",
+    ]
+    "Collections & endpoints" = [
+      "read",
+      "create",
+      "update",
+      "delete",
+    ]
+    "Client & access profiles" = [
+      "read",
+      "create",
+      "update",
+      "delete",
+    ]
+    Policies = [
+      "read",
+      "create",
+      "update",
+      "delete",
+    ]
+    Settings = [
+      "all",
+    ]
+    "On-prem groups & agents" = [
+      "read",
+      "create",
+      "update",
+      "delete",
+    ]
+    "Custom OAuth profiles" = [
+      "read",
+      "create",
+      "update",
+      "delete",
+    ]
+    "Activity audit" = [
+      "all",
+    ]
+    "Connection Folders" = [
+      "all",
+    ]
+    Collaborators = [
+      "all",
+    ]
+    "Collaborator roles (non-system)" = [
+      "all",
+    ]
+    "Collaborator SAML SSO auth" = [
+      "all",
+    ]
+  }
+}

@@ -1,0 +1,16 @@
+zendesk.ticket_field group_Group {
+  type = "group"
+  
+  raw_title = "Group"
+  
+  raw_description = "Request group"
+  active = true
+  required = false
+  collapsed_for_agents = false
+  
+  raw_title_in_portal = "Group"
+  visible_in_portal = false
+  editable_in_portal = false
+  required_in_portal = false
+  removable = false
+}

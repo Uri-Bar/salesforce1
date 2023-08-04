@@ -1,0 +1,10 @@
+salesforce.Role Marketing_Coordinator {
+  fullName = "Marketing_Coordinator"
+  caseAccessLevel = "Edit"
+  contactAccessLevel = "Edit"
+  description = "Marketing Coordinator"
+  mayForecastManagerShare = false
+  name = "Marketing Coordinator"
+  opportunityAccessLevel = "Edit"
+  parentRole = salesforce.Role.instance.CMO
+}

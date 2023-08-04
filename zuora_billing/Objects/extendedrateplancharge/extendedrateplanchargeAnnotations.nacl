@@ -1,0 +1,31 @@
+type zuora_billing.extendedrateplancharge {
+  annotations {
+    string metadataType {
+    }
+    string label {
+    }
+    string description {
+    }
+    hidden_string id {
+    }
+    string objectType {
+    }
+  }
+  metadataType = "StandardObject"
+  objectType = "extendedrateplancharge"
+  _generated_dependencies = [
+    {
+      reference = zuora_billing.accountingcode
+    },
+    {
+      reference = zuora_billing.extendeduser
+    },
+    {
+      reference = zuora_billing.productrateplancharge
+    },
+    {
+      reference = zuora_billing.rateplan
+    },
+  ]
+  label = "ExtendedRatePlanCharge"
+}

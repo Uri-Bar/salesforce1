@@ -1,0 +1,8 @@
+zendesk.ticket_field__custom_field_options NH_dropdown_tagger_su__nhv1@uumuu {
+  name = "nhv1"
+  raw_name = "nhv1"
+  value = "nhv1"
+  _parent = [
+    zendesk.ticket_field.instance.NH_dropdown_tagger@su,
+  ]
+}

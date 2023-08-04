@@ -1,0 +1,26 @@
+netsuite.clientscript customscripthq_employee_script {
+  scriptid = "customscripthq_employee_script"
+  isinactive = false
+  name = "HQ-Employee-Validations"
+  notifyadmins = false
+  notifyowner = true
+  notifyuser = false
+  scriptfile = netsuite.file.instance.SuiteScripts_HQ_Employee@du.path
+  scriptdeployments = {
+    scriptdeployment = {
+      customdeployhq_employee_script = {
+        scriptid = "customdeployhq_employee_script"
+        allemployees = false
+        alllocalizationcontexts = true
+        allpartners = false
+        allroles = false
+        executioncontext = "ACTION|ADVANCEDREVREC|BANKCONNECTIVITY|BANKSTATEMENTPARSER|BUNDLEINSTALLATION|CLIENT|CONSOLRATEADJUSTOR|CSVIMPORT|CUSTOMGLLINES|CUSTOMMASSUPDATE|DATASETBUILDER|DEBUGGER|EMAILCAPTURE|FICONNECTIVITY|FIPARSER|MAPREDUCE|OCRPLUGIN|OTHER|PAYMENTGATEWAY|PAYMENTPOSTBACK|PLATFORMEXTENSION|PORTLET|PROMOTIONS|RECORDACTION|RESTLET|RESTWEBSERVICES|SCHEDULED|SDFINSTALLATION|SHIPPINGPARTNERS|SUITELET|TAXCALCULATION|USEREVENT|USERINTERFACE|WEBSERVICES|WORKBOOKBUILDER|WORKFLOW"
+        isdeployed = true
+        loglevel = "DEBUG"
+        recordtype = "EMPLOYEE"
+        status = "TESTING"
+        
+      }
+    }
+  }
+}

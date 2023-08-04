@@ -1,0 +1,9 @@
+okta.Feature Front_channel_Single_Logout@bss {
+  type = "self-service"
+  status = "DISABLED"
+  name = "Front-channel Single Logout"
+  description = "SAML and OIDC single logout requests will trigger subsequent logout requests to all other participating apps with active sessions"
+  stage = {
+    value = "EA"
+  }
+}

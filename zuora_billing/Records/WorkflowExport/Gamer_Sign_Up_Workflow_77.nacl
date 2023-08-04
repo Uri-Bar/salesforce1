@@ -1,0 +1,56 @@
+zuora_billing.WorkflowExport Gamer_Sign_Up_Workflow_77@sssu {
+  workflow = zuora_billing.Workflow.instance.Gamer_Sign_Up_Workflow_77_sssu__Gamer_Sign_Up_Workflow@uuuumuusss
+  tasks = [
+    zuora_billing.Task.instance.Gamer_Sign_Up_Workflow_77_sssu__Record_Games_in_Library@uuuumuusss,
+    zuora_billing.Task.instance.Gamer_Sign_Up_Workflow_77_sssu__Basic_Email_Validation@uuuumuuss,
+    zuora_billing.Task.instance.Gamer_Sign_Up_Workflow_77_sssu__Email@uuuumuu,
+    zuora_billing.Task.instance.Gamer_Sign_Up_Workflow_77_sssu__Record_Registration_Activity@uuuumuuss,
+    zuora_billing.Task.instance.Gamer_Sign_Up_Workflow_77_sssu__Get_Product_Rate_Plan@uuuumuusss,
+    zuora_billing.Task.instance.Gamer_Sign_Up_Workflow_77_sssu__Create_subscription@uuuumuus,
+  ]
+  linkages = [
+    {
+      source_task_id = zuora_billing.Task.instance.Gamer_Sign_Up_Workflow_77_sssu__Record_Registration_Activity@uuuumuuss
+      target_task_id = zuora_billing.Task.instance.Gamer_Sign_Up_Workflow_77_sssu__Email@uuuumuu
+      linkage_type = "Success"
+      
+    },
+    {
+      source_task_id = zuora_billing.Task.instance.Gamer_Sign_Up_Workflow_77_sssu__Create_subscription@uuuumuus
+      target_task_id = zuora_billing.Task.instance.Gamer_Sign_Up_Workflow_77_sssu__Record_Registration_Activity@uuuumuuss
+      linkage_type = "Success"
+      
+    },
+    {
+      source_task_id = zuora_billing.Task.instance.Gamer_Sign_Up_Workflow_77_sssu__Get_Product_Rate_Plan@uuuumuusss
+      target_task_id = zuora_billing.Task.instance.Gamer_Sign_Up_Workflow_77_sssu__Create_subscription@uuuumuus
+      linkage_type = "Success"
+      
+    },
+    {
+      source_task_id = zuora_billing.Task.instance.Gamer_Sign_Up_Workflow_77_sssu__Create_subscription@uuuumuus
+      target_task_id = zuora_billing.Task.instance.Gamer_Sign_Up_Workflow_77_sssu__Record_Games_in_Library@uuuumuusss
+      linkage_type = "Success"
+      
+    },
+    {
+      source_workflow_id = zuora_billing.Workflow.instance.Gamer_Sign_Up_Workflow_77_sssu__Gamer_Sign_Up_Workflow@uuuumuusss
+      target_task_id = zuora_billing.Task.instance.Gamer_Sign_Up_Workflow_77_sssu__Basic_Email_Validation@uuuumuuss
+      linkage_type = "Start"
+      
+    },
+    {
+      source_task_id = zuora_billing.Task.instance.Gamer_Sign_Up_Workflow_77_sssu__Basic_Email_Validation@uuuumuuss
+      target_task_id = zuora_billing.Task.instance.Gamer_Sign_Up_Workflow_77_sssu__Get_Product_Rate_Plan@uuuumuusss
+      linkage_type = "True"
+      
+    },
+  ]
+  additionalProperties = {
+    workflow_definition = {
+      description = ""
+      category = "Default"
+      name = "Gamer Sign Up Workflow"
+    }
+  }
+}

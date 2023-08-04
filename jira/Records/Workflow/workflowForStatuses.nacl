@@ -1,0 +1,165 @@
+jira.Workflow workflowForStatuses {
+  description = ""
+  transitions = {
+    Create__From__none__Initial@fffsff = {
+      name = "Create"
+      description = ""
+      to = jira.Status.instance.Open
+      type = "initial"
+      rules = {
+        validators = [
+          {
+            type = "PermissionValidator"
+            configuration = {
+              permissionKey = "CREATE_ISSUES"
+            }
+          },
+        ]
+        postFunctions = [
+          {
+            type = "FireIssueEventFunction"
+            configuration = {
+              event = {
+                id = jira.IssueEvent.instance.Issue_Created@s
+              }
+            }
+          },
+        ]
+      }
+      properties = [
+        {
+          key = "jira.issue.editable"
+          value = "true"
+        },
+      ]
+      from = [
+        {
+          sourceAngle = 78.11134196037203
+          targetAngle = 173.58734576006634
+        },
+      ]
+    }
+    transition1__From__Open__Directed@fffsff = {
+      name = "transition1"
+      description = ""
+      from = [
+        {
+          id = jira.Status.instance.Open
+          sourceAngle = -148.8099962493995
+          targetAngle = 78.11134196037203
+        },
+      ]
+      to = jira.Status.instance.In_Review@s
+      type = "directed"
+      rules = {
+        postFunctions = [
+          {
+            type = "FireIssueEventFunction"
+            configuration = {
+              event = {
+                id = jira.IssueEvent.instance.Generic_Event@s
+              }
+            }
+          },
+        ]
+      }
+      properties = [
+        {
+          key = "jira.issue.editable"
+          value = "true"
+        },
+      ]
+    }
+  }
+  statuses = [
+    {
+      id = jira.Status.instance.A_shared_status@s
+      properties = [
+        {
+          key = "jira.issue.editable"
+          value = "true"
+        },
+      ]
+      name = "A shared status"
+      location = {
+        x = 620.17578125
+        y = -27.700001220703115
+      }
+    },
+    {
+      id = jira.Status.instance.Approved
+      properties = [
+        {
+          key = "jira.issue.editable"
+          value = "true"
+        },
+      ]
+      name = "Approved"
+      location = {
+        x = 455.068359375
+        y = 31.299998779296885
+      }
+    },
+    {
+      id = jira.Status.instance.Build_Broken@s
+      properties = [
+        {
+          key = "jira.issue.editable"
+          value = "true"
+        },
+      ]
+      name = "Build Broken"
+      location = {
+        x = 432.474609375
+        y = -93.70000122070311
+      }
+    },
+    {
+      id = jira.Status.instance.Done
+      properties = [
+        {
+          key = "jira.issue.editable"
+          value = "true"
+        },
+      ]
+      name = "Done"
+      location = {
+        x = 465.048828125
+        y = -2.7000012207031148
+      }
+    },
+    {
+      id = jira.Status.instance.In_Review@s
+      properties = [
+        {
+          key = "jira.issue.editable"
+          value = "true"
+        },
+      ]
+      name = "In Review"
+      location = {
+        x = 550.8056640625
+        y = -174.2499992675781
+      }
+    },
+    {
+      id = jira.Status.instance.Open
+      properties = [
+        {
+          key = "jira.issue.editable"
+          value = "true"
+        },
+      ]
+      name = "Open"
+      location = {
+        x = 695.41015625
+        y = 117.4
+      }
+    },
+  ]
+  name = "workflowForStatuses"
+  diagramInitialEntry = {
+    x = 720
+    y = 67.4
+  }
+}

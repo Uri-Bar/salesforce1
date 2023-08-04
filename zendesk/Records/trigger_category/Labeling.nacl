@@ -1,0 +1,3 @@
+zendesk.trigger_category Labeling {
+  name = "Labeling"
+}

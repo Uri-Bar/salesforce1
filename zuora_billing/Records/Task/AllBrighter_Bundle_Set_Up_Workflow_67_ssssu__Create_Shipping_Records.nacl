@@ -1,0 +1,117 @@
+zuora_billing.Task AllBrighter_Bundle_Set_Up_Workflow_67_ssssu__Create_Shipping_Records@uuuuumuuss {
+  name = "Create Shipping Records"
+  parameters = {
+    url = "https://rest.apisandbox.zuora.com/objects/records/com_zlabs/shippingtable_{{WorkflowInstance.id}}"
+    datas = [
+      {
+        key = ""
+        value = ""
+      },
+    ]
+    method = "POST"
+    headers = [
+      {
+        key = "Content-Type"
+        value = "application/json"
+      },
+    ]
+    raw_body = '''
+{
+    "records": [	{% for ship_item in Data.RatePlanCharge %}{
+            "account__c": "{{Data.Callout[0].ResponseBody.accountNumber}}",
+            "ship_zip__c": "{{Data.Workflow.ship_zip}}",
+            "subscription__c": "{{Data.Callout[0].ResponseBody.subscriptionNumbers[0]}}",
+            "device_name__c": "{{ship_item.Name}}",
+            "charge_number__c": "{{ship_item.ChargeNumber}}",
+            "order_number__c": "{{Data.Workflow.buyer_first_name}}-{{Data.Workflow.buyer_last_name}}-Initial-{{WorkflowInstance.id}}",
+            "device_serial__c": "{{ship_item.Id}}",
+            "est_ship_date__c": "{{Data.Workflow.ExecutionDateTime}}",
+            "ship_date__c": "Unknown",
+            "ship_status__c": "Pending"
+        }, {% endfor %}
+        {
+            "account__c": "{{Data.Callout[0].ResponseBody.accountNumber}}",
+            "ship_zip__c": "{{Data.Workflow.ship_zip}}",
+            "subscription__c": "{{Data.Callout[0].ResponseBody.subscriptionNumbers[0]}}",
+            "device_name__c": "Quarterly Replacement Heads Pack (3)",
+            "charge_number__c": "Unknown",
+            "order_number__c": "{{Data.Workflow.buyer_first_name}}-{{Data.Workflow.buyer_last_name}}-Initial-{{WorkflowInstance.id}}",
+            "device_serial__c": "N/A",
+            "est_ship_date__c": "{{Data.Workflow.ExecutionDateTime | date: "%s" | plus: 7884000 | date: "%Y-%m-%d"}}",
+            "ship_date__c": "Unknown",
+            "ship_status__c": "Pending"
+        },
+        {
+            "account__c": "{{Data.Callout[0].ResponseBody.accountNumber}}",
+            "ship_zip__c": "{{Data.Workflow.ship_zip}}",
+            "subscription__c": "{{Data.Callout[0].ResponseBody.subscriptionNumbers[0]}}",
+            "device_name__c": "Quarterly Replacement Heads Pack (3)",
+            "charge_number__c": "Unknown",
+            "order_number__c": "{{Data.Workflow.buyer_first_name}}-{{Data.Workflow.buyer_last_name}}-Initial-{{WorkflowInstance.id}}",
+            "device_serial__c": "N/A",
+            "est_ship_date__c": "{{Data.Workflow.ExecutionDateTime | date: "%s" | plus: 15768000 | date: "%Y-%m-%d"}}",
+            "ship_date__c": "Unknown",
+            "ship_status__c": "Pending"
+        },
+        {
+            "account__c": "{{Data.Callout[0].ResponseBody.accountNumber}}",
+            "ship_zip__c": "{{Data.Workflow.ship_zip}}",
+            "subscription__c": "{{Data.Callout[0].ResponseBody.subscriptionNumbers[0]}}",
+            "device_name__c": "Quarterly Replacement Heads Pack (3)",
+            "order_number__c": "{{Data.Workflow.buyer_first_name}}-{{Data.Workflow.buyer_last_name}}-Initial-{{WorkflowInstance.id}}",
+            "charge_number__c": "Unknown",
+            "device_serial__c": "N/A",
+            "est_ship_date__c": "{{Data.Workflow.ExecutionDateTime | date: "%s" | plus: 23651000 | date: "%Y-%m-%d"}}",
+            "ship_date__c": "Unknown",
+            "ship_status__c": "Pending"
+        }
+    ]
+}
+'''
+    body_type = "raw"
+    validation = {
+      zuora_call = "false"
+      status_codes = [
+        "",
+        "200",
+      ]
+    }
+    retry_rules = {
+      retry_count = "3"
+      retry_window = "1"
+      current_retry_count = "0"
+    }
+    authorization = {
+      type = "zuora"
+    }
+    strict_variables = "true"
+    validate_response = "false"
+    validation_scheme = ""
+    include_response_code = "true"
+  }
+  action_type = "Callout"
+  call_type = "SOAP"
+  task_id = 72
+  concurrent_limit = 9999999
+  additionalProperties = {
+    css = {
+      top = "-160px"
+      left = "500px"
+    }
+    priority = "Medium"
+    
+  }
+  _parent = [
+    zuora_billing.WorkflowExport.instance.AllBrighter_Bundle_Set_Up_Workflow_67@ssssu,
+  ]
+  _generated_dependencies = [
+    {
+      reference = zuora_billing.Workflow.instance.AllBrighter_Bundle_Set_Up_Workflow_67_ssssu__AllBrighter_Bundle_Set_Up_Workflow@uuuuumuussss.additionalProperties.parameters.fields
+      occurrences = [
+        {
+          location = zuora_billing.Task.instance.AllBrighter_Bundle_Set_Up_Workflow_67_ssssu__Create_Shipping_Records@uuuuumuuss.parameters.raw_body
+        },
+      ]
+    },
+  ]
+}

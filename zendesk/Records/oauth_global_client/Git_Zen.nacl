@@ -1,0 +1,6 @@
+zendesk.oauth_global_client Git_Zen@b {
+  name = "Git-Zen"
+  identifier = "git-zen"
+  company = "Git-Zen"
+  description = "This authorization allows Git-Zen to connect securely to your Zendesk account"
+}

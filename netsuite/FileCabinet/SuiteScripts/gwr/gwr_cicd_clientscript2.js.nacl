@@ -1,0 +1,12 @@
+netsuite.file SuiteScripts_gwr_gwr_cicd_clientscript2_js@dduuv {
+  bundleable = false
+  isinactive = false
+  availablewithoutlogin = false
+  generateurltimestamp = false
+  hideinbundle = false
+  path = "/SuiteScripts/gwr/gwr_cicd_clientscript2.js"
+  content = file("netsuite/FileCabinet/SuiteScripts/gwr/gwr_cicd_clientscript2.js")
+  _parent = [
+    netsuite.folder.instance.SuiteScripts_gwr@d,
+  ]
+}

@@ -1,0 +1,12 @@
+zendesk.article_order FAQ_General_DP_Brand_s_uum_uuuum@uuuuum {
+  articles = [
+    zendesk.article.instance.How_do_I_publish_my_content_in_other_languages__FAQ_General_DP_Brand_s_uum_uuuum@ssssssssauuuuuum,
+    zendesk.article.instance.How_do_I_customize_my_Help_Center__FAQ_General_DP_Brand_s_uum_uuuum@ssssssauuuuuum,
+    zendesk.article.instance.How_can_agents_leverage_knowledge_to_help_customers__FAQ_General_DP_Brand_s_uum_uuuum@sssssssauuuuuum,
+    zendesk.article.instance.What_are_these_sections_and_articles_doing_here__FAQ_General_DP_Brand_s_uum_uuuum@sssssssauuuuuum,
+  ]
+  brand = zendesk.brand.instance.DP_Brand@s
+  _parent = [
+    zendesk.section.instance.FAQ_General_DP_Brand_s_uum@uuuum,
+  ]
+}

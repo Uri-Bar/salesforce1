@@ -1,0 +1,12 @@
+netsuite.file SuiteBundles_Bundle_351444_Docusign_Custom_Button_Scripts_Samples_tax_js@dsddssddv {
+  bundleable = false
+  isinactive = false
+  availablewithoutlogin = false
+  generateurltimestamp = false
+  hideinbundle = false
+  path = "/SuiteBundles/Bundle 351444/Docusign/Custom Button Scripts/Samples/tax.js"
+  content = file("netsuite/FileCabinet/SuiteBundles/Bundle 351444/Docusign/Custom Button Scripts/Samples/tax.js")
+  _parent = [
+    netsuite.folder.instance.SuiteBundles_Bundle_351444_Docusign_Custom_Button_Scripts_Samples@dsddssd,
+  ]
+}

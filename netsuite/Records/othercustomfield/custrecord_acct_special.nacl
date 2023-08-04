@@ -1,0 +1,20 @@
+netsuite.othercustomfield custrecord_acct_special {
+  scriptid = "custrecord_acct_special"
+  accesslevel = "2"
+  applyformatting = false
+  checkspelling = false
+  defaultchecked = false
+  description = "Indicates this account is Special"
+  displaytype = "NORMAL"
+  encryptatrest = false
+  fieldtype = "CHECKBOX"
+  help = "Indicates this account is Special"
+  isformula = false
+  ismandatory = false
+  label = "Special"
+  rectype = "-112"
+  searchlevel = "2"
+  showhierarchy = false
+  showinlist = false
+  storevalue = true
+}

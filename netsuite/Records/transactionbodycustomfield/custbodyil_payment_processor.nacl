@@ -1,0 +1,45 @@
+netsuite.transactionbodycustomfield custbodyil_payment_processor {
+  scriptid = "custbodyil_payment_processor"
+  accesslevel = "2"
+  applyformatting = false
+  bodycustomerpayment = false
+  bodydeposit = false
+  bodydepositapplication = false
+  bodyexpensereport = false
+  bodyinventoryadjustment = false
+  bodyitemfulfillment = false
+  bodyitemfulfillmentorder = false
+  bodyitemreceipt = false
+  bodyitemreceiptorder = false
+  bodyjournal = false
+  bodyopportunity = false
+  bodyothertransaction = false
+  bodypickingticket = false
+  bodyprintflag = false
+  bodyprintpackingslip = false
+  bodyprintstatement = false
+  bodypurchase = true
+  bodysale = true
+  
+  bodytransferorder = false
+  bodyvendorpayment = false
+  checkspelling = false
+  defaultchecked = false
+  displaytype = "NORMAL"
+  encryptatrest = false
+  fieldtype = "SELECT"
+  globalsearch = false
+  isformula = false
+  ismandatory = false
+  isparent = false
+  label = "IL Payment Processor"
+  onparentdelete = "NO_ACTION"
+  searchlevel = "2"
+  selectrecordtype = netsuite.customlist.instance.customlistpayment_processor.scriptid
+  showhierarchy = false
+  showinlist = false
+  storevalue = true
+  bodyassemblybuild = false
+  bodybom = false
+  bodyperiodendjournal = false
+}

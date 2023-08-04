@@ -1,0 +1,81 @@
+zendesk.workspace Messy_workspace@s {
+  title = "Messy workspace"
+  description = "Lets play"
+  macro_ids = [
+    zendesk.macro.instance.Take_it_@sl,
+    1500049664021,
+  ]
+  ticket_form_id = zendesk.ticket_form.instance.Amazing_ticket_form@s
+  apps = [
+    {
+      id = zendesk.app_installation.instance.Salesforce
+      expand = true
+      position = 1
+    },
+  ]
+  activated = true
+  conditions = {
+    all = [
+      {
+        field = "status"
+        operator = "greater_than"
+        value = "open"
+      },
+      {
+        field = "number_of_incidents"
+        operator = "greater_than"
+        value = "3"
+      },
+      {
+        field = "brand_id"
+        operator = "is"
+        value = zendesk.brand.instance.Salto
+      },
+      {
+        field = "ticket_form_id"
+        operator = "is_not"
+        value = zendesk.ticket_form.instance.Amazing_ticket_form@s
+      },
+      {
+        field = "type"
+        operator = "is_not"
+        value = "question"
+      },
+      {
+        field = "priority"
+        operator = "greater_than"
+        value = "normal"
+      },
+      {
+        field = "group_id"
+        operator = "is"
+        value = zendesk.group.instance.Support
+      },
+      {
+        field = "organization_id"
+        operator = "is"
+        value = zendesk.organization.instance.Salto
+      },
+      {
+        field = "current_tags"
+        operator = "not_includes"
+        value = [
+          zendesk.tag.instance.boom,
+        ]
+      },
+      {
+        field = "via_id"
+        operator = "is_not"
+        value = zendesk.channel.instance.Twitter_DM@s
+      },
+    ]
+  }
+  selected_macros = [
+    {
+      id = zendesk.macro.instance.Take_it_@sl
+      title = "Take it!"
+      active = true
+      
+    },
+  ]
+}

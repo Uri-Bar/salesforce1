@@ -1,0 +1,6 @@
+zuora_billing.AccountingCodeItem SalesDiscounts_Discounts {
+  name = "Discounts"
+  type = "SalesDiscounts"
+  category = "Revenue"
+  status = "Active"
+}

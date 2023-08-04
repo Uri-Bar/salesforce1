@@ -1,0 +1,36 @@
+netsuite.entitycustomfield custentitytier {
+  scriptid = "custentitytier"
+  accesslevel = "2"
+  appliestocontact = false
+  appliestocustomer = true
+  appliestoemployee = false
+  appliestogroup = false
+  appliestoothername = false
+  appliestopartner = true
+  appliestopricelist = false
+  appliestoprojecttemplate = false
+  appliestostatement = false
+  appliestovendor = false
+  appliestowebsite = false
+  applyformatting = false
+  availableexternally = true
+  checkspelling = false
+  defaultchecked = false
+  description = "Tiering of customers. updated just in time for NSUG"
+  displaytype = "NORMAL"
+  encryptatrest = false
+  fieldtype = "SELECT"
+  globalsearch = false
+  isformula = false
+  ismandatory = false
+  isparent = false
+  label = "Tier in english"
+  onparentdelete = "NO_ACTION"
+  searchlevel = "2"
+  selectrecordtype = netsuite.customlist.instance.customlistcustomer_tiers.scriptid
+  showhierarchy = false
+  showinlist = false
+  storevalue = true
+  appliestogenericrsrc = false
+  appliestoproject = false
+}

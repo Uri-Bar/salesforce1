@@ -1,0 +1,6 @@
+zendesk.section_order Announcements_General_Salto {
+  brand = zendesk.brand.instance.Salto
+  _parent = [
+    zendesk.section.instance.Announcements_General_Salto,
+  ]
+}

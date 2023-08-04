@@ -1,0 +1,22 @@
+type zuora_billing.revenuescheduleitemcreditmemoitem {
+  annotations {
+    string metadataType {
+    }
+    string label {
+    }
+    string description {
+    }
+    hidden_string id {
+    }
+    string objectType {
+    }
+  }
+  metadataType = "StandardObject"
+  objectType = "revenuescheduleitemcreditmemoitem"
+  _generated_dependencies = [
+    {
+      reference = zuora_billing.user
+    },
+  ]
+  label = "RevenueScheduleItemCreditMemoItem"
+}

@@ -1,0 +1,12 @@
+netsuite.file Templates_E_mail_Templates_Inner_EmailTemplates_Folder_CreatedContent_html@dbsdssdv {
+  bundleable = false
+  isinactive = false
+  availablewithoutlogin = false
+  generateurltimestamp = false
+  hideinbundle = false
+  path = "/Templates/E-mail Templates/Inner EmailTemplates Folder/CreatedContent.html"
+  content = file("netsuite/FileCabinet/Templates/E-mail Templates/Inner EmailTemplates Folder/CreatedContent.html")
+  _parent = [
+    netsuite.folder.instance.Templates_E_mail_Templates_Inner_EmailTemplates_Folder@dbsdss,
+  ]
+}

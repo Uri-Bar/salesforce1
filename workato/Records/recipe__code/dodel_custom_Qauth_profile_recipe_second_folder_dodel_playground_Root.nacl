@@ -1,0 +1,26 @@
+workato.recipe__code dodel_custom_Qauth_profile_recipe_second_folder_dodel_playground_Root {
+  number = 0
+  provider = "clock"
+  name = "scheduled_event"
+  as = "e4cf7c67"
+  description = "<span class=\"provider\">Trigger</span> on a <span class=\"provider\">specified schedule</span>"
+  keyword = "trigger"
+  input = {
+    time_unit = "minutes"
+    trigger_every = "5"
+  }
+  block = [
+    {
+      number = 1
+      provider = "google_drive"
+      name = "__adhoc_http_action"
+      as = "56eb55eb"
+      keyword = "action"
+      uuid = "f133b43c-e251-46c2-ba42-e9815d18c54f"
+    },
+  ]
+  uuid = "93c0a697-8965-4de1-ba1a-59b20105a82f"
+  _parent = [
+    workato.recipe.instance.dodel_custom_Qauth_profile_recipe_second_folder_dodel_playground_Root,
+  ]
+}

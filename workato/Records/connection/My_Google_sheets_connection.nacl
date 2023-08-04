@@ -1,0 +1,5 @@
+workato.connection My_Google_sheets_connection@s {
+  application = "google_sheets"
+  name = "My Google sheets connection"
+  folder_id = workato.folder.instance.Root
+}

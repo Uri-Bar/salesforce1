@@ -1,0 +1,104 @@
+zuora_billing.Task C19__Goodwill_Discount_Recall_68_fsssu__Executing_on_Orders_feature___Failure_message_will_tell_us_@uuuuumuusssasjssssk {
+  name = "Executing on Orders feature? (Failure message will tell us)"
+  parameters = {
+    url = "{{ Credentials.zuora.rest_endpoint }}orders/preview"
+    datas = [
+      {
+        key = ""
+        value = ""
+      },
+    ]
+    method = "POST"
+    headers = [
+      {
+        key = "Content-Type"
+        value = "application/json"
+      },
+    ]
+    raw_body = '''
+{
+  "customFields": {},
+  "description": "This is a description for the Order.",
+  "previewAccountInfo": {
+     "billCycleDay": 0,
+     "currency": "USD"
+  },
+  "orderDate": "{{ 'now' | date: '%Y-%m-%d' }}",
+  "previewOptions": {
+    "previewThruType": "SpecificDate",
+    "previewTypes": [
+      "BillingDocs"
+    ],
+    "specificPreviewThruDate": "{{ 'now' | date: '%Y-%m-%d' }}"
+  },
+  "subscriptions": [
+    {
+      "orderActions": [
+        {
+          "resume": {
+            "extendsTerm": false,
+            "resumePeriods": 10,
+            "resumePeriodsType": "Day",
+            "resumePolicy": "FixedPeriodsFromSuspendDate"
+          },
+          "triggerDates": [
+            {
+              "name": "ContractEffective",
+              "triggerDate": "{{ 'now' | date: '%Y-%m-%d' }}"
+            },
+            {
+              "name": "ServiceActivation",
+              "triggerDate": "{{ 'now' | date: '%Y-%m-%d' }}"
+            },
+            {
+              "name": "CustomerAcceptance",
+              "triggerDate": "{{ 'now' | date: '%Y-%m-%d' }}"
+            }
+          ],
+          "type": "Resume"
+        }
+      ],
+      "subscriptionNumber": "A-S00000000"
+    }
+  ]
+}
+'''
+    body_type = "raw"
+    validation = {
+      replace = "false"
+      zuora_call = "true"
+      status_codes = [
+        "",
+        "200",
+      ]
+      payload_location = "isOrdersTenant"
+    }
+    retry_rules = {
+      on_timeout = "true"
+      retry_count = "0"
+      retry_window = "3"
+      current_retry_count = "0"
+    }
+    authorization = {
+      type = "zuora"
+    }
+    strict_variables = "true"
+    validate_response = "false"
+    validation_scheme = ""
+    include_response_code = "true"
+  }
+  action_type = "Callout"
+  call_type = "SOAP"
+  concurrent_limit = 9999999
+  additionalProperties = {
+    css = {
+      top = "40px"
+      left = "470px"
+    }
+    priority = "Medium"
+    
+  }
+  _parent = [
+    zuora_billing.WorkflowExport.instance.C19__Goodwill_Discount_Recall_68@fsssu,
+  ]
+}

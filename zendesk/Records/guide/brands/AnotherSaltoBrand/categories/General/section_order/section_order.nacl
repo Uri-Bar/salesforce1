@@ -1,0 +1,11 @@
+zendesk.section_order General_AnotherSaltoBrand {
+  sections = [
+    zendesk.section.instance.Lorem_Ipsum_General_AnotherSaltoBrand@suu,
+    zendesk.section.instance.FAQ_General_AnotherSaltoBrand,
+    zendesk.section.instance.Announcements_General_AnotherSaltoBrand,
+  ]
+  brand = zendesk.brand.instance.AnotherSaltoBrand
+  _parent = [
+    zendesk.category.instance.General_AnotherSaltoBrand,
+  ]
+}

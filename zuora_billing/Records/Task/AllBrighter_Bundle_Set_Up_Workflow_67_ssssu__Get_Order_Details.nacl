@@ -1,0 +1,59 @@
+zuora_billing.Task AllBrighter_Bundle_Set_Up_Workflow_67_ssssu__Get_Order_Details@uuuuumuuss {
+  name = "Get Order Details"
+  parameters = {
+    url = "{{ Credentials.zuora.rest_endpoint }}orders/{{Data.Callout[0].ResponseBody.orderNumber}}"
+    datas = [
+      {
+        key = ""
+        value = ""
+      },
+    ]
+    method = "GET"
+    headers = [
+      {
+        key = "Content-Type"
+        value = "application/json"
+      },
+      {
+        key = ""
+        value = ""
+      },
+    ]
+    raw_body = ""
+    body_type = "raw"
+    validation = {
+      zuora_call = "false"
+      status_codes = [
+        "",
+        "200",
+      ]
+    }
+    retry_rules = {
+      retry_count = "0"
+      retry_window = "30"
+      current_retry_count = "0"
+    }
+    authorization = {
+      type = "zuora"
+    }
+    strict_variables = "true"
+    validate_response = "false"
+    validation_scheme = ""
+    include_response_code = "true"
+  }
+  action_type = "Callout"
+  call_type = "SOAP"
+  task_id = 79
+  concurrent_limit = 9999999
+  additionalProperties = {
+    css = {
+      top = "-160px"
+      left = "0px"
+    }
+    priority = "Medium"
+    
+  }
+  _parent = [
+    zuora_billing.WorkflowExport.instance.AllBrighter_Bundle_Set_Up_Workflow_67@ssssu,
+  ]
+}

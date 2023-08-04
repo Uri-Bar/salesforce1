@@ -1,0 +1,8 @@
+zendesk.routing_attribute Location {
+  name = "Location"
+  values = [
+    zendesk.routing_attribute_value.instance.Location__Kyoto,
+    zendesk.routing_attribute_value.instance.Location__San_Franciscoo@uus,
+    zendesk.routing_attribute_value.instance.Location__Tel_Aviv@uus,
+  ]
+}

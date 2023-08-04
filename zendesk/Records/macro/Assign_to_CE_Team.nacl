@@ -1,0 +1,27 @@
+zendesk.macro Assign_to_CE_Team@s {
+  title = "Assign to CE Team"
+  active = true
+  description = "For DP's CI/CD demo"
+  actions = [
+    {
+      field = "current_tags"
+      value = [
+        zendesk.tag.instance.customer_engineering,
+      ]
+    },
+    {
+      field = "assignee_id"
+      value = "geoffrey.routledge@salto.io"
+    },
+    {
+      field = "priority"
+      value = "urgent"
+    },
+    {
+      field = "follower"
+      value = "hadas.birin@salto.io"
+    },
+  ]
+  raw_title = "Assign to CE Team"
+  default = false
+}

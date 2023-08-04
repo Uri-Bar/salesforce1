@@ -1,0 +1,80 @@
+salesforce.PathAssistant Default_Opportunity {
+  fullName = "Default_Opportunity"
+  active = true
+  entityName = "Opportunity"
+  fieldName = "StageName"
+  masterLabel = "Default"
+  pathAssistantSteps = [
+    {
+      fieldNames = [
+        "Loss_Reason__c",
+      ]
+      info = '''
+<strong>Revise techniques to increase future wins.</strong>
+
+<ul><li>What contributed to losing this opportunity?</li><li>What do we need to do differently to improve our chances of winning?</li><li>Schedule a follow-up task or event for this account.</li></ul>
+'''
+      picklistValueName = "Closed Lost"
+    },
+    {
+      fieldNames = [
+        "CloseDate",
+        "Amount",
+      ]
+      info = "<img alt=\"User-added image\" src=\"https://salto--orendev.sandbox.file.force.com/servlet/rtaImage?eid=1CF4J0000004HJI&amp;feoid=Info&amp;refid=0EM4J0000000WK9\" style=\"height: 118px; width: 500px;\"></img>"
+      picklistValueName = "Closed Won"
+    },
+    {
+      fieldNames = [
+        "Amount",
+        "CloseDate",
+        "Discovery_Completed__c",
+      ]
+      info = '''
+<div style="font-family: arial, sans, sans-serif;"><strong>Understand the business need and decision criteria.</strong></div>
+
+<ul><li>Why is our solution a good fit?</li><li>How is our solution better than our competitors?</li><li><span style="font-family: arial,sans,sans-serif;">What resources are available to implement the solution?</span></li></ul>
+'''
+      picklistValueName = "Needs Analysis"
+    },
+    {
+      fieldNames = [
+        "Amount",
+        "CloseDate",
+      ]
+      info = '''
+<strong>Negotiate value and resolve objections.</strong>
+
+<ul><li>Have you confirmed all key decision makers are on board?</li><li>Have you focused enough on selling the value to negotiate the best price?</li></ul>
+'''
+      picklistValueName = "Negotiation"
+    },
+    {
+      fieldNames = [
+        "Amount",
+        "CloseDate",
+        "ROI_Analysis_Completed__c",
+      ]
+      info = '''
+<div style="font-family: arial, sans, sans-serif;"><strong>Present the solution and understand the buying process.</strong></div>
+
+<ul><li>Where are they in the buying cycle?</li><li>What&#39;s the process to generate purchase orders?</li><li>Who are the key decision makers?  Have you added them to the opportunity?</li><li>How can you communicate the value of our solutions to those decision makers?</li><li>What&#39;s the status of quantifying ROI with them?</li></ul>
+'''
+      picklistValueName = "Proposal"
+    },
+    {
+      fieldNames = [
+        "CloseDate",
+        "Description",
+        "Budget_Confirmed__c",
+      ]
+      info = '''
+<p class="p1"><strong><span class="s1">Qualify the opportunity and confirm budget.</span></strong></p>
+
+<ul><li><span class="s1">What&#39;s their business?</span></li><li><span class="s1">What problems are they trying to solve?</span></li><li><span class="s1">How does solving these problems help them?</span></li><li><span class="s1">Is the timing good for them?</span></li><li><span class="s1">What&#39;s their budget?</span></li><li><span class="s1">What other solutions are they considering?</span></li></ul>
+'''
+      picklistValueName = "Qualification"
+    },
+  ]
+  recordTypeName = "__MASTER__"
+}

@@ -1,0 +1,64 @@
+zuora_billing.Task Callouts_XML__Text__SOAP__JSON_Parsing_69_szdszdszdssu__Callout_Task___Account_Found_in_Callout_3_With_Plant_Name_from_Callout_1@uuuuuuuuumuussbsssssssssss {
+  name = "Callout Task - Account Found in Callout 3 With Plant Name from Callout 1"
+  parameters = {
+    url = "{{ Credentials.zuora.rest_endpoint }}/action/update"
+    datas = [
+      {
+        key = ""
+        value = ""
+      },
+    ]
+    method = "POST"
+    headers = [
+      {
+        key = "apiAccessKeyId"
+        value = "{{ Credentials.zuora.username }}"
+      },
+      {
+        key = "apiSecretAccessKey"
+        value = "{{ Credentials.zuora.password }}"
+      },
+      {
+        key = "entityId"
+        value = "{{ Credentials.zuora.entity_id }}"
+      },
+      {
+        key = "Content-Type"
+        value = "application/json"
+      },
+      {
+        key = ""
+        value = ""
+      },
+    ]
+    raw_body = '''
+{
+  "objects": [
+    {"Id":"{{Data.Callout[2].Envelope.Body.queryResponse.result.records[0].Id }}", 
+      "Notes": "{{Data.Callout[0].CATALOG.PLANT[0].COMMON }}"
+     }
+   ],
+  "type": "Account"
+}
+'''
+    body_type = "raw"
+    authorization = {
+      type = "none"
+    }
+  }
+  action_type = "Callout"
+  call_type = "SOAP"
+  task_id = 98
+  concurrent_limit = 9999999
+  additionalProperties = {
+    css = {
+      top = "310px"
+      left = "630px"
+    }
+    priority = "Medium"
+    
+  }
+  _parent = [
+    zuora_billing.WorkflowExport.instance.Callouts_XML__Text__SOAP__JSON_Parsing_69@szdszdszdssu,
+  ]
+}

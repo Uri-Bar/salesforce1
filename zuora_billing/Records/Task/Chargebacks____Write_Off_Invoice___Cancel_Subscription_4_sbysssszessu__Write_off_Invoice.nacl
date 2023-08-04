@@ -1,0 +1,50 @@
+zuora_billing.Task Chargebacks____Write_Off_Invoice___Cancel_Subscription_4_sbysssszessu__Write_off_Invoice@uuuuuuuuuuumuubs {
+  name = "Write-off Invoice"
+  parameters = {
+    fields = {
+      write_off = {
+        ReasonCode = "Chargeback"
+        ReferenceId = ""
+        AdjustmentDate = "{{Data.Refund.RefundDate}}"
+        DeferredRevenueAccount = ""
+        RecognizedRevenueAccount = ""
+        TaxationItemDeferredRevenueAccount = ""
+        TaxationItemRecognizedRevenueAccount = ""
+      }
+    }
+  }
+  action_type = "WriteOff"
+  object_id = "{{Data.Invoice.Id}}"
+  call_type = "SOAP"
+  task_id = 16
+  concurrent_limit = 9999999
+  additionalProperties = {
+    css = {
+      top = "30px"
+      left = "910px"
+    }
+    priority = "Medium"
+    
+  }
+  _parent = [
+    zuora_billing.WorkflowExport.instance.Chargebacks____Write_Off_Invoice___Cancel_Subscription_4@sbysssszessu,
+  ]
+  _generated_dependencies = [
+    {
+      reference = zuora_billing.invoice.field.Id
+      occurrences = [
+        {
+          location = zuora_billing.Task.instance.Chargebacks____Write_Off_Invoice___Cancel_Subscription_4_sbysssszessu__Write_off_Invoice@uuuuuuuuuuumuubs.object_id
+        },
+      ]
+    },
+    {
+      reference = zuora_billing.refund.field.RefundDate
+      occurrences = [
+        {
+          location = zuora_billing.Task.instance.Chargebacks____Write_Off_Invoice___Cancel_Subscription_4_sbysssszessu__Write_off_Invoice@uuuuuuuuuuumuubs.parameters.fields.write_off.AdjustmentDate
+        },
+      ]
+    },
+  ]
+}

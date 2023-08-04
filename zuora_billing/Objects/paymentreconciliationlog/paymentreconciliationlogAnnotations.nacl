@@ -1,0 +1,22 @@
+type zuora_billing.paymentreconciliationlog {
+  annotations {
+    string metadataType {
+    }
+    string label {
+    }
+    string description {
+    }
+    hidden_string id {
+    }
+    string objectType {
+    }
+  }
+  metadataType = "StandardObject"
+  objectType = "paymentreconciliationlog"
+  _generated_dependencies = [
+    {
+      reference = zuora_billing.paymentgatewayreconciliationeventlog
+    },
+  ]
+  label = "PaymentReconciliationLog"
+}

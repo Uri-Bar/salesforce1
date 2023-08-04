@@ -1,0 +1,46 @@
+zuora_billing.Task C19__Goodwill_Discount_Recall_68_fsssu__Valid_Parameters_@uuuuumuusa {
+  name = "Valid Parameters?"
+  parameters = {
+    if_clause = '''
+{% assign contractEffectiveOn = Data.Amendment.ContractEffectiveDate | default: "today" | date: "%Y-%m-%d" %}
+{% assign _todayMinusInputEffective = "today" | date: "%Y-%m-%d" | date: "%s" %}
+{% assign _cEffEpoch = contractEffectiveOn | date: "%s" %}
+{% assign _todayMinusInputEffective = _todayMinusInputEffective | minus: _cEffEpoch %}
+{% assign myErrorMessages = '' %}
+
+{% if _todayMinusInputEffective > 0 %}
+  {% assign myErrorMessages = myErrorMessages | append: 'Parameter ContractEffectiveDate cannot be in the past: ' | append: contractEffectiveOn | append: '|' %}
+{% endif %}
+{% if myErrorMessages == '' %}
+True
+{% else %}
+False
+{% endif %}
+'''
+    strict_variables = "true"
+  }
+  action_type = "If"
+  call_type = "SOAP"
+  concurrent_limit = 9999999
+  additionalProperties = {
+    css = {
+      top = "20px"
+      left = "190px"
+    }
+    priority = "Medium"
+    
+  }
+  _parent = [
+    zuora_billing.WorkflowExport.instance.C19__Goodwill_Discount_Recall_68@fsssu,
+  ]
+  _generated_dependencies = [
+    {
+      reference = zuora_billing.amendment.field.ContractEffectiveDate
+      occurrences = [
+        {
+          location = zuora_billing.Task.instance.C19__Goodwill_Discount_Recall_68_fsssu__Valid_Parameters_@uuuuumuusa.parameters.if_clause
+        },
+      ]
+    },
+  ]
+}

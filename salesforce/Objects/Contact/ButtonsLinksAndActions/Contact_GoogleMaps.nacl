@@ -1,0 +1,22 @@
+salesforce.WebLink Contact_GoogleMaps {
+  fullName = "Contact.GoogleMaps"
+  availability = "online"
+  displayType = "link"
+  encodingKey = "UTF-8"
+  hasMenubar = false
+  hasScrollbars = true
+  hasToolbar = false
+  height = 600
+  isResizable = true
+  linkType = "url"
+  masterLabel = "Google Maps"
+  openType = "newWindow"
+  position = "none"
+  protected = false
+  showsLocation = false
+  showsStatus = false
+  url = "http://maps.google.com/maps?f=q&hl=en&q={!Contact_MailingStreet}+{!Contact_MailingCity}+{!Contact_MailingState}&om=1"
+  _parent = [
+    salesforce.Contact,
+  ]
+}

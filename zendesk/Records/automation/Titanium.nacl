@@ -1,0 +1,31 @@
+zendesk.automation Titanium {
+  title = "Titanium"
+  active = true
+  actions = [
+    {
+      field = zendesk.ticket_field.instance.checkbox_TitaniumField
+      value = "true"
+    },
+  ]
+  conditions = {
+    all = [
+      {
+        field = "ticket_form_id"
+        operator = "is"
+        value = zendesk.ticket_form.instance.Titanium_Form@s
+      },
+      {
+        field = "status"
+        operator = "is"
+        value = "new"
+      },
+      {
+        field = "NEW"
+        operator = "is"
+        value = "2"
+      },
+    ]
+  }
+  raw_title = "Titanium"
+  default = false
+}

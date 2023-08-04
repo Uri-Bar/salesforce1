@@ -1,0 +1,50 @@
+workato.recipe__code New_Workbot_post_message_Root_sssu@uuuum {
+  number = 0
+  keyword = "trigger"
+  block = [
+    {
+      number = 1
+      provider = "slack_bot"
+      name = "download_attachment"
+      as = "post_bot_message"
+      keyword = "action"
+      input = {
+        url = "#{_('data.workato.job_context.user_id')}"
+      }
+      comment = "Decide how you want Workbot to notify you on Slack. Normally, you want it to contain info from the trigger above."
+      uuid = "c78b6013-3dcf-4347-ab64-b7755e3891e8"
+    },
+    {
+      number = 2
+      keyword = "if"
+      input = {
+        type = "compound"
+        operand = "and"
+        conditions = [
+          {
+            operand = ""
+            lhs = ""
+            rhs = ""
+            uuid = "condition-418dca6b-9553-4267-a9c6-43f2af860176"
+          },
+        ]
+      }
+      block = [
+        {
+          number = 3
+          provider = "salesforce"
+          name = "upload_file_content"
+          as = "2adaba40"
+          keyword = "action"
+          uuid = "3ae6ea39-1948-4474-808a-ae814175302a"
+        },
+      ]
+      uuid = "5b0c538b-3c1e-4d78-bf7d-e5a0894661a1"
+    },
+  ]
+  comment = "Connect an app, then decide which events in the app you want Workbot to notify you about."
+  uuid = "0a319edb-1809-48bf-93cb-411dfeecccdc"
+  _parent = [
+    workato.recipe.instance.New_Workbot_post_message_Root@sssu,
+  ]
+}

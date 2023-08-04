@@ -1,0 +1,85 @@
+zuora_billing.Task Gamer_Sign_Up_Workflow_77_sssu__Record_Games_in_Library@uuuumuusss {
+  name = "Record Games in Library"
+  parameters = {
+    url = "https://rest.apisandbox.zuora.com/objects/records/com_zlabs/game_slots"
+    datas = [
+      {
+        key = ""
+        value = ""
+      },
+    ]
+    method = "POST"
+    headers = [
+      {
+        key = "Content-Type"
+        value = "application/json"
+      },
+    ]
+    raw_body = '''
+{
+    "records": [
+        {
+            "accountnumber__c": "{{Data.Callout.accountNumber}}",
+            "game_name__c": "{{Data.Workflow.Game_Slot_1}}",
+          	"added_date__c": "{{Data.Workflow.ExecutionDate}}"
+        },
+        {
+            "accountnumber__c": "{{Data.Callout.accountNumber}}",
+            "game_name__c": "{{Data.Workflow.Game_Slot_2}}",
+          	"added_date__c": "{{Data.Workflow.ExecutionDate}}"
+        },
+        {
+            "accountnumber__c": "{{Data.Callout.accountNumber}}",
+            "game_name__c": "{{Data.Workflow.Game_Slot_3}}",
+          	"added_date__c": "{{Data.Workflow.ExecutionDate}}"
+        }
+    ]
+}
+'''
+    body_type = "raw"
+    validation = {
+      zuora_call = "false"
+      status_codes = [
+        "",
+        "200",
+      ]
+    }
+    retry_rules = {
+      retry_count = "3"
+      retry_window = "1"
+      current_retry_count = "0"
+    }
+    authorization = {
+      type = "zuora"
+    }
+    strict_variables = "true"
+    validate_response = "false"
+    validation_scheme = ""
+    include_response_code = "true"
+  }
+  action_type = "Callout"
+  call_type = "SOAP"
+  task_id = 135
+  concurrent_limit = 9999999
+  additionalProperties = {
+    css = {
+      top = "-790px"
+      left = "60px"
+    }
+    priority = "Medium"
+    
+  }
+  _parent = [
+    zuora_billing.WorkflowExport.instance.Gamer_Sign_Up_Workflow_77@sssu,
+  ]
+  _generated_dependencies = [
+    {
+      reference = zuora_billing.Workflow.instance.Gamer_Sign_Up_Workflow_77_sssu__Gamer_Sign_Up_Workflow@uuuumuusss.additionalProperties.parameters.fields
+      occurrences = [
+        {
+          location = zuora_billing.Task.instance.Gamer_Sign_Up_Workflow_77_sssu__Record_Games_in_Library@uuuumuusss.parameters.raw_body
+        },
+      ]
+    },
+  ]
+}

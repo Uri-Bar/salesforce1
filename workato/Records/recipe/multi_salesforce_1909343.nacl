@@ -1,0 +1,49 @@
+workato.recipe multi_salesforce_1909343@su {
+  name = "multi salesforce"
+  trigger_application = "salesforce"
+  action_applications = [
+    "salesforce_secondary",
+    "netsuite",
+    "workato_list",
+  ]
+  applications = [
+    "salesforce",
+    "salesforce_secondary",
+    "netsuite",
+    "workato_list",
+  ]
+  description = "When there is a trigger event, do action"
+  folder_id = workato.folder.instance.tests_769211
+  running = false
+  version_no = 4
+  config = [
+    {
+      keyword = "application"
+      name = "salesforce"
+      provider = "salesforce"
+      account_id = workato.connection.instance.Neta_sfdev1@s
+      skip_validation = false
+    },
+    {
+      keyword = "application"
+      name = "salesforce_secondary"
+      provider = "salesforce_secondary"
+      account_id = workato.connection.instance.Yanai_sfdev@s
+      skip_validation = false
+    },
+    {
+      keyword = "application"
+      name = "netsuite"
+      provider = "netsuite"
+      account_id = workato.connection.instance.Oren_s_NetSuite@ts
+      skip_validation = false
+    },
+    {
+      keyword = "application"
+      name = "workato_list"
+      provider = "workato_list"
+      skip_validation = false
+    },
+  ]
+  code = workato.recipe__code.instance.multi_salesforce_1909343_su@uum
+}

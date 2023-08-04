@@ -1,0 +1,15 @@
+okta.OAuth2Scope default__openid {
+  name = "openid"
+  displayName = "openid"
+  description = "Signals that a request is an OpenID request."
+  system = true
+  metadataPublish = "ALL_CLIENTS"
+  consent = "IMPLICIT"
+  default = false
+  additionalProperties = {
+    optional = false
+  }
+  _parent = [
+    okta.AuthorizationServer.instance.default,
+  ]
+}

@@ -1,0 +1,5 @@
+okta.Role API_Access_Management_Administrator@s {
+  
+  label = "API Access Management Administrator"
+  type = "API_ACCESS_MANAGEMENT_ADMIN"
+}

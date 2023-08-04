@@ -1,0 +1,9 @@
+stripe.coupon testCoupon_forever_S8nceGxL {
+  id = "S8nceGxL"
+  duration = "forever"
+  livemode = false
+  name = "testCoupon"
+  percent_off = 4
+  times_redeemed = 0
+  valid = true
+}

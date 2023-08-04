@@ -1,0 +1,8 @@
+zendesk.macro_attachment Close_and_redirect_to_topics_2__aws_png@sssssuuv {
+  filename = "aws.png"
+  contentType = "image/png"
+  content = file("zendesk/macro_attachment/Close and redirect to topics 2__aws.png")
+  _parent = [
+    zendesk.macro.instance.Close_and_redirect_to_topics_2@s,
+  ]
+}

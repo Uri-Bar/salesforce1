@@ -1,0 +1,46 @@
+zuora_billing.Task Iterate_Over_Callout_Data_73_sssu__Iterate_Over_Callout_Data@uuuumuusss {
+  name = "Iterate Over Callout Data"
+  parameters = {
+    url = "https://api.coinmarketcap.com/v1/ticker/?limit=4&convert=USD"
+    datas = [
+      {
+        key = ""
+        value = ""
+      },
+    ]
+    method = "GET"
+    headers = [
+      {
+        key = ""
+        value = ""
+      },
+    ]
+    raw_body = ""
+    body_type = "raw"
+    validation = {
+      zuora_call = "false"
+    }
+    retry_rules = {
+      retry_count = "0"
+      retry_window = "30"
+      current_retry_count = 0
+    }
+    authorization = {
+      type = "none"
+    }
+  }
+  action_type = "Callout"
+  call_type = "SOAP"
+  concurrent_limit = 9999999
+  additionalProperties = {
+    css = {
+      top = "40px"
+      left = "360px"
+    }
+    priority = "Medium"
+    
+  }
+  _parent = [
+    zuora_billing.WorkflowExport.instance.Iterate_Over_Callout_Data_73@sssu,
+  ]
+}

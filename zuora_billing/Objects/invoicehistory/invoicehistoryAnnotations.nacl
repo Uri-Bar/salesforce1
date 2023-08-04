@@ -1,0 +1,22 @@
+type zuora_billing.invoicehistory {
+  annotations {
+    string metadataType {
+    }
+    string label {
+    }
+    string description {
+    }
+    hidden_string id {
+    }
+    string objectType {
+    }
+  }
+  metadataType = "StandardObject"
+  objectType = "invoicehistory"
+  _generated_dependencies = [
+    {
+      reference = zuora_billing.user
+    },
+  ]
+  label = "InvoiceHistory"
+}

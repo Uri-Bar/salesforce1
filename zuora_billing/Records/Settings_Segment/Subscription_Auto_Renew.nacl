@@ -1,0 +1,9 @@
+zuora_billing.Settings_Segment Subscription_Auto_Renew@s {
+  object = zuora_billing.subscription
+  field = zuora_billing.subscription.field.AutoRenew
+  segmentName = "Subscription Auto Renew"
+  systemId = "SubscriptionAutoRenew"
+  additionalProperties = {
+    active = true
+  }
+}

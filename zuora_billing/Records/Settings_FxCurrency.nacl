@@ -1,0 +1,9 @@
+zuora_billing.Settings_FxCurrency {
+  customRateEnabled = false
+  rateOffset = 0
+  useInverseRate = true
+  rateDateType = "Daily"
+  dayOfMonth = 1
+  roundingMode = "RoundHalfUp"
+  exportEnabled = false
+}

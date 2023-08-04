@@ -1,0 +1,22 @@
+salesforce.WebLink Lead_GoogleMaps {
+  fullName = "Lead.GoogleMaps"
+  availability = "online"
+  displayType = "link"
+  encodingKey = "UTF-8"
+  hasMenubar = false
+  hasScrollbars = true
+  hasToolbar = false
+  height = 600
+  isResizable = true
+  linkType = "url"
+  masterLabel = "Google Maps"
+  openType = "newWindow"
+  position = "none"
+  protected = false
+  showsLocation = false
+  showsStatus = false
+  url = "http://maps.google.com/maps?f=q&hl=en&q={!Lead_Street}+{!Lead_City}+{!Lead_State}&om=1"
+  _parent = [
+    salesforce.Lead,
+  ]
+}

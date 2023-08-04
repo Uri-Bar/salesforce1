@@ -1,0 +1,6 @@
+salesforce.StaticResource TestHTMLFile {
+  cacheControl = "Private"
+  contentType = "text/html"
+  fullName = "TestHTMLFile"
+  content = file("salesforce/Records/StaticResource/TestHTMLFile.html")
+}

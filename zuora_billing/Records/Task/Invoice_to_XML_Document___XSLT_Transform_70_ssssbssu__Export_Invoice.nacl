@@ -1,0 +1,100 @@
+zuora_billing.Task Invoice_to_XML_Document___XSLT_Transform_70_ssssbssu__Export_Invoice@uuuuuuuumuus {
+  name = "Export Invoice"
+  parameters = {
+    fields = {
+      Account = {
+        Notes = "true"
+        Status = "true"
+        Currency = "true"
+      }
+      Invoice = {
+        Id = "true"
+        Balance = "true"
+        InvoiceNumber = "true"
+      }
+      BillToContact = {
+        City = "true"
+        Country = "true"
+        Address1 = "true"
+        Address2 = "true"
+        AccountId = "true"
+      }
+    }
+    encrypt = "false"
+    where_clause = "Account.Id != null LIMIT 2 "
+    strict_variables = "true"
+  }
+  action_type = "Export"
+  object = zuora_billing.invoice
+  call_type = "SOAP"
+  concurrent_limit = 5
+  additionalProperties = {
+    css = {
+      top = "40px"
+      left = "320px"
+    }
+    priority = "Medium"
+    
+  }
+  _parent = [
+    zuora_billing.WorkflowExport.instance.Invoice_to_XML_Document___XSLT_Transform_70@ssssbssu,
+  ]
+  _generated_dependencies = [
+    {
+      reference = zuora_billing.account.field.Currency
+      occurrences = [
+        {
+          location = zuora_billing.Task.instance.Invoice_to_XML_Document___XSLT_Transform_70_ssssbssu__Export_Invoice@uuuuuuuumuus.parameters.fields.Account.Currency
+        },
+      ]
+    },
+    {
+      reference = zuora_billing.account.field.Id
+      occurrences = [
+        {
+          location = zuora_billing.Task.instance.Invoice_to_XML_Document___XSLT_Transform_70_ssssbssu__Export_Invoice@uuuuuuuumuus.parameters.where_clause
+        },
+      ]
+    },
+    {
+      reference = zuora_billing.account.field.Notes
+      occurrences = [
+        {
+          location = zuora_billing.Task.instance.Invoice_to_XML_Document___XSLT_Transform_70_ssssbssu__Export_Invoice@uuuuuuuumuus.parameters.fields.Account.Notes
+        },
+      ]
+    },
+    {
+      reference = zuora_billing.account.field.Status
+      occurrences = [
+        {
+          location = zuora_billing.Task.instance.Invoice_to_XML_Document___XSLT_Transform_70_ssssbssu__Export_Invoice@uuuuuuuumuus.parameters.fields.Account.Status
+        },
+      ]
+    },
+    {
+      reference = zuora_billing.invoice.field.Balance
+      occurrences = [
+        {
+          location = zuora_billing.Task.instance.Invoice_to_XML_Document___XSLT_Transform_70_ssssbssu__Export_Invoice@uuuuuuuumuus.parameters.fields.Invoice.Balance
+        },
+      ]
+    },
+    {
+      reference = zuora_billing.invoice.field.Id
+      occurrences = [
+        {
+          location = zuora_billing.Task.instance.Invoice_to_XML_Document___XSLT_Transform_70_ssssbssu__Export_Invoice@uuuuuuuumuus.parameters.fields.Invoice.Id
+        },
+      ]
+    },
+    {
+      reference = zuora_billing.invoice.field.InvoiceNumber
+      occurrences = [
+        {
+          location = zuora_billing.Task.instance.Invoice_to_XML_Document___XSLT_Transform_70_ssssbssu__Export_Invoice@uuuuuuuumuus.parameters.fields.Invoice.InvoiceNumber
+        },
+      ]
+    },
+  ]
+}

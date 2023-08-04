@@ -1,0 +1,18 @@
+zendesk.ticket_form Titanium_Form@s {
+  
+  raw_name = "Titanium Form"
+  
+  raw_display_name = "Titanium Rulez"
+  end_user_visible = true
+  ticket_field_ids = [
+    zendesk.ticket_field.instance.status_Status,
+    zendesk.ticket_field.instance.group_Group,
+    zendesk.ticket_field.instance.assignee_Assignee,
+    zendesk.ticket_field.instance.checkbox_TitaniumField,
+    zendesk.ticket_field.instance.subject_Subject,
+    zendesk.ticket_field.instance.description_Description,
+  ]
+  active = true
+  default = false
+  in_all_brands = true
+}

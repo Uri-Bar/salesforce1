@@ -1,0 +1,21 @@
+zuora_billing.PublicEmailTemplate New_Subscription_Created_Default_Email_Template@s {
+  eventCategory = 1210
+  name = "New Subscription Created Default Email Template"
+  description = ""
+  encodingType = "UTF8"
+  fromName = "Admin"
+  fromEmailType = "TenantEmail"
+  fromEmailAddress = "neta.marcus@salto.io"
+  replyToEmailType = "TenantEmail"
+  replyToEmailAddress = "neta.marcus@salto.io"
+  ccEmailType = "SpecificEmails"
+  ccEmailAddress = ""
+  bccEmailAddress = ""
+  toEmailType = "BillToContact"
+  toEmailAddress = ""
+  emailSubject = "New subscription <Subscription.SubscriptionName> was created and activated"
+  emailBody = "Dear <BillToContact.FirstName> <BillToContact.LastName>,\r<br />\r<br />We would like to inform you that a new subscription <Subscription.SubscriptionName> was created and activated on <Subscription.CreateDate>. The subscription is of type <Subscription.TermSetting> and is effective as of <Subscription.ContractEffective> with contracted MRR value of <Subscription.CMRR>.\r<br />\r<br />Charge details of the subscription are listed below: \r<br />\r<br /><Subscription.SubscriptionDetailTable>\r<br />\r<br />Thank you for your business!"
+  active = true
+  isHtml = true
+  useAdditionalAddresses = false
+}

@@ -1,0 +1,4 @@
+workato.folder Yanai_318283 {
+  name = "Yanai"
+  parent_id = workato.folder.instance.Root
+}

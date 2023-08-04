@@ -1,0 +1,12 @@
+zendesk.category_translation Knuckles_Salto__Salto_en_us_ub@uuuuum {
+  locale = zendesk.guide_language_settings.instance.Salto_en_us@ub
+  title = "Knuckles"
+  body = "All about Salto Knuckles"
+  outdated = false
+  draft = false
+  hidden = false
+  brand = zendesk.brand.instance.Salto
+  _parent = [
+    zendesk.category.instance.Knuckles_Salto,
+  ]
+}

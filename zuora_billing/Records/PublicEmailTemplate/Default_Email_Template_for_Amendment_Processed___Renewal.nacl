@@ -1,0 +1,21 @@
+zuora_billing.PublicEmailTemplate Default_Email_Template_for_Amendment_Processed___Renewal@ssssssbs {
+  eventCategory = 1310
+  name = "Default Email Template for Amendment Processed - Renewal"
+  description = ""
+  encodingType = "UTF8"
+  fromName = "Admin"
+  fromEmailType = "TenantEmail"
+  fromEmailAddress = "neta.marcus@salto.io"
+  replyToEmailType = "TenantEmail"
+  replyToEmailAddress = "neta.marcus@salto.io"
+  ccEmailType = "SpecificEmails"
+  ccEmailAddress = ""
+  bccEmailAddress = ""
+  toEmailType = "BillToContact"
+  toEmailAddress = ""
+  emailSubject = "Your subscription has been renewed (via amendment <Amendment.AmendmentName>)"
+  emailBody = "Dear <BillToContact.FirstName> <BillToContact.LastName>,\r<br />\r<br />We would like to inform you that your subscription <Subscription.SubscriptionName> was renewed successfully on <Subscription.CreateDate>. The subscription will have a new term of <Subscription.RenewalTerm> months after the current term ends.\r<br />\r<br />Thank you for your business!"
+  active = true
+  isHtml = true
+  useAdditionalAddresses = false
+}

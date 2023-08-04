@@ -1,0 +1,11 @@
+okta.Feature Automatically_update_Okta_Active_Directory__AD__agents@sssssjks {
+  
+  type = "self-service"
+  status = "DISABLED"
+  name = "Automatically update Okta Active Directory (AD) agents"
+  description = "Automatically update Okta AD agents to ensure your org has the latest agent features and functions. You no longer need to manually uninstall and reinstall outdated agents. Instead, you can schedule agent auto-updates to occur outside of business hours."
+  stage = {
+    value = "EA"
+  }
+  
+}

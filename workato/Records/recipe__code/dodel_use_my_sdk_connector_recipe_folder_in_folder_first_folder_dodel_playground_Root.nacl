@@ -1,0 +1,27 @@
+workato.recipe__code dodel_use_my_sdk_connector_recipe_folder_in_folder_first_folder_dodel_playground_Root {
+  number = 0
+  provider = "clock"
+  name = "scheduled_event"
+  as = "68b195ef"
+  description = "<span class=\"provider\">Trigger</span> on a <span class=\"provider\">specified schedule</span>"
+  keyword = "trigger"
+  input = {
+    time_unit = "minutes"
+    trigger_every = "5"
+  }
+  block = [
+    {
+      number = 1
+      provider = "dodel_demo_application_connector_212128_1673253480"
+      name = ""
+      as = ""
+      description = ""
+      keyword = "action"
+      uuid = "3fa0301b-8941-4882-b48b-91ba3b6e3e28"
+    },
+  ]
+  uuid = "dc00f134-8623-4e10-8abd-29ebe51101cd"
+  _parent = [
+    workato.recipe.instance.dodel_use_my_sdk_connector_recipe_folder_in_folder_first_folder_dodel_playground_Root,
+  ]
+}

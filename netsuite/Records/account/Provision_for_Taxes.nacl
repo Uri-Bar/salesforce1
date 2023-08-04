@@ -1,0 +1,15 @@
+netsuite.account Provision_for_Taxes@s {
+  acctType = "_otherIncome"
+  acctName = "Provision for Taxes"
+  includeChildren = true
+  generalRate = "_average"
+  cashFlowRate = "_average"
+  isInactive = false
+  inventory = false
+  subsidiaryList = [
+    netsuite.subsidiary.instance.Parent_Company@s,
+  ]
+  revalue = false
+  identifier = "Provision for Taxes"
+  custom_custrecord_acct_special = false
+}

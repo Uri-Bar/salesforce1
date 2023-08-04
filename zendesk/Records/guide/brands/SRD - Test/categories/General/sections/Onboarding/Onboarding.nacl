@@ -1,0 +1,12 @@
+zendesk.section Onboarding_General_SRD___Test_sbs_uuuum@uuuuuum {
+  category_id = zendesk.category.instance.General_SRD___Test_sbs@uuuum
+  sorting = "manual"
+  locale = zendesk.guide_language_settings.instance.SRD___Test_sbs_en_us@uuumub
+  source_locale = zendesk.guide_language_settings.instance.SRD___Test_sbs_en_us@uuumub
+  outdated = false
+  theme_template = "section_page"
+  translations = [
+    zendesk.section_translation.instance.Onboarding_General_SRD___Test_sbs_uuuum_uuuuuum__SRD___Test_sbs_en_us_uuumub@uuuuuuumuuuuuuuum,
+  ]
+  brand = zendesk.brand.instance.SRD___Test@sbs
+}

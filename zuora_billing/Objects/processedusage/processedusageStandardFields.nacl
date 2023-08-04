@@ -1,0 +1,114 @@
+type zuora_billing.processedusage {
+  string Id {
+    type = "string"
+    format = "uuid"
+    required = false
+    filterable = false
+    label = "Id"
+  }
+  string CreatedById {
+    type = "string"
+    format = "uuid"
+    required = false
+    filterable = false
+    referenceTo = [
+      zuora_billing.user.field.Id,
+    ]
+    cardinality = "manyToOne"
+    recordConstraints = {
+      create = {
+        enforceValidMapping = true
+      }
+    }
+    label = "CreatedById"
+  }
+  string CreatedDate {
+    type = "string"
+    format = "date-time"
+    required = false
+    filterable = false
+    label = "CreatedDate"
+  }
+  string UpdatedById {
+    type = "string"
+    format = "uuid"
+    required = false
+    filterable = false
+    referenceTo = [
+      zuora_billing.user.field.Id,
+    ]
+    cardinality = "manyToOne"
+    recordConstraints = {
+      create = {
+        enforceValidMapping = true
+      }
+    }
+    label = "UpdatedById"
+  }
+  string UpdatedDate {
+    type = "string"
+    format = "date-time"
+    required = false
+    filterable = false
+    label = "UpdatedDate"
+  }
+  string UsageId {
+    type = "string"
+    format = "uuid"
+    required = false
+    filterable = false
+    referenceTo = [
+      zuora_billing.usage.field.Id,
+    ]
+    cardinality = "manyToOne"
+    recordConstraints = {
+      create = {
+        enforceValidMapping = true
+      }
+    }
+    label = "UsageId"
+  }
+  number Amount {
+    type = "number"
+    required = false
+    filterable = false
+    label = "Amount"
+  }
+  string BillingPeriodEndDate {
+    type = "string"
+    format = "date-time"
+    required = false
+    filterable = false
+    label = "BillingPeriodEndDate"
+  }
+  string BillingPeriodStartDate {
+    type = "string"
+    format = "date-time"
+    required = false
+    filterable = false
+    label = "BillingPeriodStartDate"
+  }
+  string InvoiceItemId {
+    type = "string"
+    format = "uuid"
+    required = false
+    filterable = false
+    referenceTo = [
+      zuora_billing.invoiceitem.field.Id,
+    ]
+    cardinality = "manyToOne"
+    recordConstraints = {
+      create = {
+        enforceValidMapping = true
+      }
+    }
+    label = "InvoiceItemId"
+  }
+  string CreditMemoItemId {
+    type = "string"
+    format = "uuid"
+    required = false
+    filterable = false
+    label = "CreditMemoItemId"
+  }
+}

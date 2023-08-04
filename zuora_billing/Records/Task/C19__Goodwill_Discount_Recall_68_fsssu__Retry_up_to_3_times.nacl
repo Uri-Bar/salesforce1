@@ -1,0 +1,37 @@
+zuora_billing.Task C19__Goodwill_Discount_Recall_68_fsssu__Retry_up_to_3_times@uuuuumuussss {
+  name = "Retry up to 3 times"
+  parameters = {
+    if_clause = '''
+{%- if Data.Liquid.retryCount == nil -%}
+  {%- assign retryCount = 1 -%}
+  {%- assign backOff = Data.Worfklow.backOffMultiplier | plus: 0.00 -%}
+{%- else -%}
+  {%- assign retryCount = Data.Liquid.retryCount | plus: 1 -%}
+  {%- assign backOff = Data.Liquid.backOff | times: Data.Worfklow.backOffMultiplier -%}
+{%- endif -%}
+ 
+{% if retryCount <= 3 %}
+  {%- assign waitSeconds = Data.Worfklow.retryMinutes | times: 60.0 | times: backOff -%}
+True
+{% else %}
+False
+{% endif %}
+'''
+    strict_variables = "true"
+  }
+  action_type = "If"
+  call_type = "SOAP"
+  task_id = 81
+  concurrent_limit = 9999999
+  additionalProperties = {
+    css = {
+      top = "350px"
+      left = "150px"
+    }
+    priority = "Medium"
+    
+  }
+  _parent = [
+    zuora_billing.WorkflowExport.instance.C19__Goodwill_Discount_Recall_68@fsssu,
+  ]
+}

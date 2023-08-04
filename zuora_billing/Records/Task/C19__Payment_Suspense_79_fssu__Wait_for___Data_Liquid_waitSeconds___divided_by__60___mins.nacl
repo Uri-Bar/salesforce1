@@ -1,0 +1,22 @@
+zuora_billing.Task C19__Payment_Suspense_79_fssu__Wait_for___Data_Liquid_waitSeconds___divided_by__60___mins@uuuumuuss_00123_00123vvsgsufs_00125_00125s {
+  name = "Wait for {{Data.Liquid.waitSeconds | divided_by: 60}} mins"
+  parameters = {
+    delay_time = "{{Data.Liquid.waitSeconds}}"
+    strict_variables = "true"
+  }
+  action_type = "Delay"
+  call_type = "SOAP"
+  task_id = 147
+  concurrent_limit = 9999999
+  additionalProperties = {
+    css = {
+      top = "-90px"
+      left = "900px"
+    }
+    priority = "Medium"
+    
+  }
+  _parent = [
+    zuora_billing.WorkflowExport.instance.C19__Payment_Suspense_79@fssu,
+  ]
+}

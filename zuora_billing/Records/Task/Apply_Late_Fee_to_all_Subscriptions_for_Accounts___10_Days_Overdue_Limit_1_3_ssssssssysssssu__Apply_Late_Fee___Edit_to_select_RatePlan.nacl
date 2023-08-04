@@ -1,0 +1,90 @@
+zuora_billing.Task Apply_Late_Fee_to_all_Subscriptions_for_Accounts___10_Days_Overdue_Limit_1_3_ssssssssysssssu__Apply_Late_Fee___Edit_to_select_RatePlan@uuuuuuuuuuuuuuumuusssbssss {
+  name = "Apply Late Fee - Edit to select RatePlan"
+  parameters = {
+    fields = {
+      Amendment = {
+        Name = "Add Late Fee"
+        Product = "2c92c0f9590007a201590f3397093bef"
+        RatePlanId = "2c92c0f859067f4401590f33f50c2d4a"
+        Description = "Add Late Fee"
+        ContractEffectiveDate = "{{Data.Workflow.ExecutionDate}}"
+        ServiceActivationDate = "{{Data.Workflow.ExecutionDate}}"
+        CustomerAcceptanceDate = "{{Data.Workflow.ExecutionDate}}"
+      }
+    }
+    options = {
+      Amendment = {
+        GenerateInvoice = "true"
+        ProcessPayments = "false"
+        ApplyCreditBalance = "false"
+      }
+    }
+  }
+  action_type = "NewProduct"
+  object = zuora_billing.amendment
+  object_id = "{{Data.Subscription.Id}}"
+  call_type = "SOAP"
+  task_id = 12
+  concurrent_limit = 9999999
+  additionalProperties = {
+    css = {
+      top = "200px"
+      left = "184px"
+    }
+    priority = "Medium"
+    
+  }
+  _parent = [
+    zuora_billing.WorkflowExport.instance.Apply_Late_Fee_to_all_Subscriptions_for_Accounts___10_Days_Overdue_Limit_1_3@ssssssssysssssu,
+  ]
+  _generated_dependencies = [
+    {
+      reference = zuora_billing.amendment.field.ContractEffectiveDate
+      occurrences = [
+        {
+          location = zuora_billing.Task.instance.Apply_Late_Fee_to_all_Subscriptions_for_Accounts___10_Days_Overdue_Limit_1_3_ssssssssysssssu__Apply_Late_Fee___Edit_to_select_RatePlan@uuuuuuuuuuuuuuumuusssbssss.parameters.fields.Amendment.ContractEffectiveDate
+        },
+      ]
+    },
+    {
+      reference = zuora_billing.amendment.field.CustomerAcceptanceDate
+      occurrences = [
+        {
+          location = zuora_billing.Task.instance.Apply_Late_Fee_to_all_Subscriptions_for_Accounts___10_Days_Overdue_Limit_1_3_ssssssssysssssu__Apply_Late_Fee___Edit_to_select_RatePlan@uuuuuuuuuuuuuuumuusssbssss.parameters.fields.Amendment.CustomerAcceptanceDate
+        },
+      ]
+    },
+    {
+      reference = zuora_billing.amendment.field.Description
+      occurrences = [
+        {
+          location = zuora_billing.Task.instance.Apply_Late_Fee_to_all_Subscriptions_for_Accounts___10_Days_Overdue_Limit_1_3_ssssssssysssssu__Apply_Late_Fee___Edit_to_select_RatePlan@uuuuuuuuuuuuuuumuusssbssss.parameters.fields.Amendment.Description
+        },
+      ]
+    },
+    {
+      reference = zuora_billing.amendment.field.Name
+      occurrences = [
+        {
+          location = zuora_billing.Task.instance.Apply_Late_Fee_to_all_Subscriptions_for_Accounts___10_Days_Overdue_Limit_1_3_ssssssssysssssu__Apply_Late_Fee___Edit_to_select_RatePlan@uuuuuuuuuuuuuuumuusssbssss.parameters.fields.Amendment.Name
+        },
+      ]
+    },
+    {
+      reference = zuora_billing.amendment.field.ServiceActivationDate
+      occurrences = [
+        {
+          location = zuora_billing.Task.instance.Apply_Late_Fee_to_all_Subscriptions_for_Accounts___10_Days_Overdue_Limit_1_3_ssssssssysssssu__Apply_Late_Fee___Edit_to_select_RatePlan@uuuuuuuuuuuuuuumuusssbssss.parameters.fields.Amendment.ServiceActivationDate
+        },
+      ]
+    },
+    {
+      reference = zuora_billing.subscription.field.Id
+      occurrences = [
+        {
+          location = zuora_billing.Task.instance.Apply_Late_Fee_to_all_Subscriptions_for_Accounts___10_Days_Overdue_Limit_1_3_ssssssssysssssu__Apply_Late_Fee___Edit_to_select_RatePlan@uuuuuuuuuuuuuuumuusssbssss.object_id
+        },
+      ]
+    },
+  ]
+}

@@ -1,0 +1,78 @@
+type salesforce.ForecastingType {
+  annotations {
+    serviceid metadataType {
+    }
+    boolean hasMetaFile {
+    }
+    string folderType {
+    }
+    string folderContentType {
+    }
+    string suffix {
+    }
+    string dirName {
+    }
+  }
+  serviceid fullName {
+  }
+  boolean active {
+  }
+  boolean amount {
+  }
+  string dateType {
+    _restriction = {
+      enforce_value = false
+      values = [
+        "OLIMeasureCloseDateOnly",
+        "OLIMeasureOppCustomDateOnly",
+        "OpportunityCloseDate",
+        "OpportunityCustomDate",
+        "ProductDate",
+        "ProductDateOnly",
+        "ScheduleDate",
+        "ScheduleDateOnly",
+      ]
+    }
+  }
+  string developerName {
+  }
+  boolean hasProductFamily {
+  }
+  string masterLabel {
+  }
+  string opportunitySplitType {
+    foreignKeyDomain = [
+      "OpportunitySplitType",
+    ]
+  }
+  boolean quantity {
+  }
+  string roleType {
+    _restriction = {
+      enforce_value = false
+      values = [
+        "R",
+        "T",
+        "Y",
+      ]
+    }
+  }
+  string territory2Model {
+    foreignKeyDomain = [
+      "Territory2Model",
+    ]
+  }
+  string internalId {
+    _hidden_value = true
+    localOnly = true
+  }
+  suffix = "forecastingType"
+  dirName = "forecastingTypes"
+  metadataType = "ForecastingType"
+  
+  string opptyLineItemSplitType {
+    foreignKeyDomain = [
+      "OpptyLineItemSplitType",
+    ]
+  }
+}

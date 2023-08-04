@@ -1,0 +1,16 @@
+jira.Screen Resolve_Issue_Screen@s {
+  name = "Resolve Issue Screen"
+  description = "Allows to set resolution, change fix versions and assign an issue."
+  tabs = {
+    Field_Tab@s = {
+      name = "Field Tab"
+      fields = [
+        jira.Field.instance.Resolution,
+        jira.Field.instance.Fix_versions@s,
+        jira.Field.instance.Assignee,
+        jira.Field.instance.Log_Work@s,
+      ]
+      position = 0
+    }
+  }
+}

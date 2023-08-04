@@ -1,0 +1,10 @@
+jira.Field Request_Type__c@suu {
+  name = "Request Type"
+  description = "Holds information about which Service Desk was used to create a ticket. This custom field is created programmatically and must not be modified."
+  isLocked = true
+  searcherKey = "com.atlassian.servicedesk:vp-origin-searcher"
+  type = "com.atlassian.servicedesk:vp-origin"
+  contexts = [
+    jira.CustomFieldContext.instance.Request_Type__c_suu_Default_Configuration_Scheme_for_Request_Type@uuumusssss,
+  ]
+}

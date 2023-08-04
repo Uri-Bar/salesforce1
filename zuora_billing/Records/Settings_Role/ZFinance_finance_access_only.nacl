@@ -1,0 +1,14 @@
+zuora_billing.Settings_Role ZFinance_finance_access_only@ubb {
+  name = "finance-access-only"
+  description = ""
+  category = "ZFinance"
+  entityId = "8ac6819b-7883-361b-0178-93726ba53eff"
+  custom = true
+  attributes = [
+    {
+      name = "FinanceView"
+      scope = "Finance"
+      activationLevel = "EntityAndUser"
+    },
+  ]
+}

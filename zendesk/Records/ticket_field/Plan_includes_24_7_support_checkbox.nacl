@@ -1,0 +1,16 @@
+zendesk.ticket_field Plan_includes_24_7_support_checkbox@ssdsu {
+  type = "checkbox"
+  
+  raw_title = "Plan includes 24/7 support"
+  
+  raw_description = ""
+  active = true
+  required = false
+  collapsed_for_agents = false
+  
+  raw_title_in_portal = "Plan includes 24/7 support"
+  visible_in_portal = false
+  editable_in_portal = false
+  required_in_portal = false
+  removable = true
+}

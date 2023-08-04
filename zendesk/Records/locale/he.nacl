@@ -1,0 +1,8 @@
+zendesk.locale he {
+  locale = "he"
+  name = "עִבְרִית (Hebrew)"
+  native_name = "עברית"
+  presentation_name = "Hebrew - עברית"
+  rtl = true
+  default = false
+}

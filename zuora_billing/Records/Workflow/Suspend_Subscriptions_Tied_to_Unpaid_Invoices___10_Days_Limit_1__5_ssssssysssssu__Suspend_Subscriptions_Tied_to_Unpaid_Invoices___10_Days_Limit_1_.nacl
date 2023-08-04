@@ -1,0 +1,33 @@
+zuora_billing.Workflow Suspend_Subscriptions_Tied_to_Unpaid_Invoices___10_Days_Limit_1__5_ssssssysssssu__Suspend_Subscriptions_Tied_to_Unpaid_Invoices___10_Days_Limit_1_@uuuuuuuuuuuuumuussssssysssss {
+  id = 5
+  name = "Suspend Subscriptions Tied to Unpaid Invoices > 10 Days Limit 1 "
+  description = ""
+  type = "Workflow::Setup"
+  status = "Active"
+  version = "0.0.1"
+  additionalProperties = {
+    parameters = {
+      skipping_check = "redis"
+      file_encryption = "false"
+      callout_response = "workflow instance"
+      secure_error_msgs = "false"
+      disable_pending_status = true
+    }
+    ondemand_trigger = true
+    callout_trigger = true
+    scheduled_trigger = false
+    css = {
+      top = "40px"
+      left = "35px"
+    }
+    call_type = "ASYNC"
+    priority = "Medium"
+    delete_ttl = 30
+    
+    
+    event_trigger = false
+  }
+  _parent = [
+    zuora_billing.WorkflowExport.instance.Suspend_Subscriptions_Tied_to_Unpaid_Invoices___10_Days_Limit_1__5@ssssssysssssu,
+  ]
+}

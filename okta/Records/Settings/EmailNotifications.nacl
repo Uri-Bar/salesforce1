@@ -1,0 +1,67 @@
+okta.EmailNotifications {
+  bcc = false
+  accountEmails = [
+    {
+      emailType = "USER_LOCKED_OUT"
+      displayName = "User lockouts"
+      send = false
+    },
+    {
+      emailType = "USER_DEPROVISION"
+      displayName = "User deprovisions"
+      send = false
+    },
+    {
+      emailType = "APP_IMPORT"
+      displayName = "App user import status"
+      send = false
+    },
+    {
+      emailType = "CONNECTOR_AGENT"
+      displayName = "Disconnects and reconnects: On-prem provisioning, on-prem MFA agents, and RADIUS server agent"
+      send = true
+    },
+    {
+      emailType = "IWA_AGENT"
+      displayName = "Disconnects and reconnects: IWA Agent"
+      send = true
+    },
+    {
+      emailType = "AD_AGENT"
+      displayName = "Disconnects and reconnects: AD Agent"
+      send = true
+    },
+    {
+      emailType = "LDAP_AGENT"
+      displayName = "Disconnects and reconnects: LDAP Agent"
+      send = true
+    },
+    {
+      emailType = "RATELIMIT_NOTIFICATION"
+      displayName = "Rate limit warning and violation"
+      send = true
+    },
+    {
+      emailType = "REPORT_SUSPICIOUS_ACTIVITY"
+      displayName = "User reporting of suspicious activity"
+      send = true
+    },
+  ]
+  oktaEmails = [
+    {
+      emailType = "OKTA_ANNOUNCEMENT"
+      displayName = "Okta release notes and announcements"
+      send = true
+    },
+    {
+      emailType = "OKTA_ISSUE"
+      displayName = "Trust incidents and updates"
+      send = true
+    },
+    {
+      emailType = "OKTA_UPDATE"
+      displayName = "Scheduled system updates"
+      send = false
+    },
+  ]
+}

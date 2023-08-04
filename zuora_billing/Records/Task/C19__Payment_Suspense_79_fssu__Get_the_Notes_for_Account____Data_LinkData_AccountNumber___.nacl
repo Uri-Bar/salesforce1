@@ -1,0 +1,40 @@
+zuora_billing.Task C19__Payment_Suspense_79_fssu__Get_the_Notes_for_Account____Data_LinkData_AccountNumber___@uuuumuussssst_00123_00123vv_00125_00125t {
+  name = "Get the Notes for Account '{{Data.LinkData.AccountNumber}}'"
+  parameters = {
+    fields = {
+      Account = {
+        Notes = "true"
+      }
+    }
+    placement = "theNotes"
+    batch_size = "2000"
+    where_clause = " Id =  '{{Data.LinkData.Id}}'"
+    strict_variables = "true"
+  }
+  action_type = "Query"
+  object = zuora_billing.account
+  call_type = "SOAP"
+  task_id = 140
+  concurrent_limit = 9999999
+  additionalProperties = {
+    css = {
+      top = "200px"
+      left = "620px"
+    }
+    priority = "Medium"
+    
+  }
+  _parent = [
+    zuora_billing.WorkflowExport.instance.C19__Payment_Suspense_79@fssu,
+  ]
+  _generated_dependencies = [
+    {
+      reference = zuora_billing.account.field.Notes
+      occurrences = [
+        {
+          location = zuora_billing.Task.instance.C19__Payment_Suspense_79_fssu__Get_the_Notes_for_Account____Data_LinkData_AccountNumber___@uuuumuussssst_00123_00123vv_00125_00125t.parameters.fields.Account.Notes
+        },
+      ]
+    },
+  ]
+}

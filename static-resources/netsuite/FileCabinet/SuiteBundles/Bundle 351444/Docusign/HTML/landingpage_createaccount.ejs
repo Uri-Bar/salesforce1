@@ -1,0 +1,80 @@
+<style>
+#dsDialog {	
+	height: 380px; 
+	width: 600px; 
+	background-image: url('<%= backgroundImage %>');  
+	background-repeat: repeat-x; 
+	margin: 0; 
+	padding: 0;
+	border: 0px;
+	font-family: Helvetica;
+}
+
+#dsHeader {
+	height: 46px;
+	font-size: 14px;
+	color: #20557A;
+	font-weight: normal;
+}
+
+#dsHeader_right {
+	height: 47px;
+	float: right;
+}
+
+#dsHeader_left {
+	height: 47px;
+	line-height: 47px;
+}
+
+#ds_CreateAcct_DialogBox_close {
+	width:34px;
+	height:46px
+}
+
+#dsMain {
+	text-align: center;
+	height: 353px;
+}
+
+
+#ds_create_account_submit {
+	width:103px;
+	height:36px;
+}
+
+.ds_button {
+	background-image: url('<%= buttonImage %>');
+	cursor:pointer;
+	border: none;
+	width: 103px;
+	height: 36px;
+	color: #636363;
+	font-size: 12px;
+	font-family: Helvetica;
+	font-weight: bold;
+}
+</style>
+
+
+<div id="dsDialog" >
+	<div id="dsHeader">
+		<div id="dsHeader_right">
+			<input id="ds_CreateAcct_DialogBox_close" type="image" src="<%= closeImage %>" alt="close" />
+		</div>
+		<div id="dsHeader_left">
+			<span>&nbsp;&nbsp;<%= headerLabelText %></span>
+		</div>
+	</div>
+	<div id="dsMain">
+		<br>
+		<%= dsEnvironmentText %>:&nbsp;<%= dsEnvDropDownHTML %><br><br>
+		<%= dsCompanyText %>&nbsp;&nbsp;&nbsp;<input type="text" id="ds_newacct_companyname" value="" size ="50" maxlength="50" /><br><br>
+		<%= dsFirstNameText %>&nbsp;&nbsp;&nbsp;<input type="text" id="ds_newacct_firstname" value="" size ="50" maxlength="50" /><br><br>
+		<%= dsLastNameText %>&nbsp;&nbsp;&nbsp;<input type="text" id="ds_newacct_lastname" value="" size ="50" maxlength="50" /><br><br>
+		<%= dsEmailText %>&nbsp;&nbsp;&nbsp;<input type="text" id="ds_newacct_email" value="" size ="50" maxlength="50" /><br><br>
+		<input type="checkbox" id="ds_newacct_agreecheckbox" >&nbsp;&nbsp;<%= dsIAgreeToText %>
+		<a href="http://www.docusign.com/company/terms-and-conditions/web" target="_blank"><%= dsTermsAndConditionsText %></a><br><br>
+		<button id="ds_create_account_submit" class="ds_button" type="button" ><%= dsCreateText %></button>
+	</div>
+</div>

@@ -1,0 +1,148 @@
+type zuora_billing.SavedQuery {
+  string Id {
+    format = "uuid"
+    label = "Id"
+    origin = "system"
+    type = "string"
+    required = true
+    filterable = true
+  }
+  string CreatedById {
+    label = "CreatedById"
+    origin = "system"
+    type = "string"
+    required = true
+    filterable = true
+  }
+  string UpdatedById {
+    label = "UpdatedById"
+    origin = "system"
+    type = "string"
+    required = true
+    filterable = true
+  }
+  string CreatedDate {
+    format = "date-time"
+    origin = "system"
+    type = "string"
+    label = "CreatedDate"
+    required = true
+    filterable = true
+  }
+  string UpdatedDate {
+    format = "date-time"
+    origin = "system"
+    type = "string"
+    label = "UpdatedDate"
+    required = true
+    filterable = true
+  }
+  boolean ReadDeleted {
+    label = "Read Deleted"
+    origin = "system"
+    type = "boolean"
+    default = false
+    description = "Indicates whether the query will retrieve only deleted records."
+    required = true
+    filterable = false
+  }
+  string Compression {
+    label = "Compression"
+    origin = "system"
+    type = "string"
+    default = "NONE"
+    enum = [
+      "NONE",
+      "GZIP",
+      "ZIP",
+    ]
+    description = "Specifies whether Zuora compresses the query results."
+    required = true
+    filterable = false
+  }
+  string RecentJobId {
+    format = "uuid"
+    label = "Recent Job Id"
+    origin = "system"
+    type = "string"
+    description = "The ID of the most recent job run for this saved query."
+    required = false
+    filterable = false
+  }
+  string Query {
+    maxLength = 20000
+    label = "Query"
+    origin = "system"
+    type = "string"
+    description = "The query to perform."
+    required = true
+    filterable = false
+  }
+  string ColumnSeparator {
+    maxLength = 1
+    label = "Column Separator"
+    origin = "system"
+    type = "string"
+    description = "The column separator to be used if OutputFormat is DSV."
+    required = false
+    filterable = false
+  }
+  boolean UseIndexJoin {
+    label = "Use Index Join"
+    origin = "system"
+    type = "boolean"
+    default = false
+    description = "Indicates whether to use Index Join. Index join is useful when you have a specific reference value in your WHERE clause to index another large table by."
+    required = true
+    filterable = false
+  }
+  string OutputFormat {
+    label = "Output Format"
+    origin = "system"
+    type = "string"
+    default = "CSV"
+    enum = [
+      "CSV",
+      "JSON",
+      "TSV",
+      "DSV",
+    ]
+    description = "Specifies the format of the query results."
+    required = true
+    filterable = false
+  }
+  string QueryDescription {
+    maxLength = 4096
+    label = "Query Description"
+    origin = "system"
+    type = "string"
+    description = "A human readable saved query deascription."
+    required = false
+    filterable = false
+  }
+  string SourceData {
+    label = "Source Data"
+    origin = "system"
+    type = "string"
+    default = "LIVE"
+    enum = [
+      "LIVE",
+      "UNLIMITED",
+      "REVENUELIVE",
+      "WAREHOUSE",
+      "SNOWFLAKE",
+    ]
+    description = "Specifies the data source that a query will be run against."
+    required = false
+    filterable = false
+  }
+  string QueryName {
+    maxLength = 512
+    label = "Query Name"
+    origin = "system"
+    type = "string"
+    description = "The user readable saved query name."
+    required = true
+    filterable = true
+  }
+}

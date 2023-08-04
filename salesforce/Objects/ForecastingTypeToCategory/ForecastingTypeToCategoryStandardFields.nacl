@@ -1,0 +1,169 @@
+type salesforce.ForecastingTypeToCategory {
+  serviceid Id {
+    apiName = "ForecastingTypeToCategory.Id"
+    label = "Forecasting Type To Category Mapping ID"
+    queryable = true
+    _hidden_value = true
+    
+    
+  }
+  salesforce.Checkbox IsDeleted {
+    apiName = "ForecastingTypeToCategory.IsDeleted"
+    label = "Deleted"
+    defaultValue = false
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.DateTime CreatedDate {
+    apiName = "ForecastingTypeToCategory.CreatedDate"
+    label = "Created Date"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Lookup CreatedById {
+    apiName = "ForecastingTypeToCategory.CreatedById"
+    label = "Created By ID"
+    referenceTo = [
+      salesforce.User,
+    ]
+    createable = false
+    updateable = false
+    relationshipName = "CreatedBy"
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.DateTime LastModifiedDate {
+    apiName = "ForecastingTypeToCategory.LastModifiedDate"
+    label = "Last Modified Date"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Lookup LastModifiedById {
+    apiName = "ForecastingTypeToCategory.LastModifiedById"
+    label = "Last Modified By ID"
+    referenceTo = [
+      salesforce.User,
+    ]
+    createable = false
+    updateable = false
+    relationshipName = "LastModifiedBy"
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.DateTime SystemModstamp {
+    apiName = "ForecastingTypeToCategory.SystemModstamp"
+    label = "System Modstamp"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Lookup ForecastingTypeId {
+    apiName = "ForecastingTypeToCategory.ForecastingTypeId"
+    label = "Forecasting Type ID"
+    _required = true
+    referenceTo = [
+      salesforce.ForecastingType,
+    ]
+    createable = false
+    updateable = false
+    relationshipName = "ForecastingType"
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Picklist ForecastingItemCategory {
+    apiName = "ForecastingTypeToCategory.ForecastingItemCategory"
+    label = "Forecasting Item Category"
+    _required = true
+    valueSet = [
+      {
+        fullName = "OmittedOnly"
+        default = false
+        label = "OmittedOnly"
+        isActive = true
+      },
+      {
+        fullName = "PipelineOnly"
+        default = false
+        label = "PipelineOnly"
+        isActive = true
+      },
+      {
+        fullName = "BestCaseOnly"
+        default = false
+        label = "BestCaseOnly"
+        isActive = true
+      },
+      {
+        fullName = "CommitOnly"
+        default = false
+        label = "CommitOnly"
+        isActive = true
+      },
+      {
+        fullName = "ClosedOnly"
+        default = false
+        label = "Closed Only"
+        isActive = true
+      },
+      {
+        fullName = "OpenPipeline"
+        default = false
+        label = "Open Pipeline"
+        isActive = true
+      },
+      {
+        fullName = "BestCaseForecast"
+        default = false
+        label = "Best Case Forecast"
+        isActive = true
+      },
+      {
+        fullName = "CommitForecast"
+        default = false
+        label = "Commit Forecast"
+        isActive = true
+      },
+    ]
+    restricted = false
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Number DisplayPosition {
+    apiName = "ForecastingTypeToCategory.DisplayPosition"
+    label = "Display Position"
+    precision = 9
+    createable = false
+    updateable = false
+    scale = 0
+    unique = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Checkbox IsAdjustable {
+    apiName = "ForecastingTypeToCategory.IsAdjustable"
+    label = "Is Adjustable"
+    defaultValue = false
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Checkbox IsOwnerAdjustable {
+    apiName = "ForecastingTypeToCategory.IsOwnerAdjustable"
+    label = "Is Owner Adjustable"
+    defaultValue = false
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+}

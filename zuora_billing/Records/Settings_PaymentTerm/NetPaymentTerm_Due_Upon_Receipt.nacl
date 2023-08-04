@@ -1,0 +1,8 @@
+zuora_billing.Settings_PaymentTerm NetPaymentTerm_Due_Upon_Receipt@uss {
+  name = "Due Upon Receipt"
+  isActive = true
+  isDefault = false
+  type = "NetPaymentTerm"
+  intervalUnit = "Day"
+  intervalNumber = 0
+}

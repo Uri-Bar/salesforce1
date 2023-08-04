@@ -1,0 +1,6 @@
+zuora_billing.Settings_ReasonCode InvoiceAdjustment_Other {
+  isActive = true
+  reasonCodeName = "Other"
+  reasonCodeTransactionType = "InvoiceAdjustment"
+  isDefault = false
+}

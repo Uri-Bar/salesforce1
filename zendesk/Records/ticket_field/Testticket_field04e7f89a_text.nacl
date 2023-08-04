@@ -1,0 +1,16 @@
+zendesk.ticket_field text_Testticket_field04e7f89a {
+  type = "text"
+  
+  raw_title = "Testticket_field04e7f89a"
+  
+  raw_description = "Test desc"
+  active = false
+  required = false
+  collapsed_for_agents = false
+  
+  raw_title_in_portal = "Testticket_field04e7f89a"
+  visible_in_portal = false
+  editable_in_portal = false
+  required_in_portal = false
+  removable = true
+}

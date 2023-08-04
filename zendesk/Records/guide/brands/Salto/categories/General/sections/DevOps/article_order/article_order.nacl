@@ -1,0 +1,6 @@
+zendesk.article_order DevOps_General_Salto {
+  brand = zendesk.brand.instance.Salto
+  _parent = [
+    zendesk.section.instance.DevOps_General_Salto,
+  ]
+}

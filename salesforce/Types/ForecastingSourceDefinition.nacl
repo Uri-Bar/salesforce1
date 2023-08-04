@@ -1,0 +1,106 @@
+type salesforce.ForecastingSourceDefinition {
+  annotations {
+    serviceid metadataType {
+    }
+    boolean hasMetaFile {
+    }
+    string folderType {
+    }
+    string folderContentType {
+    }
+    string suffix {
+    }
+    string dirName {
+    }
+  }
+  string categoryField {
+    _restriction = {
+      enforce_value = false
+      values = [
+        "Opportunity.ForecastCategoryName",
+      ]
+    }
+    foreignKeyDomain = [
+      salesforce.CustomField,
+    ]
+  }
+  string dateField {
+    _restriction = {
+      enforce_value = false
+      values = [
+        "Opportunity.CloseDate",
+        "OpportunityLineItem.ServiceDate",
+      ]
+    }
+    foreignKeyDomain = [
+      salesforce.CustomField,
+    ]
+  }
+  string familyField {
+    _restriction = {
+      enforce_value = false
+      values = [
+        "Product2.Family",
+      ]
+    }
+    foreignKeyDomain = [
+      salesforce.CustomField,
+    ]
+  }
+  serviceid fullName {
+  }
+  boolean isProtected {
+  }
+  string masterLabel {
+  }
+  string measureField {
+    _restriction = {
+      enforce_value = false
+      values = [
+        "Opportunity.Amount",
+        "Opportunity.TotalOpportunityQuantity",
+        "OpportunityLineItem.Quantity",
+        "OpportunityLineItem.TotalPrice",
+      ]
+    }
+    foreignKeyDomain = [
+      salesforce.CustomField,
+    ]
+  }
+  string sourceObject {
+    _restriction = {
+      enforce_value = false
+      values = [
+        "Opportunity",
+        "OpportunityLineItem",
+        "Product2",
+      ]
+    }
+    foreignKeyDomain = [
+      "CustomObject",
+    ]
+  }
+  string territory2Field {
+    foreignKeyDomain = [
+      salesforce.CustomField,
+    ]
+  }
+  string userField {
+    _restriction = {
+      enforce_value = false
+      values = [
+        "Opportunity.OwnerId",
+      ]
+    }
+    foreignKeyDomain = [
+      salesforce.CustomField,
+    ]
+  }
+  string internalId {
+    _hidden_value = true
+    localOnly = true
+  }
+  suffix = "forecastingSourceDefinition"
+  dirName = "forecastingSourceDefinitions"
+  metadataType = "ForecastingSourceDefinition"
+}

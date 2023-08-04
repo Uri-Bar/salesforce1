@@ -1,0 +1,17 @@
+zendesk.organization_field_order {
+  active = [
+    zendesk.organization_field.instance.org_field301,
+    zendesk.organization_field.instance.org_field302,
+    zendesk.organization_field.instance.org_field_n403,
+    zendesk.organization_field.instance.org_field_n404,
+    zendesk.organization_field.instance.org_field305,
+    zendesk.organization_field.instance.org_field306,
+    zendesk.organization_field.instance.org_field307,
+    zendesk.organization_field.instance.dropdown_26,
+    zendesk.organization_field.instance.dropdown_27,
+    zendesk.organization_field.instance.oftoremove,
+    zendesk.organization_field.instance.another_drop_down,
+  ]
+  inactive = [
+  ]
+}

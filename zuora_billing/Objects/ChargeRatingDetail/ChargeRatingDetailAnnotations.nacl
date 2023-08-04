@@ -1,0 +1,17 @@
+type zuora_billing.ChargeRatingDetail {
+  annotations {
+    string metadataType {
+    }
+    string label {
+    }
+    string description {
+    }
+    hidden_string id {
+    }
+    string objectType {
+    }
+  }
+  metadataType = "StandardObject"
+  label = "ChargeRatingDetail"
+  objectType = "ChargeRatingDetail"
+}

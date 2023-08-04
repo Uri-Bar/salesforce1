@@ -1,0 +1,69 @@
+salesforce.Layout CampaignInfluenceModel_Campaign_Influence_Model_Layout@bsss {
+  fullName = "CampaignInfluenceModel-Campaign Influence Model Layout"
+  layoutSections = [
+    {
+      customLabel = false
+      detailHeading = true
+      editHeading = true
+      label = "Detail Information"
+      layoutColumns = [
+        {
+          layoutItems = [
+            {
+              behavior = "Edit"
+              field = "IsActive"
+            },
+            {
+              behavior = "Required"
+              field = "RecordPreference"
+            },
+            {
+              behavior = "Required"
+              field = "MasterLabel"
+            },
+            {
+              behavior = "Edit"
+              field = "IsDefaultModel"
+            },
+            {
+              behavior = "Edit"
+              field = "IsModelLocked"
+            },
+          ]
+        },
+        {
+          layoutItems = [
+            {
+              behavior = "Required"
+              field = "DeveloperName"
+            },
+            {
+              behavior = "Edit"
+              field = "ModelDescription"
+            },
+          ]
+        },
+      ]
+      style = "TwoColumnsLeftToRight"
+    },
+    {
+      customLabel = false
+      detailHeading = false
+      editHeading = false
+      style = "CustomLinks"
+      layoutColumns = [
+        {
+        },
+      ]
+    },
+  ]
+  miniLayout = {
+    fields = [
+      "IsActive",
+      "RecordPreference",
+    ]
+  }
+  showEmailCheckbox = false
+  showRunAssignmentRulesCheckbox = false
+  showSubmitAndAttachButton = false
+}

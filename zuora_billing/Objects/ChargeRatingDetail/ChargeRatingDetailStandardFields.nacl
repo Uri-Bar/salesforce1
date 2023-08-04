@@ -1,0 +1,105 @@
+type zuora_billing.ChargeRatingDetail {
+  string Id {
+    format = "uuid"
+    label = "Id"
+    origin = "system"
+    type = "string"
+    required = true
+    filterable = true
+  }
+  string CreatedById {
+    label = "CreatedById"
+    origin = "system"
+    type = "string"
+    required = true
+    filterable = true
+  }
+  string UpdatedById {
+    label = "UpdatedById"
+    origin = "system"
+    type = "string"
+    required = true
+    filterable = true
+  }
+  string CreatedDate {
+    format = "date-time"
+    origin = "system"
+    type = "string"
+    label = "CreatedDate"
+    required = true
+    filterable = true
+  }
+  string UpdatedDate {
+    format = "date-time"
+    origin = "system"
+    type = "string"
+    label = "UpdatedDate"
+    required = true
+    filterable = true
+  }
+  number SuccessRecordCount {
+    label = "SuccessRecordCount"
+    origin = "system"
+    type = "integer"
+    description = "Number of successful UsageRatingDetail records, or usage records, for this charge/billing period"
+    required = false
+    filterable = false
+  }
+  string ServiceEndDate {
+    format = "date"
+    label = "ServiceEndDate"
+    origin = "system"
+    type = "string"
+    description = "End date of the service period for this charge"
+    required = false
+    filterable = true
+  }
+  string Reference {
+    label = "Reference"
+    origin = "system"
+    type = "string"
+    description = "Identifier associated with the source of this calculation"
+    required = false
+    filterable = true
+  }
+  string ServiceStartDate {
+    format = "date"
+    label = "ServiceStartDate"
+    origin = "system"
+    type = "string"
+    description = "Start date of the service period for this charge"
+    required = false
+    filterable = true
+  }
+  string CalculationDetails {
+    label = "Calculation Details"
+    origin = "system"
+    type = "string"
+    description = "Detailed information about how the charge was rated. Only when the charge type is non-usage-based"
+    required = false
+    filterable = false
+  }
+  string ErrorDetails {
+    label = "ErrorDetails"
+    origin = "system"
+    type = "string"
+    description = "Error information, if the rating failed at a charge level"
+    required = false
+    filterable = false
+  }
+  string ChargeNumber {
+    label = "ChargeNumber"
+    origin = "system"
+    type = "string"
+    required = false
+    filterable = true
+  }
+  number ErrorRecordCount {
+    label = "ErrorRecordCount"
+    origin = "system"
+    type = "integer"
+    description = "Number of failed UsageRatingDetail records, or usage records, that failed to rate for this charge/billing period"
+    required = false
+    filterable = true
+  }
+}

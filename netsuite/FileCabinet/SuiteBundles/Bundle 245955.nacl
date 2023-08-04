@@ -1,0 +1,10 @@
+netsuite.folder SuiteBundles_Bundle_245955@ds {
+  description = "Folder for bundled objects"
+  bundleable = false
+  isinactive = false
+  isprivate = false
+  path = "/SuiteBundles/Bundle 245955"
+  _parent = [
+    netsuite.folder.instance.SuiteBundles,
+  ]
+}

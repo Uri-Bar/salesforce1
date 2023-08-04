@@ -1,0 +1,122 @@
+zuora_billing.Task Invoice_30_Days_Past_Due__Account_Summary_2_sssszdssu__Refetch_Matched_Invoices_Per_Account@uuuuuuuumuussss {
+  name = "Refetch Matched Invoices Per Account"
+  parameters = {
+    fields = {
+      Invoice = {
+        Id = "true"
+        Amount = "true"
+        Status = "true"
+        Balance = "true"
+        DueDate = "true"
+        AccountId = "true"
+        InvoiceDate = "true"
+        InvoiceNumber = "true"
+        PaymentAmount = "true"
+      }
+    }
+    batch_size = "2000"
+    where_clause = "DueDate <= '{{Data.Invoice.DueDate}}' AND Balance > 0 AND Status = 'Posted' AND AccountId = '{{Data.Account.Id}}' "
+    zero_query_proceed = "false"
+  }
+  action_type = "Query"
+  object = zuora_billing.invoice
+  call_type = "SOAP"
+  task_id = 5
+  concurrent_limit = 9999999
+  additionalProperties = {
+    css = {
+      top = "310px"
+      left = "400px"
+    }
+    priority = "Medium"
+    
+  }
+  _parent = [
+    zuora_billing.WorkflowExport.instance.Invoice_30_Days_Past_Due__Account_Summary_2@sssszdssu,
+  ]
+  _generated_dependencies = [
+    {
+      reference = zuora_billing.account.field.Id
+      occurrences = [
+        {
+          location = zuora_billing.Task.instance.Invoice_30_Days_Past_Due__Account_Summary_2_sssszdssu__Refetch_Matched_Invoices_Per_Account@uuuuuuuumuussss.parameters.where_clause
+        },
+      ]
+    },
+    {
+      reference = zuora_billing.invoice.field.AccountId
+      occurrences = [
+        {
+          location = zuora_billing.Task.instance.Invoice_30_Days_Past_Due__Account_Summary_2_sssszdssu__Refetch_Matched_Invoices_Per_Account@uuuuuuuumuussss.parameters.fields.Invoice.AccountId
+        },
+      ]
+    },
+    {
+      reference = zuora_billing.invoice.field.Amount
+      occurrences = [
+        {
+          location = zuora_billing.Task.instance.Invoice_30_Days_Past_Due__Account_Summary_2_sssszdssu__Refetch_Matched_Invoices_Per_Account@uuuuuuuumuussss.parameters.fields.Invoice.Amount
+        },
+      ]
+    },
+    {
+      reference = zuora_billing.invoice.field.Balance
+      occurrences = [
+        {
+          location = zuora_billing.Task.instance.Invoice_30_Days_Past_Due__Account_Summary_2_sssszdssu__Refetch_Matched_Invoices_Per_Account@uuuuuuuumuussss.parameters.fields.Invoice.Balance
+        },
+      ]
+    },
+    {
+      reference = zuora_billing.invoice.field.DueDate
+      occurrences = [
+        {
+          location = zuora_billing.Task.instance.Invoice_30_Days_Past_Due__Account_Summary_2_sssszdssu__Refetch_Matched_Invoices_Per_Account@uuuuuuuumuussss.parameters.fields.Invoice.DueDate
+        },
+        {
+          location = zuora_billing.Task.instance.Invoice_30_Days_Past_Due__Account_Summary_2_sssszdssu__Refetch_Matched_Invoices_Per_Account@uuuuuuuumuussss.parameters.where_clause
+        },
+      ]
+    },
+    {
+      reference = zuora_billing.invoice.field.Id
+      occurrences = [
+        {
+          location = zuora_billing.Task.instance.Invoice_30_Days_Past_Due__Account_Summary_2_sssszdssu__Refetch_Matched_Invoices_Per_Account@uuuuuuuumuussss.parameters.fields.Invoice.Id
+        },
+      ]
+    },
+    {
+      reference = zuora_billing.invoice.field.InvoiceDate
+      occurrences = [
+        {
+          location = zuora_billing.Task.instance.Invoice_30_Days_Past_Due__Account_Summary_2_sssszdssu__Refetch_Matched_Invoices_Per_Account@uuuuuuuumuussss.parameters.fields.Invoice.InvoiceDate
+        },
+      ]
+    },
+    {
+      reference = zuora_billing.invoice.field.InvoiceNumber
+      occurrences = [
+        {
+          location = zuora_billing.Task.instance.Invoice_30_Days_Past_Due__Account_Summary_2_sssszdssu__Refetch_Matched_Invoices_Per_Account@uuuuuuuumuussss.parameters.fields.Invoice.InvoiceNumber
+        },
+      ]
+    },
+    {
+      reference = zuora_billing.invoice.field.PaymentAmount
+      occurrences = [
+        {
+          location = zuora_billing.Task.instance.Invoice_30_Days_Past_Due__Account_Summary_2_sssszdssu__Refetch_Matched_Invoices_Per_Account@uuuuuuuumuussss.parameters.fields.Invoice.PaymentAmount
+        },
+      ]
+    },
+    {
+      reference = zuora_billing.invoice.field.Status
+      occurrences = [
+        {
+          location = zuora_billing.Task.instance.Invoice_30_Days_Past_Due__Account_Summary_2_sssszdssu__Refetch_Matched_Invoices_Per_Account@uuuuuuuumuussss.parameters.fields.Invoice.Status
+        },
+      ]
+    },
+  ]
+}

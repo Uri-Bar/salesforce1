@@ -1,0 +1,39 @@
+netsuite.itemcustomfield custitemhqcuitemfield02 {
+  scriptid = "custitemhqcuitemfield02"
+  accesslevel = "2"
+  appliestogroup = false
+  appliestoinventory = true
+  appliestokit = false
+  appliestononinventory = true
+  appliestoothercharge = false
+  appliestopricelist = false
+  appliestoservice = true
+  appliestospecificitems = false
+  appliestosubplan = false
+  applyformatting = false
+  checkspelling = false
+  defaultchecked = false
+  description = '''
+HQ change descriptions
+3/3/21 - Added new details
+3/18/21 - Add Salto
+5/10/21 New comment - test
+'''
+  displaytype = "NORMAL"
+  encryptatrest = false
+  fieldtype = "CLOBTEXT"
+  globalsearch = false
+  includechilditems = false
+  isformula = false
+  ismandatory = false
+  isparent = false
+  itemmatrix = false
+  itemsubtype = "BOTH"
+  label = "HQ_Cu_ItemField02"
+  searchlevel = "2"
+  showhierarchy = false
+  showinlist = false
+  storevalue = true
+  appliestoexpense = false
+  appliestoitemassembly = false
+}

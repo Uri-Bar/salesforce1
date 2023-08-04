@@ -1,0 +1,17 @@
+salesforce.ListView Contact_AllContacts {
+  fullName = "Contact.AllContacts"
+  columns = [
+    "FULL_NAME",
+    "ACCOUNT.NAME",
+    "CONTACT.TITLE",
+    "CONTACT.PHONE1",
+    "CONTACT.EMAIL",
+    "CORE.USERS.FIRST_NAME",
+    "CORE.USERS.LAST_NAME",
+  ]
+  filterScope = "Everything"
+  label = "All Contacts"
+  _parent = [
+    salesforce.Contact,
+  ]
+}

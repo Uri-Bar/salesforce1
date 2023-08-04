@@ -1,0 +1,78 @@
+<style>
+#dsDialog {
+	height: 180px; 
+	width: 500px; 
+	background-image: url('<%= backgroundImage %>');
+	background-repeat: repeat-x; 
+	margin: 0; 
+	padding: 0; 
+	border: 0px;
+	font-family: Helvetica;
+}
+
+#dsDialog_header {
+	height: 47px;
+	font-size: 14px;
+	color: #20557A;
+	font-weight:normal;
+}
+
+#ds_check {
+	width:42px;
+	height:46px
+}
+
+#dsDialog_header_text{
+	position:absolute;
+	top:0;
+	left:42;
+}
+
+#dsDialog_header_right{
+	height:47px;
+	line-height:2.5em;
+	float:right;
+}
+
+#ds_ConfigureAcct_DialogBox_close {
+	width:34px;
+	height:46px
+}
+
+#dsDialog_main {
+	text-align: center;
+	height: 184px;
+}
+
+#ds_configure {
+	font-size: 18px;
+	color: #20557A;
+	font-weight: normal;
+}
+
+.ds_button {
+	background-image: url('<%= buttonImage %>');
+	cursor:pointer;
+	border: none;
+	width: 103px;
+	height: 36px;
+	color: #636363;
+	font-size: 12px;
+	font-family: Helvetica;
+	font-weight: bold;
+}
+</style>
+
+<div id="dsDialog" >
+	<div id="dsDialog_header">
+		<div id="dsDialog_header_right">
+			<input id="ds_ConfigureAcct_DialogBox_close" type="image" src="<%= closeImage %>" alt="close" />
+		</div>
+	</div>
+	<div id="dsDialog_main">
+		<br>
+		<span id="ds_configure"><%= dsConfigureText %></span><br><br><br>
+		<button id="ds_configure_yes" class="ds_button" type="button" ><%= dsYesText %></button>&nbsp;&nbsp;
+		<button id="ds_configure_no" class="ds_button" type="button" ><%= dsNoText %></button>
+	</div>
+</div>

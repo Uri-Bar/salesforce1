@@ -1,0 +1,64 @@
+zuora_billing.Task C19__Payment_Suspense_79_fssu__Pick_Applicable_Accounts@uuuumuuss {
+  name = "Pick Applicable Accounts"
+  parameters = {
+    query = '''
+{%- comment -%}This showcases the power of building dynamic SQL statements depending on the input data{%- endcomment -%}
+{%- assign _myDisable = false -%}
+{%- if Data.Workflow.SuspendOrResume == 'suspend' -%}
+     {%- assign _myDisable = true -%}
+{%- endif -%}
+{%- comment -%}
+Oh btw, did you notice the '_' in front of myDisable? '_myDisable'? '_' keeps the variable scope local to just the task where is defined
+{%- endcomment -%}
+
+SELECT Id, AccountNumber, Name, AutoPay
+FROM Account A
+WHERE A.Status = 'Active'
+AND A.Notes {% if _myDisable -%} NOT {%- endif %} LIKE '%WF - Disable%'
+AND AutoPay = {{_myDisable}}
+{%- if Data['anyInputAccounts'] %}
+AND A.AccountNumber IN ('{{Data.anyInputAccounts | map: "Account: AccountNumber" | join: "' , '" }}')
+{% endif -%}
+{%- if Data.Workflow['justTestNDebug?'] == true %}
+LIMIT 5
+{% endif -%}
+'''
+    fields = [
+      "Id",
+      "AccountNumber",
+      "Name",
+      "AutoPay",
+    ]
+    compressed = "false"
+    index_join = "false"
+    file_format = "csv"
+    read_deleted = "false"
+    strict_variables = "false"
+    zero_result_stop = "true"
+  }
+  action_type = "Data::Link"
+  call_type = "SOAP"
+  task_id = 138
+  concurrent_limit = 5
+  additionalProperties = {
+    css = {
+      top = "40px"
+      left = "760px"
+    }
+    priority = "Medium"
+    
+  }
+  _parent = [
+    zuora_billing.WorkflowExport.instance.C19__Payment_Suspense_79@fssu,
+  ]
+  _generated_dependencies = [
+    {
+      reference = zuora_billing.Workflow.instance.C19__Payment_Suspense_79_fssu__C19__Payment_Suspense@uuuumuufss.additionalProperties.parameters.fields
+      occurrences = [
+        {
+          location = zuora_billing.Task.instance.C19__Payment_Suspense_79_fssu__Pick_Applicable_Accounts@uuuumuuss.parameters.query
+        },
+      ]
+    },
+  ]
+}

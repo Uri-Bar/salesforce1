@@ -1,0 +1,7 @@
+zuora_billing.Settings_ChargeType {
+  chargeTypes = [
+    "OneTime",
+    "Recurring",
+    "Usage",
+  ]
+}

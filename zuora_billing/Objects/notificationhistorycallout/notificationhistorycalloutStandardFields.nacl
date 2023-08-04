@@ -1,0 +1,118 @@
+type zuora_billing.notificationhistorycallout {
+  string Id {
+    type = "string"
+    format = "uuid"
+    required = false
+    filterable = false
+    label = "Id"
+  }
+  string NotificationId {
+    type = "string"
+    format = "uuid"
+    required = false
+    filterable = false
+    label = "NotificationId"
+  }
+  string ContactId {
+    type = "string"
+    format = "uuid"
+    required = false
+    filterable = false
+    label = "ContactId"
+  }
+  string ObjectId {
+    type = "string"
+    format = "uuid"
+    required = false
+    filterable = false
+    label = "ObjectId"
+  }
+  string AccountId {
+    type = "string"
+    format = "uuid"
+    required = false
+    filterable = false
+    referenceTo = [
+      zuora_billing.extendedaccount.field.Id,
+    ]
+    cardinality = "manyToOne"
+    recordConstraints = {
+      create = {
+        enforceValidMapping = true
+      }
+    }
+    label = "AccountId"
+  }
+  string EventName {
+    type = "string"
+    maxLength = 512
+    required = false
+    filterable = false
+    label = "EventName"
+  }
+  string RequestUrl {
+    type = "string"
+    maxLength = 512
+    required = false
+    filterable = false
+    label = "RequestUrl"
+  }
+  number ResponseCode {
+    type = "integer"
+    required = false
+    filterable = false
+    label = "ResponseCode"
+  }
+  string ResponseContent {
+    type = "string"
+    maxLength = 512
+    required = false
+    filterable = false
+    label = "ResponseContent"
+  }
+  string HttpMethod {
+    type = "string"
+    maxLength = 512
+    required = false
+    filterable = false
+    label = "HttpMethod"
+  }
+  string CreateTime {
+    type = "string"
+    format = "date-time"
+    required = false
+    filterable = false
+    label = "CreateTime"
+  }
+  boolean IsWorkflowHistory {
+    type = "boolean"
+    required = false
+    filterable = false
+    label = "IsWorkflowHistory"
+  }
+  number AttemptNumber {
+    type = "integer"
+    required = false
+    filterable = false
+    label = "AttemptNumber"
+  }
+  number AttemptLimit {
+    type = "integer"
+    required = false
+    filterable = false
+    label = "AttemptLimit"
+  }
+  string RequestPayload {
+    type = "string"
+    maxLength = 512
+    required = false
+    filterable = false
+    label = "RequestPayload"
+  }
+  boolean Success {
+    type = "boolean"
+    required = false
+    filterable = false
+    label = "Success"
+  }
+}

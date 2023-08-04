@@ -1,0 +1,19 @@
+zuora_billing.Settings_Notification Declined_Payment_First_Attempt_8ac6819b7883361b017893726f173fb1@susu {
+  profileId = zuora_billing.Settings_CommunicationProfile.instance.Default_Profile@s
+  eventName = "Declined Payment"
+  name = "First Attempt"
+  description = "The payment was declined by the payment gateway upon the first attempt."
+  active = false
+  hidden = false
+  param1 = "1"
+  param4 = "Not include invoice PDF"
+  emailOption = true
+  emailTemplateName = zuora_billing.PublicEmailTemplate.instance.Payment_Declined_Default_Email_Template@s
+  calloutOption = false
+  contentType = "APPLICATION_JSON"
+  calloutRetriable = false
+  calloutAuth = false
+  calloutOauth2 = false
+  calloutPreemptiveAuth = false
+  useCustomRequestBody = false
+}

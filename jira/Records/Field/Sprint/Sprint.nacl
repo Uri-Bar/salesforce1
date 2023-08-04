@@ -1,0 +1,10 @@
+jira.Field Sprint__c {
+  name = "Sprint"
+  description = "Jira Software sprint field"
+  isLocked = true
+  searcherKey = "com.pyxis.greenhopper.jira:gh-sprint-searcher"
+  type = "com.pyxis.greenhopper.jira:gh-sprint"
+  contexts = [
+    jira.CustomFieldContext.instance.Sprint__c_Default_Configuration_Scheme_for_Sprint@uuussss,
+  ]
+}

@@ -1,0 +1,6 @@
+zuora_billing.AccountingCodeItem SalesRevenue_Professional_Services_Revenue@uss {
+  name = "Professional Services Revenue"
+  type = "SalesRevenue"
+  category = "Revenue"
+  status = "Active"
+}

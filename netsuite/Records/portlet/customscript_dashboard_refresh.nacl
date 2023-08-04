@@ -1,0 +1,27 @@
+netsuite.portlet customscript_dashboard_refresh {
+  scriptid = "customscript_dashboard_refresh"
+  description = "Dashboard Refresh Portlet"
+  isinactive = false
+  name = "Dashboard Refresh"
+  notifyadmins = false
+  notifyowner = false
+  notifyuser = false
+  portlettype = "FORM"
+  scriptfile = netsuite.file.instance.SuiteScripts_dashboard_refresh_dashboard_refresh_pl_js@dbdbbv.path
+  scriptdeployments = {
+    scriptdeployment = {
+      customdeploy_dashboard_refresh = {
+        scriptid = "customdeploy_dashboard_refresh"
+        allemployees = false
+        allpartners = false
+        allroles = true
+        dashboardapp = false
+        isdeployed = true
+        loglevel = "DEBUG"
+        status = "RELEASED"
+        title = "Dashboard Refresh"
+        runasrole = "ADMINISTRATOR"
+      }
+    }
+  }
+}

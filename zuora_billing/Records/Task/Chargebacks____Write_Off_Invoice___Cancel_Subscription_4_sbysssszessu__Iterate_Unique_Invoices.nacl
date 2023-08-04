@@ -1,0 +1,33 @@
+zuora_billing.Task Chargebacks____Write_Off_Invoice___Cancel_Subscription_4_sbysssszessu__Iterate_Unique_Invoices@uuuuuuuuuuumuuss {
+  name = "Iterate Unique Invoices"
+  parameters = {
+    iteration_type = "Unique-Field"
+    iteration_field = "Invoice.Id"
+  }
+  action_type = "Iterate"
+  object = "RefundInvoicePayment__13.csv.zip"
+  call_type = "SOAP"
+  task_id = 13
+  concurrent_limit = 9999999
+  additionalProperties = {
+    css = {
+      top = "30px"
+      left = "640px"
+    }
+    priority = "Medium"
+    
+  }
+  _parent = [
+    zuora_billing.WorkflowExport.instance.Chargebacks____Write_Off_Invoice___Cancel_Subscription_4@sbysssszessu,
+  ]
+  _generated_dependencies = [
+    {
+      reference = zuora_billing.invoice.field.Id
+      occurrences = [
+        {
+          location = zuora_billing.Task.instance.Chargebacks____Write_Off_Invoice___Cancel_Subscription_4_sbysssszessu__Iterate_Unique_Invoices@uuuuuuuuuuumuuss.parameters.iteration_field
+        },
+      ]
+    },
+  ]
+}

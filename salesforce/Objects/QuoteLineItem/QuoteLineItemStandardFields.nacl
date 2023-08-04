@@ -1,0 +1,240 @@
+type salesforce.QuoteLineItem {
+  serviceid Id {
+    apiName = "QuoteLineItem.Id"
+    label = "Quote Line Item ID"
+    queryable = true
+    _hidden_value = true
+    
+    
+  }
+  salesforce.Checkbox IsDeleted {
+    apiName = "QuoteLineItem.IsDeleted"
+    label = "Deleted"
+    defaultValue = false
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.AutoNumber LineNumber {
+    apiName = "QuoteLineItem.LineNumber"
+    label = "Line Item Number"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+    
+    
+  }
+  salesforce.DateTime CreatedDate {
+    apiName = "QuoteLineItem.CreatedDate"
+    label = "Created Date"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Lookup CreatedById {
+    apiName = "QuoteLineItem.CreatedById"
+    label = "Created By ID"
+    referenceTo = [
+      salesforce.User,
+    ]
+    createable = false
+    updateable = false
+    relationshipName = "CreatedBy"
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.DateTime LastModifiedDate {
+    apiName = "QuoteLineItem.LastModifiedDate"
+    label = "Last Modified Date"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Lookup LastModifiedById {
+    apiName = "QuoteLineItem.LastModifiedById"
+    label = "Last Modified By ID"
+    referenceTo = [
+      salesforce.User,
+    ]
+    createable = false
+    updateable = false
+    relationshipName = "LastModifiedBy"
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.DateTime SystemModstamp {
+    apiName = "QuoteLineItem.SystemModstamp"
+    label = "System Modstamp"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.MasterDetail QuoteId {
+    apiName = "QuoteLineItem.QuoteId"
+    relationshipName = "Quote"
+    referenceTo = [
+      salesforce.Quote,
+    ]
+    _required = true
+    label = "Quote ID"
+    createable = true
+    updateable = false
+    queryable = true
+    
+    
+  }
+  salesforce.Lookup PricebookEntryId {
+    apiName = "QuoteLineItem.PricebookEntryId"
+    label = "Price Book Entry ID"
+    _required = true
+    referenceTo = [
+      salesforce.PricebookEntry,
+    ]
+    createable = true
+    updateable = false
+    relationshipName = "PricebookEntry"
+    queryable = true
+  }
+  salesforce.Lookup OpportunityLineItemId {
+    apiName = "QuoteLineItem.OpportunityLineItemId"
+    label = "Line Item ID"
+    referenceTo = [
+      salesforce.OpportunityLineItem,
+    ]
+    createable = true
+    updateable = false
+    relationshipName = "OpportunityLineItem"
+    queryable = true
+  }
+  salesforce.Number Quantity {
+    apiName = "QuoteLineItem.Quantity"
+    label = "Quantity"
+    _required = true
+    precision = 12
+    scale = 2
+    createable = true
+    updateable = true
+    unique = false
+    queryable = true
+    
+    
+  }
+  salesforce.Currency UnitPrice {
+    apiName = "QuoteLineItem.UnitPrice"
+    label = "Sales Price"
+    _required = true
+    createable = true
+    updateable = true
+    scale = 2
+    precision = 18
+    queryable = true
+    
+    
+  }
+  salesforce.Percent Discount {
+    apiName = "QuoteLineItem.Discount"
+    label = "Discount"
+    createable = true
+    updateable = true
+    scale = 2
+    precision = 5
+    queryable = true
+    
+    
+  }
+  salesforce.Text Description {
+    apiName = "QuoteLineItem.Description"
+    label = "Line Item Description"
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    length = 255
+    queryable = true
+    
+    
+  }
+  salesforce.Date ServiceDate {
+    apiName = "QuoteLineItem.ServiceDate"
+    label = "Date"
+    createable = true
+    updateable = true
+    queryable = true
+    
+    
+  }
+  salesforce.Lookup Product2Id {
+    apiName = "QuoteLineItem.Product2Id"
+    label = "Product ID"
+    _required = true
+    referenceTo = [
+      salesforce.Product2,
+    ]
+    createable = true
+    updateable = false
+    relationshipName = "Product2"
+    queryable = true
+    
+    
+  }
+  salesforce.Number SortOrder {
+    apiName = "QuoteLineItem.SortOrder"
+    label = "Sort Order"
+    precision = 9
+    createable = true
+    updateable = true
+    scale = 0
+    unique = false
+    queryable = true
+  }
+  salesforce.Currency ListPrice {
+    apiName = "QuoteLineItem.ListPrice"
+    label = "List Price"
+    createable = false
+    updateable = false
+    scale = 2
+    precision = 18
+    queryable = true
+    _hidden_value = true
+    
+    
+  }
+  salesforce.Currency Subtotal {
+    apiName = "QuoteLineItem.Subtotal"
+    label = "Subtotal "
+    createable = false
+    updateable = false
+    scale = 2
+    precision = 18
+    queryable = true
+    _hidden_value = true
+    
+    
+  }
+  salesforce.Currency TotalPrice {
+    apiName = "QuoteLineItem.TotalPrice"
+    label = "Total Price"
+    createable = false
+    updateable = false
+    scale = 2
+    precision = 18
+    queryable = true
+    _hidden_value = true
+    
+    
+  }
+  salesforce.Unknown ProductCode {
+    apiName = "QuoteLineItem.ProductCode"
+    
+    
+    
+    _hidden_value = true
+    
+    
+  }
+}

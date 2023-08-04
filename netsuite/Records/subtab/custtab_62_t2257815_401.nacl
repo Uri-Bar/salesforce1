@@ -1,0 +1,5 @@
+netsuite.subtab custtab_62_t2257815_401 {
+  scriptid = "custtab_62_t2257815_401"
+  tabtype = "TRANSACTION"
+  title = "Eshed's 2nd Subtab"
+}

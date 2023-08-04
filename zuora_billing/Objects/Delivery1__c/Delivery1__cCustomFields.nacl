@@ -1,0 +1,118 @@
+type zuora_billing.Delivery1__c {
+  number Quantity__c {
+    label = "Quantity"
+    origin = "custom"
+    type = "integer"
+    maximum = 20
+    minimum = 1
+    description = "The quantity of product that is being shipped to customer."
+    required = true
+    filterable = true
+  }
+  boolean Cancelled__c {
+    label = "Shipment Cancelled"
+    origin = "custom"
+    type = "boolean"
+    default = false
+    description = "Indicator is true when the customer has cancelled this particular shipment."
+    required = false
+    filterable = true
+  }
+  string ContactId__c {
+    format = "uuid"
+    label = "Ship To Customer"
+    origin = "custom"
+    type = "string"
+    description = "The customer contact who will receive the shipment."
+    required = true
+    filterable = true
+    referenceTo = [
+      zuora_billing.contact.field.Id,
+    ]
+    cardinality = "manyToOne"
+    recordConstraints = {
+      create = {
+        enforceValidMapping = false
+      }
+    }
+  }
+  string ProductName__c {
+    maxLength = 512
+    label = "Product Name"
+    origin = "custom"
+    type = "string"
+    description = "The name of the product that is being shipped to customer."
+    required = true
+    filterable = true
+  }
+  number TotalWeight__c {
+    label = "Total Weight (lbs.)"
+    origin = "custom"
+    type = "number"
+    minimum = 0
+    description = "The total weight of the product and packaging that is being shipped to customer."
+    required = false
+    filterable = false
+  }
+  string ContactEmail__c {
+    maxLength = 128
+    label = "Customer Email"
+    origin = "custom"
+    type = "string"
+    description = "The customer's email address."
+    required = false
+    filterable = false
+  }
+  string ShippingDate__c {
+    format = "date"
+    label = "Shipping Date"
+    origin = "custom"
+    type = "string"
+    description = "The date the product will be sent to shipping vendor for delivery."
+    required = true
+    filterable = false
+  }
+  string ShippingStatus__c {
+    maxLength = 512
+    label = "Shipping Status"
+    origin = "custom"
+    type = "string"
+    default = "Pending"
+    enum = [
+      "Pending",
+      "Preparing shipment",
+      "Waiting for tracking information",
+      "Shipped",
+    ]
+    description = "The status of the shipment - e.g. Pending, Preparing shipment, Waiting for tracking information, or Shipped."
+    required = false
+    filterable = true
+  }
+  string SubscriptionId__c {
+    format = "uuid"
+    label = "Subscription"
+    origin = "custom"
+    type = "string"
+    description = "The subscription that is associated with the shipment record."
+    required = true
+    filterable = true
+    referenceTo = [
+      zuora_billing.subscription.field.Id,
+    ]
+    cardinality = "manyToOne"
+    recordConstraints = {
+      create = {
+        enforceValidMapping = false
+      }
+    }
+  }
+  string CancellationTime__c {
+    format = "date-time"
+    label = "Cancellation Time"
+    origin = "custom"
+    type = "string"
+    description = "The time at which customer cancelled this particular shipment."
+    required = false
+    filterable = false
+  }
+}

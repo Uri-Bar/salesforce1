@@ -1,0 +1,6 @@
+okta.EmailTemplate AccountLockout {
+  name = "AccountLockout"
+  _parent = [
+    okta.Brand.instance,
+  ]
+}

@@ -1,0 +1,8 @@
+okta.Authenticator Security_Key_or_Biometric@s {
+  type = "security_key"
+  
+  key = "webauthn"
+  status = "INACTIVE"
+  name = "Security Key or Biometric"
+  
+}

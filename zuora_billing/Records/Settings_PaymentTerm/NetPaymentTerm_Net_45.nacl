@@ -1,0 +1,8 @@
+zuora_billing.Settings_PaymentTerm NetPaymentTerm_Net_45@us {
+  name = "Net 45"
+  isActive = false
+  isDefault = false
+  type = "NetPaymentTerm"
+  intervalUnit = "Day"
+  intervalNumber = 45
+}

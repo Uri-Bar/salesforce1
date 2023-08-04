@@ -1,0 +1,150 @@
+salesforce.Layout ListEmail_List_Email_Layout@bss {
+  fullName = "ListEmail-List Email Layout"
+  layoutSections = [
+    {
+      customLabel = false
+      detailHeading = true
+      editHeading = true
+      label = "Information"
+      layoutColumns = [
+        {
+          layoutItems = [
+            {
+              behavior = "Readonly"
+              field = "Name"
+            },
+            {
+              behavior = "Readonly"
+              field = "ScheduledDate"
+            },
+            {
+              behavior = "Readonly"
+              field = "CampaignId"
+            },
+          ]
+        },
+        {
+          layoutItems = [
+            {
+              behavior = "Readonly"
+              field = "Status"
+            },
+            {
+              behavior = "Readonly"
+              field = "TotalSent"
+            },
+          ]
+        },
+      ]
+      style = "TwoColumnsTopToBottom"
+    },
+    {
+      customLabel = false
+      detailHeading = true
+      editHeading = true
+      label = "Address Information"
+      layoutColumns = [
+        {
+          layoutItems = [
+            {
+              behavior = "Readonly"
+              field = "FromName"
+            },
+            {
+              behavior = "Readonly"
+              field = "FromAddress"
+            },
+            {
+              behavior = "Readonly"
+              field = "ReplyToAddress"
+            },
+          ]
+        },
+      ]
+      style = "OneColumn"
+    },
+    {
+      customLabel = false
+      detailHeading = true
+      editHeading = true
+      label = "Message Content"
+      layoutColumns = [
+        {
+          layoutItems = [
+            {
+              behavior = "Required"
+              field = "Subject"
+            },
+            {
+              behavior = "Required"
+              field = "HtmlBody"
+            },
+            {
+              behavior = "Required"
+              field = "TextBody"
+            },
+          ]
+        },
+      ]
+      style = "OneColumn"
+    },
+    {
+      customLabel = false
+      detailHeading = true
+      editHeading = true
+      label = "Engagement Metrics"
+      style = "TwoColumnsTopToBottom"
+    },
+    {
+      customLabel = false
+      detailHeading = true
+      editHeading = true
+      label = "System Information"
+      layoutColumns = [
+        {
+          layoutItems = [
+            {
+              behavior = "Readonly"
+              field = "CreatedById"
+            },
+          ]
+        },
+        {
+          layoutItems = [
+            {
+              behavior = "Readonly"
+              field = "LastModifiedById"
+            },
+          ]
+        },
+      ]
+      style = "TwoColumnsLeftToRight"
+    },
+    {
+      customLabel = false
+      detailHeading = false
+      editHeading = false
+      style = "CustomLinks"
+      layoutColumns = [
+        {
+        },
+      ]
+    },
+  ]
+  relatedLists = [
+    {
+      relatedList = "RelatedAttachmentList"
+    },
+    {
+      fields = [
+        "NAME",
+        "EMAIL_ADDRESS",
+        "RESULT",
+      ]
+      relatedList = "RelatedListEmailRecipientsList"
+    },
+  ]
+  showEmailCheckbox = false
+  showRunAssignmentRulesCheckbox = false
+  showSubmitAndAttachButton = false
+}

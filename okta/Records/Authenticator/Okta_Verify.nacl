@@ -1,0 +1,19 @@
+okta.Authenticator Okta_Verify@s {
+  type = "app"
+  
+  key = "okta_verify"
+  status = "INACTIVE"
+  name = "Okta Verify"
+  settings = {
+    compliance = {
+      fips = "OPTIONAL"
+    }
+    channelBinding = {
+      style = "NUMBER_CHALLENGE"
+      required = "NEVER"
+    }
+    userVerification = "PREFERRED"
+    appInstanceId = ""
+  }
+  
+}

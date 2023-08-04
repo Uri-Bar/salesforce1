@@ -1,0 +1,18 @@
+
+zendesk.ticket_field__custom_field_options GWR_DC_Field1_tagger_ssu__gwr_green@uuumuuu {
+  name = "Green"
+  raw_name = "Green"
+  value = "gwr_green"
+  _parent = [
+    zendesk.ticket_field.instance.GWR_DC_Field1_tagger@ssu,
+  ]
+}
+
+zendesk.ticket_field__custom_field_options GWR_classification_tagger_su__green@uumuu {
+  name = "Green"
+  raw_name = "Green"
+  value = "green"
+  _parent = [
+    zendesk.ticket_field.instance.GWR_classification_tagger@su,
+  ]
+}

@@ -1,0 +1,7 @@
+zendesk.organization test_org_124@s {
+  name = "test org 124"
+  shared_tickets = false
+  shared_comments = false
+  details = ""
+  notes = ""
+}

@@ -1,0 +1,28 @@
+jira.Screen TP3__Software_Development_Default_Issue_Screen@fsssss {
+  name = "TP3: Software Development Default Issue Screen"
+  description = ""
+  tabs = {
+    Field_Tab@s = {
+      name = "Field Tab"
+      fields = [
+        jira.Field.instance.Epic_Name__c@suu,
+        jira.Field.instance.Summary,
+        jira.Field.instance.Issue_Type@s,
+        jira.Field.instance.Components,
+        jira.Field.instance.Description,
+        jira.Field.instance.Reporter,
+        jira.Field.instance.Fix_versions@s,
+        jira.Field.instance.Priority,
+        jira.Field.instance.Labels,
+        jira.Field.instance.Time_tracking@s,
+        jira.Field.instance.Security_Level@s,
+        jira.Field.instance.Attachment,
+        jira.Field.instance.Due_date@s,
+        jira.Field.instance.Linked_Issues@s,
+        jira.Field.instance.Assignee,
+        jira.Field.instance.Epic_Link__c@suu,
+      ]
+      position = 0
+    }
+  }
+}

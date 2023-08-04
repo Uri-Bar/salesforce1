@@ -1,0 +1,5 @@
+netsuite.subtab custtab_16_t1221897_664 {
+  scriptid = "custtab_16_t1221897_664"
+  tabtype = "TRANSACTION"
+  title = "Bill Distribution Details"
+}

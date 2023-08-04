@@ -1,0 +1,9 @@
+netsuite.folder SuiteBundles_SDF_Conversions@du {
+  bundleable = false
+  isinactive = false
+  isprivate = false
+  path = "/SuiteBundles/SDF_Conversions"
+  _parent = [
+    netsuite.folder.instance.SuiteBundles,
+  ]
+}

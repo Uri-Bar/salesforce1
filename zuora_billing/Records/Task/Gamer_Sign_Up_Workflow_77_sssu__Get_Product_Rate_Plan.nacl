@@ -1,0 +1,58 @@
+zuora_billing.Task Gamer_Sign_Up_Workflow_77_sssu__Get_Product_Rate_Plan@uuuumuusss {
+  name = "Get Product Rate Plan"
+  parameters = {
+    fields = {
+      ProductRatePlan = {
+        Id = "true"
+        Name = "true"
+        ProductId = "true"
+      }
+    }
+    placement = ""
+    batch_size = "2000"
+    where_clause = "Name='Gamer Standard'"
+    strict_variables = "true"
+    zero_query_proceed = "false"
+  }
+  action_type = "Query"
+  object = zuora_billing.productrateplan
+  call_type = "SOAP"
+  concurrent_limit = 9999999
+  additionalProperties = {
+    css = {
+      top = "-990px"
+      left = "-600px"
+    }
+    priority = "Medium"
+    
+  }
+  _parent = [
+    zuora_billing.WorkflowExport.instance.Gamer_Sign_Up_Workflow_77@sssu,
+  ]
+  _generated_dependencies = [
+    {
+      reference = zuora_billing.productrateplan.field.Id
+      occurrences = [
+        {
+          location = zuora_billing.Task.instance.Gamer_Sign_Up_Workflow_77_sssu__Get_Product_Rate_Plan@uuuumuusss.parameters.fields.ProductRatePlan.Id
+        },
+      ]
+    },
+    {
+      reference = zuora_billing.productrateplan.field.Name
+      occurrences = [
+        {
+          location = zuora_billing.Task.instance.Gamer_Sign_Up_Workflow_77_sssu__Get_Product_Rate_Plan@uuuumuusss.parameters.fields.ProductRatePlan.Name
+        },
+      ]
+    },
+    {
+      reference = zuora_billing.productrateplan.field.ProductId
+      occurrences = [
+        {
+          location = zuora_billing.Task.instance.Gamer_Sign_Up_Workflow_77_sssu__Get_Product_Rate_Plan@uuuumuusss.parameters.fields.ProductRatePlan.ProductId
+        },
+      ]
+    },
+  ]
+}

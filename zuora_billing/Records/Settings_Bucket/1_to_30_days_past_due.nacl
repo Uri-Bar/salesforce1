@@ -1,0 +1,5 @@
+zuora_billing.Settings_Bucket "1_to_30_days_past_due@s" {
+  name = "1 to 30 days past due"
+  fromDaysPastDue = 1
+  toDaysPastDue = 30
+}

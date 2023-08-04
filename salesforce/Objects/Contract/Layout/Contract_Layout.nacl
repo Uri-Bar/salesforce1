@@ -1,0 +1,246 @@
+salesforce.Layout Contract_Contract_Layout@bs {
+  fullName = "Contract-Contract Layout"
+  excludeButtons = [
+    "Submit",
+  ]
+  layoutSections = [
+    {
+      customLabel = false
+      detailHeading = false
+      editHeading = true
+      label = "Contract Information"
+      layoutColumns = [
+        {
+          layoutItems = [
+            {
+              behavior = "Edit"
+              field = salesforce.Contract.field.OwnerId
+            },
+            {
+              behavior = "Readonly"
+              field = salesforce.Contract.field.ContractNumber
+            },
+            {
+              behavior = "Required"
+              field = salesforce.Contract.field.AccountId
+            },
+            {
+              behavior = "Required"
+              field = salesforce.Contract.field.Status
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.Contract.field.Pricebook2Id
+            },
+          ]
+        },
+        {
+          layoutItems = [
+            {
+              behavior = "Required"
+              field = salesforce.Contract.field.StartDate
+            },
+            {
+              behavior = "Readonly"
+              field = salesforce.Contract.field.EndDate
+            },
+            {
+              behavior = "Required"
+              field = salesforce.Contract.field.ContractTerm
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.Contract.field.OwnerExpirationNotice
+            },
+          ]
+        },
+      ]
+      style = "TwoColumnsTopToBottom"
+    },
+    {
+      customLabel = false
+      detailHeading = true
+      editHeading = true
+      label = "Address Information"
+      layoutColumns = [
+        {
+          layoutItems = [
+            {
+              behavior = "Edit"
+              field = salesforce.Contract.field.BillingAddress
+            },
+          ]
+        },
+        {
+          layoutItems = [
+            {
+              behavior = "Edit"
+              field = salesforce.Contract.field.ShippingAddress
+            },
+          ]
+        },
+      ]
+      style = "TwoColumnsTopToBottom"
+    },
+    {
+      customLabel = false
+      detailHeading = true
+      editHeading = true
+      label = "Description Information"
+      layoutColumns = [
+        {
+          layoutItems = [
+            {
+              behavior = "Edit"
+              field = salesforce.Contract.field.SpecialTerms
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.Contract.field.Description
+            },
+          ]
+        },
+      ]
+      style = "OneColumn"
+    },
+    {
+      customLabel = false
+      detailHeading = true
+      editHeading = true
+      label = "Signature Information"
+      layoutColumns = [
+        {
+          layoutItems = [
+            {
+              behavior = "Edit"
+              field = salesforce.Contract.field.CustomerSignedId
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.Contract.field.CustomerSignedTitle
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.Contract.field.CustomerSignedDate
+            },
+          ]
+        },
+        {
+          layoutItems = [
+            {
+              behavior = "Edit"
+              field = salesforce.Contract.field.CompanySignedId
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.Contract.field.CompanySignedDate
+            },
+          ]
+        },
+      ]
+      style = "TwoColumnsLeftToRight"
+    },
+    {
+      customLabel = false
+      detailHeading = true
+      editHeading = true
+      label = "System Information"
+      layoutColumns = [
+        {
+          layoutItems = [
+            {
+              behavior = "Readonly"
+              field = salesforce.Contract.field.ActivatedById
+            },
+            {
+              behavior = "Readonly"
+              field = salesforce.Contract.field.CreatedById
+            },
+          ]
+        },
+        {
+          layoutItems = [
+            {
+              behavior = "Readonly"
+              field = salesforce.Contract.field.ActivatedDate
+            },
+            {
+              behavior = "Readonly"
+              field = salesforce.Contract.field.LastModifiedById
+            },
+          ]
+        },
+      ]
+      style = "TwoColumnsTopToBottom"
+    },
+    {
+      customLabel = false
+      detailHeading = true
+      editHeading = false
+      label = "Custom Links"
+      style = "CustomLinks"
+    },
+  ]
+  relatedContent = {
+    relatedContentItems = [
+      {
+        layoutItem = {
+          behavior = "Readonly"
+          field = salesforce.Contract.field.AccountId
+        }
+      },
+    ]
+  }
+  relatedLists = [
+    {
+      fields = [
+        "TASK.SUBJECT",
+        "TASK.WHO_NAME",
+        "ACTIVITY.TASK",
+        "TASK.DUE_DATE",
+        "TASK.STATUS",
+        "TASK.PRIORITY",
+        "CORE.USERS.FULL_NAME",
+      ]
+      relatedList = "RelatedActivityList"
+    },
+    {
+      relatedList = "RelatedApprovalList"
+    },
+    {
+      relatedList = "RelatedEntityHistoryList"
+    },
+    {
+      fields = [
+        "TASK.SUBJECT",
+        "TASK.WHO_NAME",
+        "ACTIVITY.TASK",
+        "TASK.DUE_DATE",
+        "CORE.USERS.FULL_NAME",
+        "TASK.LAST_UPDATE",
+      ]
+      relatedList = "RelatedHistoryList"
+    },
+    {
+      fields = [
+        "ORDERS.ORDER_NUMBER",
+        "ORDERS.STATUS",
+        "ORDERS.EFFECTIVE_DATE",
+        "CONTRACT.CONTRACT_NUMBER",
+        "ORDERS.TOTAL_AMOUNT",
+      ]
+      relatedList = "RelatedOrderList"
+    },
+  ]
+  relatedObjects = [
+    "AccountId",
+  ]
+  showEmailCheckbox = false
+  showHighlightsPanel = false
+  showInteractionLogPanel = false
+  showRunAssignmentRulesCheckbox = false
+  showSubmitAndAttachButton = false
+  _parent = [
+    salesforce.Contract,
+  ]
+}

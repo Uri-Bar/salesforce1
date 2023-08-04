@@ -1,0 +1,6 @@
+zuora_billing.Settings_ReasonCode RefundCreditBalance_Customer_Request@us {
+  isActive = true
+  reasonCodeName = "Customer Request"
+  reasonCodeTransactionType = "RefundCreditBalance"
+  isDefault = false
+}

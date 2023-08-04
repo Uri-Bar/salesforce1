@@ -1,0 +1,50 @@
+zuora_billing.Settings_Role ZFinance_Z_Connect_API_User@ubss {
+  name = "Z-Connect API User"
+  category = "ZFinance"
+  attributes = [
+    {
+      name = "AccountingPeriodClose"
+      scope = "AccountingPeriod"
+      activationLevel = "EntityAndUser"
+    },
+    {
+      name = "AccountingPeriodCreate"
+      scope = "AccountingPeriod"
+      activationLevel = "EntityAndUser"
+    },
+    {
+      name = "AccountingPeriodDelete"
+      scope = "AccountingPeriod"
+      activationLevel = "EntityAndUser"
+    },
+    {
+      name = "AccountingPeriodReopen"
+      scope = "AccountingPeriod"
+      activationLevel = "EntityAndUser"
+    },
+    {
+      name = "RunTrialBalance"
+      scope = "AccountingPeriod"
+      activationLevel = "EntityAndUser"
+    },
+    {
+      name = "ReportingAccess"
+      scope = "Default"
+      activationLevel = "EntityAndUser"
+    },
+    {
+      name = "FinanceView"
+      scope = "Finance"
+      activationLevel = "EntityAndUser"
+    },
+    {
+      name = "RevRecRuleChangedOnPRPC"
+      scope = "ProductCatalog"
+      activationLevel = "EntityAndUser"
+    },
+  ]
+  
+  description = "Z-Connect API User"
+  entityId = "8ac6819b-7883-361b-0178-93726ba53eff"
+  custom = true
+}

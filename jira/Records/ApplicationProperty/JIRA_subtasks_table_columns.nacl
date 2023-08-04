@@ -1,0 +1,7 @@
+jira.ApplicationProperty JIRA_subtasks_table_columns@s {
+  id = "jira.table.cols.subtasks"
+  value = "issuetype, status, assignee, progress"
+  name = "JIRA subtasks table columns"
+  desc = "The columns to show when viewing sub-task issues in a table"
+  type = "list<string>"
+}

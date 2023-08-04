@@ -1,0 +1,5 @@
+workato.connection Gil_s_dev2_sfdc_account@tsss {
+  application = "salesforce"
+  name = "Gil's dev2 sfdc account"
+  folder_id = workato.folder.instance.Root
+}

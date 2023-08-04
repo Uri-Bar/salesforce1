@@ -1,0 +1,16 @@
+zendesk.ticket_field text_agent_field_431@uss {
+  type = "text"
+  
+  raw_title = "agent field 431"
+  
+  raw_description = ""
+  active = false
+  required = false
+  collapsed_for_agents = false
+  
+  raw_title_in_portal = "agent field 431"
+  visible_in_portal = false
+  editable_in_portal = false
+  required_in_portal = false
+  removable = true
+}

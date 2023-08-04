@@ -1,0 +1,28 @@
+stripe.reporting_report_type exports_unified_payments@vu {
+  id = "exports.unified_payments"
+  default_columns = [
+    "id",
+    "Description",
+    "Seller Message",
+    "Created (UTC)",
+    "Amount",
+    "Amount Refunded",
+    "Currency",
+    "Converted Amount",
+    "Converted Amount Refunded",
+    "Fee",
+    "Taxes On Fee",
+    "Converted Currency",
+    "Status",
+    "Statement Descriptor",
+    "Customer ID",
+    "Customer Description",
+    "Customer Email",
+    "Captured",
+    "Invoice ID",
+    "Transfer",
+  ]
+  livemode = false
+  name = "Unified Payments Export Query"
+  version = 1
+}

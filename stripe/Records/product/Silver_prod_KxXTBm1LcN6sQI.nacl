@@ -1,0 +1,29 @@
+stripe.product Silver_prod_KxXTBm1LcN6sQI {
+  id = "prod_KxXTBm1LcN6sQI"
+  active = true
+  description = "Silver by the pound"
+  livemode = false
+  name = "Silver"
+  product_prices = [
+    {
+      id = "price_1KHcO5Hipyrr1EYiPEY7A7Qd"
+      active = true
+      billing_scheme = "tiered"
+      currency = "usd"
+      livemode = false
+      product = stripe.product.instance.Silver_prod_KxXTBm1LcN6sQI
+      recurring = {
+        interval = "year"
+        interval_count = 1
+        usage_type = "licensed"
+      }
+      tax_behavior = "unspecified"
+      tiers_mode = "volume"
+      type = "recurring"
+    },
+  ]
+  additionalProperties = {
+    type = "service"
+  }
+  default_price = "price_1KHcO5Hipyrr1EYiPEY7A7Qd"
+}

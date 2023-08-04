@@ -1,0 +1,56 @@
+zuora_billing.WorkflowExport Chargebacks____Write_Off_Invoice___Cancel_Subscription_4@sbysssszessu {
+  workflow = zuora_billing.Workflow.instance.Chargebacks____Write_Off_Invoice___Cancel_Subscription_4_sbysssszessu__Chargebacks____Write_Off_Invoice___Cancel_Subscription@uuuuuuuuuuumuusbysssszess
+  tasks = [
+    zuora_billing.Task.instance.Chargebacks____Write_Off_Invoice___Cancel_Subscription_4_sbysssszessu__Pull_Refunds_from_Chargebacks_where_Invoice_Balance___0_@uuuuuuuuuuumuusssssssyss,
+    zuora_billing.Task.instance.Chargebacks____Write_Off_Invoice___Cancel_Subscription_4_sbysssszessu__Cancel_Subscription@uuuuuuuuuuumuus,
+    zuora_billing.Task.instance.Chargebacks____Write_Off_Invoice___Cancel_Subscription_4_sbysssszessu__Iterate_Subscriptions@uuuuuuuuuuumuus,
+    zuora_billing.Task.instance.Chargebacks____Write_Off_Invoice___Cancel_Subscription_4_sbysssszessu__Iterate_Unique_Invoices@uuuuuuuuuuumuuss,
+    zuora_billing.Task.instance.Chargebacks____Write_Off_Invoice___Cancel_Subscription_4_sbysssszessu__Write_off_Invoice@uuuuuuuuuuumuubs,
+    zuora_billing.Task.instance.Chargebacks____Write_Off_Invoice___Cancel_Subscription_4_sbysssszessu__Get_Active_Subscriptions@uuuuuuuuuuumuuss,
+  ]
+  linkages = [
+    {
+      source_task_id = zuora_billing.Task.instance.Chargebacks____Write_Off_Invoice___Cancel_Subscription_4_sbysssszessu__Iterate_Subscriptions@uuuuuuuuuuumuus
+      target_task_id = zuora_billing.Task.instance.Chargebacks____Write_Off_Invoice___Cancel_Subscription_4_sbysssszessu__Cancel_Subscription@uuuuuuuuuuumuus
+      linkage_type = "For Each"
+      
+    },
+    {
+      source_task_id = zuora_billing.Task.instance.Chargebacks____Write_Off_Invoice___Cancel_Subscription_4_sbysssszessu__Get_Active_Subscriptions@uuuuuuuuuuumuuss
+      target_task_id = zuora_billing.Task.instance.Chargebacks____Write_Off_Invoice___Cancel_Subscription_4_sbysssszessu__Iterate_Subscriptions@uuuuuuuuuuumuus
+      linkage_type = "Success"
+      
+    },
+    {
+      source_task_id = zuora_billing.Task.instance.Chargebacks____Write_Off_Invoice___Cancel_Subscription_4_sbysssszessu__Write_off_Invoice@uuuuuuuuuuumuubs
+      target_task_id = zuora_billing.Task.instance.Chargebacks____Write_Off_Invoice___Cancel_Subscription_4_sbysssszessu__Get_Active_Subscriptions@uuuuuuuuuuumuuss
+      linkage_type = "Success"
+      
+    },
+    {
+      source_task_id = zuora_billing.Task.instance.Chargebacks____Write_Off_Invoice___Cancel_Subscription_4_sbysssszessu__Iterate_Unique_Invoices@uuuuuuuuuuumuuss
+      target_task_id = zuora_billing.Task.instance.Chargebacks____Write_Off_Invoice___Cancel_Subscription_4_sbysssszessu__Write_off_Invoice@uuuuuuuuuuumuubs
+      linkage_type = "For Each"
+      
+    },
+    {
+      source_task_id = zuora_billing.Task.instance.Chargebacks____Write_Off_Invoice___Cancel_Subscription_4_sbysssszessu__Pull_Refunds_from_Chargebacks_where_Invoice_Balance___0_@uuuuuuuuuuumuusssssssyss
+      target_task_id = zuora_billing.Task.instance.Chargebacks____Write_Off_Invoice___Cancel_Subscription_4_sbysssszessu__Iterate_Unique_Invoices@uuuuuuuuuuumuuss
+      linkage_type = "Success"
+      
+    },
+    {
+      source_workflow_id = zuora_billing.Workflow.instance.Chargebacks____Write_Off_Invoice___Cancel_Subscription_4_sbysssszessu__Chargebacks____Write_Off_Invoice___Cancel_Subscription@uuuuuuuuuuumuusbysssszess
+      target_task_id = zuora_billing.Task.instance.Chargebacks____Write_Off_Invoice___Cancel_Subscription_4_sbysssszessu__Pull_Refunds_from_Chargebacks_where_Invoice_Balance___0_@uuuuuuuuuuumuusssssssyss
+      linkage_type = "Start"
+      
+    },
+  ]
+  additionalProperties = {
+    workflow_definition = {
+      description = "This workflow would run on a schedule and pick up invoices with a balance that have a tied chargeback refund. Those invoices are written off using InvoiceItemAdjustments and the linked Subscriptions are then cancelled. "
+      category = "Default"
+      name = "Chargebacks -> Write Off Invoice + Cancel Subscription"
+    }
+  }
+}

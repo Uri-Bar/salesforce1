@@ -1,0 +1,21 @@
+workato.recipe custom_record_type_ref_tests_769211@sssuu {
+  name = "custom record type ref"
+  description = "When there is a trigger event, do action"
+  folder_id = workato.folder.instance.tests_769211
+  running = false
+  version_no = 5
+  code = workato.recipe__code.instance.custom_record_type_ref_tests_769211_sssuu@uuuuum
+  trigger_application = "netsuite"
+  applications = [
+    "netsuite",
+  ]
+  config = [
+    {
+      keyword = "application"
+      name = "netsuite"
+      provider = "netsuite"
+      skip_validation = false
+      account_id = workato.connection.instance.Oren_s_NetSuite@ts
+    },
+  ]
+}

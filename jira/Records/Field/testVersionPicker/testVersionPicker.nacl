@@ -1,0 +1,9 @@
+jira.Field testVersionPicker__c {
+  name = "testVersionPicker"
+  description = ""
+  searcherKey = "com.atlassian.jira.plugin.system.customfieldtypes:versionsearcher"
+  type = "com.atlassian.jira.plugin.system.customfieldtypes:multiversion"
+  contexts = [
+    jira.CustomFieldContext.instance.testVersionPicker__c_Default_Configuration_Scheme_for_testVersionPicker@uuussss,
+  ]
+}

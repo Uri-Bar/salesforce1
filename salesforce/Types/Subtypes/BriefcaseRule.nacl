@@ -1,0 +1,234 @@
+type salesforce.BriefcaseRule {
+  annotations {
+    serviceid metadataType {
+    }
+    boolean hasMetaFile {
+    }
+    string folderType {
+    }
+    string folderContentType {
+    }
+    string suffix {
+    }
+    string dirName {
+    }
+  }
+  salesforce.BriefcaseRuleFilter briefcaseRuleFilters {
+  }
+  string filterLogic {
+  }
+  boolean isAscendingOrder {
+  }
+  string orderBy {
+    foreignKeyDomain = [
+      salesforce.CustomField,
+    ]
+  }
+  
+  number recordLimit {
+  }
+  string targetEntity {
+    _restriction = {
+      enforce_value = false
+      values = [
+        "Account",
+        "AccountContactRelation",
+        "Asset",
+        "AssetRelationship",
+        "AuthorizationForm",
+        "AuthorizationFormConsent",
+        "AuthorizationFormDataUse",
+        "AuthorizationFormText",
+        "BusinessBrand",
+        "Campaign",
+        "CampaignInfluence",
+        "CampaignMember",
+        "Case",
+        "CommSubscription",
+        "CommSubscriptionChannelType",
+        "CommSubscriptionConsent",
+        "CommSubscriptionTiming",
+        "Contact",
+        "ContactPointAddress",
+        "ContactPointConsent",
+        "ContactPointEmail",
+        "ContactPointPhone",
+        "ContactPointTypeConsent",
+        "ContentVersion",
+        "Contract",
+        "Customer",
+        "DataUseLegalBasis",
+        "DataUsePurpose",
+        "DuplicateRecordItem",
+        "DuplicateRecordSet",
+        "EmailMessage",
+        "EngagementChannelType",
+        "Event",
+        "Idea",
+        "Image",
+        "Individual",
+        "Lead",
+        "Macro",
+        "Opportunity",
+        "OpportunityContactRole",
+        "OpportunityLineItem",
+        "Order",
+        "OrderItem",
+        "PartyConsent",
+        "Pricebook2",
+        "PricebookEntry",
+        "ProcessInstance",
+        "ProcessInstanceStep",
+        "Product2",
+        "ProfileSkill",
+        "ProfileSkillEndorsement",
+        "ProfileSkillUser",
+        "QuickText",
+        "Quote",
+        "QuoteLineItem",
+        "Recommendation",
+        "Scorecard",
+        "ScorecardAssociation",
+        "ScorecardMetric",
+        "Seller",
+        "SocialPersona",
+        "SocialPost",
+        "Solution",
+        "Task",
+        "User",
+        "UserProvisioningRequest",
+        "WorkBadge",
+        "WorkBadgeDefinition",
+        "WorkThanks",
+        "Yariv__c",
+      ]
+    }
+    foreignKeyDomain = [
+      "CustomObject",
+    ]
+  }
+  metadataType = "BriefcaseRule"
+  salesforce.BriefcaseRule relatedRules {
+  }
+  string relationshipField {
+    _restriction = {
+      enforce_value = false
+      values = [
+        "Account",
+        "AccountRollup",
+        "Action",
+        "ActivatedBy",
+        "Activity",
+        "Actor",
+        "ArchivedBy",
+        "Asset",
+        "AssetProvidedBy",
+        "AssetServicedBy",
+        "AuthorizationForm",
+        "AuthorizationFormText",
+        "BillToContact",
+        "BusinessBrand",
+        "Campaign",
+        "CampaignMember",
+        "Case",
+        "CommSubscriptionChannelType",
+        "CommSubscriptionConsent",
+        "CommunicationSubscription",
+        "CompanyAuthorizedBy",
+        "CompanySigned",
+        "ConsentGiver",
+        "Contact",
+        "ContactPoint",
+        "ContactPointPhone",
+        "ContactPointTypeConsent",
+        "ContentModifiedBy",
+        "Contract",
+        "ConvertedAccount",
+        "ConvertedContact",
+        "ConvertedOpportunity",
+        "CreatedBy",
+        "CustomerAuthorizedBy",
+        "CustomerSigned",
+        "DataUsePurpose",
+        "DefaultAuthFormText",
+        "Definition",
+        "DelegatedApprover",
+        "DeletedBy",
+        "DocumentVersion",
+        "DuplicateRecordSet",
+        "EmailMessage",
+        "EngagementChannelType",
+        "FirstPublishLocation",
+        "From",
+        "Giver",
+        "HiddenBy",
+        "Individual",
+        "LastActor",
+        "LastModifiedBy",
+        "Lead",
+        "LeadOrContact",
+        "LeadOrContactOwner",
+        "LegalBasis",
+        "Manager",
+        "MasterEvent",
+        "MasterRecord",
+        "Opportunity",
+        "OpportunityContactRole",
+        "OpportunityLineItem",
+        "Order",
+        "Organizer",
+        "OriginalActor",
+        "OriginalOrder",
+        "OriginalOrderItem",
+        "Owner",
+        "Parent",
+        "ParentIdea",
+        "Party",
+        "PartyRole",
+        "Persona",
+        "Pricebook2",
+        "PricebookEntry",
+        "PrimaryPartnerAccount",
+        "ProcessInstance",
+        "Product2",
+        "ProfileSkill",
+        "ProfileSkillUser",
+        "Quote",
+        "QuoteLineItem",
+        "Recipient",
+        "Record",
+        "RecurrenceActivity",
+        "RelatedAsset",
+        "RelatedRecord",
+        "RelatedTo",
+        "ReplyTo",
+        "ReplyToEmailMessage",
+        "ReportsTo",
+        "RootAsset",
+        "SalesforceUser",
+        "Scorecard",
+        "ShipToContact",
+        "Source",
+        "SubmittedBy",
+        "SyncedQuote",
+        "TargetEntity",
+        "TargetObject",
+        "User",
+        "What",
+        "Who",
+      ]
+    }
+    foreignKeyDomain = [
+      salesforce.CustomField,
+    ]
+  }
+  string relationshipType {
+    _restriction = {
+      enforce_value = false
+      values = [
+        "ChildToParent",
+        "ParentToChild",
+      ]
+    }
+  }
+}

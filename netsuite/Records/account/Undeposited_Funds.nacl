@@ -1,0 +1,15 @@
+netsuite.account Undeposited_Funds@s {
+  acctType = "_otherCurrentAsset"
+  acctName = "Undeposited Funds"
+  includeChildren = true
+  generalRate = "_current"
+  cashFlowRate = "_average"
+  isInactive = false
+  inventory = false
+  subsidiaryList = [
+    netsuite.subsidiary.instance.Parent_Company@s,
+  ]
+  revalue = false
+  identifier = "Undeposited Funds"
+  custom_custrecord_acct_special = false
+}

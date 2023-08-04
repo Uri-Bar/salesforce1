@@ -1,0 +1,89 @@
+zuora_billing.Task AllBrighter_Bundle_Set_Up_Workflow_67_ssssu__Get_Product_Charges@uuuuumuuss {
+  name = "Get Product Charges"
+  parameters = {
+    fields = {
+      ProductRatePlanCharge = {
+        Id = "true"
+        Name = "true"
+        ChargeType = "true"
+        ChargeModel = "true"
+        BillingPeriod = "true"
+        ProductRatePlanId = "true"
+      }
+    }
+    placement = ""
+    batch_size = "2000"
+    where_clause = '''
+ProductRatePlanId = 'abc' {% for planid in Data.ProductRatePlan %}
+ or ProductRatePlanId = '{{planid.Id}}'
+{% endfor %}
+'''
+    strict_variables = "true"
+  }
+  action_type = "Query"
+  object = zuora_billing.productrateplancharge
+  call_type = "SOAP"
+  task_id = 71
+  concurrent_limit = 9999999
+  additionalProperties = {
+    css = {
+      top = "-390px"
+      left = "540px"
+    }
+    priority = "Medium"
+    
+  }
+  _parent = [
+    zuora_billing.WorkflowExport.instance.AllBrighter_Bundle_Set_Up_Workflow_67@ssssu,
+  ]
+  _generated_dependencies = [
+    {
+      reference = zuora_billing.productrateplancharge.field.BillingPeriod
+      occurrences = [
+        {
+          location = zuora_billing.Task.instance.AllBrighter_Bundle_Set_Up_Workflow_67_ssssu__Get_Product_Charges@uuuuumuuss.parameters.fields.ProductRatePlanCharge.BillingPeriod
+        },
+      ]
+    },
+    {
+      reference = zuora_billing.productrateplancharge.field.ChargeModel
+      occurrences = [
+        {
+          location = zuora_billing.Task.instance.AllBrighter_Bundle_Set_Up_Workflow_67_ssssu__Get_Product_Charges@uuuuumuuss.parameters.fields.ProductRatePlanCharge.ChargeModel
+        },
+      ]
+    },
+    {
+      reference = zuora_billing.productrateplancharge.field.ChargeType
+      occurrences = [
+        {
+          location = zuora_billing.Task.instance.AllBrighter_Bundle_Set_Up_Workflow_67_ssssu__Get_Product_Charges@uuuuumuuss.parameters.fields.ProductRatePlanCharge.ChargeType
+        },
+      ]
+    },
+    {
+      reference = zuora_billing.productrateplancharge.field.Id
+      occurrences = [
+        {
+          location = zuora_billing.Task.instance.AllBrighter_Bundle_Set_Up_Workflow_67_ssssu__Get_Product_Charges@uuuuumuuss.parameters.fields.ProductRatePlanCharge.Id
+        },
+      ]
+    },
+    {
+      reference = zuora_billing.productrateplancharge.field.Name
+      occurrences = [
+        {
+          location = zuora_billing.Task.instance.AllBrighter_Bundle_Set_Up_Workflow_67_ssssu__Get_Product_Charges@uuuuumuuss.parameters.fields.ProductRatePlanCharge.Name
+        },
+      ]
+    },
+    {
+      reference = zuora_billing.productrateplancharge.field.ProductRatePlanId
+      occurrences = [
+        {
+          location = zuora_billing.Task.instance.AllBrighter_Bundle_Set_Up_Workflow_67_ssssu__Get_Product_Charges@uuuuumuuss.parameters.fields.ProductRatePlanCharge.ProductRatePlanId
+        },
+      ]
+    },
+  ]
+}

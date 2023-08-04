@@ -1,0 +1,11 @@
+okta.Authenticator Security_Question@s {
+  type = "security_question"
+  
+  key = "security_question"
+  status = "ACTIVE"
+  name = "Security Question"
+  settings = {
+    allowedFor = "recovery"
+  }
+  
+}

@@ -1,0 +1,24 @@
+zendesk.trigger GWR_Agent_Trigger@s {
+  title = "GWR Agent Trigger"
+  active = false
+  default = false
+  actions = [
+    {
+      field = "set_tags"
+      value = [
+        zendesk.tag.instance.isgeoff,
+      ]
+    },
+  ]
+  conditions = {
+    all = [
+      {
+        field = "assignee_id"
+        operator = "is"
+        value = "geoffrey.routledge@salto.io"
+      },
+    ]
+  }
+  raw_title = "GWR Agent Trigger"
+  category_id = zendesk.trigger_category.instance.Notifications
+}

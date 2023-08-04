@@ -1,0 +1,16 @@
+type salesforce.Contract {
+  salesforce.Checkbox Salto_Test__c {
+    apiName = "Contract.Salto_Test__c"
+    label = "Salto_Test"
+    defaultValue = false
+    createable = true
+    updateable = true
+    queryable = true
+    description = "This is a Salto test field. it has been modified via Salto"
+    externalId = false
+    
+    
+    
+    
+  }
+}

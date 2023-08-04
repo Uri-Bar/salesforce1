@@ -1,0 +1,5 @@
+workato.connection dodel_salesforce_connection@s {
+  application = "salesforce"
+  name = "dodel salesforce connection"
+  folder_id = workato.folder.instance.test_dodel_playground_Root
+}

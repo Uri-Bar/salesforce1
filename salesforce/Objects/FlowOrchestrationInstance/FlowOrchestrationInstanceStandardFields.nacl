@@ -1,0 +1,158 @@
+type salesforce.FlowOrchestrationInstance {
+  serviceid Id {
+    apiName = "FlowOrchestrationInstance.Id"
+    label = "Orchestration Run ID"
+    queryable = true
+    _hidden_value = true
+    
+    
+  }
+  salesforce.Checkbox IsDeleted {
+    apiName = "FlowOrchestrationInstance.IsDeleted"
+    label = "Deleted"
+    defaultValue = false
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.AutoNumber Name {
+    apiName = "FlowOrchestrationInstance.Name"
+    label = "Name"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.DateTime CreatedDate {
+    apiName = "FlowOrchestrationInstance.CreatedDate"
+    label = "Created Date"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Lookup CreatedById {
+    apiName = "FlowOrchestrationInstance.CreatedById"
+    label = "Created By ID"
+    referenceTo = [
+      salesforce.User,
+    ]
+    createable = false
+    updateable = false
+    relationshipName = "CreatedBy"
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.DateTime LastModifiedDate {
+    apiName = "FlowOrchestrationInstance.LastModifiedDate"
+    label = "Last Modified Date"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Lookup LastModifiedById {
+    apiName = "FlowOrchestrationInstance.LastModifiedById"
+    label = "Last Modified By ID"
+    referenceTo = [
+      salesforce.User,
+    ]
+    createable = false
+    updateable = false
+    relationshipName = "LastModifiedBy"
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.DateTime SystemModstamp {
+    apiName = "FlowOrchestrationInstance.SystemModstamp"
+    label = "System Modstamp"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Picklist Status {
+    apiName = "FlowOrchestrationInstance.Status"
+    label = "Status"
+    _required = true
+    valueSet = [
+      {
+        fullName = "NotStarted"
+        default = false
+        label = "Not Started"
+        isActive = true
+      },
+      {
+        fullName = "InProgress"
+        default = false
+        label = "In Progress"
+        isActive = true
+      },
+      {
+        fullName = "Completed"
+        default = false
+        label = "Completed"
+        isActive = true
+      },
+      {
+        fullName = "Error"
+        default = false
+        label = "Error"
+        isActive = true
+      },
+      {
+        fullName = "Discontinued"
+        default = false
+        label = "Discontinued"
+        isActive = true
+      },
+      {
+        fullName = "Canceled"
+        default = false
+        label = "Canceled"
+        isActive = true
+      },
+    ]
+    restricted = true
+    createable = false
+    updateable = true
+    queryable = true
+    
+  }
+  salesforce.Lookup InterviewId {
+    apiName = "FlowOrchestrationInstance.InterviewId"
+    label = "Interview ID"
+    referenceTo = [
+      "FlowInterview",
+    ]
+    createable = false
+    updateable = true
+    relationshipName = "Interview"
+    queryable = true
+  }
+  salesforce.Text OrchestrationDeveloperName {
+    apiName = "FlowOrchestrationInstance.OrchestrationDeveloperName"
+    label = "Orchestration Developer Name"
+    createable = false
+    updateable = false
+    unique = false
+    caseSensitive = false
+    length = 80
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Lookup OwnerId {
+    apiName = "FlowOrchestrationInstance.OwnerId"
+    relationshipName = "Owner"
+    referenceTo = [
+      salesforce.Group,
+      salesforce.User,
+    ]
+    label = "Owner ID"
+    createable = false
+    updateable = true
+    queryable = true
+    _hidden_value = true
+  }
+}

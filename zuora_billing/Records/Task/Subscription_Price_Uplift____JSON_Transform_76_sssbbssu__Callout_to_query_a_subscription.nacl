@@ -1,0 +1,65 @@
+zuora_billing.Task Subscription_Price_Uplift____JSON_Transform_76_sssbbssu__Callout_to_query_a_subscription@uuuuuuuumuussss {
+  name = "Callout to query a subscription"
+  parameters = {
+    url = "{{ Credentials.zuora.rest_endpoint }}subscriptions/{{Data.Workflow.SubscriptionNumber}}"
+    datas = [
+      {
+        key = ""
+        value = ""
+      },
+    ]
+    method = "GET"
+    headers = [
+      {
+        key = "Content-Type"
+        value = "application/json"
+      },
+      {
+        key = ""
+        value = ""
+      },
+    ]
+    raw_body = ""
+    body_type = "raw"
+    validation = {
+      zuora_call = "true"
+      status_codes = [
+        "",
+        "200",
+      ]
+    }
+    retry_rules = {
+      retry_count = "0"
+      retry_window = "30"
+      current_retry_count = 0
+    }
+    authorization = {
+      type = "zuora"
+    }
+    include_response_code = "false"
+  }
+  action_type = "Callout"
+  call_type = "SOAP"
+  concurrent_limit = 9999999
+  additionalProperties = {
+    css = {
+      top = "50px"
+      left = "-780px"
+    }
+    priority = "Medium"
+    
+  }
+  _parent = [
+    zuora_billing.WorkflowExport.instance.Subscription_Price_Uplift____JSON_Transform_76@sssbbssu,
+  ]
+  _generated_dependencies = [
+    {
+      reference = zuora_billing.Workflow.instance.Subscription_Price_Uplift____JSON_Transform_76_sssbbssu__Subscription_Price_Uplift____JSON_Transform@uuuuuuuumuusssbbss.additionalProperties.parameters.fields
+      occurrences = [
+        {
+          location = zuora_billing.Task.instance.Subscription_Price_Uplift____JSON_Transform_76_sssbbssu__Callout_to_query_a_subscription@uuuuuuuumuussss.parameters.url
+        },
+      ]
+    },
+  ]
+}

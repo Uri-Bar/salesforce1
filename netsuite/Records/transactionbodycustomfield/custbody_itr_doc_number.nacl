@@ -1,0 +1,45 @@
+netsuite.transactionbodycustomfield custbody_itr_doc_number {
+  scriptid = "custbody_itr_doc_number"
+  accesslevel = "2"
+  applyformatting = false
+  bodycustomerpayment = false
+  bodydeposit = false
+  bodydepositapplication = false
+  bodyexpensereport = false
+  bodyinventoryadjustment = false
+  bodyitemfulfillment = false
+  bodyitemfulfillmentorder = false
+  bodyitemreceipt = false
+  bodyitemreceiptorder = false
+  bodyjournal = false
+  bodyopportunity = false
+  bodyothertransaction = false
+  bodypickingticket = false
+  bodyprintflag = false
+  bodyprintpackingslip = false
+  bodyprintstatement = false
+  bodypurchase = false
+  bodysale = false
+  
+  bodytransferorder = false
+  bodyvendorpayment = false
+  checkspelling = false
+  defaultchecked = false
+  displaytype = "NORMAL"
+  encryptatrest = false
+  fieldtype = "TEXT"
+  globalsearch = false
+  isformula = false
+  ismandatory = false
+  isparent = false
+  label = "GWR Amp doc number"
+  searchlevel = "2"
+  showhierarchy = false
+  showinlist = false
+  storevalue = true
+  
+  bodyassemblybuild = false
+  bodybom = false
+  bodyperiodendjournal = false
+  description = "new description"
+}

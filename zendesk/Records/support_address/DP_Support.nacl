@@ -1,0 +1,9 @@
+zendesk.support_address DP_Support_dp_DP_Brand_s_subdomain_zendesk_com@sumumvvv {
+  brand_id = zendesk.brand.instance.DP_Brand@s
+  name = "DP Support"
+  email = "dp@${ zendesk.brand.instance.DP_Brand@s.subdomain }.zendesk.com"
+  forwarding_status = "verified"
+  spf_status = "verified"
+  cname_status = "verified"
+  domain_verification_status = "verified"
+}

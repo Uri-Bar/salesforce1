@@ -1,0 +1,48 @@
+netsuite.customlist customlist_gwr_workflow_selector_list {
+  scriptid = "customlist_gwr_workflow_selector_list"
+  isinactive = false
+  ismatrixoption = false
+  isordered = true
+  name = "GWR Workflow Selector List"
+  customvalues = {
+    customvalue = {
+      val_54958_t2257815_585 = {
+        scriptid = "val_54958_t2257815_585"
+        abbreviation = "G"
+        isinactive = false
+        value = "Green"
+        index = 0
+      }
+      val_54959_t2257815_717 = {
+        scriptid = "val_54959_t2257815_717"
+        abbreviation = "R"
+        isinactive = false
+        value = "Red"
+        index = 1
+      }
+      val_54960_t2257815_430 = {
+        scriptid = "val_54960_t2257815_430"
+        abbreviation = "B"
+        isinactive = false
+        value = "Blue"
+        index = 2
+      }
+      
+      val_55058_t2257815_924 = {
+        scriptid = "val_55058_t2257815_924"
+        abbreviation = "O"
+        isinactive = false
+        value = "Silver"
+        index = 3
+      }
+      val_55059_t2257815_653 = {
+        scriptid = "val_55059_t2257815_653"
+        abbreviation = "P"
+        isinactive = false
+        value = "Purple"
+        index = 4
+      }
+    }
+  }
+  description = "change to snapshot environment"
+}

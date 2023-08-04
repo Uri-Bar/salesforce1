@@ -1,0 +1,16 @@
+zendesk.article Welcome_to_your_Help_Center__Announcements_General_DP_Brand_s_uum_uuuum@ssssluuuuuum {
+  author_id = "neta.marcus+zendesk@salto.io"
+  comments_disabled = false
+  draft = false
+  promoted = false
+  section_id = zendesk.section.instance.Announcements_General_DP_Brand_s_uum@uuuum
+  source_locale = zendesk.guide_language_settings.instance.DP_Brand_s_en_us@umub
+  locale = zendesk.guide_language_settings.instance.DP_Brand_s_en_us@umub
+  outdated = false
+  permission_group_id = zendesk.permission_group.instance.Admins
+  translations = [
+    zendesk.article_translation.instance.Welcome_to_your_Help_Center__Announcements_General_DP_Brand_s_uum_uuuum_ssssluuuuuum__DP_Brand_s_en_us_umub@uuuuuuuuuuuumuuuuuum,
+  ]
+  brand = zendesk.brand.instance.DP_Brand@s
+  user_segment_id = zendesk.user_segment.instance.Everyone
+}

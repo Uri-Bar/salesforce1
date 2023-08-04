@@ -1,0 +1,15 @@
+netsuite.account Payroll_Expenses@s {
+  acctType = "_expense"
+  acctName = "Payroll Expenses"
+  includeChildren = true
+  generalRate = "_average"
+  cashFlowRate = "_average"
+  isInactive = false
+  inventory = false
+  subsidiaryList = [
+    netsuite.subsidiary.instance.Parent_Company@s,
+  ]
+  revalue = false
+  identifier = "Payroll Expenses"
+  custom_custrecord_acct_special = false
+}

@@ -1,0 +1,34 @@
+type zuora_billing.invoicepayment {
+  annotations {
+    string metadataType {
+    }
+    string label {
+    }
+    string description {
+    }
+    hidden_string id {
+    }
+    string objectType {
+    }
+  }
+  metadataType = "StandardObject"
+  objectType = "invoicepayment"
+  _generated_dependencies = [
+    {
+      reference = zuora_billing.accountingcode
+    },
+    {
+      reference = zuora_billing.invoice
+    },
+    {
+      reference = zuora_billing.journalentry
+    },
+    {
+      reference = zuora_billing.payment
+    },
+    {
+      reference = zuora_billing.user
+    },
+  ]
+  label = "InvoicePayment"
+}

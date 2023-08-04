@@ -1,0 +1,31 @@
+type netsuite.priceLevel {
+  annotations {
+    hidden_string source {
+    }
+  }
+  
+  
+  
+  
+  
+  
+  string internalId {
+    isAttribute = true
+    _hidden_value = true
+  }
+  string externalId {
+    isAttribute = true
+  }
+  netsuite.nullField nullFieldList {
+  }
+  string name {
+  }
+  number discountpct {
+  }
+  boolean updateExistingPrices {
+  }
+  boolean isOnline {
+  }
+  boolean isInactive {
+  }
+}

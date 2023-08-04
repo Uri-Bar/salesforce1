@@ -1,0 +1,76 @@
+zuora_billing.Task Gamer_Sign_Up_Workflow_77_sssu__Record_Registration_Activity@uuuumuuss {
+  name = "Record Registration Activity"
+  parameters = {
+    url = "https://rest.apisandbox.zuora.com/objects/records/com_zlabs/gamer_activity"
+    datas = [
+      {
+        key = ""
+        value = ""
+      },
+    ]
+    method = "POST"
+    headers = [
+      {
+        key = "Content-Type"
+        value = "application/json"
+      },
+    ]
+    raw_body = '''
+{
+    "records": [
+        {
+            "account__c": "{{Data.Workflow.Your_Email}}",
+            "accountnumber__c": "{{Data.Callout.accountNumber}}",
+            "activity__c": "Created Subscription, {{Data.Callout.subscriptionNumbers[0]}}, for {{Data.Workflow.Your_Name}}",
+          	"activitydate__c": "{{Data.Workflow.ExecutionDate}}"
+        }
+    ]
+}
+'''
+    body_type = "raw"
+    validation = {
+      zuora_call = "false"
+      status_codes = [
+        "",
+        "200",
+      ]
+    }
+    retry_rules = {
+      retry_count = "3"
+      retry_window = "1"
+      current_retry_count = "0"
+    }
+    authorization = {
+      type = "zuora"
+    }
+    strict_variables = "true"
+    validate_response = "false"
+    validation_scheme = ""
+    include_response_code = "true"
+  }
+  action_type = "Callout"
+  call_type = "SOAP"
+  task_id = 135
+  concurrent_limit = 9999999
+  additionalProperties = {
+    css = {
+      top = "-780px"
+      left = "-540px"
+    }
+    priority = "Medium"
+    
+  }
+  _parent = [
+    zuora_billing.WorkflowExport.instance.Gamer_Sign_Up_Workflow_77@sssu,
+  ]
+  _generated_dependencies = [
+    {
+      reference = zuora_billing.Workflow.instance.Gamer_Sign_Up_Workflow_77_sssu__Gamer_Sign_Up_Workflow@uuuumuusss.additionalProperties.parameters.fields
+      occurrences = [
+        {
+          location = zuora_billing.Task.instance.Gamer_Sign_Up_Workflow_77_sssu__Record_Registration_Activity@uuuumuuss.parameters.raw_body
+        },
+      ]
+    },
+  ]
+}

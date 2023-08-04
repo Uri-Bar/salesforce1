@@ -1,0 +1,8 @@
+zendesk.user_field__custom_field_options dropdown_25__bla {
+  name = "bla"
+  raw_name = "bla"
+  value = "bla_edited"
+  _parent = [
+    zendesk.user_field.instance.dropdown_25,
+  ]
+}

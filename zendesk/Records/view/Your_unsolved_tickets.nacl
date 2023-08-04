@@ -1,0 +1,105 @@
+zendesk.view Your_unsolved_tickets@s {
+  title = "Your unsolved tickets"
+  active = true
+  execution = {
+    group_by = "status"
+    group_order = "asc"
+    sort_by = "nice_id"
+    sort_order = "desc"
+    group = {
+      id = "status"
+      title = "Status"
+      order = "asc"
+      filterable = true
+      sortable = true
+    }
+    sort = {
+      id = "ticket_id"
+      title = "ID"
+      order = "desc"
+      filterable = true
+      sortable = true
+    }
+    columns = [
+      {
+        id = "subject"
+        title = "Subject"
+        filterable = false
+        sortable = false
+      },
+      {
+        id = "requester"
+        title = "Requester"
+        filterable = true
+        sortable = true
+      },
+      {
+        id = "created"
+        title = "Requested"
+        filterable = false
+        sortable = true
+      },
+      {
+        id = "type"
+        title = "Type"
+        filterable = true
+        sortable = true
+      },
+      {
+        id = "priority"
+        title = "Priority"
+        filterable = true
+        sortable = true
+      },
+    ]
+    fields = [
+      {
+        id = "subject"
+        title = "Subject"
+        filterable = false
+        sortable = false
+      },
+      {
+        id = "requester"
+        title = "Requester"
+        filterable = true
+        sortable = true
+      },
+      {
+        id = "created"
+        title = "Requested"
+        filterable = false
+        sortable = true
+      },
+      {
+        id = "type"
+        title = "Type"
+        filterable = true
+        sortable = true
+      },
+      {
+        id = "priority"
+        title = "Priority"
+        filterable = true
+        sortable = true
+      },
+    ]
+  }
+  conditions = {
+    all = [
+      {
+        field = "status"
+        operator = "less_than"
+        value = "solved"
+      },
+      {
+        field = "assignee_id"
+        operator = "is"
+        value = "current_user"
+      },
+    ]
+  }
+  
+  raw_title = "{{zd.your_unsolved_tickets}}"
+  default = false
+}

@@ -1,0 +1,40 @@
+okta.AuthorizationServerPolicyRule default__Default_Policy_uus__Default_Policy_Rule@uuumuuss {
+  status = "ACTIVE"
+  name = "Default Policy Rule"
+  priority = 1
+  system = false
+  conditions = {
+    people = {
+      groups = {
+        include = [
+          "EVERYONE",
+        ]
+      }
+    }
+    grantTypes = {
+      include = [
+        "implicit",
+        "password",
+        "client_credentials",
+        "authorization_code",
+      ]
+    }
+    scopes = {
+      include = [
+        "*",
+      ]
+    }
+  }
+  actions = {
+    token = {
+      accessTokenLifetimeMinutes = 60
+      refreshTokenLifetimeMinutes = 0
+      refreshTokenWindowMinutes = 10080
+    }
+  }
+  type = "RESOURCE_ACCESS"
+  _parent = [
+    okta.AuthorizationServerPolicy.instance.default__Default_Policy@uus,
+    okta.AuthorizationServer.instance.default,
+  ]
+}

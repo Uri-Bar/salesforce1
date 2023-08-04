@@ -1,0 +1,34 @@
+netsuite.itemcustomfield custitem1 {
+  scriptid = "custitem1"
+  accesslevel = "2"
+  appliestogroup = false
+  appliestoinventory = true
+  appliestokit = false
+  appliestononinventory = false
+  appliestoothercharge = false
+  appliestopricelist = false
+  appliestoservice = false
+  appliestospecificitems = false
+  appliestosubplan = false
+  applyformatting = false
+  checkspelling = false
+  defaultchecked = false
+  description = "Field copied from SFDC"
+  displaytype = "NORMAL"
+  encryptatrest = false
+  fieldtype = "TEXT"
+  globalsearch = false
+  includechilditems = false
+  isformula = false
+  ismandatory = false
+  isparent = false
+  itemmatrix = false
+  itemsubtype = "BOTH"
+  label = "HQ_fromSF"
+  searchlevel = "2"
+  showhierarchy = false
+  showinlist = false
+  storevalue = true
+  appliestoexpense = false
+  appliestoitemassembly = false
+}

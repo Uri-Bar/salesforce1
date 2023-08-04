@@ -1,0 +1,45 @@
+type netsuite.department {
+  annotations {
+    hidden_string source {
+    }
+  }
+  
+  
+  
+  
+  
+  
+  
+  
+  string internalId {
+    isAttribute = true
+    _hidden_value = true
+  }
+  string externalId {
+    isAttribute = true
+  }
+  
+  netsuite.employee custom_custrecord_slt_po_approver {
+    field_instance = netsuite.othercustomfield.instance.custrecord_slt_po_approver.scriptid
+  }
+  netsuite.nullField nullFieldList {
+  }
+  string name {
+  }
+  boolean includeChildren {
+  }
+  netsuite.department parent {
+    isReference = true
+  }
+  boolean isInactive {
+  }
+  netsuite.classTranslationList classTranslationList {
+  }
+  "List<netsuite.subsidiary>" subsidiaryList {
+    isReference = true
+  }
+  netsuite.customFieldList customFieldList {
+  }
+  serviceid identifier {
+  }
+}

@@ -1,0 +1,42 @@
+zuora_billing.WorkflowExport Resume_Subscriptions_for_Accounts_with_Zero_Balance_Limit_1_1@ssssssssu {
+  workflow = zuora_billing.Workflow.instance.Resume_Subscriptions_for_Accounts_with_Zero_Balance_Limit_1_1_ssssssssu__Resume_Subscriptions_for_Accounts_with_Zero_Balance_Limit_1@uuuuuuuuumuussssssss
+  tasks = [
+    zuora_billing.Task.instance.Resume_Subscriptions_for_Accounts_with_Zero_Balance_Limit_1_1_ssssssssu__Resume_Notification@uuuuuuuuumuus,
+    zuora_billing.Task.instance.Resume_Subscriptions_for_Accounts_with_Zero_Balance_Limit_1_1_ssssssssu__Resume_Subscription@uuuuuuuuumuus,
+    zuora_billing.Task.instance.Resume_Subscriptions_for_Accounts_with_Zero_Balance_Limit_1_1_ssssssssu__Iterate_Subscriptions@uuuuuuuuumuus,
+    zuora_billing.Task.instance.Resume_Subscriptions_for_Accounts_with_Zero_Balance_Limit_1_1_ssssssssu__Export_Subscriptions@uuuuuuuuumuus,
+  ]
+  linkages = [
+    {
+      source_workflow_id = zuora_billing.Workflow.instance.Resume_Subscriptions_for_Accounts_with_Zero_Balance_Limit_1_1_ssssssssu__Resume_Subscriptions_for_Accounts_with_Zero_Balance_Limit_1@uuuuuuuuumuussssssss
+      target_task_id = zuora_billing.Task.instance.Resume_Subscriptions_for_Accounts_with_Zero_Balance_Limit_1_1_ssssssssu__Export_Subscriptions@uuuuuuuuumuus
+      linkage_type = "Start"
+      
+    },
+    {
+      source_task_id = zuora_billing.Task.instance.Resume_Subscriptions_for_Accounts_with_Zero_Balance_Limit_1_1_ssssssssu__Export_Subscriptions@uuuuuuuuumuus
+      target_task_id = zuora_billing.Task.instance.Resume_Subscriptions_for_Accounts_with_Zero_Balance_Limit_1_1_ssssssssu__Iterate_Subscriptions@uuuuuuuuumuus
+      linkage_type = "Success"
+      
+    },
+    {
+      source_task_id = zuora_billing.Task.instance.Resume_Subscriptions_for_Accounts_with_Zero_Balance_Limit_1_1_ssssssssu__Iterate_Subscriptions@uuuuuuuuumuus
+      target_task_id = zuora_billing.Task.instance.Resume_Subscriptions_for_Accounts_with_Zero_Balance_Limit_1_1_ssssssssu__Resume_Subscription@uuuuuuuuumuus
+      linkage_type = "For Each"
+      
+    },
+    {
+      source_task_id = zuora_billing.Task.instance.Resume_Subscriptions_for_Accounts_with_Zero_Balance_Limit_1_1_ssssssssu__Resume_Subscription@uuuuuuuuumuus
+      target_task_id = zuora_billing.Task.instance.Resume_Subscriptions_for_Accounts_with_Zero_Balance_Limit_1_1_ssssssssu__Resume_Notification@uuuuuuuuumuus
+      linkage_type = "Success"
+      
+    },
+  ]
+  additionalProperties = {
+    workflow_definition = {
+      description = ""
+      category = "Default"
+      name = "Resume Subscriptions for Accounts with Zero Balance Limit 1"
+    }
+  }
+}

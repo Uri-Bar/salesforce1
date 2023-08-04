@@ -1,0 +1,119 @@
+type zuora_billing.TestEnvironmentJobTask {
+  string Id {
+    format = "uuid"
+    label = "Id"
+    origin = "system"
+    type = "string"
+    required = true
+    filterable = true
+  }
+  string CreatedById {
+    label = "CreatedById"
+    origin = "system"
+    type = "string"
+    required = true
+    filterable = true
+    referenceTo = [
+      zuora_billing.user.field.Id,
+    ]
+    cardinality = "manyToOne"
+    recordConstraints = {
+      create = {
+        enforceValidMapping = true
+      }
+    }
+  }
+  string UpdatedById {
+    label = "UpdatedById"
+    origin = "system"
+    type = "string"
+    required = true
+    filterable = true
+    referenceTo = [
+      zuora_billing.user.field.Id,
+    ]
+    cardinality = "manyToOne"
+    recordConstraints = {
+      create = {
+        enforceValidMapping = true
+      }
+    }
+  }
+  string CreatedDate {
+    format = "date-time"
+    origin = "system"
+    type = "string"
+    label = "CreatedDate"
+    required = true
+    filterable = true
+  }
+  string UpdatedDate {
+    format = "date-time"
+    origin = "system"
+    type = "string"
+    label = "UpdatedDate"
+    required = true
+    filterable = true
+  }
+  string Status {
+    label = "Status"
+    origin = "system"
+    type = "string"
+    description = "The status of the test environment job task"
+    required = true
+    filterable = true
+  }
+  string Type {
+    label = "Type"
+    origin = "system"
+    type = "string"
+    description = "The task type"
+    required = true
+    filterable = true
+  }
+  string EndTime {
+    format = "date-time"
+    label = "End Time"
+    origin = "system"
+    type = "string"
+    description = "Time when the task completed"
+    required = false
+    filterable = true
+  }
+  string StartTime {
+    format = "date-time"
+    label = "Start Time"
+    origin = "system"
+    type = "string"
+    description = "Time when the task was started"
+    required = false
+    filterable = true
+  }
+  string EstimatedCompletionTime {
+    format = "date-time"
+    label = "Estimated Completion Time"
+    origin = "system"
+    type = "string"
+    description = "Time when the task is estimated to be complete"
+    required = false
+    filterable = true
+  }
+  string JobId {
+    format = "uuid"
+    label = "Job Id"
+    origin = "system"
+    type = "string"
+    description = "The id linking this task to a test environment job"
+    required = true
+    filterable = true
+    referenceTo = [
+      zuora_billing.TestEnvironmentJob.field.Id,
+    ]
+    cardinality = "manyToOne"
+    recordConstraints = {
+      create = {
+        enforceValidMapping = true
+      }
+    }
+  }
+}

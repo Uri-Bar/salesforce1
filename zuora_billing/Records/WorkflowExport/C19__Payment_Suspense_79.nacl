@@ -1,0 +1,97 @@
+zuora_billing.WorkflowExport C19__Payment_Suspense_79@fssu {
+  workflow = zuora_billing.Workflow.instance.C19__Payment_Suspense_79_fssu__C19__Payment_Suspense@uuuumuufss
+  tasks = [
+    zuora_billing.Task.instance.C19__Payment_Suspense_79_fssu__JSONize_any_Input_Accounts_from_CSV@uuuumuusssss,
+    zuora_billing.Task.instance.C19__Payment_Suspense_79_fssu__Pick_Applicable_Accounts@uuuumuuss,
+    zuora_billing.Task.instance.C19__Payment_Suspense_79_fssu__For_each_Account@uuuumuuss,
+    zuora_billing.Task.instance.C19__Payment_Suspense_79_fssu____Data_Workflow_SuspendOrResume__ing_ePayments_for_Account____Data_LinkData_AccountNumber___@uuuumuu_00123_00123vv_00125_00125sssst_00123_00123vv_00125_00125t,
+    zuora_billing.Task.instance.C19__Payment_Suspense_79_fssu__Valid_Parameters_@uuuumuusa,
+    zuora_billing.Task.instance.C19__Payment_Suspense_79_fssu__Validation_Kaput_@uuuumuusl,
+    zuora_billing.Task.instance.C19__Payment_Suspense_79_fssu__Trigger_a_Failure@uuuumuuss,
+    zuora_billing.Task.instance.C19__Payment_Suspense_79_fssu__Summary_of_Stats@uuuumuuss,
+    zuora_billing.Task.instance.C19__Payment_Suspense_79_fssu__Get_the_Notes_for_Account____Data_LinkData_AccountNumber___@uuuumuussssst_00123_00123vv_00125_00125t,
+    zuora_billing.Task.instance.C19__Payment_Suspense_79_fssu__Retry_up_to_3_times@uuuumuussss,
+    zuora_billing.Task.instance.C19__Payment_Suspense_79_fssu__Wait_for___Data_Liquid_waitSeconds___divided_by__60___mins@uuuumuuss_00123_00123vvsgsufs_00125_00125s,
+  ]
+  linkages = [
+    {
+      source_task_id = zuora_billing.Task.instance.C19__Payment_Suspense_79_fssu__Pick_Applicable_Accounts@uuuumuuss
+      target_task_id = zuora_billing.Task.instance.C19__Payment_Suspense_79_fssu__For_each_Account@uuuumuuss
+      linkage_type = "Success"
+      
+    },
+    {
+      source_workflow_id = zuora_billing.Workflow.instance.C19__Payment_Suspense_79_fssu__C19__Payment_Suspense@uuuumuufss
+      target_task_id = zuora_billing.Task.instance.C19__Payment_Suspense_79_fssu__Valid_Parameters_@uuuumuusa
+      linkage_type = "Start"
+      
+    },
+    {
+      source_task_id = zuora_billing.Task.instance.C19__Payment_Suspense_79_fssu__Valid_Parameters_@uuuumuusa
+      target_task_id = zuora_billing.Task.instance.C19__Payment_Suspense_79_fssu__Validation_Kaput_@uuuumuusl
+      linkage_type = "False"
+      
+    },
+    {
+      source_task_id = zuora_billing.Task.instance.C19__Payment_Suspense_79_fssu__Valid_Parameters_@uuuumuusa
+      target_task_id = zuora_billing.Task.instance.C19__Payment_Suspense_79_fssu__Trigger_a_Failure@uuuumuuss
+      linkage_type = "False"
+      
+    },
+    {
+      source_task_id = zuora_billing.Task.instance.C19__Payment_Suspense_79_fssu__For_each_Account@uuuumuuss
+      target_task_id = zuora_billing.Task.instance.C19__Payment_Suspense_79_fssu__Summary_of_Stats@uuuumuuss
+      linkage_type = "Complete"
+      
+    },
+    {
+      source_task_id = zuora_billing.Task.instance.C19__Payment_Suspense_79_fssu__Valid_Parameters_@uuuumuusa
+      target_task_id = zuora_billing.Task.instance.C19__Payment_Suspense_79_fssu__JSONize_any_Input_Accounts_from_CSV@uuuumuusssss
+      linkage_type = "True"
+      
+    },
+    {
+      source_task_id = zuora_billing.Task.instance.C19__Payment_Suspense_79_fssu__JSONize_any_Input_Accounts_from_CSV@uuuumuusssss
+      target_task_id = zuora_billing.Task.instance.C19__Payment_Suspense_79_fssu__Pick_Applicable_Accounts@uuuumuuss
+      linkage_type = "Success"
+      
+    },
+    {
+      source_task_id = zuora_billing.Task.instance.C19__Payment_Suspense_79_fssu__For_each_Account@uuuumuuss
+      target_task_id = zuora_billing.Task.instance.C19__Payment_Suspense_79_fssu__Get_the_Notes_for_Account____Data_LinkData_AccountNumber___@uuuumuussssst_00123_00123vv_00125_00125t
+      linkage_type = "For Each"
+      
+    },
+    {
+      source_task_id = zuora_billing.Task.instance.C19__Payment_Suspense_79_fssu__Get_the_Notes_for_Account____Data_LinkData_AccountNumber___@uuuumuussssst_00123_00123vv_00125_00125t
+      target_task_id = zuora_billing.Task.instance.C19__Payment_Suspense_79_fssu____Data_Workflow_SuspendOrResume__ing_ePayments_for_Account____Data_LinkData_AccountNumber___@uuuumuu_00123_00123vv_00125_00125sssst_00123_00123vv_00125_00125t
+      linkage_type = "Success"
+      
+    },
+    {
+      source_task_id = zuora_billing.Task.instance.C19__Payment_Suspense_79_fssu__Pick_Applicable_Accounts@uuuumuuss
+      target_task_id = zuora_billing.Task.instance.C19__Payment_Suspense_79_fssu__Retry_up_to_3_times@uuuumuussss
+      linkage_type = "Failure"
+      
+    },
+    {
+      source_task_id = zuora_billing.Task.instance.C19__Payment_Suspense_79_fssu__Retry_up_to_3_times@uuuumuussss
+      target_task_id = zuora_billing.Task.instance.C19__Payment_Suspense_79_fssu__Wait_for___Data_Liquid_waitSeconds___divided_by__60___mins@uuuumuuss_00123_00123vvsgsufs_00125_00125s
+      linkage_type = "True"
+      
+    },
+    {
+      source_task_id = zuora_billing.Task.instance.C19__Payment_Suspense_79_fssu__Wait_for___Data_Liquid_waitSeconds___divided_by__60___mins@uuuumuuss_00123_00123vvsgsufs_00125_00125s
+      target_task_id = zuora_billing.Task.instance.C19__Payment_Suspense_79_fssu__Pick_Applicable_Accounts@uuuumuuss
+      linkage_type = "Success"
+      
+    },
+  ]
+  additionalProperties = {
+    workflow_definition = {
+      description = "Please see https://knowledgecenter.zuora.com/Covid-19_Response_Workflow_Guide/Payment_Suspense_Management for details."
+      category = "Default"
+      name = "C19: Payment Suspense"
+    }
+  }
+}

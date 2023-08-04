@@ -1,0 +1,8 @@
+workato.recipe bla_1786968 {
+  name = "App Triger"
+  description = "When there is a trigger event, do action"
+  folder_id = workato.folder.instance.Oren_318283
+  running = false
+  version_no = 1
+  code = workato.recipe__code.instance.bla_1786968
+}

@@ -1,0 +1,12 @@
+zendesk.section_translation Lorem_Ipsum_General_AnotherSaltoBrand_suu__AnotherSaltoBrand_en_us_ub@uuumuuuum {
+  locale = zendesk.guide_language_settings.instance.AnotherSaltoBrand_en_us@ub
+  title = "Lorem Ipsum"
+  body = "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit..."
+  outdated = false
+  draft = false
+  hidden = false
+  brand = zendesk.brand.instance.AnotherSaltoBrand
+  _parent = [
+    zendesk.section.instance.Lorem_Ipsum_General_AnotherSaltoBrand@suu,
+  ]
+}

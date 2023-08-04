@@ -1,0 +1,38 @@
+zuora_billing.Task C19__Goodwill_Discount_Recall_68_fsssu__Skipping_cEffs___TermEnd_@uuuuumuussysa {
+  name = "Skipping cEffs > TermEnd?"
+  parameters = {
+    if_clause = '''
+{% if Data.Workflow.skipContractEffDateValidation == 'SKIP' %}
+True
+{% else %}
+False
+{% endif %}
+'''
+    strict_variables = "true"
+  }
+  action_type = "If"
+  call_type = "SOAP"
+  task_id = 83
+  concurrent_limit = 9999999
+  additionalProperties = {
+    css = {
+      top = "350px"
+      left = "670px"
+    }
+    priority = "Medium"
+    
+  }
+  _parent = [
+    zuora_billing.WorkflowExport.instance.C19__Goodwill_Discount_Recall_68@fsssu,
+  ]
+  _generated_dependencies = [
+    {
+      reference = zuora_billing.Workflow.instance.C19__Goodwill_Discount_Recall_68_fsssu__C19__Goodwill_Discount_Recall@uuuuumuufsss.additionalProperties.parameters.fields
+      occurrences = [
+        {
+          location = zuora_billing.Task.instance.C19__Goodwill_Discount_Recall_68_fsssu__Skipping_cEffs___TermEnd_@uuuuumuussysa.parameters.if_clause
+        },
+      ]
+    },
+  ]
+}

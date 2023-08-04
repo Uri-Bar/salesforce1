@@ -1,0 +1,132 @@
+<style>
+#dsDialog {	
+	height: 250px; 
+	width: 680px; 
+	background-image: url('<%= backgroundImage %>');  
+	background-repeat: repeat-x; 
+	margin: 0; 
+	padding: 0;
+	border: 0px;
+	font-family: Helvetica;
+}
+
+#dsHeader {
+	height: 46px;
+	font-size: 14px;
+	color: #20557A;
+	font-weight: normal;
+}
+
+#dsHeader_right {
+	height: 47px;
+	float: right;
+}
+
+#dsHeader_left {
+	height: 47px;
+	line-height: 47px;
+}
+
+#ds_SelectAcct_DialogBox_close {
+	width:34px;
+	height:46px
+}
+
+#dsDialog_main {
+	text-align: center;
+	height: 204px;
+	width: 700px;
+}
+
+#dsDialog_main_content {
+	text-align: center;
+	height: 204px;
+	width: 680px;
+}
+
+.ds_button {
+	background-image: url('<%= buttonImage %>');
+	cursor: pointer;
+	border: none;
+	width: 103px;
+	height: 36px;
+	color: #636363;
+	font-size: 12px;
+	font-family: Helvetica;
+	font-weight: bold;
+}
+
+.dsDialog_main_input {
+	display: block;
+  	padding: 0;
+  	text-align: left;
+  	width: 660px;
+	height: 20px;
+}
+
+.ds_input_label{
+	float: left;
+  	padding: 0 1em;
+  	text-align: right;
+  	width: 220px;
+  	height: 20px;
+}
+#dsDialog_main_content option{
+	height: 20px;
+}
+
+#ds_folders_list_dropdown {
+	width: 338px;
+}
+
+#ds_files_list_dropdown {
+	width: 270px;
+}
+
+#ds_dsCustomBtn_name {
+	height: 20px;
+}
+
+.ds_file_link {
+	font-size: 12px;
+	color: #000000;
+	display: none;
+}
+
+</style>
+
+<div id="dsDialog" >
+	<div id="dsHeader">
+		<div id="dsHeader_right">
+			<input id="ds_AddDSCutomBtn_DialogBox_close" type="image" src="<%= closeImage %>" alt="close" />
+		</div>
+		<div id="dsHeader_left">
+			<span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<%= headerLabelText %></span>
+		</div>
+	</div>
+	<div id="dsDialog_main">
+		<br>
+		<div id="dsDialog_main_content">
+			<div class="dsDialog_main_input">
+				<label class="ds_input_label"><%= dsCustomBtnName %></label>
+				<input type="text" id="ds_dsCustomBtn_name" value="" size ="50" maxlength="50" />
+			</div>
+			<br>
+			<div class="dsDialog_main_input">
+				<label class="ds_input_label"><%= dsAutoScriptFolder %></label>
+				<select id="ds_folders_list_dropdown"><%= nsFolderDropDownHTML %></select>
+			</div>
+			<br>
+			<div class="dsDialog_main_input">
+				<label class="ds_input_label"><%= dsAutoScriptFile %></label>
+				<select id="ds_files_list_dropdown"></select>
+				&nbsp;&nbsp;<a id="ds_file_view_link" class="ds_file_link" href="#">View</a>
+				&nbsp;&nbsp;<a id="ds_file_edit_link" class="ds_file_link" href="#">Edit</a>
+			</div>
+		<div>
+		<br>
+		<div id="dsDialog_main_content">
+			<button id="ds_add_ds_custom_button" class="ds_button" type="button" ><%= dsSaveText %></button>
+		<div>
+	</div>
+</div>

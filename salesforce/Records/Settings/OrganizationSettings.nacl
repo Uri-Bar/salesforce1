@@ -1,0 +1,41 @@
+salesforce.Organization {
+  
+  
+  Address = {
+    country = "IL"
+  }
+  PrimaryContact = "Yariv Brosh"
+  DefaultLocaleSidKey = "en_IE_EURO"
+  TimeZoneSidKey = "Europe/Dublin"
+  LanguageLocaleKey = "en_US"
+  ReceivesInfoEmails = false
+  ReceivesAdminInfoEmails = true
+  PreferencesRequireOpportunityProducts = false
+  PreferencesConsentManagementEnabled = true
+  PreferencesAutoSelectIndividualOnMerge = false
+  PreferencesLightningLoginEnabled = true
+  PreferencesOnlyLLPermUserAllowed = false
+  FiscalYearStartMonth = 1
+  UsesStartDateAsFiscalYearName = false
+  DefaultAccountAccess = "Edit"
+  DefaultContactAccess = "ControlledByParent"
+  DefaultOpportunityAccess = "Read"
+  DefaultLeadAccess = "ReadEditTransfer"
+  DefaultCaseAccess = "ReadEditTransfer"
+  DefaultCalendarAccess = "HideDetailsInsert"
+  DefaultPricebookAccess = "ReadSelect"
+  DefaultCampaignAccess = "All"
+  
+  UiSkin = "Theme3"
+  SignupCountryIsoCode = "IL"
+  
+  
+  
+  
+  
+  IsReadOnly = false
+  
+  
+  
+  
+}

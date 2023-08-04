@@ -1,0 +1,12 @@
+netsuite.file SuiteBundles_Bundle_351444_Docusign_DocuSigned_test_docx____UTC_2020_10_13T13_16_55___DOCUSIGNED_pdf@dsdddvsbsjkbbffsbsv {
+  bundleable = false
+  isinactive = false
+  availablewithoutlogin = false
+  generateurltimestamp = false
+  hideinbundle = false
+  path = "/SuiteBundles/Bundle 351444/Docusign/DocuSigned/test.docx - (UTC)2020-10-13T13:16:55 - DOCUSIGNED.pdf"
+  content = file("netsuite/FileCabinet/SuiteBundles/Bundle 351444/Docusign/DocuSigned/test.docx - (UTC)2020-10-13T13:16:55 - DOCUSIGNED.pdf")
+  _parent = [
+    netsuite.folder.instance.SuiteBundles_Bundle_351444_Docusign_DocuSigned@dsdd,
+  ]
+}

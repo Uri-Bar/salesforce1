@@ -1,0 +1,15 @@
+netsuite.account Income_Taxes_Payable@s {
+  acctType = "_otherCurrentLiability"
+  acctName = "Income Taxes Payable"
+  includeChildren = true
+  generalRate = "_current"
+  cashFlowRate = "_average"
+  isInactive = false
+  inventory = false
+  subsidiaryList = [
+    netsuite.subsidiary.instance.Parent_Company@s,
+  ]
+  revalue = true
+  identifier = "Income Taxes Payable"
+  custom_custrecord_acct_special = false
+}

@@ -1,0 +1,6 @@
+netsuite.subtab custtabdp_accounting_tab {
+  scriptid = "custtabdp_accounting_tab"
+  parent = "TRANSACTIONACCOUNTING"
+  tabtype = "TRANSACTION"
+  title = "DP Accounting"
+}

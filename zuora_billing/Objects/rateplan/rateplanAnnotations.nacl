@@ -1,0 +1,31 @@
+type zuora_billing.rateplan {
+  annotations {
+    string metadataType {
+    }
+    string label {
+    }
+    string description {
+    }
+    hidden_string id {
+    }
+    string objectType {
+    }
+  }
+  metadataType = "StandardObject"
+  objectType = "rateplan"
+  _generated_dependencies = [
+    {
+      reference = zuora_billing.amendment
+    },
+    {
+      reference = zuora_billing.productrateplan
+    },
+    {
+      reference = zuora_billing.subscription
+    },
+    {
+      reference = zuora_billing.user
+    },
+  ]
+  label = "Subscription Rate Plan"
+}

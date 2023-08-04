@@ -1,0 +1,346 @@
+salesforce.Layout Contact_Contact_Layout@bs {
+  fullName = "Contact-Contact Layout"
+  excludeButtons = [
+    "DataDotComClean",
+    "DisableCustomerPortal",
+    "DisablePartnerPortal",
+    "DisablePrmSuperUser",
+    "EnablePrmSuperUser",
+    "RequestUseSfdc",
+    "Share",
+  ]
+  layoutSections = [
+    {
+      customLabel = false
+      detailHeading = false
+      editHeading = true
+      label = "Contact Information"
+      layoutColumns = [
+        {
+          layoutItems = [
+            {
+              behavior = "Required"
+              field = salesforce.Contact.field.Name
+            },
+            {
+              behavior = "Required"
+              field = salesforce.Contact.field.AccountId
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.Contact.field.Title
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.Contact.field.Email
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.Contact.field.Phone
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.Contact.field.MobilePhone
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.Contact.field.Test_Property__c
+            },
+          ]
+        },
+        {
+          layoutItems = [
+            {
+              behavior = "Edit"
+              field = salesforce.Contact.field.OwnerId
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.Contact.field.ReportsToId
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.Contact.field.Department
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.Contact.field.Fax
+            },
+          ]
+        },
+      ]
+      style = "TwoColumnsTopToBottom"
+    },
+    {
+      customLabel = false
+      detailHeading = true
+      editHeading = true
+      label = "Address Information"
+      layoutColumns = [
+        {
+          layoutItems = [
+            {
+              behavior = "Edit"
+              field = salesforce.Contact.field.MailingAddress
+            },
+          ]
+        },
+        {
+        },
+      ]
+      style = "TwoColumnsTopToBottom"
+    },
+    {
+      customLabel = false
+      detailHeading = true
+      editHeading = true
+      label = "Additional Information"
+      style = "TwoColumnsLeftToRight"
+    },
+    {
+      customLabel = false
+      detailHeading = false
+      editHeading = true
+      label = "Description Information"
+      style = "OneColumn"
+      layoutColumns = [
+        {
+        },
+      ]
+    },
+    {
+      customLabel = false
+      detailHeading = true
+      editHeading = true
+      label = "System Information"
+      layoutColumns = [
+        {
+          layoutItems = [
+            {
+              behavior = "Readonly"
+              field = salesforce.Contact.field.CreatedById
+            },
+          ]
+        },
+        {
+          layoutItems = [
+            {
+              behavior = "Readonly"
+              field = salesforce.Contact.field.LastModifiedById
+            },
+          ]
+        },
+      ]
+      style = "TwoColumnsTopToBottom"
+    },
+    {
+      customLabel = false
+      detailHeading = false
+      editHeading = false
+      label = "Custom Links"
+      layoutColumns = [
+        {
+          layoutItems = [
+            {
+              customLink = salesforce.WebLink.instance.Contact_GoogleMaps
+            },
+          ]
+        },
+        {
+          layoutItems = [
+            {
+              customLink = salesforce.WebLink.instance.Contact_GoogleSearch
+            },
+          ]
+        },
+        {
+        },
+      ]
+      style = "CustomLinks"
+    },
+  ]
+  platformActionList = {
+    actionListContext = "Record"
+    platformActionListItems = [
+      {
+        actionName = "Edit"
+        actionType = "StandardButton"
+        sortOrder = 0
+      },
+      {
+        actionName = "Delete"
+        actionType = "StandardButton"
+        sortOrder = 1
+      },
+      {
+        actionName = "Clone"
+        actionType = "StandardButton"
+        sortOrder = 2
+      },
+      {
+        actionName = salesforce.QuickAction.instance.LogACall
+        actionType = "QuickAction"
+        sortOrder = 3
+      },
+      {
+        actionName = salesforce.QuickAction.instance.NewTask
+        actionType = "QuickAction"
+        sortOrder = 4
+      },
+      {
+        actionName = salesforce.QuickAction.instance.NewEvent
+        actionType = "QuickAction"
+        sortOrder = 5
+      },
+      {
+        actionName = "SendEmail"
+        actionType = "QuickAction"
+        sortOrder = 6
+      },
+      {
+        actionName = "EmailHighlightAction"
+        actionType = "ProductivityAction"
+        sortOrder = 7
+      },
+      {
+        actionName = "FeedItem.ContentNote"
+        actionType = "QuickAction"
+        sortOrder = 8
+      },
+      {
+        actionName = "SendEmail"
+        actionType = "StandardButton"
+        sortOrder = 9
+      },
+      {
+        actionName = "FeedItem.TextPost"
+        actionType = "QuickAction"
+        sortOrder = 10
+      },
+      {
+        actionName = "FeedItem.ContentPost"
+        actionType = "QuickAction"
+        sortOrder = 11
+      },
+    ]
+  }
+  quickActionList = {
+    quickActionListItems = [
+      {
+        quickActionName = "FeedItem.ContentNote"
+      },
+      {
+        quickActionName = "FeedItem.ContentPost"
+      },
+      {
+        quickActionName = "FeedItem.LinkPost"
+      },
+      {
+        quickActionName = "FeedItem.PollPost"
+      },
+      {
+        quickActionName = "FeedItem.TextPost"
+      },
+      {
+        quickActionName = salesforce.QuickAction.instance.LogACall
+      },
+      {
+        quickActionName = salesforce.QuickAction.instance.NewEvent
+      },
+      {
+        quickActionName = salesforce.QuickAction.instance.NewTask
+      },
+      {
+        quickActionName = "SendEmail"
+      },
+    ]
+  }
+  relatedContent = {
+    relatedContentItems = [
+      {
+        layoutItem = {
+          component = "wits:newsPanel"
+        }
+      },
+      {
+        layoutItem = {
+          component = "runtime_sales_social:socialPanel"
+        }
+      },
+    ]
+  }
+  relatedLists = [
+    {
+      fields = [
+        "OPPORTUNITY.NAME",
+        "OPPORTUNITY.STAGE_NAME",
+        "OPPORTUNITY.AMOUNT",
+        "OPPORTUNITY.CLOSE_DATE",
+      ]
+      relatedList = "RelatedOpportunityList"
+    },
+    {
+      fields = [
+        "ACCOUNT.NAME",
+        "ACCCONRELATION.IS_DIRECT",
+        "ACCCONRELATION.ROLES",
+      ]
+      relatedList = "RelatedContactAccountRelationList"
+    },
+    {
+      relatedList = "RelatedFileList"
+    },
+    {
+      relatedList = "RelatedContentNoteList"
+    },
+    {
+      fields = [
+        "CASES.CASE_NUMBER",
+        "CASES.STATUS",
+        "CASES.CREATED_DATE_DATE_ONLY",
+        "CASES.SUBJECT",
+      ]
+      relatedList = "RelatedCaseList"
+    },
+    {
+      fields = [
+        "TASK.SUBJECT",
+        "TASK.WHAT_NAME",
+        "ACTIVITY.TASK",
+        "TASK.DUE_DATE",
+        "TASK.STATUS",
+        "CORE.USERS.FULL_NAME",
+        "EVENT.LOCATION",
+      ]
+      relatedList = "RelatedActivityList"
+    },
+    {
+      fields = [
+        "TASK.SUBJECT",
+        "TASK.WHAT_NAME",
+        "ACTIVITY.TASK",
+        "TASK.DUE_DATE",
+        "EVENT.LOCATION",
+        "CORE.USERS.FULL_NAME",
+      ]
+      relatedList = "RelatedHistoryList"
+    },
+  ]
+  relatedObjects = [
+    "AccountId",
+  ]
+  showEmailCheckbox = false
+  showHighlightsPanel = false
+  showInteractionLogPanel = false
+  showRunAssignmentRulesCheckbox = false
+  showSubmitAndAttachButton = false
+  summaryLayout = {
+    masterLabel = "00h36000003jARc"
+    sizeX = 4
+    sizeY = 0
+    summaryLayoutStyle = "Default"
+  }
+  _parent = [
+    salesforce.Contact,
+  ]
+}

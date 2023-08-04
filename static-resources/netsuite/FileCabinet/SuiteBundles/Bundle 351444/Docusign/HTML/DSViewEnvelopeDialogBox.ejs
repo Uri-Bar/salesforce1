@@ -1,0 +1,13 @@
+<div style="height: <%= dialogHeight %>px; width: 1060px; background-image: url(<%= headerGradient %>);  background-repeat: repeat-x; height: 47px; width: 1060px; margin: 0; padding: 0; border: 0px;" >
+	<div style="height:47px;font-family:Helvetica;font-size:14px;color:#20557A;font-weight:normal;">
+		<div style="height:47px;float:left;line-height: 47px;">
+			<span style="position:absolute;top:0;left:20;"><%= envelopeName %></span>
+		</div>
+		<div style="height:47px;float:right;">
+			<img id="ds_ViewEnvelope_DialogBox_close" src="<%= closeButton %>" alt="close" style="width:34px;height:46px;cursor:pointer" onclick="$.unblockUI({ fadeOut: 500 });" />
+		</div>
+	</div>
+	<div style="height: <%= dialogHeight - 47 %>px;">
+		<iframe marginheight="0" marginwidth="0" height="100%" width="100%" scrolling="no" frameborder="0" src="<%= viewEnvelopeUrl %>"></iframe>
+	</div>
+</div>

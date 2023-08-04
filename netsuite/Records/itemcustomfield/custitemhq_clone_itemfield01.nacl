@@ -1,0 +1,35 @@
+netsuite.itemcustomfield custitemhq_clone_itemfield01 {
+  scriptid = "custitemhq_clone_itemfield01"
+  accesslevel = "2"
+  appliestogroup = false
+  appliestoinventory = false
+  appliestokit = false
+  appliestononinventory = true
+  appliestoothercharge = false
+  appliestopricelist = false
+  appliestoservice = false
+  appliestospecificitems = false
+  appliestosubplan = false
+  applyformatting = false
+  checkspelling = false
+  defaultchecked = false
+  defaultvalue = "{averagecost}"
+  description = "Second change and diff it out"
+  displaytype = "NORMAL"
+  encryptatrest = false
+  fieldtype = "TEXT"
+  globalsearch = false
+  includechilditems = false
+  isformula = true
+  ismandatory = false
+  isparent = false
+  itemmatrix = false
+  itemsubtype = "BOTH"
+  label = "hq-clone-itemfield01"
+  searchlevel = "2"
+  showhierarchy = false
+  showinlist = false
+  storevalue = true
+  appliestoexpense = false
+  appliestoitemassembly = false
+}

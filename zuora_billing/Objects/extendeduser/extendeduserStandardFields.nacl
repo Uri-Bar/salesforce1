@@ -1,0 +1,16 @@
+type zuora_billing.extendeduser {
+  string Id {
+    type = "string"
+    format = "uuid"
+    required = false
+    filterable = false
+    label = "Id"
+  }
+  string Username {
+    type = "string"
+    maxLength = 512
+    required = false
+    filterable = false
+    label = "Username"
+  }
+}

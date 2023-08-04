@@ -1,0 +1,3 @@
+salesforce.InstalledPackage mule {
+  fullName = "mule"
+}

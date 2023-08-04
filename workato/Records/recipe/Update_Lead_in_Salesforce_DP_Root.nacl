@@ -1,0 +1,21 @@
+workato.recipe Update_Lead_in_Salesforce_DP_Root@sssuu {
+  name = "Update Lead in Salesforce"
+  trigger_application = "salesforce"
+  applications = [
+    "salesforce",
+  ]
+  description = "When there is a trigger event, do action"
+  folder_id = workato.folder.instance.DP_Root
+  running = false
+  version_no = 2
+  config = [
+    {
+      keyword = "application"
+      name = "salesforce"
+      provider = "salesforce"
+      skip_validation = false
+      account_id = workato.connection.instance.DP1
+    },
+  ]
+  code = workato.recipe__code.instance.Update_Lead_in_Salesforce_DP_Root_sssuu@uuuuum
+}

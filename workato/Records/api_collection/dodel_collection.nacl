@@ -1,0 +1,6 @@
+workato.api_collection dodel_collection {
+  name = "dodel_collection"
+  version = "1"
+  url = "https://apim.workato.com/workatos287/dodel_collection-v1"
+  api_spec_url = "https://app.workato.com/doc/service/dodel_collection-v1/swagger?api_group_id=65708&token=6be55c6497bfef372c73d8f4f4490eec"
+}

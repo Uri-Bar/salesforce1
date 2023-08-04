@@ -1,0 +1,25 @@
+zuora_billing.Settings_Notification Credit_Memo_Refund_Processed_Credit_Memo_Refund_Processed_8ac69ff278d483ea0178d95495e16922@sssusssu {
+  profileId = zuora_billing.Settings_CommunicationProfile.instance.Neta_test@s
+  eventName = "Credit Memo Refund Processed"
+  name = "Credit Memo Refund Processed"
+  description = "A credit memo refund was processed successfully."
+  active = false
+  hidden = false
+  param1 = "1"
+  emailOption = true
+  emailTemplateName = zuora_billing.PublicEmailTemplate.instance.External_Credit_Memo_Refund_Processed_Default_Email_Template@s
+  calloutOption = false
+  calloutBaseUrl = ""
+  contentType = "APPLICATION_JSON"
+  httpMethod = "POST"
+  calloutRetriable = false
+  calloutAuth = false
+  calloutOauth2 = false
+  calloutPreemptiveAuth = false
+  useCustomRequestBody = false
+  calloutParams = "{}"
+  additionalProperties = {
+    customRequestBody = ""
+    associatedAccount = ""
+  }
+}

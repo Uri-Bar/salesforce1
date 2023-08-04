@@ -1,0 +1,42 @@
+zuora_billing.WorkflowExport Iterate_Over_Callout_Data_73@sssu {
+  workflow = zuora_billing.Workflow.instance.Iterate_Over_Callout_Data_73_sssu__Iterate_Over_Callout_Data@uuuumuusss
+  tasks = [
+    zuora_billing.Task.instance.Iterate_Over_Callout_Data_73_sssu__Iterate_Over_Callout_Data@uuuumuusss,
+    zuora_billing.Task.instance.Iterate_Over_Callout_Data_73_sssu__Let_Approve_This____Data_Callout_name___@uuuumuusss_00123_00123svvs_00125_00125,
+    zuora_billing.Task.instance.Iterate_Over_Callout_Data_73_sssu__Check_Iterate____Data_Callout_name___@uuuumuuss_00123_00123svvs_00125_00125,
+    zuora_billing.Task.instance.Iterate_Over_Callout_Data_73_sssu__Iterate_over_exchange@uuuumuuss,
+  ]
+  linkages = [
+    {
+      source_task_id = zuora_billing.Task.instance.Iterate_Over_Callout_Data_73_sssu__Iterate_over_exchange@uuuumuuss
+      target_task_id = zuora_billing.Task.instance.Iterate_Over_Callout_Data_73_sssu__Check_Iterate____Data_Callout_name___@uuuumuuss_00123_00123svvs_00125_00125
+      linkage_type = "For Each"
+      
+    },
+    {
+      source_task_id = zuora_billing.Task.instance.Iterate_Over_Callout_Data_73_sssu__Check_Iterate____Data_Callout_name___@uuuumuuss_00123_00123svvs_00125_00125
+      target_task_id = zuora_billing.Task.instance.Iterate_Over_Callout_Data_73_sssu__Let_Approve_This____Data_Callout_name___@uuuumuusss_00123_00123svvs_00125_00125
+      linkage_type = "True"
+      
+    },
+    {
+      source_workflow_id = zuora_billing.Workflow.instance.Iterate_Over_Callout_Data_73_sssu__Iterate_Over_Callout_Data@uuuumuusss
+      target_task_id = zuora_billing.Task.instance.Iterate_Over_Callout_Data_73_sssu__Iterate_Over_Callout_Data@uuuumuusss
+      linkage_type = "Start"
+      
+    },
+    {
+      source_task_id = zuora_billing.Task.instance.Iterate_Over_Callout_Data_73_sssu__Iterate_Over_Callout_Data@uuuumuusss
+      target_task_id = zuora_billing.Task.instance.Iterate_Over_Callout_Data_73_sssu__Iterate_over_exchange@uuuumuuss
+      linkage_type = "Success"
+      
+    },
+  ]
+  additionalProperties = {
+    workflow_definition = {
+      description = "This workflow demonstrates the ability to use a custom iterate/loop task across data retrieved from a callout."
+      category = "Default"
+      name = "Iterate Over Callout Data"
+    }
+  }
+}

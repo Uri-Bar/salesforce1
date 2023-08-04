@@ -1,0 +1,29 @@
+zuora_billing.PublicEmailTemplate Invoice_Due_Default_Email_Template@s {
+  eventCategory = 1140
+  name = "Invoice Due Default Email Template"
+  description = ""
+  encodingType = "UTF8"
+  fromName = "Admin"
+  fromEmailType = "SpecificEmail"
+  fromEmailAddress = "neta.marcus@salto.io"
+  replyToEmailType = "SpecificEmail"
+  replyToEmailAddress = "neta.marcus@salto.io"
+  ccEmailType = "SpecificEmails"
+  ccEmailAddress = ""
+  bccEmailAddress = ""
+  toEmailType = "BillToContact"
+  toEmailAddress = ""
+  emailSubject = "Invoice 30 Days Past Due"
+  emailBody = '''
+Dear <BillToContact.FirstName> <BillToContact.LastName>,
+
+We would like to inform you that Invoice <Invoice.Number> has an outstanding balance of <Invoice.Balance> and is now 30 days past its due date of <Invoice.DueDate>. Your account has a total outstanding invoice balance of <Account.Balance>  <Account.Currency> as of <Today.Date>.
+
+Please make proper arrangements to settle this invoice at your earliest convenience.
+
+Thank you for your business!
+'''
+  active = true
+  isHtml = false
+  useAdditionalAddresses = false
+}

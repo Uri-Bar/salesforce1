@@ -1,0 +1,10 @@
+zendesk.organization_field org_field302 {
+  type = "text"
+  key = "org_field302"
+  
+  
+  raw_title = "org_field302"
+  raw_description = ""
+  active = true
+  system = false
+}

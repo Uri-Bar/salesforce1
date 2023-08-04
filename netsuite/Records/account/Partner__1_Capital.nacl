@@ -1,0 +1,15 @@
+netsuite.account Partner__1_Capital@sns {
+  acctType = "_equity"
+  acctName = "Partner #1 Capital"
+  includeChildren = true
+  generalRate = "_historical"
+  cashFlowRate = "_historical"
+  isInactive = false
+  inventory = false
+  subsidiaryList = [
+    netsuite.subsidiary.instance.Parent_Company@s,
+  ]
+  revalue = false
+  identifier = "Partner #1 Capital"
+  custom_custrecord_acct_special = false
+}

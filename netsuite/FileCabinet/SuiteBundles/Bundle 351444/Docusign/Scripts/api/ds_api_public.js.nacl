@@ -1,0 +1,20 @@
+netsuite.file SuiteBundles_Bundle_351444_Docusign_Scripts_api_ds_api_public_js@dsdddduuv {
+  bundleable = false
+  isinactive = false
+  availablewithoutlogin = false
+  generateurltimestamp = false
+  hideinbundle = false
+  path = "/SuiteBundles/Bundle 351444/Docusign/Scripts/api/ds_api_public.js"
+  content = file("netsuite/FileCabinet/SuiteBundles/Bundle 351444/Docusign/Scripts/api/ds_api_public.js")
+  _parent = [
+    netsuite.folder.instance.SuiteBundles_Bundle_351444_Docusign_Scripts_api@dsddd,
+  ]
+  _generated_dependencies = [
+    {
+      reference = netsuite.file.instance.SuiteBundles_Bundle_351444_Docusign_Scripts_api_ds_api_common_js@dsdddduuv.path
+    },
+    {
+      reference = netsuite.file.instance.SuiteBundles_Bundle_351444_Docusign_Scripts_api_ds_envelope_js@dsdddduv.path
+    },
+  ]
+}

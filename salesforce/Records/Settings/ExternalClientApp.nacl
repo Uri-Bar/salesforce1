@@ -1,0 +1,4 @@
+salesforce.ExternalClientAppSettings {
+  fullName = "ExternalClientApp"
+  enableExternalClientApps = "false"
+}

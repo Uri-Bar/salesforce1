@@ -1,0 +1,11 @@
+workato.recipe__code bla_1786969 {
+  number = 0
+  provider = "workato_webhooks"
+  name = "new_event"
+  as = "001c9a9d"
+  keyword = "trigger"
+  uuid = "b95b9077-e663-4115-83a8-4fdeb14f6caa"
+  _parent = [
+    workato.recipe.instance.bla_1786969,
+  ]
+}

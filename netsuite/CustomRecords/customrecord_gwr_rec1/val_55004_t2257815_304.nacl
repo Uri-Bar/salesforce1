@@ -1,0 +1,7 @@
+netsuite.customrecord_gwr_rec1 val_55004_t2257815_304 {
+  scriptid = "val_55004_t2257815_304"
+  isInactive = false
+  name = "second row"
+  custom_custrecord_gwr_rec1_field2 = "this is the second row in the customrecord"
+  custom_custrecord_gwr_rec1_field1 = 2
+}

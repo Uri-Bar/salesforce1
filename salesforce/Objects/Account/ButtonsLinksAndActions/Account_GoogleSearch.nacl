@@ -1,0 +1,22 @@
+salesforce.WebLink Account_GoogleSearch {
+  fullName = "Account.GoogleSearch"
+  availability = "online"
+  displayType = "link"
+  encodingKey = "UTF-8"
+  hasMenubar = false
+  hasScrollbars = true
+  hasToolbar = false
+  height = 600
+  isResizable = true
+  linkType = "url"
+  masterLabel = "Google Search"
+  openType = "newWindow"
+  position = "none"
+  protected = false
+  showsLocation = false
+  showsStatus = false
+  url = "http://www.google.com/search?q={!Account_Name}"
+  _parent = [
+    salesforce.Account,
+  ]
+}

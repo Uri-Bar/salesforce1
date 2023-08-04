@@ -1,0 +1,21 @@
+zuora_billing.PublicEmailTemplate Payment_Method_Updater_Batch_Completed_Default_Email_Template@s {
+  eventCategory = 2520
+  name = "Payment Method Updater Batch Completed Default Email Template"
+  description = ""
+  encodingType = "UTF8"
+  fromName = "Admin"
+  fromEmailType = "SpecificEmail"
+  fromEmailAddress = "support@zuora.com"
+  replyToEmailType = "SpecificEmail"
+  replyToEmailAddress = "support@zuora.com"
+  ccEmailType = "SpecificEmails"
+  ccEmailAddress = ""
+  bccEmailAddress = ""
+  toEmailType = "TenantAdmin"
+  toEmailAddress = ""
+  emailSubject = "Payment Method Updater Batch <PMUBatch.ZuoraBatchNumber> Completed"
+  emailBody = "Dear Customer,<br /><br />A scheduled Payment Method Updater batch has finished processing.<br /><br />Batch Information<br />Batch Number: <PMUBatch.ZuoraBatchNumber><br />Date submitted: <PMUBatch.DateSubmitted><br />Date Received: <PMUBatch.DateReceived><br />Service Provider Name: <PMUBatch.ServiceProviderName><br />Number of Records Submitted: <PMUBatch.NumberOfRecordsSubmitted><br />Number of Records Changed: <PMUBatch.NumberOfRecordsChanged><br /><br />For additional batch details, please visit: <PMUBatch.AccessURL><br /><br />Thank you,<br />-Zuora"
+  active = true
+  isHtml = true
+  useAdditionalAddresses = false
+}

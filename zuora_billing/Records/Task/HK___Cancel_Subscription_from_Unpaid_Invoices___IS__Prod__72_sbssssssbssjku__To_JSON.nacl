@@ -1,0 +1,25 @@
+zuora_billing.Task HK___Cancel_Subscription_from_Unpaid_Invoices___IS__Prod__72_sbssssssbssjku__To_JSON@uuuuuuuuuuuuuumuus {
+  name = "To JSON"
+  parameters = {
+    action = "to_json"
+    placement = "InvoiceItemsJson"
+    replace_payload = "true"
+    strict_variables = "true"
+  }
+  action_type = "Logic::CSVTranslator"
+  object = "InvoiceItem__110.csv.zip"
+  call_type = "SOAP"
+  task_id = 110
+  concurrent_limit = 20
+  additionalProperties = {
+    css = {
+      top = "40px"
+      left = "650px"
+    }
+    priority = "Medium"
+    
+  }
+  _parent = [
+    zuora_billing.WorkflowExport.instance.HK___Cancel_Subscription_from_Unpaid_Invoices___IS__Prod__72@sbssssssbssjku,
+  ]
+}

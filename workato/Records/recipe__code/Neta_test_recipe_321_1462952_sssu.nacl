@@ -1,0 +1,16 @@
+workato.recipe__code Neta_test_recipe_321_1462952_sssu@uuuum {
+  number = 0
+  provider = "workato_service"
+  name = "receive_request"
+  as = "53d1c30a"
+  description = "New <span class=\"provider\">call</span> for <span class=\"provider\">#{_('data.workato.job_context.user_email')}</span>"
+  keyword = "trigger"
+  input = {
+    service_name = "#{_('data.workato.job_context.user_email')}"
+  }
+  comment = "Define the request and response parameters for this API endpoint"
+  uuid = "fc14bb5d-67a5-400a-bfe2-28324697f94b"
+  _parent = [
+    workato.recipe.instance.Neta_test_recipe_321_1462952@sssu,
+  ]
+}

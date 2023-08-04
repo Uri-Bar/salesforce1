@@ -1,0 +1,46 @@
+netsuite.suitelet customscript_testsuitelet_sl {
+  scriptid = "customscript_testsuitelet_sl"
+  isinactive = false
+  name = "test-suitelet-sl"
+  notifyadmins = false
+  notifyowner = true
+  notifyuser = false
+  scriptfile = netsuite.file.instance.SuiteScripts_2023_03_22_test_suitelet_js@dbbdbv.path
+  scriptcustomfields = {
+    scriptcustomfield = {
+      custscript_testsl_search = {
+        scriptid = "custscript_testsl_search"
+        accesslevel = "2"
+        applyformatting = false
+        checkspelling = false
+        defaultchecked = false
+        displaytype = "NORMAL"
+        fieldtype = "SELECT"
+        isformula = false
+        ismandatory = false
+        label = "Search"
+        onparentdelete = "NO_ACTION"
+        searchlevel = "2"
+        selectrecordtype = "-119"
+        storevalue = true
+        index = 0
+      }
+    }
+  }
+  scriptdeployments = {
+    scriptdeployment = {
+      customdeploy_testsuitelet_sl = {
+        scriptid = "customdeploy_testsuitelet_sl"
+        allemployees = false
+        allpartners = false
+        allroles = true
+        custscript_testsl_search = netsuite.savedsearch.instance.customsearch_accounts_srch.scriptid
+        isdeployed = true
+        isonline = false
+        loglevel = "DEBUG"
+        status = "RELEASED"
+        title = "test-suitelet-sl"
+      }
+    }
+  }
+}

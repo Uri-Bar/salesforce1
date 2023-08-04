@@ -1,0 +1,8 @@
+jira.CustomFieldContext Location__c_testContext {
+  name = "testContext"
+  description = ""
+  _parent = [
+    jira.Field.instance.Location__c,
+  ]
+  isGlobalContext = true
+}

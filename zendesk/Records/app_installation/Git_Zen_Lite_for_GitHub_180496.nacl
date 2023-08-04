@@ -1,0 +1,14 @@
+zendesk.app_installation Git_Zen_Lite_for_GitHub_180496@bsssu {
+  app_id = 180496
+  product = "support"
+  settings = {
+    name = "Git-Zen Lite for GitHub"
+    title = "Git-Zen Lite for GitHub"
+  }
+  enabled = true
+  recurring_payment = false
+  collapsible = true
+  paid = false
+  has_unpaid_subscription = false
+  has_incomplete_subscription = false
+}

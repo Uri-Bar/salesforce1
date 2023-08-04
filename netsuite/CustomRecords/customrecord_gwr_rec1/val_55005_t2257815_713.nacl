@@ -1,0 +1,7 @@
+netsuite.customrecord_gwr_rec1 val_55005_t2257815_713 {
+  scriptid = "val_55005_t2257815_713"
+  isInactive = false
+  name = "third row"
+  custom_custrecord_gwr_rec1_field2 = "this is the third row in the customrecord"
+  custom_custrecord_gwr_rec1_field1 = 300
+}

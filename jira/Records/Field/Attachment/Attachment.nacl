@@ -1,0 +1,9 @@
+jira.Field Attachment {
+  name = "Attachment"
+  schema = {
+    type = "array"
+    items = "attachment"
+    system = "attachment"
+  }
+  description = ""
+}

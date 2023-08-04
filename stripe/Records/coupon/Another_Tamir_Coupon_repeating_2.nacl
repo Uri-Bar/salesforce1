@@ -1,0 +1,10 @@
+stripe.coupon Another_Tamir_Coupon_repeating_2@ssuu {
+  id = "2"
+  duration = "repeating"
+  duration_in_months = 12
+  livemode = false
+  name = "Another Tamir Coupon"
+  percent_off = 23
+  times_redeemed = 0
+  valid = true
+}

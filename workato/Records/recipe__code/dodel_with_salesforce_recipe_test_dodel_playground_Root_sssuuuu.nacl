@@ -1,0 +1,113 @@
+workato.recipe__code dodel_with_salesforce_recipe_test_dodel_playground_Root_sssuuuu@uuuuuuum {
+  number = 0
+  provider = "salesforce"
+  name = "updated_custom_object"
+  as = "8eb493f4"
+  title = "New/updated Account"
+  description = "New/updated <span class=\"provider\">Account</span> in <span class=\"provider\">Salesforce</span>"
+  keyword = "trigger"
+  dynamicPickListSelection = {
+    sobject_name = "Account"
+    field_list = [
+      {
+        label = "Account Name"
+        value = "Name"
+      },
+      {
+        label = "Account ID"
+        value = "Id"
+      },
+      {
+        label = "Parent Account ID"
+        value = "ParentId"
+      },
+      {
+        label = "Account Number"
+        value = "AccountNumber"
+      },
+      {
+        label = "Billing Address"
+        value = "BillingAddress"
+      },
+      {
+        label = "Account Description"
+        value = "Description"
+      },
+    ]
+  }
+  input = {
+    sobject_name = "Account"
+    since_offset = "-3600"
+    field_list = '''
+Name
+Id
+`
+AccountNumber
+BillingAddress
+Description
+'''
+  }
+  block = [
+    {
+      number = 1
+      keyword = "if"
+      input = {
+        type = "compound"
+        operand = "and"
+        conditions = [
+          {
+            operand = "starts_with"
+            lhs = "#{_('data.salesforce.8eb493f4.Name')}"
+            rhs = "dodel-test"
+            uuid = "condition-6bd8bea1-8ac1-47cc-abb8-c7eba78ebe93"
+            comment = "dodel knok knok11"
+          },
+        ]
+      }
+      block = [
+        {
+          number = 2
+          provider = "salesforce"
+          name = "create_custom_object"
+          as = "f17e77a8"
+          title = "Create Case"
+          description = "Create <span class=\"provider\">Case</span> in <span class=\"provider\">Salesforce</span>"
+          keyword = "action"
+          dynamicPickListSelection = {
+            sobject_name = "Case"
+            Origin = "Phone"
+            Type = "Mechanical"
+            Priority = "Low"
+            Status = "New"
+          }
+          toggleCfg = {
+            Priority = true
+            Status = true
+          }
+          input = {
+            sobject_name = "Case"
+            Description = '''
+new account - 
+his name - #{_('data.salesforce.8eb493f4.Name')}
+his number - #{_('data.salesforce.8eb493f4.AccountNumber')}
+description - #{_('data.salesforce.8eb493f4.Description')}
+'''
+            Subject = "#{_('data.salesforce.8eb493f4.Name')} from country #{_('data.salesforce.8eb493f4.BillingAddress.country')} join"
+            AccountId = "#{_('data.salesforce.8eb493f4.Id')}"
+            Origin = "Phone"
+            Type = "Mechanical"
+            Priority = "Low"
+            Status = "New"
+          }
+          uuid = "99efbba7-7e4b-4ae5-8346-618c40784605"
+          comment = "dodel knok33 knok"
+        },
+      ]
+      uuid = "0298b13e-2302-41b1-9945-e4cb47685f58"
+    },
+  ]
+  uuid = "14374ab0-2ef9-4ab6-867d-f15884046727"
+  _parent = [
+    workato.recipe.instance.dodel_with_salesforce_recipe_test_dodel_playground_Root@sssuuuu,
+  ]
+}

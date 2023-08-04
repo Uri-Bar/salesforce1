@@ -1,0 +1,15 @@
+netsuite.account Line_of_Credit_Payable@s {
+  acctType = "_otherCurrentLiability"
+  acctName = "Line of Credit Payable"
+  includeChildren = true
+  generalRate = "_current"
+  cashFlowRate = "_average"
+  isInactive = false
+  inventory = false
+  subsidiaryList = [
+    netsuite.subsidiary.instance.Parent_Company@s,
+  ]
+  revalue = true
+  identifier = "Line of Credit Payable"
+  custom_custrecord_acct_special = false
+}

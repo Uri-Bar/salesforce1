@@ -1,0 +1,8 @@
+zuora_billing.ProductType SKU_00000013@b {
+  sku = "SKU-00000013"
+  name = "temp6"
+  description = ""
+  category = "Base Products"
+  effectiveStartDate = "2021-07-22"
+  effectiveEndDate = "2022-03-09"
+}

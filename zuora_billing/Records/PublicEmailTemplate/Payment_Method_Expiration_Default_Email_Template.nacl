@@ -1,0 +1,21 @@
+zuora_billing.PublicEmailTemplate Payment_Method_Expiration_Default_Email_Template@s {
+  eventCategory = 2210
+  name = "Payment Method Expiration Default Email Template"
+  description = ""
+  encodingType = "UTF8"
+  fromName = "Admin"
+  fromEmailType = "TenantEmail"
+  fromEmailAddress = "neta.marcus@salto.io"
+  replyToEmailType = "TenantEmail"
+  replyToEmailAddress = "neta.marcus@salto.io"
+  ccEmailType = "SpecificEmails"
+  ccEmailAddress = ""
+  bccEmailAddress = ""
+  toEmailType = "BillToContact"
+  toEmailAddress = ""
+  emailSubject = "Please update your credit card payment information."
+  emailBody = "Dear <BillToContact.FirstName> <BillToContact.LastName>,\r<br />\r<br />This is a friendly reminder that your credit card <PaymentMethod.CreditCardMaskNumber> will expire on <PaymentMethod.CreditCardExpirationDate>.  \r<br />\r<br />Please update the credit card information in order to continue the subscription.\r<br />\r<br />Thank you for your business!"
+  active = true
+  isHtml = true
+  useAdditionalAddresses = false
+}

@@ -1,0 +1,5 @@
+netsuite.subtab custtab_2_2239021_106 {
+  scriptid = "custtab_2_2239021_106"
+  tabtype = "TRANSACTION"
+  title = "Salto Logs"
+}

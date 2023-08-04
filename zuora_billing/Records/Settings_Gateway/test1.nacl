@@ -1,0 +1,50 @@
+zuora_billing.Settings_Gateway test1 {
+  paymentGatewayType = "Sample"
+  cardsAccepted = [
+    "AmericanExpress",
+    "Argencard",
+    "CUP",
+    "Cabal",
+    "Cencosud",
+    "Diners",
+    "Discover",
+    "Electron",
+    "Elo",
+    "Hipercard",
+    "JCB",
+    "Maestro",
+    "MasterCard",
+    "Naranja",
+    "Nativa",
+    "TarjetaShopping",
+    "Visa",
+  ]
+  gatewayName = "test1"
+  active = true
+  authDefaultAmount = 1
+  verifyPaymentMethodNew = true
+  verifyPaymentMethodUpdated = true
+  cardsAllowed = [
+    "AmericanExpress",
+    "Argencard",
+    "CUP",
+    "Cabal",
+    "CarteBancaire",
+    "Cencosud",
+    "Diners",
+    "Discover",
+    "Electron",
+    "Elo",
+    "Hipercard",
+    "JCB",
+    "LocalCard",
+    "Maestro",
+    "MasterCard",
+    "MercadoLibre",
+    "Mir",
+    "Naranja",
+    "Nativa",
+    "TarjetaShopping",
+    "Visa",
+  ]
+}

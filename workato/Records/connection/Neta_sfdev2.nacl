@@ -1,0 +1,5 @@
+workato.connection Neta_sfdev2@s {
+  application = "salesforce"
+  name = "Neta sfdev2"
+  folder_id = workato.folder.instance.Root
+}

@@ -1,0 +1,131 @@
+zuora_billing.Task C19__Goodwill_Discount_Recall_68_fsssu__RemoveProduct_Amendment_of_Goodwill_discount_on____Data_LinkData_Name___@uuuuumuusssssst_00123_00123vv_00125_00125t {
+  name = "RemoveProduct Amendment of Goodwill discount on '{{Data.LinkData.Name}}'"
+  parameters = {
+    url = "{{ Credentials.zuora.rest_endpoint }}{{Data.Liquid.amendUrl}}{%- if Data.Workflow['justTestNDebug?'] -%}DEBUG{%- endif -%}"
+    datas = [
+      {
+        key = ""
+        value = ""
+      },
+    ]
+    method = "POST"
+    headers = [
+      {
+        key = "Content-Type"
+        value = "application/json"
+      },
+    ]
+    raw_body = '''
+{%- assign contractEffectiveOn = Data.Liquid.contractEffectiveOn -%}
+{%- if Data.LinkData.needsTermAlign == 'true' -%}
+{%- comment -%}Align the contractEffective to the End of Term{%- endcomment -%}
+   {%- assign contractEffectiveOn = Data.LinkData.TermEndDate -%}
+{%- endif -%}
+
+{%- comment -%}Applicable payload for either Orders tenant OR Amendments tenant{%- endcomment -%}
+{%- if Data.Liquid.amendUrl == "orders" -%}
+{
+  "orderDate": "{{ 'now' | date: '%Y-%m-%d' }}",
+	"existingAccountNumber": "{{Data.LinkData.AccountNumber}}",
+  "subscriptions": [
+    {
+      "subscriptionNumber": "{{Data.LinkData.Name}}",
+      "orderActions": [
+        {
+          "type": "RemoveProduct",
+          "removeProduct": {
+            "ratePlanId": "{{Data.LinkData.RPId}}"
+          },
+          "triggerDates": [
+            {
+              "name": "ContractEffective",
+              "triggerDate": "{{contractEffectiveOn}}"
+            },
+            {
+              "name": "ServiceActivation",
+              "triggerDate": "{{contractEffectiveOn}}"
+            },
+            {
+              "name": "CustomerAcceptance",
+              "triggerDate": "{{contractEffectiveOn}}"
+            }
+          ]
+        }      
+      ]
+    }
+  ]
+}
+{%- else -%}
+{
+  "requests": [
+    {
+      "Amendments": [
+        {
+          "ContractEffectiveDate": "{{contractEffectiveOn}}",
+          "CustomerAcceptanceDate": "{{contractEffectiveOn}}",
+          "ServiceActivationDate": "{{contractEffectiveOn}}",
+          "Name": "{{Data.DiscountClass.Name}}",
+          "RatePlanData": {
+            "RatePlan": {
+              "ProductRatePlanId": "{{Data.theGoodwillRatePlan[0].Id}}",
+              "AmendmentSubscriptionRatePlanId": "{{Data.LinkData.RPId}}",
+              "SubscriptionId": "{{Data.LinkData.Id}}"
+            }
+          },
+          "Status": "Completed",
+          "SubscriptionId": "{{Data.LinkData.Id}}",
+          "Type": "RemoveProduct"
+        }
+      ]
+    }
+  ]
+}
+{%- endif -%}
+'''
+    body_type = "raw"
+    validation = {
+      replace = "false"
+      zuora_call = "true"
+      status_codes = [
+        "",
+        "200",
+      ]
+      payload_location = "Callout"
+    }
+    retry_rules = {
+      retry_count = "0"
+      retry_window = "30"
+      current_retry_count = "0"
+    }
+    authorization = {
+      type = "zuora"
+    }
+    strict_variables = "false"
+    validate_response = "true"
+    validation_scheme = '''
+{%- if Data.URL contains "orders" %}
+{{Data.ResponseBody.success}}
+{%- elsif Data.ResponseBody.results[0].Success == true %} 
+true
+{%- else -%}
+false
+{%- endif -%}
+'''
+    include_response_code = "true"
+  }
+  action_type = "Callout"
+  call_type = "SOAP"
+  task_id = 12108
+  concurrent_limit = 9999999
+  additionalProperties = {
+    css = {
+      top = "210px"
+      left = "940px"
+    }
+    priority = "Medium"
+    
+  }
+  _parent = [
+    zuora_billing.WorkflowExport.instance.C19__Goodwill_Discount_Recall_68@fsssu,
+  ]
+}

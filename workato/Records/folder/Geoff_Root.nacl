@@ -1,0 +1,4 @@
+workato.folder Geoff_Root {
+  name = "Geoff"
+  parent_id = workato.folder.instance.Root
+}

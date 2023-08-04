@@ -1,0 +1,10 @@
+jira.Field Issue_color__c@suu {
+  name = "Issue color"
+  description = ""
+  isLocked = true
+  searcherKey = "com.pyxis.greenhopper.jira:jsw-issue-color-searcher"
+  type = "com.pyxis.greenhopper.jira:jsw-issue-color"
+  contexts = [
+    jira.CustomFieldContext.instance.Issue_color__c_suu_Default_Configuration_Scheme_for_Issue_color@uuumusssss,
+  ]
+}

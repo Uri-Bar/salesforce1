@@ -1,0 +1,43 @@
+zuora_billing.ProductRatePlanType SKU_00000001_b__New_Rate_Plan_123@umuusss {
+  status = "Expired"
+  name = "New Rate Plan 123"
+  description = ""
+  effectiveStartDate = "2021-03-09"
+  effectiveEndDate = "2021-05-09"
+  productRatePlanCharges = [
+    {
+      name = "New Component 111"
+      type = "OneTime"
+      model = "FlatFee"
+      pricingSummary = [
+        "USD400",
+      ]
+      pricing = [
+        {
+          currency = zuora_billing.Settings_Currency.instance.USD
+          price = 400
+        },
+      ]
+      endDateCondition = "One_Time"
+      taxable = false
+      taxCode = ""
+      triggerEvent = "ContractEffective"
+      description = "desc"
+      revenueRecognitionRuleName = zuora_billing.Settings_RevenueRecognitionRule.instance.Recognize_daily_over_time@s
+      financeInformation = {
+        deferredRevenueAccountingCode = zuora_billing.AccountingCodeItem.instance.Cash_Check
+        recognizedRevenueAccountingCode = zuora_billing.AccountingCodeItem.instance.SalesRevenue_Usage_Revenue@us
+        additionalProperties = {
+          accountsReceivableAccountingCode = "Accounts Receivable"
+          accountsReceivableAccountingCodeType = "AccountsReceivable"
+        }
+      }
+      additionalProperties = {
+        isStackedDiscount = false
+      }
+    },
+  ]
+  _parent = [
+    zuora_billing.ProductType.instance.SKU_00000001@b,
+  ]
+}

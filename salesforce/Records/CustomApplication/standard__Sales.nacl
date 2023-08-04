@@ -1,0 +1,21 @@
+salesforce.CustomApplication standard__Sales {
+  fullName = "standard__Sales"
+  defaultLandingTab = "standard-home"
+  isNavAutoTempTabsDisabled = false
+  isNavPersonalizationDisabled = false
+  tabs = [
+    "standard-Contact",
+    "standard-Account",
+    "standard-Lead",
+    "standard-Opportunity",
+    "standard-report",
+    "standard-Dashboard",
+    "standard-Chatter",
+    "standard-File",
+    "standard-Product2",
+    "standard-Forecasting3",
+    "standard-Quote",
+    salesforce.CustomTab.instance.Yariv__c,
+  ]
+  isNavTabPersistenceDisabled = false
+}

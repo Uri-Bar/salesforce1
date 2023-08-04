@@ -1,0 +1,21 @@
+zuora_billing.PublicEmailTemplate Default_Email_Template_for_Amendment_Processed___Update_Product@ssssssbss {
+  eventCategory = 1310
+  name = "Default Email Template for Amendment Processed - Update Product"
+  description = ""
+  encodingType = "UTF8"
+  fromName = "Admin"
+  fromEmailType = "TenantEmail"
+  fromEmailAddress = "neta.marcus@salto.io"
+  replyToEmailType = "TenantEmail"
+  replyToEmailAddress = "neta.marcus@salto.io"
+  ccEmailType = "SpecificEmails"
+  ccEmailAddress = ""
+  bccEmailAddress = ""
+  toEmailType = "BillToContact"
+  toEmailAddress = ""
+  emailSubject = "A product was updated (via amendment <Amendment.AmendmentName>) in your subscription"
+  emailBody = "Dear <BillToContact.FirstName> <BillToContact.LastName>,\r<br />\r<br />We would like to inform you that a product was updated in your subscription <Subscription.SubscriptionName> successfully on <Subscription.CreateDate>. The change was effective as of <Amendment.ContractEffectiveDate>.\r<br />\r<br />Thank you for your business!"
+  active = true
+  isHtml = true
+  useAdditionalAddresses = false
+}

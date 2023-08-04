@@ -1,0 +1,15 @@
+netsuite.account Acc__Dep_Automotive_Equip_@vsbsv {
+  acctType = "_fixedAsset"
+  acctName = "Acc. Dep-Automotive Equip."
+  includeChildren = true
+  generalRate = "_current"
+  cashFlowRate = "_average"
+  isInactive = false
+  inventory = false
+  subsidiaryList = [
+    netsuite.subsidiary.instance.Parent_Company@s,
+  ]
+  revalue = false
+  identifier = "Acc. Dep-Automotive Equip."
+  custom_custrecord_acct_special = false
+}

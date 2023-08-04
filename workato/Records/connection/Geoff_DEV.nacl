@@ -1,0 +1,5 @@
+workato.connection Geoff_DEV@s {
+  application = "salesforce"
+  name = "Geoff DEV"
+  folder_id = workato.folder.instance.Geoff_Root
+}

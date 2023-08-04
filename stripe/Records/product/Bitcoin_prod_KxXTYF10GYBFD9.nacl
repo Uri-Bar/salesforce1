@@ -1,0 +1,29 @@
+stripe.product Bitcoin_prod_KxXTYF10GYBFD9 {
+  id = "prod_KxXTYF10GYBFD9"
+  active = true
+  description = "BTC by the pound"
+  livemode = false
+  name = "Bitcoin"
+  product_prices = [
+    {
+      id = "price_1KHcOpHipyrr1EYi50TAUrJB"
+      active = true
+      billing_scheme = "tiered"
+      currency = "usd"
+      livemode = false
+      product = stripe.product.instance.Bitcoin_prod_KxXTYF10GYBFD9
+      recurring = {
+        interval = "year"
+        interval_count = 1
+        usage_type = "licensed"
+      }
+      tax_behavior = "unspecified"
+      tiers_mode = "volume"
+      type = "recurring"
+    },
+  ]
+  additionalProperties = {
+    type = "service"
+  }
+  default_price = "price_1KHcOpHipyrr1EYi50TAUrJB"
+}

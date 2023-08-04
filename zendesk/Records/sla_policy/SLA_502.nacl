@@ -1,0 +1,38 @@
+zendesk.sla_policy SLA_502@s {
+  title = "SLA 502"
+  filter = {
+    all = [
+      {
+        field = "assignee_id"
+        operator = "is"
+        value = "requester_id"
+      },
+    ]
+  }
+  policy_metrics = [
+    {
+      priority = "low"
+      metric = "periodic_update_time"
+      target = 1200
+      business_hours = false
+    },
+    {
+      priority = "normal"
+      metric = "periodic_update_time"
+      target = 600
+      business_hours = false
+    },
+    {
+      priority = "high"
+      metric = "periodic_update_time"
+      target = 300
+      business_hours = false
+    },
+    {
+      priority = "urgent"
+      metric = "periodic_update_time"
+      target = 300
+      business_hours = false
+    },
+  ]
+}

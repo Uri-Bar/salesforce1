@@ -1,0 +1,105 @@
+zendesk.view Current_tasks@s {
+  title = "Current tasks"
+  active = false
+  execution = {
+    group_by = "due_date"
+    group_order = "asc"
+    sort_by = "assignee"
+    sort_order = "desc"
+    group = {
+      id = "due_date"
+      title = "Due date"
+      order = "asc"
+      filterable = true
+      sortable = true
+    }
+    sort = {
+      id = "assignee"
+      title = "Assignee"
+      order = "desc"
+      filterable = true
+      sortable = true
+    }
+    columns = [
+      {
+        id = "subject"
+        title = "Subject"
+        filterable = false
+        sortable = false
+      },
+      {
+        id = "requester"
+        title = "Requester"
+        filterable = true
+        sortable = true
+      },
+      {
+        id = "created"
+        title = "Requested"
+        filterable = false
+        sortable = true
+      },
+      {
+        id = "assignee"
+        title = "Assignee"
+        filterable = true
+        sortable = true
+      },
+      {
+        id = "due_date"
+        title = "Due date"
+        filterable = true
+        sortable = true
+      },
+    ]
+    fields = [
+      {
+        id = "subject"
+        title = "Subject"
+        filterable = false
+        sortable = false
+      },
+      {
+        id = "requester"
+        title = "Requester"
+        filterable = true
+        sortable = true
+      },
+      {
+        id = "created"
+        title = "Requested"
+        filterable = false
+        sortable = true
+      },
+      {
+        id = "assignee"
+        title = "Assignee"
+        filterable = true
+        sortable = true
+      },
+      {
+        id = "due_date"
+        title = "Due date"
+        filterable = true
+        sortable = true
+      },
+    ]
+  }
+  conditions = {
+    all = [
+      {
+        field = "status"
+        operator = "less_than"
+        value = "solved"
+      },
+      {
+        field = "type"
+        operator = "is"
+        value = "task"
+      },
+    ]
+  }
+  
+  raw_title = "{{zd.current_tasks}}"
+  default = false
+}

@@ -1,0 +1,15 @@
+netsuite.account Contract_Payable__2@ssn {
+  acctType = "_longTermLiability"
+  acctName = "Contract Payable #2"
+  includeChildren = true
+  generalRate = "_current"
+  cashFlowRate = "_average"
+  isInactive = false
+  inventory = false
+  subsidiaryList = [
+    netsuite.subsidiary.instance.Parent_Company@s,
+  ]
+  revalue = true
+  identifier = "Contract Payable #2"
+  custom_custrecord_acct_special = false
+}

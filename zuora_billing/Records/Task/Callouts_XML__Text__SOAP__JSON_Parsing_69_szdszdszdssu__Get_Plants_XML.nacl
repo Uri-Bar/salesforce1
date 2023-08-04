@@ -1,0 +1,42 @@
+zuora_billing.Task Callouts_XML__Text__SOAP__JSON_Parsing_69_szdszdszdssu__Get_Plants_XML@uuuuuuuuumuuss {
+  name = "Get Plants XML"
+  parameters = {
+    url = "https://www.w3schools.com/xml/plant_catalog.xml"
+    datas = [
+      {
+        key = ""
+        value = ""
+      },
+    ]
+    method = "GET"
+    headers = [
+      {
+        key = "Content-Type"
+        value = "text/xml; charset=utf-8"
+      },
+      {
+        key = ""
+        value = ""
+      },
+    ]
+    raw_body = ""
+    body_type = "raw"
+    authorization = {
+      type = "none"
+    }
+  }
+  action_type = "Callout"
+  call_type = "SOAP"
+  concurrent_limit = 9999999
+  additionalProperties = {
+    css = {
+      top = "40px"
+      left = "380px"
+    }
+    priority = "Medium"
+    
+  }
+  _parent = [
+    zuora_billing.WorkflowExport.instance.Callouts_XML__Text__SOAP__JSON_Parsing_69@szdszdszdssu,
+  ]
+}

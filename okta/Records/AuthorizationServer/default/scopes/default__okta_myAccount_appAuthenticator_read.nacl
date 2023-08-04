@@ -1,0 +1,15 @@
+okta.OAuth2Scope default__okta_myAccount_appAuthenticator_read@uuvvv {
+  name = "okta.myAccount.appAuthenticator.read"
+  displayName = "Read my account app authenticator enrollment"
+  description = "Allows the end user to read their app authenticator enrollment."
+  system = true
+  metadataPublish = "ALL_CLIENTS"
+  consent = "IMPLICIT"
+  default = false
+  additionalProperties = {
+    optional = false
+  }
+  _parent = [
+    okta.AuthorizationServer.instance.default,
+  ]
+}

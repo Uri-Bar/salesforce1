@@ -1,0 +1,64 @@
+salesforce.PathAssistant Default {
+  fullName = "Default"
+  active = true
+  entityName = "Lead"
+  fieldName = "Status"
+  masterLabel = "Default"
+  pathAssistantSteps = [
+    {
+      fieldNames = [
+        "Company",
+        "Website",
+        "Industry",
+        "AnnualRevenue",
+        "NumberOfEmployees",
+      ]
+      info = '''
+<strong>Learn about and contact your new lead quickly.</strong><br><br>Use Salesforce leads to separate prospects from the Salesforce contacts you’ve already sold to.<br><br>Respond to your lead within five minutes to increase your chances of converting the lead record to an opportunity. 
+<ul><li>Visit your lead’s website to learn about your lead’s business and industry.</li><li>Find your lead on social networks to determine how to best engage and connect.</li></ul>
+'''
+      picklistValueName = "New"
+    },
+    {
+      fieldNames = [
+        "Rating",
+      ]
+      info = '''
+<strong>Nurture your lead so that you’re top-of-mind.</strong><br><br>Send emails based on time intervals and your leads’ actions on our website. Nurturing leads helps to free up time to focus on other opportunities in your pipeline.
+<ul><li>Assign a rating to your lead based on what you’ve learned during the qualification process.</li><li>Work with marketing to add your lead to campaigns to further nurture the relationship.</li><li>Before you mark your lead Unqualified, schedule six follow-up tasks to email or call your lead.</li></ul>
+'''
+      picklistValueName = "Nurturing"
+    },
+    {
+      info = "<strong>Congratulations! </strong>Now it’s time to convert the lead record to an opportunity. Then, continue the qualification process with your new contact."
+      picklistValueName = "Qualified"
+    },
+    {
+      fieldNames = [
+        "Description",
+        "LeadSource",
+      ]
+      info = '''
+<strong>If your lead has neither the interest nor the authority to purchase from you, mark the lead Unqualified. </strong><br><br>Don’t waste time on unqualified leads.
+<ul><li>Learn about the lead source before you spend time selling them a product they&#39;re not ready for.</li><li>Understand your lead&#39;s level of decision making authority and solution requirements.</li><li>Determine whether your lead is likely to buy from you.</li></ul>
+'''
+      picklistValueName = "Unqualified"
+    },
+    {
+      fieldNames = [
+        "Description",
+        "Title",
+        "Email",
+        "MobilePhone",
+        "Phone",
+      ]
+      info = '''
+<strong>Verify contact information and qualify your lead.</strong><br><br>Gather as much contact information as you can. Get tips from the pros about <u>the importance of qualifying your lead</u>.
+
+<ul><li>Get your lead’s email address, phone number, and title so that you can include your lead in future campaigns.</li><li>Email your lead first, and immediately follow up with a phone call.</li><li>Rehearse your call scripts so that you sound confident and the flow of your conversation is more natural.</li></ul>
+'''
+      picklistValueName = "Working"
+    },
+  ]
+  recordTypeName = "__MASTER__"
+}

@@ -1,0 +1,14 @@
+netsuite.publisheddashboard custpubdashboard_udemy_dash {
+  scriptid = "custpubdashboard_udemy_dash"
+  center = "BASIC"
+  locknewbar = false
+  lockshortcuts = false
+  name = "Udemy dash"
+  roles = {
+    role = [
+      {
+        role = netsuite.role.instance.customrole_developer_simon.scriptid
+      },
+    ]
+  }
+}

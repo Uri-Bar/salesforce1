@@ -1,0 +1,16 @@
+salesforce.ListView Campaign_Org_Campaign_Hierarchy {
+  fullName = "Campaign.Org_Campaign_Hierarchy"
+  columns = [
+    "CAMPAIGN.NAME",
+    "CAMPAIGN.CAMPAIGN_TYPE",
+    "CAMPAIGN.ACTIVE",
+    "CAMPAIGN.STATUS",
+    "CAMPAIGN.START_DATE",
+    "CAMPAIGN.END_DATE",
+  ]
+  filterScope = "Everything"
+  label = "Org_Campaign_Hierarchy"
+  _parent = [
+    salesforce.Campaign,
+  ]
+}

@@ -1,0 +1,21 @@
+okta.AuthorizationServerPolicy default__Default_Policy@uus {
+  status = "ACTIVE"
+  name = "Default Policy"
+  description = "Default Policy for your Authorization Server"
+  priority = 1
+  system = false
+  conditions = {
+    clients = {
+      include = [
+        "ALL_CLIENTS",
+      ]
+    }
+  }
+  type = "OAUTH_AUTHORIZATION_POLICY"
+  policyRules = [
+    okta.AuthorizationServerPolicyRule.instance.default__Default_Policy_uus__Default_Policy_Rule@uuumuuss,
+  ]
+  _parent = [
+    okta.AuthorizationServer.instance.default,
+  ]
+}

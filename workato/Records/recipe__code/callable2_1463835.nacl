@@ -1,0 +1,69 @@
+workato.recipe__code callable2_1463835 {
+  number = 0
+  provider = "workato_service"
+  name = "receive_request"
+  as = "522c4e86"
+  description = "New <span class=\"provider\">call</span> for <span class=\"provider\">c2</span>"
+  keyword = "trigger"
+  input = {
+    service_name = "c2"
+  }
+  block = [
+    {
+      number = 1
+      provider = "salesforce"
+      name = "search_sobjects"
+      as = "2685928c"
+      title = "Search Fish"
+      description = "Search for <span class=\"provider\">Fish</span> in <span class=\"provider\">Salesforce</span>"
+      keyword = "action"
+      dynamicPickListSelection = {
+        sobject_name = "Fish"
+      }
+      input = {
+        limit = "150"
+        sobject_name = "Fish__c"
+      }
+      uuid = "e89c02c2-48e3-46c9-8800-30a964ea670c"
+    },
+    {
+      number = 2
+      provider = "salesforce_secondary"
+      name = "update_sobject"
+      as = "dd3f3e84"
+      title = "Update Fish"
+      description = "Update <span class=\"provider\">Fish</span> in <span class=\"provider\">Salesforce</span>"
+      keyword = "action"
+      dynamicPickListSelection = {
+        sobject_name = "Fish"
+      }
+      input = {
+        sobject_name = "Fish__c"
+        id = "#{_('data.salesforce.2685928c.Fish__c.first.Id')}"
+      }
+      uuid = "8e417853-25f1-4731-8d7f-8f5f6cc2ec91"
+    },
+    {
+      number = 3
+      provider = "workato_service"
+      name = "call_service"
+      as = "c91f8161"
+      description = "Call recipe <span class=\"provider\">#{_('data.workato.job_context.user_name')}#{_('data.workato.job_context.user_name')}</span> "
+      keyword = "action"
+      dynamicPickListSelection = {
+        flow_id = "#{_('data.workato.job_context.user_name')}#{_('data.workato.job_context.user_name')}"
+      }
+      input = {
+        flow_id = "1463813"
+        request = {
+          res123 = "m"
+        }
+      }
+      uuid = "5a53d2da-4e02-4b13-bce7-56052546b48c"
+    },
+  ]
+  uuid = "907d285f-f9f5-428c-84f7-4e6ced3b38de"
+  _parent = [
+    workato.recipe.instance.callable2_1463835,
+  ]
+}

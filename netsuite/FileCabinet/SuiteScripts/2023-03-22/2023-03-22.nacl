@@ -1,0 +1,9 @@
+netsuite.folder SuiteScripts_2023_03_22@dbb {
+  bundleable = false
+  isinactive = false
+  isprivate = false
+  path = "/SuiteScripts/2023-03-22"
+  _parent = [
+    netsuite.folder.instance.SuiteScripts,
+  ]
+}

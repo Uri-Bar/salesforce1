@@ -1,0 +1,16 @@
+zendesk.article How_can_agents_leverage_knowledge_to_help_customers__FAQ_General_DP_Brand_s_uum_uuuum@sssssssauuuuuum {
+  author_id = "neta.marcus+zendesk@salto.io"
+  comments_disabled = false
+  draft = false
+  promoted = false
+  section_id = zendesk.section.instance.FAQ_General_DP_Brand_s_uum@uuuum
+  source_locale = zendesk.guide_language_settings.instance.DP_Brand_s_en_us@umub
+  locale = zendesk.guide_language_settings.instance.DP_Brand_s_en_us@umub
+  outdated = false
+  permission_group_id = zendesk.permission_group.instance.Admins
+  translations = [
+    zendesk.article_translation.instance.How_can_agents_leverage_knowledge_to_help_customers__FAQ_General_DP_Brand_s_uum_uuuum_sssssssauuuuuum__DP_Brand_s_en_us_umub@uuuuuuuuuuuuuuumuuuuuum,
+  ]
+  brand = zendesk.brand.instance.DP_Brand@s
+  user_segment_id = zendesk.user_segment.instance.Everyone
+}

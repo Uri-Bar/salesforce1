@@ -1,0 +1,15 @@
+netsuite.account Prepaid_Expenses@s {
+  acctType = "_otherCurrentAsset"
+  acctName = "Prepaid Expenses"
+  includeChildren = true
+  generalRate = "_current"
+  cashFlowRate = "_average"
+  isInactive = false
+  inventory = false
+  subsidiaryList = [
+    netsuite.subsidiary.instance.Parent_Company@s,
+  ]
+  revalue = false
+  identifier = "Prepaid Expenses"
+  custom_custrecord_acct_special = false
+}

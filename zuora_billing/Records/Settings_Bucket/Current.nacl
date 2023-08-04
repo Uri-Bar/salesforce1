@@ -1,0 +1,4 @@
+zuora_billing.Settings_Bucket Current {
+  name = "Current"
+  toDaysPastDue = 0
+}

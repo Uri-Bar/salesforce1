@@ -1,0 +1,21 @@
+salesforce.WorkflowRule Opportunity_Opportunity_Health@vs {
+  fullName = "Opportunity.Opportunity Health"
+  actions = [
+    {
+      name = salesforce.WorkflowAlert.instance.Opportunity_Opportunity_Health_Alert@vuu
+      type = "Alert"
+    },
+  ]
+  active = true
+  criteriaItems = [
+    {
+      field = salesforce.Opportunity.field.Health__c
+      operation = "equals"
+      value = "Good"
+    },
+  ]
+  triggerType = "onCreateOrTriggeringUpdate"
+  _parent = [
+    salesforce.Opportunity,
+  ]
+}

@@ -1,0 +1,95 @@
+zuora_billing.Task HK___Cancel_Subscription_from_Unpaid_Invoices___IS__Prod__72_sbssssssbssjku__Identify_Subscriptions_for_Cancellation@uuuuuuuuuuuuuumuusss {
+  name = "Identify Subscriptions for Cancellation"
+  parameters = {
+    template = '''
+(
+    $rawData := InvoiceItemsJson;
+
+    $invItems := $map($rawData.InvoiceItem, function($v, $i) {(
+        {
+            "AccountId": $rawData.Account[$i].Id,
+            "InvoiceId": $rawData.Invoice[$i].Id,
+            "RatePlanId": $rawData.RatePlan[$i].Id,
+            "SubscriptionId": $rawData.Subscription[$i].Id,
+            "SubscriptionNotes": $rawData.Subscription[$i].Notes,
+            "InvoiceItemServiceStartDate": $v.ServiceStartDate,
+            "RatePlanCharge": $rawData.RatePlanCharge[$i]
+        }
+    )});
+
+    $subInvoices := $invItems{
+       `SubscriptionId`: [`InvoiceId`]
+    };
+
+    $isInAdvance := function($billTiming) { $billTiming = 'In Advance' };
+
+    $whatDate := function($v) {
+        $isInAdvance($v.RatePlanCharge.BillingTiming) 
+            ? $v.InvoiceItemServiceStartDate
+            : $v.RatePlanCharge.ChargedThroughDate
+    };
+
+    $removalSubs := $invItems{
+       `SubscriptionId`: [$.{"ratePlanId": `RatePlanId`, "contractEffectiveDate": $whatDate($), "subNotes": `SubscriptionNotes`, "accountId": `AccountId` }]
+    };
+
+    $subNotes := function($v) {
+        $v[0].subNotes = null 
+            ? "Cancel subscription from Unpaid Invoices WF - " & $now()
+            : ($v[0].subNotes & " Cancel subscription from Unpaid Invoices WF - " & $now()) 
+    };
+    
+    $results := $each($removalSubs, function($v, $k) {(
+        {
+            "subKey": $k,
+            "invIds": $lookup($subInvoices, $k) ~> $distinct,
+            "subCancelDate": $v[0].contractEffectiveDate,
+            "subNotes": $subNotes($v),
+            "modifiedBy": "Steve Wong",
+            "accountId": $v[0].accountId,
+            "rp": $v
+        }
+    )});
+	[$results];
+)
+'''
+    placement = "JSONTransform"
+    processor = "JSONata"
+    csv_headers = ""
+    replace_payload = "true"
+    strict_variables = "true"
+  }
+  action_type = "Logic::JSONTransform"
+  call_type = "SOAP"
+  task_id = 111
+  concurrent_limit = 9999999
+  additionalProperties = {
+    css = {
+      top = "40px"
+      left = "950px"
+    }
+    priority = "Medium"
+    
+  }
+  _parent = [
+    zuora_billing.WorkflowExport.instance.HK___Cancel_Subscription_from_Unpaid_Invoices___IS__Prod__72@sbssssssbssjku,
+  ]
+  _generated_dependencies = [
+    {
+      reference = zuora_billing.rateplancharge.field.BillingTiming
+      occurrences = [
+        {
+          location = zuora_billing.Task.instance.HK___Cancel_Subscription_from_Unpaid_Invoices___IS__Prod__72_sbssssssbssjku__Identify_Subscriptions_for_Cancellation@uuuuuuuuuuuuuumuusss.parameters.template
+        },
+      ]
+    },
+    {
+      reference = zuora_billing.rateplancharge.field.ChargedThroughDate
+      occurrences = [
+        {
+          location = zuora_billing.Task.instance.HK___Cancel_Subscription_from_Unpaid_Invoices___IS__Prod__72_sbssssssbssjku__Identify_Subscriptions_for_Cancellation@uuuuuuuuuuuuuumuusss.parameters.template
+        },
+      ]
+    },
+  ]
+}

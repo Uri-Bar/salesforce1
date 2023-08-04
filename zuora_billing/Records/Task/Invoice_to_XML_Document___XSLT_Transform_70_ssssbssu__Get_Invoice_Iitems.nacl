@@ -1,0 +1,75 @@
+zuora_billing.Task Invoice_to_XML_Document___XSLT_Transform_70_ssssbssu__Get_Invoice_Iitems@uuuuuuuumuuss {
+  name = "Get Invoice Iitems"
+  parameters = {
+    fields = {
+      InvoiceItem = {
+        Id = "true"
+        Quantity = "true"
+        ChargeDate = "true"
+        ChargeAmount = "true"
+      }
+    }
+    placement = ""
+    batch_size = "2000"
+    where_clause = " InvoiceId =  '{{Data.Invoice.Id}}'"
+    strict_variables = "true"
+  }
+  action_type = "Query"
+  object = zuora_billing.invoiceitem
+  call_type = "SOAP"
+  task_id = 107
+  concurrent_limit = 9999999
+  additionalProperties = {
+    css = {
+      top = "180px"
+      left = "590px"
+    }
+    priority = "Medium"
+    
+  }
+  _parent = [
+    zuora_billing.WorkflowExport.instance.Invoice_to_XML_Document___XSLT_Transform_70@ssssbssu,
+  ]
+  _generated_dependencies = [
+    {
+      reference = zuora_billing.invoice.field.Id
+      occurrences = [
+        {
+          location = zuora_billing.Task.instance.Invoice_to_XML_Document___XSLT_Transform_70_ssssbssu__Get_Invoice_Iitems@uuuuuuuumuuss.parameters.where_clause
+        },
+      ]
+    },
+    {
+      reference = zuora_billing.invoiceitem.field.ChargeAmount
+      occurrences = [
+        {
+          location = zuora_billing.Task.instance.Invoice_to_XML_Document___XSLT_Transform_70_ssssbssu__Get_Invoice_Iitems@uuuuuuuumuuss.parameters.fields.InvoiceItem.ChargeAmount
+        },
+      ]
+    },
+    {
+      reference = zuora_billing.invoiceitem.field.ChargeDate
+      occurrences = [
+        {
+          location = zuora_billing.Task.instance.Invoice_to_XML_Document___XSLT_Transform_70_ssssbssu__Get_Invoice_Iitems@uuuuuuuumuuss.parameters.fields.InvoiceItem.ChargeDate
+        },
+      ]
+    },
+    {
+      reference = zuora_billing.invoiceitem.field.Id
+      occurrences = [
+        {
+          location = zuora_billing.Task.instance.Invoice_to_XML_Document___XSLT_Transform_70_ssssbssu__Get_Invoice_Iitems@uuuuuuuumuuss.parameters.fields.InvoiceItem.Id
+        },
+      ]
+    },
+    {
+      reference = zuora_billing.invoiceitem.field.Quantity
+      occurrences = [
+        {
+          location = zuora_billing.Task.instance.Invoice_to_XML_Document___XSLT_Transform_70_ssssbssu__Get_Invoice_Iitems@uuuuuuuumuuss.parameters.fields.InvoiceItem.Quantity
+        },
+      ]
+    },
+  ]
+}

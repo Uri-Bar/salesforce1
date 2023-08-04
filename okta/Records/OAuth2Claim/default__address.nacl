@@ -1,0 +1,16 @@
+okta.OAuth2Claim default__address {
+  name = "address"
+  status = "ACTIVE"
+  claimType = "IDENTITY"
+  valueType = "SYSTEM"
+  conditions = {
+    scopes = [
+      "address",
+    ]
+  }
+  system = true
+  alwaysIncludeInToken = false
+  _parent = [
+    okta.AuthorizationServer.instance.default,
+  ]
+}

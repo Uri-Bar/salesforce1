@@ -1,0 +1,8 @@
+jira.Field Creator {
+  name = "Creator"
+  schema = {
+    type = "user"
+    system = "creator"
+  }
+  description = ""
+}

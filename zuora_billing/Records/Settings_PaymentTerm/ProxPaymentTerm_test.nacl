@@ -1,0 +1,10 @@
+zuora_billing.Settings_PaymentTerm ProxPaymentTerm_test {
+  name = "test"
+  isActive = true
+  isDefault = false
+  type = "ProxPaymentTerm"
+  intervalUnit = "Month"
+  invoiceCutoffDay = 1
+  intervalNumber = 0
+  paymentDueDay = 1
+}

@@ -1,0 +1,31 @@
+type zuora_billing.taxationitem {
+  annotations {
+    string metadataType {
+    }
+    string label {
+    }
+    string description {
+    }
+    hidden_string id {
+    }
+    string objectType {
+    }
+  }
+  metadataType = "StandardObject"
+  objectType = "taxationitem"
+  _generated_dependencies = [
+    {
+      reference = zuora_billing.accountingcode
+    },
+    {
+      reference = zuora_billing.invoiceitem
+    },
+    {
+      reference = zuora_billing.journalentry
+    },
+    {
+      reference = zuora_billing.user
+    },
+  ]
+  label = "TaxationItem"
+}

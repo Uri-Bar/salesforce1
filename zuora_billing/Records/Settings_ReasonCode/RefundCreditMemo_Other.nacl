@@ -1,0 +1,6 @@
+zuora_billing.Settings_ReasonCode RefundCreditMemo_Other {
+  isActive = true
+  reasonCodeName = "Other"
+  reasonCodeTransactionType = "RefundCreditMemo"
+  isDefault = false
+}

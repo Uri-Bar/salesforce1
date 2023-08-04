@@ -1,0 +1,4 @@
+zuora_billing.Settings_TaxEngine Zuora_Tax@s {
+  name = "Zuora Tax"
+  taxEngineType = "Z_Tax"
+}

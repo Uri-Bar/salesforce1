@@ -1,0 +1,17 @@
+type zuora_billing.revenuerecognitioneventstransaction {
+  annotations {
+    string metadataType {
+    }
+    string label {
+    }
+    string description {
+    }
+    hidden_string id {
+    }
+    string objectType {
+    }
+  }
+  metadataType = "StandardObject"
+  label = "RevenueRecognitionEventsTransaction"
+  objectType = "revenuerecognitioneventstransaction"
+}

@@ -1,0 +1,8 @@
+zuora_billing.Settings_CommunicationProfile Neta_test@s {
+  name = "Neta test"
+  locale = "default"
+  description = ""
+  isDefault = false
+  muted = false
+  number = "CP-00000002"
+}

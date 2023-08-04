@@ -1,0 +1,18 @@
+zuora_billing.Settings_Notification Payment_Method_Closed_API_8ac69ff278d483ea0178d95495e16922@ssuu {
+  profileId = zuora_billing.Settings_CommunicationProfile.instance.Neta_test@s
+  eventName = "Payment Method Closed"
+  name = "API"
+  description = "The payment method was closed by a system user."
+  active = false
+  hidden = false
+  param1 = "API"
+  emailOption = true
+  emailTemplateName = zuora_billing.PublicEmailTemplate.instance.Payment_Method_Closed_Default_Email_Template@s
+  calloutOption = false
+  contentType = "APPLICATION_JSON"
+  calloutRetriable = false
+  calloutAuth = false
+  calloutOauth2 = false
+  calloutPreemptiveAuth = false
+  useCustomRequestBody = false
+}

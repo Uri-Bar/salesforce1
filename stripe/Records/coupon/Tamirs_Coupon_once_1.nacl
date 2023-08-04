@@ -1,0 +1,11 @@
+stripe.coupon Tamirs_Coupon_once_1@suu {
+  id = "1"
+  amount_off = 500
+  currency = "usd"
+  duration = "once"
+  livemode = false
+  max_redemptions = 10
+  name = "Tamirs Coupon"
+  times_redeemed = 0
+  valid = true
+}

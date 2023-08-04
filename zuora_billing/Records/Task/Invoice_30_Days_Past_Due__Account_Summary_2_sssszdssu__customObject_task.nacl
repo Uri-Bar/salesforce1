@@ -1,0 +1,45 @@
+zuora_billing.Task Invoice_30_Days_Past_Due__Account_Summary_2_sssszdssu__customObject_task@uuuuuuuumuus {
+  name = "customObject task"
+  parameters = {
+    fields = {
+      default__account = {
+        something__c = "test"
+        picklist123__c = "value 1"
+      }
+    }
+    strict_variables = "true"
+  }
+  action_type = "CustomObject::Create"
+  object = zuora_billing.account__c
+  call_type = "SOAP"
+  concurrent_limit = 9999999
+  additionalProperties = {
+    css = {
+      top = "430px"
+      left = "310px"
+    }
+    priority = "Medium"
+    
+  }
+  _parent = [
+    zuora_billing.WorkflowExport.instance.Invoice_30_Days_Past_Due__Account_Summary_2@sssszdssu,
+  ]
+  _generated_dependencies = [
+    {
+      reference = zuora_billing.account__c.field.picklist123__c
+      occurrences = [
+        {
+          location = zuora_billing.Task.instance.Invoice_30_Days_Past_Due__Account_Summary_2_sssszdssu__customObject_task@uuuuuuuumuus.parameters.fields.default__account.picklist123__c
+        },
+      ]
+    },
+    {
+      reference = zuora_billing.account__c.field.something__c
+      occurrences = [
+        {
+          location = zuora_billing.Task.instance.Invoice_30_Days_Past_Due__Account_Summary_2_sssszdssu__customObject_task@uuuuuuuumuus.parameters.fields.default__account.something__c
+        },
+      ]
+    },
+  ]
+}

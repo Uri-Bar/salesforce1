@@ -1,0 +1,21 @@
+zuora_billing.WorkflowExport wwwwww_17070 {
+  workflow = zuora_billing.Workflow.instance.wwwwww_17070__wwwwww
+  tasks = [
+    zuora_billing.Task.instance.wwwwww_17070__aaaaa,
+  ]
+  linkages = [
+    {
+      source_workflow_id = zuora_billing.Workflow.instance.wwwwww_17070__wwwwww
+      target_task_id = zuora_billing.Task.instance.wwwwww_17070__aaaaa
+      linkage_type = "Start"
+      
+    },
+  ]
+  additionalProperties = {
+    workflow_definition = {
+      description = ""
+      category = "Default"
+      name = "wwwwww"
+    }
+  }
+}

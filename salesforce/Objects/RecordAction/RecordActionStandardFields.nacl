@@ -1,0 +1,487 @@
+type salesforce.RecordAction {
+  serviceid Id {
+    apiName = "RecordAction.Id"
+    label = "RecordAction ID"
+    queryable = true
+    _hidden_value = true
+    
+    
+  }
+  salesforce.Checkbox IsDeleted {
+    apiName = "RecordAction.IsDeleted"
+    label = "Deleted"
+    defaultValue = false
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.DateTime CreatedDate {
+    apiName = "RecordAction.CreatedDate"
+    label = "Created Date"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Lookup CreatedById {
+    apiName = "RecordAction.CreatedById"
+    label = "Created By ID"
+    referenceTo = [
+      salesforce.User,
+    ]
+    createable = false
+    updateable = false
+    relationshipName = "CreatedBy"
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.DateTime LastModifiedDate {
+    apiName = "RecordAction.LastModifiedDate"
+    label = "Last Modified Date"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Lookup LastModifiedById {
+    apiName = "RecordAction.LastModifiedById"
+    label = "Last Modified By ID"
+    referenceTo = [
+      salesforce.User,
+    ]
+    createable = false
+    updateable = false
+    relationshipName = "LastModifiedBy"
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.DateTime SystemModstamp {
+    apiName = "RecordAction.SystemModstamp"
+    label = "System Modstamp"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Lookup RecordId {
+    apiName = "RecordAction.RecordId"
+    label = "Parent Record ID"
+    _required = true
+    referenceTo = [
+      salesforce.Account,
+      salesforce.Asset,
+      salesforce.AssetRelationship,
+      salesforce.Campaign,
+      salesforce.CampaignMember,
+      salesforce.Case,
+      salesforce.CollaborationGroup,
+      salesforce.Contact,
+      salesforce.Contract,
+      salesforce.Lead,
+      salesforce.Opportunity,
+      salesforce.Order,
+      salesforce.Pricebook2,
+      salesforce.PricebookEntry,
+      salesforce.Product2,
+      salesforce.Quote,
+      salesforce.QuoteLineItem,
+      salesforce.Scorecard,
+      salesforce.SocialPersona,
+      salesforce.SocialPost,
+      salesforce.User,
+      salesforce.Yariv__c,
+    ]
+    createable = true
+    updateable = true
+    relationshipName = "Record"
+    queryable = true
+  }
+  salesforce.Picklist FlowDefinition {
+    apiName = "RecordAction.FlowDefinition"
+    label = "Interaction Definition ID"
+    createable = true
+    updateable = true
+    queryable = true
+    valueSet = [
+      {
+        fullName = "cms_orch__CMS_NotifyRequester"
+        isActive = true
+        label = "cms_orch__CMS_NotifyRequester"
+        default = false
+      },
+      {
+        fullName = "cms_orch__CMS_ReviewContent"
+        isActive = true
+        label = "cms_orch__CMS_ReviewContent"
+        default = false
+      },
+      {
+        fullName = "cms_orch__CMS_ReviseContent"
+        isActive = true
+        label = "cms_orch__CMS_ReviseContent"
+        default = false
+      },
+      {
+        fullName = "cms_orch__CMS_WithdrawReviewRequest"
+        isActive = true
+        label = "cms_orch__CMS_WithdrawReviewRequest"
+        default = false
+      },
+      {
+        fullName = "runtime_industries_epc__SimpleProduct"
+        isActive = true
+        label = "runtime_industries_epc__SimpleProduct"
+        default = false
+      },
+      {
+        fullName = "runtime_industries_recurrence__Orch"
+        isActive = true
+        label = "runtime_industries_recurrence__Orch"
+        default = false
+      },
+      {
+        fullName = "runtime_industries_recurrence__Schdlr"
+        isActive = true
+        label = "runtime_industries_recurrence__Schdlr"
+        default = false
+      },
+    ]
+    restricted = true
+    
+  }
+  salesforce.Lookup FlowInterviewId {
+    apiName = "RecordAction.FlowInterviewId"
+    label = "FlowInterview ID"
+    referenceTo = [
+      "FlowInterview",
+    ]
+    createable = true
+    updateable = true
+    relationshipName = "FlowInterview"
+    queryable = true
+  }
+  salesforce.Number Order {
+    apiName = "RecordAction.Order"
+    label = "Order"
+    _required = true
+    precision = 9
+    createable = true
+    updateable = true
+    scale = 0
+    unique = false
+    queryable = true
+  }
+  salesforce.Picklist Status {
+    apiName = "RecordAction.Status"
+    label = "Status"
+    valueSet = [
+      {
+        fullName = "New"
+        default = true
+        label = "New"
+        isActive = true
+      },
+      {
+        fullName = "Paused"
+        default = false
+        label = "Paused"
+        isActive = true
+      },
+      {
+        fullName = "Complete"
+        default = false
+        label = "Complete"
+        isActive = true
+      },
+      {
+        fullName = "Started"
+        default = false
+        label = "Started"
+        isActive = true
+      },
+      {
+        fullName = "Unlinked"
+        default = false
+        label = "Unlinked"
+        isActive = true
+      },
+    ]
+    restricted = true
+    createable = true
+    updateable = true
+    queryable = true
+    
+  }
+  salesforce.Picklist Pinned {
+    apiName = "RecordAction.Pinned"
+    label = "Pinned"
+    valueSet = [
+      {
+        fullName = "None"
+        default = true
+        label = "None"
+        isActive = true
+      },
+      {
+        fullName = "Top"
+        default = false
+        label = "Top"
+        isActive = true
+      },
+      {
+        fullName = "Bottom"
+        default = false
+        label = "Bottom"
+        isActive = true
+      },
+    ]
+    restricted = true
+    createable = true
+    updateable = true
+    queryable = true
+    
+  }
+  salesforce.Picklist ActionType {
+    apiName = "RecordAction.ActionType"
+    label = "Action Type"
+    valueSet = [
+      {
+        fullName = "Flow"
+        default = true
+        label = "Flow"
+        isActive = true
+      },
+      {
+        fullName = "QuickAction"
+        default = false
+        label = "QuickAction"
+        isActive = true
+      },
+      {
+        fullName = "Omniscript"
+        default = false
+        label = "Omniscript"
+        isActive = true
+      },
+    ]
+    restricted = true
+    createable = true
+    updateable = true
+    queryable = true
+    
+  }
+  salesforce.Picklist ActionDefinition {
+    apiName = "RecordAction.ActionDefinition"
+    label = "Action Definition"
+    valueSet = [
+      {
+        fullName = "cms_orch__CMS_NotifyRequester"
+        isActive = true
+        label = "cms_orch__CMS_NotifyRequester"
+        default = false
+      },
+      {
+        fullName = "cms_orch__CMS_ReviewContent"
+        isActive = true
+        label = "cms_orch__CMS_ReviewContent"
+        default = false
+      },
+      {
+        fullName = "cms_orch__CMS_ReviseContent"
+        isActive = true
+        label = "cms_orch__CMS_ReviseContent"
+        default = false
+      },
+      {
+        fullName = "cms_orch__CMS_WithdrawReviewRequest"
+        isActive = true
+        label = "cms_orch__CMS_WithdrawReviewRequest"
+        default = false
+      },
+      {
+        fullName = "QuickActionDefinition.Account.Child_Account"
+        isActive = true
+        label = "QuickActionDefinition.Account.Child_Account"
+        default = false
+      },
+      {
+        fullName = "QuickActionDefinition.Case._LightningUpdateCase"
+        isActive = true
+        label = "QuickActionDefinition.Case._LightningUpdateCase"
+        default = false
+      },
+      {
+        fullName = "QuickActionDefinition.Case.NewChildCase"
+        isActive = true
+        label = "QuickActionDefinition.Case.NewChildCase"
+        default = false
+      },
+      {
+        fullName = "QuickActionDefinition.CollaborationGroup.NewGroupMember"
+        isActive = true
+        label = "QuickActionDefinition.CollaborationGroup.NewGroupMember"
+        default = false
+      },
+      {
+        fullName = "QuickActionDefinition.CollaborationGroup.NewGroupRecord"
+        isActive = true
+        label = "QuickActionDefinition.CollaborationGroup.NewGroupRecord"
+        default = false
+      },
+      {
+        fullName = "QuickActionDefinition.Contact._LightningRelatedContact"
+        isActive = true
+        label = "QuickActionDefinition.Contact._LightningRelatedContact"
+        default = false
+      },
+      {
+        fullName = "QuickActionDefinition.FeedItem.ContentNote"
+        isActive = true
+        label = "QuickActionDefinition.FeedItem.ContentNote"
+        default = false
+      },
+      {
+        fullName = "QuickActionDefinition.FeedItem.ContentPost"
+        isActive = true
+        label = "QuickActionDefinition.FeedItem.ContentPost"
+        default = false
+      },
+      {
+        fullName = "QuickActionDefinition.FeedItem.LinkPost"
+        isActive = true
+        label = "QuickActionDefinition.FeedItem.LinkPost"
+        default = false
+      },
+      {
+        fullName = "QuickActionDefinition.FeedItem.MobileSmartActions"
+        isActive = true
+        label = "QuickActionDefinition.FeedItem.MobileSmartActions"
+        default = false
+      },
+      {
+        fullName = "QuickActionDefinition.FeedItem.PollPost"
+        isActive = true
+        label = "QuickActionDefinition.FeedItem.PollPost"
+        default = false
+      },
+      {
+        fullName = "QuickActionDefinition.FeedItem.QuestionPost"
+        isActive = true
+        label = "QuickActionDefinition.FeedItem.QuestionPost"
+        default = false
+      },
+      {
+        fullName = "QuickActionDefinition.FeedItem.RypplePost"
+        isActive = true
+        label = "QuickActionDefinition.FeedItem.RypplePost"
+        default = false
+      },
+      {
+        fullName = "QuickActionDefinition.FeedItem.TextPost"
+        isActive = true
+        label = "QuickActionDefinition.FeedItem.TextPost"
+        default = false
+      },
+      {
+        fullName = "QuickActionDefinition.Follow_Up"
+        isActive = true
+        label = "QuickActionDefinition.Follow_Up"
+        default = false
+      },
+      {
+        fullName = "QuickActionDefinition.LogACall"
+        isActive = true
+        label = "QuickActionDefinition.LogACall"
+        default = false
+      },
+      {
+        fullName = "QuickActionDefinition.NewAccount"
+        isActive = true
+        label = "QuickActionDefinition.NewAccount"
+        default = false
+      },
+      {
+        fullName = "QuickActionDefinition.NewCase"
+        isActive = true
+        label = "QuickActionDefinition.NewCase"
+        default = false
+      },
+      {
+        fullName = "QuickActionDefinition.NewContact"
+        isActive = true
+        label = "QuickActionDefinition.NewContact"
+        default = false
+      },
+      {
+        fullName = "QuickActionDefinition.NewEvent"
+        isActive = true
+        label = "QuickActionDefinition.NewEvent"
+        default = false
+      },
+      {
+        fullName = "QuickActionDefinition.NewGroup"
+        isActive = true
+        label = "QuickActionDefinition.NewGroup"
+        default = false
+      },
+      {
+        fullName = "QuickActionDefinition.NewLead"
+        isActive = true
+        label = "QuickActionDefinition.NewLead"
+        default = false
+      },
+      {
+        fullName = "QuickActionDefinition.NewOpportunity"
+        isActive = true
+        label = "QuickActionDefinition.NewOpportunity"
+        default = false
+      },
+      {
+        fullName = "QuickActionDefinition.NewTask"
+        isActive = true
+        label = "QuickActionDefinition.NewTask"
+        default = false
+      },
+      {
+        fullName = "runtime_industries_epc__SimpleProduct"
+        isActive = true
+        label = "runtime_industries_epc__SimpleProduct"
+        default = false
+      },
+      {
+        fullName = "runtime_industries_recurrence__Orch"
+        isActive = true
+        label = "runtime_industries_recurrence__Orch"
+        default = false
+      },
+      {
+        fullName = "runtime_industries_recurrence__Schdlr"
+        isActive = true
+        label = "runtime_industries_recurrence__Schdlr"
+        default = false
+      },
+    ]
+    restricted = true
+    createable = true
+    updateable = true
+    queryable = true
+    
+  }
+  salesforce.Checkbox IsMandatory {
+    apiName = "RecordAction.IsMandatory"
+    label = "Is Mandatory"
+    defaultValue = false
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Checkbox IsUiRemoveHidden {
+    apiName = "RecordAction.IsUiRemoveHidden"
+    label = "Hide Remove Action in UI"
+    defaultValue = false
+    createable = true
+    updateable = true
+    queryable = true
+  }
+}

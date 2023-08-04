@@ -1,0 +1,18 @@
+zuora_billing.Settings_Notification Credit_Balance_Refund_Processed_Credit_Balance_Refund_Processed_8ac69ff278d483ea0178d95495e16922@sssusssu {
+  profileId = zuora_billing.Settings_CommunicationProfile.instance.Neta_test@s
+  eventName = "Credit Balance Refund Processed"
+  name = "Credit Balance Refund Processed"
+  description = "A credit balance refund was processed successfully."
+  active = false
+  hidden = false
+  param1 = "1"
+  emailOption = true
+  emailTemplateName = zuora_billing.PublicEmailTemplate.instance.Credit_Balance_Refund_Processed_Default_Email_Template@s
+  calloutOption = false
+  contentType = "APPLICATION_JSON"
+  calloutRetriable = false
+  calloutAuth = false
+  calloutOauth2 = false
+  calloutPreemptiveAuth = false
+  useCustomRequestBody = false
+}

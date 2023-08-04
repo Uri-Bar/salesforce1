@@ -1,0 +1,4 @@
+netsuite.center custcenteranother_test {
+  scriptid = "custcenteranother_test"
+  label = "lalala"
+}

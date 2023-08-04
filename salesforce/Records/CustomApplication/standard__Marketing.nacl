@@ -1,0 +1,19 @@
+salesforce.CustomApplication standard__Marketing {
+  fullName = "standard__Marketing"
+  defaultLandingTab = "standard-Campaign"
+  isNavAutoTempTabsDisabled = false
+  isNavPersonalizationDisabled = false
+  tabs = [
+    "standard-Campaign",
+    "standard-Lead",
+    "standard-Contact",
+    "standard-Account",
+    "standard-report",
+    "standard-Dashboard",
+    "standard-Chatter",
+    "standard-File",
+    "standard-Quote",
+    salesforce.CustomTab.instance.Yariv__c,
+  ]
+  isNavTabPersistenceDisabled = false
+}

@@ -1,0 +1,12 @@
+netsuite.file SuiteScripts_gwr_gwr_sa3c_js@dduv {
+  bundleable = false
+  isinactive = false
+  availablewithoutlogin = false
+  generateurltimestamp = false
+  hideinbundle = false
+  path = "/SuiteScripts/gwr/gwr_sa3c.js"
+  content = file("netsuite/FileCabinet/SuiteScripts/gwr/gwr_sa3c.js")
+  _parent = [
+    netsuite.folder.instance.SuiteScripts_gwr@d,
+  ]
+}

@@ -1,0 +1,58 @@
+type zuora_billing.doodi_api_name__c {
+  string Id {
+    format = "uuid"
+    label = "Id"
+    origin = "system"
+    type = "string"
+    required = true
+    filterable = true
+  }
+  string CreatedById {
+    label = "CreatedById"
+    origin = "system"
+    type = "string"
+    required = true
+    filterable = false
+    referenceTo = [
+      zuora_billing.user.field.Id,
+    ]
+    cardinality = "manyToOne"
+    recordConstraints = {
+      create = {
+        enforceValidMapping = true
+      }
+    }
+  }
+  string UpdatedById {
+    label = "UpdatedById"
+    origin = "system"
+    type = "string"
+    required = true
+    filterable = false
+    referenceTo = [
+      zuora_billing.user.field.Id,
+    ]
+    cardinality = "manyToOne"
+    recordConstraints = {
+      create = {
+        enforceValidMapping = true
+      }
+    }
+  }
+  string CreatedDate {
+    format = "date-time"
+    origin = "system"
+    type = "string"
+    label = "CreatedDate"
+    required = true
+    filterable = true
+  }
+  string UpdatedDate {
+    format = "date-time"
+    origin = "system"
+    type = "string"
+    label = "UpdatedDate"
+    required = true
+    filterable = true
+  }
+}

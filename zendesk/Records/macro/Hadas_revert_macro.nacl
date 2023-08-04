@@ -1,0 +1,17 @@
+zendesk.macro Hadas_revert_macro@bs {
+  title = "Hadas-revert macro"
+  active = true
+  description = "A test for reverting a change in a macro"
+  actions = [
+    {
+      field = "status"
+      value = "open"
+    },
+    {
+      field = "priority"
+      value = "urgent"
+    },
+  ]
+  raw_title = "Hadas-revert macro"
+  default = false
+}

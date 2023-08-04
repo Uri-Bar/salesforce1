@@ -1,0 +1,41 @@
+workato.recipe multi_salesforce_and_netsuite_1462960@sssu {
+  name = "multi salesforce and netsuite"
+  trigger_application = "salesforce"
+  action_applications = [
+    "salesforce",
+    "rest",
+    "netsuite",
+  ]
+  applications = [
+    "salesforce",
+    "rest",
+    "netsuite",
+  ]
+  description = "When there is a trigger event, do action"
+  folder_id = workato.folder.instance.neta1_318283
+  running = false
+  version_no = 4
+  config = [
+    {
+      keyword = "application"
+      provider = "salesforce"
+      skip_validation = false
+      name = "salesforce"
+      account_id = workato.connection.instance.Neta_sfdev1@s
+    },
+    {
+      keyword = "application"
+      provider = "rest"
+      skip_validation = false
+      name = "rest"
+    },
+    {
+      keyword = "application"
+      provider = "netsuite"
+      skip_validation = false
+      name = "netsuite"
+      account_id = workato.connection.instance.Test_NetSuite_account@s
+    },
+  ]
+  code = workato.recipe__code.instance.multi_salesforce_and_netsuite_1462960_sssu@uuuum
+}

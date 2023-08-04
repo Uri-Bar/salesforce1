@@ -1,0 +1,89 @@
+zendesk.view Strategic_accounts_view@s {
+  title = "Strategic accounts view"
+  active = true
+  execution = {
+    group_order = "desc"
+    sort_order = "desc"
+    columns = [
+      {
+        id = "satisfaction_score"
+        title = "Satisfaction"
+        filterable = true
+        sortable = true
+      },
+      {
+        id = "subject"
+        title = "Subject"
+        filterable = false
+        sortable = false
+      },
+      {
+        id = "requester"
+        title = "Requester"
+        filterable = true
+        sortable = true
+      },
+      {
+        id = "created"
+        title = "Requested"
+        filterable = false
+        sortable = true
+      },
+      {
+        id = "assignee"
+        title = "Assignee"
+        filterable = true
+        sortable = true
+      },
+    ]
+    fields = [
+      {
+        id = "satisfaction_score"
+        title = "Satisfaction"
+        filterable = true
+        sortable = true
+      },
+      {
+        id = "subject"
+        title = "Subject"
+        filterable = false
+        sortable = false
+      },
+      {
+        id = "requester"
+        title = "Requester"
+        filterable = true
+        sortable = true
+      },
+      {
+        id = "created"
+        title = "Requested"
+        filterable = false
+        sortable = true
+      },
+      {
+        id = "assignee"
+        title = "Assignee"
+        filterable = true
+        sortable = true
+      },
+    ]
+  }
+  conditions = {
+    all = [
+      {
+        field = "ticket_form_id"
+        operator = "is"
+        value = zendesk.ticket_form.instance.Strategic_accounts_form@s
+      },
+      {
+        field = "assignee_id"
+        operator = "is"
+        value = ""
+      },
+    ]
+  }
+  
+  raw_title = "Strategic accounts view"
+  default = false
+}

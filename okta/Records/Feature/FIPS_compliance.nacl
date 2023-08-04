@@ -1,0 +1,11 @@
+okta.Feature FIPS_compliance@s {
+  
+  type = "self-service"
+  status = "DISABLED"
+  name = "FIPS compliance"
+  description = "This feature allows you to configure FIPS compliance on iOS or Android devices that enroll in Okta Verify."
+  stage = {
+    value = "EA"
+  }
+  
+}

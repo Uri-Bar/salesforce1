@@ -1,0 +1,8 @@
+workato.recipe LiorTest1_1778184 {
+  name = "LiorTest1"
+  description = "When there is a trigger event, do action"
+  folder_id = workato.folder.instance.LiorTests_318283
+  running = false
+  version_no = 1
+  code = workato.recipe__code.instance.LiorTest1_1778184
+}

@@ -1,0 +1,12 @@
+stripe.reporting_report_type payments_dashboard_customer_payments_v1@uvuv {
+  id = "payments_dashboard.customer_payments.v1"
+  default_columns = [
+    "start_time",
+    "currency",
+    "registered_revenue",
+    "guest_revenue",
+  ]
+  livemode = false
+  name = "Customer payments"
+  version = 1
+}

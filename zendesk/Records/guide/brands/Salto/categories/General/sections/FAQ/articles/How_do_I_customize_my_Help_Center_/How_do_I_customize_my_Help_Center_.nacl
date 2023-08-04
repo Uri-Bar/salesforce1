@@ -1,0 +1,16 @@
+zendesk.article How_do_I_customize_my_Help_Center__FAQ_General_Salto@ssssssauuu {
+  author_id = "neta.marcus+zendesk@salto.io"
+  comments_disabled = false
+  draft = false
+  promoted = false
+  section_id = zendesk.section.instance.FAQ_General_Salto
+  source_locale = zendesk.guide_language_settings.instance.Salto_en_us@ub
+  locale = zendesk.guide_language_settings.instance.Salto_en_us@ub
+  outdated = false
+  permission_group_id = zendesk.permission_group.instance.Admins
+  translations = [
+    zendesk.article_translation.instance.How_do_I_customize_my_Help_Center__FAQ_General_Salto_ssssssauuu__Salto_en_us_ub@uuuuuuuuuumuuuum,
+  ]
+  brand = zendesk.brand.instance.Salto
+  user_segment_id = zendesk.user_segment.instance.Everyone
+}

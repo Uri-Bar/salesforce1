@@ -1,0 +1,19 @@
+zendesk.ticket_field DP_Priority_tagger {
+  type = "tagger"
+  raw_title = "DP_Priority"
+  raw_description = ""
+  active = true
+  required = false
+  collapsed_for_agents = false
+  raw_title_in_portal = "DP_Priority"
+  visible_in_portal = false
+  editable_in_portal = false
+  required_in_portal = false
+  removable = true
+  custom_field_options = [
+    zendesk.ticket_field__custom_field_options.instance.DP_Priority_tagger__urgent,
+    zendesk.ticket_field__custom_field_options.instance.DP_Priority_tagger__important,
+    zendesk.ticket_field__custom_field_options.instance.DP_Priority_tagger__urgent_and_important,
+    zendesk.ticket_field__custom_field_options.instance.DP_Priority_tagger__maybe_someday,
+  ]
+}

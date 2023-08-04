@@ -1,0 +1,73 @@
+workato.recipe__code Update_Lead_in_Salesforce_DP_Root_sssuu@uuuuum {
+  number = 0
+  provider = "salesforce"
+  name = "new_custom_object"
+  as = "3ac2f9e0"
+  title = "New Lead"
+  description = "New <span class=\"provider\">Lead</span> in <span class=\"provider\">Salesforce</span>"
+  keyword = "trigger"
+  dynamicPickListSelection = {
+    sobject_name = "Lead"
+    field_list = [
+      {
+        label = "Lead ID"
+        value = "Id"
+      },
+      {
+        label = "First Name"
+        value = "FirstName"
+      },
+      {
+        label = "Last Name"
+        value = "LastName"
+      },
+      {
+        label = "Company"
+        value = "Company"
+      },
+      {
+        label = "Zip/Postal Code"
+        value = "PostalCode"
+      },
+    ]
+  }
+  input = {
+    sobject_name = "Lead"
+    since_offset = "-3600"
+    field_list = '''
+Id
+FirstName
+LastName
+Company
+PostalCode
+'''
+  }
+  block = [
+    {
+      number = 1
+      provider = "salesforce"
+      name = "update_sobject"
+      as = "4360b1c7"
+      title = "Update Lead"
+      description = "Update <span class=\"provider\">Lead</span> in <span class=\"provider\">Salesforce</span>"
+      keyword = "action"
+      dynamicPickListSelection = {
+        sobject_name = "Lead"
+      }
+      input = {
+        sobject_name = "Lead"
+        id = "#{_('data.salesforce.3ac2f9e0.Id')}"
+        LastName = "Putman"
+      }
+      visible_config_fields = [
+        "sobject_name",
+        "LastName",
+      ]
+      uuid = "035a85ff-8bd6-46e3-a27a-c31bcee8412b"
+    },
+  ]
+  uuid = "351882b1-7c02-4a5e-8f16-931c82211f24"
+  _parent = [
+    workato.recipe.instance.Update_Lead_in_Salesforce_DP_Root@sssuu,
+  ]
+}

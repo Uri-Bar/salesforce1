@@ -1,0 +1,176 @@
+type zuora_billing.revenuerecognitioneventstransaction {
+  string Id {
+    type = "string"
+    label = "Id"
+    format = "uuid"
+    required = false
+    filterable = false
+  }
+  string CreatedById {
+    type = "string"
+    label = "CreatedById"
+    format = "uuid"
+    required = false
+    filterable = false
+  }
+  string CreatedDate {
+    type = "string"
+    format = "date-time"
+    label = "CreatedDate"
+    required = false
+    filterable = false
+  }
+  string UpdatedById {
+    type = "string"
+    label = "UpdatedById"
+    format = "uuid"
+    required = false
+    filterable = false
+  }
+  string UpdatedDate {
+    type = "string"
+    format = "date-time"
+    label = "UpdatedDate"
+    required = false
+    filterable = false
+  }
+  boolean deleted {
+    type = "boolean"
+    label = "deleted"
+    required = false
+    filterable = false
+  }
+  string AccountId {
+    type = "string"
+    label = "AccountId"
+    format = "uuid"
+    required = false
+    filterable = false
+  }
+  string OriginalRatePlanChargeId {
+    type = "string"
+    label = "OriginalRatePlanChargeId"
+    format = "uuid"
+    required = false
+    filterable = false
+  }
+  string ChargeNumber {
+    type = "string"
+    label = "ChargeNumber"
+    maxLength = 512
+    required = false
+    filterable = false
+  }
+  number ChargeSegment {
+    type = "integer"
+    label = "ChargeSegment"
+    required = false
+    filterable = false
+  }
+  string TransactionDate {
+    type = "string"
+    label = "TransactionDate"
+    format = "date"
+    required = false
+    filterable = false
+  }
+  number DailyAmount {
+    type = "number"
+    label = "DailyAmount"
+    required = false
+    filterable = false
+  }
+  number DailyQuantity {
+    type = "number"
+    label = "DailyQuantity"
+    required = false
+    filterable = false
+  }
+  string Type {
+    type = "string"
+    label = "Type"
+    maxLength = 512
+    required = false
+    filterable = false
+  }
+  boolean ExcludeItemBookingFromRevenueAccounting {
+    type = "boolean"
+    label = "ExcludeItemBookingFromRevenueAccounting"
+    required = false
+    filterable = false
+  }
+  string SubscriptionName {
+    type = "string"
+    label = "SubscriptionName"
+    maxLength = 512
+    required = false
+    filterable = false
+  }
+  string SalesOrderLineId {
+    type = "string"
+    label = "SalesOrderLineId"
+    maxLength = 512
+    required = false
+    filterable = false
+  }
+  number UnitPrice {
+    type = "number"
+    label = "UnitPrice"
+    required = false
+    filterable = false
+  }
+  boolean ExcludeItemBillingFromRevenueAccounting {
+    type = "boolean"
+    label = "ExcludeItemBillingFromRevenueAccounting"
+    required = false
+    filterable = false
+  }
+  string FundId {
+    type = "string"
+    label = "FundId"
+    maxLength = 512
+    required = false
+    filterable = false
+  }
+  string FundStartDate {
+    type = "string"
+    label = "FundStartDate"
+    format = "date-time"
+    required = false
+    filterable = false
+  }
+  string FundEndDate {
+    type = "string"
+    label = "FundEndDate"
+    format = "date-time"
+    required = false
+    filterable = false
+  }
+  string DrawdownOriginalChargeId {
+    type = "string"
+    label = "DrawdownOriginalChargeId"
+    maxLength = 512
+    required = false
+    filterable = false
+  }
+  number DrawdownChargeSegment {
+    type = "integer"
+    label = "DrawdownChargeSegment"
+    required = false
+    filterable = false
+  }
+  string DdAdjustmentRevGlAccNumber {
+    type = "string"
+    label = "DdAdjustmentRevGlAccNumber"
+    maxLength = 512
+    required = false
+    filterable = false
+  }
+  string DdRecognizedRevGlAccNumber {
+    type = "string"
+    label = "DdRecognizedRevGlAccNumber"
+    maxLength = 512
+    required = false
+    filterable = false
+  }
+}

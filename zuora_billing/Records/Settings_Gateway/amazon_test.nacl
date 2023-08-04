@@ -1,0 +1,9 @@
+zuora_billing.Settings_Gateway amazon_test@s {
+  paymentGatewayType = "AmazonPay 0"
+  gatewayName = "amazon test"
+  active = true
+  authDefaultAmount = 1
+  verifyPaymentMethodNew = true
+  verifyPaymentMethodUpdated = true
+  warning = "Currently the API does not support this gateway type"
+}

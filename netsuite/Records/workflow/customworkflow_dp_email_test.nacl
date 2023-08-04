@@ -1,0 +1,56 @@
+netsuite.workflow customworkflow_dp_email_test {
+  scriptid = "customworkflow_dp_email_test"
+  initcontexts = "ACTION|BANKCONNECTIVITY|BANKSTATEMENTPARSER|BUNDLEINSTALLATION|CLIENT|CSVIMPORT|CUSTOMGLLINES|CUSTOMMASSUPDATE|RECORDACTION|DATASETBUILDER|DEBUGGER|EMAILCAPTURE|FICONNECTIVITY|FIPARSER|MAPREDUCE|OCRPLUGIN|OFFLINECLIENT|OTHER|PAYMENTPOSTBACK|PAYMENTGATEWAY|PLATFORMEXTENSION|PORTLET|PROMOTIONS|CONSOLRATEADJUSTOR|RESTWEBSERVICES|RESTLET|ADVANCEDREVREC|SCHEDULED|SDFINSTALLATION|SHIPPINGPARTNERS|WEBSERVICES|SUITELET|TAXCALCULATION|USEREVENT|USERINTERFACE|WORKBOOKBUILDER|WORKFLOW"
+  initoncreate = false
+  initonvieworupdate = false
+  isinactive = false
+  islogenabled = false
+  keephistory = "ONLYWHENTESTING"
+  name = "DP_Email_Test"
+  recordtypes = "CASHSALE"
+  releasestatus = "TESTING"
+  runasadmin = false
+  initcondition = {
+    type = "VISUAL_BUILDER"
+  }
+  workflowstates = {
+    workflowstate = {
+      workflowstate452 = {
+        scriptid = "workflowstate452"
+        donotexitworkflow = false
+        name = "Send Email"
+        positionx = 243
+        positiony = 133
+        workflowactions = {
+          ONENTRY = {
+            triggertype = "ONENTRY"
+            sendemailaction = {
+              workflowaction1284 = {
+                scriptid = "workflowaction1284"
+                attachmenttype = "SPECIFIC"
+                body = "Here is a transaction being made!"
+                contexttypes = "ACTION|BANKCONNECTIVITY|BANKSTATEMENTPARSER|BUNDLEINSTALLATION|CLIENT|CSVIMPORT|CUSTOMGLLINES|CUSTOMMASSUPDATE|RECORDACTION|DATASETBUILDER|DEBUGGER|EMAILCAPTURE|FICONNECTIVITY|FIPARSER|MAPREDUCE|OCRPLUGIN|OFFLINECLIENT|OTHER|PAYMENTPOSTBACK|PAYMENTGATEWAY|PLATFORMEXTENSION|PORTLET|PROMOTIONS|CONSOLRATEADJUSTOR|RESTWEBSERVICES|RESTLET|ADVANCEDREVREC|SCHEDULED|SDFINSTALLATION|SHIPPINGPARTNERS|WEBSERVICES|SUITELET|TAXCALCULATION|USEREVENT|USERINTERFACE|WORKBOOKBUILDER|WORKFLOW"
+                includerecordlink = false
+                includetransaction = false
+                isinactive = false
+                recipient = "[ACCOUNT_SPECIFIC_VALUE]"
+                recipienttype = "SPECIFIC"
+                schedulemode = "DELAY"
+                sender = "[ACCOUNT_SPECIFIC_VALUE]"
+                sendertype = "SPECIFIC"
+                subject = "DP made a transaction"
+                usetemplate = false
+                initcondition = {
+                  type = "VISUAL_BUILDER"
+                }
+                index = 0
+              }
+            }
+            
+          }
+        }
+        index = 0
+      }
+    }
+  }
+}

@@ -1,0 +1,8 @@
+workato.recipe__code Test1_1462957 {
+  number = 0
+  keyword = "trigger"
+  uuid = "c65b2518-00c9-437a-9c1c-3c4f34598644"
+  _parent = [
+    workato.recipe.instance.Test1_1462957,
+  ]
+}

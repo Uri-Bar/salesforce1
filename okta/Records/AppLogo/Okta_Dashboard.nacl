@@ -1,0 +1,8 @@
+okta.AppLogo Okta_Dashboard@s {
+  fileName = "Okta_Dashboard@s.png"
+  contentType = "png"
+  content = file("okta/AppLogo/Okta_Dashboard@s.png")
+  _parent = [
+    okta.Application.instance.Okta_Dashboard@s,
+  ]
+}

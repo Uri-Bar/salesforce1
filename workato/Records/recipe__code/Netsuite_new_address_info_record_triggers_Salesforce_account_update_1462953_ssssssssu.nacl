@@ -1,0 +1,68 @@
+workato.recipe__code Netsuite_new_address_info_record_triggers_Salesforce_account_update_1462953_ssssssssu@uuuuuuuuum {
+  number = 0
+  provider = "netsuite"
+  name = "new_custom_object"
+  as = "ad3fa54c"
+  title = "New Custom account address info"
+  description = '''
+          New <span class="provider">Custom account address info</span>
+          in <span class="provider">NetSuite</span>
+
+'''
+  keyword = "trigger"
+  dynamicPickListSelection = {
+    netsuite_object = "Custom account address info"
+  }
+  input = {
+    netsuite_object = "Custom account address info@@customrecord16"
+    since = "2021-03-03T05:00:00-08:00"
+  }
+  block = [
+    {
+      number = 1
+      keyword = "if"
+      input = {
+        type = "compound"
+        operand = "and"
+        conditions = [
+          {
+            operand = "present"
+            lhs = "#{_('data.netsuite.ad3fa54c.custom_fields.f_custrecordaccount_id')}"
+          },
+        ]
+      }
+      block = [
+        {
+          number = 2
+          provider = "salesforce"
+          name = "update_sobject"
+          as = "78214c26"
+          title = "Update Account"
+          description = "Update <span class=\"provider\">Account</span> in <span class=\"provider\">Salesforce</span>"
+          keyword = "action"
+          dynamicPickListSelection = {
+            sobject_name = "Account"
+          }
+          input = {
+            sobject_name = "Account"
+            id = "#{_('data.netsuite.ad3fa54c.custom_fields.f_custrecordaccount_id')}"
+            Netsuite_city__c = "#{_('data.netsuite.ad3fa54c.custom_fields.f_custrecord5')}"
+          }
+          visible_config_fields = [
+            "sobject_name",
+            "BillingCity",
+            "BillingStreet",
+            "BillingPostalCode",
+            "Netsuite_city__c",
+          ]
+          uuid = "f87f946a-d72a-48df-ac27-cc699fc0447f"
+        },
+      ]
+      uuid = "be6bda21-0284-410e-be13-f63e33c703e1"
+    },
+  ]
+  uuid = "43b45cdd-884f-4fe1-a80a-584a868e0c71"
+  _parent = [
+    workato.recipe.instance.Netsuite_new_address_info_record_triggers_Salesforce_account_update_1462953@ssssssssu,
+  ]
+}

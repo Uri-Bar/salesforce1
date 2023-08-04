@@ -1,0 +1,25 @@
+type zuora_billing.amendment {
+  annotations {
+    string metadataType {
+    }
+    string label {
+    }
+    string description {
+    }
+    hidden_string id {
+    }
+    string objectType {
+    }
+  }
+  metadataType = "StandardObject"
+  objectType = "amendment"
+  _generated_dependencies = [
+    {
+      reference = zuora_billing.subscription
+    },
+    {
+      reference = zuora_billing.user
+    },
+  ]
+  label = "Amendment"
+}

@@ -1,0 +1,9 @@
+netsuite.folder SuiteScripts_InnerFolder_Test@d {
+  bundleable = false
+  isinactive = false
+  isprivate = false
+  path = "/SuiteScripts/InnerFolder/Test"
+  _parent = [
+    netsuite.folder.instance.SuiteScripts_InnerFolder@d,
+  ]
+}

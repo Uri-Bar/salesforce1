@@ -1,0 +1,151 @@
+type salesforce.ScorecardMetric {
+  salesforce.Picklist Category {
+    apiName = "ScorecardMetric.Category"
+    
+    label = "Category"
+    valueSet = [
+      {
+        fullName = "Sales"
+        default = true
+        label = "Sales"
+        isActive = true
+      },
+      {
+        fullName = "Marketing"
+        default = false
+        label = "Marketing"
+        isActive = true
+      },
+      {
+        fullName = "Field Enablement"
+        default = false
+        label = "Field Enablement"
+        isActive = true
+      },
+      {
+        fullName = "Support"
+        default = false
+        label = "Support"
+        isActive = true
+      },
+      {
+        fullName = "Adoption"
+        default = false
+        label = "Adoption"
+        isActive = true
+      },
+    ]
+    restricted = false
+    createable = true
+    updateable = true
+    queryable = true
+    
+  }
+  salesforce.TextArea Description {
+    apiName = "ScorecardMetric.Description"
+    label = "Description"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Text Name {
+    apiName = "ScorecardMetric.Name"
+    label = "Name"
+    _required = true
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    length = 255
+    queryable = true
+  }
+  salesforce.Lookup ReportId {
+    apiName = "ScorecardMetric.ReportId"
+    
+    label = "Report ID"
+    referenceTo = [
+      "Report",
+    ]
+    createable = true
+    updateable = true
+    relationshipName = "Report"
+    queryable = true
+  }
+  salesforce.MasterDetail ScorecardId {
+    apiName = "ScorecardMetric.ScorecardId"
+    relationshipName = "Scorecard"
+    referenceTo = [
+      salesforce.Scorecard,
+    ]
+    _required = true
+    label = "Scorecard ID"
+    createable = true
+    updateable = false
+    queryable = true
+  }
+  serviceid Id {
+    apiName = "ScorecardMetric.Id"
+    label = "Scorecard Metric Id"
+    queryable = true
+    _hidden_value = true
+    
+    
+  }
+  salesforce.Checkbox IsDeleted {
+    apiName = "ScorecardMetric.IsDeleted"
+    label = "Deleted"
+    defaultValue = false
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.DateTime CreatedDate {
+    apiName = "ScorecardMetric.CreatedDate"
+    label = "Created Date"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Lookup CreatedById {
+    apiName = "ScorecardMetric.CreatedById"
+    label = "Created By ID"
+    referenceTo = [
+      salesforce.User,
+    ]
+    createable = false
+    updateable = false
+    relationshipName = "CreatedBy"
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.DateTime LastModifiedDate {
+    apiName = "ScorecardMetric.LastModifiedDate"
+    label = "Last Modified Date"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Lookup LastModifiedById {
+    apiName = "ScorecardMetric.LastModifiedById"
+    label = "Last Modified By ID"
+    referenceTo = [
+      salesforce.User,
+    ]
+    createable = false
+    updateable = false
+    relationshipName = "LastModifiedBy"
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.DateTime SystemModstamp {
+    apiName = "ScorecardMetric.SystemModstamp"
+    label = "System Modstamp"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+}

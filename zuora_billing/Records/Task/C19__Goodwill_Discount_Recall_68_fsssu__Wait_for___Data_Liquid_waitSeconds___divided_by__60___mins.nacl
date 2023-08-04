@@ -1,0 +1,22 @@
+zuora_billing.Task C19__Goodwill_Discount_Recall_68_fsssu__Wait_for___Data_Liquid_waitSeconds___divided_by__60___mins@uuuuumuuss_00123_00123vvsgsufs_00125_00125s {
+  name = "Wait for {{Data.Liquid.waitSeconds | divided_by: 60}} mins"
+  parameters = {
+    delay_time = "{{Data.Liquid.waitSeconds}}"
+    strict_variables = "true"
+  }
+  action_type = "Delay"
+  call_type = "SOAP"
+  task_id = 93
+  concurrent_limit = 9999999
+  additionalProperties = {
+    css = {
+      top = "370px"
+      left = "420px"
+    }
+    priority = "Medium"
+    
+  }
+  _parent = [
+    zuora_billing.WorkflowExport.instance.C19__Goodwill_Discount_Recall_68@fsssu,
+  ]
+}

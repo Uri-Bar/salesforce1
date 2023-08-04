@@ -1,0 +1,33 @@
+okta.OktaSignOnPolicyRule Default_Policy_s__Default_Rule@umuus {
+  status = "ACTIVE"
+  name = "Default Rule"
+  priority = 1
+  system = true
+  conditions = {
+    network = {
+      connection = "ANYWHERE"
+    }
+    authContext = {
+      authType = "ANY"
+    }
+  }
+  actions = {
+    signon = {
+      access = "ALLOW"
+      requireFactor = false
+      rememberDeviceByDefault = false
+      session = {
+        usePersistentCookie = false
+        maxSessionIdleMinutes = 120
+        maxSessionLifetimeMinutes = 0
+      }
+      additionalProperties = {
+        primaryFactor = "PASSWORD_IDP"
+      }
+    }
+  }
+  type = "SIGN_ON"
+  _parent = [
+    okta.OktaSignOnPolicy.instance.Default_Policy@s,
+  ]
+}

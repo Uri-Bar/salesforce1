@@ -1,0 +1,10 @@
+jira.Field Compass__extension_61de211f_8732_44ee_ace2_490fbca80575_b77371bd_a301_42b5_bc21_691f2b6dd5c7_static_compass_jira_integration_custom_field__c@uudbbbbdbbbbddbbbbuu {
+  name = "Compass"
+  description = "Track work on Compass components using Jira issues."
+  isLocked = true
+  searcherKey = "com.atlassian.jira.plugin.system.customfieldtypes:forgeCustomFieldSearcher"
+  type = "ari:cloud:ecosystem::extension/61de211f-8732-44ee-ace2-490fbca80575/b77371bd-a301-42b5-bc21-691f2b6dd5c7/static/compass-jira-integration-custom-field"
+  contexts = [
+    jira.CustomFieldContext.instance.Compass__extension_61de211f_8732_44ee_ace2_490fbca80575_b77371bd_a301_42b5_bc21_691f2b6dd5c7_static_compass_jira_integration_custom_field__c_uudbbbbdbbbbddbbbbuu_Default_Configuration_Scheme_for_Compass@uuuuuuuuuuuuuuuuuuuumussss,
+  ]
+}

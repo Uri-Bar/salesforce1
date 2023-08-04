@@ -1,0 +1,22 @@
+salesforce.WebLink Contact_GoogleSearch {
+  fullName = "Contact.GoogleSearch"
+  availability = "online"
+  displayType = "link"
+  encodingKey = "UTF-8"
+  hasMenubar = false
+  hasScrollbars = true
+  hasToolbar = false
+  height = 600
+  isResizable = true
+  linkType = "url"
+  masterLabel = "Google Search"
+  openType = "newWindow"
+  position = "none"
+  protected = false
+  showsLocation = false
+  showsStatus = false
+  url = "http://www.google.com/search?q={!Contact_FirstName} {!Contact_LastName}"
+  _parent = [
+    salesforce.Contact,
+  ]
+}

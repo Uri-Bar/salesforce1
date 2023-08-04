@@ -1,0 +1,47 @@
+type salesforce.CaseSubjectParticle {
+  annotations {
+    serviceid metadataType {
+    }
+    boolean hasMetaFile {
+    }
+    string folderType {
+    }
+    string folderContentType {
+    }
+    string suffix {
+    }
+    string dirName {
+    }
+  }
+  serviceid fullName {
+  }
+  number index {
+  }
+  string textField {
+  }
+  string type {
+    _restriction = {
+      enforce_value = false
+      values = [
+        "ColonSeparator",
+        "Content",
+        "HyphenSeparator",
+        "MessageType",
+        "PipeSeparator",
+        "ProvidedString",
+        "RealName",
+        "Sentiment",
+        "SocialHandle",
+        "SocialNetwork",
+        "Source",
+      ]
+    }
+  }
+  string internalId {
+    _hidden_value = true
+    localOnly = true
+  }
+  suffix = "CaseSubjectParticle"
+  dirName = "CaseSubjectParticles"
+  metadataType = "CaseSubjectParticle"
+}

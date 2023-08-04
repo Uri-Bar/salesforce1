@@ -1,0 +1,77 @@
+type salesforce.FlowScreen {
+  annotations {
+    serviceid metadataType {
+    }
+    boolean hasMetaFile {
+    }
+    string folderType {
+    }
+    string folderContentType {
+    }
+    string suffix {
+    }
+    string dirName {
+    }
+  }
+  boolean allowBack {
+  }
+  boolean allowFinish {
+  }
+  boolean allowPause {
+  }
+  salesforce.FlowConnector connector {
+  }
+  string description {
+  }
+  string elementSubtype {
+    _restriction = {
+      enforce_value = false
+      values = [
+        "BackgroundStep",
+        "FilterCollectionProcessor",
+        "InteractiveStep",
+        "ManagedContentRoleInteractiveStep",
+        "ManagedContentVariantSetLockBackgroundStep",
+        "ManagedContentVariantSetReadyBackgroundStep",
+        "MuleSoftStep",
+        "RecommendationMapCollectionProcessor",
+        "SortCollectionProcessor",
+        "WaitAttribute",
+        "WaitDate",
+        "WaitDuration",
+      ]
+    }
+    foreignKeyDomain = [
+      "FlowElementSubtypeDefinition",
+    ]
+  }
+  salesforce.FlowScreenField fields {
+  }
+  string helpText {
+  }
+  string label {
+  }
+  number locationX {
+  }
+  number locationY {
+  }
+  string name {
+  }
+  string pausedText {
+  }
+  salesforce.FlowMetadataValue processMetadataValues {
+  }
+  salesforce.FlowScreenRule rules {
+  }
+  boolean showFooter {
+  }
+  boolean showHeader {
+  }
+  metadataType = "FlowScreen"
+  string backButtonLabel {
+  }
+  string nextOrFinishButtonLabel {
+  }
+  string pauseButtonLabel {
+  }
+}

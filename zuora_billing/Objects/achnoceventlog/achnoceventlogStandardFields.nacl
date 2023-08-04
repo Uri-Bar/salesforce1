@@ -1,0 +1,128 @@
+type zuora_billing.achnoceventlog {
+  string Id {
+    type = "string"
+    label = "Id"
+    format = "uuid"
+    required = false
+    filterable = false
+  }
+  string PaymentMethodId {
+    type = "string"
+    label = "PaymentMethodId"
+    format = "uuid"
+    required = false
+    filterable = false
+  }
+  string AchMaskedAccountNumber {
+    type = "string"
+    label = "AchMaskedAccountNumber"
+    maxLength = 512
+    required = false
+    filterable = false
+  }
+  string AchAbaCode {
+    type = "string"
+    label = "AchAbaCode"
+    maxLength = 512
+    required = false
+    filterable = false
+  }
+  string AchAccountType {
+    type = "string"
+    label = "AchAccountType"
+    maxLength = 512
+    required = false
+    filterable = false
+  }
+  string UpdatedAchMaskedAccountNumber {
+    type = "string"
+    label = "UpdatedAchMaskedAccountNumber"
+    maxLength = 512
+    required = false
+    filterable = false
+  }
+  string UpdatedAchAbaCode {
+    type = "string"
+    label = "UpdatedAchAbaCode"
+    maxLength = 512
+    required = false
+    filterable = false
+  }
+  string UpdatedAchAccountType {
+    type = "string"
+    label = "UpdatedAchAccountType"
+    maxLength = 512
+    required = false
+    filterable = false
+  }
+  string NocCode {
+    type = "string"
+    label = "NocCode"
+    maxLength = 512
+    required = false
+    filterable = false
+  }
+  string PmReconciliationEventId {
+    type = "string"
+    label = "PmReconciliationEventId"
+    format = "uuid"
+    required = false
+    filterable = false
+  }
+  string PaymentMethodUpdatedDate {
+    type = "string"
+    label = "PaymentMethodUpdatedDate"
+    format = "date-time"
+    required = false
+    filterable = false
+  }
+  string LogStatus {
+    type = "string"
+    label = "LogStatus"
+    maxLength = 512
+    required = false
+    filterable = false
+  }
+  string Reason {
+    type = "string"
+    label = "Reason"
+    maxLength = 512
+    required = false
+    filterable = false
+  }
+  string ReasonMessage {
+    type = "string"
+    label = "ReasonMessage"
+    maxLength = 512
+    required = false
+    filterable = false
+  }
+  string CreatedBy {
+    type = "string"
+    label = "CreatedBy"
+    maxLength = 512
+    required = false
+    filterable = false
+  }
+  string CreatedOn {
+    type = "string"
+    label = "CreatedOn"
+    format = "date-time"
+    required = false
+    filterable = false
+  }
+  string UpdatedBy {
+    type = "string"
+    label = "UpdatedBy"
+    maxLength = 512
+    required = false
+    filterable = false
+  }
+  string UpdatedOn {
+    type = "string"
+    label = "UpdatedOn"
+    format = "date-time"
+    required = false
+    filterable = false
+  }
+}

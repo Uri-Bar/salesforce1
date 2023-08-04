@@ -1,0 +1,55 @@
+workato.recipe__code Copy_of_callable1_salesforce_accounts_1463845_ssssu@uuuuum {
+  number = 0
+  provider = "workato_service"
+  name = "receive_request"
+  as = "cd06bb51"
+  description = "New <span class=\"provider\">call</span> for <span class=\"provider\">my callable1 #{_('data.workato.job_context.user_name')}#{_('data.workato.job_context.user_name')}</span>"
+  keyword = "trigger"
+  input = {
+    service_name = "my callable1 #{_('data.workato.job_context.user_name')}#{_('data.workato.job_context.user_name')}"
+    request_schema_json = "[{\"name\":\"res123\",\"type\":\"string\",\"optional\":false,\"control_type\":\"text\"}]"
+    reply_schema_json = "[{\"name\":\"res456\",\"type\":\"string\",\"optional\":false,\"control_type\":\"text\"}]"
+  }
+  block = [
+    {
+      number = 1
+      provider = "salesforce"
+      name = "search_sobjects"
+      as = "0b739be3"
+      title = "Search Accounts"
+      description = "Search for <span class=\"provider\">Accounts</span> in <span class=\"provider\">Salesforce</span>"
+      keyword = "action"
+      dynamicPickListSelection = {
+        sobject_name = "Account"
+        field_list = [
+          {
+            label = "Billing Street"
+            value = "BillingStreet"
+          },
+          {
+            label = "Jigsaw Company ID"
+            value = "JigsawCompanyId"
+          },
+          {
+            label = "DemoSaltoDate"
+            value = "DemoSaltoDate__c"
+          },
+        ]
+      }
+      input = {
+        limit = "150"
+        sobject_name = "Account"
+        field_list = '''
+BillingStreet
+JigsawCompanyId
+DemoSaltoDate__c
+'''
+      }
+      uuid = "98ae3feb-6002-4f93-bcdd-ec6ca2c93cbc"
+    },
+  ]
+  uuid = "3db7a0f9-3883-41c1-8559-2bb168b5a72f"
+  _parent = [
+    workato.recipe.instance.Copy_of_callable1_salesforce_accounts_1463845@ssssu,
+  ]
+}

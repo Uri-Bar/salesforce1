@@ -1,0 +1,15 @@
+netsuite.account Accounts_Receivable@s {
+  acctType = "_accountsReceivable"
+  acctName = "Accounts Receivable"
+  includeChildren = true
+  generalRate = "_current"
+  cashFlowRate = "_average"
+  isInactive = false
+  inventory = false
+  subsidiaryList = [
+    netsuite.subsidiary.instance.Parent_Company@s,
+  ]
+  revalue = true
+  identifier = "Accounts Receivable"
+  custom_custrecord_acct_special = false
+}

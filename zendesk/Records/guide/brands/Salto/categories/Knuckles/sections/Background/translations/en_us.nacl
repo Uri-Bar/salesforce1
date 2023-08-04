@@ -1,0 +1,11 @@
+zendesk.section_translation Background_Knuckles_Salto__Salto_en_us_ub@uuuuuum {
+  locale = zendesk.guide_language_settings.instance.Salto_en_us@ub
+  title = "Background"
+  outdated = false
+  draft = false
+  hidden = false
+  brand = zendesk.brand.instance.Salto
+  _parent = [
+    zendesk.section.instance.Background_Knuckles_Salto,
+  ]
+}

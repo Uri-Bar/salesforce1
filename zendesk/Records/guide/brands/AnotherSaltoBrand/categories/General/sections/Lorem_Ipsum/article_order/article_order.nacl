@@ -1,0 +1,9 @@
+zendesk.article_order Lorem_Ipsum_General_AnotherSaltoBrand_suu@uuum {
+  articles = [
+    zendesk.article.instance.MKD___Test_Article_Lorem_Ipsum_General_AnotherSaltoBrand_suu@sbssuuuum,
+  ]
+  brand = zendesk.brand.instance.AnotherSaltoBrand
+  _parent = [
+    zendesk.section.instance.Lorem_Ipsum_General_AnotherSaltoBrand@suu,
+  ]
+}

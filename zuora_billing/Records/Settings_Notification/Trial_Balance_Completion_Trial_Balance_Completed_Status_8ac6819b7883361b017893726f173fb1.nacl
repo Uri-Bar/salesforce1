@@ -1,0 +1,18 @@
+zuora_billing.Settings_Notification Trial_Balance_Completion_Trial_Balance_Completed_Status_8ac6819b7883361b017893726f173fb1@ssusssu {
+  profileId = zuora_billing.Settings_CommunicationProfile.instance.Default_Profile@s
+  eventName = "Trial Balance Completion"
+  name = "Trial Balance Completed Status"
+  description = "Notification sent out when trial balance has completed."
+  active = false
+  hidden = false
+  param1 = "Completed"
+  emailOption = true
+  emailTemplateName = zuora_billing.PublicEmailTemplate.instance.Trial_Balance_Completion_With_Completed_Status_Default_Email_Template@s
+  calloutOption = false
+  contentType = "APPLICATION_JSON"
+  calloutRetriable = false
+  calloutAuth = false
+  calloutOauth2 = false
+  calloutPreemptiveAuth = false
+  useCustomRequestBody = false
+}

@@ -1,0 +1,67 @@
+zuora_billing.Workflow AllBrighter_Bundle_Set_Up_Workflow_67_ssssu__AllBrighter_Bundle_Set_Up_Workflow@uuuuumuussss {
+  id = 67
+  name = "AllBrighter Bundle Set Up Workflow"
+  description = ""
+  type = "Workflow::Setup"
+  status = "Active"
+  version = "0.0.1"
+  additionalProperties = {
+    parameters = {
+      fields = [
+        {
+          index = "0"
+          default = "Prue"
+          datatype = "Text"
+          required = false
+          callout_id = "Buyer First Name"
+          field_name = "buyer_first_name"
+          object_name = "Workflow"
+        },
+        {
+          index = "1"
+          default = "Halliwell"
+          datatype = "Text"
+          required = false
+          callout_id = "Buyer Last Name"
+          field_name = "buyer_last_name"
+          object_name = "Workflow"
+        },
+        {
+          index = "2"
+          default = ""
+          datatype = "Text"
+          required = true
+          callout_id = "Five Digit Shipping Zip"
+          field_name = "ship_zip"
+          object_name = "Workflow"
+        },
+      ]
+      skipping_check = "redis"
+      file_encryption = "false"
+      callout_response = "workflow instance"
+      secure_error_msgs = "false"
+      disable_pending_status = true
+    }
+    ondemand_trigger = true
+    callout_trigger = true
+    scheduled_trigger = false
+    css = {
+      top = "-390px"
+      left = "-520px"
+    }
+    notifications = {
+      failure = false
+      pending = false
+      success = false
+    }
+    call_type = "ASYNC"
+    priority = "Medium"
+    delete_ttl = 30
+    
+    
+    event_trigger = false
+  }
+  _parent = [
+    zuora_billing.WorkflowExport.instance.AllBrighter_Bundle_Set_Up_Workflow_67@ssssu,
+  ]
+}

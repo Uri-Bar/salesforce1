@@ -1,0 +1,8 @@
+zuora_billing.Settings_UnitOfMeasure test {
+  name = "test"
+  displayAs = "test"
+  precision = 0
+  roundingMode = "Up"
+  active = true
+  usageLogFileLabel = "test"
+}

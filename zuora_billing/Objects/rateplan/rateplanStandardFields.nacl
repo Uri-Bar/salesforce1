@@ -1,0 +1,165 @@
+type zuora_billing.rateplan {
+  string Id {
+    type = "string"
+    format = "uuid"
+    required = false
+    filterable = false
+    label = "Id"
+  }
+  string CreatedById {
+    type = "string"
+    format = "uuid"
+    required = false
+    filterable = false
+    referenceTo = [
+      zuora_billing.user.field.Id,
+    ]
+    cardinality = "manyToOne"
+    recordConstraints = {
+      create = {
+        enforceValidMapping = true
+      }
+    }
+    label = "CreatedById"
+  }
+  string CreatedDate {
+    type = "string"
+    format = "date-time"
+    required = false
+    filterable = false
+    label = "CreatedDate"
+  }
+  string UpdatedById {
+    type = "string"
+    format = "uuid"
+    required = false
+    filterable = false
+    referenceTo = [
+      zuora_billing.user.field.Id,
+    ]
+    cardinality = "manyToOne"
+    recordConstraints = {
+      create = {
+        enforceValidMapping = true
+      }
+    }
+    label = "UpdatedById"
+  }
+  string UpdatedDate {
+    type = "string"
+    format = "date-time"
+    required = false
+    filterable = false
+    label = "UpdatedDate"
+  }
+  boolean deleted {
+    type = "boolean"
+    required = false
+    filterable = false
+    label = "deleted"
+  }
+  string AmendmentId {
+    type = "string"
+    format = "uuid"
+    required = false
+    filterable = false
+    referenceTo = [
+      zuora_billing.amendment.field.Id,
+    ]
+    cardinality = "manyToOne"
+    recordConstraints = {
+      create = {
+        enforceValidMapping = true
+      }
+    }
+    label = "AmendmentId"
+  }
+  string AmendmentType {
+    type = "string"
+    maxLength = 512
+    required = false
+    filterable = false
+    label = "AmendmentType"
+  }
+  string Name {
+    type = "string"
+    maxLength = 512
+    required = false
+    filterable = false
+    label = "Name"
+  }
+  string ProductRatePlanId {
+    type = "string"
+    format = "uuid"
+    required = false
+    filterable = false
+    referenceTo = [
+      zuora_billing.productrateplan.field.Id,
+    ]
+    cardinality = "manyToOne"
+    recordConstraints = {
+      create = {
+        enforceValidMapping = true
+      }
+    }
+    label = "ProductRatePlanId"
+  }
+  string SubscriptionId {
+    type = "string"
+    format = "uuid"
+    required = false
+    filterable = false
+    referenceTo = [
+      zuora_billing.subscription.field.Id,
+    ]
+    cardinality = "manyToOne"
+    recordConstraints = {
+      create = {
+        enforceValidMapping = true
+      }
+    }
+    label = "SubscriptionId"
+  }
+  string ExternallyManagedPlanId {
+    type = "string"
+    maxLength = 512
+    required = false
+    filterable = false
+    label = "ExternallyManagedPlanId"
+  }
+  string ProductId {
+    type = "string"
+    format = "uuid"
+    required = false
+    filterable = false
+    label = "ProductId"
+  }
+  string SubscriptionOwnerId {
+    type = "string"
+    format = "uuid"
+    required = false
+    filterable = false
+    label = "SubscriptionOwnerId"
+  }
+  string InvoiceOwnerId {
+    type = "string"
+    format = "uuid"
+    required = false
+    filterable = false
+    label = "InvoiceOwnerId"
+  }
+  string OriginalRatePlanId {
+    type = "string"
+    format = "uuid"
+    required = false
+    filterable = false
+    label = "OriginalRatePlanId"
+  }
+  string SubscriptionOfferId {
+    type = "string"
+    format = "uuid"
+    required = false
+    filterable = false
+    label = "SubscriptionOfferId"
+  }
+}

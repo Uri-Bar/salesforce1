@@ -1,0 +1,31 @@
+zendesk.trigger looks_at_users {
+  title = "looks_at_users"
+  active = true
+  default = false
+  actions = [
+    {
+      field = "status"
+      value = "pending"
+    },
+    {
+      field = "assignee_id"
+      value = "gil.hoffer@salto.io"
+    },
+  ]
+  conditions = {
+    all = [
+      {
+        field = "assignee_id"
+        operator = "is"
+        value = "geoffrey.routledge@salto.io"
+      },
+      {
+        field = "status"
+        operator = "is"
+        value = "new"
+      },
+    ]
+  }
+  raw_title = "looks_at_users"
+  category_id = zendesk.trigger_category.instance.Labeling
+}

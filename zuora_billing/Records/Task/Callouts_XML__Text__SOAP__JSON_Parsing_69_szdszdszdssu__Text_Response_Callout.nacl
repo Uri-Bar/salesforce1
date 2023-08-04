@@ -1,0 +1,39 @@
+zuora_billing.Task Callouts_XML__Text__SOAP__JSON_Parsing_69_szdszdszdssu__Text_Response_Callout@uuuuuuuuumuuss {
+  name = "Text Response Callout"
+  parameters = {
+    url = "http://www.sample-videos.com/text/Sample-text-file-10kb.txt"
+    datas = [
+      {
+        key = ""
+        value = ""
+      },
+    ]
+    method = "GET"
+    headers = [
+      {
+        key = ""
+        value = ""
+      },
+    ]
+    raw_body = ""
+    body_type = "raw"
+    authorization = {
+      type = "none"
+    }
+  }
+  action_type = "Callout"
+  call_type = "SOAP"
+  task_id = 96
+  concurrent_limit = 9999999
+  additionalProperties = {
+    css = {
+      top = "40px"
+      left = "620px"
+    }
+    priority = "Medium"
+    
+  }
+  _parent = [
+    zuora_billing.WorkflowExport.instance.Callouts_XML__Text__SOAP__JSON_Parsing_69@szdszdszdssu,
+  ]
+}

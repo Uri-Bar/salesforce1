@@ -1,0 +1,5 @@
+workato.connection Neta_Zuora_for_Salesforce_sandbox@sbbs {
+  application = "zuora_forcecom"
+  name = "Neta Zuora-for-Salesforce sandbox"
+  folder_id = workato.folder.instance.Root
+}

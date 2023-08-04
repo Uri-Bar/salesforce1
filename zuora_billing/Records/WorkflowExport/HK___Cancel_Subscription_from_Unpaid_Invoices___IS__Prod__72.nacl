@@ -1,0 +1,63 @@
+zuora_billing.WorkflowExport HK___Cancel_Subscription_from_Unpaid_Invoices___IS__Prod__72@sbssssssbssjku {
+  workflow = zuora_billing.Workflow.instance.HK___Cancel_Subscription_from_Unpaid_Invoices___IS__Prod__72_sbssssssbssjku__HK___Cancel_Subscription_from_Unpaid_Invoices___IS__Prod_@uuuuuuuuuuuuuumuusbssssssbssjk
+  tasks = [
+    zuora_billing.Task.instance.HK___Cancel_Subscription_from_Unpaid_Invoices___IS__Prod__72_sbssssssbssjku__Export_Data_for_cancellation@uuuuuuuuuuuuuumuusss,
+    zuora_billing.Task.instance.HK___Cancel_Subscription_from_Unpaid_Invoices___IS__Prod__72_sbssssssbssjku__To_JSON@uuuuuuuuuuuuuumuus,
+    zuora_billing.Task.instance.HK___Cancel_Subscription_from_Unpaid_Invoices___IS__Prod__72_sbssssssbssjku__Identify_Subscriptions_for_Cancellation@uuuuuuuuuuuuuumuusss,
+    zuora_billing.Task.instance.HK___Cancel_Subscription_from_Unpaid_Invoices___IS__Prod__72_sbssssssbssjku__Each_Subscription@uuuuuuuuuuuuuumuus,
+    zuora_billing.Task.instance.HK___Cancel_Subscription_from_Unpaid_Invoices___IS__Prod__72_sbssssssbssjku__Cancel_Subscription@uuuuuuuuuuuuuumuus,
+    zuora_billing.Task.instance.HK___Cancel_Subscription_from_Unpaid_Invoices___IS__Prod__72_sbssssssbssjku__Update_Invoice@uuuuuuuuuuuuuumuus,
+    zuora_billing.Task.instance.HK___Cancel_Subscription_from_Unpaid_Invoices___IS__Prod__72_sbssssssbssjku__Update_Subscription@uuuuuuuuuuuuuumuus,
+  ]
+  linkages = [
+    {
+      source_workflow_id = zuora_billing.Workflow.instance.HK___Cancel_Subscription_from_Unpaid_Invoices___IS__Prod__72_sbssssssbssjku__HK___Cancel_Subscription_from_Unpaid_Invoices___IS__Prod_@uuuuuuuuuuuuuumuusbssssssbssjk
+      target_task_id = zuora_billing.Task.instance.HK___Cancel_Subscription_from_Unpaid_Invoices___IS__Prod__72_sbssssssbssjku__Export_Data_for_cancellation@uuuuuuuuuuuuuumuusss
+      linkage_type = "Start"
+      
+    },
+    {
+      source_task_id = zuora_billing.Task.instance.HK___Cancel_Subscription_from_Unpaid_Invoices___IS__Prod__72_sbssssssbssjku__Export_Data_for_cancellation@uuuuuuuuuuuuuumuusss
+      target_task_id = zuora_billing.Task.instance.HK___Cancel_Subscription_from_Unpaid_Invoices___IS__Prod__72_sbssssssbssjku__To_JSON@uuuuuuuuuuuuuumuus
+      linkage_type = "Success"
+      
+    },
+    {
+      source_task_id = zuora_billing.Task.instance.HK___Cancel_Subscription_from_Unpaid_Invoices___IS__Prod__72_sbssssssbssjku__To_JSON@uuuuuuuuuuuuuumuus
+      target_task_id = zuora_billing.Task.instance.HK___Cancel_Subscription_from_Unpaid_Invoices___IS__Prod__72_sbssssssbssjku__Identify_Subscriptions_for_Cancellation@uuuuuuuuuuuuuumuusss
+      linkage_type = "Success"
+      
+    },
+    {
+      source_task_id = zuora_billing.Task.instance.HK___Cancel_Subscription_from_Unpaid_Invoices___IS__Prod__72_sbssssssbssjku__Identify_Subscriptions_for_Cancellation@uuuuuuuuuuuuuumuusss
+      target_task_id = zuora_billing.Task.instance.HK___Cancel_Subscription_from_Unpaid_Invoices___IS__Prod__72_sbssssssbssjku__Each_Subscription@uuuuuuuuuuuuuumuus
+      linkage_type = "Success"
+      
+    },
+    {
+      source_task_id = zuora_billing.Task.instance.HK___Cancel_Subscription_from_Unpaid_Invoices___IS__Prod__72_sbssssssbssjku__Each_Subscription@uuuuuuuuuuuuuumuus
+      target_task_id = zuora_billing.Task.instance.HK___Cancel_Subscription_from_Unpaid_Invoices___IS__Prod__72_sbssssssbssjku__Cancel_Subscription@uuuuuuuuuuuuuumuus
+      linkage_type = "For Each"
+      
+    },
+    {
+      source_task_id = zuora_billing.Task.instance.HK___Cancel_Subscription_from_Unpaid_Invoices___IS__Prod__72_sbssssssbssjku__Cancel_Subscription@uuuuuuuuuuuuuumuus
+      target_task_id = zuora_billing.Task.instance.HK___Cancel_Subscription_from_Unpaid_Invoices___IS__Prod__72_sbssssssbssjku__Update_Subscription@uuuuuuuuuuuuuumuus
+      linkage_type = "Success"
+      
+    },
+    {
+      source_task_id = zuora_billing.Task.instance.HK___Cancel_Subscription_from_Unpaid_Invoices___IS__Prod__72_sbssssssbssjku__Update_Subscription@uuuuuuuuuuuuuumuus
+      target_task_id = zuora_billing.Task.instance.HK___Cancel_Subscription_from_Unpaid_Invoices___IS__Prod__72_sbssssssbssjku__Update_Invoice@uuuuuuuuuuuuuumuus
+      linkage_type = "Success"
+      
+    },
+  ]
+  additionalProperties = {
+    workflow_definition = {
+      description = ""
+      category = "Default"
+      name = "HK - Cancel Subscription from Unpaid Invoices - IS (Prod)"
+    }
+  }
+}

@@ -1,0 +1,41 @@
+netsuite.scheduledscript customscript8 {
+  scriptid = "customscript8"
+  defaultfunction = "print"
+  isinactive = true
+  name = "dummy scheduled script"
+  notifyadmins = false
+  notifyowner = true
+  scriptfile = netsuite.file.instance.SuiteScripts_ApplicationConstants_js@dv.path
+  scriptdeployments = {
+    scriptdeployment = {
+      customdeploy1 = {
+        scriptid = "customdeploy1"
+        isdeployed = true
+        loglevel = "DEBUG"
+        status = "NOTSCHEDULED"
+        title = "Dummy title"
+        recurrence = {
+          single = {
+            startdate = "2020-05-10"
+            starttime = "15:00:00Z"
+          }
+        }
+        
+      }
+      customdeploy2 = {
+        scriptid = "customdeploy2"
+        isdeployed = true
+        loglevel = "DEBUG"
+        status = "NOTSCHEDULED"
+        title = "Another Dummy title"
+        recurrence = {
+          single = {
+            startdate = "2020-05-10"
+            starttime = "15:00:00Z"
+          }
+        }
+        
+      }
+    }
+  }
+}

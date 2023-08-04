@@ -1,0 +1,15 @@
+netsuite.account Retirement_Contribution_Payable@s {
+  acctType = "_otherCurrentLiability"
+  acctName = "Retirement Contribution Payable"
+  includeChildren = true
+  generalRate = "_current"
+  cashFlowRate = "_average"
+  isInactive = false
+  inventory = false
+  subsidiaryList = [
+    netsuite.subsidiary.instance.Parent_Company@s,
+  ]
+  revalue = true
+  identifier = "Retirement Contribution Payable"
+  custom_custrecord_acct_special = false
+}

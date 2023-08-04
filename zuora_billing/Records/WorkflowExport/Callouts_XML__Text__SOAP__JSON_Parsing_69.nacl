@@ -1,0 +1,63 @@
+zuora_billing.WorkflowExport Callouts_XML__Text__SOAP__JSON_Parsing_69@szdszdszdssu {
+  workflow = zuora_billing.Workflow.instance.Callouts_XML__Text__SOAP__JSON_Parsing_69_szdszdszdssu__Callouts_XML__Text__SOAP__JSON_Parsing@uuuuuuuuumuuszdszdszdss
+  tasks = [
+    zuora_billing.Task.instance.Callouts_XML__Text__SOAP__JSON_Parsing_69_szdszdszdssu__Update_Task___Account_Found_in_Callout_3_With_Plant_Name_from_Callout_1@uuuuuuuuumuussbsssssssssss,
+    zuora_billing.Task.instance.Callouts_XML__Text__SOAP__JSON_Parsing_69_szdszdszdssu__Get_Plants_XML@uuuuuuuuumuuss,
+    zuora_billing.Task.instance.Callouts_XML__Text__SOAP__JSON_Parsing_69_szdszdszdssu__JSON_Callout_Bitcoin@uuuuuuuuumuuss,
+    zuora_billing.Task.instance.Callouts_XML__Text__SOAP__JSON_Parsing_69_szdszdszdssu__Data_Output@uuuuuuuuumuus,
+    zuora_billing.Task.instance.Callouts_XML__Text__SOAP__JSON_Parsing_69_szdszdszdssu__Zuora_SOAP_Query@uuuuuuuuumuuss,
+    zuora_billing.Task.instance.Callouts_XML__Text__SOAP__JSON_Parsing_69_szdszdszdssu__Text_Response_Callout@uuuuuuuuumuuss,
+    zuora_billing.Task.instance.Callouts_XML__Text__SOAP__JSON_Parsing_69_szdszdszdssu__Callout_Task___Account_Found_in_Callout_3_With_Plant_Name_from_Callout_1@uuuuuuuuumuussbsssssssssss,
+  ]
+  linkages = [
+    {
+      source_workflow_id = zuora_billing.Workflow.instance.Callouts_XML__Text__SOAP__JSON_Parsing_69_szdszdszdssu__Callouts_XML__Text__SOAP__JSON_Parsing@uuuuuuuuumuuszdszdszdss
+      target_task_id = zuora_billing.Task.instance.Callouts_XML__Text__SOAP__JSON_Parsing_69_szdszdszdssu__Get_Plants_XML@uuuuuuuuumuuss
+      linkage_type = "Start"
+      
+    },
+    {
+      source_task_id = zuora_billing.Task.instance.Callouts_XML__Text__SOAP__JSON_Parsing_69_szdszdszdssu__Get_Plants_XML@uuuuuuuuumuuss
+      target_task_id = zuora_billing.Task.instance.Callouts_XML__Text__SOAP__JSON_Parsing_69_szdszdszdssu__Text_Response_Callout@uuuuuuuuumuuss
+      linkage_type = "Success"
+      
+    },
+    {
+      source_task_id = zuora_billing.Task.instance.Callouts_XML__Text__SOAP__JSON_Parsing_69_szdszdszdssu__Text_Response_Callout@uuuuuuuuumuuss
+      target_task_id = zuora_billing.Task.instance.Callouts_XML__Text__SOAP__JSON_Parsing_69_szdszdszdssu__Zuora_SOAP_Query@uuuuuuuuumuuss
+      linkage_type = "Success"
+      
+    },
+    {
+      source_task_id = zuora_billing.Task.instance.Callouts_XML__Text__SOAP__JSON_Parsing_69_szdszdszdssu__Zuora_SOAP_Query@uuuuuuuuumuuss
+      target_task_id = zuora_billing.Task.instance.Callouts_XML__Text__SOAP__JSON_Parsing_69_szdszdszdssu__JSON_Callout_Bitcoin@uuuuuuuuumuuss
+      linkage_type = "Success"
+      
+    },
+    {
+      source_task_id = zuora_billing.Task.instance.Callouts_XML__Text__SOAP__JSON_Parsing_69_szdszdszdssu__JSON_Callout_Bitcoin@uuuuuuuuumuuss
+      target_task_id = zuora_billing.Task.instance.Callouts_XML__Text__SOAP__JSON_Parsing_69_szdszdszdssu__Data_Output@uuuuuuuuumuus
+      linkage_type = "Success"
+      
+    },
+    {
+      source_task_id = zuora_billing.Task.instance.Callouts_XML__Text__SOAP__JSON_Parsing_69_szdszdszdssu__Data_Output@uuuuuuuuumuus
+      target_task_id = zuora_billing.Task.instance.Callouts_XML__Text__SOAP__JSON_Parsing_69_szdszdszdssu__Update_Task___Account_Found_in_Callout_3_With_Plant_Name_from_Callout_1@uuuuuuuuumuussbsssssssssss
+      linkage_type = "Success"
+      
+    },
+    {
+      source_task_id = zuora_billing.Task.instance.Callouts_XML__Text__SOAP__JSON_Parsing_69_szdszdszdssu__Data_Output@uuuuuuuuumuus
+      target_task_id = zuora_billing.Task.instance.Callouts_XML__Text__SOAP__JSON_Parsing_69_szdszdszdssu__Callout_Task___Account_Found_in_Callout_3_With_Plant_Name_from_Callout_1@uuuuuuuuumuussbsssssssssss
+      linkage_type = "Success"
+      
+    },
+  ]
+  additionalProperties = {
+    workflow_definition = {
+      description = "Example workflow that uses multiple callouts and then updates a single account based on plant name found from XML callout and account found from SOAP call."
+      category = "Default"
+      name = "Callouts XML, Text, SOAP, JSON Parsing"
+    }
+  }
+}

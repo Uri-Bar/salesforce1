@@ -1,0 +1,21 @@
+zendesk.ticket_field multiselect_Product_components@us {
+  type = "multiselect"
+  
+  raw_title = "Product components"
+  
+  raw_description = ""
+  active = true
+  required = false
+  collapsed_for_agents = false
+  
+  raw_title_in_portal = "Product components"
+  visible_in_portal = false
+  editable_in_portal = false
+  required_in_portal = false
+  removable = true
+  agent_description = "List of product components"
+  custom_field_options = [
+    zendesk.ticket_field__custom_field_options.instance.multiselect_Product_components_us__Component_A@uumuus,
+    zendesk.ticket_field__custom_field_options.instance.multiselect_Product_components_us__Component_B@uumuus,
+  ]
+}

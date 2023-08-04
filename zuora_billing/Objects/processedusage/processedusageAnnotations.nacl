@@ -1,0 +1,28 @@
+type zuora_billing.processedusage {
+  annotations {
+    string metadataType {
+    }
+    string label {
+    }
+    string description {
+    }
+    hidden_string id {
+    }
+    string objectType {
+    }
+  }
+  metadataType = "StandardObject"
+  objectType = "processedusage"
+  _generated_dependencies = [
+    {
+      reference = zuora_billing.invoiceitem
+    },
+    {
+      reference = zuora_billing.usage
+    },
+    {
+      reference = zuora_billing.user
+    },
+  ]
+  label = "ProcessedUsage"
+}

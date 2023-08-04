@@ -1,0 +1,15 @@
+netsuite.account Meals___Entertainment@ses {
+  acctType = "_expense"
+  acctName = "Meals & Entertainment"
+  includeChildren = true
+  generalRate = "_average"
+  cashFlowRate = "_average"
+  isInactive = false
+  inventory = false
+  subsidiaryList = [
+    netsuite.subsidiary.instance.Parent_Company@s,
+  ]
+  revalue = false
+  identifier = "Meals & Entertainment"
+  custom_custrecord_acct_special = false
+}

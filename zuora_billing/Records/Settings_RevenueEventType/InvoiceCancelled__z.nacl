@@ -1,0 +1,5 @@
+zuora_billing.Settings_RevenueEventType InvoiceCancelled__z {
+  label = "Invoice Cancelled"
+  systemId = "InvoiceCancelled__z"
+  active = true
+}

@@ -1,0 +1,137 @@
+zuora_billing.Task Resume_Subscriptions_for_Accounts_with_Zero_Balance_Limit_1_1_ssssssssu__Export_Subscriptions@uuuuuuuuumuus {
+  name = "Export Subscriptions"
+  parameters = {
+    zip = "true"
+    delay = "60"
+    fields = {
+      Account = {
+        Name = "true"
+        Balance = "true"
+        AccountNumber = "true"
+      }
+      Subscription = {
+        Id = "true"
+        Name = "true"
+        Status = "true"
+        AutoRenew = "true"
+        RenewalTerm = "true"
+        RenewalSetting = "true"
+        RenewalTermPeriodType = "true"
+      }
+      SubscriptionVersionAmendment = {
+        Type = "true"
+        Status = "true"
+        RenewalTerm = "true"
+        SuspendDate = "true"
+        RenewalSetting = "true"
+      }
+    }
+    encrypt = "false"
+    where_clause = " Subscription.Status = 'Suspended' AND SubscriptionVersionAmendment.SuspendDate < 'today' AND Account.Balance = 0 Limit 1"
+    strict_variables = "true"
+    zero_result_stop = "false"
+  }
+  action_type = "Export"
+  object = zuora_billing.subscription
+  call_type = "SOAP"
+  concurrent_limit = 9999999
+  additionalProperties = {
+    css = {
+      top = "40px"
+      left = "400px"
+    }
+    priority = "Medium"
+    
+  }
+  _parent = [
+    zuora_billing.WorkflowExport.instance.Resume_Subscriptions_for_Accounts_with_Zero_Balance_Limit_1_1@ssssssssu,
+  ]
+  _generated_dependencies = [
+    {
+      reference = zuora_billing.account.field.AccountNumber
+      occurrences = [
+        {
+          location = zuora_billing.Task.instance.Resume_Subscriptions_for_Accounts_with_Zero_Balance_Limit_1_1_ssssssssu__Export_Subscriptions@uuuuuuuuumuus.parameters.fields.Account.AccountNumber
+        },
+      ]
+    },
+    {
+      reference = zuora_billing.account.field.Balance
+      occurrences = [
+        {
+          location = zuora_billing.Task.instance.Resume_Subscriptions_for_Accounts_with_Zero_Balance_Limit_1_1_ssssssssu__Export_Subscriptions@uuuuuuuuumuus.parameters.fields.Account.Balance
+        },
+        {
+          location = zuora_billing.Task.instance.Resume_Subscriptions_for_Accounts_with_Zero_Balance_Limit_1_1_ssssssssu__Export_Subscriptions@uuuuuuuuumuus.parameters.where_clause
+        },
+      ]
+    },
+    {
+      reference = zuora_billing.account.field.Name
+      occurrences = [
+        {
+          location = zuora_billing.Task.instance.Resume_Subscriptions_for_Accounts_with_Zero_Balance_Limit_1_1_ssssssssu__Export_Subscriptions@uuuuuuuuumuus.parameters.fields.Account.Name
+        },
+      ]
+    },
+    {
+      reference = zuora_billing.subscription.field.AutoRenew
+      occurrences = [
+        {
+          location = zuora_billing.Task.instance.Resume_Subscriptions_for_Accounts_with_Zero_Balance_Limit_1_1_ssssssssu__Export_Subscriptions@uuuuuuuuumuus.parameters.fields.Subscription.AutoRenew
+        },
+      ]
+    },
+    {
+      reference = zuora_billing.subscription.field.Id
+      occurrences = [
+        {
+          location = zuora_billing.Task.instance.Resume_Subscriptions_for_Accounts_with_Zero_Balance_Limit_1_1_ssssssssu__Export_Subscriptions@uuuuuuuuumuus.parameters.fields.Subscription.Id
+        },
+      ]
+    },
+    {
+      reference = zuora_billing.subscription.field.Name
+      occurrences = [
+        {
+          location = zuora_billing.Task.instance.Resume_Subscriptions_for_Accounts_with_Zero_Balance_Limit_1_1_ssssssssu__Export_Subscriptions@uuuuuuuuumuus.parameters.fields.Subscription.Name
+        },
+      ]
+    },
+    {
+      reference = zuora_billing.subscription.field.RenewalSetting
+      occurrences = [
+        {
+          location = zuora_billing.Task.instance.Resume_Subscriptions_for_Accounts_with_Zero_Balance_Limit_1_1_ssssssssu__Export_Subscriptions@uuuuuuuuumuus.parameters.fields.Subscription.RenewalSetting
+        },
+      ]
+    },
+    {
+      reference = zuora_billing.subscription.field.RenewalTerm
+      occurrences = [
+        {
+          location = zuora_billing.Task.instance.Resume_Subscriptions_for_Accounts_with_Zero_Balance_Limit_1_1_ssssssssu__Export_Subscriptions@uuuuuuuuumuus.parameters.fields.Subscription.RenewalTerm
+        },
+      ]
+    },
+    {
+      reference = zuora_billing.subscription.field.RenewalTermPeriodType
+      occurrences = [
+        {
+          location = zuora_billing.Task.instance.Resume_Subscriptions_for_Accounts_with_Zero_Balance_Limit_1_1_ssssssssu__Export_Subscriptions@uuuuuuuuumuus.parameters.fields.Subscription.RenewalTermPeriodType
+        },
+      ]
+    },
+    {
+      reference = zuora_billing.subscription.field.Status
+      occurrences = [
+        {
+          location = zuora_billing.Task.instance.Resume_Subscriptions_for_Accounts_with_Zero_Balance_Limit_1_1_ssssssssu__Export_Subscriptions@uuuuuuuuumuus.parameters.fields.Subscription.Status
+        },
+        {
+          location = zuora_billing.Task.instance.Resume_Subscriptions_for_Accounts_with_Zero_Balance_Limit_1_1_ssssssssu__Export_Subscriptions@uuuuuuuuumuus.parameters.where_clause
+        },
+      ]
+    },
+  ]
+}

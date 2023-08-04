@@ -1,0 +1,135 @@
+zuora_billing.Task AllBrighter_Bundle_Set_Up_Workflow_67_ssssu__debug_display_variables@uuuuumuuss {
+  name = "debug display variables"
+  parameters = {
+    email = {
+      to = [
+        "richard.sawey@zuora.com",
+      ]
+      from = "workflow@zuora.com"
+      name = ""
+      subject = "debug"
+      reply_to = ""
+      template = '''
+<p>{{Data.Callout[2].ResponseBody.order.subscriptions[0].orderActions[0].createSubscription.subscribeToRatePlans[1].newRatePlanId}}</p><p><span style="font-size: 0.875rem;">{% for newplan in Data.Callout[2].ResponseBody.order.subscriptions[0].orderActions[0].createSubscription.subscribeToRatePlans %} or RatePlanId = "{{newplan.newRatePlanId}}" {% endfor %}</span><br></p><p>{% assign guest_name = "John Smith" %}</p>
+<p>{% assign team_name = "Connect Team" %}</p>
+<p>{% assign display_use_cases = true %}</p>
+<p>{% assign names = "Taylor, Mike, Karol, Marin, Bao, Matt" | split: ", " %}</p>
+
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+<meta http-equiv="Content-Language" content="en-us">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Zuora - Workflow Email Templates</title>
+
+<style type="text/css">.zuora a, .zuora a:link { font-family:verdana,arial; font-size:11px; color:#666666; line-height:16px; } .zuora a:visited { font-family:verdana,arial; font-size:11px; color:#666666; line-height:16px; } .zuora a:hover  { font-family:verdana,arial; font-size:11px; color:#666666; line-height:16px; text-decoration:underline; } .zuora_font {font-family: verdana,arial; font-size: 11px; color: rgb(0, 0, 0); line-height: 16px;} </style>
+
+<div style="text-align: center;"><img src="https://workflow.apps.zuora.com/zuora_header.png" style="width: 685px;"></div>
+<center>
+  <table class="zuora" border="0" cellpadding="0" cellspacing="0" width="685" style="margin-top:0px">
+    <tbody>
+      <tr>
+        <td colspan="3" bgcolor="#d5d5d5" height="1"></td>
+      </tr>
+      <tr>
+        <td bgcolor="#d5d5d5" width="1"></td>
+        <td align="left" bgcolor="#ffffff" height="130" valign="top" width="683">
+          <table cellpadding="0" cellspacing="0" width="647" style="margin-left:10px">
+            <tbody>
+              <tr>
+                <td colspan="3" height="15">&nbsp;</td>
+              </tr>
+              <tr>
+                <td align="left" valign="top" width="647">
+                  <p>
+                    <font class="zuora_font" color="#000000" face="verdana,arial" size="1">
+                      Hello {{ guest_name }},
+                    </font>
+                  </p>
+                  <p>
+                    <font class="zuora_font" color="#000000" face="verdana,arial" size="1">
+                      </font></p><p><font class="zuora_font" color="#000000" face="verdana,arial" size="1">
+                        We would like to welcome you to email notifications on Zuora's Workflow solution. We provide you the ultimate ability to configure and edit your email templates. Using the Liquid templating language and Data from your previous steps, you can preform such use cases as.....
+                      </font></p><p><font class="zuora_font" color="#000000" face="verdana,arial" size="1">
+                      {% if display_use_cases %}
+                        </font></p><ul style="margin-left: 15px;"><font class="zuora_font" color="#000000" face="verdana,arial" size="1">
+                          <li> Iterate over past due invoices in data payload, "Data.Invoice" and send 1 single email with total sum. </li>
+                          <li> Create complex control flow based on data present. </li>
+                        </font></ul><font class="zuora_font" color="#000000" face="verdana,arial" size="1">
+                      {% endif %}
+                      <p> In summary, the Liquid templating language uses a combination of tags, objects, and filters to load dynamic content</p>
+                      <b> To test, you can leave this template as is and view generated content post run. </b>
+                    </font>
+                  <p></p>
+                  <br>
+                  <p>
+                    <font class="zuora_font" color="#000000" face="verdana,arial" size="1">
+                      </font></p><p><font class="zuora_font" color="#000000" face="verdana,arial" size="1"> If you have any question, feel free to reach out to any of your amazing Connect Team members..... </font></p><font class="zuora_font" color="#000000" face="verdana,arial" size="1">
+                      {% for name in names %}
+                        <ul style="margin-left: 15px;">
+                          <li> {{ name }} </li>
+                        </ul>
+                      {% endfor %}
+                    </font>
+                  <p><font class="zuora_font" color="#000000" face="verdana,arial" size="1"></font></p>
+                </td>
+              </tr>
+              <tr>
+                <td align="left" valign="top" width="647">
+                  <font class="zuora_font" color="#000000" face="verdana,arial" size="1">
+                    <br>
+                    <p>Thanks, {{ team_name }} </p>
+                    <br>
+                    Zuora, Inc. - Powering the subscription economy
+                  </font>
+                </td>
+              </tr>
+              <tr><td>&nbsp;</td></tr>
+            </tbody>
+          </table>
+        </td>
+        <td bgcolor="#d5d5d5" height="1" width="1"></td>
+      </tr>
+      <tr>
+        <td colspan="3" bgcolor="#d5d5d5" height="1px"></td>
+      </tr>
+      <tr>
+        <td height="10"></td>
+      </tr>
+    </tbody>
+  </table>
+  <table cellpadding="0" cellspacing="0" width="685">
+    <tbody>
+      <tr>
+        <td align="center" height="10">
+          <font class="zuora_font" color="#666666" face="arial,verdana" size="1">
+            Copyright © 2008-2016, Zuora Inc. All Rights Reserved.
+          </font>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</center>
+'''
+      attachments = {
+        invoices = "false"
+      }
+      preview_only = "true"
+      disable_editor = "false"
+    }
+    strict_variables = "true"
+  }
+  action_type = "Email"
+  call_type = "SOAP"
+  task_id = 69
+  concurrent_limit = 9999999
+  additionalProperties = {
+    css = {
+      top = "-160px"
+      left = "800px"
+    }
+    priority = "Medium"
+    
+  }
+  _parent = [
+    zuora_billing.WorkflowExport.instance.AllBrighter_Bundle_Set_Up_Workflow_67@ssssu,
+  ]
+}

@@ -1,0 +1,22 @@
+workato {
+  fetch = {
+    serviceConnectionNames = {
+      salesforce = [
+        "Salto Sandbox",
+      ]
+      netsuite = [
+        "Salto Netsuite",
+      ]
+      jira = [
+        "Jira track connection",
+      ]
+    }
+    include = [
+      {
+        type = ".*"
+      },
+    ]
+    exclude = [
+    ]
+  }
+}

@@ -1,0 +1,80 @@
+zuora_billing.Settings_Role ZPlatform_Administrator {
+  name = "Administrator"
+  category = "ZPlatform"
+  attributes = [
+    {
+      name = "manageUserRoles"
+      scope = "Administrative"
+      activationLevel = "User"
+    },
+    {
+      name = "securityPolicyManagement"
+      scope = "Administrative"
+      activationLevel = "User"
+    },
+    {
+      name = "userManagement"
+      scope = "Administrative"
+      activationLevel = "User"
+    },
+    {
+      name = "CentralSandboxRefresh"
+      scope = "ZPlatform"
+      activationLevel = "User"
+    },
+    {
+      name = "DataQueryUI"
+      scope = "ZPlatform"
+      activationLevel = "User"
+    },
+    {
+      name = "EnableDeploymentManagerUIAccess"
+      scope = "ZPlatform"
+      activationLevel = "User"
+    },
+    {
+      name = "TelemetryUIAccess"
+      scope = "ZPlatform"
+      activationLevel = "User"
+    },
+    {
+      name = "WorkflowGlobalConstantsAccess"
+      scope = "ZPlatform"
+      activationLevel = "User"
+    },
+    {
+      name = "WorkflowManageAccess"
+      scope = "ZPlatform"
+      activationLevel = "User"
+    },
+    {
+      name = "WorkflowManageGlobalSettingsAccess"
+      scope = "ZPlatform"
+      activationLevel = "User"
+    },
+    {
+      name = "WorkflowRunAccess"
+      scope = "ZPlatform"
+      activationLevel = "User"
+    },
+    {
+      name = "apiWrite"
+      scope = "ZPlatform"
+      activationLevel = "User"
+    },
+    {
+      name = "ui"
+      scope = "ZPlatform"
+      activationLevel = "User"
+    },
+    {
+      name = "workflow"
+      scope = "ZPlatform"
+      activationLevel = "User"
+    },
+  ]
+  
+  description = "Access Zuora Platform, administer security policies, manage users, and manage user roles"
+  entityId = "8ac6819b-7883-361b-0178-93726ba53eff"
+  custom = false
+}

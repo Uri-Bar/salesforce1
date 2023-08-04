@@ -1,0 +1,27 @@
+workato.recipe__code dodel_on_prem_group_recipe_second_folder_dodel_playground_Root {
+  number = 0
+  provider = "workato_webhooks"
+  name = "new_event"
+  as = "788c3ebe"
+  description = "<span class=\"provider\">New event</span> via <span class=\"provider\">HTTP webhook</span>"
+  keyword = "trigger"
+  input = {
+    request = {
+      webhook_type = "json"
+    }
+  }
+  block = [
+    {
+      number = 1
+      provider = "onprem_files"
+      name = "create_folder"
+      as = "c8dca6a1"
+      keyword = "action"
+      uuid = "e0e61e2c-42cc-4d96-bca9-3af469be4683"
+    },
+  ]
+  uuid = "a87b3f0d-a570-4342-ba62-f2e952620a02"
+  _parent = [
+    workato.recipe.instance.dodel_on_prem_group_recipe_second_folder_dodel_playground_Root,
+  ]
+}

@@ -1,0 +1,646 @@
+netsuite.workflow customworkflow_srd_so_v1 {
+  scriptid = "customworkflow_srd_so_v1"
+  description = '''
+With this process, a sales order is automatically approved if one of the following is true:
+
+- The total amount of the sales order is $300 or less and customer's overdue balance is $0.
+- The creator does not have a supervisor.
+
+If the sales order is not automatically approved, a manual approval process begins. An approver can edit, approve, reject, or cancel the sales order. If the sales order is rejected, the creator may cancel it or edit it and resubmit it for approval. After the sales order is approved, it is locked to all users except those with the Administrators role.
+'''
+  initcontexts = "ACTION|BANKCONNECTIVITY|BANKSTATEMENTPARSER|BUNDLEINSTALLATION|CLIENT|CSVIMPORT|CUSTOMGLLINES|CUSTOMMASSUPDATE|RECORDACTION|DATASETBUILDER|DEBUGGER|EMAILCAPTURE|FICONNECTIVITY|FIPARSER|MAPREDUCE|OFFLINECLIENT|OTHER|PAYMENTPOSTBACK|PAYMENTGATEWAY|PLATFORMEXTENSION|PORTLET|PROMOTIONS|CONSOLRATEADJUSTOR|RESTWEBSERVICES|RESTLET|ADVANCEDREVREC|SCHEDULED|SDFINSTALLATION|SHIPPINGPARTNERS|WEBSERVICES|SUITELET|TAXCALCULATION|USEREVENT|USERINTERFACE|WORKBOOKBUILDER|WORKFLOW"
+  initoncreate = true
+  initonvieworupdate = false
+  isinactive = false
+  islogenabled = true
+  keephistory = "ALWAYS"
+  name = "SRD - Sales Order Approval"
+  recordtypes = "SALESORDER"
+  releasestatus = "TESTING"
+  runasadmin = true
+  initcondition = {
+    type = "VISUAL_BUILDER"
+  }
+  workflowcustomfields = {
+    workflowcustomfield = {
+      custworkflow1 = {
+        scriptid = "custworkflow1"
+        applyformatting = false
+        defaultchecked = false
+        displaytype = "NORMAL"
+        fieldtype = "SELECT"
+        label = "Approver"
+        selectrecordtype = "-4"
+        storevalue = true
+        index = 0
+      }
+      custworkflow2 = {
+        scriptid = "custworkflow2"
+        applyformatting = false
+        defaultchecked = false
+        displaytype = "NORMAL"
+        fieldtype = "SELECT"
+        label = "Created By"
+        selectrecordtype = "-4"
+        storevalue = true
+        index = 1
+      }
+    }
+  }
+  workflowstates = {
+    workflowstate = {
+      workflowstate436 = {
+        scriptid = "workflowstate436"
+        donotexitworkflow = false
+        name = "Initiation"
+        positionx = 133
+        positiony = 113
+        workflowactions = {
+          ONENTRY = {
+            triggertype = "ONENTRY"
+            setfieldvalueaction = {
+              workflowaction1283 = {
+                scriptid = "workflowaction1283"
+                contexttypes = "ACTION|BANKCONNECTIVITY|BANKSTATEMENTPARSER|BUNDLEINSTALLATION|CLIENT|CSVIMPORT|CUSTOMGLLINES|CUSTOMMASSUPDATE|RECORDACTION|DATASETBUILDER|DEBUGGER|EMAILCAPTURE|FICONNECTIVITY|FIPARSER|MAPREDUCE|OFFLINECLIENT|OTHER|PAYMENTPOSTBACK|PAYMENTGATEWAY|PLATFORMEXTENSION|PORTLET|PROMOTIONS|CONSOLRATEADJUSTOR|RESTWEBSERVICES|RESTLET|ADVANCEDREVREC|SCHEDULED|SDFINSTALLATION|SHIPPINGPARTNERS|WEBSERVICES|SUITELET|TAXCALCULATION|USEREVENT|USERINTERFACE|WORKBOOKBUILDER|WORKFLOW"
+                field = netsuite.workflow.instance.customworkflow_srd_so_v1.workflowcustomfields.workflowcustomfield.custworkflow2.scriptid
+                isinactive = false
+                schedulemode = "DELAY"
+                valuechecked = false
+                valuefield = "STDUSERUSER"
+                valuetype = "FIELD"
+                initcondition = {
+                  type = "VISUAL_BUILDER"
+                }
+                index = 0
+              }
+              workflowaction1284 = {
+                scriptid = "workflowaction1284"
+                contexttypes = "ACTION|BANKCONNECTIVITY|BANKSTATEMENTPARSER|BUNDLEINSTALLATION|CLIENT|CSVIMPORT|CUSTOMGLLINES|CUSTOMMASSUPDATE|RECORDACTION|DATASETBUILDER|DEBUGGER|EMAILCAPTURE|FICONNECTIVITY|FIPARSER|MAPREDUCE|OFFLINECLIENT|OTHER|PAYMENTPOSTBACK|PAYMENTGATEWAY|PLATFORMEXTENSION|PORTLET|PROMOTIONS|CONSOLRATEADJUSTOR|RESTWEBSERVICES|RESTLET|ADVANCEDREVREC|SCHEDULED|SDFINSTALLATION|SHIPPINGPARTNERS|WEBSERVICES|SUITELET|TAXCALCULATION|USEREVENT|USERINTERFACE|WORKBOOKBUILDER|WORKFLOW"
+                field = "STDBODYORDERSTATUS"
+                isinactive = false
+                schedulemode = "DELAY"
+                valuechecked = false
+                valueselect = "11"
+                valuetype = "STATIC"
+                initcondition = {
+                  type = "VISUAL_BUILDER"
+                }
+                index = 1
+              }
+            }
+          }
+        }
+        workflowtransitions = {
+          workflowtransition = {
+            workflowtransition279 = {
+              scriptid = "workflowtransition279"
+              contexttypes = "ACTION|BANKCONNECTIVITY|BANKSTATEMENTPARSER|BUNDLEINSTALLATION|CLIENT|CSVIMPORT|CUSTOMGLLINES|CUSTOMMASSUPDATE|RECORDACTION|DATASETBUILDER|DEBUGGER|EMAILCAPTURE|FICONNECTIVITY|FIPARSER|MAPREDUCE|OFFLINECLIENT|OTHER|PAYMENTPOSTBACK|PAYMENTGATEWAY|PLATFORMEXTENSION|PORTLET|PROMOTIONS|CONSOLRATEADJUSTOR|RESTWEBSERVICES|RESTLET|ADVANCEDREVREC|SCHEDULED|SDFINSTALLATION|SHIPPINGPARTNERS|WEBSERVICES|SUITELET|TAXCALCULATION|USEREVENT|USERINTERFACE|WORKBOOKBUILDER|WORKFLOW"
+              tostate = netsuite.workflow.instance.customworkflow_srd_so_v1.workflowstates.workflowstate.workflowstate438.scriptid
+              triggertype = "BEFORESUBMIT"
+              initcondition = {
+                formula = "( \"Customer:Overdue Balance\" <= 0.0 AND \"Total\" <= 300.0 ) OR isEmpty(\"User:Supervisor\") = 'T'"
+                type = "VISUAL_BUILDER"
+                parameters = {
+                  parameter = {
+                    Customer_Overdue_Balance@fs = {
+                      name = "Customer:Overdue Balance"
+                      value = "STDBODYCUSTOMER:STDENTITYOVERDUEBALANCE"
+                    }
+                    Total = {
+                      name = "Total"
+                      value = "STDBODYTOTAL"
+                    }
+                    User_Supervisor@f = {
+                      name = "User:Supervisor"
+                      value = "STDUSERUSER:STDENTITYSUPERVISOR"
+                    }
+                  }
+                }
+              }
+              index = 0
+            }
+            workflowtransition280 = {
+              scriptid = "workflowtransition280"
+              contexttypes = "ACTION|BANKCONNECTIVITY|BANKSTATEMENTPARSER|BUNDLEINSTALLATION|CLIENT|CSVIMPORT|CUSTOMGLLINES|CUSTOMMASSUPDATE|RECORDACTION|DATASETBUILDER|DEBUGGER|EMAILCAPTURE|FICONNECTIVITY|FIPARSER|MAPREDUCE|OFFLINECLIENT|OTHER|PAYMENTPOSTBACK|PAYMENTGATEWAY|PLATFORMEXTENSION|PORTLET|PROMOTIONS|CONSOLRATEADJUSTOR|RESTWEBSERVICES|RESTLET|ADVANCEDREVREC|SCHEDULED|SDFINSTALLATION|SHIPPINGPARTNERS|WEBSERVICES|SUITELET|TAXCALCULATION|USEREVENT|USERINTERFACE|WORKBOOKBUILDER|WORKFLOW"
+              tostate = netsuite.workflow.instance.customworkflow_srd_so_v1.workflowstates.workflowstate.workflowstate437.scriptid
+              triggertype = "AFTERSUBMIT"
+              initcondition = {
+                type = "VISUAL_BUILDER"
+              }
+              index = 1
+            }
+          }
+        }
+        index = 0
+      }
+      workflowstate437 = {
+        scriptid = "workflowstate437"
+        donotexitworkflow = false
+        name = "Pending Approval"
+        positionx = 283
+        positiony = 223
+        workflowactions = {
+          ONENTRY = {
+            triggertype = "ONENTRY"
+            setfieldvalueaction = {
+              workflowaction1285 = {
+                scriptid = "workflowaction1285"
+                contexttypes = "ACTION|BANKCONNECTIVITY|BANKSTATEMENTPARSER|BUNDLEINSTALLATION|CLIENT|CSVIMPORT|CUSTOMGLLINES|CUSTOMMASSUPDATE|RECORDACTION|DATASETBUILDER|DEBUGGER|EMAILCAPTURE|FICONNECTIVITY|FIPARSER|MAPREDUCE|OFFLINECLIENT|OTHER|PAYMENTPOSTBACK|PAYMENTGATEWAY|PLATFORMEXTENSION|PORTLET|PROMOTIONS|CONSOLRATEADJUSTOR|RESTWEBSERVICES|RESTLET|ADVANCEDREVREC|SCHEDULED|SDFINSTALLATION|SHIPPINGPARTNERS|WEBSERVICES|SUITELET|TAXCALCULATION|USEREVENT|USERINTERFACE|WORKBOOKBUILDER|WORKFLOW"
+                field = netsuite.workflow.instance.customworkflow_srd_so_v1.workflowcustomfields.workflowcustomfield.custworkflow1.scriptid
+                isinactive = false
+                schedulemode = "DELAY"
+                valuechecked = false
+                valuefield = "STDENTITYSUPERVISOR"
+                valuejoinfield = "STDUSERUSER"
+                valuetype = "FIELD"
+                initcondition = {
+                  formula = "isEmpty(\"Workflow:Approver\") = 'T'"
+                  type = "VISUAL_BUILDER"
+                  parameters = {
+                    parameter = {
+                      Workflow_Approver@f = {
+                        name = "Workflow:Approver"
+                        value = netsuite.workflow.instance.customworkflow_srd_so_v1.workflowcustomfields.workflowcustomfield.custworkflow1.scriptid
+                      }
+                    }
+                  }
+                }
+                index = 0
+              }
+              workflowaction1286 = {
+                scriptid = "workflowaction1286"
+                contexttypes = "ACTION|BANKCONNECTIVITY|BANKSTATEMENTPARSER|BUNDLEINSTALLATION|CLIENT|CSVIMPORT|CUSTOMGLLINES|CUSTOMMASSUPDATE|RECORDACTION|DATASETBUILDER|DEBUGGER|EMAILCAPTURE|FICONNECTIVITY|FIPARSER|MAPREDUCE|OFFLINECLIENT|OTHER|PAYMENTPOSTBACK|PAYMENTGATEWAY|PLATFORMEXTENSION|PORTLET|PROMOTIONS|CONSOLRATEADJUSTOR|RESTWEBSERVICES|RESTLET|ADVANCEDREVREC|SCHEDULED|SDFINSTALLATION|SHIPPINGPARTNERS|WEBSERVICES|SUITELET|TAXCALCULATION|USEREVENT|USERINTERFACE|WORKBOOKBUILDER|WORKFLOW"
+                field = "STDBODYMEMO"
+                isinactive = false
+                schedulemode = "DELAY"
+                valuechecked = false
+                valueformula = "SYSDATE||' Pending Approval ... '||{memo}"
+                valuetype = "FORMULA"
+                initcondition = {
+                  type = "VISUAL_BUILDER"
+                }
+                index = 1
+              }
+            }
+            sendemailaction = {
+              workflowaction1287 = {
+                scriptid = "workflowaction1287"
+                attachmenttype = "SPECIFIC"
+                body = "Sales Order {TRANID} is waiting for your approval."
+                contexttypes = "ACTION|BANKCONNECTIVITY|BANKSTATEMENTPARSER|BUNDLEINSTALLATION|CLIENT|CSVIMPORT|CUSTOMGLLINES|CUSTOMMASSUPDATE|RECORDACTION|DATASETBUILDER|DEBUGGER|EMAILCAPTURE|FICONNECTIVITY|FIPARSER|MAPREDUCE|OFFLINECLIENT|OTHER|PAYMENTPOSTBACK|PAYMENTGATEWAY|PLATFORMEXTENSION|PORTLET|PROMOTIONS|CONSOLRATEADJUSTOR|RESTWEBSERVICES|RESTLET|ADVANCEDREVREC|SCHEDULED|SDFINSTALLATION|SHIPPINGPARTNERS|WEBSERVICES|SUITELET|TAXCALCULATION|USEREVENT|USERINTERFACE|WORKBOOKBUILDER|WORKFLOW"
+                includerecordlink = false
+                includetransaction = false
+                isinactive = false
+                recipientfield = netsuite.workflow.instance.customworkflow_srd_so_v1.workflowcustomfields.workflowcustomfield.custworkflow1.scriptid
+                recipienttype = "FIELD"
+                schedulemode = "DELAY"
+                senderfield = netsuite.workflow.instance.customworkflow_srd_so_v1.workflowcustomfields.workflowcustomfield.custworkflow2.scriptid
+                sendertype = "FIELD"
+                subject = "SO {TRANID} needs your attention"
+                usetemplate = false
+                initcondition = {
+                  type = "VISUAL_BUILDER"
+                }
+                index = 0
+              }
+            }
+          }
+          BEFORELOAD = {
+            triggertype = "BEFORELOAD"
+            lockrecordaction = {
+              workflowaction1288 = {
+                scriptid = "workflowaction1288"
+                contexttypes = "ACTION|BANKCONNECTIVITY|BANKSTATEMENTPARSER|BUNDLEINSTALLATION|CLIENT|CSVIMPORT|CUSTOMGLLINES|CUSTOMMASSUPDATE|RECORDACTION|DATASETBUILDER|DEBUGGER|EMAILCAPTURE|FICONNECTIVITY|FIPARSER|MAPREDUCE|OFFLINECLIENT|OTHER|PAYMENTPOSTBACK|PAYMENTGATEWAY|PLATFORMEXTENSION|PORTLET|PROMOTIONS|CONSOLRATEADJUSTOR|RESTWEBSERVICES|RESTLET|ADVANCEDREVREC|SCHEDULED|SDFINSTALLATION|SHIPPINGPARTNERS|WEBSERVICES|SUITELET|TAXCALCULATION|USEREVENT|USERINTERFACE|WORKBOOKBUILDER|WORKFLOW"
+                isinactive = false
+                initcondition = {
+                  formula = "\"Workflow:Approver\" NOT IN (\"User\")"
+                  type = "VISUAL_BUILDER"
+                  parameters = {
+                    parameter = {
+                      Workflow_Approver@f = {
+                        name = "Workflow:Approver"
+                        value = netsuite.workflow.instance.customworkflow_srd_so_v1.workflowcustomfields.workflowcustomfield.custworkflow1.scriptid
+                      }
+                      User = {
+                        name = "User"
+                        value = "STDUSERUSER"
+                      }
+                    }
+                  }
+                }
+                index = 0
+              }
+            }
+            addbuttonaction = {
+              workflowaction1289 = {
+                scriptid = "workflowaction1289"
+                checkconditionbeforeexecution = true
+                contexttypes = "ACTION|BANKCONNECTIVITY|BANKSTATEMENTPARSER|BUNDLEINSTALLATION|CLIENT|CSVIMPORT|CUSTOMGLLINES|CUSTOMMASSUPDATE|RECORDACTION|DATASETBUILDER|DEBUGGER|EMAILCAPTURE|FICONNECTIVITY|FIPARSER|MAPREDUCE|OFFLINECLIENT|OTHER|PAYMENTPOSTBACK|PAYMENTGATEWAY|PLATFORMEXTENSION|PORTLET|PROMOTIONS|CONSOLRATEADJUSTOR|RESTWEBSERVICES|RESTLET|ADVANCEDREVREC|SCHEDULED|SDFINSTALLATION|SHIPPINGPARTNERS|WEBSERVICES|SUITELET|TAXCALCULATION|USEREVENT|USERINTERFACE|WORKBOOKBUILDER|WORKFLOW"
+                isinactive = false
+                label = "Approve"
+                saverecordfirst = true
+                initcondition = {
+                  formula = "\"Workflow:Approver\" IN (\"User\")"
+                  type = "VISUAL_BUILDER"
+                  parameters = {
+                    parameter = {
+                      Workflow_Approver@f = {
+                        name = "Workflow:Approver"
+                        value = netsuite.workflow.instance.customworkflow_srd_so_v1.workflowcustomfields.workflowcustomfield.custworkflow1.scriptid
+                      }
+                      User = {
+                        name = "User"
+                        value = "STDUSERUSER"
+                      }
+                    }
+                  }
+                }
+                index = 0
+              }
+              workflowaction1290 = {
+                scriptid = "workflowaction1290"
+                checkconditionbeforeexecution = true
+                contexttypes = "ACTION|BANKCONNECTIVITY|BANKSTATEMENTPARSER|BUNDLEINSTALLATION|CLIENT|CSVIMPORT|CUSTOMGLLINES|CUSTOMMASSUPDATE|RECORDACTION|DATASETBUILDER|DEBUGGER|EMAILCAPTURE|FICONNECTIVITY|FIPARSER|MAPREDUCE|OFFLINECLIENT|OTHER|PAYMENTPOSTBACK|PAYMENTGATEWAY|PLATFORMEXTENSION|PORTLET|PROMOTIONS|CONSOLRATEADJUSTOR|RESTWEBSERVICES|RESTLET|ADVANCEDREVREC|SCHEDULED|SDFINSTALLATION|SHIPPINGPARTNERS|WEBSERVICES|SUITELET|TAXCALCULATION|USEREVENT|USERINTERFACE|WORKBOOKBUILDER|WORKFLOW"
+                isinactive = false
+                label = "Reject"
+                saverecordfirst = true
+                initcondition = {
+                  formula = "\"Workflow:Approver\" IN (\"User\")"
+                  type = "VISUAL_BUILDER"
+                  parameters = {
+                    parameter = {
+                      Workflow_Approver@f = {
+                        name = "Workflow:Approver"
+                        value = netsuite.workflow.instance.customworkflow_srd_so_v1.workflowcustomfields.workflowcustomfield.custworkflow1.scriptid
+                      }
+                      User = {
+                        name = "User"
+                        value = "STDUSERUSER"
+                      }
+                    }
+                  }
+                }
+                index = 1
+              }
+            }
+            removebuttonaction = {
+              workflowaction1291 = {
+                scriptid = "workflowaction1291"
+                buttonid = "CREATEDEPOSIT"
+                contexttypes = "ACTION|BANKCONNECTIVITY|BANKSTATEMENTPARSER|BUNDLEINSTALLATION|CLIENT|CSVIMPORT|CUSTOMGLLINES|CUSTOMMASSUPDATE|RECORDACTION|DATASETBUILDER|DEBUGGER|EMAILCAPTURE|FICONNECTIVITY|FIPARSER|MAPREDUCE|OFFLINECLIENT|OTHER|PAYMENTPOSTBACK|PAYMENTGATEWAY|PLATFORMEXTENSION|PORTLET|PROMOTIONS|CONSOLRATEADJUSTOR|RESTWEBSERVICES|RESTLET|ADVANCEDREVREC|SCHEDULED|SDFINSTALLATION|SHIPPINGPARTNERS|WEBSERVICES|SUITELET|TAXCALCULATION|USEREVENT|USERINTERFACE|WORKBOOKBUILDER|WORKFLOW"
+                isinactive = false
+                initcondition = {
+                  type = "VISUAL_BUILDER"
+                }
+                index = 0
+              }
+              workflowaction1292 = {
+                scriptid = "workflowaction1292"
+                buttonid = "UPDATEREVREC"
+                contexttypes = "ACTION|BANKCONNECTIVITY|BANKSTATEMENTPARSER|BUNDLEINSTALLATION|CLIENT|CSVIMPORT|CUSTOMGLLINES|CUSTOMMASSUPDATE|RECORDACTION|DATASETBUILDER|DEBUGGER|EMAILCAPTURE|FICONNECTIVITY|FIPARSER|MAPREDUCE|OFFLINECLIENT|OTHER|PAYMENTPOSTBACK|PAYMENTGATEWAY|PLATFORMEXTENSION|PORTLET|PROMOTIONS|CONSOLRATEADJUSTOR|RESTWEBSERVICES|RESTLET|ADVANCEDREVREC|SCHEDULED|SDFINSTALLATION|SHIPPINGPARTNERS|WEBSERVICES|SUITELET|TAXCALCULATION|USEREVENT|USERINTERFACE|WORKBOOKBUILDER|WORKFLOW"
+                isinactive = false
+                initcondition = {
+                  type = "VISUAL_BUILDER"
+                }
+                index = 1
+              }
+              workflowaction1293 = {
+                scriptid = "workflowaction1293"
+                buttonid = "APPROVE"
+                contexttypes = "ACTION|BANKCONNECTIVITY|BANKSTATEMENTPARSER|BUNDLEINSTALLATION|CLIENT|CSVIMPORT|CUSTOMGLLINES|CUSTOMMASSUPDATE|RECORDACTION|DATASETBUILDER|DEBUGGER|EMAILCAPTURE|FICONNECTIVITY|FIPARSER|MAPREDUCE|OFFLINECLIENT|OTHER|PAYMENTPOSTBACK|PAYMENTGATEWAY|PLATFORMEXTENSION|PORTLET|PROMOTIONS|CONSOLRATEADJUSTOR|RESTWEBSERVICES|RESTLET|ADVANCEDREVREC|SCHEDULED|SDFINSTALLATION|SHIPPINGPARTNERS|WEBSERVICES|SUITELET|TAXCALCULATION|USEREVENT|USERINTERFACE|WORKBOOKBUILDER|WORKFLOW"
+                isinactive = false
+                initcondition = {
+                  type = "VISUAL_BUILDER"
+                }
+                index = 2
+              }
+            }
+          }
+        }
+        workflowtransitions = {
+          workflowtransition = {
+            workflowtransition281 = {
+              scriptid = "workflowtransition281"
+              buttonaction = netsuite.workflow.instance.customworkflow_srd_so_v1.workflowstates.workflowstate.workflowstate437.workflowactions.BEFORELOAD.addbuttonaction.workflowaction1289.scriptid
+              contexttypes = "ACTION|BANKCONNECTIVITY|BANKSTATEMENTPARSER|BUNDLEINSTALLATION|CLIENT|CSVIMPORT|CUSTOMGLLINES|CUSTOMMASSUPDATE|RECORDACTION|DATASETBUILDER|DEBUGGER|EMAILCAPTURE|FICONNECTIVITY|FIPARSER|MAPREDUCE|OFFLINECLIENT|OTHER|PAYMENTPOSTBACK|PAYMENTGATEWAY|PLATFORMEXTENSION|PORTLET|PROMOTIONS|CONSOLRATEADJUSTOR|RESTWEBSERVICES|RESTLET|ADVANCEDREVREC|SCHEDULED|SDFINSTALLATION|SHIPPINGPARTNERS|WEBSERVICES|SUITELET|TAXCALCULATION|USEREVENT|USERINTERFACE|WORKBOOKBUILDER|WORKFLOW"
+              tostate = netsuite.workflow.instance.customworkflow_srd_so_v1.workflowstates.workflowstate.workflowstate438.scriptid
+              initcondition = {
+                type = "VISUAL_BUILDER"
+              }
+              index = 0
+            }
+            workflowtransition282 = {
+              scriptid = "workflowtransition282"
+              buttonaction = netsuite.workflow.instance.customworkflow_srd_so_v1.workflowstates.workflowstate.workflowstate437.workflowactions.BEFORELOAD.addbuttonaction.workflowaction1290.scriptid
+              contexttypes = "ACTION|BANKCONNECTIVITY|BANKSTATEMENTPARSER|BUNDLEINSTALLATION|CLIENT|CSVIMPORT|CUSTOMGLLINES|CUSTOMMASSUPDATE|RECORDACTION|DATASETBUILDER|DEBUGGER|EMAILCAPTURE|FICONNECTIVITY|FIPARSER|MAPREDUCE|OFFLINECLIENT|OTHER|PAYMENTPOSTBACK|PAYMENTGATEWAY|PLATFORMEXTENSION|PORTLET|PROMOTIONS|CONSOLRATEADJUSTOR|RESTWEBSERVICES|RESTLET|ADVANCEDREVREC|SCHEDULED|SDFINSTALLATION|SHIPPINGPARTNERS|WEBSERVICES|SUITELET|TAXCALCULATION|USEREVENT|USERINTERFACE|WORKBOOKBUILDER|WORKFLOW"
+              tostate = netsuite.workflow.instance.customworkflow_srd_so_v1.workflowstates.workflowstate.workflowstate439.scriptid
+              initcondition = {
+                type = "VISUAL_BUILDER"
+              }
+              index = 1
+            }
+            workflowtransition283 = {
+              scriptid = "workflowtransition283"
+              contexttypes = "ACTION|BANKCONNECTIVITY|BANKSTATEMENTPARSER|BUNDLEINSTALLATION|CLIENT|CSVIMPORT|CUSTOMGLLINES|CUSTOMMASSUPDATE|RECORDACTION|DATASETBUILDER|DEBUGGER|EMAILCAPTURE|FICONNECTIVITY|FIPARSER|MAPREDUCE|OFFLINECLIENT|OTHER|PAYMENTPOSTBACK|PAYMENTGATEWAY|PLATFORMEXTENSION|PORTLET|PROMOTIONS|CONSOLRATEADJUSTOR|RESTWEBSERVICES|RESTLET|ADVANCEDREVREC|SCHEDULED|SDFINSTALLATION|SHIPPINGPARTNERS|WEBSERVICES|SUITELET|TAXCALCULATION|USEREVENT|USERINTERFACE|WORKBOOKBUILDER|WORKFLOW"
+              eventtypes = "CANCEL"
+              tostate = netsuite.workflow.instance.customworkflow_srd_so_v1.workflowstates.workflowstate.workflowstate440.scriptid
+              triggertype = "AFTERSUBMIT"
+              initcondition = {
+                formula = "\"Order Status\" IN (\"Order Status1\")"
+                type = "VISUAL_BUILDER"
+                parameters = {
+                  parameter = {
+                    Order_Status@s = {
+                      name = "Order Status"
+                      value = "STDBODYORDERSTATUS"
+                    }
+                    Order_Status1@s = {
+                      name = "Order Status1"
+                      selectrecordtype = "-244"
+                      value = "13"
+                    }
+                  }
+                }
+              }
+              index = 2
+            }
+          }
+        }
+        index = 1
+      }
+      workflowstate438 = {
+        scriptid = "workflowstate438"
+        donotexitworkflow = true
+        name = "Approved"
+        positionx = 133
+        positiony = 333
+        workflowactions = {
+          ONENTRY = {
+            triggertype = "ONENTRY"
+            setfieldvalueaction = {
+              workflowaction1294 = {
+                scriptid = "workflowaction1294"
+                contexttypes = "ACTION|BANKCONNECTIVITY|BANKSTATEMENTPARSER|BUNDLEINSTALLATION|CLIENT|CSVIMPORT|CUSTOMGLLINES|CUSTOMMASSUPDATE|RECORDACTION|DATASETBUILDER|DEBUGGER|EMAILCAPTURE|FICONNECTIVITY|FIPARSER|MAPREDUCE|OFFLINECLIENT|OTHER|PAYMENTPOSTBACK|PAYMENTGATEWAY|PLATFORMEXTENSION|PORTLET|PROMOTIONS|CONSOLRATEADJUSTOR|RESTWEBSERVICES|RESTLET|ADVANCEDREVREC|SCHEDULED|SDFINSTALLATION|SHIPPINGPARTNERS|WEBSERVICES|SUITELET|TAXCALCULATION|USEREVENT|USERINTERFACE|WORKBOOKBUILDER|WORKFLOW"
+                field = "STDBODYORDERSTATUS"
+                isinactive = false
+                schedulemode = "DELAY"
+                valuechecked = false
+                valueselect = "12"
+                valuetype = "STATIC"
+                initcondition = {
+                  type = "VISUAL_BUILDER"
+                }
+                index = 0
+              }
+              workflowaction1295 = {
+                scriptid = "workflowaction1295"
+                contexttypes = "ACTION|BANKCONNECTIVITY|BANKSTATEMENTPARSER|BUNDLEINSTALLATION|CLIENT|CSVIMPORT|CUSTOMGLLINES|CUSTOMMASSUPDATE|RECORDACTION|DATASETBUILDER|DEBUGGER|EMAILCAPTURE|FICONNECTIVITY|FIPARSER|MAPREDUCE|OFFLINECLIENT|OTHER|PAYMENTPOSTBACK|PAYMENTGATEWAY|PLATFORMEXTENSION|PORTLET|PROMOTIONS|CONSOLRATEADJUSTOR|RESTWEBSERVICES|RESTLET|ADVANCEDREVREC|SCHEDULED|SDFINSTALLATION|SHIPPINGPARTNERS|WEBSERVICES|SUITELET|TAXCALCULATION|USEREVENT|USERINTERFACE|WORKBOOKBUILDER|WORKFLOW"
+                field = "STDBODYMEMO"
+                isinactive = false
+                schedulemode = "DELAY"
+                valuechecked = false
+                valueformula = "SYSDATE||' Approved ... '||{memo}"
+                valuetype = "FORMULA"
+                initcondition = {
+                  type = "VISUAL_BUILDER"
+                }
+                index = 1
+              }
+            }
+          }
+          BEFORELOAD = {
+            triggertype = "BEFORELOAD"
+            lockrecordaction = {
+              workflowaction1296 = {
+                scriptid = "workflowaction1296"
+                contexttypes = "ACTION|BANKCONNECTIVITY|BANKSTATEMENTPARSER|BUNDLEINSTALLATION|CLIENT|CSVIMPORT|CUSTOMGLLINES|CUSTOMMASSUPDATE|RECORDACTION|DATASETBUILDER|DEBUGGER|EMAILCAPTURE|FICONNECTIVITY|FIPARSER|MAPREDUCE|OFFLINECLIENT|OTHER|PAYMENTPOSTBACK|PAYMENTGATEWAY|PLATFORMEXTENSION|PORTLET|PROMOTIONS|CONSOLRATEADJUSTOR|RESTWEBSERVICES|RESTLET|ADVANCEDREVREC|SCHEDULED|SDFINSTALLATION|SHIPPINGPARTNERS|WEBSERVICES|SUITELET|TAXCALCULATION|USEREVENT|USERINTERFACE|WORKBOOKBUILDER|WORKFLOW"
+                isinactive = false
+                initcondition = {
+                  formula = "\"User Role\" NOT IN (\"Role1\")"
+                  type = "VISUAL_BUILDER"
+                  parameters = {
+                    parameter = {
+                      User_Role@s = {
+                        name = "User Role"
+                        value = "STDUSERROLE"
+                      }
+                      Role1 = {
+                        name = "Role1"
+                        selectrecordtype = "-118"
+                        value = "ADMINISTRATOR"
+                      }
+                    }
+                  }
+                }
+                index = 0
+              }
+            }
+          }
+        }
+        index = 2
+      }
+      workflowstate439 = {
+        scriptid = "workflowstate439"
+        donotexitworkflow = false
+        name = "Rejected"
+        positionx = 463
+        positiony = 223
+        workflowactions = {
+          ONENTRY = {
+            triggertype = "ONENTRY"
+            setfieldvalueaction = {
+              workflowaction1297 = {
+                scriptid = "workflowaction1297"
+                contexttypes = "ACTION|BANKCONNECTIVITY|BANKSTATEMENTPARSER|BUNDLEINSTALLATION|CLIENT|CSVIMPORT|CUSTOMGLLINES|CUSTOMMASSUPDATE|RECORDACTION|DATASETBUILDER|DEBUGGER|EMAILCAPTURE|FICONNECTIVITY|FIPARSER|MAPREDUCE|OFFLINECLIENT|OTHER|PAYMENTPOSTBACK|PAYMENTGATEWAY|PLATFORMEXTENSION|PORTLET|PROMOTIONS|CONSOLRATEADJUSTOR|RESTWEBSERVICES|RESTLET|ADVANCEDREVREC|SCHEDULED|SDFINSTALLATION|SHIPPINGPARTNERS|WEBSERVICES|SUITELET|TAXCALCULATION|USEREVENT|USERINTERFACE|WORKBOOKBUILDER|WORKFLOW"
+                field = "STDBODYMEMO"
+                isinactive = false
+                schedulemode = "DELAY"
+                valuechecked = false
+                valueformula = "SYSDATE||' REJECTED ... '||{memo}"
+                valuetype = "FORMULA"
+                initcondition = {
+                  type = "VISUAL_BUILDER"
+                }
+                index = 0
+              }
+            }
+            sendemailaction = {
+              workflowaction1298 = {
+                scriptid = "workflowaction1298"
+                attachmenttype = "SPECIFIC"
+                body = "Your Sales Order {TRANID} has been rejected."
+                contexttypes = "ACTION|BANKCONNECTIVITY|BANKSTATEMENTPARSER|BUNDLEINSTALLATION|CLIENT|CSVIMPORT|CUSTOMGLLINES|CUSTOMMASSUPDATE|RECORDACTION|DATASETBUILDER|DEBUGGER|EMAILCAPTURE|FICONNECTIVITY|FIPARSER|MAPREDUCE|OFFLINECLIENT|OTHER|PAYMENTPOSTBACK|PAYMENTGATEWAY|PLATFORMEXTENSION|PORTLET|PROMOTIONS|CONSOLRATEADJUSTOR|RESTWEBSERVICES|RESTLET|ADVANCEDREVREC|SCHEDULED|SDFINSTALLATION|SHIPPINGPARTNERS|WEBSERVICES|SUITELET|TAXCALCULATION|USEREVENT|USERINTERFACE|WORKBOOKBUILDER|WORKFLOW"
+                includerecordlink = false
+                includetransaction = false
+                isinactive = false
+                recipientfield = netsuite.workflow.instance.customworkflow_srd_so_v1.workflowcustomfields.workflowcustomfield.custworkflow2.scriptid
+                recipienttype = "FIELD"
+                schedulemode = "DELAY"
+                senderfield = netsuite.workflow.instance.customworkflow_srd_so_v1.workflowcustomfields.workflowcustomfield.custworkflow1.scriptid
+                sendertype = "FIELD"
+                subject = "SO {TRANID} rejected"
+                usetemplate = false
+                initcondition = {
+                  type = "VISUAL_BUILDER"
+                }
+                index = 0
+              }
+            }
+          }
+          BEFORELOAD = {
+            triggertype = "BEFORELOAD"
+            lockrecordaction = {
+              workflowaction1299 = {
+                scriptid = "workflowaction1299"
+                contexttypes = "ACTION|BANKCONNECTIVITY|BANKSTATEMENTPARSER|BUNDLEINSTALLATION|CLIENT|CSVIMPORT|CUSTOMGLLINES|CUSTOMMASSUPDATE|RECORDACTION|DATASETBUILDER|DEBUGGER|EMAILCAPTURE|FICONNECTIVITY|FIPARSER|MAPREDUCE|OFFLINECLIENT|OTHER|PAYMENTPOSTBACK|PAYMENTGATEWAY|PLATFORMEXTENSION|PORTLET|PROMOTIONS|CONSOLRATEADJUSTOR|RESTWEBSERVICES|RESTLET|ADVANCEDREVREC|SCHEDULED|SDFINSTALLATION|SHIPPINGPARTNERS|WEBSERVICES|SUITELET|TAXCALCULATION|USEREVENT|USERINTERFACE|WORKBOOKBUILDER|WORKFLOW"
+                isinactive = false
+                initcondition = {
+                  formula = "\"Workflow:Created By\" NOT IN (\"User\") AND \"User Role\" NOT IN (\"Role1\")"
+                  type = "VISUAL_BUILDER"
+                  parameters = {
+                    parameter = {
+                      Workflow_Created_By@fs = {
+                        name = "Workflow:Created By"
+                        value = netsuite.workflow.instance.customworkflow_srd_so_v1.workflowcustomfields.workflowcustomfield.custworkflow2.scriptid
+                      }
+                      User = {
+                        name = "User"
+                        value = "STDUSERUSER"
+                      }
+                      User_Role@s = {
+                        name = "User Role"
+                        value = "STDUSERROLE"
+                      }
+                      Role1 = {
+                        name = "Role1"
+                        selectrecordtype = "-118"
+                        value = "ADMINISTRATOR"
+                      }
+                    }
+                  }
+                }
+                index = 0
+              }
+            }
+            addbuttonaction = {
+              workflowaction1300 = {
+                scriptid = "workflowaction1300"
+                checkconditionbeforeexecution = true
+                contexttypes = "ACTION|BANKCONNECTIVITY|BANKSTATEMENTPARSER|BUNDLEINSTALLATION|CLIENT|CSVIMPORT|CUSTOMGLLINES|CUSTOMMASSUPDATE|RECORDACTION|DATASETBUILDER|DEBUGGER|EMAILCAPTURE|FICONNECTIVITY|FIPARSER|MAPREDUCE|OFFLINECLIENT|OTHER|PAYMENTPOSTBACK|PAYMENTGATEWAY|PLATFORMEXTENSION|PORTLET|PROMOTIONS|CONSOLRATEADJUSTOR|RESTWEBSERVICES|RESTLET|ADVANCEDREVREC|SCHEDULED|SDFINSTALLATION|SHIPPINGPARTNERS|WEBSERVICES|SUITELET|TAXCALCULATION|USEREVENT|USERINTERFACE|WORKBOOKBUILDER|WORKFLOW"
+                isinactive = false
+                label = "Resubmit for Approval"
+                saverecordfirst = true
+                initcondition = {
+                  formula = "\"Workflow:Created By\" IN (\"User\") OR \"User Role\" IN (\"Role1\")"
+                  type = "VISUAL_BUILDER"
+                  parameters = {
+                    parameter = {
+                      Workflow_Created_By@fs = {
+                        name = "Workflow:Created By"
+                        value = netsuite.workflow.instance.customworkflow_srd_so_v1.workflowcustomfields.workflowcustomfield.custworkflow2.scriptid
+                      }
+                      User = {
+                        name = "User"
+                        value = "STDUSERUSER"
+                      }
+                      User_Role@s = {
+                        name = "User Role"
+                        value = "STDUSERROLE"
+                      }
+                      Role1 = {
+                        name = "Role1"
+                        selectrecordtype = "-118"
+                        value = "ADMINISTRATOR"
+                      }
+                    }
+                  }
+                }
+                index = 0
+              }
+            }
+            removebuttonaction = {
+              workflowaction1301 = {
+                scriptid = "workflowaction1301"
+                buttonid = "CREATEDEPOSIT"
+                contexttypes = "ACTION|BANKCONNECTIVITY|BANKSTATEMENTPARSER|BUNDLEINSTALLATION|CLIENT|CSVIMPORT|CUSTOMGLLINES|CUSTOMMASSUPDATE|RECORDACTION|DATASETBUILDER|DEBUGGER|EMAILCAPTURE|FICONNECTIVITY|FIPARSER|MAPREDUCE|OFFLINECLIENT|OTHER|PAYMENTPOSTBACK|PAYMENTGATEWAY|PLATFORMEXTENSION|PORTLET|PROMOTIONS|CONSOLRATEADJUSTOR|RESTWEBSERVICES|RESTLET|ADVANCEDREVREC|SCHEDULED|SDFINSTALLATION|SHIPPINGPARTNERS|WEBSERVICES|SUITELET|TAXCALCULATION|USEREVENT|USERINTERFACE|WORKBOOKBUILDER|WORKFLOW"
+                isinactive = false
+                initcondition = {
+                  type = "VISUAL_BUILDER"
+                }
+                index = 0
+              }
+              workflowaction1302 = {
+                scriptid = "workflowaction1302"
+                buttonid = "UPDATEREVREC"
+                contexttypes = "ACTION|BANKCONNECTIVITY|BANKSTATEMENTPARSER|BUNDLEINSTALLATION|CLIENT|CSVIMPORT|CUSTOMGLLINES|CUSTOMMASSUPDATE|RECORDACTION|DATASETBUILDER|DEBUGGER|EMAILCAPTURE|FICONNECTIVITY|FIPARSER|MAPREDUCE|OFFLINECLIENT|OTHER|PAYMENTPOSTBACK|PAYMENTGATEWAY|PLATFORMEXTENSION|PORTLET|PROMOTIONS|CONSOLRATEADJUSTOR|RESTWEBSERVICES|RESTLET|ADVANCEDREVREC|SCHEDULED|SDFINSTALLATION|SHIPPINGPARTNERS|WEBSERVICES|SUITELET|TAXCALCULATION|USEREVENT|USERINTERFACE|WORKBOOKBUILDER|WORKFLOW"
+                isinactive = false
+                initcondition = {
+                  type = "VISUAL_BUILDER"
+                }
+                index = 1
+              }
+              workflowaction1303 = {
+                scriptid = "workflowaction1303"
+                buttonid = "APPROVE"
+                contexttypes = "ACTION|BANKCONNECTIVITY|BANKSTATEMENTPARSER|BUNDLEINSTALLATION|CLIENT|CSVIMPORT|CUSTOMGLLINES|CUSTOMMASSUPDATE|RECORDACTION|DATASETBUILDER|DEBUGGER|EMAILCAPTURE|FICONNECTIVITY|FIPARSER|MAPREDUCE|OFFLINECLIENT|OTHER|PAYMENTPOSTBACK|PAYMENTGATEWAY|PLATFORMEXTENSION|PORTLET|PROMOTIONS|CONSOLRATEADJUSTOR|RESTWEBSERVICES|RESTLET|ADVANCEDREVREC|SCHEDULED|SDFINSTALLATION|SHIPPINGPARTNERS|WEBSERVICES|SUITELET|TAXCALCULATION|USEREVENT|USERINTERFACE|WORKBOOKBUILDER|WORKFLOW"
+                isinactive = false
+                initcondition = {
+                  type = "VISUAL_BUILDER"
+                }
+                index = 2
+              }
+            }
+          }
+        }
+        workflowtransitions = {
+          workflowtransition = {
+            workflowtransition284 = {
+              scriptid = "workflowtransition284"
+              buttonaction = netsuite.workflow.instance.customworkflow_srd_so_v1.workflowstates.workflowstate.workflowstate439.workflowactions.BEFORELOAD.addbuttonaction.workflowaction1300.scriptid
+              contexttypes = "ACTION|BANKCONNECTIVITY|BANKSTATEMENTPARSER|BUNDLEINSTALLATION|CLIENT|CSVIMPORT|CUSTOMGLLINES|CUSTOMMASSUPDATE|RECORDACTION|DATASETBUILDER|DEBUGGER|EMAILCAPTURE|FICONNECTIVITY|FIPARSER|MAPREDUCE|OFFLINECLIENT|OTHER|PAYMENTPOSTBACK|PAYMENTGATEWAY|PLATFORMEXTENSION|PORTLET|PROMOTIONS|CONSOLRATEADJUSTOR|RESTWEBSERVICES|RESTLET|ADVANCEDREVREC|SCHEDULED|SDFINSTALLATION|SHIPPINGPARTNERS|WEBSERVICES|SUITELET|TAXCALCULATION|USEREVENT|USERINTERFACE|WORKBOOKBUILDER|WORKFLOW"
+              tostate = netsuite.workflow.instance.customworkflow_srd_so_v1.workflowstates.workflowstate.workflowstate437.scriptid
+              initcondition = {
+                type = "VISUAL_BUILDER"
+              }
+              index = 0
+            }
+            workflowtransition285 = {
+              scriptid = "workflowtransition285"
+              contexttypes = "ACTION|BANKCONNECTIVITY|BANKSTATEMENTPARSER|BUNDLEINSTALLATION|CLIENT|CSVIMPORT|CUSTOMGLLINES|CUSTOMMASSUPDATE|RECORDACTION|DATASETBUILDER|DEBUGGER|EMAILCAPTURE|FICONNECTIVITY|FIPARSER|MAPREDUCE|OFFLINECLIENT|OTHER|PAYMENTPOSTBACK|PAYMENTGATEWAY|PLATFORMEXTENSION|PORTLET|PROMOTIONS|CONSOLRATEADJUSTOR|RESTWEBSERVICES|RESTLET|ADVANCEDREVREC|SCHEDULED|SDFINSTALLATION|SHIPPINGPARTNERS|WEBSERVICES|SUITELET|TAXCALCULATION|USEREVENT|USERINTERFACE|WORKBOOKBUILDER|WORKFLOW"
+              eventtypes = "CANCEL"
+              tostate = netsuite.workflow.instance.customworkflow_srd_so_v1.workflowstates.workflowstate.workflowstate440.scriptid
+              triggertype = "AFTERSUBMIT"
+              initcondition = {
+                formula = "\"Order Status\" IN (\"Order Status1\")"
+                type = "VISUAL_BUILDER"
+                parameters = {
+                  parameter = {
+                    Order_Status@s = {
+                      name = "Order Status"
+                      value = "STDBODYORDERSTATUS"
+                    }
+                    Order_Status1@s = {
+                      name = "Order Status1"
+                      selectrecordtype = "-244"
+                      value = "13"
+                    }
+                  }
+                }
+              }
+              index = 1
+            }
+          }
+        }
+        index = 3
+      }
+      workflowstate440 = {
+        scriptid = "workflowstate440"
+        donotexitworkflow = false
+        name = "Canceled"
+        positionx = 463
+        positiony = 333
+        index = 4
+      }
+    }
+  }
+}

@@ -1,0 +1,4 @@
+workato.folder Dan_Avigdor_Root@su {
+  name = "Dan Avigdor"
+  parent_id = workato.folder.instance.Root
+}

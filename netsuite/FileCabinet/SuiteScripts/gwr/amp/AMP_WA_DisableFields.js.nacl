@@ -1,0 +1,12 @@
+netsuite.file SuiteScripts_gwr_amp_AMP_WA_DisableFields_js@ddduuv {
+  bundleable = false
+  isinactive = false
+  availablewithoutlogin = false
+  generateurltimestamp = false
+  hideinbundle = false
+  path = "/SuiteScripts/gwr/amp/AMP_WA_DisableFields.js"
+  content = file("netsuite/FileCabinet/SuiteScripts/gwr/amp/AMP_WA_DisableFields.js")
+  _parent = [
+    netsuite.folder.instance.SuiteScripts_gwr_amp@d,
+  ]
+}

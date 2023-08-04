@@ -1,0 +1,18 @@
+netsuite.customrecord_csegcseg_rg_seg_cc val_9571060_6979138_779 {
+  scriptid = "val_9571060_6979138_779"
+  isInactive = false
+  parent = netsuite.customrecord_csegcseg_rg_seg_cc.instance.val_9569984_6979138_186
+  name = "1011 Founder"
+  translationsList = {
+    customRecordTranslations = {
+      _frenchFrance = {
+        locale = "_frenchFrance"
+        language = "French (France)"
+      }
+      _german = {
+        locale = "_german"
+        language = "German"
+      }
+    }
+  }
+}

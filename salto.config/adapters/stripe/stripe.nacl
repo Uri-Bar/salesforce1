@@ -1,0 +1,11 @@
+stripe {
+  fetch = {
+    include = [
+      {
+        type = ".*"
+      },
+    ]
+    exclude = [
+    ]
+  }
+}

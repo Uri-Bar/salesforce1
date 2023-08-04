@@ -1,0 +1,4 @@
+zendesk.permission_group Admins {
+  name = "Admins"
+  built_in = true
+}

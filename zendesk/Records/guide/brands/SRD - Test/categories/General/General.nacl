@@ -1,0 +1,9 @@
+zendesk.category General_SRD___Test_sbs@uuuum {
+  locale = zendesk.guide_language_settings.instance.SRD___Test_sbs_en_us@uuumub
+  source_locale = zendesk.guide_language_settings.instance.SRD___Test_sbs_en_us@uuumub
+  outdated = false
+  translations = [
+    zendesk.category_translation.instance.General_SRD___Test_sbs_uuuum__SRD___Test_sbs_en_us_uuumub@uuuuumuuuuuuuum,
+  ]
+  brand = zendesk.brand.instance.SRD___Test@sbs
+}

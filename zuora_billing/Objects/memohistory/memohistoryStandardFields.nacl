@@ -1,0 +1,90 @@
+type zuora_billing.memohistory {
+  string Id {
+    type = "string"
+    format = "uuid"
+    required = false
+    filterable = false
+    label = "Id"
+  }
+  string CreatedById {
+    type = "string"
+    format = "uuid"
+    required = false
+    filterable = false
+    referenceTo = [
+      zuora_billing.user.field.Id,
+    ]
+    cardinality = "manyToOne"
+    recordConstraints = {
+      create = {
+        enforceValidMapping = true
+      }
+    }
+    label = "CreatedById"
+  }
+  string CreatedDate {
+    type = "string"
+    format = "date-time"
+    required = false
+    filterable = false
+    label = "CreatedDate"
+  }
+  string Source {
+    type = "string"
+    maxLength = 512
+    required = false
+    filterable = false
+    label = "Source"
+  }
+  string Type {
+    type = "string"
+    maxLength = 512
+    required = false
+    filterable = false
+    label = "Type"
+  }
+  string TransactionTime {
+    type = "string"
+    format = "date-time"
+    required = false
+    filterable = false
+    label = "TransactionTime"
+  }
+  string Result {
+    type = "string"
+    maxLength = 512
+    required = false
+    filterable = false
+    label = "Result"
+  }
+  string MemoId {
+    type = "string"
+    format = "uuid"
+    required = false
+    filterable = false
+    referenceTo = [
+      "CreditMemo.Id",
+      "DebitMemo.Id",
+    ]
+    cardinality = "manyToOne"
+    recordConstraints = {
+      create = {
+        enforceValidMapping = true
+      }
+    }
+    label = "MemoId"
+  }
+  number PdfFileVersion {
+    type = "integer"
+    required = false
+    filterable = false
+    label = "PdfFileVersion"
+  }
+  string PdfFileId {
+    type = "string"
+    format = "uuid"
+    required = false
+    filterable = false
+    label = "PdfFileId"
+  }
+}

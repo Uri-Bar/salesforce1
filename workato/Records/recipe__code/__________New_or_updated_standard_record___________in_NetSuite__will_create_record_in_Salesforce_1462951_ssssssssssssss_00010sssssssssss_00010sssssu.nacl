@@ -1,0 +1,42 @@
+workato.recipe__code __________New_or_updated_standard_record___________in_NetSuite__will_create_record_in_Salesforce_1462951_ssssssssssssss_00010sssssssssss_00010sssssu@uuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuumuu {
+  number = 0
+  provider = "netsuite"
+  name = "updated_object"
+  as = "87c5908f"
+  title = "New/updated Opportunity"
+  description = '''
+          New or updated <span class="provider">Opportunity</span>
+          in <span class="provider">NetSuite</span>
+
+'''
+  keyword = "trigger"
+  dynamicPickListSelection = {
+    netsuite_object = "Opportunity"
+  }
+  input = {
+    netsuite_object = "Opportunity@@script"
+  }
+  visible_config_fields = [
+    "since",
+    "netsuite_object",
+    "custom_list",
+    "custom_column_list",
+  ]
+  block = [
+    {
+      number = 1
+      provider = "salesforce"
+      name = "approve_process"
+      as = "8a1c9f72"
+      keyword = "action"
+      input = {
+        TargetObjectId = "#{_('data.netsuite.87c5908f.customForm.name')}"
+      }
+      uuid = "50080cc1-1fe3-4f7b-a013-f2bb5de176a5"
+    },
+  ]
+  uuid = "0b1e2436-cab8-4582-9333-a96371179989"
+  _parent = [
+    workato.recipe.instance.__________New_or_updated_standard_record___________in_NetSuite__will_create_record_in_Salesforce_1462951@ssssssssssssss_00010sssssssssss_00010sssssu,
+  ]
+}

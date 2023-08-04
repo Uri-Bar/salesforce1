@@ -1,0 +1,3 @@
+okta.PerClientRateLimitSettings {
+  defaultMode = "ENFORCE"
+}

@@ -1,0 +1,15 @@
+netsuite.account Current_Portion_Long_Term_Debt@ssbs {
+  acctType = "_otherCurrentLiability"
+  acctName = "Current Portion Long-Term Debt"
+  includeChildren = true
+  generalRate = "_current"
+  cashFlowRate = "_average"
+  isInactive = false
+  inventory = false
+  subsidiaryList = [
+    netsuite.subsidiary.instance.Parent_Company@s,
+  ]
+  revalue = true
+  identifier = "Current Portion Long-Term Debt"
+  custom_custrecord_acct_special = false
+}

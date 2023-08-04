@@ -1,0 +1,113 @@
+workato.role Copy_of_Analyst@s {
+  name = "Copy of Analyst"
+  inheritable = false
+  privileges = {
+    "Runtime user connections" = [
+      "read",
+      "update",
+      "delete",
+    ]
+    "Pub/Sub" = [
+      "read",
+      "create",
+      "update",
+      "delete",
+      "view_history",
+    ]
+    "Lookup tables" = [
+      "read",
+      "create",
+      "update_records",
+      "delete",
+      "update_schema",
+    ]
+    "People task" = [
+      "all",
+    ]
+    Recipes = [
+      "read",
+      "create",
+      "update",
+      "delete",
+      "run",
+      "read_run_history",
+    ]
+    Folders = [
+      "read",
+      "create",
+      "update",
+      "delete",
+    ]
+    Projects = [
+      "read",
+      "create",
+      "update",
+      "delete",
+    ]
+    Connections = [
+      "read",
+      "create",
+      "update",
+      "delete",
+    ]
+    
+    
+    "API key" = [
+      "all",
+    ]
+    "API platform" = [
+      "all",
+    ]
+    "Project folder" = [
+      "all",
+    ]
+    "Connection Folders" = [
+      "all",
+    ]
+    "Common data models" = [
+      "read",
+      "create",
+      "update",
+      "delete",
+    ]
+    "Custom OAuth profiles" = [
+      "read",
+      "create",
+      "update",
+      "delete",
+    ]
+    "Message templates" = [
+      "read",
+      "create",
+      "update",
+      "delete",
+    ]
+    Workbot = [
+      "read",
+      "create",
+      "update",
+      "delete",
+    ]
+    "Job History Search" = [
+      "read",
+      "create",
+      "update",
+      "delete",
+    ]
+    "Override action timeout" = [
+      "all",
+    ]
+    "Use in recipes" = [
+      "all",
+    ]
+    "Connector SDK" = [
+      "all",
+    ]
+    "On-prem groups & agents" = [
+      "read",
+      "create",
+      "update",
+      "delete",
+    ]
+  }
+}

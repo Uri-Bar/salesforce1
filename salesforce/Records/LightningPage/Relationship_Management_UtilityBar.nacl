@@ -1,0 +1,26 @@
+salesforce.LightningPage Relationship_Management_UtilityBar {
+  fullName = "Relationship_Management_UtilityBar"
+  flexiPageRegions = [
+    {
+      itemInstances = [
+        {
+          componentInstance = {
+            componentName = "notes:utilityBarNoteList"
+          }
+        },
+        {
+          componentInstance = {
+            componentName = "console:history"
+          }
+        },
+      ]
+      name = "utilityItems"
+      type = "Region"
+    },
+  ]
+  masterLabel = "Relationship Management UtilityBar"
+  template = {
+    name = "one:utilityBarTemplateDesktop"
+  }
+  type = "UtilityBar"
+}

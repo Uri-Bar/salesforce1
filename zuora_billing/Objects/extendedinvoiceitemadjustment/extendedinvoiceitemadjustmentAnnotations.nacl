@@ -1,0 +1,25 @@
+type zuora_billing.extendedinvoiceitemadjustment {
+  annotations {
+    string metadataType {
+    }
+    string label {
+    }
+    string description {
+    }
+    hidden_string id {
+    }
+    string objectType {
+    }
+  }
+  metadataType = "StandardObject"
+  objectType = "extendedinvoiceitemadjustment"
+  _generated_dependencies = [
+    {
+      reference = zuora_billing.account
+    },
+    {
+      reference = zuora_billing.invoiceitem
+    },
+  ]
+  label = "ExtendedInvoiceItemAdjustment"
+}

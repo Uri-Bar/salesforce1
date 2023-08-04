@@ -1,0 +1,6 @@
+zuora_billing.Settings_ReasonCode InvoiceAdjustment_Write_off@ub {
+  isActive = true
+  reasonCodeName = "Write-off"
+  reasonCodeTransactionType = "InvoiceAdjustment"
+  isDefault = false
+}

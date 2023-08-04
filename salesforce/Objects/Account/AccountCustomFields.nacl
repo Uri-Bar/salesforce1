@@ -1,0 +1,263 @@
+type salesforce.Account {
+  salesforce.Lookup Yariv_ref__c {
+    apiName = "Account.Yariv_ref__c"
+    label = "Yariv ref"
+    referenceTo = [
+      salesforce.Yariv__c,
+    ]
+    inlineHelpText = "help bla bla bla"
+    createable = true
+    updateable = true
+    relationshipName = "Accounts"
+    queryable = true
+    deleteConstraint = "SetNull"
+    description = "desc bla bla"
+    externalId = false
+    relationshipLabel = "Accounts"
+    
+    
+  }
+  salesforce.Picklist Tier__c {
+    apiName = "Account.Tier__c"
+    label = "Tier"
+    valueSet = [
+      {
+        fullName = "Small Business"
+        default = false
+        label = "Small Business 1-100"
+      },
+      {
+        fullName = "Enterprise"
+        default = false
+        label = "Enterprise"
+      },
+      {
+        fullName = "Key Accounts"
+        default = false
+        label = "Key Accounts"
+      },
+      {
+        fullName = "Medium Business"
+        default = false
+        isActive = false
+        label = "Medium Business"
+      },
+      {
+        fullName = "NewTierOnlyInEnv2"
+        default = false
+        isActive = false
+        label = "Test new 1111"
+      },
+    ]
+    restricted = true
+    createable = true
+    updateable = true
+    queryable = true
+    description = "Account Tiering for Enterprise, Mid Market, Small business etc."
+    externalId = false
+    
+    sorted = false
+    
+    
+  }
+  salesforce.Picklist Active__c {
+    apiName = "Account.Active__c"
+    label = "Active"
+    valueSet = [
+      {
+        fullName = "Active"
+        default = false
+        label = "Active"
+      },
+      {
+        fullName = "Churned"
+        default = false
+        isActive = false
+        label = "Churned"
+      },
+      {
+        fullName = "INACTIVE"
+        default = false
+        isActive = false
+        label = "INACTIVE"
+      },
+    ]
+    restricted = true
+    createable = true
+    updateable = true
+    queryable = true
+    description = "Whether this account is currently active or not."
+    externalId = false
+    
+    sorted = false
+    
+    
+  }
+  salesforce.Url Domain__c {
+    apiName = "Account.Domain__c"
+    label = "Domain"
+    createable = true
+    updateable = true
+    queryable = true
+    externalId = false
+    
+    
+  }
+  salesforce.FormulaNumber Power_of_1__c {
+    apiName = "Account.Power_of_1__c"
+    label = "Accounts"
+    precision = 18
+    scale = 0
+    formula = "1"
+    createable = false
+    updateable = false
+    unique = false
+    queryable = true
+    externalId = false
+    formulaTreatBlanksAs = "BlankAsZero"
+    _hidden_value = true
+  }
+  salesforce.Url Secondary_Domain__c {
+    apiName = "Account.Secondary_Domain__c"
+    label = "Secondary Domain"
+    createable = true
+    updateable = true
+    queryable = true
+    externalId = false
+    
+    
+  }
+  salesforce.Text Salto_test__c {
+    apiName = "Account.Salto_test__c"
+    label = "Salto test NEW"
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    length = 255
+    queryable = true
+    externalId = false
+    
+    
+  }
+  salesforce.Picklist NewTier__c {
+    apiName = "Account.NewTier__c"
+    label = "NewTier"
+    valueSet = [
+      {
+        fullName = "Small Business"
+        default = false
+        label = "Small Business"
+      },
+      {
+        fullName = "Enterprise"
+        default = false
+        label = "Enterprise"
+      },
+      {
+        fullName = "Key Accounts"
+        default = false
+        label = "Key Accounts"
+      },
+    ]
+    restricted = true
+    createable = true
+    updateable = true
+    queryable = true
+    externalId = false
+    
+    sorted = false
+    
+    
+  }
+  salesforce.Number NumericalField__c {
+    apiName = "Account.NumericalField__c"
+    label = "NumericalField"
+    precision = 18
+    scale = 0
+    createable = true
+    updateable = true
+    unique = false
+    queryable = true
+    externalId = false
+    
+    
+  }
+  salesforce.Number NumericField2__c {
+    apiName = "Account.NumericField2__c"
+    label = "NumericField2"
+    precision = 18
+    scale = 0
+    createable = true
+    updateable = true
+    unique = false
+    queryable = true
+    externalId = false
+    
+    
+  }
+  salesforce.Picklist SLA_Level__c {
+    apiName = "Account.SLA_Level__c"
+    label = "SLA Level"
+    valueSet = [
+      {
+        fullName = "Platinum"
+        default = false
+        label = "Platinum"
+      },
+      {
+        fullName = "Gold"
+        default = false
+        label = "Gold"
+      },
+      {
+        fullName = "Silver"
+        default = false
+        label = "Silver"
+      },
+      {
+        fullName = "Bronze"
+        default = false
+        label = "Bronze"
+      },
+      {
+        fullName = "Vibranium"
+        default = false
+        label = "Vibranium"
+      },
+      {
+        fullName = "Adamantium"
+        default = false
+        label = "Adamantium"
+      },
+      {
+        fullName = "Diamond"
+        default = false
+        label = "Diamond2"
+      },
+      {
+        fullName = "Titanium"
+        default = false
+        
+        label = "Titanium2"
+      },
+      {
+        fullName = "Cooper"
+        default = false
+        isActive = false
+        label = "Cooper2"
+      },
+    ]
+    restricted = true
+    inlineHelpText = "Account SLA Level"
+    createable = true
+    updateable = true
+    queryable = true
+    externalId = false
+    
+    sorted = false
+    description = "This is the SLA level"
+    
+    
+  }
+}

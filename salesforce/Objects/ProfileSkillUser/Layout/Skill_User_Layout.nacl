@@ -1,0 +1,67 @@
+salesforce.Layout ProfileSkillUser_Skill_User_Layout@bss {
+  fullName = "ProfileSkillUser-Skill User Layout"
+  layoutSections = [
+    {
+      customLabel = false
+      detailHeading = false
+      editHeading = false
+      label = "Information"
+      layoutColumns = [
+        {
+          layoutItems = [
+            {
+              behavior = "Readonly"
+              field = salesforce.ProfileSkillUser.field.Name
+            },
+            {
+              behavior = "Required"
+              field = salesforce.ProfileSkillUser.field.UserId
+            },
+            {
+              behavior = "Readonly"
+              field = salesforce.ProfileSkillUser.field.CreatedById
+            },
+          ]
+        },
+        {
+          layoutItems = [
+            {
+              behavior = "Required"
+              field = salesforce.ProfileSkillUser.field.ProfileSkillId
+            },
+            {
+              behavior = "Readonly"
+              field = salesforce.ProfileSkillUser.field.EndorsementCount
+            },
+          ]
+        },
+      ]
+      style = "TwoColumnsLeftToRight"
+    },
+    {
+      customLabel = false
+      detailHeading = false
+      editHeading = false
+      style = "CustomLinks"
+      layoutColumns = [
+        {
+        },
+      ]
+    },
+  ]
+  relatedLists = [
+    {
+      fields = [
+        "User",
+        "CreatedDate",
+      ]
+      relatedList = "ProfileSkillEndorsementRelatedList"
+    },
+  ]
+  showEmailCheckbox = false
+  showRunAssignmentRulesCheckbox = false
+  showSubmitAndAttachButton = false
+  _parent = [
+    salesforce.ProfileSkillUser,
+  ]
+}

@@ -1,0 +1,16 @@
+netsuite.account Telephone_Expense_Regular_Service@sus {
+  acctType = "_expense"
+  acctName = "Regular Service"
+  includeChildren = true
+  generalRate = "_average"
+  parent = netsuite.account.instance.Telephone_Expense@s
+  cashFlowRate = "_average"
+  isInactive = false
+  inventory = false
+  subsidiaryList = [
+    netsuite.subsidiary.instance.Parent_Company@s,
+  ]
+  revalue = false
+  identifier = "Telephone Expense_Regular Service"
+  custom_custrecord_acct_special = false
+}

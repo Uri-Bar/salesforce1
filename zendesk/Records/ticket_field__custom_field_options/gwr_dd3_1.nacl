@@ -1,0 +1,8 @@
+zendesk.ticket_field__custom_field_options gwr_dedup3_tagger__gwr_dd3_1 {
+  name = "gwr_dd3_1"
+  raw_name = "gwr_dd3_1"
+  value = "gwr_dd3_1"
+  _parent = [
+    zendesk.ticket_field.instance.gwr_dedup3_tagger,
+  ]
+}

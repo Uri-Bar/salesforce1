@@ -1,0 +1,12 @@
+netsuite.file SuiteBundles_Bundle_351444_Docusign_Images_ds_sent_png@dsddduv {
+  bundleable = false
+  isinactive = false
+  availablewithoutlogin = false
+  generateurltimestamp = false
+  hideinbundle = false
+  path = "/SuiteBundles/Bundle 351444/Docusign/Images/ds_sent.png"
+  content = file("netsuite/FileCabinet/SuiteBundles/Bundle 351444/Docusign/Images/ds_sent.png")
+  _parent = [
+    netsuite.folder.instance.SuiteBundles_Bundle_351444_Docusign_Images@dsdd,
+  ]
+}

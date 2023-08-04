@@ -1,0 +1,6 @@
+okta.EmailTemplate EmailFactorVerification {
+  name = "EmailFactorVerification"
+  _parent = [
+    okta.Brand.instance,
+  ]
+}

@@ -1,0 +1,20 @@
+zendesk.ticket_form Enterprise_accounts_form@s {
+  
+  raw_name = "Enterprise accounts form"
+  
+  raw_display_name = ""
+  end_user_visible = false
+  ticket_field_ids = [
+    zendesk.ticket_field.instance.status_Status,
+    zendesk.ticket_field.instance.group_Group,
+    zendesk.ticket_field.instance.assignee_Assignee,
+    zendesk.ticket_field.instance.subject_Subject,
+    zendesk.ticket_field.instance.description_Description,
+    zendesk.ticket_field.instance.checkbox_Enterprise_account@us,
+    zendesk.ticket_field.instance.multiselect_Customer_Tier@us,
+    zendesk.ticket_field.instance.Plan_includes_24_7_support_checkbox@ssdsu,
+  ]
+  active = true
+  default = false
+  in_all_brands = true
+}

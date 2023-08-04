@@ -1,0 +1,143 @@
+type zuora_billing.notificationhistoryemail {
+  string Id {
+    type = "string"
+    format = "uuid"
+    required = false
+    filterable = false
+    label = "Id"
+  }
+  string NotificationId {
+    type = "string"
+    format = "uuid"
+    required = false
+    filterable = false
+    label = "NotificationId"
+  }
+  string ContactId {
+    type = "string"
+    format = "uuid"
+    required = false
+    filterable = false
+    label = "ContactId"
+  }
+  string ObjectId {
+    type = "string"
+    format = "uuid"
+    required = false
+    filterable = false
+    label = "ObjectId"
+  }
+  string AccountId {
+    type = "string"
+    format = "uuid"
+    required = false
+    filterable = false
+    referenceTo = [
+      zuora_billing.extendedaccount.field.Id,
+    ]
+    cardinality = "manyToOne"
+    recordConstraints = {
+      create = {
+        enforceValidMapping = true
+      }
+    }
+    label = "AccountId"
+  }
+  string To {
+    type = "string"
+    maxLength = 512
+    required = false
+    filterable = false
+    label = "To"
+  }
+  string Sender {
+    type = "string"
+    maxLength = 512
+    required = false
+    filterable = false
+    label = "Sender"
+  }
+  string CC {
+    type = "string"
+    maxLength = 512
+    required = false
+    filterable = false
+    label = "CC"
+  }
+  string BCC {
+    type = "string"
+    maxLength = 512
+    required = false
+    filterable = false
+    label = "BCC"
+  }
+  string ReplyTo {
+    type = "string"
+    maxLength = 512
+    required = false
+    filterable = false
+    label = "ReplyTo"
+  }
+  string Subject {
+    type = "string"
+    maxLength = 512
+    required = false
+    filterable = false
+    label = "Subject"
+  }
+  string CreatedOn {
+    type = "string"
+    format = "date-time"
+    required = false
+    filterable = false
+    label = "CreatedOn"
+  }
+  string CreatedBy {
+    type = "string"
+    format = "uuid"
+    required = false
+    filterable = false
+    label = "CreatedBy"
+  }
+  string ErrorMessage {
+    type = "string"
+    maxLength = 512
+    required = false
+    filterable = false
+    label = "ErrorMessage"
+  }
+  string Status {
+    type = "string"
+    maxLength = 512
+    required = false
+    filterable = false
+    label = "Status"
+  }
+  string ContentFileId {
+    type = "string"
+    format = "uuid"
+    required = false
+    filterable = false
+    label = "ContentFileId"
+  }
+  string Attachment {
+    type = "string"
+    maxLength = 512
+    required = false
+    filterable = false
+    label = "Attachment"
+  }
+  string EventName {
+    type = "string"
+    maxLength = 512
+    required = false
+    filterable = false
+    label = "EventName"
+  }
+  boolean IsWorkflowHistory {
+    type = "boolean"
+    required = false
+    filterable = false
+    label = "IsWorkflowHistory"
+  }
+}

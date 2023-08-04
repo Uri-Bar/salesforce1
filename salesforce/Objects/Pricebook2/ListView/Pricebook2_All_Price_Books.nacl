@@ -1,0 +1,14 @@
+salesforce.ListView Pricebook2_All_Price_Books {
+  fullName = "Pricebook2.All_Price_Books"
+  columns = [
+    "PRICEBOOK2.NAME",
+    "PRICEBOOK2.DESCRIPTION",
+    "PRICEBOOK2.LAST_UPDATE",
+    "PRICEBOOK2.IS_ACTIVE",
+  ]
+  filterScope = "Everything"
+  label = "All Price Books"
+  _parent = [
+    salesforce.Pricebook2,
+  ]
+}

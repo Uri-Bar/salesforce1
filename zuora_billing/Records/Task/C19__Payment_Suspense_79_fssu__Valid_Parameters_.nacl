@@ -1,0 +1,42 @@
+zuora_billing.Task C19__Payment_Suspense_79_fssu__Valid_Parameters_@uuuumuusa {
+  name = "Valid Parameters?"
+  parameters = {
+    if_clause = '''
+{% assign myErrorMessages = '' %}
+
+{% if Data.Workflow.SuspendOrResume != 'suspend' and Data.Workflow.SuspendOrResume != 'resume' %}
+  {% assign myErrorMessages = myErrorMessages | append: 'Parameter SuspendOrResume has to be either suspend or resume: ' | append: Data.Workflow.SuspendOrResume | append: '|' %}
+{% endif %}
+{% if myErrorMessages == '' %}
+True
+{% else %}
+False
+{% endif %}
+'''
+    strict_variables = "true"
+  }
+  action_type = "If"
+  call_type = "SOAP"
+  concurrent_limit = 9999999
+  additionalProperties = {
+    css = {
+      top = "20px"
+      left = "190px"
+    }
+    priority = "Medium"
+    
+  }
+  _parent = [
+    zuora_billing.WorkflowExport.instance.C19__Payment_Suspense_79@fssu,
+  ]
+  _generated_dependencies = [
+    {
+      reference = zuora_billing.Workflow.instance.C19__Payment_Suspense_79_fssu__C19__Payment_Suspense@uuuumuufss.additionalProperties.parameters.fields
+      occurrences = [
+        {
+          location = zuora_billing.Task.instance.C19__Payment_Suspense_79_fssu__Valid_Parameters_@uuuumuusa.parameters.if_clause
+        },
+      ]
+    },
+  ]
+}

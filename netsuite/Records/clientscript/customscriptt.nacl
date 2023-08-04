@@ -1,0 +1,10 @@
+netsuite.clientscript customscriptt {
+  scriptid = "customscriptt"
+  description = "test - Change 2 aaaa"
+  isinactive = false
+  name = "hq-employee-v2"
+  notifyadmins = false
+  notifyowner = true
+  notifyuser = false
+  scriptfile = netsuite.file.instance.SuiteScripts_hq_employee_v2_js@dbbv.path
+}

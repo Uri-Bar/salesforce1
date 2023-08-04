@@ -1,0 +1,98 @@
+zendesk.view Unassigned_tickets___2@ssbs {
+  title = "Unassigned tickets - 2"
+  active = true
+  description = "clone of the Unassigned tickets view"
+  execution = {
+    group_order = "asc"
+    sort_by = "created"
+    sort_order = "desc"
+    sort = {
+      id = "created"
+      title = "Requested"
+      order = "desc"
+      filterable = false
+      sortable = true
+    }
+    columns = [
+      {
+        id = "subject"
+        title = "Subject"
+        filterable = false
+        sortable = false
+      },
+      {
+        id = "requester"
+        title = "Requester"
+        filterable = true
+        sortable = true
+      },
+      {
+        id = "created"
+        title = "Requested"
+        filterable = false
+        sortable = true
+      },
+      {
+        id = "priority"
+        title = "Priority"
+        filterable = true
+        sortable = true
+      },
+      {
+        id = "group"
+        title = "Group"
+        filterable = true
+        sortable = true
+      },
+    ]
+    fields = [
+      {
+        id = "subject"
+        title = "Subject"
+        filterable = false
+        sortable = false
+      },
+      {
+        id = "requester"
+        title = "Requester"
+        filterable = true
+        sortable = true
+      },
+      {
+        id = "created"
+        title = "Requested"
+        filterable = false
+        sortable = true
+      },
+      {
+        id = "priority"
+        title = "Priority"
+        filterable = true
+        sortable = true
+      },
+      {
+        id = "group"
+        title = "Group"
+        filterable = true
+        sortable = true
+      },
+    ]
+  }
+  conditions = {
+    all = [
+      {
+        field = "assignee_id"
+        operator = "is"
+        value = ""
+      },
+      {
+        field = "status"
+        operator = "less_than"
+        value = "solved"
+      },
+    ]
+  }
+  
+  raw_title = "Unassigned tickets - 2"
+  default = false
+}

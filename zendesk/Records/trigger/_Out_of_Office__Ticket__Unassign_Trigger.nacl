@@ -1,0 +1,40 @@
+zendesk.trigger _Out_of_Office__Ticket__Unassign_Trigger@hssisfss {
+  title = "[Out of Office] Ticket: Unassign Trigger"
+  active = true
+  actions = [
+    {
+      field = "assignee_id"
+      value = ""
+    },
+    {
+      field = "remove_tags"
+      value = [
+        zendesk.tag.instance.agent_ooo,
+      ]
+    },
+  ]
+  conditions = {
+    all = [
+      {
+        field = "current_tags"
+        operator = "includes"
+        value = [
+          zendesk.tag.instance.agent_ooo,
+        ]
+      },
+      {
+        field = "status"
+        operator = "is"
+        value = "open"
+      },
+      {
+        field = "assignee_id"
+        operator = "not_changed"
+      },
+    ]
+  }
+  description = "This trigger was created by the Out of Office app and is required in order for the app to run properly."
+  raw_title = "[Out of Office] Ticket: Unassign Trigger"
+  category_id = zendesk.trigger_category.instance.Notifications
+  default = false
+}

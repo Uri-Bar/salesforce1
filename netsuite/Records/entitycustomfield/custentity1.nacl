@@ -1,0 +1,35 @@
+netsuite.entitycustomfield custentity1 {
+  scriptid = "custentity1"
+  accesslevel = "2"
+  appliestocontact = true
+  appliestocustomer = false
+  appliestoemployee = true
+  appliestogroup = false
+  appliestoothername = false
+  appliestopartner = false
+  appliestopricelist = false
+  appliestoprojecttemplate = false
+  appliestostatement = false
+  appliestovendor = false
+  appliestowebsite = false
+  applyformatting = false
+  availableexternally = false
+  checkspelling = true
+  defaultchecked = false
+  defaultvalue = "None"
+  description = "A field for Gil"
+  displaytype = "NORMAL"
+  encryptatrest = false
+  fieldtype = "TEXT"
+  globalsearch = false
+  isformula = false
+  ismandatory = false
+  isparent = false
+  label = "Gil's Field"
+  searchlevel = "2"
+  showhierarchy = false
+  showinlist = false
+  storevalue = true
+  appliestogenericrsrc = false
+  appliestoproject = false
+}

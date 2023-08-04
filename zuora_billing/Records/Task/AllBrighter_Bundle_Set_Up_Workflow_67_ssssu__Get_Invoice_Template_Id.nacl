@@ -1,0 +1,49 @@
+zuora_billing.Task AllBrighter_Bundle_Set_Up_Workflow_67_ssssu__Get_Invoice_Template_Id@uuuuumuusss {
+  name = "Get Invoice Template Id"
+  parameters = {
+    fields = {
+      Account = {
+        Id = "true"
+        InvoiceTemplateId = "true"
+      }
+    }
+    placement = ""
+    batch_size = "2000"
+    where_clause = "AccountNumber='A00000001'"
+    strict_variables = "true"
+  }
+  action_type = "Query"
+  object = zuora_billing.account
+  call_type = "SOAP"
+  task_id = 74
+  concurrent_limit = 9999999
+  additionalProperties = {
+    css = {
+      top = "-390px"
+      left = "820px"
+    }
+    priority = "Medium"
+    
+  }
+  _parent = [
+    zuora_billing.WorkflowExport.instance.AllBrighter_Bundle_Set_Up_Workflow_67@ssssu,
+  ]
+  _generated_dependencies = [
+    {
+      reference = zuora_billing.account.field.Id
+      occurrences = [
+        {
+          location = zuora_billing.Task.instance.AllBrighter_Bundle_Set_Up_Workflow_67_ssssu__Get_Invoice_Template_Id@uuuuumuusss.parameters.fields.Account.Id
+        },
+      ]
+    },
+    {
+      reference = zuora_billing.account.field.InvoiceTemplateId
+      occurrences = [
+        {
+          location = zuora_billing.Task.instance.AllBrighter_Bundle_Set_Up_Workflow_67_ssssu__Get_Invoice_Template_Id@uuuuumuusss.parameters.fields.Account.InvoiceTemplateId
+        },
+      ]
+    },
+  ]
+}

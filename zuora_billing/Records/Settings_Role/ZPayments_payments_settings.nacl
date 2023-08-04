@@ -1,0 +1,14 @@
+zuora_billing.Settings_Role ZPayments_payments_settings@ub {
+  name = "payments-settings"
+  description = ""
+  category = "ZPayments"
+  entityId = "8ac6819b-7883-361b-0178-93726ba53eff"
+  custom = true
+  attributes = [
+    {
+      name = "paymentSettingsManagement"
+      scope = "ZPaymentAdmin"
+      activationLevel = "User"
+    },
+  ]
+}

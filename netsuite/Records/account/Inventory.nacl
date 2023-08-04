@@ -1,0 +1,15 @@
+netsuite.account Inventory {
+  acctType = "_otherCurrentAsset"
+  acctName = "Inventory"
+  includeChildren = true
+  generalRate = "_current"
+  cashFlowRate = "_average"
+  isInactive = false
+  inventory = true
+  subsidiaryList = [
+    netsuite.subsidiary.instance.Parent_Company@s,
+  ]
+  revalue = false
+  identifier = "Inventory"
+  custom_custrecord_acct_special = true
+}

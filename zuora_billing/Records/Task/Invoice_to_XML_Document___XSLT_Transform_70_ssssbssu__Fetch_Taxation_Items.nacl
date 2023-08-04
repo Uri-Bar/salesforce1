@@ -1,0 +1,220 @@
+zuora_billing.Task Invoice_to_XML_Document___XSLT_Transform_70_ssssbssu__Fetch_Taxation_Items@uuuuuuuumuuss {
+  name = "Fetch Taxation Items"
+  parameters = {
+    fields = {
+      TaxationItem = {
+        Id = "true"
+        Name = "true"
+        Balance = "true"
+        TaxCode = "true"
+        TaxDate = "true"
+        TaxMode = "true"
+        TaxRate = "true"
+        InvoiceId = "true"
+        TaxAmount = "true"
+        CreatedById = "true"
+        CreatedDate = "true"
+        TaxRateType = "true"
+        UpdatedById = "true"
+        UpdatedDate = "true"
+        ExemptAmount = "true"
+        Jurisdiction = "true"
+        LocationCode = "true"
+        InvoiceItemId = "true"
+        AccountingCode = "true"
+        TaxCodeDescription = "true"
+        TaxRateDescription = "true"
+      }
+    }
+    placement = ""
+    batch_size = "2000"
+    where_clause = " InvoiceId =  '{{Data.Invoice.Id}}'"
+    strict_variables = "true"
+  }
+  action_type = "Query"
+  object = zuora_billing.taxationitem
+  call_type = "SOAP"
+  task_id = 104
+  concurrent_limit = 9999999
+  additionalProperties = {
+    css = {
+      top = "180px"
+      left = "870px"
+    }
+    priority = "Medium"
+    
+  }
+  _parent = [
+    zuora_billing.WorkflowExport.instance.Invoice_to_XML_Document___XSLT_Transform_70@ssssbssu,
+  ]
+  _generated_dependencies = [
+    {
+      reference = zuora_billing.invoice.field.Id
+      occurrences = [
+        {
+          location = zuora_billing.Task.instance.Invoice_to_XML_Document___XSLT_Transform_70_ssssbssu__Fetch_Taxation_Items@uuuuuuuumuuss.parameters.where_clause
+        },
+      ]
+    },
+    {
+      reference = zuora_billing.taxationitem.field.AccountingCode
+      occurrences = [
+        {
+          location = zuora_billing.Task.instance.Invoice_to_XML_Document___XSLT_Transform_70_ssssbssu__Fetch_Taxation_Items@uuuuuuuumuuss.parameters.fields.TaxationItem.AccountingCode
+        },
+      ]
+    },
+    {
+      reference = zuora_billing.taxationitem.field.Balance
+      occurrences = [
+        {
+          location = zuora_billing.Task.instance.Invoice_to_XML_Document___XSLT_Transform_70_ssssbssu__Fetch_Taxation_Items@uuuuuuuumuuss.parameters.fields.TaxationItem.Balance
+        },
+      ]
+    },
+    {
+      reference = zuora_billing.taxationitem.field.CreatedById
+      occurrences = [
+        {
+          location = zuora_billing.Task.instance.Invoice_to_XML_Document___XSLT_Transform_70_ssssbssu__Fetch_Taxation_Items@uuuuuuuumuuss.parameters.fields.TaxationItem.CreatedById
+        },
+      ]
+    },
+    {
+      reference = zuora_billing.taxationitem.field.CreatedDate
+      occurrences = [
+        {
+          location = zuora_billing.Task.instance.Invoice_to_XML_Document___XSLT_Transform_70_ssssbssu__Fetch_Taxation_Items@uuuuuuuumuuss.parameters.fields.TaxationItem.CreatedDate
+        },
+      ]
+    },
+    {
+      reference = zuora_billing.taxationitem.field.ExemptAmount
+      occurrences = [
+        {
+          location = zuora_billing.Task.instance.Invoice_to_XML_Document___XSLT_Transform_70_ssssbssu__Fetch_Taxation_Items@uuuuuuuumuuss.parameters.fields.TaxationItem.ExemptAmount
+        },
+      ]
+    },
+    {
+      reference = zuora_billing.taxationitem.field.Id
+      occurrences = [
+        {
+          location = zuora_billing.Task.instance.Invoice_to_XML_Document___XSLT_Transform_70_ssssbssu__Fetch_Taxation_Items@uuuuuuuumuuss.parameters.fields.TaxationItem.Id
+        },
+      ]
+    },
+    {
+      reference = zuora_billing.taxationitem.field.InvoiceItemId
+      occurrences = [
+        {
+          location = zuora_billing.Task.instance.Invoice_to_XML_Document___XSLT_Transform_70_ssssbssu__Fetch_Taxation_Items@uuuuuuuumuuss.parameters.fields.TaxationItem.InvoiceItemId
+        },
+      ]
+    },
+    {
+      reference = zuora_billing.taxationitem.field.Jurisdiction
+      occurrences = [
+        {
+          location = zuora_billing.Task.instance.Invoice_to_XML_Document___XSLT_Transform_70_ssssbssu__Fetch_Taxation_Items@uuuuuuuumuuss.parameters.fields.TaxationItem.Jurisdiction
+        },
+      ]
+    },
+    {
+      reference = zuora_billing.taxationitem.field.LocationCode
+      occurrences = [
+        {
+          location = zuora_billing.Task.instance.Invoice_to_XML_Document___XSLT_Transform_70_ssssbssu__Fetch_Taxation_Items@uuuuuuuumuuss.parameters.fields.TaxationItem.LocationCode
+        },
+      ]
+    },
+    {
+      reference = zuora_billing.taxationitem.field.Name
+      occurrences = [
+        {
+          location = zuora_billing.Task.instance.Invoice_to_XML_Document___XSLT_Transform_70_ssssbssu__Fetch_Taxation_Items@uuuuuuuumuuss.parameters.fields.TaxationItem.Name
+        },
+      ]
+    },
+    {
+      reference = zuora_billing.taxationitem.field.TaxAmount
+      occurrences = [
+        {
+          location = zuora_billing.Task.instance.Invoice_to_XML_Document___XSLT_Transform_70_ssssbssu__Fetch_Taxation_Items@uuuuuuuumuuss.parameters.fields.TaxationItem.TaxAmount
+        },
+      ]
+    },
+    {
+      reference = zuora_billing.taxationitem.field.TaxCode
+      occurrences = [
+        {
+          location = zuora_billing.Task.instance.Invoice_to_XML_Document___XSLT_Transform_70_ssssbssu__Fetch_Taxation_Items@uuuuuuuumuuss.parameters.fields.TaxationItem.TaxCode
+        },
+      ]
+    },
+    {
+      reference = zuora_billing.taxationitem.field.TaxCodeDescription
+      occurrences = [
+        {
+          location = zuora_billing.Task.instance.Invoice_to_XML_Document___XSLT_Transform_70_ssssbssu__Fetch_Taxation_Items@uuuuuuuumuuss.parameters.fields.TaxationItem.TaxCodeDescription
+        },
+      ]
+    },
+    {
+      reference = zuora_billing.taxationitem.field.TaxDate
+      occurrences = [
+        {
+          location = zuora_billing.Task.instance.Invoice_to_XML_Document___XSLT_Transform_70_ssssbssu__Fetch_Taxation_Items@uuuuuuuumuuss.parameters.fields.TaxationItem.TaxDate
+        },
+      ]
+    },
+    {
+      reference = zuora_billing.taxationitem.field.TaxMode
+      occurrences = [
+        {
+          location = zuora_billing.Task.instance.Invoice_to_XML_Document___XSLT_Transform_70_ssssbssu__Fetch_Taxation_Items@uuuuuuuumuuss.parameters.fields.TaxationItem.TaxMode
+        },
+      ]
+    },
+    {
+      reference = zuora_billing.taxationitem.field.TaxRate
+      occurrences = [
+        {
+          location = zuora_billing.Task.instance.Invoice_to_XML_Document___XSLT_Transform_70_ssssbssu__Fetch_Taxation_Items@uuuuuuuumuuss.parameters.fields.TaxationItem.TaxRate
+        },
+      ]
+    },
+    {
+      reference = zuora_billing.taxationitem.field.TaxRateDescription
+      occurrences = [
+        {
+          location = zuora_billing.Task.instance.Invoice_to_XML_Document___XSLT_Transform_70_ssssbssu__Fetch_Taxation_Items@uuuuuuuumuuss.parameters.fields.TaxationItem.TaxRateDescription
+        },
+      ]
+    },
+    {
+      reference = zuora_billing.taxationitem.field.TaxRateType
+      occurrences = [
+        {
+          location = zuora_billing.Task.instance.Invoice_to_XML_Document___XSLT_Transform_70_ssssbssu__Fetch_Taxation_Items@uuuuuuuumuuss.parameters.fields.TaxationItem.TaxRateType
+        },
+      ]
+    },
+    {
+      reference = zuora_billing.taxationitem.field.UpdatedById
+      occurrences = [
+        {
+          location = zuora_billing.Task.instance.Invoice_to_XML_Document___XSLT_Transform_70_ssssbssu__Fetch_Taxation_Items@uuuuuuuumuuss.parameters.fields.TaxationItem.UpdatedById
+        },
+      ]
+    },
+    {
+      reference = zuora_billing.taxationitem.field.UpdatedDate
+      occurrences = [
+        {
+          location = zuora_billing.Task.instance.Invoice_to_XML_Document___XSLT_Transform_70_ssssbssu__Fetch_Taxation_Items@uuuuuuuumuuss.parameters.fields.TaxationItem.UpdatedDate
+        },
+      ]
+    },
+  ]
+}

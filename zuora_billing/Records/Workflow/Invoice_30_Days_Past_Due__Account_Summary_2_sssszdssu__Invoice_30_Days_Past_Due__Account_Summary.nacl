@@ -1,0 +1,67 @@
+zuora_billing.Workflow Invoice_30_Days_Past_Due__Account_Summary_2_sssszdssu__Invoice_30_Days_Past_Due__Account_Summary@uuuuuuuumuusssszdss {
+  id = 2
+  name = "Invoice 30 Days Past Due, Account Summary"
+  description = ""
+  type = "Workflow::Setup"
+  interval = "0 0 3 /1 * *"
+  timezone = "Pacific Time (US & Canada)"
+  status = "Inactive"
+  version = "0.0.1"
+  additionalProperties = {
+    parameters = {
+      fields = [
+        {
+          index = "0"
+          default = ""
+          datatype = "Text"
+          required = false
+          callout_id = "param"
+          field_name = "ExampleKey_78426"
+          instruction = ""
+          object_name = "Workflow"
+        },
+        {
+          index = "1"
+          default = ""
+          datatype = "Text"
+          required = false
+          callout_id = "test"
+          field_name = "DiscountClass"
+          instruction = ""
+          object_name = zuora_billing.productrateplancharge
+        },
+      ]
+      skipping_check = "redis"
+      file_encryption = "false"
+      show_run_prompt = "true"
+      callout_response = "workflow instance"
+      secure_error_msgs = "false"
+      disable_pending_status = true
+    }
+    ondemand_trigger = true
+    callout_trigger = true
+    scheduled_trigger = false
+    css = {
+      top = "210px"
+      left = "90px"
+    }
+    notifications = {
+      emails = [
+        "daniel.tal@salto.io",
+      ]
+      failure = false
+      pending = false
+      success = true
+      error_ignore = ""
+    }
+    call_type = "ASYNC"
+    priority = "Medium"
+    delete_ttl = 30
+    
+    
+    event_trigger = false
+  }
+  _parent = [
+    zuora_billing.WorkflowExport.instance.Invoice_30_Days_Past_Due__Account_Summary_2@sssszdssu,
+  ]
+}

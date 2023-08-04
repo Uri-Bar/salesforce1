@@ -1,0 +1,33 @@
+zendesk.macro Close_and_redirect_to_topics@s {
+  title = "Close and redirect to topics"
+  active = true
+  description = "clone of the original"
+  actions = [
+    {
+      field = "status"
+      value = "solved"
+    },
+    {
+      field = "priority"
+      value = "normal"
+    },
+    {
+      field = "type"
+      value = "incident"
+    },
+    {
+      field = "assignee_id"
+      value = "current_user"
+    },
+    {
+      field = "group_id"
+      value = "current_groups"
+    },
+    {
+      field = "comment_value"
+      value = "Thanks for your request. This issue you reported is a known issue. For more information, please visit our forums. "
+    },
+  ]
+  raw_title = "Close and redirect to topics"
+  default = false
+}

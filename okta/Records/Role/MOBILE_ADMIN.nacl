@@ -1,0 +1,5 @@
+okta.Role Mobile_Administrator@s {
+  
+  label = "Mobile Administrator"
+  type = "MOBILE_ADMIN"
+}

@@ -1,0 +1,51 @@
+salesforce.StandardValueSet CampaignType {
+  fullName = "CampaignType"
+  sorted = false
+  standardValue = [
+    {
+      fullName = "Event"
+      default = true
+      label = "Event"
+    },
+    {
+      fullName = "Demo Signup / Trial"
+      default = false
+      label = "Demo Signup / Trial"
+    },
+    {
+      fullName = "Email"
+      default = false
+      label = "Email"
+    },
+    {
+      fullName = "Referral Program"
+      default = false
+      label = "Referral Program"
+    },
+    {
+      fullName = "Search"
+      default = false
+      label = "Search"
+    },
+    {
+      fullName = "Social Media"
+      default = false
+      label = "Social Media"
+    },
+    {
+      fullName = "Thought Leadership"
+      default = false
+      label = "Thought Leadership"
+    },
+    {
+      fullName = "Website Direct"
+      default = false
+      label = "Website Direct"
+    },
+    {
+      fullName = "Other"
+      default = false
+      label = "Other"
+    },
+  ]
+}

@@ -1,0 +1,10 @@
+zendesk.oauth_client salto_zendesk_client {
+  name = "salto_zendesk_client"
+  identifier = "salto_zendesk_client"
+  company = "Salto"
+  description = ""
+  redirect_uri = [
+    "http://localhost:8000",
+  ]
+  global = false
+}

@@ -1,0 +1,20 @@
+netsuite.file SuiteBundles_Bundle_351444_Docusign_Scripts_config_ds_docusign_acct_js@dsdddduuv {
+  bundleable = false
+  isinactive = false
+  availablewithoutlogin = false
+  generateurltimestamp = false
+  hideinbundle = false
+  path = "/SuiteBundles/Bundle 351444/Docusign/Scripts/config/ds_docusign_acct.js"
+  content = file("netsuite/FileCabinet/SuiteBundles/Bundle 351444/Docusign/Scripts/config/ds_docusign_acct.js")
+  _parent = [
+    netsuite.folder.instance.SuiteBundles_Bundle_351444_Docusign_Scripts_config@dsddd,
+  ]
+  _generated_dependencies = [
+    {
+      reference = netsuite.file.instance.SuiteBundles_Bundle_351444_Docusign_Scripts_config_JsLibraryConfig_json@dsddddv.path
+    },
+    {
+      reference = netsuite.file.instance.SuiteBundles_Bundle_351444_Docusign_Scripts_config_ds_setup_sobo_js@dsdddduuv.path
+    },
+  ]
+}

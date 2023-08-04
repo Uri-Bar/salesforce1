@@ -1,0 +1,11 @@
+zendesk.user_field this_is_a_checkbox {
+  type = "checkbox"
+  key = "this_is_a_checkbox"
+  
+  
+  raw_title = "this is a checkbox 32"
+  raw_description = ""
+  active = true
+  system = false
+  tag = zendesk.tag.instance.checked32
+}

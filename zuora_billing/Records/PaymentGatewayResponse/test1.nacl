@@ -1,0 +1,7 @@
+zuora_billing.PaymentGatewayResponse test1 {
+  id = zuora_billing.Settings_Gateway.instance.test1
+  name = "test1"
+  type = "Sample"
+  isDefault = true
+  isActive = true
+}

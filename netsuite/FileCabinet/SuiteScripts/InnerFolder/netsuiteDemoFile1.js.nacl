@@ -1,0 +1,12 @@
+netsuite.file SuiteScripts_InnerFolder_netsuiteDemoFile1_js@ddv {
+  bundleable = false
+  isinactive = false
+  availablewithoutlogin = false
+  generateurltimestamp = false
+  hideinbundle = false
+  path = "/SuiteScripts/InnerFolder/netsuiteDemoFile1.js"
+  content = file("netsuite/FileCabinet/SuiteScripts/InnerFolder/netsuiteDemoFile1.js")
+  _parent = [
+    netsuite.folder.instance.SuiteScripts_InnerFolder@d,
+  ]
+}

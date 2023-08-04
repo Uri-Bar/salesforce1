@@ -1,0 +1,35 @@
+workato.recipe__code custom_record_type_ref_tests_769211_sssuu@uuuuum {
+  number = 0
+  provider = "netsuite"
+  name = "new_custom_object"
+  as = "fe71bb1f"
+  title = "New custom record"
+  description = '''
+          New <span class="provider">custom record</span>
+          in <span class="provider">NetSuite</span>
+
+'''
+  keyword = "trigger"
+  dynamicPickListSelection = {
+    netsuite_object = "Region"
+  }
+  input = {
+    netsuite_object = netsuite.customrecord_cseg2
+  }
+  uuid = "c32bbd31-11d0-4aec-b4e3-ba9f54cc36f6"
+  _parent = [
+    workato.recipe.instance.custom_record_type_ref_tests_769211@sssuu,
+  ]
+  
+  _generated_dependencies = [
+    {
+      reference = netsuite.customrecord_cseg2
+      occurrences = [
+        {
+          location = workato.recipe__code.instance.custom_record_type_ref_tests_769211_sssuu@uuuuum
+          direction = "input"
+        },
+      ]
+    },
+  ]
+}

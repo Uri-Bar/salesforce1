@@ -1,0 +1,22 @@
+type zuora_billing.dada__c {
+  annotations {
+    string metadataType {
+    }
+    string label {
+    }
+    string description {
+    }
+    hidden_string id {
+    }
+    string objectType {
+    }
+  }
+  metadataType = "CustomObject"
+  label = "dada"
+  objectType = "dada"
+  _generated_dependencies = [
+    {
+      reference = zuora_billing.user
+    },
+  ]
+}

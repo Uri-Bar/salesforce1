@@ -1,0 +1,11 @@
+okta.BehaviorRule New_Device@s {
+  name = "New Device"
+  status = "ACTIVE"
+  type = "ANOMALOUS_DEVICE"
+  additionalProperties = {
+    settings = {
+      minEventsNeededForEvaluation = 0
+      maxEventsUsedForEvaluation = 20
+    }
+  }
+}

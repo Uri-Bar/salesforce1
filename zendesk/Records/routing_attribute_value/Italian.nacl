@@ -1,0 +1,6 @@
+zendesk.routing_attribute_value Language__Italian {
+  name = "Italian"
+  _parent = [
+    zendesk.routing_attribute.instance.Language,
+  ]
+}

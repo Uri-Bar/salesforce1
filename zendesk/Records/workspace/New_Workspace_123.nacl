@@ -1,0 +1,52 @@
+zendesk.workspace New_Workspace_123@s {
+  title = "New Workspace 123"
+  description = ""
+  macro_ids = [
+    zendesk.macro.instance.Close_and_redirect_to_topics_2@s,
+    zendesk.macro.instance.Downgrade_and_inform@s,
+    zendesk.macro.instance.Close_and_redirect_to_topics@s,
+  ]
+  ticket_form_id = zendesk.ticket_form.instance.Default_Ticket_Form@s
+  activated = true
+  conditions = {
+    all = [
+      {
+        field = "brand_id"
+        operator = "is"
+        value = zendesk.brand.instance.Salto
+      },
+      {
+        field = "priority"
+        operator = "greater_than"
+        value = "normal"
+      },
+    ]
+    any = [
+      {
+        field = "type"
+        operator = "is_not"
+        value = "question"
+      },
+    ]
+  }
+  selected_macros = [
+    {
+      id = zendesk.macro.instance.Close_and_redirect_to_topics_2@s
+      title = "Close and redirect to topics 2"
+      active = true
+      
+    },
+    {
+      id = zendesk.macro.instance.Downgrade_and_inform@s
+      title = "Downgrade and inform"
+      active = true
+      
+    },
+    {
+      id = zendesk.macro.instance.Close_and_redirect_to_topics@s
+      title = "Close and redirect to topics"
+      active = true
+      
+    },
+  ]
+}

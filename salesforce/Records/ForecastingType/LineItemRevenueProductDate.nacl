@@ -1,0 +1,11 @@
+salesforce.ForecastingType LineItemRevenueProductDate {
+  fullName = "LineItemRevenueProductDate"
+  active = false
+  amount = true
+  dateType = "1"
+  developerName = "LineItemRevenueProductDate"
+  hasProductFamily = true
+  masterLabel = "Line Item Revenue Product Date"
+  quantity = false
+  roleType = "R"
+}

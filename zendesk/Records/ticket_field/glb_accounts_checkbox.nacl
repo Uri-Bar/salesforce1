@@ -1,0 +1,13 @@
+zendesk.ticket_field glb_accounts_checkbox {
+  type = "checkbox"
+  raw_title = "glb_accounts"
+  raw_description = ""
+  active = true
+  required = false
+  collapsed_for_agents = false
+  raw_title_in_portal = "glb_accounts"
+  visible_in_portal = false
+  editable_in_portal = false
+  required_in_portal = false
+  removable = true
+}

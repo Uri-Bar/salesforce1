@@ -1,0 +1,33 @@
+zuora_billing.Task Bill_Run_Callout___Print_Invoices_35_sssbssu__Iterate_Invoices@uuuuuuumuus {
+  name = "Iterate Invoices"
+  parameters = {
+    iteration_type = "Unique-Field"
+    iteration_field = "Invoice.Id"
+  }
+  action_type = "Iterate"
+  object = "InvoiceItem__39.csv.zip"
+  call_type = "SOAP"
+  task_id = 39
+  concurrent_limit = 9999999
+  additionalProperties = {
+    css = {
+      top = "140px"
+      left = "580px"
+    }
+    priority = "Medium"
+    
+  }
+  _parent = [
+    zuora_billing.WorkflowExport.instance.Bill_Run_Callout___Print_Invoices_35@sssbssu,
+  ]
+  _generated_dependencies = [
+    {
+      reference = zuora_billing.invoice.field.Id
+      occurrences = [
+        {
+          location = zuora_billing.Task.instance.Bill_Run_Callout___Print_Invoices_35_sssbssu__Iterate_Invoices@uuuuuuumuus.parameters.iteration_field
+        },
+      ]
+    },
+  ]
+}

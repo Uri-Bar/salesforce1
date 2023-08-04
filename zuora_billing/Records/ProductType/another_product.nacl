@@ -1,0 +1,12 @@
+zuora_billing.ProductType SKU_00000002@b {
+  sku = "SKU-00000002"
+  name = "another product"
+  description = "this is a product"
+  category = "Base Products"
+  effectiveStartDate = "2021-07-22"
+  effectiveEndDate = "2023-05-25"
+  productRatePlans = [
+    zuora_billing.ProductRatePlanType.instance.SKU_00000002_b__Fixed_Bid_Plan@umuuss,
+    zuora_billing.ProductRatePlanType.instance.SKU_00000002_b__Milestone_Plan@umuus,
+  ]
+}

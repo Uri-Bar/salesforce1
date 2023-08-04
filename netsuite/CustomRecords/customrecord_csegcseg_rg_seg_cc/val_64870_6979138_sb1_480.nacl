@@ -1,0 +1,18 @@
+netsuite.customrecord_csegcseg_rg_seg_cc val_64870_6979138_sb1_480 {
+  scriptid = "val_64870_6979138_sb1_480"
+  isInactive = false
+  parent = netsuite.customrecord_csegcseg_rg_seg_cc.instance.val_64866_6979138_sb1_725
+  name = "1164 Customer Support"
+  translationsList = {
+    customRecordTranslations = {
+      _frenchFrance = {
+        locale = "_frenchFrance"
+        language = "French (France)"
+      }
+      _german = {
+        locale = "_german"
+        language = "German"
+      }
+    }
+  }
+}

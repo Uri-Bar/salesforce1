@@ -1,0 +1,12 @@
+stripe.reporting_report_type balance_summary_1@v {
+  id = "balance.summary.1"
+  default_columns = [
+    "category",
+    "description",
+    "net_amount",
+    "currency",
+  ]
+  livemode = false
+  name = "Balance summary"
+  version = 1
+}

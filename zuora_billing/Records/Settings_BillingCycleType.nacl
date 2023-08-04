@@ -1,0 +1,8 @@
+zuora_billing.Settings_BillingCycleType {
+  billingCycleTypes = [
+    "DefaultFromCustomer",
+    "SpecificDayofMonth",
+    "SubscriptionStartDay",
+    "ChargeTriggerDay",
+  ]
+}

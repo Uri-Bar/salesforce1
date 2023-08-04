@@ -1,0 +1,131 @@
+type zuora_billing.TestEnvironmentJob {
+  string Id {
+    format = "uuid"
+    label = "Id"
+    origin = "system"
+    type = "string"
+    required = true
+    filterable = true
+  }
+  string CreatedById {
+    label = "CreatedById"
+    origin = "system"
+    type = "string"
+    required = true
+    filterable = true
+    referenceTo = [
+      zuora_billing.user.field.Id,
+    ]
+    cardinality = "manyToOne"
+    recordConstraints = {
+      create = {
+        enforceValidMapping = true
+      }
+    }
+  }
+  string UpdatedById {
+    label = "UpdatedById"
+    origin = "system"
+    type = "string"
+    required = true
+    filterable = true
+    referenceTo = [
+      zuora_billing.user.field.Id,
+    ]
+    cardinality = "manyToOne"
+    recordConstraints = {
+      create = {
+        enforceValidMapping = true
+      }
+    }
+  }
+  string CreatedDate {
+    format = "date-time"
+    origin = "system"
+    type = "string"
+    label = "CreatedDate"
+    required = true
+    filterable = true
+  }
+  string UpdatedDate {
+    format = "date-time"
+    origin = "system"
+    type = "string"
+    label = "UpdatedDate"
+    required = true
+    filterable = true
+  }
+  string Status {
+    label = "Status"
+    origin = "system"
+    type = "string"
+    
+    
+    description = "The status of the test environment job"
+    required = true
+    filterable = true
+  }
+  string JobType {
+    label = "Job Type"
+    origin = "system"
+    type = "string"
+    
+    
+    description = "The job type"
+    required = true
+    filterable = true
+  }
+  string TestEnvironmentId {
+    format = "uuid"
+    label = "Test Environment Id"
+    origin = "system"
+    type = "string"
+    description = "The id linking this job to a test environment"
+    required = true
+    filterable = true
+    referenceTo = [
+      zuora_billing.TestEnvironment.field.Id,
+    ]
+    cardinality = "manyToOne"
+    recordConstraints = {
+      create = {
+        enforceValidMapping = true
+      }
+    }
+  }
+  string JobStartTime {
+    format = "date-time"
+    label = "Job Start Time"
+    origin = "system"
+    type = "string"
+    description = "Time when the job was started"
+    required = false
+    filterable = true
+  }
+  string JobEndTime {
+    format = "date-time"
+    label = "Job End Time"
+    origin = "system"
+    type = "string"
+    description = "Time when the job completed"
+    required = false
+    filterable = true
+  }
+  number ProgressPercentage {
+    label = "Progress Percentage"
+    origin = "system"
+    type = "integer"
+    description = "Job progress percentage"
+    required = false
+    filterable = false
+  }
+  string EstimatedCompletionTime {
+    format = "date-time"
+    label = "Estimated Completion Time"
+    origin = "system"
+    type = "string"
+    description = "Time when the job is estimated to be completed"
+    required = false
+    filterable = true
+  }
+}

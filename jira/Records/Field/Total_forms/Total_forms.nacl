@@ -1,0 +1,10 @@
+jira.Field Total_forms__c@suu {
+  name = "Total forms"
+  description = "The total number of forms on the issue"
+  isLocked = true
+  searcherKey = "com.atlassian.jira.plugin.system.customfieldtypes:exactnumber"
+  type = "com.atlassian.jira.plugins.proforma-managed-fields:forms-total-field-cftype"
+  contexts = [
+    jira.CustomFieldContext.instance.Total_forms__c_suu_Default_Configuration_Scheme_for_Total_forms@uuumusssss,
+  ]
+}

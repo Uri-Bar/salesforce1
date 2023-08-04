@@ -1,0 +1,58 @@
+workato.recipe__code _GWR__recipe_2_Geoff_Root_uussuu@uuuuuum {
+  number = 0
+  provider = "salesforce"
+  name = "updated_custom_object"
+  as = "6aefe546"
+  title = "New/updated Opportunity"
+  description = "New/updated <span class=\"provider\">Opportunity</span> in <span class=\"provider\">Salesforce</span>"
+  keyword = "trigger"
+  dynamicPickListSelection = {
+    sobject_name = "Opportunity"
+    field_list = [
+      {
+        label = "Account ID"
+        value = "AccountId"
+      },
+    ]
+  }
+  input = {
+    sobject_name = "Opportunity"
+    since_offset = "-3600"
+    field_list = "AccountId"
+  }
+  block = [
+    {
+      number = 1
+      provider = "salesforce"
+      name = "update_sobject"
+      as = "74cd9751"
+      title = "Update Account"
+      description = "Update <span class=\"provider\">Account</span> in <span class=\"provider\">Salesforce</span>"
+      keyword = "action"
+      dynamicPickListSelection = {
+        sobject_name = "Account"
+        SLA__c = "Gold"
+      }
+      toggleCfg = {
+        SLA__c = true
+      }
+      input = {
+        sobject_name = "Account"
+        id = "#{_('data.salesforce.6aefe546.AccountId')}"
+        SLA__c = "Gold"
+      }
+      visible_config_fields = [
+        "sobject_name",
+        "BillingCity",
+        "BillingStreet",
+        "BillingPostalCode",
+        "SLA__c",
+      ]
+      uuid = "7d0a9fe6-5ca0-46a3-bd18-f856e0514808"
+    },
+  ]
+  uuid = "690401d3-91e2-4049-9b5e-ed42a76e0dce"
+  _parent = [
+    workato.recipe.instance._GWR__recipe_2_Geoff_Root@uussuu,
+  ]
+}

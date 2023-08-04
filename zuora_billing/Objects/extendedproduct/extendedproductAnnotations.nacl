@@ -1,0 +1,22 @@
+type zuora_billing.extendedproduct {
+  annotations {
+    string metadataType {
+    }
+    string label {
+    }
+    string description {
+    }
+    hidden_string id {
+    }
+    string objectType {
+    }
+  }
+  metadataType = "StandardObject"
+  objectType = "extendedproduct"
+  _generated_dependencies = [
+    {
+      reference = zuora_billing.extendeduser
+    },
+  ]
+  label = "ExtendedProduct"
+}

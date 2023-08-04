@@ -1,0 +1,19 @@
+stripe.reporting_report_type exports_coupons@v {
+  id = "exports.coupons"
+  default_columns = [
+    "id",
+    "Created (UTC)",
+    "Valid",
+    "Duration",
+    "Duration In Months",
+    "Percent Off",
+    "Amount Off",
+    "Currency",
+    "Redeem By (UTC)",
+    "Max Redemptions",
+    "Times Redeemed",
+  ]
+  livemode = false
+  name = "Coupons export"
+  version = 1
+}

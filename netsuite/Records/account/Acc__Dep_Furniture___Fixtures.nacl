@@ -1,0 +1,15 @@
+netsuite.account Acc__Dep_Furniture___Fixtures@vsbses {
+  acctType = "_fixedAsset"
+  acctName = "Acc. Dep-Furniture & Fixtures"
+  includeChildren = true
+  generalRate = "_current"
+  cashFlowRate = "_average"
+  isInactive = false
+  inventory = false
+  subsidiaryList = [
+    netsuite.subsidiary.instance.Parent_Company@s,
+  ]
+  revalue = false
+  identifier = "Acc. Dep-Furniture & Fixtures"
+  custom_custrecord_acct_special = false
+}

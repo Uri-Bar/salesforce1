@@ -1,0 +1,4 @@
+jira.AutomationLabel System_rules@s {
+  name = "System rules"
+  color = "N30"
+}

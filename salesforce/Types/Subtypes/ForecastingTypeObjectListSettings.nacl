@@ -1,0 +1,25 @@
+type salesforce.ForecastingTypeObjectListSettings {
+  annotations {
+    serviceid metadataType {
+    }
+    boolean hasMetaFile {
+    }
+    string folderType {
+    }
+    string folderContentType {
+    }
+    string suffix {
+    }
+    string dirName {
+    }
+  }
+  "List<salesforce.ForecastingObjectListLabelMapping>" forecastingObjectListLabelMappings {
+  }
+  salesforce.ForecastingObjectListSelectedSettings forecastingObjectListSelectedSettings {
+  }
+  salesforce.ForecastingObjectListUnselectedSettings forecastingObjectListUnselectedSettings {
+  }
+  string forecastingTypeDeveloperName {
+  }
+  metadataType = "ForecastingTypeObjectListSettings"
+}

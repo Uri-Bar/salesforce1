@@ -1,0 +1,105 @@
+type salesforce.BusinessBrand {
+  salesforce.Text Name {
+    apiName = "BusinessBrand.Name"
+    label = "Name"
+    _required = true
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    length = 255
+    queryable = true
+  }
+  salesforce.Unknown OrgId {
+    apiName = "BusinessBrand.OrgId"
+    
+    
+    
+    _hidden_value = true
+  }
+  salesforce.Lookup ParentId {
+    apiName = "BusinessBrand.ParentId"
+    _hidden_value = true
+    
+    
+    
+  }
+  serviceid Id {
+    apiName = "BusinessBrand.Id"
+    label = "Business Brand ID"
+    queryable = true
+    _hidden_value = true
+    
+    
+  }
+  salesforce.Lookup OwnerId {
+    apiName = "BusinessBrand.OwnerId"
+    label = "Owner ID"
+    referenceTo = [
+      salesforce.Group,
+      salesforce.User,
+    ]
+    createable = true
+    updateable = true
+    relationshipName = "Owner"
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Checkbox IsDeleted {
+    apiName = "BusinessBrand.IsDeleted"
+    label = "Deleted"
+    defaultValue = false
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.DateTime CreatedDate {
+    apiName = "BusinessBrand.CreatedDate"
+    label = "Created Date"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Lookup CreatedById {
+    apiName = "BusinessBrand.CreatedById"
+    label = "Created By ID"
+    referenceTo = [
+      salesforce.User,
+    ]
+    createable = false
+    updateable = false
+    relationshipName = "CreatedBy"
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.DateTime LastModifiedDate {
+    apiName = "BusinessBrand.LastModifiedDate"
+    label = "Last Modified Date"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Lookup LastModifiedById {
+    apiName = "BusinessBrand.LastModifiedById"
+    label = "Last Modified By ID"
+    referenceTo = [
+      salesforce.User,
+    ]
+    createable = false
+    updateable = false
+    relationshipName = "LastModifiedBy"
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.DateTime SystemModstamp {
+    apiName = "BusinessBrand.SystemModstamp"
+    label = "System Modstamp"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+}

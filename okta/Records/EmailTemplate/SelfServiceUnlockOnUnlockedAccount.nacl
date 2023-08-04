@@ -1,0 +1,6 @@
+okta.EmailTemplate SelfServiceUnlockOnUnlockedAccount {
+  name = "SelfServiceUnlockOnUnlockedAccount"
+  _parent = [
+    okta.Brand.instance,
+  ]
+}

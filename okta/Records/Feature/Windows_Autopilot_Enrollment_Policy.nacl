@@ -1,0 +1,11 @@
+okta.Feature Windows_Autopilot_Enrollment_Policy@s {
+  
+  type = "self-service"
+  status = "DISABLED"
+  name = "Windows Autopilot Enrollment Policy"
+  description = "IT admins will have the capability to create contextual access policies for Windows Autopilot Enrollment requests. The feature is only supported on Okta Identity Engine (OIE)."
+  stage = {
+    value = "EA"
+  }
+  
+}

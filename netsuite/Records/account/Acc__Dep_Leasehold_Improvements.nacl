@@ -1,0 +1,15 @@
+netsuite.account Acc__Dep_Leasehold_Improvements@vsbs {
+  acctType = "_fixedAsset"
+  acctName = "Acc. Dep-Leasehold Improvements"
+  includeChildren = true
+  generalRate = "_current"
+  cashFlowRate = "_average"
+  isInactive = false
+  inventory = false
+  subsidiaryList = [
+    netsuite.subsidiary.instance.Parent_Company@s,
+  ]
+  revalue = false
+  identifier = "Acc. Dep-Leasehold Improvements"
+  custom_custrecord_acct_special = false
+}

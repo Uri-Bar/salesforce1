@@ -1,0 +1,9 @@
+okta.Feature Assign_admin_roles_to_public_client_app@s {
+  type = "self-service"
+  status = "DISABLED"
+  name = "Assign admin roles to public client app"
+  description = "Support public client app as a principal with roles"
+  stage = {
+    value = "EA"
+  }
+}

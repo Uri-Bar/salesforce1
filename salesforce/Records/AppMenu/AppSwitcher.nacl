@@ -1,0 +1,89 @@
+salesforce.AppMenu AppSwitcher {
+  fullName = "AppSwitcher"
+  appMenuItems = [
+    {
+      name = salesforce.CustomApplication.instance.standard__Platform
+      type = "CustomApplication"
+    },
+    {
+      name = salesforce.CustomApplication.instance.standard__Sales
+      type = "CustomApplication"
+    },
+    {
+      name = salesforce.CustomApplication.instance.standard__Chatter
+      type = "CustomApplication"
+    },
+    {
+      name = salesforce.CustomApplication.instance.standard__Marketing
+      type = "CustomApplication"
+    },
+    {
+      name = salesforce.CustomApplication.instance.standard__Service
+      type = "CustomApplication"
+    },
+    {
+      name = salesforce.CustomApplication.instance.standard__Community
+      type = "CustomApplication"
+    },
+    {
+      name = salesforce.CustomApplication.instance.standard__ServiceConsole
+      type = "CustomApplication"
+    },
+    {
+      name = salesforce.CustomApplication.instance.standard__LightningSales
+      type = "CustomApplication"
+    },
+    {
+      name = salesforce.CustomApplication.instance.Sales_Leadership
+      type = "CustomApplication"
+    },
+    {
+      name = salesforce.CustomApplication.instance.Lead_Generation
+      type = "CustomApplication"
+    },
+    {
+      name = salesforce.CustomApplication.instance.Sales_Operations
+      type = "CustomApplication"
+    },
+    {
+      name = salesforce.CustomApplication.instance.Relationship_Management
+      type = "CustomApplication"
+    },
+    {
+      name = salesforce.CustomApplication.instance.standard__LightningSalesConsole
+      type = "CustomApplication"
+    },
+    {
+      name = salesforce.CustomApplication.instance.standard__LightningBolt
+      type = "CustomApplication"
+    },
+    {
+      name = "CPQIntegrationUserApp"
+      type = "ConnectedApp"
+    },
+    {
+      name = salesforce.CustomApplication.instance.standard__SalesforceCMS
+      type = "CustomApplication"
+    },
+    {
+      name = "DEVHUB_f5ixjbikgfpendcinjxh"
+      type = "ConnectedApp"
+    },
+    {
+      name = salesforce.ConnectedApp.instance.Salto_CI
+      type = "ConnectedApp"
+    },
+    {
+      name = salesforce.CustomApplication.instance.standard__AppLauncher
+      type = "CustomApplication"
+    },
+    {
+      name = salesforce.ConnectedApp.instance.Salto
+      type = "ConnectedApp"
+    },
+    {
+      name = "Salto_Dev"
+      type = "ConnectedApp"
+    },
+  ]
+}

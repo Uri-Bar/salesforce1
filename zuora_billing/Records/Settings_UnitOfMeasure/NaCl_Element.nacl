@@ -1,0 +1,8 @@
+zuora_billing.Settings_UnitOfMeasure NaCl_Element@s {
+  name = "NaCl Element"
+  displayAs = "NaCl Element"
+  precision = 0
+  roundingMode = "Up"
+  active = false
+  usageLogFileLabel = "NaCl Element"
+}

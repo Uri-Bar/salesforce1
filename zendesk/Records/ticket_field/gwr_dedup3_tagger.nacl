@@ -1,0 +1,16 @@
+zendesk.ticket_field gwr_dedup3_tagger {
+  type = "tagger"
+  raw_title = "gwr_dedup3"
+  raw_description = ""
+  active = true
+  required = false
+  collapsed_for_agents = false
+  raw_title_in_portal = "gwr_dedup3"
+  visible_in_portal = false
+  editable_in_portal = false
+  required_in_portal = false
+  removable = true
+  custom_field_options = [
+    zendesk.ticket_field__custom_field_options.instance.gwr_dedup3_tagger__gwr_dd3_1,
+  ]
+}

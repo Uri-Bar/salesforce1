@@ -1,0 +1,8 @@
+jira.Field __Progress@_00931s {
+  name = "Σ Progress"
+  schema = {
+    type = "progress"
+    system = "aggregateprogress"
+  }
+  description = ""
+}

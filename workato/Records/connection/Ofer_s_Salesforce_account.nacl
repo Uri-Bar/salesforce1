@@ -1,0 +1,5 @@
+workato.connection Ofer_s_Salesforce_account@tss {
+  application = "salesforce"
+  name = "Ofer's Salesforce account"
+  folder_id = workato.folder.instance.Root
+}

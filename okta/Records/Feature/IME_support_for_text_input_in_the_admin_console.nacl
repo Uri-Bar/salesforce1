@@ -1,0 +1,9 @@
+okta.Feature IME_support_for_text_input_in_the_admin_console@s {
+  type = "self-service"
+  status = "DISABLED"
+  name = "IME support for text input in the admin console"
+  description = "When the feature flag is turned on, any admin user in your org will be able to use the IME keyboard to input international characters"
+  stage = {
+    value = "EA"
+  }
+}

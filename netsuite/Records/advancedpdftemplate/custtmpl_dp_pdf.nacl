@@ -1,0 +1,11 @@
+netsuite.advancedpdftemplate custtmpl_dp_pdf {
+  scriptid = "custtmpl_dp_pdf"
+  displaysourcecode = false
+  isinactive = false
+  preferred = false
+  printtype = "SEARCH"
+  savedsearch = netsuite.savedsearch.instance.customsearch_dp_search_1.scriptid
+  title = "DP PDF Template"
+  trantype = "CUSTINVC"
+  content = file("netsuite/advancedpdftemplate/custtmpl_dp_pdf.xml")
+}

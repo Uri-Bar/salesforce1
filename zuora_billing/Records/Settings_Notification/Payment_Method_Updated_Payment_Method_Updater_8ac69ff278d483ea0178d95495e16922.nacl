@@ -1,0 +1,18 @@
+zuora_billing.Settings_Notification Payment_Method_Updated_Payment_Method_Updater_8ac69ff278d483ea0178d95495e16922@ssussu {
+  profileId = zuora_billing.Settings_CommunicationProfile.instance.Neta_test@s
+  eventName = "Payment Method Updated"
+  name = "Payment Method Updater"
+  description = "The payment method was updated by the Payment Method Updater."
+  active = false
+  hidden = false
+  param1 = "PMU"
+  emailOption = true
+  emailTemplateName = zuora_billing.PublicEmailTemplate.instance.Payment_Method_Updated_Default_Email_Template@s
+  calloutOption = false
+  contentType = "APPLICATION_JSON"
+  calloutRetriable = false
+  calloutAuth = false
+  calloutOauth2 = false
+  calloutPreemptiveAuth = false
+  useCustomRequestBody = false
+}

@@ -1,0 +1,25 @@
+type zuora_billing.extendedinvoicehistory {
+  annotations {
+    string metadataType {
+    }
+    string label {
+    }
+    string description {
+    }
+    hidden_string id {
+    }
+    string objectType {
+    }
+  }
+  metadataType = "StandardObject"
+  objectType = "extendedinvoicehistory"
+  _generated_dependencies = [
+    {
+      reference = zuora_billing.extendedinvoice
+    },
+    {
+      reference = zuora_billing.extendeduser
+    },
+  ]
+  label = "ExtendedInvoiceHistory"
+}

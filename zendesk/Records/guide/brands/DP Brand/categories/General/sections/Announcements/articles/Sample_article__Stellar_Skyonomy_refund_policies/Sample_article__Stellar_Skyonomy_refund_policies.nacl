@@ -1,0 +1,16 @@
+zendesk.article Sample_article__Stellar_Skyonomy_refund_policies_Announcements_General_DP_Brand_s_uum_uuuum@sfssssuuuuuum {
+  author_id = "neta.marcus+zendesk@salto.io"
+  comments_disabled = false
+  draft = true
+  promoted = false
+  section_id = zendesk.section.instance.Announcements_General_DP_Brand_s_uum@uuuum
+  source_locale = zendesk.guide_language_settings.instance.DP_Brand_s_en_us@umub
+  locale = zendesk.guide_language_settings.instance.DP_Brand_s_en_us@umub
+  outdated = false
+  permission_group_id = zendesk.permission_group.instance.Admins
+  translations = [
+    zendesk.article_translation.instance.Sample_article__Stellar_Skyonomy_refund_policies_Announcements_General_DP_Brand_s_uum_uuuum_sfssssuuuuuum__DP_Brand_s_en_us_umub@uuuuuuuuuuuuumuuuuuum,
+  ]
+  brand = zendesk.brand.instance.DP_Brand@s
+  user_segment_id = zendesk.user_segment.instance.Everyone
+}

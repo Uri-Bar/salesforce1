@@ -1,0 +1,6 @@
+zendesk.section_order Lorem_Ipsum_General_AnotherSaltoBrand_suu@uuum {
+  brand = zendesk.brand.instance.AnotherSaltoBrand
+  _parent = [
+    zendesk.section.instance.Lorem_Ipsum_General_AnotherSaltoBrand@suu,
+  ]
+}

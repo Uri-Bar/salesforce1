@@ -1,0 +1,5 @@
+zuora_billing.Settings_RevenueEventType InvoiceItemAdjustmentCreated__z {
+  label = "Invoice Item Adjustment Created"
+  systemId = "InvoiceItemAdjustmentCreated__z"
+  active = true
+}

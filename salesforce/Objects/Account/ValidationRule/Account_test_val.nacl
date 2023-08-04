@@ -1,0 +1,19 @@
+salesforce.ValidationRule Account_test_val {
+  fullName = "Account.test_val"
+  active = true
+  errorConditionFormula = '''
+AND(
+ISBLANK( AccountNumber ),
+ISPICKVAL( Active__c, "Active")
+)
+'''
+  errorMessage = "Active accounts need an account number"
+  _parent = [
+    salesforce.Account,
+  ]
+  _generated_dependencies = [
+    {
+      reference = salesforce.Account.field.Active__c
+    },
+  ]
+}

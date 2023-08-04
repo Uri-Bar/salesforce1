@@ -1,0 +1,9 @@
+jira.Field Change_start_date__c@ssuu {
+  name = "Change start date"
+  description = "Specify the time and date for the start of the change"
+  searcherKey = "com.atlassian.jira.plugin.system.customfieldtypes:datetimerange"
+  type = "com.atlassian.jira.plugin.system.customfieldtypes:datetime"
+  contexts = [
+    jira.CustomFieldContext.instance.Change_start_date__c_ssuu_Default_Configuration_Scheme_for_Change_start_date@uuuumussssss,
+  ]
+}

@@ -1,0 +1,21 @@
+zuora_billing.PublicEmailTemplate Credit_Balance_Refund_Processed_Default_Email_Template@s {
+  eventCategory = 2420
+  name = "Credit Balance Refund Processed Default Email Template"
+  description = ""
+  encodingType = "UTF8"
+  fromName = "Admin"
+  fromEmailType = "TenantEmail"
+  fromEmailAddress = "neta.marcus@salto.io"
+  replyToEmailType = "TenantEmail"
+  replyToEmailAddress = "neta.marcus@salto.io"
+  ccEmailType = "SpecificEmails"
+  ccEmailAddress = ""
+  bccEmailAddress = ""
+  toEmailType = "BillToContact"
+  toEmailAddress = ""
+  emailSubject = "Your credit balance refund was successfully processed"
+  emailBody = "Dear <BillToContact.FirstName> <BillToContact.LastName>,\r<br />\r<br />A refund of <Refund.Amount> <Account.Currency> was processed against your account credit balance on <Refund.Date>.\r<br />\r<br />Your new account credit balance is <Account.CreditBalance> <Account.Currency> and your account balance is <Account.Balance> <Account.Currency>.\r<br />\r<br />Thank you for your business!"
+  active = true
+  isHtml = true
+  useAdditionalAddresses = false
+}

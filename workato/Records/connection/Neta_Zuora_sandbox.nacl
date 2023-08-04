@@ -1,0 +1,5 @@
+workato.connection Neta_Zuora_sandbox@s {
+  application = "zuora"
+  name = "Neta Zuora sandbox"
+  folder_id = workato.folder.instance.Root
+}

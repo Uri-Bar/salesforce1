@@ -1,0 +1,35 @@
+type zuora_billing.extendedinvoicediscountsummary {
+  string Id {
+    type = "string"
+    format = "uuid"
+    required = false
+    filterable = false
+    label = "Id"
+  }
+  boolean deleted {
+    type = "boolean"
+    required = false
+    filterable = false
+    label = "deleted"
+  }
+  
+  string AppliedToInvoiceItemId {
+    type = "string"
+    format = "uuid"
+    required = false
+    filterable = false
+    label = "AppliedToInvoiceItemId"
+  }
+  number DiscountAmount {
+    type = "number"
+    required = false
+    filterable = false
+    label = "DiscountAmount"
+  }
+  number DiscountTaxAmount {
+    type = "number"
+    required = false
+    filterable = false
+    label = "DiscountTaxAmount"
+  }
+}

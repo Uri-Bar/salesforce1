@@ -1,0 +1,18 @@
+stripe.reporting_report_type connected_account_payout_reconciliation_by_id_itemized_3@uuuvuvv {
+  id = "connected_account_payout_reconciliation.by_id.itemized.3"
+  default_columns = [
+    "balance_transaction_id",
+    "created_utc",
+    "available_on_utc",
+    "currency",
+    "gross",
+    "fee",
+    "net",
+    "reporting_category",
+    "description",
+    "connected_account",
+  ]
+  livemode = false
+  name = "Connected account itemized single payout reconciliation"
+  version = 3
+}

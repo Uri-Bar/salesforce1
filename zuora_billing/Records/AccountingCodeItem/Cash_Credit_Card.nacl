@@ -1,0 +1,6 @@
+zuora_billing.AccountingCodeItem Cash_Credit_Card@us {
+  name = "Credit Card"
+  type = "Cash"
+  category = "Assets"
+  status = "Active"
+}

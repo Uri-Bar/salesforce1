@@ -1,0 +1,70 @@
+salesforce.Layout WorkBadgeDefinition_Badge_Definition_Layout@bss {
+  fullName = "WorkBadgeDefinition-Badge Definition Layout"
+  layoutSections = [
+    {
+      customLabel = false
+      detailHeading = false
+      editHeading = false
+      label = "Information"
+      layoutColumns = [
+        {
+          layoutItems = [
+            {
+              behavior = "Required"
+              field = salesforce.WorkBadgeDefinition.field.Name
+            },
+            {
+              behavior = "Readonly"
+              field = salesforce.WorkBadgeDefinition.field.LastModifiedById
+            },
+            {
+              behavior = "Required"
+              field = salesforce.WorkBadgeDefinition.field.Description
+            },
+            {
+              behavior = "Required"
+              field = salesforce.WorkBadgeDefinition.field.ImageUrl
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.WorkBadgeDefinition.field.IsActive
+            },
+          ]
+        },
+        {
+          layoutItems = [
+            {
+              behavior = "Readonly"
+              field = salesforce.WorkBadgeDefinition.field.CreatedById
+            },
+            {
+              behavior = "Required"
+              field = salesforce.WorkBadgeDefinition.field.OwnerId
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.WorkBadgeDefinition.field.IsCompanyWide
+            },
+          ]
+        },
+      ]
+      style = "TwoColumnsLeftToRight"
+    },
+    {
+      customLabel = false
+      detailHeading = false
+      editHeading = false
+      style = "CustomLinks"
+      layoutColumns = [
+        {
+        },
+      ]
+    },
+  ]
+  showEmailCheckbox = false
+  showRunAssignmentRulesCheckbox = false
+  showSubmitAndAttachButton = false
+  _parent = [
+    salesforce.WorkBadgeDefinition,
+  ]
+}

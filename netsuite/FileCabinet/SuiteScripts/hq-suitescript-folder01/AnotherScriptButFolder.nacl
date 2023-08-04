@@ -1,0 +1,12 @@
+netsuite.file SuiteScripts_hq_suitescript_folder01_AnotherScriptButFolder@dbbd {
+  bundleable = false
+  isinactive = false
+  availablewithoutlogin = false
+  generateurltimestamp = false
+  hideinbundle = false
+  path = "/SuiteScripts/hq-suitescript-folder01/AnotherScriptButFolder"
+  content = file("netsuite/FileCabinet/SuiteScripts/hq-suitescript-folder01/AnotherScriptButFolder")
+  _parent = [
+    netsuite.folder.instance.SuiteScripts_hq_suitescript_folder01@dbb,
+  ]
+}

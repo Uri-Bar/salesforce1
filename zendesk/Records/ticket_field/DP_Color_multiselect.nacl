@@ -1,0 +1,23 @@
+zendesk.ticket_field multiselect_DP_Color@us {
+  type = "multiselect"
+  
+  raw_title = "DP Color"
+  
+  raw_description = ""
+  active = true
+  required = false
+  collapsed_for_agents = false
+  
+  raw_title_in_portal = "DP Color"
+  visible_in_portal = false
+  editable_in_portal = false
+  required_in_portal = false
+  removable = true
+  agent_description = "Favorite Colors"
+  custom_field_options = [
+    zendesk.ticket_field__custom_field_options.instance.multiselect_DP_Color_us__goldish@uumuu,
+    zendesk.ticket_field__custom_field_options.instance.multiselect_DP_Color_us__burnt_sienna@uumuuu,
+    zendesk.ticket_field__custom_field_options.instance.multiselect_DP_Color_us__salmon@uumuu,
+    zendesk.ticket_field__custom_field_options.instance.multiselect_DP_Color_us__puce@uumuu,
+  ]
+}

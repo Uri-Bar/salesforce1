@@ -1,0 +1,657 @@
+type zuora_billing.productrateplancharge {
+  string Id {
+    type = "string"
+    format = "uuid"
+    required = false
+    filterable = false
+    label = "Id"
+  }
+  string CreatedById {
+    type = "string"
+    format = "uuid"
+    required = false
+    filterable = false
+    referenceTo = [
+      zuora_billing.user.field.Id,
+    ]
+    cardinality = "manyToOne"
+    recordConstraints = {
+      create = {
+        enforceValidMapping = true
+      }
+    }
+    label = "CreatedById"
+  }
+  string CreatedDate {
+    type = "string"
+    format = "date-time"
+    required = false
+    filterable = false
+    label = "CreatedDate"
+  }
+  string UpdatedById {
+    type = "string"
+    format = "uuid"
+    required = false
+    filterable = false
+    referenceTo = [
+      zuora_billing.user.field.Id,
+    ]
+    cardinality = "manyToOne"
+    recordConstraints = {
+      create = {
+        enforceValidMapping = true
+      }
+    }
+    label = "UpdatedById"
+  }
+  string UpdatedDate {
+    type = "string"
+    format = "date-time"
+    required = false
+    filterable = false
+    label = "UpdatedDate"
+  }
+  boolean deleted {
+    type = "boolean"
+    required = false
+    filterable = false
+    label = "deleted"
+  }
+  string AccountingCode {
+    type = "string"
+    maxLength = 512
+    required = false
+    filterable = false
+    label = "AccountingCode"
+  }
+  string ApplyDiscountTo {
+    type = "string"
+    maxLength = 512
+    required = false
+    filterable = false
+    label = "ApplyDiscountTo"
+  }
+  number BillCycleDay {
+    type = "integer"
+    required = false
+    filterable = false
+    label = "BillCycleDay"
+  }
+  string BillCycleType {
+    type = "string"
+    maxLength = 512
+    required = false
+    filterable = false
+    label = "BillCycleType"
+  }
+  string BillingPeriod {
+    type = "string"
+    maxLength = 512
+    required = false
+    filterable = false
+    label = "BillingPeriod"
+  }
+  string BillingPeriodAlignment {
+    type = "string"
+    maxLength = 512
+    required = false
+    filterable = false
+    label = "BillingPeriodAlignment"
+  }
+  string BillingTiming {
+    type = "string"
+    maxLength = 512
+    required = false
+    filterable = false
+    label = "BillingTiming"
+  }
+  string ChargeModel {
+    type = "string"
+    maxLength = 512
+    required = false
+    filterable = false
+    label = "ChargeModel"
+  }
+  string ChargeType {
+    type = "string"
+    maxLength = 512
+    required = false
+    filterable = false
+    label = "ChargeType"
+  }
+  number DefaultQuantity {
+    type = "number"
+    required = false
+    filterable = false
+    label = "DefaultQuantity"
+  }
+  string DeferredRevenueAccount {
+    type = "string"
+    maxLength = 512
+    required = false
+    filterable = false
+    label = "DeferredRevenueAccount"
+  }
+  string Description {
+    type = "string"
+    maxLength = 512
+    required = false
+    filterable = false
+    label = "Description"
+  }
+  string DiscountClassId {
+    type = "string"
+    format = "uuid"
+    required = false
+    filterable = false
+    label = "DiscountClassId"
+  }
+  string DiscountLevel {
+    type = "string"
+    maxLength = 512
+    required = false
+    filterable = false
+    label = "DiscountLevel"
+  }
+  string EndDateCondition {
+    type = "string"
+    maxLength = 512
+    required = false
+    filterable = false
+    label = "EndDateCondition"
+  }
+  number IncludedUnits {
+    type = "number"
+    required = false
+    filterable = false
+    label = "IncludedUnits"
+  }
+  boolean LegacyRevenueReporting {
+    type = "boolean"
+    required = false
+    filterable = false
+    label = "LegacyRevenueReporting"
+  }
+  string ListPriceBase {
+    type = "string"
+    maxLength = 512
+    required = false
+    filterable = false
+    label = "ListPriceBase"
+  }
+  number MaxQuantity {
+    type = "number"
+    required = false
+    filterable = false
+    label = "MaxQuantity"
+  }
+  number MinQuantity {
+    type = "number"
+    required = false
+    filterable = false
+    label = "MinQuantity"
+  }
+  string Name {
+    type = "string"
+    maxLength = 512
+    required = false
+    filterable = false
+    label = "Name"
+  }
+  number NumberOfPeriod {
+    type = "integer"
+    required = false
+    filterable = false
+    label = "NumberOfPeriod"
+  }
+  string OverageCalculationOption {
+    type = "string"
+    maxLength = 512
+    required = false
+    filterable = false
+    label = "OverageCalculationOption"
+  }
+  string OverageUnusedUnitsCreditOption {
+    type = "string"
+    maxLength = 512
+    required = false
+    filterable = false
+    label = "OverageUnusedUnitsCreditOption"
+  }
+  string PriceChangeOption {
+    type = "string"
+    maxLength = 512
+    required = false
+    filterable = false
+    label = "PriceChangeOption"
+  }
+  number PriceIncreasePercentage {
+    type = "number"
+    required = false
+    filterable = false
+    label = "PriceIncreasePercentage"
+  }
+  string RatingGroup {
+    type = "string"
+    maxLength = 512
+    required = false
+    filterable = false
+    label = "RatingGroup"
+  }
+  string RecognizedRevenueAccount {
+    type = "string"
+    maxLength = 512
+    required = false
+    filterable = false
+    label = "RecognizedRevenueAccount"
+  }
+  string RevenueRecognitionRuleName {
+    type = "string"
+    maxLength = 512
+    required = false
+    filterable = false
+    label = "RevenueRecognitionRuleName"
+  }
+  string RevRecTriggerCondition {
+    type = "string"
+    maxLength = 512
+    required = false
+    filterable = false
+    label = "RevRecTriggerCondition"
+  }
+  string SmoothingModel {
+    type = "string"
+    maxLength = 512
+    required = false
+    filterable = false
+    label = "SmoothingModel"
+  }
+  number SpecificBillingPeriod {
+    type = "integer"
+    required = false
+    filterable = false
+    label = "SpecificBillingPeriod"
+  }
+  boolean Taxable {
+    type = "boolean"
+    required = false
+    filterable = false
+    label = "Taxable"
+  }
+  string TaxCode {
+    type = "string"
+    maxLength = 512
+    required = false
+    filterable = false
+    label = "TaxCode"
+  }
+  string TaxMode {
+    type = "string"
+    maxLength = 512
+    required = false
+    filterable = false
+    label = "TaxMode"
+  }
+  string TriggerEvent {
+    type = "string"
+    maxLength = 512
+    required = false
+    filterable = false
+    label = "TriggerEvent"
+  }
+  number UpToPeriods {
+    type = "integer"
+    required = false
+    filterable = false
+    label = "UpToPeriods"
+  }
+  string UpToPeriodsType {
+    type = "string"
+    maxLength = 512
+    required = false
+    filterable = false
+    label = "UpToPeriodsType"
+  }
+  string UsageRecordRatingOption {
+    type = "string"
+    maxLength = 512
+    required = false
+    filterable = false
+    label = "UsageRecordRatingOption"
+  }
+  boolean UseDiscountSpecificAccountingCode {
+    type = "boolean"
+    required = false
+    filterable = false
+    label = "UseDiscountSpecificAccountingCode"
+  }
+  boolean UseTenantDefaultForPriceChange {
+    type = "boolean"
+    required = false
+    filterable = false
+    label = "UseTenantDefaultForPriceChange"
+  }
+  string WeeklyBillCycleDay {
+    type = "string"
+    maxLength = 512
+    required = false
+    filterable = false
+    label = "WeeklyBillCycleDay"
+  }
+  string AccountReceivableAccountingCodeId {
+    type = "string"
+    format = "uuid"
+    required = false
+    filterable = false
+    referenceTo = [
+      zuora_billing.accountingcode.field.Id,
+    ]
+    cardinality = "manyToOne"
+    recordConstraints = {
+      create = {
+        enforceValidMapping = true
+      }
+    }
+    label = "AccountReceivableAccountingCodeId"
+  }
+  string ProductRatePlanId {
+    type = "string"
+    format = "uuid"
+    required = false
+    filterable = false
+    referenceTo = [
+      zuora_billing.productrateplan.field.Id,
+    ]
+    cardinality = "manyToOne"
+    recordConstraints = {
+      create = {
+        enforceValidMapping = true
+      }
+    }
+    label = "ProductRatePlanId"
+  }
+  string RecognizedRevenueAccountingCodeId {
+    type = "string"
+    format = "uuid"
+    required = false
+    filterable = false
+    referenceTo = [
+      zuora_billing.accountingcode.field.Id,
+    ]
+    cardinality = "manyToOne"
+    recordConstraints = {
+      create = {
+        enforceValidMapping = true
+      }
+    }
+    label = "RecognizedRevenueAccountingCodeId"
+  }
+  string DeferredRevenueAccountingCodeId {
+    type = "string"
+    format = "uuid"
+    required = false
+    filterable = false
+    referenceTo = [
+      zuora_billing.accountingcode.field.Id,
+    ]
+    cardinality = "manyToOne"
+    recordConstraints = {
+      create = {
+        enforceValidMapping = true
+      }
+    }
+    label = "DeferredRevenueAccountingCodeId"
+  }
+  string AdjustmentLiabilityAccountingCodeId {
+    type = "string"
+    format = "uuid"
+    required = false
+    filterable = false
+    referenceTo = [
+      zuora_billing.accountingcode.field.Id,
+    ]
+    cardinality = "manyToOne"
+    recordConstraints = {
+      create = {
+        enforceValidMapping = true
+      }
+    }
+    label = "AdjustmentLiabilityAccountingCodeId"
+  }
+  string AdjustmentRevenueAccountingCodeId {
+    type = "string"
+    format = "uuid"
+    required = false
+    filterable = false
+    referenceTo = [
+      zuora_billing.accountingcode.field.Id,
+    ]
+    cardinality = "manyToOne"
+    recordConstraints = {
+      create = {
+        enforceValidMapping = true
+      }
+    }
+    label = "AdjustmentRevenueAccountingCodeId"
+  }
+  string ContractAssetAccountingCodeId {
+    type = "string"
+    format = "uuid"
+    required = false
+    filterable = false
+    referenceTo = [
+      zuora_billing.accountingcode.field.Id,
+    ]
+    cardinality = "manyToOne"
+    recordConstraints = {
+      create = {
+        enforceValidMapping = true
+      }
+    }
+    label = "ContractAssetAccountingCodeId"
+  }
+  string ContractLiabilityAccountingCodeId {
+    type = "string"
+    format = "uuid"
+    required = false
+    filterable = false
+    referenceTo = [
+      zuora_billing.accountingcode.field.Id,
+    ]
+    cardinality = "manyToOne"
+    recordConstraints = {
+      create = {
+        enforceValidMapping = true
+      }
+    }
+    label = "ContractLiabilityAccountingCodeId"
+  }
+  string ContractRecognizedRevenueAccountingCodeId {
+    type = "string"
+    format = "uuid"
+    required = false
+    filterable = false
+    referenceTo = [
+      zuora_billing.accountingcode.field.Id,
+    ]
+    cardinality = "manyToOne"
+    recordConstraints = {
+      create = {
+        enforceValidMapping = true
+      }
+    }
+    label = "ContractRecognizedRevenueAccountingCodeId"
+  }
+  string UnbilledReceivablesAccountingCodeId {
+    type = "string"
+    format = "uuid"
+    required = false
+    filterable = false
+    referenceTo = [
+      zuora_billing.accountingcode.field.Id,
+    ]
+    cardinality = "manyToOne"
+    recordConstraints = {
+      create = {
+        enforceValidMapping = true
+      }
+    }
+    label = "UnbilledReceivablesAccountingCodeId"
+  }
+  string RevRecCode {
+    type = "string"
+    maxLength = 512
+    required = false
+    filterable = false
+    label = "RevRecCode"
+  }
+  string UOM {
+    type = "string"
+    maxLength = 512
+    required = false
+    filterable = false
+    label = "UOM"
+  }
+  number DrawdownRate {
+    type = "number"
+    required = false
+    filterable = false
+    label = "DrawdownRate"
+  }
+  
+  
+  
+  
+  
+  
+  string DrawdownUom {
+    type = "string"
+    maxLength = 512
+    required = false
+    filterable = false
+    label = "DrawdownUom"
+  }
+  string CreditOption {
+    type = "string"
+    maxLength = 512
+    required = false
+    filterable = false
+    label = "CreditOption"
+  }
+  boolean IsPrepaid {
+    type = "boolean"
+    required = false
+    filterable = false
+    label = "IsPrepaid"
+  }
+  string PrepaidOperationType {
+    type = "string"
+    maxLength = 512
+    required = false
+    filterable = false
+    label = "PrepaidOperationType"
+  }
+  number PrepaidQuantity {
+    type = "number"
+    required = false
+    filterable = false
+    label = "PrepaidQuantity"
+  }
+  number PrepaidTotalQuantity {
+    type = "number"
+    required = false
+    filterable = false
+    label = "PrepaidTotalQuantity"
+  }
+  string ValidityPeriodType {
+    type = "string"
+    maxLength = 512
+    required = false
+    filterable = false
+    label = "ValidityPeriodType"
+  }
+  string PrepaidUom {
+    type = "string"
+    maxLength = 512
+    required = false
+    filterable = false
+    label = "PrepaidUom"
+  }
+  boolean ExcludeItemBookingFromRevenueAccounting {
+    type = "boolean"
+    required = false
+    filterable = false
+    label = "ExcludeItemBookingFromRevenueAccounting"
+  }
+  boolean ExcludeItemBillingFromRevenueAccounting {
+    type = "boolean"
+    required = false
+    filterable = false
+    label = "ExcludeItemBillingFromRevenueAccounting"
+  }
+  boolean IsRollover {
+    type = "boolean"
+    required = false
+    filterable = false
+    label = "IsRollover"
+  }
+  string RolloverApply {
+    type = "string"
+    maxLength = 512
+    required = false
+    filterable = false
+    label = "RolloverApply"
+  }
+  number RolloverPeriods {
+    type = "integer"
+    required = false
+    filterable = false
+    label = "RolloverPeriods"
+  }
+  number SpecificListPriceBase {
+    type = "integer"
+    required = false
+    filterable = false
+    label = "SpecificListPriceBase"
+  }
+  boolean IsStackedDiscount {
+    type = "boolean"
+    required = false
+    filterable = false
+    label = "IsStackedDiscount"
+  }
+  boolean PriceUpsellQuantityStacked {
+    type = "boolean"
+    required = false
+    filterable = false
+    label = "PriceUpsellQuantityStacked"
+  }
+  string DeliveryScheduleId {
+    type = "string"
+    format = "uuid"
+    required = false
+    filterable = false
+    label = "DeliveryScheduleId"
+  }
+  string ProductRatePlanChargeNumber {
+    type = "string"
+    maxLength = 512
+    required = false
+    filterable = false
+    label = "ProductRatePlanChargeNumber"
+  }
+  string CommitmentType {
+    type = "string"
+    label = "CommitmentType"
+    maxLength = 512
+    required = false
+    filterable = false
+  }
+  boolean IsCommitted {
+    type = "boolean"
+    label = "IsCommitted"
+    required = false
+    filterable = false
+  }
+}

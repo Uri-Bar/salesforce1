@@ -1,0 +1,37 @@
+zuora_billing.Task Callouts_XML__Text__SOAP__JSON_Parsing_69_szdszdszdssu__Update_Task___Account_Found_in_Callout_3_With_Plant_Name_from_Callout_1@uuuuuuuuumuussbsssssssssss {
+  name = "Update Task - Account Found in Callout 3 With Plant Name from Callout 1"
+  parameters = {
+    fields = {
+      Account = {
+        Notes = "{{Data.Callout[0].CATALOG.PLANT[0].COMMON }}"
+      }
+    }
+  }
+  action_type = "Update"
+  object = zuora_billing.account
+  object_id = "{{Data.Callout[2].Envelope.Body.queryResponse.result.records[0].Id }}"
+  call_type = "SOAP"
+  task_id = 98
+  concurrent_limit = 9999999
+  additionalProperties = {
+    css = {
+      top = "310px"
+      left = "410px"
+    }
+    priority = "Medium"
+    
+  }
+  _parent = [
+    zuora_billing.WorkflowExport.instance.Callouts_XML__Text__SOAP__JSON_Parsing_69@szdszdszdssu,
+  ]
+  _generated_dependencies = [
+    {
+      reference = zuora_billing.account.field.Notes
+      occurrences = [
+        {
+          location = zuora_billing.Task.instance.Callouts_XML__Text__SOAP__JSON_Parsing_69_szdszdszdssu__Update_Task___Account_Found_in_Callout_3_With_Plant_Name_from_Callout_1@uuuuuuuuumuussbsssssssssss.parameters.fields.Account.Notes
+        },
+      ]
+    },
+  ]
+}

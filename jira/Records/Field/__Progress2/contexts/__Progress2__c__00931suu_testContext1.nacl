@@ -1,0 +1,17 @@
+jira.CustomFieldContext __Progress2__c__00931suu_testContext1@uuuumuu {
+  name = "testContext1"
+  description = "test"
+  defaultValue = {
+    type = "option.multiple"
+  }
+  issueTypeIds = [
+    jira.IssueType.instance.Epic,
+    jira.IssueType.instance.Story,
+    jira.IssueType.instance.Custom_issue_type_two@s,
+  ]
+  
+  _parent = [
+    jira.Field.instance.__Progress2__c@_00931suu,
+  ]
+  isGlobalContext = false
+}

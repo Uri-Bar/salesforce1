@@ -1,0 +1,60 @@
+zuora_billing.Settings_Role ZPlatform_Standard_User@us {
+  name = "Standard User"
+  category = "ZPlatform"
+  attributes = [
+    {
+      name = "CustomObjectsDeleteAccess"
+      scope = "ZPlatform"
+      activationLevel = "User"
+    },
+    {
+      name = "CustomObjectsEditAccess"
+      scope = "ZPlatform"
+      activationLevel = "User"
+    },
+    {
+      name = "CustomObjectsReadAccess"
+      scope = "ZPlatform"
+      activationLevel = "User"
+    },
+    {
+      name = "DataQueryUI"
+      scope = "ZPlatform"
+      activationLevel = "User"
+    },
+    {
+      name = "WorkflowGlobalConstantsAccess"
+      scope = "ZPlatform"
+      activationLevel = "User"
+    },
+    {
+      name = "WorkflowManageAccess"
+      scope = "ZPlatform"
+      activationLevel = "User"
+    },
+    {
+      name = "WorkflowManageGlobalSettingsAccess"
+      scope = "ZPlatform"
+      activationLevel = "User"
+    },
+    {
+      name = "WorkflowRunAccess"
+      scope = "ZPlatform"
+      activationLevel = "User"
+    },
+    {
+      name = "apiWrite"
+      scope = "ZPlatform"
+      activationLevel = "User"
+    },
+    {
+      name = "ui"
+      scope = "ZPlatform"
+      activationLevel = "User"
+    },
+  ]
+  
+  description = "Standard User to access the Zuora Platform"
+  entityId = "8ac6819b-7883-361b-0178-93726ba53eff"
+  custom = false
+}

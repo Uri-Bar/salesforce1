@@ -1,0 +1,633 @@
+zuora_billing.Task Suspend_Template_Test1_71_ssu__Suspend__and_or_Resume_@uuumuusjdsk {
+  name = "Suspend (and/or Resume)"
+  parameters = {
+    url = "{{ Credentials.zuora.rest_endpoint }}orders"
+    datas = [
+      {
+        key = ""
+        value = ""
+      },
+    ]
+    method = "POST"
+    headers = [
+      {
+        key = "apiAccessKeyId"
+        value = "{{ Credentials.zuora.username }}"
+      },
+      {
+        key = "apiSecretAccessKey"
+        value = "{{ Credentials.zuora.password }}"
+      },
+      {
+        key = "Content-Type"
+        value = "application/json"
+      },
+      {
+        key = ""
+        value = ""
+      },
+    ]
+    raw_body = '''
+{%- assign suspendDate = Data.Workflow.ExecutionDate -%}
+{%- if Data.Workflow.suspendPolicy == 'SpecificDate' -%}
+{%- assign suspendDate = Data.Workflow.suspendSpecificDate -%}
+{%- elsif Data.Workflow.suspendPolicy == 'EndOfLastInvoicePeriod' -%}
+    {%- for rateplan in Data.Callout.ratePlans -%} 
+        {%- assign latestDate = rateplan.ratePlanCharges | sort: 'chargedThroughDate' | first -%}
+        {%- if latestDate > suspendDate -%}
+            {%- assign suspendDate = latestDate -%}
+        {%- endif -%}
+    {%- endfor -%}
+{%- elsif Data.Workflow.suspendPolicy == 'FixedPeriodsFromToday' -%}
+    {%- assign numPeriods = Data.Workflow.suspendPeriods -%}
+    {%- assign periodType = Data.Workflow.suspendPeriodsType -%}
+    {%- if Data.Workflow.suspendPeriodsType == 'Week' or Data.Workflow.suspendPeriodsType == 'week' -%}
+      {%- assign numPeriods = numPeriods | times: 7 -%}
+      {%- assign periodType = 'day' -%}
+    {%- endif -%}
+    {%- assign suspendDate = Data.Workflow.ExecutionDate | date_manip : '+', numPeriods, periodType | date: "%Y-%m-%d" -%}
+{%- endif -%}
+{%- if Data.Workflow.effectiveDate == null or  Data.Workflow.effectiveDate == '' -%}
+{%- assign effectiveDate = Data.Workflow.ExecutionDate | date: "%Y-%m-%d" -%}
+{%- else -%}
+{%- assign effectiveDate = Data.Workflow.effectiveDate | date: "%Y-%m-%d" -%}
+{%- endif -%}
+{
+    "existingAccountNumber": "{{Data.Callout.accountNumber}}", 
+    "orderDate": "{{effectiveDate}}", 
+    "subscriptions": [
+        {
+            "subscriptionNumber": "{{Data.Callout.subscriptionNumber}}",
+            "orderActions": [
+            {%- for ratePlan in Data.Callout.ratePlans -%} 
+                {
+                  "type": "RemoveProduct",
+                  "triggerDates": [
+                    {
+                      "name": "ContractEffective",
+                      "triggerDate": "{{suspendDate}}"
+                    },
+                    {
+                      "name": "ServiceActivation",
+                      "triggerDate": "{{suspendDate}}"
+                    },
+                    {
+                      "name": "CustomerAcceptance",
+                      "triggerDate": "{{suspendDate}}"
+                    }
+                  ],
+                  "removeProduct": {
+                    "ratePlanId": "{{ratePlan.id}}"
+                  }
+                }
+                {%- if forloop.last == false -%}
+                    ,
+                {%- endif -%}
+
+            {%- endfor -%}
+                {%- if Data.Workflow.resume -%}
+{%- assign resumeDate = Data.Workflow.ExecutionDate -%}
+{%- if Data.Workflow.resumePolicy == 'SpecificDate' -%}
+  {%- assign resumeDate = Data.Workflow.resumeSpecificDate -%}
+{%- elsif Data.Workflow.resumePolicy == 'FixedPeriodsFromToday' -%}
+    {%- assign numPeriodsResume = Data.Workflow.resumePeriods -%}
+    {%- assign periodTypeResume = Data.Workflow.resumePeriodsType -%}
+    {%- if Data.Workflow.resumePeriodsType == 'Week' or Data.Workflow.resumePeriodsType == 'week' -%}
+      {%- assign numPeriodsResume = numPeriodsResume | times: 7 -%}
+      {%- assign periodTypeResume = 'day' -%}
+    {%- endif -%}
+    {%- assign resumeDate = Data.Workflow.ExecutionDate | date_manip : '+', numPeriodsResume, periodTypeResume -%}
+{%- elsif Data.Workflow.resumePolicy == 'FixedPeriodsFromSuspendDate' -%}
+    {%- assign numPeriodsResume = Data.Workflow.resumePeriods -%}
+    {%- assign periodTypeResume = Data.Workflow.resumePeriodsType -%}
+    {%- if Data.Workflow.resumePeriodsType == 'Week' or Data.Workflow.resumePeriodsType == 'week' -%}
+      {%- assign numPeriodsResume = numPeriodsResume | times: 7 -%}
+      {%- assign periodTypeResume = 'day' -%}
+    {%- endif -%}
+    {%- assign resumeDate = suspendDate | date_manip : '+', numPeriodsResume, periodTypeResume -%}
+{%- endif -%}
+                
+            ,{%- for ratePlan in Data.Callout.ratePlans -%} 
+                {
+                  "type": "AddProduct",
+                  "triggerDates": [
+                    {
+                      "name": "ContractEffective",
+                      "triggerDate": "{{resumeDate}}"
+                    },
+                    {
+                      "name": "ServiceActivation",
+                      "triggerDate": "{{resumeDate}}"
+                    },
+                    {
+                      "name": "CustomerAcceptance",
+                      "triggerDate": "{{resumeDate}}"
+                    }
+                  ],
+                  "addProduct": {
+                    "productRatePlanId": "{{ratePlan.productRatePlanId}}",
+                    "chargeOverrides":[
+                     {%- for charge in ratePlan.ratePlanCharges -%} 
+                    {
+                        "billing": {
+                          {%- if charge.billingDay -%}
+                            "billCycleType":"{{charge.billingDay}}",
+                          {%- endif -%}
+                          {%- if charge.billingPeriod -%}
+                            "billingPeriod":"{{charge.billingPeriod}}",
+                          {%- endif -%}
+                          {%- if charge.billingPeriodAlignment -%}
+                            "billingPeriodAlignment":"{{charge.billingPeriodAlignment}}",
+                          {%- endif -%}
+                          {%- if charge.specificBillingPeriod -%}
+                            "specificBillingPeriod":"{{charge.specificBillingPeriod}}",
+                          {%- endif -%}
+                          {%- if charge.billingTiming -%}
+                            "billingTiming":"{{charge.billingTiming}}"
+                          {%- endif -%}
+                      },
+                          {%- if charge.description -%}
+                            "description":"{{charge.description}}",
+                          {%- endif -%}
+                      {%- if charge.model != 'FlatFee' and charge.type != 'OneTime' -%}
+                      "endDate": {
+                          {%- if charge.specificEndDate -%}
+                            "specificEndDate":"{{charge.specificEndDate}}",
+                          {%- endif -%}
+                          {%- if charge.upToPeriods -%}
+                            "upToPeriods":"{{charge.upToPeriods}}",
+                          {%- endif -%}
+                          {%- if charge.upToPeriodsType -%}
+                            "upToPeriodsType":"{{charge.upToPeriodsType}}",
+                          {%- endif -%}
+                          {%- if charge.endDateCondition -%}
+                            "endDateCondition":"{{charge.endDateCondition}}"
+                          {%- endif -%}
+                      },
+                      {%- endif -%}
+                      "pricing": {
+                        {%- if charge.model == 'DiscountFixedAmount' or charge.model == 'DiscountPercentage' -%}
+                        "discount": {
+                          {%- if charge.discountAmount -%}
+                            "discountAmount":"{{charge.discountAmount}}",
+                          {%- endif -%}
+                          {%- if charge.discountClass -%}
+                            "discountClass":"{{charge.discountClass}}",
+                          {%- endif -%}
+                          {%- if charge.discountLevel -%}
+                            "discountLevel":"{{charge.discountLevel}}",
+                          {%- endif -%}
+                          {%- if charge.discountPercentage -%}
+                            "discountPercentage":"{{charge.discountPercentage}}",
+                          {%- endif -%}
+                          {%- if charge.applyDiscountTo -%}
+                            "applyDiscountTo":"{{charge.applyDiscountTo}}"
+                          {%- endif -%}
+                        }
+                        {%- endif -%}
+                        {%- if charge.model == 'FlatFee' and charge.type == 'OneTime' -%}
+                        "oneTimeFlatFee": {
+                          {%- if charge.price -%}
+                            "listPrice":"{{charge.price}}"
+                          {%- endif -%}
+                        }
+                        {%- endif -%}
+                        {%- if charge.model == 'PerUnit' and charge.type == 'OneTime' -%}
+                        "oneTimePerUnit": {
+                          {%- if charge.price -%}
+                            "listPrice":"{{charge.price}}",
+                          {%- endif -%}
+                          {%- if charge.quantity -%}
+                            "quantity":"{{charge.quantity}}"
+                          {%- endif -%}
+                        }
+                        {%- endif -%}
+                        {%- if charge.model == 'Tiered' and charge.type == 'OneTime' -%}
+                        "oneTimeTiered": {
+                          {%- if charge.quantity -%}
+                            "quantity":"{{charge.quantity}}",
+                          {%- endif -%}
+                            "tiers" :[
+                          {%- for tier in charge.tiers -%}
+                          {
+                              "tier":"{{tier.tier}}",
+                              "price":"{{tier.price}}",
+                              "endingUnit":"{{tier.endingUnit}}",
+                              "startingUnit":"{{tier.startingUnit}}",
+                              "priceFormat":"{{tier.priceFormat}}"
+                            }
+                          {%- if forloop.last == false -%}
+                              ,
+                          {%- endif -%}
+                          {%- endfor -%}
+                          ]
+                        }
+                        {%- endif -%}
+                        {%- if charge.model == 'Volume' and charge.type == 'OneTime' -%}
+                        "oneTimeVolume": {
+                          {%- if charge.quantity -%}
+                            "quantity":"{{charge.quantity}}",
+                          {%- endif -%}
+                            "tiers" :[
+                          {%- for tier in charge.tiers -%}
+                          {
+                              "tier":"{{tier.tier}}",
+                              "price":"{{tier.price}}",
+                              "endingUnit":"{{tier.endingUnit}}",
+                              "startingUnit":"{{tier.startingUnit}}",
+                              "priceFormat":"{{tier.priceFormat}}"
+                            }
+                          {%- if forloop.last == false -%}
+                              ,
+                          {%- endif -%}
+                          {%- endfor -%}
+                          ]
+                        }
+                        {%- endif -%}
+                        {%- if charge.model == 'FlatFee' and charge.type == 'Recurring'  -%}
+                        "recurringFlatFee": {
+                          {%- if charge.priceChangeOption -%}
+                            "priceChangeOption":"{{charge.priceChangeOption}}",
+                          {%- endif -%}
+                          {%- if charge.priceIncreasePercentage -%}
+                            "priceIncreasePercentage":"{{charge.priceIncreasePercentage}}",
+                          {%- endif -%}
+                          {%- if charge.price -%}
+                            "listPrice":"{{charge.price}}",
+                          {%- endif -%}
+                          {%- if charge.listPriceBase -%}
+                            "listPriceBase":"{{charge.listPriceBase}}"
+                          {%- endif -%}
+                        }
+                        {%- endif -%}
+                        {%- if charge.model == 'PerUnit' and charge.type == 'Recurring'  -%}
+                        "recurringPerUnit": {
+                          {%- if charge.priceChangeOption -%}
+                            "priceChangeOption":"{{charge.priceChangeOption}}",
+                          {%- endif -%}
+                          {%- if charge.priceIncreasePercentage -%}
+                            "priceIncreasePercentage":"{{charge.priceIncreasePercentage}}",
+                          {%- endif -%}
+                          {%- if charge.price -%}
+                            "listPrice":"{{charge.price}}",
+                          {%- endif -%}
+                          {%- if charge.listPriceBase -%}
+                            "listPriceBase":"{{charge.listPriceBase}}",
+                          {%- endif -%}
+                          {%- if charge.quantity -%}
+                            "quantity":"{{charge.quantity}}"
+                          {%- endif -%}
+                        }
+                        {%- endif -%}
+                        {%- if charge.model == 'Tiered' and charge.type == 'Recurring' -%}
+                        "recurringTiered": {
+                        {%- if charge.priceChangeOption -%}
+                            "priceChangeOption":"{{charge.priceChangeOption}}",
+                          {%- endif -%}
+                          {%- if charge.priceIncreasePercentage -%}
+                            "priceIncreasePercentage":"{{charge.priceIncreasePercentage}}",
+                          {%- endif -%}
+                          {%- if charge.listPriceBase -%}
+                            "listPriceBase":"{{charge.listPriceBase}}",
+                          {%- endif -%}
+                          {%- if charge.quantity -%}
+                            "quantity":"{{charge.quantity}}",
+                          {%- endif -%}
+                            "tiers" :[
+                          {%- for tier in charge.tiers -%}
+                          {
+                              "tier":"{{tier.tier}}",
+                              "price":"{{tier.price}}",
+                              "endingUnit":"{{tier.endingUnit}}",
+                              "startingUnit":"{{tier.startingUnit}}",
+                              "priceFormat":"{{tier.priceFormat}}"
+                            }
+                          {%- if forloop.last == false -%}
+                              ,
+                          {%- endif -%}
+                          {%- endfor -%}
+                          ]
+                        }
+                        {%- endif -%}
+                        {%- if charge.model == 'Volume' and charge.type == 'Recurring' -%}
+                        "recurringVolume": {
+                          {%- if charge.priceChangeOption -%}
+                            "priceChangeOption":"{{charge.priceChangeOption}}",
+                          {%- endif -%}
+                          {%- if charge.priceIncreasePercentage -%}
+                            "priceIncreasePercentage":"{{charge.priceIncreasePercentage}}",
+                          {%- endif -%}
+                          {%- if charge.listPriceBase -%}
+                            "listPriceBase":"{{charge.listPriceBase}}",
+                          {%- endif -%}
+                          {%- if charge.quantity -%}
+                            "quantity":"{{charge.quantity}}",
+                          {%- endif -%}
+                            "tiers" :[
+                          {%- for tier in charge.tiers -%}
+                          {
+                              "tier":"{{tier.tier}}",
+                              "price":"{{tier.price}}",
+                              "endingUnit":"{{tier.endingUnit}}",
+                              "startingUnit":"{{tier.startingUnit}}",
+                              "priceFormat":"{{tier.priceFormat}}"
+                            }
+                          {%- if forloop.last == false -%}
+                              ,
+                          {%- endif -%}
+                          {%- endfor -%}
+                          ]
+                        }
+                        {%- endif -%}
+                        {%- if charge.model == 'FlatFee' and charge.type == 'Usage' -%}
+                        "usageFlatFee": {
+                          {%- if charge.priceChangeOption -%}
+                            "priceChangeOption":"{{charge.priceChangeOption}}",
+                          {%- endif -%}
+                          {%- if charge.priceIncreasePercentage -%}
+                            "priceIncreasePercentage":"{{charge.priceIncreasePercentage}}",
+                          {%- endif -%}
+                          {%- if charge.price -%}
+                            "listPrice":"{{charge.price}}"
+                          {%- endif -%}
+                        }
+                        {%- endif -%}
+                        {%- if charge.model == 'Overage' and charge.type == 'Usage' -%}
+                        "usageOverage": {
+                          {%- if charge.priceChangeOption -%}
+                            "priceChangeOption":"{{charge.priceChangeOption}}",
+                          {%- endif -%}
+                          {%- if charge.priceIncreasePercentage -%}
+                            "priceIncreasePercentage":"{{charge.priceIncreasePercentage}}",
+                          {%- endif -%}
+                          {%- if charge.includedUnits -%}
+                            "includedUnits":"{{charge.includedUnits}}",
+                          {%- endif -%}
+                          {%- if charge.numberOfPeriods -%}
+                            "numberOfPeriods":"{{charge.numberOfPeriods}}",
+                          {%- endif -%}
+                          {%- if charge.overagePrice -%}
+                            "overagePrice":"{{charge.overagePrice}}",
+                          {%- endif -%}
+                          {%- if charge.overageUnusedUnitsCreditsOption -%}
+                            "overageUnusedUnitsCreditsOption":"{{charge.overageUnusedUnitsCreditsOption}}",
+                          {%- endif -%}
+                          {%- if charge.unusedUnitsCreditsRates -%}
+                            "unusedUnitsCreditsRates":"{{charge.unusedUnitsCreditsRates}}"
+                          {%- endif -%}
+                        }
+                        {%- endif -%}
+                        {%- if charge.model == 'PerUnit' and charge.type == 'Usage' -%}
+                        "usagePerUnit": {
+                          {%- if charge.priceChangeOption -%}
+                            "priceChangeOption":"{{charge.priceChangeOption}}",
+                          {%- endif -%}
+                          {%- if charge.priceIncreasePercentage -%}
+                            "priceIncreasePercentage":"{{charge.priceIncreasePercentage}}",
+                          {%- endif -%}
+                          {%- if charge.price -%}
+                            "listPrice":"{{charge.price}}",
+                          {%- endif -%}
+                          {%- if charge.ratingGroup -%}
+                            "ratingGroup":"{{charge.ratingGroup}}"
+                          {%- endif -%}
+                        }
+                        {%- endif -%}
+                        {%- if charge.model == 'Tiered' and charge.type == 'Usage' -%}
+                        "usageTiered": {
+                          {%- if charge.priceChangeOption -%}
+                            "priceChangeOption":"{{charge.priceChangeOption}}",
+                          {%- endif -%}
+                          {%- if charge.priceIncreasePercentage -%}
+                            "priceIncreasePercentage":"{{charge.priceIncreasePercentage}}",
+                          {%- endif -%}
+                          {%- if charge.price -%}
+                            "listPrice":"{{charge.price}}",
+                          {%- endif -%}
+                          {%- if charge.ratingGroup -%}
+                            "ratingGroup":"{{charge.ratingGroup}}",
+                          {%- endif -%}
+                            "tiers" :[
+                          {%- for tier in charge.tiers -%}
+                          {
+                              "tier":"{{tier.tier}}",
+                              "price":"{{tier.price}}",
+                              "endingUnit":"{{tier.endingUnit}}",
+                              "startingUnit":"{{tier.startingUnit}}",
+                              "priceFormat":"{{tier.priceFormat}}"
+                            }
+                          {%- if forloop.last == false -%}
+                              ,
+                          {%- endif -%}
+                          {%- endfor -%}
+                          ]
+                        }
+                        {%- endif -%}
+                        {%- if charge.model == 'TieredWithOverage' and charge.type == 'Usage' -%}
+                        "usageTieredWithOverage": {
+                          {%- if charge.priceChangeOption -%}
+                            "priceChangeOption":"{{charge.priceChangeOption}}",
+                          {%- endif -%}
+                          {%- if charge.priceIncreasePercentage -%}
+                            "priceIncreasePercentage":"{{charge.priceIncreasePercentage}}",
+                          {%- endif -%}
+                          {%- if charge.numberOfPeriods -%}
+                            "numberOfPeriods":"{{charge.numberOfPeriods}}",
+                          {%- endif -%}
+                          {%- if charge.overagePrice -%}
+                            "overagePrice":"{{charge.overagePrice}}",
+                          {%- endif -%}
+                          {%- if charge.overageUnusedUnitsCreditsOption -%}
+                            "overageUnusedUnitsCreditsOption":"{{charge.overageUnusedUnitsCreditsOption}}",
+                          {%- endif -%}
+                            "tiers" :[
+                          {%- for tier in charge.tiers -%}
+                          {
+                              "tier":"{{tier.tier}}",
+                              "price":"{{tier.price}}",
+                              "endingUnit":"{{tier.endingUnit}}",
+                              "startingUnit":"{{tier.startingUnit}}",
+                              "priceFormat":"{{tier.priceFormat}}"
+                            }
+                          {%- if forloop.last == false -%}
+                              ,
+                          {%- endif -%}
+                          {%- endfor -%}
+                          ],
+                          {%- if charge.unusedUnitsCreditsRates -%}
+                            "unusedUnitsCreditsRates":"{{charge.unusedUnitsCreditsRates}}"
+                          {%- endif -%}
+                        }
+                        {%- endif -%}
+                        {%- if charge.model == 'Volume' and charge.type == 'Usage' -%}
+                        "usageVolume": {
+                          {%- if charge.priceChangeOption -%}
+                            "priceChangeOption":"{{charge.priceChangeOption}}",
+                          {%- endif -%}
+                          {%- if charge.priceIncreasePercentage -%}
+                            "priceIncreasePercentage":"{{charge.priceIncreasePercentage}}",
+                          {%- endif -%}
+                          {%- if charge.ratingGroup -%}
+                            "ratingGroup":"{{charge.ratingGroup}}",
+                          {%- endif -%}
+                            "tiers" :[
+                          {%- for tier in charge.tiers -%}
+                          {
+                              "tier":"{{tier.tier}}",
+                              "price":"{{tier.price}}",
+                              "endingUnit":"{{tier.endingUnit}}",
+                              "startingUnit":"{{tier.startingUnit}}",
+                              "priceFormat":"{{tier.priceFormat}}"
+                            }
+                          {%- if forloop.last == false -%}
+                              ,
+                          {%- endif -%}
+                          {%- endfor -%}
+                          ]
+                        }
+                        {%- endif -%}
+                      },
+                      "startDate":{
+                          {%- if charge.triggerDate -%}
+                            "specificTriggerDate":"{{charge.triggerDate}}",
+                          {%- endif -%}
+                          {%- if charge.triggerEvent -%}
+                            "triggerEvent":"{{charge.triggerEvent}}"
+                          {%- endif -%}
+                      },
+                      "productRatePlanChargeId":"{{charge.productRatePlanChargeId}}"
+                    }
+                {%- if forloop.last == false -%}
+                    ,
+                {%- endif -%}
+                {%- endfor -%}
+                    ]
+                  }
+                }
+                {%- if forloop.last == false -%}
+                    ,
+                {%- endif -%}
+
+            {%- endfor -%}
+                {%- endif -%}
+
+                {%- if Data.Workflow.extendsTerm -%}
+                ,{
+                  "type": "TermsAndConditions",
+                  "triggerDates": [
+                    {
+                      "name": "ContractEffective",
+                      "triggerDate": "{{resumeDate}}"
+                    },
+                    {
+                      "name": "ServiceActivation",
+                      "triggerDate": "{{resumeDate}}"
+                    },
+                    {
+                      "name": "CustomerAcceptance",
+                      "triggerDate": "{{resumeDate}}"
+                    }
+                  ],
+                 {%- if Data.Workflow.resumePolicy == 'FixedPeriodsFromSuspendDate' and Data.Workflow.resumePeriodsType == Data.Callout.currentTermPeriodType -%}
+                  "termsAndConditions": {
+                    "lastTerm": {
+                      "period": {{ Data.Callout.subscription.currentTerm | plus:  Data.Workflow.resumePeriods }}
+                    }
+                  }
+                {%- elsif Data.Workflow.resumePolicy == 'FixedPeriodsFromToday' and Data.Workflow.resumePeriodsType == Data.Callout.currentTermPeriodType and Data.Workflow.suspendPolicy == 'FixedPeriodsFromToday' and Data.Workflow.suspendPeriodsType == Data.Callout.currentTermPeriodType  -%}
+                  "termsAndConditions": {
+                    "lastTerm": {
+                      "period": {{ Data.Callout.subscription.currentTerm | plus:  Data.Workflow.resumePeriods | minus: Data.Workflow.suspendPeriods }}
+                    }
+                  }
+                {%- else -%}
+                  {%- assign diffDaysSuspendPeriod = suspendDate | date_diff: resumeDate -%}
+                  {%- assign currentPeriod = Data.Callout.termStartDate | date_diff: Data.Callout.termEndDate -%}
+                  {%- assign newTermLength = diffDaysSuspendPeriod | plus: currentPeriod -%}
+                  "termsAndConditions": {
+                    "lastTerm": {
+                      "period": {{newTermLength}},
+                      "periodType": "Day"
+                    }
+                  }
+                {%- endif -%}
+                }
+               {%- endif -%}
+
+            ]
+        }
+    ],
+    "processingOptions": {
+        "runBilling": {{Data.Workflow.invoice}},
+        "collectPayment": {{Data.Workflow.collect}}
+      }
+}
+'''
+    body_type = "raw"
+    validation = {
+      zuora_call = "true"
+      status_codes = [
+        "",
+        "200",
+      ]
+    }
+    retry_rules = {
+      retry_count = "0"
+      retry_window = "30"
+      current_retry_count = 0
+    }
+    authorization = {
+      type = "none"
+    }
+    include_response_code = "false"
+  }
+  action_type = "Callout"
+  call_type = "SOAP"
+  task_id = 108
+  concurrent_limit = 9999999
+  additionalProperties = {
+    css = {
+      top = "40px"
+      left = "680px"
+    }
+    priority = "Medium"
+    
+  }
+  _parent = [
+    zuora_billing.WorkflowExport.instance.Suspend_Template_Test1_71@ssu,
+  ]
+  _generated_dependencies = [
+    {
+      reference = zuora_billing.Workflow.instance.Suspend_Template_Test1_71_ssu__Suspend_Template_Test1@uuumuuss.additionalProperties.parameters.fields
+      occurrences = [
+        {
+          location = zuora_billing.Task.instance.Suspend_Template_Test1_71_ssu__Suspend__and_or_Resume_@uuumuusjdsk.parameters.raw_body
+        },
+      ]
+    },
+    {
+      reference = zuora_billing.rateplan.field.Id
+      occurrences = [
+        {
+          location = zuora_billing.Task.instance.Suspend_Template_Test1_71_ssu__Suspend__and_or_Resume_@uuumuusjdsk.parameters.raw_body
+        },
+      ]
+    },
+    {
+      reference = zuora_billing.rateplan.field.ProductRatePlanId
+      occurrences = [
+        {
+          location = zuora_billing.Task.instance.Suspend_Template_Test1_71_ssu__Suspend__and_or_Resume_@uuumuusjdsk.parameters.raw_body
+        },
+      ]
+    },
+    {
+      reference = zuora_billing.subscription.field.CurrentTerm
+      occurrences = [
+        {
+          location = zuora_billing.Task.instance.Suspend_Template_Test1_71_ssu__Suspend__and_or_Resume_@uuumuusjdsk.parameters.raw_body
+        },
+      ]
+    },
+  ]
+}

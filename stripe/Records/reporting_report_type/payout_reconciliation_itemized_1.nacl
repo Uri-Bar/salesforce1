@@ -1,0 +1,23 @@
+stripe.reporting_report_type payout_reconciliation_itemized_1@uvv {
+  id = "payout_reconciliation.itemized.1"
+  default_columns = [
+    "balance_transaction_id",
+    "created_utc",
+    "available_on_utc",
+    "currency",
+    "gross",
+    "fee",
+    "net",
+    "reporting_category",
+    "source_id",
+    "description",
+    "customer_facing_amount",
+    "customer_facing_currency",
+    "automatic_payout_id",
+    "automatic_payout_effective_at",
+    "charge_id",
+  ]
+  livemode = false
+  name = "Itemized payout reconciliation"
+  version = 1
+}

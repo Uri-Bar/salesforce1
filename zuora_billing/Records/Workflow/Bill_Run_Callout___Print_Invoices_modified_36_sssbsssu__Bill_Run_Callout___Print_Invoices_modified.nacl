@@ -1,0 +1,50 @@
+zuora_billing.Workflow Bill_Run_Callout___Print_Invoices_modified_36_sssbsssu__Bill_Run_Callout___Print_Invoices_modified@uuuuuuuumuusssbsss {
+  id = 36
+  name = "Bill Run Callout - Print Invoices modified"
+  description = ""
+  type = "Workflow::Setup"
+  status = "Inactive"
+  version = "0.0.1"
+  additionalProperties = {
+    parameters = {
+      fields = [
+        {
+          index = "0"
+          default = ""
+          datatype = "Text"
+          required = true
+          callout_id = "BillRunID"
+          field_name = zuora_billing.billingrun.field.Id
+          instruction = ""
+          object_name = zuora_billing.billingrun
+        },
+      ]
+      file_encryption = "false"
+      callout_response = "workflow instance"
+      secure_error_msgs = "false"
+      disable_pending_status = true
+    }
+    ondemand_trigger = true
+    callout_trigger = true
+    scheduled_trigger = false
+    css = {
+      top = "40px"
+      left = "35px"
+    }
+    notifications = {
+      failure = false
+      pending = false
+      success = false
+      error_ignore = ""
+    }
+    call_type = "ASYNC"
+    priority = "Medium"
+    delete_ttl = 30
+    
+    
+    event_trigger = false
+  }
+  _parent = [
+    zuora_billing.WorkflowExport.instance.Bill_Run_Callout___Print_Invoices_modified_36@sssbsssu,
+  ]
+}

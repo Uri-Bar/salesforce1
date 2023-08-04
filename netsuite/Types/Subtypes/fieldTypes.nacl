@@ -1,0 +1,4 @@
+type netsuite.fileContent is string {
+}
+type netsuite.cdata is string {
+}

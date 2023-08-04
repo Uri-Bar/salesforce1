@@ -1,0 +1,4 @@
+workato.folder neta1_318283 {
+  name = "neta1"
+  parent_id = workato.folder.instance.Root
+}

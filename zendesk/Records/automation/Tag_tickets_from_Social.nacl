@@ -1,0 +1,55 @@
+zendesk.automation Tag_tickets_from_Social@s {
+  title = "Tag tickets from Social"
+  active = true
+  actions = [
+    {
+      field = "current_tags"
+      value = [
+        zendesk.tag.instance.Social,
+      ]
+    },
+  ]
+  conditions = {
+    all = [
+      {
+        field = "OPEN"
+        operator = "is"
+        value = "0"
+      },
+      {
+        field = zendesk.organization_field.instance.org_field301
+        operator = "is"
+        value = "55"
+      },
+    ]
+    any = [
+      {
+        field = "via_id"
+        operator = "is"
+        value = zendesk.channel.instance.Twitter
+      },
+      {
+        field = "via_id"
+        operator = "is"
+        value = zendesk.channel.instance.Twitter_DM@s
+      },
+      {
+        field = "via_id"
+        operator = "is"
+        value = zendesk.channel.instance.Facebook_Post@s
+      },
+      {
+        field = "via_id"
+        operator = "is"
+        value = zendesk.channel.instance.Instagram_Direct@s
+      },
+      {
+        field = "via_id"
+        operator = "is"
+        value = zendesk.channel.instance.Facebook_Messenger@s
+      },
+    ]
+  }
+  raw_title = "Tag tickets from Social"
+  default = false
+}

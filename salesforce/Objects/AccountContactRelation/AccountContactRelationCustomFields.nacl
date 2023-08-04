@@ -1,0 +1,30 @@
+type salesforce.AccountContactRelation {
+  salesforce.Picklist Relationship_Strength__c {
+    apiName = "AccountContactRelation.Relationship_Strength__c"
+    label = "Relationship Strength"
+    valueSet = [
+      {
+        fullName = "Strong"
+        default = false
+        label = "Strong"
+      },
+      {
+        fullName = "Neutral"
+        default = false
+        label = "Neutral"
+      },
+      {
+        fullName = "Weak"
+        default = false
+        label = "Weak"
+      },
+    ]
+    restricted = true
+    createable = true
+    updateable = true
+    queryable = true
+    externalId = false
+    sorted = false
+    
+  }
+}

@@ -1,0 +1,20 @@
+zendesk.article_translation What_are_these_sections_and_articles_doing_here__FAQ_General_Salto_sssssssauuu__Salto_en_us_ub@uuuuuuuuuuumuuuum {
+  locale = zendesk.guide_language_settings.instance.Salto_en_us@ub
+  title = "What are these sections and articles doing here?"
+  body = '''
+<p>This FAQ is a section in the General category of your help center knowledge base. We created this category and a few common sections to help you get started with your Help Center.</p>
+
+<p>The knowledge base in the Help Center consists of three main page types: category pages, section pages, and articles. Here's the structure:</p>
+
+<p><img src="//static.zdassets.com/hc/assets/sample-articles/article0_image.png" alt="Comments are part of the articles. The articles pages are part of Sections page. The Sections pages are part of the Category pages."></p>
+
+<p>You can create your own categories, sections, and articles and modify or completely delete ours. See the <a href="https://support.zendesk.com/hc/en-us/articles/218222877" target="_blank">Organizing knowledge base content</a> and <a href="https://support.zendesk.com/hc/en-us/articles/203664366" target="_blank">Creating articles in the Help Center</a> to learn how.</p>
+'''
+  outdated = false
+  draft = false
+  hidden = false
+  brand = zendesk.brand.instance.Salto
+  _parent = [
+    zendesk.article.instance.What_are_these_sections_and_articles_doing_here__FAQ_General_Salto@sssssssauuu,
+  ]
+}

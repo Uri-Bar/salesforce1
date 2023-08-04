@@ -1,0 +1,30 @@
+type zuora_billing.extendedgeneralimport {
+  string Id {
+    type = "string"
+    format = "uuid"
+    required = false
+    filterable = false
+    label = "Id"
+  }
+  string CreatedDate {
+    type = "string"
+    format = "date-time"
+    required = false
+    filterable = false
+    label = "CreatedDate"
+  }
+  string ImportType {
+    type = "string"
+    maxLength = 512
+    required = false
+    filterable = false
+    label = "ImportType"
+  }
+  string Status {
+    type = "string"
+    maxLength = 512
+    required = false
+    filterable = false
+    label = "Status"
+  }
+}

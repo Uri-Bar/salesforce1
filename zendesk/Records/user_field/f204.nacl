@@ -1,0 +1,10 @@
+zendesk.user_field f204 {
+  type = "text"
+  key = "f204"
+  
+  
+  raw_title = "f204"
+  raw_description = ""
+  active = true
+  system = false
+}

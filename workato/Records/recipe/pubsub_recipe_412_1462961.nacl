@@ -1,0 +1,32 @@
+workato.recipe pubsub_recipe_412_1462961@ssu {
+  name = "pubsub recipe 412"
+  trigger_application = "workato_pub_sub"
+  action_applications = [
+    "workato_pub_sub",
+    "salesforce",
+  ]
+  applications = [
+    "workato_pub_sub",
+    "salesforce",
+  ]
+  description = "When there is a trigger event, do action"
+  folder_id = workato.folder.instance.f1_nested2_321886@vu
+  running = false
+  version_no = 1
+  config = [
+    {
+      keyword = "application"
+      provider = "workato_pub_sub"
+      skip_validation = false
+      name = "workato_pub_sub"
+    },
+    {
+      keyword = "application"
+      provider = "salesforce"
+      skip_validation = false
+      name = "salesforce"
+      account_id = workato.connection.instance.Neta_sfdev1@s
+    },
+  ]
+  code = workato.recipe__code.instance.pubsub_recipe_412_1462961_ssu@uuum
+}

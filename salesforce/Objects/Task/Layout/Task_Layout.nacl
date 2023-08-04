@@ -1,0 +1,364 @@
+salesforce.Layout Task_Task_Layout@bs {
+  fullName = "Task-Task Layout"
+  layoutSections = [
+    {
+      customLabel = false
+      detailHeading = true
+      editHeading = true
+      label = "Task Information"
+      layoutColumns = [
+        {
+          layoutItems = [
+            {
+              behavior = "Required"
+              field = salesforce.Task.field.Subject
+            },
+            {
+              behavior = "Required"
+              field = salesforce.Task.field.OwnerId
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.Task.field.WhoId
+            },
+          ]
+        },
+        {
+          layoutItems = [
+            {
+              emptySpace = true
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.Task.field.ActivityDate
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.Task.field.WhatId
+            },
+          ]
+        },
+      ]
+      style = "TwoColumnsTopToBottom"
+    },
+    {
+      customLabel = true
+      detailHeading = true
+      editHeading = true
+      label = "Related To"
+      style = "TwoColumnsLeftToRight"
+    },
+    {
+      customLabel = false
+      detailHeading = false
+      editHeading = false
+      label = "Description Information"
+      layoutColumns = [
+        {
+          layoutItems = [
+            {
+              behavior = "Edit"
+              field = salesforce.Task.field.Description
+            },
+          ]
+        },
+      ]
+      style = "OneColumn"
+    },
+    {
+      customLabel = false
+      detailHeading = true
+      editHeading = true
+      label = "Additional Information"
+      layoutColumns = [
+        {
+          layoutItems = [
+            {
+              behavior = "Required"
+              field = salesforce.Task.field.Priority
+            },
+            {
+              behavior = "Required"
+              field = salesforce.Task.field.Status
+            },
+          ]
+        },
+        {
+        },
+      ]
+      style = "TwoColumnsLeftToRight"
+    },
+    {
+      customLabel = false
+      detailHeading = true
+      editHeading = true
+      label = "Other Information"
+      layoutColumns = [
+        {
+          layoutItems = [
+            {
+              behavior = "Edit"
+              field = salesforce.Task.field.IsReminderSet
+            },
+          ]
+        },
+        {
+          layoutItems = [
+            {
+              behavior = "Edit"
+              field = salesforce.Task.field.IsRecurrence
+            },
+          ]
+        },
+      ]
+      style = "TwoColumnsTopToBottom"
+    },
+    {
+      customLabel = false
+      detailHeading = true
+      editHeading = true
+      label = "System Information"
+      layoutColumns = [
+        {
+          layoutItems = [
+            {
+              behavior = "Readonly"
+              field = salesforce.Task.field.CreatedById
+            },
+          ]
+        },
+        {
+          layoutItems = [
+            {
+              behavior = "Readonly"
+              field = salesforce.Task.field.LastModifiedById
+            },
+          ]
+        },
+      ]
+      style = "TwoColumnsTopToBottom"
+    },
+    {
+      customLabel = false
+      detailHeading = true
+      editHeading = false
+      label = "Custom Links"
+      style = "CustomLinks"
+    },
+  ]
+  platformActionList = {
+    actionListContext = "Record"
+    platformActionListItems = [
+      {
+        actionName = salesforce.QuickAction.instance.LogACall
+        actionType = "QuickAction"
+        sortOrder = 0
+      },
+      {
+        actionName = salesforce.QuickAction.instance.Follow_Up
+        actionType = "QuickAction"
+        sortOrder = 1
+      },
+      {
+        actionName = "Edit"
+        actionType = "StandardButton"
+        sortOrder = 2
+      },
+      {
+        actionName = "Delete"
+        actionType = "StandardButton"
+        sortOrder = 3
+      },
+      {
+        actionName = salesforce.QuickAction.instance.Task_EditDescription@v
+        actionType = "QuickAction"
+        sortOrder = 4
+      },
+      {
+        actionName = salesforce.QuickAction.instance.Task_Defer@v
+        actionType = "QuickAction"
+        sortOrder = 5
+      },
+      {
+        actionName = salesforce.QuickAction.instance.Task_UpdateStatus@v
+        actionType = "QuickAction"
+        sortOrder = 6
+      },
+      {
+        actionName = salesforce.QuickAction.instance.Task_UpdatePriority@v
+        actionType = "QuickAction"
+        sortOrder = 7
+      },
+    ]
+  }
+  quickActionList = {
+    quickActionListItems = [
+      {
+        quickActionName = "FeedItem.ContentPost"
+      },
+      {
+        quickActionName = "FeedItem.LinkPost"
+      },
+      {
+        quickActionName = "FeedItem.PollPost"
+      },
+      {
+        quickActionName = "FeedItem.TextPost"
+      },
+      {
+        quickActionName = salesforce.QuickAction.instance.LogACall
+      },
+      {
+        quickActionName = salesforce.QuickAction.instance.NewEvent
+      },
+      {
+        quickActionName = salesforce.QuickAction.instance.NewTask
+      },
+      {
+        quickActionName = salesforce.QuickAction.instance.Task_Defer@v
+      },
+      {
+        quickActionName = salesforce.QuickAction.instance.Task_Defer_0@vu
+      },
+      {
+        quickActionName = salesforce.QuickAction.instance.Task_Defer_1@vu
+      },
+      {
+        quickActionName = salesforce.QuickAction.instance.Task_Defer_2@vu
+      },
+      {
+        quickActionName = salesforce.QuickAction.instance.Task_Defer_3@vu
+      },
+      {
+        quickActionName = salesforce.QuickAction.instance.Task_Defer_4@vu
+      },
+      {
+        quickActionName = salesforce.QuickAction.instance.Task_Defer_5@vu
+      },
+      {
+        quickActionName = salesforce.QuickAction.instance.Task_Defer_6@vu
+      },
+      {
+        quickActionName = salesforce.QuickAction.instance.Task_Defer_7@vu
+      },
+      {
+        quickActionName = salesforce.QuickAction.instance.Task_EditDescription@v
+      },
+      {
+        quickActionName = salesforce.QuickAction.instance.Task_EditDescription_0@vu
+      },
+      {
+        quickActionName = salesforce.QuickAction.instance.Task_EditDescription_1@vu
+      },
+      {
+        quickActionName = salesforce.QuickAction.instance.Task_EditDescription_2@vu
+      },
+      {
+        quickActionName = salesforce.QuickAction.instance.Task_EditDescription_3@vu
+      },
+      {
+        quickActionName = salesforce.QuickAction.instance.Task_EditDescription_4@vu
+      },
+      {
+        quickActionName = salesforce.QuickAction.instance.Task_EditDescription_5@vu
+      },
+      {
+        quickActionName = salesforce.QuickAction.instance.Task_EditDescription_6@vu
+      },
+      {
+        quickActionName = salesforce.QuickAction.instance.Task_EditDescription_7@vu
+      },
+      {
+        quickActionName = salesforce.QuickAction.instance.Task_UpdatePriority@v
+      },
+      {
+        quickActionName = salesforce.QuickAction.instance.Task_UpdatePriority_0@vu
+      },
+      {
+        quickActionName = salesforce.QuickAction.instance.Task_UpdatePriority_1@vu
+      },
+      {
+        quickActionName = salesforce.QuickAction.instance.Task_UpdatePriority_2@vu
+      },
+      {
+        quickActionName = salesforce.QuickAction.instance.Task_UpdatePriority_3@vu
+      },
+      {
+        quickActionName = salesforce.QuickAction.instance.Task_UpdatePriority_4@vu
+      },
+      {
+        quickActionName = salesforce.QuickAction.instance.Task_UpdatePriority_5@vu
+      },
+      {
+        quickActionName = salesforce.QuickAction.instance.Task_UpdatePriority_6@vu
+      },
+      {
+        quickActionName = salesforce.QuickAction.instance.Task_UpdatePriority_7@vu
+      },
+      {
+        quickActionName = salesforce.QuickAction.instance.Task_UpdateStatus@v
+      },
+      {
+        quickActionName = salesforce.QuickAction.instance.Task_UpdateStatus_0@vu
+      },
+      {
+        quickActionName = salesforce.QuickAction.instance.Task_UpdateStatus_1@vu
+      },
+      {
+        quickActionName = salesforce.QuickAction.instance.Task_UpdateStatus_2@vu
+      },
+      {
+        quickActionName = salesforce.QuickAction.instance.Task_UpdateStatus_3@vu
+      },
+      {
+        quickActionName = salesforce.QuickAction.instance.Task_UpdateStatus_4@vu
+      },
+      {
+        quickActionName = salesforce.QuickAction.instance.Task_UpdateStatus_5@vu
+      },
+      {
+        quickActionName = salesforce.QuickAction.instance.Task_UpdateStatus_6@vu
+      },
+      {
+        quickActionName = salesforce.QuickAction.instance.Task_UpdateStatus_7@vu
+      },
+    ]
+  }
+  relatedContent = {
+    relatedContentItems = [
+      {
+        layoutItem = {
+          behavior = "Readonly"
+          field = salesforce.Task.field.WhoId
+        }
+      },
+      {
+        layoutItem = {
+          behavior = "Readonly"
+          field = salesforce.Task.field.WhatId
+        }
+      },
+    ]
+  }
+  relatedLists = [
+    {
+      relatedList = "RelatedActivityAttachmentList"
+    },
+  ]
+  relatedObjects = [
+    "WhoId",
+    "WhatId",
+  ]
+  showEmailCheckbox = false
+  showRunAssignmentRulesCheckbox = false
+  showSubmitAndAttachButton = false
+  summaryLayout = {
+    masterLabel = "00h36000003jARj"
+    sizeX = 4
+    sizeY = 0
+    summaryLayoutStyle = "Default"
+  }
+  _parent = [
+    salesforce.Task,
+  ]
+}

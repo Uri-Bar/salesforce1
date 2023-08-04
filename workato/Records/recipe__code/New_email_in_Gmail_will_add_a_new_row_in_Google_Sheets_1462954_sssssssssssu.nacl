@@ -1,0 +1,31 @@
+workato.recipe__code New_email_in_Gmail_will_add_a_new_row_in_Google_Sheets_1462954_sssssssssssu@uuuuuuuuuuuum {
+  number = 0
+  provider = "gmail"
+  name = "new_email"
+  as = "new_email"
+  keyword = "trigger"
+  block = [
+    {
+      number = 1
+      provider = "google_sheets"
+      name = "add_spreadsheet_row_v4"
+      as = "add_spreadsheet_row_v4"
+      keyword = "action"
+      dynamicPickListSelection = {
+        spreadsheet = "!table"
+      }
+      input = {
+        spreadsheet = "13N6gZ0P4vnGlYkWbx4TxK792aJZx-5nSaTDR9iqegJw"
+        sheet = "Sheet1"
+        data = {
+          col_1 = "#{_('data.gmail.new_email.received_time')}"
+        }
+      }
+      uuid = "af47df13-1e55-43e6-83f7-96438322b476"
+    },
+  ]
+  uuid = "228fe852-da42-446a-8802-edc457a27ac7"
+  _parent = [
+    workato.recipe.instance.New_email_in_Gmail_will_add_a_new_row_in_Google_Sheets_1462954@sssssssssssu,
+  ]
+}

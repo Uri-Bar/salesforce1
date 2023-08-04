@@ -1,0 +1,167 @@
+zuora_billing.Task AllBrighter_Bundle_Set_Up_Workflow_67_ssssu__Create_Allbrighter_Subscription@uuuuumuuss {
+  name = "Create Allbrighter Subscription"
+  parameters = {
+    url = "{{ Credentials.zuora.rest_endpoint }}orders/"
+    datas = [
+      {
+        key = ""
+        value = ""
+      },
+    ]
+    method = "POST"
+    headers = [
+      {
+        key = "Content-Type"
+        value = "application/json"
+      },
+    ]
+    raw_body = '''
+{
+  "orderDate": "{{Data.Workflow.ExecutionDate}}",
+  "orderNumber": "{{Data.Workflow.ship_zip}}-{{WorkflowInstance.id}}-1",
+  "newAccount": {
+    		"accountNumber": "A-{{Data.Workflow.ship_zip}}-{{WorkflowInstance.id}}-USP",
+        "autoPay": true,
+        "billCycleDay": 0,
+        "batch": "zlabs_rs",
+        "billToContact": {
+            "address1": "3050 S Delaware",
+            "city": "San Mateo",
+            "country": "United States",
+            "firstName": "{{Data.Workflow.buyer_first_name}}",
+            "lastName": "{{Data.Workflow.buyer_last_name}}",
+            "postalCode": "{{Data.Workflow.ship_zip}}",
+            "state": "CA",
+            "workEmail": "buyer_{{Data.Workflow.ship_zip}}@bhhigh.gov"
+        },
+        "creditCard": {
+            "cardHolderInfo": {
+                "addressLine1": "3050 S Delaware",
+                "cardHolderName": "{{Data.Workflow.buyer_first_name}} {{Data.Workflow.buyer_last_name}}",
+                "city": "San Mateo",
+                "country": "United States",
+                "email": "buyer_{{Data.Workflow.ship_zip}}@bhhigh.gov",
+                "phone": "4155551212",
+                "state": "CA",
+                "zipCode": "{{Data.Workflow.ship_zip}}"
+            },
+            "cardNumber": "4111111111111111",
+            "cardType": "Visa",
+            "expirationMonth": 12,
+            "expirationYear": 2023,
+            "securityCode": "111"
+        },
+        "currency": "USD",
+        "name": "{{Data.Workflow.buyer_first_name}} {{Data.Workflow.buyer_last_name}} - {{WorkflowInstance.id}}",
+        "paymentTerm": "Due Upon Receipt",
+        "invoiceTemplateId": "{{Data.Account[0].InvoiceTemplateId}}",
+        "soldToContact": {
+            "address1": "3050 S Delaware",
+            "city": "San Mateo",
+            "country": "United States",
+            "firstName": "{{Data.Workflow.buyer_first_name}}",
+            "lastName": "{{Data.Workflow.buyer_last_name}}",
+            "postalCode": "{{Data.Workflow.ship_zip}}",
+            "state": "CA",
+            "workEmail": "buyer_{{Data.Workflow.ship_zip}}@bhhigh.gov"
+        }
+    },
+  "subscriptions": [
+    {
+      "orderActions": [
+                {
+                    "createSubscription": {
+                        "invoiceSeparately": true,
+                        "subscribeToRatePlans": [
+                            {
+                                "productRatePlanId": "{{Data.ProductRatePlanCharge[0].ProductRatePlanId}}",
+                              	"chargeOverrides" : [
+                                  {% for charge in Data.ProductRatePlanCharge %}
+                                  {
+                                  	"productRatePlanChargeId" : "{{charge.Id}}",
+                                  	"startDate" : {"triggerEvent": "SpecificDate"}
+                                  } {% if forloop.last != true%},{% endif %}
+                                  {% endfor %}
+                                ]
+                            }
+                        ],
+                        "terms": {
+                            "autoRenew": true,
+                            "initialTerm": {
+                                "period": 12,
+                                "periodType": "Month",
+                                "startDate": "{{Data.Workflow.ExecutionDate}}",
+                                "termType": "TERMED"
+                            },
+                            "renewalSetting": "RENEW_WITH_SPECIFIC_TERM",
+                            "renewalTerms": [
+                                {
+                                    "period": 12,
+                                    "periodType": "Month"
+                                }
+                            ]
+                        }
+                    },
+                    "triggerDates": [
+                        {
+                            "name": "ContractEffective",
+                            "triggerDate": "{{Data.Workflow.ExecutionDate}}"
+                        }
+                    ],
+                    "type": "CreateSubscription"
+                }
+      ]
+    }
+  ],
+  "processingOptions": {
+    "runBilling": false,
+    "collectPayment": false
+  }
+}
+'''
+    body_type = "raw"
+    validation = {
+      zuora_call = "false"
+      status_codes = [
+        "",
+        "200",
+      ]
+    }
+    retry_rules = {
+      retry_count = "0"
+      retry_window = "30"
+      current_retry_count = "0"
+    }
+    authorization = {
+      type = "zuora"
+    }
+    strict_variables = "true"
+    validate_response = "false"
+    validation_scheme = ""
+    include_response_code = "true"
+  }
+  action_type = "Callout"
+  call_type = "SOAP"
+  concurrent_limit = 9999999
+  additionalProperties = {
+    css = {
+      top = "-390px"
+      left = "1100px"
+    }
+    priority = "Medium"
+    
+  }
+  _parent = [
+    zuora_billing.WorkflowExport.instance.AllBrighter_Bundle_Set_Up_Workflow_67@ssssu,
+  ]
+  _generated_dependencies = [
+    {
+      reference = zuora_billing.Workflow.instance.AllBrighter_Bundle_Set_Up_Workflow_67_ssssu__AllBrighter_Bundle_Set_Up_Workflow@uuuuumuussss.additionalProperties.parameters.fields
+      occurrences = [
+        {
+          location = zuora_billing.Task.instance.AllBrighter_Bundle_Set_Up_Workflow_67_ssssu__Create_Allbrighter_Subscription@uuuuumuuss.parameters.raw_body
+        },
+      ]
+    },
+  ]
+}

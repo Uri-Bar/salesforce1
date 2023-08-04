@@ -1,0 +1,9 @@
+okta.Feature Enable_Custom_Admin_Roles_for_Identity_Providers@s {
+  type = "self-service"
+  status = "DISABLED"
+  name = "Enable Custom Admin Roles for Identity Providers"
+  description = "Create custom admin roles with granular permissions for managing Identity Providers"
+  stage = {
+    value = "EA"
+  }
+}

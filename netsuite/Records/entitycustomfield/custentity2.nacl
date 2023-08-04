@@ -1,0 +1,43 @@
+netsuite.entitycustomfield custentity2 {
+  scriptid = "custentity2"
+  accesslevel = "2"
+  appliestocontact = false
+  appliestocustomer = true
+  appliestoemployee = false
+  appliestogenericrsrc = false
+  appliestogroup = false
+  appliestoothername = false
+  appliestopartner = false
+  appliestopricelist = false
+  appliestoproject = false
+  appliestoprojecttemplate = false
+  appliestostatement = false
+  appliestovendor = false
+  appliestowebsite = false
+  applyformatting = false
+  availableexternally = false
+  checkspelling = false
+  defaultchecked = false
+  displaytype = "NORMAL"
+  encryptatrest = false
+  fieldtype = "TEXT"
+  globalsearch = false
+  isformula = false
+  ismandatory = false
+  isparent = false
+  label = "CreatedUsingCodeEDITED (2)"
+  searchlevel = "2"
+  showhierarchy = false
+  showinlist = false
+  storevalue = true
+  roleaccesses = {
+    roleaccess = {
+      CEO = {
+        accesslevel = "1"
+        role = "CEO"
+        searchlevel = "2"
+        
+      }
+    }
+  }
+}

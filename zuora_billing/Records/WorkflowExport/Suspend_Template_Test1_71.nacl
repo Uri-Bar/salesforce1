@@ -1,0 +1,28 @@
+zuora_billing.WorkflowExport Suspend_Template_Test1_71@ssu {
+  workflow = zuora_billing.Workflow.instance.Suspend_Template_Test1_71_ssu__Suspend_Template_Test1@uuumuuss
+  tasks = [
+    zuora_billing.Task.instance.Suspend_Template_Test1_71_ssu__Get_Subscription_By_Key@uuumuusss,
+    zuora_billing.Task.instance.Suspend_Template_Test1_71_ssu__Suspend__and_or_Resume_@uuumuusjdsk,
+  ]
+  linkages = [
+    {
+      source_workflow_id = zuora_billing.Workflow.instance.Suspend_Template_Test1_71_ssu__Suspend_Template_Test1@uuumuuss
+      target_task_id = zuora_billing.Task.instance.Suspend_Template_Test1_71_ssu__Get_Subscription_By_Key@uuumuusss
+      linkage_type = "Start"
+      
+    },
+    {
+      source_task_id = zuora_billing.Task.instance.Suspend_Template_Test1_71_ssu__Get_Subscription_By_Key@uuumuusss
+      target_task_id = zuora_billing.Task.instance.Suspend_Template_Test1_71_ssu__Suspend__and_or_Resume_@uuumuusjdsk
+      linkage_type = "Success"
+      
+    },
+  ]
+  additionalProperties = {
+    workflow_definition = {
+      description = ""
+      category = "Default"
+      name = "Suspend Template Test1"
+    }
+  }
+}

@@ -1,0 +1,37 @@
+zendesk.view_order {
+  active = [
+    zendesk.view.instance.Your_unsolved_tickets@s,
+    zendesk.view.instance.Unassigned_tickets@s,
+    zendesk.view.instance.All_unsolved_tickets@s,
+    zendesk.view.instance.Recently_updated_tickets@s,
+    zendesk.view.instance.New_tickets_in_your_groups@s,
+    zendesk.view.instance.Pending_tickets@s,
+    zendesk.view.instance.Recently_solved_tickets@s,
+    zendesk.view.instance.Unsolved_tickets_in_your_groups@s,
+    zendesk.view.instance.Custom_view_123@s,
+    zendesk.view.instance.Unassigned_tickets___2@ssbs,
+    zendesk.view.instance.Copy_of_All_unsolved_tickets@s,
+    zendesk.view.instance.Custom_view_1234@s,
+    zendesk.view.instance.Test,
+    zendesk.view.instance.Complex_View@s,
+    zendesk.view.instance.Silver_View@s,
+    zendesk.view.instance.Golden_View@s,
+    zendesk.view.instance.Bronze_View@s,
+    zendesk.view.instance.Titanium,
+    zendesk.view.instance.Mercury_View@s,
+    zendesk.view.instance.Severity_View@s,
+    zendesk.view.instance.Free_view@s,
+    zendesk.view.instance.Platinum_View@s,
+    zendesk.view.instance.Diamond_customers_view@s,
+    zendesk.view.instance.Enterprise_accounts_view@s,
+    zendesk.view.instance.Str_accounts_view@s,
+    zendesk.view.instance.Strategic_accounts_view@s,
+    zendesk.view.instance.Glb_accounts_view@s,
+    zendesk.view.instance.Global_accounts_view@s,
+    zendesk.view.instance.Platinum,
+  ]
+  inactive = [
+    zendesk.view.instance.Current_tasks@s,
+    zendesk.view.instance.Overdue_tasks@s,
+  ]
+}

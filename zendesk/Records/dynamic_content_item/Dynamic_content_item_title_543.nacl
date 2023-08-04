@@ -1,0 +1,9 @@
+zendesk.dynamic_content_item Dynamic_content_item_title_543@s {
+  name = "Dynamic content item title 543"
+  placeholder = "{{dc.dynamic_content_item_title_543}}"
+  default_locale_id = zendesk.locale.instance.en_US@b
+  outdated = false
+  variants = [
+    zendesk.dynamic_content_item__variants.instance.Dynamic_content_item_title_543_s__1@uuuumuu,
+  ]
+}

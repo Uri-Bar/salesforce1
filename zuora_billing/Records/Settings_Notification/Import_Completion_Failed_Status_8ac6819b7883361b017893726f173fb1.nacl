@@ -1,0 +1,18 @@
+zuora_billing.Settings_Notification Import_Completion_Failed_Status_8ac6819b7883361b017893726f173fb1@susu {
+  profileId = zuora_billing.Settings_CommunicationProfile.instance.Default_Profile@s
+  eventName = "Import Completion"
+  name = "Failed Status"
+  description = "Import is completed with error."
+  active = false
+  hidden = false
+  param1 = "Failed"
+  emailOption = true
+  emailTemplateName = zuora_billing.PublicEmailTemplate.instance.Default_email_template_for_Import_Completion_with_Failed_status@s
+  calloutOption = false
+  contentType = "APPLICATION_JSON"
+  calloutRetriable = false
+  calloutAuth = false
+  calloutOauth2 = false
+  calloutPreemptiveAuth = false
+  useCustomRequestBody = false
+}

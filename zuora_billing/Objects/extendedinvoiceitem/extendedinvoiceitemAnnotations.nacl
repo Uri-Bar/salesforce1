@@ -1,0 +1,40 @@
+type zuora_billing.extendedinvoiceitem {
+  annotations {
+    string metadataType {
+    }
+    string label {
+    }
+    string description {
+    }
+    hidden_string id {
+    }
+    string objectType {
+    }
+  }
+  metadataType = "StandardObject"
+  objectType = "extendedinvoiceitem"
+  _generated_dependencies = [
+    {
+      reference = zuora_billing.accountingcode
+    },
+    {
+      reference = zuora_billing.extendedinvoice
+    },
+    {
+      reference = zuora_billing.extendeduser
+    },
+    {
+      reference = zuora_billing.journalentry
+    },
+    {
+      reference = zuora_billing.productrateplancharge
+    },
+    {
+      reference = zuora_billing.rateplancharge
+    },
+    {
+      reference = zuora_billing.subscription
+    },
+  ]
+  label = "ExtendedInvoiceItem"
+}

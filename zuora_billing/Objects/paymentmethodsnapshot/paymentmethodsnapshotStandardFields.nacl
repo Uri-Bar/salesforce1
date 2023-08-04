@@ -1,0 +1,553 @@
+type zuora_billing.paymentmethodsnapshot {
+  string Id {
+    type = "string"
+    format = "uuid"
+    required = false
+    filterable = false
+    label = "Id"
+  }
+  string CreatedDate {
+    type = "string"
+    format = "date-time"
+    required = false
+    filterable = false
+    label = "CreatedDate"
+  }
+  string UpdatedDate {
+    type = "string"
+    format = "date-time"
+    required = false
+    filterable = false
+    label = "UpdatedDate"
+  }
+  string AccountId {
+    type = "string"
+    format = "uuid"
+    required = false
+    filterable = false
+    label = "AccountId"
+  }
+  string AchAbaCode {
+    type = "string"
+    maxLength = 512
+    required = false
+    filterable = false
+    label = "AchAbaCode"
+  }
+  string AchAccountName {
+    type = "string"
+    maxLength = 512
+    required = false
+    filterable = false
+    label = "AchAccountName"
+  }
+  string AchAccountNumberMask {
+    type = "string"
+    maxLength = 512
+    required = false
+    filterable = false
+    label = "AchAccountNumberMask"
+  }
+  string AchAccountType {
+    type = "string"
+    maxLength = 512
+    required = false
+    filterable = false
+    label = "AchAccountType"
+  }
+  string AchBankName {
+    type = "string"
+    maxLength = 512
+    required = false
+    filterable = false
+    label = "AchBankName"
+  }
+  string BankBranchCode {
+    type = "string"
+    maxLength = 512
+    required = false
+    filterable = false
+    label = "BankBranchCode"
+  }
+  string BankCheckDigit {
+    type = "string"
+    maxLength = 512
+    required = false
+    filterable = false
+    label = "BankCheckDigit"
+  }
+  string BankCity {
+    type = "string"
+    maxLength = 512
+    required = false
+    filterable = false
+    label = "BankCity"
+  }
+  string BankCode {
+    type = "string"
+    maxLength = 512
+    required = false
+    filterable = false
+    label = "BankCode"
+  }
+  string BankIdentificationNumber {
+    type = "string"
+    maxLength = 512
+    required = false
+    filterable = false
+    label = "BankIdentificationNumber"
+  }
+  string BankName {
+    type = "string"
+    maxLength = 512
+    required = false
+    filterable = false
+    label = "BankName"
+  }
+  string BankPostalCode {
+    type = "string"
+    maxLength = 512
+    required = false
+    filterable = false
+    label = "BankPostalCode"
+  }
+  string BankStreetName {
+    type = "string"
+    maxLength = 512
+    required = false
+    filterable = false
+    label = "BankStreetName"
+  }
+  string BankStreetNumber {
+    type = "string"
+    maxLength = 512
+    required = false
+    filterable = false
+    label = "BankStreetNumber"
+  }
+  string BankTransferAccountName {
+    type = "string"
+    maxLength = 512
+    required = false
+    filterable = false
+    label = "BankTransferAccountName"
+  }
+  string BankTransferAccountNumberMask {
+    type = "string"
+    maxLength = 512
+    required = false
+    filterable = false
+    label = "BankTransferAccountNumberMask"
+  }
+  string BankTransferAccountType {
+    type = "string"
+    maxLength = 512
+    required = false
+    filterable = false
+    label = "BankTransferAccountType"
+  }
+  string BankTransferType {
+    type = "string"
+    maxLength = 512
+    required = false
+    filterable = false
+    label = "BankTransferType"
+  }
+  string BusinessIdentificationCode {
+    type = "string"
+    maxLength = 512
+    required = false
+    filterable = false
+    label = "BusinessIdentificationCode"
+  }
+  string City {
+    type = "string"
+    maxLength = 512
+    required = false
+    filterable = false
+    label = "City"
+  }
+  string Country {
+    type = "string"
+    maxLength = 512
+    required = false
+    filterable = false
+    label = "Country"
+  }
+  string CreditCardAddress1 {
+    type = "string"
+    maxLength = 512
+    required = false
+    filterable = false
+    label = "CreditCardAddress1"
+  }
+  string CreditCardAddress2 {
+    type = "string"
+    maxLength = 512
+    required = false
+    filterable = false
+    label = "CreditCardAddress2"
+  }
+  string CreditCardCity {
+    type = "string"
+    maxLength = 512
+    required = false
+    filterable = false
+    label = "CreditCardCity"
+  }
+  string CreditCardCountry {
+    type = "string"
+    maxLength = 512
+    required = false
+    filterable = false
+    label = "CreditCardCountry"
+  }
+  number CreditCardExpirationMonth {
+    type = "integer"
+    required = false
+    filterable = false
+    label = "CreditCardExpirationMonth"
+  }
+  number CreditCardExpirationYear {
+    type = "integer"
+    required = false
+    filterable = false
+    label = "CreditCardExpirationYear"
+  }
+  string CreditCardHolderName {
+    type = "string"
+    maxLength = 512
+    required = false
+    filterable = false
+    label = "CreditCardHolderName"
+  }
+  string CreditCardMaskNumber {
+    type = "string"
+    maxLength = 512
+    required = false
+    filterable = false
+    label = "CreditCardMaskNumber"
+  }
+  string CreditCardPostalCode {
+    type = "string"
+    maxLength = 512
+    required = false
+    filterable = false
+    label = "CreditCardPostalCode"
+  }
+  string CreditCardState {
+    type = "string"
+    maxLength = 512
+    required = false
+    filterable = false
+    label = "CreditCardState"
+  }
+  string CreditCardType {
+    type = "string"
+    maxLength = 512
+    required = false
+    filterable = false
+    label = "CreditCardType"
+  }
+  string DeviceSessionId {
+    type = "string"
+    maxLength = 512
+    required = false
+    filterable = false
+    label = "DeviceSessionId"
+  }
+  string Email {
+    type = "string"
+    maxLength = 512
+    required = false
+    filterable = false
+    label = "Email"
+  }
+  string ExistingMandate {
+    type = "string"
+    maxLength = 512
+    required = false
+    filterable = false
+    label = "ExistingMandate"
+  }
+  string FirstName {
+    type = "string"
+    maxLength = 512
+    required = false
+    filterable = false
+    label = "FirstName"
+  }
+  string IBAN {
+    type = "string"
+    maxLength = 512
+    required = false
+    filterable = false
+    label = "IBAN"
+  }
+  string IPAddress {
+    type = "string"
+    maxLength = 512
+    required = false
+    filterable = false
+    label = "IPAddress"
+  }
+  string IdentityNumber {
+    type = "string"
+    maxLength = 512
+    required = false
+    filterable = false
+    label = "IdentityNumber"
+  }
+  string CompanyName {
+    type = "string"
+    maxLength = 512
+    required = false
+    filterable = false
+    label = "CompanyName"
+  }
+  boolean IsCompany {
+    type = "boolean"
+    required = false
+    filterable = false
+    label = "IsCompany"
+  }
+  string LastFailedSaleTransactionDate {
+    type = "string"
+    format = "date"
+    required = false
+    filterable = false
+    label = "LastFailedSaleTransactionDate"
+  }
+  string LastName {
+    type = "string"
+    maxLength = 512
+    required = false
+    filterable = false
+    label = "LastName"
+  }
+  string LastTransactionDateTime {
+    type = "string"
+    format = "date-time"
+    required = false
+    filterable = false
+    label = "LastTransactionDateTime"
+  }
+  string LastTransactionStatus {
+    type = "string"
+    maxLength = 512
+    required = false
+    filterable = false
+    label = "LastTransactionStatus"
+  }
+  string MandateCreationDate {
+    type = "string"
+    format = "date"
+    required = false
+    filterable = false
+    label = "MandateCreationDate"
+  }
+  string MandateID {
+    type = "string"
+    maxLength = 512
+    required = false
+    filterable = false
+    label = "MandateID"
+  }
+  string MandateReason {
+    type = "string"
+    maxLength = 512
+    required = false
+    filterable = false
+    label = "MandateReason"
+  }
+  string MandateReceived {
+    type = "string"
+    maxLength = 512
+    required = false
+    filterable = false
+    label = "MandateReceived"
+  }
+  string MandateStatus {
+    type = "string"
+    maxLength = 512
+    required = false
+    filterable = false
+    label = "MandateStatus"
+  }
+  string MandateUpdateDate {
+    type = "string"
+    format = "date"
+    required = false
+    filterable = false
+    label = "MandateUpdateDate"
+  }
+  number MaxConsecutivePaymentFailures {
+    type = "integer"
+    required = false
+    filterable = false
+    label = "MaxConsecutivePaymentFailures"
+  }
+  string Name {
+    type = "string"
+    maxLength = 512
+    required = false
+    filterable = false
+    label = "Name"
+  }
+  string PaymentMethodId {
+    type = "string"
+    format = "uuid"
+    required = false
+    filterable = false
+    label = "PaymentMethodId"
+  }
+  number NumConsecutiveFailures {
+    type = "integer"
+    required = false
+    filterable = false
+    label = "NumConsecutiveFailures"
+  }
+  string PaymentMethodStatus {
+    type = "string"
+    maxLength = 512
+    required = false
+    filterable = false
+    label = "PaymentMethodStatus"
+  }
+  number PaymentRetryWindow {
+    type = "integer"
+    required = false
+    filterable = false
+    label = "PaymentRetryWindow"
+  }
+  string PaypalBaid {
+    type = "string"
+    maxLength = 512
+    required = false
+    filterable = false
+    label = "PaypalBaid"
+  }
+  string PaypalEmail {
+    type = "string"
+    maxLength = 512
+    required = false
+    filterable = false
+    label = "PaypalEmail"
+  }
+  string PaypalPreapprovalKey {
+    type = "string"
+    maxLength = 512
+    required = false
+    filterable = false
+    label = "PaypalPreapprovalKey"
+  }
+  string PaypalType {
+    type = "string"
+    maxLength = 512
+    required = false
+    filterable = false
+    label = "PaypalType"
+  }
+  string Phone {
+    type = "string"
+    maxLength = 512
+    required = false
+    filterable = false
+    label = "Phone"
+  }
+  string PostalCode {
+    type = "string"
+    maxLength = 512
+    required = false
+    filterable = false
+    label = "PostalCode"
+  }
+  string SecondTokenId {
+    type = "string"
+    maxLength = 512
+    required = false
+    filterable = false
+    label = "SecondTokenId"
+  }
+  string State {
+    type = "string"
+    maxLength = 512
+    required = false
+    filterable = false
+    label = "State"
+  }
+  string StreetName {
+    type = "string"
+    maxLength = 512
+    required = false
+    filterable = false
+    label = "StreetName"
+  }
+  string StreetNumber {
+    type = "string"
+    maxLength = 512
+    required = false
+    filterable = false
+    label = "StreetNumber"
+  }
+  string TokenId {
+    type = "string"
+    maxLength = 512
+    required = false
+    filterable = false
+    label = "TokenId"
+  }
+  number TotalNumberOfErrorPayments {
+    type = "integer"
+    required = false
+    filterable = false
+    label = "TotalNumberOfErrorPayments"
+  }
+  number TotalNumberOfProcessedPayments {
+    type = "integer"
+    required = false
+    filterable = false
+    label = "TotalNumberOfProcessedPayments"
+  }
+  string Type {
+    type = "string"
+    maxLength = 512
+    required = false
+    filterable = false
+    label = "Type"
+  }
+  boolean UseDefaultRetryRule {
+    type = "boolean"
+    required = false
+    filterable = false
+    label = "UseDefaultRetryRule"
+  }
+  string MethodReferenceId {
+    type = "string"
+    maxLength = 512
+    required = false
+    filterable = false
+    label = "MethodReferenceId"
+  }
+  string UserReferenceId {
+    type = "string"
+    maxLength = 512
+    required = false
+    filterable = false
+    label = "UserReferenceId"
+  }
+  string SubType {
+    type = "string"
+    maxLength = 512
+    required = false
+    filterable = false
+    label = "SubType"
+  }
+  string MethodSpecificData {
+    type = "string"
+    maxLength = 512
+    required = false
+    filterable = false
+    label = "MethodSpecificData"
+  }
+}

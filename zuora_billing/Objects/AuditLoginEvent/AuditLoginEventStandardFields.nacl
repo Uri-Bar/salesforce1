@@ -1,0 +1,126 @@
+type zuora_billing.AuditLoginEvent {
+  string Id {
+    format = "uuid"
+    label = "Id"
+    origin = "system"
+    type = "string"
+    required = true
+    filterable = true
+  }
+  string CreatedById {
+    label = "CreatedById"
+    origin = "system"
+    type = "string"
+    required = true
+    filterable = true
+  }
+  string UpdatedById {
+    label = "UpdatedById"
+    origin = "system"
+    type = "string"
+    required = true
+    filterable = true
+  }
+  string CreatedDate {
+    format = "date-time"
+    origin = "system"
+    type = "string"
+    label = "CreatedDate"
+    required = true
+    filterable = true
+  }
+  string UpdatedDate {
+    format = "date-time"
+    origin = "system"
+    type = "string"
+    label = "UpdatedDate"
+    required = true
+    filterable = true
+  }
+  string Status {
+    label = "Login status"
+    origin = "system"
+    type = "string"
+    required = false
+    filterable = true
+  }
+  string UserName {
+    label = "User name"
+    origin = "system"
+    type = "string"
+    required = false
+    filterable = true
+  }
+  string Timestamp {
+    format = "date-time"
+    label = "Event timestamp"
+    origin = "system"
+    type = "string"
+    required = true
+    filterable = true
+  }
+  string BrowserType {
+    label = "Browser type"
+    origin = "system"
+    type = "string"
+    required = false
+    filterable = true
+  }
+  
+  string UserId {
+    label = "User ID"
+    origin = "system"
+    type = "string"
+    required = false
+    filterable = false
+  }
+  number SequenceNumber {
+    label = "Event sequence number"
+    origin = "system"
+    type = "integer"
+    required = true
+    filterable = false
+  }
+  string EventId {
+    label = "Event id"
+    origin = "system"
+    type = "string"
+    required = true
+    filterable = false
+  }
+  string IpAddress {
+    label = "IP address of the user"
+    origin = "system"
+    type = "string"
+    required = false
+    filterable = false
+  }
+  string LoginType {
+    label = "Login type"
+    origin = "system"
+    type = "string"
+    required = false
+    filterable = true
+  }
+  string TokenId {
+    label = "User token id"
+    origin = "system"
+    type = "string"
+    required = true
+    filterable = false
+  }
+  string BrowserVersion {
+    label = "Browser version"
+    origin = "system"
+    type = "string"
+    required = false
+    filterable = false
+  }
+  string HostName {
+    label = "Hostname"
+    origin = "system"
+    type = "string"
+    required = false
+    filterable = false
+  }
+}

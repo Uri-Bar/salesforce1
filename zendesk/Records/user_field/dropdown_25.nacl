@@ -1,0 +1,15 @@
+zendesk.user_field dropdown_25 {
+  type = "dropdown"
+  key = "dropdown_25"
+  
+  
+  raw_title = "dropdown 25"
+  raw_description = "abc"
+  active = true
+  system = false
+  custom_field_options = [
+    zendesk.user_field__custom_field_options.instance.dropdown_25__Choice1,
+    zendesk.user_field__custom_field_options.instance.dropdown_25__another_choice@uuus,
+    zendesk.user_field__custom_field_options.instance.dropdown_25__bla,
+  ]
+}

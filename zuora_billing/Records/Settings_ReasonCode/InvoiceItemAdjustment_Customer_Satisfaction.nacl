@@ -1,0 +1,6 @@
+zuora_billing.Settings_ReasonCode InvoiceItemAdjustment_Customer_Satisfaction@us {
+  isActive = true
+  reasonCodeName = "Customer Satisfaction"
+  reasonCodeTransactionType = "InvoiceItemAdjustment"
+  isDefault = false
+}

@@ -1,0 +1,32 @@
+workato.recipe ABC_lookup_1682660@su {
+  name = "ABC lookup"
+  trigger_application = "salesforce"
+  action_applications = [
+    "lookup_table",
+    "salesforce",
+  ]
+  applications = [
+    "salesforce",
+    "lookup_table",
+  ]
+  description = "When there is a trigger event, do action"
+  folder_id = workato.folder.instance.neta1_318283
+  running = false
+  version_no = 3
+  config = [
+    {
+      keyword = "application"
+      name = "salesforce"
+      provider = "salesforce"
+      account_id = workato.connection.instance.Neta_sfdev1@s
+      skip_validation = false
+    },
+    {
+      keyword = "application"
+      name = "lookup_table"
+      provider = "lookup_table"
+      skip_validation = false
+    },
+  ]
+  code = workato.recipe__code.instance.ABC_lookup_1682660_su@uum
+}

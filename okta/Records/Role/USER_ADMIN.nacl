@@ -1,0 +1,5 @@
+okta.Role Group_Administrator@s {
+  
+  label = "Group Administrator"
+  type = "USER_ADMIN"
+}

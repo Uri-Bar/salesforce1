@@ -1,0 +1,8 @@
+okta.AccessPolicy Okta_Admin_Console@s {
+  status = "ACTIVE"
+  name = "Okta Admin Console"
+  priority = 1
+  system = false
+  type = "ACCESS_POLICY"
+  
+}

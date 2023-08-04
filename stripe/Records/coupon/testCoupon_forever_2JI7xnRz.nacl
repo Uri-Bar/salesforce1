@@ -1,0 +1,9 @@
+stripe.coupon testCoupon_forever_2JI7xnRz {
+  id = "2JI7xnRz"
+  duration = "forever"
+  livemode = false
+  name = "testCoupon"
+  percent_off = 22
+  times_redeemed = 0
+  valid = true
+}

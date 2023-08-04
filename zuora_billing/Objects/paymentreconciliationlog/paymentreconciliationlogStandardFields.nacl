@@ -1,0 +1,88 @@
+type zuora_billing.paymentreconciliationlog {
+  string Id {
+    type = "string"
+    format = "uuid"
+    required = false
+    filterable = false
+    label = "Id"
+  }
+  string CreatedDate {
+    type = "string"
+    format = "date-time"
+    required = false
+    filterable = false
+    label = "CreatedDate"
+  }
+  string UpdatedDate {
+    type = "string"
+    format = "date-time"
+    required = false
+    filterable = false
+    label = "UpdatedDate"
+  }
+  string CreatedObjectId {
+    type = "string"
+    format = "uuid"
+    required = false
+    filterable = false
+    label = "CreatedObjectId"
+  }
+  string CreatedObjectType {
+    type = "string"
+    maxLength = 512
+    required = false
+    filterable = false
+    label = "CreatedObjectType"
+  }
+  string Reason {
+    type = "string"
+    maxLength = 512
+    required = false
+    filterable = false
+    label = "Reason"
+  }
+  string ReasonMessage {
+    type = "string"
+    maxLength = 512
+    required = false
+    filterable = false
+    label = "ReasonMessage"
+  }
+  string RelatedObjectId {
+    type = "string"
+    format = "uuid"
+    required = false
+    filterable = false
+    label = "RelatedObjectId"
+  }
+  string RelatedObjectType {
+    type = "string"
+    maxLength = 512
+    required = false
+    filterable = false
+    label = "RelatedObjectType"
+  }
+  string Status {
+    type = "string"
+    maxLength = 512
+    required = false
+    filterable = false
+    label = "Status"
+  }
+  string PaymentGatewayReconciliationEventLogId {
+    type = "string"
+    format = "uuid"
+    required = false
+    filterable = false
+    referenceTo = [
+      zuora_billing.paymentgatewayreconciliationeventlog.field.Id,
+    ]
+    cardinality = "manyToOne"
+    recordConstraints = {
+      create = {
+        enforceValidMapping = true
+      }
+    }
+    label = "PaymentGatewayReconciliationEventLogId"
+  }
+}

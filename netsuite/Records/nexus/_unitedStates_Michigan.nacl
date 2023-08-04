@@ -1,0 +1,13 @@
+netsuite.nexus _unitedStates_Michigan {
+  country = "_unitedStates"
+  state = {
+    name = "Michigan"
+    id = "[ACCOUNT_SPECIFIC_VALUE]"
+  }
+  taxAgency = {
+    name = "Tax Agency MI"
+    id = "[ACCOUNT_SPECIFIC_VALUE]"
+  }
+  description = "MI"
+  identifier = "_unitedStates_Michigan"
+}

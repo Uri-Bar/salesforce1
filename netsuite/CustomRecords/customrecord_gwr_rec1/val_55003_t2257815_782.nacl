@@ -1,0 +1,7 @@
+netsuite.customrecord_gwr_rec1 val_55003_t2257815_782 {
+  scriptid = "val_55003_t2257815_782"
+  isInactive = false
+  name = "firstrow"
+  custom_custrecord_gwr_rec1_field2 = "this is the first row in the customrecord"
+  custom_custrecord_gwr_rec1_field1 = 1
+}

@@ -1,0 +1,15 @@
+netsuite.account Sales {
+  acctType = "_income"
+  acctName = "Sales"
+  includeChildren = true
+  generalRate = "_average"
+  cashFlowRate = "_average"
+  isInactive = false
+  inventory = false
+  subsidiaryList = [
+    netsuite.subsidiary.instance.Parent_Company@s,
+  ]
+  revalue = false
+  identifier = "Sales"
+  custom_custrecord_acct_special = false
+}

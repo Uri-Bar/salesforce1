@@ -1,0 +1,5 @@
+workato.connection DP1 {
+  application = "salesforce"
+  name = "DP1"
+  folder_id = workato.folder.instance.DP_Root
+}

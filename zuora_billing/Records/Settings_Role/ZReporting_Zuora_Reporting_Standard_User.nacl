@@ -1,0 +1,30 @@
+zuora_billing.Settings_Role ZReporting_Zuora_Reporting_Standard_User@usss {
+  name = "Zuora Reporting Standard User"
+  category = "ZReporting"
+  attributes = [
+    {
+      name = "viewDashboard"
+      scope = "Dashboard"
+      activationLevel = "User"
+    },
+    {
+      name = "enableDataSourceExports"
+      scope = "ZConnectBasic"
+      activationLevel = "User"
+    },
+    {
+      name = "manageZReports"
+      scope = "ZConnectBasic"
+      activationLevel = "User"
+    },
+    {
+      name = "viewZReports"
+      scope = "ZConnectBasic"
+      activationLevel = "User"
+    },
+  ]
+  
+  description = "Zuora Reporting Application Permissions for Standard User"
+  entityId = "8ac6819b-7883-361b-0178-93726ba53eff"
+  custom = false
+}

@@ -1,0 +1,8 @@
+salesforce.ListView Activity_MyDelegatedActivities {
+  fullName = "Activity.MyDelegatedActivities"
+  filterScope = "Delegated"
+  label = "My Delegated Activities"
+  _parent = [
+    salesforce.Activity,
+  ]
+}

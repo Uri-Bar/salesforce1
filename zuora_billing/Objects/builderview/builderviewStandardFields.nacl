@@ -1,0 +1,76 @@
+type zuora_billing.builderview {
+  string Id {
+    format = "uuid"
+    label = "Id"
+    origin = "system"
+    type = "string"
+    required = true
+    filterable = true
+  }
+  string CreatedById {
+    label = "CreatedById"
+    origin = "system"
+    type = "string"
+    required = true
+    filterable = true
+  }
+  string UpdatedById {
+    label = "UpdatedById"
+    origin = "system"
+    type = "string"
+    required = true
+    filterable = true
+  }
+  string CreatedDate {
+    format = "date-time"
+    origin = "system"
+    type = "string"
+    label = "CreatedDate"
+    required = true
+    filterable = true
+  }
+  string UpdatedDate {
+    format = "date-time"
+    origin = "system"
+    type = "string"
+    label = "UpdatedDate"
+    required = true
+    filterable = true
+  }
+  boolean Active {
+    label = "Active"
+    origin = "system"
+    type = "boolean"
+    description = "This property controls whether or not the view is enabled and visible to users"
+    default = false
+    required = false
+    filterable = true
+  }
+  string Data {
+    maxLength = 50000
+    label = "Data"
+    origin = "system"
+    type = "string"
+    description = "Stringified JSON blob containing the metadata that defines the Builder View"
+    required = false
+    filterable = false
+  }
+  string Name {
+    maxLength = 128
+    label = "Name"
+    origin = "system"
+    type = "string"
+    description = "Optional, user-provided name"
+    required = false
+    filterable = true
+  }
+  string Template {
+    maxLength = 256
+    label = "Template"
+    origin = "system"
+    type = "string"
+    description = "System defined template that the builder view exists for"
+    required = true
+    filterable = true
+  }
+}

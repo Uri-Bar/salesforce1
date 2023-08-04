@@ -1,0 +1,9 @@
+zendesk.category General_DP_Brand_s@uum {
+  locale = zendesk.guide_language_settings.instance.DP_Brand_s_en_us@umub
+  source_locale = zendesk.guide_language_settings.instance.DP_Brand_s_en_us@umub
+  outdated = false
+  translations = [
+    zendesk.category_translation.instance.General_DP_Brand_s_uum__DP_Brand_s_en_us_umub@uuumuuuuuum,
+  ]
+  brand = zendesk.brand.instance.DP_Brand@s
+}

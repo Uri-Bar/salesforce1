@@ -1,0 +1,45 @@
+salesforce.QuickAction Account_Child_Account@vu {
+  fullName = "Account.Child_Account"
+  description = "Create a child account."
+  label = "Child Account"
+  optionsCreateFeedItem = true
+  quickActionLayout = {
+    layoutSectionStyle = "TwoColumnsLeftToRight"
+    quickActionLayoutColumns = [
+      {
+        quickActionLayoutItems = [
+          {
+            emptySpace = false
+            field = salesforce.Account.field.Name
+            uiBehavior = "Required"
+          },
+          {
+            emptySpace = false
+            field = salesforce.Account.field.Description
+            uiBehavior = "Edit"
+          },
+          {
+            emptySpace = false
+            field = salesforce.Account.field.Website
+            uiBehavior = "Edit"
+          },
+        ]
+      },
+      {
+        quickActionLayoutItems = [
+          {
+            emptySpace = false
+            field = salesforce.Account.field.ParentId
+            uiBehavior = "Edit"
+          },
+        ]
+      },
+    ]
+  }
+  targetObject = salesforce.Account
+  targetParentField = "Parent"
+  type = "Create"
+  _parent = [
+    salesforce.Account,
+  ]
+}

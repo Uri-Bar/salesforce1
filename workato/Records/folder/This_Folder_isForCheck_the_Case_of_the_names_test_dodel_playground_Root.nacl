@@ -1,0 +1,4 @@
+workato.folder This_Folder_isForCheck_the_Case_of_the_names_test_dodel_playground_Root@sssuussuuuu {
+  name = "This Folder isForCheck the_Case_of the names"
+  parent_id = workato.folder.instance.test_dodel_playground_Root
+}

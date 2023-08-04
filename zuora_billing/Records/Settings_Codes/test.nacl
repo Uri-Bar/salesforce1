@@ -1,0 +1,4 @@
+zuora_billing.Settings_Codes test {
+  active = true
+  code = "test"
+}

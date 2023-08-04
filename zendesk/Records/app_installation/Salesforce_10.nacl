@@ -1,0 +1,15 @@
+zendesk.app_installation Salesforce {
+  app_id = 10
+  product = "support"
+  settings = {
+    name = "Salesforce"
+    title = "Salesforce"
+  }
+  
+  enabled = true
+  recurring_payment = false
+  collapsible = true
+  paid = false
+  has_unpaid_subscription = false
+  has_incomplete_subscription = false
+}

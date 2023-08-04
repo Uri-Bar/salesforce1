@@ -1,0 +1,32 @@
+okta.MultifactorEnrollmentPolicy Default_Policy@s {
+  status = "ACTIVE"
+  name = "Default Policy"
+  description = "The default policy applies in all situations if no other policy applies."
+  priority = 1
+  system = true
+  conditions = {
+    people = {
+      groups = {
+        include = [
+          okta.Group.instance.Everyone,
+        ]
+      }
+    }
+  }
+  settings = {
+    additionalProperties = {
+      factors = {
+        okta_password = {
+          enroll = {
+            self = "REQUIRED"
+          }
+          consent = {
+            type = "NONE"
+          }
+        }
+      }
+    }
+  }
+  type = "MFA_ENROLL"
+  
+}

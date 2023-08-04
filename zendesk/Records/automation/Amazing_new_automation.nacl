@@ -1,0 +1,53 @@
+zendesk.automation Amazing_new_automation@s {
+  title = "Amazing new automation"
+  active = true
+  actions = [
+    {
+      field = "assignee_id"
+      value = "gil.hoffer@salto.io"
+    },
+    {
+      field = "notification_webhook"
+      value = [
+        zendesk.webhook.instance.missing_01FTB97RGWA1YWKJ74R2MJQ20D,
+        [
+          [
+            "test",
+            "test",
+          ],
+        ],
+      ]
+    },
+  ]
+  conditions = {
+    all = [
+      {
+        field = "brand_id"
+        operator = "is"
+        value = zendesk.brand.instance.Salto
+      },
+      {
+        field = "type"
+        operator = "is"
+        value = "incident"
+      },
+      {
+        field = "status"
+        operator = "is"
+        value = "new"
+      },
+      {
+        field = "priority"
+        operator = "greater_than"
+        value = "high"
+      },
+      {
+        field = "NEW"
+        operator = "is"
+        value = "6"
+      },
+    ]
+  }
+  raw_title = "Amazing new automation"
+  default = false
+}

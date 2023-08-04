@@ -1,0 +1,31 @@
+zendesk.automation Silvery_Automation@s {
+  title = "Silvery Automation"
+  active = true
+  actions = [
+    {
+      field = zendesk.ticket_field.instance.checkbox_SilverField
+      value = "false"
+    },
+  ]
+  conditions = {
+    all = [
+      {
+        field = "ticket_form_id"
+        operator = "is"
+        value = zendesk.ticket_form.instance.SilverForm
+      },
+      {
+        field = "status"
+        operator = "is_not"
+        value = "closed"
+      },
+      {
+        field = "NEW"
+        operator = "is"
+        value = "66"
+      },
+    ]
+  }
+  raw_title = "Silvery Automation"
+  default = false
+}

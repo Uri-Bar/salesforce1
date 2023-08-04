@@ -1,0 +1,21 @@
+workato.recipe dodel_zoura_recipe_zuora_dodel_playground_Root@ssuuuu {
+  name = "dodel zoura recipe"
+  trigger_application = "zuora"
+  applications = [
+    "zuora",
+  ]
+  description = "When there is a trigger event, do action"
+  folder_id = workato.folder.instance.zuora_dodel_playground_Root
+  running = false
+  version_no = 2
+  config = [
+    {
+      keyword = "application"
+      name = "zuora"
+      provider = "zuora"
+      skip_validation = false
+      account_id = workato.connection.instance.Neta_Zuora_sandbox@s
+    },
+  ]
+  code = workato.recipe__code.instance.dodel_zoura_recipe_zuora_dodel_playground_Root_ssuuuu@uuuuuum
+}

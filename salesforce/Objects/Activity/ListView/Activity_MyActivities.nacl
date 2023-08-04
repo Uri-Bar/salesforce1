@@ -1,0 +1,17 @@
+salesforce.ListView Activity_MyActivities {
+  fullName = "Activity.MyActivities"
+  columns = [
+    "ACTIVITY_SUBTYPE",
+    "TASK.STATUS",
+    "TASK.SUBJECT",
+    "TASK.DUE_DATE",
+    "TASK.WHAT_NAME",
+    "TASK.WHO_NAME",
+    "EVENT.LOCATION",
+  ]
+  filterScope = "Mine"
+  label = "My Activities"
+  _parent = [
+    salesforce.Activity,
+  ]
+}

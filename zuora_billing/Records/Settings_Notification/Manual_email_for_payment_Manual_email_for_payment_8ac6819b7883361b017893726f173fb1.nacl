@@ -1,0 +1,18 @@
+zuora_billing.Settings_Notification Manual_email_for_payment_Manual_email_for_payment_8ac6819b7883361b017893726f173fb1@sssusssu {
+  profileId = zuora_billing.Settings_CommunicationProfile.instance.Default_Profile@s
+  eventName = "Manual email for payment"
+  name = "Manual email for payment"
+  description = "Send email notification manually from payment detail page."
+  active = true
+  hidden = false
+  param4 = "Not include invoice PDF"
+  emailOption = true
+  emailTemplateName = zuora_billing.PublicEmailTemplate.instance.Manual_Email_For_Payment_Default_Email_Template@s
+  calloutOption = false
+  contentType = "APPLICATION_JSON"
+  calloutRetriable = false
+  calloutAuth = false
+  calloutOauth2 = false
+  calloutPreemptiveAuth = false
+  useCustomRequestBody = false
+}

@@ -1,0 +1,11 @@
+zendesk.section_order General_DP_Brand_s_uum@uuum {
+  sections = [
+    zendesk.section.instance.How_To_General_DP_Brand_s_uum@suuuum,
+    zendesk.section.instance.FAQ_General_DP_Brand_s_uum@uuuum,
+    zendesk.section.instance.Announcements_General_DP_Brand_s_uum@uuuum,
+  ]
+  brand = zendesk.brand.instance.DP_Brand@s
+  _parent = [
+    zendesk.category.instance.General_DP_Brand_s@uum,
+  ]
+}

@@ -1,0 +1,8 @@
+salesforce.ListView Yariv__c_All {
+  fullName = "Yariv__c.All"
+  filterScope = "Everything"
+  label = "All"
+  _parent = [
+    salesforce.Yariv__c,
+  ]
+}

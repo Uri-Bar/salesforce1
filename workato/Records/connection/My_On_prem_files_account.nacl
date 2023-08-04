@@ -1,0 +1,6 @@
+workato.connection My_On_prem_files_account@sbss {
+  application = "onprem_files"
+  name = "My On-prem files account"
+  authorization_error = "Active on-prem agent not found"
+  folder_id = workato.folder.instance.second_folder_dodel_playground_Root
+}

@@ -1,0 +1,7 @@
+zendesk.group Support4 {
+  name = "Support444"
+  description = "test"
+  default = false
+  deleted = false
+  is_public = true
+}

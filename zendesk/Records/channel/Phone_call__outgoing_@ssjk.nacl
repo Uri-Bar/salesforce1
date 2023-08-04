@@ -1,0 +1,3 @@
+zendesk.channel Phone_call__outgoing_@ssjk {
+  name = "Phone call (outgoing)"
+}

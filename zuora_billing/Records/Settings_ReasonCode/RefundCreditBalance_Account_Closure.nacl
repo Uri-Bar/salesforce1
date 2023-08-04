@@ -1,0 +1,6 @@
+zuora_billing.Settings_ReasonCode RefundCreditBalance_Account_Closure@us {
+  isActive = true
+  reasonCodeName = "Account Closure"
+  reasonCodeTransactionType = "RefundCreditBalance"
+  isDefault = false
+}

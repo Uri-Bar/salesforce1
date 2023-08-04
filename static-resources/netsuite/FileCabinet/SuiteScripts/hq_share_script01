@@ -1,0 +1,25 @@
+/**
+@NApiVersion 2.0
+@NScriptType ClientScript
+@NModuleScope Public
+*/
+define([], function () {
+    function showMessage(context) {
+        //Dev-change1
+        //dev-change3
+        //dev-change5
+        var message = "No Email address. aditional!";
+        var email = context.currentRecord.getValue({
+            "fieldId": "email"
+        });
+
+        //devchange6
+        if (!email) {
+            alert(message);
+        }
+    }
+
+    return {
+        pageInit: showMessage
+    };
+});

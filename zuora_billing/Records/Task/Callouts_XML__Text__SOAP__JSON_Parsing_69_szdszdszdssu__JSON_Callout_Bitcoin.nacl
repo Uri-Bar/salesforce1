@@ -1,0 +1,39 @@
+zuora_billing.Task Callouts_XML__Text__SOAP__JSON_Parsing_69_szdszdszdssu__JSON_Callout_Bitcoin@uuuuuuuuumuuss {
+  name = "JSON Callout Bitcoin"
+  parameters = {
+    url = "https://api.coinmarketcap.com/v1/ticker/?limit=1&convert=USD"
+    datas = [
+      {
+        key = ""
+        value = ""
+      },
+    ]
+    method = "GET"
+    headers = [
+      {
+        key = ""
+        value = ""
+      },
+    ]
+    raw_body = ""
+    body_type = "raw"
+    authorization = {
+      type = "none"
+    }
+  }
+  action_type = "Callout"
+  call_type = "SOAP"
+  task_id = 99
+  concurrent_limit = 9999999
+  additionalProperties = {
+    css = {
+      top = "150px"
+      left = "630px"
+    }
+    priority = "Medium"
+    
+  }
+  _parent = [
+    zuora_billing.WorkflowExport.instance.Callouts_XML__Text__SOAP__JSON_Parsing_69@szdszdszdssu,
+  ]
+}

@@ -1,0 +1,45 @@
+netsuite.customtransactiontype customtransaction_srd_transcation {
+  scriptid = "customtransaction_srd_transcation"
+  cancloseorder = false
+  iscredit = true
+  isposting = false
+  isvoidable = false
+  name = "SRD transaction"
+  showstatus = true
+  transactionstyle = "BASIC"
+  segments = {
+    classposition = "HEADER"
+    departmentposition = "LINES"
+    isclassmandatory = false
+    isdepartmentmandatory = false
+    locationposition = "NONE"
+  }
+  statuses = {
+    status = {
+      status_10008_t2480139_162 = {
+        scriptid = "status_10008_t2480139_162"
+        description = "Pending"
+        id = "A"
+        isposting = false
+        index = 0
+      }
+    }
+  }
+  permissions = {
+    permission = {
+      ADMINISTRATOR = {
+        permittedlevel = "FULL"
+        permittedrole = "ADMINISTRATOR"
+      }
+    }
+  }
+  links = {
+    link = {
+      CUSTOMERHOMEBILLING = {
+        linkcategory = "CUSTOMERHOMEBILLING"
+        linklabel = "List"
+        linktasktype = "LIST"
+      }
+    }
+  }
+}

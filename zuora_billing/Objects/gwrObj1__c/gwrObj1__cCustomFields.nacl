@@ -1,0 +1,22 @@
+type zuora_billing.gwrObj1__c {
+  string gwrField1__c {
+    maxLength = 20
+    label = "gwrField1"
+    origin = "custom"
+    type = "string"
+    default = "GWR"
+    description = "Geoff's custom field"
+    required = false
+    filterable = false
+  }
+  string gwrField2__c {
+    maxLength = 15
+    label = "gwrField2"
+    origin = "custom"
+    type = "string"
+    default = "GWR2"
+    description = "Another field for Geoff"
+    required = false
+    filterable = false
+  }
+}

@@ -1,0 +1,15 @@
+netsuite.account Gain__loss__on_Sale_of_Assets@sjkssss {
+  acctType = "_otherIncome"
+  acctName = "Gain (loss) on Sale of Assets"
+  includeChildren = true
+  generalRate = "_average"
+  cashFlowRate = "_average"
+  isInactive = false
+  inventory = false
+  subsidiaryList = [
+    netsuite.subsidiary.instance.Parent_Company@s,
+  ]
+  revalue = false
+  identifier = "Gain (loss) on Sale of Assets"
+  custom_custrecord_acct_special = false
+}

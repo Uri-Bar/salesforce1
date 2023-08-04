@@ -1,0 +1,6 @@
+zuora_billing.AccountingCodeItem DeferredRevenue_Deferred_Revenue@us {
+  name = "Deferred Revenue"
+  type = "DeferredRevenue"
+  category = "Liabilities"
+  status = "Active"
+}

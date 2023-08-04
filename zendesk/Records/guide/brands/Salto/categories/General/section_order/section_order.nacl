@@ -1,0 +1,12 @@
+zendesk.section_order General_Salto {
+  sections = [
+    zendesk.section.instance.DevOps_General_Salto,
+    zendesk.section.instance.Announcements_General_Salto,
+    zendesk.section.instance.FAQ_General_Salto,
+    zendesk.section.instance.FAQ1_General_Salto,
+  ]
+  brand = zendesk.brand.instance.Salto
+  _parent = [
+    zendesk.category.instance.General_Salto,
+  ]
+}

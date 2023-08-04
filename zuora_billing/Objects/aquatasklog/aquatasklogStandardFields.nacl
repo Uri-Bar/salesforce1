@@ -1,0 +1,115 @@
+type zuora_billing.aquatasklog {
+  string Id {
+    type = "string"
+    format = "uuid"
+    required = false
+    filterable = false
+    label = "Id"
+  }
+  string CreatedById {
+    type = "string"
+    format = "uuid"
+    required = false
+    filterable = false
+    referenceTo = [
+      zuora_billing.user.field.Id,
+    ]
+    cardinality = "manyToOne"
+    recordConstraints = {
+      create = {
+        enforceValidMapping = true
+      }
+    }
+    label = "CreatedById"
+  }
+  string CreatedDate {
+    type = "string"
+    format = "date-time"
+    required = false
+    filterable = false
+    label = "CreatedDate"
+  }
+  string UpdatedById {
+    type = "string"
+    format = "uuid"
+    required = false
+    filterable = false
+    referenceTo = [
+      zuora_billing.user.field.Id,
+    ]
+    cardinality = "manyToOne"
+    recordConstraints = {
+      create = {
+        enforceValidMapping = true
+      }
+    }
+    label = "UpdatedById"
+  }
+  string UpdatedDate {
+    type = "string"
+    format = "date-time"
+    required = false
+    filterable = false
+    label = "UpdatedDate"
+  }
+  boolean deleted {
+    type = "boolean"
+    required = false
+    filterable = false
+    label = "deleted"
+  }
+  string JobId {
+    type = "string"
+    format = "uuid"
+    required = false
+    filterable = false
+    label = "JobId"
+  }
+  string Name {
+    type = "string"
+    maxLength = 512
+    required = false
+    filterable = false
+    label = "Name"
+  }
+  string Query {
+    type = "string"
+    maxLength = 512
+    required = false
+    filterable = false
+    label = "Query"
+  }
+  number ProcessingTime {
+    type = "integer"
+    required = false
+    filterable = false
+    label = "ProcessingTime"
+  }
+  number RecordsProcessed {
+    type = "integer"
+    required = false
+    filterable = false
+    label = "RecordsProcessed"
+  }
+  string FileId {
+    type = "string"
+    format = "uuid"
+    required = false
+    filterable = false
+    label = "FileId"
+  }
+  string QueryType {
+    type = "string"
+    maxLength = 512
+    required = false
+    filterable = false
+    label = "QueryType"
+  }
+  string Status {
+    type = "string"
+    maxLength = 512
+    required = false
+    filterable = false
+    label = "Status"
+  }
+}

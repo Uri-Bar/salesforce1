@@ -1,0 +1,10 @@
+jira.IssueTypeScheme New_issue_type_scheme_for_project_test_proj_three@ssssssbb {
+  name = "New issue type scheme for project test-proj-three"
+  defaultIssueTypeId = jira.IssueType.instance.Task
+  issueTypeIds = [
+    jira.IssueType.instance.Task,
+    jira.IssueType.instance.Bug,
+    jira.IssueType.instance.Custom_issue_type_two@s,
+    jira.IssueType.instance.Epic,
+  ]
+}

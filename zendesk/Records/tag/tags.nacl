@@ -1,0 +1,106 @@
+zendesk.tag Social {
+  id = "Social"
+}
+zendesk.tag agent_ooo {
+  id = "agent_ooo"
+}
+zendesk.tag boom {
+  id = "boom"
+}
+zendesk.tag customer_engineering {
+  id = "customer_engineering"
+}
+
+
+
+
+
+zendesk.tag overdue {
+  id = "overdue"
+}
+
+
+zendesk.tag checked32 {
+  id = "checked32"
+}
+zendesk.tag hadas_test_tag {
+  id = "hadas_test_tag"
+}
+zendesk.tag silver {
+  id = "silver"
+}
+zendesk.tag titanium {
+  id = "titanium"
+}
+
+zendesk.tag do_now {
+  id = "do_now"
+}
+
+
+
+
+zendesk.tag product_access_request_product_b@uufu {
+  id = "product_access_request:product_b"
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+zendesk.tag isgeoff {
+  id = "isgeoff"
+}
+
+
+
+zendesk.tag product_access_request_dark_mode@uufu {
+  id = "product_access_request:dark_mode"
+}
+
+
+
+zendesk.tag knuckle {
+  id = "knuckle"
+}
+zendesk.tag nacl {
+  id = "nacl"
+}
+zendesk.tag salto {
+  id = "salto"
+}
+zendesk.tag _ustom@_00231 {
+  id = "çustom"
+}
+zendesk.tag bluetag {
+  id = "bluetag"
+}
+zendesk.tag gwrdc1 {
+  id = "gwrdc1"
+}
+zendesk.tag isred {
+  id = "isred"
+}
+zendesk.tag isyellow {
+  id = "isyellow"
+}

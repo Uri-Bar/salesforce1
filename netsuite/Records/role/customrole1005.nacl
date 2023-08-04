@@ -1,0 +1,137 @@
+netsuite.role customrole1005 {
+  scriptid = "customrole1005"
+  accountingbooksoption = "PRIMARY"
+  centertype = "ACCOUNTCENTER"
+  coreadminpermission = false
+  employeerestriction = "NONE"
+  employeeselectionunrestricted = false
+  isinactive = false
+  ispartnerrole = false
+  issalesrole = false
+  issinglesignononly = false
+  issupportrole = false
+  iswebserviceonlyrole = false
+  name = "Integration"
+  restrictbydevice = false
+  restricttimeandexpenses = false
+  subsidiaryoption = "ALL"
+  subsidiaryviewingallowed = false
+  tfaduration = "0"
+  tfarequired = "OFF"
+  permissions = {
+    permission = {
+      TRAN_SALESORD = {
+        permkey = "TRAN_SALESORD"
+        permlevel = "FULL"
+      }
+      LIST_ACCOUNT = {
+        permkey = "LIST_ACCOUNT"
+        permlevel = "FULL"
+      }
+      LIST_CONTACT = {
+        permkey = "LIST_CONTACT"
+        permlevel = "VIEW"
+      }
+      LIST_CUSTPROFILE = {
+        permkey = "LIST_CUSTPROFILE"
+        permlevel = "FULL"
+      }
+      LIST_CUSTJOB = {
+        permkey = "LIST_CUSTJOB"
+        permlevel = "FULL"
+      }
+      LIST_ITEM_COLLECTION = {
+        permkey = "LIST_ITEM_COLLECTION"
+        permlevel = "FULL"
+      }
+      LIST_ITEMTEMPLATE = {
+        permkey = "LIST_ITEMTEMPLATE"
+        permlevel = "FULL"
+      }
+      LIST_STOREITEMLISTLA = {
+        permkey = "LIST_STOREITEMLISTLA"
+        permlevel = "FULL"
+      }
+      LIST_ITEM = {
+        permkey = "LIST_ITEM"
+        permlevel = "FULL"
+      }
+      ADMI_MANAGE_OAUTH_TOKENS = {
+        permkey = "ADMI_MANAGE_OAUTH_TOKENS"
+        permlevel = "FULL"
+      }
+      ADMI_ACCOUNTINGLIST = {
+        permkey = "ADMI_ACCOUNTINGLIST"
+        permlevel = "FULL"
+      }
+      ADMI_CRMLIST = {
+        permkey = "ADMI_CRMLIST"
+        permlevel = "FULL"
+      }
+      ADMI_CUSTBODYFIELD = {
+        permkey = "ADMI_CUSTBODYFIELD"
+        permlevel = "FULL"
+      }
+      ADMI_CUSTCOLUMNFIELD = {
+        permkey = "ADMI_CUSTCOLUMNFIELD"
+        permlevel = "FULL"
+      }
+      ADMI_CUSTENTITYFIELD = {
+        permkey = "ADMI_CUSTENTITYFIELD"
+        permlevel = "FULL"
+      }
+      ADMI_CUSTENTRYFORM = {
+        permkey = "ADMI_CUSTENTRYFORM"
+        permlevel = "FULL"
+      }
+      ADMI_CUSTEVENTFIELD = {
+        permkey = "ADMI_CUSTEVENTFIELD"
+        permlevel = "FULL"
+      }
+      ADMI_CUSTFIELD = {
+        permkey = "ADMI_CUSTFIELD"
+        permlevel = "FULL"
+      }
+      ADMI_CUSTITEMFIELD = {
+        permkey = "ADMI_CUSTITEMFIELD"
+        permlevel = "FULL"
+      }
+      ADMI_CUSTITEMNUMBERFIELD = {
+        permkey = "ADMI_CUSTITEMNUMBERFIELD"
+        permlevel = "FULL"
+      }
+      ADMI_CUSTLIST = {
+        permkey = "ADMI_CUSTLIST"
+        permlevel = "FULL"
+      }
+      ADMI_LOGIN_OAUTH = {
+        permkey = "ADMI_LOGIN_OAUTH"
+        permlevel = "FULL"
+      }
+      ADMI_CUSTOTHERFIELD = {
+        permkey = "ADMI_CUSTOTHERFIELD"
+        permlevel = "FULL"
+      }
+      ADMI_RESTWEBSERVICES = {
+        permkey = "ADMI_RESTWEBSERVICES"
+        permlevel = "FULL"
+      }
+      ADMI_WEBSERVICES = {
+        permkey = "ADMI_WEBSERVICES"
+        permlevel = "FULL"
+      }
+      ADMI_SETUPCOMPANY = {
+        permkey = "ADMI_SETUPCOMPANY"
+        permlevel = "FULL"
+      }
+      LIST_GIFT_CERTIFICATE = {
+        permkey = "LIST_GIFT_CERTIFICATE"
+        permlevel = "FULL"
+      }
+      LIST_OTHER_ADDRESS = {
+        permkey = "LIST_OTHER_ADDRESS"
+        permlevel = "FULL"
+      }
+    }
+  }
+}

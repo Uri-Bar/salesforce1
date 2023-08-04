@@ -1,0 +1,24 @@
+zuora_billing.Task C19__Payment_Suspense_79_fssu__JSONize_any_Input_Accounts_from_CSV@uuuumuusssss {
+  name = "JSONize any Input Accounts from CSV"
+  parameters = {
+    action = "to_json"
+    placement = "anyInputAccounts"
+    replace_payload = "true"
+    strict_variables = "true"
+  }
+  action_type = "Logic::CSVTranslator"
+  object = "AccountNumbersFile"
+  call_type = "SOAP"
+  concurrent_limit = 9999999
+  additionalProperties = {
+    css = {
+      top = "40px"
+      left = "490px"
+    }
+    priority = "Medium"
+    
+  }
+  _parent = [
+    zuora_billing.WorkflowExport.instance.C19__Payment_Suspense_79@fssu,
+  ]
+}

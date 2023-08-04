@@ -1,0 +1,8 @@
+workato.recipe__code Place_account_in_Netsuite_DP_Root_sssuu@uuuuum {
+  number = 0
+  keyword = "trigger"
+  uuid = "d2c0dcc3-8186-4f79-b2d7-cf165a1f3f2c"
+  _parent = [
+    workato.recipe.instance.Place_account_in_Netsuite_DP_Root@sssuu,
+  ]
+}

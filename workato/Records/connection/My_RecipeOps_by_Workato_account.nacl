@@ -1,0 +1,5 @@
+workato.connection My_RecipeOps_by_Workato_account@s {
+  application = "workato_app"
+  name = "My RecipeOps by Workato account"
+  folder_id = workato.folder.instance.Root
+}

@@ -1,0 +1,78 @@
+salesforce.Layout ProfileSkill_Skill_Layout@bs {
+  fullName = "ProfileSkill-Skill Layout"
+  layoutSections = [
+    {
+      customLabel = false
+      detailHeading = false
+      editHeading = false
+      label = "Information"
+      layoutColumns = [
+        {
+          layoutItems = [
+            {
+              behavior = "Required"
+              field = salesforce.ProfileSkill.field.Name
+            },
+            {
+              behavior = "Readonly"
+              field = salesforce.ProfileSkill.field.CreatedById
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.ProfileSkill.field.Description
+            },
+          ]
+        },
+        {
+          layoutItems = [
+            {
+              behavior = "Readonly"
+              field = salesforce.ProfileSkill.field.UserCount
+            },
+            {
+              behavior = "Readonly"
+              field = salesforce.ProfileSkill.field.LastModifiedById
+            },
+          ]
+        },
+      ]
+      style = "TwoColumnsLeftToRight"
+    },
+    {
+      customLabel = false
+      detailHeading = false
+      editHeading = false
+      style = "CustomLinks"
+      layoutColumns = [
+        {
+        },
+      ]
+    },
+  ]
+  relatedLists = [
+    {
+      fields = [
+        "User",
+        "EndorsementCount",
+        "CreatedDate",
+      ]
+      relatedList = "ProfileSkillUserBySkillRelatedList"
+    },
+    {
+      fields = [
+        "CreatedDate",
+        "StepStatus",
+        "OriginalActor",
+        "Actor",
+        "Comments",
+      ]
+      relatedList = "RelatedProcessHistoryList"
+    },
+  ]
+  showEmailCheckbox = false
+  showRunAssignmentRulesCheckbox = false
+  showSubmitAndAttachButton = false
+  _parent = [
+    salesforce.ProfileSkill,
+  ]
+}

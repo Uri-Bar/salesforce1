@@ -1,0 +1,8 @@
+zuora_billing.Settings_UnitOfMeasure Seat {
+  name = "Seat"
+  displayAs = "Seat"
+  precision = 0
+  roundingMode = "Up"
+  active = true
+  usageLogFileLabel = "Seat"
+}

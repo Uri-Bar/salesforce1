@@ -1,0 +1,7 @@
+jira.Status A_shared_status@s {
+  description = ""
+  
+  name = "A shared status"
+  
+  statusCategory = jira.StatusCategory.instance.To_Do@s
+}

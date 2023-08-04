@@ -1,0 +1,21 @@
+salesforce.StandardValueSet CaseType {
+  fullName = "CaseType"
+  sorted = false
+  standardValue = [
+    {
+      fullName = "Problem"
+      default = false
+      label = "Problem"
+    },
+    {
+      fullName = "Feature Request"
+      default = false
+      label = "Feature Request"
+    },
+    {
+      fullName = "Question"
+      default = false
+      label = "Question"
+    },
+  ]
+}

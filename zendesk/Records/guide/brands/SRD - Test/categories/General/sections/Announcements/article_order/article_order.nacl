@@ -1,0 +1,10 @@
+zendesk.article_order Announcements_General_SRD___Test_sbs_uuuum_uuuuuum@uuuuuuum {
+  articles = [
+    zendesk.article.instance.Sample_article__Stellar_Skyonomy_refund_policies_Announcements_General_SRD___Test_sbs_uuuum_uuuuuum@sfssssuuuuuuuum,
+    zendesk.article.instance.Welcome_to_your_Help_Center__Announcements_General_SRD___Test_sbs_uuuum_uuuuuum@ssssluuuuuuuum,
+  ]
+  brand = zendesk.brand.instance.SRD___Test@sbs
+  _parent = [
+    zendesk.section.instance.Announcements_General_SRD___Test_sbs_uuuum@uuuuuum,
+  ]
+}

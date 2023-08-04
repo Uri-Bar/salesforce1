@@ -1,0 +1,32 @@
+zendesk.trigger Dependent_on_Org@s {
+  title = "Dependent on Org"
+  active = true
+  default = false
+  actions = [
+    {
+      field = "status"
+      value = "pending"
+    },
+    {
+      field = "priority"
+      value = "high"
+    },
+  ]
+  conditions = {
+    all = [
+      {
+        field = "organization_id"
+        operator = "is"
+        value = zendesk.organization.instance.test_org_123@s
+      },
+      {
+        field = "status"
+        operator = "is"
+        value = "new"
+      },
+    ]
+  }
+  description = "Dependent on Org"
+  raw_title = "Dependent on Org"
+  category_id = zendesk.trigger_category.instance.Custom_Events@s
+}

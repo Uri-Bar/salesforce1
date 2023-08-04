@@ -1,0 +1,45 @@
+zuora_billing.Settings_Role ZReporting_Zuora_Reporting_Administrator@uss {
+  name = "Zuora Reporting Administrator"
+  category = "ZReporting"
+  attributes = [
+    {
+      name = "manageDashboard"
+      scope = "Dashboard"
+      activationLevel = "User"
+    },
+    {
+      name = "viewDashboard"
+      scope = "Dashboard"
+      activationLevel = "User"
+    },
+    {
+      name = "enableDataSourceExports"
+      scope = "ZConnectBasic"
+      activationLevel = "User"
+    },
+    {
+      name = "manageAllZreports"
+      scope = "ZConnectBasic"
+      activationLevel = "User"
+    },
+    {
+      name = "manageInsightsDataSources"
+      scope = "ZConnectBasic"
+      activationLevel = "User"
+    },
+    {
+      name = "manageZReports"
+      scope = "ZConnectBasic"
+      activationLevel = "User"
+    },
+    {
+      name = "viewZReports"
+      scope = "ZConnectBasic"
+      activationLevel = "User"
+    },
+  ]
+  
+  description = "Zuora Reporting Application Permissions for Administrator"
+  entityId = "8ac6819b-7883-361b-0178-93726ba53eff"
+  custom = false
+}

@@ -1,0 +1,15 @@
+okta.OAuth2Scope default__address {
+  name = "address"
+  displayName = "View your address."
+  description = "This allows the app to view your address, such as: street address, city, state, and zip code."
+  system = true
+  metadataPublish = "ALL_CLIENTS"
+  consent = "IMPLICIT"
+  default = false
+  additionalProperties = {
+    optional = false
+  }
+  _parent = [
+    okta.AuthorizationServer.instance.default,
+  ]
+}

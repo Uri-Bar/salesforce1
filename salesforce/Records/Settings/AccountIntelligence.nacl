@@ -1,0 +1,6 @@
+salesforce.AccountIntelligenceSettings {
+  fullName = "AccountIntelligence"
+  enableAccountLogos = true
+  enableAutomatedAccountFields = true
+  enableNewsStories = true
+}

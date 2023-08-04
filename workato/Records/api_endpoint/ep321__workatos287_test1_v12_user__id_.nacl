@@ -1,0 +1,11 @@
+workato.api_endpoint ep321__workatos287_test1_v12_user__id_@uddbdd_00123_00125 {
+  api_collection_id = workato.api_collection.instance.test1
+  flow_id = workato.recipe.instance.Neta_test_recipe_321_1462952@sssu
+  name = "ep321"
+  method = "GET"
+  url = "https://apim.workato.com/workatos287/test1-v12/user/{id}"
+  base_path = "/workatos287/test1-v12/user/{id}"
+  path = "user/{id}"
+  active = false
+  legacy = false
+}

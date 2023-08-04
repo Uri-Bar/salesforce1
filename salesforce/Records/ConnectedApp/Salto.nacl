@@ -1,0 +1,27 @@
+salesforce.ConnectedApp Salto {
+  fullName = "Salto"
+  contactEmail = "info@salto.io"
+  label = "Salto"
+  oauthConfig = {
+    callbackUrl = "http://localhost:8080"
+    consumerKey = "3MVG9Lf04EwncL7mOf8fdrWEYGdWO9ocErPCbP8znlGbYSGa1zaoy7rG_8nr_v5ALMDr9svYuKxVnBXCJ.RcK"
+    isAdminApproved = false
+    isConsumerSecretOptional = false
+    isIntrospectAllTokens = false
+    scopes = [
+      "Api",
+      "Web",
+      "Full",
+      "RefreshToken",
+    ]
+    isSecretRequiredForRefreshToken = false
+    isClientCredentialEnabled = false
+    isCodeCredentialEnabled = false
+    isCodeCredentialPostOnly = false
+    isNamedUserJwtEnabled = false
+  }
+  oauthPolicy = {
+    ipRelaxation = "ENFORCE"
+    refreshTokenPolicy = "infinite"
+  }
+}

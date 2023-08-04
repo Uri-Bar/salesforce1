@@ -1,0 +1,24 @@
+zuora_billing.Settings_Role ZBilling_billing_settings_only@ubb {
+  name = "billing-settings-only"
+  description = ""
+  category = "ZBilling"
+  entityId = "8ac6819b-7883-361b-0178-93726ba53eff"
+  custom = true
+  attributes = [
+    {
+      name = "NotCreateBillRunForMultipleAccounts"
+      scope = "BillRuns"
+      activationLevel = "User"
+    },
+    {
+      name = "createBillRuns"
+      scope = "BillRuns"
+      activationLevel = "User"
+    },
+    {
+      name = "billingSettingsManagement"
+      scope = "ZBillingAdmin"
+      activationLevel = "User"
+    },
+  ]
+}

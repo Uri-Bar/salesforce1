@@ -1,0 +1,10 @@
+jira.Field testNumber2__c {
+  name = "testNumber2"
+  description = ""
+  searcherKey = "com.atlassian.jira.plugin.system.customfieldtypes:exactnumber"
+  type = "com.atlassian.jira.plugin.system.customfieldtypes:float"
+  contexts = [
+    jira.CustomFieldContext.instance.testNumber2__c_Default_Configuration_Scheme_for_testNumber@uuussss,
+    jira.CustomFieldContext.instance.testNumber2__c_testContext,
+  ]
+}

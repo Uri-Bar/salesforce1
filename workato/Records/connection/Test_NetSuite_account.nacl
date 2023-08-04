@@ -1,0 +1,5 @@
+workato.connection Test_NetSuite_account@s {
+  application = "netsuite"
+  name = "Test NetSuite account"
+  folder_id = workato.folder.instance.Root
+}

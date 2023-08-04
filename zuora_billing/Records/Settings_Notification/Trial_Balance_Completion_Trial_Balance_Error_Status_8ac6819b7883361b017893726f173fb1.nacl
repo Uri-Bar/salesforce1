@@ -1,0 +1,18 @@
+zuora_billing.Settings_Notification Trial_Balance_Completion_Trial_Balance_Error_Status_8ac6819b7883361b017893726f173fb1@ssusssu {
+  profileId = zuora_billing.Settings_CommunicationProfile.instance.Default_Profile@s
+  eventName = "Trial Balance Completion"
+  name = "Trial Balance Error Status"
+  description = "Notification sent out when trial balance has error."
+  active = false
+  hidden = false
+  param1 = "Error"
+  emailOption = true
+  emailTemplateName = zuora_billing.PublicEmailTemplate.instance.Trial_Balance_Completion_With_Error_Status_Default_Email_Template@s
+  calloutOption = false
+  contentType = "APPLICATION_JSON"
+  calloutRetriable = false
+  calloutAuth = false
+  calloutOauth2 = false
+  calloutPreemptiveAuth = false
+  useCustomRequestBody = false
+}

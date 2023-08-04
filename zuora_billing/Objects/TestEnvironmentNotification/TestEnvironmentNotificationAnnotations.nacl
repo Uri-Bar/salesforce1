@@ -1,0 +1,25 @@
+type zuora_billing.TestEnvironmentNotification {
+  annotations {
+    string metadataType {
+    }
+    string label {
+    }
+    string description {
+    }
+    hidden_string id {
+    }
+    string objectType {
+    }
+  }
+  metadataType = "StandardObject"
+  label = "Test Environment Notification"
+  objectType = "TestEnvironmentNotification"
+  _generated_dependencies = [
+    {
+      reference = zuora_billing.TestEnvironment
+    },
+    {
+      reference = zuora_billing.user
+    },
+  ]
+}

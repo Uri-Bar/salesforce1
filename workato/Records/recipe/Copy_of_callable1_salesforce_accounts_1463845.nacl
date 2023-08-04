@@ -1,0 +1,31 @@
+workato.recipe Copy_of_callable1_salesforce_accounts_1463845@ssssu {
+  name = "Copy of callable1 salesforce accounts"
+  trigger_application = "workato_service"
+  action_applications = [
+    "salesforce",
+  ]
+  applications = [
+    "workato_service",
+    "salesforce",
+  ]
+  description = "When there is a new call for callable recipe, do action"
+  folder_id = workato.folder.instance.Root
+  running = false
+  version_no = 1
+  config = [
+    {
+      keyword = "application"
+      name = "workato_service"
+      provider = "workato_service"
+      skip_validation = false
+    },
+    {
+      keyword = "application"
+      name = "salesforce"
+      provider = "salesforce"
+      account_id = workato.connection.instance.Astar_s_sandbox@ts
+      skip_validation = false
+    },
+  ]
+  code = workato.recipe__code.instance.Copy_of_callable1_salesforce_accounts_1463845_ssssu@uuuuum
+}

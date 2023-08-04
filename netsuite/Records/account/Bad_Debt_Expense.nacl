@@ -1,0 +1,15 @@
+netsuite.account Bad_Debt_Expense@s {
+  acctType = "_expense"
+  acctName = "Bad Debt Expense"
+  includeChildren = true
+  generalRate = "_average"
+  cashFlowRate = "_average"
+  isInactive = false
+  inventory = false
+  subsidiaryList = [
+    netsuite.subsidiary.instance.Parent_Company@s,
+  ]
+  revalue = false
+  identifier = "Bad Debt Expense"
+  custom_custrecord_acct_special = false
+}

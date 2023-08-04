@@ -1,0 +1,100 @@
+workato.recipe__code pubsub_recipe_412_1462961_ssu@uuum {
+  number = 0
+  provider = "workato_pub_sub"
+  name = "subscribe_to_topic"
+  as = "eb73a7a8"
+  description = "New <span class=\"provider\">message</span> in <span class=\"provider\">pubsub topic 42142</span> PubSub topic"
+  keyword = "trigger"
+  dynamicPickListSelection = {
+    topic_id = "pubsub topic 42142"
+  }
+  input = {
+    since_offset = "-3600"
+    topic_id = "4171"
+  }
+  filter = {
+    conditions = [
+      {
+        operand = "contains"
+        lhs = "#{_('data.workato.job_context.recipe_name')}#{_('data.workato_pub_sub.eb73a7a8.message.t1_f1')}"
+        rhs = "3"
+      },
+      {
+        operand = "greater_than"
+        lhs = "#{_('data.workato_pub_sub.eb73a7a8.message.t1_f1')}"
+        rhs = "200"
+      },
+    ]
+    operand = "or"
+    type = "compound"
+  }
+  block = [
+    {
+      number = 1
+      provider = "workato_pub_sub"
+      name = "publish_to_topic"
+      as = "9d84520c"
+      description = "Publish <span class=\"provider\">message</span> to <span class=\"provider\">topic5325</span> PubSub topic"
+      keyword = "action"
+      dynamicPickListSelection = {
+        topic_id = "topic5325"
+      }
+      input = {
+        topic_id = "4172"
+        message = {
+          "some-field" = "hello!"
+        }
+      }
+      visible_config_fields = [
+        "topic_id",
+        "message.some-field",
+      ]
+      uuid = "257d1348-b269-40b9-95d5-6759346ce426"
+    },
+    {
+      number = 2
+      keyword = "if"
+      input = {
+        type = "compound"
+        operand = "and"
+        conditions = [
+          {
+            operand = "present"
+            lhs = "#{_('data.workato_pub_sub.eb73a7a8.message.t1_f1')}"
+          },
+        ]
+      }
+      block = [
+        {
+          number = 3
+          provider = "salesforce"
+          name = "create_custom_object"
+          as = "d48db74e"
+          title = "Create Fish"
+          description = "Create <span class=\"provider\">Fish</span> in <span class=\"provider\">Salesforce</span>"
+          keyword = "action"
+          dynamicPickListSelection = {
+            sobject_name = "Fish"
+          }
+          input = {
+            sobject_name = "Fish__c"
+            Sea__c = "abc"
+            Name = "Nemo"
+            dsafdsfa__c = "dsafdsfag"
+          }
+          visible_config_fields = [
+            "sobject_name",
+            "Name",
+            "dsafdsfa__c",
+          ]
+          uuid = "6fbca84c-481e-4909-a121-94344910567f"
+        },
+      ]
+      uuid = "95ebe9b7-bfa6-4967-9099-fad7b6d3ec3b"
+    },
+  ]
+  uuid = "64493a05-70ab-411c-989c-95a43f5591d3"
+  _parent = [
+    workato.recipe.instance.pubsub_recipe_412_1462961@ssu,
+  ]
+}

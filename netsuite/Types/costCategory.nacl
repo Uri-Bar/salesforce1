@@ -1,0 +1,29 @@
+type netsuite.costCategory {
+  annotations {
+    hidden_string source {
+    }
+  }
+  
+  
+  
+  
+  
+  string internalId {
+    isAttribute = true
+    _hidden_value = true
+  }
+  string externalId {
+    isAttribute = true
+  }
+  netsuite.nullField nullFieldList {
+  }
+  string name {
+  }
+  netsuite.account account {
+    isReference = true
+  }
+  unknown itemCostType {
+  }
+  boolean isInactive {
+  }
+}

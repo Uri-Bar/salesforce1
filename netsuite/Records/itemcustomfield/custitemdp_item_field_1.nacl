@@ -1,0 +1,35 @@
+netsuite.itemcustomfield custitemdp_item_field_1 {
+  scriptid = "custitemdp_item_field_1"
+  accesslevel = "2"
+  appliestogroup = false
+  appliestoinventory = false
+  appliestokit = false
+  appliestononinventory = false
+  appliestoothercharge = false
+  appliestopricelist = false
+  appliestoservice = false
+  appliestospecificitems = false
+  appliestosubplan = false
+  applyformatting = false
+  checkspelling = false
+  defaultchecked = false
+  displaytype = "NORMAL"
+  encryptatrest = false
+  fieldtype = "SELECT"
+  globalsearch = false
+  includechilditems = false
+  isformula = false
+  ismandatory = false
+  isparent = false
+  itemmatrix = false
+  itemsubtype = "BOTH"
+  label = "DP Field 1"
+  onparentdelete = "NO_ACTION"
+  searchlevel = "2"
+  selectrecordtype = netsuite.customlist.instance.customlist_dp.scriptid
+  showhierarchy = false
+  showinlist = false
+  storevalue = true
+  appliestoexpense = false
+  appliestoitemassembly = false
+}

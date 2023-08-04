@@ -1,0 +1,3 @@
+zendesk.channel LINE {
+  name = "LINE"
+}

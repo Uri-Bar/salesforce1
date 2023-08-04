@@ -1,0 +1,18 @@
+zendesk.macro SRD___Access_request__Product_B@sbssffs {
+  title = "SRD - Access request::Product B"
+  active = true
+  actions = [
+    {
+      field = "comment_value_html"
+      value = "<p>Thank you for your interest in Product B! Before we enable it in your account, could you let us know more about how you plan to use this product? And do you know how many of your users will need access to this Dark Modend how often they will use it?<br></p>"
+    },
+    {
+      field = "current_tags"
+      value = [
+        zendesk.tag.instance.product_access_request_product_b@uufu,
+      ]
+    },
+  ]
+  raw_title = "SRD - Access request::Product B"
+  default = false
+}

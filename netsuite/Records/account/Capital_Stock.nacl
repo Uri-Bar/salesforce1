@@ -1,0 +1,15 @@
+netsuite.account Capital_Stock@s {
+  acctType = "_equity"
+  acctName = "Capital Stock"
+  includeChildren = true
+  generalRate = "_historical"
+  cashFlowRate = "_historical"
+  isInactive = false
+  inventory = false
+  subsidiaryList = [
+    netsuite.subsidiary.instance.Parent_Company@s,
+  ]
+  revalue = false
+  identifier = "Capital Stock"
+  custom_custrecord_acct_special = false
+}

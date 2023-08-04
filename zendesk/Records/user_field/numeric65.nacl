@@ -1,0 +1,10 @@
+zendesk.user_field numeric65 {
+  type = "integer"
+  key = "numeric65"
+  
+  
+  raw_title = "numeric65"
+  raw_description = ""
+  active = true
+  system = false
+}

@@ -1,0 +1,166 @@
+zuora_billing.Task Gamer_Sign_Up_Workflow_77_sssu__Create_subscription@uuuumuus {
+  name = "Create subscription"
+  parameters = {
+    url = "{{ Credentials.zuora.rest_endpoint }}orders/"
+    datas = [
+      {
+        key = ""
+        value = ""
+      },
+    ]
+    method = "POST"
+    headers = [
+      {
+        key = "Content-Type"
+        value = "application/json"
+      },
+      {
+        key = ""
+        value = "richard.sawey@zuora.com"
+      },
+    ]
+    raw_body = '''
+{
+  "orderDate": "{{Data.Workflow.ExecutionDate}}",
+  "newAccount": {
+        "autoPay": true,
+        "billCycleDay": 0,
+        "billToContact": {
+            "address1": "3050 S Delaware",
+            "city": "San Mateo",
+            "country": "United States",
+            "firstName": "{{Data.Workflow.Your_Name}}",
+            "lastName": "!",
+            "postalCode": "94403",
+            "state": "CA",
+            "workEmail": "{{Data.Workflow.Your_Email}}"
+        },
+        "creditCard": {
+            "cardHolderInfo": {
+                "addressLine1": "3050 S Delaware",
+                "cardHolderName": "{{Data.Workflow.Your_Name}}",
+                "city": "San Mateo",
+                "country": "United States",
+                "email": "{{Data.Workflow.Your_Email}}",
+                "phone": "4155551212",
+                "state": "CA",
+                "zipCode": "94070"
+            },
+            "cardNumber": "4111111111111111",
+            "cardType": "Visa",
+            "expirationMonth": 12,
+            "expirationYear": 2023,
+            "securityCode": "111"
+        },
+        "currency": "USD",
+        "name": "{{Data.Workflow.Your_Name}} - {{WorkflowInstance.id}}",
+        "paymentTerm": "Due Upon Receipt",
+        "customFields": {"Referring_Gamer_Email__c": "None"},
+        "soldToContact": {
+            "address1": "3050 S Delaware",
+            "city": "San Mateo",
+            "country": "United States",
+            "firstName": "{{Data.Workflow.Your_Name}}",
+            "lastName": "!",
+            "postalCode": "94404",
+            "state": "CA",
+            "workEmail": "{{Data.Workflow.Your_Email}}"
+        }
+    },
+  "subscriptions": [
+    {
+      "orderActions": [
+                {
+                    "createSubscription": {
+                        "invoiceSeparately": true,
+                        "subscribeToRatePlans": [
+                            {
+                                "productRatePlanId": "{{Data.ProductRatePlan[0].Id}}"
+                            }
+                        ],
+                        "terms": {
+                            "autoRenew": true,
+                            "initialTerm": {
+                                "period": 12,
+                                "periodType": "Month",
+                                "startDate": "2019-06-01",
+                                "termType": "TERMED"
+                            },
+                            "renewalSetting": "RENEW_WITH_SPECIFIC_TERM",
+                            "renewalTerms": [
+                                {
+                                    "period": 12,
+                                    "periodType": "Month"
+                                }
+                            ]
+                        }
+                    },
+                    "triggerDates": [
+                        {
+                            "name": "ContractEffective",
+                            "triggerDate": "2019-06-01"
+                        }
+                    ],
+                    "type": "CreateSubscription"
+                }
+      ]
+    }
+  ],
+  "processingOptions": {
+     "billingOptions": {
+         "documentDate": "2019-06-01",
+         "targetDate": "2019-06-01"
+     },
+    "runBilling": true,
+    "collectPayment": true
+  }
+}
+
+'''
+    body_type = "raw"
+    validation = {
+      zuora_call = "true"
+      status_codes = [
+        "",
+        "200",
+      ]
+    }
+    retry_rules = {
+      retry_count = "3"
+      retry_window = "1"
+      current_retry_count = "0"
+    }
+    authorization = {
+      type = "zuora"
+    }
+    strict_variables = "true"
+    validate_response = "false"
+    validation_scheme = ""
+    include_response_code = "false"
+  }
+  action_type = "Callout"
+  call_type = "SOAP"
+  task_id = 30
+  concurrent_limit = 9999999
+  additionalProperties = {
+    css = {
+      top = "-990px"
+      left = "-250px"
+    }
+    priority = "Medium"
+    
+  }
+  _parent = [
+    zuora_billing.WorkflowExport.instance.Gamer_Sign_Up_Workflow_77@sssu,
+  ]
+  _generated_dependencies = [
+    {
+      reference = zuora_billing.Workflow.instance.Gamer_Sign_Up_Workflow_77_sssu__Gamer_Sign_Up_Workflow@uuuumuusss.additionalProperties.parameters.fields
+      occurrences = [
+        {
+          location = zuora_billing.Task.instance.Gamer_Sign_Up_Workflow_77_sssu__Create_subscription@uuuumuus.parameters.raw_body
+        },
+      ]
+    },
+  ]
+}

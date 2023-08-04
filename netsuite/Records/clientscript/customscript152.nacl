@@ -1,0 +1,9 @@
+netsuite.clientscript customscript152 {
+  scriptid = "customscript152"
+  isinactive = false
+  name = "testScr80t"
+  notifyadmins = false
+  notifyowner = true
+  notifyuser = false
+  scriptfile = netsuite.file.instance.SuiteScripts_testScript_js@dv.path
+}

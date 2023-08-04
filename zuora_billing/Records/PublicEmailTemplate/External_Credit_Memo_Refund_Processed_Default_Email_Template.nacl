@@ -1,0 +1,29 @@
+zuora_billing.PublicEmailTemplate External_Credit_Memo_Refund_Processed_Default_Email_Template@s {
+  eventCategory = 2430
+  name = "External Credit Memo Refund Processed Default Email Template"
+  description = ""
+  encodingType = "UTF8"
+  fromName = "Admin"
+  fromEmailType = "SpecificEmail"
+  fromEmailAddress = "neta.marcus@salto.io"
+  replyToEmailType = "SpecificEmail"
+  replyToEmailAddress = "neta.marcus@salto.io"
+  ccEmailType = "SpecificEmails"
+  ccEmailAddress = ""
+  bccEmailAddress = ""
+  toEmailType = "BillToContact"
+  toEmailAddress = ""
+  emailSubject = "Your credit memo refund was successfully processed"
+  emailBody = '''
+Dear <BillToContact.FirstName> <BillToContact.LastName>,
+
+A refund of <Refund.Amount> <Account.Currency> was processed against your credit memo on <Refund.Date>.
+
+Your new account unapplied credit memo amount is <Account.UnappliedCreditMemoAmount> <Account.Currency> and your account balance is <Account.Balance> <Account.Currency>.
+
+Thank you for your business!
+'''
+  active = true
+  isHtml = false
+  useAdditionalAddresses = false
+}

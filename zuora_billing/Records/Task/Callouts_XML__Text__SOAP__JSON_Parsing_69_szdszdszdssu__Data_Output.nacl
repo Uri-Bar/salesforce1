@@ -1,0 +1,35 @@
+zuora_billing.Task Callouts_XML__Text__SOAP__JSON_Parsing_69_szdszdszdssu__Data_Output@uuuuuuuuumuus {
+  name = "Data Output"
+  parameters = {
+    email = {
+      to = [
+        "test@test.com",
+      ]
+      from = ""
+      name = ""
+      subject = "Data Output"
+      reply_to = ""
+      template = "{{ Data | to_json }}"
+      attachments = {
+        invoices = "false"
+      }
+      preview_only = "true"
+      disable_editor = "true"
+    }
+  }
+  action_type = "Email"
+  call_type = "SOAP"
+  task_id = 97
+  concurrent_limit = 9999999
+  additionalProperties = {
+    css = {
+      top = "150px"
+      left = "900px"
+    }
+    priority = "Medium"
+    
+  }
+  _parent = [
+    zuora_billing.WorkflowExport.instance.Callouts_XML__Text__SOAP__JSON_Parsing_69@szdszdszdssu,
+  ]
+}

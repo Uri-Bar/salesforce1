@@ -1,0 +1,46 @@
+zuora_billing.Task SOAP___Batch_45_Account_Update_75_sbssssu__Fetch_Accounts@uuuuuuumuus {
+  name = "Fetch Accounts"
+  parameters = {
+    fields = {
+      Account = {
+        Id = "true"
+        Notes = "true"
+      }
+    }
+    batch_size = "2000"
+    where_clause = ""
+  }
+  action_type = "Query"
+  object = zuora_billing.account
+  call_type = "SOAP"
+  concurrent_limit = 9999999
+  additionalProperties = {
+    css = {
+      top = "40px"
+      left = "360px"
+    }
+    priority = "Medium"
+    
+  }
+  _parent = [
+    zuora_billing.WorkflowExport.instance.SOAP___Batch_45_Account_Update_75@sbssssu,
+  ]
+  _generated_dependencies = [
+    {
+      reference = zuora_billing.account.field.Id
+      occurrences = [
+        {
+          location = zuora_billing.Task.instance.SOAP___Batch_45_Account_Update_75_sbssssu__Fetch_Accounts@uuuuuuumuus.parameters.fields.Account.Id
+        },
+      ]
+    },
+    {
+      reference = zuora_billing.account.field.Notes
+      occurrences = [
+        {
+          location = zuora_billing.Task.instance.SOAP___Batch_45_Account_Update_75_sbssssu__Fetch_Accounts@uuuuuuumuus.parameters.fields.Account.Notes
+        },
+      ]
+    },
+  ]
+}

@@ -1,0 +1,16 @@
+salesforce.WorkflowAlert Opportunity_Opportunity_Health_Alert@vuu {
+  fullName = "Opportunity.Opportunity_Health_Alert"
+  description = "Opportunity Health Alert"
+  protected = false
+  recipients = [
+    {
+      recipient = "hadas.birin+prod@salto.io"
+      type = "user"
+    },
+  ]
+  senderType = "CurrentUser"
+  template = "unfiled$public/ContactFollowUpSAMPLE"
+  _parent = [
+    salesforce.Opportunity,
+  ]
+}

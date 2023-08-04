@@ -1,0 +1,8 @@
+zendesk.ticket_field__custom_field_options multiselect_Customer_Tier_us__Enterprise@uumuu {
+  name = "Enterprise"
+  raw_name = "Enterprise"
+  value = "enterprise"
+  _parent = [
+    zendesk.ticket_field.instance.multiselect_Customer_Tier@us,
+  ]
+}

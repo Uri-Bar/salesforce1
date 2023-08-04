@@ -1,0 +1,17 @@
+stripe.reporting_report_type exports_balance_history@vu {
+  id = "exports.balance_history"
+  default_columns = [
+    "id",
+    "Type",
+    "Source",
+    "Amount",
+    "Fee",
+    "Net",
+    "Currency",
+    "Created (UTC)",
+    "Available On (UTC)",
+  ]
+  livemode = false
+  name = "Balance History Export Query"
+  version = 1
+}

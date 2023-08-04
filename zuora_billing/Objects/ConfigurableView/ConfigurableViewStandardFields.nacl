@@ -1,0 +1,85 @@
+type zuora_billing.ConfigurableView {
+  string Id {
+    format = "uuid"
+    label = "Id"
+    origin = "system"
+    type = "string"
+    required = true
+    filterable = true
+  }
+  string CreatedById {
+    label = "CreatedById"
+    origin = "system"
+    type = "string"
+    required = true
+    filterable = true
+  }
+  string UpdatedById {
+    label = "UpdatedById"
+    origin = "system"
+    type = "string"
+    required = true
+    filterable = true
+  }
+  string CreatedDate {
+    format = "date-time"
+    origin = "system"
+    type = "string"
+    label = "CreatedDate"
+    required = true
+    filterable = true
+  }
+  string UpdatedDate {
+    format = "date-time"
+    origin = "system"
+    type = "string"
+    label = "UpdatedDate"
+    required = true
+    filterable = true
+  }
+  boolean Active {
+    label = "Active configuration"
+    origin = "system"
+    type = "boolean"
+    default = false
+    description = "In the case of multiple layouts for single object type and namespace, use layout with active = true"
+    required = false
+    filterable = true
+  }
+  string RoleType {
+    maxLength = 64
+    label = "Role Type"
+    origin = "system"
+    type = "string"
+    description = "Configuration for Role Type"
+    required = true
+    filterable = true
+  }
+  string UniqueName {
+    maxLength = 64
+    label = "Name"
+    origin = "system"
+    type = "string"
+    description = "A human readable, tenant-unique name given to a View."
+    required = true
+    filterable = true
+  }
+  string Nodes {
+    maxLength = 20000
+    label = "Nodes"
+    origin = "system"
+    type = "string"
+    description = "A Base64 encoded, LZ77 compressed, stringified object array of View Nodes."
+    required = true
+    filterable = false
+  }
+  string Template {
+    maxLength = 256
+    label = "Template"
+    origin = "system"
+    type = "string"
+    description = "A compressed, stringified object detailing the template name i.e. 'list', 'detail', etc and the service version"
+    required = true
+    filterable = false
+  }
+}

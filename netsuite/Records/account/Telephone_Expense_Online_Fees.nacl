@@ -1,0 +1,16 @@
+netsuite.account Telephone_Expense_Online_Fees@sus {
+  acctType = "_expense"
+  acctName = "Online Fees"
+  includeChildren = true
+  generalRate = "_average"
+  parent = netsuite.account.instance.Telephone_Expense@s
+  cashFlowRate = "_average"
+  isInactive = false
+  inventory = false
+  subsidiaryList = [
+    netsuite.subsidiary.instance.Parent_Company@s,
+  ]
+  revalue = false
+  identifier = "Telephone Expense_Online Fees"
+  custom_custrecord_acct_special = false
+}

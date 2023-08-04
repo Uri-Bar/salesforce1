@@ -1,0 +1,31 @@
+type zuora_billing.extendedusage {
+  annotations {
+    string metadataType {
+    }
+    string label {
+    }
+    string description {
+    }
+    hidden_string id {
+    }
+    string objectType {
+    }
+  }
+  metadataType = "StandardObject"
+  objectType = "extendedusage"
+  _generated_dependencies = [
+    {
+      reference = zuora_billing.extendedaccount
+    },
+    {
+      reference = zuora_billing.extendedrateplancharge
+    },
+    {
+      reference = zuora_billing.extendedsubscription
+    },
+    {
+      reference = zuora_billing.extendeduser
+    },
+  ]
+  label = "ExtendedUsage"
+}

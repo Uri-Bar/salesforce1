@@ -1,0 +1,304 @@
+type salesforce.MLModel {
+  serviceid Id {
+    apiName = "MLModel.Id"
+    label = "ML Model ID"
+    queryable = true
+    _hidden_value = true
+    
+    
+  }
+  salesforce.Checkbox IsDeleted {
+    apiName = "MLModel.IsDeleted"
+    label = "Deleted"
+    defaultValue = false
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.AutoNumber Name {
+    apiName = "MLModel.Name"
+    label = "Name"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.DateTime CreatedDate {
+    apiName = "MLModel.CreatedDate"
+    label = "Created Date"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Lookup CreatedById {
+    apiName = "MLModel.CreatedById"
+    label = "Created By ID"
+    referenceTo = [
+      salesforce.User,
+    ]
+    createable = false
+    updateable = false
+    relationshipName = "CreatedBy"
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.DateTime LastModifiedDate {
+    apiName = "MLModel.LastModifiedDate"
+    label = "Last Modified Date"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Lookup LastModifiedById {
+    apiName = "MLModel.LastModifiedById"
+    label = "Last Modified By ID"
+    referenceTo = [
+      salesforce.User,
+    ]
+    createable = false
+    updateable = false
+    relationshipName = "LastModifiedBy"
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.DateTime SystemModstamp {
+    apiName = "MLModel.SystemModstamp"
+    label = "System Modstamp"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Lookup PredictionDefinitionId {
+    apiName = "MLModel.PredictionDefinitionId"
+    label = "ML Prediction Definition ID"
+    referenceTo = [
+      salesforce.MLPredictionDefinition,
+    ]
+    createable = false
+    updateable = false
+    relationshipName = "PredictionDefinition"
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Picklist ApprovalStatus {
+    apiName = "MLModel.ApprovalStatus"
+    label = "Approval Status"
+    valueSet = [
+      {
+        fullName = "Pending"
+        default = true
+        label = "Pending"
+        isActive = true
+      },
+      {
+        fullName = "Approved"
+        default = false
+        label = "Approved"
+        isActive = true
+      },
+      {
+        fullName = "Rejected"
+        default = false
+        label = "Rejected"
+        isActive = true
+      },
+    ]
+    restricted = true
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Picklist ScoringStatus {
+    apiName = "MLModel.ScoringStatus"
+    label = "Scoring Status"
+    _required = true
+    valueSet = [
+      {
+        fullName = "Enabled"
+        default = false
+        label = "Enabled"
+        isActive = true
+      },
+      {
+        fullName = "Disabled"
+        default = false
+        label = "Disabled"
+        isActive = true
+      },
+    ]
+    restricted = true
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Picklist ModelType {
+    apiName = "MLModel.ModelType"
+    label = "Model Type"
+    valueSet = [
+      {
+        fullName = "RandomForest"
+        default = false
+        label = "RandomForest"
+        isActive = true
+      },
+      {
+        fullName = "LogisticRegression"
+        default = false
+        label = "LogisticRegression"
+        isActive = true
+      },
+      {
+        fullName = "LinearRegression"
+        default = false
+        label = "LinearRegression"
+        isActive = true
+      },
+      {
+        fullName = "DecisionTree"
+        default = false
+        label = "DecisionTree"
+        isActive = true
+      },
+      {
+        fullName = "DeepLearningIntent"
+        default = false
+        label = "DeepLearningIntent"
+        isActive = true
+      },
+      {
+        fullName = "DeepLearningNER"
+        default = false
+        label = "DeepLearningNER"
+        isActive = true
+      },
+      {
+        fullName = "GlobalDeepLearningIntent"
+        default = false
+        label = "GlobalDeepLearningIntent"
+        isActive = true
+      },
+      {
+        fullName = "GlobalDeepLearningNER"
+        default = false
+        label = "GlobalDeepLearningNER"
+        isActive = true
+      },
+      {
+        fullName = "GlobalLanguageDetection"
+        default = false
+        label = "GlobalLanguageDetection"
+        isActive = true
+      },
+      {
+        fullName = "BinaryClassification"
+        default = false
+        label = "BinaryClassification"
+        isActive = true
+      },
+      {
+        fullName = "GeneralizedLinearModels"
+        default = false
+        label = "GeneralizedLinearModels"
+        isActive = true
+      },
+      {
+        fullName = "GradientBoostedTrees"
+        default = false
+        label = "GradientBoostedTrees"
+        isActive = true
+      },
+      {
+        fullName = "LinearSupportVectorClassifiers"
+        default = false
+        label = "LinearSupportVectorClassifiers"
+        isActive = true
+      },
+      {
+        fullName = "MulticlassClassification"
+        default = false
+        label = "MulticlassClassification"
+        isActive = true
+      },
+      {
+        fullName = "NaiveBayes"
+        default = false
+        label = "NaiveBayes"
+        isActive = true
+      },
+      {
+        fullName = "Regression"
+        default = false
+        label = "Regression"
+        isActive = true
+      },
+      {
+        fullName = "XGBoost"
+        default = false
+        label = "XGBoost"
+        isActive = true
+      },
+      {
+        fullName = "NeuralNet"
+        default = false
+        label = "NeuralNet"
+        isActive = true
+      },
+      {
+        fullName = "PopularityCount"
+        default = false
+        label = "PopularityCount"
+        isActive = true
+      },
+    ]
+    restricted = true
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.DateTime TrainingStartTime {
+    apiName = "MLModel.TrainingStartTime"
+    label = "Training Start Time"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.DateTime TrainingEndTime {
+    apiName = "MLModel.TrainingEndTime"
+    label = "Training End Time"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Text Dataset {
+    apiName = "MLModel.Dataset"
+    label = "Dataset Id"
+    createable = false
+    updateable = false
+    unique = false
+    caseSensitive = false
+    length = 80
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Lookup RecommendationDefinitionId {
+    apiName = "MLModel.RecommendationDefinitionId"
+    label = "ML Recommendation Definition ID"
+    referenceTo = [
+      salesforce.MLRecommendationDefinition,
+    ]
+    createable = false
+    updateable = false
+    relationshipName = "RecommendationDefinition"
+    queryable = true
+    _hidden_value = true
+  }
+}

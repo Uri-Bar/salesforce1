@@ -1,0 +1,10 @@
+zuora_billing.WorkflowExport abc_6169 {
+  workflow = zuora_billing.Workflow.instance.abc_6169__abc
+  additionalProperties = {
+    workflow_definition = {
+      description = ""
+      category = "Default"
+      name = "abc"
+    }
+  }
+}

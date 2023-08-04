@@ -1,0 +1,25 @@
+type zuora_billing.account__c {
+  string something__c {
+    maxLength = 512
+    label = "something"
+    origin = "custom"
+    type = "string"
+    description = " "
+    required = false
+    filterable = false
+  }
+  string picklist123__c {
+    maxLength = 512
+    label = "picklist123"
+    origin = "custom"
+    type = "string"
+    enum = [
+      "value 1",
+      "second value",
+      "c",
+    ]
+    description = " "
+    required = true
+    filterable = true
+  }
+}

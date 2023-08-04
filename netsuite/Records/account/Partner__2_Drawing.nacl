@@ -1,0 +1,15 @@
+netsuite.account Partner__2_Drawing@sns {
+  acctType = "_equity"
+  acctName = "Partner #2 Drawing"
+  includeChildren = true
+  generalRate = "_historical"
+  cashFlowRate = "_historical"
+  isInactive = false
+  inventory = false
+  subsidiaryList = [
+    netsuite.subsidiary.instance.Parent_Company@s,
+  ]
+  revalue = false
+  identifier = "Partner #2 Drawing"
+  custom_custrecord_acct_special = false
+}

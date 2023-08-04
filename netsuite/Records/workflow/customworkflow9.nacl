@@ -1,0 +1,49 @@
+netsuite.workflow customworkflow9 {
+  scriptid = "customworkflow9"
+  initcontexts = "ACTION|BANKCONNECTIVITY|BANKSTATEMENTPARSER|BUNDLEINSTALLATION|CLIENT|CSVIMPORT|CUSTOMGLLINES|CUSTOMMASSUPDATE|RECORDACTION|DATASETBUILDER|DEBUGGER|EMAILCAPTURE|FICONNECTIVITY|FIPARSER|MAPREDUCE|OFFLINECLIENT|OTHER|PAYMENTPOSTBACK|PAYMENTGATEWAY|PLATFORMEXTENSION|PORTLET|PROMOTIONS|CONSOLRATEADJUSTOR|RESTWEBSERVICES|RESTLET|ADVANCEDREVREC|SCHEDULED|SDFINSTALLATION|SHIPPINGPARTNERS|WEBSERVICES|SUITELET|TAXCALCULATION|USEREVENT|USERINTERFACE|WORKBOOKBUILDER|WORKFLOW"
+  initoncreate = false
+  initonvieworupdate = false
+  isinactive = false
+  islogenabled = false
+  keephistory = "ONLYWHENTESTING"
+  name = "test"
+  recordtypes = "CONTACTROLE"
+  releasestatus = "TESTING"
+  runasadmin = false
+  initcondition = {
+    type = "VISUAL_BUILDER"
+  }
+  workflowstates = {
+    workflowstate = {
+      workflowstate449 = {
+        scriptid = "workflowstate449"
+        donotexitworkflow = false
+        name = "State 1"
+        positionx = 243
+        positiony = 133
+        workflowtransitions = {
+          workflowtransition = {
+            workflowtransition549 = {
+              scriptid = "workflowtransition549"
+              contexttypes = "ACTION|BANKCONNECTIVITY|BANKSTATEMENTPARSER|BUNDLEINSTALLATION|CLIENT|CSVIMPORT|CUSTOMGLLINES|CUSTOMMASSUPDATE|RECORDACTION|DATASETBUILDER|DEBUGGER|EMAILCAPTURE|FICONNECTIVITY|FIPARSER|MAPREDUCE|OFFLINECLIENT|OTHER|PAYMENTPOSTBACK|PAYMENTGATEWAY|PLATFORMEXTENSION|PORTLET|PROMOTIONS|CONSOLRATEADJUSTOR|RESTWEBSERVICES|RESTLET|ADVANCEDREVREC|SCHEDULED|SDFINSTALLATION|SHIPPINGPARTNERS|WEBSERVICES|SUITELET|TAXCALCULATION|USEREVENT|USERINTERFACE|WORKBOOKBUILDER|WORKFLOW"
+              tostate = netsuite.workflow.instance.customworkflow9.workflowstates.workflowstate.workflowstate450.scriptid
+              initcondition = {
+                type = "VISUAL_BUILDER"
+              }
+              index = 0
+            }
+          }
+        }
+        index = 0
+      }
+      workflowstate450 = {
+        scriptid = "workflowstate450"
+        donotexitworkflow = false
+        name = "State 2"
+        positionx = 93
+        positiony = 243
+        index = 1
+      }
+    }
+  }
+}

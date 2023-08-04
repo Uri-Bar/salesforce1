@@ -1,0 +1,6 @@
+zuora_billing.Settings_ReasonCode RefundPayment_Payment_Rejection@us {
+  isActive = true
+  reasonCodeName = "Payment Rejection"
+  reasonCodeTransactionType = "RefundPayment"
+  isDefault = false
+}

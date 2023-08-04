@@ -1,0 +1,41 @@
+workato.recipe callable2_1463835 {
+  name = "callable2"
+  trigger_application = "workato_service"
+  action_applications = [
+    "salesforce",
+    "salesforce_secondary",
+    "workato_service",
+  ]
+  applications = [
+    "workato_service",
+    "salesforce",
+    "salesforce_secondary",
+  ]
+  description = "When there is a new call for callable recipe, do action"
+  folder_id = workato.folder.instance.Root
+  running = false
+  version_no = 3
+  config = [
+    {
+      keyword = "application"
+      name = "workato_service"
+      provider = "workato_service"
+      skip_validation = false
+    },
+    {
+      keyword = "application"
+      name = "salesforce"
+      provider = "salesforce"
+      account_id = workato.connection.instance.Neta_sfdev1@s
+      skip_validation = false
+    },
+    {
+      keyword = "application"
+      name = "salesforce_secondary"
+      provider = "salesforce_secondary"
+      account_id = workato.connection.instance.secondary_Neta_sfdev1@s
+      skip_validation = false
+    },
+  ]
+  code = workato.recipe__code.instance.callable2_1463835
+}

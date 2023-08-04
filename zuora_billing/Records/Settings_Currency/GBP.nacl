@@ -1,0 +1,9 @@
+zuora_billing.Settings_Currency GBP {
+  currencyCode = "GBP"
+  roundingMode = "HalfUp"
+  rate = 0
+  defaultIncrementForInclusiveTax = false
+  incrementForInvoiceTotal = false
+  active = true
+  default = false
+}

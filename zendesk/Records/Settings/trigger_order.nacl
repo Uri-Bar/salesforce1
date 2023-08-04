@@ -1,0 +1,88 @@
+zendesk.trigger_order {
+  order = [
+    {
+      category = zendesk.trigger_category.instance.Notifications
+      active = [
+        zendesk.trigger.instance.Notify_all_agents_of_received_request@s,
+        zendesk.trigger.instance.Notify_requester_and_CCs_of_received_request@s,
+        zendesk.trigger.instance.Notify_requester_of_new_proactive_ticket@s,
+        zendesk.trigger.instance.Notify_requester_and_CCs_of_comment_update@s,
+        zendesk.trigger.instance.Notify_assignee_of_comment_update@s,
+        zendesk.trigger.instance.Notify_assignee_of_assignment@s,
+        zendesk.trigger.instance.Notify_assignee_of_reopened_ticket@s,
+        zendesk.trigger.instance.Notify_group_of_assignment@s,
+        zendesk.trigger.instance._Out_of_Office__Ticket__Unassign_Trigger@hssisfss,
+        zendesk.trigger.instance.Test___Noam@sbs,
+        zendesk.trigger.instance.Basket,
+        zendesk.trigger.instance.Basket3,
+        zendesk.trigger.instance.NH_Silver@s,
+        zendesk.trigger.instance.ZSB,
+        zendesk.trigger.instance.ZSC,
+        zendesk.trigger.instance.Assign_Account_Manager_to_High_Priority_Tickets@s,
+        zendesk.trigger.instance.GWR_DC_Trigger1@s,
+        zendesk.trigger.instance.GWR_Blue@s,
+        zendesk.trigger.instance.GWR_Red@s,
+        zendesk.trigger.instance.GWR_Yellow@s,
+      ]
+      inactive = [
+        zendesk.trigger.instance.Auto_assign_to_first_email_responding_agent@bsssss,
+        zendesk.trigger.instance.GWR_Agent_Trigger@s,
+      ]
+    },
+    {
+      category = zendesk.trigger_category.instance.Custom_Events@s
+      active = [
+        zendesk.trigger.instance.DP_Trigger@s,
+        zendesk.trigger.instance.Dependent_on_Org@s,
+      ]
+      inactive = [
+      ]
+    },
+    {
+      category = zendesk.trigger_category.instance.Labeling
+      active = [
+        zendesk.trigger.instance.looks_at_users,
+      ]
+      inactive = [
+      ]
+    },
+    {
+      category = zendesk.trigger_category.instance.Custom_Events___edited@ssbs
+      active = [
+      ]
+      inactive = [
+      ]
+    },
+    {
+      category = zendesk.trigger_category.instance.Answer_Bot_Triggers@s
+      active = [
+        zendesk.trigger.instance.Example_Answer_Bot_trigger_for_Salto_Dev@s,
+      ]
+      inactive = [
+      ]
+    },
+    {
+      category = zendesk.trigger_category.instance.General_Settings@s
+      active = [
+        zendesk.trigger.instance.Set_priority_and_group@s,
+      ]
+      inactive = [
+      ]
+    },
+    {
+      category = zendesk.trigger_category.instance.DP
+      active = [
+      ]
+      inactive = [
+        zendesk.trigger.instance.DP_Inactive_Test@s,
+      ]
+    },
+    {
+      category = zendesk.trigger_category.instance.Delete_These@s
+      active = [
+      ]
+      inactive = [
+      ]
+    },
+  ]
+}

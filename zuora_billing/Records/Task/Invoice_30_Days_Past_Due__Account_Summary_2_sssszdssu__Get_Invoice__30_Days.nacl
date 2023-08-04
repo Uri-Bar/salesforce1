@@ -1,0 +1,213 @@
+zuora_billing.Task Invoice_30_Days_Past_Due__Account_Summary_2_sssszdssu__Get_Invoice__30_Days@uuuuuuuumuussys {
+  name = "Get Invoice >30 Days"
+  parameters = {
+    zip = "true"
+    delay = "60"
+    fields = {
+      Account = {
+        Id = "true"
+        Name = "true"
+        Batch = "true"
+        CrmId = "true"
+        Currency = "true"
+        SalesRepName = "true"
+        AccountNumber = "true"
+        CommunicationProfileId = "true"
+        AdditionalEmailAddresses = "true"
+      }
+      Invoice = {
+        Id = "true"
+        Amount = "true"
+        Status = "true"
+        Balance = "true"
+        DueDate = "true"
+        InvoiceDate = "true"
+        InvoiceNumber = "true"
+      }
+      BillToContact = {
+        State = "true"
+        County = "true"
+        Address1 = "true"
+        Address2 = "true"
+        LastName = "true"
+        FirstName = "true"
+        WorkEmail = "true"
+        PersonalEmail = "true"
+      }
+      DefaultPaymentMethod = {
+        Type = "true"
+      }
+    }
+    encrypt = "false"
+    where_clause = " Invoice.DueDate <= 'today - 30 days' AND Invoice.Balance > 0 AND Invoice.Status = 'Posted' Order By Invoice.DueDate Desc"
+    strict_variables = "true"
+    zero_result_stop = "false"
+  }
+  action_type = "Export"
+  object = zuora_billing.invoiceitem
+  call_type = "SOAP"
+  concurrent_limit = 4
+  tags = [
+    "{{Data.Workflow.ExecutionDate}}",
+    "{{Data.Workflow.ExecutionDateTime}}",
+    "{{Data.Workflow.ExampleKey_78426}}",
+  ]
+  additionalProperties = {
+    css = {
+      top = "210px"
+      left = "400px"
+    }
+    priority = "Medium"
+    
+  }
+  _parent = [
+    zuora_billing.WorkflowExport.instance.Invoice_30_Days_Past_Due__Account_Summary_2@sssszdssu,
+  ]
+  _generated_dependencies = [
+    {
+      reference = zuora_billing.Workflow.instance.Invoice_30_Days_Past_Due__Account_Summary_2_sssszdssu__Invoice_30_Days_Past_Due__Account_Summary@uuuuuuuumuusssszdss.additionalProperties.parameters.fields
+      occurrences = [
+        {
+          location = zuora_billing.Task.instance.Invoice_30_Days_Past_Due__Account_Summary_2_sssszdssu__Get_Invoice__30_Days@uuuuuuuumuussys.tags.2
+        },
+      ]
+    },
+    {
+      reference = zuora_billing.account.field.AccountNumber
+      occurrences = [
+        {
+          location = zuora_billing.Task.instance.Invoice_30_Days_Past_Due__Account_Summary_2_sssszdssu__Get_Invoice__30_Days@uuuuuuuumuussys.parameters.fields.Account.AccountNumber
+        },
+      ]
+    },
+    {
+      reference = zuora_billing.account.field.AdditionalEmailAddresses
+      occurrences = [
+        {
+          location = zuora_billing.Task.instance.Invoice_30_Days_Past_Due__Account_Summary_2_sssszdssu__Get_Invoice__30_Days@uuuuuuuumuussys.parameters.fields.Account.AdditionalEmailAddresses
+        },
+      ]
+    },
+    {
+      reference = zuora_billing.account.field.Batch
+      occurrences = [
+        {
+          location = zuora_billing.Task.instance.Invoice_30_Days_Past_Due__Account_Summary_2_sssszdssu__Get_Invoice__30_Days@uuuuuuuumuussys.parameters.fields.Account.Batch
+        },
+      ]
+    },
+    {
+      reference = zuora_billing.account.field.CommunicationProfileId
+      occurrences = [
+        {
+          location = zuora_billing.Task.instance.Invoice_30_Days_Past_Due__Account_Summary_2_sssszdssu__Get_Invoice__30_Days@uuuuuuuumuussys.parameters.fields.Account.CommunicationProfileId
+        },
+      ]
+    },
+    {
+      reference = zuora_billing.account.field.CrmId
+      occurrences = [
+        {
+          location = zuora_billing.Task.instance.Invoice_30_Days_Past_Due__Account_Summary_2_sssszdssu__Get_Invoice__30_Days@uuuuuuuumuussys.parameters.fields.Account.CrmId
+        },
+      ]
+    },
+    {
+      reference = zuora_billing.account.field.Currency
+      occurrences = [
+        {
+          location = zuora_billing.Task.instance.Invoice_30_Days_Past_Due__Account_Summary_2_sssszdssu__Get_Invoice__30_Days@uuuuuuuumuussys.parameters.fields.Account.Currency
+        },
+      ]
+    },
+    {
+      reference = zuora_billing.account.field.Id
+      occurrences = [
+        {
+          location = zuora_billing.Task.instance.Invoice_30_Days_Past_Due__Account_Summary_2_sssszdssu__Get_Invoice__30_Days@uuuuuuuumuussys.parameters.fields.Account.Id
+        },
+      ]
+    },
+    {
+      reference = zuora_billing.account.field.Name
+      occurrences = [
+        {
+          location = zuora_billing.Task.instance.Invoice_30_Days_Past_Due__Account_Summary_2_sssszdssu__Get_Invoice__30_Days@uuuuuuuumuussys.parameters.fields.Account.Name
+        },
+      ]
+    },
+    {
+      reference = zuora_billing.account.field.SalesRepName
+      occurrences = [
+        {
+          location = zuora_billing.Task.instance.Invoice_30_Days_Past_Due__Account_Summary_2_sssszdssu__Get_Invoice__30_Days@uuuuuuuumuussys.parameters.fields.Account.SalesRepName
+        },
+      ]
+    },
+    {
+      reference = zuora_billing.invoice.field.Amount
+      occurrences = [
+        {
+          location = zuora_billing.Task.instance.Invoice_30_Days_Past_Due__Account_Summary_2_sssszdssu__Get_Invoice__30_Days@uuuuuuuumuussys.parameters.fields.Invoice.Amount
+        },
+      ]
+    },
+    {
+      reference = zuora_billing.invoice.field.Balance
+      occurrences = [
+        {
+          location = zuora_billing.Task.instance.Invoice_30_Days_Past_Due__Account_Summary_2_sssszdssu__Get_Invoice__30_Days@uuuuuuuumuussys.parameters.fields.Invoice.Balance
+        },
+        {
+          location = zuora_billing.Task.instance.Invoice_30_Days_Past_Due__Account_Summary_2_sssszdssu__Get_Invoice__30_Days@uuuuuuuumuussys.parameters.where_clause
+        },
+      ]
+    },
+    {
+      reference = zuora_billing.invoice.field.DueDate
+      occurrences = [
+        {
+          location = zuora_billing.Task.instance.Invoice_30_Days_Past_Due__Account_Summary_2_sssszdssu__Get_Invoice__30_Days@uuuuuuuumuussys.parameters.fields.Invoice.DueDate
+        },
+        {
+          location = zuora_billing.Task.instance.Invoice_30_Days_Past_Due__Account_Summary_2_sssszdssu__Get_Invoice__30_Days@uuuuuuuumuussys.parameters.where_clause
+        },
+      ]
+    },
+    {
+      reference = zuora_billing.invoice.field.Id
+      occurrences = [
+        {
+          location = zuora_billing.Task.instance.Invoice_30_Days_Past_Due__Account_Summary_2_sssszdssu__Get_Invoice__30_Days@uuuuuuuumuussys.parameters.fields.Invoice.Id
+        },
+      ]
+    },
+    {
+      reference = zuora_billing.invoice.field.InvoiceDate
+      occurrences = [
+        {
+          location = zuora_billing.Task.instance.Invoice_30_Days_Past_Due__Account_Summary_2_sssszdssu__Get_Invoice__30_Days@uuuuuuuumuussys.parameters.fields.Invoice.InvoiceDate
+        },
+      ]
+    },
+    {
+      reference = zuora_billing.invoice.field.InvoiceNumber
+      occurrences = [
+        {
+          location = zuora_billing.Task.instance.Invoice_30_Days_Past_Due__Account_Summary_2_sssszdssu__Get_Invoice__30_Days@uuuuuuuumuussys.parameters.fields.Invoice.InvoiceNumber
+        },
+      ]
+    },
+    {
+      reference = zuora_billing.invoice.field.Status
+      occurrences = [
+        {
+          location = zuora_billing.Task.instance.Invoice_30_Days_Past_Due__Account_Summary_2_sssszdssu__Get_Invoice__30_Days@uuuuuuuumuussys.parameters.fields.Invoice.Status
+        },
+        {
+          location = zuora_billing.Task.instance.Invoice_30_Days_Past_Due__Account_Summary_2_sssszdssu__Get_Invoice__30_Days@uuuuuuuumuussys.parameters.where_clause
+        },
+      ]
+    },
+  ]
+}

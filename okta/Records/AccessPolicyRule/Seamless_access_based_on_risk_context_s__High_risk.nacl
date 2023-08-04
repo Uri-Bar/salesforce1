@@ -1,0 +1,35 @@
+okta.AccessPolicyRule Seamless_access_based_on_risk_context_s__High_risk@uuuuumuus {
+  status = "ACTIVE"
+  name = "High risk"
+  priority = 2
+  system = false
+  conditions = {
+    network = {
+      connection = "ANYWHERE"
+    }
+    riskScore = {
+      level = "HIGH"
+    }
+  }
+  actions = {
+    appSignOn = {
+      access = "ALLOW"
+      verificationMethod = {
+        factorMode = "1FA"
+        type = "ASSURANCE"
+        reauthenticateIn = "PT12H"
+        constraints = [
+          {
+            possession = {
+              userPresence = "OPTIONAL"
+            }
+          },
+        ]
+      }
+    }
+  }
+  type = "ACCESS_POLICY"
+  _parent = [
+    okta.AccessPolicy.instance.Seamless_access_based_on_risk_context@s,
+  ]
+}

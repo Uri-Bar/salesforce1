@@ -1,0 +1,9 @@
+jira.Field Components {
+  name = "Components"
+  schema = {
+    type = "array"
+    items = "component"
+    system = "components"
+  }
+  description = ""
+}

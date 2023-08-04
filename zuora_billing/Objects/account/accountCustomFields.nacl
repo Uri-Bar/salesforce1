@@ -1,0 +1,10 @@
+type zuora_billing.account {
+  string field123__c {
+    type = "string"
+    maxLength = 512
+    required = false
+    filterable = false
+    label = "field123__c"
+    legacy = true
+  }
+}

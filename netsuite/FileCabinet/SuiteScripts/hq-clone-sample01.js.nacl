@@ -1,0 +1,12 @@
+netsuite.file SuiteScripts_hq_clone_sample01_js@dbbv {
+  bundleable = false
+  isinactive = false
+  availablewithoutlogin = false
+  generateurltimestamp = false
+  hideinbundle = false
+  path = "/SuiteScripts/hq-clone-sample01.js"
+  content = file("netsuite/FileCabinet/SuiteScripts/hq-clone-sample01.js")
+  _parent = [
+    netsuite.folder.instance.SuiteScripts,
+  ]
+}

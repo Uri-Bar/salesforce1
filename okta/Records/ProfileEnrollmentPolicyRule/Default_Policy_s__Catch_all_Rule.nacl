@@ -1,0 +1,37 @@
+okta.ProfileEnrollmentPolicyRule Default_Policy_s__Catch_all_Rule@umuubs {
+  status = "ACTIVE"
+  name = "Catch-all Rule"
+  priority = 99
+  system = true
+  actions = {
+    profileEnrollment = {
+      access = "ALLOW"
+      profileAttributes = [
+        {
+          name = okta.UserSchema.instance.user.definitions.base.properties.email
+          label = "Email"
+          required = true
+        },
+        {
+          name = okta.UserSchema.instance.user.definitions.base.properties.firstName
+          label = "First name"
+          required = true
+        },
+        {
+          name = okta.UserSchema.instance.user.definitions.base.properties.lastName
+          label = "Last name"
+          required = true
+        },
+      ]
+      unknownUserAction = "DENY"
+      activationRequirements = {
+        emailVerification = true
+      }
+      
+    }
+  }
+  type = "PROFILE_ENROLLMENT"
+  _parent = [
+    okta.ProfileEnrollmentPolicy.instance.Default_Policy@s,
+  ]
+}

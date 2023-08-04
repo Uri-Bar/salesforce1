@@ -1,0 +1,49 @@
+netsuite.customtransactiontype customtransaction_bm_budget_transaction {
+  scriptid = "customtransaction_bm_budget_transaction"
+  cancloseorder = false
+  iscredit = true
+  isposting = false
+  isvoidable = false
+  name = "Custom Budget"
+  showstatus = true
+  transactionstyle = "BASIC"
+  segments = {
+    classposition = "NONE"
+    departmentposition = "LINES"
+    isdepartmentmandatory = false
+    islocationmandatory = false
+    locationposition = "LINES"
+  }
+  statuses = {
+    status = {
+      status_10005_6970487_358 = {
+        scriptid = "status_10005_6970487_358"
+        description = "Pending Approval"
+        id = "D"
+        isposting = false
+        index = 0
+      }
+      status_10006_6970487_730 = {
+        scriptid = "status_10006_6970487_730"
+        description = "Approved"
+        id = "E"
+        isposting = false
+        index = 1
+      }
+    }
+  }
+  permissions = {
+    permission = {
+      ADMINISTRATOR = {
+        permittedlevel = "FULL"
+        permittedrole = "ADMINISTRATOR"
+        
+      }
+      EMPLOYEE_CENTER = {
+        permittedlevel = "EDIT"
+        permittedrole = "EMPLOYEE_CENTER"
+        
+      }
+    }
+  }
+}

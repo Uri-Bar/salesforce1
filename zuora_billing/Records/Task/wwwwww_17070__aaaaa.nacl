@@ -1,0 +1,36 @@
+zuora_billing.Task wwwwww_17070__aaaaa {
+  name = "aaaaa"
+  parameters = {
+    fields = {
+      default__doodi_api_name = {
+        aaaaa__c = ""
+      }
+    }
+    strict_variables = "true"
+  }
+  action_type = "CustomObject::Create"
+  object = zuora_billing.doodi_api_name__c
+  call_type = "SOAP"
+  concurrent_limit = 9999999
+  additionalProperties = {
+    css = {
+      top = "70px"
+      left = "350px"
+    }
+    priority = "Medium"
+    
+  }
+  _parent = [
+    zuora_billing.WorkflowExport.instance.wwwwww_17070,
+  ]
+  _generated_dependencies = [
+    {
+      reference = zuora_billing.doodi_api_name__c.field.aaaaa__c
+      occurrences = [
+        {
+          location = zuora_billing.Task.instance.wwwwww_17070__aaaaa.parameters.fields.default__doodi_api_name.aaaaa__c
+        },
+      ]
+    },
+  ]
+}

@@ -1,0 +1,16 @@
+salesforce.CustomApplication standard__Platform {
+  fullName = "standard__Platform"
+  defaultLandingTab = "standard-Contact"
+  isNavAutoTempTabsDisabled = false
+  isNavPersonalizationDisabled = false
+  tabs = [
+    "standard-Contact",
+    "standard-Account",
+    "standard-report",
+    "standard-Dashboard",
+    "standard-Chatter",
+    "standard-File",
+    salesforce.CustomTab.instance.Yariv__c,
+  ]
+  isNavTabPersistenceDisabled = false
+}

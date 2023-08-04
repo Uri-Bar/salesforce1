@@ -1,0 +1,31 @@
+zuora_billing.Task Gamer_Sign_Up_Workflow_77_sssu__Basic_Email_Validation@uuuumuuss {
+  name = "Basic Email Validation"
+  parameters = {
+    if_clause = "{% if Data.Workflow.Your_Email contains \"@\" %} True {% else %} False {% endif %}"
+    strict_variables = "false"
+  }
+  action_type = "If"
+  call_type = "SOAP"
+  concurrent_limit = 9999999
+  additionalProperties = {
+    css = {
+      top = "-1010px"
+      left = "-870px"
+    }
+    priority = "Medium"
+    
+  }
+  _parent = [
+    zuora_billing.WorkflowExport.instance.Gamer_Sign_Up_Workflow_77@sssu,
+  ]
+  _generated_dependencies = [
+    {
+      reference = zuora_billing.Workflow.instance.Gamer_Sign_Up_Workflow_77_sssu__Gamer_Sign_Up_Workflow@uuuumuusss.additionalProperties.parameters.fields
+      occurrences = [
+        {
+          location = zuora_billing.Task.instance.Gamer_Sign_Up_Workflow_77_sssu__Basic_Email_Validation@uuuumuuss.parameters.if_clause
+        },
+      ]
+    },
+  ]
+}

@@ -1,0 +1,15 @@
+zuora_billing.SequenceSet NEW {
+  name = "NEW"
+  invoice = {
+    prefix = "NEW_INV"
+    startNumber = 1
+  }
+  payment = {
+    prefix = "NEW_P"
+    startNumber = 1
+  }
+  refund = {
+    prefix = "NEW_R"
+    startNumber = 1
+  }
+}

@@ -1,0 +1,83 @@
+netsuite.customsegment cseg1 {
+  scriptid = "cseg1"
+  defaultrecordaccesslevel = "EDIT"
+  defaultsearchaccesslevel = "VIEW"
+  displaytype = "NORMAL"
+  fieldtype = "SELECT"
+  hasglimpact = false
+  ismandatory = false
+  label = "Stam"
+  recordtype = netsuite.customrecord_cseg1.attr.scriptid
+  valuesdisplayorder = "SUBLIST"
+  segmentapplication = {
+    transactionbody = {
+      applications = {
+        application = {
+          ITEMFULFILLMENT = {
+            id = "ITEMFULFILLMENT"
+            isapplied = true
+            
+          }
+          OPPORTUNITY = {
+            id = "OPPORTUNITY"
+            isapplied = true
+            
+          }
+          SALE = {
+            id = "SALE"
+            isapplied = true
+            
+          }
+        }
+      }
+    }
+    crm = {
+      sourcelist = "STDEVENTOPPORTUNITY"
+      applications = {
+        application = {
+          CALENDAREVENT = {
+            id = "CALENDAREVENT"
+            isapplied = true
+            
+          }
+          PHONECALL = {
+            id = "PHONECALL"
+            isapplied = true
+            
+          }
+        }
+      }
+    }
+    items = {
+      subtype = "BOTH"
+    }
+    customrecords = {
+      applications = {
+        application = {
+          
+          customrecord_slt_testforrest = {
+            id = netsuite.customrecord_slt_testforrest.attr.scriptid
+            isapplied = true
+            
+          }
+          customrecord_amzn_brand_auth = {
+            id = netsuite.customrecord_amzn_brand_auth.attr.scriptid
+            isapplied = true
+            
+          }
+        }
+      }
+    }
+    transactionline = {
+      applications = {
+        application = {
+          SALE = {
+            id = "SALE"
+            isapplied = true
+            
+          }
+        }
+      }
+    }
+  }
+}

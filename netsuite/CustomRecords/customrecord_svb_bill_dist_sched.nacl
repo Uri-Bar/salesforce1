@@ -1,0 +1,425 @@
+type netsuite.customrecord_svb_bill_dist_sched {
+  annotations {
+    serviceid scriptid {
+    }
+    string recordname {
+    }
+    string customsegment {
+    }
+    netsuite.customrecordtype_accesstype accesstype {
+    }
+    boolean allowattachments {
+    }
+    boolean allowinlineediting {
+    }
+    boolean allowinlinedeleting {
+    }
+    boolean allowinlinedetaching {
+    }
+    boolean allowmobileaccess {
+    }
+    boolean allownumberingoverride {
+    }
+    boolean allowquickadd {
+    }
+    boolean allowquicksearch {
+    }
+    boolean allowuiaccess {
+    }
+    string description {
+    }
+    boolean enabledle {
+    }
+    boolean enablekeywords {
+    }
+    boolean enablemailmerge {
+    }
+    boolean enablenametranslation {
+    }
+    boolean enablenumbering {
+    }
+    boolean enableoptimisticlocking {
+    }
+    boolean enablesystemnotes {
+    }
+    boolean hierarchical {
+    }
+    string numberingprefix {
+    }
+    string numberingsuffix {
+    }
+    string numberingmindigits {
+    }
+    string numberinginit {
+    }
+    string icon {
+    }
+    boolean iconbuiltin {
+    }
+    netsuite.generic_custom_record_icon iconindex {
+    }
+    boolean includeinsearchmenu {
+    }
+    boolean includename {
+    }
+    boolean isinactive {
+    }
+    boolean isordered {
+    }
+    boolean showcreationdate {
+    }
+    boolean showcreationdateonlist {
+    }
+    boolean showid {
+    }
+    boolean showlastmodified {
+    }
+    boolean showlastmodifiedonlist {
+    }
+    boolean shownotes {
+    }
+    boolean showowner {
+    }
+    boolean showownerallowchange {
+    }
+    boolean showowneronlist {
+    }
+    
+    netsuite.customrecordtype_links links {
+    }
+    netsuite.customrecordtype_permissions permissions {
+    }
+    netsuite.customrecordtype_recordsublists recordsublists {
+    }
+    netsuite.customrecordtype_subtabs subtabs {
+    }
+    string application_id {
+    }
+    hidden_string source {
+    }
+    hidden_string internalId {
+    }
+  }
+  serviceid scriptid {
+    _required = true
+  }
+  string internalId {
+    _hidden_value = true
+  }
+  boolean custom_custrecord_svb_parent_intercomany_alloc {
+    scriptid = "custrecord_svb_parent_intercomany_alloc"
+    accesslevel = "2"
+    allowquickadd = false
+    applyformatting = false
+    checkspelling = false
+    defaultchecked = false
+    displaytype = "NORMAL"
+    encryptatrest = false
+    fieldtype = "CHECKBOX"
+    globalsearch = false
+    help = '''
+&lt;html&gt; &lt;p&gt;Enabling this checkbox identifies the distribution schedule as an intercompany distribution of expense amounts.&lt;/p&gt;
+&lt;p&gt;Disabling the Intercompany Allocation checkbox identifies the distribution schedule as an intracompany distribution of expense amounts.&lt;/p&gt;&lt;/html&gt;
+'''
+    isformula = false
+    ismandatory = false
+    isparent = false
+    label = "Intercompany Allocation"
+    rolerestrict = false
+    searchlevel = "2"
+    showinlist = true
+    storevalue = true
+    index = 0
+  }
+  boolean custom_custrecord_svb_amount_based_dist {
+    scriptid = "custrecord_svb_amount_based_dist"
+    accesslevel = "2"
+    allowquickadd = false
+    applyformatting = false
+    checkspelling = false
+    defaultchecked = false
+    displaytype = "NORMAL"
+    encryptatrest = false
+    fieldtype = "CHECKBOX"
+    globalsearch = false
+    help = '''
+&lt;html&gt;&lt;p&gt;Enable Amount Based Distribution to create a distribution template with predefined distribution entities where you manually enter the distribution amounts. &lt;/p&gt;
+&lt;p&gt;Disable Amount Based Distribution to create a distribution template with predefined distribution entities where the solution automatically generates amounts based on fixed percentages.&lt;/p&gt;&lt;/html&gt;
+'''
+    isformula = false
+    ismandatory = false
+    isparent = false
+    label = "Amount Based Distribution"
+    rolerestrict = false
+    searchlevel = "2"
+    showinlist = false
+    storevalue = true
+    index = 1
+  }
+  boolean custom_custrecord_svb_is_alloc_wt_valid {
+    scriptid = "custrecord_svb_is_alloc_wt_valid"
+    accesslevel = "2"
+    allowquickadd = false
+    applyformatting = false
+    checkspelling = false
+    defaultchecked = false
+    displaytype = "LOCKED"
+    encryptatrest = false
+    fieldtype = "CHECKBOX"
+    globalsearch = false
+    help = "When the total Allocation Weight of all schedule lines are equal to 100%, the Allocation Weight 100% is checked."
+    isformula = false
+    ismandatory = false
+    isparent = false
+    label = "Allocation Weight 100%"
+    rolerestrict = false
+    searchlevel = "2"
+    showinlist = false
+    storevalue = true
+    index = 2
+  }
+  boolean custom_custrecord_svb_use_source_segments {
+    scriptid = "custrecord_svb_use_source_segments"
+    accesslevel = "2"
+    allowquickadd = false
+    applyformatting = false
+    checkspelling = false
+    defaultchecked = false
+    displaytype = "NORMAL"
+    encryptatrest = false
+    fieldtype = "CHECKBOX"
+    globalsearch = false
+    help = '''
+&lt;html&gt;&lt;p&gt;Enable Source Segments if you want the location, class, department, or custom segments on the journal entry to be the same as specified on the vendor bill expense line item. The solution sources segment information from the vendor bill only if the SVB | Bill Distribtn Sched Line item does not specify the segment information.&lt;/p&gt;
+&lt;p&gt;Enabling Source Segments also enables the Exclude Location Sourcing, Exclude Class Sourcing, Exclude Department Sourcing, and Exclude Custom Segments Sourcing fields.&lt;/p&gt;
+&lt;p&gt;Disable Source Segments if you do not want the location, class, department, or custom segments on the journal entry to be the same as specified on the vendor bill expense line item. The SVB | Bill Distribtn Sched Line item is the only source for this information.&lt;/p&gt;&lt;/html&gt;
+'''
+    isformula = false
+    ismandatory = false
+    isparent = false
+    label = "Source Segments"
+    rolerestrict = false
+    searchlevel = "2"
+    showinlist = true
+    storevalue = true
+    index = 3
+  }
+  netsuite.subsidiary custom_custrecord_svb_source_subsidiary {
+    scriptid = "custrecord_svb_source_subsidiary"
+    accesslevel = "2"
+    allowquickadd = false
+    applyformatting = false
+    checkspelling = false
+    defaultchecked = false
+    displaytype = "NORMAL"
+    encryptatrest = false
+    fieldtype = "SELECT"
+    globalsearch = false
+    help = "&lt;html&gt;&lt;p&gt;The source subsidiary to which the distribution schedule applies.&lt;/p&gt;&lt;/html&gt;"
+    isformula = false
+    ismandatory = true
+    isparent = false
+    label = "Source Subsidiary"
+    onparentdelete = "NO_ACTION"
+    rolerestrict = false
+    searchlevel = "2"
+    selectrecordtype = "-117"
+    showinlist = true
+    storevalue = true
+    index = 4
+  }
+  boolean custom_custrecord_svb_use_source_accounts {
+    scriptid = "custrecord_svb_use_source_accounts"
+    accesslevel = "2"
+    allowquickadd = false
+    applyformatting = false
+    checkspelling = false
+    defaultchecked = false
+    displaytype = "NORMAL"
+    encryptatrest = false
+    fieldtype = "CHECKBOX"
+    globalsearch = false
+    help = '''
+&lt;html&gt;&lt;p&gt;Enable if you want the expense and item accounts on the journal entry to be the same specified on the vendor bill. The vendor bill line account (if specified) is applied if the bill distribution schedule line does not specify an account.&lt;/p&gt;
+&lt;p&gt;Disable if you want the expense and item accounts on the journal entry to be the same as specified on the bill distribution schedule.&lt;/p&gt;&lt;/html&gt;
+'''
+    isformula = false
+    ismandatory = false
+    isparent = false
+    label = "Source Accounts"
+    rolerestrict = false
+    searchlevel = "2"
+    showinlist = true
+    storevalue = true
+    index = 5
+  }
+  boolean custom_custrecord_svb_distribute_taxes {
+    scriptid = "custrecord_svb_distribute_taxes"
+    accesslevel = "2"
+    allowquickadd = false
+    applyformatting = false
+    checkspelling = false
+    defaultchecked = false
+    displaytype = "NORMAL"
+    encryptatrest = false
+    fieldtype = "CHECKBOX"
+    globalsearch = false
+    help = '''
+&lt;html&gt;&lt;p&gt;Enable Distribute Taxes if you want the solution to distribute taxes along with the expenses. &lt;/p&gt;
+&lt;p&gt;&lt;b&gt;Note&lt;/b&gt;: US-based tax nexuses are not supported. &lt;/p&gt;
+&lt;p&gt;Disable Distribute Taxes if you do not want the solution to distribute taxes along with the expenses.&lt;/p&gt;&lt;/html&gt;
+'''
+    isformula = false
+    ismandatory = false
+    isparent = false
+    label = "Distribute Taxes"
+    rolerestrict = false
+    searchlevel = "2"
+    showinlist = false
+    storevalue = true
+    index = 6
+  }
+  boolean custom_custrecord_svb_exclude_location {
+    scriptid = "custrecord_svb_exclude_location"
+    accesslevel = "2"
+    allowquickadd = false
+    applyformatting = false
+    checkspelling = false
+    defaultchecked = false
+    displaytype = "NORMAL"
+    encryptatrest = false
+    fieldtype = "CHECKBOX"
+    globalsearch = false
+    help = "&lt;html&gt;&lt;p&gt;Enable Exclude Locations Source if you want to prevent the location segment from being sourced.&lt;/p&gt;&lt;/html&gt;"
+    isformula = false
+    ismandatory = false
+    isparent = false
+    label = "Exclude Location Sourcing"
+    rolerestrict = false
+    searchlevel = "2"
+    showinlist = false
+    storevalue = true
+    index = 7
+  }
+  boolean custom_custrecord_svb_exclude_department {
+    scriptid = "custrecord_svb_exclude_department"
+    accesslevel = "2"
+    allowquickadd = false
+    applyformatting = false
+    checkspelling = false
+    defaultchecked = false
+    displaytype = "NORMAL"
+    encryptatrest = false
+    fieldtype = "CHECKBOX"
+    globalsearch = false
+    help = "&lt;html&gt;&lt;p&gt;Enable Exclude Departments Source if you want to prevent the department segment from being sourced.&lt;/p&gt;&lt;/html&gt;"
+    isformula = false
+    ismandatory = false
+    isparent = false
+    label = "Exclude Department Sourcing"
+    rolerestrict = false
+    searchlevel = "2"
+    showinlist = false
+    storevalue = true
+    index = 8
+  }
+  boolean custom_custrecord_svb_exclude_class {
+    scriptid = "custrecord_svb_exclude_class"
+    accesslevel = "2"
+    allowquickadd = false
+    applyformatting = false
+    checkspelling = false
+    defaultchecked = false
+    displaytype = "NORMAL"
+    encryptatrest = false
+    fieldtype = "CHECKBOX"
+    globalsearch = false
+    help = "&lt;html&gt;&lt;p&gt;Enable Exclude Classes Source if you want to prevent the classes segment from being sourced.&lt;/p&gt;&lt;/html&gt;"
+    isformula = false
+    ismandatory = false
+    isparent = false
+    label = "Exclude Class Sourcing"
+    rolerestrict = false
+    searchlevel = "2"
+    showinlist = false
+    storevalue = true
+    index = 9
+  }
+  string custom_custrecord_svb_exclude_sourced_segs {
+    scriptid = "custrecord_svb_exclude_sourced_segs"
+    accesslevel = "2"
+    allowquickadd = false
+    applyformatting = false
+    checkspelling = false
+    defaultchecked = false
+    displaytype = "NORMAL"
+    encryptatrest = false
+    fieldtype = "TEXTAREA"
+    globalsearch = false
+    help = "&lt;html&gt;&lt;p&gt;If you want to prevent one or more custom segments from being sourced, enter the ID of custom segments in the Exclude Source Segments Sourcing field. Use commas to delimit each field when specifying the ID of more than one custom segment. For example, example_1_seg,example_2_seg,example_3_seg.&lt;/p&gt;&lt;/html&gt;"
+    isformula = false
+    ismandatory = false
+    isparent = false
+    label = "Exclude Custom Segment Sourcing"
+    rolerestrict = false
+    searchlevel = "2"
+    showinlist = false
+    storevalue = true
+    index = 10
+  }
+  scriptid = "customrecord_svb_bill_dist_sched"
+  accesstype = "CUSTRECORDENTRYPERM"
+  allowattachments = false
+  allowinlinedeleting = false
+  allowinlinedetaching = true
+  allowinlineediting = false
+  allowmobileaccess = false
+  allownumberingoverride = false
+  allowquickadd = false
+  allowquicksearch = false
+  allowuiaccess = true
+  enabledle = false
+  enablekeywords = true
+  enablemailmerge = false
+  enablenametranslation = false
+  enablenumbering = false
+  enableoptimisticlocking = true
+  enablesystemnotes = true
+  hierarchical = false
+  iconbuiltin = true
+  includeinsearchmenu = false
+  includename = true
+  isinactive = false
+  isordered = false
+  recordname = "SVB | Bill Distribution Schedule"
+  showcreationdate = false
+  showcreationdateonlist = false
+  showid = false
+  showlastmodified = false
+  showlastmodifiedonlist = false
+  shownotes = false
+  showowner = false
+  showownerallowchange = false
+  showowneronlist = false
+  links = {
+    link = {
+      BASICLISTSCUSTOM = {
+        linkcategory = "BASICLISTSCUSTOM"
+        linktasktype = "LIST"
+        
+      }
+    }
+  }
+  subtabs = {
+    subtab = {
+      tab_15_t1221897_841 = {
+        scriptid = "tab_15_t1221897_841"
+        tabtitle = "Schedule Lines"
+        index = 0
+      }
+    }
+  }
+  metadataType = "customrecordtype"
+  netsuite.customRecordTranslationsList translationsList {
+  }
+}

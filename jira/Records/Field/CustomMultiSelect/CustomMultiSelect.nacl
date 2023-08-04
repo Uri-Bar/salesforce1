@@ -1,0 +1,9 @@
+jira.Field CustomMultiSelect__c {
+  name = "CustomMultiSelect"
+  description = "Desc"
+  searcherKey = "com.atlassian.jira.plugin.system.customfieldtypes:multiselectsearcher"
+  type = "com.atlassian.jira.plugin.system.customfieldtypes:multiselect"
+  contexts = [
+    jira.CustomFieldContext.instance.CustomMultiSelect__c_Default_Configuration_Scheme_for_CustomMultiSelect@uuussss,
+  ]
+}

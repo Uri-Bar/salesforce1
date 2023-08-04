@@ -1,0 +1,3 @@
+zendesk.channel Twitter_Direct_Message@s {
+  name = "Twitter Direct Message"
+}

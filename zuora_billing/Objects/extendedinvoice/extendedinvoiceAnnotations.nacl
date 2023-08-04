@@ -1,0 +1,37 @@
+type zuora_billing.extendedinvoice {
+  annotations {
+    string metadataType {
+    }
+    string label {
+    }
+    string description {
+    }
+    hidden_string id {
+    }
+    string objectType {
+    }
+  }
+  metadataType = "StandardObject"
+  objectType = "extendedinvoice"
+  _generated_dependencies = [
+    {
+      reference = zuora_billing.contact
+    },
+    {
+      reference = zuora_billing.contactsnapshot
+    },
+    {
+      reference = zuora_billing.extendedaccount
+    },
+    {
+      reference = zuora_billing.extendedinvoiceschedule
+    },
+    {
+      reference = zuora_billing.extendeduser
+    },
+    {
+      reference = zuora_billing.user
+    },
+  ]
+  label = "ExtendedInvoice"
+}

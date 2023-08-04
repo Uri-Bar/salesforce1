@@ -1,0 +1,8 @@
+zendesk.ticket_field__custom_field_options tagger_Region__emea {
+  name = "EMEA"
+  raw_name = "EMEA"
+  value = "emea"
+  _parent = [
+    zendesk.ticket_field.instance.tagger_Region,
+  ]
+}

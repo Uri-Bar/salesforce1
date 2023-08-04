@@ -1,0 +1,10 @@
+zuora_billing.ProductRatePlanType SKU_00000006_b__GWR_rate_plan_1@umuusss {
+  status = "Expired"
+  name = "GWR rate plan 1"
+  description = "Geoff's rate plan1"
+  effectiveStartDate = "2022-01-25"
+  effectiveEndDate = "2023-01-25"
+  _parent = [
+    zuora_billing.ProductType.instance.SKU_00000006@b,
+  ]
+}

@@ -1,0 +1,16 @@
+zendesk.article_translation How_do_I_customize_my_Help_Center__FAQ_General_DP_Brand_s_uum_uuuum_ssssssauuuuuum__DP_Brand_s_en_us_umub@uuuuuuuuuuuuuumuuuuuum {
+  locale = zendesk.guide_language_settings.instance.DP_Brand_s_en_us@umub
+  title = "How do I customize my Help Center?"
+  body = '''
+<p>You can modify the look and feel of your Help Center by changing colors and fonts. See <a href="https://support.zendesk.com/hc/en-us/articles/206177737" target="_blank">Branding your Help Center</a> to learn how.</p>
+
+<p>You can also change the design of your Help Center. If you're comfortable working with page code, you can dig in to the site's HTML, CSS, and Javascript to customize your theme. To get started, see <a href="https://support.zendesk.com/hc/en-us/articles/203664326" target="_blank">Customizing the Help Center</a>.</p>
+'''
+  outdated = false
+  draft = false
+  hidden = false
+  brand = zendesk.brand.instance.DP_Brand@s
+  _parent = [
+    zendesk.article.instance.How_do_I_customize_my_Help_Center__FAQ_General_DP_Brand_s_uum_uuuum@ssssssauuuuuum,
+  ]
+}

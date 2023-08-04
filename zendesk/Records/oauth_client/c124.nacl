@@ -1,0 +1,7 @@
+zendesk.oauth_client c124_modified {
+  name = "c124"
+  identifier = "c124_modified"
+  company = "Salto"
+  description = ""
+  global = false
+}

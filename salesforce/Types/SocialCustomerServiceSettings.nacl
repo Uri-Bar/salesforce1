@@ -1,0 +1,47 @@
+settings salesforce.SocialCustomerServiceSettings {
+  annotations {
+    serviceid metadataType {
+    }
+    boolean hasMetaFile {
+    }
+    string folderType {
+    }
+    string folderContentType {
+    }
+    string suffix {
+    }
+    string dirName {
+    }
+  }
+  string caseSubjectOption {
+    _restriction = {
+      enforce_value = false
+      values = [
+        "BuildCustom",
+        "SocialPostContent",
+        "SocialPostSource",
+      ]
+    }
+  }
+  serviceid fullName {
+  }
+  boolean enableSocialApprovals {
+  }
+  boolean enableSocialCaseAssignmentRules {
+  }
+  boolean enableSocialCustomerService {
+  }
+  boolean enableSocialPersonaHistoryTracking {
+  }
+  boolean enableSocialPostHistoryTracking {
+  }
+  boolean enableSocialReceiveParentPost {
+  }
+  string internalId {
+    _hidden_value = true
+    localOnly = true
+  }
+  suffix = "settings"
+  dirName = "settings"
+  metadataType = "SocialCustomerServiceSettings"
+}

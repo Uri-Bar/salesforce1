@@ -1,0 +1,19 @@
+stripe.reporting_report_type ending_balance_reconciliation_itemized_4@uuvv {
+  id = "ending_balance_reconciliation.itemized.4"
+  default_columns = [
+    "automatic_payout_id",
+    "automatic_payout_effective_at",
+    "balance_transaction_id",
+    "created",
+    "available_on",
+    "currency",
+    "gross",
+    "fee",
+    "net",
+    "reporting_category",
+    "description",
+  ]
+  livemode = false
+  name = "Itemized ending balance reconciliation"
+  version = 4
+}

@@ -1,0 +1,9 @@
+zendesk.dynamic_content_item GWR_webhook_content@s {
+  name = "GWR webhook content"
+  placeholder = "{{dc.gwr_webhook_content}}"
+  default_locale_id = zendesk.locale.instance.en_US@b
+  outdated = false
+  variants = [
+    zendesk.dynamic_content_item__variants.instance.GWR_webhook_content_s__en_US_b@uumuuum,
+  ]
+}

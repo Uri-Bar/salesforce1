@@ -1,0 +1,17 @@
+zuora_billing.Settings_Notification New_Subscription_Created_New_Subscription_Created_8ac6819b7883361b017893726f173fb1@ssussu {
+  profileId = zuora_billing.Settings_CommunicationProfile.instance.Default_Profile@s
+  eventName = "New Subscription Created"
+  name = "New Subscription Created"
+  description = "A new subscription has been created and activated."
+  active = false
+  hidden = false
+  emailOption = true
+  emailTemplateName = zuora_billing.PublicEmailTemplate.instance.New_Subscription_Created_Default_Email_Template@s
+  calloutOption = false
+  contentType = "APPLICATION_JSON"
+  calloutRetriable = false
+  calloutAuth = false
+  calloutOauth2 = false
+  calloutPreemptiveAuth = false
+  useCustomRequestBody = false
+}

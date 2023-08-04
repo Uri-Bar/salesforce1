@@ -1,0 +1,442 @@
+type zuora_billing.extendeddiscountinvoiceitem {
+  string Id {
+    type = "string"
+    format = "uuid"
+    required = false
+    filterable = false
+    label = "Id"
+  }
+  string CreatedById {
+    type = "string"
+    format = "uuid"
+    required = false
+    filterable = false
+    label = "CreatedById"
+  }
+  string CreatedDate {
+    type = "string"
+    format = "date-time"
+    required = false
+    filterable = false
+    label = "CreatedDate"
+  }
+  string UpdatedById {
+    type = "string"
+    format = "uuid"
+    required = false
+    filterable = false
+    label = "UpdatedById"
+  }
+  string UpdatedDate {
+    type = "string"
+    format = "date-time"
+    required = false
+    filterable = false
+    label = "UpdatedDate"
+  }
+  boolean deleted {
+    type = "boolean"
+    required = false
+    filterable = false
+    label = "deleted"
+  }
+  string InvoiceId {
+    type = "string"
+    format = "uuid"
+    required = false
+    filterable = false
+    label = "InvoiceId"
+  }
+  string RatePlanChargeId {
+    type = "string"
+    format = "uuid"
+    required = false
+    filterable = false
+    label = "RatePlanChargeId"
+  }
+  string AccountingCode {
+    type = "string"
+    maxLength = 512
+    required = false
+    filterable = false
+    label = "AccountingCode"
+  }
+  string AppliedToInvoiceItemId {
+    type = "string"
+    format = "uuid"
+    required = false
+    filterable = false
+    referenceTo = [
+      zuora_billing.extendedinvoiceitem.field.Id,
+    ]
+    cardinality = "manyToOne"
+    recordConstraints = {
+      create = {
+        enforceValidMapping = true
+      }
+    }
+    label = "AppliedToInvoiceItemId"
+  }
+  number ChargeAmount {
+    type = "number"
+    required = false
+    filterable = false
+    label = "ChargeAmount"
+  }
+  string ChargeDate {
+    type = "string"
+    format = "date-time"
+    required = false
+    filterable = false
+    label = "ChargeDate"
+  }
+  string ChargeName {
+    type = "string"
+    maxLength = 512
+    required = false
+    filterable = false
+    label = "ChargeName"
+  }
+  string Description {
+    type = "string"
+    maxLength = 512
+    required = false
+    filterable = false
+    label = "Description"
+  }
+  boolean ExcludeItemBillingFromRevenueAccounting {
+    type = "boolean"
+    required = false
+    filterable = false
+    label = "ExcludeItemBillingFromRevenueAccounting"
+  }
+  number LongId {
+    type = "integer"
+    required = false
+    filterable = false
+    label = "LongId"
+  }
+  string ProcessingType {
+    type = "string"
+    maxLength = 512
+    required = false
+    filterable = false
+    label = "ProcessingType"
+  }
+  number Quantity {
+    type = "number"
+    required = false
+    filterable = false
+    label = "Quantity"
+  }
+  string RevRecStartDate {
+    type = "string"
+    format = "date"
+    required = false
+    filterable = false
+    label = "RevRecStartDate"
+  }
+  string ServiceEndDate {
+    type = "string"
+    format = "date"
+    required = false
+    filterable = false
+    label = "ServiceEndDate"
+  }
+  string ServiceStartDate {
+    type = "string"
+    format = "date"
+    required = false
+    filterable = false
+    label = "ServiceStartDate"
+  }
+  string SourceItemType {
+    type = "string"
+    maxLength = 512
+    required = false
+    filterable = false
+    label = "SourceItemType"
+  }
+  string SKU {
+    type = "string"
+    maxLength = 512
+    required = false
+    filterable = false
+    label = "SKU"
+  }
+  string SubscriptionId {
+    type = "string"
+    format = "uuid"
+    required = false
+    filterable = false
+    label = "SubscriptionId"
+  }
+  string SubscriptionName {
+    type = "string"
+    maxLength = 512
+    required = false
+    filterable = false
+    label = "SubscriptionName"
+  }
+  number TaxAmount {
+    type = "number"
+    required = false
+    filterable = false
+    label = "TaxAmount"
+  }
+  string TaxCode {
+    type = "string"
+    maxLength = 512
+    required = false
+    filterable = false
+    label = "TaxCode"
+  }
+  number TaxExemptAmount {
+    type = "number"
+    required = false
+    filterable = false
+    label = "TaxExemptAmount"
+  }
+  string TaxMode {
+    type = "string"
+    maxLength = 512
+    required = false
+    filterable = false
+    label = "TaxMode"
+  }
+  number UnitPrice {
+    type = "number"
+    required = false
+    filterable = false
+    label = "UnitPrice"
+  }
+  string UOM {
+    type = "string"
+    maxLength = 512
+    required = false
+    filterable = false
+    label = "UOM"
+  }
+  number Balance {
+    type = "number"
+    required = false
+    filterable = false
+    label = "Balance"
+  }
+  string AccountReceivableAccountingCodeId {
+    type = "string"
+    format = "uuid"
+    required = false
+    filterable = false
+    label = "AccountReceivableAccountingCodeId"
+  }
+  string RecognizedRevenueAccountingCodeId {
+    type = "string"
+    format = "uuid"
+    required = false
+    filterable = false
+    label = "RecognizedRevenueAccountingCodeId"
+  }
+  string DeferredRevenueAccountingCodeId {
+    type = "string"
+    format = "uuid"
+    required = false
+    filterable = false
+    label = "DeferredRevenueAccountingCodeId"
+  }
+  string ContractAssetAccountingCodeId {
+    type = "string"
+    format = "uuid"
+    required = false
+    filterable = false
+    label = "ContractAssetAccountingCodeId"
+  }
+  string ContractLiabilityAccountingCodeId {
+    type = "string"
+    format = "uuid"
+    required = false
+    filterable = false
+    label = "ContractLiabilityAccountingCodeId"
+  }
+  string ContractRecognizedRevenueAccountingCodeId {
+    type = "string"
+    format = "uuid"
+    required = false
+    filterable = false
+    label = "ContractRecognizedRevenueAccountingCodeId"
+  }
+  string UnbilledReceivablesAccountingCodeId {
+    type = "string"
+    format = "uuid"
+    required = false
+    filterable = false
+    label = "UnbilledReceivablesAccountingCodeId"
+  }
+  string AdjustmentRevenueAccountingCodeId {
+    type = "string"
+    format = "uuid"
+    required = false
+    filterable = false
+    label = "AdjustmentRevenueAccountingCodeId"
+  }
+  string AdjustmentLiabilityAccountingCodeId {
+    type = "string"
+    format = "uuid"
+    required = false
+    filterable = false
+    label = "AdjustmentLiabilityAccountingCodeId"
+  }
+  string JournalEntryId {
+    type = "string"
+    format = "uuid"
+    required = false
+    filterable = false
+    label = "JournalEntryId"
+  }
+  string AccountId {
+    type = "string"
+    format = "uuid"
+    required = false
+    filterable = false
+    label = "AccountId"
+  }
+  string BillToContactSnapshotId {
+    type = "string"
+    format = "uuid"
+    required = false
+    filterable = false
+    label = "BillToContactSnapshotId"
+  }
+  string SoldToContactSnapshotId {
+    type = "string"
+    format = "uuid"
+    required = false
+    filterable = false
+    label = "SoldToContactSnapshotId"
+  }
+  string ParentAccountId {
+    type = "string"
+    format = "uuid"
+    required = false
+    filterable = false
+    label = "ParentAccountId"
+  }
+  string BillToContactId {
+    type = "string"
+    format = "uuid"
+    required = false
+    filterable = false
+    label = "BillToContactId"
+  }
+  string SoldToContactId {
+    type = "string"
+    format = "uuid"
+    required = false
+    filterable = false
+    label = "SoldToContactId"
+  }
+  string DefaultPaymentMethodId {
+    type = "string"
+    format = "uuid"
+    required = false
+    filterable = false
+    label = "DefaultPaymentMethodId"
+  }
+  string ProductRatePlanChargeId {
+    type = "string"
+    format = "uuid"
+    required = false
+    filterable = false
+    label = "ProductRatePlanChargeId"
+  }
+  string RatePlanId {
+    type = "string"
+    format = "uuid"
+    required = false
+    filterable = false
+    label = "RatePlanId"
+  }
+  string ProductRatePlanId {
+    type = "string"
+    format = "uuid"
+    required = false
+    filterable = false
+    label = "ProductRatePlanId"
+  }
+  string AmendmentId {
+    type = "string"
+    format = "uuid"
+    required = false
+    filterable = false
+    label = "AmendmentId"
+  }
+  string ProductId {
+    type = "string"
+    format = "uuid"
+    required = false
+    filterable = false
+    label = "ProductId"
+  }
+  number Extended {
+    type = "number"
+    required = false
+    filterable = false
+    label = "Extended"
+  }
+  string RevenueScheduleId {
+    type = "string"
+    format = "uuid"
+    required = false
+    filterable = false
+    label = "RevenueScheduleId"
+  }
+  string RevenueScheduleNumber {
+    type = "string"
+    maxLength = 512
+    required = false
+    filterable = false
+    label = "RevenueScheduleNumber"
+  }
+  string BookingReference {
+    type = "string"
+    maxLength = 512
+    required = false
+    filterable = false
+    label = "BookingReference"
+  }
+  string ItemType {
+    type = "string"
+    maxLength = 512
+    required = false
+    filterable = false
+    label = "ItemType"
+  }
+  string PurchaseOrderNumber {
+    type = "string"
+    maxLength = 512
+    required = false
+    filterable = false
+    label = "PurchaseOrderNumber"
+  }
+  string RevRecCode {
+    type = "string"
+    maxLength = 512
+    required = false
+    filterable = false
+    label = "RevRecCode"
+  }
+  string RevRecTriggerCondition {
+    type = "string"
+    maxLength = 512
+    required = false
+    filterable = false
+    label = "RevRecTriggerCondition"
+  }
+  string RevenueRecognitionRuleName {
+    type = "string"
+    maxLength = 512
+    required = false
+    filterable = false
+    label = "RevenueRecognitionRuleName"
+  }
+}

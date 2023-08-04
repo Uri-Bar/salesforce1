@@ -1,0 +1,19 @@
+zuora_billing.Settings_Notification New_Invoice_Posted_Invoice_Posted_within_a_Bill_Run_of_Auto_Post_8ac6819b7883361b017893726f173fb1@ssusssssssbu {
+  profileId = zuora_billing.Settings_CommunicationProfile.instance.Default_Profile@s
+  eventName = "New Invoice Posted"
+  name = "Invoice Posted within a Bill Run of Auto-Post"
+  description = "Trigger the notification when invoices are posted within a bill run and the bill run has auto-post. This is to support existing email notification behavior from within a bill run."
+  active = true
+  hidden = false
+  param1 = "BILLRUN"
+  param4 = "Include invoice PDF"
+  emailOption = true
+  emailTemplateName = zuora_billing.PublicEmailTemplate.instance.Invoice_Posted_Default_Email_Template@s
+  calloutOption = false
+  contentType = "APPLICATION_JSON"
+  calloutRetriable = false
+  calloutAuth = false
+  calloutOauth2 = false
+  calloutPreemptiveAuth = false
+  useCustomRequestBody = false
+}

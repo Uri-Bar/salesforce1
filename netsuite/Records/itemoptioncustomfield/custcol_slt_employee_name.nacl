@@ -1,0 +1,25 @@
+netsuite.itemoptioncustomfield custcol_slt_employee_name {
+  scriptid = "custcol_slt_employee_name"
+  accesslevel = "2"
+  applyformatting = false
+  colallitems = false
+  colkititem = false
+  colopportunity = false
+  colpurchase = false
+  colsale = true
+  colstore = false
+  colstorehidden = false
+  coltransferorder = false
+  defaultchecked = false
+  displaytype = "NORMAL"
+  fieldtype = "SELECT"
+  includechilditems = false
+  isformula = false
+  ismandatory = false
+  label = "Employee Name"
+  onparentdelete = "SET_NULL"
+  searchlevel = "2"
+  selectrecordtype = "-4"
+  showhierarchy = false
+  storevalue = true
+}

@@ -1,0 +1,18 @@
+zuora_billing.Settings_Notification Manually_Email_Invoice_Manual_Email_For_Invoice_8ac69ff278d483ea0178d95495e16922@ssusssu {
+  profileId = zuora_billing.Settings_CommunicationProfile.instance.Neta_test@s
+  eventName = "Manually Email Invoice"
+  name = "Manual Email For Invoice"
+  description = "Send email notification manually from invoice detail page."
+  active = false
+  hidden = false
+  param4 = "Include invoice PDF"
+  emailOption = true
+  emailTemplateName = zuora_billing.PublicEmailTemplate.instance.Invoice_Posted_Default_Email_Template@s
+  calloutOption = false
+  contentType = "APPLICATION_JSON"
+  calloutRetriable = false
+  calloutAuth = false
+  calloutOauth2 = false
+  calloutPreemptiveAuth = false
+  useCustomRequestBody = false
+}

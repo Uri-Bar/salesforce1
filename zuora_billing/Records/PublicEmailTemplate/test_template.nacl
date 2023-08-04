@@ -1,0 +1,39 @@
+zuora_billing.PublicEmailTemplate test_template@s {
+  eventCategory = 2110
+  name = "test template"
+  description = ""
+  encodingType = "UTF8"
+  fromName = "Salto Labs Ltd"
+  fromEmailType = "TenantEmail"
+  fromEmailAddress = "neta.marcus+zuora_email_test@salto.io"
+  replyToEmailType = "TenantEmail"
+  replyToEmailAddress = "neta.marcus+zuora_email_test@salto.io"
+  ccEmailType = "SpecificEmails"
+  ccEmailAddress = ""
+  bccEmailAddress = ""
+  toEmailType = "BillToContact"
+  toEmailAddress = ""
+  emailSubject = "Your payment was declined"
+  emailBody = '''
+Dear <BillToContact.FirstName> <BillToContact.LastName>,<br />
+<br />
+We tried to make a payment for <Payment.Amount> <Account.Currency> on <Payment.Date>, but the payment was not successful (Error: <Payment.ErrorMessage>).<br />
+<br />
+Here are some details about your <PaymentMethod.PaymentMethodType> information on file:<br />
+<br />
+<PaymentMethod.CardHolderName><PaymentMethod.AchAccountName><PaymentMethod.PaypalBaid><br />
+<br />
+<PaymentMethod.CreditCardMaskNumber><PaymentMethod.AchAccountNumberMask><PaymentMethod.PaypalEmail><br />
+<br />
+<PaymentMethod.ExpirationDate><PaymentMethod.AchBankName><br />
+<br />
+<PaymentMethod.CreditCardType><PaymentMethod.AchAbaCode><br />
+<br />
+In order to ensure your service is not interrupted, please update your payment information or provide a new payment method.<br />
+<br />
+Thank you for your business!
+'''
+  active = true
+  isHtml = true
+  useAdditionalAddresses = false
+}

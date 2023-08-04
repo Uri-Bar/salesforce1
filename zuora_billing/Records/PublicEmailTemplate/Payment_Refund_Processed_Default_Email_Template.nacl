@@ -1,0 +1,21 @@
+zuora_billing.PublicEmailTemplate Payment_Refund_Processed_Default_Email_Template@s {
+  eventCategory = 2410
+  name = "Payment Refund Processed Default Email Template"
+  description = ""
+  encodingType = "UTF8"
+  fromName = "Admin"
+  fromEmailType = "TenantEmail"
+  fromEmailAddress = "neta.marcus@salto.io"
+  replyToEmailType = "TenantEmail"
+  replyToEmailAddress = "neta.marcus@salto.io"
+  ccEmailType = "SpecificEmails"
+  ccEmailAddress = ""
+  bccEmailAddress = ""
+  toEmailType = "BillToContact"
+  toEmailAddress = ""
+  emailSubject = "Your payment refund was successfully processed"
+  emailBody = "Dear <BillToContact.FirstName> <BillToContact.LastName>,\r<br />\r<br />A refund of <Refund.Amount> <Account.Currency> was processed on <Refund.Date>.\r<br />\r<br />The original payment, made on <Payment.Date>, was in the amount of <Payment.Amount> <Account.Currency>.\r<br />\r<br />The total amount refunded from the original payment is <Payment.RefundAmount> <Account.Currency>.\r<br />\r<br />Thank you for your business!"
+  active = true
+  isHtml = true
+  useAdditionalAddresses = false
+}

@@ -1,0 +1,8 @@
+zendesk.ticket_field__custom_field_options multiselect_Customer_Tier_us__Free@uumuu {
+  name = "Free"
+  raw_name = "Free"
+  value = "free"
+  _parent = [
+    zendesk.ticket_field.instance.multiselect_Customer_Tier@us,
+  ]
+}

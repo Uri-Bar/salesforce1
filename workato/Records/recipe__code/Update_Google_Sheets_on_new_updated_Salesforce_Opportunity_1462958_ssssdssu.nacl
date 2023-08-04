@@ -1,0 +1,110 @@
+workato.recipe__code Update_Google_Sheets_on_new_updated_Salesforce_Opportunity_1462958_ssssdssu@uuuuuuuum {
+  number = 0
+  provider = "salesforce"
+  name = "updated_custom_object"
+  as = "c859b8f9"
+  title = "New/updated Opportunity"
+  description = "New/updated <span class=\"provider\">Opportunity</span> in <span class=\"provider\">Salesforce</span>"
+  keyword = "trigger"
+  dynamicPickListSelection = {
+    sobject_name = "Opportunity"
+    table_list = [
+      {
+        label = "Account"
+        value = "Account"
+      },
+      {
+        label = "Campaign"
+        value = "Campaign"
+      },
+      {
+        label = "Price  book"
+        value = "Pricebook2"
+      },
+    ]
+    field_list = [
+      {
+        label = "Name"
+        value = "Name"
+      },
+      {
+        label = "Description"
+        value = "Description"
+      },
+      {
+        label = "Health"
+        value = "Health__c"
+      },
+    ]
+  }
+  input = {
+    sobject_name = "Opportunity"
+    since_offset = "-3600"
+    field_list = '''
+Name
+Description
+Health__c
+'''
+  }
+  visible_config_fields = [
+    "sobject_name",
+    "since_offset",
+    "field_list",
+  ]
+  block = [
+    {
+      number = 1
+      keyword = "if"
+      input = {
+        type = "compound"
+        operand = "and"
+        conditions = [
+          {
+            operand = "equals_to"
+            lhs = "#{_('data.salesforce.c859b8f9.Health__c')}"
+            rhs = "good"
+            uuid = "8ebb19a0-de8d-431d-a922-385c98444032"
+          },
+        ]
+        uuid = "3f57bfc8-e5dd-4611-bb91-f7453d8098ea"
+      }
+      block = [
+        {
+          number = 2
+          provider = "google_sheets"
+          name = "add_spreadsheet_row_v4"
+          as = "b4928f7a"
+          keyword = "action"
+          input = {
+            team_drives = "my_drive"
+            spreadsheet_id = "1wsH2uxMHAEqmRkmOyWOq6WGTdApBthdVLrGQZsHVOqE"
+            sheet_name = "Sheet1"
+            column_headers = '''
+col1
+col2
+col3
+col4
+col5
+col6
+
+'''
+            columns = {
+              col_col1 = "#{_('data.salesforce.c859b8f9.sobject.AccountId')}"
+              col_col2 = "#{_('data.salesforce.c859b8f9.sobject.Account.Name')}"
+              col_col3 = "#{_('data.salesforce.c859b8f9.sobject.Amount')}"
+              col_col4 = "#{_('data.salesforce.c859b8f9.sobject.CloseDate')}"
+              col_col5 = "#{_('data.salesforce.c859b8f9.sobject.CreatedDate')}"
+              col_col6 = "#{_('data.salesforce.c859b8f9.sobject.CreatedById')}"
+            }
+          }
+          uuid = "dad2eb4a-777a-4e9c-991b-79f0e12e705a"
+        },
+      ]
+      uuid = "7cc9b1fe-fb84-4c1a-8dcf-aaa1e06749b5"
+    },
+  ]
+  uuid = "f2055564-c9a4-4634-8623-bed1a3edbf59"
+  _parent = [
+    workato.recipe.instance.Update_Google_Sheets_on_new_updated_Salesforce_Opportunity_1462958@ssssdssu,
+  ]
+}

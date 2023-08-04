@@ -1,0 +1,35 @@
+zuora_billing.Workflow Apply_Late_Fee_to_all_Subscriptions_for_Accounts___10_Days_Overdue_Limit_1_3_ssssssssysssssu__Apply_Late_Fee_to_all_Subscriptions_for_Accounts___10_Days_Overdue_Limit_1@uuuuuuuuuuuuuuumuussssssssysssss {
+  id = 3
+  name = "Apply Late Fee to all Subscriptions for Accounts > 10 Days Overdue Limit 1"
+  description = ""
+  type = "Workflow::Setup"
+  interval = "0 0 0 /1 * *"
+  timezone = "Eastern Time (US & Canada)"
+  status = "Active"
+  version = "0.0.1"
+  additionalProperties = {
+    parameters = {
+      skipping_check = "redis"
+      file_encryption = "false"
+      callout_response = "workflow instance"
+      secure_error_msgs = "false"
+      disable_pending_status = true
+    }
+    ondemand_trigger = true
+    callout_trigger = true
+    scheduled_trigger = false
+    css = {
+      top = "40px"
+      left = "35px"
+    }
+    call_type = "ASYNC"
+    priority = "Medium"
+    delete_ttl = 30
+    
+    
+    event_trigger = false
+  }
+  _parent = [
+    zuora_billing.WorkflowExport.instance.Apply_Late_Fee_to_all_Subscriptions_for_Accounts___10_Days_Overdue_Limit_1_3@ssssssssysssssu,
+  ]
+}

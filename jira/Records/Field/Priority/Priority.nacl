@@ -1,0 +1,8 @@
+jira.Field Priority {
+  name = "Priority"
+  schema = {
+    type = "priority"
+    system = "priority"
+  }
+  description = ""
+}

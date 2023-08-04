@@ -1,0 +1,5 @@
+workato.connection check_connection@s {
+  application = "salesforce"
+  name = "check connection"
+  folder_id = workato.folder.instance.first_folder_dodel_playground_Root
+}

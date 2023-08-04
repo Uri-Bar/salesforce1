@@ -1,0 +1,22 @@
+type zuora_billing.revenueeventdebitmemoitem {
+  annotations {
+    string metadataType {
+    }
+    string label {
+    }
+    string description {
+    }
+    hidden_string id {
+    }
+    string objectType {
+    }
+  }
+  metadataType = "StandardObject"
+  objectType = "revenueeventdebitmemoitem"
+  _generated_dependencies = [
+    {
+      reference = zuora_billing.user
+    },
+  ]
+  label = "RevenueEventDebitMemoItem"
+}

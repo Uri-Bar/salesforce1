@@ -1,0 +1,15 @@
+netsuite.account Transfer_Orders@s {
+  acctType = "_nonPosting"
+  acctName = "Transfer Orders"
+  includeChildren = true
+  generalRate = "_average"
+  cashFlowRate = "_average"
+  isInactive = false
+  inventory = false
+  subsidiaryList = [
+    netsuite.subsidiary.instance.Parent_Company@s,
+  ]
+  revalue = false
+  identifier = "Transfer Orders"
+  custom_custrecord_acct_special = false
+}

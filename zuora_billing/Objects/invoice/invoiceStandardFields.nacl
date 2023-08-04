@@ -1,0 +1,357 @@
+type zuora_billing.invoice {
+  string Id {
+    type = "string"
+    format = "uuid"
+    required = false
+    filterable = false
+    label = "Id"
+  }
+  string CreatedById {
+    type = "string"
+    format = "uuid"
+    required = false
+    filterable = false
+    referenceTo = [
+      zuora_billing.user.field.Id,
+    ]
+    cardinality = "manyToOne"
+    recordConstraints = {
+      create = {
+        enforceValidMapping = true
+      }
+    }
+    label = "CreatedById"
+  }
+  string CreatedDate {
+    type = "string"
+    format = "date-time"
+    required = false
+    filterable = false
+    label = "CreatedDate"
+  }
+  string UpdatedById {
+    type = "string"
+    format = "uuid"
+    required = false
+    filterable = false
+    referenceTo = [
+      zuora_billing.user.field.Id,
+    ]
+    cardinality = "manyToOne"
+    recordConstraints = {
+      create = {
+        enforceValidMapping = true
+      }
+    }
+    label = "UpdatedById"
+  }
+  string UpdatedDate {
+    type = "string"
+    format = "date-time"
+    required = false
+    filterable = false
+    label = "UpdatedDate"
+  }
+  boolean deleted {
+    type = "boolean"
+    required = false
+    filterable = false
+    label = "deleted"
+  }
+  string AccountId {
+    type = "string"
+    format = "uuid"
+    required = false
+    filterable = false
+    referenceTo = [
+      zuora_billing.account.field.Id,
+    ]
+    cardinality = "manyToOne"
+    recordConstraints = {
+      create = {
+        enforceValidMapping = true
+      }
+    }
+    label = "AccountId"
+  }
+  number AdjustmentAmount {
+    type = "number"
+    required = false
+    filterable = false
+    label = "AdjustmentAmount"
+  }
+  number Amount {
+    type = "number"
+    required = false
+    filterable = false
+    label = "Amount"
+  }
+  number AmountWithoutTax {
+    type = "number"
+    required = false
+    filterable = false
+    label = "AmountWithoutTax"
+  }
+  boolean AutoPay {
+    type = "boolean"
+    required = false
+    filterable = false
+    label = "AutoPay"
+  }
+  number Balance {
+    type = "number"
+    required = false
+    filterable = false
+    label = "Balance"
+  }
+  string BillToContactSnapshotId {
+    type = "string"
+    format = "uuid"
+    required = false
+    filterable = false
+    referenceTo = [
+      zuora_billing.contactsnapshot.field.Id,
+    ]
+    cardinality = "manyToOne"
+    recordConstraints = {
+      create = {
+        enforceValidMapping = true
+      }
+    }
+    label = "BillToContactSnapshotId"
+  }
+  string Comments {
+    type = "string"
+    maxLength = 512
+    required = false
+    filterable = false
+    label = "Comments"
+  }
+  number CreditBalanceAdjustmentAmount {
+    type = "number"
+    required = false
+    filterable = false
+    label = "CreditBalanceAdjustmentAmount"
+  }
+  string DueDate {
+    type = "string"
+    format = "date"
+    required = false
+    filterable = false
+    label = "DueDate"
+  }
+  boolean IncludesOneTime {
+    type = "boolean"
+    required = false
+    filterable = false
+    label = "IncludesOneTime"
+  }
+  boolean IncludesRecurring {
+    type = "boolean"
+    required = false
+    filterable = false
+    label = "IncludesRecurring"
+  }
+  boolean IncludesUsage {
+    type = "boolean"
+    required = false
+    filterable = false
+    label = "IncludesUsage"
+  }
+  string InvoiceDate {
+    type = "string"
+    format = "date"
+    required = false
+    filterable = false
+    label = "InvoiceDate"
+  }
+  string InvoiceNumber {
+    type = "string"
+    maxLength = 512
+    required = false
+    filterable = false
+    label = "InvoiceNumber"
+  }
+  string LastEmailSentDate {
+    type = "string"
+    format = "date-time"
+    required = false
+    filterable = false
+    label = "LastEmailSentDate"
+  }
+  number PaymentAmount {
+    type = "number"
+    required = false
+    filterable = false
+    label = "PaymentAmount"
+  }
+  string PostedBy {
+    type = "string"
+    format = "uuid"
+    required = false
+    filterable = false
+    label = "PostedBy"
+  }
+  string PostedDate {
+    type = "string"
+    format = "date-time"
+    required = false
+    filterable = false
+    label = "PostedDate"
+  }
+  number RefundAmount {
+    type = "number"
+    required = false
+    filterable = false
+    label = "RefundAmount"
+  }
+  boolean Reversed {
+    type = "boolean"
+    required = false
+    filterable = false
+    label = "Reversed"
+  }
+  string SoldToContactSnapshotId {
+    type = "string"
+    format = "uuid"
+    required = false
+    filterable = false
+    referenceTo = [
+      zuora_billing.contactsnapshot.field.Id,
+    ]
+    cardinality = "manyToOne"
+    recordConstraints = {
+      create = {
+        enforceValidMapping = true
+      }
+    }
+    label = "SoldToContactSnapshotId"
+  }
+  string Source {
+    type = "string"
+    maxLength = 512
+    required = false
+    filterable = false
+    label = "Source"
+  }
+  string SourceId {
+    type = "string"
+    maxLength = 512
+    required = false
+    filterable = false
+    label = "SourceId"
+  }
+  string Status {
+    type = "string"
+    maxLength = 512
+    required = false
+    filterable = false
+    label = "Status"
+  }
+  string TargetDate {
+    type = "string"
+    format = "date"
+    required = false
+    filterable = false
+    label = "TargetDate"
+  }
+  number TaxAmount {
+    type = "number"
+    required = false
+    filterable = false
+    label = "TaxAmount"
+  }
+  number TaxExemptAmount {
+    type = "number"
+    required = false
+    filterable = false
+    label = "TaxExemptAmount"
+  }
+  string TaxStatus {
+    type = "string"
+    maxLength = 512
+    required = false
+    filterable = false
+    label = "TaxStatus"
+  }
+  string TaxMessage {
+    type = "string"
+    maxLength = 512
+    required = false
+    filterable = false
+    label = "TaxMessage"
+  }
+  string TransferredToAccounting {
+    type = "string"
+    maxLength = 512
+    required = false
+    filterable = false
+    label = "TransferredToAccounting"
+  }
+  string BillToContactId {
+    type = "string"
+    format = "uuid"
+    required = false
+    filterable = false
+    referenceTo = [
+      zuora_billing.contact.field.Id,
+    ]
+    cardinality = "manyToOne"
+    recordConstraints = {
+      create = {
+        enforceValidMapping = true
+      }
+    }
+    label = "BillToContactId"
+  }
+  string PaymentTerm {
+    type = "string"
+    maxLength = 512
+    required = false
+    filterable = false
+    label = "PaymentTerm"
+  }
+  string SoldToContactId {
+    type = "string"
+    format = "uuid"
+    required = false
+    filterable = false
+    referenceTo = [
+      zuora_billing.contact.field.Id,
+    ]
+    cardinality = "manyToOne"
+    recordConstraints = {
+      create = {
+        enforceValidMapping = true
+      }
+    }
+    label = "SoldToContactId"
+  }
+  string TemplateId {
+    type = "string"
+    format = "uuid"
+    required = false
+    filterable = false
+    label = "TemplateId"
+  }
+  string SourceType {
+    type = "string"
+    maxLength = 512
+    required = false
+    filterable = false
+    label = "SourceType"
+  }
+  number CreditMemoAmount {
+    type = "number"
+    required = false
+    filterable = false
+    label = "CreditMemoAmount"
+  }
+  string SequenceSetId {
+    type = "string"
+    format = "uuid"
+    required = false
+    filterable = false
+    label = "SequenceSetId"
+  }
+}

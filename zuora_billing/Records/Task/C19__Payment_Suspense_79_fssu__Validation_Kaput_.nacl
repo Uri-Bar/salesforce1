@@ -1,0 +1,30 @@
+zuora_billing.Task C19__Payment_Suspense_79_fssu__Validation_Kaput_@uuuumuusl {
+  name = "Validation Kaput!"
+  parameters = {
+    code = "400"
+    template = '''
+{
+  "success": false,
+  "errorMessages":
+    {{ Data.Liquid.myErrorMessages | split: '|' | to_json }}
+}
+'''
+    processor = "Liquid"
+    strict_variables = "true"
+  }
+  action_type = "Logic::ResponseFormatter"
+  call_type = "SOAP"
+  task_id = 142
+  concurrent_limit = 9999999
+  additionalProperties = {
+    css = {
+      top = "-150px"
+      left = "240px"
+    }
+    priority = "Medium"
+    
+  }
+  _parent = [
+    zuora_billing.WorkflowExport.instance.C19__Payment_Suspense_79@fssu,
+  ]
+}

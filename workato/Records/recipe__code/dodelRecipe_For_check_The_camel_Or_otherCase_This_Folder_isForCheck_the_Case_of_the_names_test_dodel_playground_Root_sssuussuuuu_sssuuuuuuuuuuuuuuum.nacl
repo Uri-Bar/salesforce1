@@ -1,0 +1,8 @@
+workato.recipe__code dodelRecipe_For_check_The_camel_Or_otherCase_This_Folder_isForCheck_the_Case_of_the_names_test_dodel_playground_Root_sssuussuuuu_sssuuuuuuuuuuuuuuum@uuuuuuuuuuuuuuuuuuum {
+  number = 0
+  keyword = "trigger"
+  uuid = "e241daef-b272-4ae1-9e61-418ebd0069cc"
+  _parent = [
+    workato.recipe.instance.dodelRecipe_For_check_The_camel_Or_otherCase_This_Folder_isForCheck_the_Case_of_the_names_test_dodel_playground_Root_sssuussuuuu@sssuuuuuuuuuuuuuuum,
+  ]
+}

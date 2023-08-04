@@ -1,0 +1,382 @@
+type zuora_billing.payment {
+  string Id {
+    type = "string"
+    format = "uuid"
+    required = false
+    filterable = false
+    label = "Id"
+  }
+  string CreatedById {
+    type = "string"
+    format = "uuid"
+    required = false
+    filterable = false
+    referenceTo = [
+      zuora_billing.user.field.Id,
+    ]
+    cardinality = "manyToOne"
+    recordConstraints = {
+      create = {
+        enforceValidMapping = true
+      }
+    }
+    label = "CreatedById"
+  }
+  string CreatedDate {
+    type = "string"
+    format = "date-time"
+    required = false
+    filterable = false
+    label = "CreatedDate"
+  }
+  string UpdatedById {
+    type = "string"
+    format = "uuid"
+    required = false
+    filterable = false
+    referenceTo = [
+      zuora_billing.user.field.Id,
+    ]
+    cardinality = "manyToOne"
+    recordConstraints = {
+      create = {
+        enforceValidMapping = true
+      }
+    }
+    label = "UpdatedById"
+  }
+  string UpdatedDate {
+    type = "string"
+    format = "date-time"
+    required = false
+    filterable = false
+    label = "UpdatedDate"
+  }
+  boolean deleted {
+    type = "boolean"
+    required = false
+    filterable = false
+    label = "deleted"
+  }
+  string AccountId {
+    type = "string"
+    format = "uuid"
+    required = false
+    filterable = false
+    referenceTo = [
+      zuora_billing.account.field.Id,
+    ]
+    cardinality = "manyToOne"
+    recordConstraints = {
+      create = {
+        enforceValidMapping = true
+      }
+    }
+    label = "AccountId"
+  }
+  string AccountingCode {
+    type = "string"
+    maxLength = 512
+    required = false
+    filterable = false
+    label = "AccountingCode"
+  }
+  number Amount {
+    type = "number"
+    required = false
+    filterable = false
+    label = "Amount"
+  }
+  number AppliedAmount {
+    type = "number"
+    required = false
+    filterable = false
+    label = "AppliedAmount"
+  }
+  number AppliedCreditBalanceAmount {
+    type = "number"
+    required = false
+    filterable = false
+    label = "AppliedCreditBalanceAmount"
+  }
+  string AuthTransactionId {
+    type = "string"
+    maxLength = 512
+    required = false
+    filterable = false
+    label = "AuthTransactionId"
+  }
+  string BankIdentificationNumber {
+    type = "string"
+    maxLength = 512
+    required = false
+    filterable = false
+    label = "BankIdentificationNumber"
+  }
+  string CancelledOn {
+    type = "string"
+    format = "date-time"
+    required = false
+    filterable = false
+    label = "CancelledOn"
+  }
+  string Comment {
+    type = "string"
+    maxLength = 512
+    required = false
+    filterable = false
+    label = "Comment"
+  }
+  string Currency {
+    type = "string"
+    maxLength = 512
+    required = false
+    filterable = false
+    label = "Currency"
+  }
+  string EffectiveDate {
+    type = "string"
+    format = "date"
+    required = false
+    filterable = false
+    label = "EffectiveDate"
+  }
+  string GatewayOrderId {
+    type = "string"
+    maxLength = 512
+    required = false
+    filterable = false
+    label = "GatewayOrderId"
+  }
+  string GatewayReconciliationReason {
+    type = "string"
+    maxLength = 512
+    required = false
+    filterable = false
+    label = "GatewayReconciliationReason"
+  }
+  string GatewayReconciliationStatus {
+    type = "string"
+    maxLength = 512
+    required = false
+    filterable = false
+    label = "GatewayReconciliationStatus"
+  }
+  string GatewayResponse {
+    type = "string"
+    maxLength = 512
+    required = false
+    filterable = false
+    label = "GatewayResponse"
+  }
+  string GatewayResponseCode {
+    type = "string"
+    maxLength = 512
+    required = false
+    filterable = false
+    label = "GatewayResponseCode"
+  }
+  string GatewayState {
+    type = "string"
+    maxLength = 512
+    required = false
+    filterable = false
+    label = "GatewayState"
+  }
+  string GatewayTransactionState {
+    type = "string"
+    maxLength = 512
+    required = false
+    filterable = false
+    label = "GatewayTransactionState"
+  }
+  boolean IsStandalone {
+    type = "boolean"
+    required = false
+    filterable = false
+    label = "IsStandalone"
+  }
+  string MarkedForSubmissionOn {
+    type = "string"
+    format = "date-time"
+    required = false
+    filterable = false
+    label = "MarkedForSubmissionOn"
+  }
+  string PaymentMethodId {
+    type = "string"
+    format = "uuid"
+    required = false
+    filterable = false
+    referenceTo = [
+      zuora_billing.paymentmethod.field.Id,
+    ]
+    cardinality = "manyToOne"
+    recordConstraints = {
+      create = {
+        enforceValidMapping = true
+      }
+    }
+    label = "PaymentMethodId"
+  }
+  string PaymentMethodSnapshotId {
+    type = "string"
+    format = "uuid"
+    required = false
+    filterable = false
+    referenceTo = [
+      zuora_billing.paymentmethodsnapshot.field.Id,
+    ]
+    cardinality = "manyToOne"
+    recordConstraints = {
+      create = {
+        enforceValidMapping = true
+      }
+    }
+    label = "PaymentMethodSnapshotId"
+  }
+  string PaymentNumber {
+    type = "string"
+    maxLength = 512
+    required = false
+    filterable = false
+    label = "PaymentNumber"
+  }
+  string PayoutId {
+    type = "string"
+    maxLength = 512
+    required = false
+    filterable = false
+    label = "PayoutId"
+  }
+  string ReferencedPaymentID {
+    type = "string"
+    maxLength = 512
+    required = false
+    filterable = false
+    label = "ReferencedPaymentID"
+  }
+  string ReferenceId {
+    type = "string"
+    maxLength = 512
+    required = false
+    filterable = false
+    label = "ReferenceId"
+  }
+  number RefundAmount {
+    type = "number"
+    required = false
+    filterable = false
+    label = "RefundAmount"
+  }
+  string SecondPaymentReferenceId {
+    type = "string"
+    maxLength = 512
+    required = false
+    filterable = false
+    label = "SecondPaymentReferenceId"
+  }
+  string SettledOn {
+    type = "string"
+    format = "date-time"
+    required = false
+    filterable = false
+    label = "SettledOn"
+  }
+  string SoftDescriptor {
+    type = "string"
+    maxLength = 512
+    required = false
+    filterable = false
+    label = "SoftDescriptor"
+  }
+  string SoftDescriptorPhone {
+    type = "string"
+    maxLength = 512
+    required = false
+    filterable = false
+    label = "SoftDescriptorPhone"
+  }
+  string Source {
+    type = "string"
+    maxLength = 512
+    required = false
+    filterable = false
+    label = "Source"
+  }
+  string SourceName {
+    type = "string"
+    maxLength = 512
+    required = false
+    filterable = false
+    label = "SourceName"
+  }
+  string Status {
+    type = "string"
+    maxLength = 512
+    required = false
+    filterable = false
+    label = "Status"
+  }
+  string SubmittedOn {
+    type = "string"
+    format = "date-time"
+    required = false
+    filterable = false
+    label = "SubmittedOn"
+  }
+  string TransferredToAccounting {
+    type = "string"
+    maxLength = 512
+    required = false
+    filterable = false
+    label = "TransferredToAccounting"
+  }
+  string TransactionSource {
+    type = "string"
+    maxLength = 512
+    required = false
+    filterable = false
+    label = "TransactionSource"
+  }
+  string Type {
+    type = "string"
+    maxLength = 512
+    required = false
+    filterable = false
+    label = "Type"
+  }
+  number UnappliedAmount {
+    type = "number"
+    required = false
+    filterable = false
+    label = "UnappliedAmount"
+  }
+  string LastEmailDateTime {
+    type = "string"
+    format = "date-time"
+    required = false
+    filterable = false
+    label = "LastEmailDateTime"
+  }
+  string Gateway {
+    type = "string"
+    maxLength = 512
+    required = false
+    filterable = false
+    label = "Gateway"
+  }
+  string PaymentOptionId {
+    type = "string"
+    format = "uuid"
+    required = false
+    filterable = false
+    label = "PaymentOptionId"
+  }
+  boolean Prepayment {
+    type = "boolean"
+    required = false
+    filterable = false
+    label = "Prepayment"
+  }
+}

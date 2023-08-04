@@ -1,0 +1,711 @@
+workato.recipe__code New_updated_record_in_Salesforce_will_add_a_new_row_in_a_sheet_in_Google_Sheets_1462955_dssssssssssssssu@uuuuuuuuuuuuuuuum {
+  number = 0
+  provider = "salesforce"
+  name = "updated_custom_object"
+  as = "c859b8f9"
+  title = "New/updated Opportunity"
+  description = "New/updated <span class=\"provider\">Opportunity</span> in <span class=\"provider\">Salesforce</span>"
+  keyword = "trigger"
+  dynamicPickListSelection = {
+    sobject_name = "Opportunity"
+    table_list = [
+      {
+        label = "Account"
+        value = "Account"
+      },
+      {
+        label = "Campaign"
+        value = "Campaign"
+      },
+      {
+        label = "Price  book"
+        value = "Pricebook2"
+      },
+    ]
+    field_list = [
+      {
+        label = "Name"
+        value = "Name"
+      },
+      {
+        label = "Opportunity ID"
+        value = "Id"
+      },
+      {
+        label = "Owner ID"
+        value = "OwnerId"
+      },
+      {
+        label = "Deleted"
+        value = "IsDeleted"
+      },
+      {
+        label = "Created date"
+        value = "CreatedDate"
+      },
+      {
+        label = "Created by ID"
+        value = "CreatedById"
+      },
+      {
+        label = "Last modified date"
+        value = "LastModifiedDate"
+      },
+      {
+        label = "Last modified by ID"
+        value = "LastModifiedById"
+      },
+      {
+        label = "System modstamp"
+        value = "SystemModstamp"
+      },
+      {
+        label = "Account ID"
+        value = "AccountId"
+      },
+      {
+        label = "Private"
+        value = "IsPrivate"
+      },
+      {
+        label = "Description"
+        value = "Description"
+      },
+      {
+        label = "Stage"
+        value = "StageName"
+      },
+      {
+        label = "Amount"
+        value = "Amount"
+      },
+      {
+        label = "Probability (%)"
+        value = "Probability"
+      },
+      {
+        label = "Expected amount"
+        value = "ExpectedRevenue"
+      },
+      {
+        label = "Quantity"
+        value = "TotalOpportunityQuantity"
+      },
+      {
+        label = "Close date"
+        value = "CloseDate"
+      },
+      {
+        label = "Opportunity type"
+        value = "Type"
+      },
+      {
+        label = "Next step"
+        value = "NextStep"
+      },
+      {
+        label = "Lead source"
+        value = "LeadSource"
+      },
+      {
+        label = "Closed"
+        value = "IsClosed"
+      },
+      {
+        label = "Won"
+        value = "IsWon"
+      },
+      {
+        label = "Forecast category"
+        value = "ForecastCategory"
+      },
+      {
+        label = "Forecast category"
+        value = "ForecastCategoryName"
+      },
+      {
+        label = "Campaign ID"
+        value = "CampaignId"
+      },
+      {
+        label = "Has line item"
+        value = "HasOpportunityLineItem"
+      },
+      {
+        label = "Price book ID"
+        value = "Pricebook2Id"
+      },
+      {
+        label = "Last activity"
+        value = "LastActivityDate"
+      },
+      {
+        label = "Fiscal quarter"
+        value = "FiscalQuarter"
+      },
+      {
+        label = "Fiscal year"
+        value = "FiscalYear"
+      },
+      {
+        label = "Fiscal period"
+        value = "Fiscal"
+      },
+      {
+        label = "Last viewed date"
+        value = "LastViewedDate"
+      },
+      {
+        label = "Last referenced date"
+        value = "LastReferencedDate"
+      },
+      {
+        label = "Has open activity"
+        value = "HasOpenActivity"
+      },
+      {
+        label = "Has overdue task"
+        value = "HasOverdueTask"
+      },
+      {
+        label = "Delivery/ installation status"
+        value = "DeliveryInstallationStatus__c"
+      },
+      {
+        label = "Tracking number"
+        value = "TrackingNumber__c"
+      },
+      {
+        label = "Order number"
+        value = "OrderNumber__c"
+      },
+      {
+        label = "Current generator(s)"
+        value = "CurrentGenerators__c"
+      },
+      {
+        label = "Main competitor(s)"
+        value = "MainCompetitors__c"
+      },
+      {
+        label = "Account.Account  ID"
+        value = "Account$Account ID.Id"
+      },
+      {
+        label = "Account.Deleted"
+        value = "Account$Account ID.IsDeleted"
+      },
+      {
+        label = "Account.Master  record  ID"
+        value = "Account$Account ID.MasterRecordId"
+      },
+      {
+        label = "Account.Account  name"
+        value = "Account$Account ID.Name"
+      },
+      {
+        label = "Account.Account  type"
+        value = "Account$Account ID.Type"
+      },
+      {
+        label = "Account.Parent  account  ID"
+        value = "Account$Account ID.ParentId"
+      },
+      {
+        label = "Account.Billing  street"
+        value = "Account$Account ID.BillingStreet"
+      },
+      {
+        label = "Account.Billing  city"
+        value = "Account$Account ID.BillingCity"
+      },
+      {
+        label = "Account.Billing  state/ province"
+        value = "Account$Account ID.BillingState"
+      },
+      {
+        label = "Account.Billing  zip/ postal  code"
+        value = "Account$Account ID.BillingPostalCode"
+      },
+      {
+        label = "Account.Billing  country"
+        value = "Account$Account ID.BillingCountry"
+      },
+      {
+        label = "Account.Billing  latitude"
+        value = "Account$Account ID.BillingLatitude"
+      },
+      {
+        label = "Account.Billing  longitude"
+        value = "Account$Account ID.BillingLongitude"
+      },
+      {
+        label = "Account.Billing  geocode  accuracy"
+        value = "Account$Account ID.BillingGeocodeAccuracy"
+      },
+      {
+        label = "Account.Billing  address"
+        value = "Account$Account ID.BillingAddress"
+      },
+      {
+        label = "Account.Shipping  street"
+        value = "Account$Account ID.ShippingStreet"
+      },
+      {
+        label = "Account.Shipping  city"
+        value = "Account$Account ID.ShippingCity"
+      },
+      {
+        label = "Account.Shipping  state/ province"
+        value = "Account$Account ID.ShippingState"
+      },
+      {
+        label = "Account.Shipping  zip/ postal  code"
+        value = "Account$Account ID.ShippingPostalCode"
+      },
+      {
+        label = "Account.Shipping  country"
+        value = "Account$Account ID.ShippingCountry"
+      },
+      {
+        label = "Account.Shipping  latitude"
+        value = "Account$Account ID.ShippingLatitude"
+      },
+      {
+        label = "Account.Shipping  longitude"
+        value = "Account$Account ID.ShippingLongitude"
+      },
+      {
+        label = "Account.Shipping  geocode  accuracy"
+        value = "Account$Account ID.ShippingGeocodeAccuracy"
+      },
+      {
+        label = "Account.Shipping  address"
+        value = "Account$Account ID.ShippingAddress"
+      },
+      {
+        label = "Account.Account  phone"
+        value = "Account$Account ID.Phone"
+      },
+      {
+        label = "Account.Account  fax"
+        value = "Account$Account ID.Fax"
+      },
+      {
+        label = "Account.Account  number"
+        value = "Account$Account ID.AccountNumber"
+      },
+      {
+        label = "Account.Website"
+        value = "Account$Account ID.Website"
+      },
+      {
+        label = "Account.Photo  URL"
+        value = "Account$Account ID.PhotoUrl"
+      },
+      {
+        label = "Account.SI c  code"
+        value = "Account$Account ID.Sic"
+      },
+      {
+        label = "Account.Industry"
+        value = "Account$Account ID.Industry"
+      },
+      {
+        label = "Account.Annual  revenue"
+        value = "Account$Account ID.AnnualRevenue"
+      },
+      {
+        label = "Account.Employees"
+        value = "Account$Account ID.NumberOfEmployees"
+      },
+      {
+        label = "Account.Ownership"
+        value = "Account$Account ID.Ownership"
+      },
+      {
+        label = "Account.Ticker  symbol"
+        value = "Account$Account ID.TickerSymbol"
+      },
+      {
+        label = "Account.Account  description"
+        value = "Account$Account ID.Description"
+      },
+      {
+        label = "Account.Account  rating"
+        value = "Account$Account ID.Rating"
+      },
+      {
+        label = "Account.Account  site"
+        value = "Account$Account ID.Site"
+      },
+      {
+        label = "Account.Owner  ID"
+        value = "Account$Account ID.OwnerId"
+      },
+      {
+        label = "Account.Created  date"
+        value = "Account$Account ID.CreatedDate"
+      },
+      {
+        label = "Account.Created  by  ID"
+        value = "Account$Account ID.CreatedById"
+      },
+      {
+        label = "Account.Last  modified  date"
+        value = "Account$Account ID.LastModifiedDate"
+      },
+      {
+        label = "Account.Last  modified  by  ID"
+        value = "Account$Account ID.LastModifiedById"
+      },
+      {
+        label = "Account.System  modstamp"
+        value = "Account$Account ID.SystemModstamp"
+      },
+      {
+        label = "Account.Last  activity"
+        value = "Account$Account ID.LastActivityDate"
+      },
+      {
+        label = "Account.Last  viewed  date"
+        value = "Account$Account ID.LastViewedDate"
+      },
+      {
+        label = "Account.Last  referenced  date"
+        value = "Account$Account ID.LastReferencedDate"
+      },
+      {
+        label = "Account.Data.com  key"
+        value = "Account$Account ID.Jigsaw"
+      },
+      {
+        label = "Account.Jigsaw  company  ID"
+        value = "Account$Account ID.JigsawCompanyId"
+      },
+      {
+        label = "Account.Clean  status"
+        value = "Account$Account ID.CleanStatus"
+      },
+      {
+        label = "Account.Account  source"
+        value = "Account$Account ID.AccountSource"
+      },
+      {
+        label = "Account.D- u- n- s  number"
+        value = "Account$Account ID.DunsNumber"
+      },
+      {
+        label = "Account.Tradestyle"
+        value = "Account$Account ID.Tradestyle"
+      },
+      {
+        label = "Account.NAIC s  code"
+        value = "Account$Account ID.NaicsCode"
+      },
+      {
+        label = "Account.NAIC s  description"
+        value = "Account$Account ID.NaicsDesc"
+      },
+      {
+        label = "Account.Year  started"
+        value = "Account$Account ID.YearStarted"
+      },
+      {
+        label = "Account.SI c  description"
+        value = "Account$Account ID.SicDesc"
+      },
+      {
+        label = "Account.D& b  company  ID"
+        value = "Account$Account ID.DandbCompanyId"
+      },
+      {
+        label = "Account.Operating  hour  ID"
+        value = "Account$Account ID.OperatingHoursId"
+      },
+      {
+        label = "Account.Customer  priority"
+        value = "Account$Account ID.CustomerPriority__c"
+      },
+      {
+        label = "Account.SLA"
+        value = "Account$Account ID.SLA__c"
+      },
+      {
+        label = "Account.Active"
+        value = "Account$Account ID.Active__c"
+      },
+      {
+        label = "Account.Number of  locations"
+        value = "Account$Account ID.NumberofLocations__c"
+      },
+      {
+        label = "Account.Upsell  opportunity"
+        value = "Account$Account ID.UpsellOpportunity__c"
+      },
+      {
+        label = "Account.SL a  serial  number"
+        value = "Account$Account ID.SLASerialNumber__c"
+      },
+      {
+        label = "Account.SL a  expiration  date"
+        value = "Account$Account ID.SLAExpirationDate__c"
+      },
+      {
+        label = "Campaign.Campaign  ID"
+        value = "Campaign$Campaign ID.Id"
+      },
+      {
+        label = "Campaign.Deleted"
+        value = "Campaign$Campaign ID.IsDeleted"
+      },
+      {
+        label = "Campaign.Name"
+        value = "Campaign$Campaign ID.Name"
+      },
+      {
+        label = "Campaign.Parent  campaign  ID"
+        value = "Campaign$Campaign ID.ParentId"
+      },
+      {
+        label = "Campaign.Type"
+        value = "Campaign$Campaign ID.Type"
+      },
+      {
+        label = "Campaign.Status"
+        value = "Campaign$Campaign ID.Status"
+      },
+      {
+        label = "Campaign.Start  date"
+        value = "Campaign$Campaign ID.StartDate"
+      },
+      {
+        label = "Campaign.End  date"
+        value = "Campaign$Campaign ID.EndDate"
+      },
+      {
+        label = "Campaign.Expected  revenue in  campaign"
+        value = "Campaign$Campaign ID.ExpectedRevenue"
+      },
+      {
+        label = "Campaign.Budgeted  cost in  campaign"
+        value = "Campaign$Campaign ID.BudgetedCost"
+      },
+      {
+        label = "Campaign.Actual  cost in  campaign"
+        value = "Campaign$Campaign ID.ActualCost"
+      },
+      {
+        label = "Campaign.Expected  response (%)"
+        value = "Campaign$Campaign ID.ExpectedResponse"
+      },
+      {
+        label = "Campaign.Num  sent in  campaign"
+        value = "Campaign$Campaign ID.NumberSent"
+      },
+      {
+        label = "Campaign.Active"
+        value = "Campaign$Campaign ID.IsActive"
+      },
+      {
+        label = "Campaign.Description"
+        value = "Campaign$Campaign ID.Description"
+      },
+      {
+        label = "Campaign.Leads in  campaign"
+        value = "Campaign$Campaign ID.NumberOfLeads"
+      },
+      {
+        label = "Campaign.Converted  leads in  campaign"
+        value = "Campaign$Campaign ID.NumberOfConvertedLeads"
+      },
+      {
+        label = "Campaign.Contacts in  campaign"
+        value = "Campaign$Campaign ID.NumberOfContacts"
+      },
+      {
+        label = "Campaign.Responses in  campaign"
+        value = "Campaign$Campaign ID.NumberOfResponses"
+      },
+      {
+        label = "Campaign.Opportunities in  campaign"
+        value = "Campaign$Campaign ID.NumberOfOpportunities"
+      },
+      {
+        label = "Campaign.Won  opportunities in  campaign"
+        value = "Campaign$Campaign ID.NumberOfWonOpportunities"
+      },
+      {
+        label = "Campaign.Value  opportunities in  campaign"
+        value = "Campaign$Campaign ID.AmountAllOpportunities"
+      },
+      {
+        label = "Campaign.Value  won  opportunities in  campaign"
+        value = "Campaign$Campaign ID.AmountWonOpportunities"
+      },
+      {
+        label = "Campaign.Owner  ID"
+        value = "Campaign$Campaign ID.OwnerId"
+      },
+      {
+        label = "Campaign.Created  date"
+        value = "Campaign$Campaign ID.CreatedDate"
+      },
+      {
+        label = "Campaign.Created  by  ID"
+        value = "Campaign$Campaign ID.CreatedById"
+      },
+      {
+        label = "Campaign.Last  modified  date"
+        value = "Campaign$Campaign ID.LastModifiedDate"
+      },
+      {
+        label = "Campaign.Last  modified  by  ID"
+        value = "Campaign$Campaign ID.LastModifiedById"
+      },
+      {
+        label = "Campaign.System  modstamp"
+        value = "Campaign$Campaign ID.SystemModstamp"
+      },
+      {
+        label = "Campaign.Last  activity"
+        value = "Campaign$Campaign ID.LastActivityDate"
+      },
+      {
+        label = "Campaign.Last  viewed  date"
+        value = "Campaign$Campaign ID.LastViewedDate"
+      },
+      {
+        label = "Campaign.Last  referenced  date"
+        value = "Campaign$Campaign ID.LastReferencedDate"
+      },
+      {
+        label = "Campaign.Record  type  ID"
+        value = "Campaign$Campaign ID.CampaignMemberRecordTypeId"
+      },
+      {
+        label = "Price  book.Price  book  ID"
+        value = "Pricebook2$Price Book ID.Id"
+      },
+      {
+        label = "Price  book.Deleted"
+        value = "Pricebook2$Price Book ID.IsDeleted"
+      },
+      {
+        label = "Price  book.Price  book  name"
+        value = "Pricebook2$Price Book ID.Name"
+      },
+      {
+        label = "Price  book.Created  date"
+        value = "Pricebook2$Price Book ID.CreatedDate"
+      },
+      {
+        label = "Price  book.Created  by  ID"
+        value = "Pricebook2$Price Book ID.CreatedById"
+      },
+      {
+        label = "Price  book.Last  modified  date"
+        value = "Pricebook2$Price Book ID.LastModifiedDate"
+      },
+      {
+        label = "Price  book.Last  modified  by  ID"
+        value = "Pricebook2$Price Book ID.LastModifiedById"
+      },
+      {
+        label = "Price  book.System  modstamp"
+        value = "Pricebook2$Price Book ID.SystemModstamp"
+      },
+      {
+        label = "Price  book.Last  viewed  date"
+        value = "Pricebook2$Price Book ID.LastViewedDate"
+      },
+      {
+        label = "Price  book.Last  referenced  date"
+        value = "Pricebook2$Price Book ID.LastReferencedDate"
+      },
+      {
+        label = "Price  book.Active"
+        value = "Pricebook2$Price Book ID.IsActive"
+      },
+      {
+        label = "Price  book.Archived"
+        value = "Pricebook2$Price Book ID.IsArchived"
+      },
+      {
+        label = "Price  book.Description"
+        value = "Pricebook2$Price Book ID.Description"
+      },
+      {
+        label = "Price  book.Is  standard  price  book"
+        value = "Pricebook2$Price Book ID.IsStandard"
+      },
+    ]
+  }
+  input = {
+    sobject_name = "Opportunity"
+    since_offset = "-3600"
+  }
+  visible_config_fields = [
+    "sobject_name",
+    "since_offset",
+  ]
+  hidden_config_fields = [
+    "field_list",
+  ]
+  block = [
+    {
+      number = 1
+      keyword = "if"
+      input = {
+        type = "compound"
+        operand = "and"
+        conditions = [
+          {
+            operand = "greater_than"
+            lhs = "#{_('data.salesforce.c859b8f9.sobject.Amount')}"
+            rhs = "500"
+            uuid = "8ebb19a0-de8d-431d-a922-385c98444032"
+          },
+        ]
+        uuid = "3f57bfc8-e5dd-4611-bb91-f7453d8098ea"
+      }
+      block = [
+        {
+          number = 2
+          provider = "google_sheets"
+          name = "add_spreadsheet_row_v4"
+          as = "b4928f7a"
+          keyword = "action"
+          input = {
+            team_drives = "my_drive"
+            spreadsheet_id = "1wsH2uxMHAEqmRkmOyWOq6WGTdApBthdVLrGQZsHVOqE"
+            sheet_name = "Sheet1"
+            column_headers = '''
+col1
+col2
+col3
+col4
+col5
+col6
+
+'''
+            columns = {
+              col_col1 = "#{_('data.salesforce.c859b8f9.sobject.AccountId')}"
+              col_col2 = "#{_('data.salesforce.c859b8f9.sobject.Account.Name')}"
+              col_col3 = "#{_('data.salesforce.c859b8f9.sobject.Amount')}"
+              col_col4 = "#{_('data.salesforce.c859b8f9.sobject.CloseDate')}"
+              col_col5 = "#{_('data.salesforce.c859b8f9.sobject.CreatedDate')}"
+              col_col6 = "#{_('data.salesforce.c859b8f9.sobject.CreatedById')}"
+            }
+          }
+          uuid = "dad2eb4a-777a-4e9c-991b-79f0e12e705a"
+        },
+      ]
+      uuid = "7cc9b1fe-fb84-4c1a-8dcf-aaa1e06749b5"
+    },
+  ]
+  uuid = "f2055564-c9a4-4634-8623-bed1a3edbf59"
+  _parent = [
+    workato.recipe.instance.New_updated_record_in_Salesforce_will_add_a_new_row_in_a_sheet_in_Google_Sheets_1462955@dssssssssssssssu,
+  ]
+}

@@ -1,0 +1,17 @@
+netsuite.file SuiteScripts_gwr_gwr_sa3_js@dduv {
+  bundleable = false
+  isinactive = false
+  availablewithoutlogin = false
+  generateurltimestamp = false
+  hideinbundle = false
+  path = "/SuiteScripts/gwr/gwr_sa3.js"
+  content = file("netsuite/FileCabinet/SuiteScripts/gwr/gwr_sa3.js")
+  _parent = [
+    netsuite.folder.instance.SuiteScripts_gwr@d,
+  ]
+  _generated_dependencies = [
+    {
+      reference = netsuite.transactionbodycustomfield.instance.custbody_aw_second_lvl_approval.scriptid
+    },
+  ]
+}

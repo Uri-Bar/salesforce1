@@ -1,0 +1,35 @@
+zuora_billing.Settings_Role ZPlatform_API_Role_Hadas@uss {
+  name = "API Role Hadas"
+  category = "ZPlatform"
+  attributes = [
+    {
+      name = "WorkflowGlobalConstantsAccess"
+      scope = "ZPlatform"
+      activationLevel = "User"
+    },
+    {
+      name = "WorkflowManageAccess"
+      scope = "ZPlatform"
+      activationLevel = "User"
+    },
+    {
+      name = "WorkflowManageGlobalSettingsAccess"
+      scope = "ZPlatform"
+      activationLevel = "User"
+    },
+    {
+      name = "WorkflowRunAccess"
+      scope = "ZPlatform"
+      activationLevel = "User"
+    },
+    {
+      name = "apiWrite"
+      scope = "ZPlatform"
+      activationLevel = "User"
+    },
+  ]
+  
+  description = ""
+  entityId = "8ac6819b-7883-361b-0178-93726ba53eff"
+  custom = true
+}

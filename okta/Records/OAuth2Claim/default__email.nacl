@@ -1,0 +1,16 @@
+okta.OAuth2Claim default__email {
+  name = "email"
+  status = "ACTIVE"
+  claimType = "IDENTITY"
+  valueType = "SYSTEM"
+  conditions = {
+    scopes = [
+      "email",
+    ]
+  }
+  system = true
+  alwaysIncludeInToken = true
+  _parent = [
+    okta.AuthorizationServer.instance.default,
+  ]
+}

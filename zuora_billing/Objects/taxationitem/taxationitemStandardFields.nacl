@@ -1,0 +1,282 @@
+type zuora_billing.taxationitem {
+  string Id {
+    type = "string"
+    format = "uuid"
+    required = false
+    filterable = false
+    label = "Id"
+  }
+  string CreatedById {
+    type = "string"
+    format = "uuid"
+    required = false
+    filterable = false
+    referenceTo = [
+      zuora_billing.user.field.Id,
+    ]
+    cardinality = "manyToOne"
+    recordConstraints = {
+      create = {
+        enforceValidMapping = true
+      }
+    }
+    label = "CreatedById"
+  }
+  string CreatedDate {
+    type = "string"
+    format = "date-time"
+    required = false
+    filterable = false
+    label = "CreatedDate"
+  }
+  string UpdatedById {
+    type = "string"
+    format = "uuid"
+    required = false
+    filterable = false
+    referenceTo = [
+      zuora_billing.user.field.Id,
+    ]
+    cardinality = "manyToOne"
+    recordConstraints = {
+      create = {
+        enforceValidMapping = true
+      }
+    }
+    label = "UpdatedById"
+  }
+  string UpdatedDate {
+    type = "string"
+    format = "date-time"
+    required = false
+    filterable = false
+    label = "UpdatedDate"
+  }
+  boolean deleted {
+    type = "boolean"
+    required = false
+    filterable = false
+    label = "deleted"
+  }
+  number CreditAmount {
+    type = "number"
+    required = false
+    filterable = false
+    label = "CreditAmount"
+  }
+  string AccountingCode {
+    type = "string"
+    maxLength = 512
+    required = false
+    filterable = false
+    label = "AccountingCode"
+  }
+  number ExemptAmount {
+    type = "number"
+    required = false
+    filterable = false
+    label = "ExemptAmount"
+  }
+  string InvoiceItemId {
+    type = "string"
+    format = "uuid"
+    required = false
+    filterable = false
+    referenceTo = [
+      zuora_billing.invoiceitem.field.Id,
+    ]
+    cardinality = "manyToOne"
+    recordConstraints = {
+      create = {
+        enforceValidMapping = true
+      }
+    }
+    label = "InvoiceItemId"
+  }
+  string Jurisdiction {
+    type = "string"
+    maxLength = 512
+    required = false
+    filterable = false
+    label = "Jurisdiction"
+  }
+  string LocationCode {
+    type = "string"
+    maxLength = 512
+    required = false
+    filterable = false
+    label = "LocationCode"
+  }
+  string Name {
+    type = "string"
+    maxLength = 512
+    required = false
+    filterable = false
+    label = "Name"
+  }
+  number PaymentAmount {
+    type = "number"
+    required = false
+    filterable = false
+    label = "PaymentAmount"
+  }
+  number TaxAmount {
+    type = "number"
+    required = false
+    filterable = false
+    label = "TaxAmount"
+  }
+  string TaxCodeDescription {
+    type = "string"
+    maxLength = 512
+    required = false
+    filterable = false
+    label = "TaxCodeDescription"
+  }
+  string TaxCode {
+    type = "string"
+    maxLength = 512
+    required = false
+    filterable = false
+    label = "TaxCode"
+  }
+  string TaxMode {
+    type = "string"
+    maxLength = 512
+    required = false
+    filterable = false
+    label = "TaxMode"
+  }
+  string TaxDate {
+    type = "string"
+    format = "date"
+    required = false
+    filterable = false
+    label = "TaxDate"
+  }
+  number TaxRate {
+    type = "number"
+    required = false
+    filterable = false
+    label = "TaxRate"
+  }
+  string TaxRateDescription {
+    type = "string"
+    maxLength = 512
+    required = false
+    filterable = false
+    label = "TaxRateDescription"
+  }
+  string TaxRateType {
+    type = "string"
+    maxLength = 512
+    required = false
+    filterable = false
+    label = "TaxRateType"
+  }
+  number Balance {
+    type = "number"
+    required = false
+    filterable = false
+    label = "Balance"
+  }
+  string JournalEntryId {
+    type = "string"
+    format = "uuid"
+    required = false
+    filterable = false
+    referenceTo = [
+      zuora_billing.journalentry.field.Id,
+    ]
+    cardinality = "manyToOne"
+    recordConstraints = {
+      create = {
+        enforceValidMapping = true
+      }
+    }
+    label = "JournalEntryId"
+  }
+  string SalesTaxPayableAccountingCodeId {
+    type = "string"
+    format = "uuid"
+    required = false
+    filterable = false
+    referenceTo = [
+      zuora_billing.accountingcode.field.Id,
+    ]
+    cardinality = "manyToOne"
+    recordConstraints = {
+      create = {
+        enforceValidMapping = true
+      }
+    }
+    label = "SalesTaxPayableAccountingCodeId"
+  }
+  string AccountReceivableAccountingCodeId {
+    type = "string"
+    format = "uuid"
+    required = false
+    filterable = false
+    referenceTo = [
+      zuora_billing.accountingcode.field.Id,
+    ]
+    cardinality = "manyToOne"
+    recordConstraints = {
+      create = {
+        enforceValidMapping = true
+      }
+    }
+    label = "AccountReceivableAccountingCodeId"
+  }
+  string TaxableItemSnapshotId {
+    type = "string"
+    format = "uuid"
+    required = false
+    filterable = false
+    referenceTo = [
+      "TaxableItemSnapshot.Id",
+    ]
+    cardinality = "manyToOne"
+    recordConstraints = {
+      create = {
+        enforceValidMapping = true
+      }
+    }
+    label = "TaxableItemSnapshotId"
+  }
+  string CustomerCode {
+    type = "string"
+    maxLength = 512
+    required = false
+    filterable = false
+    label = "CustomerCode"
+  }
+  string ExemptCertificate {
+    type = "string"
+    maxLength = 512
+    required = false
+    filterable = false
+    label = "ExemptCertificate"
+  }
+  string SellerRegistration {
+    type = "string"
+    maxLength = 512
+    required = false
+    filterable = false
+    label = "SellerRegistration"
+  }
+  string TaxDescription {
+    type = "string"
+    maxLength = 512
+    required = false
+    filterable = false
+    label = "TaxDescription"
+  }
+  string TaxRuleId {
+    type = "string"
+    maxLength = 512
+    required = false
+    filterable = false
+    label = "TaxRuleId"
+  }
+}

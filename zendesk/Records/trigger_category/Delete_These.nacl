@@ -1,0 +1,3 @@
+zendesk.trigger_category Delete_These@s {
+  name = "Delete These"
+}

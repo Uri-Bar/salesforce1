@@ -1,0 +1,10 @@
+okta.Group Okta_Administrators@s {
+  objectClass = [
+    "okta:user_group",
+  ]
+  type = "BUILT_IN"
+  profile = {
+    name = "Okta Administrators"
+    description = "Okta manages this group, which contains all administrators in your organization."
+  }
+}

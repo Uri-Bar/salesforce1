@@ -1,0 +1,10 @@
+jira.Field Epic_Color__c@suu {
+  name = "Epic Color"
+  description = "Epic Color field for Jira Software use only."
+  isLocked = true
+  searcherKey = "com.pyxis.greenhopper.jira:gh-epic-color-searcher"
+  type = "com.pyxis.greenhopper.jira:gh-epic-color"
+  contexts = [
+    jira.CustomFieldContext.instance.Epic_Color__c_suu_Default_Configuration_Scheme_for_Epic_Color@uuumusssss,
+  ]
+}

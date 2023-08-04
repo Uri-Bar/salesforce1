@@ -1,0 +1,33 @@
+netsuite.nonInventorySaleItem Services {
+  includeChildren = true
+  incomeAccount = netsuite.account.instance.Sales
+  taxSchedule = {
+    name = "Pepper"
+    id = "[ACCOUNT_SPECIFIC_VALUE]"
+  }
+  isFulfillable = false
+  useMarginalRates = false
+  overallQuantityPricingType = "_byLineQuantity"
+  excludeFromSitemap = false
+  sitemapPriority = "_auto"
+  itemId = "Services"
+  isOnline = false
+  isInactive = false
+  subsidiaryList = [
+    netsuite.subsidiary.instance.Parent_Company@s,
+  ]
+  translationsList = {
+    translation = {
+      _german = {
+        locale = "_german"
+        language = "German"
+      }
+      _frenchFrance = {
+        locale = "_frenchFrance"
+        language = "French (France)"
+      }
+    }
+  }
+  identifier = "Services"
+  custom_custitemhq_clone_itemfield01 = "ERROR: Field 'averagecost' Not Found"
+}

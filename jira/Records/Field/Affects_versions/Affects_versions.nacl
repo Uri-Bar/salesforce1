@@ -1,0 +1,9 @@
+jira.Field Affects_versions@s {
+  name = "Affects versions"
+  schema = {
+    type = "array"
+    items = "version"
+    system = "versions"
+  }
+  description = ""
+}

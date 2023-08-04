@@ -1,0 +1,12 @@
+zendesk.section DevOps_General_Salto {
+  category_id = zendesk.category.instance.General_Salto
+  sorting = "manual"
+  locale = zendesk.guide_language_settings.instance.Salto_en_us@ub
+  source_locale = zendesk.guide_language_settings.instance.Salto_en_us@ub
+  outdated = false
+  theme_template = "section_page"
+  translations = [
+    zendesk.section_translation.instance.DevOps_General_Salto__Salto_en_us_ub@uuuuuum,
+  ]
+  brand = zendesk.brand.instance.Salto
+}

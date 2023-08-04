@@ -1,0 +1,23 @@
+zuora_billing.Task Chargebacks____Write_Off_Invoice___Cancel_Subscription_4_sbysssszessu__Iterate_Subscriptions@uuuuuuuuuuumuus {
+  name = "Iterate Subscriptions"
+  parameters = {
+    iteration_type = "Unique-Field"
+    iteration_field = "Id"
+  }
+  action_type = "Iterate"
+  object = "Subscription__13.csv.zip"
+  call_type = "SOAP"
+  task_id = 18
+  concurrent_limit = 9999999
+  additionalProperties = {
+    css = {
+      top = "170px"
+      left = "640px"
+    }
+    priority = "Medium"
+    
+  }
+  _parent = [
+    zuora_billing.WorkflowExport.instance.Chargebacks____Write_Off_Invoice___Cancel_Subscription_4@sbysssszessu,
+  ]
+}

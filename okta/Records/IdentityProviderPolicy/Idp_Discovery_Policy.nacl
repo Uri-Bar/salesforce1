@@ -1,0 +1,9 @@
+okta.IdentityProviderPolicy Idp_Discovery_Policy@s {
+  status = "ACTIVE"
+  name = "Idp Discovery Policy"
+  description = "The default IdP Discovery Policy"
+  priority = 1
+  system = true
+  type = "IDP_DISCOVERY"
+  
+}

@@ -1,0 +1,6 @@
+workato.api_collection neta_test2@b {
+  name = "neta-test2"
+  version = "0.1.0"
+  url = "https://apim.workato.com/workatos287/neta-test2-v0-1"
+  api_spec_url = "https://app.workato.com/doc/service/neta-test2-v0-1/swagger?api_group_id=67034&token=d62e7d31432e18e3707f86f99a7df3b3"
+}

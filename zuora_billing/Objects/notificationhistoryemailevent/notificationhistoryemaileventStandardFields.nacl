@@ -1,0 +1,92 @@
+type zuora_billing.notificationhistoryemailevent {
+  string Id {
+    type = "string"
+    format = "uuid"
+    required = false
+    filterable = false
+    label = "Id"
+  }
+  string CreatedDate {
+    type = "string"
+    format = "date-time"
+    required = false
+    filterable = false
+    label = "CreatedDate"
+  }
+  string UpdatedDate {
+    type = "string"
+    format = "date-time"
+    required = false
+    filterable = false
+    label = "UpdatedDate"
+  }
+  string AccountId {
+    type = "string"
+    format = "uuid"
+    required = false
+    filterable = false
+    label = "AccountId"
+  }
+  string NotificationId {
+    type = "string"
+    format = "uuid"
+    required = false
+    filterable = false
+    label = "NotificationId"
+  }
+  string EmailHistoryId {
+    type = "string"
+    format = "uuid"
+    required = false
+    filterable = false
+    label = "EmailHistoryId"
+  }
+  string EventTimestamp {
+    type = "string"
+    format = "date-time"
+    required = false
+    filterable = false
+    label = "EventTimestamp"
+  }
+  string EventType {
+    type = "string"
+    maxLength = 512
+    required = false
+    filterable = false
+    label = "EventType"
+  }
+  string EventSubtype {
+    type = "string"
+    maxLength = 512
+    required = false
+    filterable = false
+    label = "EventSubtype"
+  }
+  string EventDetails {
+    type = "string"
+    maxLength = 512
+    required = false
+    filterable = false
+    label = "EventDetails"
+  }
+  number EventCount {
+    type = "integer"
+    required = false
+    filterable = false
+    label = "EventCount"
+  }
+  string CreatedBy {
+    type = "string"
+    format = "uuid"
+    required = false
+    filterable = false
+    label = "CreatedBy"
+  }
+  string UpdatedBy {
+    type = "string"
+    format = "uuid"
+    required = false
+    filterable = false
+    label = "UpdatedBy"
+  }
+}

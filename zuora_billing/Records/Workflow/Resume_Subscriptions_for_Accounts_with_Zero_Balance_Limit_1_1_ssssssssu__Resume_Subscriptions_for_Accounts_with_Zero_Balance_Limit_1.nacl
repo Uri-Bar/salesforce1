@@ -1,0 +1,33 @@
+zuora_billing.Workflow Resume_Subscriptions_for_Accounts_with_Zero_Balance_Limit_1_1_ssssssssu__Resume_Subscriptions_for_Accounts_with_Zero_Balance_Limit_1@uuuuuuuuumuussssssss {
+  id = 1
+  name = "Resume Subscriptions for Accounts with Zero Balance Limit 1"
+  description = ""
+  type = "Workflow::Setup"
+  status = "Active"
+  version = "0.0.1"
+  additionalProperties = {
+    parameters = {
+      skipping_check = "redis"
+      file_encryption = "false"
+      callout_response = "workflow instance"
+      secure_error_msgs = "false"
+      disable_pending_status = true
+    }
+    ondemand_trigger = true
+    callout_trigger = true
+    scheduled_trigger = false
+    css = {
+      top = "40px"
+      left = "35px"
+    }
+    call_type = "ASYNC"
+    priority = "Medium"
+    delete_ttl = 30
+    
+    
+    event_trigger = false
+  }
+  _parent = [
+    zuora_billing.WorkflowExport.instance.Resume_Subscriptions_for_Accounts_with_Zero_Balance_Limit_1_1@ssssssssu,
+  ]
+}

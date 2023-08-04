@@ -1,0 +1,18 @@
+zuora_billing.Settings_Notification Amendment_Processed_Renewal_8ac69ff278d483ea0178d95495e16922@suu {
+  profileId = zuora_billing.Settings_CommunicationProfile.instance.Neta_test@s
+  eventName = "Amendment Processed"
+  name = "Renewal"
+  description = " A renewal amendment has been submitted and processed."
+  active = false
+  hidden = false
+  param1 = "32"
+  emailOption = true
+  emailTemplateName = zuora_billing.PublicEmailTemplate.instance.Default_Email_Template_for_Amendment_Processed___Renewal@ssssssbs
+  calloutOption = false
+  contentType = "APPLICATION_JSON"
+  calloutRetriable = false
+  calloutAuth = false
+  calloutOauth2 = false
+  calloutPreemptiveAuth = false
+  useCustomRequestBody = false
+}

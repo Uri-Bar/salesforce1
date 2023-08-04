@@ -1,0 +1,12 @@
+zendesk.user_segment Salto_users@s {
+  user_type = "signed_in_users"
+  tags = [
+    zendesk.tag.instance.nacl,
+    zendesk.tag.instance.knuckle,
+  ]
+  or_tags = [
+    zendesk.tag.instance.salto,
+  ]
+  built_in = false
+  name = "Salto users"
+}

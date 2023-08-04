@@ -1,0 +1,41 @@
+salesforce.CaseSettings {
+  fullName = "Case"
+  caseFeedItemSettings = {
+    characterLimit = 400
+    displayFormat = "Default"
+    feedItemType = "EmailMessageEvent"
+  }
+  caseFeedReadUnreadLtng = false
+  caseMergeInLightning = "false"
+  closeCaseThroughStatusChange = false
+  defaultCaseFeedLayoutOn = false
+  defaultCaseOwner = "services-ldws@force.com"
+  defaultCaseOwnerType = "User"
+  defaultCaseUser = "services-ldws@force.com"
+  emailToCase = {
+    enableEmailToCase = false
+  }
+  enableCaseFeed = true
+  enableCollapseEmailThread = true
+  enableEarlyEscalationRuleTriggers = false
+  enableEscalateQfiToCaseInternal = false
+  enableMultiLangSolnSrchCSS = "false"
+  enableMultiLangSolnSrchPKB = "false"
+  enableMultiLangSolution = "false"
+  enableSolutionCategory = "false"
+  enableSolutionInlineCategory = "true"
+  enableSolutionShortSummary = "true"
+  enableSuggestedSolutions = true
+  escalateCaseBefore = false
+  notifyContactOnCaseComment = false
+  notifyDefaultCaseOwner = false
+  notifyOwnerOnCaseComment = false
+  notifyOwnerOnCaseOwnerChange = false
+  showEmailAttachmentsInCaseAttachmentsRL = true
+  useSystemEmailAddress = true
+  useSystemUserAsDefaultCaseUser = false
+  visibleInCssCheckbox = false
+  webToCase = {
+    enableWebToCase = false
+  }
+}

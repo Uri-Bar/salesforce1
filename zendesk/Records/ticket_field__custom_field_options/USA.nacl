@@ -1,0 +1,8 @@
+zendesk.ticket_field__custom_field_options tagger_Region__usa {
+  name = "USA"
+  raw_name = "USA"
+  value = "usa"
+  _parent = [
+    zendesk.ticket_field.instance.tagger_Region,
+  ]
+}

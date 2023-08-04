@@ -1,0 +1,100 @@
+type zuora_billing.attachment {
+  string Id {
+    type = "string"
+    format = "uuid"
+    required = false
+    filterable = false
+    label = "Id"
+  }
+  string CreatedById {
+    type = "string"
+    format = "uuid"
+    required = false
+    filterable = false
+    label = "CreatedById"
+  }
+  string CreatedDate {
+    type = "string"
+    format = "date-time"
+    required = false
+    filterable = false
+    label = "CreatedDate"
+  }
+  string UpdatedById {
+    type = "string"
+    format = "uuid"
+    required = false
+    filterable = false
+    referenceTo = [
+      zuora_billing.user.field.Id,
+    ]
+    cardinality = "manyToOne"
+    recordConstraints = {
+      create = {
+        enforceValidMapping = true
+      }
+    }
+    label = "UpdatedById"
+  }
+  string UpdatedDate {
+    type = "string"
+    format = "date-time"
+    required = false
+    filterable = false
+    label = "UpdatedDate"
+  }
+  boolean deleted {
+    type = "boolean"
+    required = false
+    filterable = false
+    label = "deleted"
+  }
+  string FileId {
+    type = "string"
+    maxLength = 512
+    required = false
+    filterable = false
+    label = "FileId"
+  }
+  string Description {
+    type = "string"
+    maxLength = 512
+    required = false
+    filterable = false
+    label = "Description"
+  }
+  string AssociatedObjectType {
+    type = "string"
+    maxLength = 512
+    required = false
+    filterable = false
+    label = "AssociatedObjectType"
+  }
+  string AssociatedObjectId {
+    type = "string"
+    maxLength = 512
+    required = false
+    filterable = false
+    label = "AssociatedObjectId"
+  }
+  string FileName {
+    type = "string"
+    maxLength = 512
+    required = false
+    filterable = false
+    label = "FileName"
+  }
+  number Size {
+    type = "integer"
+    required = false
+    filterable = false
+    label = "Size"
+  }
+  string FileContentType {
+    type = "string"
+    maxLength = 512
+    required = false
+    filterable = false
+    label = "FileContentType"
+  }
+}

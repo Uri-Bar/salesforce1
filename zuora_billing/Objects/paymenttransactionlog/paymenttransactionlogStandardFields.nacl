@@ -1,0 +1,139 @@
+type zuora_billing.paymenttransactionlog {
+  string Id {
+    type = "string"
+    format = "uuid"
+    required = false
+    filterable = false
+    label = "Id"
+  }
+  string CreatedDate {
+    type = "string"
+    format = "date-time"
+    required = false
+    filterable = false
+    label = "CreatedDate"
+  }
+  string AVSResponseCode {
+    type = "string"
+    maxLength = 512
+    required = false
+    filterable = false
+    label = "AVSResponseCode"
+  }
+  string BatchId {
+    type = "string"
+    maxLength = 512
+    required = false
+    filterable = false
+    label = "BatchId"
+  }
+  string CVVResponseCode {
+    type = "string"
+    maxLength = 512
+    required = false
+    filterable = false
+    label = "CVVResponseCode"
+  }
+  string GatewayReasonCode {
+    type = "string"
+    maxLength = 512
+    required = false
+    filterable = false
+    label = "GatewayReasonCode"
+  }
+  string GatewayReasonCodeDescription {
+    type = "string"
+    maxLength = 512
+    required = false
+    filterable = false
+    label = "GatewayReasonCodeDescription"
+  }
+  string GatewayState {
+    type = "string"
+    maxLength = 512
+    required = false
+    filterable = false
+    label = "GatewayState"
+  }
+  string GatewayTransactionType {
+    type = "string"
+    maxLength = 512
+    required = false
+    filterable = false
+    label = "GatewayTransactionType"
+  }
+  string RequestString {
+    type = "string"
+    maxLength = 512
+    required = false
+    filterable = false
+    label = "RequestString"
+  }
+  string ResponseString {
+    type = "string"
+    maxLength = 512
+    required = false
+    filterable = false
+    label = "ResponseString"
+  }
+  string TransactionDate {
+    type = "string"
+    format = "date-time"
+    required = false
+    filterable = false
+    label = "TransactionDate"
+  }
+  string TransactionId {
+    type = "string"
+    maxLength = 512
+    required = false
+    filterable = false
+    label = "TransactionId"
+  }
+  string AccountId {
+    type = "string"
+    format = "uuid"
+    required = false
+    filterable = false
+    referenceTo = [
+      zuora_billing.account.field.Id,
+    ]
+    cardinality = "manyToOne"
+    recordConstraints = {
+      create = {
+        enforceValidMapping = true
+      }
+    }
+    label = "AccountId"
+  }
+  string PaymentId {
+    type = "string"
+    format = "uuid"
+    required = false
+    filterable = false
+    referenceTo = [
+      zuora_billing.payment.field.Id,
+    ]
+    cardinality = "manyToOne"
+    recordConstraints = {
+      create = {
+        enforceValidMapping = true
+      }
+    }
+    label = "PaymentId"
+  }
+  string Gateway {
+    type = "string"
+    maxLength = 512
+    required = false
+    filterable = false
+    label = "Gateway"
+  }
+  string ServiceType {
+    type = "string"
+    maxLength = 512
+    required = false
+    filterable = false
+    label = "ServiceType"
+  }
+}

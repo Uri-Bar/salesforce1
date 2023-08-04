@@ -1,0 +1,11 @@
+salesforce.CompactLayout User_User_Layout {
+  fullName = "User.User_Layout"
+  fields = [
+    "Name",
+    "Title",
+  ]
+  label = "User Layout"
+  _parent = [
+    salesforce.User,
+  ]
+}

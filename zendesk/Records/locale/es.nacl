@@ -1,0 +1,8 @@
+zendesk.locale es {
+  locale = "es"
+  name = "Español"
+  native_name = "español"
+  presentation_name = "Spanish - español"
+  rtl = false
+  default = false
+}

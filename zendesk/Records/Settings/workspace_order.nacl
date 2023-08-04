@@ -1,0 +1,11 @@
+zendesk.workspace_order {
+  active = [
+    zendesk.workspace.instance.New_Workspace_123@s,
+    zendesk.workspace.instance.New_Workspace_124@s,
+    zendesk.workspace.instance.New_Workspace_125@s,
+    zendesk.workspace.instance.Messy_workspace@s,
+  ]
+  inactive = [
+    zendesk.workspace.instance.Inactive_New_Workspace@s,
+  ]
+}

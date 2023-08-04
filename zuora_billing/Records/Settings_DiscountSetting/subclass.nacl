@@ -1,0 +1,5 @@
+zuora_billing.Settings_DiscountSetting subclass {
+  priority = 1
+  name = "subclass"
+  active = true
+}

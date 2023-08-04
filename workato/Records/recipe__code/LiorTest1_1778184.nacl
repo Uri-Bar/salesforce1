@@ -1,0 +1,8 @@
+workato.recipe__code LiorTest1_1778184 {
+  number = 0
+  keyword = "trigger"
+  uuid = "f5a3935a-515a-46ac-ac65-803bbdfd1240"
+  _parent = [
+    workato.recipe.instance.LiorTest1_1778184,
+  ]
+}

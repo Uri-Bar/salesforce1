@@ -1,0 +1,34 @@
+zuora_billing.Task Invoice_30_Days_Past_Due__Account_Summary_2_sssszdssu__Iterate_Unique_Accounts@uuuuuuuumuuss {
+  name = "Iterate Unique Accounts"
+  parameters = {
+    chunk_size = "0"
+    iteration_type = "Unique-Field"
+    iteration_field = "Account.Id"
+  }
+  action_type = "Iterate"
+  object = "InvoiceItem__8.csv.zip"
+  call_type = "SOAP"
+  task_id = 8
+  concurrent_limit = 9999999
+  additionalProperties = {
+    css = {
+      top = "210px"
+      left = "720px"
+    }
+    priority = "Medium"
+    
+  }
+  _parent = [
+    zuora_billing.WorkflowExport.instance.Invoice_30_Days_Past_Due__Account_Summary_2@sssszdssu,
+  ]
+  _generated_dependencies = [
+    {
+      reference = zuora_billing.account.field.Id
+      occurrences = [
+        {
+          location = zuora_billing.Task.instance.Invoice_30_Days_Past_Due__Account_Summary_2_sssszdssu__Iterate_Unique_Accounts@uuuuuuuumuuss.parameters.iteration_field
+        },
+      ]
+    },
+  ]
+}

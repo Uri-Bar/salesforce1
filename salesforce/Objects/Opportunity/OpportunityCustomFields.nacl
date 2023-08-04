@@ -1,0 +1,113 @@
+type salesforce.Opportunity {
+  salesforce.Checkbox Budget_Confirmed__c {
+    apiName = "Opportunity.Budget_Confirmed__c"
+    label = "Budget Confirmed"
+    defaultValue = false
+    createable = true
+    updateable = true
+    queryable = true
+    externalId = false
+    
+    trackTrending = false
+    
+  }
+  salesforce.Checkbox Discovery_Completed__c {
+    apiName = "Opportunity.Discovery_Completed__c"
+    label = "Discovery Completed"
+    defaultValue = false
+    createable = true
+    updateable = true
+    queryable = true
+    externalId = false
+    
+    trackTrending = false
+    
+  }
+  salesforce.Checkbox ROI_Analysis_Completed__c {
+    apiName = "Opportunity.ROI_Analysis_Completed__c"
+    label = "ROI Analysis Completed"
+    defaultValue = false
+    createable = true
+    updateable = true
+    queryable = true
+    externalId = false
+    
+    trackTrending = false
+    
+  }
+  salesforce.Picklist Loss_Reason__c {
+    apiName = "Opportunity.Loss_Reason__c"
+    label = "Loss Reason"
+    valueSet = [
+      {
+        fullName = "Lost to Competitor"
+        default = false
+        label = "Lost to Competitor"
+      },
+      {
+        fullName = "No Budget / Lost Funding"
+        default = false
+        label = "No Budget / Lost Funding"
+      },
+      {
+        fullName = "No Decision / Non-Responsive"
+        default = false
+        label = "No Decision / Non-Responsive"
+      },
+      {
+        fullName = "Price"
+        default = false
+        label = "Price"
+      },
+      {
+        fullName = "Other"
+        default = false
+        label = "Other"
+      },
+    ]
+    restricted = false
+    createable = true
+    updateable = true
+    queryable = true
+    externalId = false
+    
+    trackTrending = false
+    sorted = false
+    
+    
+  }
+  salesforce.FormulaText Health__c {
+    apiName = "Opportunity.Health__c"
+    label = "Health"
+    formula = "IF( Probability>0.5, IF( Amount > 150000, \"Good\", \"Fair\"), \"Poor\")"
+    createable = false
+    updateable = false
+    unique = false
+    caseSensitive = false
+    
+    queryable = true
+    externalId = false
+    formulaTreatBlanksAs = "BlankAsZero"
+    trackTrending = false
+    _hidden_value = true
+    _generated_dependencies = [
+      {
+        reference = salesforce.Opportunity.field.Amount
+      },
+      {
+        reference = salesforce.Opportunity.field.Probability
+      },
+    ]
+  }
+  salesforce.Url Netsuite_URL__c {
+    apiName = "Opportunity.Netsuite_URL__c"
+    label = "Netsuite URL"
+    createable = true
+    updateable = true
+    queryable = true
+    externalId = false
+    
+    trackTrending = false
+    
+  }
+}

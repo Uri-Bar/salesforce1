@@ -1,0 +1,11 @@
+zendesk.category_translation General_SRD___Test_sbs_uuuum__SRD___Test_sbs_en_us_uuumub@uuuuumuuuuuuuum {
+  locale = zendesk.guide_language_settings.instance.SRD___Test_sbs_en_us@uuumub
+  title = "General"
+  outdated = false
+  draft = false
+  hidden = false
+  brand = zendesk.brand.instance.SRD___Test@sbs
+  _parent = [
+    zendesk.category.instance.General_SRD___Test_sbs@uuuum,
+  ]
+}

@@ -1,0 +1,105 @@
+zuora_billing.Settings_Role ZPayments_Zuora_Payments_Standard_User@usss {
+  name = "Zuora Payments Standard User"
+  category = "ZPayments"
+  attributes = [
+    {
+      name = "managePaymentRuns"
+      scope = "PaymentRuns"
+      activationLevel = "User"
+    },
+    {
+      name = "applyPayment"
+      scope = "Payments"
+      activationLevel = "User"
+    },
+    {
+      name = "deletePayment"
+      scope = "Payments"
+      activationLevel = "User"
+    },
+    {
+      name = "paymentEleCancel"
+      scope = "Payments"
+      activationLevel = "User"
+    },
+    {
+      name = "paymentEleCreate"
+      scope = "Payments"
+      activationLevel = "User"
+    },
+    {
+      name = "paymentExtCancel"
+      scope = "Payments"
+      activationLevel = "User"
+    },
+    {
+      name = "paymentExtCreate"
+      scope = "Payments"
+      activationLevel = "User"
+    },
+    {
+      name = "paymentGRReadUser"
+      scope = "Payments"
+      activationLevel = "User"
+    },
+    {
+      name = "paymentPMUReadUser"
+      scope = "Payments"
+      activationLevel = "User"
+    },
+    {
+      name = "transferPayment"
+      scope = "Payments"
+      activationLevel = "User"
+    },
+    {
+      name = "unapplyPayment"
+      scope = "Payments"
+      activationLevel = "User"
+    },
+    {
+      name = "ChangeReasonCodeForRefund"
+      scope = "Refunds"
+      activationLevel = "User"
+    },
+    {
+      name = "deleteRefund"
+      scope = "Refunds"
+      activationLevel = "User"
+    },
+    {
+      name = "refundEleCancel"
+      scope = "Refunds"
+      activationLevel = "User"
+    },
+    {
+      name = "refundEleIssue"
+      scope = "Refunds"
+      activationLevel = "User"
+    },
+    {
+      name = "refundExtCancel"
+      scope = "Refunds"
+      activationLevel = "User"
+    },
+    {
+      name = "refundExtIssue"
+      scope = "Refunds"
+      activationLevel = "User"
+    },
+    {
+      name = "paymentSettingsManagement"
+      scope = "ZPaymentAdmin"
+      activationLevel = "User"
+    },
+    {
+      name = "reapplyTransactions"
+      scope = "ZPaymentAdvanced"
+      activationLevel = "EntityAndUser"
+    },
+  ]
+  
+  description = "Standard User for the Zuora Payments Product"
+  entityId = "8ac6819b-7883-361b-0178-93726ba53eff"
+  custom = false
+}

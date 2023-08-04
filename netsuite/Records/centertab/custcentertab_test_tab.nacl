@@ -1,0 +1,10 @@
+netsuite.centertab custcentertab_test_tab {
+  scriptid = "custcentertab_test_tab"
+  allcustomers = false
+  allemployees = false
+  allpartners = false
+  allroles = true
+  allvendors = false
+  center = "BASIC"
+  label = "lalala"
+}

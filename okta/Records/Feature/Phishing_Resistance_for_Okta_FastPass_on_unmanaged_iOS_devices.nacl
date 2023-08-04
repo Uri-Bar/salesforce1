@@ -1,0 +1,9 @@
+okta.Feature Phishing_Resistance_for_Okta_FastPass_on_unmanaged_iOS_devices@s {
+  type = "self-service"
+  status = "DISABLED"
+  name = "Phishing Resistance for Okta FastPass on unmanaged iOS devices"
+  description = "This feature allows admins to enable phishing resistance for Fastpass authentications on unmanaged iOS devices in the authentication policy."
+  stage = {
+    value = "EA"
+  }
+}

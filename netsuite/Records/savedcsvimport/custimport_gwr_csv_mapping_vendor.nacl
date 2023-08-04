@@ -1,0 +1,92 @@
+netsuite.savedcsvimport custimport_gwr_csv_mapping_vendor {
+  scriptid = "custimport_gwr_csv_mapping_vendor"
+  charencoding = "UTF_8"
+  columndelimiter = "COMMA"
+  datahandling = "ADDUPDATE"
+  decimaldelimiter = "PERIOD"
+  entryform = "STANDARDVENDORFORM"
+  ignorereadonly = true
+  importname = "_gwr_csv_mapping_vendor"
+  logsystemnotescustfields = false
+  multiselectdelimiter = "|"
+  overwritemissingfields = false
+  overwritesublists = false
+  preventduplicates = false
+  recordtype = "VENDOR"
+  runserversuitescript = false
+  usemultithread = false
+  validatemandatorycustfields = true
+  audience = {
+    allemployees = false
+    allpartners = false
+    allroles = false
+    globaledit = false
+    ispublic = false
+  }
+  filemappings = {
+    filemapping = {
+      VENDOR = {
+        file = "VENDOR"
+      }
+    }
+  }
+  recordmappings = {
+    recordmapping = {
+      VENDOR = {
+        record = "VENDOR"
+        fieldmappings = {
+          fieldmapping = {
+            CATEGORY = {
+              field = "CATEGORY"
+              columnreference = {
+                column = "Category"
+                file = "VENDOR"
+                type = "NAME"
+              }
+            }
+            COMPANYNAME = {
+              field = "COMPANYNAME"
+              columnreference = {
+                column = "Name"
+                file = "VENDOR"
+                type = "NAME"
+              }
+            }
+            EMAIL = {
+              field = "EMAIL"
+              columnreference = {
+                column = "Email"
+                file = "VENDOR"
+                type = "NAME"
+              }
+            }
+            ISINACTIVE = {
+              field = "ISINACTIVE"
+              columnreference = {
+                column = "Inactive"
+                file = "VENDOR"
+                type = "NAME"
+              }
+            }
+            PHONE = {
+              field = "PHONE"
+              columnreference = {
+                column = "Phone"
+                file = "VENDOR"
+                type = "NAME"
+              }
+            }
+            SUBSIDIARY = {
+              field = "SUBSIDIARY"
+              columnreference = {
+                column = "Primary Subsidiary"
+                file = "VENDOR"
+                type = "NAME"
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

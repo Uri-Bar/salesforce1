@@ -1,0 +1,9 @@
+workato.api_access_profile Neta_test1@b {
+  name = "Neta-test1"
+  api_client_id = workato.api_client.instance.Neta_test_1@s
+  api_collection_ids = [
+    workato.api_collection.instance.test1,
+  ]
+  active = true
+  auth_type = "token"
+}

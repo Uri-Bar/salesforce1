@@ -1,0 +1,5 @@
+okta.Role Group_Membership_Administrator@s {
+  
+  label = "Group Membership Administrator"
+  type = "GROUP_MEMBERSHIP_ADMIN"
+}

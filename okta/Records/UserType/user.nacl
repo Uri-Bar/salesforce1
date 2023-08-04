@@ -1,0 +1,10 @@
+okta.UserType user {
+  
+  displayName = "User"
+  name = "user"
+  description = "Okta user profile template with default permission settings"
+  
+  
+  default = true
+  
+}

@@ -1,0 +1,17 @@
+zendesk.ticket_field text_New_unneeded_field@uss {
+  type = "text"
+  
+  raw_title = "New unneeded field"
+  
+  raw_description = ""
+  active = true
+  required = false
+  collapsed_for_agents = false
+  
+  raw_title_in_portal = "New unneeded field"
+  visible_in_portal = false
+  editable_in_portal = false
+  required_in_portal = false
+  removable = true
+  agent_description = "just for testing"
+}

@@ -1,0 +1,16 @@
+netsuite.account Taxes___Licenses_Other_Vehicle_Registration@sesbus {
+  acctType = "_expense"
+  acctName = "Vehicle Registration"
+  includeChildren = true
+  generalRate = "_average"
+  parent = netsuite.account.instance.Taxes___Licenses_Other@sesb
+  cashFlowRate = "_average"
+  isInactive = false
+  inventory = false
+  subsidiaryList = [
+    netsuite.subsidiary.instance.Parent_Company@s,
+  ]
+  revalue = false
+  identifier = "Taxes & Licenses-Other_Vehicle Registration"
+  custom_custrecord_acct_special = false
+}

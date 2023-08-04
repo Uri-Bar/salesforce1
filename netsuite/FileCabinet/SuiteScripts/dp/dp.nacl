@@ -1,0 +1,10 @@
+netsuite.folder SuiteScripts_dp@d {
+  description = "scripts for dp"
+  bundleable = false
+  isinactive = false
+  isprivate = false
+  path = "/SuiteScripts/dp"
+  _parent = [
+    netsuite.folder.instance.SuiteScripts,
+  ]
+}

@@ -1,0 +1,15 @@
+netsuite.account Amortization_Expense@s {
+  acctType = "_expense"
+  acctName = "Amortization Expense"
+  includeChildren = true
+  generalRate = "_average"
+  cashFlowRate = "_average"
+  isInactive = false
+  inventory = false
+  subsidiaryList = [
+    netsuite.subsidiary.instance.Parent_Company@s,
+  ]
+  revalue = false
+  identifier = "Amortization Expense"
+  custom_custrecord_acct_special = false
+}

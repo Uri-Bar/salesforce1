@@ -1,0 +1,5 @@
+workato.connection Dodel_Workbot_for_slack@s {
+  application = "slack_bot"
+  name = "Dodel Workbot for slack"
+  folder_id = workato.folder.instance.dodel_playground_Root
+}

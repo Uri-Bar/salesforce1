@@ -1,0 +1,66 @@
+salesforce.StandardValueSet OpportunityStage {
+  fullName = "OpportunityStage"
+  sorted = false
+  standardValue = [
+    {
+      fullName = "Qualification"
+      default = false
+      description = "You've contacted the prospect and they're interested."
+      label = "Qualification"
+      closed = false
+      forecastCategory = "Pipeline"
+      probability = 10
+      won = false
+    },
+    {
+      fullName = "Needs Analysis"
+      default = false
+      description = "You're defining the prospect's needs."
+      label = "Needs Analysis"
+      closed = false
+      forecastCategory = "Pipeline"
+      probability = 35
+      won = false
+    },
+    {
+      fullName = "Proposal"
+      default = false
+      description = "You're developing a sales proposal for the prospect."
+      label = "Proposal"
+      closed = false
+      forecastCategory = "BestCase"
+      probability = 75
+      won = false
+    },
+    {
+      fullName = "Closed Won"
+      default = false
+      description = "Sold!"
+      label = "Closed Won"
+      closed = true
+      forecastCategory = "Closed"
+      probability = 100
+      won = true
+    },
+    {
+      fullName = "Closed Lost"
+      default = false
+      description = "No sale."
+      label = "Closed Lost"
+      closed = true
+      forecastCategory = "Omitted"
+      probability = 0
+      won = false
+    },
+    {
+      fullName = "Negotiation"
+      default = false
+      description = "You're working with the prospect on the proposal you delivered."
+      label = "Negotiation"
+      closed = false
+      forecastCategory = "Forecast"
+      probability = 90
+      won = false
+    },
+  ]
+}

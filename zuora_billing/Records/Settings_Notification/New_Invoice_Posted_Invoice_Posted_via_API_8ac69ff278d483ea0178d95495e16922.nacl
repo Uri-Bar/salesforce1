@@ -1,0 +1,19 @@
+zuora_billing.Settings_Notification New_Invoice_Posted_Invoice_Posted_via_API_8ac69ff278d483ea0178d95495e16922@ssusssu {
+  profileId = zuora_billing.Settings_CommunicationProfile.instance.Neta_test@s
+  eventName = "New Invoice Posted"
+  name = "Invoice Posted via API"
+  description = "Generate an event when a draft invoice is posted via API."
+  active = false
+  hidden = false
+  param1 = "API"
+  param4 = "Include invoice PDF"
+  emailOption = true
+  emailTemplateName = zuora_billing.PublicEmailTemplate.instance.Invoice_Posted_Default_Email_Template@s
+  calloutOption = false
+  contentType = "APPLICATION_JSON"
+  calloutRetriable = false
+  calloutAuth = false
+  calloutOauth2 = false
+  calloutPreemptiveAuth = false
+  useCustomRequestBody = false
+}

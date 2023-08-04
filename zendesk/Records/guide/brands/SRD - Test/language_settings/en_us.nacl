@@ -1,0 +1,5 @@
+zendesk.guide_language_settings SRD___Test_sbs_en_us@uuumub {
+  locale = "en-us"
+  name = "SRD - Test"
+  brand = zendesk.brand.instance.SRD___Test@sbs
+}

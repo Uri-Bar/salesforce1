@@ -1,0 +1,12 @@
+netsuite.file SuiteBundles_Bundle_351444_Docusign_Custom_Button_Scripts_Samples_Custom_Button_Template_Files_Please_Pay_docx@dsddssddsssdsv {
+  bundleable = false
+  isinactive = false
+  availablewithoutlogin = false
+  generateurltimestamp = false
+  hideinbundle = false
+  path = "/SuiteBundles/Bundle 351444/Docusign/Custom Button Scripts/Samples/Custom Button Template Files/Please Pay.docx"
+  content = file("netsuite/FileCabinet/SuiteBundles/Bundle 351444/Docusign/Custom Button Scripts/Samples/Custom Button Template Files/Please Pay.docx")
+  _parent = [
+    netsuite.folder.instance.SuiteBundles_Bundle_351444_Docusign_Custom_Button_Scripts_Samples_Custom_Button_Template_Files@dsddssddsss,
+  ]
+}

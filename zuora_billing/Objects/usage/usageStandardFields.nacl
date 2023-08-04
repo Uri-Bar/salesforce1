@@ -1,0 +1,199 @@
+type zuora_billing.usage {
+  string Id {
+    type = "string"
+    format = "uuid"
+    required = false
+    filterable = false
+    label = "Id"
+  }
+  string CreatedById {
+    type = "string"
+    format = "uuid"
+    required = false
+    filterable = false
+    referenceTo = [
+      zuora_billing.user.field.Id,
+    ]
+    cardinality = "manyToOne"
+    recordConstraints = {
+      create = {
+        enforceValidMapping = true
+      }
+    }
+    label = "CreatedById"
+  }
+  string CreatedDate {
+    type = "string"
+    format = "date-time"
+    required = false
+    filterable = false
+    label = "CreatedDate"
+  }
+  string UpdatedById {
+    type = "string"
+    format = "uuid"
+    required = false
+    filterable = false
+    referenceTo = [
+      zuora_billing.user.field.Id,
+    ]
+    cardinality = "manyToOne"
+    recordConstraints = {
+      create = {
+        enforceValidMapping = true
+      }
+    }
+    label = "UpdatedById"
+  }
+  string UpdatedDate {
+    type = "string"
+    format = "date-time"
+    required = false
+    filterable = false
+    label = "UpdatedDate"
+  }
+  boolean deleted {
+    type = "boolean"
+    required = false
+    filterable = false
+    label = "deleted"
+  }
+  string AccountId {
+    type = "string"
+    format = "uuid"
+    required = false
+    filterable = false
+    referenceTo = [
+      zuora_billing.account.field.Id,
+    ]
+    cardinality = "manyToOne"
+    recordConstraints = {
+      create = {
+        enforceValidMapping = true
+      }
+    }
+    label = "AccountId"
+  }
+  string AccountNumber {
+    type = "string"
+    maxLength = 512
+    required = false
+    filterable = false
+    label = "AccountNumber"
+  }
+  string RatePlanChargeId {
+    type = "string"
+    format = "uuid"
+    required = false
+    filterable = false
+    referenceTo = [
+      zuora_billing.rateplancharge.field.Id,
+    ]
+    cardinality = "manyToOne"
+    recordConstraints = {
+      create = {
+        enforceValidMapping = true
+      }
+    }
+    label = "RatePlanChargeId"
+  }
+  string EndDateTime {
+    type = "string"
+    format = "date-time"
+    required = false
+    filterable = false
+    label = "EndDateTime"
+  }
+  number Quantity {
+    type = "number"
+    required = false
+    filterable = false
+    label = "Quantity"
+  }
+  string RbeStatus {
+    type = "string"
+    maxLength = 512
+    required = false
+    filterable = false
+    label = "RbeStatus"
+  }
+  string SourceType {
+    type = "string"
+    maxLength = 512
+    required = false
+    filterable = false
+    label = "SourceType"
+  }
+  string StartDateTime {
+    type = "string"
+    format = "date-time"
+    required = false
+    filterable = false
+    label = "StartDateTime"
+  }
+  string SubscriptionId {
+    type = "string"
+    format = "uuid"
+    required = false
+    filterable = false
+    referenceTo = [
+      zuora_billing.subscription.field.Id,
+    ]
+    cardinality = "manyToOne"
+    recordConstraints = {
+      create = {
+        enforceValidMapping = true
+      }
+    }
+    label = "SubscriptionId"
+  }
+  string SubmissionDateTime {
+    type = "string"
+    format = "date-time"
+    required = false
+    filterable = false
+    label = "SubmissionDateTime"
+  }
+  string UOM {
+    type = "string"
+    maxLength = 512
+    required = false
+    filterable = false
+    label = "UOM"
+  }
+  string Description {
+    type = "string"
+    maxLength = 512
+    required = false
+    filterable = false
+    label = "Description"
+  }
+  string ImportId {
+    type = "string"
+    maxLength = 512
+    required = false
+    filterable = false
+    label = "ImportId"
+  }
+  string FileId {
+    type = "string"
+    maxLength = 512
+    required = false
+    filterable = false
+    label = "FileId"
+  }
+  string FileName {
+    type = "string"
+    maxLength = 512
+    required = false
+    filterable = false
+    label = "FileName"
+  }
+  string UniqueKey {
+    type = "string"
+    label = "UniqueKey"
+    maxLength = 512
+    required = false
+    filterable = false
+  }
+}

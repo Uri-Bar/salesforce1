@@ -1,0 +1,8 @@
+workato.recipe Place_account_in_Netsuite_DP_Root@sssuu {
+  name = "Place account in Netsuite"
+  description = "When there is a trigger event, do action"
+  folder_id = workato.folder.instance.DP_Root
+  running = false
+  version_no = 1
+  code = workato.recipe__code.instance.Place_account_in_Netsuite_DP_Root_sssuu@uuuuum
+}

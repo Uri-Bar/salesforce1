@@ -1,0 +1,20 @@
+netsuite.othercustomfield custrecordsame_as_shipping_address {
+  scriptid = "custrecordsame_as_shipping_address"
+  accesslevel = "2"
+  applyformatting = false
+  applytoallforms = false
+  checkspelling = false
+  defaultchecked = false
+  description = "Verify whether the given address is also a shipping address."
+  displaytype = "NORMAL"
+  encryptatrest = false
+  fieldtype = "CHECKBOX"
+  isformula = false
+  ismandatory = false
+  label = "Same As Shipping Address"
+  rectype = "-289"
+  searchlevel = "2"
+  showhierarchy = false
+  showinlist = false
+  storevalue = true
+}

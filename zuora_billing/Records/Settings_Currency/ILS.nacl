@@ -1,0 +1,9 @@
+zuora_billing.Settings_Currency ILS {
+  currencyCode = "ILS"
+  roundingMode = "Down"
+  rate = 0
+  defaultIncrementForInclusiveTax = false
+  incrementForInvoiceTotal = false
+  active = true
+  default = false
+}

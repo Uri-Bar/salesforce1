@@ -1,0 +1,35 @@
+zuora_billing.WorkflowExport Suspend_Subscriptions_Tied_to_Unpaid_Invoices___10_Days_Limit_1__5@ssssssysssssu {
+  workflow = zuora_billing.Workflow.instance.Suspend_Subscriptions_Tied_to_Unpaid_Invoices___10_Days_Limit_1__5_ssssssysssssu__Suspend_Subscriptions_Tied_to_Unpaid_Invoices___10_Days_Limit_1_@uuuuuuuuuuuuumuussssssysssss
+  tasks = [
+    zuora_billing.Task.instance.Suspend_Subscriptions_Tied_to_Unpaid_Invoices___10_Days_Limit_1__5_ssssssysssssu__Suspend_Subscription@uuuuuuuuuuuuumuus,
+    zuora_billing.Task.instance.Suspend_Subscriptions_Tied_to_Unpaid_Invoices___10_Days_Limit_1__5_ssssssysssssu__Iterate_Unique_Subs@uuuuuuuuuuuuumuuss,
+    zuora_billing.Task.instance.Suspend_Subscriptions_Tied_to_Unpaid_Invoices___10_Days_Limit_1__5_ssssssysssssu__Export_Subscriptions_Tied_to_Unpaid_Invoices@uuuuuuuuuuuuumuusssss,
+  ]
+  linkages = [
+    {
+      source_workflow_id = zuora_billing.Workflow.instance.Suspend_Subscriptions_Tied_to_Unpaid_Invoices___10_Days_Limit_1__5_ssssssysssssu__Suspend_Subscriptions_Tied_to_Unpaid_Invoices___10_Days_Limit_1_@uuuuuuuuuuuuumuussssssysssss
+      target_task_id = zuora_billing.Task.instance.Suspend_Subscriptions_Tied_to_Unpaid_Invoices___10_Days_Limit_1__5_ssssssysssssu__Export_Subscriptions_Tied_to_Unpaid_Invoices@uuuuuuuuuuuuumuusssss
+      linkage_type = "Start"
+      
+    },
+    {
+      source_task_id = zuora_billing.Task.instance.Suspend_Subscriptions_Tied_to_Unpaid_Invoices___10_Days_Limit_1__5_ssssssysssssu__Export_Subscriptions_Tied_to_Unpaid_Invoices@uuuuuuuuuuuuumuusssss
+      target_task_id = zuora_billing.Task.instance.Suspend_Subscriptions_Tied_to_Unpaid_Invoices___10_Days_Limit_1__5_ssssssysssssu__Iterate_Unique_Subs@uuuuuuuuuuuuumuuss
+      linkage_type = "Success"
+      
+    },
+    {
+      source_task_id = zuora_billing.Task.instance.Suspend_Subscriptions_Tied_to_Unpaid_Invoices___10_Days_Limit_1__5_ssssssysssssu__Iterate_Unique_Subs@uuuuuuuuuuuuumuuss
+      target_task_id = zuora_billing.Task.instance.Suspend_Subscriptions_Tied_to_Unpaid_Invoices___10_Days_Limit_1__5_ssssssysssssu__Suspend_Subscription@uuuuuuuuuuuuumuus
+      linkage_type = "For Each"
+      
+    },
+  ]
+  additionalProperties = {
+    workflow_definition = {
+      description = ""
+      category = "Default"
+      name = "Suspend Subscriptions Tied to Unpaid Invoices > 10 Days Limit 1 "
+    }
+  }
+}

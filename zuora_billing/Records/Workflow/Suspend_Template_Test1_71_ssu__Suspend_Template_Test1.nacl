@@ -1,0 +1,175 @@
+zuora_billing.Workflow Suspend_Template_Test1_71_ssu__Suspend_Template_Test1@uuumuuss {
+  id = 71
+  name = "Suspend Template Test1"
+  description = ""
+  type = "Workflow::Setup"
+  status = "Active"
+  version = "0.0.1"
+  additionalProperties = {
+    parameters = {
+      fields = [
+        {
+          index = "0"
+          default = false
+          datatype = "Boolean"
+          required = false
+          callout_id = "collect"
+          field_name = "collect"
+          object_name = "Workflow"
+        },
+        {
+          index = "1"
+          default = false
+          datatype = "Boolean"
+          required = false
+          callout_id = "extendsTerm"
+          field_name = "extendsTerm"
+          object_name = "Workflow"
+        },
+        {
+          index = "2"
+          default = false
+          datatype = "Boolean"
+          required = false
+          callout_id = "invoice"
+          field_name = "invoice"
+          object_name = "Workflow"
+        },
+        {
+          index = "3"
+          default = false
+          datatype = "Boolean"
+          required = false
+          callout_id = "resume"
+          field_name = "resume"
+          object_name = "Workflow"
+        },
+        {
+          index = "4"
+          default = "4"
+          datatype = "Text"
+          required = false
+          callout_id = "resumePeriods"
+          field_name = "resumePeriods"
+          object_name = "Workflow"
+        },
+        {
+          index = "5"
+          default = "FixedPeriodsFromSuspendDate"
+          datatype = "Text"
+          required = false
+          callout_id = "resumePolicy"
+          field_name = "resumePolicy"
+          object_name = "Workflow"
+        },
+        {
+          index = "6"
+          default = ""
+          datatype = "Date"
+          required = false
+          callout_id = "resumeSpecificDate"
+          field_name = "resumeSpecificDate"
+          object_name = "Workflow"
+        },
+        {
+          index = "7"
+          default = "3"
+          datatype = "Text"
+          required = false
+          callout_id = "suspendPeriods"
+          field_name = "suspendPeriods"
+          object_name = "Workflow"
+        },
+        {
+          index = "8"
+          default = "FixedPeriodsFromToday"
+          datatype = "Text"
+          required = true
+          callout_id = "suspendPolicy"
+          field_name = "suspendPolicy"
+          object_name = "Workflow"
+        },
+        {
+          index = "9"
+          default = ""
+          datatype = "Date"
+          required = false
+          callout_id = "suspendSpecificDate"
+          field_name = "suspendSpecificDate"
+          object_name = "Workflow"
+        },
+        {
+          index = "10"
+          default = ""
+          datatype = "Date"
+          required = false
+          callout_id = "targetDate"
+          field_name = "targetDate"
+          object_name = "Workflow"
+        },
+        {
+          index = "11"
+          default = "A-S00000052"
+          datatype = "Text"
+          required = true
+          callout_id = "subscriptionIdentifier"
+          field_name = "subscriptionIdentifier"
+          object_name = "Workflow"
+        },
+        {
+          index = "12"
+          default = "week"
+          datatype = "Text"
+          required = false
+          callout_id = "suspendPeriodsType"
+          field_name = "suspendPeriodsType"
+          object_name = "Workflow"
+        },
+        {
+          index = "13"
+          default = "week"
+          datatype = "Text"
+          required = false
+          callout_id = "resumePeriodsType"
+          field_name = "resumePeriodsType"
+          object_name = "Workflow"
+        },
+        {
+          index = "14"
+          default = ""
+          datatype = "Date"
+          required = false
+          callout_id = "effectiveDate"
+          field_name = "effectiveDate"
+          object_name = "Workflow"
+        },
+      ]
+      skipping_check = "redis"
+      file_encryption = "false"
+      callout_response = "workflow instance"
+      secure_error_msgs = "false"
+      disable_pending_status = true
+    }
+    ondemand_trigger = true
+    callout_trigger = true
+    scheduled_trigger = false
+    css = {
+      top = "40px"
+      left = "40px"
+    }
+    notifications = {
+      failure = false
+      pending = false
+      success = false
+    }
+    call_type = "ASYNC"
+    priority = "Medium"
+    delete_ttl = 30
+    
+    
+    event_trigger = false
+  }
+  _parent = [
+    zuora_billing.WorkflowExport.instance.Suspend_Template_Test1_71@ssu,
+  ]
+}

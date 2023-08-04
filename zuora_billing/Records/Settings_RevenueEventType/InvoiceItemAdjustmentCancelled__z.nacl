@@ -1,0 +1,5 @@
+zuora_billing.Settings_RevenueEventType InvoiceItemAdjustmentCancelled__z {
+  label = "Invoice Item Adjustment Cancelled"
+  systemId = "InvoiceItemAdjustmentCancelled__z"
+  active = true
+}

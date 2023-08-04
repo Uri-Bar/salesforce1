@@ -1,0 +1,64 @@
+stripe.product sfdsfsf_prod_JMpOpTpdX5rDKx {
+  id = "prod_JMpOpTpdX5rDKx"
+  active = true
+  livemode = false
+  name = "sfdsfsf"
+  product_prices = [
+    {
+      id = "price_1JjN8THipyrr1EYirgGmnx9A"
+      active = true
+      billing_scheme = "per_unit"
+      currency = "usd"
+      livemode = false
+      product = stripe.product.instance.sfdsfsf_prod_JMpOpTpdX5rDKx
+      recurring = {
+        interval = "month"
+        interval_count = 1
+        usage_type = "licensed"
+      }
+      tax_behavior = "unspecified"
+      type = "recurring"
+      unit_amount = 600
+      unit_amount_decimal = "600"
+    },
+    {
+      id = "price_1JjN8GHipyrr1EYi69M6nDJA"
+      active = true
+      billing_scheme = "per_unit"
+      currency = "usd"
+      livemode = false
+      product = stripe.product.instance.sfdsfsf_prod_JMpOpTpdX5rDKx
+      tax_behavior = "unspecified"
+      type = "one_time"
+      unit_amount = 700
+      unit_amount_decimal = "700"
+    },
+    {
+      id = "price_1Ik5jyHipyrr1EYiTX75FImK"
+      active = true
+      billing_scheme = "per_unit"
+      currency = "usd"
+      livemode = false
+      product = stripe.product.instance.sfdsfsf_prod_JMpOpTpdX5rDKx
+      tax_behavior = "unspecified"
+      type = "one_time"
+      unit_amount = 600
+      unit_amount_decimal = "600"
+    },
+    {
+      id = "price_1Ik5jyHipyrr1EYiZkn6nySi"
+      active = true
+      billing_scheme = "per_unit"
+      currency = "usd"
+      livemode = false
+      product = stripe.product.instance.sfdsfsf_prod_JMpOpTpdX5rDKx
+      tax_behavior = "unspecified"
+      type = "one_time"
+      unit_amount = 400
+      unit_amount_decimal = "400"
+    },
+  ]
+  additionalProperties = {
+    type = "service"
+  }
+}

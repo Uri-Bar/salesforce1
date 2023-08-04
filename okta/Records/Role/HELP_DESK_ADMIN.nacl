@@ -1,0 +1,5 @@
+okta.Role Help_Desk_Administrator@s {
+  
+  label = "Help Desk Administrator"
+  type = "HELP_DESK_ADMIN"
+}

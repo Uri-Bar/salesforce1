@@ -1,0 +1,10 @@
+jira.Field Rank__c {
+  name = "Rank"
+  description = "Global rank field for Jira Software use only."
+  isLocked = true
+  searcherKey = "com.pyxis.greenhopper.jira:gh-lexo-rank-searcher"
+  type = "com.pyxis.greenhopper.jira:gh-lexo-rank"
+  contexts = [
+    jira.CustomFieldContext.instance.Rank__c_Default_Configuration_Scheme_for_Rank@uuussss,
+  ]
+}

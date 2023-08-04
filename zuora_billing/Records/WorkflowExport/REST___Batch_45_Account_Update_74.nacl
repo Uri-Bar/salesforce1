@@ -1,0 +1,35 @@
+zuora_billing.WorkflowExport REST___Batch_45_Account_Update_74@sbssssu {
+  workflow = zuora_billing.Workflow.instance.REST___Batch_45_Account_Update_74_sbssssu__REST___Batch_45_Account_Update@uuuuuuumuusbssss
+  tasks = [
+    zuora_billing.Task.instance.REST___Batch_45_Account_Update_74_sbssssu__Update_Account@uuuuuuumuus,
+    zuora_billing.Task.instance.REST___Batch_45_Account_Update_74_sbssssu__Fetch_Accounts@uuuuuuumuus,
+    zuora_billing.Task.instance.REST___Batch_45_Account_Update_74_sbssssu__Iterate_in_groups_of_45@uuuuuuumuussss,
+  ]
+  linkages = [
+    {
+      source_task_id = zuora_billing.Task.instance.REST___Batch_45_Account_Update_74_sbssssu__Iterate_in_groups_of_45@uuuuuuumuussss
+      target_task_id = zuora_billing.Task.instance.REST___Batch_45_Account_Update_74_sbssssu__Update_Account@uuuuuuumuus
+      linkage_type = "For Each"
+      
+    },
+    {
+      source_task_id = zuora_billing.Task.instance.REST___Batch_45_Account_Update_74_sbssssu__Fetch_Accounts@uuuuuuumuus
+      target_task_id = zuora_billing.Task.instance.REST___Batch_45_Account_Update_74_sbssssu__Iterate_in_groups_of_45@uuuuuuumuussss
+      linkage_type = "Success"
+      
+    },
+    {
+      source_workflow_id = zuora_billing.Workflow.instance.REST___Batch_45_Account_Update_74_sbssssu__REST___Batch_45_Account_Update@uuuuuuumuusbssss
+      target_task_id = zuora_billing.Task.instance.REST___Batch_45_Account_Update_74_sbssssu__Fetch_Accounts@uuuuuuumuus
+      linkage_type = "Start"
+      
+    },
+  ]
+  additionalProperties = {
+    workflow_definition = {
+      description = ""
+      category = "Default"
+      name = "REST - Batch 45 Account Update"
+    }
+  }
+}

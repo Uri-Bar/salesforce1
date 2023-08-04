@@ -1,0 +1,1 @@
+const demoVar = 'from service'

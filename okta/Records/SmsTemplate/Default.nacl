@@ -1,0 +1,6 @@
+okta.SmsTemplate Default {
+  
+  name = "Default"
+  type = "SMS_VERIFY_CODE"
+  template = "Your verification code is \${code}."
+}

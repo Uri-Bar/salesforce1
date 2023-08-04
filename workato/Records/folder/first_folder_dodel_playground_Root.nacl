@@ -1,0 +1,4 @@
+workato.folder first_folder_dodel_playground_Root {
+  name = "first_folder"
+  parent_id = workato.folder.instance.dodel_playground_Root
+}

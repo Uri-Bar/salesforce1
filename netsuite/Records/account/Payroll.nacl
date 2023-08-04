@@ -1,0 +1,16 @@
+netsuite.account Payroll {
+  acctType = "_bank"
+  acctName = "Payroll"
+  includeChildren = false
+  currency = netsuite.currency.instance.USA
+  generalRate = "_current"
+  cashFlowRate = "_average"
+  isInactive = false
+  inventory = false
+  subsidiaryList = [
+    netsuite.subsidiary.instance.Parent_Company@s,
+  ]
+  revalue = true
+  identifier = "Payroll"
+  custom_custrecord_acct_special = false
+}

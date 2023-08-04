@@ -1,0 +1,12 @@
+okta.BehaviorRule New_State@s {
+  name = "New State"
+  status = "ACTIVE"
+  type = "ANOMALOUS_LOCATION"
+  additionalProperties = {
+    settings = {
+      minEventsNeededForEvaluation = 0
+      maxEventsUsedForEvaluation = 15
+      granularity = "SUBDIVISION"
+    }
+  }
+}

@@ -1,0 +1,21 @@
+zendesk.workspace Inactive_New_Workspace@s {
+  title = "Inactive New Workspace"
+  description = "inactive"
+  apps = [
+    {
+      id = zendesk.app_installation.instance.Salesforce
+      expand = false
+      position = 1
+    },
+  ]
+  activated = false
+  conditions = {
+    all = [
+      {
+        field = "status"
+        operator = "is"
+        value = "new"
+      },
+    ]
+  }
+}

@@ -1,0 +1,116 @@
+type zuora_billing.journalrun {
+  string Id {
+    type = "string"
+    format = "uuid"
+    required = false
+    filterable = false
+    label = "Id"
+  }
+  string CreatedById {
+    type = "string"
+    format = "uuid"
+    required = false
+    filterable = false
+    referenceTo = [
+      zuora_billing.user.field.Id,
+    ]
+    cardinality = "manyToOne"
+    recordConstraints = {
+      create = {
+        enforceValidMapping = true
+      }
+    }
+    label = "CreatedById"
+  }
+  string CreatedDate {
+    type = "string"
+    format = "date-time"
+    required = false
+    filterable = false
+    label = "CreatedDate"
+  }
+  string UpdatedById {
+    type = "string"
+    format = "uuid"
+    required = false
+    filterable = false
+    referenceTo = [
+      zuora_billing.user.field.Id,
+    ]
+    cardinality = "manyToOne"
+    recordConstraints = {
+      create = {
+        enforceValidMapping = true
+      }
+    }
+    label = "UpdatedById"
+  }
+  string UpdatedDate {
+    type = "string"
+    format = "date-time"
+    required = false
+    filterable = false
+    label = "UpdatedDate"
+  }
+  boolean deleted {
+    type = "boolean"
+    required = false
+    filterable = false
+    label = "deleted"
+  }
+  string Number {
+    type = "string"
+    maxLength = 512
+    required = false
+    filterable = false
+    label = "Number"
+  }
+  string ProcessEndDateTime {
+    type = "string"
+    format = "date-time"
+    required = false
+    filterable = false
+    label = "ProcessEndDateTime"
+  }
+  string ProcessStartDateTime {
+    type = "string"
+    format = "date-time"
+    required = false
+    filterable = false
+    label = "ProcessStartDateTime"
+  }
+  string Status {
+    type = "string"
+    maxLength = 512
+    required = false
+    filterable = false
+    label = "Status"
+  }
+  string TargetDateType {
+    type = "string"
+    maxLength = 512
+    required = false
+    filterable = false
+    label = "TargetDateType"
+  }
+  string TargetEndDate {
+    type = "string"
+    format = "date"
+    required = false
+    filterable = false
+    label = "TargetEndDate"
+  }
+  string TargetStartDate {
+    type = "string"
+    format = "date"
+    required = false
+    filterable = false
+    label = "TargetStartDate"
+  }
+  number TotalJournalEntryCount {
+    type = "integer"
+    required = false
+    filterable = false
+    label = "TotalJournalEntryCount"
+  }
+}

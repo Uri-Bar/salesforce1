@@ -1,0 +1,19 @@
+zendesk.ticket_field GWR_DC_Field1_tagger@ssu {
+  type = "tagger"
+  raw_title = "GWR DC Field1"
+  raw_description = ""
+  active = true
+  required = false
+  collapsed_for_agents = false
+  raw_title_in_portal = "GWR DC Field1"
+  visible_in_portal = false
+  editable_in_portal = false
+  required_in_portal = false
+  removable = true
+  custom_field_options = [
+    zendesk.ticket_field__custom_field_options.instance.GWR_DC_Field1_tagger_ssu__gwr_blue@uuumuuu,
+    zendesk.ticket_field__custom_field_options.instance.GWR_DC_Field1_tagger_ssu__gwr_green@uuumuuu,
+    zendesk.ticket_field__custom_field_options.instance.GWR_DC_Field1_tagger_ssu____dc_gwr_dc1__@uuumuuuuvuuu,
+  ]
+  default_custom_field_option = zendesk.ticket_field__custom_field_options.instance.GWR_DC_Field1_tagger_ssu____dc_gwr_dc1__@uuumuuuuvuuu
+}

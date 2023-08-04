@@ -1,0 +1,12 @@
+zendesk.article_translation Hello_world__Introduction_Knuckles_Salto_sluuu__Salto_en_us_ub@uuuuumuuuum {
+  locale = zendesk.guide_language_settings.instance.Salto_en_us@ub
+  title = "Hello world!"
+  body = "<p>Hello, my names is Knuckles.</p>"
+  outdated = false
+  draft = false
+  hidden = false
+  brand = zendesk.brand.instance.Salto
+  _parent = [
+    zendesk.article.instance.Hello_world__Introduction_Knuckles_Salto@sluuu,
+  ]
+}

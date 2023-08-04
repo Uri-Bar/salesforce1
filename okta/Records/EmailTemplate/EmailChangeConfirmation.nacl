@@ -1,0 +1,6 @@
+okta.EmailTemplate EmailChangeConfirmation {
+  name = "EmailChangeConfirmation"
+  _parent = [
+    okta.Brand.instance,
+  ]
+}

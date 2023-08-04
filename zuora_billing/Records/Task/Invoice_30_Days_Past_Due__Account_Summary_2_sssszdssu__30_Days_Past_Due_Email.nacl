@@ -1,0 +1,353 @@
+zuora_billing.Task Invoice_30_Days_Past_Due__Account_Summary_2_sssszdssu__30_Days_Past_Due_Email@uuuuuuuumuussss {
+  name = "30 Days Past Due Email"
+  parameters = {
+    email = {
+      to = [
+        "{{Data.BillToContact.WorkEmail}}",
+        "{{Data.BillToContact.PersonalEmail}}",
+      ]
+      from = "workflow@zuora.com"
+      name = "Workflow Template"
+      subject = "  Action Required {{Data.Account.Name}} Invoice 30 Days Past Due"
+      reply_to = ""
+      template = '''
+{% assign total_balance = 0.0 %}
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta name="viewport" content="initial-scale=1.0"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+<meta name="format-detection" content="telephone=no"/>
+<title>30 Days Overdue</title>
+<link href="http://fonts.googleapis.com/css?family=Roboto:400,300,700|Open+Sans:400,700,300&subset=latin,cyrillic,greek" rel="stylesheet" type="text/css">
+<style type="text/css">
+
+    /* Resets: see reset.css for details */
+    .ReadMsgBody { width: 100%; background-color: #ffffff;}
+    .ExternalClass {width: 100%; background-color: #ffffff;}
+    .ExternalClass, .ExternalClass p, .ExternalClass span,
+    .ExternalClass font, .ExternalClass td, .ExternalClass div {line-height:100%;}
+    #outlook a{ padding:0;}
+    body{width: 100%; height: 100%; background-color: #ffffff; margin:0; padding:0;}
+    body{ -webkit-text-size-adjust:none; -ms-text-size-adjust:none; }
+    html{width:100%;}
+    table {mso-table-lspace:0pt; mso-table-rspace:0pt; border-spacing:0;}
+    table td {border-collapse:collapse;}
+    table p{margin:0;}
+    br, strong br, b br, em br, i br { line-height:100%; }
+    div, p, a, li, td { -webkit-text-size-adjust:none; -ms-text-size-adjust:none;}
+    h1, h2, h3, h4, h5, h6 { line-height: 100% !important; -webkit-font-smoothing: antialiased; }
+    span a { text-decoration: none !important;}
+    a{ text-decoration: none !important; }
+    img{height: auto !important; line-height: 100%; outline: none; text-decoration: none;  -ms-interpolation-mode:bicubic;}
+    .yshortcuts, .yshortcuts a, .yshortcuts a:link,.yshortcuts a:visited,
+    .yshortcuts a:hover, .yshortcuts a span { text-decoration: none !important; border-bottom: none !important;}
+    /*mailChimp class*/
+    .default-edit-image{
+    height:20px;
+    }
+    ul{padding-left:10px; margin:0;}
+    .tpl-repeatblock {
+    padding: 0px !important;
+    border: 1px dotted rgba(0,0,0,0.2);
+    }
+    .tpl-content{
+    padding:0px !important;
+    }
+    @media only screen and (max-width:800px){
+    table[style*="max-width:800px"]{width:100%!important; max-width:100%!important; min-width:100%!important; clear: both;}
+    table[style*="max-width:800px"] img{width:100% !important; height:auto !important; max-width:100% !important;}
+    }
+    @media only screen and (max-width: 640px){
+    /* mobile setting */
+    table[class="container"]{width:100%!important; max-width:100%!important; min-width:100%!important;
+    padding-left:20px!important; padding-right:20px!important; text-align: center!important; clear: both;}
+    td[class="container"]{width:100%!important; padding-left:20px!important; padding-right:20px!important; clear: both;}
+    table[class="full-width"]{width:100%!important; max-width:100%!important; min-width:100%!important; clear: both;}
+    table[class="full-width-center"] {width: 100%!important; max-width:100%!important;  text-align: center!important; clear: both; margin:0 auto; float:none;}
+    table[class="force-240-center"]{width:240px !important; clear: both; margin:0 auto; float:none;}
+    table[class="auto-center"] {width: auto!important; max-width:100%!important;  text-align: center!important; clear: both; margin:0 auto; float:none;}
+    *[class="auto-center-all"]{width: auto!important; max-width:75%!important;  text-align: center!important; clear: both; margin:0 auto; float:none;}
+    *[class="auto-center-all"] * {width: auto!important; max-width:100%!important;  text-align: center!important; clear: both; margin:0 auto; float:none;}
+    table[class="col-3"],table[class="col-3-not-full"]{width:30.35%!important; max-width:100%!important;}
+    table[class="col-2"]{width:47.3%!important; max-width:100%!important;}
+    *[class="full-block"]{width:100% !important; display:block !important; clear: both; padding-top:10px; padding-bottom:10px;}
+    /* image */
+    td[class="image-full-width"] img{width:100% !important; height:auto !important; max-width:100% !important;}
+    /* helper */
+    table[class="space-w-20"]{width:3.57%!important; max-width:20px!important; min-width:3.5% !important;}
+    table[class="space-w-20"] td:first-child{width:3.5%!important; max-width:20px!important; min-width:3.5% !important;}
+    table[class="space-w-25"]{width:4.45%!important; max-width:25px!important; min-width:4.45% !important;}
+    table[class="space-w-25"] td:first-child{width:4.45%!important; max-width:25px!important; min-width:4.45% !important;}
+    table[class="space-w-30"] td:first-child{width:5.35%!important; max-width:30px!important; min-width:5.35% !important;}
+    table[class="fix-w-20"]{width:20px!important; max-width:20px!important; min-width:20px!important;}
+    table[class="fix-w-20"] td:first-child{width:20px!important; max-width:20px!important; min-width:20px !important;}
+    *[class="h-10"]{display:block !important;  height:10px !important;}
+    *[class="h-20"]{display:block !important;  height:20px !important;}
+    *[class="h-30"]{display:block !important; height:30px !important;}
+    *[class="h-40"]{display:block !important;  height:40px !important;}
+    *[class="remove-640"]{display:none !important;}
+    *[class="text-left"]{text-align:left !important;}
+    *[class="clear-pad"]{padding:0 !important;}
+    }
+    @media only screen and (max-width: 479px){
+    /* mobile setting */
+    table[class="container"]{width:100%!important; max-width:100%!important; min-width:124px!important;
+    padding-left:15px!important; padding-right:15px!important; text-align: center!important; clear: both;}
+    td[class="container"]{width:100%!important; padding-left:15px!important; padding-right:15px!important; text-align: center!important; clear: both;}
+    table[class="full-width"],table[class="full-width-479"]{width:100%!important; max-width:100%!important; min-width:124px!important; clear: both;}
+    table[class="full-width-center"] {width: 100%!important; max-width:100%!important; min-width:124px!important; text-align: center!important; clear: both; margin:0 auto; float:none;}
+    *[class="auto-center-all"]{width: 100%!important; max-width:100%!important;  text-align: center!important; clear: both; margin:0 auto; float:none;}
+    *[class="auto-center-all"] * {width: auto!important; max-width:100%!important;  text-align: center!important; clear: both; margin:0 auto; float:none;}
+    table[class="col-3"]{width:100%!important; max-width:100%!important; text-align: center!important; clear: both;}
+    table[class="col-3-not-full"]{width:30.35%!important; max-width:100%!important; }
+    table[class="col-2"]{width:100%!important; max-width:100%!important; text-align: center!important; clear: both;}
+    *[class="full-block-479"]{display:block !important; width:100% !important; clear: both; padding-top:10px; padding-bottom:10px; }
+    /* image */
+    td[class="image-full-width"] img{width:100% !important; height:auto !important; max-width:100% !important; min-width:124px !important;}
+    td[class="image-min-80"] img{width:100% !important; height:auto !important; max-width:100% !important; min-width:80px !important;}
+    td[class="image-min-100"] img{width:100% !important; height:auto !important; max-width:100% !important; min-width:100px !important;}
+    /* halper */
+    table[class="space-w-20"]{width:100%!important; max-width:100%!important; min-width:100% !important;}
+    table[class="space-w-20"] td:first-child{width:100%!important; max-width:100%!important; min-width:100% !important;}
+    table[class="space-w-25"]{width:100%!important; max-width:100%!important; min-width:100% !important;}
+    table[class="space-w-25"] td:first-child{width:100%!important; max-width:100%!important; min-width:100% !important;}
+    table[class="space-w-30"]{width:100%!important; max-width:100%!important; min-width:100% !important;}
+    table[class="space-w-30"] td:first-child{width:100%!important; max-width:100%!important; min-width:100% !important;}
+    *[class="remove-479"]{display:none !important;}
+    table[width="595"]{width:100% !important;}
+    img{max-width:280px !important;}
+    .resize-font, .resize-font *{
+      font-size: 37px !important;
+      line-height: 48px !important;
+    }
+    }
+    table.stripped tr.stripe:nth-child(odd){
+    	background:#f0f2f9;
+    }
+    
+    td ul{list-style: initial; margin:0; padding-left:20px;}
+
+	@media only screen and (max-width: 640px){ .image-100-percent{ width:100%!important; height: auto !important; max-width: 100% !important; min-width: 124px !important;}}body{background-color:#efefef;} .default-edit-image{height:20px;} tr.tpl-repeatblock , tr.tpl-repeatblock > td{ display:block !important;} .tpl-repeatblock {padding: 0px !important;border: 1px dotted rgba(0,0,0,0.2);} table[width="595"]{width:100% !important;}a img{ border: 0 !important;}
+a:active{color:initial } a:visited{color:initial }
+.tpl-content{padding:0 !important;}
+.full-mb,*[fix="full-mb"]{width:100%!important;} .auto-mb,*[fix="auto-mb"]{width:auto!important;}
+</style>
+<!--[if gte mso 15]>
+<style type="text/css">
+a{text-decoration: none !important;}
+body { font-size: 0; line-height: 0; }
+tr { font-size:1px; mso-line-height-alt:0; mso-margin-top-alt:1px; }
+table { font-size:1px; line-height:0; mso-margin-top-alt:1px; }
+body,table,td,span,a,font{font-family: Arial, Helvetica, sans-serif !important;}
+a img{ border: 0 !important;}
+</style>
+<![endif]-->
+<!--[if gte mso 9]><xml><o:OfficeDocumentSettings><o:AllowPNG/><o:PixelsPerInch>96</o:PixelsPerInch></o:OfficeDocumentSettings></xml><![endif]-->
+</head>
+<body  style="font-size:12px; width:100%; height:100%;">
+<table id="mainStructure" width="800" class="full-width" align="center" border="0" cellspacing="0" cellpadding="0" style="background-color: #efefef; width: 800px; max-width: 800px; outline: rgb(239, 239, 239) solid 1px; box-shadow: rgb(224, 224, 224) 0px 0px 5px; margin: 0px auto;"><!--START LAYOUT-1 (LOGO AND MENU) --><tbody><tr><td align="center" valign="top" class="container" style="background-color: #ffffff;" bgcolor="#ffffff">
+            <!-- start container -->
+            <table width="600" align="center" border="0" cellspacing="0" cellpadding="0" class="container" style="min-width: 600px; background-color: #ffffff; padding-left: 20px; padding-right: 20px; width: 600px; margin: 0px auto;"><tbody><tr><td valign="top">
+                  <table width="560" border="0" cellspacing="0" cellpadding="0" align="center" class="full-width" style="width: 560px; margin: 0px auto;"><!-- start space --><tbody><tr><td valign="top" height="15" style="height: 15px; font-size: 0px; line-height: 0; border-collapse: collapse;">
+                      </td>
+                    </tr><!-- end space --><!-- start content container--><tr><td valign="top">
+                        <table width="100%" border="0" cellspacing="0" cellpadding="0" align="center" style="margin: 0px auto;"><tbody><tr><td valign="middle">
+                              
+                              <table align="left" border="0" cellspacing="0" cellpadding="0" class="full-width-center" width="auto" style="mso-table-lspace:0pt; mso-table-rspace:0pt;"><tbody><tr><td align="center" valign="top" width="136" style="width: 136px;">
+                                    <a href="#" style="text-decoration: none !important; font-size: inherit; border-style: none;" border="0">
+                                      <img src="https://www.zuora.com/wp-content/uploads/2017/03/Zuora-Logo-Navy-small.jpg" width="136" style="max-width: 240px; display: block !important; width: 136px; height: auto;" alt="set3-logo" border="0" hspace="0" vspace="0" height="auto"></a>
+                                  </td>
+                                </tr></tbody></table><!--[if (gte mso 9)|(IE)]></td><td valign="top" ><![endif]--><table width="20" border="0" cellpadding="0" cellspacing="0" align="left" class="full-width" style="height: 1px; border-spacing: 0px; width: 20px;mso-table-lspace:0pt; mso-table-rspace:0pt;"><tbody><tr><td height="1" class="h-20" style="height: 1px; font-size: 0px; line-height: 0; border-collapse: collapse;">
+                                  </td>
+                                </tr></tbody></table><!--[if (gte mso 9)|(IE)]></td><td valign="top" ><![endif]--><table align="right" border="0" cellpadding="0" cellspacing="0" class="full-width-center" width="auto" style="mso-table-lspace:0pt; mso-table-rspace:0pt;"><tbody><tr><td valign="top">
+                                    <table align="left" border="0" cellpadding="0" cellspacing="0" class="full-width-center" width="auto" style="mso-table-lspace:0pt; mso-table-rspace:0pt;"><tbody><tr><td align="center" style="font-size: 14px; color: #8c8c8c; font-weight: normal; text-align: center; font-family: Roboto, 'Open Sans', Arail, Tahoma, Helvetica, Arial, sans-serif; word-break: break-word; line-height: 22px;"><br style="font-size: 14px; font-weight: 400; font-family: Roboto, 'Open Sans', Arail, Tahoma, Helvetica, Arial, sans-serif;"></td>
+                                      </tr></tbody></table></td>
+                                </tr></tbody></table></td>
+                          </tr></tbody></table></td>
+                    </tr><!-- end content container--><!-- start space --><tr><td valign="top" height="14" style="height: 14px; font-size: 0px; line-height: 0; border-collapse: collapse;">
+                      </td>
+                    </tr><!-- end space --></tbody></table></td>
+              </tr></tbody></table><!-- end container --></td>
+        </tr><!--END LAYOUT-1 (LOGO AND MENU) --></tbody><!-- START ORDER-TABLE --><tbody><tr><td valign="top" align="center" class="container" style="background-color: #fff;" bgcolor="#ffffff">
+            <table width="600" align="center" border="0" cellspacing="0" cellpadding="0" class="container" style="background-color: #ffffff; min-width: 600px; width: 600px; margin: 0px auto;"><tbody><tr><td valign="top" align="center">
+                  <table width="560" align="center" border="0" cellspacing="0" cellpadding="0" class="full-width" style="width: 560px; margin: 0px auto;"><!-- start title --><tbody><tr dup="0"><td valign="top">
+                        <table width="100%" align="center" border="0" cellpadding="0" cellspacing="0" style="margin: 0px auto;"><!-- start space --><tbody><tr><td valign="top" height="11" style="height: 11px; font-size: 0px; line-height: 0; border-collapse: collapse;">
+                            </td>
+                          </tr><!-- end space --><tr><td align="left" style="font-size: 24px; color: #333333; font-weight: bold; font-family: 'Open Sans', Arial, Helvetica, sans-serif; text-align: left; word-break: break-word; line-height: 32px;"><p style="text-align: left; line-height: 20px; font-size: 12px; font-weight: 400; font-family: 'Open Sans', Arial, Helvetica, sans-serif;"><span style="color: #384b5d; line-height: 22px; font-size: 14px; font-weight: bold; font-family: 'Open Sans', Arial, Helvetica, sans-serif;">Dear {{Data.BillToContact.FirstName}} {{Data.BillToContact.LastName}},</span></p></td>
+                          </tr><!-- start space --><tr><td valign="top" height="10" style="height: 10px; font-size: 0px; line-height: 0; border-collapse: collapse;">
+                            </td>
+                          </tr><!-- end space --></tbody></table></td>
+                    </tr><tr dup="0"><td valign="top">
+                        <table width="100%" align="center" border="0" cellpadding="0" cellspacing="0" style="margin: 0px auto;"><!-- start space --><tbody><tr><td valign="top" height="1" style="height: 1px; font-size: 0px; line-height: 0; border-collapse: collapse;">
+                            </td>
+                          </tr><!-- end space --><tr><td align="left" style="font-size: 24px; color: #333333; font-weight: bold; font-family: 'Open Sans', Arial, Helvetica, sans-serif; text-align: left; word-break: break-word; line-height: 32px;"><p style="text-align: left; line-height: 20px; font-size: 12px; font-weight: 400; font-family: 'Open Sans', Arial, Helvetica, sans-serif;"><span style="color: #999999; line-height: 22px; font-size: 14px; font-weight: 400; font-family: 'Open Sans', Arial, Helvetica, sans-serif;">We would like to inform you of the invoice past due situation on your account, {{Data.Account.Name}}. The following is an itemized listing of all past due invoice(s) on your account. </span> <br/> <br/></p></td>
+                          </tr><!-- start space --><tr><td valign="top" height="15" style="height: 15px; font-size: 0px; line-height: 0; border-collapse: collapse;">
+                            </td>
+                          </tr><!-- end space --></tbody></table></td>
+                    </tr><!-- end title --><tr dup="0"><td valign="top" align="center">
+
+                    <!-- start of new table-->
+
+                    <table class="stripped" width="100%" align="center" border="0" cellspacing="0" cellpadding="0">
+						<tr style="background-color: #f0f2f9; margin: 0px auto;">
+							<th style="font-size: 14px; color: #333333; font-weight: normal; text-align: left; font-family: 'Open Sans', Arial, Helvetica, sans-serif; padding: 15px; word-break: break-word; width: 100px; line-height: 22px;" align="left"><span style="color: #384b5d; line-height: 20px; font-size: 12px; font-weight: bold; font-family: 'Open Sans', Arial, Helvetica, sans-serif;">Invoice Number</th>
+							<th style="font-size: 14px; color: #333333; font-weight: normal; text-align: left; font-family: 'Open Sans', Arial, Helvetica, sans-serif; padding: 15px; word-break: break-word; width: 100px; line-height: 22px;" align="left"><span style="color: #384b5d; line-height: 20px; font-size: 12px; font-weight: bold; font-family: 'Open Sans', Arial, Helvetica, sans-serif;">Balance</th>
+							<th style="font-size: 14px; color: #333333; font-weight: normal; text-align: left; font-family: 'Open Sans', Arial, Helvetica, sans-serif; padding: 15px; word-break: break-word; width: 100px; line-height: 22px;" align="left"><span style="color: #384b5d; line-height: 20px; font-size: 12px; font-weight: bold; font-family: 'Open Sans', Arial, Helvetica, sans-serif;">Invoice Date</th>
+							<th style="font-size: 14px; color: #333333; font-weight: normal; text-align: left; font-family: 'Open Sans', Arial, Helvetica, sans-serif; padding: 15px; word-break: break-word; width: 100px; line-height: 22px;" align="left"><span style="color: #384b5d; line-height: 20px; font-size: 12px; font-weight: bold; font-family: 'Open Sans', Arial, Helvetica, sans-serif;">Due Date</th>
+              <th style="font-size: 14px; color: #333333; font-weight: normal; text-align: left; font-family: 'Open Sans', Arial, Helvetica, sans-serif; padding: 15px; word-break: break-word; width: 100px; line-height: 22px;" align="left"><span style="color: #384b5d; line-height: 20px; font-size: 12px; font-weight: bold; font-family: 'Open Sans', Arial, Helvetica, sans-serif;">Days Overdue</th>
+						</tr>
+						{% for invoice in Data.Invoice %}
+                {% comment %} convert our dates to Number of seconds since 1970-01-01 00:00:00 UTC {% endcomment %}
+                {% assign dateStart = invoice.DueDate | date: '%s' %}
+                {% assign nowTimestamp = 'now' | date: '%s' %}
+
+                {% comment %} difference in seconds {% endcomment %}
+                {% assign diffSeconds = nowTimestamp | minus: dateStart %}
+
+                {% comment %} difference in days {% endcomment %}
+                {% assign diffDays = diffSeconds | divided_by: 3600 | divided_by: 24 %}
+
+
+                <tr class="stripe">
+                  <td style="font-size: 14px; color: #888888; font-weight: normal; text-align: left; font-family: 'Open Sans', Arial, Helvetica, sans-serif; padding: 15px; word-break: break-word; line-height: 22px;" align="left"><span style="line-height: 22px; font-size: 12px; font-weight: 400; font-family: 'Open Sans', Arial, Helvetica, sans-serif;">{{ invoice.InvoiceNumber }}</td>
+                  <td style="font-size: 14px; color: #C05F68; font-weight: normal; text-align: left; font-family: 'Open Sans', Arial, Helvetica, sans-serif; padding: 15px; word-break: break-word; line-height: 22px;" align="left"><span style="line-height: 22px; font-size: 12px; font-weight: 400; font-family: 'Open Sans', Arial, Helvetica, sans-serif;"><strong>{{ invoice.Balance | money: Data.Account.Currency }}</strong></td>
+                  <td style="font-size: 14px; color: #888888; font-weight: normal; text-align: left; font-family: 'Open Sans', Arial, Helvetica, sans-serif; padding: 15px; word-break: break-word; line-height: 22px;" align="left"><span style="line-height: 22px; font-size: 12px; font-weight: 400; font-family: 'Open Sans', Arial, Helvetica, sans-serif;">{{ invoice.InvoiceDate | date: "%b %e %Y" }}</td>
+                  <td style="font-size: 14px; color: #888888; font-weight: normal; text-align: left; font-family: 'Open Sans', Arial, Helvetica, sans-serif; padding: 15px; word-break: break-word; line-height: 22px;" align="left"><span style="line-height: 22px; font-size: 12px; font-weight: 400; font-family: 'Open Sans', Arial, Helvetica, sans-serif;">{{ invoice.DueDate | date: "%b %e %Y" }}</td>
+                  <td style="font-size: 14px; color: #888888; font-weight: normal; text-align: left; font-family: 'Open Sans', Arial, Helvetica, sans-serif; padding: 15px; word-break: break-word; line-height: 22px;" align="left"><span style="line-height: 22px; font-size: 12px; font-weight: 400; font-family: 'Open Sans', Arial, Helvetica, sans-serif;">{{ diffDays }}</td>
+                </tr>
+                {% assign total_balance = total_balance | plus: invoice.Balance %}
+							{% endfor %}
+						</table>
+						<table width="100%" align="center" border="0" cellspacing="0" cellpadding="0">
+						<tr style="background-color: #EFD1D1; margin: 0px auto;">
+
+                                <td style="font-size: 14px; color: #C05F68; font-weight: normal; text-align: left; font-family: 'Open Sans', Arial, Helvetica, sans-serif; padding: 15px; word-break: break-word; line-height: 22px;" align="left"><span style="line-height: 22px; font-size: 12px; font-weight: 400; font-family: 'Open Sans', Arial, Helvetica, sans-serif;">Outstanding Balance:  <strong>{{ total_balance | money: Data.Account.Currency}}</strong></td>
+							</tr>
+						</table>
+
+
+
+                    <!-- end of new table-->
+                      </td>
+                    </tr><tr dup="0"><td valign="top" align="center" class="clear-pad">
+                        <table width="100%" align="center" border="0" cellpadding="0" cellspacing="0" style="margin: 0px auto;"><tbody><tr dup="0"><td valign="top" align="center">
+                              <table width="95%" align="center" border="0" cellpadding="0" cellspacing="0" style="margin: 40px auto 0 auto;"><tbody><tr><td align="left" style="font-size: 14px; color: #999999; font-weight: normal; font-family: 'Open Sans', Arial, Helvetica, sans-serif; text-align: left; word-break: break-word; line-height: 22px;"><div style="text-align: left; font-size: 14px; font-weight: 400; font-family: 'Open Sans', Arial, Helvetica, sans-serif;"><span style="line-height: 22px; font-size: 14px; font-weight: 400; font-family: 'Open Sans', Arial, Helvetica, sans-serif;">Please confirm the date payment will be remitted for the outstanding invoice(s).  If you have any questions regarding this payment or if we can help in any way please contact<span style="color: #384b5d; line-height: 22px; font-size: 14px; font-weight: 400; font-family: 'Open Sans', Arial, Helvetica, sans-serif;"><span style="line-height: 22px; font-size: 14px; font-weight: bold; font-family: 'Open Sans', Arial, Helvetica, sans-serif;"> Your Rep at 000-000-000</span>.</span><br style="font-size: 14px; font-weight: 400; font-family: 'Open Sans', Arial, Helvetica, sans-serif;"></span>
+                              <br/> Regards,
+                              <br/> Zuora Inc.
+                              </div></td>
+                                </tr><!-- start space --><tr><td valign="top" height="15" style="height: 15px; font-size: 0px; line-height: 0; border-collapse: collapse;">
+                                  </td>
+                                </tr><!-- end space --></tbody></table></td>
+                          </tr><tr><td valign="top" align="center" class="clear-pad" style="padding-left:20px; padding-right:20px;">
+                              <table width="100%" align="center" border="0" cellpadding="0" cellspacing="0" style="margin: 0px auto;"><!--start button--><tbody><tr><td valign="top" align="center">
+                                    <table width="auto" align="center" border="0" cellspacing="0" cellpadding="0" style="margin: 0px auto;"><tbody><tr><!-- start duplicate button -->
+                                        <!-- end duplicate button -->
+                                      </tr></tbody></table></td>
+                                </tr><!--end button--></tbody></table></td>
+                          </tr><!-- start space --><tr><td valign="top" height="5" style="height: 5px; font-size: 0px; line-height: 0; border-collapse: collapse;">
+                            </td>
+                          </tr><!-- end space --></tbody></table></td>
+                    </tr></tbody></table></td>
+              </tr></tbody></table></td>
+        </tr><!-- END ORDER-TABLE --></tbody><!--START LAYOUT-16 ( UNSUBSCRIBE ) --><tbody><tr><td align="center" valign="top" class="container" style="background-color: #ffffff;" bgcolor="#ffffff">
+            <!-- start container -->
+            <table width="600" align="center" border="0" cellspacing="0" cellpadding="0" class="container" style="min-width: 600px; background-color: #ffffff; padding-left: 20px; padding-right: 20px; width: 600px; margin: 0px auto;"><tbody><tr><td valign="top">
+                  <table width="560" align="center" border="0" cellspacing="0" cellpadding="0" class="full-width" style="width: 560px; margin: 0px auto;"><!-- start space --><tbody><tr><td valign="top" height="14" style="height: 14px; font-size: 0px; line-height: 0; border-collapse: collapse;">
+                      </td>
+                    </tr><!-- end space --><tr dup="0"><td valign="top">
+                        <table width="100%" border="0" cellspacing="0" cellpadding="0" align="center" style="margin: 0px auto;"><!-- start rights reserved --><tbody><tr><td align="center" style="font-size: 13px; color: #999999; font-weight: normal; text-align: center; font-family: Roboto, 'Open Sans', Arail, Tahoma, Helvetica, Arial, sans-serif; word-break: break-word; line-height: 21px;"><span style="line-height: 21px; font-size: 13px; font-weight: 400; font-family: Roboto, 'Open Sans', Arail, Tahoma, Helvetica, Arial, sans-serif;">Copyright © 2008-2016, Zuora Inc. All Rights Reserved.</span></td>
+                          </tr><!-- end rights reserved --><!-- start space --><tr><td valign="top" height="15" style="height: 15px; font-size: 0px; line-height: 0; border-collapse: collapse;">
+                              </td>
+                            </tr><!-- end space --></tbody></table></td>
+                    </tr><!-- start space --><tr><td valign="top" height="15" style="height: 15px; font-size: 0px; line-height: 0; border-collapse: collapse;">
+                    </td>
+                  </tr><!-- end space --></tbody></table></td>
+            </tr></tbody></table><!-- end container --></td>
+      </tr><!--END LAYOUT-16 ( UNSUBSCRIBE ) --></tbody></table></body>
+</html>
+'''
+      attachments = {
+        invoices = "true"
+      }
+      preview_only = "true"
+      disable_editor = "true"
+    }
+    files = {
+      InvoiceItem__8.csv.zip = {
+        name = ""
+        attach = "false"
+      }
+    }
+  }
+  action_type = "Email"
+  call_type = "SOAP"
+  task_id = 7
+  concurrent_limit = 9999999
+  additionalProperties = {
+    css = {
+      top = "310px"
+      left = "720px"
+    }
+    priority = "Medium"
+    
+  }
+  _parent = [
+    zuora_billing.WorkflowExport.instance.Invoice_30_Days_Past_Due__Account_Summary_2@sssszdssu,
+  ]
+  _generated_dependencies = [
+    {
+      reference = zuora_billing.account.field.Currency
+      occurrences = [
+        {
+          location = zuora_billing.Task.instance.Invoice_30_Days_Past_Due__Account_Summary_2_sssszdssu__30_Days_Past_Due_Email@uuuuuuuumuussss.parameters.email.template
+        },
+      ]
+    },
+    {
+      reference = zuora_billing.account.field.Name
+      occurrences = [
+        {
+          location = zuora_billing.Task.instance.Invoice_30_Days_Past_Due__Account_Summary_2_sssszdssu__30_Days_Past_Due_Email@uuuuuuuumuussss.parameters.email.subject
+        },
+        {
+          location = zuora_billing.Task.instance.Invoice_30_Days_Past_Due__Account_Summary_2_sssszdssu__30_Days_Past_Due_Email@uuuuuuuumuussss.parameters.email.template
+        },
+      ]
+    },
+    {
+      reference = zuora_billing.invoice.field.Balance
+      occurrences = [
+        {
+          location = zuora_billing.Task.instance.Invoice_30_Days_Past_Due__Account_Summary_2_sssszdssu__30_Days_Past_Due_Email@uuuuuuuumuussss.parameters.email.template
+        },
+      ]
+    },
+    {
+      reference = zuora_billing.invoice.field.DueDate
+      occurrences = [
+        {
+          location = zuora_billing.Task.instance.Invoice_30_Days_Past_Due__Account_Summary_2_sssszdssu__30_Days_Past_Due_Email@uuuuuuuumuussss.parameters.email.template
+        },
+      ]
+    },
+    {
+      reference = zuora_billing.invoice.field.InvoiceDate
+      occurrences = [
+        {
+          location = zuora_billing.Task.instance.Invoice_30_Days_Past_Due__Account_Summary_2_sssszdssu__30_Days_Past_Due_Email@uuuuuuuumuussss.parameters.email.template
+        },
+      ]
+    },
+    {
+      reference = zuora_billing.invoice.field.InvoiceNumber
+      occurrences = [
+        {
+          location = zuora_billing.Task.instance.Invoice_30_Days_Past_Due__Account_Summary_2_sssszdssu__30_Days_Past_Due_Email@uuuuuuuumuussss.parameters.email.template
+        },
+      ]
+    },
+  ]
+}

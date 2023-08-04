@@ -1,0 +1,33 @@
+workato.recipe Amazing_recipe_1628883@su {
+  name = "Amazing recipe"
+  trigger_application = "salesforce"
+  action_applications = [
+    "netsuite",
+    "salesforce",
+  ]
+  applications = [
+    "salesforce",
+    "netsuite",
+  ]
+  description = "When there is a trigger event, do action"
+  folder_id = workato.folder.instance.Gil_318283
+  running = false
+  version_no = 4
+  config = [
+    {
+      keyword = "application"
+      name = "salesforce"
+      provider = "salesforce"
+      account_id = workato.connection.instance.Oren_s_Sandbox@ts
+      skip_validation = false
+    },
+    {
+      keyword = "application"
+      name = "netsuite"
+      provider = "netsuite"
+      account_id = workato.connection.instance.Oren_s_NetSuite@ts
+      skip_validation = false
+    },
+  ]
+  code = workato.recipe__code.instance.Amazing_recipe_1628883_su@uum
+}

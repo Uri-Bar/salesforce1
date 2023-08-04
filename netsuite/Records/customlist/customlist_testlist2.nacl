@@ -1,0 +1,26 @@
+netsuite.customlist customlist_testlist2 {
+  scriptid = "customlist_testlist2"
+  description = "desc2.."
+  isinactive = false
+  ismatrixoption = false
+  isordered = true
+  name = "testlist2"
+  customvalues = {
+    customvalue = {
+      "12@" = {
+        scriptid = "12"
+        abbreviation = "a"
+        isinactive = false
+        value = "a2"
+        index = 0
+      }
+      "22@" = {
+        scriptid = "22"
+        abbreviation = "b"
+        isinactive = false
+        value = "b2"
+        index = 1
+      }
+    }
+  }
+}

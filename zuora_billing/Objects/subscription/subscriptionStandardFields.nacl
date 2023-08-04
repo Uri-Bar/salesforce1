@@ -1,0 +1,480 @@
+type zuora_billing.subscription {
+  string Id {
+    type = "string"
+    format = "uuid"
+    required = false
+    filterable = false
+    label = "Id"
+  }
+  string CreatedById {
+    type = "string"
+    format = "uuid"
+    required = false
+    filterable = false
+    referenceTo = [
+      zuora_billing.user.field.Id,
+    ]
+    cardinality = "manyToOne"
+    recordConstraints = {
+      create = {
+        enforceValidMapping = true
+      }
+    }
+    label = "CreatedById"
+  }
+  string CreatedDate {
+    type = "string"
+    format = "date-time"
+    required = false
+    filterable = false
+    label = "CreatedDate"
+  }
+  string UpdatedById {
+    type = "string"
+    format = "uuid"
+    required = false
+    filterable = false
+    referenceTo = [
+      zuora_billing.user.field.Id,
+    ]
+    cardinality = "manyToOne"
+    recordConstraints = {
+      create = {
+        enforceValidMapping = true
+      }
+    }
+    label = "UpdatedById"
+  }
+  string UpdatedDate {
+    type = "string"
+    format = "date-time"
+    required = false
+    filterable = false
+    label = "UpdatedDate"
+  }
+  boolean deleted {
+    type = "boolean"
+    required = false
+    filterable = false
+    label = "deleted"
+  }
+  string AccountId {
+    type = "string"
+    format = "uuid"
+    required = false
+    filterable = false
+    referenceTo = [
+      zuora_billing.account.field.Id,
+    ]
+    cardinality = "manyToOne"
+    recordConstraints = {
+      create = {
+        enforceValidMapping = true
+      }
+    }
+    label = "AccountId"
+  }
+  boolean AutoRenew {
+    type = "boolean"
+    required = false
+    filterable = false
+    label = "AutoRenew"
+  }
+  string CancelledDate {
+    type = "string"
+    format = "date"
+    required = false
+    filterable = false
+    label = "CancelledDate"
+  }
+  string ContractAcceptanceDate {
+    type = "string"
+    format = "date"
+    required = false
+    filterable = false
+    label = "ContractAcceptanceDate"
+  }
+  string ContractEffectiveDate {
+    type = "string"
+    format = "date"
+    required = false
+    filterable = false
+    label = "ContractEffectiveDate"
+  }
+  string CreatorAccountId {
+    type = "string"
+    format = "uuid"
+    required = false
+    filterable = false
+    referenceTo = [
+      zuora_billing.account.field.Id,
+    ]
+    cardinality = "manyToOne"
+    recordConstraints = {
+      create = {
+        enforceValidMapping = true
+      }
+    }
+    label = "CreatorAccountId"
+  }
+  string CreatorInvoiceOwnerId {
+    type = "string"
+    format = "uuid"
+    required = false
+    filterable = false
+    referenceTo = [
+      zuora_billing.account.field.Id,
+    ]
+    cardinality = "manyToOne"
+    recordConstraints = {
+      create = {
+        enforceValidMapping = true
+      }
+    }
+    label = "CreatorInvoiceOwnerId"
+  }
+  number CurrentTerm {
+    type = "integer"
+    required = false
+    filterable = false
+    label = "CurrentTerm"
+  }
+  string CurrentTermPeriodType {
+    type = "string"
+    maxLength = 512
+    required = false
+    filterable = false
+    label = "CurrentTermPeriodType"
+  }
+  number InitialTerm {
+    type = "integer"
+    required = false
+    filterable = false
+    label = "InitialTerm"
+  }
+  string InitialTermPeriodType {
+    type = "string"
+    maxLength = 512
+    required = false
+    filterable = false
+    label = "InitialTermPeriodType"
+  }
+  string InvoiceOwnerId {
+    type = "string"
+    format = "uuid"
+    required = false
+    filterable = false
+    referenceTo = [
+      zuora_billing.account.field.Id,
+    ]
+    cardinality = "manyToOne"
+    recordConstraints = {
+      create = {
+        enforceValidMapping = true
+      }
+    }
+    label = "InvoiceOwnerId"
+  }
+  boolean IsInvoiceSeparate {
+    type = "boolean"
+    required = false
+    filterable = false
+    label = "IsInvoiceSeparate"
+  }
+  string Name {
+    type = "string"
+    maxLength = 512
+    required = false
+    filterable = false
+    label = "Name"
+  }
+  string Notes {
+    type = "string"
+    maxLength = 512
+    required = false
+    filterable = false
+    label = "Notes"
+  }
+  string OriginalCreatedDate {
+    type = "string"
+    format = "date-time"
+    required = false
+    filterable = false
+    label = "OriginalCreatedDate"
+  }
+  string OriginalId {
+    type = "string"
+    format = "uuid"
+    required = false
+    filterable = false
+    label = "OriginalId"
+  }
+  string PreviousSubscriptionId {
+    type = "string"
+    format = "uuid"
+    required = false
+    filterable = false
+    label = "PreviousSubscriptionId"
+  }
+  string RenewalSetting {
+    type = "string"
+    maxLength = 512
+    required = false
+    filterable = false
+    label = "RenewalSetting"
+  }
+  number RenewalTerm {
+    type = "integer"
+    required = false
+    filterable = false
+    label = "RenewalTerm"
+  }
+  string RenewalTermPeriodType {
+    type = "string"
+    maxLength = 512
+    required = false
+    filterable = false
+    label = "RenewalTermPeriodType"
+  }
+  string Revision {
+    type = "string"
+    maxLength = 512
+    required = false
+    filterable = false
+    label = "Revision"
+  }
+  string ServiceActivationDate {
+    type = "string"
+    format = "date"
+    required = false
+    filterable = false
+    label = "ServiceActivationDate"
+  }
+  string Status {
+    type = "string"
+    maxLength = 512
+    required = false
+    filterable = false
+    label = "Status"
+  }
+  string SubscriptionEndDate {
+    type = "string"
+    format = "date"
+    required = false
+    filterable = false
+    label = "SubscriptionEndDate"
+  }
+  string SubscriptionStartDate {
+    type = "string"
+    format = "date"
+    required = false
+    filterable = false
+    label = "SubscriptionStartDate"
+  }
+  string SubscriptionVersionAmendmentId {
+    type = "string"
+    format = "uuid"
+    required = false
+    filterable = false
+    referenceTo = [
+      zuora_billing.amendment.field.Id,
+      zuora_billing.extendedamendment.field.Id,
+    ]
+    cardinality = "manyToOne"
+    recordConstraints = {
+      create = {
+        enforceValidMapping = true
+      }
+    }
+    label = "SubscriptionVersionAmendmentId"
+  }
+  string TermEndDate {
+    type = "string"
+    format = "date"
+    required = false
+    filterable = false
+    label = "TermEndDate"
+  }
+  string TermStartDate {
+    type = "string"
+    format = "date"
+    required = false
+    filterable = false
+    label = "TermStartDate"
+  }
+  string TermType {
+    type = "string"
+    maxLength = 512
+    required = false
+    filterable = false
+    label = "TermType"
+  }
+  number Version {
+    type = "integer"
+    required = false
+    filterable = false
+    label = "Version"
+  }
+  number CMRR {
+    type = "number"
+    required = false
+    filterable = false
+    label = "CMRR"
+  }
+  string BillToContactSnapshotId {
+    type = "string"
+    format = "uuid"
+    required = false
+    filterable = false
+    label = "BillToContactSnapshotId"
+  }
+  string BillToContactId {
+    type = "string"
+    format = "uuid"
+    required = false
+    filterable = false
+    referenceTo = [
+      zuora_billing.contact.field.Id,
+    ]
+    cardinality = "manyToOne"
+    recordConstraints = {
+      create = {
+        enforceValidMapping = true
+      }
+    }
+    label = "BillToContactId"
+  }
+  string RampId {
+    type = "string"
+    format = "uuid"
+    required = false
+    filterable = false
+    label = "RampId"
+  }
+  string PaymentTerm {
+    type = "string"
+    maxLength = 512
+    required = true
+    filterable = false
+    label = "PaymentTerm"
+  }
+  string QuoteNumber__QT {
+    type = "string"
+    maxLength = 512
+    required = false
+    filterable = false
+    label = "QuoteNumber__QT"
+  }
+  string QuoteType__QT {
+    type = "string"
+    maxLength = 512
+    required = false
+    filterable = false
+    label = "QuoteType__QT"
+  }
+  string QuoteBusinessType__QT {
+    type = "string"
+    maxLength = 512
+    required = false
+    filterable = false
+    label = "QuoteBusinessType__QT"
+  }
+  string OpportunityName__QT {
+    type = "string"
+    maxLength = 512
+    required = false
+    filterable = false
+    label = "OpportunityName__QT"
+  }
+  string OpportunityCloseDate__QT {
+    type = "string"
+    format = "date"
+    required = false
+    filterable = false
+    label = "OpportunityCloseDate__QT"
+  }
+  string CpqBundleJsonId__QT {
+    type = "string"
+    maxLength = 512
+    required = false
+    filterable = false
+    label = "CpqBundleJsonId__QT"
+  }
+  string ExternallyManagedBy {
+    type = "string"
+    maxLength = 512
+    required = false
+    filterable = false
+    label = "ExternallyManagedBy"
+  }
+  string LastBookingDate {
+    type = "string"
+    format = "date"
+    required = false
+    filterable = false
+    label = "LastBookingDate"
+  }
+  boolean IsLatestVersion {
+    type = "boolean"
+    required = false
+    filterable = false
+    label = "IsLatestVersion"
+  }
+  string InvoiceScheduleId {
+    type = "string"
+    format = "uuid"
+    required = false
+    filterable = false
+    referenceTo = [
+      "InvoiceSchedule.Id",
+    ]
+    cardinality = "manyToOne"
+    recordConstraints = {
+      create = {
+        enforceValidMapping = true
+      }
+    }
+    label = "InvoiceScheduleId"
+  }
+  string InvoiceTemplateId {
+    type = "string"
+    format = "uuid"
+    required = false
+    filterable = false
+    label = "InvoiceTemplateId"
+  }
+  string SequenceSetId {
+    type = "string"
+    maxLength = 512
+    required = false
+    filterable = false
+    label = "SequenceSetId"
+  }
+  string CancelReason {
+    type = "string"
+    maxLength = 512
+    required = false
+    filterable = false
+    label = "CancelReason"
+  }
+  boolean Prepayment {
+    type = "boolean"
+    required = false
+    filterable = false
+    label = "Prepayment"
+  }
+  string SoldToContactId {
+    type = "string"
+    label = "SoldToContactId"
+    format = "uuid"
+    required = false
+    filterable = false
+  }
+  string SoldToContactSnapshotId {
+    type = "string"
+    label = "SoldToContactSnapshotId"
+    format = "uuid"
+    required = false
+    filterable = false
+  }
+}

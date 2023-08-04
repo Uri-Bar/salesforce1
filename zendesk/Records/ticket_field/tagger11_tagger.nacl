@@ -1,0 +1,20 @@
+zendesk.ticket_field tagger11_tagger {
+  type = "tagger"
+  raw_title = "tagger11"
+  raw_description = "11"
+  active = true
+  required = false
+  collapsed_for_agents = false
+  raw_title_in_portal = "tagger11"
+  visible_in_portal = true
+  editable_in_portal = true
+  required_in_portal = false
+  removable = true
+  agent_description = "desc"
+  custom_field_options = [
+    zendesk.ticket_field__custom_field_options.instance.tagger11_tagger__v11,
+    zendesk.ticket_field__custom_field_options.instance.tagger11_tagger__v222,
+    zendesk.ticket_field__custom_field_options.instance.tagger11_tagger__v224,
+    zendesk.ticket_field__custom_field_options.instance.tagger11_tagger__v223,
+  ]
+}

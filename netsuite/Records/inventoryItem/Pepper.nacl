@@ -1,0 +1,45 @@
+netsuite.inventoryItem Pepper {
+  cogsAccount = netsuite.account.instance.Purchases
+  includeChildren = false
+  incomeAccount = netsuite.account.instance.Sales
+  taxSchedule = {
+    name = "Pepper"
+    
+    id = "[ACCOUNT_SPECIFIC_VALUE]"
+  }
+  assetAccount = netsuite.account.instance.Inventory
+  matchBillToReceipt = false
+  costingMethodDisplay = "Average"
+  
+  useMarginalRates = false
+  overallQuantityPricingType = "_byLineQuantity"
+  excludeFromSitemap = false
+  sitemapPriority = "_auto"
+  
+  
+  
+  
+  itemId = "Pepper"
+  displayName = "Pepper"
+  isOnline = false
+  isInactive = false
+  currency = "1"
+  subsidiaryList = [
+    netsuite.subsidiary.instance.Parent_Company@s,
+  ]
+  
+  identifier = "Pepper"
+  translationsList = {
+    translation = {
+      _german = {
+        locale = "_german"
+        language = "German"
+      }
+      _frenchFrance = {
+        locale = "_frenchFrance"
+        language = "French (France)"
+      }
+    }
+  }
+  roundUpAsComponent = false
+}

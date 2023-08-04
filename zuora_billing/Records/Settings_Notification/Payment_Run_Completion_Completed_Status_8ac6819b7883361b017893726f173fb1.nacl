@@ -1,0 +1,18 @@
+zuora_billing.Settings_Notification Payment_Run_Completion_Completed_Status_8ac6819b7883361b017893726f173fb1@ssusu {
+  profileId = zuora_billing.Settings_CommunicationProfile.instance.Default_Profile@s
+  eventName = "Payment Run Completion"
+  name = "Completed Status"
+  description = "Payment run is completed successfully."
+  active = true
+  hidden = false
+  param1 = "Completed"
+  emailOption = true
+  emailTemplateName = zuora_billing.PublicEmailTemplate.instance.Default_email_template_for_Payment_Run_Completion_with_Completed_status@s
+  calloutOption = false
+  contentType = "APPLICATION_JSON"
+  calloutRetriable = false
+  calloutAuth = false
+  calloutOauth2 = false
+  calloutPreemptiveAuth = false
+  useCustomRequestBody = false
+}

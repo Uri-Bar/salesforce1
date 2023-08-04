@@ -1,0 +1,106 @@
+zendesk.view Silver_View@s {
+  title = "Silver View"
+  active = true
+  description = "That Silverish quality"
+  execution = {
+    group_order = "desc"
+    sort_order = "desc"
+    columns = [
+      {
+        id = "satisfaction_score"
+        title = "Satisfaction"
+        filterable = true
+        sortable = true
+      },
+      {
+        id = "subject"
+        title = "Subject"
+        filterable = false
+        sortable = false
+      },
+      {
+        id = "requester"
+        title = "Requester"
+        filterable = true
+        sortable = true
+      },
+      {
+        id = "created"
+        title = "Requested"
+        filterable = false
+        sortable = true
+      },
+      {
+        id = "assignee"
+        title = "Assignee"
+        filterable = true
+        sortable = true
+      },
+      {
+        id = zendesk.ticket_field.instance.checkbox_SilverField
+        title = "SilverField"
+        type = "checkbox"
+        filterable = true
+        sortable = true
+      },
+    ]
+    fields = [
+      {
+        id = "satisfaction_score"
+        title = "Satisfaction"
+        filterable = true
+        sortable = true
+      },
+      {
+        id = "subject"
+        title = "Subject"
+        filterable = false
+        sortable = false
+      },
+      {
+        id = "requester"
+        title = "Requester"
+        filterable = true
+        sortable = true
+      },
+      {
+        id = "created"
+        title = "Requested"
+        filterable = false
+        sortable = true
+      },
+      {
+        id = "assignee"
+        title = "Assignee"
+        filterable = true
+        sortable = true
+      },
+    ]
+    custom_fields = [
+      {
+        id = zendesk.ticket_field.instance.checkbox_SilverField
+        title = "SilverField"
+        type = "checkbox"
+        filterable = true
+        sortable = true
+      },
+    ]
+  }
+  conditions = {
+    all = [
+      {
+        field = "ticket_form_id"
+        operator = "is"
+        value = zendesk.ticket_form.instance.SilverForm
+      },
+      {
+        field = "status"
+        operator = "is_not"
+        value = "solved"
+      },
+    ]
+  }
+  
+  raw_title = "Silver View"
+  default = false
+}

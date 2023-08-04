@@ -1,0 +1,74 @@
+netsuite.savedcsvimport custimport_gl_import_coa {
+  scriptid = "custimport_gl_import_coa"
+  charencoding = "UTF_8"
+  columndelimiter = "SEMICOLON"
+  datahandling = "ADDUPDATE"
+  decimaldelimiter = "PERIOD"
+  ignorereadonly = true
+  importname = "Germany Localization - Chart of Accounts"
+  logsystemnotescustfields = false
+  multiselectdelimiter = "|"
+  overwritemissingfields = false
+  overwritesublists = false
+  recordtype = "ACCOUNT"
+  runserversuitescript = false
+  usemultithread = false
+  validatemandatorycustfields = true
+  audience = {
+    allemployees = false
+    allpartners = false
+    allroles = false
+    globaledit = false
+    ispublic = true
+  }
+  filemappings = {
+    filemapping = {
+      ACCOUNT = {
+        file = "ACCOUNT"
+      }
+    }
+  }
+  recordmappings = {
+    recordmapping = {
+      ACCOUNT = {
+        record = "ACCOUNT"
+        fieldmappings = {
+          fieldmapping = {
+            ACCTNAME = {
+              field = "ACCTNAME"
+              columnreference = {
+                column = "Name"
+                file = "ACCOUNT"
+                type = "NAME"
+              }
+            }
+            ACCTNUMBER = {
+              field = "ACCTNUMBER"
+              columnreference = {
+                column = "Number"
+                file = "ACCOUNT"
+                type = "NAME"
+              }
+            }
+            ACCTTYPE = {
+              field = "ACCTTYPE"
+              columnreference = {
+                column = "Type"
+                file = "ACCOUNT"
+                type = "NAME"
+              }
+            }
+            CURRENCY = {
+              field = "CURRENCY"
+              columnreference = {
+                column = "Currency"
+                file = "ACCOUNT"
+                type = "NAME"
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

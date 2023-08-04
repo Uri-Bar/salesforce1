@@ -1,0 +1,39 @@
+zuora_billing.Workflow HK___Cancel_Subscription_from_Unpaid_Invoices___IS__Prod__72_sbssssssbssjku__HK___Cancel_Subscription_from_Unpaid_Invoices___IS__Prod_@uuuuuuuuuuuuuumuusbssssssbssjk {
+  id = 72
+  name = "HK - Cancel Subscription from Unpaid Invoices - IS (Prod)"
+  description = ""
+  type = "Workflow::Setup"
+  interval = "0 /20 * /1 * *"
+  timezone = "Hong Kong"
+  status = "Active"
+  version = "0.0.1"
+  additionalProperties = {
+    parameters = {
+      skipping_check = "redis"
+      file_encryption = "false"
+      secure_error_msgs = "false"
+      disable_pending_status = true
+    }
+    ondemand_trigger = true
+    callout_trigger = false
+    scheduled_trigger = true
+    css = {
+      top = "40px"
+      left = "30px"
+    }
+    notifications = {
+      failure = false
+      pending = false
+      success = false
+    }
+    call_type = "ASYNC"
+    priority = "Medium"
+    delete_ttl = 30
+    
+    
+    event_trigger = false
+  }
+  _parent = [
+    zuora_billing.WorkflowExport.instance.HK___Cancel_Subscription_from_Unpaid_Invoices___IS__Prod__72@sbssssssbssjku,
+  ]
+}

@@ -1,0 +1,9 @@
+okta.Feature Enhanced_Permission_set_Editor@s {
+  type = "self-service"
+  status = "DISABLED"
+  name = "Enhanced Permission set Editor"
+  description = "Improved user experience in permission set editor UI for admin roles"
+  stage = {
+    value = "EA"
+  }
+}

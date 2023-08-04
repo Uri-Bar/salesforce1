@@ -1,0 +1,355 @@
+workato.recipe__code multi_salesforce_1909343_su@uum {
+  number = 0
+  provider = "salesforce"
+  name = "updated_custom_object"
+  as = "a2b85922"
+  title = "New/updated Opportunity"
+  description = "New/updated <span class=\"provider\">Opportunity</span> in <span class=\"provider\">Salesforce</span>"
+  keyword = "trigger"
+  dynamicPickListSelection = {
+    sobject_name = "Opportunity"
+  }
+  input = {
+    sobject_name = "Opportunity"
+    since_offset = "-3600"
+  }
+  filter = {
+    conditions = [
+      {
+        operand = "equals_to"
+        lhs = "#{_('data.salesforce.a2b85922.StageName')}"
+        rhs = "Closed Won"
+        uuid = "condition-9b6ae69b-66ad-4c78-adc3-7e644f0e5ff3"
+      },
+      {
+        operand = "is_not_true"
+        lhs = "#{_('data.salesforce.a2b85922.Description')}.present ?? #{_('data.salesforce.a2b85922.Description')}.include?(\"Netsuite ID\") : false"
+        rhs = ""
+        uuid = "condition-159efb3a-5486-408e-99fb-b5d553129a5f"
+      },
+    ]
+    operand = "and"
+    type = "compound"
+  }
+  block = [
+    {
+      number = 1
+      provider = "salesforce_secondary"
+      name = "search_sobjects"
+      as = "91572900"
+      title = "Search Opportunity Products"
+      description = "Search for <span class=\"provider\">Opportunity Products</span> in <span class=\"provider\">Salesforce</span>"
+      keyword = "action"
+      dynamicPickListSelection = {
+        sobject_name = "Opportunity Product"
+      }
+      input = {
+        sobject_name = "OpportunityLineItem"
+        Name = "#{_('data.salesforce.a2b85922.Name')}bla"
+        limit = "150"
+      }
+      uuid = "327ba4b1-707f-484f-a16d-d86f0d5a3ad2"
+    },
+    {
+      number = 2
+      provider = "netsuite"
+      name = "search_object_v2"
+      as = "7196edf9"
+      title = "Search Customers"
+      description = "Search <span class=\"provider\">Customers</span> in <span class=\"provider\">NetSuite</span>"
+      keyword = "action"
+      dynamicPickListSelection = {
+        netsuite_object = "Customer"
+      }
+      input = {
+        netsuite_object = netsuite.customer
+        limit = "25"
+        search_settings = {
+          string_fields = "contains"
+          integer_fields = "equalTo"
+          list_fields = "anyOf"
+        }
+        companyName = "#{_('data.salesforce.a2b85922.get_custom_object(AccountId>id, sobject_name: Account).Name')}"
+      }
+      visible_config_fields = [
+        "netsuite_object",
+        "limit",
+        "field_list",
+        "custom_list",
+        "custom_column_list",
+        "search_settings",
+        "search_settings.string_fields",
+        "search_settings.integer_fields",
+        "search_settings.list_fields",
+        "companyName",
+      ]
+      uuid = "9a916850-11bd-41cc-8c68-5969bb83bf7f"
+    },
+    {
+      number = 3
+      as = "38597a91"
+      keyword = "foreach"
+      repeat_mode = "simple"
+      clear_scope = "false"
+      block = [
+        {
+          number = 4
+          provider = "salesforce"
+          name = "search_sobjects"
+          as = "4ff73318"
+          title = "Search Products"
+          description = "Search for <span class=\"provider\">Products</span> in <span class=\"provider\">Salesforce</span>"
+          keyword = "action"
+          dynamicPickListSelection = {
+            sobject_name = "Product"
+          }
+          input = {
+            limit = "150"
+            sobject_name = "Product2"
+          }
+          uuid = "8ff24f02-dcc2-4c32-a4c0-4094d4ee1beb"
+        },
+        {
+          number = 5
+          provider = "netsuite"
+          name = "search_object_v2"
+          as = "0de9386c"
+          title = "Search Inventory items"
+          description = "Search <span class=\"provider\">Inventory items</span> in <span class=\"provider\">NetSuite</span>"
+          keyword = "action"
+          dynamicPickListSelection = {
+            netsuite_object = "InventoryItem"
+          }
+          input = {
+            netsuite_object = netsuite.inventoryItem
+            limit = "25"
+            search_settings = {
+              string_fields = "contains"
+              integer_fields = "equalTo"
+              list_fields = "anyOf"
+            }
+            displayName = "#{_('data.salesforce.4ff73318.Product2.first.Name')}"
+          }
+          visible_config_fields = [
+            "netsuite_object",
+            "limit",
+            "field_list",
+            "custom_list",
+            "custom_column_list",
+            "search_settings",
+            "search_settings.string_fields",
+            "search_settings.integer_fields",
+            "search_settings.list_fields",
+            "displayName",
+          ]
+          uuid = "9ee69617-d4ac-41fb-bdd4-28fc546d84ef"
+        },
+        {
+          number = 6
+          keyword = "if"
+          input = {
+            type = "compound"
+            operand = "and"
+            conditions = [
+              {
+                operand = "equals_to"
+                lhs = "#{_('data.netsuite.0de9386c.InventoryItems.first.itemShipMethodList.recordRef.first.____Size', 'list_meta', '____Size', 'data.netsuite.0de9386c.InventoryItems.first.itemShipMethodList.recordRef')}"
+                rhs = "0"
+                uuid = "condition-9b085f3d-dcb9-4733-b4ed-a9b4d7f18c53"
+              },
+            ]
+          }
+          block = [
+            {
+              number = 7
+              provider = "netsuite"
+              name = "add_object"
+              as = "948ddc15"
+              title = "Create Inventory  item"
+              description = "Create <span class=\"provider\">Inventory  item</span> in <span class=\"provider\">NetSuite</span>"
+              keyword = "action"
+              dynamicPickListSelection = {
+                netsuite_object = "Inventory Item"
+              }
+              input = {
+                netsuite_object = netsuite.inventoryItem
+                external_id = "#{_('data.salesforce.4ff73318.Product2.first.Id')}"
+                storeDisplayName = "#{_('data.salesforce.4ff73318.Product2.first.Name')}"
+                itemId = "#{_('data.salesforce.4ff73318.Product2.first.ProductCode')}"
+                displayName = "#{_('data.salesforce.4ff73318.Product2.first.Name')}"
+              }
+              visible_config_fields = [
+                "netsuite_object",
+                "custom_list",
+                "custom_column_list",
+                "displayName",
+                "itemId",
+                "storeDisplayName",
+                "external_id",
+                "itemVendorList.itemVendor.subsidiary",
+              ]
+              uuid = "6c184ac8-7d1a-4b3f-9fc5-074afa8e09f6"
+            },
+          ]
+          uuid = "ee1d0cb9-e612-42b3-bc90-33aeb5caa467"
+        },
+        {
+          number = 8
+          provider = "workato_list"
+          name = "accumulate_list_items"
+          as = "f942e05b"
+          title = "Accumulate items to Netsuite Order Items list"
+          description = "Accumulate <span class=\"provider\">items</span> to <span class=\"provider\">Netsuite Order Items</span> list"
+          keyword = "action"
+          input = {
+            name = "Netsuite Order Items"
+            list_item = {
+              schema = "[{\"name\":\"item_id\",\"type\":\"string\",\"optional\":true,\"label\":\"item id\",\"control_type\":\"text\"},{\"name\":\"quantity\",\"type\":\"string\",\"optional\":true,\"label\":\"quantity\",\"control_type\":\"text\"},{\"name\":\"price\",\"type\":\"string\",\"optional\":true,\"label\":\"price\",\"control_type\":\"text\"},{\"name\":\"description\",\"type\":\"string\",\"optional\":true,\"label\":\"description\",\"control_type\":\"text\"}]"
+              data = {
+                item_id = "=_('data.netsuite.0de9386c.InventoryItems.first.internal_id')or _('data.netsuite.948ddc15.internal_id')"
+                quantity = "#{_('data.foreach.38597a91.Quantity')}"
+                price = "#{_('data.foreach.38597a91.UnitPrice')}"
+                description = "#{_('data.salesforce.4ff73318.Product2.first.Description')}"
+              }
+            }
+          }
+          visible_config_fields = [
+            "name",
+            "list_item.data.item_id",
+            "list_item",
+            "list_item.schema",
+            "list_item.data.quantity",
+            "list_item.data",
+            "list_item.data.price",
+            "list_item.data.description",
+          ]
+          uuid = "ce39b7dd-c94a-458c-b75f-bf39c46ea30e"
+        },
+      ]
+      source = "#{_('data.salesforce_secondary.91572900.OpportunityLineItem')}"
+      uuid = "1e159699-9640-4b43-bfa6-922a188a4bbb"
+    },
+    {
+      number = 9
+      provider = "netsuite"
+      name = "search_object_v2"
+      as = "8d9b954b"
+      title = "Search Sales  orders"
+      description = "Search <span class=\"provider\">Sales  orders</span> in <span class=\"provider\">NetSuite</span>"
+      keyword = "action"
+      dynamicPickListSelection = {
+        netsuite_object = "Sales Order"
+      }
+      input = {
+        netsuite_object = netsuite.salesOrder
+        limit = "25"
+        search_settings = {
+          string_fields = "contains"
+          integer_fields = "equalTo"
+          list_fields = "anyOf"
+        }
+        externalId = "#{_('data.salesforce.a2b85922.Id')}"
+      }
+      visible_config_fields = [
+        "netsuite_object",
+        "limit",
+        "field_list",
+        "custom_list",
+        "custom_column_list",
+        "search_settings",
+        "search_settings.string_fields",
+        "search_settings.integer_fields",
+        "search_settings.list_fields",
+        "externalId",
+      ]
+      uuid = "7cc36e8c-c62f-4ba0-b569-6d0355a53c73"
+    },
+  ]
+  uuid = "060f49c7-953e-464c-ad7e-879b71314ca4"
+  _parent = [
+    workato.recipe.instance.multi_salesforce_1909343@su,
+  ]
+  
+  _generated_dependencies = [
+    {
+      reference = netsuite.customer
+      occurrences = [
+        {
+          location = workato.recipe__code.instance.multi_salesforce_1909343_su@uum.block.1
+          direction = "output"
+        },
+      ]
+    },
+    {
+      reference = netsuite.customer.field.companyName
+      occurrences = [
+        {
+          location = workato.recipe__code.instance.multi_salesforce_1909343_su@uum.block.1
+          direction = "output"
+        },
+      ]
+    },
+    {
+      reference = netsuite.inventoryItem
+      occurrences = [
+        {
+          location = workato.recipe__code.instance.multi_salesforce_1909343_su@uum.block.2.block.1
+          direction = "output"
+        },
+        {
+          location = workato.recipe__code.instance.multi_salesforce_1909343_su@uum.block.2.block.2.block.0
+          direction = "output"
+        },
+      ]
+    },
+    {
+      reference = netsuite.inventoryItem.field.displayName
+      occurrences = [
+        {
+          location = workato.recipe__code.instance.multi_salesforce_1909343_su@uum.block.2.block.1
+          direction = "output"
+        },
+        {
+          location = workato.recipe__code.instance.multi_salesforce_1909343_su@uum.block.2.block.2.block.0
+          direction = "output"
+        },
+      ]
+    },
+    {
+      reference = netsuite.inventoryItem.field.itemId
+      occurrences = [
+        {
+          location = workato.recipe__code.instance.multi_salesforce_1909343_su@uum.block.2.block.2.block.0
+          direction = "output"
+        },
+      ]
+    },
+    {
+      reference = netsuite.inventoryItem.field.storeDisplayName
+      occurrences = [
+        {
+          location = workato.recipe__code.instance.multi_salesforce_1909343_su@uum.block.2.block.2.block.0
+          direction = "output"
+        },
+      ]
+    },
+    {
+      reference = netsuite.salesOrder
+      occurrences = [
+        {
+          location = workato.recipe__code.instance.multi_salesforce_1909343_su@uum.block.3
+          direction = "output"
+        },
+      ]
+    },
+    {
+      reference = netsuite.salesOrder.field.externalId
+      occurrences = [
+        {
+          location = workato.recipe__code.instance.multi_salesforce_1909343_su@uum.block.3
+          direction = "output"
+        },
+      ]
+    },
+  ]
+}

@@ -1,0 +1,7 @@
+zuora_billing.PaymentGatewayResponse amazon_test@s {
+  id = zuora_billing.Settings_Gateway.instance.amazon_test@s
+  name = "amazon test"
+  type = "AmazonPay"
+  isDefault = false
+  isActive = true
+}

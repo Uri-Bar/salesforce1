@@ -1,0 +1,5 @@
+zendesk.user_segment Signed_in_users@bs {
+  user_type = "signed_in_users"
+  built_in = true
+  name = "Signed-in users"
+}

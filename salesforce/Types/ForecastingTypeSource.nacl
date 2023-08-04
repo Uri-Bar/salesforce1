@@ -1,0 +1,58 @@
+type salesforce.ForecastingTypeSource {
+  annotations {
+    serviceid metadataType {
+    }
+    boolean hasMetaFile {
+    }
+    string folderType {
+    }
+    string folderContentType {
+    }
+    string suffix {
+    }
+    string dirName {
+    }
+  }
+  string forecastingSourceDefinition {
+    foreignKeyDomain = [
+      salesforce.ForecastingSourceDefinition,
+    ]
+  }
+  string forecastingType {
+    foreignKeyDomain = [
+      salesforce.ForecastingType,
+    ]
+  }
+  serviceid fullName {
+  }
+  boolean isProtected {
+  }
+  string masterLabel {
+  }
+  string parentSourceDefinition {
+    foreignKeyDomain = [
+      salesforce.ForecastingSourceDefinition,
+    ]
+  }
+  string relationField {
+    _restriction = {
+      enforce_value = false
+      values = [
+        "OpportunityLineItem.OpportunityId",
+        "OpportunityLineItem.Product2Id",
+      ]
+    }
+    foreignKeyDomain = [
+      salesforce.CustomField,
+    ]
+  }
+  number sourceGroup {
+  }
+  string internalId {
+    _hidden_value = true
+    localOnly = true
+  }
+  suffix = "forecastingTypeSource"
+  dirName = "forecastingTypeSources"
+  metadataType = "ForecastingTypeSource"
+}

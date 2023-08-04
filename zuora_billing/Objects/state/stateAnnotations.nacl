@@ -1,0 +1,17 @@
+type zuora_billing.state {
+  annotations {
+    string metadataType {
+    }
+    string label {
+    }
+    string description {
+    }
+    hidden_string id {
+    }
+    string objectType {
+    }
+  }
+  metadataType = "StandardObject"
+  objectType = "state"
+  label = "State"
+}

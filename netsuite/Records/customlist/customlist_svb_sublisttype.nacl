@@ -1,0 +1,25 @@
+netsuite.customlist customlist_svb_sublisttype {
+  scriptid = "customlist_svb_sublisttype"
+  isinactive = false
+  ismatrixoption = false
+  isordered = true
+  name = "SVB Sublist type"
+  customvalues = {
+    customvalue = {
+      value_1_t1221897_146 = {
+        scriptid = "value_1_t1221897_146"
+        abbreviation = "I"
+        isinactive = false
+        value = "Item"
+        index = 0
+      }
+      value_2_t1221897_146 = {
+        scriptid = "value_2_t1221897_146"
+        abbreviation = "E"
+        isinactive = false
+        value = "Expense"
+        index = 1
+      }
+    }
+  }
+}

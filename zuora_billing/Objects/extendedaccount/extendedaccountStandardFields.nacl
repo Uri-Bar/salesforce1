@@ -1,0 +1,498 @@
+type zuora_billing.extendedaccount {
+  string Id {
+    type = "string"
+    format = "uuid"
+    required = false
+    filterable = false
+    label = "Id"
+  }
+  string CreatedById {
+    type = "string"
+    format = "uuid"
+    required = false
+    filterable = false
+    referenceTo = [
+      zuora_billing.extendeduser.field.Id,
+    ]
+    cardinality = "manyToOne"
+    recordConstraints = {
+      create = {
+        enforceValidMapping = true
+      }
+    }
+    label = "CreatedById"
+  }
+  string CreatedDate {
+    type = "string"
+    format = "date-time"
+    required = false
+    filterable = false
+    label = "CreatedDate"
+  }
+  string UpdatedById {
+    type = "string"
+    format = "uuid"
+    required = false
+    filterable = false
+    referenceTo = [
+      zuora_billing.extendeduser.field.Id,
+    ]
+    cardinality = "manyToOne"
+    recordConstraints = {
+      create = {
+        enforceValidMapping = true
+      }
+    }
+    label = "UpdatedById"
+  }
+  string UpdatedDate {
+    type = "string"
+    format = "date-time"
+    required = false
+    filterable = false
+    label = "UpdatedDate"
+  }
+  boolean deleted {
+    type = "boolean"
+    required = false
+    filterable = false
+    label = "deleted"
+  }
+  string AccountNumber {
+    type = "string"
+    maxLength = 512
+    required = false
+    filterable = false
+    label = "AccountNumber"
+  }
+  string AdditionalEmailAddresses {
+    type = "string"
+    maxLength = 512
+    required = false
+    filterable = false
+    label = "AdditionalEmailAddresses"
+  }
+  boolean AllowInvoiceEdit {
+    type = "boolean"
+    required = false
+    filterable = false
+    label = "AllowInvoiceEdit"
+  }
+  boolean AutoPay {
+    type = "boolean"
+    required = false
+    filterable = false
+    label = "AutoPay"
+  }
+  number Balance {
+    type = "number"
+    required = false
+    filterable = false
+    label = "Balance"
+  }
+  string Batch {
+    type = "string"
+    maxLength = 512
+    required = false
+    filterable = false
+    label = "Batch"
+  }
+  string BcdSettingOption {
+    type = "string"
+    maxLength = 512
+    required = false
+    filterable = false
+    label = "BcdSettingOption"
+  }
+  string BillToContactName {
+    type = "string"
+    maxLength = 512
+    required = false
+    filterable = false
+    label = "BillToContactName"
+  }
+  number BillCycleDay {
+    type = "integer"
+    required = true
+    filterable = false
+    label = "BillCycleDay"
+  }
+  string BillToId {
+    type = "string"
+    format = "uuid"
+    required = false
+    filterable = false
+    referenceTo = [
+      zuora_billing.contact.field.Id,
+    ]
+    cardinality = "manyToOne"
+    recordConstraints = {
+      create = {
+        enforceValidMapping = true
+      }
+    }
+    label = "BillToId"
+  }
+  string BillToWorkEmail {
+    type = "string"
+    maxLength = 512
+    required = false
+    filterable = false
+    label = "BillToWorkEmail"
+  }
+  string BillToWorkPhone {
+    type = "string"
+    maxLength = 512
+    required = false
+    filterable = false
+    label = "BillToWorkPhone"
+  }
+  string CommunicationProfileId {
+    type = "string"
+    format = "uuid"
+    required = false
+    filterable = false
+    label = "CommunicationProfileId"
+  }
+  number CreditBalance {
+    type = "number"
+    required = false
+    filterable = false
+    label = "CreditBalance"
+  }
+  string CrmId {
+    type = "string"
+    maxLength = 512
+    required = false
+    filterable = false
+    label = "CrmId"
+  }
+  string Currency {
+    type = "string"
+    maxLength = 512
+    required = true
+    filterable = false
+    label = "Currency"
+  }
+  string CustomerServiceRepName {
+    type = "string"
+    maxLength = 512
+    required = false
+    filterable = false
+    label = "CustomerServiceRepName"
+  }
+  string DefaultPaymentMethodId {
+    type = "string"
+    format = "uuid"
+    required = false
+    filterable = false
+    referenceTo = [
+      zuora_billing.paymentmethod.field.Id,
+    ]
+    cardinality = "manyToOne"
+    recordConstraints = {
+      create = {
+        enforceValidMapping = true
+      }
+    }
+    label = "DefaultPaymentMethodId"
+  }
+  string DefaultPaymentMethodCreditCard {
+    type = "string"
+    maxLength = 512
+    required = false
+    filterable = false
+    label = "DefaultPaymentMethodCreditCard"
+  }
+  string DefaultPaymentMethodMaskNumber {
+    type = "string"
+    maxLength = 512
+    required = false
+    filterable = false
+    label = "DefaultPaymentMethodMaskNumber"
+  }
+  boolean InvoiceDeliveryPrefsEmail {
+    type = "boolean"
+    required = false
+    filterable = false
+    label = "InvoiceDeliveryPrefsEmail"
+  }
+  boolean InvoiceDeliveryPrefsPrint {
+    type = "boolean"
+    required = false
+    filterable = false
+    label = "InvoiceDeliveryPrefsPrint"
+  }
+  string InvoiceTemplateId {
+    type = "string"
+    format = "uuid"
+    required = false
+    filterable = false
+    label = "InvoiceTemplateId"
+  }
+  string LastInvoiceDate {
+    type = "string"
+    format = "date"
+    required = false
+    filterable = false
+    label = "LastInvoiceDate"
+  }
+  string Name {
+    type = "string"
+    maxLength = 512
+    required = true
+    filterable = false
+    label = "Name"
+  }
+  string Notes {
+    type = "string"
+    maxLength = 512
+    required = false
+    filterable = false
+    label = "Notes"
+  }
+  string ParentId {
+    type = "string"
+    format = "uuid"
+    required = false
+    filterable = false
+    referenceTo = [
+      zuora_billing.extendedaccount.field.Id,
+    ]
+    cardinality = "manyToOne"
+    recordConstraints = {
+      create = {
+        enforceValidMapping = true
+      }
+    }
+    label = "ParentId"
+  }
+  string PurchaseOrderNumber {
+    type = "string"
+    maxLength = 512
+    required = false
+    filterable = false
+    label = "PurchaseOrderNumber"
+  }
+  string SalesRepName {
+    type = "string"
+    maxLength = 512
+    required = false
+    filterable = false
+    label = "SalesRepName"
+  }
+  string SequenceSetId {
+    type = "string"
+    maxLength = 512
+    required = false
+    filterable = false
+    label = "SequenceSetId"
+  }
+  string SoldToContactName {
+    type = "string"
+    maxLength = 512
+    required = false
+    filterable = false
+    label = "SoldToContactName"
+  }
+  string SoldToId {
+    type = "string"
+    format = "uuid"
+    required = false
+    filterable = false
+    referenceTo = [
+      zuora_billing.contact.field.Id,
+    ]
+    cardinality = "manyToOne"
+    recordConstraints = {
+      create = {
+        enforceValidMapping = true
+      }
+    }
+    label = "SoldToId"
+  }
+  string SoldToWorkEmail {
+    type = "string"
+    maxLength = 512
+    required = false
+    filterable = false
+    label = "SoldToWorkEmail"
+  }
+  string SoldToWorkPhone {
+    type = "string"
+    maxLength = 512
+    required = false
+    filterable = false
+    label = "SoldToWorkPhone"
+  }
+  string Status {
+    type = "string"
+    maxLength = 512
+    required = true
+    filterable = false
+    label = "Status"
+  }
+  string TaxCompanyCode {
+    type = "string"
+    maxLength = 512
+    required = false
+    filterable = false
+    label = "TaxCompanyCode"
+  }
+  string TaxExemptCertificateID {
+    type = "string"
+    maxLength = 512
+    required = false
+    filterable = false
+    label = "TaxExemptCertificateID"
+  }
+  string TaxExemptCertificateType {
+    type = "string"
+    maxLength = 512
+    required = false
+    filterable = false
+    label = "TaxExemptCertificateType"
+  }
+  string TaxExemptDescription {
+    type = "string"
+    maxLength = 512
+    required = false
+    filterable = false
+    label = "TaxExemptDescription"
+  }
+  string TaxExemptEffectiveDate {
+    type = "string"
+    format = "date"
+    required = false
+    filterable = false
+    label = "TaxExemptEffectiveDate"
+  }
+  string TaxExemptEntityUseCode {
+    type = "string"
+    maxLength = 512
+    required = false
+    filterable = false
+    label = "TaxExemptEntityUseCode"
+  }
+  string TaxExemptExpirationDate {
+    type = "string"
+    format = "date"
+    required = false
+    filterable = false
+    label = "TaxExemptExpirationDate"
+  }
+  string TaxExemptIssuingJurisdiction {
+    type = "string"
+    maxLength = 512
+    required = false
+    filterable = false
+    label = "TaxExemptIssuingJurisdiction"
+  }
+  string TaxExemptStatus {
+    type = "string"
+    maxLength = 512
+    required = false
+    filterable = false
+    label = "TaxExemptStatus"
+  }
+  number TotalInvoiceBalance {
+    type = "number"
+    required = false
+    filterable = false
+    label = "TotalInvoiceBalance"
+  }
+  number UnappliedBalance {
+    type = "number"
+    required = false
+    filterable = false
+    label = "UnappliedBalance"
+  }
+  string VATId {
+    type = "string"
+    maxLength = 512
+    required = false
+    filterable = false
+    label = "VATId"
+  }
+  number Mrr {
+    type = "number"
+    required = false
+    filterable = false
+    label = "Mrr"
+  }
+  number TotalDebitMemoBalance {
+    type = "number"
+    required = false
+    filterable = false
+    label = "TotalDebitMemoBalance"
+  }
+  number UnappliedCreditMemoAmount {
+    type = "number"
+    required = false
+    filterable = false
+    label = "UnappliedCreditMemoAmount"
+  }
+  string CreditMemoTemplateId {
+    type = "string"
+    format = "uuid"
+    required = false
+    filterable = false
+    label = "CreditMemoTemplateId"
+  }
+  string DebitMemoTemplateId {
+    type = "string"
+    format = "uuid"
+    required = false
+    filterable = false
+    label = "DebitMemoTemplateId"
+  }
+  string PaymentGateway {
+    type = "string"
+    maxLength = 512
+    required = false
+    filterable = false
+    label = "PaymentGateway"
+  }
+  
+  string CommunicationProfileName {
+    type = "string"
+    maxLength = 512
+    required = true
+    filterable = false
+    label = "CommunicationProfileName"
+  }
+  string InvoiceTemplateName {
+    type = "string"
+    maxLength = 512
+    required = true
+    filterable = false
+    label = "InvoiceTemplateName"
+  }
+  string PaymentTermName {
+    type = "string"
+    maxLength = 512
+    required = false
+    filterable = false
+    label = "PaymentTermName"
+  }
+  string InvoiceTemplateFormat {
+    type = "string"
+    maxLength = 512
+    required = false
+    filterable = false
+    label = "InvoiceTemplateFormat"
+  }
+  string LastMetricsUpdate {
+    type = "string"
+    format = "date-time"
+    required = false
+    filterable = false
+    label = "LastMetricsUpdate"
+  }
+  boolean PartnerAccount {
+    type = "boolean"
+    required = false
+    filterable = false
+    label = "PartnerAccount"
+  }
+}

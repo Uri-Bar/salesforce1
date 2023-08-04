@@ -1,0 +1,17 @@
+zendesk {
+  fetch = {
+    include = [
+      {
+        type = ".*"
+      },
+    ]
+    exclude = [
+      {
+        type = "webhook"
+      },
+    ]
+    guide = {
+      brands = [".*"]
+    }
+  }
+}

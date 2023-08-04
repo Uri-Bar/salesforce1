@@ -1,0 +1,277 @@
+netsuite.role customrolecustom_sales_vp_role {
+  scriptid = "customrolecustom_sales_vp_role"
+  accountingbooksoption = "PRIMARY"
+  centertype = "SALESCENTER"
+  coreadminpermission = false
+  employeerestriction = "NONE"
+  employeeselectionunrestricted = false
+  isinactive = false
+  ispartnerrole = false
+  issalesrole = true
+  issinglesignononly = false
+  issupportrole = false
+  iswebserviceonlyrole = false
+  name = "Custom Sales Vice President"
+  restrictbydevice = false
+  restricttimeandexpenses = false
+  subsidiaryoption = "OWN"
+  subsidiaryviewingallowed = false
+  tfaduration = "720"
+  tfarequired = "SMS"
+  permissions = {
+    permission = {
+      TRAN_PAYMENTAUDIT = {
+        permkey = "TRAN_PAYMENTAUDIT"
+        permlevel = "VIEW"
+      }
+      TRAN_CASHSALE = {
+        permkey = "TRAN_CASHSALE"
+        permlevel = "EDIT"
+      }
+      TRAN_FORECAST = {
+        permkey = "TRAN_FORECAST"
+        permlevel = "FULL"
+      }
+      TRAN_MGRFORECAST = {
+        permkey = "TRAN_MGRFORECAST"
+        permlevel = "FULL"
+      }
+      TRAN_QUOTA = {
+        permkey = "TRAN_QUOTA"
+        permlevel = "FULL"
+      }
+      TRAN_ESTIMATE = {
+        permkey = "TRAN_ESTIMATE"
+        permlevel = "FULL"
+      }
+      TRAN_FIND = {
+        permkey = "TRAN_FIND"
+        permlevel = "FULL"
+      }
+      TRAN_OPPRTNTY = {
+        permkey = "TRAN_OPPRTNTY"
+        permlevel = "FULL"
+      }
+      TRAN_CLEARHOLD = {
+        permkey = "TRAN_CLEARHOLD"
+        permlevel = "EDIT"
+      }
+      TRAN_SALESORD = {
+        permkey = "TRAN_SALESORD"
+        permlevel = "FULL"
+      }
+      TRAN_SALESORDAPPRV = {
+        permkey = "TRAN_SALESORDAPPRV"
+        permlevel = "FULL"
+      }
+      TRAN_GATEWAYNOTIFICATION = {
+        permkey = "TRAN_GATEWAYNOTIFICATION"
+        permlevel = "VIEW"
+      }
+      TRAN_PAYMENTEVENT = {
+        permkey = "TRAN_PAYMENTEVENT"
+        permlevel = "VIEW"
+      }
+      REPO_AR = {
+        permkey = "REPO_AR"
+        permlevel = "VIEW"
+      }
+      REPO_COMMISSION = {
+        permkey = "REPO_COMMISSION"
+        permlevel = "VIEW"
+      }
+      REPO_SNAPSHOTLEAD = {
+        permkey = "REPO_SNAPSHOTLEAD"
+        permlevel = "VIEW"
+      }
+      REPO_QUOTA = {
+        permkey = "REPO_QUOTA"
+        permlevel = "VIEW"
+      }
+      REPO_CUSTOMIZATION = {
+        permkey = "REPO_CUSTOMIZATION"
+        permlevel = "FULL"
+      }
+      REPO_SCHEDULE = {
+        permkey = "REPO_SCHEDULE"
+        permlevel = "FULL"
+      }
+      REPO_SALES = {
+        permkey = "REPO_SALES"
+        permlevel = "VIEW"
+      }
+      REPO_SALES_PARTNER = {
+        permkey = "REPO_SALES_PARTNER"
+        permlevel = "VIEW"
+      }
+      REPO_SALES_PROMO = {
+        permkey = "REPO_SALES_PROMO"
+        permlevel = "VIEW"
+      }
+      REPO_SFA = {
+        permkey = "REPO_SFA"
+        permlevel = "VIEW"
+      }
+      REPO_SALESORDER = {
+        permkey = "REPO_SALESORDER"
+        permlevel = "VIEW"
+      }
+      REPO_BOOKINGS = {
+        permkey = "REPO_BOOKINGS"
+        permlevel = "VIEW"
+      }
+      REPO_NONPOSTING = {
+        permkey = "REPO_NONPOSTING"
+        permlevel = "VIEW"
+      }
+      REPO_ANALYTICS = {
+        permkey = "REPO_ANALYTICS"
+        permlevel = "EDIT"
+      }
+      REPO_WEBSITE = {
+        permkey = "REPO_WEBSITE"
+        permlevel = "VIEW"
+      }
+      REGT_ACCTREC = {
+        permkey = "REGT_ACCTREC"
+        permlevel = "VIEW"
+      }
+      LIST_CRMGROUP = {
+        permkey = "LIST_CRMGROUP"
+        permlevel = "FULL"
+      }
+      LIST_CALENDAR = {
+        permkey = "LIST_CALENDAR"
+        permlevel = "FULL"
+      }
+      LIST_ORDER_REALLOCATION = {
+        permkey = "LIST_ORDER_REALLOCATION"
+        permlevel = "VIEW"
+      }
+      LIST_COMPANY = {
+        permkey = "LIST_COMPANY"
+        permlevel = "FULL"
+      }
+      LIST_COMPETITOR = {
+        permkey = "LIST_COMPETITOR"
+        permlevel = "FULL"
+      }
+      LIST_CONTACTROLE = {
+        permkey = "LIST_CONTACTROLE"
+        permlevel = "FULL"
+      }
+      LIST_CONTACT = {
+        permkey = "LIST_CONTACT"
+        permlevel = "FULL"
+      }
+      LIST_CUSTJOB = {
+        permkey = "LIST_CUSTJOB"
+        permlevel = "FULL"
+      }
+      LIST_FILECABINET = {
+        permkey = "LIST_FILECABINET"
+        permlevel = "FULL"
+      }
+      LIST_EMAILTEMPLATE = {
+        permkey = "LIST_EMAILTEMPLATE"
+        permlevel = "FULL"
+      }
+      LIST_EMPLOYEE_RECORD = {
+        permkey = "LIST_EMPLOYEE_RECORD"
+        permlevel = "VIEW"
+      }
+      LIST_EVENT = {
+        permkey = "LIST_EVENT"
+        permlevel = "FULL"
+      }
+      LIST_EXPORT = {
+        permkey = "LIST_EXPORT"
+        permlevel = "CREATE"
+      }
+      LIST_FAXMESSAGE = {
+        permkey = "LIST_FAXMESSAGE"
+        permlevel = "EDIT"
+      }
+      LIST_FAXTEMPLATE = {
+        permkey = "LIST_FAXTEMPLATE"
+        permlevel = "EDIT"
+      }
+      LIST_ITEM = {
+        permkey = "LIST_ITEM"
+        permlevel = "VIEW"
+      }
+      LIST_MAILMESSAGE = {
+        permkey = "LIST_MAILMESSAGE"
+        permlevel = "EDIT"
+      }
+      LIST_MAILTEMPLATE = {
+        permkey = "LIST_MAILTEMPLATE"
+        permlevel = "EDIT"
+      }
+      LIST_MAILMERGE = {
+        permkey = "LIST_MAILMERGE"
+        permlevel = "EDIT"
+      }
+      LIST_MASSUPDATES = {
+        permkey = "LIST_MASSUPDATES"
+        permlevel = "EDIT"
+      }
+      REGT_NONPOSTING = {
+        permkey = "REGT_NONPOSTING"
+        permlevel = "VIEW"
+      }
+      LIST_HISTORY = {
+        permkey = "LIST_HISTORY"
+        permlevel = "FULL"
+      }
+      LIST_PDFMESSAGE = {
+        permkey = "LIST_PDFMESSAGE"
+        permlevel = "EDIT"
+      }
+      LIST_PDFTEMPLATE = {
+        permkey = "LIST_PDFTEMPLATE"
+        permlevel = "EDIT"
+      }
+      LIST_FIND = {
+        permkey = "LIST_FIND"
+        permlevel = "FULL"
+      }
+      LIST_CALL = {
+        permkey = "LIST_CALL"
+        permlevel = "FULL"
+      }
+      LIST_TASK = {
+        permkey = "LIST_TASK"
+        permlevel = "FULL"
+      }
+      LIST_CRMMESSAGE = {
+        permkey = "LIST_CRMMESSAGE"
+        permlevel = "FULL"
+      }
+      LIST_USAGE = {
+        permkey = "LIST_USAGE"
+        permlevel = "VIEW"
+      }
+      ADMI_MOBILE_ACCESS = {
+        permkey = "ADMI_MOBILE_ACCESS"
+        permlevel = "FULL"
+      }
+      LIST_BULK_PROCESSING = {
+        permkey = "LIST_BULK_PROCESSING"
+        permlevel = "VIEW"
+      }
+      LIST_ENTITYSUBSIDIARYRELATION = {
+        permkey = "LIST_ENTITYSUBSIDIARYRELATION"
+        permlevel = "VIEW"
+      }
+      LIST_GIFT_CERTIFICATE = {
+        permkey = "LIST_GIFT_CERTIFICATE"
+        permlevel = "FULL"
+      }
+      LIST_OTHER_ADDRESS = {
+        permkey = "LIST_OTHER_ADDRESS"
+        permlevel = "FULL"
+      }
+    }
+  }
+}

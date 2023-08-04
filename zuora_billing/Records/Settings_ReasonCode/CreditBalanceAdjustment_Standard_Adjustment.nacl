@@ -1,0 +1,6 @@
+zuora_billing.Settings_ReasonCode CreditBalanceAdjustment_Standard_Adjustment@us {
+  isActive = true
+  reasonCodeName = "Standard Adjustment"
+  reasonCodeTransactionType = "CreditBalanceAdjustment"
+  isDefault = true
+}

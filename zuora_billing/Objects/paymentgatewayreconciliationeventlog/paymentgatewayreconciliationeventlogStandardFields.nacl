@@ -1,0 +1,108 @@
+type zuora_billing.paymentgatewayreconciliationeventlog {
+  string Id {
+    type = "string"
+    format = "uuid"
+    required = false
+    filterable = false
+    label = "Id"
+  }
+  string CreatedDate {
+    type = "string"
+    format = "date-time"
+    required = false
+    filterable = false
+    label = "CreatedDate"
+  }
+  string UpdatedDate {
+    type = "string"
+    format = "date-time"
+    required = false
+    filterable = false
+    label = "UpdatedDate"
+  }
+  number amount {
+    type = "number"
+    required = false
+    filterable = false
+    label = "amount"
+  }
+  string CreatedGatewayReferenceId {
+    type = "string"
+    maxLength = 512
+    required = false
+    filterable = false
+    label = "CreatedGatewayReferenceId"
+  }
+  string CreatedGatewaySecondReferenceId {
+    type = "string"
+    maxLength = 512
+    required = false
+    filterable = false
+    label = "CreatedGatewaySecondReferenceId"
+  }
+  string EventDate {
+    type = "string"
+    format = "date-time"
+    required = false
+    filterable = false
+    label = "EventDate"
+  }
+  string EventType {
+    type = "string"
+    maxLength = 512
+    required = false
+    filterable = false
+    label = "EventType"
+  }
+  string GatewayRawRecord {
+    type = "string"
+    maxLength = 512
+    required = false
+    filterable = false
+    label = "GatewayRawRecord"
+  }
+  string GatewayReasonCode {
+    type = "string"
+    maxLength = 512
+    required = false
+    filterable = false
+    label = "GatewayReasonCode"
+  }
+  string GatewayReasonMessage {
+    type = "string"
+    maxLength = 512
+    required = false
+    filterable = false
+    label = "GatewayReasonMessage"
+  }
+  string GatewayReferenceId {
+    type = "string"
+    maxLength = 512
+    required = false
+    filterable = false
+    label = "GatewayReferenceId"
+  }
+  string GatewaySecondReferenceId {
+    type = "string"
+    maxLength = 512
+    required = false
+    filterable = false
+    label = "GatewaySecondReferenceId"
+  }
+  string PaymentReconciliationJobId {
+    type = "string"
+    format = "uuid"
+    required = false
+    filterable = false
+    referenceTo = [
+      zuora_billing.paymentreconciliationjob.field.Id,
+    ]
+    cardinality = "manyToOne"
+    recordConstraints = {
+      create = {
+        enforceValidMapping = true
+      }
+    }
+    label = "PaymentReconciliationJobId"
+  }
+}

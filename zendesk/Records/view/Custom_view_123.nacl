@@ -1,0 +1,140 @@
+zendesk.view Custom_view_123@s {
+  title = "Custom view 123"
+  active = true
+  description = "custom view 123"
+  execution = {
+    group_by = "submitter"
+    group_order = "desc"
+    sort_order = "desc"
+    group = {
+      id = "submitter"
+      title = "Submitter"
+      order = "desc"
+      filterable = false
+      sortable = false
+    }
+    columns = [
+      {
+        id = "satisfaction_score"
+        title = "Satisfaction"
+        filterable = true
+        sortable = true
+      },
+      {
+        id = "subject"
+        title = "Subject"
+        filterable = false
+        sortable = false
+      },
+      {
+        id = "created"
+        title = "Requested"
+        filterable = false
+        sortable = true
+      },
+      {
+        id = "requester"
+        title = "Requester"
+        filterable = true
+        sortable = true
+      },
+      {
+        id = "assignee"
+        title = "Assignee"
+        filterable = true
+        sortable = true
+      },
+      {
+        id = "attributes_match"
+        title = "Skill match"
+        filterable = false
+        sortable = false
+      },
+      {
+        id = "sla_next_breach_at"
+        title = "SLA"
+        filterable = true
+        sortable = true
+      },
+    ]
+    fields = [
+      {
+        id = "satisfaction_score"
+        title = "Satisfaction"
+        filterable = true
+        sortable = true
+      },
+      {
+        id = "subject"
+        title = "Subject"
+        filterable = false
+        sortable = false
+      },
+      {
+        id = "created"
+        title = "Requested"
+        filterable = false
+        sortable = true
+      },
+      {
+        id = "requester"
+        title = "Requester"
+        filterable = true
+        sortable = true
+      },
+      {
+        id = "assignee"
+        title = "Assignee"
+        filterable = true
+        sortable = true
+      },
+      {
+        id = "attributes_match"
+        title = "Skill match"
+        filterable = false
+        sortable = false
+      },
+      {
+        id = "sla_next_breach_at"
+        title = "SLA"
+        filterable = true
+        sortable = true
+      },
+    ]
+  }
+  conditions = {
+    all = [
+      {
+        field = "type"
+        operator = "is"
+        value = "problem"
+      },
+      {
+        field = "brand_id"
+        operator = "is_not"
+        value = zendesk.brand.instance.Salto
+      },
+    ]
+    any = [
+      {
+        field = "requester_id"
+        operator = "is_not"
+        value = "assignee_id"
+      },
+      {
+        field = "organization_id"
+        operator = "is_not"
+        value = zendesk.organization.instance.test_org_123@s
+      },
+    ]
+  }
+  restriction = {
+    type = "Group"
+    ids = [
+      zendesk.group.instance.Support,
+    ]
+  }
+  
+  raw_title = "Custom view 123"
+  default = false
+}

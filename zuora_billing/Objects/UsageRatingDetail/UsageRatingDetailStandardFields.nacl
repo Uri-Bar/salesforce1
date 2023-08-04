@@ -1,0 +1,108 @@
+type zuora_billing.UsageRatingDetail {
+  string Id {
+    format = "uuid"
+    label = "Id"
+    origin = "system"
+    type = "string"
+    required = true
+    filterable = true
+  }
+  string CreatedById {
+    label = "CreatedById"
+    origin = "system"
+    type = "string"
+    required = true
+    filterable = true
+  }
+  string UpdatedById {
+    label = "UpdatedById"
+    origin = "system"
+    type = "string"
+    required = true
+    filterable = true
+  }
+  string CreatedDate {
+    format = "date-time"
+    origin = "system"
+    type = "string"
+    label = "CreatedDate"
+    required = true
+    filterable = true
+  }
+  string UpdatedDate {
+    format = "date-time"
+    origin = "system"
+    type = "string"
+    label = "UpdatedDate"
+    required = true
+    filterable = true
+  }
+  number RecordSequence {
+    label = "RecordSequence"
+    origin = "system"
+    type = "integer"
+    required = false
+    filterable = false
+  }
+  string Reference {
+    label = "Reference"
+    origin = "system"
+    type = "string"
+    description = "Identifier associated with the source of this calculation"
+    required = false
+    filterable = true
+  }
+  string CalculationDetails {
+    label = "CalculationDetails"
+    origin = "system"
+    type = "string"
+    description = "Detailed information about how the usage was rated"
+    required = false
+    filterable = false
+  }
+  number ErrorSequence {
+    label = "ErrorSequence"
+    origin = "system"
+    type = "integer"
+    required = false
+    filterable = true
+  }
+  string UsageId {
+    format = "uuid"
+    label = "UsageId"
+    origin = "system"
+    type = "string"
+    required = false
+    filterable = true
+  }
+  string ErrorDetails {
+    label = "ErrorDetails"
+    origin = "system"
+    type = "string"
+    description = "Error information, if this usage failed to rate successfully"
+    required = false
+    filterable = false
+  }
+  string ChargeNumber {
+    label = "ChargeNumber"
+    origin = "system"
+    type = "string"
+    required = false
+    filterable = true
+  }
+  boolean Success {
+    label = "Success"
+    origin = "system"
+    type = "boolean"
+    required = false
+    filterable = true
+  }
+  string ChargeRatingDetailId {
+    format = "uuid"
+    label = "ChargeRatingDetailId"
+    origin = "system"
+    type = "string"
+    required = false
+    filterable = false
+  }
+}

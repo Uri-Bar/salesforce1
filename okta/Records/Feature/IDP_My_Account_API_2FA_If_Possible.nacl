@@ -1,0 +1,9 @@
+okta.Feature IDP_My_Account_API_2FA_If_Possible@s {
+  type = "self-service"
+  status = "DISABLED"
+  name = "IDP My Account API 2FA If Possible"
+  description = "The MyAccounts API feature provides admins and app developers the ability to support the constraint urn:okta:loa:2fa:any:ifpossible in the acr_values parameter"
+  stage = {
+    value = "EA"
+  }
+}

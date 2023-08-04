@@ -1,0 +1,8 @@
+jira.Field Created {
+  name = "Created"
+  schema = {
+    type = "datetime"
+    system = "created"
+  }
+  description = ""
+}

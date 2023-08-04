@@ -1,0 +1,114 @@
+zuora_billing.Task AllBrighter_Bundle_Set_Up_Workflow_67_ssssu__Create_Shipping_Table@uuuuumuuss {
+  name = "Create Shipping Table"
+  parameters = {
+    url = "https://rest.apisandbox.zuora.com/objects/definitions/com_zlabs"
+    datas = [
+      {
+        key = ""
+        value = ""
+      },
+    ]
+    method = "POST"
+    headers = [
+      {
+        key = "Content-Type"
+        value = "application/json"
+      },
+    ]
+    raw_body = '''
+{
+    "title": "Shipping Table",
+    "description": "Stores physical goods shipping records tracking shipping activity from the original order to fulfillment.",
+    "type": "object",
+    "object": "shippingtable_{{WorkflowInstance.id}}",
+    "properties": {
+        "account__c": {
+            "label": "Account Number",
+            "type": "string",
+            "description": "Zuora Billing Account Number"
+        },
+        "ship_zip__c": {
+            "label": "Shipping Zip Code",
+            "type": "string",
+            "description": "Ship To Zip Code - Used for shipping cost calulation"
+        },
+        "subscription__c": {
+            "label": "Subscription",
+            "type": "string",
+            "description": "Zuora Subscription Name"
+        },
+        "order_number__c": {
+            "label": "Order",
+            "type": "string",
+            "description": "Zuora Order Number"
+        },
+        "device_name__c": {
+            "label": "Device Name",
+            "type": "string",
+            "description": "Product to be shipped"
+        },
+        "charge_number__c": {
+            "label": "Charge Number",
+            "type": "string",
+            "description": "Zuora Subscription Charge Number"
+        },
+        "device_serial__c": {
+            "label": "Device Serial Number",
+            "type": "string",
+            "description": "Unique Device Identifier Number"
+        },
+        "est_ship_date__c": {
+            "label": "Estimated Ship Date",
+            "type": "string",
+            "description": "Current Estimated Ship Date"
+        },
+        "ship_date__c": {
+            "label": "Actual Ship Date",
+            "type": "string",
+            "description": "Actual Ship Date"
+        },
+        "ship_status__c": {
+            "label": "Shipping Status",
+            "type": "string",
+            "description": "Shipping Status"
+        }
+    }
+}
+'''
+    body_type = "raw"
+    validation = {
+      zuora_call = "false"
+      status_codes = [
+        "",
+        "200",
+      ]
+    }
+    retry_rules = {
+      retry_count = "3"
+      retry_window = "1"
+      current_retry_count = "0"
+    }
+    authorization = {
+      type = "zuora"
+    }
+    strict_variables = "true"
+    validate_response = "false"
+    validation_scheme = ""
+    include_response_code = "true"
+  }
+  action_type = "Callout"
+  call_type = "SOAP"
+  task_id = 75
+  concurrent_limit = 9999999
+  additionalProperties = {
+    css = {
+      top = "-70px"
+      left = "-290px"
+    }
+    priority = "Medium"
+    
+  }
+  _parent = [
+    zuora_billing.WorkflowExport.instance.AllBrighter_Bundle_Set_Up_Workflow_67@ssssu,
+  ]
+}

@@ -1,0 +1,11 @@
+okta.BehaviorRule New_IP@s {
+  name = "New IP"
+  status = "ACTIVE"
+  type = "ANOMALOUS_IP"
+  additionalProperties = {
+    settings = {
+      minEventsNeededForEvaluation = 0
+      maxEventsUsedForEvaluation = 50
+    }
+  }
+}

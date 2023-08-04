@@ -1,0 +1,4 @@
+workato.folder a_neta1_1_Root_vu@uuum {
+  name = "a"
+  parent_id = workato.folder.instance.neta1_1_Root@vu
+}

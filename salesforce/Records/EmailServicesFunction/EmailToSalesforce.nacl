@@ -1,0 +1,14 @@
+salesforce.EmailServicesFunction EmailToSalesforce {
+  fullName = "EmailToSalesforce"
+  attachmentOption = "All"
+  authenticationFailureAction = "Discard"
+  authorizationFailureAction = "Bounce"
+  functionInactiveAction = "Bounce"
+  functionName = "EmailToSalesforce"
+  isActive = true
+  isAuthenticationRequired = false
+  isErrorRoutingEnabled = false
+  isTextAttachmentsAsBinary = false
+  isTlsRequired = false
+  overLimitAction = "Bounce"
+}

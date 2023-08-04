@@ -1,0 +1,26 @@
+workato.recipe dodel_with_salesforce_recipe_test_dodel_playground_Root@sssuuuu {
+  name = "dodel with salesforce recipe"
+  trigger_application = "salesforce"
+  applications = [
+    "salesforce",
+  ]
+  description = "When there is a trigger event, do action"
+  folder_id = workato.folder.instance.test_dodel_playground_Root
+  running = true
+  stopped_at = "2023-05-23T01:38:41.741-07:00"
+  version_no = 20
+  config = [
+    {
+      keyword = "application"
+      name = "salesforce"
+      provider = "salesforce"
+      skip_validation = false
+      account_id = workato.connection.instance.dodel_salesforce_connection@s
+    },
+  ]
+  code = workato.recipe__code.instance.dodel_with_salesforce_recipe_test_dodel_playground_Root_sssuuuu@uuuuuuum
+  trigger_closure = {
+    sobject = "Account"
+    last_query_date = "2023-02-27T11:58:07.000+0000"
+  }
+}

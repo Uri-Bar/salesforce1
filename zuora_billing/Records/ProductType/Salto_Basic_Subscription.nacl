@@ -1,0 +1,11 @@
+zuora_billing.ProductType SKU_00000004@b {
+  sku = "SKU-00000004"
+  name = "Salto Basic Subscription"
+  description = ""
+  category = "Base Products"
+  effectiveStartDate = "2021-08-09"
+  effectiveEndDate = "2022-06-16"
+  productRatePlans = [
+    zuora_billing.ProductRatePlanType.instance.SKU_00000004_b__Basic_Rate_Plan@umuuss,
+  ]
+}

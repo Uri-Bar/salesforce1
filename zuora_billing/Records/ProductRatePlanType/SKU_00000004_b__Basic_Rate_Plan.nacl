@@ -1,0 +1,46 @@
+zuora_billing.ProductRatePlanType SKU_00000004_b__Basic_Rate_Plan@umuuss {
+  status = "Expired"
+  name = "Basic Rate Plan"
+  description = "The Basic Plan Description"
+  effectiveStartDate = "2021-08-10"
+  effectiveEndDate = "2021-08-31"
+  productRatePlanCharges = [
+    {
+      name = "Seat"
+      type = "OneTime"
+      model = "PerUnit"
+      uom = zuora_billing.Settings_UnitOfMeasure.instance.Each
+      pricingSummary = [
+        "USD550/Each",
+      ]
+      pricing = [
+        {
+          currency = zuora_billing.Settings_Currency.instance.USD
+          price = 550
+        },
+      ]
+      defaultQuantity = 1
+      endDateCondition = "One_Time"
+      taxable = false
+      taxCode = ""
+      taxMode = "TaxExclusive"
+      triggerEvent = "ServiceActivation"
+      description = ""
+      revenueRecognitionRuleName = zuora_billing.Settings_RevenueRecognitionRule.instance.Recognize_upon_invoicing@s
+      financeInformation = {
+        deferredRevenueAccountingCode = zuora_billing.AccountingCodeItem.instance.DeferredRevenue_Deferred_Revenue@us
+        recognizedRevenueAccountingCode = zuora_billing.AccountingCodeItem.instance.SalesRevenue_Usage_Revenue@us
+        additionalProperties = {
+          accountsReceivableAccountingCode = "Accounts Receivable"
+          accountsReceivableAccountingCodeType = "AccountsReceivable"
+        }
+      }
+      additionalProperties = {
+        isStackedDiscount = false
+      }
+    },
+  ]
+  _parent = [
+    zuora_billing.ProductType.instance.SKU_00000004@b,
+  ]
+}

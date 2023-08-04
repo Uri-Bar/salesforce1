@@ -1,0 +1,25 @@
+zuora_billing.Task C19__Goodwill_Discount_Recall_68_fsssu__For_each_Subscription@uuuuumuuss {
+  name = "For each Subscription"
+  parameters = {
+    file_type = "CSV"
+    chunk_size = "0"
+    iteration_type = "Default"
+    strict_variables = "true"
+  }
+  action_type = "Iterate"
+  object = "LinkRun__81.csv"
+  call_type = "SOAP"
+  task_id = 81
+  concurrent_limit = 9999999
+  additionalProperties = {
+    css = {
+      top = "210px"
+      left = "640px"
+    }
+    priority = "Medium"
+    
+  }
+  _parent = [
+    zuora_billing.WorkflowExport.instance.C19__Goodwill_Discount_Recall_68@fsssu,
+  ]
+}

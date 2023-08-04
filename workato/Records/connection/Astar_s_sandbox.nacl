@@ -1,0 +1,5 @@
+workato.connection Astar_s_sandbox@ts {
+  application = "salesforce"
+  name = "Astar's sandbox"
+  folder_id = workato.folder.instance.Root
+}

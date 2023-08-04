@@ -1,0 +1,18 @@
+zuora_billing.Settings_Notification Key_Date_s__Subscription_Start_Date_8ac6819b7883361b017893726f173fb1@sjkussu {
+  profileId = zuora_billing.Settings_CommunicationProfile.instance.Default_Profile@s
+  eventName = "Key Date(s)"
+  name = "Subscription Start Date"
+  description = "Notification sent out on the Subscription Start Date."
+  active = false
+  hidden = false
+  param1 = "Subscription_Date_Change_Subscription_start_Date"
+  emailOption = true
+  emailTemplateName = zuora_billing.PublicEmailTemplate.instance.Key_Date_s__Default_Email_Template@sjksss
+  calloutOption = false
+  contentType = "APPLICATION_JSON"
+  calloutRetriable = false
+  calloutAuth = false
+  calloutOauth2 = false
+  calloutPreemptiveAuth = false
+  useCustomRequestBody = false
+}

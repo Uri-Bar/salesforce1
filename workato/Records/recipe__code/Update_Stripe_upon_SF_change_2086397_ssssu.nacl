@@ -1,0 +1,108 @@
+workato.recipe__code Update_Stripe_upon_SF_change_2086397_ssssu@uuuuum {
+  number = 0
+  provider = "salesforce"
+  name = "updated_custom_object"
+  as = "e3714622"
+  title = "New/updated Account"
+  description = "New/updated <span class=\"provider\">Account</span> in <span class=\"provider\">Salesforce</span>"
+  keyword = "trigger"
+  dynamicPickListSelection = {
+    sobject_name = salesforce.Account
+    field_list = [
+      salesforce.Account.field.SLA_Level__c,
+      salesforce.Account.field.Name,
+    ]
+  }
+  input = {
+    sobject_name = salesforce.Account
+    since_offset = "-3600"
+    field_list = '''
+SLA_Level__c
+Name
+'''
+  }
+  block = [
+    {
+      number = 1
+      provider = "stripe"
+      name = "search_charges"
+      as = "adaaefcd"
+      keyword = "action"
+      input = {
+        customer = "#{_('data.salesforce.e3714622.Id')}"
+      }
+      uuid = "f7912416-dfac-4f4d-a6b7-04f08e1710d2"
+    },
+    {
+      number = 2
+      provider = "slack"
+      name = "post_message_to_channel"
+      as = "89881d0b"
+      keyword = "action"
+      dynamicPickListSelection = {
+        channel = "random"
+      }
+      toggleCfg = {
+        channel = true
+      }
+      input = {
+        parse = "false"
+        channel = "C02SZD4RFCK"
+        text = "SLA Level changed to #{_('data.salesforce.e3714622.SLA_Level__c')}for #{_('data.salesforce.e3714622.Name')}"
+        attachment_text = "Last charge was #{_('data.stripe.adaaefcd.data.first.amount')}"
+      }
+      uuid = "a3dd7607-7145-4360-a291-b1c1e81e37f6"
+    },
+  ]
+  uuid = "01b82569-f41b-4183-8ecc-c88d67eeaf8d"
+  _parent = [
+    workato.recipe.instance.Update_Stripe_upon_SF_change_2086397@ssssu,
+  ]
+  
+  _generated_dependencies = [
+    {
+      reference = salesforce.Account
+      occurrences = [
+        {
+          location = workato.recipe__code.instance.Update_Stripe_upon_SF_change_2086397_ssssu@uuuuum
+          direction = "input"
+        },
+      ]
+    },
+    {
+      reference = salesforce.Account.field.Id
+      occurrences = [
+        {
+          location = workato.recipe__code.instance.Update_Stripe_upon_SF_change_2086397_ssssu@uuuuum.block.0.input.customer
+          direction = "input"
+        },
+      ]
+    },
+    {
+      reference = salesforce.Account.field.Name
+      occurrences = [
+        {
+          location = workato.recipe__code.instance.Update_Stripe_upon_SF_change_2086397_ssssu@uuuuum
+          direction = "input"
+        },
+        {
+          location = workato.recipe__code.instance.Update_Stripe_upon_SF_change_2086397_ssssu@uuuuum.block.1.input.text
+          direction = "input"
+        },
+      ]
+    },
+    {
+      reference = salesforce.Account.field.SLA_Level__c
+      occurrences = [
+        {
+          location = workato.recipe__code.instance.Update_Stripe_upon_SF_change_2086397_ssssu@uuuuum
+          direction = "input"
+        },
+        {
+          location = workato.recipe__code.instance.Update_Stripe_upon_SF_change_2086397_ssssu@uuuuum.block.1.input.text
+          direction = "input"
+        },
+      ]
+    },
+  ]
+}

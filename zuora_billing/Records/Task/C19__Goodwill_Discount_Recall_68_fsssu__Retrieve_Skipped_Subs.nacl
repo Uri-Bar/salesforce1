@@ -1,0 +1,61 @@
+zuora_billing.Task C19__Goodwill_Discount_Recall_68_fsssu__Retrieve_Skipped_Subs@uuuuumuuss {
+  name = "Retrieve Skipped Subs"
+  parameters = {
+    query = '''
+SELECT S.Id, S.Name, S.Status, S.Version, TermType, TermEndDate, A.AccountNumber, RP.Id AS RPId
+     , (date_diff('day', DATE_PARSE('{{Data.Liquid.contractEffectiveOn}}','%Y-%m-%d'), TermEndDate) < 0) AS needsTermAlign
+FROM Subscription S
+JOIN Account A ON S.accountId = A.Id
+JOIN RatePlan RP ON S.Id = RP.SubscriptionId
+WHERE S.Status = 'Active'
+AND  RP.ProductRatePlanId = to_uuid32('{{Data.theGoodwillRatePlan[0].Id}}')
+AND NOT EXISTS 
+      ( SELECT RP.Id
+         FROM RatePlan RP
+         WHERE RP.ProductRatePlanId = to_uuid32('{{Data.theGoodwillRatePlan[0].Id}}')
+         AND RP.SubscriptionId = S.Id
+         AND RP.AmendmentType = 'RemoveProduct'
+      )
+{%- if Data['anyInputSubs'] %}
+AND S.Name IN ('{{Data.anyInputSubs | map: "Subscription: Name" | join: "' , '" }}')
+{% endif -%}
+{%- if Data.Workflow.skipContractEffDateValidation == 'SKIP' %}
+AND TermEndDate < DATE_PARSE('{{Data.Liquid.contractEffectiveOn}}', '%Y-%m-%d') 
+{% endif -%}
+{%- if Data.Workflow['justTestNDebug?'] == true %}
+LIMIT 5
+{% endif -%}
+'''
+    compressed = "true"
+    index_join = "false"
+    file_format = "csv"
+    read_deleted = "false"
+    strict_variables = "false"
+    zero_result_stop = "false"
+  }
+  action_type = "Data::Link"
+  call_type = "SOAP"
+  task_id = 90
+  concurrent_limit = 5
+  additionalProperties = {
+    css = {
+      top = "370px"
+      left = "940px"
+    }
+    priority = "Medium"
+    
+  }
+  _parent = [
+    zuora_billing.WorkflowExport.instance.C19__Goodwill_Discount_Recall_68@fsssu,
+  ]
+  _generated_dependencies = [
+    {
+      reference = zuora_billing.Workflow.instance.C19__Goodwill_Discount_Recall_68_fsssu__C19__Goodwill_Discount_Recall@uuuuumuufsss.additionalProperties.parameters.fields
+      occurrences = [
+        {
+          location = zuora_billing.Task.instance.C19__Goodwill_Discount_Recall_68_fsssu__Retrieve_Skipped_Subs@uuuuumuuss.parameters.query
+        },
+      ]
+    },
+  ]
+}

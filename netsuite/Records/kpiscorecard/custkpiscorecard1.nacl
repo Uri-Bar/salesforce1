@@ -1,0 +1,134 @@
+netsuite.kpiscorecard custkpiscorecard1 {
+  scriptid = "custkpiscorecard1"
+  name = "Custom Financial Ratios2"
+  useperiods = "T"
+  audience = {
+    allemployees = false
+    allpartners = false
+    allroles = true
+  }
+  kpis = {
+    kpi = [
+      {
+        formula = "({BANKBAL}+{RECEIVABLES}+{OTHERCURRENTASSET})/({PAYABLES}+{CREDITCARDBAL}+{OTHERCURRENTLIAB})"
+        hidden = false
+        kpi = "FORMULANUMERIC"
+        label = "Current Ratio"
+        lessismore = false
+      },
+      {
+        formula = "{SALES}/{RECEIVABLES}"
+        hidden = false
+        kpi = "FORMULANUMERIC"
+        label = "Receivables Turnover"
+        lessismore = false
+      },
+      {
+        formula = "{DAYS}/({SALES}/{RECEIVABLES})"
+        hidden = false
+        kpi = "FORMULANUMERIC"
+        label = "Days Sales Outstanding"
+        lessismore = true
+      },
+      {
+        formula = "{COGS}/{INVENTORY}"
+        hidden = false
+        kpi = "FORMULANUMERIC"
+        label = "Inventory Turnover"
+        lessismore = false
+      },
+      {
+        formula = "{DAYS}/({COGS}/{INVENTORY})"
+        hidden = false
+        kpi = "FORMULANUMERIC"
+        label = "Days Inventory On Hand"
+        lessismore = true
+      },
+      {
+        formula = "{SALES}/({BANKBAL}+{RECEIVABLES}+{OTHERCURRENTASSET}+{FIXEDASSET}+{OTHERASSET})"
+        hidden = false
+        kpi = "FORMULANUMERIC"
+        label = "Asset Turnover"
+        lessismore = false
+      },
+      {
+        formula = "{PROFIT}/{INCOME}"
+        hidden = false
+        kpi = "FORMULAPERCENT"
+        label = "Profit Margin on Sales"
+        lessismore = false
+      },
+      {
+        formula = "{PROFIT}/({BANKBAL}+{RECEIVABLES}+{OTHERCURRENTASSET}+{FIXEDASSET}+{OTHERASSET})"
+        hidden = false
+        kpi = "FORMULAPERCENT"
+        label = "Return on Assets"
+        lessismore = false
+      },
+      {
+        formula = "{PROFIT}/{EQUITY}"
+        hidden = false
+        kpi = "FORMULAPERCENT"
+        label = "Return on Equity"
+        lessismore = false
+      },
+      {
+        formula = "({PAYABLES}+{CREDITCARDBAL}+{OTHERCURRENTLIAB}+{LONGTERMLIAB})/({BANKBAL}+{RECEIVABLES}+{OTHERCURRENTASSET}+{FIXEDASSET}+{OTHERASSET})"
+        hidden = false
+        kpi = "FORMULANUMERIC"
+        label = "Debt to Total Assets"
+        lessismore = true
+      },
+      {
+        formula = "({PAYABLES}+{CREDITCARDBAL}+{OTHERCURRENTLIAB}+{LONGTERMLIAB})/{EQUITY}"
+        hidden = false
+        kpi = "FORMULANUMERIC"
+        label = "Debt to Equity"
+        lessismore = true
+      },
+    ]
+  }
+  ranges = {
+    range = [
+      {
+        comparewithprevious = false
+        invertcomparison = false
+        range = "THIS_PERIOD"
+      },
+      {
+        comparewithprevious = false
+        invertcomparison = false
+        range = "LAST_PERIOD"
+      },
+      {
+        comparevalueto = "LAST_PERIOD"
+        comparewithprevious = false
+        comparisontype = "VARIANCE_PERCENT"
+        invertcomparison = false
+        label = "Change"
+        range = "THIS_PERIOD"
+      },
+    ]
+  }
+  highlightings = {
+    highlighting = [
+      {
+        bold = true
+        condition = "ALWAYS"
+        foregroundcolor = "fff79b"
+        headline = false
+        icon = "RED_ARROW_LEFT"
+        kpiindex = "1"
+        rangeindex = "ALL"
+      },
+      {
+        bold = false
+        condition = "GREATER_THAN"
+        headline = false
+        kpiindex = "2"
+        rangeindex = "ALL"
+        threshold = 1.1
+      },
+    ]
+  }
+}

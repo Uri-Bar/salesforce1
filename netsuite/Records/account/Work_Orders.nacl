@@ -1,0 +1,15 @@
+netsuite.account Work_Orders@s {
+  acctType = "_nonPosting"
+  acctName = "Work Orders"
+  includeChildren = true
+  generalRate = "_average"
+  cashFlowRate = "_average"
+  isInactive = false
+  inventory = false
+  subsidiaryList = [
+    netsuite.subsidiary.instance.Parent_Company@s,
+  ]
+  revalue = false
+  identifier = "Work Orders"
+  custom_custrecord_acct_special = false
+}

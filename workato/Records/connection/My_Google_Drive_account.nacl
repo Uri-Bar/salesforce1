@@ -1,0 +1,5 @@
+workato.connection My_Google_Drive_account@s {
+  application = "google_drive"
+  name = "My Google Drive account"
+  folder_id = workato.folder.instance.second_folder_dodel_playground_Root
+}

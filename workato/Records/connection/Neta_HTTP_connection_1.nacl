@@ -1,0 +1,5 @@
+workato.connection Neta_HTTP_connection_1@s {
+  application = "rest"
+  name = "Neta HTTP connection 1"
+  folder_id = workato.folder.instance.f1_nested2_321886@vu
+}

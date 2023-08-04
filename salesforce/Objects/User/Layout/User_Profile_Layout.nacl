@@ -1,0 +1,115 @@
+salesforce.Layout UserAlt_User_Profile_Layout@bss {
+  fullName = "UserAlt-User Profile Layout"
+  layoutSections = [
+    {
+      customLabel = true
+      detailHeading = true
+      editHeading = true
+      label = "About"
+      layoutColumns = [
+        {
+          layoutItems = [
+            {
+              behavior = "Required"
+              field = salesforce.User.field.Name
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.User.field.ManagerId
+            },
+          ]
+        },
+        {
+          layoutItems = [
+            {
+              behavior = "Edit"
+              field = salesforce.User.field.Title
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.User.field.CompanyName
+            },
+          ]
+        },
+      ]
+      style = "TwoColumnsLeftToRight"
+    },
+    {
+      customLabel = true
+      detailHeading = true
+      editHeading = true
+      label = "Contact"
+      layoutColumns = [
+        {
+          layoutItems = [
+            {
+              behavior = "Required"
+              field = salesforce.User.field.Email
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.User.field.MobilePhone
+            },
+          ]
+        },
+        {
+          layoutItems = [
+            {
+              behavior = "Edit"
+              field = salesforce.User.field.Phone
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.User.field.Address
+            },
+          ]
+        },
+      ]
+      style = "TwoColumnsLeftToRight"
+    },
+    {
+      customLabel = true
+      detailHeading = true
+      editHeading = true
+      label = "Background"
+      layoutColumns = [
+        {
+          layoutItems = [
+            {
+              behavior = "Edit"
+              field = salesforce.User.field.AboutMe
+            },
+          ]
+        },
+      ]
+      style = "OneColumn"
+    },
+    {
+      customLabel = false
+      detailHeading = true
+      editHeading = false
+      label = "Custom Links"
+      style = "CustomLinks"
+    },
+  ]
+  relatedLists = [
+    {
+      relatedList = "RelatedFileList"
+    },
+    {
+      relatedList = "RelatedGroupList"
+    },
+    {
+      relatedList = "UserFollowersList"
+    },
+    {
+      relatedList = "UserFollowingList"
+    },
+  ]
+  showEmailCheckbox = false
+  showRunAssignmentRulesCheckbox = false
+  showSubmitAndAttachButton = false
+  _parent = [
+    salesforce.User,
+  ]
+}

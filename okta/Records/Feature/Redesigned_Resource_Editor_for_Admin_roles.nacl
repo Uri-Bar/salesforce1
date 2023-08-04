@@ -1,0 +1,9 @@
+okta.Feature Redesigned_Resource_Editor_for_Admin_roles@s {
+  type = "self-service"
+  status = "DISABLED"
+  name = "Redesigned Resource Editor for Admin roles"
+  description = "This feature enables the new, more intuitive user experience for creating and editing resource sets."
+  stage = {
+    value = "EA"
+  }
+}

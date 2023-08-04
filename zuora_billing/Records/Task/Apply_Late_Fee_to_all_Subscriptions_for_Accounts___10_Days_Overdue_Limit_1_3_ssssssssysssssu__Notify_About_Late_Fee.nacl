@@ -1,0 +1,130 @@
+zuora_billing.Task Apply_Late_Fee_to_all_Subscriptions_for_Accounts___10_Days_Overdue_Limit_1_3_ssssssssysssssu__Notify_About_Late_Fee@uuuuuuuuuuuuuuumuusss {
+  name = "Notify About Late Fee"
+  parameters = {
+    email = {
+      to = [
+        "test@test.com",
+      ]
+      from = ""
+      name = ""
+      subject = "Late Payment Fee Applied"
+      reply_to = ""
+      template = '''
+<p><br></p>
+
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+<meta http-equiv="Content-Language" content="en-us">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Zuora - Workflow Email Templates</title>
+
+<style type="text/css">.zuora a, .zuora a:link { font-family:verdana,arial; font-size:11px; color:#666666; line-height:16px; } .zuora a:visited { font-family:verdana,arial; font-size:11px; color:#666666; line-height:16px; } .zuora a:hover  { font-family:verdana,arial; font-size:11px; color:#666666; line-height:16px; text-decoration:underline; } .zuora_font {font-family: verdana,arial; font-size: 11px; color: rgb(0, 0, 0); line-height: 16px;} </style>
+
+<div style="text-align: center;"><img src="https://workflow.apps.zuora.com/zuora_header.png" style="width: 685px;"></div>
+<center>
+  <table class="zuora" border="0" cellpadding="0" cellspacing="0" width="685" style="margin-top:0px">
+    <tbody>
+      <tr>
+        <td colspan="3" bgcolor="#d5d5d5" height="1"></td>
+      </tr>
+      <tr>
+        <td bgcolor="#d5d5d5" width="1"></td>
+        <td align="left" bgcolor="#ffffff" height="130" valign="top" width="683">
+          <table cellpadding="0" cellspacing="0" width="647" style="margin-left:10px">
+            <tbody>
+              <tr>
+                <td colspan="3" height="15">&nbsp;</td>
+              </tr>
+              <tr>
+                <td align="left" valign="top" width="647">
+                  <p>
+                    <font class="zuora_font" color="#000000" face="verdana,arial" size="1">
+                      Hello {{Data.Account.Name}},
+                    </font>
+                  </p>
+                  <p>
+                    <font class="zuora_font" color="#000000" face="verdana,arial" size="1">
+                      </font></p><p><font class="zuora_font" color="#000000" face="verdana,arial" size="1">We would like to inform you that a late payment fee has been applied to your subscription &nbsp;{{Data.Subscription.Name}} due to an unpaid balance on your account. Please update your payment information or call to provide payment of </font><span style="background-color: transparent;">{{Data.Account.Balance}}.</span></p><p><font class="zuora_font" color="#000000" face="verdana,arial" size="1"></font></p>
+                </td>
+              </tr>
+              <tr>
+                <td align="left" valign="top" width="647">
+                  <font class="zuora_font" color="#000000" face="verdana,arial" size="1">
+                    <br>
+                    <p>Thanks,&nbsp;</p>
+                    <br>
+                    Zuora, Inc. - Powering the subscription economy
+                  </font>
+                </td>
+              </tr>
+              <tr><td>&nbsp;</td></tr>
+            </tbody>
+          </table>
+        </td>
+        <td bgcolor="#d5d5d5" height="1" width="1"></td>
+      </tr>
+      <tr>
+        <td colspan="3" bgcolor="#d5d5d5" height="1px"></td>
+      </tr>
+      <tr>
+        <td height="10"></td>
+      </tr>
+    </tbody>
+  </table>
+  <table cellpadding="0" cellspacing="0" width="685">
+    <tbody>
+      <tr>
+        <td align="center" height="10">
+          <font class="zuora_font" color="#666666" face="arial,verdana" size="1">
+            Copyright © 2008-2016, Zuora Inc. All Rights Reserved.
+          </font>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</center>
+'''
+      preview_only = "true"
+    }
+  }
+  action_type = "Email"
+  call_type = "SOAP"
+  task_id = 10
+  concurrent_limit = 9999999
+  additionalProperties = {
+    css = {
+      top = "200px"
+      left = "544px"
+    }
+    priority = "Medium"
+    
+  }
+  _parent = [
+    zuora_billing.WorkflowExport.instance.Apply_Late_Fee_to_all_Subscriptions_for_Accounts___10_Days_Overdue_Limit_1_3@ssssssssysssssu,
+  ]
+  _generated_dependencies = [
+    {
+      reference = zuora_billing.account.field.Balance
+      occurrences = [
+        {
+          location = zuora_billing.Task.instance.Apply_Late_Fee_to_all_Subscriptions_for_Accounts___10_Days_Overdue_Limit_1_3_ssssssssysssssu__Notify_About_Late_Fee@uuuuuuuuuuuuuuumuusss.parameters.email.template
+        },
+      ]
+    },
+    {
+      reference = zuora_billing.account.field.Name
+      occurrences = [
+        {
+          location = zuora_billing.Task.instance.Apply_Late_Fee_to_all_Subscriptions_for_Accounts___10_Days_Overdue_Limit_1_3_ssssssssysssssu__Notify_About_Late_Fee@uuuuuuuuuuuuuuumuusss.parameters.email.template
+        },
+      ]
+    },
+    {
+      reference = zuora_billing.subscription.field.Name
+      occurrences = [
+        {
+          location = zuora_billing.Task.instance.Apply_Late_Fee_to_all_Subscriptions_for_Accounts___10_Days_Overdue_Limit_1_3_ssssssssysssssu__Notify_About_Late_Fee@uuuuuuuuuuuuuuumuusss.parameters.email.template
+        },
+      ]
+    },
+  ]
+}

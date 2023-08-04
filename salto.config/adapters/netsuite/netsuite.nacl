@@ -1,0 +1,84 @@
+netsuite {
+  fetch = {
+    include = {
+      types = [
+        {
+          name = ".*"
+        },
+      ]
+      fileCabinet = [
+        "^/SuiteScripts.*",
+        "^/Templates.*",
+        "^/SuiteBundles.*",
+      ]
+      customRecords = [
+        {
+          name = ".*"
+        },
+      ]
+    }
+    exclude = {
+      fileCabinet = [
+      ]
+      types = [
+        {
+          name = "workbook"
+        },
+        {
+          name = "dataset"
+        },
+        {
+          name = "customer"
+        },
+        {
+          name = "accountingPeriod"
+        },
+        {
+          name = "employee"
+        },
+        {
+          name = "job"
+        },
+        {
+          name = "manufacturingCostTemplate"
+        },
+        {
+          name = "partner"
+        },
+        {
+          name = "solution"
+        },
+        {
+          name = "giftCertificateItem"
+        },
+        {
+          name = "downloadItem"
+        },
+        {
+          name = "publisheddashboard"
+          ids = [
+            "custpubdashboard_26_t1049933_589",
+          ]
+        },
+        {
+          name = "scheduledscript"
+          ids = [
+            "customscript_flo_cleanup_custs",
+          ]
+        },
+        {
+          name = "savedsearch"
+          ids = [
+            "customsearch_srd_opp_search",
+          ]
+        },
+        {
+          name = "workflow"
+          ids = [
+            "customworkflow4",
+          ]
+        },
+      ]
+    }
+  }
+}

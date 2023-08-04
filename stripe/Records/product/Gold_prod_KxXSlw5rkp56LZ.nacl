@@ -1,0 +1,29 @@
+stripe.product Gold_prod_KxXSlw5rkp56LZ {
+  id = "prod_KxXSlw5rkp56LZ"
+  active = true
+  description = "Gold by the pound"
+  livemode = false
+  name = "Gold"
+  product_prices = [
+    {
+      id = "price_1KHcNIHipyrr1EYiM28BSvnU"
+      active = true
+      billing_scheme = "tiered"
+      currency = "usd"
+      livemode = false
+      product = stripe.product.instance.Gold_prod_KxXSlw5rkp56LZ
+      recurring = {
+        interval = "year"
+        interval_count = 1
+        usage_type = "licensed"
+      }
+      tax_behavior = "unspecified"
+      tiers_mode = "volume"
+      type = "recurring"
+    },
+  ]
+  additionalProperties = {
+    type = "service"
+  }
+  default_price = "price_1KHcNIHipyrr1EYiM28BSvnU"
+}

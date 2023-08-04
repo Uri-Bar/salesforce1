@@ -1,0 +1,16 @@
+netsuite.account Insurance_Expense_Workers__compensation@suts {
+  acctType = "_expense"
+  acctName = "Workers' compensation"
+  includeChildren = true
+  generalRate = "_average"
+  parent = netsuite.account.instance.Insurance_Expense@s
+  cashFlowRate = "_average"
+  isInactive = false
+  inventory = false
+  subsidiaryList = [
+    netsuite.subsidiary.instance.Parent_Company@s,
+  ]
+  revalue = false
+  identifier = "Insurance Expense_Workers' compensation"
+  custom_custrecord_acct_special = false
+}

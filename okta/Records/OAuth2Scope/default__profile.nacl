@@ -1,0 +1,15 @@
+okta.OAuth2Scope default__profile {
+  name = "profile"
+  displayName = "View your profile information."
+  description = "The exact data varies based on what profile information you have provided, such as: name, time zone, picture, or birthday."
+  system = true
+  metadataPublish = "ALL_CLIENTS"
+  consent = "IMPLICIT"
+  default = false
+  additionalProperties = {
+    optional = false
+  }
+  _parent = [
+    okta.AuthorizationServer.instance.default,
+  ]
+}

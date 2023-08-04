@@ -1,0 +1,21 @@
+workato.recipe ReceipeForUnderlinesTest_Seroussi_Root {
+  name = "AAAReceipeForUnderlines"
+  trigger_application = "netsuite"
+  applications = [
+    "netsuite",
+  ]
+  description = "When there is a trigger event, do action"
+  folder_id = workato.folder.instance.Seroussi_Root
+  running = false
+  version_no = 2
+  config = [
+    {
+      keyword = "application"
+      name = "netsuite"
+      provider = "netsuite"
+      skip_validation = false
+      account_id = workato.connection.instance.Alon_Netsuite@s
+    },
+  ]
+  code = workato.recipe__code.instance.ReceipeForUnderlinesTest_Seroussi_Root
+}

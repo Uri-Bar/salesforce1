@@ -1,0 +1,4 @@
+workato.folder netsuite_dodel_playground_Root {
+  name = "netsuite"
+  parent_id = workato.folder.instance.dodel_playground_Root
+}

@@ -1,0 +1,19 @@
+netsuite.department EGO_inactive_department@s {
+  name = "EGO inactive department"
+  includeChildren = false
+  isInactive = true
+  classTranslationList = {
+    classTranslation = {
+      German = {
+        language = "German"
+      }
+      French__France_@sjk = {
+        language = "French (France)"
+      }
+    }
+  }
+  subsidiaryList = [
+    netsuite.subsidiary.instance.Parent_Company@s,
+  ]
+  identifier = "EGO inactive department"
+}

@@ -1,0 +1,51 @@
+type zuora_billing.extendedpaymentreconciliationjob {
+  string Id {
+    type = "string"
+    format = "uuid"
+    required = false
+    filterable = false
+    label = "Id"
+  }
+  string CreatedDate {
+    type = "string"
+    format = "date-time"
+    required = false
+    filterable = false
+    label = "CreatedDate"
+  }
+  string JobNumber {
+    type = "string"
+    maxLength = 512
+    required = false
+    filterable = false
+    label = "JobNumber"
+  }
+  string periodStart {
+    type = "string"
+    format = "date-time"
+    required = false
+    filterable = false
+    label = "periodStart"
+  }
+  string periodEnd {
+    type = "string"
+    format = "date-time"
+    required = false
+    filterable = false
+    label = "periodEnd"
+  }
+  string Status {
+    type = "string"
+    maxLength = 512
+    required = false
+    filterable = false
+    label = "Status"
+  }
+  string GatewayInstance {
+    type = "string"
+    maxLength = 512
+    required = false
+    filterable = false
+    label = "GatewayInstance"
+  }
+}

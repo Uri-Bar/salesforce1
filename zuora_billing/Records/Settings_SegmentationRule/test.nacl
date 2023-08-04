@@ -1,0 +1,9 @@
+zuora_billing.Settings_SegmentationRule test {
+  name = "test"
+  active = false
+  defaultSegments = [
+    {
+      segmentName = zuora_billing.Settings_Segment.instance.Subscription_Auto_Renew@s
+    },
+  ]
+}

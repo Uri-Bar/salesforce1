@@ -1,0 +1,9 @@
+okta.Feature OAuth_2_0_Demonstration_of_Proof_of_Possession__DPoP_@svssssssjk {
+  type = "self-service"
+  status = "DISABLED"
+  name = "OAuth 2.0 Demonstration of Proof of Possession (DPoP)"
+  description = "Enables the client to demonstrate that it possesses a particular key or secret associated with the access token"
+  stage = {
+    value = "EA"
+  }
+}

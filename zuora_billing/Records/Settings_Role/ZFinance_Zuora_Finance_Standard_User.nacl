@@ -1,0 +1,130 @@
+zuora_billing.Settings_Role ZFinance_Zuora_Finance_Standard_User@usss {
+  name = "Zuora Finance Standard User"
+  category = "ZFinance"
+  attributes = [
+    {
+      name = "AccountingPeriodCreate"
+      scope = "AccountingPeriod"
+      activationLevel = "EntityAndUser"
+    },
+    {
+      name = "RunTrialBalance"
+      scope = "AccountingPeriod"
+      activationLevel = "EntityAndUser"
+    },
+    {
+      name = "ReportingAccess"
+      scope = "Default"
+      activationLevel = "EntityAndUser"
+    },
+    {
+      name = "FinanceView"
+      scope = "Finance"
+      activationLevel = "EntityAndUser"
+    },
+    {
+      name = "RevenueRecognitionRuleCreate"
+      scope = "RevenueRecognitionRule"
+      activationLevel = "EntityAndUser"
+    },
+    {
+      name = "RevenueRecognitionRuleManage"
+      scope = "RevenueRecognitionRule"
+      activationLevel = "EntityAndUser"
+    },
+    {
+      name = "ChangeRevenueAllocation"
+      scope = "RevenueSchedule"
+      activationLevel = "EntityAndUser"
+    },
+    {
+      name = "CreateRSOfUnlimitRevRec"
+      scope = "RevenueSchedule"
+      activationLevel = "EntityAndUser"
+    },
+    {
+      name = "DeleteExternalRevenueSchedule"
+      scope = "RevenueSchedule"
+      activationLevel = "EntityAndUser"
+    },
+    {
+      name = "cancelAccountingRun"
+      scope = "ZFinanceAccountingRun"
+      activationLevel = "EntityAndUser"
+    },
+    {
+      name = "createAccountingRun"
+      scope = "ZFinanceAccountingRun"
+      activationLevel = "EntityAndUser"
+    },
+    {
+      name = "deleteAccountingRun"
+      scope = "ZFinanceAccountingRun"
+      activationLevel = "EntityAndUser"
+    },
+    {
+      name = "financeSettingsManagement"
+      scope = "ZFinanceAdmin"
+      activationLevel = "User"
+    },
+    {
+      name = "createCOAAccountingCode"
+      scope = "ZFinanceCOA"
+      activationLevel = "User"
+    },
+    {
+      name = "deleteCOAAccountingCode"
+      scope = "ZFinanceCOA"
+      activationLevel = "User"
+    },
+    {
+      name = "manageCOAAccountingCode"
+      scope = "ZFinanceCOA"
+      activationLevel = "User"
+    },
+    {
+      name = "cancelJournalEntry"
+      scope = "ZFinanceJournalEntry"
+      activationLevel = "EntityAndUser"
+    },
+    {
+      name = "createJournalEntry"
+      scope = "ZFinanceJournalEntry"
+      activationLevel = "EntityAndUser"
+    },
+    {
+      name = "deleteJournalEntry"
+      scope = "ZFinanceJournalEntry"
+      activationLevel = "EntityAndUser"
+    },
+    {
+      name = "editJournalEntry"
+      scope = "ZFinanceJournalEntry"
+      activationLevel = "EntityAndUser"
+    },
+    {
+      name = "createSegment"
+      scope = "ZFinanceSegment"
+      activationLevel = "EntityAndUser"
+    },
+    {
+      name = "manageSegment"
+      scope = "ZFinanceSegment"
+      activationLevel = "EntityAndUser"
+    },
+    {
+      name = "createSegmentRule"
+      scope = "ZFinanceSegmentRule"
+      activationLevel = "EntityAndUser"
+    },
+    {
+      name = "manageSegmentRule"
+      scope = "ZFinanceSegmentRule"
+      activationLevel = "EntityAndUser"
+    },
+  ]
+  
+  description = "Standard User for the Zuora Finance Product"
+  entityId = "8ac6819b-7883-361b-0178-93726ba53eff"
+  custom = false
+}

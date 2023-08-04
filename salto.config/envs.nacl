@@ -1,0 +1,17 @@
+envs {
+  envs = [
+    {
+      name = "TrackChanges-combined"
+      accountToServiceName = {
+        jira = "jira"
+        netsuite = "netsuite"
+        zuora_billing = "zuora_billing"
+        workato = "workato"
+        stripe = "stripe"
+        salesforce = "salesforce"
+        zendesk = "zendesk"
+        okta = "okta"
+      }
+    },
+  ]
+}

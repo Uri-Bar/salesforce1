@@ -1,0 +1,44 @@
+type zuora_billing.user {
+  string Id {
+    type = "string"
+    format = "uuid"
+    required = false
+    filterable = false
+    label = "Id"
+  }
+  string CreatedDate {
+    type = "string"
+    format = "date-time"
+    required = false
+    filterable = false
+    label = "CreatedDate"
+  }
+  string Email {
+    type = "string"
+    maxLength = 512
+    required = false
+    filterable = false
+    label = "Email"
+  }
+  string FirstName {
+    type = "string"
+    maxLength = 512
+    required = false
+    filterable = false
+    label = "FirstName"
+  }
+  string LastName {
+    type = "string"
+    maxLength = 512
+    required = false
+    filterable = false
+    label = "LastName"
+  }
+  string Username {
+    type = "string"
+    maxLength = 512
+    required = false
+    filterable = false
+    label = "Username"
+  }
+}

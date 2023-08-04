@@ -1,0 +1,26 @@
+zendesk.automation Close_ticket_4_days_after_status_is_set_to_solved@s {
+  title = "Close ticket 4 days after status is set to solved"
+  active = true
+  actions = [
+    {
+      field = "status"
+      value = "closed"
+    },
+  ]
+  conditions = {
+    all = [
+      {
+        field = "status"
+        operator = "is"
+        value = "solved"
+      },
+      {
+        field = "SOLVED"
+        operator = "greater_than"
+        value = "97"
+      },
+    ]
+  }
+  raw_title = "Close ticket 4 days after status is set to solved"
+  default = true
+}

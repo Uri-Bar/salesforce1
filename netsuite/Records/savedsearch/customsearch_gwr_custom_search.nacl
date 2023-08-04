@@ -1,0 +1,122 @@
+netsuite.savedsearch customsearch_gwr_custom_search {
+  scriptid = "customsearch_gwr_custom_search"
+  dependencies = {
+    dependency = [
+      netsuite.entitycustomfield.instance.custentitycust_slt_conflict1.scriptid,
+    ]
+  }
+  definition = "d9c85ae8ce75ce020bdedf50062857666536668f9bd0fff0ba2654b1b7226f86@GZC@2022.1.16@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"
+  search_filter = [
+    {
+      FLAG_DATE_TIME_SECOND = false
+      FLAG_FROM_AVAILABLE_FILTER = false
+      FLAG_NOT = false
+      FLAG_OR = false
+      FIELD_OR_CLAUSE_STATUS = "N"
+      FIELD_NUM_LEFT_PARENS = 0
+      FIELD_NUM_RIGHT_PARENS = 0
+      FIELD_FILTER_NAME = "Customer_STAGE"
+      FIELD_ATTRIBUTE = "ANYOF"
+      FIELD_TYPE = "SELECT"
+      RECORDS = [
+        {
+          KEY_ID = 0
+          FIELD_VALUE = "CUSTOMER"
+        },
+      ]
+    },
+  ]
+  return_fields = [
+    {
+      FIELD_ALIAS = "Entity_ENTITYID"
+      FIELD_INDEX = 1
+      FIELD_FORMULA_ERROR = false
+    },
+    {
+      FIELD_ALIAS = "Entity_ALTNAME"
+      FIELD_INDEX = 2
+      FIELD_FORMULA_ERROR = false
+    },
+    {
+      FIELD_ALIAS = "Entity_EMAIL"
+      FIELD_INDEX = 3
+      FIELD_FORMULA_ERROR = false
+    },
+    {
+      FIELD_ALIAS = "Entity_PHONE"
+      FIELD_INDEX = 4
+      FIELD_FORMULA_ERROR = false
+    },
+    {
+      FIELD_ALIAS = "Entity_ALTPHONE"
+      FIELD_INDEX = 5
+      FIELD_FORMULA_ERROR = false
+    },
+    {
+      FIELD_ALIAS = "Entity_FAX"
+      FIELD_INDEX = 6
+      FIELD_FORMULA_ERROR = false
+    },
+    {
+      FIELD_ALIAS = "Customer_CONTACT"
+      FIELD_INDEX = 7
+      FIELD_FORMULA_ERROR = false
+    },
+    {
+      FIELD_ALIAS = "Entity_ALTEMAIL"
+      FIELD_INDEX = 8
+      FIELD_FORMULA_ERROR = false
+    },
+    {
+      FIELD_ALIAS = "CUSTENTITYCUST_SLT_CONFLICT1"
+      FIELD_INDEX = 9
+      FIELD_FORMULA_ERROR = false
+    },
+  ]
+  sort_columns = [
+    {
+      KEY_FIELD = "Entity_ENTITYID"
+      FILELD_ORDER = 1
+      FLAG_DESCENDING = false
+    },
+  ]
+  KEY_SCRIPT_ID = "customsearch_gwr_custom_search"
+  FIELD_DEFAULT_NAME = "GWR Customer Search"
+  FIELD_SEARCH_TYPE = "Customer"
+  FLAG_PUBLIC = false
+  FLAG_LIST = false
+  FLAG_PORTLET = false
+  FLAG_MACHINE = false
+  FLAG_REMINDER = false
+  FLAG_SHOW_LINK = false
+  FLAG_PREFERRED_LIST = false
+  FLAG_PREFERRED_PORTLET = false
+  FLAG_PREFERRED_MACHINE = false
+  FLAG_PREFERRED_FORM = false
+  FLAG_PREFERRED_RESULTS = false
+  FLAG_VIEW_AS_REPORT = false
+  FLAG_VIEW_AS_GRAPH = false
+  FLAG_VIEW_AS_GRID = false
+  FLAG_UNRESTRICTED = false
+  FLAG_DISABLE_DRILL_DOWN = false
+  FLAG_HIDE_FILTER_DROPDOWNS = false
+  KEY_DEFAULT_TEXT_FIELD_FILTER = "ANY"
+  FLAG_AVAILABLE_AS_FEED = false
+  FLAG_GLOBAL_EDIT = false
+  FLAG_CSV = false
+  FLAG_EXCEL = false
+  FLAG_PDF = false
+  FIELD_EMAIL_SUBJECT = "OMG New Record 20220901"
+  FIELD_EMAIL_COMMENT = "20220901 hard to find string"
+  FLAG_TRIGGERED_ALERT = true
+  FLAG_SCHEDULED_ALERT = false
+  FLAG_SCHEDULED_ALERT_SUMMARIES = false
+  FLAG_SEND_EMPTY_RESULTS = false
+  FLAG_ALERT_ALLOW_SUBSCRIBE = false
+  FLAG_ALERT_INCLUDE_VIEW_LINK = false
+  FLAG_HAS_TOTALS = false
+  FLAG_INCLUDE_PERIOD_END_TRANSACTIONS = false
+  FLAG_BUILT_IN = false
+  FLAG_SEND_ON_UPDATE = false
+  FLAG_SHOW_AUDIT_TRAIL = false
+}

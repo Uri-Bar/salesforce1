@@ -1,0 +1,304 @@
+type zuora_billing.extendedrefund {
+  string Id {
+    type = "string"
+    format = "uuid"
+    required = false
+    filterable = false
+    label = "Id"
+  }
+  string CreatedById {
+    type = "string"
+    format = "uuid"
+    required = false
+    filterable = false
+    referenceTo = [
+      zuora_billing.extendeduser.field.Id,
+    ]
+    cardinality = "manyToOne"
+    recordConstraints = {
+      create = {
+        enforceValidMapping = true
+      }
+    }
+    label = "CreatedById"
+  }
+  string CreatedDate {
+    type = "string"
+    format = "date-time"
+    required = false
+    filterable = false
+    label = "CreatedDate"
+  }
+  string UpdatedById {
+    type = "string"
+    format = "uuid"
+    required = false
+    filterable = false
+    referenceTo = [
+      zuora_billing.extendeduser.field.Id,
+    ]
+    cardinality = "manyToOne"
+    recordConstraints = {
+      create = {
+        enforceValidMapping = true
+      }
+    }
+    label = "UpdatedById"
+  }
+  string UpdatedDate {
+    type = "string"
+    format = "date-time"
+    required = false
+    filterable = false
+    label = "UpdatedDate"
+  }
+  boolean deleted {
+    type = "boolean"
+    required = false
+    filterable = false
+    label = "deleted"
+  }
+  string AccountId {
+    type = "string"
+    format = "uuid"
+    required = false
+    filterable = false
+    referenceTo = [
+      zuora_billing.extendedaccount.field.Id,
+    ]
+    cardinality = "manyToOne"
+    recordConstraints = {
+      create = {
+        enforceValidMapping = true
+      }
+    }
+    label = "AccountId"
+  }
+  string PaymentMethodSnapshotId {
+    type = "string"
+    format = "uuid"
+    required = false
+    filterable = false
+    referenceTo = [
+      zuora_billing.paymentmethodsnapshot.field.Id,
+    ]
+    cardinality = "manyToOne"
+    recordConstraints = {
+      create = {
+        enforceValidMapping = true
+      }
+    }
+    label = "PaymentMethodSnapshotId"
+  }
+  string AccountingCode {
+    type = "string"
+    maxLength = 512
+    required = false
+    filterable = false
+    label = "AccountingCode"
+  }
+  number Amount {
+    type = "number"
+    required = false
+    filterable = false
+    label = "Amount"
+  }
+  string CancelledOn {
+    type = "string"
+    format = "date-time"
+    required = false
+    filterable = false
+    label = "CancelledOn"
+  }
+  string Comment {
+    type = "string"
+    maxLength = 512
+    required = false
+    filterable = false
+    label = "Comment"
+  }
+  string GatewayReconciliationReason {
+    type = "string"
+    maxLength = 512
+    required = false
+    filterable = false
+    label = "GatewayReconciliationReason"
+  }
+  string GatewayReconciliationStatus {
+    type = "string"
+    maxLength = 512
+    required = false
+    filterable = false
+    label = "GatewayReconciliationStatus"
+  }
+  string GatewayResponse {
+    type = "string"
+    maxLength = 512
+    required = false
+    filterable = false
+    label = "GatewayResponse"
+  }
+  string GatewayResponseCode {
+    type = "string"
+    maxLength = 512
+    required = false
+    filterable = false
+    label = "GatewayResponseCode"
+  }
+  string GatewayState {
+    type = "string"
+    maxLength = 512
+    required = false
+    filterable = false
+    label = "GatewayState"
+  }
+  string MarkedForSubmissionOn {
+    type = "string"
+    format = "date-time"
+    required = false
+    filterable = false
+    label = "MarkedForSubmissionOn"
+  }
+  string MethodType {
+    type = "string"
+    maxLength = 512
+    required = false
+    filterable = false
+    label = "MethodType"
+  }
+  string PaymentMethodId {
+    type = "string"
+    format = "uuid"
+    required = false
+    filterable = false
+    referenceTo = [
+      zuora_billing.extendedpaymentmethod.field.Id,
+    ]
+    cardinality = "manyToOne"
+    recordConstraints = {
+      create = {
+        enforceValidMapping = true
+      }
+    }
+    label = "PaymentMethodId"
+  }
+  string PayoutId {
+    type = "string"
+    maxLength = 512
+    required = false
+    filterable = false
+    label = "PayoutId"
+  }
+  string ReasonCode {
+    type = "string"
+    maxLength = 512
+    required = false
+    filterable = false
+    label = "ReasonCode"
+  }
+  string ReferenceID {
+    type = "string"
+    maxLength = 512
+    required = false
+    filterable = false
+    label = "ReferenceID"
+  }
+  string RefundDate {
+    type = "string"
+    format = "date"
+    required = false
+    filterable = false
+    label = "RefundDate"
+  }
+  string RefundNumber {
+    type = "string"
+    maxLength = 512
+    required = false
+    filterable = false
+    label = "RefundNumber"
+  }
+  string RefundTransactionTime {
+    type = "string"
+    format = "date-time"
+    required = false
+    filterable = false
+    label = "RefundTransactionTime"
+  }
+  string SecondRefundReferenceId {
+    type = "string"
+    maxLength = 512
+    required = false
+    filterable = false
+    label = "SecondRefundReferenceId"
+  }
+  string SettledOn {
+    type = "string"
+    format = "date-time"
+    required = false
+    filterable = false
+    label = "SettledOn"
+  }
+  string SoftDescriptor {
+    type = "string"
+    maxLength = 512
+    required = false
+    filterable = false
+    label = "SoftDescriptor"
+  }
+  string SoftDescriptorPhone {
+    type = "string"
+    maxLength = 512
+    required = false
+    filterable = false
+    label = "SoftDescriptorPhone"
+  }
+  string SourceType {
+    type = "string"
+    maxLength = 512
+    required = false
+    filterable = false
+    label = "SourceType"
+  }
+  string Status {
+    type = "string"
+    maxLength = 512
+    required = false
+    filterable = false
+    label = "Status"
+  }
+  string SubmittedOn {
+    type = "string"
+    format = "date-time"
+    required = false
+    filterable = false
+    label = "SubmittedOn"
+  }
+  string TransferredToAccounting {
+    type = "string"
+    maxLength = 512
+    required = false
+    filterable = false
+    label = "TransferredToAccounting"
+  }
+  string Type {
+    type = "string"
+    maxLength = 512
+    required = false
+    filterable = false
+    label = "Type"
+  }
+  string AssociatedTransactionNumber {
+    type = "string"
+    maxLength = 512
+    required = false
+    filterable = false
+    label = "AssociatedTransactionNumber"
+  }
+  string Gateway {
+    type = "string"
+    maxLength = 512
+    required = false
+    filterable = false
+    label = "Gateway"
+  }
+}

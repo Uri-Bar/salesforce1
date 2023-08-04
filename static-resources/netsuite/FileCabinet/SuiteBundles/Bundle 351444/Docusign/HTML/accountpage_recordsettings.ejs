@@ -1,0 +1,238 @@
+<style>
+#ds_record_settings {
+	height: 470px;
+	width: 514px;
+	font-family: Helvetica;
+	font-size: 13px;
+}
+
+#ds_record_settings_submit{
+	text-align: center;
+}
+
+#ds_recordType_submitBtn{
+	width: 103px;
+	height: 36px;
+}
+
+#ds_recordType_emailBlurb{
+	width: 450px;
+	height: 160px;
+}
+
+.ui-autocomplete {
+	width: 300px;
+}
+
+.ds_button {
+	background-image: url('<%= buttonImage %>');
+	cursor:pointer;
+	border: none;
+	width: 103px;
+	height: 36px;
+	color: #636363;
+	font-size: 12px;
+	font-family: Helvetica;
+	font-weight: bold;
+}
+.ds_seperator {
+	width: 520px;
+}
+.ds_section_header {
+	font-weight: bold;
+	color: #265885;
+}
+.ds_subsection_header {
+	color: #000000;
+}
+.removeDSCustomBtnLink{
+	font-size: 10px;
+}
+.editDSCustomBtnLink{
+	font-size: 10px;
+}
+.ds_learn_more_link {
+	font-size: 10px;
+	color: #000000;
+}
+</style>
+
+<script>
+	$(document).ready(function() {
+		$.getScript('https://ajax.googleapis.com/ajax/libs/jqueryui/1.10.0/jquery-ui.min.js', function() {
+		    var nsRecordTypesList = [
+				"account",
+				"assemblybuild",
+				"assemblyunbuild",
+				"bin",
+				"bintransfer",
+				"binworksheet",
+				"assemblyitem",
+				"campaign",
+				"case",
+				"cashrefund",
+				"cashsale",
+				"check",
+				"class",
+				"competitor",
+				"contact",
+				"creditmemo",
+				"currency",
+				"customer",
+				"customercategory",
+				"customerdeposit",
+				"customerpayment",
+				"customerrefund",
+				"department",
+				"depositapplication",
+				"descriptionitem",
+				"discountitem",
+				"downloaditem",
+				"employee",
+				"estimate",
+				"event",
+				"expensecategory",
+				"expensereport",
+				"folder",
+				"giftcertificate",
+				"giftcertificateitem",
+				"intercompanyjournalentry",
+				"inventoryadjustment",
+				"inventorydetail",
+				"inventorynumber",
+				"inventorypart",
+				"inventorytransfer",
+				"invoice",
+				"issue",
+				"itemfulfillment",
+				"itemgroup",
+				"itemreceipt",
+				"journalentry",
+				"kititem",
+				"lead",
+				"location",
+				"lotnumberedassemblyitem",
+				"lotnumberedinventoryitem",
+				"markupitem",
+				"message",
+				"nexus",
+				"noninventoryitem",
+				"note",
+				"opportunity",
+				"otherchargeitem",
+				"othername",
+				"partner",
+				"paymentitem",
+				"phonecall",
+				"pricelevel",
+				"project",
+				"projecttask",
+				"promotioncode",
+				"prospect",
+				"purchaseorder",
+				"returnauthorization",
+				"revenuecommitment",
+				"revenuecommitmentreversal",
+				"revenuerecognitionschedule",
+				"revenuerecognitiontemplate",
+				"salesorder",
+				"salestaxitem",
+				"serializedassemblyitem",
+				"serializedinventoryitem",
+				"service",
+				"solution",
+				"subsidiary",
+				"subtotalitem",
+				"task",
+				"taxgroup",
+				"taxperiod",
+				"taxtype",
+				"term",
+				"time",
+				"topic",
+				"transferorder",
+				"unitstype",
+				"vendor",
+				"vendorbill",
+				"vendorcategory",
+				"vendorcredit",
+				"vendorpayment",
+				"vendorreturnauthorization",
+				"workorder"
+		    ];
+		    $( "#ds_recordType_internalId" ).autocomplete({
+		      	source: nsRecordTypesList
+		    });
+		});
+		initDSAccountPage();
+		$('#ds_recordType_emailSubject, #ds_recordType_emailBlurb').keyup(function () { 
+		    this.value = this.value.replace(/<|>/ig,''); 
+		});
+	});
+</script>
+
+<div id="ds_record_settings">
+	<div id="ds_record_settings_content">
+		<br>
+		<label class="ds_section_header">Record Settings</label><br>
+		<hr class="ds_seperator" /><br>
+		Name:&nbsp;
+		<input type="text" id="ds_recordType_name" value="" size ="50" maxlength="50" />
+		<img class="ds_question_icon" src="<%= questionIcon %>" toolTipText="Enter the name for this record" />
+		<br><br>
+		Record Internal ID:&nbsp;
+		<input type="text" id="ds_recordType_internalId" value="" size ="50" maxlength="50" />
+		<img class="ds_question_icon" src="<%= questionIcon %>" toolTipText="Enter the NetSuite Record Internal ID" />
+		<br><br>
+		<br><label class="ds_section_header">DocuSign Button Settings</label><br>
+		<hr class="ds_seperator" /><br>
+		<label class="ds_subsection_header">DocuSign Standard Buttons</label><br><br>
+		&nbsp;&nbsp;&nbsp;&nbsp;
+		<input type="checkbox" id="ds_recordType_sendWithDocuSign" >
+		&nbsp;Send With DocuSign
+		<img class="ds_question_icon" src="<%= questionIcon %>" toolTipText="Check if you want to enable the 'Send with DocuSign' button for this record" />
+		<br><br>
+		&nbsp;&nbsp;&nbsp;&nbsp;
+		<input type="checkbox" id="ds_recordType_signWithDocuSign" >
+		&nbsp;Sign With DocuSign
+		<img class="ds_question_icon" src="<%= questionIcon %>" toolTipText="Check if you want to enable the 'Sign with DocuSign' button for this record" />
+		<br><br>
+		<% if (recordType != "") { %>
+			<hr class="ds_seperator" />
+			<br>
+			<label class="ds_subsection_header">DocuSign Custom Buttons</label>&nbsp;&nbsp;
+			<a href="https://docs.google.com/viewer?url=<%= dsHowToGuide %>" class="ds_learn_more_link" target="_blank">Learn More<a><br><br>
+			<%= dsDSCustomBtnHTML %>
+			&nbsp;&nbsp;&nbsp;&nbsp;
+			<a id="addDSCustomBtn" href="#"><%= dsAddDSBtnLabel %></a>
+			<br><br>
+		<% } %>
+		<% if (recordType == "estimate") { %>
+		<br><label class="ds_section_header">DocuSign Envelope Document Settings</label><br>
+		<hr class="ds_seperator" /><br>
+			<input type="checkbox" id="ds_recordType_includeAttachedFiles" >
+			&nbsp;Include Attached File(s)
+			<img class="ds_question_icon" src="<%= questionIcon %>" toolTipText="Check if you want to include attached file(s) when Send with DocuSign" />
+			<br><br>
+		<% } %>
+		<br><label class="ds_section_header">DocuSign Envelope Recipient Settings</label><br>
+		<hr class="ds_seperator" /><br>
+		<input type="checkbox" id="ds_recordType_parimaryContactOnly" >
+		&nbsp;Only Add Primary Contact to the DocuSign Envelope
+		<img class="ds_question_icon" src="<%= questionIcon %>" toolTipText="By default, DocuSign for NetSuite attaches any contact in a record to the envelope when Sending with DocuSign.  Checking this option restricts the contacts added to the envelope to the Primary Contact ONLY. You can manually add any other signers once the DocuSign dialog has popped up, of course, but the document will initially be populated only with the Primary Contact.This option has no effect on the Sign with DocuSign option." />
+		<br><br>
+		<br><label class="ds_section_header">DocuSign Envelope Email Settings</label><br>
+		<hr class="ds_seperator" /><br>
+		Default Email Subject:&nbsp;
+		<input type="text" id="ds_recordType_emailSubject" value="" size ="46" maxlength="100" />
+		<img class="ds_question_icon" src="<%= questionIcon %>" toolTipText="Enter the default email subject for DocuSign envelope.  This can be a maximum of 100 characters.  A default email subject will be used if it's empty." />
+		<br><br>
+		Default Email Message:
+		<img class="ds_question_icon" src="<%= questionIcon %>" toolTipText="Enter the default email message for DocuSign envelope.  This can be a maximum of 2000 characters." /><br>
+		<textarea id="ds_recordType_emailBlurb" maxlength="2000" ></textarea>
+		<br><br>
+	</div>
+	<div id="ds_record_settings_submit">
+		<button id="ds_recordType_submitBtn" class="ds_button" type="button" onclick="saveRecordTypeSettings('<%= recordType %>')" ><%= dsSaveText %></button>
+	</div>
+</div>

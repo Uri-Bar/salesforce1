@@ -1,0 +1,22 @@
+zendesk.trigger DP_Inactive_Test@s {
+  title = "DP Inactive Test"
+  active = false
+  default = false
+  actions = [
+    {
+      field = "status"
+      value = "open"
+    },
+  ]
+  conditions = {
+    all = [
+      {
+        field = "number_of_incidents"
+        operator = "greater_than"
+        value = "2"
+      },
+    ]
+  }
+  raw_title = "DP Inactive Test"
+  category_id = zendesk.trigger_category.instance.DP
+}

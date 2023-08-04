@@ -1,0 +1,8 @@
+zendesk.ticket_field__custom_field_options multiselect_agent_dropdown_6432_for_agent_ussss__v1@uuuuumuu {
+  name = "v1"
+  raw_name = "v1"
+  value = "v1gil"
+  _parent = [
+    zendesk.ticket_field.instance.multiselect_agent_dropdown_6432_for_agent@ussss,
+  ]
+}

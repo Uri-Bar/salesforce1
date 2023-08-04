@@ -1,0 +1,24 @@
+zendesk.trigger GWR_Yellow@s {
+  title = "GWR Yellow"
+  active = true
+  default = false
+  actions = [
+    {
+      field = "current_tags"
+      value = [
+        zendesk.tag.instance.isyellow,
+      ]
+    },
+  ]
+  conditions = {
+    all = [
+      {
+        field = zendesk.ticket_field.instance.GWR_classification_tagger@su
+        operator = "is"
+        value = zendesk.ticket_field__custom_field_options.instance.GWR_classification_tagger_su__yellow@uumuu
+      },
+    ]
+  }
+  raw_title = "GWR Yellow"
+  category_id = zendesk.trigger_category.instance.Notifications
+}

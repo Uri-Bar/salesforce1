@@ -1,0 +1,51 @@
+type salesforce.Lead {
+  salesforce.Picklist Role__c {
+    apiName = "Lead.Role__c"
+    label = "Role"
+    valueSet = [
+      {
+        fullName = "IT"
+        default = false
+        label = "IT"
+      },
+      {
+        fullName = "Finance"
+        default = false
+        label = "Finance"
+      },
+      {
+        fullName = "Marketing"
+        default = false
+        label = "Marketing"
+      },
+      {
+        fullName = "Sales or Customer Success"
+        default = false
+        label = "Sales"
+      },
+    ]
+    restricted = true
+    inlineHelpText = "please choose a role"
+    createable = true
+    updateable = true
+    queryable = true
+    description = "The role of the lead updated"
+    externalId = false
+    
+    sorted = false
+    
+    
+  }
+  salesforce.Checkbox Important__c {
+    apiName = "Lead.Important__c"
+    label = "Important"
+    defaultValue = false
+    createable = true
+    updateable = true
+    queryable = true
+    description = "Is this lead important?"
+    externalId = false
+    
+    
+  }
+}

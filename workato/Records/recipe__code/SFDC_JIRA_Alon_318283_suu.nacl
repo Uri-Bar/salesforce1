@@ -1,0 +1,9 @@
+workato.recipe__code SFDC_JIRA_Alon_318283_suu@uuum {
+  number = 0
+  keyword = "trigger"
+  uuid = "95e216a0-54b9-40f7-83fb-a6a8a92e4d11"
+  unfinished = false
+  _parent = [
+    workato.recipe.instance.SFDC_JIRA_Alon_318283@suu,
+  ]
+}

@@ -1,0 +1,514 @@
+workato.recipe__code multi_salesforce_and_netsuite_1462960_sssu@uuuum {
+  number = 0
+  provider = "salesforce"
+  name = "updated_custom_object"
+  as = "1b8d1f9c"
+  title = "New/updated Opportunity"
+  description = "New/updated <span class=\"provider\">Opportunity</span> in <span class=\"provider\">Salesforce</span>"
+  keyword = "trigger"
+  dynamicPickListSelection = {
+    sobject_name = "Opportunity"
+    field_list = [
+      {
+        label = "Opportunity ID"
+        value = "Id"
+      },
+      {
+        label = "Account ID"
+        value = "AccountId"
+      },
+      {
+        label = "Deleted"
+        value = "IsDeleted"
+      },
+      {
+        label = "Private"
+        value = "IsPrivate"
+      },
+      {
+        label = "Name"
+        value = "Name"
+      },
+      {
+        label = "Description"
+        value = "Description"
+      },
+      {
+        label = "Amount"
+        value = "Amount"
+      },
+      {
+        label = "Probability (%)"
+        value = "Probability"
+      },
+      {
+        label = "Expected Amount"
+        value = "ExpectedRevenue"
+      },
+      {
+        label = "Quantity"
+        value = "TotalOpportunityQuantity"
+      },
+      {
+        label = "Close Date"
+        value = "CloseDate"
+      },
+      {
+        label = "Opportunity Type"
+        value = "Type"
+      },
+      {
+        label = "Next Step"
+        value = "NextStep"
+      },
+      {
+        label = "Lead Source"
+        value = "LeadSource"
+      },
+      {
+        label = "Closed"
+        value = "IsClosed"
+      },
+      {
+        label = "Won"
+        value = "IsWon"
+      },
+      {
+        label = "Forecast Category"
+        value = "ForecastCategory"
+      },
+      {
+        label = "Forecast Category"
+        value = "ForecastCategoryName"
+      },
+      {
+        label = "Campaign ID"
+        value = "CampaignId"
+      },
+      {
+        label = "Has Line Item"
+        value = "HasOpportunityLineItem"
+      },
+      {
+        label = "Price Book ID"
+        value = "Pricebook2Id"
+      },
+      {
+        label = "Owner ID"
+        value = "OwnerId"
+      },
+      {
+        label = "Created Date"
+        value = "CreatedDate"
+      },
+      {
+        label = "Created By ID"
+        value = "CreatedById"
+      },
+      {
+        label = "Last Modified Date"
+        value = "LastModifiedDate"
+      },
+      {
+        label = "Last Modified By ID"
+        value = "LastModifiedById"
+      },
+      {
+        label = "Last Activity"
+        value = "LastActivityDate"
+      },
+      {
+        label = "Fiscal Quarter"
+        value = "FiscalQuarter"
+      },
+      {
+        label = "Fiscal Year"
+        value = "FiscalYear"
+      },
+      {
+        label = "Fiscal Period"
+        value = "Fiscal"
+      },
+      {
+        label = "Last Referenced Date"
+        value = "LastReferencedDate"
+      },
+      {
+        label = "Has Open Activity"
+        value = "HasOpenActivity"
+      },
+      {
+        label = "Has Overdue Task"
+        value = "HasOverdueTask"
+      },
+      {
+        label = "Delivery/Installation Status"
+        value = "DeliveryInstallationStatus__c"
+      },
+      {
+        label = "Tracking Number"
+        value = "TrackingNumber__c"
+      },
+      {
+        label = "Order Number"
+        value = "OrderNumber__c"
+      },
+      {
+        label = "Current Generator(s)"
+        value = "CurrentGenerators__c"
+      },
+      {
+        label = "Main Competitor(s)"
+        value = "MainCompetitors__c"
+      },
+    ]
+    table_list = [
+      {
+        label = "Price Book"
+        value = "Pricebook2"
+      },
+      {
+        label = "Owner"
+        value = "User"
+      },
+      {
+        label = "Account"
+        value = "Account"
+      },
+    ]
+  }
+  input = {
+    sobject_name = "Opportunity"
+    since_offset = "0"
+    field_list = '''
+Id
+AccountId
+IsDeleted
+IsPrivate
+Name
+Description
+Amount
+Probability
+ExpectedRevenue
+TotalOpportunityQuantity
+CloseDate
+Type
+NextStep
+LeadSource
+IsClosed
+IsWon
+ForecastCategory
+ForecastCategoryName
+CampaignId
+HasOpportunityLineItem
+Pricebook2Id
+OwnerId
+CreatedDate
+CreatedById
+LastModifiedDate
+LastModifiedById
+LastActivityDate
+FiscalQuarter
+FiscalYear
+Fiscal
+LastReferencedDate
+HasOpenActivity
+HasOverdueTask
+DeliveryInstallationStatus__c
+TrackingNumber__c
+OrderNumber__c
+CurrentGenerators__c
+MainCompetitors__c
+'''
+    table_list = '''
+Pricebook2
+User
+Account
+'''
+  }
+  visible_config_fields = [
+    "sobject_name",
+    "field_list",
+    "since_offset",
+    "table_list",
+  ]
+  block = [
+    {
+      number = 1
+      provider = "salesforce"
+      name = "search_sobjects"
+      as = "5a4e66d1"
+      title = "Search Accounts"
+      description = "Search for <span class=\"provider\">Accounts</span> in <span class=\"provider\">Salesforce</span>"
+      keyword = "action"
+      dynamicPickListSelection = {
+        sobject_name = "Account"
+      }
+      input = {
+        sobject_name = "Account"
+        limit = "150"
+        Name = "#{_('data.salesforce.1b8d1f9c.Name')}#{_('data.salesforce.1b8d1f9c.AccountId')}"
+      }
+      uuid = "5819dd0e-f97c-4ad7-b8a4-a4624eb2ceb0"
+    },
+    {
+      number = 2
+      provider = "rest"
+      name = "make_request_v2"
+      as = "b2f3e3bb"
+      keyword = "action"
+      comment = "test comment"
+      uuid = "b3bcb256-11be-4f3d-a6bd-b3c767a615fe"
+    },
+    {
+      number = 3
+      provider = "netsuite"
+      name = "add_object"
+      as = "7f6865f3"
+      title = "Create Account"
+      description = "Create <span class=\"provider\">Account</span> in <span class=\"provider\">NetSuite</span>"
+      keyword = "action"
+      dynamicPickListSelection = {
+        netsuite_object = "Account"
+        custom_list = [
+          {
+            label = "Critical notes"
+            value = "otherCustomField@custrecord3"
+          },
+          {
+            label = "great note"
+            value = "otherCustomField@custrecord4"
+          },
+        ]
+      }
+      input = {
+        netsuite_object = "Account@@script"
+        custom_list = '''
+otherCustomField@custrecord3
+otherCustomField@custrecord4
+'''
+        external_id = "#{_('data.salesforce.1b8d1f9c.AccountId')}#{_('data.salesforce.1b8d1f9c.CreatedById')}"
+        unit = "#{_('data.salesforce.1b8d1f9c.CampaignId')}#{_('data.salesforce.1b8d1f9c.FiscalYear')}#{_('data.salesforce.5a4e66d1.Account.first.BillingState')}"
+      }
+      visible_config_fields = [
+        "netsuite_object",
+        "custom_list",
+        "custom_column_list",
+        "custom_segment_schema",
+        "external_id",
+        "unit",
+      ]
+      uuid = "066e581f-61c3-4f7b-82a4-7bee6a0444b6"
+    },
+    {
+      number = 4
+      keyword = "if"
+      input = {
+        type = "compound"
+        operand = "or"
+        conditions = [
+          {
+            operand = "starts_with"
+            lhs = "#{_('data.salesforce.5a4e66d1.Account.first.Fax')}"
+            rhs = "00"
+          },
+          {
+            operand = "blank"
+            lhs = "#{_('data.salesforce.5a4e66d1.Account.first.Name')}"
+          },
+          {
+            operand = "not_equals_to"
+            lhs = "#{_('data.netsuite.7f6865f3.internal_id')}"
+            rhs = "=.hmac_md5(_('data.salesforce.5a4e66d1.Account.first.Id'))"
+          },
+          {
+            operand = "not_ends_with"
+            lhs = "#{_('data.workato.job_context.user_email')}"
+            rhs = "=.last(_('data.workato.job_context.job_url'))"
+          },
+        ]
+      }
+      block = [
+        {
+          number = 5
+          as = "72458e04"
+          keyword = "foreach"
+          repeat_mode = "simple"
+          clear_scope = "false"
+          block = [
+            {
+              number = 6
+              provider = "salesforce"
+              name = "update_sobject"
+              as = "14f52f33"
+              title = "Update Sea"
+              description = "Update <span class=\"provider\">Sea</span> in <span class=\"provider\">Salesforce</span>"
+              keyword = "action"
+              dynamicPickListSelection = {
+                sobject_name = "Sea"
+              }
+              input = {
+                sobject_name = "Sea__c"
+                id = "#{_('data.salesforce.5a4e66d1.Account.first.Id')}_abc"
+                Name = "=_('data.salesforce.5a4e66d1.Account.first.Name').gsub(\"aaa\", \"bbb\")"
+              }
+              visible_config_fields = [
+                "sobject_name",
+                "Name",
+              ]
+              uuid = "f6ff4752-004e-48c7-8c02-e47bf85297a4"
+            },
+            {
+              number = 7
+              provider = "salesforce"
+              name = "upsert_sobject"
+              as = "4d469627"
+              title = "Upsert Apex Test Result"
+              description = "Upsert <span class=\"provider\">Apex Test Result</span> in <span class=\"provider\">Salesforce</span>"
+              keyword = "action"
+              dynamicPickListSelection = {
+                sobject_name = "Apex Test Result"
+                primary_key = [
+                  {
+                    label = "Apex Test Result ID"
+                    value = "Id"
+                  },
+                  {
+                    label = "Class ID"
+                    value = "ApexClassId"
+                  },
+                  {
+                    label = "Method Name"
+                    value = "MethodName"
+                  },
+                ]
+                Outcome = "CompileFail"
+              }
+              toggleCfg = {
+                Outcome = true
+              }
+              input = {
+                sobject_name = "ApexTestResult"
+                query_field = {
+                  primary_key = '''
+Id
+ApexClassId
+MethodName
+'''
+                }
+                ApexClassId = "#{_('data.salesforce.5a4e66d1.Account.first.Ownership')}"
+                Outcome = "CompileFail"
+                Id = "#{_('data.salesforce.1b8d1f9c.CombinedAttachments.records.first.Id')}"
+                TestTimestamp = "2021-03-17T00:00:00-07:00"
+              }
+              uuid = "7c48a5d5-1fad-4199-b0b1-e0902c756dac"
+            },
+            {
+              number = 8
+              keyword = "if"
+              input = {
+                type = "compound"
+                operand = "and"
+                conditions = [
+                  {
+                    operand = "equals_to"
+                    lhs = "#{_('data.salesforce.4d469627.status')}"
+                    rhs = "=aaa"
+                  },
+                  {
+                    operand = "contains"
+                    lhs = "#{_('data.salesforce.5a4e66d1.Account.first.Description')}"
+                    rhs = "jjj"
+                  },
+                ]
+              }
+              block = [
+                {
+                  number = 9
+                  keyword = "action"
+                  uuid = "a45abf99-a1bd-4880-9cf2-92bb94ee4583"
+                },
+                {
+                  number = 10
+                  provider = "salesforce"
+                  name = "approve_process"
+                  as = "baaf01e2"
+                  keyword = "action"
+                  dynamicPickListSelection = {
+                    processDefinitionNameOrId = "asset approval 5324234 (Asset)"
+                  }
+                  toggleCfg = {
+                    processDefinitionNameOrId = true
+                  }
+                  input = {
+                    TargetObjectId = "hhh"
+                    processDefinitionNameOrId = "04a3h00000093n5"
+                  }
+                  uuid = "29bf5af5-0f0f-423d-9c37-585a3671a718"
+                },
+              ]
+              uuid = "31192f0d-beaa-487e-adde-56d89e0b9aa2"
+            },
+          ]
+          uuid = "ded06702-75f3-4400-88f5-bf1c20cea4f1"
+        },
+      ]
+      uuid = "b8fd7ac0-f7b2-4700-80c6-8f93bb864cae"
+    },
+    {
+      number = 11
+      provider = "salesforce"
+      name = "search_sobjects"
+      as = "889e07bb"
+      title = "Search Opportunity Products"
+      description = "Search for <span class=\"provider\">Opportunity Products</span> in <span class=\"provider\">Salesforce</span>"
+      keyword = "action"
+      dynamicPickListSelection = {
+        sobject_name = "Opportunity Product"
+      }
+      input = {
+        limit = "150"
+        sobject_name = "OpportunityLineItem"
+        OpportunityId = "#{_('data.salesforce.5a4e66d1.Account.first.Name')}"
+      }
+      uuid = "994ad886-ba43-4c38-9142-c2967d4e9748"
+    },
+    {
+      number = 12
+      provider = "netsuite"
+      name = "search_object_v2"
+      as = "9cfcee64"
+      keyword = "action"
+      dynamicPickListSelection = {
+        netsuite_object = "Customer"
+      }
+      input = {
+        netsuite_object = "Customer"
+        limit = "25"
+        search_settings = {
+          string_fields = "contains"
+          integer_fields = "equalTo"
+          list_fields = "anyOf"
+        }
+        searchId = "#{_('data.salesforce.889e07bb.OpportunityLineItem.first.Name')}#{_('data.salesforce.5a4e66d1.Account.first.Name')}#{_('data.salesforce.5a4e66d1.Account.first.Id')}"
+      }
+      visible_config_fields = [
+        "netsuite_object",
+        "limit",
+        "field_list",
+        "custom_list",
+        "custom_column_list",
+        "search_settings",
+        "search_settings.string_fields",
+        "search_settings.integer_fields",
+        "search_settings.list_fields",
+        "searchId",
+      ]
+      uuid = "eb4ea17f-46a7-49bc-8fe2-3fd870ffb7f0"
+    },
+  ]
+  uuid = "b7e0a69f-fc84-4ff5-b264-4442b0dd6512"
+  _parent = [
+    workato.recipe.instance.multi_salesforce_and_netsuite_1462960@sssu,
+  ]
+}

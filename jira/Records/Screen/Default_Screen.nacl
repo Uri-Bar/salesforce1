@@ -1,0 +1,27 @@
+jira.Screen Default_Screen@s {
+  name = "Default Screen"
+  description = "Allows to update all system fields."
+  tabs = {
+    Field_Tab@s = {
+      name = "Field Tab"
+      fields = [
+        jira.Field.instance.Summary,
+        jira.Field.instance.Issue_Type@s,
+        jira.Field.instance.Security_Level@s,
+        jira.Field.instance.Priority,
+        jira.Field.instance.Due_date@s,
+        jira.Field.instance.Components,
+        jira.Field.instance.Affects_versions@s,
+        jira.Field.instance.Fix_versions@s,
+        jira.Field.instance.Assignee,
+        jira.Field.instance.Reporter,
+        jira.Field.instance.Environment,
+        jira.Field.instance.Description,
+        jira.Field.instance.Time_tracking@s,
+        jira.Field.instance.Attachment,
+        jira.Field.instance.Labels,
+      ]
+      position = 0
+    }
+  }
+}

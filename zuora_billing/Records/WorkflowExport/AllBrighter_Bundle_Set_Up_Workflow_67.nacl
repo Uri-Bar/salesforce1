@@ -1,0 +1,105 @@
+zuora_billing.WorkflowExport AllBrighter_Bundle_Set_Up_Workflow_67@ssssu {
+  workflow = zuora_billing.Workflow.instance.AllBrighter_Bundle_Set_Up_Workflow_67_ssssu__AllBrighter_Bundle_Set_Up_Workflow@uuuuumuussss
+  tasks = [
+    zuora_billing.Task.instance.AllBrighter_Bundle_Set_Up_Workflow_67_ssssu__debug_display_variables@uuuuumuuss,
+    zuora_billing.Task.instance.AllBrighter_Bundle_Set_Up_Workflow_67_ssssu__Get_Account_Id@uuuuumuuss,
+    zuora_billing.Task.instance.AllBrighter_Bundle_Set_Up_Workflow_67_ssssu__Get_Order_Details@uuuuumuuss,
+    zuora_billing.Task.instance.AllBrighter_Bundle_Set_Up_Workflow_67_ssssu__Update_Account_with_Shipping_Table_Name@uuuuumuusssss,
+    zuora_billing.Task.instance.AllBrighter_Bundle_Set_Up_Workflow_67_ssssu__Get_Product_Rate_Plans@uuuuumuusss,
+    zuora_billing.Task.instance.AllBrighter_Bundle_Set_Up_Workflow_67_ssssu__Get_Charge_Names@uuuuumuuss,
+    zuora_billing.Task.instance.AllBrighter_Bundle_Set_Up_Workflow_67_ssssu__Get_Invoice_Template_Id@uuuuumuusss,
+    zuora_billing.Task.instance.AllBrighter_Bundle_Set_Up_Workflow_67_ssssu__Get_Product_Charges@uuuuumuuss,
+    zuora_billing.Task.instance.AllBrighter_Bundle_Set_Up_Workflow_67_ssssu__Create_Allbrighter_Subscription@uuuuumuuss,
+    zuora_billing.Task.instance.AllBrighter_Bundle_Set_Up_Workflow_67_ssssu__Create_Shipping_Records@uuuuumuuss,
+    zuora_billing.Task.instance.AllBrighter_Bundle_Set_Up_Workflow_67_ssssu__Get_Products@uuuuumuus,
+    zuora_billing.Task.instance.AllBrighter_Bundle_Set_Up_Workflow_67_ssssu__Validate_Zip_Code_Input@uuuuumuusss,
+    zuora_billing.Task.instance.AllBrighter_Bundle_Set_Up_Workflow_67_ssssu__Create_Shipping_Table@uuuuumuuss,
+  ]
+  linkages = [
+    {
+      source_task_id = zuora_billing.Task.instance.AllBrighter_Bundle_Set_Up_Workflow_67_ssssu__Get_Product_Charges@uuuuumuuss
+      target_task_id = zuora_billing.Task.instance.AllBrighter_Bundle_Set_Up_Workflow_67_ssssu__Get_Invoice_Template_Id@uuuuumuusss
+      linkage_type = "Success"
+      
+    },
+    {
+      source_task_id = zuora_billing.Task.instance.AllBrighter_Bundle_Set_Up_Workflow_67_ssssu__Get_Invoice_Template_Id@uuuuumuusss
+      target_task_id = zuora_billing.Task.instance.AllBrighter_Bundle_Set_Up_Workflow_67_ssssu__Create_Allbrighter_Subscription@uuuuumuuss
+      linkage_type = "Success"
+      
+    },
+    {
+      source_workflow_id = zuora_billing.Workflow.instance.AllBrighter_Bundle_Set_Up_Workflow_67_ssssu__AllBrighter_Bundle_Set_Up_Workflow@uuuuumuussss
+      target_task_id = zuora_billing.Task.instance.AllBrighter_Bundle_Set_Up_Workflow_67_ssssu__Validate_Zip_Code_Input@uuuuumuusss
+      linkage_type = "Start"
+      
+    },
+    {
+      source_task_id = zuora_billing.Task.instance.AllBrighter_Bundle_Set_Up_Workflow_67_ssssu__Validate_Zip_Code_Input@uuuuumuusss
+      target_task_id = zuora_billing.Task.instance.AllBrighter_Bundle_Set_Up_Workflow_67_ssssu__Get_Products@uuuuumuus
+      linkage_type = "True"
+      
+    },
+    {
+      source_task_id = zuora_billing.Task.instance.AllBrighter_Bundle_Set_Up_Workflow_67_ssssu__Get_Account_Id@uuuuumuuss
+      target_task_id = zuora_billing.Task.instance.AllBrighter_Bundle_Set_Up_Workflow_67_ssssu__Update_Account_with_Shipping_Table_Name@uuuuumuusssss
+      linkage_type = "Success"
+      
+    },
+    {
+      source_task_id = zuora_billing.Task.instance.AllBrighter_Bundle_Set_Up_Workflow_67_ssssu__Create_Shipping_Table@uuuuumuuss
+      target_task_id = zuora_billing.Task.instance.AllBrighter_Bundle_Set_Up_Workflow_67_ssssu__Get_Account_Id@uuuuumuuss
+      linkage_type = "Success"
+      
+    },
+    {
+      source_task_id = zuora_billing.Task.instance.AllBrighter_Bundle_Set_Up_Workflow_67_ssssu__Create_Shipping_Records@uuuuumuuss
+      target_task_id = zuora_billing.Task.instance.AllBrighter_Bundle_Set_Up_Workflow_67_ssssu__debug_display_variables@uuuuumuuss
+      linkage_type = "Failure"
+      
+    },
+    {
+      source_task_id = zuora_billing.Task.instance.AllBrighter_Bundle_Set_Up_Workflow_67_ssssu__Get_Charge_Names@uuuuumuuss
+      target_task_id = zuora_billing.Task.instance.AllBrighter_Bundle_Set_Up_Workflow_67_ssssu__Create_Shipping_Records@uuuuumuuss
+      linkage_type = "Success"
+      
+    },
+    {
+      source_task_id = zuora_billing.Task.instance.AllBrighter_Bundle_Set_Up_Workflow_67_ssssu__Get_Order_Details@uuuuumuuss
+      target_task_id = zuora_billing.Task.instance.AllBrighter_Bundle_Set_Up_Workflow_67_ssssu__Get_Charge_Names@uuuuumuuss
+      linkage_type = "Success"
+      
+    },
+    {
+      source_task_id = zuora_billing.Task.instance.AllBrighter_Bundle_Set_Up_Workflow_67_ssssu__Create_Shipping_Table@uuuuumuuss
+      target_task_id = zuora_billing.Task.instance.AllBrighter_Bundle_Set_Up_Workflow_67_ssssu__Get_Order_Details@uuuuumuuss
+      linkage_type = "Success"
+      
+    },
+    {
+      source_task_id = zuora_billing.Task.instance.AllBrighter_Bundle_Set_Up_Workflow_67_ssssu__Create_Allbrighter_Subscription@uuuuumuuss
+      target_task_id = zuora_billing.Task.instance.AllBrighter_Bundle_Set_Up_Workflow_67_ssssu__Create_Shipping_Table@uuuuumuuss
+      linkage_type = "Success"
+      
+    },
+    {
+      source_task_id = zuora_billing.Task.instance.AllBrighter_Bundle_Set_Up_Workflow_67_ssssu__Get_Product_Rate_Plans@uuuuumuusss
+      target_task_id = zuora_billing.Task.instance.AllBrighter_Bundle_Set_Up_Workflow_67_ssssu__Get_Product_Charges@uuuuumuuss
+      linkage_type = "Success"
+      
+    },
+    {
+      source_task_id = zuora_billing.Task.instance.AllBrighter_Bundle_Set_Up_Workflow_67_ssssu__Get_Products@uuuuumuus
+      target_task_id = zuora_billing.Task.instance.AllBrighter_Bundle_Set_Up_Workflow_67_ssssu__Get_Product_Rate_Plans@uuuuumuusss
+      linkage_type = "Success"
+      
+    },
+  ]
+  additionalProperties = {
+    workflow_definition = {
+      description = ""
+      category = "Default"
+      name = "AllBrighter Bundle Set Up Workflow"
+    }
+  }
+}

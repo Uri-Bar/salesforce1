@@ -1,0 +1,21 @@
+zendesk.article Hello_world__Introduction_Knuckles_Salto@sluuu {
+  author_id = "neta.marcus+dev@salto.io"
+  comments_disabled = false
+  draft = false
+  promoted = false
+  section_id = zendesk.section.instance.Introduction_Knuckles_Salto
+  source_locale = zendesk.guide_language_settings.instance.Salto_en_us@ub
+  locale = zendesk.guide_language_settings.instance.Salto_en_us@ub
+  outdated = false
+  user_segment_id = zendesk.user_segment.instance.Agents_and_admins@s
+  permission_group_id = zendesk.permission_group.instance.Admins
+  translations = [
+    zendesk.article_translation.instance.Hello_world__Introduction_Knuckles_Salto_sluuu__Salto_en_us_ub@uuuuumuuuum,
+  ]
+  label_names = [
+    "knuckles",
+    "salto",
+    "intro",
+  ]
+  brand = zendesk.brand.instance.Salto
+}

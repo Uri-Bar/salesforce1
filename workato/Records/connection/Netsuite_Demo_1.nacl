@@ -1,0 +1,6 @@
+workato.connection Netsuite_Demo_1@s {
+  application = "netsuite"
+  name = "Netsuite Demo 1"
+  authorization_error = "(soapenv:Server.userException) Invalid login attempt."
+  folder_id = workato.folder.instance.Root
+}

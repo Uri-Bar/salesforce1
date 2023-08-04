@@ -1,0 +1,28 @@
+zuora_billing.Task C19__Payment_Suspense_79_fssu__For_each_Account@uuuumuuss {
+  name = "For each Account"
+  parameters = {
+    file_type = "CSV"
+    chunk_size = "0"
+    iteration_type = "Default"
+    strict_variables = "true"
+    delete_payload_paths = [
+      "",
+    ]
+  }
+  action_type = "Iterate"
+  object = "LinkRun__139.csv"
+  call_type = "SOAP"
+  task_id = 139
+  concurrent_limit = 9999999
+  additionalProperties = {
+    css = {
+      top = "200px"
+      left = "350px"
+    }
+    priority = "Medium"
+    
+  }
+  _parent = [
+    zuora_billing.WorkflowExport.instance.C19__Payment_Suspense_79@fssu,
+  ]
+}

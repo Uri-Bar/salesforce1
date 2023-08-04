@@ -1,0 +1,15 @@
+netsuite.account Sales_Orders@s {
+  acctType = "_nonPosting"
+  acctName = "Sales Orders"
+  includeChildren = true
+  generalRate = "_average"
+  cashFlowRate = "_average"
+  isInactive = false
+  inventory = false
+  subsidiaryList = [
+    netsuite.subsidiary.instance.Parent_Company@s,
+  ]
+  revalue = false
+  identifier = "Sales Orders"
+  custom_custrecord_acct_special = false
+}

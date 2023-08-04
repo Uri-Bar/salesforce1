@@ -1,0 +1,5 @@
+zuora_billing.Settings_RevenueEventType RevenueDistributed__z {
+  label = "Revenue Distributed"
+  systemId = "RevenueDistributed__z"
+  active = true
+}

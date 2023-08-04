@@ -1,0 +1,39 @@
+workato.recipe with_lookup_1_a_neta1_1_Root_vu_uuum@ssuuuuum {
+  name = "with lookup 1"
+  trigger_application = "clock"
+  action_applications = [
+    "salesforce",
+    "lookup_table",
+  ]
+  applications = [
+    "clock",
+    "salesforce",
+    "lookup_table",
+  ]
+  description = "When there is a trigger on a specified schedule, do action"
+  folder_id = workato.folder.instance.a_neta1_1_Root_vu@uuum
+  running = false
+  version_no = 2
+  config = [
+    {
+      keyword = "application"
+      name = "clock"
+      provider = "clock"
+      skip_validation = false
+    },
+    {
+      keyword = "application"
+      name = "salesforce"
+      provider = "salesforce"
+      skip_validation = false
+      account_id = workato.connection.instance.Neta_sfdev1_primary@s
+    },
+    {
+      keyword = "application"
+      name = "lookup_table"
+      provider = "lookup_table"
+      skip_validation = false
+    },
+  ]
+  code = workato.recipe__code.instance.with_lookup_1_a_neta1_1_Root_vu_uuum_ssuuuuum@uuuuuuuum
+}

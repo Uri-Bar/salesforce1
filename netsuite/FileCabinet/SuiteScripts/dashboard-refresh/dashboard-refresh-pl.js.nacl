@@ -1,0 +1,20 @@
+netsuite.file SuiteScripts_dashboard_refresh_dashboard_refresh_pl_js@dbdbbv {
+  bundleable = false
+  isinactive = false
+  availablewithoutlogin = false
+  generateurltimestamp = false
+  hideinbundle = false
+  path = "/SuiteScripts/dashboard-refresh/dashboard-refresh-pl.js"
+  content = file("netsuite/FileCabinet/SuiteScripts/dashboard-refresh/dashboard-refresh-pl.js")
+  _parent = [
+    netsuite.folder.instance.SuiteScripts_dashboard_refresh@db,
+  ]
+  _generated_dependencies = [
+    {
+      reference = netsuite.file.instance.SuiteScripts_dashboard_refresh_dashboard_refresh_lib_js@dbdbbv.path
+    },
+    {
+      reference = netsuite.file.instance.SuiteScripts_dashboard_refresh_dashboard_refresh_pl_cl_js@dbdbbbv.path
+    },
+  ]
+}

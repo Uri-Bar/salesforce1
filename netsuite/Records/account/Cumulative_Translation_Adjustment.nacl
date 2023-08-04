@@ -1,0 +1,15 @@
+netsuite.account Cumulative_Translation_Adjustment@s {
+  acctType = "_equity"
+  acctName = "Cumulative Translation Adjustment"
+  includeChildren = true
+  generalRate = "_historical"
+  cashFlowRate = "_historical"
+  isInactive = false
+  inventory = false
+  subsidiaryList = [
+    netsuite.subsidiary.instance.Parent_Company@s,
+  ]
+  revalue = false
+  identifier = "Cumulative Translation Adjustment"
+  custom_custrecord_acct_special = false
+}

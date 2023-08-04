@@ -1,0 +1,81 @@
+workato.recipe _GIT__webhook__Salto_to_Monday___create_git_commit_as_monday_subitem_Monday_Github_Integration_Root_ssu@hihissssbssssssuuuum {
+  name = "[GIT][webhook] Salto to Monday - create git commit as monday subitem"
+  trigger_application = "workato_webhooks"
+  action_applications = [
+    "logger",
+    "workato_variable",
+    "monday_com_riskified_connector_212128_1684233590",
+    "workato_custom_code",
+    "json_parser",
+    "github",
+    "workato_pub_sub",
+  ]
+  applications = [
+    "workato_webhooks",
+    "logger",
+    "workato_variable",
+    "monday_com_riskified_connector_212128_1684233590",
+    "workato_custom_code",
+    "json_parser",
+    "github",
+    "workato_pub_sub",
+  ]
+  description = "When there is a new event via HTTP webhook, do action"
+  webhook_url = "https://webhooks.workato.com/webhooks/rest/c684a59b-d216-4fe9-ae26-77170db56fd5/git-commit"
+  folder_id = workato.folder.instance.Dan_Avigdor_Root@su
+  running = false
+  version_no = 4
+  config = [
+    {
+      keyword = "application"
+      name = "logger"
+      provider = "logger"
+      skip_validation = false
+    },
+    {
+      keyword = "application"
+      name = "workato_webhooks"
+      provider = "workato_webhooks"
+      skip_validation = false
+    },
+    {
+      keyword = "application"
+      name = "json_parser"
+      provider = "json_parser"
+      skip_validation = true
+    },
+    {
+      keyword = "application"
+      name = "workato_variable"
+      provider = "workato_variable"
+      skip_validation = false
+    },
+    {
+      keyword = "application"
+      name = "monday_com_riskified_connector_212128_1684233590"
+      provider = "monday_com_riskified_connector_212128_1684233590"
+      account_id = workato.connection.instance.My_Monday_com_riskified_connector_212128_1684233590_connection@s
+      skip_validation = false
+    },
+    {
+      keyword = "application"
+      name = "github"
+      provider = "github"
+      account_id = workato.connection.instance.My_Github_connection@s
+      skip_validation = true
+    },
+    {
+      keyword = "application"
+      name = "workato_pub_sub"
+      provider = "workato_pub_sub"
+      skip_validation = false
+    },
+    {
+      keyword = "application"
+      name = "workato_custom_code"
+      provider = "workato_custom_code"
+      skip_validation = false
+    },
+  ]
+  code = workato.recipe__code.instance._GIT__webhook__Salto_to_Monday___create_git_commit_as_monday_subitem_Monday_Github_Integration_Root_ssu_hihissssbssssssuuuum@uuuuuuuuuuuuuuuuuuuum
+}

@@ -1,0 +1,9 @@
+okta.Feature Admin_Console_Japanese_translations@s {
+  type = "self-service"
+  status = "DISABLED"
+  name = "Admin Console Japanese translations"
+  description = "This feature will show the admin console in Japanese (日本語) if the admin user's display language preference is set to Japanese."
+  stage = {
+    value = "EA"
+  }
+}

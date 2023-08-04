@@ -1,0 +1,190 @@
+type zuora_billing.journalentry {
+  string Id {
+    type = "string"
+    format = "uuid"
+    required = false
+    filterable = false
+    label = "Id"
+  }
+  string CreatedById {
+    type = "string"
+    format = "uuid"
+    required = false
+    filterable = false
+    referenceTo = [
+      zuora_billing.user.field.Id,
+    ]
+    cardinality = "manyToOne"
+    recordConstraints = {
+      create = {
+        enforceValidMapping = true
+      }
+    }
+    label = "CreatedById"
+  }
+  string CreatedDate {
+    type = "string"
+    format = "date-time"
+    required = false
+    filterable = false
+    label = "CreatedDate"
+  }
+  string UpdatedById {
+    type = "string"
+    format = "uuid"
+    required = false
+    filterable = false
+    referenceTo = [
+      zuora_billing.user.field.Id,
+    ]
+    cardinality = "manyToOne"
+    recordConstraints = {
+      create = {
+        enforceValidMapping = true
+      }
+    }
+    label = "UpdatedById"
+  }
+  string UpdatedDate {
+    type = "string"
+    format = "date-time"
+    required = false
+    filterable = false
+    label = "UpdatedDate"
+  }
+  boolean deleted {
+    type = "boolean"
+    required = false
+    filterable = false
+    label = "deleted"
+  }
+  string AccountingPeriodId {
+    type = "string"
+    format = "uuid"
+    required = false
+    filterable = false
+    referenceTo = [
+      zuora_billing.accountingperiod.field.Id,
+    ]
+    cardinality = "manyToOne"
+    recordConstraints = {
+      create = {
+        enforceValidMapping = true
+      }
+    }
+    label = "AccountingPeriodId"
+  }
+  string Currency {
+    type = "string"
+    maxLength = 512
+    required = false
+    filterable = false
+    label = "Currency"
+  }
+  string HomeCurrency {
+    type = "string"
+    maxLength = 512
+    required = false
+    filterable = false
+    label = "HomeCurrency"
+  }
+  string JournalEntryDate {
+    type = "string"
+    format = "date"
+    required = false
+    filterable = false
+    label = "JournalEntryDate"
+  }
+  string Notes {
+    type = "string"
+    maxLength = 512
+    required = false
+    filterable = false
+    label = "Notes"
+  }
+  string Number {
+    type = "string"
+    maxLength = 512
+    required = false
+    filterable = false
+    label = "Number"
+  }
+  string Status {
+    type = "string"
+    maxLength = 512
+    required = false
+    filterable = false
+    label = "Status"
+  }
+  number TransactionCount {
+    type = "integer"
+    required = false
+    filterable = false
+    label = "TransactionCount"
+  }
+  string TransactionType {
+    type = "string"
+    maxLength = 512
+    required = false
+    filterable = false
+    label = "TransactionType"
+  }
+  string TransferDate {
+    type = "string"
+    format = "date-time"
+    required = false
+    filterable = false
+    label = "TransferDate"
+  }
+  string TransferredBy {
+    type = "string"
+    maxLength = 512
+    required = false
+    filterable = false
+    label = "TransferredBy"
+  }
+  string TransferredToAccounting {
+    type = "string"
+    maxLength = 512
+    required = false
+    filterable = false
+    label = "TransferredToAccounting"
+  }
+  string JournalRunId {
+    type = "string"
+    format = "uuid"
+    required = false
+    filterable = false
+    referenceTo = [
+      zuora_billing.journalrun.field.Id,
+    ]
+    cardinality = "manyToOne"
+    recordConstraints = {
+      create = {
+        enforceValidMapping = true
+      }
+    }
+    label = "JournalRunId"
+  }
+  string SubscriptionAutoRenew__s {
+    type = "string"
+    maxLength = 512
+    required = false
+    filterable = false
+    label = "SubscriptionAutoRenew__s"
+  }
+  string AccountAccountNumber2__s {
+    type = "string"
+    maxLength = 512
+    required = false
+    filterable = false
+    label = "AccountAccountNumber2__s"
+  }
+  string SubscriptionRatePlanChargeRevenueRecognitionRuleName__s {
+    type = "string"
+    maxLength = 512
+    required = false
+    filterable = false
+    label = "SubscriptionRatePlanChargeRevenueRecognitionRuleName__s"
+  }
+}

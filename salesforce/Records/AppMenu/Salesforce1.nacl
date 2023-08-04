@@ -1,0 +1,49 @@
+salesforce.AppMenu Salesforce1 {
+  fullName = "Salesforce1"
+  appMenuItems = [
+    {
+      name = "Feed"
+      type = "StandardAppMenuItem"
+    },
+    {
+      name = "MyDay"
+      type = "StandardAppMenuItem"
+    },
+    {
+      name = "News"
+      type = "StandardAppMenuItem"
+    },
+    {
+      name = "Dashboards"
+      type = "StandardAppMenuItem"
+    },
+    {
+      name = "Tasks"
+      type = "StandardAppMenuItem"
+    },
+    {
+      name = "Notes"
+      type = "StandardAppMenuItem"
+    },
+    {
+      name = "Search"
+      type = "StandardAppMenuItem"
+    },
+    {
+      name = "Reports"
+      type = "StandardAppMenuItem"
+    },
+    {
+      name = "Events"
+      type = "StandardAppMenuItem"
+    },
+    {
+      name = "People"
+      type = "StandardAppMenuItem"
+    },
+    {
+      name = "Groups"
+      type = "StandardAppMenuItem"
+    },
+  ]
+}

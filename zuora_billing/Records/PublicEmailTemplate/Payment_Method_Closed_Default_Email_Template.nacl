@@ -1,0 +1,21 @@
+zuora_billing.PublicEmailTemplate Payment_Method_Closed_Default_Email_Template@s {
+  eventCategory = 2230
+  name = "Payment Method Closed Default Email Template"
+  description = ""
+  encodingType = "UTF8"
+  fromName = "Admin"
+  fromEmailType = "TenantEmail"
+  fromEmailAddress = "neta.marcus@salto.io"
+  replyToEmailType = "TenantEmail"
+  replyToEmailAddress = "neta.marcus@salto.io"
+  ccEmailType = "SpecificEmails"
+  ccEmailAddress = ""
+  bccEmailAddress = ""
+  toEmailType = "BillToContact"
+  toEmailAddress = ""
+  emailSubject = "Details of your account have been updated."
+  emailBody = "Dear <BillToContact.FirstName> <BillToContact.LastName>,<br /><br />We've been notified that the default <DefaultPaymentMethod.Type> payment method on your account is no longer valid. Please contact us and provide us with updated information to ensure continued delivery of service.<br /><br />Thank you for your business!"
+  active = true
+  isHtml = true
+  useAdditionalAddresses = false
+}

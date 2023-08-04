@@ -1,0 +1,6 @@
+workato.connection dodel_netsuite_connection@s {
+  application = "netsuite"
+  name = "dodel netsuite connection"
+  authorization_error = "(soapenv:Server.userException) Invalid login attempt."
+  folder_id = workato.folder.instance.netsuite_dodel_playground_Root
+}

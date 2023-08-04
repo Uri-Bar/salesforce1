@@ -1,0 +1,93 @@
+type zuora_billing.TestEnvironmentNotification {
+  string Id {
+    format = "uuid"
+    label = "Id"
+    origin = "system"
+    type = "string"
+    required = true
+    filterable = true
+  }
+  string CreatedById {
+    label = "CreatedById"
+    origin = "system"
+    type = "string"
+    required = true
+    filterable = true
+    referenceTo = [
+      zuora_billing.user.field.Id,
+    ]
+    cardinality = "manyToOne"
+    recordConstraints = {
+      create = {
+        enforceValidMapping = true
+      }
+    }
+  }
+  string UpdatedById {
+    label = "UpdatedById"
+    origin = "system"
+    type = "string"
+    required = true
+    filterable = true
+    referenceTo = [
+      zuora_billing.user.field.Id,
+    ]
+    cardinality = "manyToOne"
+    recordConstraints = {
+      create = {
+        enforceValidMapping = true
+      }
+    }
+  }
+  string CreatedDate {
+    format = "date-time"
+    origin = "system"
+    type = "string"
+    label = "CreatedDate"
+    required = true
+    filterable = true
+  }
+  string UpdatedDate {
+    format = "date-time"
+    origin = "system"
+    type = "string"
+    label = "UpdatedDate"
+    required = true
+    filterable = true
+  }
+  string Address {
+    label = "Address"
+    origin = "system"
+    type = "string"
+    description = "The address of the test environment notification"
+    required = true
+    filterable = false
+  }
+  string TestEnvironmentId {
+    format = "uuid"
+    label = "Test Environment Id"
+    origin = "system"
+    type = "string"
+    description = "The id of the test environment"
+    required = true
+    filterable = true
+    referenceTo = [
+      zuora_billing.TestEnvironment.field.Id,
+    ]
+    cardinality = "manyToOne"
+    recordConstraints = {
+      create = {
+        enforceValidMapping = true
+      }
+    }
+  }
+  string Name {
+    maxLength = 255
+    label = "Name"
+    origin = "system"
+    type = "string"
+    description = "The name of the test environment notification"
+    required = false
+    filterable = false
+  }
+}

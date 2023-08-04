@@ -1,0 +1,48 @@
+workato.recipe__code dodel_people_task_recipe_second_folder_dodel_playground_Root {
+  number = 0
+  keyword = "trigger"
+  block = [
+    {
+      number = 1
+      keyword = "if"
+      input = {
+        type = "compound"
+        operand = "and"
+        conditions = [
+          {
+            operand = ""
+            lhs = ""
+            rhs = ""
+            uuid = "condition-a8552a4d-c15c-413b-84d4-822add4fcc71"
+          },
+        ]
+      }
+      block = [
+        {
+          number = 2
+          provider = "workflow"
+          name = "GetApproval"
+          as = "414d7515"
+          keyword = "action"
+          toggleCfg = {
+            due_in_days = true
+          }
+          input = {
+            title = "Are u agree?"
+            document = "to this task?"
+            requester_id = "7938"
+            approver_ids = "7938"
+            due_in_days = "3"
+            requester_note = "commnet"
+          }
+          uuid = "4de462b7-c8d5-45e1-901a-2a0c1424f798"
+        },
+      ]
+      uuid = "7197dc3c-4ea9-4eb6-b30c-76e24a272a6e"
+    },
+  ]
+  uuid = "b9134f4e-755a-410a-a62d-a3aff310c1c3"
+  _parent = [
+    workato.recipe.instance.dodel_people_task_recipe_second_folder_dodel_playground_Root,
+  ]
+}

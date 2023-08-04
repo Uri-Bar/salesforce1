@@ -1,0 +1,20 @@
+okta.MultifactorEnrollmentPolicyRule Default_Policy_s__Default_Rule@umuus {
+  status = "ACTIVE"
+  name = "Default Rule"
+  priority = 1
+  system = true
+  conditions = {
+    network = {
+      connection = "ANYWHERE"
+    }
+  }
+  actions = {
+    enroll = {
+      self = "CHALLENGE"
+    }
+  }
+  type = "MFA_ENROLL"
+  _parent = [
+    okta.MultifactorEnrollmentPolicy.instance.Default_Policy@s,
+  ]
+}

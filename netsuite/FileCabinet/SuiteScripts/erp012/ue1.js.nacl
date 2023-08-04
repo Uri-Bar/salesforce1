@@ -1,0 +1,12 @@
+netsuite.file SuiteScripts_erp012_ue1_js@ddv {
+  bundleable = false
+  isinactive = false
+  availablewithoutlogin = false
+  generateurltimestamp = false
+  hideinbundle = false
+  path = "/SuiteScripts/erp012/ue1.js"
+  content = file("netsuite/FileCabinet/SuiteScripts/erp012/ue1.js")
+  _parent = [
+    netsuite.folder.instance.SuiteScripts_erp012@d,
+  ]
+}

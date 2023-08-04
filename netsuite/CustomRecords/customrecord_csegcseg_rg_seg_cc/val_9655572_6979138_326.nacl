@@ -1,0 +1,18 @@
+netsuite.customrecord_csegcseg_rg_seg_cc val_9655572_6979138_326 {
+  scriptid = "val_9655572_6979138_326"
+  isInactive = false
+  parent = netsuite.customrecord_csegcseg_rg_seg_cc.instance.val_64866_6979138_sb1_725
+  name = "1166 Direct to Consumer"
+  translationsList = {
+    customRecordTranslations = {
+      _frenchFrance = {
+        locale = "_frenchFrance"
+        language = "French (France)"
+      }
+      _german = {
+        locale = "_german"
+        language = "German"
+      }
+    }
+  }
+}

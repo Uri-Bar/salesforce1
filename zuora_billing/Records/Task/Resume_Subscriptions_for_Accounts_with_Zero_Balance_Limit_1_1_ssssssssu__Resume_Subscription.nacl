@@ -1,0 +1,55 @@
+zuora_billing.Task Resume_Subscriptions_for_Accounts_with_Zero_Balance_Limit_1_1_ssssssssu__Resume_Subscription@uuuuuuuuumuus {
+  name = "Resume Subscription"
+  parameters = {
+    fields = {
+      Amendment = {
+        extendsTerm = "false"
+        resumePolicy = "SpecificDate"
+        resumeSpecificDate = "{{Data.Workflow.ExecutionDate}}"
+        contractEffectiveDate = "{{Data.Workflow.ExecutionDate}}"
+      }
+    }
+    options = {
+      Amendment = {
+        GenerateInvoice = "true"
+        ProcessPayments = "false"
+        ApplyCreditBalance = "false"
+      }
+    }
+  }
+  action_type = "Resume"
+  object = zuora_billing.amendment
+  object_id = "{{Data.Subscription.Id}}"
+  call_type = "REST"
+  task_id = 3
+  concurrent_limit = 9999999
+  additionalProperties = {
+    css = {
+      top = "190px"
+      left = "114px"
+    }
+    priority = "Medium"
+    
+  }
+  _parent = [
+    zuora_billing.WorkflowExport.instance.Resume_Subscriptions_for_Accounts_with_Zero_Balance_Limit_1_1@ssssssssu,
+  ]
+  _generated_dependencies = [
+    {
+      reference = zuora_billing.amendment.field.ContractEffectiveDate
+      occurrences = [
+        {
+          location = zuora_billing.Task.instance.Resume_Subscriptions_for_Accounts_with_Zero_Balance_Limit_1_1_ssssssssu__Resume_Subscription@uuuuuuuuumuus.parameters.fields.Amendment.contractEffectiveDate
+        },
+      ]
+    },
+    {
+      reference = zuora_billing.subscription.field.Id
+      occurrences = [
+        {
+          location = zuora_billing.Task.instance.Resume_Subscriptions_for_Accounts_with_Zero_Balance_Limit_1_1_ssssssssu__Resume_Subscription@uuuuuuuuumuus.object_id
+        },
+      ]
+    },
+  ]
+}

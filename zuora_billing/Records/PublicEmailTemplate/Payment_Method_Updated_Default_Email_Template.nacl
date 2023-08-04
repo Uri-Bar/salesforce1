@@ -1,0 +1,21 @@
+zuora_billing.PublicEmailTemplate Payment_Method_Updated_Default_Email_Template@s {
+  eventCategory = 2220
+  name = "Payment Method Updated Default Email Template"
+  description = ""
+  encodingType = "UTF8"
+  fromName = "Admin"
+  fromEmailType = "TenantEmail"
+  fromEmailAddress = "neta.marcus@salto.io"
+  replyToEmailType = "TenantEmail"
+  replyToEmailAddress = "neta.marcus@salto.io"
+  ccEmailType = "SpecificEmails"
+  ccEmailAddress = ""
+  bccEmailAddress = ""
+  toEmailType = "BillToContact"
+  toEmailAddress = ""
+  emailSubject = "Details of your account have been updated."
+  emailBody = "Dear <BillToContact.FirstName> <BillToContact.LastName>,<br /><br />The default <OriginalDefaultPaymentMethod.Type> payment method on your account has been updated. If you did not make the change, or believe it's been made in error, please contact us immediately.<br /><br />Thank you for your business!"
+  active = true
+  isHtml = true
+  useAdditionalAddresses = false
+}

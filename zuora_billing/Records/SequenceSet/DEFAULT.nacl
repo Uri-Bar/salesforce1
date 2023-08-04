@@ -1,0 +1,7 @@
+zuora_billing.SequenceSet DEFAULT {
+  name = "DEFAULT"
+  invoice = {
+    prefix = "INV"
+    startNumber = 1
+  }
+}

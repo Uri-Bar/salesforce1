@@ -1,0 +1,11 @@
+netsuite.advancedpdftemplate custtmpl_gwr_amp_so_vatgst {
+  scriptid = "custtmpl_gwr_amp_so_vatgst"
+  standard = "STDTMPLSALESORD"
+  displaysourcecode = false
+  isinactive = false
+  preferred = true
+  printtype = "TRANSACTION"
+  title = "Custom Sales Order PDF/HTML Template"
+  trantype = "SALESORD"
+  content = file("netsuite/advancedpdftemplate/custtmpl_gwr_amp_so_vatgst.xml")
+}

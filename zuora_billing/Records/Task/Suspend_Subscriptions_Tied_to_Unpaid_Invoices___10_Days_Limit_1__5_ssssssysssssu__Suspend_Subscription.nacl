@@ -1,0 +1,79 @@
+zuora_billing.Task Suspend_Subscriptions_Tied_to_Unpaid_Invoices___10_Days_Limit_1__5_ssssssysssssu__Suspend_Subscription@uuuuuuuuuuuuumuus {
+  name = "Suspend Subscription"
+  parameters = {
+    fields = {
+      Amendment = {
+        Name = "Suspend Subscription"
+        Description = "No Payment 10 Days"
+        SuspendDate = "{{Data.Workflow.ExecutionDate}}"
+        ContractEffectiveDate = "{{Data.Workflow.ExecutionDate}}"
+      }
+    }
+    options = {
+      Amendment = {
+        GenerateInvoice = "true"
+        ProcessPayments = "false"
+        ApplyCreditBalance = "false"
+      }
+    }
+  }
+  action_type = "Suspend"
+  object = zuora_billing.amendment
+  object_id = "{{Data.Subscription.Id}}"
+  call_type = "SOAP"
+  task_id = 20
+  concurrent_limit = 9999999
+  additionalProperties = {
+    css = {
+      top = "220px"
+      left = "114px"
+    }
+    priority = "Medium"
+    
+  }
+  _parent = [
+    zuora_billing.WorkflowExport.instance.Suspend_Subscriptions_Tied_to_Unpaid_Invoices___10_Days_Limit_1__5@ssssssysssssu,
+  ]
+  _generated_dependencies = [
+    {
+      reference = zuora_billing.amendment.field.ContractEffectiveDate
+      occurrences = [
+        {
+          location = zuora_billing.Task.instance.Suspend_Subscriptions_Tied_to_Unpaid_Invoices___10_Days_Limit_1__5_ssssssysssssu__Suspend_Subscription@uuuuuuuuuuuuumuus.parameters.fields.Amendment.ContractEffectiveDate
+        },
+      ]
+    },
+    {
+      reference = zuora_billing.amendment.field.Description
+      occurrences = [
+        {
+          location = zuora_billing.Task.instance.Suspend_Subscriptions_Tied_to_Unpaid_Invoices___10_Days_Limit_1__5_ssssssysssssu__Suspend_Subscription@uuuuuuuuuuuuumuus.parameters.fields.Amendment.Description
+        },
+      ]
+    },
+    {
+      reference = zuora_billing.amendment.field.Name
+      occurrences = [
+        {
+          location = zuora_billing.Task.instance.Suspend_Subscriptions_Tied_to_Unpaid_Invoices___10_Days_Limit_1__5_ssssssysssssu__Suspend_Subscription@uuuuuuuuuuuuumuus.parameters.fields.Amendment.Name
+        },
+      ]
+    },
+    {
+      reference = zuora_billing.amendment.field.SuspendDate
+      occurrences = [
+        {
+          location = zuora_billing.Task.instance.Suspend_Subscriptions_Tied_to_Unpaid_Invoices___10_Days_Limit_1__5_ssssssysssssu__Suspend_Subscription@uuuuuuuuuuuuumuus.parameters.fields.Amendment.SuspendDate
+        },
+      ]
+    },
+    {
+      reference = zuora_billing.subscription.field.Id
+      occurrences = [
+        {
+          location = zuora_billing.Task.instance.Suspend_Subscriptions_Tied_to_Unpaid_Invoices___10_Days_Limit_1__5_ssssssysssssu__Suspend_Subscription@uuuuuuuuuuuuumuus.object_id
+        },
+      ]
+    },
+  ]
+}

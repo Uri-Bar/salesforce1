@@ -1,0 +1,12 @@
+okta.OAuth2Claim default__sub {
+  name = "sub"
+  status = "ACTIVE"
+  claimType = "RESOURCE"
+  valueType = "EXPRESSION"
+  value = "(appuser != null) ? appuser.userName : app.clientId"
+  system = true
+  alwaysIncludeInToken = true
+  _parent = [
+    okta.AuthorizationServer.instance.default,
+  ]
+}

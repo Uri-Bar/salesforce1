@@ -1,0 +1,25 @@
+type zuora_billing.TestEnvironmentJobTask {
+  annotations {
+    string metadataType {
+    }
+    string label {
+    }
+    string description {
+    }
+    hidden_string id {
+    }
+    string objectType {
+    }
+  }
+  metadataType = "StandardObject"
+  label = "Test Environment Job Task"
+  objectType = "TestEnvironmentJobTask"
+  _generated_dependencies = [
+    {
+      reference = zuora_billing.TestEnvironmentJob
+    },
+    {
+      reference = zuora_billing.user
+    },
+  ]
+}

@@ -1,0 +1,17 @@
+type zuora_billing.ConfigurableView {
+  annotations {
+    string metadataType {
+    }
+    string label {
+    }
+    string description {
+    }
+    hidden_string id {
+    }
+    string objectType {
+    }
+  }
+  metadataType = "StandardObject"
+  label = "Configurable View"
+  objectType = "ConfigurableView"
+}

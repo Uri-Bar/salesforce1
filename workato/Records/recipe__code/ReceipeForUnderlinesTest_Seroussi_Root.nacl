@@ -1,0 +1,28 @@
+workato.recipe__code ReceipeForUnderlinesTest_Seroussi_Root {
+  number = 0
+  provider = "netsuite"
+  name = "updated_saved_search_result"
+  as = "2665135f"
+  title = "New/updated standard records in a saved search"
+  description = '''
+          New or updated search result for
+          <span class="provider">record</span>
+          in <span class="provider">NetSuite</span>
+
+'''
+  keyword = "trigger"
+  block = [
+    {
+      number = 1
+      keyword = "stop"
+      input = {
+        stop_with_error = "true"
+      }
+      uuid = "472a6532-58f5-446c-a24e-17ac82290b28"
+    },
+  ]
+  uuid = "4de09a22-74a8-4856-be1f-5d416b6ea2ac"
+  _parent = [
+    workato.recipe.instance.ReceipeForUnderlinesTest_Seroussi_Root,
+  ]
+}

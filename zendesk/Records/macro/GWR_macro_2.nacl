@@ -1,0 +1,13 @@
+zendesk.macro GWR_macro_2@s {
+  title = "GWR macro 2"
+  active = true
+  default = false
+  description = "THIS is the one I want in prod "
+  actions = [
+    {
+      field = zendesk.ticket_field.instance.gwr_dedup3_tagger
+      value = zendesk.ticket_field__custom_field_options.instance.gwr_dedup3_tagger__gwr_dd3_1
+    },
+  ]
+  raw_title = "GWR macro 2"
+}

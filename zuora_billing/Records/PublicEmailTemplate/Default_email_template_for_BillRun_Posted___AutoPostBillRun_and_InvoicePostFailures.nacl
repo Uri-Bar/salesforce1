@@ -1,0 +1,21 @@
+zuora_billing.PublicEmailTemplate Default_email_template_for_BillRun_Posted___AutoPostBillRun_and_InvoicePostFailures@ssssssbsss {
+  eventCategory = 1420
+  name = "Default email template for BillRun Posted - AutoPostBillRun and InvoicePostFailures"
+  description = ""
+  encodingType = "UTF8"
+  fromName = "Admin"
+  fromEmailType = "SpecificEmail"
+  fromEmailAddress = "support@zuora.com"
+  replyToEmailType = "SpecificEmail"
+  replyToEmailAddress = "support@zuora.com"
+  ccEmailType = "SpecificEmails"
+  ccEmailAddress = ""
+  bccEmailAddress = ""
+  toEmailType = "RunOwner"
+  toEmailAddress = ""
+  emailSubject = "Bill Run Notification: Completed / Post Failed"
+  emailBody = "Dear Customer,\r<br />\r<br />Your Bill Run has completed, but an error has occurred while posting.\r<br />\r<br />Bill Run Information\r<br />Bill Run ID:                                 <BillRun.ID>\r<br />Target Date:                                 <BillRun.TargetDate>\r<br />Executed On:                                 <BillRun.ExecutedOn>\r<br />Batch Included:                              <BillRun.Batch>\r<br />Bill Cycle Day Included:                     <BillRun.BillCycleDay>\r<br />Customer Account Selected:                   <BillRun.SingleAccount>\r<br />Number of Customer Accounts Processed:       <BillRun.NumberofCustomerAccountsProcessed>\r<br />Number of Invoices Generated:                <BillRun.NumberofInvoicesGenerated>\r<br />Number of Invoices Posted:                   <BillRun.NumberofInvoicesPosted>\r<br />Number of Invoices with Posting Errors:      <BillRun.NumberofInvoiceswithPostingErrors>\r<br />\r<br />For additional Bill Run details, please visit: <BillRun.BillRunAccessURL>\r<br />\r<br />Thank you,\r<br />\r<br />-Zuora"
+  active = true
+  isHtml = true
+  useAdditionalAddresses = false
+}

@@ -1,0 +1,58 @@
+zuora_billing.Task AllBrighter_Bundle_Set_Up_Workflow_67_ssssu__Get_Account_Id@uuuuumuuss {
+  name = "Get Account Id"
+  parameters = {
+    fields = {
+      Subscription = {
+        Id = "true"
+        Name = "true"
+        AccountId = "true"
+      }
+    }
+    placement = ""
+    batch_size = "2000"
+    where_clause = "Name='{{Data.Callout[0].ResponseBody.subscriptionNumbers[0]}}'"
+    strict_variables = "false"
+  }
+  action_type = "Query"
+  object = zuora_billing.subscription
+  call_type = "SOAP"
+  task_id = 79
+  concurrent_limit = 9999999
+  additionalProperties = {
+    css = {
+      top = "-10px"
+      left = "0px"
+    }
+    priority = "Medium"
+    
+  }
+  _parent = [
+    zuora_billing.WorkflowExport.instance.AllBrighter_Bundle_Set_Up_Workflow_67@ssssu,
+  ]
+  _generated_dependencies = [
+    {
+      reference = zuora_billing.subscription.field.AccountId
+      occurrences = [
+        {
+          location = zuora_billing.Task.instance.AllBrighter_Bundle_Set_Up_Workflow_67_ssssu__Get_Account_Id@uuuuumuuss.parameters.fields.Subscription.AccountId
+        },
+      ]
+    },
+    {
+      reference = zuora_billing.subscription.field.Id
+      occurrences = [
+        {
+          location = zuora_billing.Task.instance.AllBrighter_Bundle_Set_Up_Workflow_67_ssssu__Get_Account_Id@uuuuumuuss.parameters.fields.Subscription.Id
+        },
+      ]
+    },
+    {
+      reference = zuora_billing.subscription.field.Name
+      occurrences = [
+        {
+          location = zuora_billing.Task.instance.AllBrighter_Bundle_Set_Up_Workflow_67_ssssu__Get_Account_Id@uuuuumuuss.parameters.fields.Subscription.Name
+        },
+      ]
+    },
+  ]
+}

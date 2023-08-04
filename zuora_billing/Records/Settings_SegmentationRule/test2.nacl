@@ -1,0 +1,31 @@
+zuora_billing.Settings_SegmentationRule test2 {
+  name = "test2"
+  active = true
+  defaultSegments = [
+    {
+      segmentName = zuora_billing.Settings_Segment.instance.Account_Account_Number2@s
+    },
+  ]
+  specificTransactionTypesSegments = [
+    {
+      transactionType = "Invoice"
+      segmentName = zuora_billing.Settings_Segment.instance.Subscription_Auto_Renew@s
+    },
+    {
+      transactionType = "InvoiceItemAdjustment"
+      segmentName = zuora_billing.Settings_Segment.instance.Subscription_Auto_Renew@s
+    },
+    {
+      transactionType = "Tax"
+      segmentName = zuora_billing.Settings_Segment.instance.Subscription_Auto_Renew@s
+    },
+    {
+      transactionType = "ExternalRefund"
+      segmentName = zuora_billing.Settings_Segment.instance.Account_Account_Number2@s
+    },
+    {
+      transactionType = "ExternalRefund"
+      segmentName = zuora_billing.Settings_Segment.instance.Subscription_Auto_Renew@s
+    },
+  ]
+}

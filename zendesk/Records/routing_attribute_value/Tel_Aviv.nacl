@@ -1,0 +1,6 @@
+zendesk.routing_attribute_value Location__Tel_Aviv@uus {
+  name = "Tel Aviv"
+  _parent = [
+    zendesk.routing_attribute.instance.Location,
+  ]
+}

@@ -1,0 +1,88 @@
+zuora_billing.Task SOAP___Batch_45_Account_Update_75_sbssssu__Update_Account@uuuuuuumuus {
+  name = "Update Account"
+  parameters = {
+    url = "{{ Credentials.zuora.url }}"
+    datas = [
+      {
+        key = ""
+        value = ""
+      },
+    ]
+    method = "POST"
+    headers = [
+      {
+        key = "Content-Type"
+        value = "text/xml"
+      },
+    ]
+    raw_body = '''
+<?xml version="1.0"?>
+<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ns2="http://object.api.zuora.com/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:api="http://api.zuora.com/" xmlns:ns1="http://api.zuora.com/">
+  <SOAP-ENV:Header>
+    <ns1:SessionHeader>
+      <ns1:session>{{ Credentials.zuora.session }}</ns1:session>
+    </ns1:SessionHeader>
+  </SOAP-ENV:Header>
+  <SOAP-ENV:Body>
+    <ns1:update>
+      {% for account in Data.Account %}
+      <ns1:zObjects xsi:type="ns2:Account">
+        <ns2:Id>{{account.Id}}</ns2:Id>
+        <ns2:Notes>{{account.Notes | escape}}</ns2:Notes>
+      </ns1:zObjects>
+      {% endfor %}
+    </ns1:update>
+  </SOAP-ENV:Body>
+</SOAP-ENV:Envelope>
+'''
+    body_type = "raw"
+    validation = {
+      zuora_call = "true"
+      status_codes = [
+        "",
+        "200",
+      ]
+    }
+    retry_rules = {
+      retry_count = "0"
+      retry_window = "30"
+      current_retry_count = 0
+    }
+    authorization = {
+      type = "none"
+    }
+  }
+  action_type = "Callout"
+  call_type = "SOAP"
+  task_id = 646658
+  concurrent_limit = 9999999
+  additionalProperties = {
+    css = {
+      top = "40px"
+      left = "900px"
+    }
+    priority = "Medium"
+    
+  }
+  _parent = [
+    zuora_billing.WorkflowExport.instance.SOAP___Batch_45_Account_Update_75@sbssssu,
+  ]
+  _generated_dependencies = [
+    {
+      reference = zuora_billing.account.field.Id
+      occurrences = [
+        {
+          location = zuora_billing.Task.instance.SOAP___Batch_45_Account_Update_75_sbssssu__Update_Account@uuuuuuumuus.parameters.raw_body
+        },
+      ]
+    },
+    {
+      reference = zuora_billing.account.field.Notes
+      occurrences = [
+        {
+          location = zuora_billing.Task.instance.SOAP___Batch_45_Account_Update_75_sbssssu__Update_Account@uuuuuuumuus.parameters.raw_body
+        },
+      ]
+    },
+  ]
+}

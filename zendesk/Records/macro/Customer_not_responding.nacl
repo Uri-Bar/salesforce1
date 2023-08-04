@@ -1,0 +1,16 @@
+zendesk.macro Customer_not_responding@s {
+  title = "Customer not responding"
+  active = true
+  actions = [
+    {
+      field = "status"
+      value = "pending"
+    },
+    {
+      field = "comment_value"
+      value = "Hello {{ticket.requester.name}}. Our agent {{current_user.name}} has tried to contact you about this request but we haven't heard back from you yet. Please let us know if we can be of further assistance. Thanks. "
+    },
+  ]
+  raw_title = "Customer not responding"
+  default = false
+}

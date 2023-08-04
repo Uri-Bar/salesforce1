@@ -1,0 +1,11 @@
+zuora_billing.ProductType SKU_00000006@b {
+  sku = "SKU-00000006"
+  name = "GWR Product 1"
+  description = "Geoff's first product"
+  category = "Miscellaneous Products"
+  effectiveStartDate = "2022-01-25"
+  effectiveEndDate = "2023-01-25"
+  productRatePlans = [
+    zuora_billing.ProductRatePlanType.instance.SKU_00000006_b__GWR_rate_plan_1@umuusss,
+  ]
+}

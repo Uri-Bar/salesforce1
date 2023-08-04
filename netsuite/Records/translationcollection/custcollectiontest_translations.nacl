@@ -1,0 +1,21 @@
+netsuite.translationcollection custcollectiontest_translations {
+  scriptid = "custcollectiontest_translations"
+  defaultlanguage = "en"
+  name = "test translations"
+  strings = {
+    string = {
+      another_lala = {
+        scriptid = "another_lala"
+        defaulttranslation = "Another"
+        description = "another test description from collection"
+        index = 0
+      }
+      name_trans = {
+        scriptid = "name_trans"
+        defaulttranslation = "Name"
+        description = "test description from collection"
+        index = 1
+      }
+    }
+  }
+}

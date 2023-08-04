@@ -1,0 +1,34 @@
+type zuora_billing.subscription {
+  annotations {
+    string metadataType {
+    }
+    string label {
+    }
+    string description {
+    }
+    hidden_string id {
+    }
+    string objectType {
+    }
+  }
+  metadataType = "StandardObject"
+  objectType = "subscription"
+  _generated_dependencies = [
+    {
+      reference = zuora_billing.account
+    },
+    {
+      reference = zuora_billing.amendment
+    },
+    {
+      reference = zuora_billing.contact
+    },
+    {
+      reference = zuora_billing.extendedamendment
+    },
+    {
+      reference = zuora_billing.user
+    },
+  ]
+  label = "Subscription"
+}

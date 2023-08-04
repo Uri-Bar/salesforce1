@@ -1,0 +1,36 @@
+netsuite.entitycustomfield custentitygwr_field1 {
+  scriptid = "custentitygwr_field1"
+  accesslevel = "2"
+  appliestocontact = true
+  appliestocustomer = false
+  appliestoemployee = false
+  appliestogenericrsrc = false
+  appliestogroup = false
+  appliestoothername = false
+  appliestopartner = false
+  appliestopricelist = false
+  appliestoproject = false
+  appliestoprojecttemplate = false
+  appliestostatement = false
+  appliestovendor = false
+  appliestowebsite = false
+  applyformatting = false
+  availableexternally = false
+  checkspelling = false
+  defaultchecked = false
+  defaultvalue = "gwr text for default value"
+  description = "updated descr 20220203"
+  displaytype = "HIDDEN"
+  encryptatrest = false
+  fieldtype = "TEXT"
+  globalsearch = false
+  isformula = false
+  ismandatory = false
+  isparent = false
+  label = "gwr_field1"
+  searchlevel = "2"
+  showhierarchy = false
+  showinlist = false
+  storevalue = true
+  subtab = "ENTITYACCESS"
+}

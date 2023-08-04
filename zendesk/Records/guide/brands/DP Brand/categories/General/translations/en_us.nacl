@@ -1,0 +1,11 @@
+zendesk.category_translation General_DP_Brand_s_uum__DP_Brand_s_en_us_umub@uuumuuuuuum {
+  locale = zendesk.guide_language_settings.instance.DP_Brand_s_en_us@umub
+  title = "General"
+  outdated = false
+  draft = false
+  hidden = false
+  brand = zendesk.brand.instance.DP_Brand@s
+  _parent = [
+    zendesk.category.instance.General_DP_Brand_s@uum,
+  ]
+}

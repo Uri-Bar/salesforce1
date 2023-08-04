@@ -1,0 +1,12 @@
+salesforce.WorkDotComSettings {
+  fullName = "WorkDotCom"
+  enableProfileSkills = "true"
+  enableProfileSkillsAddFeedPost = "false"
+  enableProfileSkillsAutoSuggest = "false"
+  enableProfileSkillsUsePlatform = "false"
+  enableWorkBadgeDefRestrictPref = "false"
+  enableWorkCanvasPref = "false"
+  enableWorkCertification = "false"
+  enableWorkCertificationNotification = "false"
+  enableWorkThanksPref = "true"
+}

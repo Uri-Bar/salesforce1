@@ -1,0 +1,52 @@
+netsuite.translationcollection custcollection_account_translations {
+  scriptid = "custcollection_account_translations"
+  defaultlanguage = "en-US"
+  description = "This Translation Collection contains terms for the Hotel customization."
+  name = "Account Translations"
+  strings = {
+    string = {
+      t_custrecord_erp012_fld1 = {
+        scriptid = "t_custrecord_erp012_fld1"
+        defaulttranslation = "Marketplace"
+        description = "Marketplace Id field translation"
+        index = 0
+      }
+      t_val_3420444_6979138_680 = {
+        scriptid = "t_val_3420444_6979138_680"
+        defaulttranslation = "Amazon"
+        description = "val_3420444_6979138_680 list translation"
+        index = 1
+      }
+      t_val_3420446_6979138_364 = {
+        scriptid = "t_val_3420446_6979138_364"
+        defaulttranslation = "Stord"
+        description = "val_3420445_6979138_744 list translation"
+        index = 2
+      }
+      t_custrecord_erp012_list_fld = {
+        scriptid = "t_custrecord_erp012_list_fld"
+        defaulttranslation = "List Values"
+        description = "List Values field translation"
+        index = 3
+      }
+      t_customrecord_erp012_cr = {
+        scriptid = "t_customrecord_erp012_cr"
+        defaulttranslation = "Feat 1 Custom Record (2)"
+        description = "Feat 1 Custom Record (2) translation"
+        index = 4
+      }
+      t_val_3420445_6979138_744 = {
+        scriptid = "t_val_3420445_6979138_744"
+        defaulttranslation = "Everstox"
+        description = "val_3420445_6979138_744 list translation"
+        index = 5
+      }
+      t_customlist_rg_warehouse_type = {
+        scriptid = "t_customlist_rg_warehouse_type"
+        defaulttranslation = "wewef"
+        description = "RG - Warehouse Types list translation"
+        index = 6
+      }
+    }
+  }
+}

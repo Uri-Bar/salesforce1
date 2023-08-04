@@ -1,0 +1,47 @@
+netsuite.transactionbodycustomfield custbody_slt_sales_order_type {
+  scriptid = "custbody_slt_sales_order_type"
+  accesslevel = "2"
+  applyformatting = false
+  bodycustomerpayment = false
+  bodydeposit = false
+  bodydepositapplication = false
+  bodyexpensereport = false
+  bodyinventoryadjustment = false
+  bodyitemfulfillment = false
+  bodyitemfulfillmentorder = false
+  bodyitemreceipt = false
+  bodyitemreceiptorder = false
+  bodyjournal = false
+  bodyopportunity = false
+  bodyothertransaction = false
+  bodypickingticket = false
+  bodyprintflag = false
+  bodyprintpackingslip = false
+  bodyprintstatement = false
+  bodypurchase = false
+  bodysale = true
+  
+  bodytransferorder = false
+  bodyvendorpayment = false
+  checkspelling = false
+  defaultchecked = false
+  defaultselection = netsuite.customlist.instance.customlist_slt_sales_order_type.customvalues.customvalue.val_5673_2239021_447.scriptid
+  displaytype = "NORMAL"
+  encryptatrest = false
+  fieldtype = "SELECT"
+  globalsearch = false
+  isformula = false
+  ismandatory = false
+  isparent = false
+  label = "Sales order type"
+  onparentdelete = "NO_ACTION"
+  searchlevel = "2"
+  selectrecordtype = netsuite.customlist.instance.customlist_slt_sales_order_type.scriptid
+  showhierarchy = false
+  showinlist = false
+  storevalue = true
+  subtab = "TRANSACTIONMAIN"
+  bodyassemblybuild = false
+  bodybom = false
+  bodyperiodendjournal = false
+}

@@ -1,0 +1,25 @@
+type zuora_billing.extendedamendment {
+  annotations {
+    string metadataType {
+    }
+    string label {
+    }
+    string description {
+    }
+    hidden_string id {
+    }
+    string objectType {
+    }
+  }
+  metadataType = "StandardObject"
+  objectType = "extendedamendment"
+  _generated_dependencies = [
+    {
+      reference = zuora_billing.extendeduser
+    },
+    {
+      reference = zuora_billing.subscription
+    },
+  ]
+  label = "ExtendedAmendment"
+}

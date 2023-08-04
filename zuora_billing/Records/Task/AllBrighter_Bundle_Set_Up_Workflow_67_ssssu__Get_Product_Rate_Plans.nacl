@@ -1,0 +1,53 @@
+zuora_billing.Task AllBrighter_Bundle_Set_Up_Workflow_67_ssssu__Get_Product_Rate_Plans@uuuuumuusss {
+  name = "Get Product Rate Plans"
+  parameters = {
+    fields = {
+      ProductRatePlan = {
+        Id = "true"
+        Name = "true"
+      }
+    }
+    placement = ""
+    batch_size = "2000"
+    where_clause = '''
+ProductId = 'abc' {% for prodid in Data.Product %}
+ or ProductId = '{{prodid.Id}}'
+{% endfor %}
+'''
+    strict_variables = "true"
+  }
+  action_type = "Query"
+  object = zuora_billing.productrateplan
+  call_type = "SOAP"
+  task_id = 77
+  concurrent_limit = 9999999
+  additionalProperties = {
+    css = {
+      top = "-390px"
+      left = "290px"
+    }
+    priority = "Medium"
+    
+  }
+  _parent = [
+    zuora_billing.WorkflowExport.instance.AllBrighter_Bundle_Set_Up_Workflow_67@ssssu,
+  ]
+  _generated_dependencies = [
+    {
+      reference = zuora_billing.productrateplan.field.Id
+      occurrences = [
+        {
+          location = zuora_billing.Task.instance.AllBrighter_Bundle_Set_Up_Workflow_67_ssssu__Get_Product_Rate_Plans@uuuuumuusss.parameters.fields.ProductRatePlan.Id
+        },
+      ]
+    },
+    {
+      reference = zuora_billing.productrateplan.field.Name
+      occurrences = [
+        {
+          location = zuora_billing.Task.instance.AllBrighter_Bundle_Set_Up_Workflow_67_ssssu__Get_Product_Rate_Plans@uuuuumuusss.parameters.fields.ProductRatePlan.Name
+        },
+      ]
+    },
+  ]
+}

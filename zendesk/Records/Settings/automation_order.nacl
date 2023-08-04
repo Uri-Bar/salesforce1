@@ -1,0 +1,21 @@
+zendesk.automation_order {
+  active = [
+    zendesk.automation.instance.Close_ticket_4_days_after_status_is_set_to_solved@s,
+    zendesk.automation.instance.Close_ticket_5_days_after_status_is_set_to_solved@s,
+    zendesk.automation.instance.Tag_tickets_from_Social@s,
+    zendesk.automation.instance.Amazing_new_automation@s,
+    zendesk.automation.instance.Golden_Automation@s,
+    zendesk.automation.instance.Silvery_Automation@s,
+    zendesk.automation.instance.Bronze_Automation_edited_in_service@s,
+    zendesk.automation.instance.Titanium,
+    zendesk.automation.instance.DP_s_test_automation@tss,
+    zendesk.automation.instance.Mercury_Automation@s,
+    zendesk.automation.instance.Platinum_Automation@s,
+    zendesk.automation.instance.Automate_ZSB_routing@s,
+    zendesk.automation.instance.Automate_ZSC_Routing@s,
+  ]
+  inactive = [
+    zendesk.automation.instance.Pending_notification_24_hours@s,
+    zendesk.automation.instance.Pending_notification_5_days@s,
+  ]
+}

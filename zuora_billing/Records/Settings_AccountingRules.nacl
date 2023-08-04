@@ -1,0 +1,7 @@
+zuora_billing.Settings_AccountingRules {
+  allowBlankAccountingCodes = true
+  allowCreationInClosedPeriod = true
+  allowUsageInClosedPeriod = false
+  allowRevenueScheduleNegativeAmounts = true
+  differentCurrencies = false
+}

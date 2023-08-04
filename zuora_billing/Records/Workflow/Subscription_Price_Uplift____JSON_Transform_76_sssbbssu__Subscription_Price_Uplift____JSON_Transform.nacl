@@ -1,0 +1,58 @@
+zuora_billing.Workflow Subscription_Price_Uplift____JSON_Transform_76_sssbbssu__Subscription_Price_Uplift____JSON_Transform@uuuuuuuumuusssbbss {
+  id = 76
+  name = "Subscription Price Uplift -- JSON Transform"
+  description = "Applies a price uplift o recurring charges on the subscription. This is done by using a JSON Transform on the original subscription callout response. Once the transform is done, the resulting transform is used in an amendment callout."
+  type = "Workflow::Setup"
+  status = "Active"
+  version = "0.0.1"
+  additionalProperties = {
+    parameters = {
+      fields = [
+        {
+          index = "0"
+          default = 1.08
+          datatype = "Decimal"
+          required = false
+          callout_id = ""
+          field_name = "ManualRate"
+          object_name = "Workflow"
+        },
+        {
+          index = "1"
+          default = ""
+          datatype = "Text"
+          required = true
+          callout_id = ""
+          field_name = "SubscriptionNumber"
+          object_name = "Workflow"
+        },
+      ]
+      skipping_check = "redis"
+      file_encryption = "false"
+      callout_response = "workflow instance"
+      secure_error_msgs = "false"
+      disable_pending_status = true
+    }
+    ondemand_trigger = true
+    callout_trigger = false
+    scheduled_trigger = false
+    css = {
+      top = "50px"
+      left = "-1120px"
+    }
+    notifications = {
+      failure = false
+      pending = false
+      success = false
+    }
+    call_type = "ASYNC"
+    priority = "Medium"
+    delete_ttl = 30
+    
+    
+    event_trigger = false
+  }
+  _parent = [
+    zuora_billing.WorkflowExport.instance.Subscription_Price_Uplift____JSON_Transform_76@sssbbssu,
+  ]
+}

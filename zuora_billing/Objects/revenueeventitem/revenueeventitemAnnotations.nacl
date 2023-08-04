@@ -1,0 +1,34 @@
+type zuora_billing.revenueeventitem {
+  annotations {
+    string metadataType {
+    }
+    string label {
+    }
+    string description {
+    }
+    hidden_string id {
+    }
+    string objectType {
+    }
+  }
+  metadataType = "StandardObject"
+  objectType = "revenueeventitem"
+  _generated_dependencies = [
+    {
+      reference = zuora_billing.accountingcode
+    },
+    {
+      reference = zuora_billing.accountingperiod
+    },
+    {
+      reference = zuora_billing.journalentry
+    },
+    {
+      reference = zuora_billing.revenueevent
+    },
+    {
+      reference = zuora_billing.user
+    },
+  ]
+  label = "Revenue Event Item"
+}

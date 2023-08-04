@@ -1,0 +1,25 @@
+type zuora_billing.updaterbatch {
+  annotations {
+    string metadataType {
+    }
+    string label {
+    }
+    string description {
+    }
+    hidden_string id {
+    }
+    string objectType {
+    }
+  }
+  metadataType = "StandardObject"
+  objectType = "updaterbatch"
+  _generated_dependencies = [
+    {
+      reference = zuora_billing.updateraccount
+    },
+    {
+      reference = zuora_billing.user
+    },
+  ]
+  label = "UpdaterBatch"
+}

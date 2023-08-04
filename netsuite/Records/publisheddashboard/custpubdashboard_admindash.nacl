@@ -1,0 +1,98 @@
+netsuite.publisheddashboard custpubdashboard_admindash {
+  scriptid = "custpubdashboard_admindash"
+  center = "BASIC"
+  locknewbar = false
+  lockshortcuts = false
+  name = "Admin Dashboard"
+  roles = {
+    role = [
+      {
+        role = "ADMINISTRATOR"
+      },
+    ]
+  }
+  dashboards = {
+    dashboard = [
+      {
+        centertab = "BASICCENTERHOMEHOME"
+        layout = "TWO_COLUMN"
+        mode = "UNLOCKED"
+        leftcolumn = {
+          reminders = [
+            {
+              isminimized = false
+              showzeroresults = true
+              other = {
+                reminder = [
+                  {
+                    id = "ESTIMATESTOPRINT"
+                  },
+                  {
+                    id = "BILLSTOAPPROVE"
+                  },
+                  {
+                    days = 5
+                    id = "BILLSTOPAY"
+                  },
+                  {
+                    id = "BUNDLESTOUPDATE"
+                  },
+                ]
+              }
+            },
+          ]
+          recentrecords = [
+            {
+              isminimized = false
+            },
+          ]
+          quicksearch = [
+            {
+              defaultgeneraltype = "ENTITY_ENTITY_NAME"
+              isminimized = false
+              searchtype = "GENERIC"
+            },
+          ]
+          settings = [
+            {
+              isminimized = false
+            },
+          ]
+        }
+        centercolumn = {
+          customsearch = [
+            {
+              allowinlineediting = true
+              backgroundtype = "GLOBAL_BACKGROUND"
+              charttheme = "GLOBAL_THEME"
+              drilldown = "NEW_PAGE"
+              isminimized = true
+              resultssize = 10
+              savedsearch = netsuite.savedsearch.instance.customsearch_accounts_srch.scriptid
+            },
+            {
+              allowinlineediting = true
+              backgroundtype = "GLOBAL_BACKGROUND"
+              charttheme = "GLOBAL_THEME"
+              drilldown = "NEW_PAGE"
+              isminimized = false
+              resultssize = 5
+              savedsearch = netsuite.savedsearch.instance.customsearch331.scriptid
+            },
+          ]
+          keyperformanceindicators = [
+            {
+              cacheddata = false
+              isminimized = false
+            },
+          ]
+          shortcuts = [
+            {
+              isminimized = false
+            },
+          ]
+        }
+      },
+    ]
+  }
+}

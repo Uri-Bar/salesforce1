@@ -1,0 +1,9 @@
+okta.AccessPolicy Classic_Migrated@s {
+  status = "ACTIVE"
+  name = "Classic Migrated"
+  description = "Policy created during OIE upgrade and applied to all applications that were protected by the default app-sign on policy in Classic."
+  priority = 1
+  system = false
+  type = "ACCESS_POLICY"
+  
+}

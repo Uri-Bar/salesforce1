@@ -1,0 +1,6 @@
+zuora_billing.AccountingCodeItem AccountsReceivable_Accounts_Receivable@us {
+  name = "Accounts Receivable"
+  type = "AccountsReceivable"
+  category = "Assets"
+  status = "Active"
+}

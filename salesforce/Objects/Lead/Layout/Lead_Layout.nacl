@@ -1,0 +1,329 @@
+salesforce.Layout Lead_Lead_Layout@bs {
+  fullName = "Lead-Lead Layout"
+  layoutSections = [
+    {
+      customLabel = false
+      detailHeading = false
+      editHeading = true
+      label = "Lead Information"
+      layoutColumns = [
+        {
+          layoutItems = [
+            {
+              behavior = "Required"
+              field = salesforce.Lead.field.Status
+            },
+            {
+              behavior = "Required"
+              field = salesforce.Lead.field.Name
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.Lead.field.Title
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.Lead.field.Email
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.Lead.field.Phone
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.Lead.field.MobilePhone
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.Lead.field.Rating
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.Lead.field.Role__c
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.Lead.field.Important__c
+            },
+          ]
+        },
+        {
+          layoutItems = [
+            {
+              behavior = "Edit"
+              field = salesforce.Lead.field.OwnerId
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.Lead.field.Website
+            },
+            {
+              behavior = "Required"
+              field = salesforce.Lead.field.Company
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.Lead.field.Industry
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.Lead.field.NumberOfEmployees
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.Lead.field.LeadSource
+            },
+          ]
+        },
+      ]
+      style = "TwoColumnsTopToBottom"
+    },
+    {
+      customLabel = false
+      detailHeading = true
+      editHeading = true
+      label = "Address Information"
+      layoutColumns = [
+        {
+          layoutItems = [
+            {
+              behavior = "Edit"
+              field = salesforce.Lead.field.Address
+            },
+          ]
+        },
+        {
+        },
+      ]
+      style = "TwoColumnsTopToBottom"
+    },
+    {
+      customLabel = false
+      detailHeading = true
+      editHeading = true
+      label = "Additional Information"
+      style = "TwoColumnsLeftToRight"
+    },
+    {
+      customLabel = false
+      detailHeading = false
+      editHeading = true
+      label = "Description Information"
+      style = "OneColumn"
+      layoutColumns = [
+        {
+        },
+      ]
+    },
+    {
+      customLabel = false
+      detailHeading = false
+      editHeading = true
+      label = "System Information"
+      layoutColumns = [
+        {
+          layoutItems = [
+            {
+              behavior = "Readonly"
+              field = salesforce.Lead.field.CreatedById
+            },
+          ]
+        },
+        {
+          layoutItems = [
+            {
+              behavior = "Readonly"
+              field = salesforce.Lead.field.LastModifiedById
+            },
+          ]
+        },
+      ]
+      style = "TwoColumnsTopToBottom"
+    },
+    {
+      customLabel = false
+      detailHeading = true
+      editHeading = false
+      label = "Custom Links"
+      layoutColumns = [
+        {
+          layoutItems = [
+            {
+              customLink = salesforce.WebLink.instance.Lead_GoogleMaps
+            },
+          ]
+        },
+        {
+        },
+        {
+        },
+      ]
+      style = "CustomLinks"
+    },
+  ]
+  platformActionList = {
+    actionListContext = "Record"
+    platformActionListItems = [
+      {
+        actionName = "Edit"
+        actionType = "StandardButton"
+        sortOrder = 0
+      },
+      {
+        actionName = "Delete"
+        actionType = "StandardButton"
+        sortOrder = 1
+      },
+      {
+        actionName = "Clone"
+        actionType = "StandardButton"
+        sortOrder = 2
+      },
+      {
+        actionName = "Convert"
+        actionType = "StandardButton"
+        sortOrder = 3
+      },
+      {
+        actionName = "FeedItem.ContentNote"
+        actionType = "QuickAction"
+        sortOrder = 4
+      },
+      {
+        actionName = salesforce.QuickAction.instance.LogACall
+        actionType = "QuickAction"
+        sortOrder = 5
+      },
+      {
+        actionName = salesforce.QuickAction.instance.NewTask
+        actionType = "QuickAction"
+        sortOrder = 6
+      },
+      {
+        actionName = salesforce.QuickAction.instance.NewEvent
+        actionType = "QuickAction"
+        sortOrder = 7
+      },
+      {
+        actionName = "SendEmail"
+        actionType = "StandardButton"
+        sortOrder = 8
+      },
+      {
+        actionName = "FeedItem.TextPost"
+        actionType = "QuickAction"
+        sortOrder = 9
+      },
+      {
+        actionName = "FeedItem.ContentPost"
+        actionType = "QuickAction"
+        sortOrder = 10
+      },
+      {
+        actionName = "SendEmail"
+        actionType = "QuickAction"
+        sortOrder = 11
+      },
+      {
+        actionName = "EmailHighlightAction"
+        actionType = "ProductivityAction"
+        sortOrder = 12
+      },
+    ]
+  }
+  quickActionList = {
+    quickActionListItems = [
+      {
+        quickActionName = "FeedItem.ContentNote"
+      },
+      {
+        quickActionName = "FeedItem.ContentPost"
+      },
+      {
+        quickActionName = "FeedItem.LinkPost"
+      },
+      {
+        quickActionName = "FeedItem.PollPost"
+      },
+      {
+        quickActionName = "FeedItem.TextPost"
+      },
+      {
+        quickActionName = salesforce.QuickAction.instance.LogACall
+      },
+      {
+        quickActionName = salesforce.QuickAction.instance.NewEvent
+      },
+      {
+        quickActionName = salesforce.QuickAction.instance.NewTask
+      },
+      {
+        quickActionName = "SendEmail"
+      },
+    ]
+  }
+  relatedContent = {
+    relatedContentItems = [
+      {
+        layoutItem = {
+          component = "wits:newsPanel"
+        }
+      },
+      {
+        layoutItem = {
+          behavior = "Readonly"
+          field = salesforce.Lead.field.CampaignId
+        }
+      },
+      {
+        layoutItem = {
+          component = "runtime_sales_social:socialPanel"
+        }
+      },
+    ]
+  }
+  relatedLists = [
+    {
+      relatedList = "RelatedFileList"
+    },
+    {
+      relatedList = "RelatedContentNoteList"
+    },
+    {
+      fields = [
+        "TASK.SUBJECT",
+        "ACTIVITY.TASK",
+        "TASK.DUE_DATE",
+        "TASK.STATUS",
+        "CORE.USERS.FULL_NAME",
+        "EVENT.LOCATION",
+      ]
+      relatedList = "RelatedActivityList"
+    },
+    {
+      fields = [
+        "TASK.SUBJECT",
+        "ACTIVITY.TASK",
+        "TASK.DUE_DATE",
+        "EVENT.LOCATION",
+        "CORE.USERS.FULL_NAME",
+      ]
+      relatedList = "RelatedHistoryList"
+    },
+  ]
+  runAssignmentRulesDefault = false
+  showEmailCheckbox = false
+  showHighlightsPanel = false
+  showInteractionLogPanel = false
+  showRunAssignmentRulesCheckbox = true
+  showSubmitAndAttachButton = false
+  summaryLayout = {
+    masterLabel = "00h36000003jARe"
+    sizeX = 4
+    sizeY = 0
+    summaryLayoutStyle = "Default"
+  }
+  _parent = [
+    salesforce.Lead,
+  ]
+}

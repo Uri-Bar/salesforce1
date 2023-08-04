@@ -1,0 +1,21 @@
+netsuite.account GWR_Statistical_Account@s {
+  acctType = "_statistical"
+  unitsType = {
+    name = "Each"
+    id = "[ACCOUNT_SPECIFIC_VALUE]"
+  }
+  unit = {
+    name = "Each"
+    id = "[ACCOUNT_SPECIFIC_VALUE]"
+  }
+  acctName = "GWR Statistical Account"
+  includeChildren = true
+  description = "GWR testing"
+  isInactive = false
+  inventory = false
+  subsidiaryList = [
+    netsuite.subsidiary.instance.Parent_Company@s,
+  ]
+  identifier = "GWR Statistical Account"
+  custom_custrecord_acct_special = false
+}

@@ -1,0 +1,8 @@
+jira.Field Summary {
+  name = "Summary"
+  schema = {
+    type = "string"
+    system = "summary"
+  }
+  description = ""
+}

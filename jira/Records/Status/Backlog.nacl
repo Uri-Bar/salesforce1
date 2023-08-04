@@ -1,0 +1,7 @@
+jira.Status Backlog {
+  description = ""
+  
+  name = "Backlog"
+  
+  statusCategory = jira.StatusCategory.instance.To_Do@s
+}

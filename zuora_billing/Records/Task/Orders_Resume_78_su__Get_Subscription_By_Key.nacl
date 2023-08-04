@@ -1,0 +1,68 @@
+zuora_billing.Task Orders_Resume_78_su__Get_Subscription_By_Key@uumuusss {
+  name = "Get Subscription By Key"
+  parameters = {
+    url = "{{ Credentials.zuora.rest_endpoint }}subscriptions/{{Data.Workflow.subscriptionIdentifier}}"
+    datas = [
+      {
+        key = ""
+        value = ""
+      },
+    ]
+    method = "GET"
+    headers = [
+      {
+        key = "apiAccessKeyId"
+        value = "{{ Credentials.zuora.username }}"
+      },
+      {
+        key = "apiSecretAccessKey"
+        value = "{{ Credentials.zuora.password }}"
+      },
+      {
+        key = ""
+        value = ""
+      },
+    ]
+    raw_body = ""
+    body_type = "raw"
+    validation = {
+      zuora_call = "true"
+      status_codes = [
+        "",
+        "200",
+      ]
+    }
+    retry_rules = {
+      retry_count = "0"
+      retry_window = "30"
+      current_retry_count = 0
+    }
+    authorization = {
+      type = "none"
+    }
+  }
+  action_type = "Callout"
+  call_type = "SOAP"
+  concurrent_limit = 9999999
+  additionalProperties = {
+    css = {
+      top = "40px"
+      left = "410px"
+    }
+    priority = "Medium"
+    
+  }
+  _parent = [
+    zuora_billing.WorkflowExport.instance.Orders_Resume_78@su,
+  ]
+  _generated_dependencies = [
+    {
+      reference = zuora_billing.Workflow.instance.Orders_Resume_78_su__Orders_Resume@uumuus.additionalProperties.parameters.fields
+      occurrences = [
+        {
+          location = zuora_billing.Task.instance.Orders_Resume_78_su__Get_Subscription_By_Key@uumuusss.parameters.url
+        },
+      ]
+    },
+  ]
+}

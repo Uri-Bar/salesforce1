@@ -1,0 +1,45 @@
+netsuite.workflow customworkflow7 {
+  scriptid = "customworkflow7"
+  description = "Link to ; custitemhqcuitemfieldid01"
+  initcontexts = "ACTION|BANKCONNECTIVITY|BANKSTATEMENTPARSER|BUNDLEINSTALLATION|CLIENT|CSVIMPORT|CUSTOMGLLINES|CUSTOMMASSUPDATE|RECORDACTION|DATASETBUILDER|DEBUGGER|EMAILCAPTURE|FICONNECTIVITY|FIPARSER|MAPREDUCE|OFFLINECLIENT|OTHER|PAYMENTPOSTBACK|PAYMENTGATEWAY|PLATFORMEXTENSION|PORTLET|PROMOTIONS|CONSOLRATEADJUSTOR|RESTWEBSERVICES|RESTLET|ADVANCEDREVREC|SCHEDULED|SDFINSTALLATION|SHIPPINGPARTNERS|WEBSERVICES|SUITELET|TAXCALCULATION|USEREVENT|USERINTERFACE|WORKBOOKBUILDER|WORKFLOW"
+  initoncreate = true
+  initonvieworupdate = false
+  isinactive = false
+  islogenabled = false
+  keephistory = "ONLYWHENTESTING"
+  name = "HQ-Inventory-Test"
+  recordtypes = "OPPORTUNITY"
+  releasestatus = "TESTING"
+  runasadmin = false
+  initcondition = {
+    type = "VISUAL_BUILDER"
+  }
+  workflowcustomfields = {
+    workflowcustomfield = {
+      custworkflow10 = {
+        scriptid = "custworkflow10"
+        applyformatting = false
+        defaultchecked = false
+        defaultvalue = "custitemhqcuitemfieldid01"
+        description = "Test"
+        displaytype = "NORMAL"
+        fieldtype = "TEXT"
+        label = "WkFlowHQField"
+        storevalue = true
+        index = 0
+      }
+    }
+  }
+  workflowstates = {
+    workflowstate = {
+      workflowstate431 = {
+        scriptid = "workflowstate431"
+        donotexitworkflow = false
+        name = "State 1"
+        positionx = 243
+        positiony = 133
+        index = 0
+      }
+    }
+  }
+}

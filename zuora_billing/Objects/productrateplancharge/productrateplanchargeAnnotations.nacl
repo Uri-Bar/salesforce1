@@ -1,0 +1,28 @@
+type zuora_billing.productrateplancharge {
+  annotations {
+    string metadataType {
+    }
+    string label {
+    }
+    string description {
+    }
+    hidden_string id {
+    }
+    string objectType {
+    }
+  }
+  metadataType = "StandardObject"
+  objectType = "productrateplancharge"
+  _generated_dependencies = [
+    {
+      reference = zuora_billing.accountingcode
+    },
+    {
+      reference = zuora_billing.productrateplan
+    },
+    {
+      reference = zuora_billing.user
+    },
+  ]
+  label = "Product Rate Plan Charge"
+}

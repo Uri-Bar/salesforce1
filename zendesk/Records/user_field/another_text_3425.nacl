@@ -1,0 +1,10 @@
+zendesk.user_field another_text_3425 {
+  type = "text"
+  key = "another_text_3425"
+  
+  
+  raw_title = "another text 3425"
+  raw_description = ""
+  active = true
+  system = false
+}

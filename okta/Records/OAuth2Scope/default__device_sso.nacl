@@ -1,0 +1,15 @@
+okta.OAuth2Scope default__device_sso {
+  name = "device_sso"
+  displayName = "Request device secret."
+  description = "This allows you to single sign on between native client applications on your device."
+  system = true
+  metadataPublish = "ALL_CLIENTS"
+  consent = "IMPLICIT"
+  default = false
+  additionalProperties = {
+    optional = false
+  }
+  _parent = [
+    okta.AuthorizationServer.instance.default,
+  ]
+}

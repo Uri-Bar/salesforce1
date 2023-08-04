@@ -1,0 +1,14 @@
+stripe.reporting_report_type balance_change_from_activity_summary_1@uuuvv {
+  id = "balance_change_from_activity.summary.1"
+  default_columns = [
+    "reporting_category",
+    "currency",
+    "count",
+    "gross",
+    "fee",
+    "net",
+  ]
+  livemode = false
+  name = "Balance change from activity summary"
+  version = 1
+}

@@ -1,0 +1,5 @@
+workato.connection Yanai_sfdev@s {
+  application = "salesforce_secondary"
+  name = "Yanai sfdev"
+  folder_id = workato.folder.instance.tests_769211
+}

@@ -1,0 +1,165 @@
+jira.Workflow Lior_s_Test_Workflow_2@tsss {
+  description = ""
+  transitions = {
+    Create__From__none__Initial@fffsff = {
+      name = "Create"
+      description = ""
+      to = jira.Status.instance.Open
+      type = "initial"
+      rules = {
+        validators = [
+          {
+            type = "PermissionValidator"
+            configuration = {
+              permissionKey = "CREATE_ISSUES"
+            }
+          },
+        ]
+        postFunctions = [
+          {
+            type = "FireIssueEventFunction"
+            configuration = {
+              event = {
+                id = jira.IssueEvent.instance.Issue_Created@s
+              }
+            }
+          },
+        ]
+      }
+      properties = [
+        {
+          key = "jira.issue.editable"
+          value = "true"
+        },
+      ]
+    }
+    Build_Broken__From__any_status__Global@sfffssff = {
+      name = "Build Broken"
+      description = ""
+      to = jira.Status.instance.Build_Broken@s
+      type = "global"
+      rules = {
+        postFunctions = [
+          {
+            type = "FireIssueEventFunction"
+            configuration = {
+              event = {
+                id = jira.IssueEvent.instance.Generic_Event@s
+              }
+            }
+          },
+        ]
+      }
+      properties = [
+        {
+          key = "jira.issue.editable"
+          value = "true"
+        },
+      ]
+    }
+    TransitionToShared__From__A_shared_status_Approved__Directed@fffssszdff = {
+      name = "TransitionToShared"
+      description = ""
+      from = [
+        {
+          id = jira.Status.instance.Approved
+        },
+        {
+          id = jira.Status.instance.A_shared_status@s
+        },
+      ]
+      to = jira.Status.instance.Build_Broken@s
+      type = "directed"
+      rules = {
+        postFunctions = [
+          {
+            type = "FireIssueEventFunction"
+            configuration = {
+              event = {
+                id = jira.IssueEvent.instance.Generic_Event@s
+              }
+            }
+          },
+        ]
+      }
+      properties = [
+        {
+          key = "jira.issue.editable"
+          value = "true"
+        },
+      ]
+    }
+    LiorTestTransition__From__Open__Directed@fffsff = {
+      name = "LiorTestTransition"
+      description = ""
+      from = [
+        {
+          id = jira.Status.instance.Open
+        },
+      ]
+      to = jira.Status.instance.Build_Broken@s
+      type = "directed"
+      rules = {
+        postFunctions = [
+          {
+            type = "FireIssueEventFunction"
+            configuration = {
+              event = {
+                id = jira.IssueEvent.instance.Generic_Event@s
+              }
+            }
+          },
+        ]
+      }
+      properties = [
+        {
+          key = "jira.issue.editable"
+          value = "true"
+        },
+      ]
+    }
+  }
+  statuses = [
+    {
+      id = jira.Status.instance.A_shared_status@s
+      properties = [
+        {
+          key = "jira.issue.editable"
+          value = "true"
+        },
+      ]
+      name = "A shared status"
+    },
+    {
+      id = jira.Status.instance.Approved
+      properties = [
+        {
+          key = "jira.issue.editable"
+          value = "true"
+        },
+      ]
+      name = "Approved"
+    },
+    {
+      id = jira.Status.instance.Build_Broken@s
+      properties = [
+        {
+          key = "jira.issue.editable"
+          value = "true"
+        },
+      ]
+      name = "Build Broken"
+    },
+    {
+      id = jira.Status.instance.Open
+      properties = [
+        {
+          key = "jira.issue.editable"
+          value = "true"
+        },
+      ]
+      name = "Open"
+    },
+  ]
+  name = "Lior's Test Workflow 2"
+}

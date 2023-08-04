@@ -1,0 +1,17 @@
+zuora_billing.Settings_Notification Payment_Method_Updater_Batch_Started_Payment_Method_Updater_Batch_Started_8ac6819b7883361b017893726f173fb1@ssssussssu {
+  profileId = zuora_billing.Settings_CommunicationProfile.instance.Default_Profile@s
+  eventName = "Payment Method Updater Batch Started"
+  name = "Payment Method Updater Batch Started"
+  description = "A payment method updater batch was started."
+  active = false
+  hidden = false
+  emailOption = true
+  emailTemplateName = zuora_billing.PublicEmailTemplate.instance.Payment_Method_Updater_Batch_Started_Default_Email_Template@s
+  calloutOption = false
+  contentType = "APPLICATION_JSON"
+  calloutRetriable = false
+  calloutAuth = false
+  calloutOauth2 = false
+  calloutPreemptiveAuth = false
+  useCustomRequestBody = false
+}

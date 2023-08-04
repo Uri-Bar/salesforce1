@@ -1,0 +1,27 @@
+salesforce.ListView Lead_AllOpenLeads {
+  fullName = "Lead.AllOpenLeads"
+  columns = [
+    "FULL_NAME",
+    "LEAD.COMPANY",
+    "LEAD.TITLE",
+    "LEAD.STATE",
+    "LEAD.PHONE",
+    "LEAD.EMAIL",
+    "LEAD.STATUS",
+    "CORE.USERS.FIRST_NAME",
+    "CORE.USERS.LAST_NAME",
+    "LEAD.CREATED_DATE",
+  ]
+  filterScope = "Everything"
+  filters = [
+    {
+      field = "LEAD.STATUS"
+      operation = "notEqual"
+      value = "Qualified"
+    },
+  ]
+  label = "All Open Leads"
+  _parent = [
+    salesforce.Lead,
+  ]
+}

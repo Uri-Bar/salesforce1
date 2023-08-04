@@ -1,0 +1,45 @@
+zuora_billing.Settings_Role ZBilling_Zuora_Billing_Admin__custom_@usssjk {
+  name = "Zuora Billing Admin (custom)"
+  category = "ZBilling"
+  attributes = [
+    {
+      name = "manageAttachment"
+      scope = "Attachments"
+      activationLevel = "User"
+    },
+    {
+      name = "NotCreateBillRunForMultipleAccounts"
+      scope = "BillRuns"
+      activationLevel = "User"
+    },
+    {
+      name = "createBillRuns"
+      scope = "BillRuns"
+      activationLevel = "User"
+    },
+    {
+      name = "CreateStandaloneInvoice"
+      scope = "Invoices"
+      activationLevel = "User"
+    },
+    {
+      name = "manageProductCatalog"
+      scope = "ProductCatalog"
+      activationLevel = "User"
+    },
+    {
+      name = "subscriptionManagement"
+      scope = "Subscription"
+      activationLevel = "User"
+    },
+    {
+      name = "billingSettingsManagement"
+      scope = "ZBillingAdmin"
+      activationLevel = "User"
+    },
+  ]
+  
+  description = "Custom-created billing role that can access the settings"
+  entityId = "8ac6819b-7883-361b-0178-93726ba53eff"
+  custom = true
+}

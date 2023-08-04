@@ -1,0 +1,10 @@
+zendesk.user_field f215 {
+  type = "text"
+  key = "f215"
+  
+  
+  raw_title = "f215"
+  raw_description = ""
+  active = true
+  system = false
+}

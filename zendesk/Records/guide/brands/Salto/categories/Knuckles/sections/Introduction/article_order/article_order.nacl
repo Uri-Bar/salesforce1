@@ -1,0 +1,9 @@
+zendesk.article_order Introduction_Knuckles_Salto {
+  articles = [
+    zendesk.article.instance.Hello_world__Introduction_Knuckles_Salto@sluuu,
+  ]
+  brand = zendesk.brand.instance.Salto
+  _parent = [
+    zendesk.section.instance.Introduction_Knuckles_Salto,
+  ]
+}

@@ -1,0 +1,182 @@
+salesforce.Flow Set_account_tiering {
+  fullName = "Set_account_tiering"
+  apiVersion = 49
+  decisions = [
+    {
+      processMetadataValues = {
+        name = "index"
+        value = {
+          numberValue = 0
+        }
+      }
+      name = "myDecision"
+      label = "myDecision"
+      locationX = 50
+      locationY = 0
+      defaultConnectorLabel = "default"
+      rules = [
+        {
+          name = "myRule_1"
+          conditionLogic = "and"
+          conditions = [
+            {
+              leftValueReference = "formula_myRule_1"
+              operator = "EqualTo"
+              rightValue = {
+                booleanValue = true
+              }
+            },
+          ]
+          connector = {
+            targetReference = "myRule_1_A1"
+          }
+          label = "revenue"
+        },
+      ]
+    },
+  ]
+  description = "Set account tiering upon account creation"
+  formulas = [
+    {
+      name = "formula_myRule_1"
+      dataType = "Boolean"
+      expression = "true"
+    },
+  ]
+  interviewLabel = "Set_account_tiering-1_InterviewLabel"
+  label = "Set account tiering"
+  processMetadataValues = [
+    {
+      name = "ObjectType"
+      value = {
+        stringValue = "Account"
+      }
+    },
+    {
+      name = "ObjectVariable"
+      value = {
+        elementReference = "myVariable_current"
+      }
+    },
+    {
+      name = "OldObjectVariable"
+      value = {
+        elementReference = "myVariable_old"
+      }
+    },
+    {
+      name = "TriggerType"
+      value = {
+        stringValue = "onCreateOnly"
+      }
+    },
+  ]
+  processType = "Workflow"
+  recordUpdates = [
+    {
+      processMetadataValues = [
+        {
+          name = "evaluationType"
+          value = {
+            stringValue = "always"
+          }
+        },
+        {
+          name = "extraTypeInfo"
+        },
+        {
+          name = "isChildRelationship"
+          value = {
+            booleanValue = false
+          }
+        },
+        {
+          name = "reference"
+          value = {
+            stringValue = "[Account]"
+          }
+        },
+        {
+          name = "referenceTargetField"
+        },
+      ]
+      name = "myRule_1_A1"
+      label = "set account tier"
+      locationX = 100
+      locationY = 200
+      filterLogic = "and"
+      filters = [
+        {
+          processMetadataValues = [
+            {
+              name = "implicit"
+              value = {
+                booleanValue = true
+              }
+            },
+          ]
+          field = salesforce.Account.field.Id
+          operator = "EqualTo"
+          value = {
+            elementReference = "myVariable_current.Id"
+          }
+        },
+      ]
+      inputAssignments = [
+        {
+          processMetadataValues = [
+            {
+              name = "dataType"
+              value = {
+                stringValue = "Picklist"
+              }
+            },
+            {
+              name = "isRequired"
+              value = {
+                booleanValue = false
+              }
+            },
+            {
+              name = "leftHandSideLabel"
+              value = {
+                stringValue = "Tier"
+              }
+            },
+            {
+              name = "rightHandSideType"
+              value = {
+                stringValue = "Picklist"
+              }
+            },
+          ]
+          field = salesforce.Account.field.Tier__c
+          value = {
+            stringValue = "Small Business"
+          }
+        },
+      ]
+      object = salesforce.Account
+    },
+  ]
+  startElementReference = "myDecision"
+  status = "Draft"
+  variables = [
+    {
+      name = "myVariable_current"
+      dataType = "SObject"
+      isCollection = false
+      isInput = true
+      isOutput = true
+      objectType = salesforce.Account
+    },
+    {
+      name = "myVariable_old"
+      dataType = "SObject"
+      isCollection = false
+      isInput = true
+      isOutput = false
+      objectType = salesforce.Account
+    },
+  ]
+}

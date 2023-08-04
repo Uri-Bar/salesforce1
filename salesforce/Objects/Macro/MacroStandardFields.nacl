@@ -1,0 +1,373 @@
+type salesforce.Macro {
+  serviceid Id {
+    apiName = "Macro.Id"
+    label = "Macro ID"
+    queryable = true
+    _hidden_value = true
+    
+    
+  }
+  salesforce.Lookup OwnerId {
+    apiName = "Macro.OwnerId"
+    label = "Owner ID"
+    referenceTo = [
+      salesforce.Group,
+      salesforce.User,
+    ]
+    createable = true
+    updateable = true
+    relationshipName = "Owner"
+    queryable = true
+    _hidden_value = true
+    
+    
+  }
+  salesforce.Checkbox IsDeleted {
+    apiName = "Macro.IsDeleted"
+    label = "Deleted"
+    defaultValue = false
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Text Name {
+    apiName = "Macro.Name"
+    label = "Macro Name"
+    _required = true
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    length = 255
+    queryable = true
+    
+    
+  }
+  salesforce.DateTime CreatedDate {
+    apiName = "Macro.CreatedDate"
+    label = "Created Date"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Lookup CreatedById {
+    apiName = "Macro.CreatedById"
+    label = "Created By ID"
+    referenceTo = [
+      salesforce.User,
+    ]
+    createable = false
+    updateable = false
+    relationshipName = "CreatedBy"
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.DateTime LastModifiedDate {
+    apiName = "Macro.LastModifiedDate"
+    label = "Last Modified Date"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Lookup LastModifiedById {
+    apiName = "Macro.LastModifiedById"
+    label = "Last Modified By ID"
+    referenceTo = [
+      salesforce.User,
+    ]
+    createable = false
+    updateable = false
+    relationshipName = "LastModifiedBy"
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.DateTime SystemModstamp {
+    apiName = "Macro.SystemModstamp"
+    label = "System Modstamp"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Html Description {
+    apiName = "Macro.Description"
+    label = "Description"
+    createable = true
+    updateable = true
+    length = 4096
+    queryable = true
+    
+    
+  }
+  salesforce.Checkbox IsAlohaSupported {
+    apiName = "Macro.IsAlohaSupported"
+    label = "Supports Classic"
+    defaultValue = false
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Checkbox IsLightningSupported {
+    apiName = "Macro.IsLightningSupported"
+    label = "Supports Lightning"
+    defaultValue = false
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Picklist StartingContext {
+    apiName = "Macro.StartingContext"
+    label = "Apply To"
+    valueSet = [
+      {
+        fullName = "Account"
+        isActive = true
+        label = "Account"
+        default = false
+      },
+      {
+        fullName = "AccountContactRelation"
+        isActive = true
+        label = "Account Contact Relationship"
+        default = false
+      },
+      {
+        fullName = "Asset"
+        isActive = true
+        label = "Asset"
+        default = false
+      },
+      {
+        fullName = "AssetRelationship"
+        isActive = true
+        label = "Asset Relationship"
+        default = false
+      },
+      {
+        fullName = "AuthorizationForm"
+        isActive = true
+        label = "Authorization Form"
+        default = false
+      },
+      {
+        fullName = "AuthorizationFormConsent"
+        isActive = true
+        label = "Authorization Form Consent"
+        default = false
+      },
+      {
+        fullName = "AuthorizationFormDataUse"
+        isActive = true
+        label = "Authorization Form Data Use"
+        default = false
+      },
+      {
+        fullName = "AuthorizationFormText"
+        isActive = true
+        label = "Authorization Form Text"
+        default = false
+      },
+      {
+        fullName = "Case"
+        isActive = true
+        label = "Case"
+        default = false
+      },
+      {
+        fullName = "CommSubscription"
+        isActive = true
+        label = "Communication Subscription"
+        default = false
+      },
+      {
+        fullName = "CommSubscriptionChannelType"
+        isActive = true
+        label = "Communication Subscription Channel Type"
+        default = false
+      },
+      {
+        fullName = "CommSubscriptionConsent"
+        isActive = true
+        label = "Communication Subscription Consent"
+        default = false
+      },
+      {
+        fullName = "CommSubscriptionTiming"
+        isActive = true
+        label = "Communication Subscription Timing"
+        default = false
+      },
+      {
+        fullName = "Contact"
+        isActive = true
+        label = "Contact"
+        default = false
+      },
+      {
+        fullName = "ContactPointAddress"
+        isActive = true
+        label = "Contact Point Address"
+        default = false
+      },
+      {
+        fullName = "ContactPointEmail"
+        isActive = true
+        label = "Contact Point Email"
+        default = false
+      },
+      {
+        fullName = "ContactPointPhone"
+        isActive = true
+        label = "Contact Point Phone"
+        default = false
+      },
+      {
+        fullName = "Contract"
+        isActive = true
+        label = "Contract"
+        default = false
+      },
+      {
+        fullName = "DataUsePurpose"
+        isActive = true
+        label = "Data Use Purpose"
+        default = false
+      },
+      {
+        fullName = "EngagementChannelType"
+        isActive = true
+        label = "Engagement Channel Type"
+        default = false
+      },
+      {
+        fullName = "Event"
+        isActive = true
+        label = "Event"
+        default = false
+      },
+      {
+        fullName = "FeedItem"
+        isActive = true
+        label = "Feed Item"
+        default = false
+      },
+      {
+        fullName = "CollaborationGroup"
+        isActive = true
+        label = "Group"
+        default = false
+      },
+      {
+        fullName = "Image"
+        isActive = true
+        label = "Image"
+        default = false
+      },
+      {
+        fullName = "Individual"
+        isActive = true
+        label = "Individual"
+        default = false
+      },
+      {
+        fullName = "Lead"
+        isActive = true
+        label = "Lead"
+        default = false
+      },
+      {
+        fullName = "Opportunity"
+        isActive = true
+        label = "Opportunity"
+        default = false
+      },
+      {
+        fullName = "OpportunityContactRole"
+        isActive = true
+        label = "Opportunity Contact Role"
+        default = false
+      },
+      {
+        fullName = "Order"
+        isActive = true
+        label = "Order"
+        default = false
+      },
+      {
+        fullName = "PartyConsent"
+        isActive = true
+        label = "Party Consent"
+        default = false
+      },
+      {
+        fullName = "Product2"
+        isActive = true
+        label = "Product"
+        default = false
+      },
+      {
+        fullName = "ContentDocumentListViewMapping"
+        isActive = true
+        label = "Quip Document from List View"
+        default = false
+      },
+      {
+        fullName = "Quote"
+        isActive = true
+        label = "Quote"
+        default = false
+      },
+      {
+        fullName = "ProfileSkill"
+        isActive = true
+        label = "Skill"
+        default = false
+      },
+      {
+        fullName = "ProfileSkillUser"
+        isActive = true
+        label = "Skill User"
+        default = false
+      },
+      {
+        fullName = "SocialPost"
+        isActive = true
+        label = "Social Post"
+        default = false
+      },
+      {
+        fullName = "Task"
+        isActive = true
+        label = "Task"
+        default = false
+      },
+      {
+        fullName = "User"
+        isActive = true
+        label = "User"
+        default = false
+      },
+      {
+        fullName = "WebCartDocument"
+        isActive = true
+        label = "Web Cart Document"
+        default = false
+      },
+      {
+        fullName = "Yariv__c"
+        isActive = true
+        label = "Yariv"
+        default = false
+      },
+    ]
+    restricted = true
+    createable = true
+    updateable = false
+    queryable = true
+  }
+}

@@ -1,0 +1,102 @@
+type zuora_billing.refundtransactionlog {
+  string Id {
+    type = "string"
+    maxLength = 512
+    required = false
+    filterable = false
+    label = "Id"
+  }
+  string CreatedDate {
+    type = "string"
+    format = "date-time"
+    required = false
+    filterable = false
+    label = "CreatedDate"
+  }
+  string BatchId {
+    type = "string"
+    maxLength = 512
+    required = false
+    filterable = false
+    label = "BatchId"
+  }
+  string GatewayReasonCode {
+    type = "string"
+    maxLength = 512
+    required = false
+    filterable = false
+    label = "GatewayReasonCode"
+  }
+  string GatewayReasonCodeDescription {
+    type = "string"
+    maxLength = 512
+    required = false
+    filterable = false
+    label = "GatewayReasonCodeDescription"
+  }
+  string GatewayState {
+    type = "string"
+    maxLength = 512
+    required = false
+    filterable = false
+    label = "GatewayState"
+  }
+  string GatewayTransactionType {
+    type = "string"
+    maxLength = 512
+    required = false
+    filterable = false
+    label = "GatewayTransactionType"
+  }
+  string RequestString {
+    type = "string"
+    maxLength = 512
+    required = false
+    filterable = false
+    label = "RequestString"
+  }
+  string ResponseString {
+    type = "string"
+    maxLength = 512
+    required = false
+    filterable = false
+    label = "ResponseString"
+  }
+  string TransactionDate {
+    type = "string"
+    format = "date-time"
+    required = false
+    filterable = false
+    label = "TransactionDate"
+  }
+  string TransactionId {
+    type = "string"
+    maxLength = 512
+    required = false
+    filterable = false
+    label = "TransactionId"
+  }
+  string RefundId {
+    type = "string"
+    format = "uuid"
+    required = false
+    filterable = false
+    referenceTo = [
+      zuora_billing.refund.field.Id,
+    ]
+    cardinality = "manyToOne"
+    recordConstraints = {
+      create = {
+        enforceValidMapping = true
+      }
+    }
+    label = "RefundId"
+  }
+  string Gateway {
+    type = "string"
+    maxLength = 512
+    required = false
+    filterable = false
+    label = "Gateway"
+  }
+}

@@ -1,0 +1,8 @@
+zuora_billing.Settings_UnitOfMeasure License {
+  name = "License"
+  displayAs = "License"
+  precision = 0
+  roundingMode = "Up"
+  active = true
+  usageLogFileLabel = "License"
+}

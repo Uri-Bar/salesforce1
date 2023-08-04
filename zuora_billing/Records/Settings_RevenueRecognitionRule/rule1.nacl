@@ -1,0 +1,31 @@
+zuora_billing.Settings_RevenueRecognitionRule rule1 {
+  name = "rule1"
+  recognitionModel = "Daily"
+  active = false
+  description = "test"
+  roundingRule = "RoundLast"
+  apClosedDistributionRule = "MergeToNextOpen"
+  transactionDateRule = "RecognizeWithoutImpact"
+  invoiceItemAdjustmentTransactionRule = {
+    termStartField = "InvoiceDate"
+    termStartNumberOfFixedPeriod = 0
+    termStartUnitOfFixedPeriod = "Months"
+    termEndField = "RecognitionTermStartDate"
+    termEndNumberOfFixedPeriod = 10
+    termEndUnitOfFixedPeriod = "Days"
+    allocationPolicy = "EvenByDay"
+    id = "8ac69ff278ef948e0178f1d559b113d5"
+    usedTheSameTransactionRuleAsInvoiceItem = true
+  }
+  invoiceItemTransactionRule = {
+    termStartField = "InvoiceDate"
+    termStartNumberOfFixedPeriod = 0
+    termStartUnitOfFixedPeriod = "Months"
+    termEndField = "RecognitionTermStartDate"
+    termEndNumberOfFixedPeriod = 10
+    termEndUnitOfFixedPeriod = "Days"
+    allocationPolicy = "EvenByDay"
+    id = "8ac69ff278ef948e0178f1d559b113d4"
+    usedTheSameTransactionRuleAsInvoiceItem = false
+  }
+}

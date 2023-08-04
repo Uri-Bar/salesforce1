@@ -1,0 +1,25 @@
+zuora_billing.Settings_Role ZPlatform_new_role@us {
+  name = "new role"
+  category = "ZPlatform"
+  attributes = [
+    {
+      name = "WorkflowManageGlobalSettingsAccess"
+      scope = "ZPlatform"
+      activationLevel = "User"
+    },
+    {
+      name = "apiWrite"
+      scope = "ZPlatform"
+      activationLevel = "User"
+    },
+    {
+      name = "ui"
+      scope = "ZPlatform"
+      activationLevel = "User"
+    },
+  ]
+  
+  description = ""
+  entityId = "8ac6819b-7883-361b-0178-93726ba53eff"
+  custom = true
+}

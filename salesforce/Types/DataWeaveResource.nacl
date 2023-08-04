@@ -1,0 +1,33 @@
+type salesforce.DataWeaveResource {
+  annotations {
+    serviceid metadataType {
+    }
+    boolean hasMetaFile {
+    }
+    string folderType {
+    }
+    string folderContentType {
+    }
+    string suffix {
+    }
+    string dirName {
+    }
+  }
+  number apiVersion {
+  }
+  string content {
+  }
+  serviceid fullName {
+  }
+  boolean isProtected {
+  }
+  string internalId {
+    _hidden_value = true
+    localOnly = true
+  }
+  hasMetaFile = true
+  dirName = "dw"
+  metadataType = "DataWeaveResource"
+  boolean isGlobal {
+  }
+}

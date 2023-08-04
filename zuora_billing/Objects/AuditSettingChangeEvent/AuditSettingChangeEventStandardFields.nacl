@@ -1,0 +1,147 @@
+type zuora_billing.AuditSettingChangeEvent {
+  string Id {
+    format = "uuid"
+    label = "Id"
+    origin = "system"
+    type = "string"
+    required = true
+    filterable = true
+  }
+  string CreatedById {
+    label = "CreatedById"
+    origin = "system"
+    type = "string"
+    required = true
+    filterable = true
+  }
+  string UpdatedById {
+    label = "UpdatedById"
+    origin = "system"
+    type = "string"
+    required = true
+    filterable = true
+  }
+  string CreatedDate {
+    format = "date-time"
+    origin = "system"
+    type = "string"
+    label = "CreatedDate"
+    required = true
+    filterable = true
+  }
+  string UpdatedDate {
+    format = "date-time"
+    origin = "system"
+    type = "string"
+    label = "UpdatedDate"
+    required = true
+    filterable = true
+  }
+  string Action {
+    label = "Change action"
+    origin = "system"
+    type = "string"
+    required = true
+    filterable = false
+  }
+  string UserName {
+    label = "Username"
+    origin = "system"
+    type = "string"
+    required = false
+    filterable = true
+  }
+  string AttributeId {
+    label = "Attribute ID"
+    origin = "system"
+    type = "string"
+    required = false
+    filterable = false
+  }
+  string OldValue {
+    label = "Previous Value"
+    origin = "system"
+    type = "string"
+    required = false
+    filterable = false
+  }
+  string SettingType {
+    label = "Setting type"
+    origin = "system"
+    type = "string"
+    required = true
+    filterable = true
+  }
+  string Timestamp {
+    format = "date-time"
+    label = "Event timestamp"
+    origin = "system"
+    type = "string"
+    required = true
+    filterable = true
+  }
+  string Namespace {
+    label = "Setting namespace"
+    origin = "system"
+    type = "string"
+    required = false
+    filterable = true
+  }
+  string TransactionId {
+    format = "uuid"
+    label = "Change transaction ID"
+    origin = "system"
+    type = "string"
+    required = true
+    filterable = true
+  }
+  string UserId {
+    label = "User ID"
+    origin = "system"
+    type = "string"
+    required = false
+    filterable = false
+  }
+  number SequenceNumber {
+    label = "Event sequence number"
+    origin = "system"
+    type = "integer"
+    required = true
+    filterable = false
+  }
+  string EventId {
+    label = "Event ID"
+    origin = "system"
+    type = "string"
+    required = true
+    filterable = false
+  }
+  string AttributeName {
+    label = "Attribute Name"
+    origin = "system"
+    type = "string"
+    required = false
+    filterable = false
+  }
+  string NewValue {
+    label = "New Value"
+    origin = "system"
+    type = "string"
+    required = false
+    filterable = false
+  }
+  string TokenId {
+    label = "User token ID"
+    origin = "system"
+    type = "string"
+    required = true
+    filterable = false
+  }
+  string SettingObjectName {
+    label = "Instance name"
+    origin = "system"
+    type = "string"
+    required = false
+    filterable = false
+  }
+}

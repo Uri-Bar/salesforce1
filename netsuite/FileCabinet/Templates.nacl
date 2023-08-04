@@ -1,0 +1,7 @@
+netsuite.folder Templates {
+  description = "Templates Folder"
+  bundleable = false
+  isinactive = false
+  isprivate = false
+  path = "/Templates"
+}

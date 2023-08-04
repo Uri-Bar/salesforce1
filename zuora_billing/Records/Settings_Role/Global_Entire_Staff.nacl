@@ -1,0 +1,44 @@
+zuora_billing.Settings_Role Global_Entire_Staff@us {
+  name = "Entire Staff"
+  category = "Global"
+  attributes = [
+    {
+      name = "allowMoreThanTenNewSubscriptions"
+      scope = "TenantSetting"
+      activationLevel = "EntityAndUser"
+    },
+    {
+      name = "allowNewSubscriptions"
+      scope = "TenantSetting"
+      activationLevel = "EntityAndUser"
+    },
+    {
+      name = "enableAccountingCodesFeature"
+      scope = "TenantSetting"
+      activationLevel = "EntityAndUser"
+    },
+    {
+      name = "enableAdvancedBillingAndPaymentOperationsFeature"
+      scope = "TenantSetting"
+      activationLevel = "EntityAndUser"
+    },
+    {
+      name = "enableMultipleSubscriptionsPerCustomerFeature"
+      scope = "TenantSetting"
+      activationLevel = "EntityAndUser"
+    },
+    {
+      name = "enableTermedSubscriptions"
+      scope = "TenantSetting"
+      activationLevel = "EntityAndUser"
+    },
+    {
+      name = "enableTriggerConditions"
+      scope = "TenantSetting"
+      activationLevel = "EntityAndUser"
+    },
+  ]
+  
+  entityId = "8ac6819b-7883-361b-0178-93726ba53eff"
+  custom = false
+}

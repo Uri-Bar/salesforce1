@@ -1,0 +1,93 @@
+zuora_billing.Task Apply_Late_Fee_to_all_Subscriptions_for_Accounts___10_Days_Overdue_Limit_1_3_ssssssssysssssu__Export_Subscriptions_tied_to_Late_Accounts@uuuuuuuuuuuuuuumuusssss {
+  name = "Export Subscriptions tied to Late Accounts"
+  parameters = {
+    fields = {
+      Account = {
+        Name = "true"
+        Balance = "true"
+        AccountNumber = "true"
+      }
+      Subscription = {
+        Id = "true"
+        Name = "true"
+      }
+    }
+    where_clause = "Subscription.Status = 'Active' AND Account.Balance > 0 AND Account.LastInvoiceDate  < 'today - 10 day' Limit 1"
+  }
+  action_type = "Export"
+  object = zuora_billing.subscription
+  call_type = "SOAP"
+  concurrent_limit = 9999999
+  additionalProperties = {
+    css = {
+      top = "40px"
+      left = "314px"
+    }
+    priority = "Medium"
+    
+  }
+  _parent = [
+    zuora_billing.WorkflowExport.instance.Apply_Late_Fee_to_all_Subscriptions_for_Accounts___10_Days_Overdue_Limit_1_3@ssssssssysssssu,
+  ]
+  _generated_dependencies = [
+    {
+      reference = zuora_billing.account.field.AccountNumber
+      occurrences = [
+        {
+          location = zuora_billing.Task.instance.Apply_Late_Fee_to_all_Subscriptions_for_Accounts___10_Days_Overdue_Limit_1_3_ssssssssysssssu__Export_Subscriptions_tied_to_Late_Accounts@uuuuuuuuuuuuuuumuusssss.parameters.fields.Account.AccountNumber
+        },
+      ]
+    },
+    {
+      reference = zuora_billing.account.field.Balance
+      occurrences = [
+        {
+          location = zuora_billing.Task.instance.Apply_Late_Fee_to_all_Subscriptions_for_Accounts___10_Days_Overdue_Limit_1_3_ssssssssysssssu__Export_Subscriptions_tied_to_Late_Accounts@uuuuuuuuuuuuuuumuusssss.parameters.fields.Account.Balance
+        },
+        {
+          location = zuora_billing.Task.instance.Apply_Late_Fee_to_all_Subscriptions_for_Accounts___10_Days_Overdue_Limit_1_3_ssssssssysssssu__Export_Subscriptions_tied_to_Late_Accounts@uuuuuuuuuuuuuuumuusssss.parameters.where_clause
+        },
+      ]
+    },
+    {
+      reference = zuora_billing.account.field.LastInvoiceDate
+      occurrences = [
+        {
+          location = zuora_billing.Task.instance.Apply_Late_Fee_to_all_Subscriptions_for_Accounts___10_Days_Overdue_Limit_1_3_ssssssssysssssu__Export_Subscriptions_tied_to_Late_Accounts@uuuuuuuuuuuuuuumuusssss.parameters.where_clause
+        },
+      ]
+    },
+    {
+      reference = zuora_billing.account.field.Name
+      occurrences = [
+        {
+          location = zuora_billing.Task.instance.Apply_Late_Fee_to_all_Subscriptions_for_Accounts___10_Days_Overdue_Limit_1_3_ssssssssysssssu__Export_Subscriptions_tied_to_Late_Accounts@uuuuuuuuuuuuuuumuusssss.parameters.fields.Account.Name
+        },
+      ]
+    },
+    {
+      reference = zuora_billing.subscription.field.Id
+      occurrences = [
+        {
+          location = zuora_billing.Task.instance.Apply_Late_Fee_to_all_Subscriptions_for_Accounts___10_Days_Overdue_Limit_1_3_ssssssssysssssu__Export_Subscriptions_tied_to_Late_Accounts@uuuuuuuuuuuuuuumuusssss.parameters.fields.Subscription.Id
+        },
+      ]
+    },
+    {
+      reference = zuora_billing.subscription.field.Name
+      occurrences = [
+        {
+          location = zuora_billing.Task.instance.Apply_Late_Fee_to_all_Subscriptions_for_Accounts___10_Days_Overdue_Limit_1_3_ssssssssysssssu__Export_Subscriptions_tied_to_Late_Accounts@uuuuuuuuuuuuuuumuusssss.parameters.fields.Subscription.Name
+        },
+      ]
+    },
+    {
+      reference = zuora_billing.subscription.field.Status
+      occurrences = [
+        {
+          location = zuora_billing.Task.instance.Apply_Late_Fee_to_all_Subscriptions_for_Accounts___10_Days_Overdue_Limit_1_3_ssssssssysssssu__Export_Subscriptions_tied_to_Late_Accounts@uuuuuuuuuuuuuuumuusssss.parameters.where_clause
+        },
+      ]
+    },
+  ]
+}

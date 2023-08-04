@@ -1,0 +1,12 @@
+workato.recipe bla_1786969 {
+  name = "Event"
+  trigger_application = "workato_webhooks"
+  applications = [
+    "workato_webhooks",
+  ]
+  description = "When there is a new event via HTTP webhook, do action"
+  folder_id = workato.folder.instance.Oren_318283
+  running = false
+  version_no = 1
+  code = workato.recipe__code.instance.bla_1786969
+}

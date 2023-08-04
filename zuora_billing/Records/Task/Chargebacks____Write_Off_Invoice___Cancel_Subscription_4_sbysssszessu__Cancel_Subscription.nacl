@@ -1,0 +1,85 @@
+zuora_billing.Task Chargebacks____Write_Off_Invoice___Cancel_Subscription_4_sbysssszessu__Cancel_Subscription@uuuuuuuuuuumuus {
+  name = "Cancel Subscription"
+  parameters = {
+    fields = {
+      Amendment = {
+        Name = "Chargeback Cancellation"
+        Description = "Chargeback Cancellation"
+        EffectiveDate = "{% if Data.Workflow.ExecutionDate > Data.Subscription.SubscriptionEndDate %}{{ Data.Subscription.SubscriptionEndDate }}{% else %}{{ Data.Workflow.ExecutionDate }}{% endif %}"
+        ContractEffectiveDate = "{{Data.Workflow.ExecutionDate}}"
+      }
+    }
+    options = {
+      Amendment = {
+        GenerateInvoice = "false"
+      }
+    }
+  }
+  action_type = "Cancel"
+  object = zuora_billing.amendment
+  object_id = "{{Data.Subscription.Id}}"
+  call_type = "SOAP"
+  task_id = 15
+  concurrent_limit = 9999999
+  additionalProperties = {
+    css = {
+      top = "170px"
+      left = "910px"
+    }
+    priority = "Medium"
+    
+  }
+  _parent = [
+    zuora_billing.WorkflowExport.instance.Chargebacks____Write_Off_Invoice___Cancel_Subscription_4@sbysssszessu,
+  ]
+  _generated_dependencies = [
+    {
+      reference = zuora_billing.amendment.field.ContractEffectiveDate
+      occurrences = [
+        {
+          location = zuora_billing.Task.instance.Chargebacks____Write_Off_Invoice___Cancel_Subscription_4_sbysssszessu__Cancel_Subscription@uuuuuuuuuuumuus.parameters.fields.Amendment.ContractEffectiveDate
+        },
+      ]
+    },
+    {
+      reference = zuora_billing.amendment.field.Description
+      occurrences = [
+        {
+          location = zuora_billing.Task.instance.Chargebacks____Write_Off_Invoice___Cancel_Subscription_4_sbysssszessu__Cancel_Subscription@uuuuuuuuuuumuus.parameters.fields.Amendment.Description
+        },
+      ]
+    },
+    {
+      reference = zuora_billing.amendment.field.EffectiveDate
+      occurrences = [
+        {
+          location = zuora_billing.Task.instance.Chargebacks____Write_Off_Invoice___Cancel_Subscription_4_sbysssszessu__Cancel_Subscription@uuuuuuuuuuumuus.parameters.fields.Amendment.EffectiveDate
+        },
+      ]
+    },
+    {
+      reference = zuora_billing.amendment.field.Name
+      occurrences = [
+        {
+          location = zuora_billing.Task.instance.Chargebacks____Write_Off_Invoice___Cancel_Subscription_4_sbysssszessu__Cancel_Subscription@uuuuuuuuuuumuus.parameters.fields.Amendment.Name
+        },
+      ]
+    },
+    {
+      reference = zuora_billing.subscription.field.Id
+      occurrences = [
+        {
+          location = zuora_billing.Task.instance.Chargebacks____Write_Off_Invoice___Cancel_Subscription_4_sbysssszessu__Cancel_Subscription@uuuuuuuuuuumuus.object_id
+        },
+      ]
+    },
+    {
+      reference = zuora_billing.subscription.field.SubscriptionEndDate
+      occurrences = [
+        {
+          location = zuora_billing.Task.instance.Chargebacks____Write_Off_Invoice___Cancel_Subscription_4_sbysssszessu__Cancel_Subscription@uuuuuuuuuuumuus.parameters.fields.Amendment.EffectiveDate
+        },
+      ]
+    },
+  ]
+}

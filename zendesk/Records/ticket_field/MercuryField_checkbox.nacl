@@ -1,0 +1,18 @@
+zendesk.ticket_field checkbox_MercuryField {
+  type = "checkbox"
+  
+  raw_title = "MercuryField"
+  
+  raw_description = "Catch me if you can"
+  active = true
+  required = false
+  collapsed_for_agents = false
+  
+  raw_title_in_portal = "MercuryField"
+  visible_in_portal = true
+  editable_in_portal = true
+  required_in_portal = false
+  tag = ""
+  removable = true
+  agent_description = "A very fluid field..."
+}

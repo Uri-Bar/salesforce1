@@ -1,0 +1,5 @@
+workato.connection My_Gmail_connection@s {
+  application = "gmail"
+  name = "My Gmail connection"
+  folder_id = workato.folder.instance.Root
+}

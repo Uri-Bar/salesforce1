@@ -1,0 +1,12 @@
+netsuite.file SuiteBundles_Bundle_351444_Docusign_Images_ds_header_gradient_png@dsddduuv {
+  bundleable = false
+  isinactive = false
+  availablewithoutlogin = false
+  generateurltimestamp = false
+  hideinbundle = false
+  path = "/SuiteBundles/Bundle 351444/Docusign/Images/ds_header_gradient.png"
+  content = file("netsuite/FileCabinet/SuiteBundles/Bundle 351444/Docusign/Images/ds_header_gradient.png")
+  _parent = [
+    netsuite.folder.instance.SuiteBundles_Bundle_351444_Docusign_Images@dsdd,
+  ]
+}

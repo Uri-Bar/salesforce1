@@ -1,0 +1,11 @@
+netsuite.advancedpdftemplate custtmpl_104_2239021_318 {
+  scriptid = "custtmpl_104_2239021_318"
+  displaysourcecode = false
+  isinactive = false
+  preferred = true
+  printtype = "SEARCH"
+  savedsearch = netsuite.savedsearch.instance.customsearch22.scriptid
+  title = "Empty PDF/HTML Template 5"
+  trantype = "CUSTINVC"
+  content = file("netsuite/advancedpdftemplate/custtmpl_104_2239021_318.xml")
+}

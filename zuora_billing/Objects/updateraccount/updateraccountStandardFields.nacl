@@ -1,0 +1,137 @@
+type zuora_billing.updateraccount {
+  string Id {
+    type = "string"
+    format = "uuid"
+    required = false
+    filterable = false
+    label = "Id"
+  }
+  string CreatedById {
+    type = "string"
+    format = "uuid"
+    required = false
+    filterable = false
+    label = "CreatedById"
+  }
+  string CreatedDate {
+    type = "string"
+    format = "date-time"
+    required = false
+    filterable = false
+    label = "CreatedDate"
+  }
+  string UpdatedById {
+    type = "string"
+    format = "uuid"
+    required = false
+    filterable = false
+    label = "UpdatedById"
+  }
+  string UpdatedDate {
+    type = "string"
+    format = "date-time"
+    required = false
+    filterable = false
+    label = "UpdatedDate"
+  }
+  number VersionOptimizedLock {
+    type = "integer"
+    required = false
+    filterable = false
+    label = "VersionOptimizedLock"
+  }
+  string UpdaterName {
+    type = "string"
+    maxLength = 512
+    required = false
+    filterable = false
+    label = "UpdaterName"
+  }
+  string UpdaterGatewayType {
+    type = "string"
+    maxLength = 512
+    required = false
+    filterable = false
+    label = "UpdaterGatewayType"
+  }
+  boolean Default {
+    type = "boolean"
+    required = false
+    filterable = false
+    label = "Default"
+  }
+  boolean Active {
+    type = "boolean"
+    required = false
+    filterable = false
+    label = "Active"
+  }
+  boolean ProcessVisa {
+    type = "boolean"
+    required = false
+    filterable = false
+    label = "ProcessVisa"
+  }
+  boolean ProcessMastercard {
+    type = "boolean"
+    required = false
+    filterable = false
+    label = "ProcessMastercard"
+  }
+  number DefaultCompletionDays {
+    type = "integer"
+    required = false
+    filterable = false
+    label = "DefaultCompletionDays"
+  }
+  number MaxRetryDays {
+    type = "integer"
+    required = false
+    filterable = false
+    label = "MaxRetryDays"
+  }
+  number DaysToUpdateBeforeBcd {
+    type = "integer"
+    required = false
+    filterable = false
+    label = "DaysToUpdateBeforeBcd"
+  }
+  string Parameter {
+    type = "string"
+    maxLength = 512
+    required = false
+    filterable = false
+    label = "Parameter"
+  }
+  boolean ProcessAssociatedGwOnly {
+    type = "boolean"
+    required = false
+    filterable = false
+    label = "ProcessAssociatedGwOnly"
+  }
+  boolean Test {
+    type = "boolean"
+    required = false
+    filterable = false
+    label = "Test"
+  }
+  string ParameterNew {
+    type = "string"
+    maxLength = 512
+    required = false
+    filterable = false
+    label = "ParameterNew"
+  }
+  boolean ProcessAutopayDefaultPmOnly {
+    type = "boolean"
+    required = false
+    filterable = false
+    label = "ProcessAutopayDefaultPmOnly"
+  }
+  boolean IgnoreClosedResponse {
+    type = "boolean"
+    required = false
+    filterable = false
+    label = "IgnoreClosedResponse"
+  }
+}

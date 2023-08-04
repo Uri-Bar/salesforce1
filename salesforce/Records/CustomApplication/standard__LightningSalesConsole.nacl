@@ -1,0 +1,118 @@
+salesforce.CustomApplication standard__LightningSalesConsole {
+  fullName = "standard__LightningSalesConsole"
+  actionOverrides = [
+    {
+      actionName = "View"
+      comment = "Action override created by Lightning App Builder during activation."
+      content = "Account_Record_Page2"
+      formFactor = "Large"
+      skipRecordTypeSelect = false
+      type = "Flexipage"
+      pageOrSobjectType = "Account"
+    },
+    {
+      actionName = "View"
+      comment = "Action override created by Lightning App Builder during activation."
+      content = "Contact_Record_Page1"
+      formFactor = "Large"
+      skipRecordTypeSelect = false
+      type = "Flexipage"
+      pageOrSobjectType = "Contact"
+    },
+    {
+      actionName = "View"
+      comment = "Action override created by Lightning App Builder during activation."
+      content = "Opportunity_Record_Page1"
+      formFactor = "Large"
+      skipRecordTypeSelect = false
+      type = "Flexipage"
+      pageOrSobjectType = "Opportunity"
+    },
+    {
+      actionName = "View"
+      comment = "Action override created by Lightning App Builder during activation."
+      content = "Lead_Record_Page1"
+      formFactor = "Large"
+      skipRecordTypeSelect = false
+      type = "Flexipage"
+      pageOrSobjectType = "Lead"
+    },
+  ]
+  formFactors = [
+    "Small",
+    "Large",
+  ]
+  isNavAutoTempTabsDisabled = false
+  isNavPersonalizationDisabled = false
+  label = "Sales Console"
+  navType = "Console"
+  tabs = [
+    "standard-home",
+    "standard-Lead",
+    "standard-Account",
+    "standard-Contact",
+    "standard-Opportunity",
+    "standard-Campaign",
+    "standard-Task",
+    "standard-Event",
+    "standard-ContentNote",
+    "standard-report",
+    "standard-Dashboard",
+    "standard-Feed",
+    "standard-CollaborationGroup",
+    "standard-File",
+    salesforce.CustomTab.instance.Yariv__c,
+  ]
+  uiType = "Lightning"
+  utilityBar = "LightningSalesConsole_UtilityBar"
+  workspaceConfig = {
+    mappings = [
+      {
+        tab = salesforce.CustomTab.instance.Yariv__c
+      },
+      {
+        tab = "standard-Account"
+      },
+      {
+        tab = "standard-Campaign"
+      },
+      {
+        tab = "standard-CollaborationGroup"
+      },
+      {
+        tab = "standard-Contact"
+      },
+      {
+        tab = "standard-ContentNote"
+      },
+      {
+        tab = "standard-Dashboard"
+      },
+      {
+        tab = "standard-Event"
+      },
+      {
+        tab = "standard-Feed"
+      },
+      {
+        tab = "standard-File"
+      },
+      {
+        tab = "standard-Lead"
+      },
+      {
+        tab = "standard-Opportunity"
+      },
+      {
+        tab = "standard-Task"
+      },
+      {
+        tab = "standard-home"
+      },
+      {
+        tab = "standard-report"
+      },
+    ]
+  }
+  isNavTabPersistenceDisabled = false
+}

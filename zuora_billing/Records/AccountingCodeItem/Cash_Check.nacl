@@ -1,0 +1,6 @@
+zuora_billing.AccountingCodeItem Cash_Check {
+  name = "Check"
+  type = "Cash"
+  category = "Assets"
+  status = "Active"
+}

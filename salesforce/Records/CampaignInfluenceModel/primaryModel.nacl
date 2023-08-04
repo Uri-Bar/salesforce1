@@ -1,0 +1,9 @@
+salesforce.CampaignInfluenceModel primaryModel {
+  fullName = "primaryModel"
+  isActive = true
+  isDefaultModel = true
+  isModelLocked = true
+  modelDescription = "Primary Campaign gets 100% of the revenue share"
+  name = "Salesforce Model"
+  recordPreference = "AllRecords"
+}

@@ -1,0 +1,34 @@
+netsuite.clientscript customscript_dp_searchdemo {
+  scriptid = "customscript_dp_searchdemo"
+  isinactive = false
+  name = "DP Search Demo"
+  notifyadmins = false
+  notifyowner = true
+  notifyuser = false
+  scriptfile = netsuite.file.instance.SuiteScripts_dp_dp_searchdemo_js@dduv.path
+  scriptdeployments = {
+    scriptdeployment = {
+      customdeploy_dp_searchdemo_deploy1 = {
+        scriptid = "customdeploy_dp_searchdemo_deploy1"
+        allemployees = false
+        alllocalizationcontexts = true
+        allpartners = false
+        allroles = false
+        audslctrole = "[scriptid=customroledp_role1]|[scriptid=customrole1084]"
+        executioncontext = "ACTION|ADVANCEDREVREC|BANKCONNECTIVITY|BANKSTATEMENTPARSER|BUNDLEINSTALLATION|CLIENT|CONSOLRATEADJUSTOR|CSVIMPORT|CUSTOMGLLINES|CUSTOMMASSUPDATE|DATASETBUILDER|DEBUGGER|EMAILCAPTURE|FICONNECTIVITY|FIPARSER|MAPREDUCE|OCRPLUGIN|OTHER|PAYMENTGATEWAY|PAYMENTPOSTBACK|PLATFORMEXTENSION|PORTLET|PROMOTIONS|RECORDACTION|RESTLET|RESTWEBSERVICES|SCHEDULED|SDFINSTALLATION|SHIPPINGPARTNERS|SUITELET|TAXCALCULATION|USEREVENT|USERINTERFACE|WEBSERVICES|WORKBOOKBUILDER|WORKFLOW"
+        isdeployed = true
+        loglevel = "DEBUG"
+        recordtype = "ASSEMBLYBUILD"
+        status = "TESTING"
+      }
+    }
+  }
+  _generated_dependencies = [
+    {
+      reference = netsuite.role.instance.customrole1084.scriptid
+    },
+    {
+      reference = netsuite.role.instance.customroledp_role1.scriptid
+    },
+  ]
+}

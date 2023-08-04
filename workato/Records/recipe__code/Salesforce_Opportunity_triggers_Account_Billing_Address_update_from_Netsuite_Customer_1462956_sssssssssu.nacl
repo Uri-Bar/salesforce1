@@ -1,0 +1,175 @@
+workato.recipe__code Salesforce_Opportunity_triggers_Account_Billing_Address_update_from_Netsuite_Customer_1462956_sssssssssu@uuuuuuuuuum {
+  number = 0
+  provider = "salesforce"
+  name = "updated_custom_object"
+  as = "b12c9036"
+  title = "New/updated Opportunity"
+  description = "New/updated <span class=\"provider\">Opportunity</span> in <span class=\"provider\">Salesforce</span>"
+  keyword = "trigger"
+  dynamicPickListSelection = {
+    sobject_name = "Opportunity"
+    field_list = [
+      {
+        label = "Opportunity ID"
+        value = "Id"
+      },
+      {
+        label = "Account ID"
+        value = "AccountId"
+      },
+      {
+        label = "Won"
+        value = "IsWon"
+      },
+      {
+        label = "Account.Billing Address"
+        value = "Account$Account ID.BillingAddress"
+      },
+      {
+        label = "Campaign.Name"
+        value = "Campaign$Campaign ID.Name"
+      },
+    ]
+    table_list = [
+      {
+        label = "Campaign"
+        value = "Campaign"
+      },
+      {
+        label = "Account"
+        value = "Account"
+      },
+    ]
+  }
+  input = {
+    sobject_name = "Opportunity"
+    since_offset = "-3600"
+    field_list = '''
+Id
+AccountId
+IsWon
+Account$Account ID.BillingAddress
+Campaign$Campaign ID.Name
+'''
+    table_list = '''
+Campaign
+Account
+'''
+  }
+  visible_config_fields = [
+    "sobject_name",
+    "field_list",
+    "since_offset",
+    "table_list",
+  ]
+  block = [
+    {
+      number = 1
+      provider = "netsuite"
+      name = "search_object_v2"
+      as = "44bf4bfd"
+      title = "Search Customers"
+      description = "Search <span class=\"provider\">Customers</span> in <span class=\"provider\">NetSuite</span>"
+      keyword = "action"
+      dynamicPickListSelection = {
+        netsuite_object = "Customer"
+        field_list = [
+          {
+            label = "Account number"
+            value = "accountNumber"
+          },
+        ]
+        custom_list = [
+          {
+            label = "Custom account city"
+            value = "entityCustomField@126"
+          },
+        ]
+      }
+      input = {
+        netsuite_object = "Customer"
+        limit = "25"
+        search_settings = {
+          string_fields = "contains"
+          integer_fields = "equalTo"
+          list_fields = "anyOf"
+        }
+        field_list = "accountNumber"
+        custom_list = "entityCustomField@126"
+        accountNumber = "#{_('data.salesforce.b12c9036.AccountId')}"
+      }
+      visible_config_fields = [
+        "netsuite_object",
+        "limit",
+        "field_list",
+        "custom_list",
+        "custom_column_list",
+        "search_settings",
+        "search_settings.string_fields",
+        "search_settings.integer_fields",
+        "search_settings.list_fields",
+        "accountNumber",
+      ]
+      uuid = "52592c34-1c98-441a-a81a-1f53ad4589a9"
+    },
+    {
+      number = 2
+      keyword = "if"
+      input = {
+        type = "compound"
+        operand = "and"
+        conditions = [
+          {
+            operand = "not_equals_to"
+            lhs = "#{_('data.netsuite.44bf4bfd.Customers.first.custom_fields.f_126_custentitycustom_account_city')}"
+            rhs = "#{_('data.salesforce.b12c9036.Account.BillingAddress.city')}"
+          },
+          {
+            operand = "present"
+            lhs = ""
+            rhs = ""
+          },
+        ]
+      }
+      block = [
+        {
+          number = 3
+          provider = "salesforce"
+          name = "update_sobject"
+          as = "d0852750"
+          title = "Update Account"
+          description = "Update <span class=\"provider\">Account</span> in <span class=\"provider\">Salesforce</span>"
+          keyword = "action"
+          dynamicPickListSelection = {
+            sobject_name = "Account"
+            field_list = [
+              {
+                label = "Name"
+                value = "Name"
+              },
+            ]
+          }
+          input = {
+            sobject_name = "Account"
+            id = "#{_('data.salesforce.b12c9036.AccountId')}"
+            Netsuite_city__c = "#{_('data.netsuite.44bf4bfd.Customers.first.custom_fields.f_126_custentitycustom_account_city')}"
+          }
+          visible_config_fields = [
+            "sobject_name",
+            "id",
+            "BillingCity",
+            "BillingStreet",
+            "BillingPostalCode",
+            "Netsuite_city__c",
+          ]
+          uuid = "f3ba091a-652f-4981-a2a4-1ca05efdf2a6"
+        },
+      ]
+      uuid = "a1665c83-4025-4340-8597-8738a1ed4ad6"
+    },
+  ]
+  uuid = "0dd88fb6-cbcd-4b0f-9e45-1328ea1e77aa"
+  _parent = [
+    workato.recipe.instance.Salesforce_Opportunity_triggers_Account_Billing_Address_update_from_Netsuite_Customer_1462956@sssssssssu,
+  ]
+}

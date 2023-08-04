@@ -1,0 +1,16 @@
+zendesk.ticket_field NH_Silver_ticket_text@ssu {
+  type = "text"
+  
+  raw_title = "NH Silver ticket"
+  
+  raw_description = ""
+  active = true
+  required = false
+  collapsed_for_agents = false
+  
+  raw_title_in_portal = "NH Silver ticket"
+  visible_in_portal = false
+  editable_in_portal = false
+  required_in_portal = false
+  removable = true
+}

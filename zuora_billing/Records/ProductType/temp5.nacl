@@ -1,0 +1,8 @@
+zuora_billing.ProductType SKU_00000012@b {
+  sku = "SKU-00000012"
+  name = "temp5"
+  description = ""
+  category = "Miscellaneous Products"
+  effectiveStartDate = "2021-03-01"
+  effectiveEndDate = "2021-03-09"
+}

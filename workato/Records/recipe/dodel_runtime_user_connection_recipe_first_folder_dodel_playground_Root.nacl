@@ -1,0 +1,20 @@
+workato.recipe dodel_runtime_user_connection_recipe_first_folder_dodel_playground_Root {
+  name = "dodel_runtime_user_connection_recipe"
+  trigger_application = "workato_recipe_function"
+  applications = [
+    "workato_recipe_function",
+  ]
+  description = "When there is a trigger event, do action"
+  folder_id = workato.folder.instance.first_folder_dodel_playground_Root
+  running = false
+  version_no = 5
+  config = [
+    {
+      keyword = "application"
+      name = "workato_recipe_function"
+      provider = "workato_recipe_function"
+      skip_validation = false
+    },
+  ]
+  code = workato.recipe__code.instance.dodel_runtime_user_connection_recipe_first_folder_dodel_playground_Root
+}

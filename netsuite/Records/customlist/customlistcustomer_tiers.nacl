@@ -1,0 +1,27 @@
+netsuite.customlist customlistcustomer_tiers {
+  scriptid = "customlistcustomer_tiers"
+  description = "List of Tiers for customers_"
+  isinactive = false
+  ismatrixoption = false
+  isordered = true
+  name = netsuite.translationcollection.instance.custcollection_new_collections.strings.string._custom_tiers.scriptid
+  customvalues = {
+    customvalue = {
+      val_51689_t2257815_143 = {
+        scriptid = "val_51689_t2257815_143"
+        abbreviation = "E"
+        isinactive = false
+        value = "Enterprise"
+        index = 0
+      }
+      val_51690_t2257815_166 = {
+        scriptid = "val_51690_t2257815_166"
+        abbreviation = "S"
+        isinactive = false
+        value = "Small Business"
+        index = 1
+      }
+    }
+  }
+  nameTranslate = true
+}

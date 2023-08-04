@@ -1,0 +1,4 @@
+netsuite.center custcenter1 {
+  scriptid = "custcenter1"
+  label = "testcenter1 aaaa"
+}

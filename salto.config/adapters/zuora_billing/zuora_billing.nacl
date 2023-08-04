@@ -1,0 +1,11 @@
+zuora_billing {
+  fetch = {
+    include = [
+      {
+        type = ".*"
+      },
+    ]
+    exclude = [
+    ]
+  }
+}

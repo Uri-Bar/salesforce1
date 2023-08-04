@@ -1,0 +1,32 @@
+type netsuite.bin {
+  annotations {
+    hidden_string source {
+    }
+  }
+  
+  
+  
+  
+  
+  
+  string internalId {
+    isAttribute = true
+    _hidden_value = true
+  }
+  string externalId {
+    isAttribute = true
+  }
+  netsuite.nullField nullFieldList {
+  }
+  string binNumber {
+  }
+  netsuite.location location {
+    isReference = true
+  }
+  string memo {
+  }
+  boolean isInactive {
+  }
+  netsuite.customFieldList customFieldList {
+  }
+}

@@ -1,0 +1,11 @@
+okta.Feature Reports___MFA_enrollment_by_user@sbssss {
+  
+  type = "self-service"
+  status = "DISABLED"
+  name = "Reports - MFA enrollment by user"
+  description = "Enable a new report in the admin console to understand the authenticators users in the Org have enrolled"
+  stage = {
+    value = "EA"
+  }
+  
+}

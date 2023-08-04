@@ -1,0 +1,20 @@
+zuora_billing.Settings_Notification Invoice_Due_30_Days_Past_Due_8ac69ff278d483ea0178d95495e16922@susssu {
+  profileId = zuora_billing.Settings_CommunicationProfile.instance.Neta_test@s
+  eventName = "Invoice Due"
+  name = "30 Days Past Due"
+  description = "The invoice is 30 days past due."
+  active = false
+  hidden = false
+  param1 = "30"
+  param2 = "Days_after_Invoice_Due_Date"
+  param4 = "Not include invoice PDF"
+  emailOption = true
+  emailTemplateName = zuora_billing.PublicEmailTemplate.instance.Invoice_Due_Default_Email_Template@s
+  calloutOption = false
+  contentType = "APPLICATION_JSON"
+  calloutRetriable = false
+  calloutAuth = false
+  calloutOauth2 = false
+  calloutPreemptiveAuth = false
+  useCustomRequestBody = false
+}

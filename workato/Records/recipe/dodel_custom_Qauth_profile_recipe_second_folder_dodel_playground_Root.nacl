@@ -1,0 +1,30 @@
+workato.recipe dodel_custom_Qauth_profile_recipe_second_folder_dodel_playground_Root {
+  name = "dodel_custom_Qauth_profile_recipe"
+  trigger_application = "clock"
+  action_applications = [
+    "google_drive",
+  ]
+  applications = [
+    "clock",
+    "google_drive",
+  ]
+  description = "When there is a trigger on a specified schedule, do action"
+  folder_id = workato.folder.instance.second_folder_dodel_playground_Root
+  running = false
+  version_no = 2
+  config = [
+    {
+      keyword = "application"
+      name = "clock"
+      provider = "clock"
+      skip_validation = false
+    },
+    {
+      keyword = "application"
+      name = "google_drive"
+      provider = "google_drive"
+      skip_validation = false
+    },
+  ]
+  code = workato.recipe__code.instance.dodel_custom_Qauth_profile_recipe_second_folder_dodel_playground_Root
+}

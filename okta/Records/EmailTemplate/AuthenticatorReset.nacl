@@ -1,0 +1,6 @@
+okta.EmailTemplate AuthenticatorReset {
+  name = "AuthenticatorReset"
+  _parent = [
+    okta.Brand.instance,
+  ]
+}

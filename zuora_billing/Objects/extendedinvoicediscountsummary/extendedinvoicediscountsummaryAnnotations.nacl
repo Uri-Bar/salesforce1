@@ -1,0 +1,17 @@
+type zuora_billing.extendedinvoicediscountsummary {
+  annotations {
+    string metadataType {
+    }
+    string label {
+    }
+    string description {
+    }
+    hidden_string id {
+    }
+    string objectType {
+    }
+  }
+  metadataType = "StandardObject"
+  objectType = "extendedinvoicediscountsummary"
+  label = "ExtendedInvoiceDiscountSummary"
+}

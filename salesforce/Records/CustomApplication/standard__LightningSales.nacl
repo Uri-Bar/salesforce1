@@ -1,0 +1,53 @@
+salesforce.CustomApplication standard__LightningSales {
+  fullName = "standard__LightningSales"
+  actionOverrides = [
+    {
+      actionName = "View"
+      comment = "Action override created by Lightning App Builder during activation."
+      content = "Account_Record_Page"
+      formFactor = "Large"
+      skipRecordTypeSelect = false
+      type = "Flexipage"
+      pageOrSobjectType = "Account"
+    },
+  ]
+  brand = {
+    headerColor = "#0070D2"
+    logoVersion = 1
+    shouldOverrideOrgTheme = false
+  }
+  description = "Sell smarter and faster with the world's #1 CRM solution."
+  formFactors = [
+    "Large",
+  ]
+  isNavAutoTempTabsDisabled = false
+  isNavPersonalizationDisabled = false
+  label = "Sales"
+  navType = "Standard"
+  tabs = [
+    "standard-home",
+    "standard-Account",
+    "standard-Contact",
+    "standard-Lead",
+    "standard-Opportunity",
+    "standard-Task",
+    "standard-Event",
+    "standard-CollaborationGroup",
+    "standard-ContentNote",
+    "standard-report",
+    "standard-Dashboard",
+    "standard-Forecasting3",
+    "standard-File",
+    "standard-ListEmail",
+    "standard-Quote",
+    salesforce.CustomTab.instance.Yariv__c,
+  ]
+  uiType = "Lightning"
+  utilityBar = "Sales_UtilityBar"
+  _generated_dependencies = [
+    {
+      reference = salesforce.LightningPage.instance.Sales_UtilityBar
+    },
+  ]
+  isNavTabPersistenceDisabled = false
+}

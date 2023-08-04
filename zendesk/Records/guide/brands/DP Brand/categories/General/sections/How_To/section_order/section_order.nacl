@@ -1,0 +1,6 @@
+zendesk.section_order How_To_General_DP_Brand_s_uum_suuuum@uuuuuum {
+  brand = zendesk.brand.instance.DP_Brand@s
+  _parent = [
+    zendesk.section.instance.How_To_General_DP_Brand_s_uum@suuuum,
+  ]
+}

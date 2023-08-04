@@ -1,0 +1,42 @@
+zuora_billing.WorkflowExport Apply_Late_Fee_to_all_Subscriptions_for_Accounts___10_Days_Overdue_Limit_1_3@ssssssssysssssu {
+  workflow = zuora_billing.Workflow.instance.Apply_Late_Fee_to_all_Subscriptions_for_Accounts___10_Days_Overdue_Limit_1_3_ssssssssysssssu__Apply_Late_Fee_to_all_Subscriptions_for_Accounts___10_Days_Overdue_Limit_1@uuuuuuuuuuuuuuumuussssssssysssss
+  tasks = [
+    zuora_billing.Task.instance.Apply_Late_Fee_to_all_Subscriptions_for_Accounts___10_Days_Overdue_Limit_1_3_ssssssssysssssu__Notify_About_Late_Fee@uuuuuuuuuuuuuuumuusss,
+    zuora_billing.Task.instance.Apply_Late_Fee_to_all_Subscriptions_for_Accounts___10_Days_Overdue_Limit_1_3_ssssssssysssssu__Apply_Late_Fee___Edit_to_select_RatePlan@uuuuuuuuuuuuuuumuusssbssss,
+    zuora_billing.Task.instance.Apply_Late_Fee_to_all_Subscriptions_for_Accounts___10_Days_Overdue_Limit_1_3_ssssssssysssssu__Iterate_Subscriptions@uuuuuuuuuuuuuuumuus,
+    zuora_billing.Task.instance.Apply_Late_Fee_to_all_Subscriptions_for_Accounts___10_Days_Overdue_Limit_1_3_ssssssssysssssu__Export_Subscriptions_tied_to_Late_Accounts@uuuuuuuuuuuuuuumuusssss,
+  ]
+  linkages = [
+    {
+      source_workflow_id = zuora_billing.Workflow.instance.Apply_Late_Fee_to_all_Subscriptions_for_Accounts___10_Days_Overdue_Limit_1_3_ssssssssysssssu__Apply_Late_Fee_to_all_Subscriptions_for_Accounts___10_Days_Overdue_Limit_1@uuuuuuuuuuuuuuumuussssssssysssss
+      target_task_id = zuora_billing.Task.instance.Apply_Late_Fee_to_all_Subscriptions_for_Accounts___10_Days_Overdue_Limit_1_3_ssssssssysssssu__Export_Subscriptions_tied_to_Late_Accounts@uuuuuuuuuuuuuuumuusssss
+      linkage_type = "Start"
+      
+    },
+    {
+      source_task_id = zuora_billing.Task.instance.Apply_Late_Fee_to_all_Subscriptions_for_Accounts___10_Days_Overdue_Limit_1_3_ssssssssysssssu__Export_Subscriptions_tied_to_Late_Accounts@uuuuuuuuuuuuuuumuusssss
+      target_task_id = zuora_billing.Task.instance.Apply_Late_Fee_to_all_Subscriptions_for_Accounts___10_Days_Overdue_Limit_1_3_ssssssssysssssu__Iterate_Subscriptions@uuuuuuuuuuuuuuumuus
+      linkage_type = "Success"
+      
+    },
+    {
+      source_task_id = zuora_billing.Task.instance.Apply_Late_Fee_to_all_Subscriptions_for_Accounts___10_Days_Overdue_Limit_1_3_ssssssssysssssu__Iterate_Subscriptions@uuuuuuuuuuuuuuumuus
+      target_task_id = zuora_billing.Task.instance.Apply_Late_Fee_to_all_Subscriptions_for_Accounts___10_Days_Overdue_Limit_1_3_ssssssssysssssu__Apply_Late_Fee___Edit_to_select_RatePlan@uuuuuuuuuuuuuuumuusssbssss
+      linkage_type = "For Each"
+      
+    },
+    {
+      source_task_id = zuora_billing.Task.instance.Apply_Late_Fee_to_all_Subscriptions_for_Accounts___10_Days_Overdue_Limit_1_3_ssssssssysssssu__Apply_Late_Fee___Edit_to_select_RatePlan@uuuuuuuuuuuuuuumuusssbssss
+      target_task_id = zuora_billing.Task.instance.Apply_Late_Fee_to_all_Subscriptions_for_Accounts___10_Days_Overdue_Limit_1_3_ssssssssysssssu__Notify_About_Late_Fee@uuuuuuuuuuuuuuumuusss
+      linkage_type = "Success"
+      
+    },
+  ]
+  additionalProperties = {
+    workflow_definition = {
+      description = ""
+      category = "Default"
+      name = "Apply Late Fee to all Subscriptions for Accounts > 10 Days Overdue Limit 1"
+    }
+  }
+}

@@ -1,0 +1,7 @@
+zuora_billing.Settings_CommunicationProfile Default_Profile@s {
+  name = "Default Profile"
+  locale = "default"
+  isDefault = true
+  muted = false
+  number = "CP-00000001"
+}

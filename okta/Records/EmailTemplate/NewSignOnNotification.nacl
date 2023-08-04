@@ -1,0 +1,6 @@
+okta.EmailTemplate NewSignOnNotification {
+  name = "NewSignOnNotification"
+  _parent = [
+    okta.Brand.instance,
+  ]
+}

@@ -1,0 +1,23 @@
+salesforce.WebLink Campaign_ViewAllCampaignMembers {
+  fullName = "Campaign.ViewAllCampaignMembers"
+  availability = "online"
+  displayType = "link"
+  encodingKey = "UTF-8"
+  hasMenubar = false
+  hasScrollbars = true
+  hasToolbar = false
+  height = 500
+  isResizable = true
+  linkType = "url"
+  masterLabel = "View All Campaign Members"
+  openType = "newWindow"
+  position = "none"
+  protected = false
+  showsLocation = false
+  showsStatus = false
+  url = "/camp/rptcmpgncalldown.jsp?scope=1&scopeid={!Campaign_Name}"
+  width = 500
+  _parent = [
+    salesforce.Campaign,
+  ]
+}

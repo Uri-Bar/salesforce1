@@ -1,0 +1,31 @@
+zuora_billing.Settings_RevenueRecognitionRule Recognize_upon_invoicing@s {
+  name = "Recognize upon invoicing"
+  recognitionModel = "UponInvoicing"
+  active = true
+  description = "This rule recognizes revenue all at once on the day when the charge is invoiced or when an invoice item adjustment is made."
+  roundingRule = "RoundLast"
+  apClosedDistributionRule = "MergeToNextOpen"
+  transactionDateRule = "RecognizeWithoutImpact"
+  invoiceItemAdjustmentTransactionRule = {
+    termStartField = "InvoiceItemAdjustmentDate"
+    termStartNumberOfFixedPeriod = 0
+    termStartUnitOfFixedPeriod = "Months"
+    termEndField = "RecognitionTermStartDate"
+    termEndNumberOfFixedPeriod = 0
+    termEndUnitOfFixedPeriod = "Months"
+    allocationPolicy = "EvenByDay"
+    id = "8ac698ea7883442001789372ea803215"
+    usedTheSameTransactionRuleAsInvoiceItem = false
+  }
+  invoiceItemTransactionRule = {
+    termStartField = "InvoiceDate"
+    termStartNumberOfFixedPeriod = 0
+    termStartUnitOfFixedPeriod = "Months"
+    termEndField = "RecognitionTermStartDate"
+    termEndNumberOfFixedPeriod = 0
+    termEndUnitOfFixedPeriod = "Months"
+    allocationPolicy = "EvenByDay"
+    id = "8ac698ea7883442001789372ea7f3214"
+    usedTheSameTransactionRuleAsInvoiceItem = false
+  }
+}

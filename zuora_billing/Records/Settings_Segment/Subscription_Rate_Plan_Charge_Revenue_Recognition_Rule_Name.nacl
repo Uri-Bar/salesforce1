@@ -1,0 +1,9 @@
+zuora_billing.Settings_Segment Subscription_Rate_Plan_Charge_Revenue_Recognition_Rule_Name@s {
+  object = zuora_billing.productrateplancharge
+  field = zuora_billing.productrateplancharge.field.TaxCode
+  segmentName = "Subscription Rate Plan Charge Revenue Recognition Rule Name"
+  systemId = "SubscriptionRatePlanChargeRevenueRecognitionRuleName"
+  additionalProperties = {
+    active = true
+  }
+}

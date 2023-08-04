@@ -1,0 +1,12 @@
+netsuite.file SuiteBundles_Bundle_351444_Docusign_HTML_docusign_landingpage_client_html@dsddduuv {
+  bundleable = false
+  isinactive = false
+  availablewithoutlogin = false
+  generateurltimestamp = false
+  hideinbundle = false
+  path = "/SuiteBundles/Bundle 351444/Docusign/HTML/docusign_landingpage_client.html"
+  content = file("netsuite/FileCabinet/SuiteBundles/Bundle 351444/Docusign/HTML/docusign_landingpage_client.html")
+  _parent = [
+    netsuite.folder.instance.SuiteBundles_Bundle_351444_Docusign_HTML@dsdd,
+  ]
+}

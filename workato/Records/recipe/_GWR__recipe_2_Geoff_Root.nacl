@@ -1,0 +1,26 @@
+workato.recipe _GWR__recipe_2_Geoff_Root@uussuu {
+  name = "_GWR_ recipe 2"
+  trigger_application = "salesforce"
+  applications = [
+    "salesforce",
+  ]
+  description = "When there is a trigger event, do action"
+  folder_id = workato.folder.instance.Geoff_Root
+  running = false
+  stopped_at = "2022-08-10T20:04:42.118-07:00"
+  version_no = 4
+  config = [
+    {
+      keyword = "application"
+      name = "salesforce"
+      provider = "salesforce"
+      skip_validation = false
+      account_id = workato.connection.instance.Geoff_DEV@s
+    },
+  ]
+  code = workato.recipe__code.instance._GWR__recipe_2_Geoff_Root_uussuu@uuuuuum
+  trigger_closure = {
+    sobject = "Opportunity"
+    last_query_date = "2022-08-11T03:04:36.000+0000"
+  }
+}

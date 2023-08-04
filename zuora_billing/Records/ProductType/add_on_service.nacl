@@ -1,0 +1,11 @@
+zuora_billing.ProductType SKU_00000005@b {
+  sku = "SKU-00000005"
+  name = "add on service"
+  description = ""
+  category = "Add On Services"
+  effectiveStartDate = "2021-11-18"
+  effectiveEndDate = "2021-11-23"
+  productRatePlans = [
+    zuora_billing.ProductRatePlanType.instance.SKU_00000005_b__New_Rate_Plan@umuuss,
+  ]
+}

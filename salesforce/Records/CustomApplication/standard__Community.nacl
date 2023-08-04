@@ -1,0 +1,16 @@
+salesforce.CustomApplication standard__Community {
+  fullName = "standard__Community"
+  defaultLandingTab = "standard-home"
+  isNavAutoTempTabsDisabled = false
+  isNavPersonalizationDisabled = false
+  tabs = [
+    "standard-Chatter",
+    "standard-Contact",
+    "standard-Account",
+    "standard-Idea",
+    "standard-report",
+    "standard-Dashboard",
+    salesforce.CustomTab.instance.Yariv__c,
+  ]
+  isNavTabPersistenceDisabled = false
+}

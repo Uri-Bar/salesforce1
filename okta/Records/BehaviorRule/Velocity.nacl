@@ -1,0 +1,10 @@
+okta.BehaviorRule Velocity {
+  name = "Velocity"
+  status = "ACTIVE"
+  type = "VELOCITY"
+  additionalProperties = {
+    settings = {
+      velocityKph = 805
+    }
+  }
+}

@@ -1,0 +1,23 @@
+zuora_billing.Task SOAP___Batch_45_Account_Update_75_sbssssu__Iterate_in_groups_of_45@uuuuuuumuussss {
+  name = "Iterate in groups of 45"
+  parameters = {
+    chunk_size = "45"
+    iteration_type = "Default"
+  }
+  action_type = "Iterate"
+  object = zuora_billing.account
+  call_type = "SOAP"
+  task_id = 125
+  concurrent_limit = 9999999
+  additionalProperties = {
+    css = {
+      top = "40px"
+      left = "630px"
+    }
+    priority = "Medium"
+    
+  }
+  _parent = [
+    zuora_billing.WorkflowExport.instance.SOAP___Batch_45_Account_Update_75@sbssssu,
+  ]
+}

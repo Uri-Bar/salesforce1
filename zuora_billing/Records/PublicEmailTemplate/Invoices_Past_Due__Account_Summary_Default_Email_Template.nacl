@@ -1,0 +1,21 @@
+zuora_billing.PublicEmailTemplate Invoices_Past_Due__Account_Summary_Default_Email_Template@sszdsssss {
+  eventCategory = 1120
+  name = "Invoices Past Due, Account Summary Default Email Template"
+  description = ""
+  encodingType = "UTF8"
+  fromName = "Admin"
+  fromEmailType = "TenantEmail"
+  fromEmailAddress = "neta.marcus@salto.io"
+  replyToEmailType = "TenantEmail"
+  replyToEmailAddress = "neta.marcus@salto.io"
+  ccEmailType = "SpecificEmails"
+  ccEmailAddress = ""
+  bccEmailAddress = ""
+  toEmailType = "BillToContact"
+  toEmailAddress = ""
+  emailSubject = "Account Past Due Summary"
+  emailBody = "Dear <BillToContact.FirstName> <BillToContact.LastName>,\r<br />\r<br />We would like to inform you about the invoice past due situation on your account <Account.Name>. The following past due summary was prepared on <Today.Date> and your account had total invoice balance of <Account.Balance> <Account.Currency>.\r<br />\r<br />Past Due Invoices in the Account : \r<br />\r<br /><MergeTable.PastDueInvoice>\r<br />\r<br />Please make proper payment arrangement for the invoices that are past due.\r<br />\r<br />Thank you for your business!"
+  active = true
+  isHtml = true
+  useAdditionalAddresses = false
+}

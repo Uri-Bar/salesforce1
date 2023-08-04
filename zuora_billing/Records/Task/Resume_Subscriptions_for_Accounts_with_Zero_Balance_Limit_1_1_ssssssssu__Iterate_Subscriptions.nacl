@@ -1,0 +1,22 @@
+zuora_billing.Task Resume_Subscriptions_for_Accounts_with_Zero_Balance_Limit_1_1_ssssssssu__Iterate_Subscriptions@uuuuuuuuumuus {
+  name = "Iterate Subscriptions"
+  parameters = {
+    iteration_type = "Default"
+  }
+  action_type = "Iterate"
+  object = "Subscription__4.csv.zip"
+  call_type = "SOAP"
+  task_id = 4
+  concurrent_limit = 9999999
+  additionalProperties = {
+    css = {
+      top = "40px"
+      left = "764px"
+    }
+    priority = "Medium"
+    
+  }
+  _parent = [
+    zuora_billing.WorkflowExport.instance.Resume_Subscriptions_for_Accounts_with_Zero_Balance_Limit_1_1@ssssssssu,
+  ]
+}

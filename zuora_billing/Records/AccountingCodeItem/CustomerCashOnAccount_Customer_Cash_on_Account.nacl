@@ -1,0 +1,6 @@
+zuora_billing.AccountingCodeItem CustomerCashOnAccount_Customer_Cash_on_Account@usss {
+  name = "Customer Cash on Account"
+  type = "CustomerCashOnAccount"
+  category = "Liabilities"
+  status = "Active"
+}

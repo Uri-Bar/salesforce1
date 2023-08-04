@@ -1,0 +1,15 @@
+okta.OAuth2Scope default__email {
+  name = "email"
+  displayName = "View your email address."
+  description = "This allows the app to view your email address."
+  system = true
+  metadataPublish = "ALL_CLIENTS"
+  consent = "IMPLICIT"
+  default = false
+  additionalProperties = {
+    optional = false
+  }
+  _parent = [
+    okta.AuthorizationServer.instance.default,
+  ]
+}

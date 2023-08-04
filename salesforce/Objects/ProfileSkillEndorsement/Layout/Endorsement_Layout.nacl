@@ -1,0 +1,58 @@
+salesforce.Layout ProfileSkillEndorsement_Endorsement_Layout@bs {
+  fullName = "ProfileSkillEndorsement-Endorsement Layout"
+  layoutSections = [
+    {
+      customLabel = false
+      detailHeading = false
+      editHeading = false
+      label = "Information"
+      layoutColumns = [
+        {
+          layoutItems = [
+            {
+              behavior = "Readonly"
+              field = salesforce.ProfileSkillEndorsement.field.Name
+            },
+            {
+              behavior = "Required"
+              field = salesforce.ProfileSkillEndorsement.field.UserId
+            },
+            {
+              behavior = "Readonly"
+              field = salesforce.ProfileSkillEndorsement.field.LastModifiedById
+            },
+          ]
+        },
+        {
+          layoutItems = [
+            {
+              behavior = "Required"
+              field = salesforce.ProfileSkillEndorsement.field.ProfileSkillUserId
+            },
+            {
+              behavior = "Readonly"
+              field = salesforce.ProfileSkillEndorsement.field.CreatedById
+            },
+          ]
+        },
+      ]
+      style = "TwoColumnsLeftToRight"
+    },
+    {
+      customLabel = false
+      detailHeading = false
+      editHeading = false
+      style = "CustomLinks"
+      layoutColumns = [
+        {
+        },
+      ]
+    },
+  ]
+  showEmailCheckbox = false
+  showRunAssignmentRulesCheckbox = false
+  showSubmitAndAttachButton = false
+  _parent = [
+    salesforce.ProfileSkillEndorsement,
+  ]
+}

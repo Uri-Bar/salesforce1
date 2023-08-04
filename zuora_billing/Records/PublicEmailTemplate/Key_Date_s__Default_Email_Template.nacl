@@ -1,0 +1,27 @@
+zuora_billing.PublicEmailTemplate Key_Date_s__Default_Email_Template@sjksss {
+  eventCategory = 1230
+  name = "Key Date(s) Default Email Template"
+  description = ""
+  encodingType = "UTF8"
+  fromName = "Admin"
+  fromEmailType = "TenantEmail"
+  fromEmailAddress = "neta.marcus@salto.io"
+  replyToEmailType = "TenantEmail"
+  replyToEmailAddress = "neta.marcus@salto.io"
+  ccEmailType = "SpecificEmails"
+  ccEmailAddress = ""
+  bccEmailAddress = ""
+  toEmailType = "BillToContact"
+  toEmailAddress = ""
+  emailSubject = "Subscription <Subscription.SubscriptionName> started"
+  emailBody = '''
+Dear <BillToContact.FirstName> <BillToContact.LastName>:
+
+This is a friendly reminder that your subscription <Subscription.SubscriptionName> starts today.
+
+Thank you for your business!
+'''
+  active = true
+  isHtml = false
+  useAdditionalAddresses = false
+}

@@ -1,0 +1,30 @@
+zuora_billing.Task C19__Payment_Suspense_79_fssu__Summary_of_Stats@uuuumuuss {
+  name = "Summary of Stats"
+  parameters = {
+    code = "200"
+    template = '''
+{
+  "success": true,
+  "stats":
+    {{ Data.Iterate.Tasks | to_json }}
+}
+'''
+    processor = "Liquid"
+    strict_variables = "true"
+  }
+  action_type = "Logic::ResponseFormatter"
+  call_type = "SOAP"
+  task_id = 140
+  concurrent_limit = 9999999
+  additionalProperties = {
+    css = {
+      top = "300px"
+      left = "590px"
+    }
+    priority = "Medium"
+    
+  }
+  _parent = [
+    zuora_billing.WorkflowExport.instance.C19__Payment_Suspense_79@fssu,
+  ]
+}

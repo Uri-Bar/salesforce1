@@ -1,0 +1,11 @@
+salesforce.ForecastingType OpportunityQuantityScheduleDate {
+  fullName = "OpportunityQuantityScheduleDate"
+  active = false
+  amount = false
+  dateType = "2"
+  developerName = "OpportunityQuantityScheduleDate"
+  hasProductFamily = false
+  masterLabel = "Opportunity Quantity Schedule Date"
+  quantity = true
+  roleType = "R"
+}

@@ -1,0 +1,106 @@
+zendesk.view Mercury_View@s {
+  title = "Mercury View"
+  active = true
+  description = "Don't let them slip away"
+  execution = {
+    group_order = "desc"
+    sort_order = "desc"
+    columns = [
+      {
+        id = "satisfaction_score"
+        title = "Satisfaction"
+        filterable = true
+        sortable = true
+      },
+      {
+        id = "subject"
+        title = "Subject"
+        filterable = false
+        sortable = false
+      },
+      {
+        id = "requester"
+        title = "Requester"
+        filterable = true
+        sortable = true
+      },
+      {
+        id = "created"
+        title = "Requested"
+        filterable = false
+        sortable = true
+      },
+      {
+        id = "assignee"
+        title = "Assignee"
+        filterable = true
+        sortable = true
+      },
+      {
+        id = zendesk.ticket_field.instance.checkbox_MercuryField
+        title = "MercuryField"
+        type = "checkbox"
+        filterable = false
+        sortable = true
+      },
+    ]
+    fields = [
+      {
+        id = "satisfaction_score"
+        title = "Satisfaction"
+        filterable = true
+        sortable = true
+      },
+      {
+        id = "subject"
+        title = "Subject"
+        filterable = false
+        sortable = false
+      },
+      {
+        id = "requester"
+        title = "Requester"
+        filterable = true
+        sortable = true
+      },
+      {
+        id = "created"
+        title = "Requested"
+        filterable = false
+        sortable = true
+      },
+      {
+        id = "assignee"
+        title = "Assignee"
+        filterable = true
+        sortable = true
+      },
+    ]
+    custom_fields = [
+      {
+        id = zendesk.ticket_field.instance.checkbox_MercuryField
+        title = "MercuryField"
+        type = "checkbox"
+        filterable = false
+        sortable = true
+      },
+    ]
+  }
+  conditions = {
+    all = [
+      {
+        field = "ticket_form_id"
+        operator = "is"
+        value = zendesk.ticket_form.instance.Mercury_Form@s
+      },
+      {
+        field = "status"
+        operator = "is"
+        value = "new"
+      },
+    ]
+  }
+  
+  raw_title = "Mercury View"
+  default = false
+}

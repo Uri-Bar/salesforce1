@@ -1,0 +1,3 @@
+zuora_billing.Settings_RevenueRecognitionStatus {
+  enabled = true
+}

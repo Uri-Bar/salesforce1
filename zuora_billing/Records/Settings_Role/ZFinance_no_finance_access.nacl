@@ -1,0 +1,7 @@
+zuora_billing.Settings_Role ZFinance_no_finance_access@uss {
+  name = "no finance access"
+  description = ""
+  category = "ZFinance"
+  entityId = "8ac6819b-7883-361b-0178-93726ba53eff"
+  custom = true
+}

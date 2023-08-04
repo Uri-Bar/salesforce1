@@ -1,0 +1,28 @@
+type zuora_billing.revenuechargesummaryitem {
+  annotations {
+    string metadataType {
+    }
+    string label {
+    }
+    string description {
+    }
+    hidden_string id {
+    }
+    string objectType {
+    }
+  }
+  metadataType = "StandardObject"
+  objectType = "revenuechargesummaryitem"
+  _generated_dependencies = [
+    {
+      reference = zuora_billing.accountingperiod
+    },
+    {
+      reference = zuora_billing.revenuechargesummary
+    },
+    {
+      reference = zuora_billing.user
+    },
+  ]
+  label = "RevenueChargeSummaryItem"
+}

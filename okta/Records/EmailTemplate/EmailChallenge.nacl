@@ -1,0 +1,6 @@
+okta.EmailTemplate EmailChallenge {
+  name = "EmailChallenge"
+  _parent = [
+    okta.Brand.instance,
+  ]
+}

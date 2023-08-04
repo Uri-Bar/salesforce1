@@ -1,0 +1,41 @@
+workato.recipe Update_Stripe_upon_SF_change_2086397@ssssu {
+  name = "Update Stripe upon SF change"
+  trigger_application = "salesforce"
+  action_applications = [
+    "stripe",
+    "slack",
+  ]
+  applications = [
+    "salesforce",
+    "stripe",
+    "slack",
+  ]
+  description = "When there is a trigger event, do action"
+  folder_id = workato.folder.instance.Gil_318283
+  running = false
+  version_no = 4
+  config = [
+    {
+      keyword = "application"
+      name = "salesforce"
+      provider = "salesforce"
+      account_id = workato.connection.instance.Oren_s_Sandbox@ts
+      skip_validation = false
+    },
+    {
+      keyword = "application"
+      name = "stripe"
+      provider = "stripe"
+      account_id = workato.connection.instance.My_Stripe_account@s
+      skip_validation = false
+    },
+    {
+      keyword = "application"
+      name = "slack"
+      provider = "slack"
+      account_id = workato.connection.instance.Neta_test_slack@s
+      skip_validation = false
+    },
+  ]
+  code = workato.recipe__code.instance.Update_Stripe_upon_SF_change_2086397_ssssu@uuuuum
+}

@@ -1,0 +1,5 @@
+zuora_billing.Settings_DiscountSetting vip_discount@s {
+  priority = 0
+  name = "vip discount"
+  active = true
+}

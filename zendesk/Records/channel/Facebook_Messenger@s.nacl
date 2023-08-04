@@ -1,0 +1,3 @@
+zendesk.channel Facebook_Messenger@s {
+  name = "Facebook Messenger"
+}

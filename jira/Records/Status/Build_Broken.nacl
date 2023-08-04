@@ -1,0 +1,7 @@
+jira.Status Build_Broken@s {
+  description = "The source code committed for this issue has possibly broken the build."
+  
+  name = "Build Broken"
+  
+  statusCategory = jira.StatusCategory.instance.In_Progress@s
+}

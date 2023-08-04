@@ -1,0 +1,27 @@
+zendesk.trigger NH_Silver@s {
+  title = "NH Silver"
+  active = true
+  actions = [
+    {
+      field = "ticket_form_id"
+      value = zendesk.ticket_form.instance.NH_Silver_form@s
+    },
+  ]
+  conditions = {
+    all = [
+      {
+        field = "status"
+        operator = "is"
+        value = "open"
+      },
+      {
+        field = "priority"
+        operator = "is"
+        value = "high"
+      },
+    ]
+  }
+  raw_title = "NH Silver"
+  category_id = zendesk.trigger_category.instance.Notifications
+  default = false
+}

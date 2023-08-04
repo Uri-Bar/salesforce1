@@ -1,0 +1,25 @@
+type zuora_billing.rateplanchargetier {
+  annotations {
+    string metadataType {
+    }
+    string label {
+    }
+    string description {
+    }
+    hidden_string id {
+    }
+    string objectType {
+    }
+  }
+  metadataType = "StandardObject"
+  objectType = "rateplanchargetier"
+  _generated_dependencies = [
+    {
+      reference = zuora_billing.rateplancharge
+    },
+    {
+      reference = zuora_billing.user
+    },
+  ]
+  label = "RatePlanChargeTier"
+}

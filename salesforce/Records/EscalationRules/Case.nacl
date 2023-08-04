@@ -1,0 +1,26 @@
+salesforce.EscalationRules Case {
+  fullName = "Case"
+  escalationRule = {
+    fullName = "Check SLA Level"
+    active = true
+    ruleEntry = {
+      businessHoursSource = "Case"
+      criteriaItems = [
+        {
+          field = salesforce.Account.field.SLA_Level__c
+          operation = "equals"
+          value = "Bronze"
+        },
+      ]
+      escalationAction = {
+        assignedTo = "training+user1@salto.io"
+        assignedToType = "User"
+        minutesToEscalation = 60
+        notifyCaseOwner = false
+        notifyTo = "training+user1@salto.io"
+        notifyToTemplate = "unfiled$public/LeadsNewassignmentnotificationSAMPLE"
+      }
+      escalationStartTime = "CaseCreation"
+    }
+  }
+}

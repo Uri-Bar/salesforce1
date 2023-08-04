@@ -1,0 +1,211 @@
+workato.recipe__code dodel_track_jira_recipe_jira_dodel_playground_Root_sssuuuu@uuuuuuum {
+  number = 0
+  provider = "jira"
+  name = "updated_issue_webhook"
+  as = "c3eeb2f6"
+  keyword = "trigger"
+  input = {
+    since = "2023-07-17T00:00:00-07:00"
+  }
+  block = [
+    {
+      number = 1
+      keyword = "if"
+      input = {
+        type = "compound"
+        operand = "and"
+        conditions = [
+          {
+            operand = "starts_with"
+            lhs = "never happen"
+            rhs = "end"
+            uuid = "condition-c7106ea3-587b-4de7-bab1-8445287d7678"
+          },
+        ]
+      }
+      block = [
+        {
+          number = 2
+          provider = "jira"
+          name = "update_issue"
+          as = "6df9b806"
+          keyword = "action"
+          dynamicPickListSelection = {
+            project_issuetype = "AlonProject"
+            priority = "Highest"
+          }
+          toggleCfg = {
+            project_issuetype = true
+            priority = true
+          }
+          input = {
+            issuekey = "ID#{_('data.jira.c3eeb2f6.id')}"
+            project_issuetype = "AlonProject@@AS"
+            reporter_id = "#{_('data.jira.c3eeb2f6.id')}"
+            description = "check this"
+            priority = "Highest"
+            assignee_id = "#{_('data.jira.c3eeb2f6.id')}"
+            issuelinks = "#{_('data.jira.c3eeb2f6.key')}"
+            components = "check this, "
+            duedate = "#{_('data.jira.c3eeb2f6.fields.summary')}"
+          }
+          visible_config_fields = [
+            "issuekey",
+            "project_issuetype",
+            "reporter_id",
+            "description",
+            "priority",
+            "assignee_id",
+            "summary",
+            "components",
+            "labels",
+            "timetracking.originalEstimate",
+            "timetracking.remainingEstimate",
+            "issuelinks",
+            "duedate",
+          ]
+          uuid = "95778b5c-12e9-4415-a421-71017ac46034"
+        },
+        {
+          number = 3
+          provider = "jira"
+          name = "create_issue"
+          as = "80e65275"
+          keyword = "action"
+          dynamicPickListSelection = {
+            
+            
+            priority = "High"
+          }
+          toggleCfg = {
+            project_issuetype = true
+            sample_project_issuetype = true
+            priority = true
+          }
+          input = {
+            
+            
+            summary = "#{_('data.jira.c3eeb2f6.fields.summary')} wit h summery #{_('data.jira.c3eeb2f6.fields.workratio')}"
+            reporter_id = "#{_('data.jira.c3eeb2f6.id')}"
+            description = '''
+never should happen
+
+
+#{_('data.jira.c3eeb2f6.id')}#{_('data.jira.c3eeb2f6.fields.project.name')}#{_('data.jira.c3eeb2f6.fields.watches.watchCount')}#{_('data.jira.c3eeb2f6.fields.aggregatetimeoriginalestimate')}
+'''
+            priority = "High"
+            assignee_id = "#{_('data.jira.c3eeb2f6.fields.reporter.self')}"
+            parent = "#{_('data.jira.c3eeb2f6.id')}"
+            projectKey = jira.Project.instance.test_proj_three@b
+            issueType = jira.IssueType.instance.Task
+            sampleProjectKey = jira.Project.instance.AlonProject
+            sampleIssueType = jira.IssueType.instance.Task
+          }
+          visible_config_fields = [
+            "project_issuetype",
+            "sample_project_issuetype",
+            "reporter_id",
+            "description",
+            "priority",
+            "assignee_id",
+            "parent",
+          ]
+          uuid = "3084e3f7-5228-4c25-88a9-e99aa59ec334"
+        },
+      ]
+      uuid = "d3feae61-2d76-48a3-856d-e2069851c47a"
+    },
+  ]
+  uuid = "4622e30f-3004-47dc-84df-a736fec8c834"
+  unfinished = false
+  _parent = [
+    workato.recipe.instance.dodel_track_jira_recipe_jira_dodel_playground_Root@sssuuuu,
+  ]
+  _generated_dependencies = [
+    {
+      reference = jira.Field.instance.Project
+      occurrences = [
+        {
+          location = workato.recipe__code.instance.dodel_track_jira_recipe_jira_dodel_playground_Root_sssuuuu@uuuuuuum.block.0.block.1.input.description
+          direction = "input"
+        },
+      ]
+    },
+    {
+      reference = jira.Field.instance.Reporter
+      occurrences = [
+        {
+          location = workato.recipe__code.instance.dodel_track_jira_recipe_jira_dodel_playground_Root_sssuuuu@uuuuuuum.block.0.block.1.input.assignee_id
+          direction = "input"
+        },
+      ]
+    },
+    {
+      reference = jira.Field.instance.Summary
+      occurrences = [
+        {
+          location = workato.recipe__code.instance.dodel_track_jira_recipe_jira_dodel_playground_Root_sssuuuu@uuuuuuum.block.0.block.0.input.duedate
+          direction = "input"
+        },
+        {
+          location = workato.recipe__code.instance.dodel_track_jira_recipe_jira_dodel_playground_Root_sssuuuu@uuuuuuum.block.0.block.1.input.summary
+          direction = "input"
+        },
+      ]
+    },
+    {
+      reference = jira.Field.instance.Watchers
+      occurrences = [
+        {
+          location = workato.recipe__code.instance.dodel_track_jira_recipe_jira_dodel_playground_Root_sssuuuu@uuuuuuum.block.0.block.1.input.description
+          direction = "input"
+        },
+      ]
+    },
+    {
+      reference = jira.Field.instance.Work_Ratio@s
+      occurrences = [
+        {
+          location = workato.recipe__code.instance.dodel_track_jira_recipe_jira_dodel_playground_Root_sssuuuu@uuuuuuum.block.0.block.1.input.summary
+          direction = "input"
+        },
+      ]
+    },
+    {
+      reference = jira.Field.instance.__Original_Estimate@_00931ss
+      occurrences = [
+        {
+          location = workato.recipe__code.instance.dodel_track_jira_recipe_jira_dodel_playground_Root_sssuuuu@uuuuuuum.block.0.block.1.input.description
+          direction = "input"
+        },
+      ]
+    },
+    {
+      reference = jira.IssueType.instance.Task
+      occurrences = [
+        {
+          location = workato.recipe__code.instance.dodel_track_jira_recipe_jira_dodel_playground_Root_sssuuuu@uuuuuuum.block.0.block.1
+          direction = "output"
+        },
+      ]
+    },
+    {
+      reference = jira.Project.instance.AlonProject
+      occurrences = [
+        {
+          location = workato.recipe__code.instance.dodel_track_jira_recipe_jira_dodel_playground_Root_sssuuuu@uuuuuuum.block.0.block.1
+          direction = "output"
+        },
+      ]
+    },
+    {
+      reference = jira.Project.instance.test_proj_three@b
+      occurrences = [
+        {
+          location = workato.recipe__code.instance.dodel_track_jira_recipe_jira_dodel_playground_Root_sssuuuu@uuuuuuum.block.0.block.1
+          direction = "output"
+        },
+      ]
+    },
+  ]
+}

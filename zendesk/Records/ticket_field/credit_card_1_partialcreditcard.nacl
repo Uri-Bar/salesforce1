@@ -1,0 +1,16 @@
+zendesk.ticket_field partialcreditcard_credit_card_1@uss {
+  type = "partialcreditcard"
+  
+  raw_title = "credit card 1"
+  
+  raw_description = "description"
+  active = true
+  required = false
+  collapsed_for_agents = false
+  
+  raw_title_in_portal = "credit card 1"
+  visible_in_portal = true
+  editable_in_portal = true
+  required_in_portal = false
+  removable = true
+}

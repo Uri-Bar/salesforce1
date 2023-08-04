@@ -1,0 +1,14 @@
+stripe.reporting_report_type ending_balance_reconciliation_summary_1@uuvv {
+  id = "ending_balance_reconciliation.summary.1"
+  default_columns = [
+    "reporting_category",
+    "currency",
+    "count",
+    "gross",
+    "fee",
+    "net",
+  ]
+  livemode = false
+  name = "Ending balance reconciliation summary"
+  version = 1
+}

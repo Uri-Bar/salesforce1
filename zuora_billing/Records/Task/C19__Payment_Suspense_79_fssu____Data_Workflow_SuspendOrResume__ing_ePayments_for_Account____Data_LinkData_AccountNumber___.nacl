@@ -1,0 +1,101 @@
+zuora_billing.Task C19__Payment_Suspense_79_fssu____Data_Workflow_SuspendOrResume__ing_ePayments_for_Account____Data_LinkData_AccountNumber___@uuuumuu_00123_00123vv_00125_00125sssst_00123_00123vv_00125_00125t {
+  name = "{{Data.Workflow.SuspendOrResume}}ing ePayments for Account '{{Data.LinkData.AccountNumber}}'"
+  parameters = {
+    url = "{{ Credentials.zuora.rest_endpoint }}accounts/{{Data.LinkData.AccountNumber}}{%- if Data.Workflow['justTestNDebug?'] -%}DEBUG{%- endif -%}"
+    datas = [
+      {
+        key = ""
+        value = ""
+      },
+    ]
+    method = "PUT"
+    headers = [
+      {
+        key = "Content-Type"
+        value = "application/json"
+      },
+    ]
+    raw_body = '''
+{%- comment -%}
+We could have used a simpler CRUD/Update task instead, but doing it like this, we
+can illustrate how to dynamically build a webservice request payload
+{%- endcomment -%}
+
+{%- assign _myEnable = false -%}
+{%- if Data.Workflow.SuspendOrResume == 'resume' -%}
+     {%- assign _myEnable = true -%}
+{%- endif -%}
+
+{%- assign DisableOrEnable = 'Disabled' -%}
+{%- if _myEnable == true -%}
+    {%- assign DisableOrEnable = 'Enabled' -%}
+{%- endif -%}
+
+{%- comment -%}
+We are a good workflow and will leave a note behind for agents to see we changed the autoPay flag
+{%- endcomment -%}
+{%- capture NewNotes -%}
+{{ "now" | date: "%Y-%m-%d" }} WF - {{DisableOrEnable}} AutoPay\n{{Data.theNotes[0].Notes | newline_to_br | replace: "<br />", "\n"}}
+{%- endcapture -%}
+
+{%- comment -%}
+All that work :o) and we finally get to drop the JSON payload: lines 26 - 29
+{%- endcomment -%}
+{
+  "autoPay": {{_myEnable}},
+  "notes": "{{NewNotes | strip_newlines}}"
+}
+'''
+    body_type = "raw"
+    validation = {
+      replace = "false"
+      zuora_call = "true"
+      status_codes = [
+        "",
+        "200",
+      ]
+      payload_location = "Callout"
+    }
+    retry_rules = {
+      on_timeout = "true"
+      retry_count = "3"
+      retry_window = "3"
+      current_retry_count = "0"
+    }
+    authorization = {
+      type = "zuora"
+    }
+    strict_variables = "false"
+    validate_response = "true"
+    validation_scheme = "{{Data.ResponseBody.success}}"
+    include_response_code = "true"
+  }
+  action_type = "Callout"
+  call_type = "SOAP"
+  task_id = 12108
+  concurrent_limit = 9999999
+  additionalProperties = {
+    css = {
+      top = "200px"
+      left = "890px"
+    }
+    priority = "Medium"
+    
+  }
+  _parent = [
+    zuora_billing.WorkflowExport.instance.C19__Payment_Suspense_79@fssu,
+  ]
+  _generated_dependencies = [
+    {
+      reference = zuora_billing.Workflow.instance.C19__Payment_Suspense_79_fssu__C19__Payment_Suspense@uuuumuufss.additionalProperties.parameters.fields
+      occurrences = [
+        {
+          location = zuora_billing.Task.instance.C19__Payment_Suspense_79_fssu____Data_Workflow_SuspendOrResume__ing_ePayments_for_Account____Data_LinkData_AccountNumber___@uuuumuu_00123_00123vv_00125_00125sssst_00123_00123vv_00125_00125t.name
+        },
+        {
+          location = zuora_billing.Task.instance.C19__Payment_Suspense_79_fssu____Data_Workflow_SuspendOrResume__ing_ePayments_for_Account____Data_LinkData_AccountNumber___@uuuumuu_00123_00123vv_00125_00125sssst_00123_00123vv_00125_00125t.parameters.raw_body
+        },
+      ]
+    },
+  ]
+}

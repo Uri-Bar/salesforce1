@@ -1,0 +1,8 @@
+workato.recipe__code bla_1786968 {
+  number = 0
+  keyword = "trigger"
+  uuid = "2aef0cae-c630-42b7-af50-6b60bc5d7cfb"
+  _parent = [
+    workato.recipe.instance.bla_1786968,
+  ]
+}

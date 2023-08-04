@@ -1,0 +1,31 @@
+zuora_billing.PublicEmailTemplate New_Subscription__Pending_Activation__Created_Default_Email_Template@ssjskssss {
+  eventCategory = 1210
+  name = "New Subscription (Pending Activation) Created Default Email Template"
+  description = ""
+  encodingType = "UTF8"
+  fromName = "Admin"
+  fromEmailType = "TenantEmail"
+  fromEmailAddress = "neta.marcus@salto.io"
+  replyToEmailType = "TenantEmail"
+  replyToEmailAddress = "neta.marcus@salto.io"
+  ccEmailType = "SpecificEmails"
+  ccEmailAddress = ""
+  bccEmailAddress = ""
+  toEmailType = "BillToContact"
+  toEmailAddress = ""
+  emailSubject = "New subscription <Subscription.SubscriptionName> was created and pending activation"
+  emailBody = '''
+Dear <BillToContact.FirstName> <BillToContact.LastName>,
+
+We would like to inform you that a new subscription <Subscription.SubscriptionName> was created on <Subscription.ContractEffective> and pending activation.
+
+Charge details of the subscription are listed below:
+
+<Subscription.SubscriptionDetailTable>
+
+Thank you for your business!
+'''
+  active = true
+  isHtml = false
+  useAdditionalAddresses = false
+}
