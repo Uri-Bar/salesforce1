@@ -1,0 +1,9 @@
+salesforce.ListView favorite__c_All {
+  fullName = "favorite__c.All"
+  filterScope = "Everything"
+  label = "All"
+  _parent = [
+    salesforce.favorite__c,
+  ]
+  _alias = "All"
+}

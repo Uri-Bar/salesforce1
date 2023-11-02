@@ -1,0 +1,18 @@
+salesforce.EmailTemplate unfiled_public_noattach@zcd {
+  attachments = {
+    attach2 = {
+      content = file("salesforce/Records/EmailTemplate/unfiled$public/noattach/attach2.rtf")
+      name = "attach2.rtf"
+    }
+  }
+  available = false
+  encodingKey = "UTF-8"
+  name = "noattach"
+  style = "none"
+  subject = "noattach"
+  type = "text"
+  uiType = "Aloha"
+  fullName = "unfiled$public/noattach"
+  content = file("salesforce/Records/EmailTemplate/unfiled$public/noattach/noattach.email")
+  _alias = "unfiled$public/noattach"
+}

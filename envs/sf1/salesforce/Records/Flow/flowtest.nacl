@@ -1,0 +1,82 @@
+salesforce.Flow flowtest {
+  fullName = "flowtest"
+  actionCalls = {
+    name = "aa"
+    label = "aa"
+    locationX = 176
+    locationY = 276
+    actionName = "submit"
+    actionType = "submit"
+    connector = {
+      targetReference = "aaa"
+    }
+    flowTransactionModel = "CurrentTransaction"
+    inputParameters = [
+      {
+        name = "objectId"
+        value = {
+          booleanValue = true
+        }
+      },
+    ]
+    nameSegment = "submit"
+    storeOutputAutomatically = true
+    versionSegment = 1
+  }
+  apiVersion = 55
+  environments = "Default"
+  interviewLabel = "flowtest {!$Flow.CurrentDateTime}"
+  label = "flowtest"
+  processMetadataValues = [
+    {
+      name = "BuilderType"
+      value = {
+        stringValue = "LightningFlowBuilder"
+      }
+    },
+    {
+      name = "CanvasMode"
+      value = {
+        stringValue = "AUTO_LAYOUT_CANVAS"
+      }
+    },
+    {
+      name = "OriginBuilderType"
+      value = {
+        stringValue = "LightningFlowBuilder"
+      }
+    },
+  ]
+  processType = "AutoLaunchedFlow"
+  start = {
+    locationX = 50
+    locationY = 0
+    connector = {
+      targetReference = "aa"
+    }
+    filterLogic = "and"
+    filters = {
+      field = "IsRichText"
+      operator = "EqualTo"
+      value = {
+        booleanValue = false
+      }
+    }
+    object = "AccountFeed"
+    schedule = {
+      frequency = "Once"
+      startDate = "2022-08-31"
+      startTime = "00:30:00.000Z"
+    }
+    triggerType = "Scheduled"
+  }
+  status = "Active"
+  subflows = {
+    name = "aaa"
+    label = "aaa"
+    locationX = 176
+    locationY = 396
+    flowName = "omnichannel_chat__QueuesChat"
+  }
+  _alias = "flowtest"
+}
