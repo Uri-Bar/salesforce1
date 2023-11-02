@@ -1,0 +1,48 @@
+salesforce.CaseSettings {
+  fullName = "Case"
+  caseAssignNotificationTemplate = salesforce.EmailTemplate.instance.unfiled_public_SupportCaseAssignmentNotification@zcd
+  caseCreateNotificationTemplate = salesforce.EmailTemplate.instance.unfiled_public_SupportCaseCreatedPhoneInquiries@zcd
+  caseFeedItemSettings = {
+    characterLimit = 400
+    displayFormat = "Default"
+    feedItemType = "EmailMessageEvent"
+  }
+  caseFeedReadUnreadLtng = false
+  caseMergeInLightning = "false"
+  closeCaseThroughStatusChange = false
+  defaultCaseFeedLayoutOn = true
+  defaultCaseOwner = "uri.bar+1@salto.io"
+  defaultCaseOwnerType = "User"
+  defaultCaseUser = "uri.bar+1@salto.io"
+  emailToCase = {
+    enableEmailToCase = false
+  }
+  enableCaseFeed = true
+  enableCaseSwarming = "false"
+  enableCollapseEmailThread = true
+  enableEarlyEscalationRuleTriggers = false
+  enableEscalateQfiToCaseInternal = false
+  enableMultiLangSolnSrchCSS = "false"
+  enableMultiLangSolnSrchPKB = "false"
+  enableMultiLangSolution = "false"
+  enableSolutionCategory = "false"
+  enableSolutionInlineCategory = "true"
+  enableSolutionShortSummary = "true"
+  enableSuggestedSolutions = true
+  escalateCaseBefore = false
+  keepRecordTypeOnAssignmentRule = true
+  notifyContactOnCaseComment = false
+  notifyDefaultCaseOwner = false
+  notifyOwnerOnCaseComment = false
+  notifyOwnerOnCaseOwnerChange = false
+  showEmailAttachmentsInCaseAttachmentsRL = true
+  useSystemEmailAddress = true
+  useSystemUserAsDefaultCaseUser = false
+  visibleInCssCheckbox = false
+  webToCase = {
+    caseOrigin = "Web"
+    defaultResponseTemplate = "unfiled$public/SupportCaseCreatedWebInquiries"
+    enableWebToCase = true
+  }
+  _alias = "Case"
+}

@@ -1,0 +1,18 @@
+salesforce.EmailTemplate unfiled_public_filterTest@zcd {
+  attachments = {
+    nacl_case_test@bs = {
+      content = file("salesforce/Records/EmailTemplate/unfiled$public/filterTest/nacl-case test.rtf")
+      name = "nacl-case test.rtf"
+    }
+  }
+  available = false
+  encodingKey = "UTF-8"
+  name = "filterTest"
+  style = "none"
+  subject = "filterTest"
+  type = "text"
+  uiType = "Aloha"
+  fullName = "unfiled$public/filterTest"
+  content = file("salesforce/Records/EmailTemplate/unfiled$public/filterTest/filterTest.email")
+  _alias = "unfiled$public/filterTest"
+}
