@@ -1,0 +1,12 @@
+envs {
+  envsCloud = [
+    {
+      uuid = "f036f41e-ce9b-4312-98a0-0a21992c72e9"
+      folderName = "sf3-new"
+    },
+    {
+      uuid = "80390876-5b69-44b0-8701-7946f8386238"
+      folderName = "sf1-new"
+    },
+  ]
+}
