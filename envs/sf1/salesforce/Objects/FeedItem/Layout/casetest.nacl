@@ -1,0 +1,16 @@
+salesforce.Layout FeedItem_casetest@b {
+  showEmailCheckbox = false
+  showRunAssignmentRulesCheckbox = false
+  showSubmitAndAttachButton = false
+  summaryLayout = {
+    masterLabel = "00h8d000004hoSj"
+    sizeX = 4
+    sizeY = 0
+    summaryLayoutStyle = "Default"
+  }
+  fullName = "FeedItem-casetest"
+  _parent = [
+    salesforce.FeedItem,
+  ]
+  _alias = "FeedItem-casetest"
+}
