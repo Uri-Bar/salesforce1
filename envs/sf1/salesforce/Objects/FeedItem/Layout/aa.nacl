@@ -1,0 +1,10 @@
+salesforce.Layout FeedItem_aa@b {
+  showEmailCheckbox = false
+  showRunAssignmentRulesCheckbox = false
+  showSubmitAndAttachButton = false
+  fullName = "FeedItem-aa"
+  _parent = [
+    salesforce.FeedItem,
+  ]
+  _alias = "FeedItem-aa"
+}
