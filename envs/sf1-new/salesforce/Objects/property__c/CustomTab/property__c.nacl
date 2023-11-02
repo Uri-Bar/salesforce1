@@ -1,0 +1,9 @@
+salesforce.CustomTab property__c {
+  fullName = "property__c"
+  customObject = true
+  motif = "Custom16: Bank"
+  _parent = [
+    salesforce.property__c,
+  ]
+  _alias = "property__c"
+}
