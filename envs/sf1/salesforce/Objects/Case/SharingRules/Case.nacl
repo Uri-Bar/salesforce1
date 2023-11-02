@@ -1,0 +1,41 @@
+salesforce.SharingRules Case {
+  sharingCriteriaRules = [
+    {
+      fullName = "asaa"
+      accessLevel = "Read"
+      label = "asa"
+      sharedTo = {
+        role = [
+          salesforce.Role.instance.SVPSalesMarketing,
+        ]
+      }
+      criteriaItems = {
+        field = salesforce.Case.field.IsClosed
+        operation = "notEqual"
+        value = "False"
+      }
+      includeRecordsOwnedByAll = true
+    },
+    {
+      fullName = "assaa"
+      accessLevel = "Read"
+      label = "asaa"
+      sharedTo = {
+        role = [
+          salesforce.Role.instance.SVPSalesMarketing,
+        ]
+      }
+      criteriaItems = {
+        field = salesforce.Case.field.IsClosed
+        operation = "notEqual"
+        value = "False"
+      }
+      includeRecordsOwnedByAll = true
+    },
+  ]
+  fullName = "Case"
+  _parent = [
+    salesforce.Case,
+  ]
+  _alias = "Case"
+}

@@ -1,0 +1,4 @@
+salesforce.ArchiveSettings {
+  fullName = "Archive"
+  _alias = "Archive"
+}
