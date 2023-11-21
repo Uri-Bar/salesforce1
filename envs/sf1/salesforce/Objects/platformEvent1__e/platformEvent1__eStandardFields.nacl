@@ -1,0 +1,44 @@
+type salesforce.platformEvent1__e {
+  salesforce.Text ReplayId {
+    apiName = "platformEvent1__e.ReplayId"
+    length = 1000
+    label = "Replay ID"
+    createable = false
+    updateable = false
+    unique = false
+    caseSensitive = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.DateTime CreatedDate {
+    apiName = "platformEvent1__e.CreatedDate"
+    label = "Created Date"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Lookup CreatedById {
+    apiName = "platformEvent1__e.CreatedById"
+    relationshipName = "CreatedBy"
+    referenceTo = [
+      salesforce.User,
+    ]
+    label = "Created By ID"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Text EventUuid {
+    apiName = "platformEvent1__e.EventUuid"
+    length = 36
+    label = "Event UUID"
+    createable = false
+    updateable = false
+    unique = false
+    caseSensitive = false
+    queryable = true
+    _hidden_value = true
+  }
+}
