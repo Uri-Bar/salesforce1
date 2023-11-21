@@ -1,6 +1,0 @@
-salesforce.Group moni2 {
-  fullName = "moni2"
-  doesIncludeBosses = true
-  name = "moni2"
-  _alias = "moni2"
-}
