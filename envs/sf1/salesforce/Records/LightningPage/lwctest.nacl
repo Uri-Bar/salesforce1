@@ -1,0 +1,110 @@
+salesforce.LightningPage lwctest {
+  flexiPageRegions = [
+    {
+      itemInstances = [
+        {
+          componentInstance = {
+            componentInstanceProperties = [
+              {
+                name = "tabs"
+                valueList = {
+                  valueListItems = [
+                    {
+                      value = "standard-AnalyticsDataManager"
+                    },
+                    {
+                      value = "standard-CollaborationGroup"
+                    },
+                  ]
+                }
+              },
+              {
+                name = "title"
+                value = "my lunchpad"
+              },
+            ]
+            componentName = "runtime_mobilesapp:launchPadTileList"
+            identifier = "runtime_mobilesapp_launchPadTileList"
+          }
+        },
+      ]
+      name = "region1"
+      type = "Region"
+    },
+    {
+      itemInstances = [
+        {
+          componentInstance = {
+            componentInstanceProperties = [
+              {
+                name = "enableInlineEdit"
+                value = "true"
+              },
+              {
+                name = "entityName"
+                value = "property__c"
+              },
+              {
+                name = "filterName"
+                value = "All"
+              },
+              {
+                name = "hideActionBar"
+                value = "false"
+              },
+              {
+                name = "hideSearchBar"
+                value = "false"
+              },
+              {
+                name = "pageSize"
+                value = "3"
+              },
+            ]
+            componentName = "flexipage:filterListCard"
+            identifier = "flexipage_filterListCard"
+          }
+        },
+      ]
+      name = "region2"
+      type = "Region"
+    },
+    {
+      itemInstances = [
+        {
+          componentInstance = {
+            componentInstanceProperties = [
+              {
+                name = "decorate"
+                value = "true"
+              },
+              {
+                name = "richTextValue"
+                value = "<p><span style=\"font-family: courier; color: rgb(0, 0, 0); font-size: 18px;\">hello to my new favorite</span></p>"
+              },
+            ]
+            componentName = "flexipage:richText"
+            identifier = "flexipage_richText"
+          }
+        },
+      ]
+      name = "region3"
+      type = "Region"
+    },
+  ]
+  masterLabel = "lwctest"
+  template = {
+    name = "flexipage:appHomeTemplateThreeColumns"
+  }
+  type = "AppPage"
+  fullName = "lwctest"
+  _generated_dependencies = [
+    {
+      reference = salesforce.ListView.instance.property__c_All
+    },
+    {
+      reference = salesforce.property__c
+    },
+  ]
+  _alias = "lwctest"
+}

@@ -1,0 +1,23 @@
+salesforce.BusinessProcess Case_asd {
+  fullName = "Case.asd"
+  description = "asd"
+  isActive = true
+  values = [
+    {
+      fullName = "Closed"
+      default = false
+    },
+    {
+      fullName = "Escalated"
+      default = false
+    },
+    {
+      fullName = "Working"
+      default = true
+    },
+  ]
+  _parent = [
+    salesforce.Case,
+  ]
+  _alias = "Case.asd"
+}
