@@ -1,0 +1,10 @@
+salesforce.AuraDefinitionBundle lwc_bundle {
+  apiVersion = 54
+  description = "try to create bundle"
+  fullName = "lwc_bundle"
+  type = "Component"
+  controllerContent = file("salesforce/Records/AuraDefinitionBundle/lwc_bundle/lwc_bundleController.js")
+  SVGContent = file("salesforce/Records/AuraDefinitionBundle/lwc_bundle/lwc_bundle.svg")
+  markup = file("salesforce/Records/AuraDefinitionBundle/lwc_bundle/lwc_bundle.cmp")
+  _alias = "lwc_bundle"
+}

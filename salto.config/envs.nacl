@@ -1,0 +1,16 @@
+envs {
+  envs = [
+    {
+      name = "sf1"
+      accountToServiceName = {
+        salesforce = "salesforce"
+      }
+    },
+    {
+      name = "sf2"
+      accountToServiceName = {
+        salesforce = "salesforce"
+      }
+    },
+  ]
+}
