@@ -1,0 +1,6 @@
+salesforce.Group g6 {
+  fullName = "g6"
+  doesIncludeBosses = true
+  name = "g6"
+  _alias = "g6"
+}
