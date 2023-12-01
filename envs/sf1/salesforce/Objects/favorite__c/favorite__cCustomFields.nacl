@@ -1,0 +1,34 @@
+type salesforce.favorite__c {
+  salesforce.Lookup Contact__c {
+    apiName = "favorite__c.Contact__c"
+    deleteConstraint = "SetNull"
+    externalId = false
+    label = "Contact"
+    referenceTo = [
+      salesforce.Contact,
+    ]
+    relationshipLabel = "favorites"
+    relationshipName = "favorites"
+    trackTrending = false
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.MasterDetail property__c {
+    apiName = "favorite__c.property__c"
+    externalId = false
+    label = "property"
+    referenceTo = [
+      salesforce.property__c,
+    ]
+    relationshipLabel = "favorites"
+    relationshipName = "favorites"
+    relationshipOrder = 0
+    reparentableMasterDetail = false
+    trackTrending = false
+    writeRequiresMasterRead = false
+    createable = true
+    updateable = false
+    queryable = true
+  }
+}
