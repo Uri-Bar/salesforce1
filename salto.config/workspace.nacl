@@ -1,6 +1,6 @@
 workspace {
-  uid = "ae37bed9-0ab4-45d5-a467-cacf99b9e26e"
-  name = "envae37bed9-0ab4-45d5-a467-cacf99b9e26e"
+  uid = "ffa77416-0ebc-4e8c-a2bc-653fa6bd4d9f"
+  name = "envffa77416-0ebc-4e8c-a2bc-653fa6bd4d9f"
   state = {
     provider = "s3"
     options = {
