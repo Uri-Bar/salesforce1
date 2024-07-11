@@ -1,4 +1,10 @@
 envs {
   envs = [
+    {
+      name = "dor-11-07-24"
+      accountToServiceName = {
+        salesforce = "salesforce"
+      }
+    },
   ]
 }
