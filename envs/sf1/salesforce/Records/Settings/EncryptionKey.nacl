@@ -1,0 +1,9 @@
+salesforce.EncryptionKeySettings {
+  fullName = "EncryptionKey"
+  canOptOutOfDerivationWithBYOK = false
+  dataCloudEncryption = "false"
+  enableBringYourOwnkms = "false"
+  enableCacheOnlyKeys = false
+  enableReplayDetection = false
+  _alias = "EncryptionKey"
+}

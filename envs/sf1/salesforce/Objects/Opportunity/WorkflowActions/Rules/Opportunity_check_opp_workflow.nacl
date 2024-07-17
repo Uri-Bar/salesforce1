@@ -1,0 +1,16 @@
+salesforce.WorkflowRule Opportunity_check_opp_workflow@vuu {
+  fullName = "Opportunity.check_opp_workflow"
+  active = false
+  criteriaItems = [
+    {
+      field = salesforce.Opportunity.field.Amount
+      operation = "greaterThan"
+      value = "100000"
+    },
+  ]
+  triggerType = "onCreateOrTriggeringUpdate"
+  _parent = [
+    salesforce.Opportunity,
+  ]
+  _alias = "Opportunity.check_opp_workflow"
+}

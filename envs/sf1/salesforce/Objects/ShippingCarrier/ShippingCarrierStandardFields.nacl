@@ -1,0 +1,10 @@
+type salesforce.ShippingCarrier {
+  salesforce.Unknown ExternalReference {
+    apiName = "ShippingCarrier.ExternalReference"
+    _hidden_value = true
+  }
+  salesforce.Unknown Name {
+    apiName = "ShippingCarrier.Name"
+    _hidden_value = true
+  }
+}

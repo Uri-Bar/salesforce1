@@ -1,0 +1,30 @@
+type salesforce.ShippingCarrierMethod {
+  salesforce.Unknown ExternalReference {
+    apiName = "ShippingCarrierMethod.ExternalReference"
+    _hidden_value = true
+  }
+  salesforce.Unknown MaxTransitTime {
+    apiName = "ShippingCarrierMethod.MaxTransitTime"
+    _hidden_value = true
+  }
+  salesforce.Unknown MinTransitTime {
+    apiName = "ShippingCarrierMethod.MinTransitTime"
+    _hidden_value = true
+  }
+  salesforce.Unknown Name {
+    apiName = "ShippingCarrierMethod.Name"
+    _hidden_value = true
+  }
+  salesforce.Unknown ShippingAreaType {
+    apiName = "ShippingCarrierMethod.ShippingAreaType"
+    _hidden_value = true
+  }
+  salesforce.Lookup ShippingCarrierId {
+    apiName = "ShippingCarrierMethod.ShippingCarrierId"
+    _hidden_value = true
+  }
+  salesforce.Unknown TransitTimeUnit {
+    apiName = "ShippingCarrierMethod.TransitTimeUnit"
+    _hidden_value = true
+  }
+}

@@ -1,0 +1,13 @@
+salesforce.EmailTemplate unfiled_public_SalesforceSchedulerCreateApptEmailTemplate@zcd {
+  available = true
+  description = "Email Template to confirm scheduling of a service appointment."
+  encodingKey = "UTF-8"
+  name = "Scheduled Service Appointment Confirmation Email"
+  style = "none"
+  subject = "Your service appointment is scheduled"
+  type = "custom"
+  uiType = "Aloha"
+  fullName = "unfiled$public/SalesforceSchedulerCreateApptEmailTemplate"
+  content = file("salesforce/Records/EmailTemplate/unfiled$public/SalesforceSchedulerCreateApptEmailTemplate/SalesforceSchedulerCreateApptEmailTemplate.email")
+  _alias = "unfiled$public/SalesforceSchedulerCreateApptEmailTemplate"
+}
