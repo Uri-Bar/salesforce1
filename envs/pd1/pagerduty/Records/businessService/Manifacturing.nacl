@@ -1,5 +1,5 @@
 pagerduty.businessService Manifacturing {
-  description = "Systems that Impact Manifacturing"
+  description = "Systems that Impa6ct Manifacturing"
   name = "Manifacturing"
   point_of_contact = "the help desk of ACME inc"
   team = {
