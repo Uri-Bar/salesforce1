@@ -1,0 +1,22 @@
+pagerduty.scheduleLayer IT_mainframe__Weekly_On_call_real@suusbs {
+  name = "Weekly On-call real"
+  rotation_turn_length_seconds = 604800
+  rotation_virtual_start = "2015-11-07T03:00:00+02:00"
+  users = [
+    {
+      user = {
+        id = "pagerduty-dev+bibipagerduty@salto.io"
+        type = "user_reference"
+      }
+    },
+    {
+      user = {
+        id = "pagerduty-dev+bidenpagerduty@salto.io"
+        type = "user_reference"
+      }
+    },
+  ]
+  _parent = [
+    pagerduty.schedule.instance.IT_mainframe@s,
+  ]
+}

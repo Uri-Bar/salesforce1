@@ -1,0 +1,12 @@
+pagerduty {
+  fetch = {
+    include = [
+      {
+        type = ".*"
+      },
+    ]
+    exclude = [
+    ]
+    convertUsersIds = true
+  }
+}

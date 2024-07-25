@@ -1,0 +1,10 @@
+pagerduty.businessService IT_Services@s {
+  description = "All IT services at ACME inc."
+  name = "IT Services"
+  point_of_contact = "the help desk of ACME inc"
+  team = {
+    id = pagerduty.team.instance.the_IT_of_ACME_inc@s
+    type = "team_reference"
+  }
+  type = "business_service"
+}

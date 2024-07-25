@@ -1,0 +1,10 @@
+pagerduty.team IT_Mainframe_Team@s {
+  name = "IT Mainframe Team"
+  description = "das mainframe Team"
+  type = "team"
+  default_role = "manager"
+  parent = {
+    id = pagerduty.team.instance.the_IT_of_ACME_inc@s
+    type = "team_reference"
+  }
+}

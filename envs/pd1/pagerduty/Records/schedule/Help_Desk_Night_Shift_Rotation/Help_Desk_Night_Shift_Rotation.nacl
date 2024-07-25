@@ -1,0 +1,15 @@
+pagerduty.schedule Help_Desk_Night_Shift_Rotation@s {
+  description = "Managed by Terraform s"
+  name = "Help Desk Night Shift Rotation"
+  schedule_layers = [
+    pagerduty.scheduleLayer.instance.Help_Desk_Night_Shift_Rotation__Night_Shift@ssssuus,
+  ]
+  teams = [
+    {
+      id = pagerduty.team.instance.Help_Desk_team_B@s
+      type = "team_reference"
+    },
+  ]
+  time_zone = "America/New_York"
+  type = "schedule"
+}

@@ -1,0 +1,31 @@
+pagerduty.service store_acme_test@v {
+  name = "store.acme.test"
+  description = "Managed by Terraform"
+  status = "active"
+  teams = [
+    {
+      id = pagerduty.team.instance.Web
+      type = "team_reference"
+    },
+  ]
+  alert_creation = "create_alerts_and_incidents"
+  escalation_policy = {
+    id = pagerduty.escalationPolicy.instance.IT_Web_Policy@s
+    type = "escalation_policy_reference"
+  }
+  incident_urgency_rule = {
+    type = "constant"
+    urgency = "high"
+  }
+  acknowledgement_timeout = 300
+  auto_resolve_timeout = 14400
+  type = "service"
+  serviceOrchestration = {
+    sets = [
+      {
+        id = "start"
+      },
+    ]
+    type = "service"
+  }
+}

@@ -1,0 +1,37 @@
+pagerduty.service CRM {
+  name = "CRM"
+  description = "Managed by Terraform"
+  status = "active"
+  teams = [
+    {
+      id = pagerduty.team.instance.IT_CRM@s
+      type = "team_reference"
+    },
+  ]
+  alert_creation = "create_alerts_and_incidents"
+  escalation_policy = {
+    id = pagerduty.escalationPolicy.instance.IT_CRM_Policy@s
+    type = "escalation_policy_reference"
+  }
+  incident_urgency_rule = {
+    type = "constant"
+    urgency = "high"
+  }
+  acknowledgement_timeout = 600
+  auto_resolve_timeout = 14400
+  integrations = [
+    {
+      id = "PIS2WG2"
+      type = "event_transformer_api_inbound_integration_reference"
+    },
+  ]
+  type = "service"
+  serviceOrchestration = {
+    sets = [
+      {
+        id = "start"
+      },
+    ]
+    type = "service"
+  }
+}

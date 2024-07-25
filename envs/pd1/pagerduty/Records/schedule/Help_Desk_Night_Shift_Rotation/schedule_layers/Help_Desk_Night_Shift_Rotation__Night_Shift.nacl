@@ -1,0 +1,29 @@
+pagerduty.scheduleLayer Help_Desk_Night_Shift_Rotation__Night_Shift@ssssuus {
+  name = "Night Shift"
+  restrictions = [
+    {
+      duration_seconds = 32400
+      start_time_of_day = "10:00:00"
+      type = "daily_restriction"
+    },
+  ]
+  rotation_turn_length_seconds = 86400
+  rotation_virtual_start = "2015-11-07T03:00:00+02:00"
+  users = [
+    {
+      user = {
+        id = "pagerduty-dev+bibipagerduty@salto.io"
+        type = "user_reference"
+      }
+    },
+    {
+      user = {
+        id = "pagerduty-dev+bidenpagerduty@salto.io"
+        type = "user_reference"
+      }
+    },
+  ]
+  _parent = [
+    pagerduty.schedule.instance.Help_Desk_Night_Shift_Rotation@s,
+  ]
+}

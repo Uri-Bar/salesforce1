@@ -1,0 +1,33 @@
+pagerduty.escalationPolicy Page_the_Helpdesk@s {
+  type = "escalation_policy"
+  name = "Page the Helpdesk"
+  escalation_rules = [
+    {
+      id = "PT2IJ28"
+      escalation_delay_in_minutes = 30
+      targets = [
+        {
+          id = pagerduty.schedule.instance.Helpdesk_Day_Shift_Rotation@s
+          type = "schedule_reference"
+        },
+        {
+          id = pagerduty.schedule.instance.Help_Desk_Night_Shift_Rotation@s
+          type = "schedule_reference"
+        },
+      ]
+    },
+    {
+      id = "PPTXIPI"
+      escalation_delay_in_minutes = 1
+      targets = [
+        {
+          id = pagerduty.schedule.instance.Bibi_is_Always_on_Call@s
+          type = "schedule_reference"
+        },
+      ]
+    },
+  ]
+  num_loops = 1
+  description = "Managed by Terraform"
+  on_call_handoff_notifications = "if_has_services"
+}

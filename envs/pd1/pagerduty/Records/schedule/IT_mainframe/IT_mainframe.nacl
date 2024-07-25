@@ -1,0 +1,15 @@
+pagerduty.schedule IT_mainframe@s {
+  description = "Managed by Terraform"
+  name = "IT mainframe"
+  schedule_layers = [
+    pagerduty.scheduleLayer.instance.IT_mainframe__Weekly_On_call_real@suusbs,
+  ]
+  teams = [
+    {
+      id = pagerduty.team.instance.IT_Mainframe_Team@s
+      type = "team_reference"
+    },
+  ]
+  time_zone = "America/New_York"
+  type = "schedule"
+}

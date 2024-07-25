@@ -1,0 +1,19 @@
+pagerduty.escalationPolicy Escalation_Policy_to_Fred@s {
+  type = "escalation_policy"
+  name = "Escalation Policy to Fred"
+  escalation_rules = [
+    {
+      id = "PIK4NMF"
+      escalation_delay_in_minutes = 10
+      targets = [
+        {
+          id = pagerduty.schedule.instance.Bibi_is_Always_on_Call@s
+          type = "schedule_reference"
+        },
+      ]
+    },
+  ]
+  num_loops = 1
+  description = "Managed by Terraform"
+  on_call_handoff_notifications = "if_has_services"
+}

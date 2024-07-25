@@ -1,0 +1,6 @@
+pagerduty.team the_IT_of_ACME_inc@s {
+  name = "the IT of ACME inc"
+  description = "IT - stands for I tried to make it work"
+  type = "team"
+  default_role = "manager"
+}

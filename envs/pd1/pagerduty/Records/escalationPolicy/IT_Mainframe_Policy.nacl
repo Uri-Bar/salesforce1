@@ -1,0 +1,35 @@
+pagerduty.escalationPolicy IT_Mainframe_Policy@s {
+  type = "escalation_policy"
+  name = "IT Mainframe Policy"
+  escalation_rules = [
+    {
+      id = "PI8Z4KD"
+      escalation_delay_in_minutes = 60
+      targets = [
+        {
+          id = pagerduty.schedule.instance.IT_mainframe@s
+          type = "schedule_reference"
+        },
+      ]
+    },
+    {
+      id = "PEZO48Q"
+      escalation_delay_in_minutes = 10
+      targets = [
+        {
+          id = pagerduty.schedule.instance.Bibi_is_Always_on_Call@s
+          type = "schedule_reference"
+        },
+      ]
+    },
+  ]
+  num_loops = 1
+  teams = [
+    {
+      id = pagerduty.team.instance.IT_Mainframe_Team@s
+      type = "team_reference"
+    },
+  ]
+  description = "Managed by Terraform"
+  on_call_handoff_notifications = "if_has_services"
+}

@@ -1,0 +1,10 @@
+pagerduty.team Web {
+  name = "Web"
+  description = "Spiders building their nests"
+  type = "team"
+  default_role = "manager"
+  parent = {
+    id = pagerduty.team.instance.the_IT_of_ACME_inc@s
+    type = "team_reference"
+  }
+}
