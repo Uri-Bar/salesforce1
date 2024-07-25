@@ -1,6 +1,6 @@
 pagerduty.service acme_test@v {
   name = "acme.test"
-  description = "Managed by Terraform and me"
+  description = "Managed by Terraform and dor"
   status = "active"
   teams = [
     {
