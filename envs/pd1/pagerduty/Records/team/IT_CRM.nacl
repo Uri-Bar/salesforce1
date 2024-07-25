@@ -1,0 +1,10 @@
+pagerduty.team IT_CRM@s {
+  name = "IT CRM"
+  description = "The CRM team"
+  type = "team"
+  default_role = "manager"
+  parent = {
+    id = pagerduty.team.instance.the_IT_of_ACME_inc@s
+    type = "team_reference"
+  }
+}

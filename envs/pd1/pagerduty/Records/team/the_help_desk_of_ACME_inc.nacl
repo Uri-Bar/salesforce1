@@ -1,0 +1,6 @@
+pagerduty.team the_help_desk_of_ACME_inc@s {
+  name = "the help desk of ACME inc"
+  description = "Product and Engineering"
+  type = "team"
+  default_role = "manager"
+}

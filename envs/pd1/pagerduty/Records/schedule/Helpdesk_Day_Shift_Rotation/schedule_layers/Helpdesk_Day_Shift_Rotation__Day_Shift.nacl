@@ -1,0 +1,29 @@
+pagerduty.scheduleLayer Helpdesk_Day_Shift_Rotation__Day_Shift@sssuus {
+  name = "Day Shift"
+  restrictions = [
+    {
+      duration_seconds = 43200
+      start_time_of_day = "15:00:00"
+      type = "daily_restriction"
+    },
+  ]
+  rotation_turn_length_seconds = 86400
+  rotation_virtual_start = "2015-11-06T07:08:00+02:00"
+  users = [
+    {
+      user = {
+        id = "pagerduty-dev+bibipagerduty@salto.io"
+        type = "user_reference"
+      }
+    },
+    {
+      user = {
+        id = "pagerduty-dev+bidenpagerduty@salto.io"
+        type = "user_reference"
+      }
+    },
+  ]
+  _parent = [
+    pagerduty.schedule.instance.Helpdesk_Day_Shift_Rotation@s,
+  ]
+}

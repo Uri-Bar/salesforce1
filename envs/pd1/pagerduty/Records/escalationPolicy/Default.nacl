@@ -1,0 +1,18 @@
+pagerduty.escalationPolicy Default {
+  type = "escalation_policy"
+  name = "Default"
+  escalation_rules = [
+    {
+      id = "PL2FGB3"
+      escalation_delay_in_minutes = 30
+      targets = [
+        {
+          id = "pagerduty-dev+1@salto.io"
+          type = "user_reference"
+        },
+      ]
+    },
+  ]
+  num_loops = 1
+  on_call_handoff_notifications = "if_has_services"
+}

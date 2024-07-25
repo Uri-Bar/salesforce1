@@ -1,0 +1,16 @@
+pagerduty.schedule IT_CRM@s {
+  description = "Managed by Terraform a"
+  name = "IT CRM"
+  schedule_layers = [
+    pagerduty.scheduleLayer.instance.IT_CRM__Weekly_On_call_uris@suusbs,
+    pagerduty.scheduleLayer.instance.IT_CRM__Weekly_On_call2uri@suusb,
+  ]
+  teams = [
+    {
+      id = pagerduty.team.instance.IT_CRM@s
+      type = "team_reference"
+    },
+  ]
+  time_zone = "America/New_York"
+  type = "schedule"
+}

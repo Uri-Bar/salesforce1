@@ -1,0 +1,10 @@
+pagerduty.team Help_Desk_team_B@s {
+  name = "Help Desk team B"
+  description = "Help Desk team B"
+  type = "team"
+  default_role = "manager"
+  parent = {
+    id = pagerduty.team.instance.the_help_desk_of_ACME_inc@s
+    type = "team_reference"
+  }
+}

@@ -1,0 +1,10 @@
+pagerduty.businessService Self_serve_mobile_checkou2t2@bss {
+  description = "Checkout service for our mobile clients"
+  name = "Self-serve mobile checkou2t2"
+  point_of_contact = "PagerDuty Admin"
+  team = {
+    id = pagerduty.team.instance.the_IT_of_ACME_inc@s
+    type = "team_reference"
+  }
+  type = "business_service"
+}

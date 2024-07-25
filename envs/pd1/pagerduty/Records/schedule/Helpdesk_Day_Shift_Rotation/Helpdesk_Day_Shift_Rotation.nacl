@@ -1,0 +1,15 @@
+pagerduty.schedule Helpdesk_Day_Shift_Rotation@s {
+  description = "Managed by Terraform"
+  name = "Helpdesk Day Shift Rotation"
+  schedule_layers = [
+    pagerduty.scheduleLayer.instance.Helpdesk_Day_Shift_Rotation__Day_Shift@sssuus,
+  ]
+  teams = [
+    {
+      id = pagerduty.team.instance.Help_Desk_team_A@s
+      type = "team_reference"
+    },
+  ]
+  time_zone = "America/New_York"
+  type = "schedule"
+}

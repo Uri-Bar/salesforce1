@@ -1,0 +1,18 @@
+pagerduty.escalationPolicy Lior_s_Service_ep_b@tsbs {
+  type = "escalation_policy"
+  name = "Lior's Service-ep b"
+  escalation_rules = [
+    {
+      id = "PNKD6T4"
+      escalation_delay_in_minutes = 30
+      targets = [
+        {
+          id = "pagerduty-dev+1@salto.io"
+          type = "user_reference"
+        },
+      ]
+    },
+  ]
+  num_loops = 0
+  on_call_handoff_notifications = "if_has_services"
+}

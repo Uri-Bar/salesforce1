@@ -1,0 +1,16 @@
+pagerduty.scheduleLayer Bibi_is_Always_on_Call__Weekly_On_call9@ssssuusb {
+  name = "Weekly On-call9"
+  rotation_turn_length_seconds = 604800
+  rotation_virtual_start = "2024-06-08T03:00:00+03:00"
+  users = [
+    {
+      user = {
+        id = "pagerduty-dev+bibipagerduty@salto.io"
+        type = "user_reference"
+      }
+    },
+  ]
+  _parent = [
+    pagerduty.schedule.instance.Bibi_is_Always_on_Call@s,
+  ]
+}

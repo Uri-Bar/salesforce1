@@ -1,0 +1,10 @@
+pagerduty.businessService Sales {
+  description = "Systems that Impact Sales"
+  name = "Sales"
+  point_of_contact = "the help desk of ACME inc"
+  team = {
+    id = pagerduty.team.instance.the_IT_of_ACME_inc@s
+    type = "team_reference"
+  }
+  type = "business_service"
+}

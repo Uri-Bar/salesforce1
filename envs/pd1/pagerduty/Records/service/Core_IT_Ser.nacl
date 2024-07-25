@@ -1,0 +1,153 @@
+pagerduty.service Core_IT_Ser@s {
+  name = "Core IT Ser"
+  description = "Managed by us"
+  status = "active"
+  teams = [
+    {
+      id = pagerduty.team.instance.IT_core_Team@s
+      type = "team_reference"
+    },
+  ]
+  alert_creation = "create_alerts_and_incidents"
+  escalation_policy = {
+    id = pagerduty.escalationPolicy.instance.IT_Core_Policy@s
+    type = "escalation_policy_reference"
+  }
+  incident_urgency_rule = {
+    type = "constant"
+    urgency = "high"
+  }
+  acknowledgement_timeout = 600
+  auto_resolve_timeout = 14400
+  type = "service"
+  serviceOrchestration = {
+    catch_all = {
+      actions = {
+        annotate = "This is a note"
+        automation_actions = [
+          {
+            auto_send = false
+            headers = [
+              {
+                key = "header1"
+                value = "fsdfsd"
+              },
+              {
+                key = "header2"
+                value = "fsdfds"
+              },
+            ]
+            name = "Webhook!"
+            parameters = [
+              {
+                key = "jsonbody"
+                value = "valuejson1"
+              },
+            ]
+            url = "https://webhook.webhook.webhook"
+          },
+        ]
+        extractions = [
+          {
+            target = "event.component"
+            template = "thisistemplate"
+          },
+        ]
+        priority = "P8O29QQ"
+        severity = "warning"
+        suspend = 300
+        variables = [
+          {
+            name = "var1"
+            path = "event.summary"
+            type = "regex"
+            value = "(.*)"
+          },
+        ]
+      }
+    }
+    sets = [
+      {
+        id = "start"
+        rules = [
+          {
+            actions = {
+              automation_actions = [
+                {
+                  auto_send = false
+                  headers = [
+                    {
+                      key = "h1"
+                      value = "v1"
+                    },
+                  ]
+                  name = "weebhoookok221"
+                  url = "https://whatisthis"
+                },
+              ]
+              route_to = "d6bbbce8"
+            }
+            id = "4f51c60a"
+            label = "Some rule 3"
+          },
+        ]
+      },
+      {
+        id = "d6bbbce8"
+        rules = [
+          {
+            actions = {
+              annotate = "fdsfsd"
+              automation_actions = [
+                {
+                  auto_send = true
+                  name = "fdsfsd"
+                  url = "https:/fsdfsd"
+                },
+              ]
+              event_action = "resolve"
+              extractions = [
+                {
+                  target = "event.dedup_key"
+                  template = "fdsfds"
+                },
+                {
+                  regex = ".*"
+                  source = "event.source"
+                  target = "event.timestamp"
+                },
+              ]
+              priority = "PJLC88H"
+              severity = "warning"
+              suspend = 300
+              variables = [
+                {
+                  name = "v111"
+                  path = "event.source"
+                  type = "regex"
+                  value = "(.*)"
+                },
+              ]
+            }
+            conditions = [
+              {
+                expression = "event.class matches part 'sdfds' and event.dedup_key matches part 'fdsf'"
+              },
+              {
+                expression = "now in Wed,Sun 16:54:00 to 17:54:00 Asia/Jerusalem"
+              },
+              {
+                expression = "now > 2024-05-26 16:54:00 Asia/Jerusalem and now < 2024-05-26 17:54:00 Asia/Jerusalem"
+              },
+              {
+                expression = "not event.dedup_key matches 'fsdfsd'"
+              },
+            ]
+            id = "64ed501a"
+          },
+        ]
+      },
+    ]
+    type = "service"
+  }
+}

@@ -1,0 +1,30 @@
+pagerduty.service Lior_s_Service@ts {
+  name = "Lior's Service"
+  status = "critical"
+  alert_creation = "create_alerts_and_incidents"
+  last_incident_timestamp = "2024-05-20T15:32:46Z"
+  escalation_policy = {
+    id = pagerduty.escalationPolicy.instance.Lior_s_Service_ep_b@tsbs
+    type = "escalation_policy_reference"
+  }
+  incident_urgency_rule = {
+    type = "constant"
+    urgency = "high"
+  }
+  alert_grouping = "intelligent"
+  alert_grouping_parameters = {
+    type = "intelligent"
+    config = {
+      time_window = 300
+    }
+  }
+  type = "service"
+  serviceOrchestration = {
+    sets = [
+      {
+        id = "start"
+      },
+    ]
+    type = "service"
+  }
+}

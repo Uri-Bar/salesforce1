@@ -1,0 +1,24 @@
+pagerduty.eventOrchestration "2nd_orch@s" {
+  name = "2nd orch"
+  eventOrchestrationsRouter = {
+    catch_all = {
+      actions = {
+        route_to = "unrouted"
+      }
+    }
+    sets = [
+      {
+        id = "start"
+        rules = [
+          {
+            actions = {
+              route_to = pagerduty.service.instance.Core_IT_Services@s
+            }
+            id = "e281e448"
+          },
+        ]
+      },
+    ]
+    type = "router"
+  }
+}

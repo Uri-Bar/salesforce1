@@ -1,0 +1,74 @@
+pagerduty.eventOrchestration Lior_s_first_event_orch@tsss {
+  description = "Some desc"
+  name = "Lior's first event orch"
+  team = {
+    id = pagerduty.team.instance.Help_Desk_team_B@s
+    type = "team_reference"
+  }
+  eventOrchestrationsRouter = {
+    catch_all = {
+      actions = {
+        route_to = pagerduty.service.instance.Core_IT_Services@s
+      }
+    }
+    sets = [
+      {
+        id = "start"
+        rules = [
+          {
+            actions = {
+              route_to = pagerduty.service.instance.Core_IT_Services@s
+            }
+            conditions = [
+              {
+                expression = "event.class matches regex '123123' and not event.group matches '4t4' and event.component matches regex 'gdfgfd'"
+              },
+            ]
+            id = "c7d93b38"
+            label = "service route desc"
+          },
+          {
+            actions = {
+              route_to = pagerduty.service.instance.Mainframe
+            }
+            conditions = [
+              {
+                expression = "now in Wed,Sun 16:44:00 to 17:44:00 Asia/Jerusalem"
+              },
+              {
+                expression = "not event.group exists"
+              },
+              {
+                expression = "not event.dedup_key matches regex 'fdfs'"
+              },
+            ]
+            id = "f25a1b69"
+          },
+          {
+            actions = {
+              route_to = pagerduty.service.instance.acme_test@v
+            }
+            conditions = [
+              {
+                expression = "now > 2024-05-26 16:44:00 Asia/Jerusalem and now < 2024-05-26 17:44:00 Asia/Jerusalem and now == 2024-05-26 16:44:00 Asia/Jerusalem"
+              },
+            ]
+            id = "0d0e7405"
+          },
+          {
+            actions = {
+              route_to = pagerduty.service.instance.CRM
+            }
+            conditions = [
+              {
+                expression = "trigger_count over 5 second > 10"
+              },
+            ]
+            id = "27af55fa"
+          },
+        ]
+      },
+    ]
+    type = "router"
+  }
+}

@@ -1,0 +1,35 @@
+pagerduty.escalationPolicy IT_Web_Policy@s {
+  type = "escalation_policy"
+  name = "IT Web Policy"
+  escalation_rules = [
+    {
+      id = "PHX3LIB"
+      escalation_delay_in_minutes = 60
+      targets = [
+        {
+          id = pagerduty.schedule.instance.IT_web@s
+          type = "schedule_reference"
+        },
+      ]
+    },
+    {
+      id = "PDKFL6O"
+      escalation_delay_in_minutes = 10
+      targets = [
+        {
+          id = pagerduty.schedule.instance.Bibi_is_Always_on_Call@s
+          type = "schedule_reference"
+        },
+      ]
+    },
+  ]
+  num_loops = 1
+  teams = [
+    {
+      id = pagerduty.team.instance.Web
+      type = "team_reference"
+    },
+  ]
+  description = "Managed by Terraform"
+  on_call_handoff_notifications = "if_has_services"
+}

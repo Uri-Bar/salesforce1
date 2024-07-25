@@ -1,0 +1,29 @@
+pagerduty.eventOrchestration uris_@s {
+  description = "wow"
+  name = "uris "
+  team = {
+    id = pagerduty.team.instance.Help_Desk_team_B@s
+    type = "team_reference"
+  }
+  eventOrchestrationsRouter = {
+    catch_all = {
+      actions = {
+        route_to = "unrouted"
+      }
+    }
+    sets = [
+      {
+        id = "start"
+        rules = [
+          {
+            actions = {
+              route_to = pagerduty.service.instance.Core_IT_Services@s
+            }
+            id = "1648f721"
+          },
+        ]
+      },
+    ]
+    type = "router"
+  }
+}

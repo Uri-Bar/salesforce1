@@ -1,0 +1,10 @@
+envs {
+  envs = [
+    {
+      name = "pd1"
+      accountToServiceName = {
+        pagerduty = "pagerduty"
+      }
+    },
+  ]
+}
