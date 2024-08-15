@@ -1,0 +1,44 @@
+salesforce.CustomApplication standard__SalesforceCMS {
+  formFactors = [
+    "Large",
+  ]
+  isNavAutoTempTabsDisabled = false
+  isNavPersonalizationDisabled = false
+  isNavTabPersistenceDisabled = false
+  label = "Salesforce CMS"
+  navType = "Console"
+  tabs = [
+    "standard-CmsAuthorHome",
+    "standard-CmsChannel",
+    "standard-CmsWorkspaces",
+    "standard-CmsExperiences",
+    salesforce.CustomTab.instance.property__c,
+    salesforce.CustomTab.instance.favorite__c,
+  ]
+  uiType = "Lightning"
+  workspaceConfig = {
+    mappings = [
+      {
+        tab = salesforce.CustomTab.instance.favorite__c
+      },
+      {
+        tab = salesforce.CustomTab.instance.property__c
+      },
+      {
+        tab = "standard-CmsAuthorHome"
+      },
+      {
+        tab = "standard-CmsChannel"
+      },
+      {
+        tab = "standard-CmsExperiences"
+      },
+      {
+        tab = "standard-CmsWorkspaces"
+      },
+    ]
+  }
+  fullName = "standard__SalesforceCMS"
+  _alias = "Salesforce CMS (standard)"
+  isOmniPinnedViewEnabled = false
+}

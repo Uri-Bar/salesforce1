@@ -1,0 +1,228 @@
+type salesforce.PrivacyJobSession {
+  salesforce.Picklist JobStatus {
+    apiName = "PrivacyJobSession.JobStatus"
+    restricted = true
+    label = "Job Status"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Text PolicyDescription {
+    apiName = "PrivacyJobSession.PolicyDescription"
+    length = 255
+    label = "Policy Description"
+    createable = false
+    updateable = false
+    unique = false
+    caseSensitive = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Text PolicyName {
+    apiName = "PrivacyJobSession.PolicyName"
+    length = 255
+    label = "Policy Name"
+    createable = false
+    updateable = false
+    unique = false
+    caseSensitive = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Picklist PolicyType {
+    apiName = "PrivacyJobSession.PolicyType"
+    restricted = true
+    label = "Policy Type"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.DateTime StartTime {
+    apiName = "PrivacyJobSession.StartTime"
+    label = "Start Time"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  serviceid Id {
+    apiName = "PrivacyJobSession.Id"
+    label = "Privacy Job Session ID"
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Lookup OwnerId {
+    apiName = "PrivacyJobSession.OwnerId"
+    relationshipName = "Owner"
+    label = "Owner ID"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Checkbox IsDeleted {
+    apiName = "PrivacyJobSession.IsDeleted"
+    defaultValue = false
+    label = "Deleted"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.AutoNumber Name {
+    apiName = "PrivacyJobSession.Name"
+    label = "Name"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.DateTime CreatedDate {
+    apiName = "PrivacyJobSession.CreatedDate"
+    label = "Created Date"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Lookup CreatedById {
+    apiName = "PrivacyJobSession.CreatedById"
+    relationshipName = "CreatedBy"
+    label = "Created By ID"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.DateTime LastModifiedDate {
+    apiName = "PrivacyJobSession.LastModifiedDate"
+    label = "Last Modified Date"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Lookup LastModifiedById {
+    apiName = "PrivacyJobSession.LastModifiedById"
+    relationshipName = "LastModifiedBy"
+    label = "Last Modified By ID"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.DateTime SystemModstamp {
+    apiName = "PrivacyJobSession.SystemModstamp"
+    label = "System Modstamp"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.DateTime EndTime {
+    apiName = "PrivacyJobSession.EndTime"
+    label = "End Time"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.DateTime CreationDate {
+    apiName = "PrivacyJobSession.CreationDate"
+    label = "Creation Date"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.LongTextArea SerializedPolicy {
+    apiName = "PrivacyJobSession.SerializedPolicy"
+    length = 131072
+    label = "Serialized Policy"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.LongTextArea FailureLog {
+    apiName = "PrivacyJobSession.FailureLog"
+    length = 131072
+    label = "Failure Log"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Text CurrentObject {
+    apiName = "PrivacyJobSession.CurrentObject"
+    length = 128
+    label = "Current Object"
+    createable = false
+    updateable = false
+    unique = false
+    caseSensitive = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Lookup PrivacyPolicyDefinitionId {
+    apiName = "PrivacyJobSession.PrivacyPolicyDefinitionId"
+    relationshipName = "PrivacyPolicyDefinition"
+    label = "Privacy Policy Definition ID"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.DateTime ScheduledTime {
+    apiName = "PrivacyJobSession.ScheduledTime"
+    label = "Scheduled Time"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Picklist JobStartType {
+    apiName = "PrivacyJobSession.JobStartType"
+    restricted = true
+    label = "Job Start Type"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Checkbox OptionsTraversalComplete {
+    apiName = "PrivacyJobSession.OptionsTraversalComplete"
+    label = "TraversalComplete"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Checkbox OptionsTraversalFailed {
+    apiName = "PrivacyJobSession.OptionsTraversalFailed"
+    label = "TraversalFailed"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Checkbox OptionsProcessingFailed {
+    apiName = "PrivacyJobSession.OptionsProcessingFailed"
+    label = "ProcessingFailed"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Lookup PrivacyRtbfRequestId {
+    apiName = "PrivacyJobSession.PrivacyRtbfRequestId"
+    relationshipName = "PrivacyRtbfRequest"
+    label = "Privacy RTBF Request ID"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+}

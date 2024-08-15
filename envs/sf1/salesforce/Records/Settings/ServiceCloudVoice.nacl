@@ -1,0 +1,15 @@
+salesforce.ServiceCloudVoiceSettings {
+  fullName = "ServiceCloudVoice"
+  enableAmazonQueueManagement = "false"
+  enableDefaultChannelForSCV = "false"
+  enableEndUserForSCV = "false"
+  enableOmniCapacityForSCV = "false"
+  enableSCVBYOT = "false"
+  enableServiceCloudVoice = "false"
+  
+  _alias = "ServiceCloudVoice"
+  enableSCVSupportBannerDisplayed = "false"
+  enableRZoneCloudVoiceOptIn = "false"
+  disableSCVTaskCreationForHVS = "false"
+  enablePhoneNumberMaskingForSCV = "false"
+}

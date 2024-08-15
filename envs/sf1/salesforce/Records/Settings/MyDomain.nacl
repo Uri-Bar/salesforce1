@@ -1,0 +1,26 @@
+salesforce.MyDomainSettings {
+  fullName = "MyDomain"
+  canOnlyLoginWithMyDomainUrl = false
+  doesApiLoginRequireOrgDomain = false
+  domainPartition = "none"
+  enableEdgeDuringRollout = "true"
+  enableNativeBrowserForAuthOnAndroid = false
+  enableNativeBrowserForAuthOnIos = false
+  enableShareBrowserSessionAndroidForAuth = "false"
+  enableShareBrowserSessionIOSForAuth = "false"
+  logRedirections = "false"
+  myDomainName = "salto-5b-dev-ed"
+  myDomainSuffix = "MySalesforce"
+  redirectForceComSiteUrls = "true"
+  redirectPriorMyDomain = "true"
+  use3rdPartyCookieBlockingCompatibleHostnames = "true"
+  useEdge = false
+  useEnhancedDomainsInSandbox = "true"
+  useStabilizedMyDomainHostnames = true
+  useStabilizedSandboxMyDomainHostnames = true
+  _alias = "MyDomain"
+  doesWarnOnForceComRedirect = "false"
+  doesWarnOnRedirect = "false"
+  instancedUrlRedirectHandling = "NoRedirect"
+  isFirstPartyCookieUseRequired = "false"
+}
