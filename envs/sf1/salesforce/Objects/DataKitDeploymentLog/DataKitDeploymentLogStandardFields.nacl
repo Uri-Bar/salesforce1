@@ -11,7 +11,7 @@ type salesforce.DataKitDeploymentLog {
   }
   salesforce.Text ComponentName {
     apiName = "DataKitDeploymentLog.ComponentName"
-    label = "Component Name"
+    label = "Component Name hjuhkuh"
     createable = false
     updateable = false
     unique = false
