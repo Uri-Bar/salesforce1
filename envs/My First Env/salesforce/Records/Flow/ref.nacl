@@ -29,7 +29,7 @@ salesforce.Flow ref {
     {
       name = "check"
       label = "check"
-      locationX = 176
+      locationX = 174
       locationY = 335
       connector = {
         targetReference = "sec"
