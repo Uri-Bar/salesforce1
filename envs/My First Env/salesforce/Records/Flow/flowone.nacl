@@ -1,0 +1,56 @@
+salesforce.Flow flowone {
+  fullName = "flowone"
+  actionCalls = {
+    name = "aa"
+    label = "aa"
+    locationX = 171
+    locationY = 158
+    actionName = salesforce.QuickAction.instance.CollaborationGroup_NewGroupMember@v
+    actionType = "quickAction"
+    flowTransactionModel = "CurrentTransaction"
+    inputParameters = [
+      {
+        name = "MemberId"
+        value = {
+          stringValue = ""
+        }
+      },
+      {
+        name = "contextId"
+        value = {
+          booleanValue = true
+        }
+      },
+    ]
+    nameSegment = "CollaborationGroup.NewGroupMember"
+    versionSegment = 1
+  }
+  apiVersion = 55
+  environments = "Default"
+  interviewLabel = "flowone {!$Flow.CurrentDateTime}"
+  label = "flowone"
+  processMetadataValues = [
+    {
+      name = "CanvasMode"
+      value = {
+        stringValue = "AUTO_LAYOUT_CANVAS"
+      }
+    },
+    {
+      name = "OriginBuilderType"
+      value = {
+        stringValue = "LightningFlowBuilder"
+      }
+    },
+  ]
+  processType = "Flow"
+  start = {
+    locationX = 22
+    locationY = 123
+    connector = {
+      targetReference = "aa"
+    }
+  }
+  status = "Draft"
+  _alias = "flowone"
+}

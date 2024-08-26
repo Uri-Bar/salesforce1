@@ -1,0 +1,47 @@
+type salesforce.property__c {
+  salesforce.MultiselectPicklist pick__c {
+    apiName = "property__c.pick__c"
+    label = "pick"
+    trackTrending = false
+    valueSet = [
+      {
+        fullName = "a"
+        default = false
+        label = "a"
+      },
+      {
+        fullName = "b"
+        default = false
+        label = "b"
+      },
+      {
+        fullName = "c"
+        default = false
+        label = "c"
+      },
+      {
+        fullName = "d"
+        default = false
+        label = "d"
+      },
+    ]
+    sorted = false
+    restricted = true
+    visibleLines = 4
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Currency price__c {
+    apiName = "property__c.price__c"
+    description = "the listed price"
+    label = "price"
+    precision = 18
+    _required = true
+    scale = 0
+    trackTrending = false
+    createable = true
+    updateable = true
+    queryable = true
+  }
+}
