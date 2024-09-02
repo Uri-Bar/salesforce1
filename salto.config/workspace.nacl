@@ -1,0 +1,13 @@
+workspace {
+  uid = "f701de0a-0b70-4882-9cde-a869b270bb0f"
+  name = "envf701de0a-0b70-4882-9cde-a869b270bb0f"
+  state = {
+    provider = "s3"
+    options = {
+      s3 = {
+        bucket = "salto-test-state-static-files"
+        prefix = "2bedb117-3faa-4b4c-a9cf-404849f431b7"
+      }
+    }
+  }
+}
