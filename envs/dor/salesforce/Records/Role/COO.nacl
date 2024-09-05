@@ -2,7 +2,7 @@ salesforce.Role COO {
   fullName = "COO"
   caseAccessLevel = "Edit"
   contactAccessLevel = "Edit"
-  description = "COO uri bar o"
+  description = "COO demo"
   mayForecastManagerShare = false
   name = "COO"
   opportunityAccessLevel = "Edit"
