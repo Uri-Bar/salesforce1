@@ -1,0 +1,85 @@
+type salesforce.ProductAttributeSetProduct {
+  salesforce.Lookup ProductAttributeSetId {
+    apiName = "ProductAttributeSetProduct.ProductAttributeSetId"
+    relationshipName = "ProductAttributeSet"
+    _required = true
+    label = "Product Attribute Set ID"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Lookup ProductId {
+    apiName = "ProductAttributeSetProduct.ProductId"
+    relationshipName = "Product"
+    _required = true
+    label = "Product ID"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  serviceid Id {
+    apiName = "ProductAttributeSetProduct.Id"
+    label = "Product Attribute Set Product ID"
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Checkbox IsDeleted {
+    apiName = "ProductAttributeSetProduct.IsDeleted"
+    defaultValue = false
+    label = "Deleted"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.AutoNumber Name {
+    apiName = "ProductAttributeSetProduct.Name"
+    label = "Product Attribute Set Product Name"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.DateTime CreatedDate {
+    apiName = "ProductAttributeSetProduct.CreatedDate"
+    label = "Created Date"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Lookup CreatedById {
+    apiName = "ProductAttributeSetProduct.CreatedById"
+    relationshipName = "CreatedBy"
+    label = "Created By ID"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.DateTime LastModifiedDate {
+    apiName = "ProductAttributeSetProduct.LastModifiedDate"
+    label = "Last Modified Date"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Lookup LastModifiedById {
+    apiName = "ProductAttributeSetProduct.LastModifiedById"
+    relationshipName = "LastModifiedBy"
+    label = "Last Modified By ID"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.DateTime SystemModstamp {
+    apiName = "ProductAttributeSetProduct.SystemModstamp"
+    label = "System Modstamp"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+}

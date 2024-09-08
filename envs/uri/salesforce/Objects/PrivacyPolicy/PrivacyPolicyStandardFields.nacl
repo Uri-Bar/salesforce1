@@ -1,0 +1,139 @@
+type salesforce.PrivacyPolicy {
+  salesforce.Text Description {
+    apiName = "PrivacyPolicy.Description"
+    length = 255
+    label = "Description"
+    createable = false
+    updateable = false
+    unique = false
+    caseSensitive = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Text Name {
+    apiName = "PrivacyPolicy.Name"
+    length = 255
+    _required = true
+    label = "Name"
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    queryable = true
+  }
+  salesforce.Picklist RunFrequency {
+    apiName = "PrivacyPolicy.RunFrequency"
+    restricted = true
+    label = "Run Frequency"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Picklist Status {
+    apiName = "PrivacyPolicy.Status"
+    restricted = true
+    label = "Status"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Picklist Type {
+    apiName = "PrivacyPolicy.Type"
+    restricted = true
+    label = "Policy Type"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  serviceid Id {
+    apiName = "PrivacyPolicy.Id"
+    label = "Privacy Policy ID"
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Checkbox IsDeleted {
+    apiName = "PrivacyPolicy.IsDeleted"
+    defaultValue = false
+    label = "Deleted"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.DateTime CreatedDate {
+    apiName = "PrivacyPolicy.CreatedDate"
+    label = "Created Date"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Lookup CreatedById {
+    apiName = "PrivacyPolicy.CreatedById"
+    relationshipName = "CreatedBy"
+    label = "Created By ID"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.DateTime LastModifiedDate {
+    apiName = "PrivacyPolicy.LastModifiedDate"
+    label = "Last Modified Date"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Lookup LastModifiedById {
+    apiName = "PrivacyPolicy.LastModifiedById"
+    relationshipName = "LastModifiedBy"
+    label = "Last Modified By ID"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.DateTime SystemModstamp {
+    apiName = "PrivacyPolicy.SystemModstamp"
+    label = "System Modstamp"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Lookup PrivacyPolicyDefinitionId {
+    apiName = "PrivacyPolicy.PrivacyPolicyDefinitionId"
+    relationshipName = "PrivacyPolicyDefinition"
+    _required = true
+    label = "Privacy Policy Definition ID"
+    createable = true
+    updateable = false
+    queryable = true
+  }
+  salesforce.Text DefinitionMasterLabel {
+    apiName = "PrivacyPolicy.DefinitionMasterLabel"
+    length = 255
+    label = "Definition Master Label"
+    createable = false
+    updateable = false
+    unique = false
+    caseSensitive = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Text DefinitionDeveloperName {
+    apiName = "PrivacyPolicy.DefinitionDeveloperName"
+    length = 255
+    label = "Definition Developer Name"
+    createable = false
+    updateable = false
+    unique = false
+    caseSensitive = false
+    queryable = true
+    _hidden_value = true
+  }
+}
