@@ -1,0 +1,57 @@
+salesforce.Flow flowtwo {
+  fullName = "flowtwo"
+  actionCalls = {
+    name = "aa"
+    label = "aa"
+    locationX = 123
+    locationY = 158
+    actionName = "submit"
+    actionType = "submit"
+    flowTransactionModel = "CurrentTransaction"
+    inputParameters = [
+      {
+        name = "objectId"
+        value = {
+          stringValue = ""
+        }
+      },
+    ]
+    nameSegment = "submit"
+    storeOutputAutomatically = true
+    versionSegment = 1
+  }
+  apiVersion = 55
+  environments = "Default"
+  interviewLabel = "flowtwo {!$Flow.CurrentDateTime}"
+  label = "flowtwo"
+  processMetadataValues = [
+    {
+      name = "BuilderType"
+      value = {
+        stringValue = "LightningFlowBuilder"
+      }
+    },
+    {
+      name = "CanvasMode"
+      value = {
+        stringValue = "AUTO_LAYOUT_CANVAS"
+      }
+    },
+    {
+      name = "OriginBuilderType"
+      value = {
+        stringValue = "LightningFlowBuilder"
+      }
+    },
+  ]
+  processType = "AutoLaunchedFlow"
+  start = {
+    locationX = 52
+    locationY = 14
+    connector = {
+      targetReference = "aa"
+    }
+  }
+  status = "Active"
+  _alias = "flowtwo"
+}
