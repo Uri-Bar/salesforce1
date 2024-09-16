@@ -1,0 +1,9 @@
+salesforce.CustomFeedFilter Case_saas@v {
+  fullName = "Case.saas"
+  criteria = {
+    feedItemType = "EmailMessageEvent"
+    relatedSObjectType = "EmailMessage"
+  }
+  label = "saas"
+  _alias = "saas"
+}

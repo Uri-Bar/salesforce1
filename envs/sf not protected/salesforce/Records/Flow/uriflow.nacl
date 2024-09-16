@@ -1,0 +1,34 @@
+salesforce.Flow uriflow {
+  fullName = "uriflow"
+  apiVersion = 55
+  environments = "Default"
+  interviewLabel = "uriflow {!$Flow.CurrentDateTime}"
+  label = "uriflow"
+  processMetadataValues = [
+    {
+      name = "BuilderType"
+      value = {
+        stringValue = "LightningFlowBuilder"
+      }
+    },
+    {
+      name = "CanvasMode"
+      value = {
+        stringValue = "AUTO_LAYOUT_CANVAS"
+      }
+    },
+    {
+      name = "OriginBuilderType"
+      value = {
+        stringValue = "LightningFlowBuilder"
+      }
+    },
+  ]
+  processType = "Flow"
+  start = {
+    locationX = 41
+    locationY = 0
+  }
+  status = "InvalidDraft"
+  _alias = "uriflow"
+}

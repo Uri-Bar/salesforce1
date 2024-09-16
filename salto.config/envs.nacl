@@ -1,4 +1,10 @@
 envs {
   envs = [
+    {
+      name = "sf not protected"
+      accountToServiceName = {
+        salesforce = "salesforce"
+      }
+    },
   ]
 }
