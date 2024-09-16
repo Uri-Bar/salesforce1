@@ -1,0 +1,46 @@
+salesforce.LightningComponentBundle helloWorld {
+  apiVersion = 52
+  isExposed = true
+  targets = {
+    target = [
+      "lightning__AppPage",
+      "lightning__RecordPage",
+      "lightning__HomePage",
+    ]
+  }
+  targetConfigs = {
+    targetConfig = [
+      {
+        targets = "lightning__RecordPage"
+        property = {
+          name = "recordId"
+          type = "String"
+        }
+      },
+      {
+        targets = "lightning__HomePage"
+        property = {
+          name = "contact"
+          type = "String"
+          default = "uri"
+          required = true
+        }
+      },
+    ]
+  }
+  attr_fqn = "helloWorld"
+  fullName = "helloWorld"
+  lwcResources = {
+    lwcResource = {
+      helloWorld_html@v = {
+        source = file("salesforce/Records/LightningComponentBundle/helloWorld/helloWorld.html")
+        filePath = "lwc/helloWorld/helloWorld.html"
+      }
+      helloWorld_js@v = {
+        source = file("salesforce/Records/LightningComponentBundle/helloWorld/helloWorld.js")
+        filePath = "lwc/helloWorld/helloWorld.js"
+      }
+    }
+  }
+  _alias = "helloWorld"
+}

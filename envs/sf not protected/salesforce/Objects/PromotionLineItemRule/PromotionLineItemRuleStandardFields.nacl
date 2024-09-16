@@ -1,0 +1,130 @@
+type salesforce.PromotionLineItemRule {
+  salesforce.Lookup AssociatedReferenceId {
+    apiName = "PromotionLineItemRule.AssociatedReferenceId"
+    relationshipName = "AssociatedReference"
+    _required = true
+    label = "Associated Reference ID"
+    createable = true
+    updateable = false
+    queryable = true
+  }
+  salesforce.Picklist AssociatedType {
+    apiName = "PromotionLineItemRule.AssociatedType"
+    restricted = true
+    _required = true
+    label = "Associated Type"
+    createable = true
+    updateable = false
+    queryable = true
+  }
+  salesforce.Picklist OperatorType {
+    apiName = "PromotionLineItemRule.OperatorType"
+    restricted = true
+    _required = true
+    label = "Operator Type"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Lookup OwnerId {
+    apiName = "PromotionLineItemRule.OwnerId"
+    relationshipName = "Owner"
+    label = "Owner ID"
+    createable = true
+    updateable = true
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Picklist Type {
+    apiName = "PromotionLineItemRule.Type"
+    restricted = true
+    _required = true
+    label = "Type"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Lookup TypeReferenceId {
+    apiName = "PromotionLineItemRule.TypeReferenceId"
+    relationshipName = "TypeReference"
+    label = "Type Reference ID"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Text TypeValue {
+    apiName = "PromotionLineItemRule.TypeValue"
+    length = 255
+    label = "Type Value"
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    queryable = true
+  }
+  serviceid Id {
+    apiName = "PromotionLineItemRule.Id"
+    label = "Promotion Line Item Rule ID"
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Checkbox IsDeleted {
+    apiName = "PromotionLineItemRule.IsDeleted"
+    defaultValue = false
+    label = "Deleted"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.AutoNumber Name {
+    apiName = "PromotionLineItemRule.Name"
+    label = "Promotion Line Item Rule Name"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.DateTime CreatedDate {
+    apiName = "PromotionLineItemRule.CreatedDate"
+    label = "Created Date"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Lookup CreatedById {
+    apiName = "PromotionLineItemRule.CreatedById"
+    relationshipName = "CreatedBy"
+    label = "Created By ID"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.DateTime LastModifiedDate {
+    apiName = "PromotionLineItemRule.LastModifiedDate"
+    label = "Last Modified Date"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Lookup LastModifiedById {
+    apiName = "PromotionLineItemRule.LastModifiedById"
+    relationshipName = "LastModifiedBy"
+    label = "Last Modified By ID"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.DateTime SystemModstamp {
+    apiName = "PromotionLineItemRule.SystemModstamp"
+    label = "System Modstamp"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+}
