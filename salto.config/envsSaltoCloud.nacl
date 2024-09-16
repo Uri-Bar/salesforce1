@@ -1,0 +1,8 @@
+envs {
+  envsCloud = [
+    {
+      uuid = "11183bbe-8593-4564-8939-7b4f20dd108b"
+      folderName = "sf not protected"
+    },
+  ]
+}
