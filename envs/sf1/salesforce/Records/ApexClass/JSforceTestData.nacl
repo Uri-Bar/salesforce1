@@ -1,0 +1,18 @@
+salesforce.ApexClass JSforceTestData {
+  apiVersion = 34
+  status = "Active"
+  fullName = "JSforceTestData"
+  content = file("salesforce/Records/ApexClass/JSforceTestData.cls")
+  _generated_dependencies = [
+    {
+      reference = salesforce.JSforceTestSetting__c
+    },
+    {
+      reference = salesforce.JSforceTestSetting__c.field.ExecUsername__c
+    },
+    {
+      reference = salesforce.JSforceTestSetting__c.field.TargetTableNames__c
+    },
+  ]
+  _alias = "JSforceTestData"
+}

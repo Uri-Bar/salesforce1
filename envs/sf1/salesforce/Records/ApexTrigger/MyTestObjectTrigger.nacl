@@ -1,0 +1,12 @@
+salesforce.ApexTrigger MyTestObjectTrigger {
+  apiVersion = 29
+  status = "Active"
+  fullName = "MyTestObjectTrigger"
+  content = file("salesforce/Records/ApexTrigger/MyTestObjectTrigger.trigger")
+  _generated_dependencies = [
+    {
+      reference = salesforce.MyTestObject__c
+    },
+  ]
+  _alias = "MyTestObjectTrigger"
+}

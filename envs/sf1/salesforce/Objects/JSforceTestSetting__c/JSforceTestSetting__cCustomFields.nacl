@@ -1,0 +1,35 @@
+type salesforce.JSforceTestSetting__c {
+  salesforce.DateTime ExecLatch__c {
+    apiName = "JSforceTestSetting__c.ExecLatch__c"
+    label = "Execution Latch"
+    trackTrending = false
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Text ExecUsername__c {
+    apiName = "JSforceTestSetting__c.ExecUsername__c"
+    externalId = false
+    label = "Execution Username"
+    length = 255
+    _required = true
+    trackTrending = false
+    unique = false
+    createable = true
+    updateable = true
+    caseSensitive = false
+    queryable = true
+  }
+  salesforce.Text TargetTableNames__c {
+    apiName = "JSforceTestSetting__c.TargetTableNames__c"
+    externalId = false
+    label = "Target Table Names"
+    length = 255
+    trackTrending = false
+    unique = false
+    createable = true
+    updateable = true
+    caseSensitive = false
+    queryable = true
+  }
+}

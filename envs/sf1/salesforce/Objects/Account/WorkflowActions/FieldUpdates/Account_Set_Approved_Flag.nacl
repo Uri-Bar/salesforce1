@@ -1,0 +1,14 @@
+salesforce.WorkflowFieldUpdate Account_Set_Approved_Flag@vuu {
+  fullName = "Account.Set_Approved_Flag"
+  field = salesforce.Account.field.Name
+  formula = "'(Approved)' &  Name"
+  name = "Set Approved Flag"
+  notifyAssignee = false
+  operation = "Formula"
+  protected = false
+  reevaluateOnChange = false
+  _parent = [
+    salesforce.Account,
+  ]
+  _alias = "Account.Set_Approved_Flag"
+}

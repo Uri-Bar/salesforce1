@@ -1,0 +1,21 @@
+salesforce.ApexClass JSforceTestUtil {
+  apiVersion = 32
+  status = "Active"
+  fullName = "JSforceTestUtil"
+  content = file("salesforce/Records/ApexClass/JSforceTestUtil.cls")
+  _generated_dependencies = [
+    {
+      reference = salesforce.JSforceTestSetting__c
+    },
+    {
+      reference = salesforce.JSforceTestSetting__c.field.ExecLatch__c
+    },
+    {
+      reference = salesforce.JSforceTestSetting__c.field.ExecUsername__c
+    },
+    {
+      reference = salesforce.JSforceTestSetting__c.field.TargetTableNames__c
+    },
+  ]
+  _alias = "JSforceTestUtil"
+}

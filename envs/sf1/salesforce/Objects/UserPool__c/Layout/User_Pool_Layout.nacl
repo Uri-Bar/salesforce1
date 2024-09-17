@@ -1,0 +1,86 @@
+salesforce.Layout UserPool__c_User_Pool_Layout@uubss {
+  layoutSections = [
+    {
+      customLabel = false
+      detailHeading = false
+      editHeading = true
+      label = "Information"
+      layoutColumns = [
+        {
+          layoutItems = [
+            {
+              behavior = "Required"
+              field = salesforce.UserPool__c.field.Name
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.UserPool__c.field.CheckedOutAt__c
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.UserPool__c.field.CheckedOutBy__c
+            },
+            {
+              behavior = "Readonly"
+              field = salesforce.UserPool__c.field.IsPooled__c
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.UserPool__c.field.LastCheckedOutAt__c
+            },
+          ]
+        },
+        {
+          layoutItems = [
+            {
+              behavior = "Edit"
+              field = salesforce.UserPool__c.field.OwnerId
+            },
+          ]
+        },
+      ]
+      style = "TwoColumnsTopToBottom"
+    },
+    {
+      customLabel = false
+      detailHeading = false
+      editHeading = true
+      label = "System Information"
+      layoutColumns = [
+        {
+          layoutItems = [
+            {
+              behavior = "Readonly"
+              field = salesforce.UserPool__c.field.CreatedById
+            },
+          ]
+        },
+        {
+          layoutItems = [
+            {
+              behavior = "Readonly"
+              field = salesforce.UserPool__c.field.LastModifiedById
+            },
+          ]
+        },
+      ]
+      style = "TwoColumnsTopToBottom"
+    },
+    {
+      customLabel = false
+      detailHeading = false
+      editHeading = true
+      style = "CustomLinks"
+    },
+  ]
+  showEmailCheckbox = false
+  showHighlightsPanel = false
+  showInteractionLogPanel = false
+  showRunAssignmentRulesCheckbox = false
+  showSubmitAndAttachButton = false
+  fullName = "UserPool__c-User Pool Layout"
+  _parent = [
+    salesforce.UserPool__c,
+  ]
+  _alias = "UserPool__c-User Pool Layout"
+}

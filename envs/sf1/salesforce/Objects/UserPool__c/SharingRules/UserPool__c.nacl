@@ -1,0 +1,7 @@
+salesforce.SharingRules UserPool__c {
+  fullName = "UserPool__c"
+  _parent = [
+    salesforce.UserPool__c,
+  ]
+  _alias = "UserPool__c"
+}
