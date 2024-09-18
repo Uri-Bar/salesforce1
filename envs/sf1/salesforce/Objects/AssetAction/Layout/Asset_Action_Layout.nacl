@@ -36,6 +36,10 @@ salesforce.Layout AssetAction_Asset_Action_Layout@bss {
               behavior = "Required"
               field = salesforce.AssetAction.field.QuantityChange
             },
+            {
+              behavior = "Readonly"
+              field = salesforce.AssetAction.field.SubtotalChange
+            },
           ]
         },
         {
@@ -106,6 +110,10 @@ salesforce.Layout AssetAction_Asset_Action_Layout@bss {
       customLabel = false
       detailHeading = false
       editHeading = false
+      layoutColumns = [
+        {
+        },
+      ]
       style = "CustomLinks"
     },
   ]

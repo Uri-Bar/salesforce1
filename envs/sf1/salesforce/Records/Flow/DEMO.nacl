@@ -1,0 +1,62 @@
+salesforce.Flow DEMO {
+  fullName = "DEMO"
+  actionCalls = {
+    name = "aaaa"
+    label = "aa"
+    locationX = 176
+    locationY = 158
+    actionName = salesforce.QuickAction.instance.CollaborationGroup_NewGroupMember@v
+    actionType = "quickAction"
+    flowTransactionModel = "CurrentTransaction"
+    inputParameters = [
+      {
+        name = "MemberId"
+        value = {
+          elementReference = "$Api.Enterprise_Server_URL_100"
+        }
+      },
+      {
+        name = "contextId"
+        value = {
+          elementReference = "$Flow.CurrentDate"
+        }
+      },
+    ]
+    nameSegment = "CollaborationGroup.NewGroupMember"
+    versionSegment = 1
+  }
+  apiVersion = 56
+  environments = "Default"
+  interviewLabel = "DEMO {!$Flow.CurrentDateTime}"
+  label = "DEMO"
+  processMetadataValues = [
+    {
+      name = "BuilderType"
+      value = {
+        stringValue = "LightningFlowBuilder"
+      }
+    },
+    {
+      name = "CanvasMode"
+      value = {
+        stringValue = "AUTO_LAYOUT_CANVAS"
+      }
+    },
+    {
+      name = "OriginBuilderType"
+      value = {
+        stringValue = "LightningFlowBuilder"
+      }
+    },
+  ]
+  processType = "Flow"
+  start = {
+    locationX = 315
+    locationY = 122
+    connector = {
+      targetReference = "aaaa"
+    }
+  }
+  status = "Active"
+  _alias = "DEMO"
+}

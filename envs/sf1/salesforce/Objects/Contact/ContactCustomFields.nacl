@@ -36,12 +36,4 @@ type salesforce.Contact {
     updateable = true
     queryable = true
   }
-  salesforce.Checkbox Prequalified__c {
-    apiName = "Contact.Prequalified__c"
-    defaultValue = false
-    label = "Prequalified?"
-    createable = true
-    updateable = true
-    queryable = true
-  }
 }

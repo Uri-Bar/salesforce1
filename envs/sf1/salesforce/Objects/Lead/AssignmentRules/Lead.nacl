@@ -5,7 +5,7 @@ salesforce.AssignmentRules Lead {
       active = true
       ruleEntry = [
         {
-          assignedTo = "uri.bar+1@salto.io"
+          assignedTo = "uri.bar+3@salto.io"
           assignedToType = "User"
           criteriaItems = [
             {
@@ -16,7 +16,7 @@ salesforce.AssignmentRules Lead {
           ]
         },
         {
-          assignedTo = "uri.bar+1@salto.io"
+          assignedTo = "uri.bar+3@salto.io"
           assignedToType = "User"
           criteriaItems = [
             {

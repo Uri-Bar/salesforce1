@@ -5,7 +5,7 @@ salesforce.AssignmentRules Case {
       active = true
       ruleEntry = [
         {
-          assignedTo = "uri.bar+1@salto.io"
+          assignedTo = "uri.bar+3@salto.io"
           assignedToType = "User"
           criteriaItems = [
             {
@@ -26,7 +26,7 @@ salesforce.AssignmentRules Case {
           ]
         },
         {
-          assignedTo = "uri.bar+1@salto.io"
+          assignedTo = "uri.bar+3@salto.io"
           assignedToType = "User"
           criteriaItems = [
             {
@@ -47,7 +47,7 @@ salesforce.AssignmentRules Case {
           ]
         },
         {
-          assignedTo = "uri.bar+1@salto.io"
+          assignedTo = "uri.bar+3@salto.io"
           assignedToType = "User"
           criteriaItems = [
             {
@@ -68,7 +68,7 @@ salesforce.AssignmentRules Case {
           ]
         },
         {
-          assignedTo = "uri.bar+1@salto.io"
+          assignedTo = "uri.bar+3@salto.io"
           assignedToType = "User"
           criteriaItems = [
             {
@@ -89,7 +89,7 @@ salesforce.AssignmentRules Case {
           ]
         },
         {
-          assignedTo = "uri.bar+1@salto.io"
+          assignedTo = "uri.bar+3@salto.io"
           assignedToType = "User"
           criteriaItems = [
             {
@@ -98,19 +98,6 @@ salesforce.AssignmentRules Case {
               value = "Partner"
             },
           ]
-        },
-        {
-          assignedTo = "uri.bar+1@salto.io"
-          assignedToType = "User"
-          criteriaItems = [
-            {
-              field = salesforce.Case.field.IsClosed
-              operation = "equals"
-              value = "True"
-            },
-          ]
-          team = "asds"
-          template = salesforce.EmailTemplate.instance.unfiled_public_MarketingProductInquiryResponse@zcd
         },
       ]
     },

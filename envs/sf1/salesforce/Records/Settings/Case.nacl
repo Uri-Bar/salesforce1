@@ -11,9 +11,9 @@ salesforce.CaseSettings {
   caseMergeInLightning = "false"
   closeCaseThroughStatusChange = false
   defaultCaseFeedLayoutOn = true
-  defaultCaseOwner = "uri.bar+1@salto.io"
+  defaultCaseOwner = "uri.bar+3@salto.io"
   defaultCaseOwnerType = "User"
-  defaultCaseUser = "uri.bar+1@salto.io"
+  defaultCaseUser = "uri.bar+3@salto.io"
   emailToCase = {
     enableEmailToCase = false
   }
@@ -30,7 +30,6 @@ salesforce.CaseSettings {
   enableSolutionShortSummary = "true"
   enableSuggestedSolutions = true
   escalateCaseBefore = false
-  keepRecordTypeOnAssignmentRule = true
   notifyContactOnCaseComment = false
   notifyDefaultCaseOwner = false
   notifyOwnerOnCaseComment = false

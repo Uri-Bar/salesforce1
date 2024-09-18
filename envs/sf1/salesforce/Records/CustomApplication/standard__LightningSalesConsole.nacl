@@ -23,19 +23,11 @@ salesforce.CustomApplication standard__LightningSalesConsole {
     "standard-Feed",
     "standard-CollaborationGroup",
     "standard-File",
-    salesforce.CustomTab.instance.property__c,
-    salesforce.CustomTab.instance.favorite__c,
   ]
   uiType = "Lightning"
   utilityBar = "LightningSalesConsole_UtilityBar"
   workspaceConfig = {
     mappings = [
-      {
-        tab = salesforce.CustomTab.instance.favorite__c
-      },
-      {
-        tab = salesforce.CustomTab.instance.property__c
-      },
       {
         tab = "standard-Account"
       },

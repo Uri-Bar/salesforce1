@@ -13,8 +13,6 @@ salesforce.CustomApplication standard__Chatter {
     "standard-OtherUserProfile",
     "standard-CollaborationGroup",
     "standard-File",
-    salesforce.CustomTab.instance.property__c,
-    salesforce.CustomTab.instance.favorite__c,
   ]
   fullName = "standard__Chatter"
   _alias = "standard__Chatter"

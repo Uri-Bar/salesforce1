@@ -183,17 +183,9 @@ salesforce.CustomApplication standard__ServiceConsole {
     "standard-Case",
     "standard-Opportunity",
     "standard-Lead",
-    salesforce.CustomTab.instance.property__c,
-    salesforce.CustomTab.instance.favorite__c,
   ]
   workspaceConfig = {
     mappings = [
-      {
-        tab = salesforce.CustomTab.instance.favorite__c
-      },
-      {
-        tab = salesforce.CustomTab.instance.property__c
-      },
       {
         tab = "standard-Account"
       },

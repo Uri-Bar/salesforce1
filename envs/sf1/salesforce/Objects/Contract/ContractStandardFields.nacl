@@ -153,7 +153,7 @@ type salesforce.Contract {
     createable = true
     updateable = true
     queryable = true
-    valueSetName = salesforce.StandardValueSet.instance.ServiceContractApprovalStatus
+    valueSetName = salesforce.StandardValueSet.instance.ContractStatus
   }
   serviceid Id {
     apiName = "Contract.Id"

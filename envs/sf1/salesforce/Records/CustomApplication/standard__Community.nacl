@@ -15,8 +15,6 @@ salesforce.CustomApplication standard__Community {
     "standard-IdeaTheme",
     "standard-report",
     "standard-Dashboard",
-    salesforce.CustomTab.instance.property__c,
-    salesforce.CustomTab.instance.favorite__c,
   ]
   fullName = "standard__Community"
   _alias = "standard__Community"

@@ -21,6 +21,24 @@ salesforce.StandardValueSet ContractStatus {
       label = "Draft"
       groupingString = "Draft"
     },
+    {
+      fullName = "bla bla"
+      default = false
+      label = "bla bla"
+      groupingString = "Draft"
+    },
+    {
+      fullName = "deploy"
+      default = false
+      label = "deploy"
+      groupingString = "Activated"
+    },
+    {
+      fullName = "deployed"
+      default = false
+      label = "deployed"
+      groupingString = "Activated"
+    },
   ]
   _alias = "ContractStatus"
 }

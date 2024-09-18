@@ -224,6 +224,10 @@ salesforce.ForecastingSettings {
           label = "Fiscal Period"
         },
         {
+          field = "OPPORTUNITY.RECORDTYPE"
+          label = "Opportunity Record Type"
+        },
+        {
           field = "OPPORTUNITY.LAST_ACTIVITY"
           label = "Last Activity"
         },
@@ -296,6 +300,7 @@ salesforce.ForecastingSettings {
           "OPPORTUNITY.FISCAL_YEAR",
           "OPPORTUNITY.FISCAL_QUARTER",
           "OPPORTUNITY.FISCAL_PERIOD",
+          "OPPORTUNITY.RECORDTYPE",
           "OPPORTUNITY.LAST_ACTIVITY",
           "OPPORTUNITY.CREATED_DATE",
           "OPPORTUNITY.LAST_UPDATE",
@@ -436,6 +441,10 @@ salesforce.ForecastingSettings {
           label = "Fiscal Period"
         },
         {
+          field = "OPPORTUNITY.RECORDTYPE"
+          label = "Opportunity Record Type"
+        },
+        {
           field = "OPPORTUNITY.LAST_ACTIVITY"
           label = "Last Activity"
         },
@@ -508,6 +517,7 @@ salesforce.ForecastingSettings {
           "OPPORTUNITY.FISCAL_YEAR",
           "OPPORTUNITY.FISCAL_QUARTER",
           "OPPORTUNITY.FISCAL_PERIOD",
+          "OPPORTUNITY.RECORDTYPE",
           "OPPORTUNITY.LAST_ACTIVITY",
           "OPPORTUNITY.CREATED_DATE",
           "OPPORTUNITY.LAST_UPDATE",
@@ -652,6 +662,10 @@ salesforce.ForecastingSettings {
           label = "Fiscal Period"
         },
         {
+          field = "OPPORTUNITY.RECORDTYPE"
+          label = "Opportunity Record Type"
+        },
+        {
           field = "OPPORTUNITY.LAST_ACTIVITY"
           label = "Last Activity"
         },
@@ -725,6 +739,7 @@ salesforce.ForecastingSettings {
           "OPPORTUNITY.FISCAL_YEAR",
           "OPPORTUNITY.FISCAL_QUARTER",
           "OPPORTUNITY.FISCAL_PERIOD",
+          "OPPORTUNITY.RECORDTYPE",
           "OPPORTUNITY.LAST_ACTIVITY",
           "OPPORTUNITY.CREATED_DATE",
           "OPPORTUNITY.LAST_UPDATE",
@@ -865,6 +880,10 @@ salesforce.ForecastingSettings {
           label = "Fiscal Period"
         },
         {
+          field = "OPPORTUNITY.RECORDTYPE"
+          label = "Opportunity Record Type"
+        },
+        {
           field = "OPPORTUNITY.LAST_ACTIVITY"
           label = "Last Activity"
         },
@@ -937,6 +956,7 @@ salesforce.ForecastingSettings {
           "OPPORTUNITY.FISCAL_YEAR",
           "OPPORTUNITY.FISCAL_QUARTER",
           "OPPORTUNITY.FISCAL_PERIOD",
+          "OPPORTUNITY.RECORDTYPE",
           "OPPORTUNITY.LAST_ACTIVITY",
           "OPPORTUNITY.CREATED_DATE",
           "OPPORTUNITY.LAST_UPDATE",
@@ -1081,6 +1101,10 @@ salesforce.ForecastingSettings {
           label = "Fiscal Period"
         },
         {
+          field = "OPPORTUNITY.RECORDTYPE"
+          label = "Opportunity Record Type"
+        },
+        {
           field = "OPPORTUNITY.LAST_ACTIVITY"
           label = "Last Activity"
         },
@@ -1154,6 +1178,7 @@ salesforce.ForecastingSettings {
           "OPPORTUNITY.FISCAL_YEAR",
           "OPPORTUNITY.FISCAL_QUARTER",
           "OPPORTUNITY.FISCAL_PERIOD",
+          "OPPORTUNITY.RECORDTYPE",
           "OPPORTUNITY.LAST_ACTIVITY",
           "OPPORTUNITY.CREATED_DATE",
           "OPPORTUNITY.LAST_UPDATE",
@@ -1294,6 +1319,10 @@ salesforce.ForecastingSettings {
           label = "Fiscal Period"
         },
         {
+          field = "OPPORTUNITY.RECORDTYPE"
+          label = "Opportunity Record Type"
+        },
+        {
           field = "OPPORTUNITY.LAST_ACTIVITY"
           label = "Last Activity"
         },
@@ -1366,6 +1395,7 @@ salesforce.ForecastingSettings {
           "OPPORTUNITY.FISCAL_YEAR",
           "OPPORTUNITY.FISCAL_QUARTER",
           "OPPORTUNITY.FISCAL_PERIOD",
+          "OPPORTUNITY.RECORDTYPE",
           "OPPORTUNITY.LAST_ACTIVITY",
           "OPPORTUNITY.CREATED_DATE",
           "OPPORTUNITY.LAST_UPDATE",
@@ -1510,6 +1540,10 @@ salesforce.ForecastingSettings {
           label = "Fiscal Period"
         },
         {
+          field = "OPPORTUNITY.RECORDTYPE"
+          label = "Opportunity Record Type"
+        },
+        {
           field = "OPPORTUNITY.LAST_ACTIVITY"
           label = "Last Activity"
         },
@@ -1583,6 +1617,7 @@ salesforce.ForecastingSettings {
           "OPPORTUNITY.FISCAL_YEAR",
           "OPPORTUNITY.FISCAL_QUARTER",
           "OPPORTUNITY.FISCAL_PERIOD",
+          "OPPORTUNITY.RECORDTYPE",
           "OPPORTUNITY.LAST_ACTIVITY",
           "OPPORTUNITY.CREATED_DATE",
           "OPPORTUNITY.LAST_UPDATE",
@@ -1723,6 +1758,10 @@ salesforce.ForecastingSettings {
           label = "Fiscal Period"
         },
         {
+          field = "OPPORTUNITY.RECORDTYPE"
+          label = "Opportunity Record Type"
+        },
+        {
           field = "OPPORTUNITY.LAST_ACTIVITY"
           label = "Last Activity"
         },
@@ -1795,6 +1834,7 @@ salesforce.ForecastingSettings {
           "OPPORTUNITY.FISCAL_YEAR",
           "OPPORTUNITY.FISCAL_QUARTER",
           "OPPORTUNITY.FISCAL_PERIOD",
+          "OPPORTUNITY.RECORDTYPE",
           "OPPORTUNITY.LAST_ACTIVITY",
           "OPPORTUNITY.CREATED_DATE",
           "OPPORTUNITY.LAST_UPDATE",
@@ -1939,6 +1979,10 @@ salesforce.ForecastingSettings {
           label = "Fiscal Period"
         },
         {
+          field = "OPPORTUNITY.RECORDTYPE"
+          label = "Opportunity Record Type"
+        },
+        {
           field = "OPPORTUNITY.LAST_ACTIVITY"
           label = "Last Activity"
         },
@@ -2012,6 +2056,7 @@ salesforce.ForecastingSettings {
           "OPPORTUNITY.FISCAL_YEAR",
           "OPPORTUNITY.FISCAL_QUARTER",
           "OPPORTUNITY.FISCAL_PERIOD",
+          "OPPORTUNITY.RECORDTYPE",
           "OPPORTUNITY.LAST_ACTIVITY",
           "OPPORTUNITY.CREATED_DATE",
           "OPPORTUNITY.LAST_UPDATE",
@@ -2152,6 +2197,10 @@ salesforce.ForecastingSettings {
           label = "Fiscal Period"
         },
         {
+          field = "OPPORTUNITY.RECORDTYPE"
+          label = "Opportunity Record Type"
+        },
+        {
           field = "OPPORTUNITY.LAST_ACTIVITY"
           label = "Last Activity"
         },
@@ -2224,6 +2273,7 @@ salesforce.ForecastingSettings {
           "OPPORTUNITY.FISCAL_YEAR",
           "OPPORTUNITY.FISCAL_QUARTER",
           "OPPORTUNITY.FISCAL_PERIOD",
+          "OPPORTUNITY.RECORDTYPE",
           "OPPORTUNITY.LAST_ACTIVITY",
           "OPPORTUNITY.CREATED_DATE",
           "OPPORTUNITY.LAST_UPDATE",
@@ -2368,6 +2418,10 @@ salesforce.ForecastingSettings {
           label = "Fiscal Period"
         },
         {
+          field = "OPPORTUNITY.RECORDTYPE"
+          label = "Opportunity Record Type"
+        },
+        {
           field = "OPPORTUNITY.LAST_ACTIVITY"
           label = "Last Activity"
         },
@@ -2441,6 +2495,7 @@ salesforce.ForecastingSettings {
           "OPPORTUNITY.FISCAL_YEAR",
           "OPPORTUNITY.FISCAL_QUARTER",
           "OPPORTUNITY.FISCAL_PERIOD",
+          "OPPORTUNITY.RECORDTYPE",
           "OPPORTUNITY.LAST_ACTIVITY",
           "OPPORTUNITY.CREATED_DATE",
           "OPPORTUNITY.LAST_UPDATE",
@@ -2581,6 +2636,10 @@ salesforce.ForecastingSettings {
           label = "Fiscal Period"
         },
         {
+          field = "OPPORTUNITY.RECORDTYPE"
+          label = "Opportunity Record Type"
+        },
+        {
           field = "OPPORTUNITY.LAST_ACTIVITY"
           label = "Last Activity"
         },
@@ -2653,6 +2712,7 @@ salesforce.ForecastingSettings {
           "OPPORTUNITY.FISCAL_YEAR",
           "OPPORTUNITY.FISCAL_QUARTER",
           "OPPORTUNITY.FISCAL_PERIOD",
+          "OPPORTUNITY.RECORDTYPE",
           "OPPORTUNITY.LAST_ACTIVITY",
           "OPPORTUNITY.CREATED_DATE",
           "OPPORTUNITY.LAST_UPDATE",

@@ -204,6 +204,7 @@ type salesforce.Opportunity {
   enableFeeds = true
   enableHistory = false
   externalSharingModel = "Private"
+  recordTypeTrackFeedHistory = false
   searchLayouts = {
     customTabListAdditionalFields = [
       "OPPORTUNITY.NAME",

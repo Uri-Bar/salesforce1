@@ -8,6 +8,20 @@ salesforce.QuickAction LogACall {
         quickActionLayoutItems = [
           {
             emptySpace = false
+            field = "Subject"
+            uiBehavior = "Edit"
+          },
+          {
+            emptySpace = false
+            field = "WhoId"
+            uiBehavior = "Edit"
+          },
+        ]
+      },
+      {
+        quickActionLayoutItems = [
+          {
+            emptySpace = false
             field = "Description"
             uiBehavior = "Edit"
           },
@@ -17,8 +31,6 @@ salesforce.QuickAction LogACall {
             uiBehavior = "Edit"
           },
         ]
-      },
-      {
       },
     ]
   }

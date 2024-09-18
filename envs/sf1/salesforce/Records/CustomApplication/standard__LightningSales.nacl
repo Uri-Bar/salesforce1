@@ -28,8 +28,6 @@ salesforce.CustomApplication standard__LightningSales {
     "standard-OtherUserProfile",
     "standard-Case",
     "standard-Forecasting3",
-    salesforce.CustomTab.instance.property__c,
-    salesforce.CustomTab.instance.favorite__c,
   ]
   uiType = "Lightning"
   utilityBar = "LightningSales_UtilityBar"

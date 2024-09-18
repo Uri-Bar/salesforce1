@@ -1,0 +1,22 @@
+salesforce.EmailTemplate unfiled_public_tempattach@zcd {
+  attachments = {
+    aattach2 = {
+      content = file("salesforce/Records/EmailTemplate/unfiled$public/tempattach/aattach2.rtf")
+      name = "aattach2.rtf"
+    }
+    github_copy@b = {
+      content = file("salesforce/Records/EmailTemplate/unfiled$public/tempattach/github-copy.txt")
+      name = "github-copy.txt"
+    }
+  }
+  available = false
+  encodingKey = "UTF-8"
+  name = "tempattach"
+  style = "none"
+  subject = "there is attatchments"
+  type = "text"
+  uiType = "Aloha"
+  fullName = "unfiled$public/tempattach"
+  content = file("salesforce/Records/EmailTemplate/unfiled$public/tempattach/tempattach.email")
+  _alias = "unfiled$public/tempattach"
+}

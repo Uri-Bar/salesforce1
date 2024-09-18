@@ -59,7 +59,7 @@ type salesforce.Account {
   }
   salesforce.Date SLAExpirationDate__c {
     apiName = "Account.SLAExpirationDate__c"
-    label = "SLA Expiration Datea"
+    label = "SLA Expiration Date"
     createable = true
     updateable = true
     queryable = true
@@ -67,7 +67,7 @@ type salesforce.Account {
   salesforce.Text SLASerialNumber__c {
     apiName = "Account.SLASerialNumber__c"
     externalId = false
-    label = "SLA Serial Number chgange"
+    label = "SLA Serial Number"
     length = 10
     unique = false
     createable = true
@@ -108,7 +108,6 @@ type salesforce.Account {
   }
   salesforce.Picklist UpsellOpportunity__c {
     apiName = "Account.UpsellOpportunity__c"
-    description = "yes"
     label = "Upsell Opportunity"
     valueSet = [
       {

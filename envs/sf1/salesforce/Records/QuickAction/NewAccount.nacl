@@ -24,6 +24,18 @@ salesforce.QuickAction NewAccount {
         ]
       },
       {
+        quickActionLayoutItems = [
+          {
+            emptySpace = false
+            field = "Type"
+            uiBehavior = "Edit"
+          },
+          {
+            emptySpace = false
+            field = "Website"
+            uiBehavior = "Edit"
+          },
+        ]
       },
     ]
   }

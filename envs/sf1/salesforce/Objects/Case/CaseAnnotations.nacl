@@ -259,8 +259,6 @@ type salesforce.Case {
   compactLayoutAssignment = "SYSTEM"
   enableFeeds = true
   externalSharingModel = "Private"
-  recordTypeTrackFeedHistory = false
-  recordTypeTrackHistory = true
   searchLayouts = {
     customTabListAdditionalFields = [
       "CASES.CASE_NUMBER",

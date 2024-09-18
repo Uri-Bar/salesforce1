@@ -46,8 +46,8 @@ salesforce.Flow flowtwo {
   ]
   processType = "AutoLaunchedFlow"
   start = {
-    locationX = 52
-    locationY = 14
+    locationX = 51
+    locationY = 13
     connector = {
       targetReference = "aa"
     }

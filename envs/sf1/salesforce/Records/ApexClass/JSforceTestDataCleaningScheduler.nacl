@@ -1,0 +1,12 @@
+salesforce.ApexClass JSforceTestDataCleaningScheduler {
+  apiVersion = 31
+  status = "Active"
+  fullName = "JSforceTestDataCleaningScheduler"
+  content = file("salesforce/Records/ApexClass/JSforceTestDataCleaningScheduler.cls")
+  _generated_dependencies = [
+    {
+      reference = salesforce.ApexClass.instance.JSforceTestData
+    },
+  ]
+  _alias = "JSforceTestDataCleaningScheduler"
+}

@@ -10,8 +10,6 @@ salesforce.CustomApplication standard__LightningInstrumentation {
   navType = "Standard"
   tabs = [
     "standard-LightningInstrumentation",
-    salesforce.CustomTab.instance.property__c,
-    salesforce.CustomTab.instance.favorite__c,
   ]
   uiType = "Lightning"
   fullName = "standard__LightningInstrumentation"

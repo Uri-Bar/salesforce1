@@ -98,6 +98,12 @@ salesforce.SearchSettings {
       {
         enhancedLookupEnabled = false
         lookupAutoCompleteEnabled = false
+        name = salesforce.BigTable__c
+        resultsPerPageCount = 0
+      },
+      {
+        enhancedLookupEnabled = false
+        lookupAutoCompleteEnabled = false
         name = "Calendar"
         resultsPerPageCount = 25
       },
@@ -332,6 +338,12 @@ salesforce.SearchSettings {
       {
         enhancedLookupEnabled = false
         lookupAutoCompleteEnabled = false
+        name = salesforce.MyTestObject__c
+        resultsPerPageCount = 0
+      },
+      {
+        enhancedLookupEnabled = false
+        lookupAutoCompleteEnabled = false
         name = "Note"
         resultsPerPageCount = 25
       },
@@ -428,8 +440,20 @@ salesforce.SearchSettings {
       {
         enhancedLookupEnabled = false
         lookupAutoCompleteEnabled = false
+        name = salesforce.UpsertTable__c
+        resultsPerPageCount = 0
+      },
+      {
+        enhancedLookupEnabled = false
+        lookupAutoCompleteEnabled = false
         name = salesforce.User
         resultsPerPageCount = 25
+      },
+      {
+        enhancedLookupEnabled = false
+        lookupAutoCompleteEnabled = false
+        name = salesforce.UserPool__c
+        resultsPerPageCount = 0
       },
       {
         enhancedLookupEnabled = false
@@ -452,14 +476,8 @@ salesforce.SearchSettings {
       {
         enhancedLookupEnabled = false
         lookupAutoCompleteEnabled = false
-        name = salesforce.favorite__c
-        resultsPerPageCount = 25
-      },
-      {
-        enhancedLookupEnabled = false
-        lookupAutoCompleteEnabled = false
-        name = salesforce.property__c
-        resultsPerPageCount = 25
+        name = salesforce.shock__c
+        resultsPerPageCount = 0
       },
     ]
   }

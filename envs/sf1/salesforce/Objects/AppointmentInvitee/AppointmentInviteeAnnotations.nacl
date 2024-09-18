@@ -191,11 +191,13 @@ type salesforce.AppointmentInvitee {
   externalSharingModel = "ControlledByParent"
   searchLayouts = {
     customTabListAdditionalFields = [
+      "LastModifiedDate",
       "LastModifiedBy",
       "AppointmentInvitation",
       "ParticipantServiceResource",
     ]
     searchResultsAdditionalFields = [
+      "LastModifiedDate",
       "LastModifiedBy",
       "AppointmentInvitation",
       "ParticipantServiceResource",

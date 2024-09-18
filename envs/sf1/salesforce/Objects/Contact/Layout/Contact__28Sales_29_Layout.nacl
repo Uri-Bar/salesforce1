@@ -48,10 +48,6 @@ salesforce.Layout Contact_Contact__28Sales_29_Layout@bspps {
               behavior = "Edit"
               field = salesforce.Contact.field.Birthdate
             },
-            {
-              behavior = "Edit"
-              field = salesforce.Contact.field.Prequalified__c
-            },
           ]
         },
         {
@@ -418,12 +414,6 @@ salesforce.Layout Contact_Contact__28Sales_29_Layout@bspps {
         "EMAIL_STATUS.LAST_OPEN_DATE",
       ]
       relatedList = "RelatedEmailStatusList"
-    },
-    {
-      fields = [
-        "NAME",
-      ]
-      relatedList = salesforce.favorite__c.field.Contact__c
     },
   ]
   relatedObjects = [

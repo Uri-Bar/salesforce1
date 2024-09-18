@@ -317,15 +317,6 @@ type salesforce.Case {
     queryable = true
     _hidden_value = true
   }
-  salesforce.Lookup RecordTypeId {
-    apiName = "Case.RecordTypeId"
-    relationshipName = "RecordType"
-    label = "Record Type ID"
-    createable = true
-    updateable = true
-    queryable = true
-    _hidden_value = true
-  }
   salesforce.Checkbox IsClosed {
     apiName = "Case.IsClosed"
     defaultValue = false

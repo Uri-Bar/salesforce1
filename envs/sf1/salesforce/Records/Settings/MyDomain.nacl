@@ -13,7 +13,7 @@ salesforce.MyDomainSettings {
   instancedUrlRedirectHandling = "NoRedirect"
   isFirstPartyCookieUseRequired = "false"
   logRedirections = "false"
-  myDomainName = "salto-5b-dev-ed"
+  myDomainName = "saltolabs7-dev-ed"
   myDomainSuffix = "MySalesforce"
   redirectForceComSiteUrls = "true"
   redirectPriorMyDomain = "true"

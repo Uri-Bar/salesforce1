@@ -1,0 +1,46 @@
+salesforce.BusinessProcess Opportunity_test {
+  fullName = "Opportunity.test"
+  isActive = true
+  values = [
+    {
+      fullName = "Closed Lost"
+      default = false
+    },
+    {
+      fullName = "Closed Won"
+      default = false
+    },
+    {
+      fullName = "Id%2E Decision Makers"
+      default = false
+    },
+    {
+      fullName = "Negotiation%2FReview"
+      default = false
+    },
+    {
+      fullName = "Perception Analysis"
+      default = false
+    },
+    {
+      fullName = "Proposal%2FPrice Quote"
+      default = false
+    },
+    {
+      fullName = "Prospecting"
+      default = false
+    },
+    {
+      fullName = "Qualification"
+      default = false
+    },
+    {
+      fullName = "Value Proposition"
+      default = false
+    },
+  ]
+  _parent = [
+    salesforce.Opportunity,
+  ]
+  _alias = "Opportunity.test"
+}

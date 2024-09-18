@@ -2,7 +2,7 @@ salesforce.Organization {
   Address = {
     country = "IL"
   }
-  PrimaryContact = "Uri Bar"
+  PrimaryContact = "urib ar"
   DefaultLocaleSidKey = "en_IE_EURO"
   TimeZoneSidKey = "Europe/Dublin"
   LanguageLocaleKey = "en_US"

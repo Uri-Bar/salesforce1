@@ -184,6 +184,15 @@ type salesforce.Opportunity {
     queryable = true
     _hidden_value = true
   }
+  salesforce.Lookup RecordTypeId {
+    apiName = "Opportunity.RecordTypeId"
+    relationshipName = "RecordType"
+    label = "Record Type ID"
+    createable = true
+    updateable = true
+    queryable = true
+    _hidden_value = true
+  }
   salesforce.Checkbox IsClosed {
     apiName = "Opportunity.IsClosed"
     defaultValue = false

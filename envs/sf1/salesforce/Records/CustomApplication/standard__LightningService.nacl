@@ -20,19 +20,11 @@ salesforce.CustomApplication standard__LightningService {
     "standard-Incident",
     "standard-Problem",
     "standard-ChangeRequest",
-    salesforce.CustomTab.instance.property__c,
-    salesforce.CustomTab.instance.favorite__c,
   ]
   uiType = "Lightning"
   utilityBar = "LightningService_UtilityBar"
   workspaceConfig = {
     mappings = [
-      {
-        tab = salesforce.CustomTab.instance.favorite__c
-      },
-      {
-        tab = salesforce.CustomTab.instance.property__c
-      },
       {
         tab = "standard-Account"
       },

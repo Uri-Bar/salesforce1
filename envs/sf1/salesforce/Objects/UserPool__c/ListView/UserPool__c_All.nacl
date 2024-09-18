@@ -1,0 +1,16 @@
+salesforce.ListView UserPool__c_All {
+  fullName = "UserPool__c.All"
+  columns = [
+    "NAME",
+    salesforce.UserPool__c.field.IsPooled__c,
+    salesforce.UserPool__c.field.CheckedOutAt__c,
+    salesforce.UserPool__c.field.CheckedOutBy__c,
+    salesforce.UserPool__c.field.LastCheckedOutAt__c,
+  ]
+  filterScope = "Everything"
+  label = "All"
+  _parent = [
+    salesforce.UserPool__c,
+  ]
+  _alias = "All"
+}
