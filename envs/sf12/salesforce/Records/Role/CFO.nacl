@@ -2,7 +2,7 @@ salesforce.Role CFO {
   fullName = "CFO"
   caseAccessLevel = "Edit"
   contactAccessLevel = "Edit"
-  description = "CFO test yuri"
+  description = "CFO test yuri q"
   mayForecastManagerShare = false
   name = "CFO"
   opportunityAccessLevel = "Edit"
