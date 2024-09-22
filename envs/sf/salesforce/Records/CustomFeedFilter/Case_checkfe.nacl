@@ -1,0 +1,9 @@
+salesforce.CustomFeedFilter Case_checkfe@v {
+  fullName = "Case.checkfe"
+  criteria = {
+    feedItemType = "CallLogPost"
+    relatedSObjectType = "Task"
+  }
+  label = "checkfe"
+  _alias = "checkfe"
+}
