@@ -7,9 +7,8 @@ salesforce {
           namespace = ""
           name = ".*"
         },
-      ] 
+      ]
       exclude = [
-  
         {
           metadataType = "ReportType"
         },
