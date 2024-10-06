@@ -1,0 +1,170 @@
+type salesforce.MLModelFactorComponent {
+  serviceid Id {
+    apiName = "MLModelFactorComponent.Id"
+    label = "ML Model Factor Components ID"
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Checkbox IsDeleted {
+    apiName = "MLModelFactorComponent.IsDeleted"
+    defaultValue = false
+    label = "Deleted"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.AutoNumber Name {
+    apiName = "MLModelFactorComponent.Name"
+    label = "Name"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.DateTime CreatedDate {
+    apiName = "MLModelFactorComponent.CreatedDate"
+    label = "Created Date"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Lookup CreatedById {
+    apiName = "MLModelFactorComponent.CreatedById"
+    relationshipName = "CreatedBy"
+    label = "Created By ID"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.DateTime LastModifiedDate {
+    apiName = "MLModelFactorComponent.LastModifiedDate"
+    label = "Last Modified Date"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Lookup LastModifiedById {
+    apiName = "MLModelFactorComponent.LastModifiedById"
+    relationshipName = "LastModifiedBy"
+    label = "Last Modified By ID"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.DateTime SystemModstamp {
+    apiName = "MLModelFactorComponent.SystemModstamp"
+    label = "System Modstamp"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Lookup ModelFactorId {
+    apiName = "MLModelFactorComponent.ModelFactorId"
+    relationshipName = "ModelFactor"
+    _required = true
+    label = "ML Model Factor ID"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Lookup ModelId {
+    apiName = "MLModelFactorComponent.ModelId"
+    relationshipName = "Model"
+    label = "ML Model ID"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Text LeftHandDerivedField {
+    apiName = "MLModelFactorComponent.LeftHandDerivedField"
+    length = 120
+    label = "Left Hand Derived Field"
+    createable = false
+    updateable = false
+    unique = false
+    caseSensitive = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Picklist Operator {
+    apiName = "MLModelFactorComponent.Operator"
+    restricted = true
+    label = "Operator"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Text RightHandDerivedField {
+    apiName = "MLModelFactorComponent.RightHandDerivedField"
+    length = 120
+    label = "Right Hand Derived Field"
+    createable = false
+    updateable = false
+    unique = false
+    caseSensitive = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Text Value {
+    apiName = "MLModelFactorComponent.Value"
+    length = 120
+    label = "Value"
+    createable = false
+    updateable = false
+    unique = false
+    caseSensitive = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Number SortOrder {
+    apiName = "MLModelFactorComponent.SortOrder"
+    label = "Sort Order"
+    precision = 9
+    createable = false
+    updateable = false
+    scale = 0
+    unique = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Picklist FeatureType {
+    apiName = "MLModelFactorComponent.FeatureType"
+    restricted = true
+    label = "Feature Type"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Text FeatureValue {
+    apiName = "MLModelFactorComponent.FeatureValue"
+    length = 255
+    label = "Feature Value"
+    createable = false
+    updateable = false
+    unique = false
+    caseSensitive = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Text FactorLabelKey {
+    apiName = "MLModelFactorComponent.FactorLabelKey"
+    length = 255
+    label = "Factor Label Key"
+    createable = false
+    updateable = false
+    unique = false
+    caseSensitive = false
+    queryable = true
+    _hidden_value = true
+  }
+}

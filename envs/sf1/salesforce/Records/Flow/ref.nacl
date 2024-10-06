@@ -1,0 +1,113 @@
+salesforce.Flow ref {
+  fullName = "ref"
+  apiVersion = 56
+  environments = "Default"
+  interviewLabel = "ref {!$Flow.CurrentDateTime}"
+  label = "ref"
+  processMetadataValues = [
+    {
+      name = "BuilderType"
+      value = {
+        stringValue = "LightningFlowBuilder"
+      }
+    },
+    {
+      name = "CanvasMode"
+      value = {
+        stringValue = "AUTO_LAYOUT_CANVAS"
+      }
+    },
+    {
+      name = "OriginBuilderType"
+      value = {
+        stringValue = "LightningFlowBuilder"
+      }
+    },
+  ]
+  processType = "AutoLaunchedFlow"
+  recordCreates = [
+    {
+      name = "check"
+      label = "check"
+      locationX = 176
+      locationY = 335
+      connector = {
+        targetReference = "sec"
+      }
+      inputAssignments = [
+        {
+          field = salesforce.Case.field.AssetId
+          value = {
+            stringValue = ""
+          }
+        },
+        {
+          field = salesforce.Case.field.PotentialLiability__c
+          value = {
+            elementReference = "$Record.Id"
+          }
+        },
+        {
+          field = salesforce.Case.field.RecordTypeId
+          value = {
+            elementReference = salesforce.CustomLabel.instance.check
+          }
+        },
+      ]
+      object = salesforce.Case
+      storeOutputAutomatically = true
+    },
+    {
+      name = "sec"
+      label = "sec"
+      locationX = 176
+      locationY = 45
+      inputAssignments = [
+        {
+          field = salesforce.Case.field.ContactId
+          value = {
+            elementReference = "$Api.Enterprise_Server_URL_140"
+          }
+        },
+        {
+          field = salesforce.Case.field.Description
+          value = {
+            elementReference = salesforce.CustomLabel.instance.check
+          }
+        },
+        {
+          field = salesforce.Case.field.Origin
+          value = {
+            stringValue = "Web"
+          }
+        },
+        {
+          field = salesforce.Case.field.OwnerId
+          value = {
+            elementReference = "check"
+          }
+        },
+        {
+          field = salesforce.Case.field.Priority
+          value = {
+            elementReference = salesforce.CustomLabel.instance.second
+          }
+        },
+      ]
+      object = salesforce.Case
+      storeOutputAutomatically = true
+    },
+  ]
+  start = {
+    locationX = 10
+    locationY = 2
+    connector = {
+      targetReference = "check"
+    }
+    object = salesforce.Opportunity
+    recordTriggerType = "Create"
+    triggerType = "RecordAfterSave"
+  }
+  status = "Draft"
+  _alias = "ref"
+}

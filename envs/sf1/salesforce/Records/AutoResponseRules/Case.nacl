@@ -1,0 +1,36 @@
+salesforce.AutoResponseRules Case {
+  fullName = "Case"
+  autoResponseRule = {
+    fullName = "autotest"
+    active = true
+    ruleEntry = [
+      {
+        criteriaItems = [
+          {
+            field = salesforce.Case.field.ContactMobile
+            operation = "equals"
+            value = "1212156"
+          },
+        ]
+        replyToEmail = "uri.bar@salto.io"
+        senderEmail = "uri.bar@salto.io"
+        senderName = "1"
+        template = salesforce.EmailTemplate.instance.unfiled_public_MarketingProductInquiryResponse@zcd
+      },
+      {
+        criteriaItems = [
+          {
+            field = "Contact.AccountName"
+            operation = "equals"
+            value = "2"
+          },
+        ]
+        replyToEmail = "uri.bar@salto.io"
+        senderEmail = "uri.bar@salto.io"
+        senderName = "u"
+        template = salesforce.EmailTemplate.instance.unfiled_public_SalesNewCustomerEmail@zcd
+      },
+    ]
+  }
+  _alias = "Case"
+}
