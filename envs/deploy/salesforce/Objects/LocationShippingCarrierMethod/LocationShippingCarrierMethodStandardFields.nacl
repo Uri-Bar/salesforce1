@@ -1,0 +1,94 @@
+type salesforce.LocationShippingCarrierMethod {
+  salesforce.Lookup LocationSourceId {
+    apiName = "LocationShippingCarrierMethod.LocationSourceId"
+    relationshipName = "LocationSource"
+    _required = true
+    label = "Location Source ID"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Lookup ShippingCarrierMethodId {
+    apiName = "LocationShippingCarrierMethod.ShippingCarrierMethodId"
+    relationshipName = "ShippingCarrierMethod"
+    _required = true
+    label = "Shipping Carrier Method ID"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  serviceid Id {
+    apiName = "LocationShippingCarrierMethod.Id"
+    label = "Location Shipping Carrier Method ID"
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Lookup OwnerId {
+    apiName = "LocationShippingCarrierMethod.OwnerId"
+    relationshipName = "Owner"
+    label = "Owner ID"
+    createable = true
+    updateable = true
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Checkbox IsDeleted {
+    apiName = "LocationShippingCarrierMethod.IsDeleted"
+    defaultValue = false
+    label = "Deleted"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.AutoNumber Name {
+    apiName = "LocationShippingCarrierMethod.Name"
+    label = "Name"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.DateTime CreatedDate {
+    apiName = "LocationShippingCarrierMethod.CreatedDate"
+    label = "Created Date"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Lookup CreatedById {
+    apiName = "LocationShippingCarrierMethod.CreatedById"
+    relationshipName = "CreatedBy"
+    label = "Created By ID"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.DateTime LastModifiedDate {
+    apiName = "LocationShippingCarrierMethod.LastModifiedDate"
+    label = "Last Modified Date"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Lookup LastModifiedById {
+    apiName = "LocationShippingCarrierMethod.LastModifiedById"
+    relationshipName = "LastModifiedBy"
+    label = "Last Modified By ID"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.DateTime SystemModstamp {
+    apiName = "LocationShippingCarrierMethod.SystemModstamp"
+    label = "System Modstamp"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+}

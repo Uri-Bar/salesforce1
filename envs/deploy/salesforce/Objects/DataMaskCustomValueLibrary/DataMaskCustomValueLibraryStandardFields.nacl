@@ -1,0 +1,22 @@
+type salesforce.DataMaskCustomValueLibrary {
+  salesforce.Unknown ContentType {
+    apiName = "DataMaskCustomValueLibrary.ContentType"
+    _hidden_value = true
+  }
+  salesforce.Unknown Description {
+    apiName = "DataMaskCustomValueLibrary.Description"
+    _hidden_value = true
+  }
+  salesforce.Unknown IsActive {
+    apiName = "DataMaskCustomValueLibrary.IsActive"
+    _hidden_value = true
+  }
+  salesforce.Unknown Name {
+    apiName = "DataMaskCustomValueLibrary.Name"
+    _hidden_value = true
+  }
+  salesforce.Unknown Type {
+    apiName = "DataMaskCustomValueLibrary.Type"
+    _hidden_value = true
+  }
+}

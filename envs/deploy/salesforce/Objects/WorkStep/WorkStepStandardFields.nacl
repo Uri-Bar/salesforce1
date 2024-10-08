@@ -1,0 +1,204 @@
+type salesforce.WorkStep {
+  salesforce.Picklist ActionDefinition {
+    apiName = "WorkStep.ActionDefinition"
+    inlineHelpText = "Find and select the associated global action, quick action, screen flow, or mobile flow."
+    restricted = true
+    label = "Action Definition"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Picklist ActionType {
+    apiName = "WorkStep.ActionType"
+    restricted = true
+    label = "Action Type"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.LongTextArea Description {
+    apiName = "WorkStep.Description"
+    length = 500
+    label = "Description"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.DateTime EndTime {
+    apiName = "WorkStep.EndTime"
+    label = "End Time"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Number ExecutionOrder {
+    apiName = "WorkStep.ExecutionOrder"
+    label = "Execution Order"
+    precision = 9
+    createable = true
+    updateable = true
+    scale = 0
+    unique = false
+    queryable = true
+  }
+  salesforce.Text Name {
+    apiName = "WorkStep.Name"
+    length = 255
+    _required = true
+    label = "Name"
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    queryable = true
+  }
+  salesforce.Lookup ParentRecordId {
+    apiName = "WorkStep.ParentRecordId"
+    relationshipName = "ParentRecord"
+    _required = true
+    label = "Parent Record ID"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Text ParentRecordType {
+    apiName = "WorkStep.ParentRecordType"
+    length = 50
+    label = "Parent Record Type"
+    createable = false
+    updateable = false
+    unique = false
+    caseSensitive = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Lookup PausedFlowInterviewId {
+    apiName = "WorkStep.PausedFlowInterviewId"
+    relationshipName = "PausedFlowInterview"
+    label = "Paused Flow Interview ID"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.DateTime StartTime {
+    apiName = "WorkStep.StartTime"
+    label = "Start Time"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Picklist Status {
+    apiName = "WorkStep.Status"
+    restricted = false
+    label = "Status"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Picklist StatusCategory {
+    apiName = "WorkStep.StatusCategory"
+    restricted = true
+    label = "Status Category"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Lookup WorkOrderId {
+    apiName = "WorkStep.WorkOrderId"
+    relationshipName = "WorkOrder"
+    label = "Work Order ID"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Lookup WorkOrderLineItemId {
+    apiName = "WorkStep.WorkOrderLineItemId"
+    relationshipName = "WorkOrderLineItem"
+    label = "Work Order Line Item ID"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Number WorkPlanExecutionOrder {
+    apiName = "WorkStep.WorkPlanExecutionOrder"
+    label = "Work Plan Execution Order"
+    precision = 9
+    createable = false
+    updateable = false
+    scale = 0
+    unique = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.MasterDetail WorkPlanId {
+    apiName = "WorkStep.WorkPlanId"
+    relationshipName = "WorkPlan"
+    _required = true
+    label = "Work Plan ID"
+    createable = true
+    updateable = false
+    queryable = true
+  }
+  serviceid Id {
+    apiName = "WorkStep.Id"
+    label = "Work Step ID"
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Checkbox IsDeleted {
+    apiName = "WorkStep.IsDeleted"
+    defaultValue = false
+    label = "Deleted"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.DateTime CreatedDate {
+    apiName = "WorkStep.CreatedDate"
+    label = "Created Date"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Lookup CreatedById {
+    apiName = "WorkStep.CreatedById"
+    relationshipName = "CreatedBy"
+    label = "Created By ID"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.DateTime LastModifiedDate {
+    apiName = "WorkStep.LastModifiedDate"
+    label = "Last Modified Date"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Lookup LastModifiedById {
+    apiName = "WorkStep.LastModifiedById"
+    relationshipName = "LastModifiedBy"
+    label = "Last Modified By ID"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.DateTime SystemModstamp {
+    apiName = "WorkStep.SystemModstamp"
+    label = "System Modstamp"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+}
