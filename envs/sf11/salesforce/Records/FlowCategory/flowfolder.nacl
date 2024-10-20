@@ -1,0 +1,14 @@
+salesforce.FlowCategory flowfolder {
+  fullName = "flowfolder"
+  description = "aaa"
+  flowCategoryItems = [
+    {
+      flow = "flowone"
+    },
+    {
+      flow = "flowtest"
+    },
+  ]
+  masterLabel = "flowfolder"
+  _alias = "flowfolder"
+}
