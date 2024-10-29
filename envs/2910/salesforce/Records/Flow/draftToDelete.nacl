@@ -1,0 +1,54 @@
+salesforce.Flow draftToDelete {
+  fullName = "draftToDelete"
+  apiVersion = 56
+  assignments = [
+    {
+      name = "som"
+      label = "som"
+      locationX = 176
+      locationY = 158
+      assignmentItems = [
+        {
+          assignToReference = "$Flow.CurrentStage"
+          operator = "Assign"
+          value = {
+            stringValue = "satatud"
+          }
+        },
+      ]
+    },
+  ]
+  environments = "Default"
+  interviewLabel = "draftToDelete {!$Flow.CurrentDateTime}"
+  label = "draftToDelete"
+  processMetadataValues = [
+    {
+      name = "BuilderType"
+      value = {
+        stringValue = "LightningFlowBuilder"
+      }
+    },
+    {
+      name = "CanvasMode"
+      value = {
+        stringValue = "AUTO_LAYOUT_CANVAS"
+      }
+    },
+    {
+      name = "OriginBuilderType"
+      value = {
+        stringValue = "LightningFlowBuilder"
+      }
+    },
+  ]
+  processType = "Flow"
+  start = {
+    locationX = 50
+    locationY = 0
+    connector = {
+      targetReference = "som"
+    }
+  }
+  status = "InvalidDraft"
+  _alias = "draftToDelete"
+}

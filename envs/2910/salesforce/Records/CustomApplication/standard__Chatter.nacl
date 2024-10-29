@@ -1,0 +1,21 @@
+salesforce.CustomApplication standard__Chatter {
+  defaultLandingTab = "standard-home"
+  formFactors = [
+    "Large",
+  ]
+  isNavAutoTempTabsDisabled = false
+  isNavPersonalizationDisabled = false
+  isNavTabPersistenceDisabled = false
+  isOmniPinnedViewEnabled = false
+  tabs = [
+    "standard-Chatter",
+    "standard-UserProfile",
+    "standard-OtherUserProfile",
+    "standard-CollaborationGroup",
+    "standard-File",
+    salesforce.CustomTab.instance.property__c,
+    salesforce.CustomTab.instance.favorite__c,
+  ]
+  fullName = "standard__Chatter"
+  _alias = "standard__Chatter"
+}
