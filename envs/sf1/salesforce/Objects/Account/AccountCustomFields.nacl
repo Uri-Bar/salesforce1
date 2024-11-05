@@ -39,6 +39,11 @@ type salesforce.Account {
         default = false
         label = "Medium"
       },
+            {
+        fullName = "bak"
+        default = false
+        label = "bak"
+      },
     ]
     sorted = false
     restricted = false
