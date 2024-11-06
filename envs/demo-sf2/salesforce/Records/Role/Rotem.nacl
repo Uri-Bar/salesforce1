@@ -1,0 +1,11 @@
+salesforce.Role Rotem {
+  fullName = "Rotem"
+  caseAccessLevel = "Edit"
+  contactAccessLevel = "Edit"
+  description = "sd"
+  mayForecastManagerShare = false
+  name = "Rotem"
+  opportunityAccessLevel = "Edit"
+  parentRole = salesforce.Role.instance.CEO
+  _alias = "Rotem"
+}

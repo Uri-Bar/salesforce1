@@ -1,0 +1,12 @@
+salesforce.ApexClass MyApexTriggerTest {
+  apiVersion = 29
+  status = "Active"
+  fullName = "MyApexTriggerTest"
+  content = file("salesforce/Records/ApexClass/MyApexTriggerTest.cls")
+  _generated_dependencies = [
+    {
+      reference = salesforce.MyTestObject__c
+    },
+  ]
+  _alias = "MyApexTriggerTest"
+}

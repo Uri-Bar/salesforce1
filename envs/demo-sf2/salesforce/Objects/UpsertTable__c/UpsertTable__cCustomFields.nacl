@@ -1,0 +1,11 @@
+type salesforce.UpsertTable__c {
+  salesforce.Text ExtId__c {
+    apiName = "UpsertTable__c.ExtId__c"
+    externalId = true
+    label = "ExtId"
+    length = 50
+    trackTrending = false
+    unique = false
+    _hidden_value = true
+  }
+}

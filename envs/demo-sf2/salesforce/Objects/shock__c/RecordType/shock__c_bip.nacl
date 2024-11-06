@@ -1,0 +1,10 @@
+salesforce.RecordType shock__c_bip {
+  fullName = "shock__c.bip"
+  active = true
+  description = "bip"
+  label = "bip"
+  _parent = [
+    salesforce.shock__c,
+  ]
+  _alias = "bip"
+}

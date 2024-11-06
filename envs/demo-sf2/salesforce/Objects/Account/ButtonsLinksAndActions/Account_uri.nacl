@@ -1,0 +1,17 @@
+salesforce.WebLink Account_uri {
+  fullName = "Account.uri"
+  availability = "online"
+  displayType = "massActionButton"
+  encodingKey = "UTF-8"
+  height = 600
+  linkType = "url"
+  masterLabel = "uri"
+  openType = "sidebar"
+  protected = false
+  requireRowSelection = true
+  url = "aSas"
+  _parent = [
+    salesforce.Account,
+  ]
+  _alias = "Account.uri"
+}

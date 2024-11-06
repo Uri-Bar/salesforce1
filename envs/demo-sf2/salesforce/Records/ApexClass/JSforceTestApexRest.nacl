@@ -1,0 +1,12 @@
+salesforce.ApexClass JSforceTestApexRest {
+  apiVersion = 28
+  status = "Active"
+  fullName = "JSforceTestApexRest"
+  content = file("salesforce/Records/ApexClass/JSforceTestApexRest.cls")
+  _generated_dependencies = [
+    {
+      reference = salesforce.Account
+    },
+  ]
+  _alias = "JSforceTestApexRest"
+}

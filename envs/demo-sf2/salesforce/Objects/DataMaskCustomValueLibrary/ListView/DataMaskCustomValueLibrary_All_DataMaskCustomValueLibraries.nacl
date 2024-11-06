@@ -1,0 +1,9 @@
+salesforce.ListView DataMaskCustomValueLibrary_All_DataMaskCustomValueLibraries {
+  fullName = "DataMaskCustomValueLibrary.All_DataMaskCustomValueLibraries"
+  filterScope = "Everything"
+  label = "All Custom Libraries"
+  _parent = [
+    salesforce.DataMaskCustomValueLibrary,
+  ]
+  _alias = "All Custom Libraries"
+}

@@ -1,0 +1,59 @@
+salesforce.ApprovalProcess Account_JSforceApprovalProcess1@v {
+  fullName = "Account.JSforceApprovalProcess1"
+  active = true
+  allowRecall = false
+  allowedSubmitters = {
+    type = "owner"
+  }
+  approvalPageFields = {
+    field = [
+      "Name",
+      "Owner",
+    ]
+  }
+  approvalStep = [
+    {
+      allowDelegate = false
+      assignedApprover = {
+        approver = {
+          name = "CreatedBy"
+          type = "relatedUserField"
+        }
+        whenMultipleApprovers = "FirstResponse"
+      }
+      label = "Step 1"
+      name = "Step_1"
+    },
+    {
+      allowDelegate = false
+      approvalActions = {
+        action = [
+          {
+            name = "Set_Approved_Flag"
+            type = "FieldUpdate"
+          },
+        ]
+      }
+      assignedApprover = {
+        approver = {
+          name = "Owner"
+          type = "relatedUserField"
+        }
+        whenMultipleApprovers = "FirstResponse"
+      }
+      label = "Step 2"
+      name = "Step2"
+      rejectBehavior = {
+        type = "RejectRequest"
+      }
+    },
+  ]
+  enableMobileDeviceAccess = false
+  finalApprovalRecordLock = true
+  finalRejectionRecordLock = false
+  label = "JSforce Approval Process #1"
+  processOrder = 1
+  recordEditability = "AdminOnly"
+  showApprovalHistory = true
+  _alias = "JSforce Approval Process #1"
+}

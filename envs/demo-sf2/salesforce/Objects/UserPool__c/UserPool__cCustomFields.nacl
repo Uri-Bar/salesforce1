@@ -1,0 +1,37 @@
+type salesforce.UserPool__c {
+  salesforce.DateTime CheckedOutAt__c {
+    apiName = "UserPool__c.CheckedOutAt__c"
+    label = "Checked Out At"
+    trackTrending = false
+    _hidden_value = true
+  }
+  salesforce.Text CheckedOutBy__c {
+    apiName = "UserPool__c.CheckedOutBy__c"
+    externalId = false
+    label = "Checked Out By"
+    length = 255
+    trackTrending = false
+    unique = false
+    _hidden_value = true
+  }
+  salesforce.FormulaCheckbox IsPooled__c {
+    apiName = "UserPool__c.IsPooled__c"
+    formula = "ISNULL(CheckedOutAt__c) || NOW() - CheckedOutAt__c > 0.1/24"
+    formulaTreatBlanksAs = "BlankAsZero"
+    label = "Is Pooled"
+    trackTrending = false
+    _hidden_value = true
+    _generated_dependencies = [
+      {
+        reference = salesforce.UserPool__c.field.CheckedOutAt__c
+      },
+    ]
+  }
+  salesforce.DateTime LastCheckedOutAt__c {
+    apiName = "UserPool__c.LastCheckedOutAt__c"
+    defaultValueFormula = "NOW()"
+    label = "Last Checked Out At"
+    trackTrending = false
+    _hidden_value = true
+  }
+}

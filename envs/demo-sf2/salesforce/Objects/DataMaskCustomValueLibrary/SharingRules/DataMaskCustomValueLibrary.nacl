@@ -1,0 +1,7 @@
+salesforce.SharingRules DataMaskCustomValueLibrary {
+  fullName = "DataMaskCustomValueLibrary"
+  _parent = [
+    salesforce.DataMaskCustomValueLibrary,
+  ]
+  _alias = "DataMaskCustomValueLibrary"
+}

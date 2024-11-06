@@ -1,0 +1,13 @@
+salesforce.ApexTrigger MyTestObjectTrigger {
+  apiVersion = 29
+  status = "Active"
+  fullName = "MyTestObjectTrigger"
+  content = file("salesforce/Records/ApexTrigger/MyTestObjectTrigger.trigger")
+  triggerTypes = [
+    "UsageBeforeInsert",
+  ]
+  _parent = [
+    salesforce.MyTestObject__c,
+  ]
+  _alias = "MyTestObjectTrigger"
+}

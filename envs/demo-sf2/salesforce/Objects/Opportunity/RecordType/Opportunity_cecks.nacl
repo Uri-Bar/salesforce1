@@ -1,0 +1,101 @@
+salesforce.RecordType Opportunity_cecks {
+  fullName = "Opportunity.cecks"
+  active = true
+  businessProcess = salesforce.BusinessProcess.instance.Opportunity_test
+  description = "bka bka"
+  label = "check"
+  picklistValues = [
+    {
+      picklist = salesforce.Opportunity.field.DeliveryInstallationStatus__c
+      values = [
+        {
+          fullName = "Completed"
+          default = false
+        },
+        {
+          fullName = "In progress"
+          default = false
+        },
+        {
+          fullName = "Yet to begin"
+          default = false
+        },
+      ]
+    },
+    {
+      picklist = salesforce.Opportunity.field.ForecastCategoryName
+      values = [
+        {
+          fullName = "Best Case"
+          default = false
+        },
+        {
+          fullName = "Closed"
+          default = false
+        },
+        {
+          fullName = "Commit"
+          default = false
+        },
+        {
+          fullName = "Omitted"
+          default = false
+        },
+        {
+          fullName = "Pipeline"
+          default = false
+        },
+      ]
+    },
+    {
+      picklist = salesforce.Opportunity.field.LeadSource
+      values = [
+        {
+          fullName = "Other"
+          default = false
+        },
+        {
+          fullName = "Partner Referral"
+          default = false
+        },
+        {
+          fullName = "Phone Inquiry"
+          default = false
+        },
+        {
+          fullName = "Purchased List"
+          default = false
+        },
+        {
+          fullName = "Web"
+          default = false
+        },
+      ]
+    },
+    {
+      picklist = salesforce.Opportunity.field.Type
+      values = [
+        {
+          fullName = "Existing Customer - Downgrade"
+          default = false
+        },
+        {
+          fullName = "Existing Customer - Replacement"
+          default = false
+        },
+        {
+          fullName = "Existing Customer - Upgrade"
+          default = false
+        },
+        {
+          fullName = "New Customer"
+          default = false
+        },
+      ]
+    },
+  ]
+  _parent = [
+    salesforce.Opportunity,
+  ]
+  _alias = "check"
+}
