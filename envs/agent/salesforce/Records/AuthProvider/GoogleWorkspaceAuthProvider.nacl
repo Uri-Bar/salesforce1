@@ -1,0 +1,12 @@
+salesforce.AuthProvider GoogleWorkspaceAuthProvider {
+  fullName = "GoogleWorkspaceAuthProvider"
+  friendlyName = "GoogleWorkspaceAuthProvider"
+  includeOrgIdInIdentifier = false
+  isPkceEnabled = false
+  providerType = "Google"
+  requireMfa = false
+  sendAccessTokenInHeader = false
+  sendClientCredentialsInHeader = false
+  sendSecretInApis = true
+  _alias = "GoogleWorkspaceAuthProvider"
+}

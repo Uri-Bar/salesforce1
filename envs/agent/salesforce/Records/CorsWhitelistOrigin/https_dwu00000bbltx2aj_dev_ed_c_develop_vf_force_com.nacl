@@ -1,0 +1,5 @@
+salesforce.CorsWhitelistOrigin https_dwu00000bbltx2aj_dev_ed_c_develop_vf_force_com {
+  fullName = "https_dwu00000bbltx2aj_dev_ed_c_develop_vf_force_com"
+  urlPattern = "https://dwu00000bbltx2aj-dev-ed--c.develop.vf.force.com"
+  _alias = "https_dwu00000bbltx2aj_dev_ed_c_develop_vf_force_com"
+}

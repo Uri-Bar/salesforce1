@@ -35,6 +35,9 @@ salesforce.CustomSite ESW_ESA_Web_Deployment_1724800920657 {
     {
       url = "storm-0bf45bbf073ef6-dev-ed--c.develop.vf.force.com"
     },
+    {
+      url = "dwu00000bbltx2aj-dev-ed--c.develop.vf.force.com"
+    },
   ]
   siteType = "ChatterNetwork"
   urlPathPrefix = "ESWESAWebDeployment1724800920657vforcesi"

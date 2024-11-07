@@ -1,5 +1,5 @@
 salesforce.EinsteinCopilotSettings {
   fullName = "EinsteinCopilot"
-  enableEinsteinGptCopilot = "false"
+  enableEinsteinGptCopilot = "true"
   _alias = "EinsteinCopilot"
 }
