@@ -1,0 +1,88 @@
+salesforce.Layout RevenueTransactionErrorLog_Revenue_Transaction_Error_Log_Layout@bssss {
+  layoutSections = [
+    {
+      customLabel = false
+      detailHeading = true
+      editHeading = true
+      label = "Detail Information"
+      layoutColumns = [
+        {
+          layoutItems = [
+            {
+              behavior = "Readonly"
+              field = salesforce.RevenueTransactionErrorLog.field.ErrorLogNumber
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.RevenueTransactionErrorLog.field.RelatedRecordId
+            },
+          ]
+        },
+        {
+          layoutItems = [
+            {
+              behavior = "Required"
+              field = salesforce.RevenueTransactionErrorLog.field.PrimaryRecordId
+            },
+            {
+              behavior = "Required"
+              field = salesforce.RevenueTransactionErrorLog.field.ErrorMessage
+            },
+          ]
+        },
+      ]
+      style = "TwoColumnsLeftToRight"
+    },
+    {
+      customLabel = false
+      detailHeading = true
+      editHeading = true
+      label = "SystemInformation"
+      layoutColumns = [
+        {
+          layoutItems = [
+            {
+              behavior = "Readonly"
+              field = salesforce.RevenueTransactionErrorLog.field.CreatedDate
+            },
+            {
+              behavior = "Readonly"
+              field = salesforce.RevenueTransactionErrorLog.field.CreatedById
+            },
+          ]
+        },
+        {
+          layoutItems = [
+            {
+              behavior = "Readonly"
+              field = salesforce.RevenueTransactionErrorLog.field.LastModifiedDate
+            },
+            {
+              behavior = "Readonly"
+              field = salesforce.RevenueTransactionErrorLog.field.LastModifiedById
+            },
+          ]
+        },
+      ]
+      style = "TwoColumnsLeftToRight"
+    },
+    {
+      customLabel = false
+      detailHeading = false
+      editHeading = false
+      layoutColumns = [
+        {
+        },
+      ]
+      style = "CustomLinks"
+    },
+  ]
+  showEmailCheckbox = false
+  showRunAssignmentRulesCheckbox = false
+  showSubmitAndAttachButton = false
+  fullName = "RevenueTransactionErrorLog-Revenue Transaction Error Log Layout"
+  _parent = [
+    salesforce.RevenueTransactionErrorLog,
+  ]
+  _alias = "RevenueTransactionErrorLog-Revenue Transaction Error Log Layout"
+}

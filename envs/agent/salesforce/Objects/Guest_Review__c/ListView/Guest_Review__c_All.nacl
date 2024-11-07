@@ -1,0 +1,9 @@
+salesforce.ListView Guest_Review__c_All {
+  fullName = "Guest_Review__c.All"
+  filterScope = "Everything"
+  label = "All"
+  _parent = [
+    salesforce.Guest_Review__c,
+  ]
+  _alias = "All"
+}

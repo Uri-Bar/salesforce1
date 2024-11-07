@@ -1,0 +1,331 @@
+type salesforce.MessagingSession {
+  salesforce.DateTime AcceptTime {
+    apiName = "MessagingSession.AcceptTime"
+    label = "Accept Time"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Number AgentMessageCount {
+    apiName = "MessagingSession.AgentMessageCount"
+    label = "Agent Message Count"
+    precision = 9
+    createable = false
+    updateable = false
+    scale = 0
+    unique = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Lookup CaseId {
+    apiName = "MessagingSession.CaseId"
+    relationshipName = "Case"
+    label = "Case ID"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Text ChannelKey {
+    apiName = "MessagingSession.ChannelKey"
+    length = 150
+    label = "Channel Key"
+    createable = false
+    updateable = false
+    unique = false
+    caseSensitive = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Text ChannelName {
+    apiName = "MessagingSession.ChannelName"
+    length = 80
+    label = "Channel Name"
+    createable = false
+    updateable = false
+    unique = false
+    caseSensitive = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Picklist ChannelType {
+    apiName = "MessagingSession.ChannelType"
+    restricted = true
+    label = "Channel Type"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Lookup ConversationId {
+    apiName = "MessagingSession.ConversationId"
+    relationshipName = "Conversation"
+    label = "Conversation ID"
+    createable = true
+    updateable = false
+    queryable = true
+  }
+  salesforce.DateTime EndTime {
+    apiName = "MessagingSession.EndTime"
+    label = "End Time"
+    createable = true
+    updateable = false
+    queryable = true
+  }
+  salesforce.Lookup EndUserAccountId {
+    apiName = "MessagingSession.EndUserAccountId"
+    relationshipName = "EndUserAccount"
+    label = "Account ID"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Lookup EndUserContactId {
+    apiName = "MessagingSession.EndUserContactId"
+    relationshipName = "EndUserContact"
+    label = "Contact ID"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Picklist EndUserLanguage {
+    apiName = "MessagingSession.EndUserLanguage"
+    restricted = true
+    label = "Messaging User Language"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Number EndUserMessageCount {
+    apiName = "MessagingSession.EndUserMessageCount"
+    label = "End User Message Count"
+    precision = 9
+    createable = false
+    updateable = false
+    scale = 0
+    unique = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Picklist EndedByType {
+    apiName = "MessagingSession.EndedByType"
+    restricted = true
+    label = "Ended By Type"
+    createable = true
+    updateable = false
+    queryable = true
+  }
+  salesforce.Unknown ErrorReason {
+    apiName = "MessagingSession.ErrorReason"
+    _hidden_value = true
+  }
+  salesforce.Lookup LeadId {
+    apiName = "MessagingSession.LeadId"
+    relationshipName = "Lead"
+    label = "Lead ID"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Lookup MessagingChannelId {
+    apiName = "MessagingSession.MessagingChannelId"
+    relationshipName = "MessagingChannel"
+    _required = true
+    label = "Messaging Channel ID"
+    createable = true
+    updateable = false
+    queryable = true
+  }
+  salesforce.Lookup MessagingEndUserId {
+    apiName = "MessagingSession.MessagingEndUserId"
+    relationshipName = "MessagingEndUser"
+    _required = true
+    label = "Messaging User ID"
+    createable = true
+    updateable = false
+    queryable = true
+  }
+  salesforce.Lookup OpportunityId {
+    apiName = "MessagingSession.OpportunityId"
+    relationshipName = "Opportunity"
+    label = "Opportunity ID"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Picklist Origin {
+    apiName = "MessagingSession.Origin"
+    restricted = true
+    _required = true
+    label = "Origin"
+    createable = true
+    updateable = false
+    queryable = true
+  }
+  salesforce.Lookup OwnerId {
+    apiName = "MessagingSession.OwnerId"
+    relationshipName = "Owner"
+    label = "Owner ID"
+    createable = true
+    updateable = true
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Text PreviewDetails {
+    apiName = "MessagingSession.PreviewDetails"
+    length = 255
+    label = "Preview Details"
+    createable = false
+    updateable = false
+    unique = false
+    caseSensitive = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.DateTime StartTime {
+    apiName = "MessagingSession.StartTime"
+    label = "Start Time"
+    createable = true
+    updateable = false
+    queryable = true
+  }
+  salesforce.Picklist Status {
+    apiName = "MessagingSession.Status"
+    restricted = true
+    _required = true
+    label = "Status"
+    createable = true
+    updateable = false
+    queryable = true
+  }
+  serviceid Id {
+    apiName = "MessagingSession.Id"
+    label = "Messaging Session ID"
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Checkbox IsDeleted {
+    apiName = "MessagingSession.IsDeleted"
+    defaultValue = false
+    label = "Deleted"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.AutoNumber Name {
+    apiName = "MessagingSession.Name"
+    label = "Messaging Session Name"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.DateTime CreatedDate {
+    apiName = "MessagingSession.CreatedDate"
+    label = "Created Date"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Lookup CreatedById {
+    apiName = "MessagingSession.CreatedById"
+    relationshipName = "CreatedBy"
+    label = "Created By ID"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.DateTime LastModifiedDate {
+    apiName = "MessagingSession.LastModifiedDate"
+    label = "Last Modified Date"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Lookup LastModifiedById {
+    apiName = "MessagingSession.LastModifiedById"
+    relationshipName = "LastModifiedBy"
+    label = "Last Modified By ID"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.DateTime SystemModstamp {
+    apiName = "MessagingSession.SystemModstamp"
+    label = "System Modstamp"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Picklist AgentType {
+    apiName = "MessagingSession.AgentType"
+    restricted = true
+    label = "Agent Type"
+    createable = true
+    updateable = false
+    queryable = true
+  }
+  salesforce.Text SessionKey {
+    apiName = "MessagingSession.SessionKey"
+    length = 36
+    label = "Session Key"
+    createable = true
+    updateable = false
+    unique = false
+    caseSensitive = false
+    queryable = true
+  }
+  salesforce.Lookup TargetUserId {
+    apiName = "MessagingSession.TargetUserId"
+    relationshipName = "TargetUser"
+    label = "User ID"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Text ChannelGroup {
+    apiName = "MessagingSession.ChannelGroup"
+    length = 255
+    label = "Group"
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    queryable = true
+  }
+  salesforce.Text ChannelIntent {
+    apiName = "MessagingSession.ChannelIntent"
+    length = 255
+    label = "Intent"
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    queryable = true
+  }
+  salesforce.Text ChannelLocale {
+    apiName = "MessagingSession.ChannelLocale"
+    length = 255
+    label = "Locale"
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    queryable = true
+  }
+  salesforce.Summary ChannelEndUserFormula {
+    apiName = "MessagingSession.ChannelEndUserFormula"
+    label = "Concatenated Messaging Channel and Messaging User"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+}

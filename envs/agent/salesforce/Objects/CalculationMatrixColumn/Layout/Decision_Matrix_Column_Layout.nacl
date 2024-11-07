@@ -1,0 +1,75 @@
+salesforce.Layout CalculationMatrixColumn_Decision_Matrix_Column_Layout@bsss {
+  layoutSections = [
+    {
+      customLabel = false
+      detailHeading = true
+      editHeading = true
+      label = "Information"
+      layoutColumns = [
+        {
+          layoutItems = [
+            {
+              behavior = "Required"
+              field = salesforce.CalculationMatrixColumn.field.Name
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.CalculationMatrixColumn.field.ColumnType
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.CalculationMatrixColumn.field.IsWildcardColumn
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.CalculationMatrixColumn.field.RangeValues
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.CalculationMatrixColumn.field.ApiName
+            },
+          ]
+        },
+        {
+          layoutItems = [
+            {
+              behavior = "Required"
+              field = salesforce.CalculationMatrixColumn.field.CalculationMatrixId
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.CalculationMatrixColumn.field.DataType
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.CalculationMatrixColumn.field.WildcardColumnValue
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.CalculationMatrixColumn.field.DisplaySequence
+            },
+          ]
+        },
+      ]
+      style = "TwoColumnsLeftToRight"
+    },
+    {
+      customLabel = false
+      detailHeading = false
+      editHeading = false
+      layoutColumns = [
+        {
+        },
+      ]
+      style = "CustomLinks"
+    },
+  ]
+  showEmailCheckbox = false
+  showRunAssignmentRulesCheckbox = false
+  showSubmitAndAttachButton = false
+  fullName = "CalculationMatrixColumn-Decision Matrix Column Layout"
+  _parent = [
+    salesforce.CalculationMatrixColumn,
+  ]
+  _alias = "CalculationMatrixColumn-Decision Matrix Column Layout"
+}

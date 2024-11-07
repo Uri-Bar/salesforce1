@@ -1,0 +1,7 @@
+salesforce.SharingRules ActivationTargetPlatform {
+  fullName = "ActivationTargetPlatform"
+  _parent = [
+    salesforce.ActivationTargetPlatform,
+  ]
+  _alias = "ActivationTargetPlatform"
+}

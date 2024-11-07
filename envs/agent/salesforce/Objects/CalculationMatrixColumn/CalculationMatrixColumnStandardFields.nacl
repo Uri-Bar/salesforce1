@@ -1,0 +1,151 @@
+type salesforce.CalculationMatrixColumn {
+  salesforce.Text ApiName {
+    apiName = "CalculationMatrixColumn.ApiName"
+    length = 80
+    label = "API Name"
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    queryable = true
+  }
+  salesforce.MasterDetail CalculationMatrixId {
+    apiName = "CalculationMatrixColumn.CalculationMatrixId"
+    relationshipName = "CalculationMatrix"
+    _required = true
+    label = "Decision Matrix ID"
+    createable = true
+    updateable = false
+    queryable = true
+  }
+  salesforce.Picklist ColumnType {
+    apiName = "CalculationMatrixColumn.ColumnType"
+    restricted = true
+    label = "Column Type"
+    createable = true
+    updateable = false
+    queryable = true
+  }
+  salesforce.Picklist DataType {
+    apiName = "CalculationMatrixColumn.DataType"
+    restricted = true
+    label = "Data Type"
+    createable = true
+    updateable = false
+    queryable = true
+  }
+  salesforce.Number DisplaySequence {
+    apiName = "CalculationMatrixColumn.DisplaySequence"
+    label = "Display Sequence"
+    precision = 9
+    createable = true
+    updateable = true
+    scale = 0
+    unique = false
+    queryable = true
+  }
+  salesforce.Checkbox IsWildcardColumn {
+    apiName = "CalculationMatrixColumn.IsWildcardColumn"
+    defaultValue = false
+    label = "Wildcard Column"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Text Name {
+    apiName = "CalculationMatrixColumn.Name"
+    length = 255
+    _required = true
+    label = "Name"
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    queryable = true
+  }
+  salesforce.Text Namespace {
+    apiName = "CalculationMatrixColumn.Namespace"
+    length = 255
+    label = "Namespace"
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    queryable = true
+  }
+  salesforce.LongTextArea RangeValues {
+    apiName = "CalculationMatrixColumn.RangeValues"
+    length = 32768
+    label = "Range Values"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Text WildcardColumnValue {
+    apiName = "CalculationMatrixColumn.WildcardColumnValue"
+    length = 255
+    label = "Wildcard Column Value"
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    queryable = true
+  }
+  serviceid Id {
+    apiName = "CalculationMatrixColumn.Id"
+    label = "Decision Matrix Column ID"
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Checkbox IsDeleted {
+    apiName = "CalculationMatrixColumn.IsDeleted"
+    defaultValue = false
+    label = "Deleted"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.DateTime CreatedDate {
+    apiName = "CalculationMatrixColumn.CreatedDate"
+    label = "Created Date"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Lookup CreatedById {
+    apiName = "CalculationMatrixColumn.CreatedById"
+    relationshipName = "CreatedBy"
+    label = "Created By ID"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.DateTime LastModifiedDate {
+    apiName = "CalculationMatrixColumn.LastModifiedDate"
+    label = "Last Modified Date"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Lookup LastModifiedById {
+    apiName = "CalculationMatrixColumn.LastModifiedById"
+    relationshipName = "LastModifiedBy"
+    label = "Last Modified By ID"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.DateTime SystemModstamp {
+    apiName = "CalculationMatrixColumn.SystemModstamp"
+    label = "System Modstamp"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+}

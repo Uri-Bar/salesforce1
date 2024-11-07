@@ -1,0 +1,67 @@
+salesforce.Layout CalculationProcedureVersion_Calculation_Procedure_Version_Layout@bsss {
+  layoutSections = [
+    {
+      customLabel = false
+      detailHeading = true
+      editHeading = true
+      label = "Information"
+      layoutColumns = [
+        {
+          layoutItems = [
+            {
+              behavior = "Required"
+              field = salesforce.CalculationProcedureVersion.field.Name
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.CalculationProcedureVersion.field.VersionNumber
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.CalculationProcedureVersion.field.StartDateTime
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.CalculationProcedureVersion.field.Rank
+            },
+          ]
+        },
+        {
+          layoutItems = [
+            {
+              behavior = "Edit"
+              field = salesforce.CalculationProcedureVersion.field.IsEnabled
+            },
+            {
+              behavior = "Required"
+              field = salesforce.CalculationProcedureVersion.field.CalculationProcedureId
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.CalculationProcedureVersion.field.EndDateTime
+            },
+          ]
+        },
+      ]
+      style = "TwoColumnsLeftToRight"
+    },
+    {
+      customLabel = false
+      detailHeading = false
+      editHeading = false
+      layoutColumns = [
+        {
+        },
+      ]
+      style = "CustomLinks"
+    },
+  ]
+  showEmailCheckbox = false
+  showRunAssignmentRulesCheckbox = false
+  showSubmitAndAttachButton = false
+  fullName = "CalculationProcedureVersion-Calculation Procedure Version Layout"
+  _parent = [
+    salesforce.CalculationProcedureVersion,
+  ]
+  _alias = "CalculationProcedureVersion-Calculation Procedure Version Layout"
+}

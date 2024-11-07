@@ -1,0 +1,21 @@
+salesforce.ListView Session__c_All {
+  fullName = "Session__c.All"
+  columns = [
+    "NAME",
+    salesforce.Session__c.field.Experience__c,
+    salesforce.Session__c.field.Date__c,
+    salesforce.Session__c.field.Start_Time__c,
+    salesforce.Session__c.field.End_Time__c,
+    salesforce.Session__c.field.Status__c,
+    salesforce.Session__c.field.Is_Canceled__c,
+    salesforce.Session__c.field.Capacity__c,
+    salesforce.Session__c.field.Available_Slots__c,
+    salesforce.Session__c.field.Booked_Slots__c,
+  ]
+  filterScope = "Everything"
+  label = "All"
+  _parent = [
+    salesforce.Session__c,
+  ]
+  _alias = "All"
+}

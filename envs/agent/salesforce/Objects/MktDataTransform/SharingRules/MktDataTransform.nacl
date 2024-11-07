@@ -1,0 +1,7 @@
+salesforce.SharingRules MktDataTransform {
+  fullName = "MktDataTransform"
+  _parent = [
+    salesforce.MktDataTransform,
+  ]
+  _alias = "MktDataTransform"
+}

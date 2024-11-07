@@ -1,0 +1,441 @@
+salesforce.Layout Contact_Contact_Layout@bs {
+  excludeButtons = [
+    "DataDotComClean",
+    "RequestUseSfdc",
+    "Submit",
+  ]
+  layoutSections = [
+    {
+      customLabel = false
+      detailHeading = false
+      editHeading = true
+      label = "Contact Information"
+      layoutColumns = [
+        {
+          layoutItems = [
+            {
+              behavior = "Required"
+              field = salesforce.Contact.field.Name
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.Contact.field.Next_Check_in_Date__c
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.Contact.field.Lifetime_Value__c
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.Contact.field.Lifetime_Reservations__c
+            },
+            {
+              behavior = "Readonly"
+              field = salesforce.Contact.field.Membership_Number__c
+            },
+          ]
+        },
+        {
+          layoutItems = [
+            {
+              behavior = "Required"
+              field = salesforce.Contact.field.AccountId
+            },
+          ]
+        },
+      ]
+      style = "TwoColumnsTopToBottom"
+    },
+    {
+      customLabel = false
+      detailHeading = true
+      editHeading = true
+      label = "Details"
+      layoutColumns = [
+        {
+          layoutItems = [
+            {
+              behavior = "Edit"
+              field = salesforce.Contact.field.Birthdate
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.Contact.field.Preferred_Name__c
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.Contact.field.Guest_Type__c
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.Contact.field.LeadSource
+            },
+          ]
+        },
+        {
+          layoutItems = [
+            {
+              behavior = "Edit"
+              field = salesforce.Contact.field.Interest1__c
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.Contact.field.Interest2__c
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.Contact.field.Interest3__c
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.Contact.field.External_Id__c
+            },
+          ]
+        },
+      ]
+      style = "TwoColumnsLeftToRight"
+    },
+    {
+      customLabel = false
+      detailHeading = true
+      editHeading = true
+      label = "Overview"
+      layoutColumns = [
+        {
+          layoutItems = [
+            {
+              behavior = "Edit"
+              field = salesforce.Contact.field.Description
+            },
+          ]
+        },
+      ]
+      style = "OneColumn"
+    },
+    {
+      customLabel = true
+      detailHeading = true
+      editHeading = false
+      label = "Reservation Insights"
+      style = "TwoColumnsLeftToRight"
+    },
+    {
+      customLabel = false
+      detailHeading = true
+      editHeading = true
+      label = "Contact Information"
+      layoutColumns = [
+        {
+          layoutItems = [
+            {
+              behavior = "Edit"
+              field = salesforce.Contact.field.MobilePhone
+            },
+          ]
+        },
+        {
+          layoutItems = [
+            {
+              behavior = "Edit"
+              field = salesforce.Contact.field.Email
+            },
+          ]
+        },
+      ]
+      style = "TwoColumnsLeftToRight"
+    },
+    {
+      customLabel = false
+      detailHeading = true
+      editHeading = true
+      label = "Address Information"
+      layoutColumns = [
+        {
+          layoutItems = [
+            {
+              behavior = "Edit"
+              field = salesforce.Contact.field.MailingAddress
+            },
+          ]
+        },
+      ]
+      style = "OneColumn"
+    },
+    {
+      customLabel = false
+      detailHeading = true
+      editHeading = true
+      label = "System Information"
+      layoutColumns = [
+        {
+          layoutItems = [
+            {
+              behavior = "Readonly"
+              field = salesforce.Contact.field.CreatedById
+            },
+          ]
+        },
+        {
+          layoutItems = [
+            {
+              behavior = "Readonly"
+              field = salesforce.Contact.field.LastModifiedById
+            },
+          ]
+        },
+      ]
+      style = "TwoColumnsTopToBottom"
+    },
+    {
+      customLabel = false
+      detailHeading = false
+      editHeading = false
+      label = "Custom Links"
+      style = "CustomLinks"
+    },
+  ]
+  platformActionList = {
+    actionListContext = "Record"
+    platformActionListItems = [
+      {
+        actionName = "FeedItem.TextPost"
+        actionType = "QuickAction"
+        sortOrder = 0
+      },
+      {
+        actionName = "FeedItem.ContentPost"
+        actionType = "QuickAction"
+        sortOrder = 1
+      },
+      {
+        actionName = salesforce.QuickAction.instance.NewTask
+        actionType = "QuickAction"
+        sortOrder = 2
+      },
+      {
+        actionName = salesforce.QuickAction.instance.LogACall
+        actionType = "QuickAction"
+        sortOrder = 3
+      },
+      {
+        actionName = salesforce.QuickAction.instance.NewCase
+        actionType = "QuickAction"
+        sortOrder = 4
+      },
+      {
+        actionName = salesforce.QuickAction.instance.NewNote
+        actionType = "QuickAction"
+        sortOrder = 5
+      },
+      {
+        actionName = salesforce.QuickAction.instance.NewEvent
+        actionType = "QuickAction"
+        sortOrder = 6
+      },
+      {
+        actionName = "FeedItem.LinkPost"
+        actionType = "QuickAction"
+        sortOrder = 7
+      },
+      {
+        actionName = "FeedItem.PollPost"
+        actionType = "QuickAction"
+        sortOrder = 8
+      },
+      {
+        actionName = "FeedItem.QuestionPost"
+        actionType = "QuickAction"
+        sortOrder = 9
+      },
+      {
+        actionName = salesforce.QuickAction.instance.SendEmail
+        actionType = "QuickAction"
+        sortOrder = 10
+      },
+      {
+        actionName = "Submit"
+        actionType = "StandardButton"
+        sortOrder = 11
+      },
+      {
+        actionName = "Clone"
+        actionType = "StandardButton"
+        sortOrder = 12
+      },
+      {
+        actionName = "Share"
+        actionType = "StandardButton"
+        sortOrder = 13
+      },
+      {
+        actionName = "Edit"
+        actionType = "StandardButton"
+        sortOrder = 14
+      },
+      {
+        actionName = "Delete"
+        actionType = "StandardButton"
+        sortOrder = 15
+      },
+      {
+        actionName = "ChangeOwnerOne"
+        actionType = "StandardButton"
+        sortOrder = 16
+      },
+      {
+        actionName = "ChangeRecordType"
+        actionType = "StandardButton"
+        sortOrder = 17
+      },
+      {
+        actionName = "SendEmail"
+        actionType = "StandardButton"
+        sortOrder = 18
+      },
+      {
+        actionName = "RequestUpdate"
+        actionType = "StandardButton"
+        sortOrder = 19
+      },
+      {
+        actionName = "XClean"
+        actionType = "StandardButton"
+        sortOrder = 20
+      },
+      {
+        actionName = "CallHighlightAction"
+        actionType = "ProductivityAction"
+        sortOrder = 21
+      },
+      {
+        actionName = "SmsHighlightAction"
+        actionType = "ProductivityAction"
+        sortOrder = 22
+      },
+      {
+        actionName = "EmailHighlightAction"
+        actionType = "ProductivityAction"
+        sortOrder = 23
+      },
+    ]
+  }
+  quickActionList = {
+    quickActionListItems = [
+      {
+        quickActionName = "FeedItem.ContentPost"
+      },
+      {
+        quickActionName = "FeedItem.LinkPost"
+      },
+      {
+        quickActionName = "FeedItem.PollPost"
+      },
+      {
+        quickActionName = "FeedItem.QuestionPost"
+      },
+      {
+        quickActionName = "FeedItem.TextPost"
+      },
+      {
+        quickActionName = salesforce.QuickAction.instance.LogACall
+      },
+      {
+        quickActionName = salesforce.QuickAction.instance.NewCase
+      },
+      {
+        quickActionName = salesforce.QuickAction.instance.NewEvent
+      },
+      {
+        quickActionName = salesforce.QuickAction.instance.NewNote
+      },
+      {
+        quickActionName = salesforce.QuickAction.instance.NewTask
+      },
+      {
+        quickActionName = salesforce.QuickAction.instance.SendEmail
+      },
+    ]
+  }
+  relatedContent = {
+    relatedContentItems = [
+      {
+        layoutItem = {
+          behavior = "Readonly"
+          field = salesforce.Contact.field.AccountId
+        }
+      },
+    ]
+  }
+  relatedLists = [
+    {
+      fields = [
+        "Session__c.Experience__c",
+        "Date__c",
+        "Start_Time__c",
+        "End_Time__c",
+        "Number_of_Guests__c",
+        "Total_Price__c",
+      ]
+      relatedList = salesforce.Booking__c.field.Contact__c
+    },
+    {
+      fields = [
+        "NAME",
+        "Experience__c.NAME",
+        "Rating__c",
+        "Comments__c",
+      ]
+      relatedList = salesforce.Guest_Review__c.field.Contact__c
+    },
+    {
+      fields = [
+        "NAME",
+        "Amount__c",
+        "CREATED_DATE",
+        "CREATEDBY_USER",
+      ]
+      relatedList = salesforce.Credit__c.field.Contact__c
+    },
+    {
+      fields = [
+        "TASK.SUBJECT",
+        "TASK.WHAT_NAME",
+        "ACTIVITY.TASK",
+        "TASK.DUE_DATE",
+        "CORE.USERS.FULL_NAME",
+        "TASK.LAST_UPDATE",
+      ]
+      relatedList = "RelatedHistoryList"
+    },
+    {
+      fields = [
+        "CASES.CASE_NUMBER",
+        "CASES.SUBJECT",
+        "CASES.PRIORITY",
+        "CASES.CREATED_DATE",
+        "CASES.STATUS",
+        "OWNER_NAME",
+      ]
+      relatedList = "RelatedCaseList"
+    },
+  ]
+  relatedObjects = [
+    "AccountId",
+  ]
+  showEmailCheckbox = false
+  showHighlightsPanel = false
+  showInteractionLogPanel = false
+  showRunAssignmentRulesCheckbox = false
+  showSubmitAndAttachButton = false
+  summaryLayout = {
+    masterLabel = "00h1a0000012AGv"
+    sizeX = 4
+    sizeY = 0
+    summaryLayoutStyle = "Default"
+  }
+  fullName = "Contact-Contact Layout"
+  _parent = [
+    salesforce.Contact,
+  ]
+  _alias = "Contact-Contact Layout"
+}

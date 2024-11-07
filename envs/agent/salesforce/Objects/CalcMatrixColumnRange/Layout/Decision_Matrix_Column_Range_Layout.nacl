@@ -1,0 +1,59 @@
+salesforce.Layout CalcMatrixColumnRange_Decision_Matrix_Column_Range_Layout@bssss {
+  layoutSections = [
+    {
+      customLabel = false
+      detailHeading = true
+      editHeading = true
+      label = "Information"
+      layoutColumns = [
+        {
+          layoutItems = [
+            {
+              behavior = "Required"
+              field = salesforce.CalcMatrixColumnRange.field.Name
+            },
+            {
+              behavior = "Required"
+              field = salesforce.CalcMatrixColumnRange.field.CalculationMatrixColumnId
+            },
+            {
+              behavior = "Required"
+              field = salesforce.CalcMatrixColumnRange.field.RangeStartValue
+            },
+          ]
+        },
+        {
+          layoutItems = [
+            {
+              behavior = "Required"
+              field = salesforce.CalcMatrixColumnRange.field.CalculationMatrixVersionId
+            },
+            {
+              behavior = "Required"
+              field = salesforce.CalcMatrixColumnRange.field.Occurrence
+            },
+          ]
+        },
+      ]
+      style = "TwoColumnsLeftToRight"
+    },
+    {
+      customLabel = false
+      detailHeading = false
+      editHeading = false
+      layoutColumns = [
+        {
+        },
+      ]
+      style = "CustomLinks"
+    },
+  ]
+  showEmailCheckbox = false
+  showRunAssignmentRulesCheckbox = false
+  showSubmitAndAttachButton = false
+  fullName = "CalcMatrixColumnRange-Decision Matrix Column Range Layout"
+  _parent = [
+    salesforce.CalcMatrixColumnRange,
+  ]
+  _alias = "CalcMatrixColumnRange-Decision Matrix Column Range Layout"
+}

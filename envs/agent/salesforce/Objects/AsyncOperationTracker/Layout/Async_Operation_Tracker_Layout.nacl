@@ -1,0 +1,117 @@
+salesforce.Layout AsyncOperationTracker_Async_Operation_Tracker_Layout@bsss {
+  layoutSections = [
+    {
+      customLabel = false
+      detailHeading = true
+      editHeading = true
+      label = "Detail Information"
+      layoutColumns = [
+        {
+          layoutItems = [
+            {
+              behavior = "Readonly"
+              field = salesforce.AsyncOperationTracker.field.AsyncOperationNumber
+            },
+            {
+              behavior = "Required"
+              field = salesforce.AsyncOperationTracker.field.Status
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.AsyncOperationTracker.field.SubmittedAt
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.AsyncOperationTracker.field.FinishedAt
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.AsyncOperationTracker.field.ReferenceEntityId
+            },
+          ]
+        },
+        {
+          layoutItems = [
+            {
+              behavior = "Edit"
+              field = salesforce.AsyncOperationTracker.field.ParentOperationId
+            },
+            {
+              behavior = "Required"
+              field = salesforce.AsyncOperationTracker.field.JobType
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.AsyncOperationTracker.field.StartedAt
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.AsyncOperationTracker.field.ExpiresAt
+            },
+          ]
+        },
+      ]
+      style = "TwoColumnsLeftToRight"
+    },
+    {
+      customLabel = false
+      detailHeading = true
+      editHeading = true
+      label = "System Information"
+      layoutColumns = [
+        {
+          layoutItems = [
+            {
+              behavior = "Readonly"
+              field = salesforce.AsyncOperationTracker.field.CreatedDate
+            },
+            {
+              behavior = "Readonly"
+              field = salesforce.AsyncOperationTracker.field.CreatedById
+            },
+          ]
+        },
+        {
+          layoutItems = [
+            {
+              behavior = "Readonly"
+              field = salesforce.AsyncOperationTracker.field.LastModifiedDate
+            },
+            {
+              behavior = "Readonly"
+              field = salesforce.AsyncOperationTracker.field.LastModifiedById
+            },
+          ]
+        },
+      ]
+      style = "TwoColumnsLeftToRight"
+    },
+    {
+      customLabel = false
+      detailHeading = false
+      editHeading = false
+      layoutColumns = [
+        {
+        },
+      ]
+      style = "CustomLinks"
+    },
+  ]
+  relatedLists = [
+    {
+      fields = [
+        "RTEL.NAME",
+        "RTEL.ERROR_MESSAGE",
+      ]
+      relatedList = "RevenueTransactionErrorLogs"
+    },
+  ]
+  showEmailCheckbox = false
+  showRunAssignmentRulesCheckbox = false
+  showSubmitAndAttachButton = false
+  fullName = "AsyncOperationTracker-Async Operation Tracker Layout"
+  _parent = [
+    salesforce.AsyncOperationTracker,
+  ]
+  _alias = "AsyncOperationTracker-Async Operation Tracker Layout"
+}

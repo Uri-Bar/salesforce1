@@ -1,0 +1,140 @@
+type salesforce.MktCalculatedInsight {
+  salesforce.Picklist CalculatedInsightStatus {
+    apiName = "MktCalculatedInsight.CalculatedInsightStatus"
+    restricted = true
+    label = "Status"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.DateTime LastRunDateTime {
+    apiName = "MktCalculatedInsight.LastRunDateTime"
+    label = "Last Run Time"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Picklist LastRunStatus {
+    apiName = "MktCalculatedInsight.LastRunStatus"
+    restricted = true
+    label = "Last Run Status"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Text Name {
+    apiName = "MktCalculatedInsight.Name"
+    length = 255
+    _required = true
+    label = "Calculated Insight Name"
+    createable = false
+    updateable = false
+    unique = false
+    caseSensitive = false
+    queryable = true
+    _hidden_value = true
+  }
+  serviceid Id {
+    apiName = "MktCalculatedInsight.Id"
+    label = "Calculated Insight ID"
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Checkbox IsDeleted {
+    apiName = "MktCalculatedInsight.IsDeleted"
+    defaultValue = false
+    label = "Deleted"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.DateTime CreatedDate {
+    apiName = "MktCalculatedInsight.CreatedDate"
+    label = "Created Date"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Lookup CreatedById {
+    apiName = "MktCalculatedInsight.CreatedById"
+    relationshipName = "CreatedBy"
+    label = "Created By ID"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.DateTime LastModifiedDate {
+    apiName = "MktCalculatedInsight.LastModifiedDate"
+    label = "Last Modified Date"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Lookup LastModifiedById {
+    apiName = "MktCalculatedInsight.LastModifiedById"
+    relationshipName = "LastModifiedBy"
+    label = "Last Modified By ID"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.DateTime SystemModstamp {
+    apiName = "MktCalculatedInsight.SystemModstamp"
+    label = "System Modstamp"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Picklist LastCalcInsightStatusErrorCode {
+    apiName = "MktCalculatedInsight.LastCalcInsightStatusErrorCode"
+    restricted = true
+    label = "Last Calculated Insight Status Error Code"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.DateTime LastCalcInsightStatusDateTime {
+    apiName = "MktCalculatedInsight.LastCalcInsightStatusDateTime"
+    label = "Last Calculated Insight Status Time"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Picklist LastRunStatusErrorCode {
+    apiName = "MktCalculatedInsight.LastRunStatusErrorCode"
+    restricted = true
+    label = "Last Run Status Error Code"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.DateTime LastRunStatusDateTime {
+    apiName = "MktCalculatedInsight.LastRunStatusDateTime"
+    label = "Last Run Status Time"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.LongTextArea ExternalErrorProperties {
+    apiName = "MktCalculatedInsight.ExternalErrorProperties"
+    length = 128000
+    label = "Last Run Status error properties"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+}

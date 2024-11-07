@@ -1,0 +1,7 @@
+salesforce.SharingRules ExtDataShareTarget {
+  fullName = "ExtDataShareTarget"
+  _parent = [
+    salesforce.ExtDataShareTarget,
+  ]
+  _alias = "ExtDataShareTarget"
+}

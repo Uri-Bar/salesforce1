@@ -1,0 +1,9 @@
+salesforce.ListView ActivationTarget_All_ActivationTargets {
+  fullName = "ActivationTarget.All_ActivationTargets"
+  filterScope = "Everything"
+  label = "All Activation Targets"
+  _parent = [
+    salesforce.ActivationTarget,
+  ]
+  _alias = "All Activation Targets"
+}

@@ -1,0 +1,148 @@
+type salesforce.DataAction {
+  salesforce.Picklist ActionStatus {
+    apiName = "DataAction.ActionStatus"
+    restricted = true
+    label = "Status"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Text Description {
+    apiName = "DataAction.Description"
+    length = 255
+    label = "Data Action Description"
+    createable = false
+    updateable = false
+    unique = false
+    caseSensitive = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.DateTime LastActionStatusDateTime {
+    apiName = "DataAction.LastActionStatusDateTime"
+    label = "Last Data Action Status Date Time"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Text Name {
+    apiName = "DataAction.Name"
+    length = 255
+    _required = true
+    label = "Data Action Name"
+    createable = false
+    updateable = false
+    unique = false
+    caseSensitive = false
+    queryable = true
+    _hidden_value = true
+  }
+  serviceid Id {
+    apiName = "DataAction.Id"
+    label = "Data Action ID"
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Checkbox IsDeleted {
+    apiName = "DataAction.IsDeleted"
+    defaultValue = false
+    label = "Deleted"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.DateTime CreatedDate {
+    apiName = "DataAction.CreatedDate"
+    label = "Created Date"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Lookup CreatedById {
+    apiName = "DataAction.CreatedById"
+    relationshipName = "CreatedBy"
+    label = "Created By ID"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.DateTime LastModifiedDate {
+    apiName = "DataAction.LastModifiedDate"
+    label = "Last Modified Date"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Lookup LastModifiedById {
+    apiName = "DataAction.LastModifiedById"
+    relationshipName = "LastModifiedBy"
+    label = "Last Modified By ID"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.DateTime SystemModstamp {
+    apiName = "DataAction.SystemModstamp"
+    label = "System Modstamp"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Picklist LastActionStatusErrorCode {
+    apiName = "DataAction.LastActionStatusErrorCode"
+    restricted = true
+    label = "Last Data Action Status Error Code"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Text ActionApiName {
+    apiName = "DataAction.ActionApiName"
+    length = 255
+    label = "Data Action API Name"
+    createable = false
+    updateable = false
+    unique = false
+    caseSensitive = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Checkbox ShouldProcessDayZero {
+    apiName = "DataAction.ShouldProcessDayZero"
+    defaultValue = false
+    label = "Should Process Day Zero"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Text AffiliationDmoDeveloperName {
+    apiName = "DataAction.AffiliationDmoDeveloperName"
+    length = 255
+    label = "Affiliation Dmo Developer Name"
+    createable = false
+    updateable = false
+    unique = false
+    caseSensitive = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Picklist ManagedBy {
+    apiName = "DataAction.ManagedBy"
+    restricted = true
+    label = "Managed By"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+}

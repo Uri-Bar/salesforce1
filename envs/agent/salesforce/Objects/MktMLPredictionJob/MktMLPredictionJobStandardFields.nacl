@@ -1,0 +1,128 @@
+type salesforce.MktMLPredictionJob {
+  salesforce.Picklist ActivationStatus {
+    apiName = "MktMLPredictionJob.ActivationStatus"
+    restricted = true
+    label = "Activation Status"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Unknown Duration {
+    apiName = "MktMLPredictionJob.Duration"
+    label = "Duration"
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Unknown LastProcessedRecords {
+    apiName = "MktMLPredictionJob.LastProcessedRecords"
+    label = "Last Processed Records"
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.DateTime LastRunDate {
+    apiName = "MktMLPredictionJob.LastRunDate"
+    label = "Last Run Date"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Picklist LastRunStatus {
+    apiName = "MktMLPredictionJob.LastRunStatus"
+    restricted = true
+    label = "Last Run Status"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Text Name {
+    apiName = "MktMLPredictionJob.Name"
+    length = 255
+    _required = true
+    label = "Prediction Job Name"
+    createable = false
+    updateable = false
+    unique = false
+    caseSensitive = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Picklist OffCoreSyncStatus {
+    apiName = "MktMLPredictionJob.OffCoreSyncStatus"
+    restricted = true
+    label = "Offcore Sync Status"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Lookup PredictionJobDefId {
+    apiName = "MktMLPredictionJob.PredictionJobDefId"
+    _hidden_value = true
+  }
+  salesforce.Unknown ScoreUpdated {
+    apiName = "MktMLPredictionJob.ScoreUpdated"
+    label = "Score Updated"
+    queryable = true
+    _hidden_value = true
+  }
+  serviceid Id {
+    apiName = "MktMLPredictionJob.Id"
+    label = "Prediction Job ID"
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Checkbox IsDeleted {
+    apiName = "MktMLPredictionJob.IsDeleted"
+    defaultValue = false
+    label = "Deleted"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.DateTime CreatedDate {
+    apiName = "MktMLPredictionJob.CreatedDate"
+    label = "Created Date"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Lookup CreatedById {
+    apiName = "MktMLPredictionJob.CreatedById"
+    relationshipName = "CreatedBy"
+    label = "Created By ID"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.DateTime LastModifiedDate {
+    apiName = "MktMLPredictionJob.LastModifiedDate"
+    label = "Last Modified Date"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Lookup LastModifiedById {
+    apiName = "MktMLPredictionJob.LastModifiedById"
+    relationshipName = "LastModifiedBy"
+    label = "Last Modified By ID"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.DateTime SystemModstamp {
+    apiName = "MktMLPredictionJob.SystemModstamp"
+    label = "System Modstamp"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+}

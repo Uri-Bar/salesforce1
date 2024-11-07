@@ -1,0 +1,23 @@
+salesforce.WebLink Contact_YahooWeather {
+  fullName = "Contact.YahooWeather"
+  availability = "online"
+  displayType = "link"
+  encodingKey = "UTF-8"
+  hasMenubar = false
+  hasScrollbars = true
+  hasToolbar = false
+  height = 600
+  isResizable = true
+  linkType = "url"
+  masterLabel = "Yahoo! Weather"
+  openType = "newWindow"
+  position = "none"
+  protected = false
+  showsLocation = false
+  showsStatus = false
+  url = "http://weather.yahoo.com/search/weather2?p={!Contact.MailingPostalCode}"
+  _parent = [
+    salesforce.Contact,
+  ]
+  _alias = "Contact.YahooWeather"
+}

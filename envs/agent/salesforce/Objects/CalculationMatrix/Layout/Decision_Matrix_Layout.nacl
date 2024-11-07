@@ -1,0 +1,83 @@
+salesforce.Layout CalculationMatrix_Decision_Matrix_Layout@bss {
+  layoutSections = [
+    {
+      customLabel = false
+      detailHeading = true
+      editHeading = true
+      label = "Information"
+      layoutColumns = [
+        {
+          layoutItems = [
+            {
+              behavior = "Required"
+              field = salesforce.CalculationMatrix.field.Name
+            },
+            {
+              behavior = "Required"
+              field = salesforce.CalculationMatrix.field.Type
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.CalculationMatrix.field.GroupKey
+            },
+            {
+              behavior = "Readonly"
+              field = salesforce.CalculationMatrix.field.UniqueName
+            },
+          ]
+        },
+        {
+          layoutItems = [
+            {
+              behavior = "Edit"
+              field = salesforce.CalculationMatrix.field.OwnerId
+            },
+            {
+              behavior = "Readonly"
+              field = salesforce.CalculationMatrix.field.LastModifiedById
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.CalculationMatrix.field.SubGroupKey
+            },
+          ]
+        },
+      ]
+      style = "TwoColumnsLeftToRight"
+    },
+    {
+      customLabel = false
+      detailHeading = false
+      editHeading = false
+      layoutColumns = [
+        {
+        },
+      ]
+      style = "CustomLinks"
+    },
+  ]
+  relatedLists = [
+    {
+      fields = [
+        "Name",
+        "GroupKey",
+        "SubGroupKey",
+        "IsEnabled",
+        "DscnModelNoteExportStatus",
+        "Rank",
+        "StartDateTime",
+        "EndDateTime",
+        "VersionNumber",
+      ]
+      relatedList = "CalculationMatrixVersions"
+    },
+  ]
+  showEmailCheckbox = false
+  showRunAssignmentRulesCheckbox = false
+  showSubmitAndAttachButton = false
+  fullName = "CalculationMatrix-Decision Matrix Layout"
+  _parent = [
+    salesforce.CalculationMatrix,
+  ]
+  _alias = "CalculationMatrix-Decision Matrix Layout"
+}

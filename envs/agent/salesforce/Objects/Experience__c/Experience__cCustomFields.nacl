@@ -1,0 +1,252 @@
+type salesforce.Experience__c {
+  salesforce.Picklist Activity_Level__c {
+    apiName = "Experience__c.Activity_Level__c"
+    description = "Categorizes the experience based on its physical intensity or required skill level, with values ranging from \"Low\" for relaxed activities to \"High\" for more vigorous or skill-intensive experiences."
+    label = "Activity Level"
+    trackTrending = false
+    valueSet = [
+      {
+        fullName = "Low"
+        default = false
+        label = "Low"
+      },
+      {
+        fullName = "Medium"
+        default = false
+        label = "Medium"
+      },
+      {
+        fullName = "High"
+        default = false
+        label = "High"
+      },
+    ]
+    sorted = false
+    restricted = false
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Number Capacity__c {
+    apiName = "Experience__c.Capacity__c"
+    description = "Defines the maximum number of participants that can be accommodated in a single session of the experience, ensuring optimal guest enjoyment and safety."
+    externalId = false
+    label = "Capacity"
+    precision = 4
+    scale = 0
+    trackTrending = false
+    unique = false
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Time Default_Start_Time__c {
+    apiName = "Experience__c.Default_Start_Time__c"
+    description = "The default start time used to build the schedule each day"
+    label = "Default Start Time"
+    trackTrending = false
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Html Description__c {
+    apiName = "Experience__c.Description__c"
+    description = "Provides a detailed overview of the experience, including what guests can expect, any prerequisites or recommendations, and unique highlights that distinguish this activity or service."
+    label = "Description"
+    length = 32768
+    trackTrending = false
+    visibleLines = 25
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Number Duration_Hours__c {
+    apiName = "Experience__c.Duration_Hours__c"
+    description = "Indicates the length of time in hours that the experience is expected to last. This information helps guests plan their schedules and enables the resort to efficiently manage bookings and availability."
+    externalId = false
+    label = "Duration (Hours)"
+    precision = 4
+    scale = 2
+    trackTrending = false
+    unique = false
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.TextArea Location__c {
+    apiName = "Experience__c.Location__c"
+    description = "Specifies the physical location or venue within the resort where the experience takes place, aiding guests in navigation and planning."
+    label = "Location"
+    trackTrending = false
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Url Picture_URL__c {
+    apiName = "Experience__c.Picture_URL__c"
+    description = "The Picture_URL__c field stores the web address (URL) of an image representing the experience, providing a visual reference for guests on different platforms and promotional materials."
+    label = "Picture URL"
+    trackTrending = false
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Currency Price__c {
+    apiName = "Experience__c.Price__c"
+    description = "The Price__c field indicates the cost associated with participating in an experience, allowing guests to understand the financial commitment for each activity and enabling the resort to manage and display pricing information for its offerings."
+    label = "Price"
+    precision = 6
+    scale = 2
+    trackTrending = false
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.FormulaNumber Rating__c {
+    apiName = "Experience__c.Rating__c"
+    description = "The average Guest Rating"
+    externalId = false
+    formula = "Sum_of_Guest_Reviews__c / Total_Guest_Reviews__c"
+    formulaTreatBlanksAs = "BlankAsZero"
+    label = "Rating"
+    precision = 18
+    scale = 1
+    trackTrending = false
+    unique = false
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+    _generated_dependencies = [
+      {
+        reference = salesforce.Experience__c.field.Sum_of_Guest_Reviews__c
+      },
+      {
+        reference = salesforce.Experience__c.field.Total_Guest_Reviews__c
+      },
+    ]
+  }
+  salesforce.LongTextArea Reviews_Summary__c {
+    apiName = "Experience__c.Reviews_Summary__c"
+    description = "A summary of all of the guest reviews for the Experience."
+    label = "Reviews Summary"
+    length = 32768
+    trackTrending = false
+    visibleLines = 3
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Summary Sum_of_Guest_Reviews__c {
+    apiName = "Experience__c.Sum_of_Guest_Reviews__c"
+    description = "The Total Sum of the Guest Review Ratings"
+    label = "Sum of Guest Reviews"
+    summarizedField = "Guest_Review__c.Rating_Value__c"
+    summaryForeignKey = "Guest_Review__c.Experience__c"
+    summaryOperation = "sum"
+    trackTrending = false
+    precision = 18
+    scale = 0
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Summary Total_Guest_Reviews__c {
+    apiName = "Experience__c.Total_Guest_Reviews__c"
+    description = "Total Number of Guest Reviews"
+    label = "Total Guest Reviews"
+    summaryForeignKey = "Guest_Review__c.Experience__c"
+    summaryOperation = "count"
+    trackTrending = false
+    precision = 18
+    scale = 0
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Picklist Type__c {
+    apiName = "Experience__c.Type__c"
+    description = "The Type field categorizes experiences into specific activities like \"Tennis & Pickleball,\" \"Swimming Pools,\" and \"Beaches & Snorkeling,\" helping guests easily find and book preferred activities, and aiding resort organization."
+    label = "Type"
+    trackTrending = false
+    valueSet = [
+      {
+        fullName = "Adventure Activities"
+        default = false
+        label = "Adventure Activities"
+      },
+      {
+        fullName = "Beaches & Snorkeling"
+        default = false
+        label = "Beaches & Snorkeling"
+      },
+      {
+        fullName = "Cultural Tours & Workshops"
+        default = false
+        label = "Cultural Tours & Workshops"
+      },
+      {
+        fullName = "Dining Experiences"
+        default = false
+        label = "Dining Experiences"
+      },
+      {
+        fullName = "Family & Kids' Activities"
+        default = false
+        label = "Family & Kids' Activities"
+      },
+      {
+        fullName = "Fitness & Exercise"
+        default = false
+        label = "Fitness & Exercise"
+      },
+      {
+        fullName = "Golf"
+        default = false
+        label = "Golf"
+      },
+      {
+        fullName = "Nature & Eco Tours"
+        default = false
+        label = "Nature & Eco Tours"
+      },
+      {
+        fullName = "Nightlife & Entertainment"
+        default = false
+        label = "Nightlife & Entertainment"
+      },
+      {
+        fullName = "Relaxation & Quiet Zones"
+        default = false
+        label = "Relaxation & Quiet Zones"
+      },
+      {
+        fullName = "Spa & Wellness"
+        default = false
+        label = "Spa & Wellness"
+      },
+      {
+        fullName = "Swimming Pools"
+        default = false
+        label = "Swimming Pools"
+      },
+      {
+        fullName = "Tennis & Pickleball"
+        default = false
+        label = "Tennis & Pickleball"
+      },
+      {
+        fullName = "Water Sports"
+        default = false
+        label = "Water Sports"
+      },
+    ]
+    sorted = false
+    restricted = false
+    createable = true
+    updateable = true
+    queryable = true
+  }
+}

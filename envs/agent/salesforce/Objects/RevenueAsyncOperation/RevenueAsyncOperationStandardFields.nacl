@@ -1,0 +1,190 @@
+type salesforce.RevenueAsyncOperation {
+  serviceid Id {
+    apiName = "RevenueAsyncOperation.Id"
+    label = "Revenue Async Operation ID"
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Checkbox IsDeleted {
+    apiName = "RevenueAsyncOperation.IsDeleted"
+    defaultValue = false
+    label = "Deleted"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.AutoNumber AsyncOperationNumber {
+    apiName = "RevenueAsyncOperation.AsyncOperationNumber"
+    label = "Async Operation Number"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.DateTime CreatedDate {
+    apiName = "RevenueAsyncOperation.CreatedDate"
+    label = "Created Date"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Lookup CreatedById {
+    apiName = "RevenueAsyncOperation.CreatedById"
+    relationshipName = "CreatedBy"
+    label = "Created By ID"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.DateTime LastModifiedDate {
+    apiName = "RevenueAsyncOperation.LastModifiedDate"
+    label = "Last Modified Date"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Lookup LastModifiedById {
+    apiName = "RevenueAsyncOperation.LastModifiedById"
+    relationshipName = "LastModifiedBy"
+    label = "Last Modified By ID"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.DateTime SystemModstamp {
+    apiName = "RevenueAsyncOperation.SystemModstamp"
+    label = "System Modstamp"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Picklist Status {
+    apiName = "RevenueAsyncOperation.Status"
+    restricted = true
+    _required = true
+    label = "Status"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Picklist JobType {
+    apiName = "RevenueAsyncOperation.JobType"
+    restricted = true
+    _required = true
+    label = "Job Type"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.DateTime SubmittedAt {
+    apiName = "RevenueAsyncOperation.SubmittedAt"
+    label = "Submitted At"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.DateTime StartedAt {
+    apiName = "RevenueAsyncOperation.StartedAt"
+    label = "Started At"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.DateTime FinishedAt {
+    apiName = "RevenueAsyncOperation.FinishedAt"
+    label = "Finished At"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.DateTime ExpiresAt {
+    apiName = "RevenueAsyncOperation.ExpiresAt"
+    label = "Expires At"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Lookup ParentOperationId {
+    apiName = "RevenueAsyncOperation.ParentOperationId"
+    relationshipName = "ParentOperation"
+    label = "Revenue Async Operation ID"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Lookup ReferenceEntityId {
+    apiName = "RevenueAsyncOperation.ReferenceEntityId"
+    relationshipName = "ReferenceEntity"
+    label = "Reference Entity ID"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Number TotalJobItems {
+    apiName = "RevenueAsyncOperation.TotalJobItems"
+    label = "Total Job Items"
+    precision = 9
+    createable = false
+    updateable = false
+    scale = 0
+    unique = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Number SuccessfulJobItems {
+    apiName = "RevenueAsyncOperation.SuccessfulJobItems"
+    label = "Successful Job Items"
+    precision = 9
+    createable = false
+    updateable = false
+    scale = 0
+    unique = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Number FailedJobItems {
+    apiName = "RevenueAsyncOperation.FailedJobItems"
+    label = "Failed Job Items"
+    precision = 9
+    createable = false
+    updateable = false
+    scale = 0
+    unique = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Text CorrelationIdentifier {
+    apiName = "RevenueAsyncOperation.CorrelationIdentifier"
+    length = 80
+    label = "Correlation Identifier"
+    createable = false
+    updateable = false
+    unique = false
+    caseSensitive = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.LongTextArea Response {
+    apiName = "RevenueAsyncOperation.Response"
+    length = 131072
+    label = "Response"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+}

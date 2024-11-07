@@ -1,0 +1,16 @@
+salesforce.ListView ExpressionSet_All_DiscoveryProcedures {
+  fullName = "ExpressionSet.All_DiscoveryProcedures"
+  filterScope = "Everything"
+  filters = [
+    {
+      field = "UsageType"
+      operation = "equals"
+      value = "27"
+    },
+  ]
+  label = "All Discovery Procedures"
+  _parent = [
+    salesforce.ExpressionSet,
+  ]
+  _alias = "All Discovery Procedures"
+}

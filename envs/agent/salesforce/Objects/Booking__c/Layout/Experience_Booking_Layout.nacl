@@ -1,0 +1,130 @@
+salesforce.Layout Booking__c_Experience_Booking_Layout@uubss {
+  layoutSections = [
+    {
+      customLabel = false
+      detailHeading = false
+      editHeading = true
+      label = "Information"
+      layoutColumns = [
+        {
+          layoutItems = [
+            {
+              behavior = "Required"
+              field = salesforce.Booking__c.field.Session__c
+            },
+            {
+              behavior = "Readonly"
+              field = salesforce.Booking__c.field.Activity_Level__c
+            },
+            {
+              behavior = "Readonly"
+              field = salesforce.Booking__c.field.Experience_Name__c
+            },
+          ]
+        },
+        {
+          layoutItems = [
+            {
+              behavior = "Required"
+              field = salesforce.Booking__c.field.Contact__c
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.Booking__c.field.Number_of_Guests__c
+            },
+          ]
+        },
+      ]
+      style = "TwoColumnsTopToBottom"
+    },
+    {
+      customLabel = false
+      detailHeading = true
+      editHeading = true
+      label = "Details"
+      layoutColumns = [
+        {
+          layoutItems = [
+            {
+              behavior = "Readonly"
+              field = salesforce.Booking__c.field.Total_Price__c
+            },
+            {
+              behavior = "Readonly"
+              field = salesforce.Booking__c.field.Status__c
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.Booking__c.field.Is_Canceled__c
+            },
+          ]
+        },
+        {
+          layoutItems = [
+            {
+              behavior = "Readonly"
+              field = salesforce.Booking__c.field.Date__c
+            },
+            {
+              behavior = "Readonly"
+              field = salesforce.Booking__c.field.Start_Time__c
+            },
+            {
+              behavior = "Readonly"
+              field = salesforce.Booking__c.field.End_Time__c
+            },
+          ]
+        },
+      ]
+      style = "TwoColumnsLeftToRight"
+    },
+    {
+      customLabel = false
+      detailHeading = false
+      editHeading = true
+      label = "System Information"
+      layoutColumns = [
+        {
+          layoutItems = [
+            {
+              behavior = "Readonly"
+              field = salesforce.Booking__c.field.CreatedById
+            },
+          ]
+        },
+        {
+          layoutItems = [
+            {
+              behavior = "Readonly"
+              field = salesforce.Booking__c.field.LastModifiedById
+            },
+          ]
+        },
+      ]
+      style = "TwoColumnsTopToBottom"
+    },
+    {
+      customLabel = false
+      detailHeading = false
+      editHeading = true
+      label = "Custom Links"
+      style = "CustomLinks"
+    },
+  ]
+  miniLayout = {
+    fields = [
+      "Session__c",
+      "Contact__c",
+    ]
+  }
+  showEmailCheckbox = false
+  showHighlightsPanel = false
+  showInteractionLogPanel = false
+  showRunAssignmentRulesCheckbox = false
+  showSubmitAndAttachButton = false
+  fullName = "Booking__c-Experience Booking Layout"
+  _parent = [
+    salesforce.Booking__c,
+  ]
+  _alias = "Booking__c-Experience Booking Layout"
+}

@@ -1,0 +1,7 @@
+salesforce.SharingRules Session__c {
+  fullName = "Session__c"
+  _parent = [
+    salesforce.Session__c,
+  ]
+  _alias = "Session__c"
+}

@@ -1,0 +1,22 @@
+type salesforce.DataCommCapActvTarget {
+  salesforce.Lookup ActivationTargetId {
+    apiName = "DataCommCapActvTarget.ActivationTargetId"
+    _hidden_value = true
+  }
+  salesforce.Lookup DataCommCapDimId {
+    apiName = "DataCommCapActvTarget.DataCommCapDimId"
+    _hidden_value = true
+  }
+  salesforce.Lookup DataCommCapDimValueId {
+    apiName = "DataCommCapActvTarget.DataCommCapDimValueId"
+    _hidden_value = true
+  }
+  salesforce.Unknown Name {
+    apiName = "DataCommCapActvTarget.Name"
+    _hidden_value = true
+  }
+  salesforce.Lookup OwnerId {
+    apiName = "DataCommCapActvTarget.OwnerId"
+    _hidden_value = true
+  }
+}

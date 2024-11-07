@@ -1,0 +1,7 @@
+salesforce.SharingRules DataQueryWorkspace {
+  fullName = "DataQueryWorkspace"
+  _parent = [
+    salesforce.DataQueryWorkspace,
+  ]
+  _alias = "DataQueryWorkspace"
+}

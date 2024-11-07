@@ -1,0 +1,220 @@
+type salesforce.CalculationMatrixVersion {
+  salesforce.Text ApiName {
+    apiName = "CalculationMatrixVersion.ApiName"
+    length = 80
+    label = "API Name"
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    queryable = true
+  }
+  salesforce.MasterDetail CalculationMatrixId {
+    apiName = "CalculationMatrixVersion.CalculationMatrixId"
+    relationshipName = "CalculationMatrix"
+    _required = true
+    label = "Decision Matrix ID"
+    createable = true
+    updateable = false
+    queryable = true
+  }
+  salesforce.Picklist DscnModelNoteExportStatus {
+    apiName = "CalculationMatrixVersion.DscnModelNoteExportStatus"
+    restricted = true
+    label = "Decision Model and Notation Export Status"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.DateTime EndDateTime {
+    apiName = "CalculationMatrixVersion.EndDateTime"
+    label = "End Date Time"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Text GroupKeyValue {
+    apiName = "CalculationMatrixVersion.GroupKeyValue"
+    length = 255
+    label = "Group Key Value"
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    queryable = true
+  }
+  salesforce.Checkbox IsEnabled {
+    apiName = "CalculationMatrixVersion.IsEnabled"
+    defaultValue = false
+    label = "Active"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Picklist LoadProcessStatus {
+    apiName = "CalculationMatrixVersion.LoadProcessStatus"
+    restricted = true
+    label = "Load Process Status"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Text Name {
+    apiName = "CalculationMatrixVersion.Name"
+    length = 255
+    _required = true
+    label = "Name"
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    queryable = true
+  }
+  salesforce.Text Namespace {
+    apiName = "CalculationMatrixVersion.Namespace"
+    length = 255
+    label = "Namespace"
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    queryable = true
+  }
+  salesforce.Number Rank {
+    apiName = "CalculationMatrixVersion.Rank"
+    label = "Rank"
+    precision = 9
+    createable = true
+    updateable = true
+    scale = 0
+    unique = false
+    queryable = true
+  }
+  salesforce.DateTime StartDateTime {
+    apiName = "CalculationMatrixVersion.StartDateTime"
+    label = "Start Date Time"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Text SubGroupKeyValue {
+    apiName = "CalculationMatrixVersion.SubGroupKeyValue"
+    length = 255
+    label = "Sub Group Key Value"
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    queryable = true
+  }
+  salesforce.Number VersionNumber {
+    apiName = "CalculationMatrixVersion.VersionNumber"
+    label = "Version Number"
+    precision = 9
+    createable = true
+    updateable = true
+    scale = 0
+    unique = false
+    queryable = true
+  }
+  serviceid Id {
+    apiName = "CalculationMatrixVersion.Id"
+    label = "Decision Matrix Version ID"
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Checkbox IsDeleted {
+    apiName = "CalculationMatrixVersion.IsDeleted"
+    defaultValue = false
+    label = "Deleted"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.DateTime CreatedDate {
+    apiName = "CalculationMatrixVersion.CreatedDate"
+    label = "Created Date"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Lookup CreatedById {
+    apiName = "CalculationMatrixVersion.CreatedById"
+    relationshipName = "CreatedBy"
+    label = "Created By ID"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.DateTime LastModifiedDate {
+    apiName = "CalculationMatrixVersion.LastModifiedDate"
+    label = "Last Modified Date"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Lookup LastModifiedById {
+    apiName = "CalculationMatrixVersion.LastModifiedById"
+    relationshipName = "LastModifiedBy"
+    label = "Last Modified By ID"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.DateTime SystemModstamp {
+    apiName = "CalculationMatrixVersion.SystemModstamp"
+    label = "System Modstamp"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Text GroupKey {
+    apiName = "CalculationMatrixVersion.GroupKey"
+    length = 255
+    label = "Group Key"
+    createable = false
+    updateable = false
+    unique = false
+    caseSensitive = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Text MatrixType {
+    apiName = "CalculationMatrixVersion.MatrixType"
+    length = 255
+    label = "Matrix Type"
+    createable = false
+    updateable = false
+    unique = false
+    caseSensitive = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Text SubGroupKey {
+    apiName = "CalculationMatrixVersion.SubGroupKey"
+    length = 255
+    label = "Sub Group Key"
+    createable = false
+    updateable = false
+    unique = false
+    caseSensitive = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Lookup DecisionMatrixDefinitionVerId {
+    apiName = "CalculationMatrixVersion.DecisionMatrixDefinitionVerId"
+    relationshipName = "DecisionMatrixDefinitionVer"
+    label = "Decision Matrix Definition Version ID"
+    createable = true
+    updateable = false
+    queryable = true
+  }
+}

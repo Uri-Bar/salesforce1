@@ -1,0 +1,67 @@
+salesforce.Layout CalculationMatrixRow_Decision_Matrix_Row_Layout@bsss {
+  layoutSections = [
+    {
+      customLabel = false
+      detailHeading = true
+      editHeading = true
+      label = "Information"
+      layoutColumns = [
+        {
+          layoutItems = [
+            {
+              behavior = "Required"
+              field = salesforce.CalculationMatrixRow.field.Name
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.CalculationMatrixRow.field.StartDateTime
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.CalculationMatrixRow.field.InputData
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.CalculationMatrixRow.field.IsVersionEnabled
+            },
+          ]
+        },
+        {
+          layoutItems = [
+            {
+              behavior = "Required"
+              field = salesforce.CalculationMatrixRow.field.CalculationMatrixVersionId
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.CalculationMatrixRow.field.EndDateTime
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.CalculationMatrixRow.field.OutputData
+            },
+          ]
+        },
+      ]
+      style = "TwoColumnsTopToBottom"
+    },
+    {
+      customLabel = false
+      detailHeading = false
+      editHeading = false
+      layoutColumns = [
+        {
+        },
+      ]
+      style = "CustomLinks"
+    },
+  ]
+  showEmailCheckbox = false
+  showRunAssignmentRulesCheckbox = false
+  showSubmitAndAttachButton = false
+  fullName = "CalculationMatrixRow-Decision Matrix Row Layout"
+  _parent = [
+    salesforce.CalculationMatrixRow,
+  ]
+  _alias = "CalculationMatrixRow-Decision Matrix Row Layout"
+}

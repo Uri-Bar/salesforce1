@@ -1,0 +1,79 @@
+salesforce.Layout CalculationProcedureVariable_Calculation_Procedure_Variable_Layout@bsss {
+  layoutSections = [
+    {
+      customLabel = false
+      detailHeading = true
+      editHeading = true
+      label = "Information"
+      layoutColumns = [
+        {
+          layoutItems = [
+            {
+              behavior = "Required"
+              field = salesforce.CalculationProcedureVariable.field.Name
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.CalculationProcedureVariable.field.DataType
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.CalculationProcedureVariable.field.UiDisplayOrder
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.CalculationProcedureVariable.field.DefaultValue
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.CalculationProcedureVariable.field.Precision
+            },
+          ]
+        },
+        {
+          layoutItems = [
+            {
+              behavior = "Required"
+              field = salesforce.CalculationProcedureVariable.field.CalculationProcedureVersionId
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.CalculationProcedureVariable.field.DisplayName
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.CalculationProcedureVariable.field.CalculationMatrixName
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.CalculationProcedureVariable.field.IsEditable
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.CalculationProcedureVariable.field.IsUserDefined
+            },
+          ]
+        },
+      ]
+      style = "TwoColumnsLeftToRight"
+    },
+    {
+      customLabel = false
+      detailHeading = false
+      editHeading = false
+      layoutColumns = [
+        {
+        },
+      ]
+      style = "CustomLinks"
+    },
+  ]
+  showEmailCheckbox = false
+  showRunAssignmentRulesCheckbox = false
+  showSubmitAndAttachButton = false
+  fullName = "CalculationProcedureVariable-Calculation Procedure Variable Layout"
+  _parent = [
+    salesforce.CalculationProcedureVariable,
+  ]
+  _alias = "CalculationProcedureVariable-Calculation Procedure Variable Layout"
+}

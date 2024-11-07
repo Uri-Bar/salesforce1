@@ -1,0 +1,234 @@
+type salesforce.Session__c {
+  salesforce.FormulaNumber Available_Slots__c {
+    apiName = "Session__c.Available_Slots__c"
+    description = "Calculates the number of slots still available for booking by subtracting the Booked_Slots__c from the Capacity__c, offering real-time availability data."
+    externalId = false
+    formula = "Capacity__c - Booked_Slots__c"
+    formulaTreatBlanksAs = "BlankAsZero"
+    label = "Available Slots"
+    precision = 18
+    scale = 0
+    trackTrending = false
+    unique = false
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+    _generated_dependencies = [
+      {
+        reference = salesforce.Session__c.field.Booked_Slots__c
+      },
+      {
+        reference = salesforce.Session__c.field.Capacity__c
+      },
+    ]
+  }
+  salesforce.Summary Booked_Slots__c {
+    apiName = "Session__c.Booked_Slots__c"
+    description = "Tracks the number of slots already booked by guests for the experience, aiding in reservation management."
+    label = "Booked Slots"
+    summarizedField = "Booking__c.Number_of_Guests__c"
+    summaryFilterItems = [
+      {
+        field = "Booking__c.Is_Canceled__c"
+        operation = "equals"
+        value = "False"
+      },
+    ]
+    summaryForeignKey = "Booking__c.Session__c"
+    summaryOperation = "sum"
+    trackTrending = false
+    precision = 4
+    scale = 0
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.FormulaNumber Capacity__c {
+    apiName = "Session__c.Capacity__c"
+    externalId = false
+    formula = "Experience__r.Capacity__c"
+    formulaTreatBlanksAs = "BlankAsZero"
+    label = "Capacity"
+    precision = 18
+    scale = 0
+    trackTrending = false
+    unique = false
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+    _generated_dependencies = [
+      {
+        reference = salesforce.Session__c.field.Experience__c
+      },
+    ]
+  }
+  salesforce.Date Date__c {
+    apiName = "Session__c.Date__c"
+    description = "Specifies the date on which the experience instance takes place, facilitating scheduling and planning for both the resort and the guests."
+    label = "Date"
+    trackTrending = false
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.FormulaNumber Duration_Hours__c {
+    apiName = "Session__c.Duration_Hours__c"
+    externalId = false
+    formula = "Experience__r.Duration_Hours__c"
+    formulaTreatBlanksAs = "BlankAsZero"
+    label = "Duration (Hours)"
+    precision = 18
+    scale = 1
+    trackTrending = false
+    unique = false
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+    _generated_dependencies = [
+      {
+        reference = salesforce.Session__c.field.Experience__c
+      },
+    ]
+  }
+  salesforce.FormulaTime End_Time__c {
+    apiName = "Session__c.End_Time__c"
+    description = "Marks the concluding time of the experience instance, ensuring clear communication to guests about the duration of activities."
+    formula = "Start_Time__c + (Experience__r.Duration_Hours__c* 3600000)"
+    formulaTreatBlanksAs = "BlankAsZero"
+    label = "End Time"
+    trackTrending = false
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+    _generated_dependencies = [
+      {
+        reference = salesforce.Session__c.field.Experience__c
+      },
+      {
+        reference = salesforce.Session__c.field.Start_Time__c
+      },
+    ]
+  }
+  salesforce.FormulaText Experience_Name__c {
+    apiName = "Session__c.Experience_Name__c"
+    description = "The name of the experience"
+    externalId = false
+    formula = "Experience__r.Name"
+    formulaTreatBlanksAs = "BlankAsZero"
+    label = "Experience Name"
+    trackTrending = false
+    unique = false
+    createable = false
+    updateable = false
+    caseSensitive = false
+    queryable = true
+    _hidden_value = true
+    _generated_dependencies = [
+      {
+        reference = salesforce.Session__c.field.Experience__c
+      },
+    ]
+  }
+  salesforce.Lookup Experience__c {
+    apiName = "Session__c.Experience__c"
+    deleteConstraint = "SetNull"
+    description = "The parent experience that this object is scheduled based on."
+    label = "Experience"
+    referenceTo = [
+      salesforce.Experience__c,
+    ]
+    relationshipName = "Sessions"
+    trackTrending = false
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Checkbox Is_Canceled__c {
+    apiName = "Session__c.Is_Canceled__c"
+    defaultValue = false
+    description = "The experience has been canceled"
+    label = "Is Canceled"
+    trackTrending = false
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.FormulaText Location__c {
+    apiName = "Session__c.Location__c"
+    externalId = false
+    formula = "Experience__r.Location__c"
+    formulaTreatBlanksAs = "BlankAsZero"
+    label = "Location"
+    trackTrending = false
+    unique = false
+    createable = false
+    updateable = false
+    caseSensitive = false
+    queryable = true
+    _hidden_value = true
+    _generated_dependencies = [
+      {
+        reference = salesforce.Session__c.field.Experience__c
+      },
+    ]
+  }
+  salesforce.FormulaPercent Percentage_Booked__c {
+    apiName = "Session__c.Percentage_Booked__c"
+    description = "The percentage of available slots."
+    formula = "Booked_Slots__c / Capacity__c"
+    formulaTreatBlanksAs = "BlankAsZero"
+    label = "Percentage Booked"
+    precision = 18
+    scale = 0
+    trackTrending = false
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+    _generated_dependencies = [
+      {
+        reference = salesforce.Session__c.field.Booked_Slots__c
+      },
+      {
+        reference = salesforce.Session__c.field.Capacity__c
+      },
+    ]
+  }
+  salesforce.Time Start_Time__c {
+    apiName = "Session__c.Start_Time__c"
+    description = "Indicates the beginning time of the experience instance, helping guests plan their day around scheduled activities."
+    label = "Start Time"
+    trackTrending = false
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.FormulaText Status__c {
+    apiName = "Session__c.Status__c"
+    description = "The Status field tracks the current state of an experience booking, indicating whether it is Confirmed, Canceled, or Completed. This field is essential for managing reservations effectively, allowing both resort staff and guests to understand the booking's progression from confirmation through completion or cancellation, facilitating clear communication and operational planning."
+    externalId = false
+    formula = "IF(Is_Canceled__c , \"Canceled\", IF( Date__c >= Today(), \"Confirmed\", \"Completed\"))"
+    formulaTreatBlanksAs = "BlankAsZero"
+    label = "Status"
+    trackTrending = false
+    unique = false
+    createable = false
+    updateable = false
+    caseSensitive = false
+    queryable = true
+    _hidden_value = true
+    _generated_dependencies = [
+      {
+        reference = salesforce.Session__c.field.Date__c
+      },
+      {
+        reference = salesforce.Session__c.field.Is_Canceled__c
+      },
+    ]
+  }
+}

@@ -1,0 +1,117 @@
+salesforce.Layout RevenueAsyncOperation_Revenue_Async_Operation_Layout@bsss {
+  layoutSections = [
+    {
+      customLabel = false
+      detailHeading = true
+      editHeading = true
+      label = "Detail Information"
+      layoutColumns = [
+        {
+          layoutItems = [
+            {
+              behavior = "Readonly"
+              field = salesforce.RevenueAsyncOperation.field.AsyncOperationNumber
+            },
+            {
+              behavior = "Required"
+              field = salesforce.RevenueAsyncOperation.field.Status
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.RevenueAsyncOperation.field.SubmittedAt
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.RevenueAsyncOperation.field.FinishedAt
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.RevenueAsyncOperation.field.ReferenceEntityId
+            },
+          ]
+        },
+        {
+          layoutItems = [
+            {
+              behavior = "Edit"
+              field = salesforce.RevenueAsyncOperation.field.ParentOperationId
+            },
+            {
+              behavior = "Required"
+              field = salesforce.RevenueAsyncOperation.field.JobType
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.RevenueAsyncOperation.field.StartedAt
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.RevenueAsyncOperation.field.ExpiresAt
+            },
+          ]
+        },
+      ]
+      style = "TwoColumnsLeftToRight"
+    },
+    {
+      customLabel = false
+      detailHeading = true
+      editHeading = true
+      label = "System Information"
+      layoutColumns = [
+        {
+          layoutItems = [
+            {
+              behavior = "Readonly"
+              field = salesforce.RevenueAsyncOperation.field.CreatedDate
+            },
+            {
+              behavior = "Readonly"
+              field = salesforce.RevenueAsyncOperation.field.CreatedById
+            },
+          ]
+        },
+        {
+          layoutItems = [
+            {
+              behavior = "Readonly"
+              field = salesforce.RevenueAsyncOperation.field.LastModifiedDate
+            },
+            {
+              behavior = "Readonly"
+              field = salesforce.RevenueAsyncOperation.field.LastModifiedById
+            },
+          ]
+        },
+      ]
+      style = "TwoColumnsLeftToRight"
+    },
+    {
+      customLabel = false
+      detailHeading = false
+      editHeading = false
+      layoutColumns = [
+        {
+        },
+      ]
+      style = "CustomLinks"
+    },
+  ]
+  relatedLists = [
+    {
+      fields = [
+        "RTEL.NAME",
+        "RTEL.ERROR_MESSAGE",
+      ]
+      relatedList = "RevenueTransactionErrorLogs"
+    },
+  ]
+  showEmailCheckbox = false
+  showRunAssignmentRulesCheckbox = false
+  showSubmitAndAttachButton = false
+  fullName = "RevenueAsyncOperation-Revenue Async Operation Layout"
+  _parent = [
+    salesforce.RevenueAsyncOperation,
+  ]
+  _alias = "RevenueAsyncOperation-Revenue Async Operation Layout"
+}

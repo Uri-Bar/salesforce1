@@ -1,0 +1,229 @@
+type salesforce.IdentityResolution {
+  salesforce.Percent ConsolidationRate {
+    apiName = "IdentityResolution.ConsolidationRate"
+    label = "Consolidation Rate"
+    createable = false
+    updateable = false
+    scale = 0
+    precision = 3
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Text Description {
+    apiName = "IdentityResolution.Description"
+    length = 255
+    label = "Description"
+    createable = false
+    updateable = false
+    unique = false
+    caseSensitive = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Checkbox IsScheduled {
+    apiName = "IdentityResolution.IsScheduled"
+    defaultValue = false
+    label = "Is Scheduled"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Picklist LastRunStatus {
+    apiName = "IdentityResolution.LastRunStatus"
+    restricted = true
+    label = "Last Job Status"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.DateTime LastRunStatusDateTime {
+    apiName = "IdentityResolution.LastRunStatusDateTime"
+    label = "Last Job Status Time"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.DateTime LastSuccessfulRunDateTime {
+    apiName = "IdentityResolution.LastSuccessfulRunDateTime"
+    label = "Last Job Completed"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Unknown MatchedCount {
+    apiName = "IdentityResolution.MatchedCount"
+    label = "Matched Source Profiles"
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Text Name {
+    apiName = "IdentityResolution.Name"
+    length = 255
+    _required = true
+    label = "Ruleset Name"
+    createable = false
+    updateable = false
+    unique = false
+    caseSensitive = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Unknown SourceCount {
+    apiName = "IdentityResolution.SourceCount"
+    label = "Source Profiles"
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Picklist Status {
+    apiName = "IdentityResolution.Status"
+    restricted = true
+    _required = true
+    label = "Ruleset Status"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Unknown TotalAnonymousRecords {
+    apiName = "IdentityResolution.TotalAnonymousRecords"
+    label = "Anonymous Unified Profiles"
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Unknown TotalNonAnonymousRecords {
+    apiName = "IdentityResolution.TotalNonAnonymousRecords"
+    label = "Known Unified Profiles"
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Unknown UnifiedCount {
+    apiName = "IdentityResolution.UnifiedCount"
+    label = "Total Unified Profiles"
+    queryable = true
+    _hidden_value = true
+  }
+  serviceid Id {
+    apiName = "IdentityResolution.Id"
+    label = "Identity Resolution ID"
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Checkbox IsDeleted {
+    apiName = "IdentityResolution.IsDeleted"
+    defaultValue = false
+    label = "Deleted"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.DateTime CreatedDate {
+    apiName = "IdentityResolution.CreatedDate"
+    label = "Created Date"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Lookup CreatedById {
+    apiName = "IdentityResolution.CreatedById"
+    relationshipName = "CreatedBy"
+    label = "Created By ID"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.DateTime LastModifiedDate {
+    apiName = "IdentityResolution.LastModifiedDate"
+    label = "Last Modified Date"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Lookup LastModifiedById {
+    apiName = "IdentityResolution.LastModifiedById"
+    relationshipName = "LastModifiedBy"
+    label = "Last Modified By ID"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.DateTime SystemModstamp {
+    apiName = "IdentityResolution.SystemModstamp"
+    label = "System Modstamp"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Text ErrorMessage {
+    apiName = "IdentityResolution.ErrorMessage"
+    length = 255
+    label = "Error Message"
+    createable = false
+    updateable = false
+    unique = false
+    caseSensitive = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Picklist ErrorCode {
+    apiName = "IdentityResolution.ErrorCode"
+    restricted = true
+    _required = true
+    label = "Error Code"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Text RootEntityLabel {
+    apiName = "IdentityResolution.RootEntityLabel"
+    length = 40
+    label = "Primary Data Model Object"
+    createable = false
+    updateable = false
+    unique = false
+    caseSensitive = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Text Suffix {
+    apiName = "IdentityResolution.Suffix"
+    length = 4
+    label = "Ruleset ID"
+    createable = false
+    updateable = false
+    unique = false
+    caseSensitive = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.LongTextArea StatusDetails {
+    apiName = "IdentityResolution.StatusDetails"
+    length = 128000
+    label = "Error details from the last IR run"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Text SecondaryEntityLabel {
+    apiName = "IdentityResolution.SecondaryEntityLabel"
+    length = 40
+    label = "Secondary Data Model Object"
+    createable = false
+    updateable = false
+    unique = false
+    caseSensitive = false
+    queryable = true
+    _hidden_value = true
+  }
+}

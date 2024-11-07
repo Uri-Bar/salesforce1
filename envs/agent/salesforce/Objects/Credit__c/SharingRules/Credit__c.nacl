@@ -1,0 +1,7 @@
+salesforce.SharingRules Credit__c {
+  fullName = "Credit__c"
+  _parent = [
+    salesforce.Credit__c,
+  ]
+  _alias = "Credit__c"
+}

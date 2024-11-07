@@ -1,0 +1,150 @@
+type salesforce.Guest_Review__c {
+  salesforce.LongTextArea Comments__c {
+    apiName = "Guest_Review__c.Comments__c"
+    description = "The general comments about the experience"
+    label = "Comments"
+    length = 32768
+    trackTrending = false
+    visibleLines = 3
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.MasterDetail Contact__c {
+    apiName = "Guest_Review__c.Contact__c"
+    description = "The Contact who submitted the Review"
+    label = "Contact"
+    referenceTo = [
+      salesforce.Contact,
+    ]
+    relationshipName = "Reviews"
+    relationshipOrder = 1
+    reparentableMasterDetail = false
+    trackTrending = false
+    writeRequiresMasterRead = false
+    createable = true
+    updateable = false
+    queryable = true
+  }
+  salesforce.FormulaText Experience_Name__c {
+    apiName = "Guest_Review__c.Experience_Name__c"
+    externalId = false
+    formula = "Experience__r.Name"
+    formulaTreatBlanksAs = "BlankAsZero"
+    label = "Experience Name"
+    trackTrending = false
+    unique = false
+    createable = false
+    updateable = false
+    caseSensitive = false
+    queryable = true
+    _hidden_value = true
+    _generated_dependencies = [
+      {
+        reference = salesforce.Guest_Review__c.field.Experience__c
+      },
+    ]
+  }
+  salesforce.MasterDetail Experience__c {
+    apiName = "Guest_Review__c.Experience__c"
+    description = "The Experience related to the review"
+    label = "Experience"
+    referenceTo = [
+      salesforce.Experience__c,
+    ]
+    relationshipLabel = "Guest Reviews"
+    relationshipName = "Guest_Reviews"
+    relationshipOrder = 0
+    reparentableMasterDetail = false
+    trackTrending = false
+    writeRequiresMasterRead = false
+    createable = true
+    updateable = false
+    queryable = true
+  }
+  salesforce.FormulaNumber Rating_Value__c {
+    apiName = "Guest_Review__c.Rating_Value__c"
+    description = "The Integer value of the Rating Picklist"
+    externalId = false
+    formula = "VALUE(TEXT(Rating__c))"
+    formulaTreatBlanksAs = "BlankAsZero"
+    label = "Rating Value"
+    precision = 18
+    scale = 0
+    trackTrending = false
+    unique = false
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+    _generated_dependencies = [
+      {
+        reference = salesforce.Guest_Review__c.field.Rating__c
+      },
+    ]
+  }
+  salesforce.Picklist Rating__c {
+    apiName = "Guest_Review__c.Rating__c"
+    description = "The rating of the Experience"
+    inlineHelpText = "1 - Low / 10 - High"
+    label = "Rating"
+    trackTrending = false
+    valueSet = [
+      {
+        fullName = "1"
+        default = false
+        label = "1"
+      },
+      {
+        fullName = "2"
+        default = false
+        label = "2"
+      },
+      {
+        fullName = "3"
+        default = false
+        label = "3"
+      },
+      {
+        fullName = "4"
+        default = false
+        label = "4"
+      },
+      {
+        fullName = "5"
+        default = false
+        label = "5"
+      },
+      {
+        fullName = "6"
+        default = false
+        label = "6"
+      },
+      {
+        fullName = "7"
+        default = false
+        label = "7"
+      },
+      {
+        fullName = "8"
+        default = false
+        label = "8"
+      },
+      {
+        fullName = "9"
+        default = false
+        label = "9"
+      },
+      {
+        fullName = "10"
+        default = false
+        label = "10"
+      },
+    ]
+    sorted = false
+    restricted = true
+    createable = true
+    updateable = true
+    queryable = true
+  }
+}

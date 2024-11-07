@@ -1,0 +1,7 @@
+salesforce.SharingRules PendingServiceRouting {
+  fullName = "PendingServiceRouting"
+  _parent = [
+    salesforce.PendingServiceRouting,
+  ]
+  _alias = "PendingServiceRouting"
+}

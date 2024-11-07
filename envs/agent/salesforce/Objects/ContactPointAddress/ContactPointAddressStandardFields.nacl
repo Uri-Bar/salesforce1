@@ -1,0 +1,189 @@
+type salesforce.ContactPointAddress {
+  salesforce.Date ActiveFromDate {
+    apiName = "ContactPointAddress.ActiveFromDate"
+    label = "Active from Date"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Date ActiveToDate {
+    apiName = "ContactPointAddress.ActiveToDate"
+    label = "Active to Date"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Address Address {
+    apiName = "ContactPointAddress.Address"
+    label = "Address"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Picklist AddressType {
+    apiName = "ContactPointAddress.AddressType"
+    restricted = false
+    label = "Address Type"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Time BestTimeToContactEndTime {
+    apiName = "ContactPointAddress.BestTimeToContactEndTime"
+    label = "Best time to contact end time"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Time BestTimeToContactStartTime {
+    apiName = "ContactPointAddress.BestTimeToContactStartTime"
+    label = "Best time to contact start time"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Picklist BestTimeToContactTimezone {
+    apiName = "ContactPointAddress.BestTimeToContactTimezone"
+    restricted = true
+    label = "Best time to contact time zone"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Lookup ContactPointPhoneId {
+    apiName = "ContactPointAddress.ContactPointPhoneId"
+    relationshipName = "ContactPointPhone"
+    label = "Contact Point Phone ID"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Checkbox IsDefault {
+    apiName = "ContactPointAddress.IsDefault"
+    defaultValue = false
+    label = "Is Default Address"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Checkbox IsPrimary {
+    apiName = "ContactPointAddress.IsPrimary"
+    defaultValue = false
+    label = "Is Primary"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Checkbox IsThirdPartyAddress {
+    apiName = "ContactPointAddress.IsThirdPartyAddress"
+    defaultValue = false
+    label = "Is Third-Party Address"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Text Name {
+    apiName = "ContactPointAddress.Name"
+    length = 255
+    _required = true
+    label = "Name"
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    queryable = true
+  }
+  salesforce.Lookup OwnerId {
+    apiName = "ContactPointAddress.OwnerId"
+    relationshipName = "Owner"
+    label = "Owner ID"
+    createable = true
+    updateable = true
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.MasterDetail ParentId {
+    apiName = "ContactPointAddress.ParentId"
+    relationshipName = "Parent"
+    label = "Parent ID"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Number PreferenceRank {
+    apiName = "ContactPointAddress.PreferenceRank"
+    label = "Preference Rank"
+    precision = 9
+    createable = true
+    updateable = true
+    scale = 0
+    unique = false
+    queryable = true
+  }
+  salesforce.Picklist UsageType {
+    apiName = "ContactPointAddress.UsageType"
+    restricted = false
+    label = "Usage Type"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  serviceid Id {
+    apiName = "ContactPointAddress.Id"
+    label = "Contact Point Address ID"
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Checkbox IsDeleted {
+    apiName = "ContactPointAddress.IsDeleted"
+    defaultValue = false
+    label = "Deleted"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.DateTime CreatedDate {
+    apiName = "ContactPointAddress.CreatedDate"
+    label = "Created Date"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Lookup CreatedById {
+    apiName = "ContactPointAddress.CreatedById"
+    relationshipName = "CreatedBy"
+    label = "Created By ID"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.DateTime LastModifiedDate {
+    apiName = "ContactPointAddress.LastModifiedDate"
+    label = "Last Modified Date"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Lookup LastModifiedById {
+    apiName = "ContactPointAddress.LastModifiedById"
+    relationshipName = "LastModifiedBy"
+    label = "Last Modified By ID"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.DateTime SystemModstamp {
+    apiName = "ContactPointAddress.SystemModstamp"
+    label = "System Modstamp"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+}

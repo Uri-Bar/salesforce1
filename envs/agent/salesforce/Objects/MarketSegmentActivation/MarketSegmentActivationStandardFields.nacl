@@ -1,0 +1,290 @@
+type salesforce.MarketSegmentActivation {
+  salesforce.Picklist ActivationFlowType {
+    apiName = "MarketSegmentActivation.ActivationFlowType"
+    restricted = true
+    label = "Activation Type"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Picklist ActivationRefreshType {
+    apiName = "MarketSegmentActivation.ActivationRefreshType"
+    inlineHelpText = "Choose how often to refresh your data. Incremental refresh updates new or changed data since the last publish. Full refresh updates all your data and can be selected once every 24 hours."
+    restricted = true
+    label = "Activation Refresh Type"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Picklist ActivationStatus {
+    apiName = "MarketSegmentActivation.ActivationStatus"
+    restricted = true
+    label = "Activation Status"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Lookup ActivationTargetId {
+    apiName = "MarketSegmentActivation.ActivationTargetId"
+    relationshipName = "ActivationTarget"
+    label = "Partner Profile ID"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Text Description {
+    apiName = "MarketSegmentActivation.Description"
+    length = 255
+    label = "Description"
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    queryable = true
+  }
+  salesforce.DateTime LastActivationStatusDateTime {
+    apiName = "MarketSegmentActivation.LastActivationStatusDateTime"
+    label = "Activation Status Last Updated"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Picklist LastActivationStatusErrorCode {
+    apiName = "MarketSegmentActivation.LastActivationStatusErrorCode"
+    restricted = true
+    label = "Activation Status Error Code"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Picklist LastPublishStatus {
+    apiName = "MarketSegmentActivation.LastPublishStatus"
+    restricted = true
+    label = "Last Publish Status"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Lookup MarketSegmentId {
+    apiName = "MarketSegmentActivation.MarketSegmentId"
+    relationshipName = "MarketSegment"
+    label = "Segment ID"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Text Name {
+    apiName = "MarketSegmentActivation.Name"
+    length = 255
+    _required = true
+    label = "Name"
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    queryable = true
+  }
+  serviceid Id {
+    apiName = "MarketSegmentActivation.Id"
+    label = "Segment Activation ID"
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Checkbox IsDeleted {
+    apiName = "MarketSegmentActivation.IsDeleted"
+    defaultValue = false
+    label = "Deleted"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.DateTime CreatedDate {
+    apiName = "MarketSegmentActivation.CreatedDate"
+    label = "Created Date"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Lookup CreatedById {
+    apiName = "MarketSegmentActivation.CreatedById"
+    relationshipName = "CreatedBy"
+    label = "Created By ID"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.DateTime LastModifiedDate {
+    apiName = "MarketSegmentActivation.LastModifiedDate"
+    label = "Last Modified Date"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Lookup LastModifiedById {
+    apiName = "MarketSegmentActivation.LastModifiedById"
+    relationshipName = "LastModifiedBy"
+    label = "Last Modified By ID"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.DateTime SystemModstamp {
+    apiName = "MarketSegmentActivation.SystemModstamp"
+    label = "System Modstamp"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Text LastPublishStatusErrorMessage {
+    apiName = "MarketSegmentActivation.LastPublishStatusErrorMessage"
+    length = 255
+    label = "Last Publish Status Error Message"
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    queryable = true
+  }
+  salesforce.DateTime LastPublishedDate {
+    apiName = "MarketSegmentActivation.LastPublishedDate"
+    label = "Last Published Date"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Text ActivationObjectFilter {
+    apiName = "MarketSegmentActivation.ActivationObjectFilter"
+    length = 255
+    label = "Activation Object Filter"
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    queryable = true
+  }
+  salesforce.LongTextArea ActivationObjectPath {
+    apiName = "MarketSegmentActivation.ActivationObjectPath"
+    length = 4096
+    label = "Activation Object Path"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.LongTextArea DmoFilterExpression {
+    apiName = "MarketSegmentActivation.DmoFilterExpression"
+    length = 131072
+    label = "Dmo Filter Expression"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Picklist CustomerFileSource {
+    apiName = "MarketSegmentActivation.CustomerFileSource"
+    restricted = true
+    label = "Customer File Source Entity Name"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Unknown RecordCount {
+    apiName = "MarketSegmentActivation.RecordCount"
+    label = "Activation Record Count"
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.LongTextArea DirectAttributeDmoFilterExpression {
+    apiName = "MarketSegmentActivation.DirectAttributeDmoFilterExpression"
+    length = 131072
+    label = "Direct Attribute Dmo Filter Expression"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.LongTextArea StaticAttributes {
+    apiName = "MarketSegmentActivation.StaticAttributes"
+    length = 131072
+    label = "Static Attributes"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.LongTextArea LimitingAttributesExpression {
+    apiName = "MarketSegmentActivation.LimitingAttributesExpression"
+    length = 131072
+    label = "Adhoc limiting attribute expression"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Number LimitValue {
+    apiName = "MarketSegmentActivation.LimitValue"
+    label = "Adhoc limit value"
+    precision = 9
+    createable = true
+    updateable = true
+    scale = 0
+    unique = false
+    queryable = true
+  }
+  salesforce.DateTime StartDate {
+    apiName = "MarketSegmentActivation.StartDate"
+    label = "Start date for processing the activation"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.DateTime EndDate {
+    apiName = "MarketSegmentActivation.EndDate"
+    label = "End date for processing the activation"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.LongTextArea DataGraphPath {
+    apiName = "MarketSegmentActivation.DataGraphPath"
+    length = 4096
+    label = "Activation DataGraph Path"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Text CuratedEntityName {
+    apiName = "MarketSegmentActivation.CuratedEntityName"
+    length = 255
+    label = "Curated Data Model Entity Name"
+    createable = false
+    updateable = false
+    unique = false
+    caseSensitive = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Text ActivationObjectName {
+    apiName = "MarketSegmentActivation.ActivationObjectName"
+    length = 255
+    label = "Data Model Object"
+    createable = false
+    updateable = false
+    unique = false
+    caseSensitive = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Text DataGraphName {
+    apiName = "MarketSegmentActivation.DataGraphName"
+    length = 255
+    label = "Data Graph"
+    createable = false
+    updateable = false
+    unique = false
+    caseSensitive = false
+    queryable = true
+    _hidden_value = true
+  }
+}

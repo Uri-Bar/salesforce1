@@ -1,0 +1,16 @@
+salesforce.ListView Experience__c_All {
+  fullName = "Experience__c.All"
+  columns = [
+    "NAME",
+    salesforce.Experience__c.field.Type__c,
+    salesforce.Experience__c.field.Description__c,
+    salesforce.Experience__c.field.Location__c,
+    salesforce.Experience__c.field.Capacity__c,
+  ]
+  filterScope = "Everything"
+  label = "All"
+  _parent = [
+    salesforce.Experience__c,
+  ]
+  _alias = "All"
+}

@@ -1,0 +1,134 @@
+type salesforce.ExpressionSet {
+  salesforce.Text ApiName {
+    apiName = "ExpressionSet.ApiName"
+    length = 80
+    label = "API Name"
+    createable = true
+    updateable = true
+    unique = true
+    caseSensitive = false
+    queryable = true
+  }
+  salesforce.Text Description {
+    apiName = "ExpressionSet.Description"
+    length = 255
+    label = "Description"
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    queryable = true
+  }
+  salesforce.Text Name {
+    apiName = "ExpressionSet.Name"
+    length = 255
+    _required = true
+    label = "Name"
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    queryable = true
+  }
+  salesforce.Lookup OwnerId {
+    apiName = "ExpressionSet.OwnerId"
+    relationshipName = "Owner"
+    label = "Owner ID"
+    createable = true
+    updateable = true
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Picklist UsageType {
+    apiName = "ExpressionSet.UsageType"
+    restricted = true
+    _required = true
+    label = "Usage Type"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  serviceid Id {
+    apiName = "ExpressionSet.Id"
+    label = "Expression Set ID"
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Checkbox IsDeleted {
+    apiName = "ExpressionSet.IsDeleted"
+    defaultValue = false
+    label = "Deleted"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.DateTime CreatedDate {
+    apiName = "ExpressionSet.CreatedDate"
+    label = "Created Date"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Lookup CreatedById {
+    apiName = "ExpressionSet.CreatedById"
+    relationshipName = "CreatedBy"
+    label = "Created By ID"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.DateTime LastModifiedDate {
+    apiName = "ExpressionSet.LastModifiedDate"
+    label = "Last Modified Date"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Lookup LastModifiedById {
+    apiName = "ExpressionSet.LastModifiedById"
+    relationshipName = "LastModifiedBy"
+    label = "Last Modified By ID"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.DateTime SystemModstamp {
+    apiName = "ExpressionSet.SystemModstamp"
+    label = "System Modstamp"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Lookup ExpressionSetDefinitionId {
+    apiName = "ExpressionSet.ExpressionSetDefinitionId"
+    relationshipName = "ExpressionSetDefinition"
+    _required = true
+    label = "ExpressionSetDefinition ID"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Picklist InterfaceSourceType {
+    apiName = "ExpressionSet.InterfaceSourceType"
+    restricted = true
+    label = "Interface Source Type"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Picklist ExecutionScale {
+    apiName = "ExpressionSet.ExecutionScale"
+    restricted = true
+    label = "Execution Scale"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+}

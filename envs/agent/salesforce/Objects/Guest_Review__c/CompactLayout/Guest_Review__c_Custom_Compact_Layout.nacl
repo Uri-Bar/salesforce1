@@ -1,0 +1,12 @@
+salesforce.CompactLayout Guest_Review__c_Custom_Compact_Layout {
+  fullName = "Guest_Review__c.Custom_Compact_Layout"
+  fields = [
+    "Name",
+    "Rating__c",
+  ]
+  label = "Custom Compact Layout"
+  _parent = [
+    salesforce.Guest_Review__c,
+  ]
+  _alias = "Custom Compact Layout"
+}

@@ -1,0 +1,23 @@
+salesforce.WebLink Account_HooversProfile {
+  fullName = "Account.HooversProfile"
+  availability = "online"
+  displayType = "link"
+  encodingKey = "UTF-8"
+  hasMenubar = false
+  hasScrollbars = true
+  hasToolbar = false
+  height = 600
+  isResizable = true
+  linkType = "url"
+  masterLabel = "Hoovers Profile"
+  openType = "newWindow"
+  position = "none"
+  protected = false
+  showsLocation = false
+  showsStatus = false
+  url = "http://search.hoovers.com/cgi-bin/hol_search?which=company&query_string={!Account.Name}"
+  _parent = [
+    salesforce.Account,
+  ]
+  _alias = "Account.HooversProfile"
+}

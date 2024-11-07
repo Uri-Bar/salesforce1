@@ -1,0 +1,271 @@
+type salesforce.PendingServiceRouting {
+  serviceid Id {
+    apiName = "PendingServiceRouting.Id"
+    label = "Pending Service Routing ID"
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Lookup OwnerId {
+    apiName = "PendingServiceRouting.OwnerId"
+    relationshipName = "Owner"
+    label = "Owner ID"
+    createable = true
+    updateable = true
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Checkbox IsDeleted {
+    apiName = "PendingServiceRouting.IsDeleted"
+    defaultValue = false
+    label = "Deleted"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.AutoNumber Name {
+    apiName = "PendingServiceRouting.Name"
+    label = "Name"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.DateTime CreatedDate {
+    apiName = "PendingServiceRouting.CreatedDate"
+    label = "Created Date"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Lookup CreatedById {
+    apiName = "PendingServiceRouting.CreatedById"
+    relationshipName = "CreatedBy"
+    label = "Created By ID"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.DateTime LastModifiedDate {
+    apiName = "PendingServiceRouting.LastModifiedDate"
+    label = "Last Modified Date"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Lookup LastModifiedById {
+    apiName = "PendingServiceRouting.LastModifiedById"
+    relationshipName = "LastModifiedBy"
+    label = "Last Modified By ID"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.DateTime SystemModstamp {
+    apiName = "PendingServiceRouting.SystemModstamp"
+    label = "System Modstamp"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Lookup WorkItemId {
+    apiName = "PendingServiceRouting.WorkItemId"
+    relationshipName = "WorkItem"
+    _required = true
+    label = "WorkItem ID"
+    createable = true
+    updateable = false
+    queryable = true
+  }
+  salesforce.Lookup QueueId {
+    apiName = "PendingServiceRouting.QueueId"
+    relationshipName = "Queue"
+    label = "Queue ID"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Checkbox IsPushAttempted {
+    apiName = "PendingServiceRouting.IsPushAttempted"
+    label = "Is Push Attempted"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Lookup ServiceChannelId {
+    apiName = "PendingServiceRouting.ServiceChannelId"
+    relationshipName = "ServiceChannel"
+    _required = true
+    label = "Service Channel ID"
+    createable = true
+    updateable = false
+    queryable = true
+  }
+  salesforce.Checkbox IsPushed {
+    apiName = "PendingServiceRouting.IsPushed"
+    label = "Is Pushed"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Number Serial {
+    apiName = "PendingServiceRouting.Serial"
+    label = "Serial"
+    precision = 9
+    createable = false
+    updateable = false
+    scale = 0
+    unique = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Text LastDeclinedAgentSession {
+    apiName = "PendingServiceRouting.LastDeclinedAgentSession"
+    length = 200
+    label = "Last Declined Agent Session"
+    createable = false
+    updateable = false
+    unique = false
+    caseSensitive = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Checkbox IsTransfer {
+    apiName = "PendingServiceRouting.IsTransfer"
+    defaultValue = false
+    label = "Is Transfer"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Picklist RoutingModel {
+    apiName = "PendingServiceRouting.RoutingModel"
+    restricted = true
+    label = "Queue's Routing Model"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.DateTime CustomRequestedDateTime {
+    apiName = "PendingServiceRouting.CustomRequestedDateTime"
+    label = "Custom Requested Date"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Number RoutingPriority {
+    apiName = "PendingServiceRouting.RoutingPriority"
+    label = "Routing Priority"
+    precision = 9
+    createable = true
+    updateable = true
+    scale = 0
+    unique = false
+    queryable = true
+  }
+  salesforce.Picklist RoutingType {
+    apiName = "PendingServiceRouting.RoutingType"
+    restricted = true
+    label = "Routing Type"
+    createable = true
+    updateable = false
+    queryable = true
+  }
+  salesforce.Checkbox IsReadyForRouting {
+    apiName = "PendingServiceRouting.IsReadyForRouting"
+    defaultValue = false
+    label = "Is Ready For Routing"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Number CapacityWeight {
+    apiName = "PendingServiceRouting.CapacityWeight"
+    label = "Capacity Weight"
+    precision = 10
+    scale = 2
+    createable = true
+    updateable = true
+    unique = false
+    queryable = true
+  }
+  salesforce.Percent CapacityPercentage {
+    apiName = "PendingServiceRouting.CapacityPercentage"
+    label = "Capacity Percentage"
+    createable = true
+    updateable = true
+    scale = 2
+    precision = 5
+    queryable = true
+  }
+  salesforce.Number PushTimeout {
+    apiName = "PendingServiceRouting.PushTimeout"
+    label = "Push Time-Out"
+    precision = 9
+    createable = true
+    updateable = true
+    scale = 0
+    unique = false
+    queryable = true
+  }
+  salesforce.Lookup PreferredUserId {
+    apiName = "PendingServiceRouting.PreferredUserId"
+    relationshipName = "PreferredUser"
+    label = "User ID"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Number DropAdditionalSkillsTimeout {
+    apiName = "PendingServiceRouting.DropAdditionalSkillsTimeout"
+    label = "Drop Additional Skills Time-Out"
+    precision = 9
+    createable = true
+    updateable = true
+    scale = 0
+    unique = false
+    queryable = true
+  }
+  salesforce.Lookup GroupId {
+    apiName = "PendingServiceRouting.GroupId"
+    relationshipName = "Group"
+    label = "Group ID"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Checkbox IsPreferredUserRequired {
+    apiName = "PendingServiceRouting.IsPreferredUserRequired"
+    defaultValue = false
+    label = "Is Preferred User Required"
+    createable = true
+    updateable = false
+    queryable = true
+  }
+  salesforce.Lookup BotId {
+    apiName = "PendingServiceRouting.BotId"
+    relationshipName = "Bot"
+    label = "Bot ID"
+    createable = true
+    updateable = false
+    queryable = true
+  }
+  salesforce.Checkbox IsInterruptible {
+    apiName = "PendingServiceRouting.IsInterruptible"
+    defaultValue = false
+    label = "Is Interruptible"
+    createable = true
+    updateable = false
+    queryable = true
+  }
+}

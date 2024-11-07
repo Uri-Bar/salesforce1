@@ -1,0 +1,216 @@
+type salesforce.ActivationTarget {
+  salesforce.Picklist ConnectionType {
+    apiName = "ActivationTarget.ConnectionType"
+    restricted = true
+    _required = true
+    label = "Platform"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Lookup DataConConfigurationId {
+    apiName = "ActivationTarget.DataConConfigurationId"
+    _hidden_value = true
+  }
+  salesforce.Text Description {
+    apiName = "ActivationTarget.Description"
+    length = 255
+    label = "Description"
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    queryable = true
+  }
+  salesforce.Checkbox IsCommunicationCappingEnabled {
+    apiName = "ActivationTarget.IsCommunicationCappingEnabled"
+    label = "Capping Relevance"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.DateTime LastTargetStatusDateTime {
+    apiName = "ActivationTarget.LastTargetStatusDateTime"
+    label = "Target Status Last Updated"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Picklist LastTargetStatusErrorCode {
+    apiName = "ActivationTarget.LastTargetStatusErrorCode"
+    restricted = true
+    label = "Target Status Error Code"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Text MasterLabel {
+    apiName = "ActivationTarget.MasterLabel"
+    length = 255
+    _required = true
+    label = "Name"
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    queryable = true
+  }
+  salesforce.Text PlatformName {
+    apiName = "ActivationTarget.PlatformName"
+    length = 255
+    label = "Platform Name"
+    createable = false
+    updateable = false
+    unique = false
+    caseSensitive = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Picklist TargetStatus {
+    apiName = "ActivationTarget.TargetStatus"
+    restricted = true
+    label = "Target Status"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Picklist TargetType {
+    apiName = "ActivationTarget.TargetType"
+    restricted = true
+    label = "Target Type"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  serviceid Id {
+    apiName = "ActivationTarget.Id"
+    label = "Partner Profile ID"
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Lookup OwnerId {
+    apiName = "ActivationTarget.OwnerId"
+    relationshipName = "Owner"
+    label = "Owner ID"
+    createable = true
+    updateable = true
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Checkbox IsDeleted {
+    apiName = "ActivationTarget.IsDeleted"
+    defaultValue = false
+    label = "Deleted"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.DateTime CreatedDate {
+    apiName = "ActivationTarget.CreatedDate"
+    label = "Created Date"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Lookup CreatedById {
+    apiName = "ActivationTarget.CreatedById"
+    relationshipName = "CreatedBy"
+    label = "Created By ID"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.DateTime LastModifiedDate {
+    apiName = "ActivationTarget.LastModifiedDate"
+    label = "Last Modified Date"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Lookup LastModifiedById {
+    apiName = "ActivationTarget.LastModifiedById"
+    relationshipName = "LastModifiedBy"
+    label = "Last Modified By ID"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.DateTime SystemModstamp {
+    apiName = "ActivationTarget.SystemModstamp"
+    label = "System Modstamp"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Picklist RunStatus {
+    apiName = "ActivationTarget.RunStatus"
+    restricted = true
+    _required = true
+    label = "Data Export Run Status"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.DateTime LastPublishStatusDate {
+    apiName = "ActivationTarget.LastPublishStatusDate"
+    label = "Last Publish Status Date"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Text LastPublishStatusErrorMessage {
+    apiName = "ActivationTarget.LastPublishStatusErrorMessage"
+    length = 255
+    label = "Last Publish Status Error Message"
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    queryable = true
+  }
+  salesforce.Text ExportToDirectory {
+    apiName = "ActivationTarget.ExportToDirectory"
+    length = 255
+    label = "Export To Directory"
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    queryable = true
+  }
+  salesforce.Text ExportToEndpoint {
+    apiName = "ActivationTarget.ExportToEndpoint"
+    length = 255
+    label = "Export To Endpoint"
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    queryable = true
+  }
+  salesforce.Picklist OutputFormat {
+    apiName = "ActivationTarget.OutputFormat"
+    restricted = true
+    label = "Output Format"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Text PlatformPrivacyType {
+    apiName = "ActivationTarget.PlatformPrivacyType"
+    length = 255
+    label = "Platform Privacy Type"
+    createable = false
+    updateable = false
+    unique = false
+    caseSensitive = false
+    queryable = true
+    _hidden_value = true
+  }
+}

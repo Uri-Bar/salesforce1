@@ -1,0 +1,9 @@
+salesforce.ListView Booking__c_All {
+  fullName = "Booking__c.All"
+  filterScope = "Everything"
+  label = "All"
+  _parent = [
+    salesforce.Booking__c,
+  ]
+  _alias = "All"
+}

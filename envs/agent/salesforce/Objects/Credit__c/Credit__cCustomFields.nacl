@@ -1,0 +1,28 @@
+type salesforce.Credit__c {
+  salesforce.Currency Amount__c {
+    apiName = "Credit__c.Amount__c"
+    description = "The currency amount of resort credit that you would like to grant to a customer"
+    label = "Amount"
+    precision = 6
+    scale = 0
+    trackTrending = false
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Lookup Contact__c {
+    apiName = "Credit__c.Contact__c"
+    deleteConstraint = "SetNull"
+    description = "The contact that has received the resort credit."
+    label = "Contact"
+    referenceTo = [
+      salesforce.Contact,
+    ]
+    relationshipLabel = "Credits"
+    relationshipName = "Credits"
+    trackTrending = false
+    createable = true
+    updateable = true
+    queryable = true
+  }
+}

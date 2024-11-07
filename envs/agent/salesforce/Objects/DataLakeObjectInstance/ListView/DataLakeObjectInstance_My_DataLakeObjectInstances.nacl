@@ -1,0 +1,9 @@
+salesforce.ListView DataLakeObjectInstance_My_DataLakeObjectInstances {
+  fullName = "DataLakeObjectInstance.My_DataLakeObjectInstances"
+  filterScope = "Mine"
+  label = "My Data Lake Objects"
+  _parent = [
+    salesforce.DataLakeObjectInstance,
+  ]
+  _alias = "My Data Lake Objects"
+}

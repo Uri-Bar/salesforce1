@@ -1,0 +1,13 @@
+salesforce.ListView MessagingSession_Messaging_Queue_MessagingSession {
+  fullName = "MessagingSession.Messaging_Queue_MessagingSession"
+  filterScope = "Queue"
+  label = "Messaging Queue"
+  queue = salesforce.Queue.instance.Messaging_Queue
+  sharedTo = {
+    allInternalUsers = ""
+  }
+  _parent = [
+    salesforce.MessagingSession,
+  ]
+  _alias = "Messaging Queue"
+}

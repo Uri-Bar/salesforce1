@@ -1,0 +1,9 @@
+salesforce.CustomTab Booking__c {
+  fullName = "Booking__c"
+  customObject = true
+  motif = "Custom68: Globe"
+  _parent = [
+    salesforce.Booking__c,
+  ]
+  _alias = "Booking__c"
+}

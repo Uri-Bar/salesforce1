@@ -1,0 +1,7 @@
+salesforce.SharingRules ActvTgtPlatformFieldValue {
+  fullName = "ActvTgtPlatformFieldValue"
+  _parent = [
+    salesforce.ActvTgtPlatformFieldValue,
+  ]
+  _alias = "ActvTgtPlatformFieldValue"
+}

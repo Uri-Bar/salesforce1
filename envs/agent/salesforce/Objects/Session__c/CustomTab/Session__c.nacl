@@ -1,0 +1,9 @@
+salesforce.CustomTab Session__c {
+  fullName = "Session__c"
+  customObject = true
+  motif = "Custom4: Hexagon"
+  _parent = [
+    salesforce.Session__c,
+  ]
+  _alias = "Session__c"
+}

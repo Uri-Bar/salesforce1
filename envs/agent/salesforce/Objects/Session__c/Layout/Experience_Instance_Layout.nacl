@@ -1,0 +1,127 @@
+salesforce.Layout Session__c_Experience_Instance_Layout@uubss {
+  excludeButtons = [
+    "Submit",
+  ]
+  layoutSections = [
+    {
+      customLabel = true
+      detailHeading = true
+      editHeading = true
+      label = "Experience Details"
+      layoutColumns = [
+        {
+          layoutItems = [
+            {
+              behavior = "Edit"
+              field = salesforce.Session__c.field.Experience__c
+            },
+            {
+              behavior = "Readonly"
+              field = salesforce.Session__c.field.Status__c
+            },
+          ]
+        },
+        {
+          layoutItems = [
+            {
+              behavior = "Readonly"
+              field = salesforce.Session__c.field.Name
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.Session__c.field.Is_Canceled__c
+            },
+          ]
+        },
+      ]
+      style = "TwoColumnsLeftToRight"
+    },
+    {
+      customLabel = false
+      detailHeading = true
+      editHeading = true
+      label = "Schedule"
+      layoutColumns = [
+        {
+          layoutItems = [
+            {
+              behavior = "Edit"
+              field = salesforce.Session__c.field.Date__c
+            },
+          ]
+        },
+        {
+          layoutItems = [
+            {
+              behavior = "Edit"
+              field = salesforce.Session__c.field.Start_Time__c
+            },
+            {
+              behavior = "Readonly"
+              field = salesforce.Session__c.field.End_Time__c
+            },
+          ]
+        },
+      ]
+      style = "TwoColumnsLeftToRight"
+    },
+    {
+      customLabel = true
+      detailHeading = true
+      editHeading = true
+      label = "Capacity"
+      layoutColumns = [
+        {
+          layoutItems = [
+            {
+              behavior = "Readonly"
+              field = salesforce.Session__c.field.Capacity__c
+            },
+          ]
+        },
+        {
+          layoutItems = [
+            {
+              behavior = "Readonly"
+              field = salesforce.Session__c.field.Booked_Slots__c
+            },
+            {
+              behavior = "Readonly"
+              field = salesforce.Session__c.field.Available_Slots__c
+            },
+          ]
+        },
+      ]
+      style = "TwoColumnsLeftToRight"
+    },
+    {
+      customLabel = false
+      detailHeading = false
+      editHeading = true
+      label = "Custom Links"
+      style = "CustomLinks"
+    },
+  ]
+  relatedLists = [
+    {
+      fields = [
+        "NAME",
+        "Contact.CNTC_FIRST_NAME",
+        "Contact.NAME",
+        "Number_of_Guests__c",
+        "Total_Price__c",
+      ]
+      relatedList = salesforce.Booking__c.field.Session__c
+    },
+  ]
+  showEmailCheckbox = false
+  showHighlightsPanel = false
+  showInteractionLogPanel = false
+  showRunAssignmentRulesCheckbox = false
+  showSubmitAndAttachButton = false
+  fullName = "Session__c-Experience Instance Layout"
+  _parent = [
+    salesforce.Session__c,
+  ]
+  _alias = "Session__c-Experience Instance Layout"
+}

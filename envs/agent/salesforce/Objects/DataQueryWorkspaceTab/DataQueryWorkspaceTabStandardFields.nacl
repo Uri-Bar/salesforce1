@@ -1,0 +1,117 @@
+type salesforce.DataQueryWorkspaceTab {
+  serviceid Id {
+    apiName = "DataQueryWorkspaceTab.Id"
+    label = "Query Tab Id"
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Checkbox IsDeleted {
+    apiName = "DataQueryWorkspaceTab.IsDeleted"
+    defaultValue = false
+    label = "Deleted"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Text Name {
+    apiName = "DataQueryWorkspaceTab.Name"
+    length = 255
+    _required = true
+    label = "Name"
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    queryable = true
+  }
+  salesforce.DateTime CreatedDate {
+    apiName = "DataQueryWorkspaceTab.CreatedDate"
+    label = "Created Date"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Lookup CreatedById {
+    apiName = "DataQueryWorkspaceTab.CreatedById"
+    relationshipName = "CreatedBy"
+    label = "Created By ID"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.DateTime LastModifiedDate {
+    apiName = "DataQueryWorkspaceTab.LastModifiedDate"
+    label = "Last Modified Date"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Lookup LastModifiedById {
+    apiName = "DataQueryWorkspaceTab.LastModifiedById"
+    relationshipName = "LastModifiedBy"
+    label = "Last Modified By ID"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.DateTime SystemModstamp {
+    apiName = "DataQueryWorkspaceTab.SystemModstamp"
+    label = "System Modstamp"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Lookup QueryWorkspaceId {
+    apiName = "DataQueryWorkspaceTab.QueryWorkspaceId"
+    relationshipName = "QueryWorkspace"
+    _required = true
+    label = "Query Editor ID"
+    createable = true
+    updateable = false
+    queryable = true
+  }
+  salesforce.Text Entity {
+    apiName = "DataQueryWorkspaceTab.Entity"
+    length = 255
+    label = "Entity"
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    queryable = true
+  }
+  salesforce.Text EntityType {
+    apiName = "DataQueryWorkspaceTab.EntityType"
+    length = 255
+    label = "Data Query Workspace Tab Type"
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    queryable = true
+  }
+  salesforce.Text TabOption {
+    apiName = "DataQueryWorkspaceTab.TabOption"
+    length = 255
+    label = "Tab Option"
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    queryable = true
+  }
+  salesforce.LongTextArea Query {
+    apiName = "DataQueryWorkspaceTab.Query"
+    length = 32000
+    label = "Query"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+}

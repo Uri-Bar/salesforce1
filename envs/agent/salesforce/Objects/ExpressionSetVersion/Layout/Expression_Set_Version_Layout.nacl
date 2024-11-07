@@ -1,0 +1,75 @@
+salesforce.Layout ExpressionSetVersion_Expression_Set_Version_Layout@bsss {
+  layoutSections = [
+    {
+      customLabel = false
+      detailHeading = true
+      editHeading = true
+      label = "Information"
+      layoutColumns = [
+        {
+          layoutItems = [
+            {
+              behavior = "Required"
+              field = salesforce.ExpressionSetVersion.field.Name
+            },
+            {
+              behavior = "Required"
+              field = salesforce.ExpressionSetVersion.field.VersionNumber
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.ExpressionSetVersion.field.StartDateTime
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.ExpressionSetVersion.field.Rank
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.ExpressionSetVersion.field.ShouldShowExplExternally
+            },
+          ]
+        },
+        {
+          layoutItems = [
+            {
+              behavior = "Edit"
+              field = salesforce.ExpressionSetVersion.field.IsActive
+            },
+            {
+              behavior = "Required"
+              field = salesforce.ExpressionSetVersion.field.ExpressionSetId
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.ExpressionSetVersion.field.EndDateTime
+            },
+            {
+              behavior = "Required"
+              field = salesforce.ExpressionSetVersion.field.ApiName
+            },
+          ]
+        },
+      ]
+      style = "TwoColumnsLeftToRight"
+    },
+    {
+      customLabel = false
+      detailHeading = false
+      editHeading = false
+      layoutColumns = [
+        {
+        },
+      ]
+      style = "CustomLinks"
+    },
+  ]
+  showEmailCheckbox = false
+  showRunAssignmentRulesCheckbox = false
+  showSubmitAndAttachButton = false
+  fullName = "ExpressionSetVersion-Expression Set Version Layout"
+  _parent = [
+    salesforce.ExpressionSetVersion,
+  ]
+  _alias = "ExpressionSetVersion-Expression Set Version Layout"
+}

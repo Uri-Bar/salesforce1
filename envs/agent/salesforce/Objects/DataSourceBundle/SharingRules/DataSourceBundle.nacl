@@ -1,0 +1,7 @@
+salesforce.SharingRules DataSourceBundle {
+  fullName = "DataSourceBundle"
+  _parent = [
+    salesforce.DataSourceBundle,
+  ]
+  _alias = "DataSourceBundle"
+}

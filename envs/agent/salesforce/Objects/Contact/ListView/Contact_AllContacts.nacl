@@ -1,0 +1,13 @@
+salesforce.ListView Contact_AllContacts {
+  fullName = "Contact.AllContacts"
+  columns = [
+    "FULL_NAME",
+    salesforce.Contact.field.Guest_Type__c,
+  ]
+  filterScope = "Everything"
+  label = "All Contacts"
+  _parent = [
+    salesforce.Contact,
+  ]
+  _alias = "All Contacts"
+}

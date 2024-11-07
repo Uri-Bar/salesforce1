@@ -1,0 +1,9 @@
+salesforce.ListView MktMLModel_All_MktMLModels {
+  fullName = "MktMLModel.All_MktMLModels"
+  filterScope = "Everything"
+  label = "All Models"
+  _parent = [
+    salesforce.MktMLModel,
+  ]
+  _alias = "All Models"
+}

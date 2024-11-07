@@ -1,0 +1,16 @@
+salesforce.ListView ActivationTarget_My_SFMC_ActivationTargets {
+  fullName = "ActivationTarget.My_SFMC_ActivationTargets"
+  filterScope = "Everything"
+  filters = [
+    {
+      field = "ConnectionType"
+      operation = "equals"
+      value = "SFMC"
+    },
+  ]
+  label = "Marketing Cloud"
+  _parent = [
+    salesforce.ActivationTarget,
+  ]
+  _alias = "Marketing Cloud"
+}
