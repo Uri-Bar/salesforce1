@@ -1,0 +1,10 @@
+salesforce.ApexPage ESWESAWebDeployment1724800920657 {
+  apiVersion = 58
+  availableInTouch = false
+  confirmationTokenRequired = false
+  description = "Test messaging page for ESA_Web_Deployment embedded service deployment"
+  label = "ESWESAWebDeployment1724800920657"
+  fullName = "ESWESAWebDeployment1724800920657"
+  content = file("salesforce/Records/ApexPage/ESWESAWebDeployment1724800920657.page")
+  _alias = "ESWESAWebDeployment1724800920657"
+}

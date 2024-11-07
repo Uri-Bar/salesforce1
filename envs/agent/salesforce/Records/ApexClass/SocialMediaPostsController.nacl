@@ -1,0 +1,7 @@
+salesforce.ApexClass SocialMediaPostsController {
+  apiVersion = 61
+  status = "Active"
+  fullName = "SocialMediaPostsController"
+  content = file("salesforce/Records/ApexClass/SocialMediaPostsController.cls")
+  _alias = "SocialMediaPostsController"
+}

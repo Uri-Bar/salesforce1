@@ -1,0 +1,5 @@
+salesforce.CustomerDataPlatformSettings {
+  fullName = "CustomerDataPlatform"
+  enableCustomerDataPlatform = "false"
+  _alias = "CustomerDataPlatform"
+}

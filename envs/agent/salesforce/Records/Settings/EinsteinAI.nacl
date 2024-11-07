@@ -1,0 +1,7 @@
+salesforce.EinsteinAISettings {
+  fullName = "EinsteinAI"
+  enableAIFeedbackWithDC = "false"
+  enablePBPromptPerformanceMetrics = "false"
+  enableTrustPIIMasking = "false"
+  _alias = "EinsteinAI"
+}

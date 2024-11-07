@@ -1,0 +1,15 @@
+salesforce.ApexClass LightningSelfRegisterControllerTest {
+  apiVersion = 61
+  status = "Active"
+  fullName = "LightningSelfRegisterControllerTest"
+  content = file("salesforce/Records/ApexClass/LightningSelfRegisterControllerTest.cls")
+  _generated_dependencies = [
+    {
+      reference = salesforce.Account
+    },
+    {
+      reference = salesforce.ApexClass.instance.LightningSelfRegisterController
+    },
+  ]
+  _alias = "LightningSelfRegisterControllerTest"
+}

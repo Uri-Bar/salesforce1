@@ -1,0 +1,46 @@
+salesforce.Layout ManagedContent_Managed_Content_Layout@bss {
+  layoutSections = [
+    {
+      customLabel = true
+      detailHeading = true
+      editHeading = true
+      label = "Managed Content Info"
+      layoutColumns = [
+        {
+          layoutItems = [
+            {
+              behavior = "Required"
+              field = "PrimaryLanguage"
+            },
+            {
+              behavior = "Edit"
+              field = "ContentKey"
+            },
+            {
+              behavior = "Edit"
+              field = "AuthoredManagedContentSpaceId"
+            },
+          ]
+        },
+        {
+        },
+      ]
+      style = "TwoColumnsLeftToRight"
+    },
+    {
+      customLabel = false
+      detailHeading = false
+      editHeading = false
+      layoutColumns = [
+        {
+        },
+      ]
+      style = "CustomLinks"
+    },
+  ]
+  showEmailCheckbox = false
+  showRunAssignmentRulesCheckbox = false
+  showSubmitAndAttachButton = false
+  fullName = "ManagedContent-Managed Content Layout"
+  _alias = "ManagedContent-Managed Content Layout"
+}

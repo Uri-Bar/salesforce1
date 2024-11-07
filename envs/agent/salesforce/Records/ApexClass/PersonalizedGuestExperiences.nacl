@@ -1,0 +1,18 @@
+salesforce.ApexClass PersonalizedGuestExperiences {
+  apiVersion = 61
+  status = "Active"
+  fullName = "PersonalizedGuestExperiences"
+  content = file("salesforce/Records/ApexClass/PersonalizedGuestExperiences.cls")
+  _generated_dependencies = [
+    {
+      reference = salesforce.ApexClass.instance.ExperienceSessionController
+    },
+    {
+      reference = salesforce.Contact
+    },
+    {
+      reference = salesforce.Session__c
+    },
+  ]
+  _alias = "PersonalizedGuestExperiences"
+}

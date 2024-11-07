@@ -1,0 +1,71 @@
+salesforce.LightningPage Home_Page_Default {
+  flexiPageRegions = [
+    {
+      itemInstances = [
+        {
+          componentInstance = {
+            componentInstanceProperties = [
+              {
+                name = "iconName"
+                value = "standard:home"
+              },
+              {
+                name = "subtitle"
+                value = "Coral Cloud Resorts"
+              },
+              {
+                name = "title"
+                value = "AI + Data Now Tour"
+              },
+            ]
+            componentName = "coralCloudsPageHeader"
+            identifier = "c_coralCloudsPageHeader"
+          }
+        },
+        {
+          componentInstance = {
+            componentName = "coralCloudsHomepageShortcuts"
+            identifier = "c_coralCloudsHomepageShortcuts"
+          }
+        },
+      ]
+      name = "top"
+      type = "Region"
+    },
+    {
+      itemInstances = [
+        {
+          componentInstance = {
+            componentName = "home:recentRecordContainer"
+            identifier = "home_recentRecordContainer"
+          }
+        },
+      ]
+      name = "sidebar"
+      type = "Region"
+    },
+    {
+      name = "bottomLeft"
+      type = "Region"
+    },
+    {
+      name = "bottomRight"
+      type = "Region"
+    },
+  ]
+  masterLabel = "Home Page Default"
+  template = {
+    name = "home:desktopTemplate"
+  }
+  type = "HomePage"
+  fullName = "Home_Page_Default"
+  _generated_dependencies = [
+    {
+      reference = salesforce.LightningComponentBundle.instance.coralCloudsHomepageShortcuts
+    },
+    {
+      reference = salesforce.LightningComponentBundle.instance.coralCloudsPageHeader
+    },
+  ]
+  _alias = "Home_Page_Default"
+}

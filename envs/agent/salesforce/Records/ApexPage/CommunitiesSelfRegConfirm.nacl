@@ -1,0 +1,24 @@
+salesforce.ApexPage CommunitiesSelfRegConfirm {
+  apiVersion = 61
+  availableInTouch = false
+  confirmationTokenRequired = false
+  description = "Default experiences self registration confirmation page"
+  label = "CommunitiesSelfRegConfirm"
+  fullName = "CommunitiesSelfRegConfirm"
+  content = file("salesforce/Records/ApexPage/CommunitiesSelfRegConfirm.page")
+  _generated_dependencies = [
+    {
+      reference = salesforce.ApexClass.instance.CommunitiesSelfRegConfirmController
+    },
+    {
+      reference = salesforce.ApexComponent.instance.SitePoweredBy
+    },
+    {
+      reference = salesforce.ApexPage.instance.CommunitiesLogin
+    },
+    {
+      reference = salesforce.StaticResource.instance.SiteSamples
+    },
+  ]
+  _alias = "CommunitiesSelfRegConfirm"
+}

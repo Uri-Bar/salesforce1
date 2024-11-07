@@ -1,0 +1,22 @@
+salesforce.ModerationRule coral_cloud_Review_the_first_post@bvuuu {
+  fullName = "coral-cloud.Review_the_first_post"
+  action = "Review"
+  active = false
+  description = "Community moderators review the first post or comment from new members"
+  entitiesAndFields = [
+    {
+      entityName = "FeedItem"
+    },
+    {
+      entityName = "FeedComment"
+    },
+    {
+      entityName = "FeedPollChoice"
+    },
+  ]
+  masterLabel = "Review the first post or comment made by a new member"
+  type = "Content"
+  userCriteria = "coral-cloud.Members_without_contribution"
+  userMessage = "You can't use %BLOCKED_KEYWORD% or other inappropriate words in this community. Review your content and try again."
+  _alias = "coral-cloud.Review_the_first_post"
+}

@@ -1,0 +1,10 @@
+salesforce.ApexPage AnswersHome {
+  apiVersion = 61
+  availableInTouch = false
+  confirmationTokenRequired = false
+  description = "Default Lightning Platform home page for Answers sites"
+  label = "AnswersHome"
+  fullName = "AnswersHome"
+  content = file("salesforce/Records/ApexPage/AnswersHome.page")
+  _alias = "AnswersHome"
+}

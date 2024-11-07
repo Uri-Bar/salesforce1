@@ -1,0 +1,35 @@
+salesforce.QuickAction GuestCommunityCase {
+  fullName = "GuestCommunityCase"
+  label = "Guest Community Case"
+  optionsCreateFeedItem = true
+  quickActionLayout = {
+    layoutSectionStyle = "TwoColumnsLeftToRight"
+    quickActionLayoutColumns = [
+      {
+        quickActionLayoutItems = [
+          {
+            emptySpace = false
+            field = "Subject"
+            uiBehavior = "Edit"
+          },
+          {
+            emptySpace = false
+            field = "Description"
+            uiBehavior = "Edit"
+          },
+          {
+            emptySpace = false
+            field = "SuppliedEmail"
+            uiBehavior = "Edit"
+          },
+        ]
+      },
+      {
+      },
+    ]
+  }
+  standardLabel = "Guest Community Case"
+  targetObject = salesforce.Case
+  type = "Create"
+  _alias = "Guest Community Case"
+}

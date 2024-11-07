@@ -1,0 +1,199 @@
+salesforce.Flow Issue_Bulk_Resort_Credits {
+  fullName = "Issue_Bulk_Resort_Credits"
+  apiVersion = 61
+  assignments = [
+    {
+      name = "Add_creditRecord_to_creditRecords"
+      label = "Add creditRecord to creditRecords"
+      assignmentItems = [
+        {
+          assignToReference = "creditRecords"
+          operator = "Add"
+          value = {
+            elementReference = "creditRecord"
+          }
+        },
+      ]
+      connector = {
+        targetReference = "Increment_recordCount"
+      }
+    },
+    {
+      name = "Increment_recordCount"
+      label = "Increment recordCount"
+      assignmentItems = [
+        {
+          assignToReference = "recordCount"
+          operator = "Add"
+          value = {
+            numberValue = 1
+          }
+        },
+      ]
+      connector = {
+        targetReference = "Loop_through_contactRecords"
+      }
+    },
+    {
+      name = "Set_creditRecord_values"
+      label = "Set creditRecord values"
+      assignmentItems = [
+        {
+          assignToReference = "creditRecord.Contact__c"
+          operator = "Assign"
+          value = {
+            elementReference = "Loop_through_contactRecords.Id"
+          }
+        },
+        {
+          assignToReference = "creditRecord.Amount__c"
+          operator = "Assign"
+          value = {
+            elementReference = "amount"
+          }
+        },
+      ]
+      connector = {
+        targetReference = "Add_creditRecord_to_creditRecords"
+      }
+    },
+    {
+      name = "Set_Message"
+      label = "Set Message"
+      assignmentItems = [
+        {
+          assignToReference = "message"
+          operator = "Assign"
+          value = {
+            elementReference = "messageTemplate"
+          }
+        },
+      ]
+    },
+  ]
+  description = "Issue resort credits for one of multiple contacts identified by an array of Contact Ids."
+  environments = "Default"
+  interviewLabel = "Issue Bulk Resort Credits {!$Flow.CurrentDateTime}"
+  label = "Issue Bulk Resort Credits"
+  loops = [
+    {
+      name = "Loop_through_contactRecords"
+      label = "Loop through contactRecords"
+      collectionReference = "contactRecords"
+      iterationOrder = "Asc"
+      nextValueConnector = {
+        targetReference = "Set_creditRecord_values"
+      }
+      noMoreValuesConnector = {
+        targetReference = "Create_Credit_Records"
+      }
+    },
+  ]
+  processMetadataValues = [
+    {
+      name = "BuilderType"
+      value = {
+        stringValue = "LightningFlowBuilder"
+      }
+    },
+    {
+      name = "CanvasMode"
+      value = {
+        stringValue = "AUTO_LAYOUT_CANVAS"
+      }
+    },
+    {
+      name = "OriginBuilderType"
+      value = {
+        stringValue = "LightningFlowBuilder"
+      }
+    },
+  ]
+  processType = "AutoLaunchedFlow"
+  recordCreates = [
+    {
+      name = "Create_Credit_Records"
+      label = "Create Credit Records"
+      connector = {
+        targetReference = "Set_Message"
+      }
+      inputReference = "creditRecords"
+    },
+  ]
+  start = {
+    connector = {
+      targetReference = "Loop_through_contactRecords"
+    }
+  }
+  status = "Active"
+  textTemplates = {
+    description = "A description of the outcome of the operation"
+    name = "messageTemplate"
+    isViewedAsPlainText = true
+    text = "Issued \${!amount} resort credit to {!recordCount} customers."
+  }
+  variables = [
+    {
+      description = "The resort credit amount"
+      name = "amount"
+      dataType = "Number"
+      isCollection = false
+      isInput = true
+      isOutput = false
+      scale = 0
+    },
+    {
+      description = "The list of contacts"
+      name = "contactRecords"
+      dataType = "SObject"
+      isCollection = true
+      isInput = true
+      isOutput = false
+      objectType = salesforce.Contact
+    },
+    {
+      name = "creditRecord"
+      dataType = "SObject"
+      isCollection = false
+      isInput = false
+      isOutput = false
+      objectType = salesforce.Credit__c
+    },
+    {
+      name = "creditRecords"
+      dataType = "SObject"
+      isCollection = true
+      isInput = false
+      isOutput = false
+      objectType = salesforce.Credit__c
+    },
+    {
+      description = "The outcome of the operation"
+      name = "message"
+      dataType = "String"
+      isCollection = false
+      isInput = false
+      isOutput = true
+    },
+    {
+      name = "recordCount"
+      dataType = "Number"
+      isCollection = false
+      isInput = false
+      isOutput = false
+      scale = 0
+      value = {
+        numberValue = 0
+      }
+    },
+  ]
+  _generated_dependencies = [
+    {
+      reference = salesforce.Credit__c.field.Amount__c
+    },
+    {
+      reference = salesforce.Credit__c.field.Contact__c
+    },
+  ]
+  _alias = "Issue Bulk Resort Credits"
+}

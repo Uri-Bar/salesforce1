@@ -1,0 +1,72 @@
+salesforce.Layout ManagedContentVariant_Managed_Content_Variant_Layout@bsss {
+  layoutSections = [
+    {
+      customLabel = true
+      detailHeading = true
+      editHeading = true
+      label = "Content Variant Details"
+      layoutColumns = [
+        {
+          layoutItems = [
+            {
+              behavior = "Required"
+              field = "Name"
+            },
+            {
+              behavior = "Required"
+              field = "VariantType"
+            },
+            {
+              behavior = "Required"
+              field = "Language"
+            },
+            {
+              behavior = "Edit"
+              field = "IsReady"
+            },
+            {
+              behavior = "Edit"
+              field = "LastModifiedDate"
+            },
+          ]
+        },
+        {
+          layoutItems = [
+            {
+              behavior = "Edit"
+              field = "ManagedContentVariantStatus"
+            },
+            {
+              behavior = "Required"
+              field = "UrlName"
+            },
+            {
+              behavior = "Required"
+              field = "ManagedContentKey"
+            },
+            {
+              behavior = "Edit"
+              field = "HasLocks"
+            },
+          ]
+        },
+      ]
+      style = "TwoColumnsLeftToRight"
+    },
+    {
+      customLabel = false
+      detailHeading = false
+      editHeading = false
+      layoutColumns = [
+        {
+        },
+      ]
+      style = "CustomLinks"
+    },
+  ]
+  showEmailCheckbox = false
+  showRunAssignmentRulesCheckbox = false
+  showSubmitAndAttachButton = false
+  fullName = "ManagedContentVariant-Managed Content Variant Layout"
+  _alias = "ManagedContentVariant-Managed Content Variant Layout"
+}

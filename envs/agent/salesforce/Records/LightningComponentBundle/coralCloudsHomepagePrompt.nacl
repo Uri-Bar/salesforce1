@@ -1,0 +1,23 @@
+salesforce.LightningComponentBundle coralCloudsHomepagePrompt {
+  apiVersion = 61
+  isExposed = false
+  fullName = "coralCloudsHomepagePrompt"
+  lwcResources = {
+    lwcResource = {
+      coralCloudsHomepagePrompt_js@v = {
+        source = file("salesforce/Records/LightningComponentBundle/coralCloudsHomepagePrompt/coralCloudsHomepagePrompt.js")
+        filePath = "lwc/coralCloudsHomepagePrompt/coralCloudsHomepagePrompt.js"
+      }
+      coralCloudsHomepagePrompt_html@v = {
+        source = file("salesforce/Records/LightningComponentBundle/coralCloudsHomepagePrompt/coralCloudsHomepagePrompt.html")
+        filePath = "lwc/coralCloudsHomepagePrompt/coralCloudsHomepagePrompt.html"
+      }
+    }
+  }
+  _generated_dependencies = [
+    {
+      reference = salesforce.LightningComponentBundle.instance.codeBlock
+    },
+  ]
+  _alias = "coralCloudsHomepagePrompt"
+}

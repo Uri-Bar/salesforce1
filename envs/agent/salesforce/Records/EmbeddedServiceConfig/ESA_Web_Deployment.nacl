@@ -1,0 +1,22 @@
+salesforce.EmbeddedServiceConfig ESA_Web_Deployment {
+  areGuestUsersAllowed = false
+  deploymentFeature = "EmbeddedMessaging"
+  deploymentType = "Web"
+  embeddedServiceMessagingChannel = {
+    isEnabled = true
+    messagingChannel = salesforce.MessagingChannel.instance.ESA_Channel
+    shouldShowDeliveryReceipts = false
+    shouldShowEmojiSelection = false
+    shouldShowReadReceipts = false
+    shouldShowTypingIndicators = false
+    shouldStartNewLineOnEnter = false
+  }
+  isEnabled = true
+  isTermsAndConditionsEnabled = false
+  isTermsAndConditionsRequired = false
+  masterLabel = "ESA Web Deployment"
+  shouldHideAuthDialog = false
+  site = "ESW_ESA_Web_Deployment_17248009206571"
+  fullName = "ESA_Web_Deployment"
+  _alias = "ESA_Web_Deployment"
+}

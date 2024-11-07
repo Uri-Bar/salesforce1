@@ -1,0 +1,10 @@
+salesforce.QueueRoutingConfig ESA_Routing_Configuration {
+  fullName = "ESA_Routing_Configuration"
+  capacityType = "INHERITED"
+  capacityWeight = 2
+  isAttributeBased = false
+  label = "ESA Routing Configuration"
+  routingModel = "MOST_AVAILABLE"
+  routingPriority = 1
+  _alias = "ESA Routing Configuration"
+}

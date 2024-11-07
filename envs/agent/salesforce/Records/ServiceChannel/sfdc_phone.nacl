@@ -1,0 +1,10 @@
+salesforce.ServiceChannel sfdc_phone {
+  fullName = "sfdc_phone"
+  doesMinimizeWidgetOnAccept = true
+  hasAfterConvoWorkTimer = false
+  hasAutoAcceptEnabled = false
+  isInterruptible = false
+  label = "Phone"
+  relatedEntityType = salesforce.VoiceCall
+  _alias = "Phone"
+}

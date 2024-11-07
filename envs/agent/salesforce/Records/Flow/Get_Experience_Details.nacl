@@ -1,0 +1,103 @@
+salesforce.Flow Get_Experience_Details {
+  fullName = "Get_Experience_Details"
+  apiVersion = 61
+  assignments = [
+    {
+      description = "Assign an Experience__c record for presentation back to the user."
+      name = "Assign_Experience_Record"
+      label = "Assign Experience Record"
+      assignmentItems = [
+        {
+          assignToReference = "experienceRecord"
+          operator = "Assign"
+          value = {
+            elementReference = "Get_Experience_by_Name"
+          }
+        },
+      ]
+    },
+  ]
+  description = "Provides details about an Experience__c that a user would like more information about."
+  environments = "Default"
+  interviewLabel = "Get Experience Details {!$Flow.CurrentDateTime}"
+  label = "Get Experience Details"
+  processMetadataValues = [
+    {
+      name = "BuilderType"
+      value = {
+        stringValue = "LightningFlowBuilder"
+      }
+    },
+    {
+      name = "CanvasMode"
+      value = {
+        stringValue = "AUTO_LAYOUT_CANVAS"
+      }
+    },
+    {
+      name = "OriginBuilderType"
+      value = {
+        stringValue = "LightningFlowBuilder"
+      }
+    },
+  ]
+  processType = "AutoLaunchedFlow"
+  recordLookups = [
+    {
+      description = "Search for available Experiences by Name."
+      name = "Get_Experience_by_Name"
+      label = "Get Experience by Name"
+      assignNullValuesIfNoRecordsFound = false
+      connector = {
+        targetReference = "Assign_Experience_Record"
+      }
+      filterLogic = "and"
+      filters = [
+        {
+          field = salesforce.Experience__c.field.Name
+          operator = "EqualTo"
+          value = {
+            elementReference = "experienceName"
+          }
+        },
+      ]
+      getFirstRecordOnly = true
+      object = salesforce.Experience__c
+      queriedFields = [
+        salesforce.Experience__c.field.Id,
+        salesforce.Experience__c.field.Name,
+        salesforce.Experience__c.field.Description__c,
+        salesforce.Experience__c.field.Activity_Level__c,
+        salesforce.Experience__c.field.Type__c,
+      ]
+      storeOutputAutomatically = true
+    },
+  ]
+  runInMode = "SystemModeWithSharing"
+  start = {
+    connector = {
+      targetReference = "Get_Experience_by_Name"
+    }
+  }
+  status = "Active"
+  variables = [
+    {
+      description = "The Name of the Experience__c that the user would like more information on."
+      name = "experienceName"
+      dataType = "String"
+      isCollection = false
+      isInput = true
+      isOutput = false
+    },
+    {
+      description = "The Experience__C record to be summarized for the user."
+      name = "experienceRecord"
+      dataType = "SObject"
+      isCollection = false
+      isInput = false
+      isOutput = true
+      objectType = salesforce.Experience__c
+    },
+  ]
+  _alias = "Get Experience Details"
+}

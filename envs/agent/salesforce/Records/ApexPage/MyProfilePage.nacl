@@ -1,0 +1,18 @@
+salesforce.ApexPage MyProfilePage {
+  apiVersion = 61
+  availableInTouch = false
+  confirmationTokenRequired = false
+  description = "Default Salesforce Sites My Profile page"
+  label = "MyProfilePage"
+  fullName = "MyProfilePage"
+  content = file("salesforce/Records/ApexPage/MyProfilePage.page")
+  _generated_dependencies = [
+    {
+      reference = salesforce.ApexClass.instance.MyProfilePageController
+    },
+    {
+      reference = salesforce.User
+    },
+  ]
+  _alias = "MyProfilePage"
+}

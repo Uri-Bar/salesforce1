@@ -1,0 +1,139 @@
+salesforce.Flow Add_Experiences_to_Prompt {
+  fullName = "Add_Experiences_to_Prompt"
+  apiVersion = 61
+  assignments = [
+    {
+      description = "Add each experience matching guest's interests to the prompt"
+      name = "Add_Experience_to_Prompt"
+      elementSubtype = "AddPromptInstructions"
+      label = "Add Experience to Prompt"
+      assignmentItems = [
+        {
+          assignToReference = "$Output.Prompt"
+          operator = "Add"
+          value = {
+            stringValue = '''
+{!Experiences_Loop.Name}
+
+'''
+          }
+        },
+      ]
+      connector = {
+        targetReference = "Experiences_Loop"
+      }
+    },
+  ]
+  description = "Add experiences that match the guest's interests to the prompt"
+  environments = "Default"
+  interviewLabel = "Add Experiences to Prompt {!$Flow.CurrentDateTime}"
+  label = "Add Experiences to Prompt"
+  loops = [
+    {
+      description = "Loop through experiences"
+      name = "Experiences_Loop"
+      label = "Experiences Loop"
+      collectionReference = "Get_Experiences"
+      iterationOrder = "Asc"
+      nextValueConnector = {
+        targetReference = "Add_Experience_to_Prompt"
+      }
+    },
+  ]
+  processMetadataValues = [
+    {
+      name = "BuilderType"
+      value = {
+        stringValue = "LightningFlowBuilder"
+      }
+    },
+    {
+      name = "CanvasMode"
+      value = {
+        stringValue = "AUTO_LAYOUT_CANVAS"
+      }
+    },
+    {
+      name = "OriginBuilderType"
+      value = {
+        stringValue = "LightningFlowBuilder"
+      }
+    },
+  ]
+  processType = "PromptFlow"
+  recordLookups = [
+    {
+      description = "Get a list of resort experiences that match the guest's interests"
+      name = "Get_Experiences"
+      label = "Get Experiences"
+      assignNullValuesIfNoRecordsFound = false
+      connector = {
+        targetReference = "Experiences_Loop"
+      }
+      filterLogic = "or"
+      filters = [
+        {
+          field = salesforce.Experience__c.field.Type__c
+          operator = "EqualTo"
+          value = {
+            elementReference = "$Input.Recipient.Interest1__c"
+          }
+        },
+        {
+          field = salesforce.Experience__c.field.Type__c
+          operator = "EqualTo"
+          value = {
+            elementReference = "$Input.Recipient.Interest2__c"
+          }
+        },
+        {
+          field = salesforce.Experience__c.field.Type__c
+          operator = "EqualTo"
+          value = {
+            elementReference = "$Input.Recipient.Interest3__c"
+          }
+        },
+      ]
+      getFirstRecordOnly = false
+      object = salesforce.Experience__c
+      storeOutputAutomatically = true
+    },
+  ]
+  start = {
+    capabilityTypes = {
+      name = "PromptTemplateType://einstein_gpt__salesEmail"
+      capabilityName = "PromptTemplateType://einstein_gpt__salesEmail"
+      inputs = [
+        {
+          name = "Sender"
+          capabilityInputName = "Sender"
+          dataType = "SOBJECT://User"
+          isCollection = false
+        },
+        {
+          name = "Recipient"
+          capabilityInputName = "Recipient"
+          dataType = "SOBJECT://Contact"
+          isCollection = false
+        },
+      ]
+    }
+    connector = {
+      targetReference = "Get_Experiences"
+    }
+    triggerType = "Capability"
+  }
+  status = "Active"
+  _generated_dependencies = [
+    {
+      reference = salesforce.Contact.field.Interest1__c
+    },
+    {
+      reference = salesforce.Contact.field.Interest2__c
+    },
+    {
+      reference = salesforce.Contact.field.Interest3__c
+    },
+  ]
+  _alias = "Add Experiences to Prompt"
+}

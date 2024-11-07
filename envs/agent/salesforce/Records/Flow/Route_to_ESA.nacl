@@ -1,0 +1,158 @@
+salesforce.Flow Route_to_ESA {
+  fullName = "Route_to_ESA"
+  actionCalls = {
+    name = "Route_to_ESA"
+    label = "Route to ESA"
+    actionName = "routeWork"
+    actionType = "routeWork"
+    flowTransactionModel = "CurrentTransaction"
+    inputParameters = [
+      {
+        name = "recordId"
+        value = {
+          elementReference = "recordId"
+        }
+      },
+      {
+        name = "serviceChannelId"
+        value = {
+          stringValue = "0N9WU0000006Gq50AE"
+        }
+      },
+      {
+        name = "serviceChannelLabel"
+        value = {
+          stringValue = "Messaging"
+        }
+      },
+      {
+        name = "serviceChannelDevName"
+        value = {
+          stringValue = "sfdc_livemessage"
+        }
+      },
+      {
+        name = "routingType"
+        value = {
+          stringValue = "Bot"
+        }
+      },
+      {
+        name = "routingConfigId"
+      },
+      {
+        name = "routingConfigLabel"
+      },
+      {
+        name = "queueId"
+        value = {
+          stringValue = "00GWU0000068z7i2AA"
+        }
+      },
+      {
+        name = "agentId"
+      },
+      {
+        name = "agentLabel"
+      },
+      {
+        name = "queueLabel"
+        value = {
+          stringValue = "Messaging Queue"
+        }
+      },
+      {
+        name = "skillOption"
+      },
+      {
+        name = "skillRequirementsResourceItem"
+      },
+      {
+        name = "botId"
+        value = {
+          stringValue = "0XxWU0000002nz90AA"
+        }
+      },
+      {
+        name = "botLabel"
+        value = {
+          stringValue = "Coral Cloud Experience Agent"
+        }
+      },
+      {
+        name = "isQueueVariable"
+        value = {
+          booleanValue = false
+        }
+      },
+    ]
+    nameSegment = "routeWork"
+    offset = 0
+    versionSegment = 1
+  }
+  apiVersion = 61
+  description = "This omni-channel flow is used to route a messaging session to ESA"
+  environments = "Default"
+  interviewLabel = "Route to ESA {!$Flow.CurrentDateTime}"
+  label = "Route to ESA"
+  processMetadataValues = [
+    {
+      name = "BuilderType"
+      value = {
+        stringValue = "LightningFlowBuilder"
+      }
+    },
+    {
+      name = "CanvasMode"
+      value = {
+        stringValue = "AUTO_LAYOUT_CANVAS"
+      }
+    },
+    {
+      name = "OriginBuilderType"
+      value = {
+        stringValue = "LightningFlowBuilder"
+      }
+    },
+  ]
+  processType = "RoutingFlow"
+  recordLookups = [
+    {
+      name = "Get_Messaging_Session"
+      label = "Get Messaging Session"
+      assignNullValuesIfNoRecordsFound = false
+      connector = {
+        targetReference = "Route_to_ESA"
+      }
+      filterLogic = "and"
+      filters = [
+        {
+          field = salesforce.MessagingSession.field.Id
+          operator = "EqualTo"
+          value = {
+            elementReference = "recordId"
+          }
+        },
+      ]
+      getFirstRecordOnly = true
+      object = salesforce.MessagingSession
+      storeOutputAutomatically = true
+    },
+  ]
+  start = {
+    connector = {
+      targetReference = "Get_Messaging_Session"
+    }
+  }
+  status = "Active"
+  variables = [
+    {
+      name = "recordId"
+      dataType = "String"
+      isCollection = false
+      isInput = true
+      isOutput = false
+    },
+  ]
+  _alias = "Route to ESA"
+}

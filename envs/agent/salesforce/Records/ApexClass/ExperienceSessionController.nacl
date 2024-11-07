@@ -1,0 +1,51 @@
+salesforce.ApexClass ExperienceSessionController {
+  apiVersion = 61
+  status = "Active"
+  fullName = "ExperienceSessionController"
+  content = file("salesforce/Records/ApexClass/ExperienceSessionController.cls")
+  _generated_dependencies = [
+    {
+      reference = salesforce.Contact
+    },
+    {
+      reference = salesforce.Contact.field.Interest1__c
+    },
+    {
+      reference = salesforce.Contact.field.Interest2__c
+    },
+    {
+      reference = salesforce.Contact.field.Interest3__c
+    },
+    {
+      reference = salesforce.Experience__c
+    },
+    {
+      reference = salesforce.Experience__c.field.Type__c
+    },
+    {
+      reference = salesforce.Session__c
+    },
+    {
+      reference = salesforce.Session__c.field.Date__c
+    },
+    {
+      reference = salesforce.Session__c.field.Duration_Hours__c
+    },
+    {
+      reference = salesforce.Session__c.field.Experience_Name__c
+    },
+    {
+      reference = salesforce.Session__c.field.Experience__c
+    },
+    {
+      reference = salesforce.Session__c.field.Is_Canceled__c
+    },
+    {
+      reference = salesforce.Session__c.field.Location__c
+    },
+    {
+      reference = salesforce.Session__c.field.Start_Time__c
+    },
+  ]
+  _alias = "ExperienceSessionController"
+}

@@ -1,0 +1,22 @@
+salesforce.LightningComponentBundle experiencesTile {
+  apiVersion = 61
+  isExposed = false
+  fullName = "experiencesTile"
+  lwcResources = {
+    lwcResource = {
+      experiencesTile_js@v = {
+        source = file("salesforce/Records/LightningComponentBundle/experiencesTile/experiencesTile.js")
+        filePath = "lwc/experiencesTile/experiencesTile.js"
+      }
+      experiencesTile_html@v = {
+        source = file("salesforce/Records/LightningComponentBundle/experiencesTile/experiencesTile.html")
+        filePath = "lwc/experiencesTile/experiencesTile.html"
+      }
+      experiencesTile_css@v = {
+        source = file("salesforce/Records/LightningComponentBundle/experiencesTile/experiencesTile.css")
+        filePath = "lwc/experiencesTile/experiencesTile.css"
+      }
+    }
+  }
+  _alias = "experiencesTile"
+}

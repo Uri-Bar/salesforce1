@@ -1,0 +1,10 @@
+salesforce.ApexPage CommunitiesTemplate {
+  apiVersion = 61
+  availableInTouch = false
+  confirmationTokenRequired = false
+  description = "Default template for experiences pages"
+  label = "CommunitiesTemplate"
+  fullName = "CommunitiesTemplate"
+  content = file("salesforce/Records/ApexPage/CommunitiesTemplate.page")
+  _alias = "CommunitiesTemplate"
+}

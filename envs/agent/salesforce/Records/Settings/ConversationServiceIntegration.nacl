@@ -1,0 +1,6 @@
+salesforce.ConversationServiceIntegrationSettings {
+  fullName = "ConversationServiceIntegration"
+  enableConvoCatchUpForAgents = "false"
+  enableConvoCatchUpForSupervisors = "false"
+  _alias = "ConversationServiceIntegration"
+}

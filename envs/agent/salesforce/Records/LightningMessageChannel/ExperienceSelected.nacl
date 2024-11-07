@@ -1,0 +1,11 @@
+salesforce.LightningMessageChannel ExperienceSelected {
+  fullName = "ExperienceSelected"
+  description = "This event is fired when an experience is selected."
+  isExposed = false
+  lightningMessageFields = {
+    description = "Selected experience Id."
+    fieldName = "experienceId"
+  }
+  masterLabel = "ExperienceSelected"
+  _alias = "ExperienceSelected"
+}

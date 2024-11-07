@@ -1,0 +1,32 @@
+salesforce.CustomApplication standard__ExpressionSetConsole {
+  formFactors = [
+    "Large",
+  ]
+  isNavAutoTempTabsDisabled = false
+  isNavPersonalizationDisabled = false
+  isNavTabPersistenceDisabled = false
+  isOmniPinnedViewEnabled = false
+  label = "Business Rules Engine"
+  navType = "Console"
+  tabs = [
+    "standard-DecisionTable",
+    "standard-ExpressionSetTemplate",
+    "standard-ExpressionSet",
+  ]
+  uiType = "Lightning"
+  workspaceConfig = {
+    mappings = [
+      {
+        tab = "standard-DecisionTable"
+      },
+      {
+        tab = "standard-ExpressionSet"
+      },
+      {
+        tab = "standard-ExpressionSetTemplate"
+      },
+    ]
+  }
+  fullName = "standard__ExpressionSetConsole"
+  _alias = "Business Rules Engine (standard)"
+}

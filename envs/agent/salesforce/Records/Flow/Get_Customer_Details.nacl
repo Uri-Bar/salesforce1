@@ -1,0 +1,115 @@
+salesforce.Flow Get_Customer_Details {
+  fullName = "Get_Customer_Details"
+  apiVersion = 61
+  assignments = [
+    {
+      description = "Assign the contact record for output to the user in the agent."
+      name = "Assign_Contact"
+      label = "Assign Contact"
+      assignmentItems = [
+        {
+          assignToReference = "contact"
+          operator = "Assign"
+          value = {
+            elementReference = "Get_Contact_by_Email_and_Member_Number"
+          }
+        },
+      ]
+    },
+  ]
+  description = "Validate a Customers details by passing their email and memberNumber to see if their is a related contact."
+  environments = "Default"
+  interviewLabel = "Get Customer Details {!$Flow.CurrentDateTime}"
+  label = "Get Customer Details"
+  processMetadataValues = [
+    {
+      name = "BuilderType"
+      value = {
+        stringValue = "LightningFlowBuilder"
+      }
+    },
+    {
+      name = "CanvasMode"
+      value = {
+        stringValue = "AUTO_LAYOUT_CANVAS"
+      }
+    },
+    {
+      name = "OriginBuilderType"
+      value = {
+        stringValue = "LightningFlowBuilder"
+      }
+    },
+  ]
+  processType = "AutoLaunchedFlow"
+  recordLookups = [
+    {
+      description = "Search for a contact record and validate that they are who they say they are by their email and member number."
+      name = "Get_Contact_by_Email_and_Member_Number"
+      label = "Get Contact by Email and Member Number"
+      assignNullValuesIfNoRecordsFound = false
+      connector = {
+        targetReference = "Assign_Contact"
+      }
+      filterLogic = "and"
+      filters = [
+        {
+          field = salesforce.Contact.field.Email
+          operator = "EqualTo"
+          value = {
+            elementReference = "email"
+          }
+        },
+        {
+          field = salesforce.Contact.field.Membership_Number__c
+          operator = "EqualTo"
+          value = {
+            elementReference = "memberNumber"
+          }
+        },
+      ]
+      getFirstRecordOnly = true
+      object = salesforce.Contact
+      queriedFields = [
+        salesforce.Contact.field.Id,
+        salesforce.Contact.field.Name,
+      ]
+      storeOutputAutomatically = true
+    },
+  ]
+  runInMode = "SystemModeWithSharing"
+  start = {
+    connector = {
+      targetReference = "Get_Contact_by_Email_and_Member_Number"
+    }
+  }
+  status = "Active"
+  variables = [
+    {
+      description = "The contact that was returned in the search for records."
+      name = "contact"
+      dataType = "SObject"
+      isCollection = false
+      isInput = false
+      isOutput = true
+      objectType = salesforce.Contact
+    },
+    {
+      description = "The Email Address of the customer that is validating their identity."
+      name = "email"
+      dataType = "String"
+      isCollection = false
+      isInput = true
+      isOutput = false
+    },
+    {
+      description = "The Member Number of the customer that is validating their identity."
+      name = "memberNumber"
+      dataType = "String"
+      isCollection = false
+      isInput = true
+      isOutput = false
+    },
+  ]
+  _alias = "Get Customer Details"
+}

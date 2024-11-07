@@ -1,0 +1,5 @@
+salesforce.CorsWhitelistOrigin https_storm_0bf45bbf073ef6_dev_ed_c_develop_vf_force_com {
+  fullName = "https_storm_0bf45bbf073ef6_dev_ed_c_develop_vf_force_com"
+  urlPattern = "https://storm-0bf45bbf073ef6-dev-ed--c.develop.vf.force.com"
+  _alias = "https_storm_0bf45bbf073ef6_dev_ed_c_develop_vf_force_com"
+}

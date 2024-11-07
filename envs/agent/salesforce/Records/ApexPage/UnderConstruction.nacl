@@ -1,0 +1,18 @@
+salesforce.ApexPage UnderConstruction {
+  apiVersion = 61
+  availableInTouch = false
+  confirmationTokenRequired = false
+  description = "Default Lightning Platform Under Construction page"
+  label = "UnderConstruction"
+  fullName = "UnderConstruction"
+  content = file("salesforce/Records/ApexPage/UnderConstruction.page")
+  _generated_dependencies = [
+    {
+      reference = salesforce.ApexPage.instance.StdExceptionTemplate
+    },
+    {
+      reference = salesforce.StaticResource.instance.SiteSamples
+    },
+  ]
+  _alias = "UnderConstruction"
+}

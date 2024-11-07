@@ -1,0 +1,42 @@
+salesforce.ApexClass ExperienceController {
+  apiVersion = 61
+  status = "Active"
+  fullName = "ExperienceController"
+  content = file("salesforce/Records/ApexClass/ExperienceController.cls")
+  _generated_dependencies = [
+    {
+      reference = salesforce.Experience__c
+    },
+    {
+      reference = salesforce.Experience__c.field.Price__c
+    },
+    {
+      reference = salesforce.Session__c
+    },
+    {
+      reference = salesforce.Session__c.field.Booked_Slots__c
+    },
+    {
+      reference = salesforce.Session__c.field.Capacity__c
+    },
+    {
+      reference = salesforce.Session__c.field.Date__c
+    },
+    {
+      reference = salesforce.Session__c.field.End_Time__c
+    },
+    {
+      reference = salesforce.Session__c.field.Experience__c
+    },
+    {
+      reference = salesforce.Session__c.field.Percentage_Booked__c
+    },
+    {
+      reference = salesforce.Session__c.field.Start_Time__c
+    },
+    {
+      reference = salesforce.Session__c.field.Status__c
+    },
+  ]
+  _alias = "ExperienceController"
+}

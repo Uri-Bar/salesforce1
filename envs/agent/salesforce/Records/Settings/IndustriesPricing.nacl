@@ -1,0 +1,7 @@
+salesforce.IndustriesPricingSettings {
+  fullName = "IndustriesPricing"
+  enableHighAvailability = "false"
+  enablePricingWaterfall = "false"
+  enableSalesforcePricing = "false"
+  _alias = "IndustriesPricing"
+}

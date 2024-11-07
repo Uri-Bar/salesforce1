@@ -1,0 +1,10 @@
+salesforce.UserCriteria ESW_ESA_Web_Deployment_1724800920657_Partner_and_Customer_members@uuuuvuuu {
+  fullName = "ESW_ESA_Web_Deployment_1724800920657.Partner_and_Customer_members"
+  description = "Member criteria matches customer and partner member"
+  masterLabel = "Customer and Partner Members"
+  userTypes = [
+    "Partner",
+    "Customer",
+  ]
+  _alias = "ESW_ESA_Web_Deployment_1724800920657.Partner_and_Customer_members"
+}

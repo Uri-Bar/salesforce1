@@ -1,0 +1,7 @@
+salesforce.LightningExperienceTheme CoralCloudResorts {
+  fullName = "CoralCloudResorts"
+  defaultBrandingSet = salesforce.BrandingSet.instance.LEXTHEMINGCoralCloudResorts
+  masterLabel = "Coral Cloud Resorts"
+  shouldOverrideLoadingImage = false
+  _alias = "CoralCloudResorts"
+}

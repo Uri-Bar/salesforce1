@@ -1,0 +1,12 @@
+salesforce.SharingSet Coral_Cloud_Sharing {
+  fullName = "Coral_Cloud_Sharing"
+  accessMappings = {
+    accessLevel = "Edit"
+    object = "Account"
+    objectField = "Id"
+    userField = "Contact.Account"
+  }
+  name = "Coral Cloud Sharing"
+  profiles = "customer community login user"
+  _alias = "Coral_Cloud_Sharing"
+}

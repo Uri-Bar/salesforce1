@@ -1,0 +1,5 @@
+salesforce.SubscriptionManagementSettings {
+  fullName = "SubscriptionManagement"
+  enableSubscriptionManagement = "false"
+  _alias = "SubscriptionManagement"
+}

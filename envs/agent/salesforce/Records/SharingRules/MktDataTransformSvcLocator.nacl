@@ -1,0 +1,4 @@
+salesforce.SharingRules MktDataTransformSvcLocator {
+  fullName = "MktDataTransformSvcLocator"
+  _alias = "MktDataTransformSvcLocator"
+}

@@ -1,0 +1,22 @@
+salesforce.LightningComponentBundle coralCloudsHomepageNavigation {
+  apiVersion = 61
+  isExposed = false
+  fullName = "coralCloudsHomepageNavigation"
+  lwcResources = {
+    lwcResource = {
+      coralCloudsHomepageNavigation_js@v = {
+        source = file("salesforce/Records/LightningComponentBundle/coralCloudsHomepageNavigation/coralCloudsHomepageNavigation.js")
+        filePath = "lwc/coralCloudsHomepageNavigation/coralCloudsHomepageNavigation.js"
+      }
+      coralCloudsHomepageNavigation_css@v = {
+        source = file("salesforce/Records/LightningComponentBundle/coralCloudsHomepageNavigation/coralCloudsHomepageNavigation.css")
+        filePath = "lwc/coralCloudsHomepageNavigation/coralCloudsHomepageNavigation.css"
+      }
+      coralCloudsHomepageNavigation_html@v = {
+        source = file("salesforce/Records/LightningComponentBundle/coralCloudsHomepageNavigation/coralCloudsHomepageNavigation.html")
+        filePath = "lwc/coralCloudsHomepageNavigation/coralCloudsHomepageNavigation.html"
+      }
+    }
+  }
+  _alias = "coralCloudsHomepageNavigation"
+}

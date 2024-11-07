@@ -1,0 +1,36 @@
+salesforce.ApexClass SampleDataGenerator {
+  apiVersion = 61
+  status = "Active"
+  fullName = "SampleDataGenerator"
+  content = file("salesforce/Records/ApexClass/SampleDataGenerator.cls")
+  _generated_dependencies = [
+    {
+      reference = salesforce.ApexClass.instance.SampleBookingBatch
+    },
+    {
+      reference = salesforce.Booking__c
+    },
+    {
+      reference = salesforce.Contact
+    },
+    {
+      reference = salesforce.Experience__c
+    },
+    {
+      reference = salesforce.Experience__c.field.Capacity__c
+    },
+    {
+      reference = salesforce.Session__c
+    },
+    {
+      reference = salesforce.Session__c.field.Date__c
+    },
+    {
+      reference = salesforce.Session__c.field.Experience__c
+    },
+    {
+      reference = salesforce.Session__c.field.Start_Time__c
+    },
+  ]
+  _alias = "SampleDataGenerator"
+}

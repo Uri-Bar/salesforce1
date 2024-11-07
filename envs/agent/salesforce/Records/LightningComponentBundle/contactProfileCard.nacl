@@ -1,0 +1,49 @@
+salesforce.LightningComponentBundle contactProfileCard {
+  apiVersion = 61
+  isExposed = true
+  masterLabel = "Contact Profile Card"
+  description = "Card that displays Contact record highlights"
+  targets = {
+    target = [
+      "lightning__RecordPage",
+    ]
+  }
+  targetConfigs = {
+    targetConfig = [
+      {
+        targets = "lightning__RecordPage"
+        objects = [
+          {
+            object = "Contact"
+          },
+        ]
+      },
+    ]
+  }
+  fullName = "contactProfileCard"
+  lwcResources = {
+    lwcResource = {
+      contactProfileCard_css@v = {
+        source = file("salesforce/Records/LightningComponentBundle/contactProfileCard/contactProfileCard.css")
+        filePath = "lwc/contactProfileCard/contactProfileCard.css"
+      }
+      contactProfileCard_html@v = {
+        source = file("salesforce/Records/LightningComponentBundle/contactProfileCard/contactProfileCard.html")
+        filePath = "lwc/contactProfileCard/contactProfileCard.html"
+      }
+      contactProfileCard_js@v = {
+        source = file("salesforce/Records/LightningComponentBundle/contactProfileCard/contactProfileCard.js")
+        filePath = "lwc/contactProfileCard/contactProfileCard.js"
+      }
+    }
+  }
+  _generated_dependencies = [
+    {
+      reference = salesforce.Contact.field.Photo_URL__c
+    },
+    {
+      reference = salesforce.LightningComponentBundle.instance.errorPanel
+    },
+  ]
+  _alias = "contactProfileCard"
+}

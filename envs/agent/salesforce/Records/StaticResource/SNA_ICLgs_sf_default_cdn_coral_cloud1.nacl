@@ -1,0 +1,8 @@
+salesforce.StaticResource SNA_ICLgs_sf_default_cdn_coral_cloud1 {
+  cacheControl = "Public"
+  contentType = "application/zip"
+  description = "System-generated SNA sf_default_cdn coral_cloud1"
+  fullName = "SNA_ICLgs_sf_default_cdn_coral_cloud1"
+  content = file("salesforce/Records/StaticResource/SNA_ICLgs_sf_default_cdn_coral_cloud1.zip")
+  _alias = "SNA_ICLgs_sf_default_cdn_coral_cloud1"
+}

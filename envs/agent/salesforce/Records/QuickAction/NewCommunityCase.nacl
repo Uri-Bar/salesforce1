@@ -1,0 +1,35 @@
+salesforce.QuickAction NewCommunityCase {
+  fullName = "NewCommunityCase"
+  label = "New Community Case"
+  optionsCreateFeedItem = true
+  quickActionLayout = {
+    layoutSectionStyle = "TwoColumnsLeftToRight"
+    quickActionLayoutColumns = [
+      {
+        quickActionLayoutItems = [
+          {
+            emptySpace = false
+            field = "ContactId"
+            uiBehavior = "Edit"
+          },
+          {
+            emptySpace = false
+            field = "Subject"
+            uiBehavior = "Edit"
+          },
+          {
+            emptySpace = false
+            field = "Description"
+            uiBehavior = "Edit"
+          },
+        ]
+      },
+      {
+      },
+    ]
+  }
+  standardLabel = "New Community Case"
+  targetObject = salesforce.Case
+  type = "Create"
+  _alias = "New Community Case"
+}

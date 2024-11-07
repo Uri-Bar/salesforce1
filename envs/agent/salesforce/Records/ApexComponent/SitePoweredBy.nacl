@@ -1,0 +1,13 @@
+salesforce.ApexComponent SitePoweredBy {
+  apiVersion = 61
+  description = "Default Lightning Platform site powered by component"
+  label = "SitePoweredBy"
+  fullName = "SitePoweredBy"
+  content = file("salesforce/Records/ApexComponent/SitePoweredBy.component")
+  _generated_dependencies = [
+    {
+      reference = salesforce.StaticResource.instance.SiteSamples
+    },
+  ]
+  _alias = "SitePoweredBy"
+}

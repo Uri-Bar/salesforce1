@@ -1,0 +1,69 @@
+salesforce.ApexClass SampleDataTest {
+  apiVersion = 61
+  status = "Active"
+  fullName = "SampleDataTest"
+  content = file("salesforce/Records/ApexClass/SampleDataTest.cls")
+  _generated_dependencies = [
+    {
+      reference = salesforce.ApexClass.instance.SampleBookingBatch
+    },
+    {
+      reference = salesforce.ApexClass.instance.SampleDataGenerator
+    },
+    {
+      reference = salesforce.Booking__c
+    },
+    {
+      reference = salesforce.Booking__c.field.Number_of_Guests__c
+    },
+    {
+      reference = salesforce.Booking__c.field.Session__c
+    },
+    {
+      reference = salesforce.Contact
+    },
+    {
+      reference = salesforce.Experience__c
+    },
+    {
+      reference = salesforce.Experience__c.field.Activity_Level__c
+    },
+    {
+      reference = salesforce.Experience__c.field.Capacity__c
+    },
+    {
+      reference = salesforce.Experience__c.field.Default_Start_Time__c
+    },
+    {
+      reference = salesforce.Experience__c.field.Description__c
+    },
+    {
+      reference = salesforce.Experience__c.field.Duration_Hours__c
+    },
+    {
+      reference = salesforce.Experience__c.field.Location__c
+    },
+    {
+      reference = salesforce.Experience__c.field.Picture_URL__c
+    },
+    {
+      reference = salesforce.Experience__c.field.Price__c
+    },
+    {
+      reference = salesforce.Experience__c.field.Type__c
+    },
+    {
+      reference = salesforce.Session__c
+    },
+    {
+      reference = salesforce.Session__c.field.Date__c
+    },
+    {
+      reference = salesforce.Session__c.field.Experience__c
+    },
+    {
+      reference = salesforce.Session__c.field.Start_Time__c
+    },
+  ]
+  _alias = "SampleDataTest"
+}

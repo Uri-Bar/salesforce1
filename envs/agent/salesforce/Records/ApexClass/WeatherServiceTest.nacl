@@ -1,0 +1,12 @@
+salesforce.ApexClass WeatherServiceTest {
+  apiVersion = 61
+  status = "Active"
+  fullName = "WeatherServiceTest"
+  content = file("salesforce/Records/ApexClass/WeatherServiceTest.cls")
+  _generated_dependencies = [
+    {
+      reference = salesforce.ApexClass.instance.WeatherService
+    },
+  ]
+  _alias = "WeatherServiceTest"
+}

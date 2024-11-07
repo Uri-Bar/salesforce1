@@ -1,0 +1,5 @@
+salesforce.CorsWhitelistOrigin https_live_preview_salesforce_experience_com {
+  fullName = "https_live_preview_salesforce_experience_com"
+  urlPattern = "https://*.live-preview.salesforce-experience.com"
+  _alias = "https_live_preview_salesforce_experience_com"
+}

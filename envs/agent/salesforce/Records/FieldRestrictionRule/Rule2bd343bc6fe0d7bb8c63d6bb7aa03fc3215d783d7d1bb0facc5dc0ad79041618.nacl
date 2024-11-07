@@ -1,0 +1,19 @@
+salesforce.FieldRestrictionRule Rule2bd343bc6fe0d7bb8c63d6bb7aa03fc3215d783d7d1bb0facc5dc0ad79041618 {
+  fullName = "Rule2bd343bc6fe0d7bb8c63d6bb7aa03fc3215d783d7d1bb0facc5dc0ad79041618"
+  active = true
+  classification = "PersonalInfo_EPIM"
+  classificationType = "FieldSet"
+  description = "Field Restriction Rule for Portal PersonalInfo_EPIM"
+  enforcementType = "FieldRestrict"
+  masterLabel = "Rule2bd343bc6fe0d7bb8c63d6bb7aa03fc3215d783d7d1bb0facc5dc0ad79041618"
+  recordFilter = "Id=$User.Id"
+  targetEntity = "User"
+  userCriteria = "CASE($User.UserType,'Standard',0,'AutomatedProcess',0,'CloudIntegrationUser',0,'LicenseManager',0,'Guest',0,1)=1"
+  version = 0
+  _generated_dependencies = [
+    {
+      reference = salesforce.FieldSet.instance.User_PersonalInfo_EPIM
+    },
+  ]
+  _alias = "Rule2bd343bc6fe0d7bb8c63d6bb7aa03fc3215d783d7d1bb0facc5dc0ad79041618"
+}

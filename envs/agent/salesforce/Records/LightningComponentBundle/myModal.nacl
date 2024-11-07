@@ -1,0 +1,38 @@
+salesforce.LightningComponentBundle myModal {
+  apiVersion = 61
+  isExposed = false
+  fullName = "myModal"
+  lwcResources = {
+    lwcResource = {
+      myModal_html@v = {
+        source = file("salesforce/Records/LightningComponentBundle/myModal/myModal.html")
+        filePath = "lwc/myModal/myModal.html"
+      }
+      myModal_js@v = {
+        source = file("salesforce/Records/LightningComponentBundle/myModal/myModal.js")
+        filePath = "lwc/myModal/myModal.js"
+      }
+    }
+  }
+  _generated_dependencies = [
+    {
+      reference = salesforce.Experience__c.field.Price__c
+    },
+    {
+      reference = salesforce.Session__c
+    },
+    {
+      reference = salesforce.Session__c.field.Date__c
+    },
+    {
+      reference = salesforce.Session__c.field.End_Time__c
+    },
+    {
+      reference = salesforce.Session__c.field.Experience__c
+    },
+    {
+      reference = salesforce.Session__c.field.Start_Time__c
+    },
+  ]
+  _alias = "myModal"
+}

@@ -1,0 +1,4 @@
+salesforce.ManagedTopics coral_cloud@b {
+  fullName = "coral-cloud"
+  _alias = "coral-cloud"
+}

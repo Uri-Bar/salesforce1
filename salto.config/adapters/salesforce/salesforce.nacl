@@ -1,0 +1,121 @@
+salesforce {
+  fetch = {
+    metadata = {
+      include = [
+        {
+          metadataType = ".*"
+          namespace = ""
+          name = ".*"
+        },
+      ]
+      exclude = [
+        {
+          metadataType = "Report"
+        },
+        {
+          metadataType = "ReportType"
+        },
+        {
+          metadataType = "ReportFolder"
+        },
+        {
+          metadataType = "Dashboard"
+        },
+        {
+          metadataType = "DashboardFolder"
+        },
+        {
+          metadataType = "Document"
+        },
+        {
+          metadataType = "DocumentFolder"
+        },
+        {
+          metadataType = "Profile"
+        },
+        {
+          metadataType = "PermissionSet"
+        },
+        {
+          metadataType = "MutingPermissionSet"
+        },
+        {
+          metadataType = "PermissionSetGroup"
+        },
+        {
+          metadataType = "SiteDotCom"
+        },
+        {
+          metadataType = "EmailTemplate"
+          name = "Marketo_?Email_?Templates/.*"
+        },
+        {
+          metadataType = "ContentAsset"
+        },
+        {
+          metadataType = "CustomObjectTranslation"
+        },
+        {
+          metadataType = "AnalyticSnapshot"
+        },
+        {
+          metadataType = "WaveDashboard"
+        },
+        {
+          metadataType = "WaveDataflow"
+        },
+        {
+          metadataType = "StandardValueSet"
+          name = "^(AddressCountryCode)|(AddressStateCode)$"
+          namespace = ""
+        },
+        {
+          metadataType = "Layout"
+          name = "CollaborationGroup-Group Layout"
+        },
+        {
+          metadataType = "Layout"
+          name = "CaseInteraction-Case Feed Layout"
+        },
+        {
+          metadataType = "EclairGeoData"
+        },
+        {
+          metadataType = "OmniUiCard|OmniDataTransform|OmniIntegrationProcedure|OmniInteractionAccessConfig|OmniInteractionConfig|OmniScript"
+        },
+        {
+          metadataType = "DiscoveryAIModel"
+        },
+        {
+          metadataType = "Translations"
+        },
+        {
+          metadataType = "ManagedEventSubscription"
+        },
+        {
+          metadataType = "DigitalExperienceBundle"
+          name = "site/coral_cloud1"
+        },
+        {
+          metadataType = "DigitalExperienceBundle"
+          name = "site/ESW_ESA_Web_Deployment_17248009206571"
+        },
+        {
+          metadataType = "DigitalExperienceBundle"
+          name = "enablement/sfdcEnablement_EnablementWorkspace"
+        },
+        {
+          metadataType = "DigitalExperienceConfig"
+          name = "ESW_ESA_Web_Deployment_17248009206571"
+        },
+        {
+          metadataType = "DigitalExperienceConfig"
+          name = "coral_cloud1"
+        },
+      ]
+    }
+    fetchAllCustomSettings = false
+    maxInstancesPerType = 5000
+  }
+  maxItemsInRetrieveRequest = 2500
+}

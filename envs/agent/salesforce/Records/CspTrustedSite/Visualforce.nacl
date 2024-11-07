@@ -1,0 +1,15 @@
+salesforce.CspTrustedSite Visualforce {
+  fullName = "Visualforce"
+  canAccessCamera = false
+  canAccessMicrophone = false
+  context = "All"
+  endpointUrl = "*.develop.vf.force.com"
+  isActive = true
+  isApplicableToConnectSrc = false
+  isApplicableToFontSrc = false
+  isApplicableToFrameSrc = false
+  isApplicableToImgSrc = true
+  isApplicableToMediaSrc = false
+  isApplicableToStyleSrc = false
+  _alias = "Visualforce"
+}

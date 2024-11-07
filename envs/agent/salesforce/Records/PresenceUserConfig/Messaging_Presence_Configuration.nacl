@@ -1,0 +1,11 @@
+salesforce.PresenceUserConfig Messaging_Presence_Configuration {
+  fullName = "Messaging_Presence_Configuration"
+  capacity = 20
+  enableAutoAccept = false
+  enableDecline = false
+  enableDeclineReason = false
+  enableDisconnectSound = true
+  enableRequestSound = true
+  label = "Messaging Presence Configuration"
+  _alias = "Messaging Presence Configuration"
+}

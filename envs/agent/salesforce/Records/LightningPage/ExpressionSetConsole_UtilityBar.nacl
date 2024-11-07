@@ -1,0 +1,30 @@
+salesforce.LightningPage ExpressionSetConsole_UtilityBar {
+  description = "The default utility bar for the Business Rules Engine application."
+  flexiPageRegions = [
+    {
+      itemInstances = [
+        {
+          componentInstance = {
+            componentName = "console:history"
+            identifier = "console_history"
+          }
+        },
+        {
+          componentInstance = {
+            componentName = "notes:utilityBarNoteList"
+            identifier = "notes_utilityBarNoteList"
+          }
+        },
+      ]
+      name = "utilityItems"
+      type = "Region"
+    },
+  ]
+  masterLabel = "Business Rules Engine App Utility Bar"
+  template = {
+    name = "one:utilityBarTemplateDesktop"
+  }
+  type = "UtilityBar"
+  fullName = "ExpressionSetConsole_UtilityBar"
+  _alias = "ExpressionSetConsole_UtilityBar"
+}

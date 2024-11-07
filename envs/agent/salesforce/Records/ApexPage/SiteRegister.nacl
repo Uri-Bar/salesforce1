@@ -1,0 +1,21 @@
+salesforce.ApexPage SiteRegister {
+  apiVersion = 61
+  availableInTouch = false
+  confirmationTokenRequired = false
+  description = "Default Salesforce Sites User Registration page"
+  label = "SiteRegister"
+  fullName = "SiteRegister"
+  content = file("salesforce/Records/ApexPage/SiteRegister.page")
+  _generated_dependencies = [
+    {
+      reference = salesforce.ApexClass.instance.SiteRegisterController
+    },
+    {
+      reference = salesforce.ApexComponent.instance.SitePoweredBy
+    },
+    {
+      reference = salesforce.StaticResource.instance.SiteSamples
+    },
+  ]
+  _alias = "SiteRegister"
+}

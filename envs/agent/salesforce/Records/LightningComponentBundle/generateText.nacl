@@ -1,0 +1,57 @@
+salesforce.LightningComponentBundle generateText {
+  apiVersion = 61
+  isExposed = true
+  masterLabel = "Generate Text"
+  targets = {
+    target = [
+      "lightning__RecordPage",
+    ]
+  }
+  targetConfigs = {
+    targetConfig = [
+      {
+        targets = "lightning__RecordPage"
+        objects = [
+          {
+            object = "Experience__c"
+          },
+        ]
+        supportedFormFactors = {
+          supportedFormFactor = [
+            {
+              type = "Large"
+            },
+            {
+              type = "Small"
+            },
+          ]
+        }
+      },
+    ]
+  }
+  fullName = "generateText"
+  lwcResources = {
+    lwcResource = {
+      generateText_js@v = {
+        source = file("salesforce/Records/LightningComponentBundle/generateText/generateText.js")
+        filePath = "lwc/generateText/generateText.js"
+      }
+      generateText_html@v = {
+        source = file("salesforce/Records/LightningComponentBundle/generateText/generateText.html")
+        filePath = "lwc/generateText/generateText.html"
+      }
+    }
+  }
+  _generated_dependencies = [
+    {
+      reference = salesforce.ApexClass.instance.LLMService
+    },
+    {
+      reference = salesforce.Experience__c
+    },
+    {
+      reference = salesforce.Experience__c.field.Description__c
+    },
+  ]
+  _alias = "generateText"
+}

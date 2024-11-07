@@ -1,0 +1,15 @@
+salesforce.CspTrustedSite MIAW {
+  fullName = "MIAW"
+  canAccessCamera = false
+  canAccessMicrophone = false
+  context = "All"
+  endpointUrl = "https://*.my.salesforce-scrt.com"
+  isActive = true
+  isApplicableToConnectSrc = true
+  isApplicableToFontSrc = true
+  isApplicableToFrameSrc = true
+  isApplicableToImgSrc = true
+  isApplicableToMediaSrc = true
+  isApplicableToStyleSrc = true
+  _alias = "MIAW"
+}

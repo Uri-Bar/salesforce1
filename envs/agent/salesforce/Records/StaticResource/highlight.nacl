@@ -1,0 +1,7 @@
+salesforce.StaticResource highlight {
+  cacheControl = "Public"
+  contentType = "application/zip"
+  fullName = "highlight"
+  content = file("salesforce/Records/StaticResource/highlight.zip")
+  _alias = "highlight"
+}

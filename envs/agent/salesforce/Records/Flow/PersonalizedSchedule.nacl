@@ -1,0 +1,111 @@
+salesforce.Flow PersonalizedSchedule {
+  fullName = "PersonalizedSchedule"
+  actionCalls = {
+    description = "Invoke the Generate Personalized Schedule Prompt"
+    name = "Invoke_Prompt"
+    label = "Invoke Prompt"
+    actionName = "Generate_Personalized_Schedule"
+    actionType = "generatePromptResponse"
+    connector = {
+      targetReference = "Display_Result"
+    }
+    flowTransactionModel = "CurrentTransaction"
+    inputParameters = [
+      {
+        name = "Input:myContact"
+        value = {
+          elementReference = "Get_Contact"
+        }
+      },
+    ]
+    nameSegment = "Generate_Personalized_Schedule"
+    storeOutputAutomatically = true
+    versionSegment = 1
+  }
+  apiVersion = 61
+  description = "This flow is used to take a contacts interests and generate a report of the available Experiences that they can enroll in today."
+  environments = "Default"
+  interviewLabel = "Personalize Schedule {!$Flow.CurrentDateTime}"
+  label = "Personalized Schedule"
+  processMetadataValues = [
+    {
+      name = "BuilderType"
+      value = {
+        stringValue = "LightningFlowBuilder"
+      }
+    },
+    {
+      name = "CanvasMode"
+      value = {
+        stringValue = "AUTO_LAYOUT_CANVAS"
+      }
+    },
+    {
+      name = "OriginBuilderType"
+      value = {
+        stringValue = "LightningFlowBuilder"
+      }
+    },
+  ]
+  processType = "Flow"
+  recordLookups = [
+    {
+      name = "Get_Contact"
+      label = "Get Contact"
+      assignNullValuesIfNoRecordsFound = false
+      connector = {
+        targetReference = "Invoke_Prompt"
+      }
+      filterLogic = "and"
+      filters = [
+        {
+          field = salesforce.Contact.field.Id
+          operator = "EqualTo"
+          value = {
+            elementReference = "recordId"
+          }
+        },
+      ]
+      getFirstRecordOnly = true
+      object = salesforce.Contact
+      storeOutputAutomatically = true
+    },
+  ]
+  screens = {
+    description = "Display the field generation result"
+    name = "Display_Result"
+    label = "Display Result"
+    allowBack = true
+    allowFinish = true
+    allowPause = true
+    fields = {
+      name = "PromptGenerationResult"
+      fieldText = "<p>{!Invoke_Prompt.promptResponse}</p>"
+      fieldType = "DisplayText"
+    }
+    showFooter = true
+    showHeader = true
+  }
+  start = {
+    connector = {
+      targetReference = "Get_Contact"
+    }
+  }
+  status = "Active"
+  variables = [
+    {
+      description = "The record Id that is passed in from the quick action."
+      name = "recordId"
+      dataType = "String"
+      isCollection = false
+      isInput = true
+      isOutput = false
+    },
+  ]
+  _generated_dependencies = [
+    {
+      reference = salesforce.GenAiPromptTemplate.instance.Generate_Personalized_Schedule
+    },
+  ]
+  _alias = "Personalized Schedule"
+}

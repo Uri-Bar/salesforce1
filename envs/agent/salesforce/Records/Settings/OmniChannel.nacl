@@ -1,0 +1,8 @@
+salesforce.OmniChannelSettings {
+  fullName = "OmniChannel"
+  enableOmniAutoLoginPrompt = false
+  enableOmniChannel = true
+  enableOmniSecondaryRoutingPriority = false
+  enableOmniSkillsRouting = false
+  _alias = "OmniChannel"
+}

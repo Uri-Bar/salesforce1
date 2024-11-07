@@ -1,0 +1,52 @@
+salesforce.LightningComponentBundle experiencesPanel {
+  apiVersion = 61
+  isExposed = true
+  masterLabel = "Experiences Panel"
+  description = "Displays a panel with experiences."
+  targets = {
+    target = [
+      "lightningCommunity__Page",
+    ]
+  }
+  fullName = "experiencesPanel"
+  lwcResources = {
+    lwcResource = {
+      experiencesPanel_css@v = {
+        source = file("salesforce/Records/LightningComponentBundle/experiencesPanel/experiencesPanel.css")
+        filePath = "lwc/experiencesPanel/experiencesPanel.css"
+      }
+      experiencesPanel_js@v = {
+        source = file("salesforce/Records/LightningComponentBundle/experiencesPanel/experiencesPanel.js")
+        filePath = "lwc/experiencesPanel/experiencesPanel.js"
+      }
+      experiencesPanel_html@v = {
+        source = file("salesforce/Records/LightningComponentBundle/experiencesPanel/experiencesPanel.html")
+        filePath = "lwc/experiencesPanel/experiencesPanel.html"
+      }
+    }
+  }
+  _generated_dependencies = [
+    {
+      reference = salesforce.ApexClass.instance.ExperienceController
+    },
+    {
+      reference = salesforce.Experience__c
+    },
+    {
+      reference = salesforce.Experience__c.field.Type__c
+    },
+    {
+      reference = salesforce.LightningComponentBundle.instance.errorPanel
+    },
+    {
+      reference = salesforce.LightningComponentBundle.instance.experiencesTile
+    },
+    {
+      reference = salesforce.LightningComponentBundle.instance.paginator
+    },
+    {
+      reference = salesforce.LightningMessageChannel.instance.ExperienceSelected
+    },
+  ]
+  _alias = "experiencesPanel"
+}

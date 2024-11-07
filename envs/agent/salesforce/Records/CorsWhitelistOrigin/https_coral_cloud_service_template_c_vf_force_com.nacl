@@ -1,0 +1,5 @@
+salesforce.CorsWhitelistOrigin https_coral_cloud_service_template_c_vf_force_com {
+  fullName = "https_coral_cloud_service_template_c_vf_force_com"
+  urlPattern = "https://coral-cloud-service-template--c.vf.force.com"
+  _alias = "https_coral_cloud_service_template_c_vf_force_com"
+}

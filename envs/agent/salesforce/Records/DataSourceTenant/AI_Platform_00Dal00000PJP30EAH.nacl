@@ -1,0 +1,6 @@
+salesforce.DataSourceTenant AI_Platform_00Dal00000PJP30EAH {
+  fullName = "AI_Platform_00Dal00000PJP30EAH"
+  externalRecordId = "tenantKey=core/prod/00Dal00000PJP30EAH,cloudName=core,dc=clouds,dc=cloudatlas"
+  masterLabel = "AI_Platform_00Dal00000PJP30EAH"
+  _alias = "AI_Platform_00Dal00000PJP30EAH"
+}

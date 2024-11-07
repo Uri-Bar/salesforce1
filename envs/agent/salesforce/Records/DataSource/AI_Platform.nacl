@@ -1,0 +1,6 @@
+salesforce.DataSource AI_Platform {
+  fullName = "AI_Platform"
+  masterLabel = "AI_Platform"
+  prefix = "AI_"
+  _alias = "AI_Platform"
+}

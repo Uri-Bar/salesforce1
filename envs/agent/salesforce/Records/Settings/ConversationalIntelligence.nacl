@@ -1,0 +1,5 @@
+salesforce.ConversationalIntelligenceSettings {
+  fullName = "ConversationalIntelligence"
+  enableCallSummarization = "false"
+  _alias = "ConversationalIntelligence"
+}

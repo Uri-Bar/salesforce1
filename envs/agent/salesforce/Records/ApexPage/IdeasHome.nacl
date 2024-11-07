@@ -1,0 +1,10 @@
+salesforce.ApexPage IdeasHome {
+  apiVersion = 61
+  availableInTouch = false
+  confirmationTokenRequired = false
+  description = "Default Lightning Platform home page for ideas sites"
+  label = "IdeasHome"
+  fullName = "IdeasHome"
+  content = file("salesforce/Records/ApexPage/IdeasHome.page")
+  _alias = "IdeasHome"
+}

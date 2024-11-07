@@ -1,0 +1,8 @@
+salesforce.ServicePresenceStatus Available {
+  fullName = "Available"
+  channels = {
+    channel = "sfdc_livemessage"
+  }
+  label = "Available"
+  _alias = "Available"
+}

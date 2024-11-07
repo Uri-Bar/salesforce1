@@ -1,0 +1,121 @@
+salesforce.Bot Coral_Cloud_Agent {
+  fullName = "Coral_Cloud_Agent"
+  botMlDomain = {
+    label = "Coral Cloud Agent"
+    name = "Coral_Cloud_Agent"
+  }
+  botVersions = {
+    fullName = "v1"
+    articleAnswersGPTEnabled = false
+    botDialogs = [
+      {
+        botSteps = [
+          {
+            botMessages = {
+              message = "Hi! I'm your helpful bot."
+              messageIdentifier = "80d90081-0963-408b-a1fc-899f698b68f5"
+            }
+            stepIdentifier = "fd8bdd2f-640a-42f0-b4f6-b9f9df7629d2"
+            type = "Message"
+          },
+          {
+            stepIdentifier = "67670583-59c4-4231-bbbc-2d53ed301da4"
+            type = "Wait"
+          },
+        ]
+        developerName = "Welcome"
+        isPlaceholderDialog = false
+        label = "Welcome"
+        showInFooterMenu = false
+      },
+      {
+        botSteps = [
+          {
+            botMessages = {
+              message = "Unfortunately, a system error occurred. Let us start again."
+              messageIdentifier = "892c2989-54f6-4499-baf8-11330dd4bada"
+            }
+            stepIdentifier = "827116d7-0972-40c2-9f9f-1e5f5fa56c95"
+            type = "Message"
+          },
+          {
+            stepIdentifier = "cf91cdc4-3126-4b13-9c2d-ac7eeb98c3bd"
+            type = "Wait"
+          },
+        ]
+        developerName = "Rich_Content_Error_Handling"
+        isPlaceholderDialog = false
+        label = "Error Handler"
+        showInFooterMenu = false
+      },
+      {
+        botSteps = [
+          {
+            conversationSystemMessage = {
+              type = "Transfer"
+            }
+            stepIdentifier = "f2187407-6d97-4140-9f43-9f7460df4baf"
+            type = "SystemMessage"
+          },
+        ]
+        developerName = "Transfer_To_Agent"
+        isPlaceholderDialog = false
+        label = "Transfer To Agent"
+        showInFooterMenu = false
+      },
+    ]
+    citationsEnabled = false
+    conversationDefinitionPlanners = {
+      genAiPlannerName = "Coral_Cloud_Agent_v1"
+    }
+    conversationSystemDialogs = {
+      dialog = "Rich_Content_Error_Handling"
+      type = "ErrorHandling"
+    }
+    entryDialog = "Welcome"
+    intentDisambiguationEnabled = false
+    intentV3Enabled = false
+    knowledgeActionEnabled = false
+    knowledgeFallbackEnabled = false
+    smallTalkEnabled = false
+  }
+  contextVariables = [
+    {
+      contextVariableMappings = {
+        SObjectType = "MessagingEndUser"
+        fieldName = "MessagingEndUser.ContactId"
+        messageType = "EmbeddedMessaging"
+      }
+      dataType = "Id"
+      developerName = "ContactId"
+      label = "Contact Id"
+    },
+    {
+      contextVariableMappings = {
+        SObjectType = "MessagingSession"
+        fieldName = "MessagingSession.MessagingEndUserId"
+        messageType = "EmbeddedMessaging"
+      }
+      dataType = "Id"
+      developerName = "EndUserId"
+      label = "End User Id"
+    },
+    {
+      contextVariableMappings = {
+        SObjectType = "MessagingSession"
+        fieldName = "MessagingSession.Id"
+        messageType = "EmbeddedMessaging"
+      }
+      dataType = "Id"
+      developerName = "RoutableId"
+      label = "Routable Id"
+    },
+  ]
+  description = "This is the Coral Cloud Agent, our Einstein Service Agent, that helps guests"
+  label = "Coral Cloud Agent"
+  logPrivateConversationData = false
+  richContentEnabled = true
+  sessionTimeout = 480
+  type = "ExternalCopilot"
+  _alias = "Coral Cloud Agent"
+}
