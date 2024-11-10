@@ -1,0 +1,7 @@
+salesforce.SharingRules BigTable__c {
+  fullName = "BigTable__c"
+  _parent = [
+    salesforce.BigTable__c,
+  ]
+  _alias = "BigTable__c"
+}

@@ -1,0 +1,7 @@
+salesforce.SharingRules shock__c {
+  fullName = "shock__c"
+  _parent = [
+    salesforce.shock__c,
+  ]
+  _alias = "shock__c"
+}

@@ -1,0 +1,24 @@
+salesforce.LightningPage SalesCloudMobile_UtilityBar {
+  description = "The default utility bar for the Sales Cloud Mobile application."
+  flexiPageRegions = [
+    {
+      itemInstances = [
+        {
+          componentInstance = {
+            componentName = "runtime_sales_todo_list:unifiedToDoListAuraWrapper"
+            identifier = "runtime_sales_todo_list_unifiedToDoListAuraWrapper"
+          }
+        },
+      ]
+      name = "utilityItems"
+      type = "Region"
+    },
+  ]
+  masterLabel = "Sales Cloud Mobile App Utility Bar"
+  template = {
+    name = "one:utilityBarTemplateDesktop"
+  }
+  type = "UtilityBar"
+  fullName = "SalesCloudMobile_UtilityBar"
+  _alias = "SalesCloudMobile_UtilityBar"
+}

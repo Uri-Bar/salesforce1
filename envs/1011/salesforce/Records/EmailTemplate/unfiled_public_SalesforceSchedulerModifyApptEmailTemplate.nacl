@@ -1,0 +1,13 @@
+salesforce.EmailTemplate unfiled_public_SalesforceSchedulerModifyApptEmailTemplate@zcd {
+  available = true
+  description = "Email Template to confirm rescheduling of a service appointment."
+  encodingKey = "UTF-8"
+  name = "Rescheduled Service Appointment Confirmation Email"
+  style = "none"
+  subject = "Your service appointment is rescheduled"
+  type = "custom"
+  uiType = "Aloha"
+  fullName = "unfiled$public/SalesforceSchedulerModifyApptEmailTemplate"
+  content = file("salesforce/Records/EmailTemplate/unfiled$public/SalesforceSchedulerModifyApptEmailTemplate/SalesforceSchedulerModifyApptEmailTemplate.email")
+  _alias = "unfiled$public/SalesforceSchedulerModifyApptEmailTemplate"
+}

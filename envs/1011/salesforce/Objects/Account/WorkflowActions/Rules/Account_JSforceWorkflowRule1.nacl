@@ -1,0 +1,22 @@
+salesforce.WorkflowRule Account_JSforceWorkflowRule1@v {
+  fullName = "Account.JSforceWorkflowRule1"
+  actions = [
+    {
+      name = salesforce.WorkflowTask.instance.Account_JSforceNewTask@v
+      type = "Task"
+    },
+  ]
+  active = true
+  criteriaItems = [
+    {
+      field = salesforce.Account.field.Name
+      operation = "startsWith"
+      value = "JSforce"
+    },
+  ]
+  triggerType = "onCreateOnly"
+  _parent = [
+    salesforce.Account,
+  ]
+  _alias = "Account.JSforceWorkflowRule1"
+}

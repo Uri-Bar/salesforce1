@@ -1,0 +1,12 @@
+salesforce.EmailTemplate unfiled_public_nocontent@zcd {
+  available = false
+  encodingKey = "UTF-8"
+  name = "nocontent"
+  style = "none"
+  subject = "asd"
+  type = "text"
+  uiType = "Aloha"
+  fullName = "unfiled$public/nocontent"
+  content = file("salesforce/Records/EmailTemplate/unfiled$public/nocontent/nocontent.email")
+  _alias = "unfiled$public/nocontent"
+}

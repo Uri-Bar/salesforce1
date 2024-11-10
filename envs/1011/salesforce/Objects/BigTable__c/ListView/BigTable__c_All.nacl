@@ -1,0 +1,14 @@
+salesforce.ListView BigTable__c_All {
+  fullName = "BigTable__c.All"
+  columns = [
+    "NAME",
+    "CREATED_DATE",
+    "CREATEDBY_USER.ALIAS",
+  ]
+  filterScope = "Everything"
+  label = "All"
+  _parent = [
+    salesforce.BigTable__c,
+  ]
+  _alias = "All"
+}
