@@ -1,0 +1,21 @@
+salesforce.ApexPage SiteRegisterConfirm {
+  apiVersion = 61
+  availableInTouch = false
+  confirmationTokenRequired = false
+  description = "Default Salesforce Sites User Registration Confirmation page"
+  label = "SiteRegisterConfirm"
+  fullName = "SiteRegisterConfirm"
+  content = file("salesforce/Records/ApexPage/SiteRegisterConfirm.page")
+  _generated_dependencies = [
+    {
+      reference = salesforce.ApexComponent.instance.SitePoweredBy
+    },
+    {
+      reference = salesforce.ApexPage.instance.SiteLogin
+    },
+    {
+      reference = salesforce.StaticResource.instance.SiteSamples
+    },
+  ]
+  _alias = "SiteRegisterConfirm"
+}

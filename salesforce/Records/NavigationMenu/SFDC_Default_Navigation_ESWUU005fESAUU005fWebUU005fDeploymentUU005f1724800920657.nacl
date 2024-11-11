@@ -1,0 +1,14 @@
+salesforce.NavigationMenu SFDC_Default_Navigation_ESWUU005fESAUU005fWebUU005fDeploymentUU005f1724800920657 {
+  fullName = "SFDC_Default_Navigation_ESWUU005fESAUU005fWebUU005fDeploymentUU005f1724800920657"
+  container = "ESW_ESA_Web_Deployment_1724800920657"
+  containerType = "Network"
+  label = "Default Navigation"
+  navigationMenuItem = {
+    label = "Topics"
+    position = 1
+    publiclyAvailable = true
+    target = "ShowMoreTopics"
+    type = "NavigationalTopic"
+  }
+  _alias = "Default Navigation"
+}

@@ -1,0 +1,219 @@
+salesforce.Flow ESA_Route_to_Queue {
+  fullName = "ESA_Route_to_Queue"
+  actionCalls = {
+    name = "Route_to_Queue"
+    label = "Route to Queue"
+    locationX = 176
+    locationY = 458
+    actionName = "routeWork"
+    actionType = "routeWork"
+    flowTransactionModel = "CurrentTransaction"
+    inputParameters = [
+      {
+        name = "recordId"
+        value = {
+          elementReference = "recordId"
+        }
+      },
+      {
+        name = "serviceChannelId"
+        value = {
+          stringValue = "0N9WU0000006Grh0AE"
+        }
+      },
+      {
+        name = "serviceChannelLabel"
+        value = {
+          stringValue = "Messaging"
+        }
+      },
+      {
+        name = "serviceChannelDevName"
+        value = {
+          stringValue = "sfdc_livemessage"
+        }
+      },
+      {
+        name = "routingType"
+        value = {
+          stringValue = "QueueBased"
+        }
+      },
+      {
+        name = "routingConfigId"
+      },
+      {
+        name = "routingConfigLabel"
+      },
+      {
+        name = "queueId"
+        value = {
+          stringValue = "00GWU0000068z7x2AA"
+        }
+      },
+      {
+        name = "agentId"
+      },
+      {
+        name = "agentLabel"
+      },
+      {
+        name = "queueLabel"
+        value = {
+          stringValue = "Messaging Queue"
+        }
+      },
+      {
+        name = "skillOption"
+      },
+      {
+        name = "skillRequirementsResourceItem"
+      },
+      {
+        name = "botId"
+      },
+      {
+        name = "botLabel"
+      },
+    ]
+    nameSegment = "routeWork"
+    versionSegment = 1
+  }
+  apiVersion = 61
+  environments = "Default"
+  interviewLabel = "ESA - Route to Queue {!$Flow.CurrentDateTime}"
+  label = "ESA - Route to Queue"
+  processMetadataValues = [
+    {
+      name = "BuilderType"
+      value = {
+        stringValue = "LightningFlowBuilder"
+      }
+    },
+    {
+      name = "CanvasMode"
+      value = {
+        stringValue = "AUTO_LAYOUT_CANVAS"
+      }
+    },
+    {
+      name = "OriginBuilderType"
+      value = {
+        stringValue = "LightningFlowBuilder"
+      }
+    },
+  ]
+  processType = "RoutingFlow"
+  recordCreates = [
+    {
+      name = "Create_Case"
+      label = "Create Case"
+      locationX = 176
+      locationY = 242
+      connector = {
+        targetReference = "Update_Messaging_Session"
+      }
+      inputAssignments = [
+        {
+          field = salesforce.Case.field.ContactId
+          value = {
+            elementReference = "Get_Contact.Id"
+          }
+        },
+        {
+          field = salesforce.Case.field.Origin
+          value = {
+            stringValue = "Web"
+          }
+        },
+        {
+          field = salesforce.Case.field.Status
+          value = {
+            stringValue = "New"
+          }
+        },
+        {
+          field = salesforce.Case.field.Subject
+          value = {
+            stringValue = "Web Messaging Support"
+          }
+        },
+      ]
+      object = salesforce.Case
+      storeOutputAutomatically = true
+    },
+  ]
+  recordLookups = [
+    {
+      name = "Get_Contact"
+      label = "Get Contact"
+      locationX = 176
+      locationY = 134
+      assignNullValuesIfNoRecordsFound = false
+      connector = {
+        targetReference = "Create_Case"
+      }
+      filterLogic = "and"
+      filters = [
+        {
+          field = salesforce.Contact.field.Name
+          operator = "EqualTo"
+          value = {
+            stringValue = "Sofia Rodriguez"
+          }
+        },
+      ]
+      getFirstRecordOnly = true
+      object = salesforce.Contact
+      storeOutputAutomatically = true
+    },
+  ]
+  recordUpdates = [
+    {
+      name = "Update_Messaging_Session"
+      label = "Update Messaging Session"
+      locationX = 176
+      locationY = 350
+      connector = {
+        targetReference = "Route_to_Queue"
+      }
+      filterLogic = "and"
+      filters = [
+        {
+          field = salesforce.MessagingSession.field.Id
+          operator = "EqualTo"
+          value = {
+            elementReference = "recordId"
+          }
+        },
+      ]
+      inputAssignments = [
+        {
+          field = salesforce.MessagingSession.field.CaseId
+          value = {
+            elementReference = "Create_Case"
+          }
+        },
+      ]
+      object = salesforce.MessagingSession
+    },
+  ]
+  start = {
+    locationX = 50
+    locationY = 0
+    connector = {
+      targetReference = "Get_Contact"
+    }
+  }
+  status = "Active"
+  variables = [
+    {
+      name = "recordId"
+      dataType = "String"
+      isCollection = false
+      isInput = true
+      isOutput = false
+    },
+  ]
+  _alias = "ESA - Route to Queue"
+}

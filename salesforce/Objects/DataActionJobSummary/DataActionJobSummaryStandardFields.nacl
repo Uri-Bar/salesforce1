@@ -1,0 +1,215 @@
+type salesforce.DataActionJobSummary {
+  salesforce.Lookup DataActionDefinitionId {
+    apiName = "DataActionJobSummary.DataActionDefinitionId"
+    relationshipName = "DataActionDefinition"
+    label = "DataActionDefinition ID"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.DateTime EndExecutionTime {
+    apiName = "DataActionJobSummary.EndExecutionTime"
+    label = "Execution end time"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.LongTextArea ExecutionDetails {
+    apiName = "DataActionJobSummary.ExecutionDetails"
+    length = 10000
+    label = "Execution details of related process"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Text ExternalRequestName {
+    apiName = "DataActionJobSummary.ExternalRequestName"
+    length = 255
+    label = "Request source for this enrichment"
+    createable = false
+    updateable = false
+    unique = false
+    caseSensitive = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Number FailedRecordCount {
+    apiName = "DataActionJobSummary.FailedRecordCount"
+    label = "Total records failed"
+    precision = 9
+    createable = false
+    updateable = false
+    scale = 0
+    unique = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.LongTextArea FailedRecords {
+    apiName = "DataActionJobSummary.FailedRecords"
+    length = 32000
+    label = "Failed records details"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Picklist JobStatus {
+    apiName = "DataActionJobSummary.JobStatus"
+    restricted = true
+    label = "Data action job type"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Picklist JobType {
+    apiName = "DataActionJobSummary.JobType"
+    restricted = true
+    label = "Data action job type"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Text Name {
+    apiName = "DataActionJobSummary.Name"
+    length = 255
+    _required = true
+    label = "DataActionJobSummary_Name"
+    createable = false
+    updateable = false
+    unique = false
+    caseSensitive = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Lookup OwnerId {
+    apiName = "DataActionJobSummary.OwnerId"
+    relationshipName = "Owner"
+    label = "Owner ID"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Text ProcessName {
+    apiName = "DataActionJobSummary.ProcessName"
+    length = 255
+    label = "Enrichment API name "
+    createable = false
+    updateable = false
+    unique = false
+    caseSensitive = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Number ProcessedRecordCount {
+    apiName = "DataActionJobSummary.ProcessedRecordCount"
+    label = "Total records processed "
+    precision = 9
+    createable = false
+    updateable = false
+    scale = 0
+    unique = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.DateTime PublishDateTime {
+    apiName = "DataActionJobSummary.PublishDateTime"
+    label = "Job published time"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Number SkippedRecords {
+    apiName = "DataActionJobSummary.SkippedRecords"
+    label = "Skipped records count"
+    precision = 9
+    createable = false
+    updateable = false
+    scale = 0
+    unique = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.DateTime StartExecutionTime {
+    apiName = "DataActionJobSummary.StartExecutionTime"
+    label = "Execution start time"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Number UpdatedRecordCount {
+    apiName = "DataActionJobSummary.UpdatedRecordCount"
+    label = "Total records updated"
+    precision = 9
+    createable = false
+    updateable = false
+    scale = 0
+    unique = false
+    queryable = true
+    _hidden_value = true
+  }
+  serviceid Id {
+    apiName = "DataActionJobSummary.Id"
+    label = "DataActionJobSummary ID"
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Checkbox IsDeleted {
+    apiName = "DataActionJobSummary.IsDeleted"
+    defaultValue = false
+    label = "Deleted"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.DateTime CreatedDate {
+    apiName = "DataActionJobSummary.CreatedDate"
+    label = "Created Date"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Lookup CreatedById {
+    apiName = "DataActionJobSummary.CreatedById"
+    relationshipName = "CreatedBy"
+    label = "Created By ID"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.DateTime LastModifiedDate {
+    apiName = "DataActionJobSummary.LastModifiedDate"
+    label = "Last Modified Date"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Lookup LastModifiedById {
+    apiName = "DataActionJobSummary.LastModifiedById"
+    relationshipName = "LastModifiedBy"
+    label = "Last Modified By ID"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.DateTime SystemModstamp {
+    apiName = "DataActionJobSummary.SystemModstamp"
+    label = "System Modstamp"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+}

@@ -1,0 +1,55 @@
+salesforce.Layout CalcProcStepRelationship_Expression_Set_Step_Relationship_Layout@bssss {
+  layoutSections = [
+    {
+      customLabel = false
+      detailHeading = true
+      editHeading = true
+      label = "Information"
+      layoutColumns = [
+        {
+          layoutItems = [
+            {
+              behavior = "Readonly"
+              field = salesforce.CalcProcStepRelationship.field.Name
+            },
+            {
+              behavior = "Required"
+              field = salesforce.CalcProcStepRelationship.field.ParentCalcProcStepId
+            },
+            {
+              behavior = "Required"
+              field = salesforce.CalcProcStepRelationship.field.CalcProcStepId
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.CalcProcStepRelationship.field.RelationshipType
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.CalcProcStepRelationship.field.CalcProcVersionId
+            },
+          ]
+        },
+      ]
+      style = "OneColumn"
+    },
+    {
+      customLabel = false
+      detailHeading = false
+      editHeading = false
+      layoutColumns = [
+        {
+        },
+      ]
+      style = "CustomLinks"
+    },
+  ]
+  showEmailCheckbox = false
+  showRunAssignmentRulesCheckbox = false
+  showSubmitAndAttachButton = false
+  fullName = "CalcProcStepRelationship-Expression Set Step Relationship Layout"
+  _parent = [
+    salesforce.CalcProcStepRelationship,
+  ]
+  _alias = "CalcProcStepRelationship-Expression Set Step Relationship Layout"
+}

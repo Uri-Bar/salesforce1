@@ -1,0 +1,6 @@
+salesforce.AIReplyRecommendationsSettings {
+  fullName = "AIReplyRecommendations"
+  enableGenReplyRecommendations = "false"
+  enableServiceEinsteinGPTGrounding = "false"
+  _alias = "AIReplyRecommendations"
+}

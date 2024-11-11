@@ -1,0 +1,9 @@
+salesforce.ListView DataAction_All_DataActions {
+  fullName = "DataAction.All_DataActions"
+  filterScope = "Everything"
+  label = "All Data Actions"
+  _parent = [
+    salesforce.DataAction,
+  ]
+  _alias = "All Data Actions"
+}

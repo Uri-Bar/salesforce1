@@ -1,0 +1,9 @@
+salesforce.ListView IdentityResolution_All_IdentityResolutions {
+  fullName = "IdentityResolution.All_IdentityResolutions"
+  filterScope = "Everything"
+  label = "All Identity Resolutions"
+  _parent = [
+    salesforce.IdentityResolution,
+  ]
+  _alias = "All Identity Resolutions"
+}

@@ -1,0 +1,9 @@
+salesforce.CustomTab Guest_Review__c {
+  fullName = "Guest_Review__c"
+  customObject = true
+  motif = "Custom83: Pencil"
+  _parent = [
+    salesforce.Guest_Review__c,
+  ]
+  _alias = "Guest_Review__c"
+}

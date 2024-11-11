@@ -1,0 +1,23 @@
+salesforce.WebLink Contact_YahooMaps {
+  fullName = "Contact.YahooMaps"
+  availability = "online"
+  displayType = "link"
+  encodingKey = "UTF-8"
+  hasMenubar = true
+  hasScrollbars = true
+  hasToolbar = true
+  height = 600
+  isResizable = true
+  linkType = "url"
+  masterLabel = "Yahoo! Maps"
+  openType = "newWindow"
+  position = "none"
+  protected = false
+  showsLocation = true
+  showsStatus = true
+  url = "http://maps.yahoo.com/py/maps.py?cn={!Contact.MailingCountry}&csz={!Contact.MailingCity}+{!Contact.MailingState}+{!Contact.MailingPostalCode}+&addr={!Contact.MailingStreet}"
+  _parent = [
+    salesforce.Contact,
+  ]
+  _alias = "Contact.YahooMaps"
+}

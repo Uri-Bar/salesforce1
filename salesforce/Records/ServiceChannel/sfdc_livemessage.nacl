@@ -1,0 +1,10 @@
+salesforce.ServiceChannel sfdc_livemessage {
+  fullName = "sfdc_livemessage"
+  doesMinimizeWidgetOnAccept = false
+  hasAfterConvoWorkTimer = false
+  hasAutoAcceptEnabled = false
+  isInterruptible = false
+  label = "Messaging"
+  relatedEntityType = salesforce.MessagingSession
+  _alias = "Messaging"
+}

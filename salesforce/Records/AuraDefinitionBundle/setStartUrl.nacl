@@ -1,0 +1,8 @@
+salesforce.AuraDefinitionBundle setStartUrl {
+  apiVersion = 61
+  description = "Sample Event for setStartUrl"
+  fullName = "setStartUrl"
+  type = "Event"
+  markup = file("salesforce/Records/AuraDefinitionBundle/setStartUrl/setStartUrl.evt")
+  _alias = "setStartUrl"
+}

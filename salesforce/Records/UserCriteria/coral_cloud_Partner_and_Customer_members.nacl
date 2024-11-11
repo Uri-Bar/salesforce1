@@ -1,0 +1,10 @@
+salesforce.UserCriteria coral_cloud_Partner_and_Customer_members@bvuuu {
+  fullName = "coral-cloud.Partner_and_Customer_members"
+  description = "Member criteria matches customer and partner member"
+  masterLabel = "Customer and Partner Members"
+  userTypes = [
+    "Partner",
+    "Customer",
+  ]
+  _alias = "coral-cloud.Partner_and_Customer_members"
+}

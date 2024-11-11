@@ -1,0 +1,18 @@
+salesforce.ApexPage InMaintenance {
+  apiVersion = 61
+  availableInTouch = false
+  confirmationTokenRequired = false
+  description = "Default Lightning Platform In Maintenance page"
+  label = "InMaintenance"
+  fullName = "InMaintenance"
+  content = file("salesforce/Records/ApexPage/InMaintenance.page")
+  _generated_dependencies = [
+    {
+      reference = salesforce.ApexPage.instance.StdExceptionTemplate
+    },
+    {
+      reference = salesforce.StaticResource.instance.SiteSamples
+    },
+  ]
+  _alias = "InMaintenance"
+}

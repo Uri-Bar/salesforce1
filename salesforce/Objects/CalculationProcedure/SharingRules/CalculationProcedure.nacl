@@ -1,0 +1,7 @@
+salesforce.SharingRules CalculationProcedure {
+  fullName = "CalculationProcedure"
+  _parent = [
+    salesforce.CalculationProcedure,
+  ]
+  _alias = "CalculationProcedure"
+}

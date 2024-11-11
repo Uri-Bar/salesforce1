@@ -1,0 +1,7 @@
+salesforce.StaticResource coralcloudexperiences {
+  cacheControl = "Public"
+  contentType = "application/zip"
+  fullName = "coralcloudexperiences"
+  content = file("salesforce/Records/StaticResource/coralcloudexperiences.zip")
+  _alias = "coralcloudexperiences"
+}

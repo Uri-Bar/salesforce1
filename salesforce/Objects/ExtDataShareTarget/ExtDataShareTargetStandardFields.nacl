@@ -1,0 +1,118 @@
+type salesforce.ExtDataShareTarget {
+  salesforce.Picklist DataShareTargetStatus {
+    apiName = "ExtDataShareTarget.DataShareTargetStatus"
+    restricted = true
+    _required = true
+    label = "Data Share Target Status"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Text Name {
+    apiName = "ExtDataShareTarget.Name"
+    length = 255
+    _required = true
+    label = "Data Share Target Name"
+    createable = false
+    updateable = false
+    unique = false
+    caseSensitive = false
+    queryable = true
+    _hidden_value = true
+  }
+  serviceid Id {
+    apiName = "ExtDataShareTarget.Id"
+    label = "Data Share Target ID"
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Lookup OwnerId {
+    apiName = "ExtDataShareTarget.OwnerId"
+    relationshipName = "Owner"
+    label = "Owner ID"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Checkbox IsDeleted {
+    apiName = "ExtDataShareTarget.IsDeleted"
+    defaultValue = false
+    label = "Deleted"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.DateTime CreatedDate {
+    apiName = "ExtDataShareTarget.CreatedDate"
+    label = "Created Date"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Lookup CreatedById {
+    apiName = "ExtDataShareTarget.CreatedById"
+    relationshipName = "CreatedBy"
+    label = "Created By ID"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.DateTime LastModifiedDate {
+    apiName = "ExtDataShareTarget.LastModifiedDate"
+    label = "Last Modified Date"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Lookup LastModifiedById {
+    apiName = "ExtDataShareTarget.LastModifiedById"
+    relationshipName = "LastModifiedBy"
+    label = "Last Modified By ID"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.DateTime SystemModstamp {
+    apiName = "ExtDataShareTarget.SystemModstamp"
+    label = "System Modstamp"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.DateTime LastDataChangeStatusDateTime {
+    apiName = "ExtDataShareTarget.LastDataChangeStatusDateTime"
+    label = "Last Data Change Status At"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Text LastDataChangeStatusErrorCode {
+    apiName = "ExtDataShareTarget.LastDataChangeStatusErrorCode"
+    length = 255
+    label = "Last Data Change Status Error Code"
+    createable = false
+    updateable = false
+    unique = false
+    caseSensitive = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Picklist ConnectionType {
+    apiName = "ExtDataShareTarget.ConnectionType"
+    restricted = true
+    label = "Connection Type"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+}

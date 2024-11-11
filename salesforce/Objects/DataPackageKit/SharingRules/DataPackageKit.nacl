@@ -1,0 +1,7 @@
+salesforce.SharingRules DataPackageKit {
+  fullName = "DataPackageKit"
+  _parent = [
+    salesforce.DataPackageKit,
+  ]
+  _alias = "DataPackageKit"
+}

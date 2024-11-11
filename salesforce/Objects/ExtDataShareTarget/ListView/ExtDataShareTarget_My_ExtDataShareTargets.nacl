@@ -1,0 +1,9 @@
+salesforce.ListView ExtDataShareTarget_My_ExtDataShareTargets {
+  fullName = "ExtDataShareTarget.My_ExtDataShareTargets"
+  filterScope = "Mine"
+  label = "My Data Share Targets"
+  _parent = [
+    salesforce.ExtDataShareTarget,
+  ]
+  _alias = "My Data Share Targets"
+}

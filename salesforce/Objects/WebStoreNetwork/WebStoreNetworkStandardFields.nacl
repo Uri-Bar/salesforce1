@@ -1,0 +1,94 @@
+type salesforce.WebStoreNetwork {
+  serviceid Id {
+    apiName = "WebStoreNetwork.Id"
+    label = "Store Site ID"
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Checkbox IsDeleted {
+    apiName = "WebStoreNetwork.IsDeleted"
+    defaultValue = false
+    label = "Deleted"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.AutoNumber Name {
+    apiName = "WebStoreNetwork.Name"
+    label = "Store Site Name"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.DateTime CreatedDate {
+    apiName = "WebStoreNetwork.CreatedDate"
+    label = "Created Date"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Lookup CreatedById {
+    apiName = "WebStoreNetwork.CreatedById"
+    relationshipName = "CreatedBy"
+    label = "Created By ID"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.DateTime LastModifiedDate {
+    apiName = "WebStoreNetwork.LastModifiedDate"
+    label = "Last Modified Date"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Lookup LastModifiedById {
+    apiName = "WebStoreNetwork.LastModifiedById"
+    relationshipName = "LastModifiedBy"
+    label = "Last Modified By ID"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.DateTime SystemModstamp {
+    apiName = "WebStoreNetwork.SystemModstamp"
+    label = "System Modstamp"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Lookup WebStoreId {
+    apiName = "WebStoreNetwork.WebStoreId"
+    relationshipName = "WebStore"
+    _required = true
+    label = "Store ID"
+    createable = true
+    updateable = false
+    queryable = true
+  }
+  salesforce.Lookup NetworkId {
+    apiName = "WebStoreNetwork.NetworkId"
+    relationshipName = "Network"
+    _required = true
+    label = "Network ID"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Lookup SiteId {
+    apiName = "WebStoreNetwork.SiteId"
+    relationshipName = "Site"
+    label = "Site ID"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+}

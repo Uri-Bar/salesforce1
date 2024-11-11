@@ -1,0 +1,73 @@
+salesforce.GenAiPromptTemplate Generate_Personalized_Schedule {
+  fullName = "Generate_Personalized_Schedule"
+  activeVersion = 1
+  developerName = "Generate_Personalized_Schedule"
+  masterLabel = "Generate Personalized Schedule"
+  templateVersions = [
+    {
+      content = '''
+Present the list of resort activities happening today that match the guest's interests.
+For clarity, use a bullet list.
+For each activity, include name, time, location and duration on a single line. Do not include the date.
+Tell the guest to reach out if they'd like to book any of these activities.
+List of activities happening today that match the guest's interests:
+{!$Apex:PersonalizedGuestExperiences.Prompt}
+
+'''
+      inputs = {
+        apiName = "myContact"
+        definition = "SOBJECT://Contact"
+        masterLabel = "Contact"
+        referenceName = "Input:myContact"
+        required = true
+      }
+      primaryModel = "sfdc_ai__DefaultOpenAIGPT35Turbo"
+      status = "Published"
+      templateDataProviders = {
+        definition = "apex://PersonalizedGuestExperiences"
+        parameters = {
+          definition = "SOBJECT://Contact"
+          isRequired = true
+          parameterName = "myContact"
+          valueExpression = "{!$Input:myContact}"
+        }
+        referenceName = "Apex:PersonalizedGuestExperiences"
+      }
+      versionNumber = 1
+    },
+    {
+      content = '''
+Present the list of resort activities happening today that match the guest's interests.
+For clarity, use a bullet list.
+For each activity, include name, time, location and duration on a single line. Do not include the date.
+Tell the guest to reach out if they'd like to book any of these activities.
+List of activities happening today that match the guest's interests:
+{!$Apex:PersonalizedGuestExperiences.Prompt}
+
+'''
+      inputs = {
+        apiName = "myContact"
+        definition = "SOBJECT://Contact"
+        masterLabel = "Contact"
+        referenceName = "Input:myContact"
+        required = true
+      }
+      primaryModel = "sfdc_ai__DefaultOpenAIGPT35Turbo"
+      status = "Draft"
+      templateDataProviders = {
+        definition = "apex://PersonalizedGuestExperiences"
+        parameters = {
+          definition = "SOBJECT://Contact"
+          isRequired = true
+          parameterName = "myContact"
+          valueExpression = "{!$Input:myContact}"
+        }
+        referenceName = "Apex:PersonalizedGuestExperiences"
+      }
+      versionNumber = 2
+    },
+  ]
+  type = "einstein_gpt__flex"
+  visibility = "Global"
+  _alias = "Generate_Personalized_Schedule"
+}

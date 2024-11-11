@@ -1,0 +1,12 @@
+salesforce.NamedCredential Weather_Endpoint {
+  fullName = "Weather_Endpoint"
+  allowMergeFieldsInBody = false
+  allowMergeFieldsInHeader = false
+  calloutStatus = "Enabled"
+  endpoint = "https://api.brightsky.dev"
+  generateAuthorizationHeader = true
+  label = "Weather Endpoint"
+  principalType = "Anonymous"
+  protocol = "NoAuthentication"
+  _alias = "Weather Endpoint"
+}

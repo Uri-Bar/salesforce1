@@ -1,0 +1,127 @@
+salesforce.Layout CalculationProcedureStep_Calculation_Procedure_Step_Layout@bsss {
+  layoutSections = [
+    {
+      customLabel = false
+      detailHeading = true
+      editHeading = true
+      label = "Information"
+      layoutColumns = [
+        {
+          layoutItems = [
+            {
+              behavior = "Required"
+              field = salesforce.CalculationProcedureStep.field.Name
+            },
+            {
+              behavior = "Required"
+              field = salesforce.CalculationProcedureStep.field.CalculationProcedureVersionId
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.CalculationProcedureStep.field.FormulaConvertedText
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.CalculationProcedureStep.field.FormulaExpressionText
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.CalculationProcedureStep.field.FormulaUiFormattedText
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.CalculationProcedureStep.field.CalculationMatrixId
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.CalculationProcedureStep.field.CalculationProcedure
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.CalculationProcedureStep.field.IsConditionalStep
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.CalculationProcedureStep.field.ConditionsConvertedText
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.CalculationProcedureStep.field.ConditionsExpressionText
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.CalculationProcedureStep.field.ConditionsUiFormattedText
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.CalculationProcedureStep.field.StepType
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.CalculationProcedureStep.field.InputVariablesFormatText
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.CalculationProcedureStep.field.IsResultIncluded
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.CalculationProcedureStep.field.CalculationMatrixType
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.CalculationProcedureStep.field.OutputVariablesFormatText
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.CalculationProcedureStep.field.OutputVariablesMappingText
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.CalculationProcedureStep.field.StageStepSequence
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.CalculationProcedureStep.field.Stage
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.CalculationProcedureStep.field.ReferenceProcedureId
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.CalculationProcedureStep.field.Description
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.CalculationProcedureStep.field.ReturnMessageValueSet
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.CalculationProcedureStep.field.DecisionTableId
+            },
+          ]
+        },
+      ]
+      style = "OneColumn"
+    },
+    {
+      customLabel = false
+      detailHeading = false
+      editHeading = false
+      layoutColumns = [
+        {
+        },
+      ]
+      style = "CustomLinks"
+    },
+  ]
+  showEmailCheckbox = false
+  showRunAssignmentRulesCheckbox = false
+  showSubmitAndAttachButton = false
+  fullName = "CalculationProcedureStep-Calculation Procedure Step Layout"
+  _parent = [
+    salesforce.CalculationProcedureStep,
+  ]
+  _alias = "CalculationProcedureStep-Calculation Procedure Step Layout"
+}

@@ -1,0 +1,186 @@
+type salesforce.MktDataTransform {
+  salesforce.Lookup DataTransformDefinitionId {
+    apiName = "MktDataTransform.DataTransformDefinitionId"
+    _hidden_value = true
+  }
+  salesforce.Picklist DataTransformStatus {
+    apiName = "MktDataTransform.DataTransformStatus"
+    restricted = true
+    _required = true
+    label = "Data Transform Status"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Picklist LastRunStatus {
+    apiName = "MktDataTransform.LastRunStatus"
+    restricted = true
+    _required = true
+    label = "Last Run Status"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.DateTime LastRunTime {
+    apiName = "MktDataTransform.LastRunTime"
+    label = "Last Run Time"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Lookup MktDataTransformSetupId {
+    apiName = "MktDataTransform.MktDataTransformSetupId"
+    _hidden_value = true
+  }
+  salesforce.Text Name {
+    apiName = "MktDataTransform.Name"
+    length = 255
+    _required = true
+    label = "Data Transform Name"
+    createable = false
+    updateable = false
+    unique = false
+    caseSensitive = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Picklist Type {
+    apiName = "MktDataTransform.Type"
+    restricted = true
+    _required = true
+    label = "Type"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  serviceid Id {
+    apiName = "MktDataTransform.Id"
+    label = "Data Transform ID"
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Lookup OwnerId {
+    apiName = "MktDataTransform.OwnerId"
+    relationshipName = "Owner"
+    label = "Owner ID"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Checkbox IsDeleted {
+    apiName = "MktDataTransform.IsDeleted"
+    defaultValue = false
+    label = "Deleted"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.DateTime CreatedDate {
+    apiName = "MktDataTransform.CreatedDate"
+    label = "Created Date"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Lookup CreatedById {
+    apiName = "MktDataTransform.CreatedById"
+    relationshipName = "CreatedBy"
+    label = "Created By ID"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.DateTime LastModifiedDate {
+    apiName = "MktDataTransform.LastModifiedDate"
+    label = "Last Modified Date"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Lookup LastModifiedById {
+    apiName = "MktDataTransform.LastModifiedById"
+    relationshipName = "LastModifiedBy"
+    label = "Last Modified By ID"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.DateTime SystemModstamp {
+    apiName = "MktDataTransform.SystemModstamp"
+    label = "System Modstamp"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.DateTime LastDataChangeStatusDateTime {
+    apiName = "MktDataTransform.LastDataChangeStatusDateTime"
+    label = "Last Data Change Status At"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Text LastDataChangeStatusErrorCode {
+    apiName = "MktDataTransform.LastDataChangeStatusErrorCode"
+    length = 255
+    label = "Last Data Change Status Error Code"
+    createable = false
+    updateable = false
+    unique = false
+    caseSensitive = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Picklist CreationType {
+    apiName = "MktDataTransform.CreationType"
+    restricted = true
+    _required = true
+    label = "Creation Type"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Text TargetObject {
+    apiName = "MktDataTransform.TargetObject"
+    length = 40
+    label = "Target Object"
+    createable = false
+    updateable = false
+    unique = false
+    caseSensitive = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.LongTextArea DataTransformStatusDetails {
+    apiName = "MktDataTransform.DataTransformStatusDetails"
+    length = 128000
+    label = "Data Transform Status Details"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Text CurrencyCode {
+    apiName = "MktDataTransform.CurrencyCode"
+    length = 40
+    label = "Currency ISO Code"
+    createable = false
+    updateable = false
+    unique = false
+    caseSensitive = false
+    queryable = true
+    _hidden_value = true
+  }
+}

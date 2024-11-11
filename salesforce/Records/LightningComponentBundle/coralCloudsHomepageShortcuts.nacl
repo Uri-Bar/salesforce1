@@ -1,0 +1,43 @@
+salesforce.LightningComponentBundle coralCloudsHomepageShortcuts {
+  apiVersion = 61
+  isExposed = true
+  masterLabel = "Home Page Shortcuts"
+  description = "This is an LWC Created to use across the Coral Clouds App"
+  targets = {
+    target = [
+      "lightning__HomePage",
+    ]
+  }
+  fullName = "coralCloudsHomepageShortcuts"
+  lwcResources = {
+    lwcResource = {
+      coralCloudsHomepageShortcuts_html@v = {
+        source = file("salesforce/Records/LightningComponentBundle/coralCloudsHomepageShortcuts/coralCloudsHomepageShortcuts.html")
+        filePath = "lwc/coralCloudsHomepageShortcuts/coralCloudsHomepageShortcuts.html"
+      }
+      coralCloudsHomepageShortcuts_css@v = {
+        source = file("salesforce/Records/LightningComponentBundle/coralCloudsHomepageShortcuts/coralCloudsHomepageShortcuts.css")
+        filePath = "lwc/coralCloudsHomepageShortcuts/coralCloudsHomepageShortcuts.css"
+      }
+      coralCloudsHomepageShortcuts_js@v = {
+        source = file("salesforce/Records/LightningComponentBundle/coralCloudsHomepageShortcuts/coralCloudsHomepageShortcuts.js")
+        filePath = "lwc/coralCloudsHomepageShortcuts/coralCloudsHomepageShortcuts.js"
+      }
+    }
+  }
+  _generated_dependencies = [
+    {
+      reference = salesforce.LightningComponentBundle.instance.coralCloudsHomepageNavigation
+    },
+    {
+      reference = salesforce.LightningComponentBundle.instance.coralCloudsHomepagePrompt
+    },
+    {
+      reference = salesforce.LightningComponentBundle.instance.coralCloudsHomepageShortcut
+    },
+    {
+      reference = salesforce.StaticResource.instance.workshopDetails
+    },
+  ]
+  _alias = "coralCloudsHomepageShortcuts"
+}

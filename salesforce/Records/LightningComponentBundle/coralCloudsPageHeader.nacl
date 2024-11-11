@@ -1,0 +1,52 @@
+salesforce.LightningComponentBundle coralCloudsPageHeader {
+  apiVersion = 61
+  isExposed = true
+  masterLabel = "Home Page Header"
+  description = "This is an LWC Created to use across the Coral Clouds App"
+  targets = {
+    target = [
+      "lightning__HomePage",
+    ]
+  }
+  targetConfigs = {
+    targetConfig = [
+      {
+        targets = "lightning__HomePage"
+        property = [
+          {
+            label = "Title"
+            name = "title"
+            type = "String"
+            required = true
+          },
+          {
+            label = "Subtitle"
+            name = "subtitle"
+            type = "String"
+            required = true
+          },
+          {
+            label = "Icon Name"
+            name = "iconName"
+            type = "String"
+            required = true
+          },
+        ]
+      },
+    ]
+  }
+  fullName = "coralCloudsPageHeader"
+  lwcResources = {
+    lwcResource = {
+      coralCloudsPageHeader_js@v = {
+        source = file("salesforce/Records/LightningComponentBundle/coralCloudsPageHeader/coralCloudsPageHeader.js")
+        filePath = "lwc/coralCloudsPageHeader/coralCloudsPageHeader.js"
+      }
+      coralCloudsPageHeader_html@v = {
+        source = file("salesforce/Records/LightningComponentBundle/coralCloudsPageHeader/coralCloudsPageHeader.html")
+        filePath = "lwc/coralCloudsPageHeader/coralCloudsPageHeader.html"
+      }
+    }
+  }
+  _alias = "coralCloudsPageHeader"
+}

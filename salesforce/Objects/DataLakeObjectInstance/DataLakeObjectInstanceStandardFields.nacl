@@ -1,0 +1,209 @@
+type salesforce.DataLakeObjectInstance {
+  salesforce.Picklist Billable {
+    apiName = "DataLakeObjectInstance.Billable"
+    restricted = true
+    label = "Billable"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Text Description {
+    apiName = "DataLakeObjectInstance.Description"
+    length = 255
+    label = "Description"
+    createable = false
+    updateable = false
+    unique = false
+    caseSensitive = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.DateTime LastRefreshDate {
+    apiName = "DataLakeObjectInstance.LastRefreshDate"
+    label = "Last Updated On"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Lookup MktDataLakeObjectId {
+    apiName = "DataLakeObjectInstance.MktDataLakeObjectId"
+    _hidden_value = true
+  }
+  salesforce.Text Name {
+    apiName = "DataLakeObjectInstance.Name"
+    length = 255
+    _required = true
+    label = "Name"
+    createable = false
+    updateable = false
+    unique = false
+    caseSensitive = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Unknown TotalRecords {
+    apiName = "DataLakeObjectInstance.TotalRecords"
+    label = "Total Records"
+    queryable = true
+    _hidden_value = true
+  }
+  serviceid Id {
+    apiName = "DataLakeObjectInstance.Id"
+    label = "Data Lake Object Instance ID"
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Checkbox IsDeleted {
+    apiName = "DataLakeObjectInstance.IsDeleted"
+    defaultValue = false
+    label = "Deleted"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.DateTime CreatedDate {
+    apiName = "DataLakeObjectInstance.CreatedDate"
+    label = "Created Date"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Lookup CreatedById {
+    apiName = "DataLakeObjectInstance.CreatedById"
+    relationshipName = "CreatedBy"
+    label = "Created By ID"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.DateTime LastModifiedDate {
+    apiName = "DataLakeObjectInstance.LastModifiedDate"
+    label = "Last Modified Date"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Lookup LastModifiedById {
+    apiName = "DataLakeObjectInstance.LastModifiedById"
+    relationshipName = "LastModifiedBy"
+    label = "Last Modified By ID"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.DateTime SystemModstamp {
+    apiName = "DataLakeObjectInstance.SystemModstamp"
+    label = "System Modstamp"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Picklist DataLakeObjectStatus {
+    apiName = "DataLakeObjectInstance.DataLakeObjectStatus"
+    restricted = true
+    label = "Data Lake Object Status"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Text LastDataChangeStatusErrorCode {
+    apiName = "DataLakeObjectInstance.LastDataChangeStatusErrorCode"
+    length = 255
+    label = "Last Data Change Status Error Code"
+    createable = false
+    updateable = false
+    unique = false
+    caseSensitive = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Text Category {
+    apiName = "DataLakeObjectInstance.Category"
+    length = 255
+    label = "Category"
+    createable = false
+    updateable = false
+    unique = false
+    caseSensitive = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Text ExternalName {
+    apiName = "DataLakeObjectInstance.ExternalName"
+    length = 255
+    label = "External Name"
+    createable = false
+    updateable = false
+    unique = false
+    caseSensitive = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Picklist Storage {
+    apiName = "DataLakeObjectInstance.Storage"
+    restricted = true
+    label = "Storage"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Picklist AccelerationEnabled {
+    apiName = "DataLakeObjectInstance.AccelerationEnabled"
+    restricted = true
+    label = "Accelerated"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Picklist AccelerationSchedule {
+    apiName = "DataLakeObjectInstance.AccelerationSchedule"
+    restricted = true
+    label = "Acceleration Schedule"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Picklist ExternalObjectErrorStatus {
+    apiName = "DataLakeObjectInstance.ExternalObjectErrorStatus"
+    restricted = true
+    label = "External Object Error Status"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Text ExternalObjectErrorCode {
+    apiName = "DataLakeObjectInstance.ExternalObjectErrorCode"
+    length = 255
+    label = "External Object Error Code"
+    createable = false
+    updateable = false
+    unique = false
+    caseSensitive = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Text ProblemRecordsDataLakeObject {
+    apiName = "DataLakeObjectInstance.ProblemRecordsDataLakeObject"
+    length = 40
+    label = "Problem Records Data Lake Object Name"
+    createable = false
+    updateable = false
+    unique = false
+    caseSensitive = false
+    queryable = true
+    _hidden_value = true
+  }
+}

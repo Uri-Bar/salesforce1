@@ -1,0 +1,225 @@
+type salesforce.DataGraph {
+  serviceid Id {
+    apiName = "DataGraph.Id"
+    label = "Data Graph ID"
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Checkbox IsDeleted {
+    apiName = "DataGraph.IsDeleted"
+    defaultValue = false
+    label = "Deleted"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Text Name {
+    apiName = "DataGraph.Name"
+    length = 255
+    _required = true
+    label = "Data Graph Label"
+    createable = false
+    updateable = false
+    unique = false
+    caseSensitive = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.DateTime CreatedDate {
+    apiName = "DataGraph.CreatedDate"
+    label = "Created Date"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Lookup CreatedById {
+    apiName = "DataGraph.CreatedById"
+    relationshipName = "CreatedBy"
+    label = "Created By ID"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.DateTime LastModifiedDate {
+    apiName = "DataGraph.LastModifiedDate"
+    label = "Last Modified Date"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Lookup LastModifiedById {
+    apiName = "DataGraph.LastModifiedById"
+    relationshipName = "LastModifiedBy"
+    label = "Last Modified By ID"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.DateTime SystemModstamp {
+    apiName = "DataGraph.SystemModstamp"
+    label = "System Modstamp"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Picklist Status {
+    apiName = "DataGraph.Status"
+    restricted = true
+    _required = true
+    label = "Status"
+    inlineHelpText = "Current Status of Data Graph"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Picklist LastRunStatus {
+    apiName = "DataGraph.LastRunStatus"
+    restricted = true
+    _required = true
+    label = "Status"
+    inlineHelpText = "Data Transform status for Data Graph"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Unknown RecordCount {
+    apiName = "DataGraph.RecordCount"
+    label = "Record Count"
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.DateTime LastRefreshDate {
+    apiName = "DataGraph.LastRefreshDate"
+    label = "Last Refreshed On"
+    inlineHelpText = "Last refresh date for Data Graph"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Picklist DataGraphType {
+    apiName = "DataGraph.DataGraphType"
+    restricted = true
+    _required = true
+    label = "Type"
+    inlineHelpText = "Type"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Number DataSourceObjCount {
+    apiName = "DataGraph.DataSourceObjCount"
+    label = "Source Object Count"
+    precision = 9
+    createable = false
+    updateable = false
+    scale = 0
+    unique = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Number DaoFieldsCount {
+    apiName = "DataGraph.DaoFieldsCount"
+    label = "Fields Count"
+    precision = 9
+    createable = false
+    updateable = false
+    scale = 0
+    unique = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Number Levels {
+    apiName = "DataGraph.Levels"
+    label = "Levels"
+    precision = 9
+    createable = false
+    updateable = false
+    scale = 0
+    unique = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Text RolloutVersion {
+    apiName = "DataGraph.RolloutVersion"
+    length = 100
+    label = "Rollout Version"
+    createable = false
+    updateable = false
+    unique = false
+    caseSensitive = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Text Version {
+    apiName = "DataGraph.Version"
+    length = 100
+    label = "Version"
+    createable = false
+    updateable = false
+    unique = false
+    caseSensitive = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Text DataGraphApiName {
+    apiName = "DataGraph.DataGraphApiName"
+    length = 255
+    label = "Data Graph Api Name"
+    createable = false
+    updateable = false
+    unique = false
+    caseSensitive = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Text PrimaryDmo {
+    apiName = "DataGraph.PrimaryDmo"
+    length = 255
+    label = "Primary DMO"
+    createable = false
+    updateable = false
+    unique = false
+    caseSensitive = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.LongTextArea FullRefreshConfig {
+    apiName = "DataGraph.FullRefreshConfig"
+    length = 131072
+    label = "FullRefreshConfig"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.LongTextArea IncrementalRefreshConfig {
+    apiName = "DataGraph.IncrementalRefreshConfig"
+    length = 131072
+    label = "IncrementalRefreshConfig"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Text Schedule {
+    apiName = "DataGraph.Schedule"
+    length = 255
+    label = "Schedule"
+    createable = false
+    updateable = false
+    unique = false
+    caseSensitive = false
+    queryable = true
+    _hidden_value = true
+  }
+}

@@ -1,0 +1,9 @@
+salesforce.CustomTab Experience__c {
+  fullName = "Experience__c"
+  customObject = true
+  motif = "Custom72: Helicopter"
+  _parent = [
+    salesforce.Experience__c,
+  ]
+  _alias = "Experience__c"
+}

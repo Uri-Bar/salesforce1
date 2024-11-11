@@ -1,0 +1,68 @@
+salesforce.Layout ExpressionSet_Expression_Set_Layout@bss {
+  layoutSections = [
+    {
+      customLabel = false
+      detailHeading = true
+      editHeading = true
+      label = "Information"
+      layoutColumns = [
+        {
+          layoutItems = [
+            {
+              behavior = "Required"
+              field = salesforce.ExpressionSet.field.Name
+            },
+            {
+              behavior = "Required"
+              field = salesforce.ExpressionSet.field.UsageType
+            },
+          ]
+        },
+        {
+          layoutItems = [
+            {
+              behavior = "Edit"
+              field = salesforce.ExpressionSet.field.OwnerId
+            },
+            {
+              behavior = "Readonly"
+              field = salesforce.ExpressionSet.field.CreatedById
+            },
+          ]
+        },
+      ]
+      style = "TwoColumnsLeftToRight"
+    },
+    {
+      customLabel = false
+      detailHeading = false
+      editHeading = false
+      layoutColumns = [
+        {
+        },
+      ]
+      style = "CustomLinks"
+    },
+  ]
+  relatedLists = [
+    {
+      fields = [
+        "Name",
+        "IsActive",
+        "Rank",
+        "StartDateTime",
+        "EndDateTime",
+        "VersionNumber",
+      ]
+      relatedList = "ExpressionSetVersions"
+    },
+  ]
+  showEmailCheckbox = false
+  showRunAssignmentRulesCheckbox = false
+  showSubmitAndAttachButton = false
+  fullName = "ExpressionSet-Expression Set Layout"
+  _parent = [
+    salesforce.ExpressionSet,
+  ]
+  _alias = "ExpressionSet-Expression Set Layout"
+}

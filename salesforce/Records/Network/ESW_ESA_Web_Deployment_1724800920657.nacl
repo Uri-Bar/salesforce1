@@ -1,0 +1,62 @@
+salesforce.Network ESW_ESA_Web_Deployment_1724800920657 {
+  fullName = "ESW_ESA_Web_Deployment_1724800920657"
+  allowInternalUserLogin = false
+  allowMembersToFlag = false
+  changePasswordTemplate = "unfiled$public/CommunityChangePasswordEmailTemplate"
+  communityRoles = {
+  }
+  description = "Site for Messaging for Web deployment: ESA_Web_Deployment."
+  disableReputationRecordConversations = true
+  emailSenderAddress = "stephan.garcia@salesforce.com"
+  emailSenderName = "ESW_ESA_Web_Deployment_1724800920657"
+  embeddedLoginEnabled = false
+  enableApexCDNCaching = true
+  enableCustomVFErrorPageOverrides = false
+  enableDirectMessages = true
+  enableExpFriendlyUrlsAsDefault = false
+  enableExperienceBundleBasedSnaOverrideEnabled = true
+  enableGuestChatter = false
+  enableGuestFileAccess = false
+  enableGuestMemberVisibility = false
+  enableImageOptimizationCDN = false
+  enableInvitation = false
+  enableKnowledgeable = false
+  enableLWRExperienceConnectedApp = false
+  enableMemberVisibility = false
+  enableNicknameDisplay = true
+  enablePrivateMessages = false
+  enableReputation = false
+  enableShowAllNetworkSettings = false
+  enableSiteAsContainer = true
+  enableTalkingAboutStats = true
+  enableTopicAssignmentRules = true
+  enableTopicSuggestions = false
+  enableUpDownVote = false
+  forgotPasswordTemplate = "unfiled$public/CommunityForgotPasswordEmailTemplate"
+  gatherCustomerSentimentData = false
+  headlessForgotPasswordTemplate = salesforce.EmailTemplate.instance.unfiled_public_CommunityHeadlessForgotPasswordTemplate@zcd
+  headlessRegistrationTemplate = salesforce.EmailTemplate.instance.unfiled_public_CommunityHeadlessRegistrationTemplate@zcd
+  networkMemberGroups = {
+    profile = "admin"
+  }
+  networkPageOverrides = {
+    changePasswordPageOverrideSetting = "Standard"
+    forgotPasswordPageOverrideSetting = "Designer"
+    homePageOverrideSetting = "Designer"
+    loginPageOverrideSetting = "Designer"
+    selfRegProfilePageOverrideSetting = "Designer"
+  }
+  picassoSite = "ESW_ESA_Web_Deployment_17248009206571"
+  selfRegistration = false
+  sendWelcomeEmail = false
+  site = salesforce.CustomSite.instance.ESW_ESA_Web_Deployment_1724800920657
+  siteArchiveStatus = "NotArchived"
+  status = "Live"
+  tabs = {
+    defaultTab = "home"
+    standardTab = "Chatter"
+  }
+  urlPathPrefix = "ESWESAWebDeployment1724800920657vforcesi"
+  welcomeTemplate = "unfiled$public/CommunityWelcomeEmailTemplate"
+  _alias = "ESW_ESA_Web_Deployment_1724800920657"
+}

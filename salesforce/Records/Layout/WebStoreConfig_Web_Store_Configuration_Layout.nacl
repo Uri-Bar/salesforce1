@@ -1,0 +1,88 @@
+salesforce.Layout WebStoreConfig_Web_Store_Configuration_Layout@bsss {
+  layoutSections = [
+    {
+      customLabel = false
+      detailHeading = false
+      editHeading = false
+      label = "Information"
+      layoutColumns = [
+        {
+          layoutItems = [
+            {
+              behavior = "Required"
+              field = "Name"
+            },
+          ]
+        },
+        {
+        },
+      ]
+      style = "TwoColumnsLeftToRight"
+    },
+    {
+      customLabel = false
+      detailHeading = true
+      editHeading = true
+      label = "Localization"
+      layoutColumns = [
+        {
+          layoutItems = [
+            {
+              behavior = "Edit"
+              field = "SupportedLanguages"
+            },
+          ]
+        },
+        {
+          layoutItems = [
+            {
+              behavior = "Edit"
+              field = "DefaultLanguage"
+            },
+          ]
+        },
+      ]
+      style = "TwoColumnsLeftToRight"
+    },
+    {
+      customLabel = false
+      detailHeading = true
+      editHeading = true
+      label = "Pricing"
+      layoutColumns = [
+        {
+          layoutItems = [
+            {
+              behavior = "Edit"
+              field = "StrikethroughPricebookId"
+            },
+          ]
+        },
+        {
+          layoutItems = [
+            {
+              behavior = "Edit"
+              field = "PricingStrategy"
+            },
+          ]
+        },
+      ]
+      style = "TwoColumnsLeftToRight"
+    },
+    {
+      customLabel = false
+      detailHeading = false
+      editHeading = false
+      layoutColumns = [
+        {
+        },
+      ]
+      style = "CustomLinks"
+    },
+  ]
+  showEmailCheckbox = false
+  showRunAssignmentRulesCheckbox = false
+  showSubmitAndAttachButton = false
+  fullName = "WebStoreConfig-Web Store Configuration Layout"
+  _alias = "WebStoreConfig-Web Store Configuration Layout"
+}

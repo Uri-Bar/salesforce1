@@ -1,0 +1,9 @@
+salesforce.ListView MarketSegmentActivation_All_MarketSegmentActivations {
+  fullName = "MarketSegmentActivation.All_MarketSegmentActivations"
+  filterScope = "Everything"
+  label = "All Activations"
+  _parent = [
+    salesforce.MarketSegmentActivation,
+  ]
+  _alias = "All Activations"
+}

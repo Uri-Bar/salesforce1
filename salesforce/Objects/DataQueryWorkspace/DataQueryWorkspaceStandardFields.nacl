@@ -1,0 +1,98 @@
+type salesforce.DataQueryWorkspace {
+  salesforce.Text DataSpace {
+    apiName = "DataQueryWorkspace.DataSpace"
+    length = 255
+    _required = true
+    label = "Data Space"
+    createable = true
+    updateable = false
+    unique = false
+    caseSensitive = false
+    queryable = true
+  }
+  salesforce.Text Name {
+    apiName = "DataQueryWorkspace.Name"
+    length = 255
+    _required = true
+    label = "Name"
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    queryable = true
+  }
+  serviceid Id {
+    apiName = "DataQueryWorkspace.Id"
+    label = "Query Workspace IdData Query Workspace ID"
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Lookup OwnerId {
+    apiName = "DataQueryWorkspace.OwnerId"
+    relationshipName = "Owner"
+    label = "Owner ID"
+    createable = true
+    updateable = true
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Checkbox IsDeleted {
+    apiName = "DataQueryWorkspace.IsDeleted"
+    defaultValue = false
+    label = "Deleted"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.DateTime CreatedDate {
+    apiName = "DataQueryWorkspace.CreatedDate"
+    label = "Created Date"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Lookup CreatedById {
+    apiName = "DataQueryWorkspace.CreatedById"
+    relationshipName = "CreatedBy"
+    label = "Created By ID"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.DateTime LastModifiedDate {
+    apiName = "DataQueryWorkspace.LastModifiedDate"
+    label = "Last Modified Date"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Lookup LastModifiedById {
+    apiName = "DataQueryWorkspace.LastModifiedById"
+    relationshipName = "LastModifiedBy"
+    label = "Last Modified By ID"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.DateTime SystemModstamp {
+    apiName = "DataQueryWorkspace.SystemModstamp"
+    label = "System Modstamp"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Lookup LandingTabId {
+    apiName = "DataQueryWorkspace.LandingTabId"
+    relationshipName = "LandingTab"
+    label = "Landing Tab ID"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+}

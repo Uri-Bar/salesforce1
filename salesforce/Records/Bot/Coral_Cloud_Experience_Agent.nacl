@@ -1,0 +1,125 @@
+salesforce.Bot Coral_Cloud_Experience_Agent {
+  fullName = "Coral_Cloud_Experience_Agent"
+  botMlDomain = {
+    label = "Coral Cloud Experience Agent"
+    name = "Coral_Cloud_Experience_Agent"
+  }
+  botUser = "coral_cloud_experience_agent.svoh7kvkopim@orgfarm.com"
+  botVersions = {
+    fullName = "v1"
+    articleAnswersGPTEnabled = false
+    botDialogs = [
+      {
+        botSteps = [
+          {
+            botMessages = {
+              message = "Hi, I'm an AI service assistant. How can I help you?"
+              messageIdentifier = "8b4a8189-1975-4af0-9b88-15b4f3e0d7b2"
+            }
+            stepIdentifier = "7f940321-1f6d-4f73-8cf8-588ab772e1b8"
+            type = "Message"
+          },
+          {
+            stepIdentifier = "a830d103-d4a0-4352-86b0-dc82caf5b7ec"
+            type = "Wait"
+          },
+        ]
+        developerName = "Welcome"
+        isPlaceholderDialog = false
+        label = "Hi! I'm your helpful bot."
+        showInFooterMenu = false
+      },
+      {
+        botSteps = [
+          {
+            botMessages = {
+              message = "Sorry, it looks like something has gone wrong."
+              messageIdentifier = "945b24a6-00ff-4feb-b3b9-5f2b763d74d2"
+            }
+            stepIdentifier = "b8f9978f-addc-4818-8608-ca752147f8c4"
+            type = "Message"
+          },
+          {
+            stepIdentifier = "d1789b51-e85f-4bac-8e61-02254718f55a"
+            type = "Wait"
+          },
+        ]
+        developerName = "Error_Handling"
+        isPlaceholderDialog = false
+        label = "Unfortunately, a system error occurred. Let us start again."
+        showInFooterMenu = false
+      },
+      {
+        botSteps = [
+          {
+            botMessages = {
+              message = "One moment while I connect you to the next available service representative."
+              messageIdentifier = "8e413fbd-27ff-4f29-8826-a5a641ef34f0"
+            }
+            stepIdentifier = "1c4c16fb-5353-4667-ba86-07f0db526505"
+            type = "Message"
+          },
+          {
+            stepIdentifier = "daa74408-6c1a-435f-bdd2-6a1bcb7f8a65"
+            type = "Wait"
+          },
+        ]
+        developerName = "Transfer_to_Agent"
+        isPlaceholderDialog = false
+        label = "Transfer To Agent"
+        showInFooterMenu = false
+      },
+    ]
+    citationsEnabled = false
+    conversationDefinitionPlanners = {
+      genAiPlannerName = "Coral_Cloud_Experience_Agent"
+    }
+    entryDialog = "Welcome"
+    intentDisambiguationEnabled = false
+    intentV3Enabled = false
+    knowledgeActionEnabled = false
+    knowledgeFallbackEnabled = false
+    smallTalkEnabled = false
+    toneType = "Casual"
+  }
+  contextVariables = [
+    {
+      contextVariableMappings = {
+        SObjectType = "MessagingEndUser"
+        fieldName = "MessagingEndUser.ContactId"
+        messageType = "EmbeddedMessaging"
+      }
+      dataType = "Id"
+      developerName = "ContactId"
+      label = "Contact Id"
+    },
+    {
+      contextVariableMappings = {
+        SObjectType = "MessagingSession"
+        fieldName = "MessagingSession.MessagingEndUserId"
+        messageType = "EmbeddedMessaging"
+      }
+      dataType = "Id"
+      developerName = "EndUserId"
+      label = "End User Id"
+    },
+    {
+      contextVariableMappings = {
+        SObjectType = "MessagingSession"
+        fieldName = "MessagingSession.Id"
+        messageType = "EmbeddedMessaging"
+      }
+      dataType = "Id"
+      developerName = "RoutableId"
+      label = "Routable Id"
+    },
+  ]
+  defaultOutboundFlow = salesforce.FlowDefinition.instance.ESA_Route_to_Queue
+  description = "This is the Coral Cloud Agent that helps customers learn more about Experiences as well as book sessions."
+  label = "Coral Cloud Experience Agent"
+  logPrivateConversationData = false
+  richContentEnabled = true
+  sessionTimeout = 480
+  type = "ExternalCopilot"
+  _alias = "Coral Cloud Experience Agent"
+}

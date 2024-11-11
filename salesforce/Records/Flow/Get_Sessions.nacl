@@ -1,0 +1,113 @@
+salesforce.Flow Get_Sessions {
+  fullName = "Get_Sessions"
+  apiVersion = 61
+  description = "Get the Sessions__c based on the provided specific Date and the Id of the Experience__c"
+  environments = "Default"
+  interviewLabel = "Get Sessions {!$Flow.CurrentDateTime}"
+  label = "Get Sessions"
+  processMetadataValues = [
+    {
+      name = "BuilderType"
+      value = {
+        stringValue = "LightningFlowBuilder"
+      }
+    },
+    {
+      name = "CanvasMode"
+      value = {
+        stringValue = "AUTO_LAYOUT_CANVAS"
+      }
+    },
+    {
+      name = "OriginBuilderType"
+      value = {
+        stringValue = "LightningFlowBuilder"
+      }
+    },
+  ]
+  processType = "AutoLaunchedFlow"
+  recordLookups = [
+    {
+      description = "Get Experience Session records based on the Experience Id and the Date."
+      name = "Get_Sessions_by_Date"
+      label = "Get Sessions by Date"
+      locationX = 176
+      locationY = 134
+      assignNullValuesIfNoRecordsFound = false
+      filterLogic = "and"
+      filters = [
+        {
+          field = salesforce.Session__c.field.Date__c
+          operator = "EqualTo"
+          value = {
+            elementReference = "startDate"
+          }
+        },
+        {
+          field = salesforce.Session__c.field.Experience__c
+          operator = "EqualTo"
+          value = {
+            elementReference = "experienceId"
+          }
+        },
+        {
+          field = salesforce.Session__c.field.Available_Slots__c
+          operator = "GreaterThan"
+          value = {
+            numberValue = 0
+          }
+        },
+      ]
+      object = salesforce.Session__c
+      outputReference = "sessions"
+      queriedFields = [
+        salesforce.Session__c.field.Id,
+        salesforce.Session__c.field.Start_Time__c,
+        salesforce.Session__c.field.End_Time__c,
+        salesforce.Session__c.field.Available_Slots__c,
+      ]
+    },
+  ]
+  runInMode = "SystemModeWithSharing"
+  start = {
+    locationX = 50
+    locationY = 0
+    connector = {
+      targetReference = "Get_Sessions_by_Date"
+    }
+  }
+  status = "Active"
+  variables = [
+    {
+      description = "The Id of the Experience__c that you would like to check for."
+      name = "experienceId"
+      dataType = "String"
+      isCollection = false
+      isInput = true
+      isOutput = false
+    },
+    {
+      description = "The available Session__c records for the Experience__c"
+      name = "sessions"
+      dataType = "SObject"
+      isCollection = true
+      isInput = false
+      isOutput = true
+      objectType = salesforce.Session__c
+    },
+    {
+      description = "The date that the user would like to view the Session__c for."
+      name = "startDate"
+      dataType = "Date"
+      isCollection = false
+      isInput = true
+      isOutput = false
+    },
+  ]
+  _generated_dependencies = [
+    {
+      reference = salesforce.Experience__c
+    },
+  ]
+  _alias = "Get Sessions"
+}

@@ -1,0 +1,19 @@
+salesforce.MessagingChannel ESA_Channel {
+  fullName = "ESA_Channel"
+  automatedResponses = [
+    {
+      response = "You've opted out of receiving messages from us, so we won't contact you again."
+      type = "OptOutConfirmation"
+    },
+    {
+      response = "Text STOP to opt out of further messages."
+      type = "HelpResponse"
+    },
+  ]
+  masterLabel = "ESA Channel"
+  messagingChannelType = "EmbeddedMessaging"
+  sessionHandlerFlow = "Route_to_ESA"
+  sessionHandlerQueue = "Messaging_Queue"
+  sessionHandlerType = "Flow"
+  _alias = "ESA_Channel"
+}

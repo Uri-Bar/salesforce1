@@ -1,0 +1,5 @@
+salesforce.CorsWhitelistOrigin https_my_site_com {
+  fullName = "https_my_site_com"
+  urlPattern = "https://*.my.site.com"
+  _alias = "https_my_site_com"
+}

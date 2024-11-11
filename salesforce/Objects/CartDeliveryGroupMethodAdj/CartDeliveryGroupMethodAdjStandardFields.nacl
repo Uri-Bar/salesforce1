@@ -1,0 +1,131 @@
+type salesforce.CartDeliveryGroupMethodAdj {
+  salesforce.Currency AdjustmentAmount {
+    apiName = "CartDeliveryGroupMethodAdj.AdjustmentAmount"
+    _required = true
+    label = "Adjustment Amount"
+    createable = true
+    updateable = true
+    scale = 2
+    precision = 18
+    queryable = true
+  }
+  salesforce.Lookup AdjustmentBasisReferenceId {
+    apiName = "CartDeliveryGroupMethodAdj.AdjustmentBasisReferenceId"
+    _hidden_value = true
+  }
+  salesforce.Picklist AdjustmentType {
+    apiName = "CartDeliveryGroupMethodAdj.AdjustmentType"
+    restricted = true
+    label = "Adjustment Type"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Number AdjustmentValue {
+    apiName = "CartDeliveryGroupMethodAdj.AdjustmentValue"
+    _required = true
+    label = "Adjustment Value"
+    precision = 18
+    scale = 0
+    createable = true
+    updateable = true
+    unique = false
+    queryable = true
+  }
+  salesforce.MasterDetail CartDeliveryGroupMethodId {
+    apiName = "CartDeliveryGroupMethodAdj.CartDeliveryGroupMethodId"
+    relationshipName = "CartDeliveryGroupMethod"
+    _required = true
+    label = "Cart Delivery Group Method ID"
+    createable = true
+    updateable = false
+    queryable = true
+  }
+  salesforce.Lookup PriceAdjustmentCauseId {
+    apiName = "CartDeliveryGroupMethodAdj.PriceAdjustmentCauseId"
+    relationshipName = "PriceAdjustmentCause"
+    _required = true
+    label = "Promotion ID"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Number Priority {
+    apiName = "CartDeliveryGroupMethodAdj.Priority"
+    label = "Priority"
+    precision = 9
+    createable = true
+    updateable = true
+    scale = 0
+    unique = false
+    queryable = true
+  }
+  serviceid Id {
+    apiName = "CartDeliveryGroupMethodAdj.Id"
+    label = "Cart Delivery Group Method Adjustment ID"
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Checkbox IsDeleted {
+    apiName = "CartDeliveryGroupMethodAdj.IsDeleted"
+    defaultValue = false
+    label = "Deleted"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Text Name {
+    apiName = "CartDeliveryGroupMethodAdj.Name"
+    length = 255
+    _required = true
+    label = "Cart Delivery Group Method AdjustmentName"
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    queryable = true
+  }
+  salesforce.DateTime CreatedDate {
+    apiName = "CartDeliveryGroupMethodAdj.CreatedDate"
+    label = "Created Date"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Lookup CreatedById {
+    apiName = "CartDeliveryGroupMethodAdj.CreatedById"
+    relationshipName = "CreatedBy"
+    label = "Created By ID"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.DateTime LastModifiedDate {
+    apiName = "CartDeliveryGroupMethodAdj.LastModifiedDate"
+    label = "Last Modified Date"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Lookup LastModifiedById {
+    apiName = "CartDeliveryGroupMethodAdj.LastModifiedById"
+    relationshipName = "LastModifiedBy"
+    label = "Last Modified By ID"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.DateTime SystemModstamp {
+    apiName = "CartDeliveryGroupMethodAdj.SystemModstamp"
+    label = "System Modstamp"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+}

@@ -1,0 +1,11 @@
+salesforce.QuickAction Contact_Personalized_Schedule@vu {
+  fullName = "Contact.Personalized_Schedule"
+  flowDefinition = salesforce.Flow.instance.PersonalizedSchedule
+  label = "Personalized Schedule"
+  optionsCreateFeedItem = false
+  type = "Flow"
+  _parent = [
+    salesforce.Contact,
+  ]
+  _alias = "Personalized Schedule"
+}

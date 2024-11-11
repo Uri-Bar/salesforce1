@@ -1,0 +1,12 @@
+salesforce.ApexClass LightningLoginFormControllerTest {
+  apiVersion = 61
+  status = "Active"
+  fullName = "LightningLoginFormControllerTest"
+  content = file("salesforce/Records/ApexClass/LightningLoginFormControllerTest.cls")
+  _generated_dependencies = [
+    {
+      reference = salesforce.ApexClass.instance.LightningLoginFormController
+    },
+  ]
+  _alias = "LightningLoginFormControllerTest"
+}

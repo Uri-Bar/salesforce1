@@ -1,0 +1,16 @@
+salesforce.CspTrustedSite s3_us_west_2_amazonaws_com {
+  fullName = "s3_us_west_2_amazonaws_com"
+  canAccessCamera = false
+  canAccessMicrophone = false
+  context = "LEX"
+  description = "Amazon S3 hosted sample app media"
+  endpointUrl = "https://s3-us-west-2.amazonaws.com"
+  isActive = true
+  isApplicableToConnectSrc = false
+  isApplicableToFontSrc = false
+  isApplicableToFrameSrc = false
+  isApplicableToImgSrc = true
+  isApplicableToMediaSrc = false
+  isApplicableToStyleSrc = false
+  _alias = "s3_us_west_2_amazonaws_com"
+}

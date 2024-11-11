@@ -1,0 +1,9 @@
+salesforce.ListView DataStream_My_DataStreams {
+  fullName = "DataStream.My_DataStreams"
+  filterScope = "Mine"
+  label = "My Data Streams"
+  _parent = [
+    salesforce.DataStream,
+  ]
+  _alias = "My Data Streams"
+}

@@ -1,0 +1,9 @@
+salesforce.ListView CalculationMatrix_All_CalculationMatrices {
+  fullName = "CalculationMatrix.All_CalculationMatrices"
+  filterScope = "Everything"
+  label = "All Decision Matrices"
+  _parent = [
+    salesforce.CalculationMatrix,
+  ]
+  _alias = "All Decision Matrices"
+}

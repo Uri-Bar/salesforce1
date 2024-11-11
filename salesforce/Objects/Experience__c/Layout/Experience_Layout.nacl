@@ -1,0 +1,143 @@
+salesforce.Layout Experience__c_Experience_Layout@uubs {
+  excludeButtons = [
+    "Submit",
+  ]
+  layoutSections = [
+    {
+      customLabel = true
+      detailHeading = true
+      editHeading = true
+      label = "Experience Details"
+      layoutColumns = [
+        {
+          layoutItems = [
+            {
+              behavior = "Required"
+              field = salesforce.Experience__c.field.Name
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.Experience__c.field.Location__c
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.Experience__c.field.Type__c
+            },
+            {
+              behavior = "Readonly"
+              field = salesforce.Experience__c.field.Rating__c
+            },
+          ]
+        },
+        {
+          layoutItems = [
+            {
+              behavior = "Edit"
+              field = salesforce.Experience__c.field.Activity_Level__c
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.Experience__c.field.Picture_URL__c
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.Experience__c.field.Price__c
+            },
+          ]
+        },
+      ]
+      style = "TwoColumnsLeftToRight"
+    },
+    {
+      customLabel = false
+      detailHeading = true
+      editHeading = true
+      label = "Description"
+      layoutColumns = [
+        {
+          layoutItems = [
+            {
+              behavior = "Edit"
+              field = salesforce.Experience__c.field.Description__c
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.Experience__c.field.Reviews_Summary__c
+            },
+          ]
+        },
+      ]
+      style = "OneColumn"
+    },
+    {
+      customLabel = true
+      detailHeading = true
+      editHeading = true
+      label = "Scheduling"
+      layoutColumns = [
+        {
+          layoutItems = [
+            {
+              behavior = "Edit"
+              field = salesforce.Experience__c.field.Capacity__c
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.Experience__c.field.Duration_Hours__c
+            },
+          ]
+        },
+        {
+          layoutItems = [
+            {
+              behavior = "Edit"
+              field = salesforce.Experience__c.field.Default_Start_Time__c
+            },
+          ]
+        },
+      ]
+      style = "TwoColumnsLeftToRight"
+    },
+    {
+      customLabel = false
+      detailHeading = false
+      editHeading = true
+      label = "Custom Links"
+      style = "CustomLinks"
+    },
+  ]
+  relatedLists = [
+    {
+      fields = [
+        "NAME",
+        "Date__c",
+        "Booked_Slots__c",
+        "Available_Slots__c",
+        "Start_Time__c",
+      ]
+      relatedList = salesforce.Session__c.field.Experience__c
+      sortField = "Date__c"
+      sortOrder = "Asc"
+    },
+    {
+      fields = [
+        "NAME",
+        "Contact.CNTC_FIRST_NAME",
+        "Contact.NAME",
+        "Rating__c",
+        "Comments__c",
+      ]
+      relatedList = salesforce.Guest_Review__c.field.Experience__c
+    },
+  ]
+  showEmailCheckbox = false
+  showHighlightsPanel = false
+  showInteractionLogPanel = false
+  showRunAssignmentRulesCheckbox = false
+  showSubmitAndAttachButton = false
+  fullName = "Experience__c-Experience Layout"
+  _parent = [
+    salesforce.Experience__c,
+  ]
+  _alias = "Experience__c-Experience Layout"
+}

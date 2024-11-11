@@ -1,0 +1,12 @@
+salesforce.ApexClass CheckWeather {
+  apiVersion = 61
+  status = "Active"
+  fullName = "CheckWeather"
+  content = file("salesforce/Records/ApexClass/CheckWeather.cls")
+  _generated_dependencies = [
+    {
+      reference = salesforce.ApexClass.instance.WeatherService
+    },
+  ]
+  _alias = "CheckWeather"
+}

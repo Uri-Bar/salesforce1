@@ -1,0 +1,7 @@
+salesforce.SharingRules DecisionTblFileImportData {
+  fullName = "DecisionTblFileImportData"
+  _parent = [
+    salesforce.DecisionTblFileImportData,
+  ]
+  _alias = "DecisionTblFileImportData"
+}

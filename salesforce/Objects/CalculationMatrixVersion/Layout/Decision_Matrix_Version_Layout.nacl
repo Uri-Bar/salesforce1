@@ -1,0 +1,121 @@
+salesforce.Layout CalculationMatrixVersion_Decision_Matrix_Version_Layout@bsss {
+  layoutSections = [
+    {
+      customLabel = false
+      detailHeading = true
+      editHeading = true
+      label = "Information"
+      layoutColumns = [
+        {
+          layoutItems = [
+            {
+              behavior = "Required"
+              field = salesforce.CalculationMatrixVersion.field.Name
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.CalculationMatrixVersion.field.VersionNumber
+            },
+            {
+              behavior = "Readonly"
+              field = salesforce.CalculationMatrixVersion.field.MatrixType
+            },
+            {
+              behavior = "Required"
+              field = salesforce.CalculationMatrixVersion.field.CalculationMatrixId
+            },
+            {
+              behavior = "Readonly"
+              field = salesforce.CalculationMatrixVersion.field.LoadProcessStatus
+            },
+            {
+              behavior = "Readonly"
+              field = salesforce.CalculationMatrixVersion.field.DscnModelNoteExportStatus
+            },
+          ]
+        },
+        {
+          layoutItems = [
+            {
+              behavior = "Edit"
+              field = salesforce.CalculationMatrixVersion.field.IsEnabled
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.CalculationMatrixVersion.field.StartDateTime
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.CalculationMatrixVersion.field.EndDateTime
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.CalculationMatrixVersion.field.Rank
+            },
+            {
+              behavior = "Readonly"
+              field = salesforce.CalculationMatrixVersion.field.ApiName
+            },
+          ]
+        },
+      ]
+      style = "TwoColumnsLeftToRight"
+    },
+    {
+      customLabel = false
+      detailHeading = true
+      editHeading = true
+      label = "Configuration"
+      layoutColumns = [
+        {
+          layoutItems = [
+            {
+              behavior = "Edit"
+              field = salesforce.CalculationMatrixVersion.field.GroupKey
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.CalculationMatrixVersion.field.GroupKeyValue
+            },
+          ]
+        },
+        {
+          layoutItems = [
+            {
+              behavior = "Edit"
+              field = salesforce.CalculationMatrixVersion.field.SubGroupKey
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.CalculationMatrixVersion.field.SubGroupKeyValue
+            },
+          ]
+        },
+      ]
+      style = "TwoColumnsLeftToRight"
+    },
+    {
+      customLabel = false
+      detailHeading = false
+      editHeading = false
+      layoutColumns = [
+        {
+        },
+      ]
+      style = "CustomLinks"
+    },
+  ]
+  relatedLists = [
+    {
+      relatedList = "RelatedFileList"
+    },
+  ]
+  showEmailCheckbox = false
+  showRunAssignmentRulesCheckbox = false
+  showSubmitAndAttachButton = false
+  fullName = "CalculationMatrixVersion-Decision Matrix Version Layout"
+  _parent = [
+    salesforce.CalculationMatrixVersion,
+  ]
+  _alias = "CalculationMatrixVersion-Decision Matrix Version Layout"
+}

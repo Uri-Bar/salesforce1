@@ -1,0 +1,39 @@
+salesforce.ApexClass ExperienceBookingHelper {
+  apiVersion = 61
+  status = "Active"
+  fullName = "ExperienceBookingHelper"
+  content = file("salesforce/Records/ApexClass/ExperienceBookingHelper.cls")
+  _generated_dependencies = [
+    {
+      reference = salesforce.Booking__c
+    },
+    {
+      reference = salesforce.Booking__c.field.Contact__c
+    },
+    {
+      reference = salesforce.Booking__c.field.Number_of_Guests__c
+    },
+    {
+      reference = salesforce.Booking__c.field.Session__c
+    },
+    {
+      reference = salesforce.Contact
+    },
+    {
+      reference = salesforce.Contact.field.Lifetime_Experience_Bookings__c
+    },
+    {
+      reference = salesforce.Session__c
+    },
+    {
+      reference = salesforce.Session__c.field.Booked_Slots__c
+    },
+    {
+      reference = salesforce.Session__c.field.Capacity__c
+    },
+    {
+      reference = salesforce.Session__c.field.Experience__c
+    },
+  ]
+  _alias = "ExperienceBookingHelper"
+}

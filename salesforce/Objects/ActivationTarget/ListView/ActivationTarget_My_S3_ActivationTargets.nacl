@@ -1,0 +1,16 @@
+salesforce.ListView ActivationTarget_My_S3_ActivationTargets {
+  fullName = "ActivationTarget.My_S3_ActivationTargets"
+  filterScope = "Everything"
+  filters = [
+    {
+      field = "ConnectionType"
+      operation = "equals"
+      value = "S3"
+    },
+  ]
+  label = "S3"
+  _parent = [
+    salesforce.ActivationTarget,
+  ]
+  _alias = "S3"
+}

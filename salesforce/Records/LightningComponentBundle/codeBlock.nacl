@@ -1,0 +1,23 @@
+salesforce.LightningComponentBundle codeBlock {
+  apiVersion = 61
+  isExposed = false
+  fullName = "codeBlock"
+  lwcResources = {
+    lwcResource = {
+      codeBlock_html@v = {
+        source = file("salesforce/Records/LightningComponentBundle/codeBlock/codeBlock.html")
+        filePath = "lwc/codeBlock/codeBlock.html"
+      }
+      codeBlock_js@v = {
+        source = file("salesforce/Records/LightningComponentBundle/codeBlock/codeBlock.js")
+        filePath = "lwc/codeBlock/codeBlock.js"
+      }
+    }
+  }
+  _generated_dependencies = [
+    {
+      reference = salesforce.StaticResource.instance.highlight
+    },
+  ]
+  _alias = "codeBlock"
+}

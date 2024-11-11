@@ -1,0 +1,36 @@
+salesforce.ApexClass ExperienceControllerTest {
+  apiVersion = 61
+  status = "Active"
+  fullName = "ExperienceControllerTest"
+  content = file("salesforce/Records/ApexClass/ExperienceControllerTest.cls")
+  _generated_dependencies = [
+    {
+      reference = salesforce.ApexClass.instance.ExperienceController
+    },
+    {
+      reference = salesforce.Contact
+    },
+    {
+      reference = salesforce.Contact.field.Interest1__c
+    },
+    {
+      reference = salesforce.Experience__c
+    },
+    {
+      reference = salesforce.Experience__c.field.Type__c
+    },
+    {
+      reference = salesforce.Session__c
+    },
+    {
+      reference = salesforce.Session__c.field.Date__c
+    },
+    {
+      reference = salesforce.Session__c.field.Experience__c
+    },
+    {
+      reference = salesforce.Session__c.field.Start_Time__c
+    },
+  ]
+  _alias = "ExperienceControllerTest"
+}

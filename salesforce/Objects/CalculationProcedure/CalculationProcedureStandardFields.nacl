@@ -1,0 +1,134 @@
+type salesforce.CalculationProcedure {
+  salesforce.Text Description {
+    apiName = "CalculationProcedure.Description"
+    length = 255
+    label = "Description"
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    queryable = true
+  }
+  salesforce.LongTextArea InputVariablesMetadata {
+    apiName = "CalculationProcedure.InputVariablesMetadata"
+    length = 131072
+    label = "Input Variables Metadata"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.LongTextArea MigrationStatus {
+    apiName = "CalculationProcedure.MigrationStatus"
+    length = 32000
+    label = "Migration Status"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Text Name {
+    apiName = "CalculationProcedure.Name"
+    length = 255
+    _required = true
+    label = "Name"
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    queryable = true
+  }
+  salesforce.Text Namespace {
+    apiName = "CalculationProcedure.Namespace"
+    length = 255
+    label = "Namespace"
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    queryable = true
+  }
+  salesforce.LongTextArea OutputVariablesMetadata {
+    apiName = "CalculationProcedure.OutputVariablesMetadata"
+    length = 131072
+    label = "Output Variables Metadata"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Lookup OwnerId {
+    apiName = "CalculationProcedure.OwnerId"
+    relationshipName = "Owner"
+    label = "Owner ID"
+    createable = true
+    updateable = true
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Text UniqueName {
+    apiName = "CalculationProcedure.UniqueName"
+    length = 80
+    label = "Unique Name"
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    queryable = true
+  }
+  serviceid Id {
+    apiName = "CalculationProcedure.Id"
+    label = "Calculation Procedure ID"
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Checkbox IsDeleted {
+    apiName = "CalculationProcedure.IsDeleted"
+    defaultValue = false
+    label = "Deleted"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.DateTime CreatedDate {
+    apiName = "CalculationProcedure.CreatedDate"
+    label = "Created Date"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Lookup CreatedById {
+    apiName = "CalculationProcedure.CreatedById"
+    relationshipName = "CreatedBy"
+    label = "Created By ID"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.DateTime LastModifiedDate {
+    apiName = "CalculationProcedure.LastModifiedDate"
+    label = "Last Modified Date"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Lookup LastModifiedById {
+    apiName = "CalculationProcedure.LastModifiedById"
+    relationshipName = "LastModifiedBy"
+    label = "Last Modified By ID"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.DateTime SystemModstamp {
+    apiName = "CalculationProcedure.SystemModstamp"
+    label = "System Modstamp"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+}

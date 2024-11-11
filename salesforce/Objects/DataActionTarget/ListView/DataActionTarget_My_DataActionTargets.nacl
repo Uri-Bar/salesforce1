@@ -1,0 +1,9 @@
+salesforce.ListView DataActionTarget_My_DataActionTargets {
+  fullName = "DataActionTarget.My_DataActionTargets"
+  filterScope = "Mine"
+  label = "My Data Action Targets"
+  _parent = [
+    salesforce.DataActionTarget,
+  ]
+  _alias = "My Data Action Targets"
+}

@@ -1,0 +1,7 @@
+salesforce.SharingRules DataActionTarget {
+  fullName = "DataActionTarget"
+  _parent = [
+    salesforce.DataActionTarget,
+  ]
+  _alias = "DataActionTarget"
+}

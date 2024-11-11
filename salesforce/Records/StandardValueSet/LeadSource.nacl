@@ -1,0 +1,72 @@
+salesforce.StandardValueSet LeadSource {
+  fullName = "LeadSource"
+  sorted = false
+  standardValue = [
+    {
+      fullName = "Advertising"
+      default = false
+      label = "Advertising"
+    },
+    {
+      fullName = "Website"
+      default = false
+      label = "Website"
+    },
+    {
+      fullName = "Word of Mouth"
+      default = false
+      label = "Word of Mouth"
+    },
+    {
+      fullName = "Other"
+      default = false
+      label = "Other"
+    },
+    {
+      fullName = "Social Media"
+      default = false
+      label = "Social Media"
+    },
+    {
+      fullName = "Referral"
+      default = false
+      label = "Referral"
+    },
+    {
+      fullName = "Travel Agency"
+      default = false
+      label = "Travel Agency"
+    },
+    {
+      fullName = "Online Travel Agent"
+      default = false
+      label = "Online Travel Agent"
+    },
+    {
+      fullName = "Event and Trade Show"
+      default = false
+      label = "Event and Trade Show"
+    },
+    {
+      fullName = "Walk-in"
+      default = false
+      label = "Walk-in"
+    },
+    {
+      fullName = "Direct Mail"
+      default = false
+      label = "Direct Mail"
+    },
+    {
+      fullName = "Partnerships"
+      default = false
+      label = "Partnerships"
+    },
+    {
+      fullName = "Corporate Booking"
+      default = false
+      label = "Corporate Booking"
+    },
+  ]
+  _alias = "LeadSource"
+}

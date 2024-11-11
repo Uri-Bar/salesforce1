@@ -1,0 +1,45 @@
+salesforce.CustomSite ESW_ESA_Web_Deployment_1724800920657 {
+  fullName = "ESW_ESA_Web_Deployment_1724800920657"
+  active = true
+  allowGuestPaymentsApi = "false"
+  allowHomePage = false
+  allowStandardAnswersPages = false
+  allowStandardIdeasPages = false
+  allowStandardLookups = false
+  allowStandardPortalPages = true
+  allowStandardSearch = false
+  authorizationRequiredPage = salesforce.ApexPage.instance.CommunitiesLogin
+  bandwidthExceededPage = salesforce.ApexPage.instance.BandwidthExceeded
+  browserXssProtection = true
+  cachePublicVisualforcePagesInProxyServers = true
+  clickjackProtectionLevel = "SameOriginOnly"
+  contentSniffingProtection = true
+  enableAuraRequests = true
+  fileNotFoundPage = salesforce.ApexPage.instance.FileNotFound
+  genericErrorPage = salesforce.ApexPage.instance.Exception
+  inMaintenancePage = salesforce.ApexPage.instance.InMaintenance
+  indexPage = salesforce.ApexPage.instance.CommunitiesLanding
+  masterLabel = "ESW_ESA_Web_Deployment_1724800920657"
+  redirectToCustomDomain = false
+  referrerPolicyOriginWhenCrossOrigin = true
+  selfRegPage = salesforce.ApexPage.instance.CommunitiesSelfReg
+  siteAdmin = "epic.e4f50a49be1c@orgfarm.com"
+  siteGuestRecordDefaultOwner = "epic.e4f50a49be1c@orgfarm.com"
+  siteIframeWhiteListUrls = [
+    {
+      url = "develop.my.site.com"
+    },
+    {
+      url = "*.develop.my.site.com"
+    },
+    {
+      url = "storm-0bf45bbf073ef6-dev-ed--c.develop.vf.force.com"
+    },
+    {
+      url = "dwu00000bbltx2aj-dev-ed--c.develop.vf.force.com"
+    },
+  ]
+  siteType = "ChatterNetwork"
+  urlPathPrefix = "ESWESAWebDeployment1724800920657vforcesi"
+  _alias = "ESW_ESA_Web_Deployment_1724800920657"
+}

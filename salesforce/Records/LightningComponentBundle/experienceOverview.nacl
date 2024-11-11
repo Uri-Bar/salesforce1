@@ -1,0 +1,63 @@
+salesforce.LightningComponentBundle experienceOverview {
+  apiVersion = 61
+  isExposed = true
+  masterLabel = "Experience Overview"
+  description = "Displays an overview (picture and description) of an experience."
+  targets = {
+    target = [
+      "lightning__RecordPage",
+      "lightningCommunity__Page",
+    ]
+  }
+  targetConfigs = {
+    targetConfig = [
+      {
+        targets = "lightning__RecordPage"
+        objects = [
+          {
+            object = "Experience__c"
+          },
+        ]
+        supportedFormFactors = {
+          supportedFormFactor = [
+            {
+              type = "Large"
+            },
+            {
+              type = "Small"
+            },
+          ]
+        }
+      },
+    ]
+  }
+  fullName = "experienceOverview"
+  lwcResources = {
+    lwcResource = {
+      experienceOverview_html@v = {
+        source = file("salesforce/Records/LightningComponentBundle/experienceOverview/experienceOverview.html")
+        filePath = "lwc/experienceOverview/experienceOverview.html"
+      }
+      experienceOverview_css@v = {
+        source = file("salesforce/Records/LightningComponentBundle/experienceOverview/experienceOverview.css")
+        filePath = "lwc/experienceOverview/experienceOverview.css"
+      }
+      experienceOverview_js@v = {
+        source = file("salesforce/Records/LightningComponentBundle/experienceOverview/experienceOverview.js")
+        filePath = "lwc/experienceOverview/experienceOverview.js"
+      }
+    }
+  }
+  _generated_dependencies = [
+    {
+      reference = salesforce.Experience__c
+    },
+    {
+      reference = salesforce.Experience__c.field.Description__c
+    },
+    {
+      reference = salesforce.Experience__c.field.Picture_URL__c
+    },
+  ]
+  _alias = "experienceOverview"
+}

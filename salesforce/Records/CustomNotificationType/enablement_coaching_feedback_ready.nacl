@@ -1,0 +1,9 @@
+salesforce.CustomNotificationType enablement_coaching_feedback_ready {
+  fullName = "enablement_coaching_feedback_ready"
+  customNotifTypeName = "enablement_coaching_feedback_ready"
+  desktop = true
+  masterLabel = "Enablement Coaching Feedback Ready"
+  mobile = false
+  slack = false
+  _alias = "enablement_coaching_feedback_ready"
+}

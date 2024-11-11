@@ -1,0 +1,192 @@
+type salesforce.Booking__c {
+  salesforce.FormulaText Activity_Level__c {
+    apiName = "Booking__c.Activity_Level__c"
+    description = "Describes the physical or engagement level required for the experience, such as \"Low\", \"Medium\", or \"High\"."
+    externalId = false
+    formula = "TEXT(Session__r.Experience__r.Activity_Level__c)"
+    formulaTreatBlanksAs = "BlankAsZero"
+    label = "Activity Level"
+    trackTrending = false
+    unique = false
+    createable = false
+    updateable = false
+    caseSensitive = false
+    queryable = true
+    _hidden_value = true
+    _generated_dependencies = [
+      {
+        reference = salesforce.Booking__c.field.Session__c
+      },
+    ]
+  }
+  salesforce.MasterDetail Contact__c {
+    apiName = "Booking__c.Contact__c"
+    label = "Contact"
+    referenceTo = [
+      salesforce.Contact,
+    ]
+    relationshipLabel = "Bookings"
+    relationshipName = "Bookings"
+    relationshipOrder = 1
+    reparentableMasterDetail = false
+    trackTrending = false
+    writeRequiresMasterRead = false
+    createable = true
+    updateable = false
+    queryable = true
+  }
+  salesforce.FormulaDate Date__c {
+    apiName = "Booking__c.Date__c"
+    description = "The date of the booked experience, aiding in schedule planning."
+    formula = "Session__r.Date__c"
+    formulaTreatBlanksAs = "BlankAsZero"
+    label = "Date"
+    trackTrending = false
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+    _generated_dependencies = [
+      {
+        reference = salesforce.Booking__c.field.Session__c
+      },
+    ]
+  }
+  salesforce.FormulaTime End_Time__c {
+    apiName = "Booking__c.End_Time__c"
+    description = "The ending time of the experience, providing clear timing details to guests."
+    formula = "Session__r.End_Time__c"
+    formulaTreatBlanksAs = "BlankAsZero"
+    label = "End Time"
+    trackTrending = false
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+    _generated_dependencies = [
+      {
+        reference = salesforce.Booking__c.field.Session__c
+      },
+    ]
+  }
+  salesforce.FormulaText Experience_Name__c {
+    apiName = "Booking__c.Experience_Name__c"
+    externalId = false
+    formula = "Session__r.Experience__r.Name"
+    formulaTreatBlanksAs = "BlankAsZero"
+    label = "Experience Name"
+    trackTrending = false
+    unique = false
+    createable = false
+    updateable = false
+    caseSensitive = false
+    queryable = true
+    _hidden_value = true
+    _generated_dependencies = [
+      {
+        reference = salesforce.Booking__c.field.Session__c
+      },
+    ]
+  }
+  salesforce.Checkbox Is_Canceled__c {
+    apiName = "Booking__c.Is_Canceled__c"
+    defaultValue = false
+    description = "Indicates if a customer has canceled their booking"
+    label = "Is Canceled"
+    trackTrending = false
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Number Number_of_Guests__c {
+    apiName = "Booking__c.Number_of_Guests__c"
+    description = "Specifies how many guests are included in the booking, ensuring appropriate accommodation."
+    externalId = false
+    label = "Number of Guests"
+    precision = 4
+    scale = 0
+    trackTrending = false
+    unique = false
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.MasterDetail Session__c {
+    apiName = "Booking__c.Session__c"
+    description = "Connects the booking to a specific session of an activity, detailing when and where it occurs."
+    label = "Session"
+    referenceTo = [
+      salesforce.Session__c,
+    ]
+    relationshipLabel = "Bookings"
+    relationshipName = "Bookings"
+    relationshipOrder = 0
+    reparentableMasterDetail = false
+    trackTrending = false
+    writeRequiresMasterRead = false
+    createable = true
+    updateable = false
+    queryable = true
+  }
+  salesforce.FormulaTime Start_Time__c {
+    apiName = "Booking__c.Start_Time__c"
+    description = "The starting time of the experience, helping guests plan their day."
+    formula = "Session__r.Start_Time__c"
+    formulaTreatBlanksAs = "BlankAsZero"
+    label = "Start Time"
+    trackTrending = false
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+    _generated_dependencies = [
+      {
+        reference = salesforce.Booking__c.field.Session__c
+      },
+    ]
+  }
+  salesforce.FormulaText Status__c {
+    apiName = "Booking__c.Status__c"
+    description = "The Status field tracks the current state of an experience booking, indicating whether it is Confirmed, Canceled, or Completed. This field is essential for managing reservations effectively, allowing both resort staff and guests to understand the booking's progression from confirmation through completion or cancellation, facilitating clear communication and operational planning."
+    externalId = false
+    formula = "If(Is_Canceled__c, \"Canceled\",  Session__r.Status__c )"
+    formulaTreatBlanksAs = "BlankAsZero"
+    label = "Status"
+    trackTrending = false
+    unique = false
+    createable = false
+    updateable = false
+    caseSensitive = false
+    queryable = true
+    _hidden_value = true
+    _generated_dependencies = [
+      {
+        reference = salesforce.Booking__c.field.Is_Canceled__c
+      },
+      {
+        reference = salesforce.Booking__c.field.Session__c
+      },
+    ]
+  }
+  salesforce.FormulaCurrency Total_Price__c {
+    apiName = "Booking__c.Total_Price__c"
+    formula = "Session__r.Experience__r.Price__c *  Number_of_Guests__c"
+    formulaTreatBlanksAs = "BlankAsZero"
+    label = "Total Price"
+    precision = 18
+    scale = 2
+    trackTrending = false
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+    _generated_dependencies = [
+      {
+        reference = salesforce.Booking__c.field.Number_of_Guests__c
+      },
+      {
+        reference = salesforce.Booking__c.field.Session__c
+      },
+    ]
+  }
+}

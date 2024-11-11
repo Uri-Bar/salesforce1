@@ -1,0 +1,7 @@
+salesforce.StaticResource workshopDetails {
+  cacheControl = "Public"
+  contentType = "text/javascript"
+  fullName = "workshopDetails"
+  content = file("salesforce/Records/StaticResource/workshopDetails.resource")
+  _alias = "workshopDetails"
+}

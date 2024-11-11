@@ -1,0 +1,18 @@
+salesforce.ApexPage BandwidthExceeded {
+  apiVersion = 61
+  availableInTouch = false
+  confirmationTokenRequired = false
+  description = "Default Lightning Platform Limit Exceeded page"
+  label = "BandwidthExceeded"
+  fullName = "BandwidthExceeded"
+  content = file("salesforce/Records/ApexPage/BandwidthExceeded.page")
+  _generated_dependencies = [
+    {
+      reference = salesforce.ApexPage.instance.StdExceptionTemplate
+    },
+    {
+      reference = salesforce.StaticResource.instance.SiteSamples
+    },
+  ]
+  _alias = "BandwidthExceeded"
+}

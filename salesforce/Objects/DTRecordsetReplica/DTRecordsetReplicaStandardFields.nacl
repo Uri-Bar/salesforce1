@@ -1,0 +1,117 @@
+type salesforce.DTRecordsetReplica {
+  serviceid Id {
+    apiName = "DTRecordsetReplica.Id"
+    label = "Decision Table Recordset Replica ID"
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Lookup OwnerId {
+    apiName = "DTRecordsetReplica.OwnerId"
+    relationshipName = "Owner"
+    label = "Owner ID"
+    createable = true
+    updateable = true
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Checkbox IsDeleted {
+    apiName = "DTRecordsetReplica.IsDeleted"
+    defaultValue = false
+    label = "Deleted"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.DateTime CreatedDate {
+    apiName = "DTRecordsetReplica.CreatedDate"
+    label = "Created Date"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Lookup CreatedById {
+    apiName = "DTRecordsetReplica.CreatedById"
+    relationshipName = "CreatedBy"
+    label = "Created By ID"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.DateTime LastModifiedDate {
+    apiName = "DTRecordsetReplica.LastModifiedDate"
+    label = "Last Modified Date"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Lookup LastModifiedById {
+    apiName = "DTRecordsetReplica.LastModifiedById"
+    relationshipName = "LastModifiedBy"
+    label = "Last Modified By ID"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.DateTime SystemModstamp {
+    apiName = "DTRecordsetReplica.SystemModstamp"
+    label = "System Modstamp"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Text HashKey {
+    apiName = "DTRecordsetReplica.HashKey"
+    length = 100
+    _required = true
+    label = "Hash Key"
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    queryable = true
+  }
+  salesforce.Text DecisionTable {
+    apiName = "DTRecordsetReplica.DecisionTable"
+    length = 40
+    _required = true
+    label = "DecisionTable Id"
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    queryable = true
+  }
+  salesforce.Number LastRefreshDate {
+    apiName = "DTRecordsetReplica.LastRefreshDate"
+    _required = true
+    label = "Last Refresh Date"
+    precision = 18
+    scale = 0
+    createable = true
+    updateable = true
+    unique = false
+    queryable = true
+  }
+  salesforce.LongTextArea NonhashedInputFieldValue {
+    apiName = "DTRecordsetReplica.NonhashedInputFieldValue"
+    length = 131000
+    label = "Nonhashed Input Field Value"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.LongTextArea NonhashedOutputFieldValue {
+    apiName = "DTRecordsetReplica.NonhashedOutputFieldValue"
+    length = 131000
+    label = "Nonhashed Output Field Value"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+}

@@ -1,0 +1,38 @@
+salesforce.ModerationRule coral_cloud_Flag_banned@bvu {
+  fullName = "coral-cloud.Flag_banned"
+  action = "Flag"
+  active = false
+  description = "Community moderators review posts and comments containing banned keywords"
+  entitiesAndFields = [
+    {
+      entityName = "FeedComment"
+      fieldName = "RawCommentBody"
+      keywordList = "coral-cloud.Banned"
+    },
+    {
+      entityName = "FeedItem"
+      fieldName = "LinkUrl"
+      keywordList = "coral-cloud.Banned"
+    },
+    {
+      entityName = "FeedItem"
+      fieldName = "RawBody"
+      keywordList = "coral-cloud.Banned"
+    },
+    {
+      entityName = "FeedItem"
+      fieldName = "Title"
+      keywordList = "coral-cloud.Banned"
+    },
+    {
+      entityName = "FeedPollChoice"
+      fieldName = "ChoiceBody"
+      keywordList = "coral-cloud.Banned"
+    },
+  ]
+  masterLabel = "Flag posts or comments containing banned keywords"
+  type = "Content"
+  userCriteria = "coral-cloud.Customer_Members"
+  userMessage = "You can't use %BLOCKED_KEYWORD% or other inappropriate words in this community. Review your content and try again."
+  _alias = "coral-cloud.Flag_banned"
+}

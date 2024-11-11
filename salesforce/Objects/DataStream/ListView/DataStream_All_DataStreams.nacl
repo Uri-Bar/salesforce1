@@ -1,0 +1,9 @@
+salesforce.ListView DataStream_All_DataStreams {
+  fullName = "DataStream.All_DataStreams"
+  filterScope = "Everything"
+  label = "All Data Streams"
+  _parent = [
+    salesforce.DataStream,
+  ]
+  _alias = "All Data Streams"
+}

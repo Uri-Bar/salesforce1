@@ -1,0 +1,236 @@
+type salesforce.UserServicePresence {
+  salesforce.Number AtCapacityDuration {
+    apiName = "UserServicePresence.AtCapacityDuration"
+    label = "At Capacity Duration"
+    precision = 9
+    createable = false
+    updateable = false
+    scale = 0
+    unique = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Unknown AtCapacityStartTime {
+    apiName = "UserServicePresence.AtCapacityStartTime"
+    _hidden_value = true
+  }
+  salesforce.Number AverageCapacity {
+    apiName = "UserServicePresence.AverageCapacity"
+    label = "Average Capacity"
+    precision = 10
+    scale = 2
+    createable = false
+    updateable = false
+    unique = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Unknown AverageCapacityStartTime {
+    apiName = "UserServicePresence.AverageCapacityStartTime"
+    _hidden_value = true
+  }
+  salesforce.Unknown Capacity {
+    apiName = "UserServicePresence.Capacity"
+    _hidden_value = true
+  }
+  salesforce.Unknown ClusterId {
+    apiName = "UserServicePresence.ClusterId"
+    _hidden_value = true
+  }
+  salesforce.Number ConfiguredCapacity {
+    apiName = "UserServicePresence.ConfiguredCapacity"
+    label = "Configured Capacity"
+    precision = 9
+    createable = false
+    updateable = false
+    scale = 0
+    unique = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Number ConfiguredInterruptCapacity {
+    apiName = "UserServicePresence.ConfiguredInterruptCapacity"
+    label = "Configured Interruptible Capacity"
+    precision = 9
+    createable = false
+    updateable = false
+    scale = 0
+    unique = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Number IdleDuration {
+    apiName = "UserServicePresence.IdleDuration"
+    label = "Idle Duration"
+    precision = 9
+    createable = false
+    updateable = false
+    scale = 0
+    unique = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Unknown IdleStartTime {
+    apiName = "UserServicePresence.IdleStartTime"
+    _hidden_value = true
+  }
+  salesforce.Unknown InterruptibleCapacity {
+    apiName = "UserServicePresence.InterruptibleCapacity"
+    _hidden_value = true
+  }
+  salesforce.Checkbox IsAway {
+    apiName = "UserServicePresence.IsAway"
+    defaultValue = false
+    label = "Is Away"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Checkbox IsCurrentState {
+    apiName = "UserServicePresence.IsCurrentState"
+    defaultValue = false
+    label = "Is Current State"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Unknown LASessionId {
+    apiName = "UserServicePresence.LASessionId"
+    _hidden_value = true
+  }
+  salesforce.Lookup OwnerId {
+    apiName = "UserServicePresence.OwnerId"
+    relationshipName = "Owner"
+    label = "Owner ID"
+    createable = false
+    updateable = true
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Unknown PresenceUserConfig {
+    apiName = "UserServicePresence.PresenceUserConfig"
+    _hidden_value = true
+  }
+  salesforce.Unknown PreviousCapacity {
+    apiName = "UserServicePresence.PreviousCapacity"
+    _hidden_value = true
+  }
+  salesforce.Unknown PreviousInterruptibleCapacity {
+    apiName = "UserServicePresence.PreviousInterruptibleCapacity"
+    _hidden_value = true
+  }
+  salesforce.Lookup ServicePresenceStatusId {
+    apiName = "UserServicePresence.ServicePresenceStatusId"
+    relationshipName = "ServicePresenceStatus"
+    label = "Service Presence Status ID"
+    createable = false
+    updateable = true
+    queryable = true
+  }
+  salesforce.DateTime StatusEndDate {
+    apiName = "UserServicePresence.StatusEndDate"
+    label = "Status End Date"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Unknown StatusSequence {
+    apiName = "UserServicePresence.StatusSequence"
+    _hidden_value = true
+  }
+  salesforce.DateTime StatusStartDate {
+    apiName = "UserServicePresence.StatusStartDate"
+    label = "Status Start Date"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Lookup UserId {
+    apiName = "UserServicePresence.UserId"
+    relationshipName = "User"
+    _required = true
+    label = "User ID"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  serviceid Id {
+    apiName = "UserServicePresence.Id"
+    label = "User Presence ID"
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Checkbox IsDeleted {
+    apiName = "UserServicePresence.IsDeleted"
+    defaultValue = false
+    label = "Deleted"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.AutoNumber Name {
+    apiName = "UserServicePresence.Name"
+    label = "Name"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.DateTime CreatedDate {
+    apiName = "UserServicePresence.CreatedDate"
+    label = "Created Date"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Lookup CreatedById {
+    apiName = "UserServicePresence.CreatedById"
+    relationshipName = "CreatedBy"
+    label = "Created By ID"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.DateTime LastModifiedDate {
+    apiName = "UserServicePresence.LastModifiedDate"
+    label = "Last Modified Date"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Lookup LastModifiedById {
+    apiName = "UserServicePresence.LastModifiedById"
+    relationshipName = "LastModifiedBy"
+    label = "Last Modified By ID"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.DateTime SystemModstamp {
+    apiName = "UserServicePresence.SystemModstamp"
+    label = "System Modstamp"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Summary StatusDuration {
+    apiName = "UserServicePresence.StatusDuration"
+    label = "Status Duration"
+    precision = 9
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+}

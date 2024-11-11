@@ -1,0 +1,18 @@
+salesforce.LightningComponentBundle paginator {
+  apiVersion = 61
+  isExposed = false
+  fullName = "paginator"
+  lwcResources = {
+    lwcResource = {
+      paginator_js@v = {
+        source = file("salesforce/Records/LightningComponentBundle/paginator/paginator.js")
+        filePath = "lwc/paginator/paginator.js"
+      }
+      paginator_html@v = {
+        source = file("salesforce/Records/LightningComponentBundle/paginator/paginator.html")
+        filePath = "lwc/paginator/paginator.html"
+      }
+    }
+  }
+  _alias = "paginator"
+}

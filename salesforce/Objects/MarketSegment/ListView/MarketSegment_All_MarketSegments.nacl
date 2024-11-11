@@ -1,0 +1,9 @@
+salesforce.ListView MarketSegment_All_MarketSegments {
+  fullName = "MarketSegment.All_MarketSegments"
+  filterScope = "Everything"
+  label = "All Segments"
+  _parent = [
+    salesforce.MarketSegment,
+  ]
+  _alias = "All Segments"
+}

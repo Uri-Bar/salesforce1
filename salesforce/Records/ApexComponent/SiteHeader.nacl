@@ -1,0 +1,8 @@
+salesforce.ApexComponent SiteHeader {
+  apiVersion = 61
+  description = "Default Lightning Platform site header component"
+  label = "SiteHeader"
+  fullName = "SiteHeader"
+  content = file("salesforce/Records/ApexComponent/SiteHeader.component")
+  _alias = "SiteHeader"
+}

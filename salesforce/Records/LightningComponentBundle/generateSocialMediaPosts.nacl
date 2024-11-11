@@ -1,0 +1,61 @@
+salesforce.LightningComponentBundle generateSocialMediaPosts {
+  apiVersion = 61
+  isExposed = true
+  masterLabel = "Generate Social Media Posts"
+  targets = {
+    target = [
+      "lightning__RecordPage",
+    ]
+  }
+  targetConfigs = {
+    targetConfig = [
+      {
+        targets = "lightning__RecordPage"
+        objects = [
+          {
+            object = "Session__c"
+          },
+        ]
+        supportedFormFactors = {
+          supportedFormFactor = [
+            {
+              type = "Large"
+            },
+            {
+              type = "Small"
+            },
+          ]
+        }
+      },
+    ]
+  }
+  fullName = "generateSocialMediaPosts"
+  lwcResources = {
+    lwcResource = {
+      generateSocialMediaPosts_js@v = {
+        source = file("salesforce/Records/LightningComponentBundle/generateSocialMediaPosts/generateSocialMediaPosts.js")
+        filePath = "lwc/generateSocialMediaPosts/generateSocialMediaPosts.js"
+      }
+      generateSocialMediaPosts_css@v = {
+        source = file("salesforce/Records/LightningComponentBundle/generateSocialMediaPosts/generateSocialMediaPosts.css")
+        filePath = "lwc/generateSocialMediaPosts/generateSocialMediaPosts.css"
+      }
+      generateSocialMediaPosts_html@v = {
+        source = file("salesforce/Records/LightningComponentBundle/generateSocialMediaPosts/generateSocialMediaPosts.html")
+        filePath = "lwc/generateSocialMediaPosts/generateSocialMediaPosts.html"
+      }
+    }
+  }
+  _generated_dependencies = [
+    {
+      reference = salesforce.ApexClass.instance.SocialMediaPostsController
+    },
+    {
+      reference = salesforce.LightningComponentBundle.instance.errorPanel
+    },
+    {
+      reference = salesforce.Session__c
+    },
+  ]
+  _alias = "generateSocialMediaPosts"
+}

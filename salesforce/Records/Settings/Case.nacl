@@ -1,0 +1,49 @@
+salesforce.CaseSettings {
+  fullName = "Case"
+  caseAssignNotificationTemplate = salesforce.EmailTemplate.instance.unfiled_public_SupportCaseAssignmentNotification@zcd
+  caseCreateNotificationTemplate = salesforce.EmailTemplate.instance.unfiled_public_SupportCaseCreatedPhoneInquiries@zcd
+  caseFeedItemSettings = {
+    characterLimit = 400
+    displayFormat = "Default"
+    feedItemType = "EmailMessageEvent"
+  }
+  caseFeedReadUnreadLtng = false
+  caseMergeInLightning = "false"
+  closeCaseThroughStatusChange = false
+  defaultCaseFeedLayoutOn = true
+  defaultCaseOwner = "epic.e4f50a49be1c@orgfarm.com"
+  defaultCaseOwnerType = "User"
+  defaultCaseUser = "epic.e4f50a49be1c@orgfarm.com"
+  emailToCase = {
+    enableEmailToCase = false
+  }
+  enableCaseFeed = true
+  enableCaseSwarming = "false"
+  enableCollapseEmailThread = true
+  enableEarlyEscalationRuleTriggers = false
+  enableEscalateQfiToCaseInternal = false
+  enableEscalateQfiToCaseNetworks = false
+  enableExtNetworksCaseFeedEnabled = false
+  enableMultiLangSolnSrchCSS = "false"
+  enableMultiLangSolnSrchPKB = "false"
+  enableMultiLangSolution = "false"
+  enableSolutionCategory = "false"
+  enableSolutionInlineCategory = "true"
+  enableSolutionShortSummary = "true"
+  enableSuggestedSolutions = true
+  escalateCaseBefore = false
+  notifyContactOnCaseComment = false
+  notifyDefaultCaseOwner = false
+  notifyOwnerOnCaseComment = false
+  notifyOwnerOnCaseOwnerChange = false
+  showEmailAttachmentsInCaseAttachmentsRL = true
+  useSystemEmailAddress = true
+  useSystemUserAsDefaultCaseUser = false
+  visibleInCssCheckbox = false
+  webToCase = {
+    caseOrigin = "Web"
+    defaultResponseTemplate = "unfiled$public/SupportCaseCreatedWebInquiries"
+    enableWebToCase = true
+  }
+  _alias = "Case"
+}

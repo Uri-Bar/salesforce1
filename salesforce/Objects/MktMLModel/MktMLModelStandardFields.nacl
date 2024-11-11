@@ -1,0 +1,160 @@
+type salesforce.MktMLModel {
+  salesforce.LongTextArea Description {
+    apiName = "MktMLModel.Description"
+    length = 4000
+    label = "Description"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Text Name {
+    apiName = "MktMLModel.Name"
+    length = 255
+    _required = true
+    label = "Model Name"
+    createable = false
+    updateable = false
+    unique = false
+    caseSensitive = false
+    queryable = true
+    _hidden_value = true
+  }
+  serviceid Id {
+    apiName = "MktMLModel.Id"
+    label = "Model ID"
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Lookup OwnerId {
+    apiName = "MktMLModel.OwnerId"
+    relationshipName = "Owner"
+    label = "Owner ID"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Checkbox IsDeleted {
+    apiName = "MktMLModel.IsDeleted"
+    defaultValue = false
+    label = "Deleted"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.DateTime CreatedDate {
+    apiName = "MktMLModel.CreatedDate"
+    label = "Created Date"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Lookup CreatedById {
+    apiName = "MktMLModel.CreatedById"
+    relationshipName = "CreatedBy"
+    label = "Created By ID"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.DateTime LastModifiedDate {
+    apiName = "MktMLModel.LastModifiedDate"
+    label = "Last Modified Date"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Lookup LastModifiedById {
+    apiName = "MktMLModel.LastModifiedById"
+    relationshipName = "LastModifiedBy"
+    label = "Last Modified By ID"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.DateTime SystemModstamp {
+    apiName = "MktMLModel.SystemModstamp"
+    label = "System Modstamp"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Text MlModelApiName {
+    apiName = "MktMLModel.MlModelApiName"
+    length = 255
+    label = "Model API Name"
+    createable = false
+    updateable = false
+    unique = false
+    caseSensitive = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Picklist OffCoreSyncStatus {
+    apiName = "MktMLModel.OffCoreSyncStatus"
+    restricted = true
+    _required = true
+    label = "Status"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Picklist DeployStatus {
+    apiName = "MktMLModel.DeployStatus"
+    restricted = true
+    label = "Deploy status of model"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Picklist LastRunStatus {
+    apiName = "MktMLModel.LastRunStatus"
+    restricted = true
+    label = "Last Run Status"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.DateTime LastRefreshDate {
+    apiName = "MktMLModel.LastRefreshDate"
+    label = "Last Refresh Date"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Unknown LastProcessedRecords {
+    apiName = "MktMLModel.LastProcessedRecords"
+    label = "Last Processed Records"
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Picklist AggregatedStatus {
+    apiName = "MktMLModel.AggregatedStatus"
+    restricted = true
+    label = "Status"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Picklist ScoringMode {
+    apiName = "MktMLModel.ScoringMode"
+    restricted = true
+    label = "Scoring Mode"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+}

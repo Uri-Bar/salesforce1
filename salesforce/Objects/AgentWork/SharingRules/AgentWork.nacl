@@ -1,0 +1,7 @@
+salesforce.SharingRules AgentWork {
+  fullName = "AgentWork"
+  _parent = [
+    salesforce.AgentWork,
+  ]
+  _alias = "AgentWork"
+}

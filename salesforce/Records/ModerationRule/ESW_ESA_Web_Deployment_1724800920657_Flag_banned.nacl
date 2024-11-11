@@ -1,0 +1,38 @@
+salesforce.ModerationRule ESW_ESA_Web_Deployment_1724800920657_Flag_banned@uuuuvu {
+  fullName = "ESW_ESA_Web_Deployment_1724800920657.Flag_banned"
+  action = "Flag"
+  active = false
+  description = "Community moderators review posts and comments containing banned keywords"
+  entitiesAndFields = [
+    {
+      entityName = "FeedComment"
+      fieldName = "RawCommentBody"
+      keywordList = "ESW_ESA_Web_Deployment_1724800920657.Banned"
+    },
+    {
+      entityName = "FeedItem"
+      fieldName = "LinkUrl"
+      keywordList = "ESW_ESA_Web_Deployment_1724800920657.Banned"
+    },
+    {
+      entityName = "FeedItem"
+      fieldName = "RawBody"
+      keywordList = "ESW_ESA_Web_Deployment_1724800920657.Banned"
+    },
+    {
+      entityName = "FeedItem"
+      fieldName = "Title"
+      keywordList = "ESW_ESA_Web_Deployment_1724800920657.Banned"
+    },
+    {
+      entityName = "FeedPollChoice"
+      fieldName = "ChoiceBody"
+      keywordList = "ESW_ESA_Web_Deployment_1724800920657.Banned"
+    },
+  ]
+  masterLabel = "Flag posts or comments containing banned keywords"
+  type = "Content"
+  userCriteria = "ESW_ESA_Web_Deployment_1724800920657.Customer_Members"
+  userMessage = "You can't use %BLOCKED_KEYWORD% or other inappropriate words in this community. Review your content and try again."
+  _alias = "ESW_ESA_Web_Deployment_1724800920657.Flag_banned"
+}

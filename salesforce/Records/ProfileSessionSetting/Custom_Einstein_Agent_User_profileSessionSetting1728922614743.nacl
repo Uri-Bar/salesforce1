@@ -1,0 +1,10 @@
+salesforce.ProfileSessionSetting Custom_Einstein_Agent_User_profileSessionSetting1728922614743 {
+  fullName = "Custom_Einstein_Agent_User_profileSessionSetting1728922614743"
+  externalCommunityUserIdentityVerif = false
+  forceLogout = false
+  profile = "custom einstein agent user"
+  sessionPersistence = false
+  sessionTimeout = 0
+  sessionTimeoutWarning = false
+  _alias = "Custom_Einstein_Agent_User_profileSessionSetting1728922614743"
+}

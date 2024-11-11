@@ -1,0 +1,7 @@
+salesforce.ApexClass LLMService {
+  apiVersion = 61
+  status = "Active"
+  fullName = "LLMService"
+  content = file("salesforce/Records/ApexClass/LLMService.cls")
+  _alias = "LLMService"
+}

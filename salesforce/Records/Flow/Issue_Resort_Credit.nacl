@@ -1,0 +1,90 @@
+salesforce.Flow Issue_Resort_Credit {
+  fullName = "Issue_Resort_Credit"
+  apiVersion = 61
+  description = "Issue a resort credit for a Contact"
+  environments = "Default"
+  interviewLabel = "Issue Resort Credit {!$Flow.CurrentDateTime}"
+  label = "Issue Resort Credit"
+  processMetadataValues = [
+    {
+      name = "BuilderType"
+      value = {
+        stringValue = "LightningFlowBuilder"
+      }
+    },
+    {
+      name = "CanvasMode"
+      value = {
+        stringValue = "AUTO_LAYOUT_CANVAS"
+      }
+    },
+    {
+      name = "OriginBuilderType"
+      value = {
+        stringValue = "LightningFlowBuilder"
+      }
+    },
+  ]
+  processType = "AutoLaunchedFlow"
+  recordCreates = [
+    {
+      description = "Create a credit record including a Contact Id and the amount of the credit."
+      name = "Create_Credit_Record"
+      label = "Create Credit Record"
+      locationX = 176
+      locationY = 134
+      assignRecordIdToReference = "creditId"
+      inputAssignments = [
+        {
+          field = salesforce.Credit__c.field.Amount__c
+          value = {
+            elementReference = "amount"
+          }
+        },
+        {
+          field = salesforce.Credit__c.field.Contact__c
+          value = {
+            elementReference = "contactId"
+          }
+        },
+      ]
+      object = salesforce.Credit__c
+    },
+  ]
+  start = {
+    locationX = 50
+    locationY = 0
+    connector = {
+      targetReference = "Create_Credit_Record"
+    }
+  }
+  status = "Active"
+  variables = [
+    {
+      description = "The amount of the resort credit."
+      name = "amount"
+      dataType = "Number"
+      isCollection = false
+      isInput = true
+      isOutput = false
+      scale = 0
+    },
+    {
+      description = "The Id of the Contact the credit will be issued to."
+      name = "contactId"
+      dataType = "String"
+      isCollection = false
+      isInput = true
+      isOutput = false
+    },
+    {
+      description = "The id of the Credit record that was created."
+      name = "creditId"
+      dataType = "String"
+      isCollection = false
+      isInput = false
+      isOutput = true
+    },
+  ]
+  _alias = "Issue Resort Credit"
+}

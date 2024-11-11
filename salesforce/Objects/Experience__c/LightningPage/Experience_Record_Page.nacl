@@ -1,0 +1,584 @@
+salesforce.LightningPage Experience_Record_Page {
+  flexiPageRegions = [
+    {
+      itemInstances = [
+        {
+          componentInstance = {
+            componentInstanceProperties = [
+              {
+                name = "collapsed"
+                value = "false"
+              },
+              {
+                name = "enableActionsConfiguration"
+                value = "false"
+              },
+              {
+                name = "enableActionsInNative"
+                value = "false"
+              },
+              {
+                name = "hideChatterActions"
+                value = "false"
+              },
+              {
+                name = "numVisibleActions"
+                value = "3"
+              },
+            ]
+            componentName = "force:highlightsPanel"
+            identifier = "force_highlightsPanel"
+          }
+        },
+      ]
+      mode = "Replace"
+      name = "header"
+      type = "Region"
+    },
+    {
+      itemInstances = [
+        {
+          componentInstance = {
+            componentInstanceProperties = [
+              {
+                name = "actionNames"
+                valueList = {
+                  valueListItems = [
+                    {
+                      value = "New"
+                    },
+                  ]
+                }
+              },
+              {
+                name = "maxRecordsToDisplay"
+                value = "10"
+              },
+              {
+                name = "parentFieldApiName"
+                value = "Experience__c.Id"
+              },
+              {
+                name = "relatedListApiName"
+                value = "Guest_Reviews__r"
+              },
+              {
+                name = "relatedListDisplayType"
+                value = "ADVGRID"
+              },
+              {
+                name = "relatedListFieldAliases"
+                valueList = {
+                  valueListItems = [
+                    {
+                      value = "NAME"
+                    },
+                    {
+                      value = "Contact.CNTC_FIRST_NAME"
+                    },
+                    {
+                      value = "Contact.NAME"
+                    },
+                    {
+                      value = "Rating__c"
+                    },
+                    {
+                      value = "Comments__c"
+                    },
+                  ]
+                }
+              },
+              {
+                name = "relatedListLabel"
+                value = "Reviews"
+              },
+              {
+                name = "showActionBar"
+                value = "true"
+              },
+              {
+                name = "sortFieldAlias"
+                value = "CREATED_DATE"
+              },
+              {
+                name = "sortFieldOrder"
+                value = "Default"
+              },
+            ]
+            componentName = "lst:dynamicRelatedList"
+            identifier = "lst_dynamicRelatedList"
+          }
+        },
+        {
+          componentInstance = {
+            componentInstanceProperties = [
+              {
+                name = "actionNames"
+                valueList = {
+                  valueListItems = [
+                    {
+                      value = "MassChangeOwner"
+                    },
+                    {
+                      value = "New"
+                    },
+                  ]
+                }
+              },
+              {
+                name = "maxRecordsToDisplay"
+                value = "10"
+              },
+              {
+                name = "parentFieldApiName"
+                value = "Experience__c.Id"
+              },
+              {
+                name = "relatedListApiName"
+                value = "Sessions__r"
+              },
+              {
+                name = "relatedListDisplayType"
+                value = "ADVGRID"
+              },
+              {
+                name = "relatedListFieldAliases"
+                valueList = {
+                  valueListItems = [
+                    {
+                      value = "NAME"
+                    },
+                    {
+                      value = "Date__c"
+                    },
+                    {
+                      value = "Booked_Slots__c"
+                    },
+                    {
+                      value = "Available_Slots__c"
+                    },
+                    {
+                      value = "Start_Time__c"
+                    },
+                  ]
+                }
+              },
+              {
+                name = "relatedListLabel"
+                value = "Sessions"
+              },
+              {
+                name = "showActionBar"
+                value = "true"
+              },
+              {
+                name = "sortFieldAlias"
+                value = "Date__c"
+              },
+              {
+                name = "sortFieldOrder"
+                value = "Descending"
+              },
+            ]
+            componentName = "lst:dynamicRelatedList"
+            identifier = "lst_dynamicRelatedList2"
+          }
+        },
+      ]
+      mode = "Replace"
+      name = "relatedTabContent"
+      type = "Facet"
+    },
+    {
+      itemInstances = [
+        {
+          componentInstance = {
+            componentInstanceProperties = [
+              {
+                name = "body"
+                value = "Facet-80f633a1-c7de-43a8-a0d1-c83b3fc22694"
+              },
+            ]
+            componentName = "flexipage:column"
+            identifier = "flexipage_column"
+          }
+        },
+        {
+          componentInstance = {
+            componentInstanceProperties = [
+              {
+                name = "body"
+                value = "Facet-bcb97862-bd96-411a-b6af-569657d2e7b8"
+              },
+            ]
+            componentName = "flexipage:column"
+            identifier = "flexipage_column2"
+          }
+        },
+      ]
+      name = "Facet-ee44334e-8375-4b57-9a34-b34f44aa90ca"
+      type = "Facet"
+    },
+    {
+      itemInstances = [
+        {
+          componentInstance = {
+            componentInstanceProperties = [
+              {
+                name = "body"
+                value = "Facet-067143c6-414b-4305-a9ff-133962dbbf0c"
+              },
+            ]
+            componentName = "flexipage:column"
+            identifier = "flexipage_column3"
+          }
+        },
+      ]
+      name = "Facet-5062b503-3b12-4046-9956-3727a2364515"
+      type = "Facet"
+    },
+    {
+      itemInstances = [
+        {
+          componentInstance = {
+            componentInstanceProperties = [
+              {
+                name = "body"
+                value = "Facet-925974b1-9b9b-4953-8f0c-72c3b8255a58"
+              },
+            ]
+            componentName = "flexipage:column"
+            identifier = "flexipage_column4"
+          }
+        },
+        {
+          componentInstance = {
+            componentInstanceProperties = [
+              {
+                name = "body"
+                value = "Facet-333a419c-d5bb-4a1b-9f90-f1c76e489861"
+              },
+            ]
+            componentName = "flexipage:column"
+            identifier = "flexipage_column5"
+          }
+        },
+      ]
+      name = "Facet-6fdfcf73-6eee-45d7-ab0e-6fc3d0386769"
+      type = "Facet"
+    },
+    {
+      itemInstances = [
+        {
+          componentInstance = {
+            componentInstanceProperties = [
+              {
+                name = "columns"
+                value = "Facet-ee44334e-8375-4b57-9a34-b34f44aa90ca"
+              },
+              {
+                name = "horizontalAlignment"
+                value = "false"
+              },
+              {
+                name = "label"
+                value = "Experience Details"
+              },
+            ]
+            componentName = "flexipage:fieldSection"
+            identifier = "flexipage_fieldSection"
+          }
+        },
+        {
+          componentInstance = {
+            componentInstanceProperties = [
+              {
+                name = "columns"
+                value = "Facet-5062b503-3b12-4046-9956-3727a2364515"
+              },
+              {
+                name = "horizontalAlignment"
+                value = "false"
+              },
+              {
+                name = "label"
+                value = "More Details"
+              },
+            ]
+            componentName = "flexipage:fieldSection"
+            identifier = "flexipage_fieldSection2"
+          }
+        },
+        {
+          componentInstance = {
+            componentInstanceProperties = [
+              {
+                name = "columns"
+                value = "Facet-6fdfcf73-6eee-45d7-ab0e-6fc3d0386769"
+              },
+              {
+                name = "horizontalAlignment"
+                value = "false"
+              },
+              {
+                name = "label"
+                value = "Scheduling"
+              },
+            ]
+            componentName = "flexipage:fieldSection"
+            identifier = "flexipage_fieldSection3"
+          }
+        },
+      ]
+      mode = "Replace"
+      name = "detailTabContent"
+      type = "Facet"
+    },
+    {
+      itemInstances = [
+        {
+          componentInstance = {
+            componentInstanceProperties = [
+              {
+                name = "body"
+                value = "relatedTabContent"
+              },
+              {
+                name = "title"
+                value = "Standard.Tab.relatedLists"
+              },
+            ]
+            componentName = "flexipage:tab"
+            identifier = "relatedListsTab"
+          }
+        },
+        {
+          componentInstance = {
+            componentInstanceProperties = [
+              {
+                name = "active"
+                value = "true"
+              },
+              {
+                name = "body"
+                value = "detailTabContent"
+              },
+              {
+                name = "title"
+                value = "Standard.Tab.detail"
+              },
+            ]
+            componentName = "flexipage:tab"
+            identifier = "detailTab"
+          }
+        },
+      ]
+      mode = "Replace"
+      name = "maintabs"
+      type = "Facet"
+    },
+    {
+      itemInstances = [
+        {
+          componentInstance = {
+            componentInstanceProperties = [
+              {
+                name = "tabs"
+                value = "maintabs"
+              },
+            ]
+            componentName = "flexipage:tabset"
+            identifier = "flexipage_tabset"
+          }
+        },
+      ]
+      mode = "Replace"
+      name = "main"
+      type = "Region"
+    },
+    {
+      itemInstances = [
+        {
+          componentInstance = {
+            componentName = "experienceSchedule"
+            identifier = "c_experienceSchedule"
+          }
+        },
+      ]
+      mode = "Replace"
+      name = "sidebar"
+      type = "Region"
+    },
+    {
+      itemInstances = [
+        {
+          fieldInstance = {
+            fieldInstanceProperties = {
+              name = "uiBehavior"
+              value = "required"
+            }
+            fieldItem = "Record.Name"
+            identifier = "RecordNameField"
+          }
+        },
+        {
+          fieldInstance = {
+            fieldInstanceProperties = {
+              name = "uiBehavior"
+              value = "none"
+            }
+            fieldItem = "Record.Location__c"
+            identifier = "RecordLocation_cField"
+          }
+        },
+        {
+          fieldInstance = {
+            fieldInstanceProperties = {
+              name = "uiBehavior"
+              value = "none"
+            }
+            fieldItem = "Record.Type__c"
+            identifier = "RecordType_cField"
+          }
+        },
+      ]
+      name = "Facet-80f633a1-c7de-43a8-a0d1-c83b3fc22694"
+      type = "Facet"
+    },
+    {
+      itemInstances = [
+        {
+          fieldInstance = {
+            fieldInstanceProperties = {
+              name = "uiBehavior"
+              value = "none"
+            }
+            fieldItem = "Record.Activity_Level__c"
+            identifier = "RecordActivity_Level_cField"
+          }
+        },
+        {
+          fieldInstance = {
+            fieldInstanceProperties = {
+              name = "uiBehavior"
+              value = "none"
+            }
+            fieldItem = "Record.Rating__c"
+            identifier = "RecordRating_cField"
+          }
+        },
+        {
+          fieldInstance = {
+            fieldInstanceProperties = {
+              name = "uiBehavior"
+              value = "none"
+            }
+            fieldItem = "Record.Price__c"
+            identifier = "RecordPrice_cField"
+          }
+        },
+      ]
+      name = "Facet-bcb97862-bd96-411a-b6af-569657d2e7b8"
+      type = "Facet"
+    },
+    {
+      itemInstances = [
+        {
+          fieldInstance = {
+            fieldInstanceProperties = {
+              name = "uiBehavior"
+              value = "none"
+            }
+            fieldItem = "Record.Description__c"
+            identifier = "RecordDescription_cField"
+          }
+        },
+        {
+          fieldInstance = {
+            fieldInstanceProperties = {
+              name = "uiBehavior"
+              value = "none"
+            }
+            fieldItem = "Record.Reviews_Summary__c"
+            identifier = "RecordReviews_Summary_cField"
+          }
+        },
+      ]
+      name = "Facet-067143c6-414b-4305-a9ff-133962dbbf0c"
+      type = "Facet"
+    },
+    {
+      itemInstances = [
+        {
+          fieldInstance = {
+            fieldInstanceProperties = {
+              name = "uiBehavior"
+              value = "none"
+            }
+            fieldItem = "Record.Duration_Hours__c"
+            identifier = "RecordDuration_Hours_cField"
+          }
+        },
+      ]
+      name = "Facet-925974b1-9b9b-4953-8f0c-72c3b8255a58"
+      type = "Facet"
+    },
+    {
+      itemInstances = [
+        {
+          fieldInstance = {
+            fieldInstanceProperties = {
+              name = "uiBehavior"
+              value = "none"
+            }
+            fieldItem = "Record.Capacity__c"
+            identifier = "RecordCapacity_cField"
+          }
+        },
+      ]
+      name = "Facet-333a419c-d5bb-4a1b-9f90-f1c76e489861"
+      type = "Facet"
+    },
+  ]
+  masterLabel = "Experience Record Page"
+  parentFlexiPage = "flexipage__default_rec_L"
+  sobjectType = "Experience__c"
+  template = {
+    name = "flexipage:recordHomeTemplateDesktop"
+  }
+  type = "RecordPage"
+  fullName = "Experience_Record_Page"
+  _parent = [
+    salesforce.Experience__c,
+  ]
+  _generated_dependencies = [
+    {
+      reference = salesforce.Guest_Review__c.field.Comments__c
+    },
+    {
+      reference = salesforce.Guest_Review__c.field.Experience__c
+    },
+    {
+      reference = salesforce.Guest_Review__c.field.Rating__c
+    },
+    {
+      reference = salesforce.LightningComponentBundle.instance.experienceSchedule
+    },
+    {
+      reference = salesforce.Session__c.field.Available_Slots__c
+    },
+    {
+      reference = salesforce.Session__c.field.Booked_Slots__c
+    },
+    {
+      reference = salesforce.Session__c.field.Date__c
+    },
+    {
+      reference = salesforce.Session__c.field.Experience__c
+    },
+    {
+      reference = salesforce.Session__c.field.Start_Time__c
+    },
+  ]
+  _alias = "Experience_Record_Page"
+}

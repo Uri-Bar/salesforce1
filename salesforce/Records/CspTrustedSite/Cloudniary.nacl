@@ -1,0 +1,15 @@
+salesforce.CspTrustedSite Cloudniary {
+  fullName = "Cloudniary"
+  canAccessCamera = false
+  canAccessMicrophone = false
+  context = "All"
+  endpointUrl = "https://*.cloudinary.com"
+  isActive = true
+  isApplicableToConnectSrc = false
+  isApplicableToFontSrc = false
+  isApplicableToFrameSrc = false
+  isApplicableToImgSrc = true
+  isApplicableToMediaSrc = false
+  isApplicableToStyleSrc = false
+  _alias = "Cloudniary"
+}

@@ -1,0 +1,9 @@
+salesforce.ListView ExtDataShare_All_ExtDataShares {
+  fullName = "ExtDataShare.All_ExtDataShares"
+  filterScope = "Everything"
+  label = "All Data Shares"
+  _parent = [
+    salesforce.ExtDataShare,
+  ]
+  _alias = "All Data Shares"
+}

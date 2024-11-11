@@ -1,0 +1,69 @@
+salesforce.LightningComponentBundle experienceSchedule {
+  apiVersion = 61
+  isExposed = true
+  masterLabel = "Experience Schedule"
+  description = "Displays sessions' availability and capacity for an experience."
+  targets = {
+    target = [
+      "lightning__RecordPage",
+      "lightningCommunity__Page",
+    ]
+  }
+  targetConfigs = {
+    targetConfig = [
+      {
+        targets = "lightning__RecordPage"
+        objects = [
+          {
+            object = "Experience__c"
+          },
+        ]
+        supportedFormFactors = {
+          supportedFormFactor = [
+            {
+              type = "Large"
+            },
+            {
+              type = "Small"
+            },
+          ]
+        }
+      },
+    ]
+  }
+  fullName = "experienceSchedule"
+  lwcResources = {
+    lwcResource = {
+      experienceSchedule_html@v = {
+        source = file("salesforce/Records/LightningComponentBundle/experienceSchedule/experienceSchedule.html")
+        filePath = "lwc/experienceSchedule/experienceSchedule.html"
+      }
+      experienceSchedule_css@v = {
+        source = file("salesforce/Records/LightningComponentBundle/experienceSchedule/experienceSchedule.css")
+        filePath = "lwc/experienceSchedule/experienceSchedule.css"
+      }
+      experienceSchedule_js@v = {
+        source = file("salesforce/Records/LightningComponentBundle/experienceSchedule/experienceSchedule.js")
+        filePath = "lwc/experienceSchedule/experienceSchedule.js"
+      }
+    }
+  }
+  _generated_dependencies = [
+    {
+      reference = salesforce.ApexClass.instance.ContextService
+    },
+    {
+      reference = salesforce.ApexClass.instance.ExperienceController
+    },
+    {
+      reference = salesforce.Experience__c
+    },
+    {
+      reference = salesforce.LightningComponentBundle.instance.errorPanel
+    },
+    {
+      reference = salesforce.LightningMessageChannel.instance.ExperienceSelected
+    },
+  ]
+  _alias = "experienceSchedule"
+}

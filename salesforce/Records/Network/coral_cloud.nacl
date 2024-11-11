@@ -1,0 +1,65 @@
+salesforce.Network coral_cloud@b {
+  fullName = "coral-cloud"
+  allowInternalUserLogin = false
+  allowMembersToFlag = false
+  changePasswordTemplate = "unfiled$public/CommunityChangePasswordEmailTemplate"
+  communityRoles = {
+  }
+  disableReputationRecordConversations = false
+  emailSenderAddress = "stephan.garcia@salesforce.com"
+  emailSenderName = "test"
+  embeddedLoginEnabled = false
+  enableApexCDNCaching = true
+  enableCustomVFErrorPageOverrides = false
+  enableDirectMessages = false
+  enableExpFriendlyUrlsAsDefault = false
+  enableExperienceBundleBasedSnaOverrideEnabled = true
+  enableGuestChatter = false
+  enableGuestFileAccess = true
+  enableGuestMemberVisibility = false
+  enableImageOptimizationCDN = false
+  enableInvitation = false
+  enableKnowledgeable = false
+  enableLWRExperienceConnectedApp = true
+  enableMemberVisibility = false
+  enableNicknameDisplay = true
+  enablePrivateMessages = false
+  enableReputation = false
+  enableShowAllNetworkSettings = false
+  enableSiteAsContainer = true
+  enableTalkingAboutStats = false
+  enableTopicAssignmentRules = true
+  enableTopicSuggestions = false
+  enableUpDownVote = false
+  forgotPasswordTemplate = "unfiled$public/CommunityForgotPasswordEmailTemplate"
+  gatherCustomerSentimentData = false
+  headlessForgotPasswordTemplate = salesforce.EmailTemplate.instance.unfiled_public_CommunityHeadlessForgotPasswordTemplate@zcd
+  headlessRegistrationTemplate = salesforce.EmailTemplate.instance.unfiled_public_CommunityHeadlessRegistrationTemplate@zcd
+  networkMemberGroups = {
+    permissionSet = [
+      "Coral_Clouds",
+      "Coral_Cloud_Portal_User",
+    ]
+    profile = "admin"
+  }
+  networkPageOverrides = {
+    changePasswordPageOverrideSetting = "Standard"
+    forgotPasswordPageOverrideSetting = "Designer"
+    homePageOverrideSetting = "Designer"
+    loginPageOverrideSetting = "Designer"
+    selfRegProfilePageOverrideSetting = "Designer"
+  }
+  picassoSite = "coral_cloud1"
+  selfRegistration = false
+  sendWelcomeEmail = false
+  site = salesforce.CustomSite.instance.coral_cloud
+  siteArchiveStatus = "NotArchived"
+  status = "Live"
+  tabs = {
+    defaultTab = "home"
+    standardTab = "Chatter"
+  }
+  urlPathPrefix = "testvforcesite"
+  welcomeTemplate = "unfiled$public/CommunityWelcomeEmailTemplate"
+  _alias = "coral-cloud"
+}

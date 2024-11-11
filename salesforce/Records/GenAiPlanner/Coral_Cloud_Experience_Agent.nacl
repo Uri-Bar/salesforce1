@@ -1,0 +1,10 @@
+salesforce.GenAiPlanner Coral_Cloud_Experience_Agent {
+  fullName = "Coral_Cloud_Experience_Agent"
+  description = "This is the Coral Cloud Agent that helps customers learn more about Experiences as well as book sessions."
+  genAiFunctions = {
+    genAiFunctionName = "EmployeeCopilot__AnswerQuestionsWithKnowledge"
+  }
+  masterLabel = "Coral Cloud Experience Agent"
+  plannerType = "AiCopilot__ReAct"
+  _alias = "Coral_Cloud_Experience_Agent"
+}

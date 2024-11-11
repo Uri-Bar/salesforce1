@@ -1,0 +1,7 @@
+salesforce.SharingRules DataCommCapActvTarget {
+  fullName = "DataCommCapActvTarget"
+  _parent = [
+    salesforce.DataCommCapActvTarget,
+  ]
+  _alias = "DataCommCapActvTarget"
+}

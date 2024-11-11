@@ -1,0 +1,421 @@
+type salesforce.MarketSegment {
+  salesforce.TextArea Description {
+    apiName = "MarketSegment.Description"
+    label = "Segment Description"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.LongTextArea ExcludeCriteria {
+    apiName = "MarketSegment.ExcludeCriteria"
+    inlineHelpText = "Query to execute to determine members excluded from this segment."
+    length = 100000
+    label = "Exclude Criteria"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.LongTextArea IncludeCriteria {
+    apiName = "MarketSegment.IncludeCriteria"
+    inlineHelpText = "Query to execute to determine members to include in segment."
+    length = 100000
+    label = "Include Criteria"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.DateTime LastPublishStatusDateTime {
+    apiName = "MarketSegment.LastPublishStatusDateTime"
+    label = "Last Publish Status Date Time"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Picklist LastPublishStatusErrorCode {
+    apiName = "MarketSegment.LastPublishStatusErrorCode"
+    restricted = true
+    label = "Last Publish Status Error Code"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.DateTime LastPublishedEndDateTime {
+    apiName = "MarketSegment.LastPublishedEndDateTime"
+    label = "Last Publish Completed"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Unknown LastSegmentExcludedCount {
+    apiName = "MarketSegment.LastSegmentExcludedCount"
+    label = "Population Excluded"
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Unknown LastSegmentExcludedCountError {
+    apiName = "MarketSegment.LastSegmentExcludedCountError"
+    label = "Approximate Segment Population Excluded Absolute Error"
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Unknown LastSegmentIncludedCount {
+    apiName = "MarketSegment.LastSegmentIncludedCount"
+    label = "Included Population"
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Unknown LastSegmentMemberCount {
+    apiName = "MarketSegment.LastSegmentMemberCount"
+    inlineHelpText = "Count of selected segment entity. GDPR requirements may impact your count."
+    label = "Population"
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Unknown LastSegmentMemberCountError {
+    apiName = "MarketSegment.LastSegmentMemberCountError"
+    inlineHelpText = "Error Count of selected segment entity. GDPR requirements may impact your count."
+    label = "Approximate Segment Population Absolute Error"
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Unknown LastSegmentRemainderCount {
+    apiName = "MarketSegment.LastSegmentRemainderCount"
+    label = "Population Remainder"
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.DateTime LastSegmentStatusDateTime {
+    apiName = "MarketSegment.LastSegmentStatusDateTime"
+    label = "Segment Status Last Updated"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Picklist LastSegmentStatusErrorCode {
+    apiName = "MarketSegment.LastSegmentStatusErrorCode"
+    restricted = true
+    label = "Segment Status Error Code"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.LongTextArea LastSegmentStatusErrorDetails {
+    apiName = "MarketSegment.LastSegmentStatusErrorDetails"
+    length = 4096
+    label = "Segment Status Error Details"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Unknown LastSegmentTotalCount {
+    apiName = "MarketSegment.LastSegmentTotalCount"
+    label = "Total Population"
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Text Name {
+    apiName = "MarketSegment.Name"
+    length = 255
+    _required = true
+    label = "Segment Name"
+    createable = false
+    updateable = false
+    unique = false
+    caseSensitive = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.DateTime NextPublishDateTime {
+    apiName = "MarketSegment.NextPublishDateTime"
+    label = "Next Publish Date Time"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Date PublishScheduleEndDate {
+    apiName = "MarketSegment.PublishScheduleEndDate"
+    label = "Expiration Date"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Picklist PublishScheduleInterval {
+    apiName = "MarketSegment.PublishScheduleInterval"
+    inlineHelpText = "Determines when and how often your segment publishes to activation targets."
+    restricted = true
+    _required = true
+    label = "Publish Schedule"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.DateTime PublishScheduleStartDateTime {
+    apiName = "MarketSegment.PublishScheduleStartDateTime"
+    label = "Publish Schedule Start Date and Time"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Picklist PublishStatus {
+    apiName = "MarketSegment.PublishStatus"
+    restricted = true
+    label = "Publish Status"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Picklist PublishType {
+    apiName = "MarketSegment.PublishType"
+    restricted = true
+    label = "Publish Type"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Lookup SegmentOnId {
+    apiName = "MarketSegment.SegmentOnId"
+    inlineHelpText = "Identify the target used to build your segment."
+    _hidden_value = true
+  }
+  salesforce.Picklist SegmentStatus {
+    apiName = "MarketSegment.SegmentStatus"
+    restricted = true
+    _required = true
+    label = "Segment Status"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  serviceid Id {
+    apiName = "MarketSegment.Id"
+    label = "Segment ID"
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Checkbox IsDeleted {
+    apiName = "MarketSegment.IsDeleted"
+    defaultValue = false
+    label = "Deleted"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.DateTime CreatedDate {
+    apiName = "MarketSegment.CreatedDate"
+    label = "Created Date"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Lookup CreatedById {
+    apiName = "MarketSegment.CreatedById"
+    relationshipName = "CreatedBy"
+    label = "Created By ID"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.DateTime LastModifiedDate {
+    apiName = "MarketSegment.LastModifiedDate"
+    label = "Last Modified Date"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Lookup LastModifiedById {
+    apiName = "MarketSegment.LastModifiedById"
+    relationshipName = "LastModifiedBy"
+    label = "Last Modified By ID"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.DateTime SystemModstamp {
+    apiName = "MarketSegment.SystemModstamp"
+    label = "System Modstamp"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.LongTextArea SegmentMembershipDataModelList {
+    apiName = "MarketSegment.SegmentMembershipDataModelList"
+    length = 1000
+    label = "Segment Membership Data Models"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Picklist MarketSegmentType {
+    apiName = "MarketSegment.MarketSegmentType"
+    restricted = true
+    label = "Segment Type"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Picklist SeedModelStatus {
+    apiName = "MarketSegment.SeedModelStatus"
+    restricted = true
+    label = "Seed Model Status"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.DateTime LastSeedModelStatusDateTime {
+    apiName = "MarketSegment.LastSeedModelStatusDateTime"
+    label = "Last Seed Model Status Date Time"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Text LastSeedModelStatusErrorCode {
+    apiName = "MarketSegment.LastSeedModelStatusErrorCode"
+    length = 255
+    label = "Last Seed Model Status Error Code"
+    createable = false
+    updateable = false
+    unique = false
+    caseSensitive = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.DateTime LastSeedModelRunDateTime {
+    apiName = "MarketSegment.LastSeedModelRunDateTime"
+    label = "Last Seed Model Run Date Time"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Text SegmentMembershipTable {
+    apiName = "MarketSegment.SegmentMembershipTable"
+    length = 255
+    label = "Segment Membership data model object name"
+    createable = false
+    updateable = false
+    unique = false
+    caseSensitive = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Checkbox IsSeedSegment {
+    apiName = "MarketSegment.IsSeedSegment"
+    defaultValue = false
+    label = "Is Seed Segment"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Unknown SeedSimilarityHighToMedium {
+    apiName = "MarketSegment.SeedSimilarityHighToMedium"
+    label = "Similarity High to Medium"
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Unknown SeedSimilarityMediumToLow {
+    apiName = "MarketSegment.SeedSimilarityMediumToLow"
+    label = "Similarity Medium to Low"
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Picklist SeedSimilarity {
+    apiName = "MarketSegment.SeedSimilarity"
+    restricted = true
+    label = "Similarity"
+    inlineHelpText = "Similarity of the Lookalike model."
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.DateTime LastSegmentCountEndDateTime {
+    apiName = "MarketSegment.LastSegmentCountEndDateTime"
+    label = "Last Segment Count End Date Time"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Lookup DataGraphId {
+    apiName = "MarketSegment.DataGraphId"
+    relationshipName = "DataGraph"
+    label = "Data Graph ID"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.DateTime PublishScheduleEndDateTime {
+    apiName = "MarketSegment.PublishScheduleEndDateTime"
+    label = "Publish Schedule End Date and Time"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Text LookbackPeriod {
+    apiName = "MarketSegment.LookbackPeriod"
+    length = 40
+    label = "Look Back Period"
+    createable = false
+    updateable = false
+    unique = false
+    caseSensitive = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Checkbox IsPrevSaveApproxCount {
+    apiName = "MarketSegment.IsPrevSaveApproxCount"
+    defaultValue = false
+    label = "Is Previous Count Approx"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Checkbox IsCurrentSaveApproxCount {
+    apiName = "MarketSegment.IsCurrentSaveApproxCount"
+    defaultValue = false
+    label = "Is Current Count Approx"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.LongTextArea AdditionalMetadataInfo {
+    apiName = "MarketSegment.AdditionalMetadataInfo"
+    length = 32000
+    label = "Additional Metadata Info"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+}

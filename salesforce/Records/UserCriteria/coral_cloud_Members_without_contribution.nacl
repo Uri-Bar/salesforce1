@@ -1,0 +1,11 @@
+salesforce.UserCriteria coral_cloud_Members_without_contribution@bvuu {
+  fullName = "coral-cloud.Members_without_contribution"
+  description = "Member criteria matches members who haven't  posted or commented"
+  lastChatterActivityAgeInSeconds = -1
+  masterLabel = "Members Without Contributions"
+  userTypes = [
+    "Partner",
+    "Customer",
+  ]
+  _alias = "coral-cloud.Members_without_contribution"
+}

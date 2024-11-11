@@ -1,0 +1,109 @@
+type salesforce.CalcMatrixColumnRange {
+  salesforce.MasterDetail CalculationMatrixColumnId {
+    apiName = "CalcMatrixColumnRange.CalculationMatrixColumnId"
+    relationshipName = "CalculationMatrixColumn"
+    _required = true
+    label = "Decision Matrix Column ID"
+    createable = true
+    updateable = false
+    queryable = true
+  }
+  salesforce.Lookup CalculationMatrixVersionId {
+    apiName = "CalcMatrixColumnRange.CalculationMatrixVersionId"
+    relationshipName = "CalculationMatrixVersion"
+    label = "Decision Matrix Version ID"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Text Name {
+    apiName = "CalcMatrixColumnRange.Name"
+    length = 255
+    _required = true
+    label = "Name"
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    queryable = true
+  }
+  salesforce.Number Occurrence {
+    apiName = "CalcMatrixColumnRange.Occurrence"
+    _required = true
+    label = "Occurrence"
+    precision = 9
+    createable = true
+    updateable = true
+    scale = 0
+    unique = false
+    queryable = true
+  }
+  salesforce.Text RangeStartValue {
+    apiName = "CalcMatrixColumnRange.RangeStartValue"
+    length = 255
+    _required = true
+    label = "Range Start Value"
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    queryable = true
+  }
+  serviceid Id {
+    apiName = "CalcMatrixColumnRange.Id"
+    label = "Decision Matrix Column Range ID"
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Checkbox IsDeleted {
+    apiName = "CalcMatrixColumnRange.IsDeleted"
+    defaultValue = false
+    label = "Deleted"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.DateTime CreatedDate {
+    apiName = "CalcMatrixColumnRange.CreatedDate"
+    label = "Created Date"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Lookup CreatedById {
+    apiName = "CalcMatrixColumnRange.CreatedById"
+    relationshipName = "CreatedBy"
+    label = "Created By ID"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.DateTime LastModifiedDate {
+    apiName = "CalcMatrixColumnRange.LastModifiedDate"
+    label = "Last Modified Date"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Lookup LastModifiedById {
+    apiName = "CalcMatrixColumnRange.LastModifiedById"
+    relationshipName = "LastModifiedBy"
+    label = "Last Modified By ID"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.DateTime SystemModstamp {
+    apiName = "CalcMatrixColumnRange.SystemModstamp"
+    label = "System Modstamp"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+}

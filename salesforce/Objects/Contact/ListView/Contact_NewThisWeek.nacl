@@ -1,0 +1,24 @@
+salesforce.ListView Contact_NewThisWeek {
+  fullName = "Contact.NewThisWeek"
+  columns = [
+    "FULL_NAME",
+    "ACCOUNT.NAME",
+    "CONTACT.TITLE",
+    "CONTACT.PHONE1",
+    "CONTACT.EMAIL",
+    "CORE.USERS.ALIAS",
+  ]
+  filterScope = "Everything"
+  filters = [
+    {
+      field = "CONTACT.CREATED_DATE"
+      operation = "equals"
+      value = "THIS_WEEK"
+    },
+  ]
+  label = "New This Week"
+  _parent = [
+    salesforce.Contact,
+  ]
+  _alias = "New This Week"
+}

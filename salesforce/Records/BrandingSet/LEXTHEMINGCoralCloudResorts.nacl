@@ -1,0 +1,51 @@
+salesforce.BrandingSet LEXTHEMINGCoralCloudResorts {
+  fullName = "LEXTHEMINGCoralCloudResorts"
+  brandingSetProperty = [
+    {
+      propertyName = "BRAND_COLOR"
+      propertyValue = "#02505A"
+    },
+    {
+      propertyName = "PAGE_BACKGROUND_COLOR"
+      propertyValue = "#7fb6af"
+    },
+    {
+      propertyName = "HEADER_BACKGROUND_COLOR"
+      propertyValue = "#FFFFFF"
+    },
+    {
+      propertyName = "BRAND_IMAGE"
+      propertyValue = "/file-asset/Coral_Cloud_Org_Logo?v=1"
+    },
+    {
+      propertyName = "BANNER_IMAGE"
+      propertyValue = "/file-asset/Coral_Cloud_Org_Background?v=1"
+    },
+    {
+      propertyName = "GROUPS_BANNER_IMAGE"
+      propertyValue = ""
+    },
+    {
+      propertyName = "GROUP_IMAGE"
+      propertyValue = ""
+    },
+    {
+      propertyName = "PROFILE_BANNER_IMAGE"
+      propertyValue = ""
+    },
+    {
+      propertyName = "USER_IMAGE"
+      propertyValue = ""
+    },
+    {
+      propertyName = "LINK_AS_BACKGROUND"
+      propertyValue = "true"
+    },
+    {
+      propertyName = "OVERRIDE_LOADING_PAGE"
+      propertyValue = "false"
+    },
+  ]
+  masterLabel = "Coral Cloud Resorts"
+  _alias = "LEXTHEMINGCoralCloudResorts"
+}

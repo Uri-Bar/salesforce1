@@ -1,0 +1,36 @@
+salesforce.ApexClass SampleBookingBatch {
+  apiVersion = 61
+  status = "Active"
+  fullName = "SampleBookingBatch"
+  content = file("salesforce/Records/ApexClass/SampleBookingBatch.cls")
+  _generated_dependencies = [
+    {
+      reference = salesforce.Booking__c
+    },
+    {
+      reference = salesforce.Booking__c.field.Contact__c
+    },
+    {
+      reference = salesforce.Booking__c.field.Number_of_Guests__c
+    },
+    {
+      reference = salesforce.Booking__c.field.Session__c
+    },
+    {
+      reference = salesforce.Contact
+    },
+    {
+      reference = salesforce.Experience__c
+    },
+    {
+      reference = salesforce.Experience__c.field.Capacity__c
+    },
+    {
+      reference = salesforce.Session__c
+    },
+    {
+      reference = salesforce.Session__c.field.Experience__c
+    },
+  ]
+  _alias = "SampleBookingBatch"
+}

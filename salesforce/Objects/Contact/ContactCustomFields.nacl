@@ -1,0 +1,491 @@
+type salesforce.Contact {
+  salesforce.Number Average_Room_Cost__c {
+    apiName = "Contact.Average_Room_Cost__c"
+    description = "Copied from Data Cloud Spend Profile Calculated Insight"
+    externalId = false
+    label = "Average Room Cost"
+    precision = 7
+    scale = 2
+    unique = false
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Text External_Id__c {
+    apiName = "Contact.External_Id__c"
+    externalId = true
+    label = "External Id"
+    length = 18
+    unique = false
+    createable = true
+    updateable = true
+    caseSensitive = false
+    queryable = true
+  }
+  salesforce.LongTextArea Guest_Summary__c {
+    apiName = "Contact.Guest_Summary__c"
+    description = "Aggregates key information about the guest's preferences, historical bookings, activity participation, and loyalty status into a concise profile. This summary serves as a quick reference for staff to deliver personalized service and anticipate guest needs effectively."
+    label = "Guest Summary"
+    length = 32768
+    visibleLines = 3
+    _hidden_value = true
+  }
+  salesforce.Picklist Guest_Type__c {
+    apiName = "Contact.Guest_Type__c"
+    description = "Defines the category of the guest based on their preferences, purpose of visit, and characteristics. This field helps the resort in tailoring services, offers, and communications to enhance the guest experience. It includes values such as Eco-Luxury Travelers, Tech-Savvy Explorers, Wellness Seekers, etc., reflecting the diverse clientele the resort serves."
+    label = "Guest Type"
+    valueSet = [
+      {
+        fullName = "Adventure Enthusiasts"
+        default = false
+        label = "Adventure Enthusiasts"
+      },
+      {
+        fullName = "Business and Pleasure Travelers"
+        default = false
+        label = "Business and Pleasure Travelers"
+      },
+      {
+        fullName = "Celebration Groups"
+        default = false
+        label = "Celebration Groups"
+      },
+      {
+        fullName = "Cultural Connoisseurs"
+        default = false
+        label = "Cultural Connoisseurs"
+      },
+      {
+        fullName = "Digital Detoxers"
+        default = false
+        label = "Digital Detoxers"
+      },
+      {
+        fullName = "Eco-Luxury Travelers"
+        default = false
+        label = "Eco-Luxury Travelers"
+      },
+      {
+        fullName = "Family Fun Seekers"
+        default = false
+        label = "Family Fun Seekers"
+      },
+      {
+        fullName = "Gourmet Globetrotters"
+        default = false
+        label = "Gourmet Globetrotters"
+      },
+      {
+        fullName = "Romance Retreaters"
+        default = false
+        label = "Romance Retreaters"
+      },
+      {
+        fullName = "Solitude Seekers"
+        default = false
+        label = "Solitude Seekers"
+      },
+      {
+        fullName = "Tech-Savvy Explorers"
+        default = false
+        label = "Tech-Savvy Explorers"
+      },
+      {
+        fullName = "Wellness Seekers"
+        default = false
+        label = "Wellness Seekers"
+      },
+    ]
+    sorted = false
+    restricted = false
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Picklist Interest1__c {
+    apiName = "Contact.Interest1__c"
+    label = "Interest 1"
+    valueSet = [
+      {
+        fullName = "Adventure Activities"
+        default = false
+        label = "Adventure Activities"
+      },
+      {
+        fullName = "Beaches & Snorkeling"
+        default = false
+        label = "Beaches & Snorkeling"
+      },
+      {
+        fullName = "Cultural Tours & Workshops"
+        default = false
+        label = "Cultural Tours & Workshops"
+      },
+      {
+        fullName = "Dining Experiences"
+        default = false
+        label = "Dining Experiences"
+      },
+      {
+        fullName = "Family & Kids' Activities"
+        default = false
+        label = "Family & Kids' Activities"
+      },
+      {
+        fullName = "Fitness & Exercise"
+        default = false
+        label = "Fitness & Exercise"
+      },
+      {
+        fullName = "Golf"
+        default = false
+        label = "Golf"
+      },
+      {
+        fullName = "Nature & Eco Tours"
+        default = false
+        label = "Nature & Eco Tours"
+      },
+      {
+        fullName = "Nightlife & Entertainment"
+        default = false
+        label = "Nightlife & Entertainment"
+      },
+      {
+        fullName = "Relaxation & Quiet Zones"
+        default = false
+        label = "Relaxation & Quiet Zones"
+      },
+      {
+        fullName = "Spa & Wellness"
+        default = false
+        label = "Spa & Wellness"
+      },
+      {
+        fullName = "Swimming Pools"
+        default = false
+        label = "Swimming Pools"
+      },
+      {
+        fullName = "Tennis & Pickleball"
+        default = false
+        label = "Tennis & Pickleball"
+      },
+      {
+        fullName = "Water Sports"
+        default = false
+        label = "Water Sports"
+      },
+    ]
+    sorted = false
+    restricted = true
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Picklist Interest2__c {
+    apiName = "Contact.Interest2__c"
+    label = "Interest 2"
+    valueSet = [
+      {
+        fullName = "Adventure Activities"
+        default = false
+        label = "Adventure Activities"
+      },
+      {
+        fullName = "Beaches & Snorkeling"
+        default = false
+        label = "Beaches & Snorkeling"
+      },
+      {
+        fullName = "Cultural Tours & Workshops"
+        default = false
+        label = "Cultural Tours & Workshops"
+      },
+      {
+        fullName = "Dining Experiences"
+        default = false
+        label = "Dining Experiences"
+      },
+      {
+        fullName = "Family & Kids' Activities"
+        default = false
+        label = "Family & Kids' Activities"
+      },
+      {
+        fullName = "Fitness & Exercise"
+        default = false
+        label = "Fitness & Exercise"
+      },
+      {
+        fullName = "Golf"
+        default = false
+        label = "Golf"
+      },
+      {
+        fullName = "Nature & Eco Tours"
+        default = false
+        label = "Nature & Eco Tours"
+      },
+      {
+        fullName = "Nightlife & Entertainment"
+        default = false
+        label = "Nightlife & Entertainment"
+      },
+      {
+        fullName = "Relaxation & Quiet Zones"
+        default = false
+        label = "Relaxation & Quiet Zones"
+      },
+      {
+        fullName = "Spa & Wellness"
+        default = false
+        label = "Spa & Wellness"
+      },
+      {
+        fullName = "Swimming Pools"
+        default = false
+        label = "Swimming Pools"
+      },
+      {
+        fullName = "Tennis & Pickleball"
+        default = false
+        label = "Tennis & Pickleball"
+      },
+      {
+        fullName = "Water Sports"
+        default = false
+        label = "Water Sports"
+      },
+    ]
+    sorted = false
+    restricted = true
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Picklist Interest3__c {
+    apiName = "Contact.Interest3__c"
+    label = "Interest 3"
+    valueSet = [
+      {
+        fullName = "Adventure Activities"
+        default = false
+        label = "Adventure Activities"
+      },
+      {
+        fullName = "Beaches & Snorkeling"
+        default = false
+        label = "Beaches & Snorkeling"
+      },
+      {
+        fullName = "Cultural Tours & Workshops"
+        default = false
+        label = "Cultural Tours & Workshops"
+      },
+      {
+        fullName = "Dining Experiences"
+        default = false
+        label = "Dining Experiences"
+      },
+      {
+        fullName = "Family & Kids' Activities"
+        default = false
+        label = "Family & Kids' Activities"
+      },
+      {
+        fullName = "Fitness & Exercise"
+        default = false
+        label = "Fitness & Exercise"
+      },
+      {
+        fullName = "Golf"
+        default = false
+        label = "Golf"
+      },
+      {
+        fullName = "Nature & Eco Tours"
+        default = false
+        label = "Nature & Eco Tours"
+      },
+      {
+        fullName = "Nightlife & Entertainment"
+        default = false
+        label = "Nightlife & Entertainment"
+      },
+      {
+        fullName = "Relaxation & Quiet Zones"
+        default = false
+        label = "Relaxation & Quiet Zones"
+      },
+      {
+        fullName = "Spa & Wellness"
+        default = false
+        label = "Spa & Wellness"
+      },
+      {
+        fullName = "Swimming Pools"
+        default = false
+        label = "Swimming Pools"
+      },
+      {
+        fullName = "Tennis & Pickleball"
+        default = false
+        label = "Tennis & Pickleball"
+      },
+      {
+        fullName = "Water Sports"
+        default = false
+        label = "Water Sports"
+      },
+    ]
+    sorted = false
+    restricted = true
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Text Languages__c {
+    apiName = "Contact.Languages__c"
+    externalId = false
+    label = "Languages"
+    length = 100
+    unique = false
+    createable = true
+    updateable = true
+    caseSensitive = false
+    queryable = true
+  }
+  salesforce.Picklist Level__c {
+    apiName = "Contact.Level__c"
+    label = "Level"
+    valueSet = [
+      {
+        fullName = "Secondary"
+        default = false
+        label = "Secondary"
+      },
+      {
+        fullName = "Tertiary"
+        default = false
+        label = "Tertiary"
+      },
+      {
+        fullName = "Primary"
+        default = false
+        label = "Primary"
+      },
+    ]
+    sorted = false
+    restricted = false
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Summary Lifetime_Experience_Bookings__c {
+    apiName = "Contact.Lifetime_Experience_Bookings__c"
+    description = "The \"Lifetime Experience Bookings\" field counts the total bookings a contact has made, offering insights into guest engagement and loyalty."
+    label = "Lifetime Experience Bookings"
+    summaryForeignKey = "Booking__c.Contact__c"
+    summaryOperation = "count"
+    precision = 18
+    scale = 0
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Number Lifetime_Reservations__c {
+    apiName = "Contact.Lifetime_Reservations__c"
+    description = "The total lifetime reservations completed by a Guest and provided by Data Cloud"
+    externalId = false
+    label = "Lifetime Reservations"
+    precision = 18
+    scale = 0
+    unique = false
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Number Lifetime_Value__c {
+    apiName = "Contact.Lifetime_Value__c"
+    description = "The Guests Lifetime Value as calculated from the data in Data Cloud"
+    externalId = false
+    label = "Lifetime Value"
+    precision = 18
+    scale = 2
+    unique = false
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Number Maximum_Room_Cost__c {
+    apiName = "Contact.Maximum_Room_Cost__c"
+    description = "Copied from Data Cloud Spend Profile Calculated Insight"
+    externalId = false
+    label = "Maximum Room Cost"
+    precision = 7
+    scale = 2
+    unique = false
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.FormulaText Membership_Number__c {
+    apiName = "Contact.Membership_Number__c"
+    externalId = false
+    formula = "External_Id__c"
+    formulaTreatBlanksAs = "BlankAsZero"
+    label = "Membership Number"
+    unique = false
+    createable = false
+    updateable = false
+    caseSensitive = false
+    queryable = true
+    _hidden_value = true
+    _generated_dependencies = [
+      {
+        reference = salesforce.Contact.field.External_Id__c
+      },
+    ]
+  }
+  salesforce.Number Minimum_Room_Cost__c {
+    apiName = "Contact.Minimum_Room_Cost__c"
+    description = "Copied from Data Cloud Spend Profile Calculated Insight"
+    externalId = false
+    label = "Minimum Room Cost"
+    precision = 7
+    scale = 2
+    unique = false
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Date Next_Check_in_Date__c {
+    apiName = "Contact.Next_Check_in_Date__c"
+    label = "Next Check-in Date"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Url Photo_URL__c {
+    apiName = "Contact.Photo_URL__c"
+    description = "The Photo_URL__c field stores the URL of profile photos uploaded by guests via our app, used for security."
+    label = "Photo URL"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Text Preferred_Name__c {
+    apiName = "Contact.Preferred_Name__c"
+    description = "The PreferredName__c field captures the name a guest prefers to be addressed by, ensuring all interactions are personalized and respectful of the guest's identity and preferences. This can differ from their legal name or the name on their booking, providing a more tailored and comfortable guest experience."
+    externalId = false
+    label = "Preferred Name"
+    length = 255
+    unique = false
+    createable = true
+    updateable = true
+    caseSensitive = false
+    queryable = true
+  }
+}

@@ -1,0 +1,9 @@
+salesforce.ListView DataQueryWorkspace_All_DataQueryWorkspaces {
+  fullName = "DataQueryWorkspace.All_DataQueryWorkspaces"
+  filterScope = "Everything"
+  label = "Workspaces"
+  _parent = [
+    salesforce.DataQueryWorkspace,
+  ]
+  _alias = "Workspaces"
+}

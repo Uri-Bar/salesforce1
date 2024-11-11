@@ -1,0 +1,192 @@
+salesforce.Flow Create_Experience_Session_Booking {
+  fullName = "Create_Experience_Session_Booking"
+  apiVersion = 61
+  assignments = [
+    {
+      name = "Assign_Failed_Message"
+      label = "Assign Failed Message"
+      locationX = 440
+      locationY = 242
+      assignmentItems = [
+        {
+          assignToReference = "Output_Message"
+          operator = "Assign"
+          value = {
+            stringValue = "Unfortunatley we were unable to make the booking, would you like to speak to a representative? "
+          }
+        },
+      ]
+    },
+    {
+      name = "Assign_Success_Message"
+      label = "Assign Success Message"
+      locationX = 176
+      locationY = 350
+      assignmentItems = [
+        {
+          assignToReference = "Output_Message"
+          operator = "Assign"
+          value = {
+            stringValue = "The booking has been successful. "
+          }
+        },
+      ]
+    },
+  ]
+  description = "This flow is used to create a Booking for a user that wants to attend an experience session. Each Experience__c has multiple Session__c records that each have a date and time allocated to them. A Contact Id needs to passed into the flow with a Session__c Id to create the booking. This flow also requires a number of guests."
+  environments = "Default"
+  interviewLabel = "Create Experience Session Booking {!$Flow.CurrentDateTime}"
+  label = "Create Experience Session Booking"
+  processMetadataValues = [
+    {
+      name = "BuilderType"
+      value = {
+        stringValue = "LightningFlowBuilder"
+      }
+    },
+    {
+      name = "CanvasMode"
+      value = {
+        stringValue = "AUTO_LAYOUT_CANVAS"
+      }
+    },
+    {
+      name = "OriginBuilderType"
+      value = {
+        stringValue = "LightningFlowBuilder"
+      }
+    },
+  ]
+  processType = "AutoLaunchedFlow"
+  recordCreates = [
+    {
+      name = "Create_Booking"
+      label = "Create Booking"
+      locationX = 176
+      locationY = 134
+      assignRecordIdToReference = "Booking_Id"
+      connector = {
+        targetReference = "Get_Booking"
+      }
+      faultConnector = {
+        targetReference = "Assign_Failed_Message"
+      }
+      inputAssignments = [
+        {
+          field = salesforce.Booking__c.field.Contact__c
+          value = {
+            elementReference = "Contact_Id"
+          }
+        },
+        {
+          field = salesforce.Booking__c.field.Number_of_Guests__c
+          value = {
+            elementReference = "Guests"
+          }
+        },
+        {
+          field = salesforce.Booking__c.field.Session__c
+          value = {
+            elementReference = "Session_Id"
+          }
+        },
+      ]
+      object = salesforce.Booking__c
+    },
+  ]
+  recordLookups = [
+    {
+      name = "Get_Booking"
+      label = "Get Booking"
+      locationX = 176
+      locationY = 242
+      assignNullValuesIfNoRecordsFound = false
+      connector = {
+        targetReference = "Assign_Success_Message"
+      }
+      filterLogic = "and"
+      filters = [
+        {
+          field = salesforce.Booking__c.field.Id
+          operator = "EqualTo"
+          value = {
+            elementReference = "Booking_Id"
+          }
+        },
+      ]
+      object = salesforce.Booking__c
+      outputReference = "Booking"
+      queriedFields = [
+        salesforce.Booking__c.field.Id,
+        salesforce.Booking__c.field.Session__c,
+        salesforce.Booking__c.field.Start_Time__c,
+      ]
+    },
+  ]
+  start = {
+    locationX = 50
+    locationY = 0
+    connector = {
+      targetReference = "Create_Booking"
+    }
+  }
+  status = "Active"
+  variables = [
+    {
+      description = "The booking that has been created."
+      name = "Booking"
+      dataType = "SObject"
+      isCollection = false
+      isInput = false
+      isOutput = true
+      objectType = salesforce.Booking__c
+    },
+    {
+      description = "The Id of the booking that has just been created."
+      name = "Booking_Id"
+      dataType = "String"
+      isCollection = false
+      isInput = false
+      isOutput = false
+    },
+    {
+      description = "The Id of a Contact record that you would like to create the booking for."
+      name = "Contact_Id"
+      dataType = "String"
+      isCollection = false
+      isInput = true
+      isOutput = false
+    },
+    {
+      description = "The number of guests that you would like to make the booking for."
+      name = "Guests"
+      dataType = "Number"
+      isCollection = false
+      isInput = true
+      isOutput = false
+      scale = 2
+    },
+    {
+      description = "The message that you would like to display to the user after the action has run."
+      name = "Output_Message"
+      dataType = "String"
+      isCollection = false
+      isInput = false
+      isOutput = true
+    },
+    {
+      description = "The Session Id is an Id for the Session__c record that you would like book for a customer."
+      name = "Session_Id"
+      dataType = "String"
+      isCollection = false
+      isInput = true
+      isOutput = false
+    },
+  ]
+  _generated_dependencies = [
+    {
+      reference = salesforce.Session__c
+    },
+  ]
+  _alias = "Create Experience Session Booking"
+}

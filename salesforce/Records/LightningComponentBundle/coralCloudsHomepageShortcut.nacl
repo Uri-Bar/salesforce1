@@ -1,0 +1,22 @@
+salesforce.LightningComponentBundle coralCloudsHomepageShortcut {
+  apiVersion = 61
+  isExposed = false
+  fullName = "coralCloudsHomepageShortcut"
+  lwcResources = {
+    lwcResource = {
+      coralCloudsHomepageShortcut_js@v = {
+        source = file("salesforce/Records/LightningComponentBundle/coralCloudsHomepageShortcut/coralCloudsHomepageShortcut.js")
+        filePath = "lwc/coralCloudsHomepageShortcut/coralCloudsHomepageShortcut.js"
+      }
+      coralCloudsHomepageShortcut_html@v = {
+        source = file("salesforce/Records/LightningComponentBundle/coralCloudsHomepageShortcut/coralCloudsHomepageShortcut.html")
+        filePath = "lwc/coralCloudsHomepageShortcut/coralCloudsHomepageShortcut.html"
+      }
+      coralCloudsHomepageShortcut_css@v = {
+        source = file("salesforce/Records/LightningComponentBundle/coralCloudsHomepageShortcut/coralCloudsHomepageShortcut.css")
+        filePath = "lwc/coralCloudsHomepageShortcut/coralCloudsHomepageShortcut.css"
+      }
+    }
+  }
+  _alias = "coralCloudsHomepageShortcut"
+}

@@ -1,0 +1,23 @@
+salesforce.LightningPage Coral_Clouds_UtilityBar {
+  flexiPageRegions = [
+    {
+      name = "utilityItems"
+      type = "Region"
+    },
+    {
+      name = "backgroundComponents"
+      type = "Background"
+    },
+  ]
+  masterLabel = "Coral Clouds UtilityBar"
+  template = {
+    name = "one:utilityBarTemplateDesktop"
+    properties = {
+      name = "isLeftAligned"
+      value = "true"
+    }
+  }
+  type = "UtilityBar"
+  fullName = "Coral_Clouds_UtilityBar"
+  _alias = "Coral_Clouds_UtilityBar"
+}

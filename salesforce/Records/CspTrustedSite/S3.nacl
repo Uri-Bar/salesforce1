@@ -1,0 +1,15 @@
+salesforce.CspTrustedSite S3 {
+  fullName = "S3"
+  canAccessCamera = false
+  canAccessMicrophone = false
+  context = "All"
+  endpointUrl = "https://s3-us-west-2.amazonaws.com"
+  isActive = true
+  isApplicableToConnectSrc = true
+  isApplicableToFontSrc = true
+  isApplicableToFrameSrc = true
+  isApplicableToImgSrc = true
+  isApplicableToMediaSrc = true
+  isApplicableToStyleSrc = true
+  _alias = "S3"
+}

@@ -1,0 +1,8 @@
+salesforce.DataSourceObject EVFBotsEvent {
+  fullName = "EVFBotsEvent"
+  dataSource = salesforce.DataSource.instance.AI_Platform
+  externalRecordIdentifier = "EVFBotsEvent"
+  masterLabel = "EVFBotsEvent"
+  templateVersion = 1
+  _alias = "EVFBotsEvent"
+}

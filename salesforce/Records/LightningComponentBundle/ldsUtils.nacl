@@ -1,0 +1,14 @@
+salesforce.LightningComponentBundle ldsUtils {
+  apiVersion = 61
+  isExposed = false
+  fullName = "ldsUtils"
+  lwcResources = {
+    lwcResource = {
+      ldsUtils_js@v = {
+        source = file("salesforce/Records/LightningComponentBundle/ldsUtils/ldsUtils.js")
+        filePath = "lwc/ldsUtils/ldsUtils.js"
+      }
+    }
+  }
+  _alias = "ldsUtils"
+}

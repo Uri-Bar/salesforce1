@@ -1,0 +1,118 @@
+salesforce.Layout MessagingChannel_Messaging_Channel_Layout@bss {
+  layoutSections = [
+    {
+      customLabel = false
+      detailHeading = true
+      editHeading = true
+      label = "Information"
+      layoutColumns = [
+        {
+          layoutItems = [
+            {
+              behavior = "Required"
+              field = "MasterLabel"
+            },
+            {
+              behavior = "Required"
+              field = "DeveloperName"
+            },
+            {
+              behavior = "Readonly"
+              field = "MessagingPlatformKey"
+            },
+          ]
+        },
+        {
+          layoutItems = [
+            {
+              behavior = "Edit"
+              field = "TargetQueueId"
+            },
+            {
+              behavior = "Edit"
+              field = "IsActive"
+            },
+          ]
+        },
+      ]
+      style = "TwoColumnsLeftToRight"
+    },
+    {
+      customLabel = false
+      detailHeading = true
+      editHeading = true
+      label = "Automated Responses"
+      layoutColumns = [
+        {
+          layoutItems = [
+            {
+              behavior = "Edit"
+              field = "InitialResponse"
+            },
+            {
+              behavior = "Edit"
+              field = "EngagedResponse"
+            },
+            {
+              behavior = "Edit"
+              field = "ConversationEndResponse"
+            },
+          ]
+        },
+        {
+          layoutItems = [
+            {
+              behavior = "Required"
+              field = "OptInResponse"
+            },
+            {
+              behavior = "Required"
+              field = "OptOutResponse"
+            },
+          ]
+        },
+      ]
+      style = "TwoColumnsLeftToRight"
+    },
+    {
+      customLabel = false
+      detailHeading = true
+      editHeading = true
+      label = "Object Linking"
+      layoutColumns = [
+        {
+          layoutItems = [
+            {
+              behavior = "Edit"
+              field = "LinkingPreference"
+            },
+          ]
+        },
+        {
+          layoutItems = [
+            {
+              behavior = "Edit"
+              field = "IsLinkedRecordOpenedAsSubTab"
+            },
+          ]
+        },
+      ]
+      style = "TwoColumnsLeftToRight"
+    },
+    {
+      customLabel = false
+      detailHeading = false
+      editHeading = false
+      layoutColumns = [
+        {
+        },
+      ]
+      style = "CustomLinks"
+    },
+  ]
+  showEmailCheckbox = false
+  showRunAssignmentRulesCheckbox = false
+  showSubmitAndAttachButton = false
+  fullName = "MessagingChannel-Messaging Channel Layout"
+  _alias = "MessagingChannel-Messaging Channel Layout"
+}

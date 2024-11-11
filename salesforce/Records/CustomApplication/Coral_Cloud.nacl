@@ -1,0 +1,39 @@
+salesforce.CustomApplication Coral_Cloud {
+  brand = {
+    headerColor = "#7FB6AF"
+    logo = "Coral_Cloud_Logo"
+    logoVersion = 1
+    shouldOverrideOrgTheme = false
+  }
+  description = "Your smart hospitality app"
+  formFactors = [
+    "Small",
+    "Large",
+  ]
+  isNavAutoTempTabsDisabled = false
+  isNavPersonalizationDisabled = false
+  isNavTabPersistenceDisabled = false
+  isOmniPinnedViewEnabled = false
+  label = "Coral Cloud Resorts"
+  navType = "Standard"
+  tabs = [
+    "standard-home",
+    "standard-Account",
+    "standard-Contact",
+    salesforce.CustomTab.instance.Experience__c,
+    salesforce.CustomTab.instance.Session__c,
+    salesforce.CustomTab.instance.Booking__c,
+    salesforce.CustomTab.instance.Guest_Review__c,
+    "standard-Case",
+    "standard-report",
+  ]
+  uiType = "Lightning"
+  utilityBar = "Coral_Clouds_UtilityBar"
+  fullName = "Coral_Cloud"
+  _generated_dependencies = [
+    {
+      reference = salesforce.LightningPage.instance.Coral_Clouds_UtilityBar
+    },
+  ]
+  _alias = "Coral Cloud Resorts"
+}

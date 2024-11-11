@@ -1,0 +1,7 @@
+salesforce.SharingRules Experience__c {
+  fullName = "Experience__c"
+  _parent = [
+    salesforce.Experience__c,
+  ]
+  _alias = "Experience__c"
+}

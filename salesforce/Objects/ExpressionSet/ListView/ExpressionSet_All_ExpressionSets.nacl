@@ -1,0 +1,9 @@
+salesforce.ListView ExpressionSet_All_ExpressionSets {
+  fullName = "ExpressionSet.All_ExpressionSets"
+  filterScope = "Everything"
+  label = "All Expression Sets"
+  _parent = [
+    salesforce.ExpressionSet,
+  ]
+  _alias = "All Expression Sets"
+}
