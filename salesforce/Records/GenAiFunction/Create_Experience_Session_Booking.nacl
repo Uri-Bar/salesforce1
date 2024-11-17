@@ -1,0 +1,9 @@
+salesforce.GenAiFunction Create_Experience_Session_Booking {
+  fullName = "Create_Experience_Session_Booking"
+  description = "This flow is used to create a Booking for a user that wants to attend an experience session. Each Experience__c has multiple Session__c records that each have a date and time allocated to them. A Contact Id needs to passed into the flow with a Session__c Id to create the booking. This flow also requires a number of guests."
+  invocationTarget = salesforce.FlowDefinition.instance.Create_Experience_Session_Booking
+  invocationTargetType = "flow"
+  isConfirmationRequired = false
+  masterLabel = "Create Experience Session Booking"
+  _alias = "Create_Experience_Session_Booking"
+}

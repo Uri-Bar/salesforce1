@@ -1,0 +1,9 @@
+salesforce.GenAiFunction Get_Experience_Details {
+  fullName = "Get_Experience_Details"
+  description = "Provides details about an Experience__c that a user would like more information about."
+  invocationTarget = salesforce.FlowDefinition.instance.Get_Experience_Details
+  invocationTargetType = "flow"
+  isConfirmationRequired = false
+  masterLabel = "Get Experience Details"
+  _alias = "Get_Experience_Details"
+}

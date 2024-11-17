@@ -1,9 +1,12 @@
 salesforce {
   fetch = {
+    optionalFeatures = {
+      hideTypesFolder = false
+    }
     metadata = {
       include = [
         {
-          metadataType = ".*"
+          metadataType = "GenAi.*|Flow.*"
           namespace = ""
           name = ".*"
         },

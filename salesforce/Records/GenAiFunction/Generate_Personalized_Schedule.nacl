@@ -1,0 +1,9 @@
+salesforce.GenAiFunction Generate_Personalized_Schedule {
+  fullName = "Generate_Personalized_Schedule"
+  description = "Generate a personalized schedule that includes the time and location of resort experiences that are available today, and that match the guest's interests."
+  invocationTarget = salesforce.GenAiPromptTemplate.instance.Generate_Personalized_Schedule
+  invocationTargetType = "generatePromptResponse"
+  isConfirmationRequired = false
+  masterLabel = "Generate Personalized Schedule"
+  _alias = "Generate_Personalized_Schedule"
+}

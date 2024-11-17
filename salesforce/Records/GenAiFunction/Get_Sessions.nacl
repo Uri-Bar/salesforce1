@@ -1,0 +1,9 @@
+salesforce.GenAiFunction Get_Sessions {
+  fullName = "Get_Sessions"
+  description = "Get the Sessions__c based on the provided specific Date and the Id of the Experience__c"
+  invocationTarget = salesforce.FlowDefinition.instance.Get_Sessions
+  invocationTargetType = "flow"
+  isConfirmationRequired = false
+  masterLabel = "Get Sessions"
+  _alias = "Get_Sessions"
+}

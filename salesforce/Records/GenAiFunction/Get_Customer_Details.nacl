@@ -1,0 +1,9 @@
+salesforce.GenAiFunction Get_Customer_Details {
+  fullName = "Get_Customer_Details"
+  description = "Validate a Customers details by passing their email and memberNumber to see if their is a related contact."
+  invocationTarget = salesforce.FlowDefinition.instance.Get_Customer_Details
+  invocationTargetType = "flow"
+  isConfirmationRequired = false
+  masterLabel = "Get Customer Details"
+  _alias = "Get_Customer_Details"
+}
