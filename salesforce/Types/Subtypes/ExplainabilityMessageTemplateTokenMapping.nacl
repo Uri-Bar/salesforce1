@@ -1,0 +1,29 @@
+type salesforce.ExplainabilityMessageTemplateTokenMapping {
+  annotations {
+    serviceid metadataType {
+    }
+    boolean hasMetaFile {
+    }
+    string folderType {
+    }
+    string folderContentType {
+    }
+    string suffix {
+    }
+    string dirName {
+    }
+  }
+  string expressionSetMessageToken {
+    foreignKeyDomain = [
+      salesforce.ExpressionSetMessageToken,
+    ]
+  }
+  string resourceReference {
+    foreignKeyDomain = [
+      "ContextTag",
+      "ExpressionSetDefinitionVersionVariable",
+      "ExpressionSetDefinitionVersionVariableField",
+    ]
+  }
+  metadataType = "ExplainabilityMessageTemplateTokenMapping"
+}

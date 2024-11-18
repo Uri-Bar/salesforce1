@@ -1,0 +1,53 @@
+type salesforce.ConversationVariable {
+  annotations {
+    serviceid metadataType {
+    }
+    boolean hasMetaFile {
+    }
+    string folderType {
+    }
+    string folderContentType {
+    }
+    string suffix {
+    }
+    string dirName {
+    }
+  }
+  string SObjectType {
+  }
+  string collectionType {
+    _restriction = {
+      enforce_value = false
+      values = [
+        "List",
+      ]
+    }
+  }
+  string dataType {
+    _restriction = {
+      enforce_value = false
+      values = [
+        "Boolean",
+        "Currency",
+        "Date",
+        "DateTime",
+        "Id",
+        "Number",
+        "Object",
+        "Text",
+      ]
+    }
+  }
+  string developerName {
+  }
+  string label {
+  }
+  metadataType = "ConversationVariable"
+  _important_values = [
+    {
+      value = "label"
+      highlighted = true
+      indexed = false
+    },
+  ]
+}

@@ -1,0 +1,66 @@
+type salesforce.ActvPlatformAdncIdentifier {
+  annotations {
+    serviceid metadataType {
+    }
+    boolean hasMetaFile {
+    }
+    string folderType {
+    }
+    string folderContentType {
+    }
+    string suffix {
+    }
+    string dirName {
+    }
+  }
+  serviceid fullName {
+  }
+  string activationPlatform {
+    foreignKeyDomain = [
+      salesforce.ActivationPlatform,
+    ]
+  }
+  string identifierHashMethod {
+    _restriction = {
+      enforce_value = false
+      values = [
+        "MD5",
+        "NONE",
+        "SHA1",
+        "SHA256",
+      ]
+    }
+  }
+  string identifierType {
+    _restriction = {
+      enforce_value = false
+      values = [
+        "EMAIL",
+        "MAID",
+        "OTT",
+        "PHONE",
+      ]
+    }
+  }
+  string masterLabel {
+  }
+  string internalId {
+    _hidden_value = true
+    localOnly = true
+  }
+  suffix = "actvPlatformAdncIdentifier"
+  dirName = "actvPlatformAdncIdentifiers"
+  metadataType = "ActvPlatformAdncIdentifier"
+  _important_values = [
+    {
+      value = "fullName"
+      highlighted = true
+      indexed = false
+    },
+    {
+      value = "masterLabel"
+      highlighted = true
+      indexed = false
+    },
+  ]
+}

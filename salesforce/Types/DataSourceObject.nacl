@@ -1,0 +1,74 @@
+type salesforce.DataSourceObject {
+  annotations {
+    serviceid metadataType {
+    }
+    boolean hasMetaFile {
+    }
+    string folderType {
+    }
+    string folderContentType {
+    }
+    string suffix {
+    }
+    string dirName {
+    }
+  }
+  serviceid fullName {
+  }
+  string additionalDLOInfoJson {
+  }
+  string creationType {
+  }
+  string dataConnection {
+  }
+  string dataSource {
+    foreignKeyDomain = [
+      salesforce.DataSource,
+    ]
+  }
+  salesforce.DataSourceField dataSourceFields {
+  }
+  string dmoDeveloperName {
+  }
+  string dmoLabel {
+  }
+  string externalRecordIdentifier {
+  }
+  string masterLabel {
+  }
+  string objectCategory {
+  }
+  string objectType {
+    _restriction = {
+      enforce_value = false
+      values = [
+        "Api",
+        "Object",
+        "Table",
+      ]
+    }
+  }
+  string sourceObject {
+  }
+  number templateVersion {
+  }
+  string internalId {
+    _hidden_value = true
+    localOnly = true
+  }
+  suffix = "dataSourceObject"
+  dirName = "dataSourceObjects"
+  metadataType = "DataSourceObject"
+  _important_values = [
+    {
+      value = "fullName"
+      highlighted = true
+      indexed = false
+    },
+    {
+      value = "masterLabel"
+      highlighted = true
+      indexed = false
+    },
+  ]
+}

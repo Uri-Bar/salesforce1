@@ -1,0 +1,61 @@
+type salesforce.DataKitObjectDependency {
+  annotations {
+    serviceid metadataType {
+    }
+    boolean hasMetaFile {
+    }
+    string folderType {
+    }
+    string folderContentType {
+    }
+    string suffix {
+    }
+    string dirName {
+    }
+  }
+  serviceid fullName {
+  }
+  string dataPackageKitDef {
+    foreignKeyDomain = [
+      salesforce.DataPackageKitDefinition,
+    ]
+  }
+  string developerName {
+  }
+  string masterLabel {
+  }
+  string sourceObject {
+    foreignKeyDomain = [
+      salesforce.DataKitObjectTemplate,
+      salesforce.DataSourceBundleDefinition,
+      salesforce.DataSourceObject,
+      salesforce.DataStreamTemplate,
+    ]
+  }
+  string sourceObjectType {
+  }
+  string targetObject {
+    foreignKeyDomain = [
+      salesforce.DataKitObjectTemplate,
+    ]
+  }
+  string internalId {
+    _hidden_value = true
+    localOnly = true
+  }
+  suffix = "dataKitObjectDependency"
+  dirName = "dataKitObjectDependencies"
+  metadataType = "DataKitObjectDependency"
+  _important_values = [
+    {
+      value = "fullName"
+      highlighted = true
+      indexed = false
+    },
+    {
+      value = "masterLabel"
+      highlighted = true
+      indexed = false
+    },
+  ]
+}

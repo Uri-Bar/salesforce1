@@ -1,0 +1,53 @@
+type salesforce.ExtDataTranFieldTemplate {
+  annotations {
+    serviceid metadataType {
+    }
+    boolean hasMetaFile {
+    }
+    string folderType {
+    }
+    string folderContentType {
+    }
+    string suffix {
+    }
+    string dirName {
+    }
+  }
+  serviceid fullName {
+  }
+  string dataSourceField {
+    foreignKeyDomain = [
+      salesforce.DataSourceField,
+    ]
+  }
+  string externalDataTranField {
+    foreignKeyDomain = [
+      salesforce.ExternalDataTranField,
+    ]
+  }
+  string externalName {
+  }
+  boolean isDataRequired {
+  }
+  string masterLabel {
+  }
+  string sourceFieldName {
+  }
+  string internalId {
+    _hidden_value = true
+    localOnly = true
+  }
+  metadataType = "ExtDataTranFieldTemplate"
+  _important_values = [
+    {
+      value = "fullName"
+      highlighted = true
+      indexed = false
+    },
+    {
+      value = "masterLabel"
+      highlighted = true
+      indexed = false
+    },
+  ]
+}

@@ -417,7 +417,7 @@ salesforce.LightningPage Experience_Record_Page {
               name = "uiBehavior"
               value = "required"
             }
-            fieldItem = "Record.Name"
+            fieldItem = salesforce.Experience__c.field.Name
             identifier = "RecordNameField"
           }
         },
@@ -427,7 +427,7 @@ salesforce.LightningPage Experience_Record_Page {
               name = "uiBehavior"
               value = "none"
             }
-            fieldItem = "Record.Location__c"
+            fieldItem = salesforce.Experience__c.field.Location__c
             identifier = "RecordLocation_cField"
           }
         },
@@ -437,7 +437,7 @@ salesforce.LightningPage Experience_Record_Page {
               name = "uiBehavior"
               value = "none"
             }
-            fieldItem = "Record.Type__c"
+            fieldItem = salesforce.Experience__c.field.Type__c
             identifier = "RecordType_cField"
           }
         },
@@ -453,7 +453,7 @@ salesforce.LightningPage Experience_Record_Page {
               name = "uiBehavior"
               value = "none"
             }
-            fieldItem = "Record.Activity_Level__c"
+            fieldItem = salesforce.Experience__c.field.Activity_Level__c
             identifier = "RecordActivity_Level_cField"
           }
         },
@@ -463,7 +463,7 @@ salesforce.LightningPage Experience_Record_Page {
               name = "uiBehavior"
               value = "none"
             }
-            fieldItem = "Record.Rating__c"
+            fieldItem = salesforce.Experience__c.field.Rating__c
             identifier = "RecordRating_cField"
           }
         },
@@ -473,7 +473,7 @@ salesforce.LightningPage Experience_Record_Page {
               name = "uiBehavior"
               value = "none"
             }
-            fieldItem = "Record.Price__c"
+            fieldItem = salesforce.Experience__c.field.Price__c
             identifier = "RecordPrice_cField"
           }
         },
@@ -489,7 +489,7 @@ salesforce.LightningPage Experience_Record_Page {
               name = "uiBehavior"
               value = "none"
             }
-            fieldItem = "Record.Description__c"
+            fieldItem = salesforce.Experience__c.field.Description__c
             identifier = "RecordDescription_cField"
           }
         },
@@ -499,7 +499,7 @@ salesforce.LightningPage Experience_Record_Page {
               name = "uiBehavior"
               value = "none"
             }
-            fieldItem = "Record.Reviews_Summary__c"
+            fieldItem = salesforce.Experience__c.field.Reviews_Summary__c
             identifier = "RecordReviews_Summary_cField"
           }
         },
@@ -515,7 +515,7 @@ salesforce.LightningPage Experience_Record_Page {
               name = "uiBehavior"
               value = "none"
             }
-            fieldItem = "Record.Duration_Hours__c"
+            fieldItem = salesforce.Experience__c.field.Duration_Hours__c
             identifier = "RecordDuration_Hours_cField"
           }
         },
@@ -531,7 +531,7 @@ salesforce.LightningPage Experience_Record_Page {
               name = "uiBehavior"
               value = "none"
             }
-            fieldItem = "Record.Capacity__c"
+            fieldItem = salesforce.Experience__c.field.Capacity__c
             identifier = "RecordCapacity_cField"
           }
         },

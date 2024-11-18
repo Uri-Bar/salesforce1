@@ -1,0 +1,5 @@
+settings salesforce.ProfilesAndPermissionSetsBrokenPaths {
+  "List<string>" paths {
+  }
+  _hidden_value = true
+}

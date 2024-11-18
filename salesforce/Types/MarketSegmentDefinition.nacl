@@ -1,0 +1,63 @@
+type salesforce.MarketSegmentDefinition {
+  annotations {
+    serviceid metadataType {
+    }
+    boolean hasMetaFile {
+    }
+    string folderType {
+    }
+    string folderContentType {
+    }
+    string suffix {
+    }
+    string dirName {
+    }
+  }
+  serviceid fullName {
+  }
+  string additionalMetadata {
+  }
+  string excludeCriteria {
+  }
+  string includeCriteria {
+  }
+  string masterLabel {
+  }
+  string segmentOn {
+    foreignKeyDomain = [
+      "MktDataModelObject",
+    ]
+  }
+  string segmentType {
+    _restriction = {
+      enforce_value = false
+      values = [
+        "DBT",
+        "EinsteinGptSegmentsUI",
+        "Lookalike",
+        "Realtime",
+        "UI",
+        "Waterfall",
+      ]
+    }
+  }
+  string internalId {
+    _hidden_value = true
+    localOnly = true
+  }
+  suffix = "marketSegmentDefinition"
+  dirName = "marketSegmentDefinitions"
+  metadataType = "MarketSegmentDefinition"
+  _important_values = [
+    {
+      value = "fullName"
+      highlighted = true
+      indexed = false
+    },
+    {
+      value = "masterLabel"
+      highlighted = true
+      indexed = false
+    },
+  ]
+}

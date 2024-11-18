@@ -1,0 +1,74 @@
+type salesforce.DataKitObjectTemplate {
+  annotations {
+    serviceid metadataType {
+    }
+    boolean hasMetaFile {
+    }
+    string folderType {
+    }
+    string folderContentType {
+    }
+    string suffix {
+    }
+    string dirName {
+    }
+  }
+  serviceid fullName {
+  }
+  string developerName {
+  }
+  string entityPayload {
+  }
+  string masterLabel {
+  }
+  string parentDataPackageKitDefinitionName {
+  }
+  string sourceObject {
+  }
+  string sourceObjectType {
+    _restriction = {
+      enforce_value = false
+      values = [
+        "ActivationTarget",
+        "DataAction",
+        "DataActionTarget",
+        "DataGraph",
+        "DataSemanticSearch",
+        "DataSpaceMember",
+        "ExtDataShare",
+        "IdentityResolution",
+        "InternalDataConnector",
+        "MarketSegment",
+        "MarketSegmentActivation",
+        "McConnector",
+        "MktDataConnection",
+        "MktDataTransform",
+        "MlConfiguredModel",
+        "MlPredictionJob",
+        "PersonalizationRecommender",
+        "StreamingAppAndIngestionConnector",
+      ]
+    }
+  }
+  number templateVersion {
+  }
+  string internalId {
+    _hidden_value = true
+    localOnly = true
+  }
+  suffix = "dataKitObjectTemplate"
+  dirName = "dataKitObjectTemplates"
+  metadataType = "DataKitObjectTemplate"
+  _important_values = [
+    {
+      value = "fullName"
+      highlighted = true
+      indexed = false
+    },
+    {
+      value = "masterLabel"
+      highlighted = true
+      indexed = false
+    },
+  ]
+}

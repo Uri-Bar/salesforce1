@@ -1,0 +1,94 @@
+type salesforce.FieldSrcTrgtRelationship {
+  annotations {
+    serviceid metadataType {
+    }
+    boolean hasMetaFile {
+    }
+    string folderType {
+    }
+    string folderContentType {
+    }
+    string suffix {
+    }
+    string dirName {
+    }
+  }
+  serviceid fullName {
+  }
+  string definitionCreationType {
+    _restriction = {
+      enforce_value = false
+      values = [
+        "ADG",
+        "Activation_Audience",
+        "Bridge",
+        "CG_Audience",
+        "Calculated_Insight",
+        "Chunk",
+        "Curated",
+        "Custom",
+        "Derived",
+        "Directory_Table",
+        "External",
+        "Ml_Prediction",
+        "Problem_Records",
+        "Segment_Membership",
+        "Semantic",
+        "Standard",
+        "System",
+        "Transform",
+        "Vector_Embedding",
+      ]
+    }
+  }
+  string lookupFieldName {
+  }
+  string masterLabel {
+  }
+  string owner {
+    _restriction = {
+      enforce_value = false
+      values = [
+        "DataCloud",
+        "SObject",
+      ]
+    }
+  }
+  string relationshipCardinality {
+    _restriction = {
+      enforce_value = false
+      values = [
+        "ManyToOne",
+        "OneToOne",
+      ]
+    }
+  }
+  string sourceFieldName {
+  }
+  string targetEntity {
+    foreignKeyDomain = [
+      "MktDataModelObject",
+    ]
+  }
+  string targetFieldName {
+  }
+  string internalId {
+    _hidden_value = true
+    localOnly = true
+  }
+  suffix = "fieldSrcTrgtRelationship"
+  dirName = "fieldSrcTrgtRelationships"
+  metadataType = "FieldSrcTrgtRelationship"
+  _important_values = [
+    {
+      value = "fullName"
+      highlighted = true
+      indexed = false
+    },
+    {
+      value = "masterLabel"
+      highlighted = true
+      indexed = false
+    },
+  ]
+}

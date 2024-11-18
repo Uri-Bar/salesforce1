@@ -1,0 +1,23 @@
+type salesforce.CommunityRoles {
+  annotations {
+    serviceid metadataType {
+    }
+    boolean hasMetaFile {
+    }
+    string folderType {
+    }
+    string folderContentType {
+    }
+    string suffix {
+    }
+    string dirName {
+    }
+  }
+  string customerUserRole {
+  }
+  string employeeUserRole {
+  }
+  string partnerUserRole {
+  }
+  metadataType = "CommunityRoles"
+}

@@ -6,8 +6,6 @@ salesforce.Flow Get_Experience_Details {
       description = "Assign an Experience__c record for presentation back to the user."
       name = "Assign_Experience_Record"
       label = "Assign Experience Record"
-      locationX = 176
-      locationY = 242
       assignmentItems = [
         {
           assignToReference = "experienceRecord"
@@ -49,8 +47,6 @@ salesforce.Flow Get_Experience_Details {
       description = "Search for available Experiences by Name."
       name = "Get_Experience_by_Name"
       label = "Get Experience by Name"
-      locationX = 176
-      locationY = 134
       assignNullValuesIfNoRecordsFound = false
       connector = {
         targetReference = "Assign_Experience_Record"
@@ -79,8 +75,6 @@ salesforce.Flow Get_Experience_Details {
   ]
   runInMode = "SystemModeWithSharing"
   start = {
-    locationX = 50
-    locationY = 0
     connector = {
       targetReference = "Get_Experience_by_Name"
     }

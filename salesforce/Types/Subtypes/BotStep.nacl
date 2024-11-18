@@ -1,0 +1,67 @@
+type salesforce.BotStep {
+  annotations {
+    serviceid metadataType {
+    }
+    boolean hasMetaFile {
+    }
+    string folderType {
+    }
+    string folderContentType {
+    }
+    string suffix {
+    }
+    string dirName {
+    }
+  }
+  string booleanFilter {
+  }
+  salesforce.BotInvocation botInvocation {
+  }
+  salesforce.BotMessage botMessages {
+  }
+  salesforce.BotNavigation botNavigation {
+  }
+  salesforce.BotStepCondition botStepConditions {
+  }
+  salesforce.BotStep botSteps {
+  }
+  salesforce.BotVariableOperation botVariableOperation {
+  }
+  string conditionLogicType {
+    _restriction = {
+      enforce_value = false
+      values = [
+        "And",
+        "Or",
+      ]
+    }
+  }
+  salesforce.ConversationRecordLookup conversationRecordLookup {
+  }
+  salesforce.ConversationDefinitionStepGoalMapping conversationStepGoalMappings {
+  }
+  salesforce.ConversationSystemMessage conversationSystemMessage {
+  }
+  salesforce.ConversationDefinitionRichMessage messageDefinition {
+  }
+  string stepIdentifier {
+  }
+  string type {
+    _restriction = {
+      enforce_value = false
+      values = [
+        "GoalStep",
+        "Group",
+        "Invocation",
+        "Message",
+        "Navigation",
+        "RecordLookup",
+        "RichMessage",
+        "SystemMessage",
+        "VariableOperation",
+        "Wait",
+      ]
+    }
+  }
+  metadataType = "BotStep"
+}

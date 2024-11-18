@@ -1,0 +1,44 @@
+type salesforce.CommunityTemplateBundleInfo {
+  annotations {
+    serviceid metadataType {
+    }
+    boolean hasMetaFile {
+    }
+    string folderType {
+    }
+    string folderContentType {
+    }
+    string suffix {
+    }
+    string dirName {
+    }
+  }
+  string description {
+  }
+  string image {
+    foreignKeyDomain = [
+      salesforce.StaticResource,
+    ]
+  }
+  number order {
+  }
+  string title {
+  }
+  string type {
+    _restriction = {
+      enforce_value = false
+      values = [
+        "Highlight",
+        "PreviewImage",
+      ]
+    }
+  }
+  metadataType = "CommunityTemplateBundleInfo"
+  _important_values = [
+    {
+      value = "description"
+      highlighted = true
+      indexed = false
+    },
+  ]
+}

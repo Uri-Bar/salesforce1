@@ -1,0 +1,68 @@
+type salesforce.BotBlockVersion {
+  annotations {
+    serviceid metadataType {
+    }
+    boolean hasMetaFile {
+    }
+    string folderType {
+    }
+    string folderContentType {
+    }
+    string suffix {
+    }
+    string dirName {
+    }
+  }
+  serviceid fullName {
+  }
+  salesforce.BotDialog botDialogs {
+  }
+  salesforce.ConversationDefinitionGoal conversationGoals {
+  }
+  string conversationLanguages {
+  }
+  salesforce.ConversationVariable conversationVariables {
+  }
+  string description {
+  }
+  salesforce.LocalMlDomain mlDomain {
+    foreignKeyDomain = [
+      salesforce.MlDomain,
+    ]
+  }
+  string permissionSet {
+    foreignKeyDomain = [
+      "PermissionSet",
+    ]
+  }
+  string status {
+    _restriction = {
+      enforce_value = false
+      values = [
+        "Published",
+      ]
+    }
+  }
+  string internalId {
+    _hidden_value = true
+    localOnly = true
+  }
+  metadataType = "BotBlockVersion"
+  _important_values = [
+    {
+      value = "fullName"
+      highlighted = true
+      indexed = false
+    },
+    {
+      value = "description"
+      highlighted = true
+      indexed = false
+    },
+    {
+      value = "status"
+      highlighted = true
+      indexed = true
+    },
+  ]
+}

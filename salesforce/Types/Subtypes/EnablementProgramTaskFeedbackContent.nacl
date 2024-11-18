@@ -1,0 +1,25 @@
+type salesforce.EnablementProgramTaskFeedbackContent {
+  annotations {
+    serviceid metadataType {
+    }
+    boolean hasMetaFile {
+    }
+    string folderType {
+    }
+    string folderContentType {
+    }
+    string suffix {
+    }
+    string dirName {
+    }
+  }
+  number inviteeCount {
+  }
+  string promptTemplate {
+  }
+  string surveyDeveloperName {
+  }
+  string type {
+  }
+  metadataType = "EnablementProgramTaskFeedbackContent"
+}

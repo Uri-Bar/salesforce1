@@ -1,0 +1,47 @@
+type salesforce.ConversationContextVariable {
+  annotations {
+    serviceid metadataType {
+    }
+    boolean hasMetaFile {
+    }
+    string folderType {
+    }
+    string folderContentType {
+    }
+    string suffix {
+    }
+    string dirName {
+    }
+  }
+  string SObjectType {
+  }
+  salesforce.ConversationContextVariableMapping contextVariableMappings {
+  }
+  string dataType {
+    _restriction = {
+      enforce_value = false
+      values = [
+        "Boolean",
+        "Currency",
+        "Date",
+        "DateTime",
+        "Id",
+        "Number",
+        "Object",
+        "Text",
+      ]
+    }
+  }
+  string developerName {
+  }
+  string label {
+  }
+  metadataType = "ConversationContextVariable"
+  _important_values = [
+    {
+      value = "label"
+      highlighted = true
+      indexed = false
+    },
+  ]
+}

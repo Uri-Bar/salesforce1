@@ -1,0 +1,81 @@
+type salesforce.ServiceChannel {
+  annotations {
+    serviceid metadataType {
+    }
+    boolean hasMetaFile {
+    }
+    string folderType {
+    }
+    string folderContentType {
+    }
+    string suffix {
+    }
+    string dirName {
+    }
+  }
+  serviceid fullName {
+  }
+  number acwExtensionDuration {
+  }
+  number afterConvoWorkMaxTime {
+  }
+  boolean doesMinimizeWidgetOnAccept {
+  }
+  boolean hasAcwExtensionEnabled {
+  }
+  boolean hasAfterConvoWorkTimer {
+  }
+  boolean hasAutoAcceptEnabled {
+  }
+  string interactionComponent {
+    foreignKeyDomain = [
+      salesforce.CustomApplicationComponent,
+    ]
+  }
+  boolean isInterruptible {
+  }
+  string label {
+  }
+  string maxExtensions {
+    _restriction = {
+      enforce_value = false
+      values = [
+        "1",
+        "10",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7",
+        "8",
+        "9",
+      ]
+    }
+  }
+  string relatedEntityType {
+  }
+  string secondaryRoutingPriorityField {
+  }
+  salesforce.ServiceChannelFieldPriority serviceChannelFieldPriorities {
+  }
+  string internalId {
+    _hidden_value = true
+    localOnly = true
+  }
+  suffix = "serviceChannel"
+  dirName = "serviceChannels"
+  metadataType = "ServiceChannel"
+  _important_values = [
+    {
+      value = "fullName"
+      highlighted = true
+      indexed = false
+    },
+    {
+      value = "label"
+      highlighted = true
+      indexed = false
+    },
+  ]
+}

@@ -1,0 +1,53 @@
+type salesforce.BotDialog {
+  annotations {
+    serviceid metadataType {
+    }
+    boolean hasMetaFile {
+    }
+    string folderType {
+    }
+    string folderContentType {
+    }
+    string suffix {
+    }
+    string dirName {
+    }
+  }
+  string botDialogGroup {
+    foreignKeyDomain = [
+      "ConversationDefinitionDialogGroup",
+    ]
+  }
+  "List<salesforce.BotStep>" botSteps {
+  }
+  string description {
+  }
+  string developerName {
+  }
+  boolean isPlaceholderDialog {
+  }
+  string label {
+  }
+  string mlIntent {
+    foreignKeyDomain = [
+      salesforce.MlIntent,
+    ]
+  }
+  boolean mlIntentTrainingEnabled {
+  }
+  boolean showInFooterMenu {
+  }
+  metadataType = "BotDialog"
+  _important_values = [
+    {
+      value = "label"
+      highlighted = true
+      indexed = false
+    },
+    {
+      value = "description"
+      highlighted = true
+      indexed = false
+    },
+  ]
+}

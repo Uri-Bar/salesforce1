@@ -1,0 +1,30 @@
+type salesforce.ConversationDefinitionNlpProvider {
+  annotations {
+    serviceid metadataType {
+    }
+    boolean hasMetaFile {
+    }
+    string folderType {
+    }
+    string folderContentType {
+    }
+    string suffix {
+    }
+    string dirName {
+    }
+  }
+  string language {
+  }
+  string nlpProviderName {
+  }
+  string nlpProviderType {
+    _restriction = {
+      enforce_value = false
+      values = [
+        "Apex",
+        "EinsteinAi",
+      ]
+    }
+  }
+  metadataType = "ConversationDefinitionNlpProvider"
+}

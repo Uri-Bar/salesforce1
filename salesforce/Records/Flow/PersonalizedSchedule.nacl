@@ -4,8 +4,6 @@ salesforce.Flow PersonalizedSchedule {
     description = "Invoke the Generate Personalized Schedule Prompt"
     name = "Invoke_Prompt"
     label = "Invoke Prompt"
-    locationX = 176
-    locationY = 242
     actionName = "Generate_Personalized_Schedule"
     actionType = "generatePromptResponse"
     connector = {
@@ -54,8 +52,6 @@ salesforce.Flow PersonalizedSchedule {
     {
       name = "Get_Contact"
       label = "Get Contact"
-      locationX = 176
-      locationY = 134
       assignNullValuesIfNoRecordsFound = false
       connector = {
         targetReference = "Invoke_Prompt"
@@ -79,8 +75,6 @@ salesforce.Flow PersonalizedSchedule {
     description = "Display the field generation result"
     name = "Display_Result"
     label = "Display Result"
-    locationX = 176
-    locationY = 350
     allowBack = true
     allowFinish = true
     allowPause = true
@@ -93,8 +87,6 @@ salesforce.Flow PersonalizedSchedule {
     showHeader = true
   }
   start = {
-    locationX = 50
-    locationY = 0
     connector = {
       targetReference = "Get_Contact"
     }

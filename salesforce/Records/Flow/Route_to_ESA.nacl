@@ -3,8 +3,6 @@ salesforce.Flow Route_to_ESA {
   actionCalls = {
     name = "Route_to_ESA"
     label = "Route to ESA"
-    locationX = 176
-    locationY = 242
     actionName = "routeWork"
     actionType = "routeWork"
     flowTransactionModel = "CurrentTransaction"
@@ -122,8 +120,6 @@ salesforce.Flow Route_to_ESA {
     {
       name = "Get_Messaging_Session"
       label = "Get Messaging Session"
-      locationX = 176
-      locationY = 134
       assignNullValuesIfNoRecordsFound = false
       connector = {
         targetReference = "Route_to_ESA"
@@ -144,8 +140,6 @@ salesforce.Flow Route_to_ESA {
     },
   ]
   start = {
-    locationX = 50
-    locationY = 0
     connector = {
       targetReference = "Get_Messaging_Session"
     }

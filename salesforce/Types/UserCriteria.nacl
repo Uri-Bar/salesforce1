@@ -1,0 +1,52 @@
+type salesforce.UserCriteria {
+  annotations {
+    serviceid metadataType {
+    }
+    boolean hasMetaFile {
+    }
+    string folderType {
+    }
+    string folderContentType {
+    }
+    string suffix {
+    }
+    string dirName {
+    }
+  }
+  number creationAgeInSeconds {
+  }
+  string description {
+  }
+  serviceid fullName {
+  }
+  number lastChatterActivityAgeInSeconds {
+  }
+  string masterLabel {
+  }
+  string profiles {
+  }
+  string internalId {
+    _hidden_value = true
+    localOnly = true
+  }
+  suffix = "userCriteria"
+  dirName = "userCriteria"
+  metadataType = "UserCriteria"
+  _important_values = [
+    {
+      value = "fullName"
+      highlighted = true
+      indexed = false
+    },
+    {
+      value = "masterLabel"
+      highlighted = true
+      indexed = false
+    },
+    {
+      value = "description"
+      highlighted = true
+      indexed = false
+    },
+  ]
+}

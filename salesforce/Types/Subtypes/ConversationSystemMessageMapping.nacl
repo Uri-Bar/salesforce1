@@ -1,0 +1,36 @@
+type salesforce.ConversationSystemMessageMapping {
+  annotations {
+    serviceid metadataType {
+    }
+    boolean hasMetaFile {
+    }
+    string folderType {
+    }
+    string folderContentType {
+    }
+    string suffix {
+    }
+    string dirName {
+    }
+  }
+  string mappingType {
+    _restriction = {
+      enforce_value = false
+      values = [
+        "Input",
+        "Output",
+      ]
+    }
+  }
+  string parameterType {
+    _restriction = {
+      enforce_value = false
+      values = [
+        "Transfer",
+      ]
+    }
+  }
+  string variableName {
+  }
+  metadataType = "ConversationSystemMessageMapping"
+}

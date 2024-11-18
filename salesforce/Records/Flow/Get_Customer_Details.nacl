@@ -6,8 +6,6 @@ salesforce.Flow Get_Customer_Details {
       description = "Assign the contact record for output to the user in the agent."
       name = "Assign_Contact"
       label = "Assign Contact"
-      locationX = 176
-      locationY = 242
       assignmentItems = [
         {
           assignToReference = "contact"
@@ -49,8 +47,6 @@ salesforce.Flow Get_Customer_Details {
       description = "Search for a contact record and validate that they are who they say they are by their email and member number."
       name = "Get_Contact_by_Email_and_Member_Number"
       label = "Get Contact by Email and Member Number"
-      locationX = 176
-      locationY = 134
       assignNullValuesIfNoRecordsFound = false
       connector = {
         targetReference = "Assign_Contact"
@@ -83,8 +79,6 @@ salesforce.Flow Get_Customer_Details {
   ]
   runInMode = "SystemModeWithSharing"
   start = {
-    locationX = 50
-    locationY = 0
     connector = {
       targetReference = "Get_Contact_by_Email_and_Member_Number"
     }

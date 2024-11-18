@@ -1,0 +1,85 @@
+type salesforce.Bot {
+  annotations {
+    serviceid metadataType {
+    }
+    boolean hasMetaFile {
+    }
+    string folderType {
+    }
+    string folderContentType {
+    }
+    string suffix {
+    }
+    string dirName {
+    }
+  }
+  serviceid fullName {
+  }
+  salesforce.LocalMlDomain botMlDomain {
+    foreignKeyDomain = [
+      salesforce.MlDomain,
+    ]
+  }
+  string botUser {
+    foreignKeyDomain = [
+      salesforce.User,
+    ]
+  }
+  salesforce.BotVersion botVersions {
+  }
+  "List<salesforce.ConversationContextVariable>" contextVariables {
+  }
+  salesforce.ConversationDefinitionChannelProvider conversationChannelProviders {
+  }
+  string defaultOutboundFlow {
+    foreignKeyDomain = [
+      salesforce.FlowDefinition,
+    ]
+  }
+  string description {
+  }
+  string label {
+  }
+  boolean logPrivateConversationData {
+  }
+  "List<salesforce.PageContextVariable>" pageContextVariables {
+  }
+  boolean richContentEnabled {
+  }
+  number sessionTimeout {
+  }
+  string type {
+    _restriction = {
+      enforce_value = false
+      values = [
+        "Bot",
+        "ExternalCopilot",
+        "InternalCopilot",
+      ]
+    }
+  }
+  string internalId {
+    _hidden_value = true
+    localOnly = true
+  }
+  suffix = "bot"
+  dirName = "bots"
+  metadataType = "Bot"
+  _important_values = [
+    {
+      value = "fullName"
+      highlighted = true
+      indexed = false
+    },
+    {
+      value = "label"
+      highlighted = true
+      indexed = false
+    },
+    {
+      value = "description"
+      highlighted = true
+      indexed = false
+    },
+  ]
+}

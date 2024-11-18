@@ -1,0 +1,56 @@
+type salesforce.EnablementProgramTask {
+  annotations {
+    serviceid metadataType {
+    }
+    boolean hasMetaFile {
+    }
+    string folderType {
+    }
+    string folderContentType {
+    }
+    string suffix {
+    }
+    string dirName {
+    }
+  }
+  string customSubCategoryName {
+  }
+  number day {
+  }
+  string description {
+  }
+  string developerName {
+  }
+  salesforce.EnablementProgramTaskExercise exercise {
+  }
+  salesforce.EnablementProgramTaskMilestone milestone {
+  }
+  string name {
+  }
+  number sequenceNumber {
+  }
+  string taskCategory {
+    _restriction = {
+      enforce_value = false
+      values = [
+        "Exercise",
+        "Milestone",
+      ]
+    }
+  }
+  string taskSubCategory {
+  }
+  metadataType = "EnablementProgramTask"
+  _important_values = [
+    {
+      value = "name"
+      highlighted = true
+      indexed = false
+    },
+    {
+      value = "description"
+      highlighted = true
+      indexed = false
+    },
+  ]
+}

@@ -1,0 +1,62 @@
+type salesforce.OmniSupervisorConfig {
+  annotations {
+    serviceid metadataType {
+    }
+    boolean hasMetaFile {
+    }
+    string folderType {
+    }
+    string folderContentType {
+    }
+    string suffix {
+    }
+    string dirName {
+    }
+  }
+  serviceid fullName {
+  }
+  boolean isTimelineHidden {
+  }
+  string masterLabel {
+  }
+  salesforce.OmniSupervisorConfigAction omniSupervisorConfigAction {
+  }
+  salesforce.OmniSupervisorConfigGroup omniSupervisorConfigGroup {
+  }
+  salesforce.OmniSupervisorConfigProfile omniSupervisorConfigProfile {
+  }
+  salesforce.OmniSupervisorConfigQueue omniSupervisorConfigQueue {
+  }
+  salesforce.OmniSupervisorConfigSkill omniSupervisorConfigSkill {
+  }
+  salesforce.OmniSupervisorConfigTab omniSupervisorConfigTab {
+  }
+  string skillVisibility {
+    _restriction = {
+      enforce_value = false
+      values = [
+        "AllSkills",
+        "AnySkill",
+      ]
+    }
+  }
+  string internalId {
+    _hidden_value = true
+    localOnly = true
+  }
+  suffix = "omniSupervisorConfig"
+  dirName = "omniSupervisorConfigs"
+  metadataType = "OmniSupervisorConfig"
+  _important_values = [
+    {
+      value = "fullName"
+      highlighted = true
+      indexed = false
+    },
+    {
+      value = "masterLabel"
+      highlighted = true
+      indexed = false
+    },
+  ]
+}

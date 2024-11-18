@@ -7,8 +7,6 @@ salesforce.Flow Add_Experiences_to_Prompt {
       name = "Add_Experience_to_Prompt"
       elementSubtype = "AddPromptInstructions"
       label = "Add Experience to Prompt"
-      locationX = 264
-      locationY = 350
       assignmentItems = [
         {
           assignToReference = "$Output.Prompt"
@@ -35,8 +33,6 @@ salesforce.Flow Add_Experiences_to_Prompt {
       description = "Loop through experiences"
       name = "Experiences_Loop"
       label = "Experiences Loop"
-      locationX = 176
-      locationY = 242
       collectionReference = "Get_Experiences"
       iterationOrder = "Asc"
       nextValueConnector = {
@@ -70,8 +66,6 @@ salesforce.Flow Add_Experiences_to_Prompt {
       description = "Get a list of resort experiences that match the guest's interests"
       name = "Get_Experiences"
       label = "Get Experiences"
-      locationX = 176
-      locationY = 134
       assignNullValuesIfNoRecordsFound = false
       connector = {
         targetReference = "Experiences_Loop"
@@ -106,8 +100,6 @@ salesforce.Flow Add_Experiences_to_Prompt {
     },
   ]
   start = {
-    locationX = 50
-    locationY = 0
     capabilityTypes = {
       name = "PromptTemplateType://einstein_gpt__salesEmail"
       capabilityName = "PromptTemplateType://einstein_gpt__salesEmail"

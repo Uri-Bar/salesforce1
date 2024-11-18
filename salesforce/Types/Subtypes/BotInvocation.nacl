@@ -1,0 +1,37 @@
+type salesforce.BotInvocation {
+  annotations {
+    serviceid metadataType {
+    }
+    boolean hasMetaFile {
+    }
+    string folderType {
+    }
+    string folderContentType {
+    }
+    string suffix {
+    }
+    string dirName {
+    }
+  }
+  string invocationActionName {
+  }
+  string invocationActionType {
+    _restriction = {
+      enforce_value = false
+      values = [
+        "apex",
+        "api",
+        "externalService",
+        "flow",
+        "logDisambiguation",
+        "logFeedback",
+        "logGoalAchieved",
+        "quickAction",
+        "standardInvocableAction",
+      ]
+    }
+  }
+  salesforce.BotInvocationMapping invocationMappings {
+  }
+  metadataType = "BotInvocation"
+}

@@ -1,0 +1,53 @@
+type salesforce.ExperienceBundle {
+  annotations {
+    serviceid metadataType {
+    }
+    boolean hasMetaFile {
+    }
+    string folderType {
+    }
+    string folderContentType {
+    }
+    string suffix {
+    }
+    string dirName {
+    }
+  }
+  salesforce.ExperienceResources experienceResources {
+  }
+  serviceid fullName {
+  }
+  string label {
+  }
+  string type {
+    _restriction = {
+      enforce_value = false
+      values = [
+        "ChatterNetwork",
+        "ChatterNetworkPicasso",
+        "Siteforce",
+        "Visualforce",
+      ]
+    }
+  }
+  string urlPathPrefix {
+  }
+  string internalId {
+    _hidden_value = true
+    localOnly = true
+  }
+  dirName = "experiences"
+  metadataType = "ExperienceBundle"
+  _important_values = [
+    {
+      value = "fullName"
+      highlighted = true
+      indexed = false
+    },
+    {
+      value = "label"
+      highlighted = true
+      indexed = false
+    },
+  ]
+}

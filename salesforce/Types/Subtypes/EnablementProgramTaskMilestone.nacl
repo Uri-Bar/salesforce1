@@ -1,0 +1,35 @@
+type salesforce.EnablementProgramTaskMilestone {
+  annotations {
+    serviceid metadataType {
+    }
+    boolean hasMetaFile {
+    }
+    string folderType {
+    }
+    string folderContentType {
+    }
+    string suffix {
+    }
+    string dirName {
+    }
+  }
+  string compositeMilestoneType {
+    _restriction = {
+      enforce_value = false
+      values = [
+        "Addition",
+        "Division",
+        "Percentage",
+      ]
+    }
+  }
+  boolean isMilestoneAnOutcome {
+  }
+  salesforce.EnablementProgramTaskMilestoneMeasure milestoneMeasures {
+  }
+  number milestoneTarget {
+  }
+  number minimumSampleSize {
+  }
+  metadataType = "EnablementProgramTaskMilestone"
+}

@@ -1,0 +1,67 @@
+type salesforce.DataPackageKitDefinition {
+  annotations {
+    serviceid metadataType {
+    }
+    boolean hasMetaFile {
+    }
+    string folderType {
+    }
+    string folderContentType {
+    }
+    string suffix {
+    }
+    string dirName {
+    }
+  }
+  serviceid fullName {
+  }
+  string dataKitType {
+    _restriction = {
+      enforce_value = false
+      values = [
+        "NONE",
+        "SANDBOX",
+      ]
+    }
+  }
+  string dataSpaceDefinitionDevName {
+  }
+  string deploymentOrder {
+  }
+  string description {
+  }
+  string developerName {
+  }
+  boolean isDeployed {
+  }
+  boolean isEnabled {
+  }
+  string masterLabel {
+  }
+  number versionNumber {
+  }
+  string internalId {
+    _hidden_value = true
+    localOnly = true
+  }
+  suffix = "dataPackageKitDefinition"
+  dirName = "dataPackageKitDefinitions"
+  metadataType = "DataPackageKitDefinition"
+  _important_values = [
+    {
+      value = "fullName"
+      highlighted = true
+      indexed = false
+    },
+    {
+      value = "masterLabel"
+      highlighted = true
+      indexed = false
+    },
+    {
+      value = "description"
+      highlighted = true
+      indexed = false
+    },
+  ]
+}

@@ -1,0 +1,232 @@
+type salesforce.SearchOrgWideObjectConfig {
+  annotations {
+    serviceid metadataType {
+    }
+    boolean hasMetaFile {
+    }
+    string folderType {
+    }
+    string folderContentType {
+    }
+    string suffix {
+    }
+    string dirName {
+    }
+  }
+  serviceid fullName {
+  }
+  string masterLabel {
+  }
+  string objectReference {
+    _restriction = {
+      enforce_value = false
+      values = [
+        "Account",
+        "AccountBrand",
+        "ActivationTarget",
+        "ActivationTargetPlatform",
+        "ActivationTrgtIntOrgAccess",
+        "ActvTgtPlatformFieldValue",
+        "Address",
+        "AppointmentCategory",
+        "AppointmentInvitation",
+        "AppointmentInvitee",
+        "Asset",
+        "AssetAction",
+        "AssetActionSource",
+        "AssetRelationship",
+        "AssetStatePeriod",
+        "AsyncOperationLog",
+        "Attachment",
+        "AuthorizationForm",
+        "AuthorizationFormConsent",
+        "AuthorizationFormDataUse",
+        "AuthorizationFormText",
+        "Booking__c",
+        "BusinessBrand",
+        "BuyerGroup",
+        "CalculationMatrix",
+        "CalculationMatrixRow",
+        "CalculationProcedure",
+        "Campaign",
+        "Case",
+        "ChangeRequest",
+        "ChannelProgram",
+        "ChannelProgramLevel",
+        "ChatterMessage",
+        "CollaborationGroup",
+        "CommSubscription",
+        "CommSubscriptionChannelType",
+        "CommSubscriptionConsent",
+        "CommSubscriptionTiming",
+        "ConsumptionSchedule",
+        "Contact",
+        "ContactPointAddress",
+        "ContactPointConsent",
+        "ContactPointEmail",
+        "ContactPointPhone",
+        "ContactPointTypeConsent",
+        "ContentVersion",
+        "Contract",
+        "ContractLineItem",
+        "Coupon",
+        "CreditMemo",
+        "CreditMemoInvApplication",
+        "CreditMemoLine",
+        "Customer",
+        "DTRecordsetReplica",
+        "DandBCompany",
+        "Dashboard",
+        "DataAction",
+        "DataActionTarget",
+        "DataGraph",
+        "DataKitDeploymentLog",
+        "DataLakeObjectInstance",
+        "DataMaskCustomValueLibrary",
+        "DataSemanticSearch",
+        "DataStream",
+        "DataUseLegalBasis",
+        "DataUsePurpose",
+        "DecisionTblFileImportData",
+        "DelegatedAccount",
+        "DeliveryEstimationSetup",
+        "Document",
+        "EmailMessage",
+        "EngagementChannelType",
+        "EngagementChannelWorkType",
+        "EnhancedLetterhead",
+        "Entitlement",
+        "Event",
+        "Experience__c",
+        "ExpressionSet",
+        "ExtDataShare",
+        "ExtDataShareTarget",
+        "FeedComment",
+        "FeedPost",
+        "FinanceBalanceSnapshot",
+        "FinanceTransaction",
+        "FlowOrchestration",
+        "FlowOrchestrationWorkItem",
+        "FlowRecord",
+        "FulfillmentOrder",
+        "Guest_Review__c",
+        "Idea",
+        "IdentityResolution",
+        "Image",
+        "Incident",
+        "Individual",
+        "Invoice",
+        "InvoiceLine",
+        "Lead",
+        "LegalEntity",
+        "ListEmail",
+        "Location",
+        "LocationGroup",
+        "LocationShippingCarrierMethod",
+        "Macro",
+        "ManagedContentVariant",
+        "ManagedContentVersion",
+        "MarketSegment",
+        "MarketSegmentActivation",
+        "MessagingEndUser",
+        "MessagingSession",
+        "MktCalculatedInsight",
+        "MktDataTransform",
+        "MktMLModel",
+        "Note",
+        "OperatingHours",
+        "OperatingHoursHoliday",
+        "Opportunity",
+        "Order",
+        "PartnerFundAllocation",
+        "PartnerFundClaim",
+        "PartnerFundRequest",
+        "PartnerMarketingBudget",
+        "PartyConsent",
+        "Pricebook2",
+        "PrivacyRTBFRequest",
+        "Problem",
+        "ProcessException",
+        "Product2",
+        "ProductCatalog",
+        "ProductCategory",
+        "Promotion",
+        "PromotionMarketSegment",
+        "PromotionSegment",
+        "QuickText",
+        "Recommendation",
+        "Report",
+        "ResourceAbsence",
+        "ReturnOrder",
+        "ReturnOrderLineItem",
+        "Seller",
+        "ServiceAppointment",
+        "ServiceAppointmentAttendee",
+        "ServiceContract",
+        "ServiceResource",
+        "ServiceResourceSkill",
+        "ServiceTerritory",
+        "ServiceTerritoryMember",
+        "ServiceTerritoryWorkType",
+        "Session__c",
+        "Shift",
+        "ShiftEngagementChannel",
+        "ShiftWorkTopic",
+        "Shipment",
+        "ShippingCarrier",
+        "ShippingCarrierMethod",
+        "SkillRequirement",
+        "SocialPersona",
+        "Solution",
+        "StandardShippingRate",
+        "Task",
+        "Topic",
+        "User",
+        "UserDefinedLabel",
+        "UserEmailPreferredPerson",
+        "VoiceCall",
+        "Waitlist",
+        "WaitlistParticipant",
+        "WaitlistServiceResource",
+        "WaitlistWorkType",
+        "WebCart",
+        "WebStore",
+        "WebStoreInventorySource",
+        "WorkOrder",
+        "WorkOrderLineItem",
+        "WorkPlan",
+        "WorkPlanTemplate",
+        "WorkPlanTemplateEntry",
+        "WorkStep",
+        "WorkStepTemplate",
+        "WorkType",
+        "WorkTypeGroup",
+        "WorkTypeGroupMember",
+      ]
+    }
+    foreignKeyDomain = [
+      "CustomObject",
+    ]
+  }
+  salesforce.SearchOrgWideFieldConfig searchOrgWideFieldConfig {
+  }
+  string internalId {
+    _hidden_value = true
+    localOnly = true
+  }
+  suffix = "searchOrgWideObjectConfig"
+  dirName = "searchOrgWideConfiguration"
+  metadataType = "SearchOrgWideObjectConfig"
+  _important_values = [
+    {
+      value = "fullName"
+      highlighted = true
+      indexed = false
+    },
+    {
+      value = "masterLabel"
+      highlighted = true
+      indexed = false
+    },
+  ]
+}

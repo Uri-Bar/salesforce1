@@ -1,0 +1,43 @@
+type salesforce.ActvPfrmDataConnectorS3 {
+  annotations {
+    serviceid metadataType {
+    }
+    boolean hasMetaFile {
+    }
+    string folderType {
+    }
+    string folderContentType {
+    }
+    string suffix {
+    }
+    string dirName {
+    }
+  }
+  serviceid fullName {
+  }
+  string bucketName {
+  }
+  string exportDirectory {
+  }
+  string masterLabel {
+  }
+  string internalId {
+    _hidden_value = true
+    localOnly = true
+  }
+  suffix = "actvPfrmDataConnectorS3"
+  dirName = "actvPfrmDataConnectorS3s"
+  metadataType = "ActvPfrmDataConnectorS3"
+  _important_values = [
+    {
+      value = "fullName"
+      highlighted = true
+      indexed = false
+    },
+    {
+      value = "masterLabel"
+      highlighted = true
+      indexed = false
+    },
+  ]
+}

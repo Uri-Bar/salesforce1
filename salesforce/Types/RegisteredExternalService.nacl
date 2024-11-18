@@ -1,0 +1,115 @@
+type salesforce.RegisteredExternalService {
+  annotations {
+    serviceid metadataType {
+    }
+    boolean hasMetaFile {
+    }
+    string folderType {
+    }
+    string folderContentType {
+    }
+    string suffix {
+    }
+    string dirName {
+    }
+  }
+  string configUrl {
+  }
+  string description {
+  }
+  string documentationUrl {
+  }
+  string extensionPointName {
+    _restriction = {
+      enforce_value = false
+      values = [
+        "Cart_Prices_Extension",
+        "Checkout_CartSummary_ComputePromotions",
+        "Checkout_CartSummary_Inventory",
+        "Checkout_CartSummary_PriceCart",
+        "Checkout_Update_CalcCartSummary",
+        "CommerceDx_Endpoint_InventorySample_Service",
+        "CommerceDx_Endpoint_PricingSample_Service",
+        "CommerceDx_Inventory",
+        "CommerceDx_Pricing",
+        "CommerceDx_TicketProcessing",
+        "Commerce_Domain_Cart_Calculate",
+        "Commerce_Domain_Checkout_CreateOrder",
+        "Commerce_Domain_Inventory_CartCalculator",
+        "Commerce_Domain_Inventory_Service",
+        "Commerce_Domain_OrderManagement_Product",
+        "Commerce_Domain_Pricing_CartCalculator",
+        "Commerce_Domain_Pricing_Service",
+        "Commerce_Domain_Promotions_CartCalculator",
+        "Commerce_Domain_Promotions_ShippingCalculator",
+        "Commerce_Domain_Shipping_CartCalculator",
+        "Commerce_Domain_Shipping_SplitShipment",
+        "Commerce_Domain_Tax_CartCalculator",
+        "Commerce_Domain_Tax_Service",
+        "Commerce_Endpoint_Account_Address",
+        "Commerce_Endpoint_Account_Addresses",
+        "Commerce_Endpoint_Cart_Item",
+        "Commerce_Endpoint_Cart_ItemCollection",
+        "Commerce_Endpoint_Catalog_Product",
+        "Commerce_Endpoint_Catalog_Products",
+        "Commerce_Endpoint_Search_ProductSearch",
+        "Commerce_Endpoint_Search_Products",
+        "Commerce_Endpoint_Search_ProductsByCategory",
+        "Commerce_Integration_B2CEOrderImport",
+        "Product_Inventory_CheckInventory",
+      ]
+    }
+  }
+  string externalServiceProvider {
+    foreignKeyDomain = [
+      salesforce.ApexClass,
+    ]
+  }
+  string externalServiceProviderType {
+    _restriction = {
+      enforce_value = false
+      values = [
+        "Extension",
+        "Inventory",
+        "Price",
+        "Promotions",
+        "Shipment",
+        "Tax",
+      ]
+    }
+  }
+  serviceid fullName {
+  }
+  string iconUri {
+  }
+  boolean isApplication {
+  }
+  boolean isProtected {
+  }
+  string masterLabel {
+  }
+  string internalId {
+    _hidden_value = true
+    localOnly = true
+  }
+  suffix = "registeredExternalService"
+  dirName = "registeredExternalServices"
+  metadataType = "RegisteredExternalService"
+  _important_values = [
+    {
+      value = "fullName"
+      highlighted = true
+      indexed = false
+    },
+    {
+      value = "masterLabel"
+      highlighted = true
+      indexed = false
+    },
+    {
+      value = "description"
+      highlighted = true
+      indexed = false
+    },
+  ]
+}

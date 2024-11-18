@@ -1,0 +1,65 @@
+type salesforce.Audience {
+  annotations {
+    serviceid metadataType {
+    }
+    boolean hasMetaFile {
+    }
+    string folderType {
+    }
+    string folderContentType {
+    }
+    string suffix {
+    }
+    string dirName {
+    }
+  }
+  string audienceName {
+  }
+  string container {
+    foreignKeyDomain = [
+      salesforce.Network,
+      "Organization",
+    ]
+  }
+  salesforce.AudienceCriteria criteria {
+  }
+  string description {
+  }
+  string formula {
+  }
+  string formulaFilterType {
+    _restriction = {
+      enforce_value = false
+      values = [
+        "AllCriteriaMatch",
+        "AnyCriterionMatches",
+        "CustomLogicMatches",
+      ]
+    }
+  }
+  serviceid fullName {
+  }
+  boolean isDefaultAudience {
+  }
+  salesforce.PersonalizationTargetInfos targets {
+  }
+  string internalId {
+    _hidden_value = true
+    localOnly = true
+  }
+  suffix = "audience"
+  dirName = "audience"
+  metadataType = "Audience"
+  _important_values = [
+    {
+      value = "fullName"
+      highlighted = true
+      indexed = false
+    },
+    {
+      value = "description"
+      highlighted = true
+      indexed = false
+    },
+  ]
+}

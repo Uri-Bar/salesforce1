@@ -1,0 +1,42 @@
+type salesforce.MlModelOutputEndpoint {
+  annotations {
+    serviceid metadataType {
+    }
+    boolean hasMetaFile {
+    }
+    string folderType {
+    }
+    string folderContentType {
+    }
+    string suffix {
+    }
+    string dirName {
+    }
+  }
+  string jsonPath {
+  }
+  string label {
+  }
+  string name {
+  }
+  string outputFeature {
+    foreignKeyDomain = [
+      "MktMLModelOutputFeature",
+    ]
+  }
+  number position {
+  }
+  metadataType = "MlModelOutputEndpoint"
+  _important_values = [
+    {
+      value = "label"
+      highlighted = true
+      indexed = false
+    },
+    {
+      value = "name"
+      highlighted = true
+      indexed = false
+    },
+  ]
+}

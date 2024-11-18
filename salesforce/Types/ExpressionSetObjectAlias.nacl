@@ -1,0 +1,83 @@
+type salesforce.ExpressionSetObjectAlias {
+  annotations {
+    serviceid metadataType {
+    }
+    boolean hasMetaFile {
+    }
+    string folderType {
+    }
+    string folderContentType {
+    }
+    string suffix {
+    }
+    string dirName {
+    }
+  }
+  serviceid fullName {
+  }
+  string dataType {
+    _restriction = {
+      enforce_value = false
+      values = [
+        "JSON",
+        "sObject",
+      ]
+    }
+  }
+  salesforce.ExpressionSetObjectAliasField mappings {
+  }
+  string objectApiName {
+  }
+  string usageType {
+    _restriction = {
+      enforce_value = false
+      values = [
+        "AiAcceleratorSubscriberChurnPrediction",
+        "Bre",
+        "CancelVoucher",
+        "ComplianceControl",
+        "Constraint",
+        "CreditPointsToMembers",
+        "CustomLoyalty",
+        "DebitPointsFromMembers",
+        "DefaultPricing",
+        "DefaultRating",
+        "EnrollInPromotion",
+        "EventOrchestration",
+        "FinancialServicesCloud",
+        "GetMemberPromotions",
+        "IssueVoucher",
+        "LoopingProcessing",
+        "OptOutPromotion",
+        "PlanCostCalculation",
+        "PriceProtection",
+        "PricingDiscovery",
+        "ProductCategoryQualification",
+        "ProductQualification",
+        "RatingDiscovery",
+        "RecordAlert",
+        "ShipAndDebit",
+        "TestProcess",
+        "TierProcessing",
+        "TransactionJournal",
+        "UnenrollMember",
+        "UpdateMemberDetails",
+        "WarrantyClaim",
+      ]
+    }
+  }
+  string internalId {
+    _hidden_value = true
+    localOnly = true
+  }
+  suffix = "expressionSetObjectAlias"
+  dirName = "expressionSetObjectAlias"
+  metadataType = "ExpressionSetObjectAlias"
+  _important_values = [
+    {
+      value = "fullName"
+      highlighted = true
+      indexed = false
+    },
+  ]
+}

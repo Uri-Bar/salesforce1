@@ -1,0 +1,43 @@
+type salesforce.ConversationContextVariableMapping {
+  annotations {
+    serviceid metadataType {
+    }
+    boolean hasMetaFile {
+    }
+    string folderType {
+    }
+    string folderContentType {
+    }
+    string suffix {
+    }
+    string dirName {
+    }
+  }
+  string SObjectType {
+  }
+  string fieldName {
+  }
+  string messageType {
+    _restriction = {
+      enforce_value = false
+      values = [
+        "Alexa",
+        "AppleBusinessChat",
+        "Custom",
+        "EmbeddedMessaging",
+        "Facebook",
+        "GoogleHome",
+        "InternalCopilot",
+        "Line",
+        "Omega",
+        "Phone",
+        "Text",
+        "Voice",
+        "WeChat",
+        "WebChat",
+        "WhatsApp",
+      ]
+    }
+  }
+  metadataType = "ConversationContextVariableMapping"
+}

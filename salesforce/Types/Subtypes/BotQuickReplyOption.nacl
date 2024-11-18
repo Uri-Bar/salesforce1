@@ -1,0 +1,21 @@
+type salesforce.BotQuickReplyOption {
+  annotations {
+    serviceid metadataType {
+    }
+    boolean hasMetaFile {
+    }
+    string folderType {
+    }
+    string folderContentType {
+    }
+    string suffix {
+    }
+    string dirName {
+    }
+  }
+  string literalValue {
+  }
+  string quickReplyOptionIdentifier {
+  }
+  metadataType = "BotQuickReplyOption"
+}

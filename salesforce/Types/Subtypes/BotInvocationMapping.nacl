@@ -1,0 +1,45 @@
+type salesforce.BotInvocationMapping {
+  annotations {
+    serviceid metadataType {
+    }
+    boolean hasMetaFile {
+    }
+    string folderType {
+    }
+    string folderContentType {
+    }
+    string suffix {
+    }
+    string dirName {
+    }
+  }
+  string parameterName {
+  }
+  string recordName {
+  }
+  string type {
+    _restriction = {
+      enforce_value = false
+      values = [
+        "Error",
+        "Input",
+        "Output",
+      ]
+    }
+  }
+  string value {
+  }
+  string variableName {
+  }
+  string variableType {
+    _restriction = {
+      enforce_value = false
+      values = [
+        "ContextVariable",
+        "ConversationVariable",
+        "PageContextVariable",
+      ]
+    }
+  }
+  metadataType = "BotInvocationMapping"
+}

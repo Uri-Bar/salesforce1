@@ -1,0 +1,46 @@
+type salesforce.BotStepCondition {
+  annotations {
+    serviceid metadataType {
+    }
+    boolean hasMetaFile {
+    }
+    string folderType {
+    }
+    string folderContentType {
+    }
+    string suffix {
+    }
+    string dirName {
+    }
+  }
+  string leftOperandName {
+  }
+  string leftOperandType {
+    _restriction = {
+      enforce_value = false
+      values = [
+        "ContextVariable",
+        "ConversationVariable",
+        "PageContextVariable",
+      ]
+    }
+  }
+  string operatorType {
+    _restriction = {
+      enforce_value = false
+      values = [
+        "Equals",
+        "GreaterThan",
+        "GreaterThanOrEqualTo",
+        "IsNotSet",
+        "IsSet",
+        "LessThan",
+        "LessThanOrEqualTo",
+        "NotEquals",
+      ]
+    }
+  }
+  string rightOperandValue {
+  }
+  metadataType = "BotStepCondition"
+}

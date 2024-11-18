@@ -1,0 +1,66 @@
+type salesforce.ExternalAuthIdentityProvider {
+  annotations {
+    serviceid metadataType {
+    }
+    boolean hasMetaFile {
+    }
+    string folderType {
+    }
+    string folderContentType {
+    }
+    string suffix {
+    }
+    string dirName {
+    }
+  }
+  serviceid fullName {
+  }
+  string authenticationFlow {
+    _restriction = {
+      enforce_value = false
+      values = [
+        "AuthorizationCode",
+        "ClientCredentials",
+        "JwtBearer",
+      ]
+    }
+  }
+  string authenticationProtocol {
+    _restriction = {
+      enforce_value = false
+      values = [
+        "OAuth",
+      ]
+    }
+  }
+  string description {
+  }
+  salesforce.ExternalAuthIdentityProviderParameter externalAuthIdentityProviderParameters {
+  }
+  string label {
+  }
+  string internalId {
+    _hidden_value = true
+    localOnly = true
+  }
+  suffix = "externalAuthIdentityProvider"
+  dirName = "externalAuthIdentityProviders"
+  metadataType = "ExternalAuthIdentityProvider"
+  _important_values = [
+    {
+      value = "fullName"
+      highlighted = true
+      indexed = false
+    },
+    {
+      value = "label"
+      highlighted = true
+      indexed = false
+    },
+    {
+      value = "description"
+      highlighted = true
+      indexed = false
+    },
+  ]
+}

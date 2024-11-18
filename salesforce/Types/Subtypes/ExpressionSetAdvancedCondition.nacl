@@ -1,0 +1,27 @@
+type salesforce.ExpressionSetAdvancedCondition {
+  annotations {
+    serviceid metadataType {
+    }
+    boolean hasMetaFile {
+    }
+    string folderType {
+    }
+    string folderContentType {
+    }
+    string suffix {
+    }
+    string dirName {
+    }
+  }
+  string conditionLogic {
+  }
+  salesforce.ExpressionSetConditionCriteria criteria {
+  }
+  string errorMessage {
+  }
+  string resultParameter {
+  }
+  string successMessage {
+  }
+  metadataType = "ExpressionSetAdvancedCondition"
+}

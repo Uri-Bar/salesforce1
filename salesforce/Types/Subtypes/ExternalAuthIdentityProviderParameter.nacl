@@ -1,0 +1,48 @@
+type salesforce.ExternalAuthIdentityProviderParameter {
+  annotations {
+    serviceid metadataType {
+    }
+    boolean hasMetaFile {
+    }
+    string folderType {
+    }
+    string folderContentType {
+    }
+    string suffix {
+    }
+    string dirName {
+    }
+  }
+  string description {
+  }
+  string parameterName {
+  }
+  string parameterType {
+    _restriction = {
+      enforce_value = false
+      values = [
+        "AuthorizeUrl",
+        "ClientCertificate",
+        "CreatedByNamespace",
+        "HttpHeader",
+        "JwtBodyClaim",
+        "JwtHeaderClaim",
+        "RequestBodyParameter",
+        "SigningCertificate",
+        "TokenUrl",
+        "UrlQueryParameter",
+        "UserInfoUrl",
+      ]
+    }
+  }
+  string parameterValue {
+  }
+  metadataType = "ExternalAuthIdentityProviderParameter"
+  _important_values = [
+    {
+      value = "description"
+      highlighted = true
+      indexed = false
+    },
+  ]
+}

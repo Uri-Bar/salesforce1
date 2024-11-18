@@ -1,0 +1,37 @@
+type salesforce.LocalMlDomain {
+  annotations {
+    serviceid metadataType {
+    }
+    boolean hasMetaFile {
+    }
+    string folderType {
+    }
+    string folderContentType {
+    }
+    string suffix {
+    }
+    string dirName {
+    }
+  }
+  string label {
+  }
+  salesforce.MlIntent mlIntents {
+  }
+  salesforce.MlSlotClass mlSlotClasses {
+  }
+  string name {
+  }
+  metadataType = "LocalMlDomain"
+  _important_values = [
+    {
+      value = "label"
+      highlighted = true
+      indexed = false
+    },
+    {
+      value = "name"
+      highlighted = true
+      indexed = false
+    },
+  ]
+}

@@ -1,0 +1,43 @@
+type salesforce.WaveAnalyticAssetCollectionItem {
+  annotations {
+    serviceid metadataType {
+    }
+    boolean hasMetaFile {
+    }
+    string folderType {
+    }
+    string folderContentType {
+    }
+    string suffix {
+    }
+    string dirName {
+    }
+  }
+  string asset {
+    foreignKeyDomain = [
+      "Dashboard",
+      "DashboardSavedView",
+      "ReferencedDashboard",
+      "Report",
+      "WaveTemplateLensDashboardMetadata",
+    ]
+  }
+  string assetType {
+    _restriction = {
+      enforce_value = false
+      values = [
+        "Component",
+        "Dashboard",
+        "DashboardSavedView",
+        "Lens",
+        "LightningDashboard",
+        "Report",
+        "TableauDashboard",
+        "TableauWorkbook",
+      ]
+    }
+  }
+  number sortOrder {
+  }
+  metadataType = "WaveAnalyticAssetCollectionItem"
+}

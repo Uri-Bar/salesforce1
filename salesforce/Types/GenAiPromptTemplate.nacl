@@ -1,0 +1,159 @@
+type salesforce.GenAiPromptTemplate {
+  annotations {
+    serviceid metadataType {
+    }
+    boolean hasMetaFile {
+    }
+    string folderType {
+    }
+    string folderContentType {
+    }
+    string suffix {
+    }
+    string dirName {
+    }
+  }
+  serviceid fullName {
+  }
+  number activeVersion {
+    foreignKeyDomain = [
+      salesforce.GenAiPromptTemplateVersion,
+    ]
+  }
+  string description {
+  }
+  string developerName {
+  }
+  string masterLabel {
+  }
+  string overrideSource {
+    _restriction = {
+      enforce_value = false
+      values = [
+        "einstein_gpt__answerWithKnowledge",
+        "einstein_gpt__ragBasicAnswerGeneration",
+        "einstein_gpt__ragProfessorAnswerGeneration",
+        "einstein_gpt__ragSmartAnswerGeneration",
+        "einstein_gpt__testOverridable",
+        "sales_einstein_coach_copilot__GetNeedsAnalysisFeedback",
+        "sales_einstein_coach_copilot__GetNegotiationFeedback",
+        "sales_einstein_coach_copilot__GetProposalFeedback",
+        "sales_einstein_coach_copilot__GetQualificationFeedback",
+        "sales_sdr_agent__DraftNudgeEmail",
+        "sales_sdr_agent__GenerateGenericFallbackReply",
+        "sales_sdr_agent__GenerateInitialIntroEmail",
+        "sales_sdr_agent__RespondToProspectInterest",
+      ]
+    }
+  }
+  string relatedEntity {
+    foreignKeyDomain = [
+      "CustomObject",
+    ]
+  }
+  string relatedField {
+    foreignKeyDomain = [
+      "FieldDefinition",
+    ]
+  }
+  "List<salesforce.GenAiPromptTemplateVersion>" templateVersions {
+  }
+  string type {
+    _restriction = {
+      enforce_value = false
+      values = [
+        "AiCopilot__CancelDialogGeneratorType",
+        "AiCopilot__ChoiceDialogGeneratorType",
+        "AiCopilot__CollectDialogGeneratorType",
+        "AiCopilot__ConfirmDialogGeneratorType",
+        "AiCopilot__InformDialogGeneratorType",
+        "AiCopilot__IntentClassifierType",
+        "AiCopilot__IntentVerifierType",
+        "AiCopilot__NonRecoverableErrorDialogGeneratorType",
+        "AiCopilot__PolarityClassifierType",
+        "AiCopilot__ReactPlannerType",
+        "AiCopilot__RecoverableErrorDialogGeneratorType",
+        "AiCopilot__SequentialPlannerTopicClassifierType",
+        "AiCopilot__SequentialPlannerType",
+        "AiCopilot__ServiceLocalizationPromptType",
+        "AiCopilot__SmallTalkGeneratorType",
+        "einstein_gpt__arConvoQueryGenType",
+        "einstein_gpt__arConvoTextHighlightType",
+        "einstein_gpt__caseEmailDraft",
+        "einstein_gpt__caseSummary",
+        "einstein_gpt__convIntelligenceSignalsType",
+        "einstein_gpt__conversationSummary",
+        "einstein_gpt__copilotDraftEmailType",
+        "einstein_gpt__copilotDraftReviseExtensibilityPreprocessingType",
+        "einstein_gpt__copilotReviseEmailType",
+        "einstein_gpt__draftReviseRoutingType",
+        "einstein_gpt__einsteinFeedback",
+        "einstein_gpt__einsteinSdrEmail",
+        "einstein_gpt__engagementVisualization",
+        "einstein_gpt__fieldCompletion",
+        "einstein_gpt__fieldServicePreWorkBrief",
+        "einstein_gpt__fieldServiceSummarizeAppointmentNotesType",
+        "einstein_gpt__flex",
+        "einstein_gpt__gdfRefineAnswers",
+        "einstein_gpt__industriesFSCEmail",
+        "einstein_gpt__industriesHLSSummary",
+        "einstein_gpt__industriesLSCandidateMatching",
+        "einstein_gpt__industriesRecordsComparison",
+        "einstein_gpt__knowledgeAnswers",
+        "einstein_gpt__knowledgeFieldGeneration",
+        "einstein_gpt__ragAnswerGenerationType",
+        "einstein_gpt__recordAndFieldResearch",
+        "einstein_gpt__recordPrioritization",
+        "einstein_gpt__recordSummary",
+        "einstein_gpt__salesEmail",
+        "einstein_gpt__schedulerEmail",
+        "einstein_gpt__searchAnswersType",
+        "einstein_gpt__serviceRepliesContextualType",
+        "einstein_gpt__serviceRepliesGroundedType",
+        "einstein_gpt__userSummary",
+        "sales_assistant__closePlan",
+        "sales_assistant__reviewMyDay",
+        "sales_einstein_coach_copilot__SalesCoachAgent",
+        "sfdc_dqa__synthesizeMetricInsights",
+      ]
+    }
+    foreignKeyDomain = [
+      "GenAiPromptTemplateType",
+    ]
+  }
+  string visibility {
+    _restriction = {
+      enforce_value = false
+      values = [
+        "API",
+        "Global",
+        "Internal",
+        "Locked",
+      ]
+    }
+  }
+  string internalId {
+    _hidden_value = true
+    localOnly = true
+  }
+  suffix = "genAiPromptTemplate"
+  dirName = "genAiPromptTemplates"
+  metadataType = "GenAiPromptTemplate"
+  _important_values = [
+    {
+      value = "fullName"
+      highlighted = true
+      indexed = false
+    },
+    {
+      value = "masterLabel"
+      highlighted = true
+      indexed = false
+    },
+    {
+      value = "description"
+      highlighted = true
+      indexed = false
+    },
+  ]
+}

@@ -1,0 +1,82 @@
+type salesforce.FlowStageStep {
+  annotations {
+    serviceid metadataType {
+    }
+    boolean hasMetaFile {
+    }
+    string folderType {
+    }
+    string folderContentType {
+    }
+    string suffix {
+    }
+    string dirName {
+    }
+  }
+  salesforce.FlowMetadataValue processMetadataValues {
+  }
+  string description {
+  }
+  string name {
+  }
+  string actionName {
+  }
+  string actionType {
+  }
+  salesforce.FlowStageStepAssignee assignees {
+  }
+  salesforce.FlowStageStepEntryActionInputParameter entryActionInputParameters {
+  }
+  string entryActionName {
+  }
+  salesforce.FlowStageStepEntryActionOutputParameter entryActionOutputParameters {
+  }
+  string entryActionType {
+  }
+  string entryConditionLogic {
+  }
+  salesforce.FlowCondition entryConditions {
+  }
+  salesforce.FlowStageStepExitActionInputParameter exitActionInputParameters {
+  }
+  string exitActionName {
+  }
+  salesforce.FlowStageStepExitActionOutputParameter exitActionOutputParameters {
+  }
+  string exitActionType {
+  }
+  string exitConditionLogic {
+  }
+  salesforce.FlowCondition exitConditions {
+  }
+  salesforce.FlowStageStepInputParameter inputParameters {
+  }
+  string label {
+  }
+  salesforce.FlowStageStepOutputParameter outputParameters {
+  }
+  boolean requiresAsyncProcessing {
+  }
+  boolean runAsUser {
+  }
+  string stepSubtype {
+  }
+  metadataType = "FlowStageStep"
+  _important_values = [
+    {
+      value = "label"
+      highlighted = true
+      indexed = false
+    },
+    {
+      value = "name"
+      highlighted = true
+      indexed = false
+    },
+    {
+      value = "description"
+      highlighted = true
+      indexed = false
+    },
+  ]
+}

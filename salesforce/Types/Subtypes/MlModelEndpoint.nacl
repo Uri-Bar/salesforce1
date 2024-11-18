@@ -1,0 +1,56 @@
+type salesforce.MlModelEndpoint {
+  annotations {
+    serviceid metadataType {
+    }
+    boolean hasMetaFile {
+    }
+    string folderType {
+    }
+    string folderContentType {
+    }
+    string suffix {
+    }
+    string dirName {
+    }
+  }
+  string inputSchema {
+    foreignKeyDomain = [
+      salesforce.MlModelSchema,
+    ]
+  }
+  string label {
+  }
+  string name {
+  }
+  string outputSchema {
+    foreignKeyDomain = [
+      salesforce.MlModelSchema,
+    ]
+  }
+  salesforce.MlModelOutputEndpoint outputs {
+  }
+  string type {
+    _restriction = {
+      enforce_value = false
+      values = [
+        "BATCH_INFERENCE",
+        "REAL_TIME_INFERENCE",
+      ]
+    }
+  }
+  string url {
+  }
+  metadataType = "MlModelEndpoint"
+  _important_values = [
+    {
+      value = "label"
+      highlighted = true
+      indexed = false
+    },
+    {
+      value = "name"
+      highlighted = true
+      indexed = false
+    },
+  ]
+}

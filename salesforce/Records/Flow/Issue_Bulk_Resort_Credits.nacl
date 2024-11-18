@@ -5,8 +5,6 @@ salesforce.Flow Issue_Bulk_Resort_Credits {
     {
       name = "Add_creditRecord_to_creditRecords"
       label = "Add creditRecord to creditRecords"
-      locationX = 264
-      locationY = 350
       assignmentItems = [
         {
           assignToReference = "creditRecords"
@@ -23,8 +21,6 @@ salesforce.Flow Issue_Bulk_Resort_Credits {
     {
       name = "Increment_recordCount"
       label = "Increment recordCount"
-      locationX = 264
-      locationY = 458
       assignmentItems = [
         {
           assignToReference = "recordCount"
@@ -41,8 +37,6 @@ salesforce.Flow Issue_Bulk_Resort_Credits {
     {
       name = "Set_creditRecord_values"
       label = "Set creditRecord values"
-      locationX = 264
-      locationY = 242
       assignmentItems = [
         {
           assignToReference = "creditRecord.Contact__c"
@@ -66,8 +60,6 @@ salesforce.Flow Issue_Bulk_Resort_Credits {
     {
       name = "Set_Message"
       label = "Set Message"
-      locationX = 176
-      locationY = 758
       assignmentItems = [
         {
           assignToReference = "message"
@@ -87,8 +79,6 @@ salesforce.Flow Issue_Bulk_Resort_Credits {
     {
       name = "Loop_through_contactRecords"
       label = "Loop through contactRecords"
-      locationX = 176
-      locationY = 134
       collectionReference = "contactRecords"
       iterationOrder = "Asc"
       nextValueConnector = {
@@ -124,8 +114,6 @@ salesforce.Flow Issue_Bulk_Resort_Credits {
     {
       name = "Create_Credit_Records"
       label = "Create Credit Records"
-      locationX = 176
-      locationY = 650
       connector = {
         targetReference = "Set_Message"
       }
@@ -133,8 +121,6 @@ salesforce.Flow Issue_Bulk_Resort_Credits {
     },
   ]
   start = {
-    locationX = 50
-    locationY = 0
     connector = {
       targetReference = "Loop_through_contactRecords"
     }

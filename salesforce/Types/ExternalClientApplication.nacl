@@ -1,0 +1,80 @@
+type salesforce.ExternalClientApplication {
+  annotations {
+    serviceid metadataType {
+    }
+    boolean hasMetaFile {
+    }
+    string folderType {
+    }
+    string folderContentType {
+    }
+    string suffix {
+    }
+    string dirName {
+    }
+  }
+  serviceid fullName {
+  }
+  string contactEmail {
+  }
+  string contactPhone {
+  }
+  string description {
+  }
+  string distributionState {
+    _restriction = {
+      enforce_value = false
+      values = [
+        "AutoInstalled",
+        "Local",
+        "Managed",
+        "Packaged",
+      ]
+    }
+  }
+  string iconUrl {
+  }
+  string infoUrl {
+  }
+  boolean isProtected {
+  }
+  string label {
+  }
+  string logoUrl {
+  }
+  string managedType {
+    _restriction = {
+      enforce_value = false
+      values = [
+        "Global",
+        "Local",
+      ]
+    }
+  }
+  string orgScopedExternalApp {
+  }
+  string internalId {
+    _hidden_value = true
+    localOnly = true
+  }
+  suffix = "eca"
+  dirName = "externalClientApps"
+  metadataType = "ExternalClientApplication"
+  _important_values = [
+    {
+      value = "fullName"
+      highlighted = true
+      indexed = false
+    },
+    {
+      value = "label"
+      highlighted = true
+      indexed = false
+    },
+    {
+      value = "description"
+      highlighted = true
+      indexed = false
+    },
+  ]
+}

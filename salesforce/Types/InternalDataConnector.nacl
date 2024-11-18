@@ -1,0 +1,90 @@
+type salesforce.InternalDataConnector {
+  annotations {
+    serviceid metadataType {
+    }
+    boolean hasMetaFile {
+    }
+    string folderType {
+    }
+    string folderContentType {
+    }
+    string suffix {
+    }
+    string dirName {
+    }
+  }
+  serviceid fullName {
+  }
+  string alias {
+  }
+  string dataConnectionStatus {
+    _restriction = {
+      enforce_value = false
+      values = [
+        "Connected",
+        "Disconnected",
+        "Failed",
+      ]
+    }
+  }
+  string dataConnectorType {
+    _restriction = {
+      enforce_value = false
+      values = [
+        "ACCOUNTENGAGEMENT",
+        "AmazonS3",
+        "AzureBlob",
+        "BIGQUERY",
+        "ConversationStorage",
+        "CuratedEntity",
+        "DataCloud",
+        "ExternalPlatform",
+        "GoogleCloudStorage",
+        "IngestApi",
+        "REDSHIFT",
+        "S3Arn",
+        "SFTP",
+        "SalesforceCommerceCloud",
+        "SalesforceDotCom",
+        "SalesforceInteractionStudio",
+        "SalesforceMarketingCloud",
+        "Snowflake",
+        "StreamingApp",
+        "UPLOAD",
+      ]
+    }
+  }
+  string dataPlatform {
+    foreignKeyDomain = [
+      "DataPlatform",
+    ]
+  }
+  string dataSourceTenant {
+    foreignKeyDomain = [
+      salesforce.DataSourceTenant,
+    ]
+  }
+  string externalRecordId {
+  }
+  string masterLabel {
+  }
+  string internalId {
+    _hidden_value = true
+    localOnly = true
+  }
+  suffix = "internalDataConnector"
+  dirName = "internalDataConnectors"
+  metadataType = "InternalDataConnector"
+  _important_values = [
+    {
+      value = "fullName"
+      highlighted = true
+      indexed = false
+    },
+    {
+      value = "masterLabel"
+      highlighted = true
+      indexed = false
+    },
+  ]
+}

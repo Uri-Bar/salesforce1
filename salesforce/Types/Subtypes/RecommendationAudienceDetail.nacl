@@ -1,0 +1,30 @@
+type salesforce.RecommendationAudienceDetail {
+  annotations {
+    serviceid metadataType {
+    }
+    boolean hasMetaFile {
+    }
+    string folderType {
+    }
+    string folderContentType {
+    }
+    string suffix {
+    }
+    string dirName {
+    }
+  }
+  string audienceCriteriaType {
+    _restriction = {
+      enforce_value = false
+      values = [
+        "CustomList",
+        "MaxDaysInCommunity",
+      ]
+    }
+  }
+  string audienceCriteriaValue {
+  }
+  string setupName {
+  }
+  metadataType = "RecommendationAudienceDetail"
+}

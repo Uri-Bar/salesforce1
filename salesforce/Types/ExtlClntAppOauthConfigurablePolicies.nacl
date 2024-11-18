@@ -1,0 +1,162 @@
+type salesforce.ExtlClntAppOauthConfigurablePolicies {
+  annotations {
+    serviceid metadataType {
+    }
+    boolean hasMetaFile {
+    }
+    string folderType {
+    }
+    string folderContentType {
+    }
+    string suffix {
+    }
+    string dirName {
+    }
+  }
+  serviceid fullName {
+  }
+  string apexHandler {
+    foreignKeyDomain = [
+      salesforce.ApexClass,
+    ]
+  }
+  string clientCredentialsFlowUser {
+  }
+  string commaSeparatedCustomScopes {
+  }
+  string commaSeparatedPermissionSet {
+  }
+  salesforce.ExtlClntAppOauthPoliciesAttribute customAttributes {
+  }
+  string executeHandlerAs {
+    foreignKeyDomain = [
+      salesforce.User,
+    ]
+  }
+  string externalClientApplication {
+    foreignKeyDomain = [
+      salesforce.ExternalClientApplication,
+    ]
+  }
+  number guestJwtTimeout {
+    _restriction = {
+      enforce_value = false
+      values = [
+        "1",
+        "10",
+        "15",
+        "30",
+        "5",
+      ]
+    }
+  }
+  string ipRelaxationPolicyType {
+    _restriction = {
+      enforce_value = false
+      values = [
+        "0",
+        "1",
+        "2",
+        "3",
+      ]
+    }
+  }
+  boolean isClientCredentialsFlowEnabled {
+  }
+  boolean isGuestCodeCredFlowEnabled {
+  }
+  boolean isNamedUserJwtEnabled {
+  }
+  boolean isTokenExchangeFlowEnabled {
+  }
+  string label {
+  }
+  number namedUserJwtTimeout {
+    _restriction = {
+      enforce_value = false
+      values = [
+        "1",
+        "10",
+        "15",
+        "30",
+        "5",
+      ]
+    }
+  }
+  string permittedUsersPolicyType {
+    _restriction = {
+      enforce_value = false
+      values = [
+        "AdminApprovedPreAuthorized",
+        "AllSelfAuthorized",
+      ]
+    }
+  }
+  string policyAction {
+    _restriction = {
+      enforce_value = false
+      values = [
+        "Block",
+        "RaiseSessionLevel",
+      ]
+    }
+  }
+  string refreshTokenPolicyType {
+    _restriction = {
+      enforce_value = false
+      values = [
+        "Infinite",
+        "SpecificInactivity",
+        "SpecificLifetime",
+        "Zero",
+      ]
+    }
+  }
+  number refreshTokenValidityPeriod {
+  }
+  string refreshTokenValidityUnit {
+    _restriction = {
+      enforce_value = false
+      values = [
+        "0",
+        "1",
+        "2",
+      ]
+    }
+  }
+  string requiredSessionLevel {
+    _restriction = {
+      enforce_value = false
+      values = [
+        "HIGH_ASSURANCE",
+        "LOW",
+        "STANDARD",
+      ]
+    }
+  }
+  number sessionTimeoutInMinutes {
+  }
+  string singleLogoutUrl {
+  }
+  string startUrl {
+  }
+  string internalId {
+    _hidden_value = true
+    localOnly = true
+  }
+  suffix = "ecaOauthPlcy"
+  dirName = "extlClntAppOauthPolicies"
+  metadataType = "ExtlClntAppOauthConfigurablePolicies"
+  _important_values = [
+    {
+      value = "fullName"
+      highlighted = true
+      indexed = false
+    },
+    {
+      value = "label"
+      highlighted = true
+      indexed = false
+    },
+  ]
+}

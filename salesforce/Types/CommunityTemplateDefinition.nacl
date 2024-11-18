@@ -1,0 +1,86 @@
+type salesforce.CommunityTemplateDefinition {
+  annotations {
+    serviceid metadataType {
+    }
+    boolean hasMetaFile {
+    }
+    string folderType {
+    }
+    string folderContentType {
+    }
+    string suffix {
+    }
+    string dirName {
+    }
+  }
+  serviceid fullName {
+  }
+  string baseTemplate {
+    _restriction = {
+      enforce_value = false
+      values = [
+        "c",
+      ]
+    }
+  }
+  salesforce.CommunityTemplateBundleInfo bundlesInfo {
+  }
+  string category {
+    _restriction = {
+      enforce_value = false
+      values = [
+        "Commerce",
+        "IT",
+        "Marketing",
+        "Sales",
+        "Service",
+      ]
+    }
+  }
+  string defaultBrandingSet {
+    foreignKeyDomain = [
+      salesforce.BrandingSet,
+    ]
+  }
+  string defaultThemeDefinition {
+    foreignKeyDomain = [
+      salesforce.CommunityThemeDefinition,
+    ]
+  }
+  string description {
+  }
+  boolean enableExtendedCleanUpOnDelete {
+  }
+  string masterLabel {
+  }
+  salesforce.NavigationLinkSet navigationLinkSet {
+  }
+  salesforce.CommunityTemplatePageSetting pageSetting {
+  }
+  string publisher {
+  }
+  string internalId {
+    _hidden_value = true
+    localOnly = true
+  }
+  suffix = "communityTemplateDefinition"
+  dirName = "communityTemplateDefinitions"
+  metadataType = "CommunityTemplateDefinition"
+  _important_values = [
+    {
+      value = "fullName"
+      highlighted = true
+      indexed = false
+    },
+    {
+      value = "masterLabel"
+      highlighted = true
+      indexed = false
+    },
+    {
+      value = "description"
+      highlighted = true
+      indexed = false
+    },
+  ]
+}

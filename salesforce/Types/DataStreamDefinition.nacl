@@ -1,0 +1,310 @@
+type salesforce.DataStreamDefinition {
+  annotations {
+    serviceid metadataType {
+    }
+    boolean hasMetaFile {
+    }
+    string folderType {
+    }
+    string folderContentType {
+    }
+    string suffix {
+    }
+    string dirName {
+    }
+  }
+  serviceid fullName {
+  }
+  boolean areHeadersIncludedInFile {
+  }
+  boolean bulkIngest {
+  }
+  string creationType {
+    _restriction = {
+      enforce_value = false
+      values = [
+        "ADG",
+        "Activation_Audience",
+        "Bridge",
+        "CG_Audience",
+        "Calculated_Insight",
+        "Chunk",
+        "Curated",
+        "Custom",
+        "Derived",
+        "Directory_Table",
+        "External",
+        "Ml_Prediction",
+        "Problem_Records",
+        "Segment_Membership",
+        "Semantic",
+        "Standard",
+        "System",
+        "Transform",
+        "Vector_Embedding",
+      ]
+    }
+  }
+  string dataConnector {
+    foreignKeyDomain = [
+      salesforce.ExternalDataConnector,
+      salesforce.InternalDataConnector,
+      salesforce.MktDataConnection,
+    ]
+  }
+  string dataConnectorType {
+    _restriction = {
+      enforce_value = false
+      values = [
+        "ACCOUNTENGAGEMENT",
+        "ADP",
+        "ActOn",
+        "ActiveCampaign",
+        "Acumatica",
+        "AdobeAnalytics",
+        "AdobeCommerce",
+        "AdobeMarketoEngage",
+        "Airtable",
+        "AmazonMarketingCloud",
+        "AmazonMarketplace",
+        "AmazonS3",
+        "ApacheCouchDB",
+        "ApacheHBase",
+        "ApacheHive",
+        "ApacheImpala",
+        "ApachePhoenix",
+        "Asana",
+        "AwS3ExtendedTesting",
+        "AwsAthena",
+        "AwsDynamoDB",
+        "AwsKinesisDS",
+        "AwsRdsAuroraMySql",
+        "AwsRdsAuroraPostgres",
+        "AwsRdsMariaDB",
+        "AwsRdsMySql",
+        "AwsRdsOracle",
+        "AwsRdsPostgres",
+        "AwsRdsSqlServer",
+        "AwsS3",
+        "AzureAnalysisServices",
+        "AzureBlob",
+        "AzureCosmosDB",
+        "AzureMariaDB",
+        "AzureMySql",
+        "AzurePostgres",
+        "AzureSql",
+        "AzureSynapse",
+        "BIGQUERY",
+        "BigCommerce",
+        "BingAdsEMI",
+        "CDataJdbcGoogleAnalytics",
+        "Cassandra",
+        "Cloudant",
+        "CockroachDB",
+        "Confluence",
+        "ConversationStorage",
+        "CuratedEntity",
+        "DATABRICKS_UNITY",
+        "DB2",
+        "DataCloud",
+        "Databricks",
+        "EdcMlModelBYOConnector",
+        "Elasticsearch",
+        "EnterpriseDB",
+        "EpicorERP",
+        "EventBusConnector",
+        "ExcelOnline",
+        "ExternalPlatform",
+        "Facebook",
+        "FacebookAds",
+        "FacebookConversion",
+        "GCS",
+        "GoogleAdManager",
+        "GoogleAds",
+        "GoogleAnalyticsEMI",
+        "GoogleCampaignManager",
+        "GoogleCloudStorage",
+        "GoogleContacts",
+        "GoogleDV360",
+        "GoogleDrive",
+        "GoogleSheet",
+        "GoogleSpanner",
+        "GraphQL",
+        "Greenplum",
+        "HerokuPostgres",
+        "IBMCloudObjectStorage",
+        "ICEBERG",
+        "Informix",
+        "IngestApi",
+        "Instagram",
+        "Intercom",
+        "Jira",
+        "JiraServiceDesk",
+        "LinkedInAdsEMI",
+        "LinkedInSalesNavigator",
+        "Linkedin",
+        "LinkedinAds",
+        "LinkedinAdsEgress",
+        "Mailchimp",
+        "MicrosoftAds",
+        "MicrosoftAnalysisServices",
+        "MicrosoftDynamics365",
+        "MicrosoftOneDrive",
+        "MicrosoftPowerBiXmla",
+        "MicrosoftSharePoint",
+        "MicrosoftTeams",
+        "Monday",
+        "MongoDB",
+        "MuleSoftDirect",
+        "Neo4j",
+        "OCI",
+        "OData",
+        "Odoo",
+        "OracleEloqua",
+        "OracleFusionCloudFinancials",
+        "OracleFusionCloudHCM",
+        "OracleNetSuite",
+        "OracleSCM",
+        "OracleSalesCloud",
+        "OracleServiceCloud",
+        "PayPal",
+        "Paylocity",
+        "Pinterest",
+        "PinterestAdsEMI",
+        "Pipedrive",
+        "REDSHIFT",
+        "Redis",
+        "S3Arn",
+        "SAPHana",
+        "SAPHybris",
+        "SFTP",
+        "SNOWFLAKE",
+        "SNOWFLAKE_POLARIS",
+        "SalesforceCRM",
+        "SalesforceCommerceCloud",
+        "SalesforceDotCom",
+        "SalesforceInteractionStudio",
+        "SalesforceMarketingCloud",
+        "Salesloft",
+        "SapSuccessFactors",
+        "SendGrid",
+        "ShipStation",
+        "Shopify",
+        "SingleStore",
+        "Smartsheet",
+        "SnapchatAds",
+        "SnapchatAdsEMI",
+        "SnapchatAdsEgress",
+        "Snowflake",
+        "SparkSQL",
+        "Splunk",
+        "Square",
+        "Streak",
+        "StreamingApp",
+        "Stripe",
+        "SugarCRM",
+        "SuiteCRM",
+        "SurveyMonkey",
+        "SybaseASE",
+        "SybaseIQ",
+        "TenantBillingUsageConnector",
+        "TigerGraph",
+        "Trello",
+        "Twilio",
+        "TwitterAds",
+        "UPLOAD",
+        "UploadedFiles",
+        "VeevaVault",
+        "WooCommerce",
+        "WordPress",
+        "Workday",
+        "YoutubeAdsEMI",
+        "YoutubeAnalytics",
+        "Zendesk",
+        "ZoomInfo",
+        "Zuora",
+        "act",
+        "eBay",
+        "eBayAnalytics",
+        "hubspot",
+        "servicenow",
+      ]
+    }
+  }
+  string dataExtensionIdentifier {
+  }
+  string dataExtractField {
+  }
+  string dataExtractMethods {
+    _restriction = {
+      enforce_value = false
+      values = [
+        "BINARY_CDC",
+        "DATETIME_CDC",
+        "FULL_REFRESH",
+        "NUMERIC_CDC",
+      ]
+    }
+  }
+  string dataPlatDataSetBundle {
+    foreignKeyDomain = [
+      "DataPlatDataSetBundle",
+    ]
+  }
+  string dataPlatformDataSetItemName {
+  }
+  string dataSource {
+    foreignKeyDomain = [
+      salesforce.DataSource,
+    ]
+  }
+  string description {
+  }
+  string fileNameWildcard {
+  }
+  string internalOrganization {
+    foreignKeyDomain = [
+      "InternalOrganization",
+    ]
+  }
+  boolean isLimitedToNewFiles {
+  }
+  boolean isMissingFileFailure {
+  }
+  string masterLabel {
+  }
+  string mktDataLakeObject {
+    foreignKeyDomain = [
+      "MktDataLakeObject",
+    ]
+  }
+  string mktDataTranObject {
+    foreignKeyDomain = [
+      salesforce.MktDataTranObject,
+    ]
+  }
+  string internalId {
+    _hidden_value = true
+    localOnly = true
+  }
+  suffix = "dataStreamDefinition"
+  dirName = "dataStreamDefinitions"
+  metadataType = "DataStreamDefinition"
+  _important_values = [
+    {
+      value = "fullName"
+      highlighted = true
+      indexed = false
+    },
+    {
+      value = "masterLabel"
+      highlighted = true
+      indexed = false
+    },
+    {
+      value = "description"
+      highlighted = true
+      indexed = false
+    },
+  ]
+}

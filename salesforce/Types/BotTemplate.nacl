@@ -1,0 +1,97 @@
+type salesforce.BotTemplate {
+  annotations {
+    serviceid metadataType {
+    }
+    boolean hasMetaFile {
+    }
+    string folderType {
+    }
+    string folderContentType {
+    }
+    string suffix {
+    }
+    string dirName {
+    }
+  }
+  serviceid fullName {
+  }
+  salesforce.BotDialogGroup botDialogGroups {
+  }
+  salesforce.BotDialog botDialogs {
+  }
+  salesforce.ConversationContextVariable contextVariables {
+  }
+  salesforce.ConversationDefinitionGoal conversationGoals {
+  }
+  string conversationLanguages {
+  }
+  salesforce.ConversationSystemDialog conversationSystemDialogs {
+  }
+  salesforce.ConversationVariable conversationVariables {
+  }
+  string description {
+  }
+  string entryDialog {
+    foreignKeyDomain = [
+      "ConversationDefinitionDialog",
+    ]
+  }
+  string icon {
+    foreignKeyDomain = [
+      "ContentAsset",
+    ]
+  }
+  string mainMenuDialog {
+    foreignKeyDomain = [
+      "ConversationDefinitionDialog",
+    ]
+  }
+  string masterLabel {
+  }
+  salesforce.LocalMlDomain mlDomain {
+    foreignKeyDomain = [
+      salesforce.MlDomain,
+    ]
+  }
+  string permissionSet {
+    foreignKeyDomain = [
+      "PermissionSet",
+    ]
+  }
+  boolean richContentEnabled {
+  }
+  string type {
+    _restriction = {
+      enforce_value = false
+      values = [
+        "Bot",
+        "ExternalCopilot",
+        "InternalCopilot",
+      ]
+    }
+  }
+  string internalId {
+    _hidden_value = true
+    localOnly = true
+  }
+  suffix = "botTemplate"
+  dirName = "botTemplates"
+  metadataType = "BotTemplate"
+  _important_values = [
+    {
+      value = "fullName"
+      highlighted = true
+      indexed = false
+    },
+    {
+      value = "masterLabel"
+      highlighted = true
+      indexed = false
+    },
+    {
+      value = "description"
+      highlighted = true
+      indexed = false
+    },
+  ]
+}

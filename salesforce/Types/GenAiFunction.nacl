@@ -1,0 +1,240 @@
+type salesforce.GenAiFunction {
+  annotations {
+    serviceid metadataType {
+    }
+    boolean hasMetaFile {
+    }
+    string folderType {
+    }
+    string folderContentType {
+    }
+    string suffix {
+    }
+    string dirName {
+    }
+  }
+  serviceid fullName {
+  }
+  string description {
+  }
+  string invocationTarget {
+    _restriction = {
+      enforce_value = false
+      values = [
+        "SvcCopilotTmpl__AddCaseComment",
+        "SvcCopilotTmpl__CancelOrder",
+        "SvcCopilotTmpl__CreateCase",
+        "SvcCopilotTmpl__FinalizeDeliveryTime",
+        "SvcCopilotTmpl__FinalizeReservation",
+        "SvcCopilotTmpl__GetAvailableTimeSlots",
+        "SvcCopilotTmpl__GetCaseByCaseNumber",
+        "SvcCopilotTmpl__GetCasesForContact",
+        "SvcCopilotTmpl__GetDeliveryTimeSlots",
+        "SvcCopilotTmpl__GetOrderByOrderNumber",
+        "SvcCopilotTmpl__GetOrdersByContact",
+        "SvcCopilotTmpl__IdentifyCustomer",
+        "SvcCopilotTmpl__ResetPassword",
+        "SvcCopilotTmpl__UpdateContactRcd",
+        "activateSessionPermSet",
+        "addCartItem",
+        "addScreenPop",
+        "addWorkPlans",
+        "addWorkSteps",
+        "apex",
+        "api",
+        "assignEnablementProgram",
+        "authorizePayment",
+        "cancelAppointment",
+        "chatterPost",
+        "checkAvailabilityForRouting",
+        "choosePricebook",
+        "cms_orch__CMS_BasicApprovalRequest",
+        "cms_orch__CMS_EvalApprovalStepStatus",
+        "cms_orch__CMS_NotifyRequester",
+        "cms_orch__CMS_ReviewContent",
+        "cms_orch__CMS_ReviseContent",
+        "cms_orch__CMS_WithdrawReviewRequest",
+        "component",
+        "contactRequestAction",
+        "contentWorkspaceEnableFolders",
+        "conv_copilot_ms__GetTscpMsgSes",
+        "createCart",
+        "createInvRsvForCart",
+        "createReturnOrder",
+        "createSearchBoostBuryRule",
+        "createWaitlist",
+        "customNotificationAction",
+        "dataCloudIngestionApi",
+        "dataKitDeployComponentAction",
+        "dataKitGetComponentAction",
+        "deactivateSessionPermSet",
+        "decisionTableAction",
+        "deleteCart",
+        "deleteInvRsvForCart",
+        "deleteWorkPlans",
+        "draftOrReviseEmail",
+        "einsteinbot__EchoValue",
+        "einsteinbot__GetUserEmail",
+        "einsteinbot__SendVerificationEmail",
+        "einsteinbot__VerifyEmailCode",
+        "emailAlert",
+        "emailSimple",
+        "enablement_coaching__SendFdbkRdyNtfcn",
+        "evaluationFlow",
+        "externalService",
+        "findMatchingIndividuals",
+        "flow",
+        "generateDisambiguationLogData",
+        "generateKnowledgeLogData",
+        "generatePromptResponse",
+        "getActivitySummary",
+        "getCartItems",
+        "getCartPromotions",
+        "getConvTscpForRecord",
+        "getRelatedList",
+        "getSimilarRecords",
+        "goalAchievedAction",
+        "identifyObject",
+        "identifyRecordByName",
+        "invocableApplyLeadAssignmentRules",
+        "knowledgeSearch",
+        "limitRepetitions",
+        "lockRecord",
+        "managedContentReleasePublish",
+        "managedContentRoleStepInteractive",
+        "managedContentVariantAutoPublishStepBackground",
+        "managedContentVariantAutoUnpublishStepBackground",
+        "managedContentVariantSetLockStepBackground",
+        "managedContentVariantSetReadyStepBackground",
+        "omnichannel_chat__QueuesChat",
+        "omnichannel_chat__SkillsChat",
+        "omnichannel_messaging__MsgRouting",
+        "omnichannel_voice__VoiceRouting",
+        "opencti__SCV_Basic_Routing_Flow",
+        "outboundMessage",
+        "prm_slack_flows__ApprovalDispatcher",
+        "prm_slack_flows__DealApproval",
+        "prm_slack_flows__DealRegistration",
+        "queryRecords",
+        "queryRecordsWithAggregate",
+        "quickAction",
+        "refreshDecisionTable",
+        "registerGuestBuyer",
+        "returnReturnOrderItems",
+        "routeWork",
+        "routingAddressVerification",
+        "runDecisionMatrix",
+        "runExpressionSet",
+        "runtime_appointmentbooking__AddAttnd",
+        "runtime_appointmentbooking__Create_WL",
+        "runtime_appointmentbooking__EnrlAttnd",
+        "runtime_appointmentbooking__Flow",
+        "runtime_appointmentbooking__Guest_Flow",
+        "runtime_appointmentbooking__In_Cancel",
+        "runtime_appointmentbooking__In_Modify",
+        "runtime_appointmentbooking__In_New",
+        "runtime_appointmentbooking__Inv_Book",
+        "runtime_appointmentbooking__Inv_Gen",
+        "runtime_appointmentbooking__ModGstAppt",
+        "runtime_appointmentbooking__Out_Modify",
+        "runtime_appointmentbooking__Rasgn_Appt",
+        "runtime_appointmentbooking__send_Invt",
+        "runtime_commerce_adj__Discount_Item",
+        "runtime_commerce_exc__Exchange_Flow",
+        "runtime_commerce_oe__Order_Entry",
+        "runtime_commerce_oms__Cancel_Item",
+        "runtime_commerce_oms__Create_OS",
+        "runtime_commerce_oms__Create_PE",
+        "runtime_commerce_oms__Return_Item",
+        "runtime_commerce_rex__Exchange_RMA",
+        "runtime_commerce_rma__Create_CO",
+        "runtime_commerce_rma__Return_Item_RMA",
+        "runtime_commerce_rs__Reship_FO",
+        "runtime_industries_recurrence__Orch",
+        "runtime_industries_recurrence__Schdlr",
+        "runtime_payments__GeneratePaymentLink",
+        "runtime_service_incident_mgmt__CCOIO",
+        "runtime_service_incident_mgmt__CRRI",
+        "saveAppointment",
+        "saveAppointmentInvitationDetails",
+        "saveServiceAppointmentAttendees",
+        "scvOutboundCall",
+        "sendChannelMessage",
+        "sendConversationMessages",
+        "sendNotification",
+        "setup_bot__IntroBotAddCaseComment",
+        "setup_bot__IntroBotCreateCase",
+        "setup_bot__IntroBotCreateLead",
+        "setup_bot__IntroBotLookupCase",
+        "setup_bot__IntroBotPreChatContext",
+        "setup_order_bot__IntroBotLookupOrder",
+        "setup_service_experience__Create_Case",
+        "setup_service_experience__Reset_Pwd",
+        "setup_service_experience__Verify_Cust",
+        "setup_service_folmessaging__MSContact",
+        "setup_service_plan__CheckEligibility",
+        "sfdatakit__DeployDataKitComponents",
+        "sfdc_fieldservice__CreateLeadAndOpp",
+        "sfdc_fieldservice__GenPreWorkBrief",
+        "stepBackground",
+        "stepInteractive",
+        "stepMuleSoft",
+        "submit",
+        "summarizeRecord",
+      ]
+    }
+    foreignKeyDomain = [
+      salesforce.ApexClass,
+      salesforce.ExternalServiceOperation,
+      salesforce.FlowDefinition,
+      salesforce.GenAiPromptTemplate,
+      "ServiceProcess",
+    ]
+  }
+  string invocationTargetType {
+    _restriction = {
+      enforce_value = false
+      values = [
+        "apex",
+        "api",
+        "createCatalogItemRequest",
+        "externalService",
+        "flow",
+        "generatePromptResponse",
+        "quickAction",
+        "standardInvocableAction",
+      ]
+    }
+    foreignKeyDomain = [
+      "GenAiFunctionTypeDef",
+    ]
+  }
+  boolean isConfirmationRequired {
+  }
+  string masterLabel {
+  }
+  string internalId {
+    _hidden_value = true
+    localOnly = true
+  }
+  suffix = "genAiFunction"
+  dirName = "genAiFunctions"
+  metadataType = "GenAiFunction"
+  _important_values = [
+    {
+      value = "fullName"
+      highlighted = true
+      indexed = false
+    },
+    {
+      value = "masterLabel"
+      highlighted = true
+      indexed = false
+    },
+    {
+      value = "description"
+      highlighted = true
+      indexed = false
+    },
+  ]
+}

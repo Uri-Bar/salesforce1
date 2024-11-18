@@ -1,0 +1,42 @@
+type salesforce.NavigationMenuItem {
+  annotations {
+    serviceid metadataType {
+    }
+    boolean hasMetaFile {
+    }
+    string folderType {
+    }
+    string folderContentType {
+    }
+    string suffix {
+    }
+    string dirName {
+    }
+  }
+  string defaultListViewId {
+  }
+  string label {
+  }
+  salesforce.NavigationMenuItemBranding menuItemBranding {
+  }
+  number position {
+  }
+  boolean publiclyAvailable {
+  }
+  salesforce.NavigationSubMenu subMenu {
+  }
+  string target {
+  }
+  string targetPreference {
+  }
+  string type {
+  }
+  metadataType = "NavigationMenuItem"
+  _important_values = [
+    {
+      value = "label"
+      highlighted = true
+      indexed = false
+    },
+  ]
+}

@@ -1,0 +1,21 @@
+type salesforce.NetworkMemberGroup {
+  annotations {
+    serviceid metadataType {
+    }
+    boolean hasMetaFile {
+    }
+    string folderType {
+    }
+    string folderContentType {
+    }
+    string suffix {
+    }
+    string dirName {
+    }
+  }
+  "List<string>" permissionSet {
+  }
+  string profile {
+  }
+  metadataType = "NetworkMemberGroup"
+}

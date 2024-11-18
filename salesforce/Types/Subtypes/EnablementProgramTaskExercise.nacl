@@ -1,0 +1,23 @@
+type salesforce.EnablementProgramTaskExercise {
+  annotations {
+    serviceid metadataType {
+    }
+    boolean hasMetaFile {
+    }
+    string folderType {
+    }
+    string folderContentType {
+    }
+    string suffix {
+    }
+    string dirName {
+    }
+  }
+  salesforce.EnablementProgramTaskCmsContent cmsContent {
+  }
+  salesforce.EnablementProgramTaskExternalContent externalContent {
+  }
+  salesforce.EnablementProgramTaskFeedbackContent feedbackContent {
+  }
+  metadataType = "EnablementProgramTaskExercise"
+}

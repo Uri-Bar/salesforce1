@@ -1,0 +1,51 @@
+type salesforce.PortalDelegablePermissionSet {
+  annotations {
+    serviceid metadataType {
+    }
+    boolean hasMetaFile {
+    }
+    string folderType {
+    }
+    string folderContentType {
+    }
+    string suffix {
+    }
+    string dirName {
+    }
+  }
+  serviceid fullName {
+  }
+  boolean isProtected {
+  }
+  string masterLabel {
+  }
+  string permissionSet {
+    foreignKeyDomain = [
+      "PermissionSet",
+    ]
+  }
+  string profile {
+    foreignKeyDomain = [
+      "Profile",
+    ]
+  }
+  string internalId {
+    _hidden_value = true
+    localOnly = true
+  }
+  suffix = "portalDelegablePermissionSet"
+  dirName = "portalDelegablePermissionSet"
+  metadataType = "PortalDelegablePermissionSet"
+  _important_values = [
+    {
+      value = "fullName"
+      highlighted = true
+      indexed = false
+    },
+    {
+      value = "masterLabel"
+      highlighted = true
+      indexed = false
+    },
+  ]
+}

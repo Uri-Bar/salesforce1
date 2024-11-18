@@ -1,0 +1,87 @@
+type salesforce.BotVariableOperation {
+  annotations {
+    serviceid metadataType {
+    }
+    boolean hasMetaFile {
+    }
+    string folderType {
+    }
+    string folderContentType {
+    }
+    string suffix {
+    }
+    string dirName {
+    }
+  }
+  boolean askCollectIfSet {
+  }
+  boolean autoSelectIfSingleChoice {
+  }
+  salesforce.BotInvocation botInvocation {
+  }
+  salesforce.BotMessage botMessages {
+  }
+  salesforce.BotQuickReplyOption botQuickReplyOptions {
+  }
+  salesforce.BotVariableOperand botVariableOperands {
+  }
+  boolean ignoreIntentRecognition {
+  }
+  salesforce.BotNavigation invalidInputBotNavigation {
+  }
+  salesforce.ConversationDefinitionRichMessage messageDefinition {
+  }
+  boolean optionalCollect {
+  }
+  string quickReplyOptionTemplate {
+  }
+  string quickReplyType {
+    _restriction = {
+      enforce_value = false
+      values = [
+        "Dynamic",
+        "Static",
+      ]
+    }
+  }
+  string quickReplyWidgetType {
+    _restriction = {
+      enforce_value = false
+      values = [
+        "Buttons",
+        "Menu",
+      ]
+    }
+  }
+  salesforce.BotMessage retryMessages {
+  }
+  string sourceVariableName {
+  }
+  string sourceVariableType {
+    _restriction = {
+      enforce_value = false
+      values = [
+        "ContextVariable",
+        "ConversationVariable",
+        "PageContextVariable",
+      ]
+    }
+  }
+  salesforce.BotMessage successMessages {
+  }
+  string type {
+    _restriction = {
+      enforce_value = false
+      values = [
+        "Collect",
+        "CollectAttachment",
+        "Set",
+        "SetConversationLanguage",
+        "Unset",
+      ]
+    }
+  }
+  string variableOperationIdentifier {
+  }
+  metadataType = "BotVariableOperation"
+}

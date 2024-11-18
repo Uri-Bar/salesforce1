@@ -1,0 +1,26 @@
+type salesforce.SearchOrgWideFieldConfig {
+  annotations {
+    serviceid metadataType {
+    }
+    boolean hasMetaFile {
+    }
+    string folderType {
+    }
+    string folderContentType {
+    }
+    string suffix {
+    }
+    string dirName {
+    }
+  }
+  string fieldReference {
+    foreignKeyDomain = [
+      salesforce.CustomField,
+    ]
+  }
+  boolean isSearchable {
+  }
+  boolean isSecure {
+  }
+  metadataType = "SearchOrgWideFieldConfig"
+}

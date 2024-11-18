@@ -1,0 +1,87 @@
+type salesforce.DecisionTableParameter {
+  annotations {
+    serviceid metadataType {
+    }
+    boolean hasMetaFile {
+    }
+    string folderType {
+    }
+    string folderContentType {
+    }
+    string suffix {
+    }
+    string dirName {
+    }
+  }
+  string dataType {
+    _restriction = {
+      enforce_value = false
+      values = [
+        "Boolean",
+        "Currency",
+        "Date",
+        "Number",
+        "Percent",
+        "String",
+      ]
+    }
+  }
+  number decimalScale {
+  }
+  string domainObject {
+  }
+  string fieldName {
+  }
+  string fieldPath {
+  }
+  boolean isGroupByField {
+  }
+  boolean isPriorityField {
+  }
+  boolean isRequired {
+  }
+  number length {
+  }
+  string operator {
+    _restriction = {
+      enforce_value = false
+      values = [
+        "Contains",
+        "DoesNotExistIn",
+        "DoesNotMatch",
+        "Equals",
+        "ExistsIn",
+        "GreaterOrEqual",
+        "GreaterThan",
+        "LessOrEqual",
+        "LessThan",
+        "Matches",
+        "NotEquals",
+      ]
+    }
+  }
+  number sequence {
+  }
+  string sortType {
+    _restriction = {
+      enforce_value = false
+      values = [
+        "AscNullFirst",
+        "AscNullLast",
+        "DescNullFirst",
+        "DescNullLast",
+        "None",
+      ]
+    }
+  }
+  string usage {
+    _restriction = {
+      enforce_value = false
+      values = [
+        "INPUT",
+        "OUTPUT",
+      ]
+    }
+  }
+  metadataType = "DecisionTableParameter"
+}

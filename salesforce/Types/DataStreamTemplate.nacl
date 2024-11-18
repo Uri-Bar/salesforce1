@@ -1,0 +1,152 @@
+type salesforce.DataStreamTemplate {
+  annotations {
+    serviceid metadataType {
+    }
+    boolean hasMetaFile {
+    }
+    string folderType {
+    }
+    string folderContentType {
+    }
+    string suffix {
+    }
+    string dirName {
+    }
+  }
+  serviceid fullName {
+  }
+  salesforce.DataConnectionParamTmpl dataConnectionSourceParameters {
+  }
+  string dataSourceBundleDefinition {
+    foreignKeyDomain = [
+      salesforce.DataSourceBundleDefinition,
+    ]
+  }
+  string dataSourceObject {
+    foreignKeyDomain = [
+      salesforce.DataSourceObject,
+    ]
+  }
+  string filterCriteria {
+  }
+  string masterLabel {
+  }
+  string objectCategory {
+    foreignKeyDomain = [
+      "DataObjectCategory",
+    ]
+  }
+  number refreshDayOfMonth {
+  }
+  number refreshDayOfWeek {
+  }
+  string refreshFrequency {
+    _restriction = {
+      enforce_value = false
+      values = [
+        "BATCH",
+        "DAILY",
+        "EVERY_12_HOURS",
+        "EVERY_4_HOURS",
+        "HOURLY",
+        "MINUTES_15",
+        "MINUTES_30",
+        "MINUTES_5",
+        "MONTHLY",
+        "NONE",
+        "NOT_APPLICABLE",
+        "STREAMING",
+        "WEEKLY",
+      ]
+    }
+  }
+  string refreshHours {
+    _restriction = {
+      enforce_value = false
+      values = [
+        "0",
+        "1",
+        "10",
+        "11",
+        "12",
+        "13",
+        "14",
+        "15",
+        "16",
+        "17",
+        "18",
+        "19",
+        "2",
+        "20",
+        "21",
+        "22",
+        "23",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7",
+        "8",
+        "9",
+      ]
+    }
+  }
+  string refreshMode {
+    _restriction = {
+      enforce_value = false
+      values = [
+        "FULL_REFRESH",
+        "INCREMENTAL",
+        "NEAR_REAL_TIME_INCREMENTAL",
+        "NOT_APPLICABLE",
+        "PARTIAL_UPDATE",
+        "REPLACE",
+        "UPSERT",
+      ]
+    }
+  }
+  string refreshStartDate {
+  }
+  string sourceObjectName {
+  }
+  string streamType {
+    _restriction = {
+      enforce_value = false
+      values = [
+        "DIRECT_ACCESS",
+        "DIRECT_ACCESS_ACCELERATED",
+        "INGEST",
+      ]
+    }
+  }
+  string streamingAppDataConnectorType {
+    _restriction = {
+      enforce_value = false
+      values = [
+        "MobileApp",
+        "WebApp",
+      ]
+    }
+  }
+  number templateVersion {
+  }
+  string internalId {
+    _hidden_value = true
+    localOnly = true
+  }
+  suffix = "dataStreamTemplate"
+  dirName = "dataStreamTemplates"
+  metadataType = "DataStreamTemplate"
+  _important_values = [
+    {
+      value = "fullName"
+      highlighted = true
+      indexed = false
+    },
+    {
+      value = "masterLabel"
+      highlighted = true
+      indexed = false
+    },
+  ]
+}

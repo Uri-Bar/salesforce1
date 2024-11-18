@@ -1,0 +1,39 @@
+type salesforce.EmbeddedServiceMessagingChannel {
+  annotations {
+    serviceid metadataType {
+    }
+    boolean hasMetaFile {
+    }
+    string folderType {
+    }
+    string folderContentType {
+    }
+    string suffix {
+    }
+    string dirName {
+    }
+  }
+  string businessHours {
+    foreignKeyDomain = [
+      salesforce.BusinessHoursEntry,
+    ]
+  }
+  boolean isEnabled {
+  }
+  string messagingChannel {
+    foreignKeyDomain = [
+      salesforce.MessagingChannel,
+    ]
+  }
+  boolean shouldShowDeliveryReceipts {
+  }
+  boolean shouldShowEmojiSelection {
+  }
+  boolean shouldShowReadReceipts {
+  }
+  boolean shouldShowTypingIndicators {
+  }
+  boolean shouldStartNewLineOnEnter {
+  }
+  metadataType = "EmbeddedServiceMessagingChannel"
+}

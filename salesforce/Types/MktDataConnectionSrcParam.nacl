@@ -1,0 +1,41 @@
+type salesforce.MktDataConnectionSrcParam {
+  annotations {
+    serviceid metadataType {
+    }
+    boolean hasMetaFile {
+    }
+    string folderType {
+    }
+    string folderContentType {
+    }
+    string suffix {
+    }
+    string dirName {
+    }
+  }
+  serviceid fullName {
+  }
+  string paramName {
+  }
+  string referenceObject {
+    foreignKeyDomain = [
+      salesforce.DataStreamDefinition,
+    ]
+  }
+  string value {
+  }
+  string internalId {
+    _hidden_value = true
+    localOnly = true
+  }
+  suffix = "mktDataConnectionSrcParam"
+  dirName = "mktDataConnectionSrcParams"
+  metadataType = "MktDataConnectionSrcParam"
+  _important_values = [
+    {
+      value = "fullName"
+      highlighted = true
+      indexed = false
+    },
+  ]
+}

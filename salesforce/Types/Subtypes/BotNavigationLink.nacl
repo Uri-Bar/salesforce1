@@ -1,0 +1,46 @@
+type salesforce.BotNavigationLink {
+  annotations {
+    serviceid metadataType {
+    }
+    boolean hasMetaFile {
+    }
+    string folderType {
+    }
+    string folderContentType {
+    }
+    string suffix {
+    }
+    string dirName {
+    }
+  }
+  string label {
+  }
+  string targetBotDialog {
+    foreignKeyDomain = [
+      "ConversationDefinitionDialog",
+    ]
+  }
+  string targetVariable {
+    foreignKeyDomain = [
+      "ConversationDefinitionVariable",
+    ]
+  }
+  string targetVariableType {
+    _restriction = {
+      enforce_value = false
+      values = [
+        "ContextVariable",
+        "ConversationVariable",
+        "PageContextVariable",
+      ]
+    }
+  }
+  metadataType = "BotNavigationLink"
+  _important_values = [
+    {
+      value = "label"
+      highlighted = true
+      indexed = false
+    },
+  ]
+}

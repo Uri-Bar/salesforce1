@@ -1,0 +1,40 @@
+type salesforce.OutboundNetworkConnProperty {
+  annotations {
+    serviceid metadataType {
+    }
+    boolean hasMetaFile {
+    }
+    string folderType {
+    }
+    string folderContentType {
+    }
+    string suffix {
+    }
+    string dirName {
+    }
+  }
+  string propertyName {
+    _restriction = {
+      enforce_value = false
+      values = [
+        "AwsVpcEndpointId",
+        "AwsVpcEndpointServiceName",
+        "DataCloudPrivateNetworkAwsVpcEndpointId",
+        "DataCloudPrivateNetworkAwsVpcEndpointServiceName",
+        "DataCloudPrivateNetworkCustomUrls",
+        "DataCloudPrivateNetworkDefaultUrl",
+        "DataCloudPrivateNetworkFalconInstance",
+        "DataCloudPrivateNetworkFunctionalDomain",
+        "DataCloudPrivateNetworkProvider",
+        "DataCloudPrivateNetworkStatusCode",
+        "DataCloudPrivateNetworkUrl",
+        "LinkId",
+        "ProxyUrl",
+        "Region",
+      ]
+    }
+  }
+  string propertyValue {
+  }
+  metadataType = "OutboundNetworkConnProperty"
+}

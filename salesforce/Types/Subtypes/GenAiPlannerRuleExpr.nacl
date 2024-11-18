@@ -1,0 +1,32 @@
+type salesforce.GenAiPlannerRuleExpr {
+  annotations {
+    serviceid metadataType {
+    }
+    boolean hasMetaFile {
+    }
+    string folderType {
+    }
+    string folderContentType {
+    }
+    string suffix {
+    }
+    string dirName {
+    }
+  }
+  string expression {
+  }
+  string expressionLabel {
+  }
+  string expressionName {
+  }
+  string expressionType {
+    _restriction = {
+      enforce_value = false
+      values = [
+        "handlebars",
+        "sel",
+      ]
+    }
+  }
+  metadataType = "GenAiPlannerRuleExpr"
+}

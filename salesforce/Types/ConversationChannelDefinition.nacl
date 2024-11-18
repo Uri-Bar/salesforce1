@@ -1,0 +1,109 @@
+type salesforce.ConversationChannelDefinition {
+  annotations {
+    serviceid metadataType {
+    }
+    boolean hasMetaFile {
+    }
+    string folderType {
+    }
+    string folderContentType {
+    }
+    string suffix {
+    }
+    string dirName {
+    }
+  }
+  serviceid fullName {
+  }
+  string connectedAppOauthLink {
+  }
+  string connectedAppType {
+    _restriction = {
+      enforce_value = false
+      values = [
+        "Customer",
+        "Partner",
+      ]
+    }
+  }
+  string consentOwner {
+    _restriction = {
+      enforce_value = false
+      values = [
+        "Partner",
+        "Salesforce",
+      ]
+    }
+  }
+  string conversationVendorInfo {
+    foreignKeyDomain = [
+      salesforce.ConversationVendorInfo,
+    ]
+  }
+  string customEventPayloadField {
+    foreignKeyDomain = [
+      salesforce.CustomField,
+    ]
+  }
+  string customEventTypeField {
+    foreignKeyDomain = [
+      salesforce.CustomField,
+    ]
+  }
+  string customIcon {
+    foreignKeyDomain = [
+      salesforce.StaticResource,
+    ]
+  }
+  string customPlatformEvent {
+    foreignKeyDomain = [
+      "CustomObject",
+    ]
+  }
+  string customerConnectedAppOauthLink {
+  }
+  string developerName {
+  }
+  string masterLabel {
+  }
+  string routingOwner {
+    _restriction = {
+      enforce_value = false
+      values = [
+        "Partner",
+        "Salesforce",
+      ]
+    }
+  }
+  boolean supportsCustomChannelParameters {
+  }
+  boolean supportsDoubleOptInConsent {
+  }
+  boolean supportsExplicitConsent {
+  }
+  boolean supportsImplicitConsent {
+  }
+  boolean supportsIsoCountryCode {
+  }
+  boolean supportsKeywords {
+  }
+  string internalId {
+    _hidden_value = true
+    localOnly = true
+  }
+  suffix = "ConversationChannelDefinition"
+  dirName = "conversationChannelDefinitions"
+  metadataType = "ConversationChannelDefinition"
+  _important_values = [
+    {
+      value = "fullName"
+      highlighted = true
+      indexed = false
+    },
+    {
+      value = "masterLabel"
+      highlighted = true
+      indexed = false
+    },
+  ]
+}

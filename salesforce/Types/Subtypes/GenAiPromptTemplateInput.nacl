@@ -1,0 +1,41 @@
+type salesforce.GenAiPromptTemplateInput {
+  annotations {
+    serviceid metadataType {
+    }
+    boolean hasMetaFile {
+    }
+    string folderType {
+    }
+    string folderContentType {
+    }
+    string suffix {
+    }
+    string dirName {
+    }
+  }
+  string apiName {
+  }
+  string definition {
+  }
+  string description {
+  }
+  string masterLabel {
+  }
+  string referenceName {
+  }
+  boolean required {
+  }
+  metadataType = "GenAiPromptTemplateInput"
+  _important_values = [
+    {
+      value = "masterLabel"
+      highlighted = true
+      indexed = false
+    },
+    {
+      value = "description"
+      highlighted = true
+      indexed = false
+    },
+  ]
+}

@@ -1,0 +1,21 @@
+type salesforce.ExpressionSetSubExpression {
+  annotations {
+    serviceid metadataType {
+    }
+    boolean hasMetaFile {
+    }
+    string folderType {
+    }
+    string folderContentType {
+    }
+    string suffix {
+    }
+    string dirName {
+    }
+  }
+  string expressionSet {
+  }
+  salesforce.ExpressionSetElementParameter mappings {
+  }
+  metadataType = "ExpressionSetSubExpression"
+}

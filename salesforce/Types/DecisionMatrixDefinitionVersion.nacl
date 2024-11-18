@@ -1,0 +1,131 @@
+type salesforce.DecisionMatrixDefinitionVersion {
+  annotations {
+    serviceid metadataType {
+    }
+    boolean hasMetaFile {
+    }
+    string folderType {
+    }
+    string folderContentType {
+    }
+    string suffix {
+    }
+    string dirName {
+    }
+  }
+  salesforce.DecisionMatrixDefinitionVersionColumn columns {
+  }
+  string decisionMatrixDefinition {
+    foreignKeyDomain = [
+      salesforce.DecisionMatrixDefinition,
+    ]
+  }
+  string endDate {
+  }
+  serviceid fullName {
+  }
+  string groupKeyValue {
+  }
+  string interfaceSourceType {
+    _restriction = {
+      enforce_value = false
+      values = [
+        "Constraint",
+        "DiscoveryProcedure",
+        "EventOrchestration",
+        "PricingProcedure",
+        "QualificationProcedure",
+        "RatingDiscoveryProcedure",
+        "RatingProcedure",
+        "Sample",
+      ]
+    }
+  }
+  string label {
+  }
+  string processType {
+    _restriction = {
+      enforce_value = false
+      values = [
+        "AiAcceleratorSubscriberChurnPrediction",
+        "Bre",
+        "CancelVoucher",
+        "ComplianceControl",
+        "Constraint",
+        "CreditPointsToMembers",
+        "CustomLoyalty",
+        "DebitPointsFromMembers",
+        "DefaultPricing",
+        "DefaultRating",
+        "EnrollInPromotion",
+        "EventOrchestration",
+        "FinancialServicesCloud",
+        "GetMemberPromotions",
+        "IssueVoucher",
+        "LoopingProcessing",
+        "OptOutPromotion",
+        "PlanCostCalculation",
+        "PriceProtection",
+        "PricingDiscovery",
+        "ProductCategoryQualification",
+        "ProductQualification",
+        "RatingDiscovery",
+        "RecordAlert",
+        "ShipAndDebit",
+        "TestProcess",
+        "TierProcessing",
+        "TransactionJournal",
+        "UnenrollMember",
+        "UpdateMemberDetails",
+        "WarrantyClaim",
+      ]
+    }
+  }
+  string startDate {
+  }
+  string status {
+    _restriction = {
+      enforce_value = false
+      values = [
+        "Active",
+        "Draft",
+        "Inactive",
+        "InvalidDraft",
+        "Obsolete",
+      ]
+    }
+  }
+  string subGroupKeyValue {
+  }
+  number versionNumber {
+  }
+  string internalId {
+    _hidden_value = true
+    localOnly = true
+  }
+  suffix = "decisionMatrixVersion"
+  dirName = "decisionMatrixVersion"
+  metadataType = "DecisionMatrixDefinitionVersion"
+  _important_values = [
+    {
+      value = "fullName"
+      highlighted = true
+      indexed = false
+    },
+    {
+      value = "label"
+      highlighted = true
+      indexed = false
+    },
+    {
+      value = "processType"
+      highlighted = true
+      indexed = false
+    },
+    {
+      value = "status"
+      highlighted = true
+      indexed = true
+    },
+  ]
+}

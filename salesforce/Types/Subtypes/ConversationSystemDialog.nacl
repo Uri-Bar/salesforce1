@@ -1,0 +1,35 @@
+type salesforce.ConversationSystemDialog {
+  annotations {
+    serviceid metadataType {
+    }
+    boolean hasMetaFile {
+    }
+    string folderType {
+    }
+    string folderContentType {
+    }
+    string suffix {
+    }
+    string dirName {
+    }
+  }
+  string dialog {
+    foreignKeyDomain = [
+      "ConversationDefinitionDialog",
+    ]
+  }
+  string type {
+    _restriction = {
+      enforce_value = false
+      values = [
+        "Disambiguation",
+        "DisambiguationFailed",
+        "ErrorHandling",
+        "KnowledgeAction",
+        "KnowledgeFallback",
+        "TransferFailed",
+      ]
+    }
+  }
+  metadataType = "ConversationSystemDialog"
+}

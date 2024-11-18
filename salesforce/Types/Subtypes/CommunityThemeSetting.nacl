@@ -1,0 +1,38 @@
+type salesforce.CommunityThemeSetting {
+  annotations {
+    serviceid metadataType {
+    }
+    boolean hasMetaFile {
+    }
+    string folderType {
+    }
+    string folderContentType {
+    }
+    string suffix {
+    }
+    string dirName {
+    }
+  }
+  string customThemeLayoutType {
+  }
+  string themeLayout {
+    foreignKeyDomain = [
+      salesforce.LightningPage,
+    ]
+  }
+  string themeLayoutType {
+    _restriction = {
+      enforce_value = false
+      values = [
+        "Home",
+        "Inner",
+        "Login",
+        "ServiceNotAvailable",
+      ]
+    }
+    foreignKeyDomain = [
+      salesforce.CommunityCustomThemeLayoutType,
+    ]
+  }
+  metadataType = "CommunityThemeSetting"
+}

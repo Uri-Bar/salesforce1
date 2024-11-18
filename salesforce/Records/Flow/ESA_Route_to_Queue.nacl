@@ -3,8 +3,6 @@ salesforce.Flow ESA_Route_to_Queue {
   actionCalls = {
     name = "Route_to_Queue"
     label = "Route to Queue"
-    locationX = 176
-    locationY = 458
     actionName = "routeWork"
     actionType = "routeWork"
     flowTransactionModel = "CurrentTransaction"
@@ -108,8 +106,6 @@ salesforce.Flow ESA_Route_to_Queue {
     {
       name = "Create_Case"
       label = "Create Case"
-      locationX = 176
-      locationY = 242
       connector = {
         targetReference = "Update_Messaging_Session"
       }
@@ -147,8 +143,6 @@ salesforce.Flow ESA_Route_to_Queue {
     {
       name = "Get_Contact"
       label = "Get Contact"
-      locationX = 176
-      locationY = 134
       assignNullValuesIfNoRecordsFound = false
       connector = {
         targetReference = "Create_Case"
@@ -172,8 +166,6 @@ salesforce.Flow ESA_Route_to_Queue {
     {
       name = "Update_Messaging_Session"
       label = "Update Messaging Session"
-      locationX = 176
-      locationY = 350
       connector = {
         targetReference = "Route_to_Queue"
       }
@@ -199,8 +191,6 @@ salesforce.Flow ESA_Route_to_Queue {
     },
   ]
   start = {
-    locationX = 50
-    locationY = 0
     connector = {
       targetReference = "Get_Contact"
     }

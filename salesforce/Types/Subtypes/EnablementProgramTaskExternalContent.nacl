@@ -1,0 +1,27 @@
+type salesforce.EnablementProgramTaskExternalContent {
+  annotations {
+    serviceid metadataType {
+    }
+    boolean hasMetaFile {
+    }
+    string folderType {
+    }
+    string folderContentType {
+    }
+    string suffix {
+    }
+    string dirName {
+    }
+  }
+  string externalId {
+  }
+  string providerType {
+    _restriction = {
+      enforce_value = false
+      values = [
+        "Trailhead",
+      ]
+    }
+  }
+  metadataType = "EnablementProgramTaskExternalContent"
+}

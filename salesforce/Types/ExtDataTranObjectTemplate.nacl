@@ -1,0 +1,57 @@
+type salesforce.ExtDataTranObjectTemplate {
+  annotations {
+    serviceid metadataType {
+    }
+    boolean hasMetaFile {
+    }
+    string folderType {
+    }
+    string folderContentType {
+    }
+    string suffix {
+    }
+    string dirName {
+    }
+  }
+  serviceid fullName {
+  }
+  string dataSourceObject {
+    foreignKeyDomain = [
+      salesforce.DataSourceObject,
+    ]
+  }
+  salesforce.ExtDataTranFieldTemplate extDataTranFieldTemplates {
+  }
+  string externalDataTranObject {
+    foreignKeyDomain = [
+      salesforce.ExternalDataTranObject,
+    ]
+  }
+  string externalName {
+  }
+  string masterLabel {
+  }
+  string sourceObjectName {
+  }
+  number templateVersion {
+  }
+  string internalId {
+    _hidden_value = true
+    localOnly = true
+  }
+  suffix = "extDataTranObjectTemplate"
+  dirName = "extDataTranObjectTemplates"
+  metadataType = "ExtDataTranObjectTemplate"
+  _important_values = [
+    {
+      value = "fullName"
+      highlighted = true
+      indexed = false
+    },
+    {
+      value = "masterLabel"
+      highlighted = true
+      indexed = false
+    },
+  ]
+}

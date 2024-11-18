@@ -1,0 +1,59 @@
+type salesforce.MktCalcInsightObjectDef {
+  annotations {
+    serviceid metadataType {
+    }
+    boolean hasMetaFile {
+    }
+    string folderType {
+    }
+    string folderContentType {
+    }
+    string suffix {
+    }
+    string dirName {
+    }
+  }
+  serviceid fullName {
+  }
+  string builderExpression {
+  }
+  string creationType {
+    _restriction = {
+      enforce_value = false
+      values = [
+        "Custom",
+        "System",
+      ]
+    }
+  }
+  string description {
+  }
+  string expression {
+  }
+  string masterLabel {
+  }
+  string internalId {
+    _hidden_value = true
+    localOnly = true
+  }
+  suffix = "mktCalcInsightObjectDef"
+  dirName = "mktCalcInsightObjectDefs"
+  metadataType = "MktCalcInsightObjectDef"
+  _important_values = [
+    {
+      value = "fullName"
+      highlighted = true
+      indexed = false
+    },
+    {
+      value = "masterLabel"
+      highlighted = true
+      indexed = false
+    },
+    {
+      value = "description"
+      highlighted = true
+      indexed = false
+    },
+  ]
+}

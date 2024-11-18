@@ -1,0 +1,23 @@
+type salesforce.ExpressionSetDecisionTable {
+  annotations {
+    serviceid metadataType {
+    }
+    boolean hasMetaFile {
+    }
+    string folderType {
+    }
+    string folderContentType {
+    }
+    string suffix {
+    }
+    string dirName {
+    }
+  }
+  string decisionTableName {
+  }
+  salesforce.ExpressionSetElementParameter mappings {
+  }
+  string type {
+  }
+  metadataType = "ExpressionSetDecisionTable"
+}

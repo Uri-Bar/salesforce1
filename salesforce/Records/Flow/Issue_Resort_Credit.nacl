@@ -31,8 +31,6 @@ salesforce.Flow Issue_Resort_Credit {
       description = "Create a credit record including a Contact Id and the amount of the credit."
       name = "Create_Credit_Record"
       label = "Create Credit Record"
-      locationX = 176
-      locationY = 134
       assignRecordIdToReference = "creditId"
       inputAssignments = [
         {
@@ -52,8 +50,6 @@ salesforce.Flow Issue_Resort_Credit {
     },
   ]
   start = {
-    locationX = 50
-    locationY = 0
     connector = {
       targetReference = "Create_Credit_Record"
     }

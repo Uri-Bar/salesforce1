@@ -1,0 +1,52 @@
+type salesforce.ExpressionSetConditionCriteria {
+  annotations {
+    serviceid metadataType {
+    }
+    boolean hasMetaFile {
+    }
+    string folderType {
+    }
+    string folderContentType {
+    }
+    string suffix {
+    }
+    string dirName {
+    }
+  }
+  string operator {
+    _restriction = {
+      enforce_value = false
+      values = [
+        "Contains",
+        "DoesNotContain",
+        "Equals",
+        "GreaterThan",
+        "GreaterThanOrEquals",
+        "IsNotNull",
+        "IsNull",
+        "LessThan",
+        "LessThanOrEquals",
+        "NotEquals",
+      ]
+    }
+  }
+  number sequenceNumber {
+  }
+  string sourceFieldName {
+  }
+  string value {
+  }
+  string valueType {
+    _restriction = {
+      enforce_value = false
+      values = [
+        "Formula",
+        "Literal",
+        "Lookup",
+        "Parameter",
+        "PickList",
+      ]
+    }
+  }
+  metadataType = "ExpressionSetConditionCriteria"
+}

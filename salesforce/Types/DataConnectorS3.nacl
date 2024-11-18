@@ -1,0 +1,53 @@
+type salesforce.DataConnectorS3 {
+  annotations {
+    serviceid metadataType {
+    }
+    boolean hasMetaFile {
+    }
+    string folderType {
+    }
+    string folderContentType {
+    }
+    string suffix {
+    }
+    string dirName {
+    }
+  }
+  serviceid fullName {
+  }
+  string delimiter {
+  }
+  string fileNameWildcard {
+  }
+  string fileType {
+  }
+  string importFromDirectory {
+  }
+  string masterLabel {
+  }
+  string s3AccessKey {
+  }
+  string s3BucketName {
+  }
+  string s3SecretKey {
+  }
+  string internalId {
+    _hidden_value = true
+    localOnly = true
+  }
+  suffix = "s3DataConnector"
+  dirName = "s3DataConnectors"
+  metadataType = "DataConnectorS3"
+  _important_values = [
+    {
+      value = "fullName"
+      highlighted = true
+      indexed = false
+    },
+    {
+      value = "masterLabel"
+      highlighted = true
+      indexed = false
+    },
+  ]
+}

@@ -1,0 +1,123 @@
+type salesforce.ExternalDataTranField {
+  annotations {
+    serviceid metadataType {
+    }
+    boolean hasMetaFile {
+    }
+    string folderType {
+    }
+    string folderContentType {
+    }
+    string suffix {
+    }
+    string dirName {
+    }
+  }
+  serviceid fullName {
+  }
+  string creationType {
+    _restriction = {
+      enforce_value = false
+      values = [
+        "ADG",
+        "Activation_Audience",
+        "Bridge",
+        "CG_Audience",
+        "Calculated_Insight",
+        "Chunk",
+        "Curated",
+        "Custom",
+        "Derived",
+        "Directory_Table",
+        "External",
+        "Ml_Prediction",
+        "Problem_Records",
+        "Segment_Membership",
+        "Semantic",
+        "Standard",
+        "System",
+        "Transform",
+        "Vector_Embedding",
+      ]
+    }
+  }
+  string datatype {
+    _restriction = {
+      enforce_value = false
+      values = [
+        "address",
+        "array",
+        "autonumber",
+        "checkbox",
+        "currency",
+        "date",
+        "datetime",
+        "email",
+        "encryptedtext",
+        "enumorid",
+        "externalForeignKey",
+        "file",
+        "foreignKey",
+        "formula",
+        "html",
+        "inetaddress",
+        "location",
+        "longtextarea",
+        "multipicklist",
+        "number",
+        "percent",
+        "phone",
+        "picklist",
+        "sfdcencryptedtext",
+        "summary",
+        "text",
+        "textarea",
+        "time",
+        "url",
+      ]
+    }
+  }
+  string dateFormat {
+  }
+  string extDataTranFieldTemplate {
+    foreignKeyDomain = [
+      salesforce.ExtDataTranFieldTemplate,
+    ]
+  }
+  string externalName {
+  }
+  boolean isCurrencyIsoCode {
+  }
+  boolean isDataRequired {
+  }
+  number length {
+  }
+  string masterLabel {
+  }
+  string mktDataTranField {
+    foreignKeyDomain = [
+      salesforce.MktDataTranField,
+    ]
+  }
+  number precision {
+  }
+  number primaryIndexOrder {
+  }
+  number scale {
+  }
+  number sequence {
+  }
+  metadataType = "ExternalDataTranField"
+  _important_values = [
+    {
+      value = "fullName"
+      highlighted = true
+      indexed = false
+    },
+    {
+      value = "masterLabel"
+      highlighted = true
+      indexed = false
+    },
+  ]
+}

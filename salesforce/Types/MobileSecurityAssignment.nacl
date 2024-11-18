@@ -1,0 +1,51 @@
+type salesforce.MobileSecurityAssignment {
+  annotations {
+    serviceid metadataType {
+    }
+    boolean hasMetaFile {
+    }
+    string folderType {
+    }
+    string folderContentType {
+    }
+    string suffix {
+    }
+    string dirName {
+    }
+  }
+  string connectedApplication {
+    foreignKeyDomain = [
+      salesforce.ConnectedApp,
+    ]
+  }
+  serviceid fullName {
+  }
+  boolean isProtected {
+  }
+  string masterLabel {
+  }
+  string profile {
+    foreignKeyDomain = [
+      "Profile",
+    ]
+  }
+  string internalId {
+    _hidden_value = true
+    localOnly = true
+  }
+  suffix = "mobileSecurityAssignment"
+  dirName = "mobileSecurityAssignments"
+  metadataType = "MobileSecurityAssignment"
+  _important_values = [
+    {
+      value = "fullName"
+      highlighted = true
+      indexed = false
+    },
+    {
+      value = "masterLabel"
+      highlighted = true
+      indexed = false
+    },
+  ]
+}

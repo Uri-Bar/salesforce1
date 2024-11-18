@@ -1,0 +1,59 @@
+type salesforce.ActivationPlatformActvAttr {
+  annotations {
+    serviceid metadataType {
+    }
+    boolean hasMetaFile {
+    }
+    string folderType {
+    }
+    string folderContentType {
+    }
+    string suffix {
+    }
+    string dirName {
+    }
+  }
+  serviceid fullName {
+  }
+  string activationPlatform {
+    foreignKeyDomain = [
+      salesforce.ActivationPlatform,
+    ]
+  }
+  string actvPlatformAdncIdentifier {
+    foreignKeyDomain = [
+      salesforce.ActvPlatformAdncIdentifier,
+    ]
+  }
+  string destinationName {
+  }
+  string fieldName {
+  }
+  boolean isFromSourceObject {
+  }
+  boolean isRequired {
+  }
+  string masterLabel {
+  }
+  string objectName {
+  }
+  string internalId {
+    _hidden_value = true
+    localOnly = true
+  }
+  suffix = "activationPlatformActvAttr"
+  dirName = "activationPlatformActvAttrs"
+  metadataType = "ActivationPlatformActvAttr"
+  _important_values = [
+    {
+      value = "fullName"
+      highlighted = true
+      indexed = false
+    },
+    {
+      value = "masterLabel"
+      highlighted = true
+      indexed = false
+    },
+  ]
+}

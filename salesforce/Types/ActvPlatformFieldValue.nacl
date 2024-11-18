@@ -1,0 +1,48 @@
+type salesforce.ActvPlatformFieldValue {
+  annotations {
+    serviceid metadataType {
+    }
+    boolean hasMetaFile {
+    }
+    string folderType {
+    }
+    string folderContentType {
+    }
+    string suffix {
+    }
+    string dirName {
+    }
+  }
+  serviceid fullName {
+  }
+  string activationPlatformField {
+    foreignKeyDomain = [
+      salesforce.ActivationPlatformField,
+    ]
+  }
+  boolean isDefault {
+  }
+  string masterLabel {
+  }
+  string value {
+  }
+  string internalId {
+    _hidden_value = true
+    localOnly = true
+  }
+  suffix = "actvPlatformFieldValue"
+  dirName = "actvPlatformFieldValues"
+  metadataType = "ActvPlatformFieldValue"
+  _important_values = [
+    {
+      value = "fullName"
+      highlighted = true
+      indexed = false
+    },
+    {
+      value = "masterLabel"
+      highlighted = true
+      indexed = false
+    },
+  ]
+}

@@ -1,0 +1,22 @@
+type salesforce.NetworkEmailTmplAllowlist {
+  annotations {
+    serviceid metadataType {
+    }
+    boolean hasMetaFile {
+    }
+    string folderType {
+    }
+    string folderContentType {
+    }
+    string suffix {
+    }
+    string dirName {
+    }
+  }
+  string emailTemplate {
+    foreignKeyDomain = [
+      salesforce.EmailTemplate,
+    ]
+  }
+  metadataType = "NetworkEmailTmplAllowlist"
+}

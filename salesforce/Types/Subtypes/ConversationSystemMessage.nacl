@@ -1,0 +1,28 @@
+type salesforce.ConversationSystemMessage {
+  annotations {
+    serviceid metadataType {
+    }
+    boolean hasMetaFile {
+    }
+    string folderType {
+    }
+    string folderContentType {
+    }
+    string suffix {
+    }
+    string dirName {
+    }
+  }
+  salesforce.ConversationSystemMessageMapping systemMessageMappings {
+  }
+  string type {
+    _restriction = {
+      enforce_value = false
+      values = [
+        "EndChat",
+        "Transfer",
+      ]
+    }
+  }
+  metadataType = "ConversationSystemMessage"
+}

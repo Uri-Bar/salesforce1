@@ -1,0 +1,15 @@
+type salesforce.LightningComponentBundleTargetConfig {
+  string targets {
+    isAttribute = true
+  }
+  string configurationEditor {
+    isAttribute = true
+  }
+  "List<salesforce.LightningComponentBundleObject>" objects {
+  }
+  salesforce.LightningComponentBundleSupportedFormFactors supportedFormFactors {
+  }
+  metadataType = "LightningComponentBundleTargetConfig"
+  "List<salesforce.LightningComponentBundleProperty>" property {
+  }
+}

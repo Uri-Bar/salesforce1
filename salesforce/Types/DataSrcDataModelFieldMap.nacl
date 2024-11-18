@@ -1,0 +1,53 @@
+type salesforce.DataSrcDataModelFieldMap {
+  annotations {
+    serviceid metadataType {
+    }
+    boolean hasMetaFile {
+    }
+    string folderType {
+    }
+    string folderContentType {
+    }
+    string suffix {
+    }
+    string dirName {
+    }
+  }
+  serviceid fullName {
+  }
+  boolean filterApplied {
+  }
+  string filterOperationType {
+  }
+  string filterValue {
+  }
+  string masterLabel {
+  }
+  string sourceField {
+  }
+  string targetField {
+  }
+  number templateVersion {
+  }
+  number versionNumber {
+  }
+  string internalId {
+    _hidden_value = true
+    localOnly = true
+  }
+  suffix = "dataSrcDataModelFieldMap"
+  dirName = "dataSrcDataModelFieldMaps"
+  metadataType = "DataSrcDataModelFieldMap"
+  _important_values = [
+    {
+      value = "fullName"
+      highlighted = true
+      indexed = false
+    },
+    {
+      value = "masterLabel"
+      highlighted = true
+      indexed = false
+    },
+  ]
+}

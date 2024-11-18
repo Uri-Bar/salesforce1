@@ -1,0 +1,73 @@
+type salesforce.ObjectSourceTargetMap {
+  annotations {
+    serviceid metadataType {
+    }
+    boolean hasMetaFile {
+    }
+    string folderType {
+    }
+    string folderContentType {
+    }
+    string suffix {
+    }
+    string dirName {
+    }
+  }
+  serviceid fullName {
+  }
+  string creationType {
+    _restriction = {
+      enforce_value = false
+      values = [
+        "ADG",
+        "Activation_Audience",
+        "Bridge",
+        "CG_Audience",
+        "Calculated_Insight",
+        "Chunk",
+        "Curated",
+        "Custom",
+        "Derived",
+        "Directory_Table",
+        "External",
+        "Ml_Prediction",
+        "Problem_Records",
+        "Segment_Membership",
+        "Semantic",
+        "Standard",
+        "System",
+        "Transform",
+        "Vector_Embedding",
+      ]
+    }
+  }
+  salesforce.FieldSourceTargetMap fieldSourceTargetMaps {
+  }
+  string masterLabel {
+  }
+  number sequenceNbr {
+  }
+  string sourceObjectName {
+  }
+  string targetObjectName {
+  }
+  string internalId {
+    _hidden_value = true
+    localOnly = true
+  }
+  suffix = "objectSourceTargetMap"
+  dirName = "objectSourceTargetMaps"
+  metadataType = "ObjectSourceTargetMap"
+  _important_values = [
+    {
+      value = "fullName"
+      highlighted = true
+      indexed = false
+    },
+    {
+      value = "masterLabel"
+      highlighted = true
+      indexed = false
+    },
+  ]
+}

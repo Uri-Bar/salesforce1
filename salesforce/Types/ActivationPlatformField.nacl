@@ -1,0 +1,59 @@
+type salesforce.ActivationPlatformField {
+  annotations {
+    serviceid metadataType {
+    }
+    boolean hasMetaFile {
+    }
+    string folderType {
+    }
+    string folderContentType {
+    }
+    string suffix {
+    }
+    string dirName {
+    }
+  }
+  serviceid fullName {
+  }
+  string activationPlatform {
+    foreignKeyDomain = [
+      salesforce.ActivationPlatform,
+    ]
+  }
+  string helpText {
+  }
+  boolean isHidden {
+  }
+  boolean isRequired {
+  }
+  string masterLabel {
+  }
+  string type {
+    _restriction = {
+      enforce_value = false
+      values = [
+        "Number",
+        "Text",
+      ]
+    }
+  }
+  string internalId {
+    _hidden_value = true
+    localOnly = true
+  }
+  suffix = "activationPlatformField"
+  dirName = "activationPlatformFields"
+  metadataType = "ActivationPlatformField"
+  _important_values = [
+    {
+      value = "fullName"
+      highlighted = true
+      indexed = false
+    },
+    {
+      value = "masterLabel"
+      highlighted = true
+      indexed = false
+    },
+  ]
+}

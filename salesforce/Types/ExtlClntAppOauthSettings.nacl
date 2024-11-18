@@ -1,0 +1,66 @@
+type salesforce.ExtlClntAppOauthSettings {
+  annotations {
+    serviceid metadataType {
+    }
+    boolean hasMetaFile {
+    }
+    string folderType {
+    }
+    string folderContentType {
+    }
+    string suffix {
+    }
+    string dirName {
+    }
+  }
+  serviceid fullName {
+  }
+  boolean areAttributesIncludedInAssetToken {
+  }
+  boolean areCustomPermsIncludedInAssetToken {
+  }
+  string assetTokenAudiences {
+  }
+  string assetTokenSigningCertificate {
+  }
+  number assetTokenValidity {
+  }
+  string commaSeparatedCustomScopes {
+  }
+  string commaSeparatedOauthScopes {
+  }
+  salesforce.ExtlClntAppOauthSettingsAttribute customAttributes {
+  }
+  string externalClientApplication {
+    foreignKeyDomain = [
+      salesforce.ExternalClientApplication,
+    ]
+  }
+  string label {
+  }
+  string oauthLink {
+  }
+  string singleLogoutUrl {
+  }
+  salesforce.ExtlClntAppOauthIpRange trustedIpRanges {
+  }
+  string internalId {
+    _hidden_value = true
+    localOnly = true
+  }
+  suffix = "ecaOauth"
+  dirName = "extlClntAppOauthSettings"
+  metadataType = "ExtlClntAppOauthSettings"
+  _important_values = [
+    {
+      value = "fullName"
+      highlighted = true
+      indexed = false
+    },
+    {
+      value = "label"
+      highlighted = true
+      indexed = false
+    },
+  ]
+}

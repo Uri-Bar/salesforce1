@@ -1,0 +1,119 @@
+type salesforce.FlowActionCall {
+  annotations {
+    serviceid metadataType {
+    }
+    boolean hasMetaFile {
+    }
+    string folderType {
+    }
+    string folderContentType {
+    }
+    string suffix {
+    }
+    string dirName {
+    }
+  }
+  "List<salesforce.FlowMetadataValue>" processMetadataValues {
+  }
+  string description {
+  }
+  string name {
+  }
+  string elementSubtype {
+    _restriction = {
+      enforce_value = false
+      values = [
+        "AddPromptInstructions",
+        "ApprovalStep",
+        "BackgroundStep",
+        "FilterCollectionProcessor",
+        "InteractiveStep",
+        "ManagedContentRoleInteractiveStep",
+        "ManagedContentVariantAutoPublishBackgroundStep",
+        "ManagedContentVariantAutoUnpublishBackgroundStep",
+        "ManagedContentVariantSetLockBackgroundStep",
+        "ManagedContentVariantSetReadyBackgroundStep",
+        "MuleSoftStep",
+        "RecommendationMapCollectionProcessor",
+        "SortCollectionProcessor",
+        "WaitAttribute",
+        "WaitDate",
+        "WaitDuration",
+        "WaitUntilEvent",
+      ]
+    }
+    foreignKeyDomain = [
+      "FlowElementSubtypeDefinition",
+    ]
+  }
+  string label {
+  }
+  number locationX {
+  }
+  number locationY {
+  }
+  string actionName {
+  }
+  string actionType {
+  }
+  salesforce.FlowConnector connector {
+  }
+  salesforce.FlowDataTypeMapping dataTypeMappings {
+  }
+  salesforce.FlowConnector faultConnector {
+  }
+  string flowTransactionModel {
+    _restriction = {
+      enforce_value = false
+      values = [
+        "Automatic",
+        "CurrentTransaction",
+        "NewTransaction",
+      ]
+    }
+  }
+  "List<salesforce.FlowActionCallInputParameter>" inputParameters {
+  }
+  boolean isWaitUntilCompleted {
+  }
+  string nameSegment {
+  }
+  number offset {
+  }
+  string offsetUnit {
+    _restriction = {
+      enforce_value = false
+      values = [
+        "Days",
+        "Hours",
+        "Minutes",
+        "Months",
+        "Weeks",
+      ]
+    }
+  }
+  salesforce.FlowActionCallOutputParameter outputParameters {
+  }
+  boolean storeOutputAutomatically {
+  }
+  number versionSegment {
+  }
+  metadataType = "FlowActionCall"
+  _important_values = [
+    {
+      value = "label"
+      highlighted = true
+      indexed = false
+    },
+    {
+      value = "name"
+      highlighted = true
+      indexed = false
+    },
+    {
+      value = "description"
+      highlighted = true
+      indexed = false
+    },
+  ]
+}

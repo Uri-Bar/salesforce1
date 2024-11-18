@@ -1,0 +1,63 @@
+type salesforce.GenAiPlanner {
+  annotations {
+    serviceid metadataType {
+    }
+    boolean hasMetaFile {
+    }
+    string folderType {
+    }
+    string folderContentType {
+    }
+    string suffix {
+    }
+    string dirName {
+    }
+  }
+  serviceid fullName {
+  }
+  string capabilities {
+  }
+  string description {
+  }
+  salesforce.GenAiPlannerFunctionDef genAiFunctions {
+  }
+  salesforce.GenAiPlannerFunctionDef genAiPlugins {
+  }
+  string masterLabel {
+  }
+  string plannerType {
+    _restriction = {
+      enforce_value = false
+      values = [
+        "AiCopilot__ReAct",
+        "AiCopilot__SequentialPlannerIntentClassifier",
+      ]
+    }
+  }
+  string internalId {
+    _hidden_value = true
+    localOnly = true
+  }
+  salesforce.GenAiPlannerRuleExpr genAiPlannerRuleExpressions {
+  }
+  suffix = "genAiPlanner"
+  dirName = "genAiPlanners"
+  metadataType = "GenAiPlanner"
+  _important_values = [
+    {
+      value = "fullName"
+      highlighted = true
+      indexed = false
+    },
+    {
+      value = "masterLabel"
+      highlighted = true
+      indexed = false
+    },
+    {
+      value = "description"
+      highlighted = true
+      indexed = false
+    },
+  ]
+}

@@ -1,0 +1,72 @@
+type salesforce.NetworkPageOverride {
+  annotations {
+    serviceid metadataType {
+    }
+    boolean hasMetaFile {
+    }
+    string folderType {
+    }
+    string folderContentType {
+    }
+    string suffix {
+    }
+    string dirName {
+    }
+  }
+  string changePasswordPageOverrideSetting {
+    _restriction = {
+      enforce_value = false
+      values = [
+        "Configurable",
+        "Designer",
+        "Standard",
+        "VisualForce",
+      ]
+    }
+  }
+  string forgotPasswordPageOverrideSetting {
+    _restriction = {
+      enforce_value = false
+      values = [
+        "Configurable",
+        "Designer",
+        "Standard",
+        "VisualForce",
+      ]
+    }
+  }
+  string homePageOverrideSetting {
+    _restriction = {
+      enforce_value = false
+      values = [
+        "Configurable",
+        "Designer",
+        "Standard",
+        "VisualForce",
+      ]
+    }
+  }
+  string loginPageOverrideSetting {
+    _restriction = {
+      enforce_value = false
+      values = [
+        "Configurable",
+        "Designer",
+        "Standard",
+        "VisualForce",
+      ]
+    }
+  }
+  string selfRegProfilePageOverrideSetting {
+    _restriction = {
+      enforce_value = false
+      values = [
+        "Configurable",
+        "Designer",
+        "Standard",
+        "VisualForce",
+      ]
+    }
+  }
+  metadataType = "NetworkPageOverride"
+}

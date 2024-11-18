@@ -1,0 +1,25 @@
+type salesforce.GenAiPromptTemplateDataProviderParam {
+  annotations {
+    serviceid metadataType {
+    }
+    boolean hasMetaFile {
+    }
+    string folderType {
+    }
+    string folderContentType {
+    }
+    string suffix {
+    }
+    string dirName {
+    }
+  }
+  string definition {
+  }
+  boolean isRequired {
+  }
+  string parameterName {
+  }
+  string valueExpression {
+  }
+  metadataType = "GenAiPromptTemplateDataProviderParam"
+}

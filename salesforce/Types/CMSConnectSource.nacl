@@ -1,0 +1,102 @@
+type salesforce.CMSConnectSource {
+  annotations {
+    serviceid metadataType {
+    }
+    boolean hasMetaFile {
+    }
+    string folderType {
+    }
+    string folderContentType {
+    }
+    string suffix {
+    }
+    string dirName {
+    }
+  }
+  salesforce.CMSConnectAsset cmsConnectAsset {
+  }
+  salesforce.CMSConnectLanguage cmsConnectLanguage {
+  }
+  salesforce.CMSConnectPersonalization cmsConnectPersonalization {
+  }
+  salesforce.CMSConnectResourceType cmsConnectResourceType {
+  }
+  string connectionType {
+    _restriction = {
+      enforce_value = false
+      values = [
+        "Authenticated",
+        "Public",
+      ]
+    }
+  }
+  string cssScope {
+  }
+  string developerName {
+  }
+  serviceid fullName {
+  }
+  string languageEnabled {
+  }
+  string masterLabel {
+  }
+  string namedCredential {
+    foreignKeyDomain = [
+      salesforce.NamedCredential,
+    ]
+  }
+  string personalizationEnabled {
+  }
+  string rootPath {
+  }
+  number sortOrder {
+  }
+  string status {
+    _restriction = {
+      enforce_value = false
+      values = [
+        "ACTIVE",
+        "INACTIVE",
+      ]
+    }
+  }
+  string type {
+    _restriction = {
+      enforce_value = false
+      values = [
+        "AEM",
+        "Drupal",
+        "Other",
+        "SDL",
+        "Sitecore",
+        "WordPress",
+      ]
+    }
+  }
+  string websiteUrl {
+  }
+  string internalId {
+    _hidden_value = true
+    localOnly = true
+  }
+  suffix = "cmsConnectSource"
+  dirName = "cmsConnectSource"
+  metadataType = "CMSConnectSource"
+  _important_values = [
+    {
+      value = "fullName"
+      highlighted = true
+      indexed = false
+    },
+    {
+      value = "masterLabel"
+      highlighted = true
+      indexed = false
+    },
+    {
+      value = "status"
+      highlighted = true
+      indexed = true
+    },
+  ]
+}

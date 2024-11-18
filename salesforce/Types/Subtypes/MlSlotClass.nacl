@@ -1,0 +1,61 @@
+type salesforce.MlSlotClass {
+  annotations {
+    serviceid metadataType {
+    }
+    boolean hasMetaFile {
+    }
+    string folderType {
+    }
+    string folderContentType {
+    }
+    string suffix {
+    }
+    string dirName {
+    }
+  }
+  string dataType {
+    _restriction = {
+      enforce_value = false
+      values = [
+        "Boolean",
+        "Currency",
+        "Date",
+        "DateTime",
+        "Number",
+        "Text",
+      ]
+    }
+  }
+  string description {
+  }
+  string developerName {
+  }
+  string extractionRegex {
+  }
+  string extractionType {
+    _restriction = {
+      enforce_value = false
+      values = [
+        "Pattern",
+        "Value",
+      ]
+    }
+  }
+  string label {
+  }
+  salesforce.MlSlotClassValue mlSlotClassValues {
+  }
+  metadataType = "MlSlotClass"
+  _important_values = [
+    {
+      value = "label"
+      highlighted = true
+      indexed = false
+    },
+    {
+      value = "description"
+      highlighted = true
+      indexed = false
+    },
+  ]
+}

@@ -1,0 +1,70 @@
+type salesforce.MktDataConnection {
+  annotations {
+    serviceid metadataType {
+    }
+    boolean hasMetaFile {
+    }
+    string folderType {
+    }
+    string folderContentType {
+    }
+    string suffix {
+    }
+    string dirName {
+    }
+  }
+  serviceid fullName {
+  }
+  string connectionMethod {
+    _restriction = {
+      enforce_value = false
+      values = [
+        "Egress",
+        "Ingress",
+      ]
+    }
+  }
+  string connectionStatus {
+    _restriction = {
+      enforce_value = false
+      values = [
+        "ACTIVE",
+        "DELETING",
+        "ERROR",
+        "INACTIVE",
+        "PROCESSING",
+        "SCHEMA_REQUIRED",
+        "TESTING",
+      ]
+    }
+  }
+  string connectorName {
+  }
+  salesforce.MktDataConnectionCred credentials {
+  }
+  string externalRecordIdentifier {
+  }
+  string masterLabel {
+  }
+  salesforce.MktDataConnectionParam parameters {
+  }
+  string internalId {
+    _hidden_value = true
+    localOnly = true
+  }
+  suffix = "mktDataConnection"
+  dirName = "mktDataConnections"
+  metadataType = "MktDataConnection"
+  _important_values = [
+    {
+      value = "fullName"
+      highlighted = true
+      indexed = false
+    },
+    {
+      value = "masterLabel"
+      highlighted = true
+      indexed = false
+    },
+  ]
+}

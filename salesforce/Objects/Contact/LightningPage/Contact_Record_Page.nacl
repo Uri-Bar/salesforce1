@@ -623,13 +623,13 @@ salesforce.LightningPage Contact_Record_Page {
               name = "uiBehavior"
               value = "required"
             }
-            fieldItem = "Record.Name"
+            fieldItem = salesforce.Contact.field.Name
             identifier = "RecordNameField"
           }
         },
         {
           fieldInstance = {
-            fieldItem = "Record.Membership_Number__c"
+            fieldItem = salesforce.Contact.field.Membership_Number__c
             identifier = "RecordMembership_Number__cField"
           }
         },
@@ -645,7 +645,7 @@ salesforce.LightningPage Contact_Record_Page {
               name = "uiBehavior"
               value = "required"
             }
-            fieldItem = "Record.AccountId"
+            fieldItem = salesforce.Contact.field.AccountId
             identifier = "RecordAccountIdField"
           }
         },
@@ -661,7 +661,7 @@ salesforce.LightningPage Contact_Record_Page {
               name = "uiBehavior"
               value = "none"
             }
-            fieldItem = "Record.Birthdate"
+            fieldItem = salesforce.Contact.field.Birthdate
             identifier = "RecordBirthdateField"
           }
         },
@@ -671,7 +671,7 @@ salesforce.LightningPage Contact_Record_Page {
               name = "uiBehavior"
               value = "none"
             }
-            fieldItem = "Record.Preferred_Name__c"
+            fieldItem = salesforce.Contact.field.Preferred_Name__c
             identifier = "RecordPreferred_Name_cField"
           }
         },
@@ -681,7 +681,7 @@ salesforce.LightningPage Contact_Record_Page {
               name = "uiBehavior"
               value = "none"
             }
-            fieldItem = "Record.LeadSource"
+            fieldItem = salesforce.Contact.field.LeadSource
             identifier = "RecordLeadSourceField"
           }
         },
@@ -697,7 +697,7 @@ salesforce.LightningPage Contact_Record_Page {
               name = "uiBehavior"
               value = "none"
             }
-            fieldItem = "Record.Next_Check_in_Date__c"
+            fieldItem = salesforce.Contact.field.Next_Check_in_Date__c
             identifier = "RecordNext_Check_in_Date_cField"
           }
         },
@@ -707,7 +707,7 @@ salesforce.LightningPage Contact_Record_Page {
               name = "uiBehavior"
               value = "none"
             }
-            fieldItem = "Record.Guest_Type__c"
+            fieldItem = salesforce.Contact.field.Guest_Type__c
             identifier = "RecordGuest_Type_cField"
           }
         },
@@ -717,7 +717,7 @@ salesforce.LightningPage Contact_Record_Page {
               name = "uiBehavior"
               value = "none"
             }
-            fieldItem = "Record.External_Id__c"
+            fieldItem = salesforce.Contact.field.External_Id__c
             identifier = "RecordExternal_Id_cField"
           }
         },
@@ -733,7 +733,7 @@ salesforce.LightningPage Contact_Record_Page {
               name = "uiBehavior"
               value = "none"
             }
-            fieldItem = "Record.Guest_Summary__c"
+            fieldItem = salesforce.Contact.field.Guest_Summary__c
             identifier = "RecordGuest_Summary_cField"
           }
         },
@@ -743,7 +743,7 @@ salesforce.LightningPage Contact_Record_Page {
               name = "uiBehavior"
               value = "none"
             }
-            fieldItem = "Record.Description"
+            fieldItem = salesforce.Contact.field.Description
             identifier = "RecordDescriptionField"
           }
         },
@@ -759,7 +759,7 @@ salesforce.LightningPage Contact_Record_Page {
               name = "uiBehavior"
               value = "none"
             }
-            fieldItem = "Record.Interest1__c"
+            fieldItem = salesforce.Contact.field.Interest1__c
             identifier = "RecordInterest1_cField"
           }
         },
@@ -769,7 +769,7 @@ salesforce.LightningPage Contact_Record_Page {
               name = "uiBehavior"
               value = "none"
             }
-            fieldItem = "Record.Interest2__c"
+            fieldItem = salesforce.Contact.field.Interest2__c
             identifier = "RecordInterest2_cField"
           }
         },
@@ -785,7 +785,7 @@ salesforce.LightningPage Contact_Record_Page {
               name = "uiBehavior"
               value = "none"
             }
-            fieldItem = "Record.Interest3__c"
+            fieldItem = salesforce.Contact.field.Interest3__c
             identifier = "RecordInterest3_cField"
           }
         },
@@ -795,7 +795,7 @@ salesforce.LightningPage Contact_Record_Page {
               name = "uiBehavior"
               value = "none"
             }
-            fieldItem = "Record.Lifetime_Experience_Bookings__c"
+            fieldItem = salesforce.Contact.field.Lifetime_Experience_Bookings__c
             identifier = "RecordLifetime_Experience_Bookings_cField"
           }
         },
@@ -811,7 +811,7 @@ salesforce.LightningPage Contact_Record_Page {
               name = "uiBehavior"
               value = "none"
             }
-            fieldItem = "Record.Lifetime_Value__c"
+            fieldItem = salesforce.Contact.field.Lifetime_Value__c
             identifier = "RecordLifetime_Value_cField"
           }
         },
@@ -827,7 +827,7 @@ salesforce.LightningPage Contact_Record_Page {
               name = "uiBehavior"
               value = "none"
             }
-            fieldItem = "Record.Lifetime_Reservations__c"
+            fieldItem = salesforce.Contact.field.Lifetime_Reservations__c
             identifier = "RecordLifetime_Reservations_cField"
           }
         },
@@ -843,7 +843,7 @@ salesforce.LightningPage Contact_Record_Page {
               name = "uiBehavior"
               value = "none"
             }
-            fieldItem = "Record.MobilePhone"
+            fieldItem = salesforce.Contact.field.MobilePhone
             identifier = "RecordMobilePhoneField"
           }
         },
@@ -859,7 +859,7 @@ salesforce.LightningPage Contact_Record_Page {
               name = "uiBehavior"
               value = "none"
             }
-            fieldItem = "Record.Email"
+            fieldItem = salesforce.Contact.field.Email
             identifier = "RecordEmailField"
           }
         },
@@ -875,7 +875,7 @@ salesforce.LightningPage Contact_Record_Page {
               name = "uiBehavior"
               value = "none"
             }
-            fieldItem = "Record.MailingAddress"
+            fieldItem = salesforce.Contact.field.MailingAddress
             identifier = "RecordMailingAddressField"
           }
         },
@@ -891,7 +891,7 @@ salesforce.LightningPage Contact_Record_Page {
               name = "uiBehavior"
               value = "readonly"
             }
-            fieldItem = "Record.CreatedById"
+            fieldItem = salesforce.Contact.field.CreatedById
             identifier = "RecordCreatedByIdField"
           }
         },
@@ -907,7 +907,7 @@ salesforce.LightningPage Contact_Record_Page {
               name = "uiBehavior"
               value = "readonly"
             }
-            fieldItem = "Record.LastModifiedById"
+            fieldItem = salesforce.Contact.field.LastModifiedById
             identifier = "RecordLastModifiedByIdField"
           }
         },

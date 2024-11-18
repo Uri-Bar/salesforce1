@@ -1,0 +1,197 @@
+type salesforce.ExpressionSetStep {
+  annotations {
+    serviceid metadataType {
+    }
+    boolean hasMetaFile {
+    }
+    string folderType {
+    }
+    string folderContentType {
+    }
+    string suffix {
+    }
+    string dirName {
+    }
+  }
+  string actionType {
+    _restriction = {
+      enforce_value = false
+      values = [
+        "AiAcceleratorSubscriberChurnPrediction",
+        "ApexAction",
+        "AssetDiscovery",
+        "AssignBadgeToMember",
+        "AssignParameterValues",
+        "AssignmentElement",
+        "AttributeDiscount",
+        "AutomatedClaimsProcessingValidation",
+        "BaseRate",
+        "BreAggregator",
+        "BreAggregatorAssignment",
+        "BundleDiscount",
+        "ChangeMemberTier",
+        "CheckMemberBadgeAssignment",
+        "CommercePricing",
+        "ComplianceCheck",
+        "ComplianceControlLog",
+        "Constraint",
+        "CreditPoints",
+        "Crud",
+        "DebitPoints",
+        "DerivedPricing",
+        "DiscountDistributionService",
+        "EvaluateCategoryDisqualification",
+        "EvaluateCategoryQualification",
+        "EvaluateDisqualification",
+        "EvaluateQualification",
+        "FormulaBasedPricing",
+        "FormulaBasedRating",
+        "GetMemberAttributesValues",
+        "GetMemberPointBalance",
+        "GetMemberPromotions",
+        "GetMemberTier",
+        "GetOutputsFromDecisionMatrix",
+        "GetOutputsFromDecisionTable",
+        "GetUserData",
+        "GroupingAndAggregatePricing",
+        "GroupingAndAggregateRating",
+        "IncreaseUsageForCumulativePromotion",
+        "IntegrationOrchestration",
+        "IssueVoucher",
+        "ListGroup",
+        "ListGroupCalculation",
+        "ListPrice",
+        "ManualDiscount",
+        "ManualRatingDiscount",
+        "MapProduct",
+        "MinimumPrice",
+        "PriceAdjustmentMatrix",
+        "PriceGuidance",
+        "PricingSettings",
+        "PromotionsDiscount",
+        "Proration",
+        "RateAdjustmentByAttributeResolution",
+        "RateAdjustmentByTierResolution",
+        "RateAdjustmentMatrix",
+        "RateAssignment",
+        "RateCardEntryResolution",
+        "RateCardResolution",
+        "RatingAttributeDiscount",
+        "RatingRoundingValues",
+        "RatingSetting",
+        "RatingTierDiscount",
+        "RatingVolumeDiscount",
+        "RecordAction",
+        "RecordAlert",
+        "RedeemVoucher",
+        "RoundingValues",
+        "RuleFetch",
+        "RunFlow",
+        "RunProgramProcess",
+        "SampleBusinessElementWithContext",
+        "SampleCustomElementWithExpressionAndListFilter",
+        "SampleDynamicCustomElement",
+        "SendMail",
+        "StopPricing",
+        "StopRating",
+        "SubscriptionPricing",
+        "TestCustomElement",
+        "UpdateCurrentValueForMemberAttribute",
+        "UpdatePointBalance",
+        "UpdateUsageForCumulativePromotion",
+        "VolumeDiscount",
+        "VolumeTierDiscount",
+      ]
+    }
+  }
+  salesforce.ExpressionSetAdvancedCondition advancedCondition {
+  }
+  salesforce.ExpressionSetAggregation aggregation {
+  }
+  salesforce.ExpressionSetAssignment assignment {
+  }
+  salesforce.ExpressionSetConditionExpression conditionExpression {
+  }
+  salesforce.ExpressionSetCustomElement customElement {
+  }
+  salesforce.ExpressionSetDecisionTable decisionTable {
+  }
+  string description {
+  }
+  string failedExplainerTemplate {
+    foreignKeyDomain = [
+      salesforce.ExplainabilityMsgTemplate,
+    ]
+  }
+  salesforce.ExplainabilityMessageTemplateTokenMapping failedMessageTokenMappings {
+  }
+  string label {
+  }
+  string name {
+  }
+  string noResultExplainerTemplate {
+    foreignKeyDomain = [
+      salesforce.ExplainabilityMsgTemplate,
+    ]
+  }
+  salesforce.ExplainabilityMessageTemplateTokenMapping noResultMessageTokenMappings {
+  }
+  string parentStep {
+    foreignKeyDomain = [
+      "ExpressionSetDefinitionVersionStep",
+    ]
+  }
+  string passedExplainerTemplate {
+    foreignKeyDomain = [
+      salesforce.ExplainabilityMsgTemplate,
+    ]
+  }
+  salesforce.ExplainabilityMessageTemplateTokenMapping passedMessageTokenMappings {
+  }
+  boolean resultIncluded {
+  }
+  number sequenceNumber {
+  }
+  boolean shouldExposExecPathMsgOnly {
+  }
+  boolean shouldExposeConditionDetails {
+  }
+  boolean shouldShowExplExternally {
+  }
+  string stepType {
+    _restriction = {
+      enforce_value = false
+      values = [
+        "AdvancedCondition",
+        "AdvancedListFilter",
+        "Branch",
+        "BusinessKnowledgeModel",
+        "Condition",
+        "DefaultPath",
+        "ListFilter",
+        "ListGroup",
+        "SubExpression",
+      ]
+    }
+  }
+  salesforce.ExpressionSetSubExpression subExpression {
+  }
+  metadataType = "ExpressionSetStep"
+  _important_values = [
+    {
+      value = "label"
+      highlighted = true
+      indexed = false
+    },
+    {
+      value = "name"
+      highlighted = true
+      indexed = false
+    },
+    {
+      value = "description"
+      highlighted = true
+      indexed = false
+    },
+  ]
+}

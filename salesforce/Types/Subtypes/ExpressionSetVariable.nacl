@@ -1,0 +1,95 @@
+type salesforce.ExpressionSetVariable {
+  annotations {
+    serviceid metadataType {
+    }
+    boolean hasMetaFile {
+    }
+    string folderType {
+    }
+    string folderContentType {
+    }
+    string suffix {
+    }
+    string dirName {
+    }
+  }
+  boolean collection {
+  }
+  string dataType {
+    _restriction = {
+      enforce_value = false
+      values = [
+        "ActionOutput",
+        "Boolean",
+        "Context",
+        "ContextNode",
+        "Currency",
+        "Date",
+        "DateTime",
+        "DecisionMatrix",
+        "DecisionTable",
+        "Numeric",
+        "Percent",
+        "Picklist",
+        "Sobject",
+        "SubExpression",
+        "Text",
+      ]
+    }
+  }
+  number decimalPlaces {
+  }
+  string description {
+  }
+  salesforce.ExpressionSetVariableField fields {
+  }
+  boolean input {
+  }
+  string lookupName {
+  }
+  string lookupType {
+    _restriction = {
+      enforce_value = false
+      values = [
+        "DecisionMatrix",
+        "DecisionTable",
+        "SubExpression",
+      ]
+    }
+  }
+  string name {
+  }
+  string objectName {
+  }
+  boolean output {
+  }
+  string resultStep {
+  }
+  string type {
+    _restriction = {
+      enforce_value = false
+      values = [
+        "Constant",
+        "ContextDynamicAttributeTag",
+        "ExecutableContextDefinitionTag",
+        "Formula",
+        "Variable",
+      ]
+    }
+  }
+  string value {
+  }
+  metadataType = "ExpressionSetVariable"
+  _important_values = [
+    {
+      value = "name"
+      highlighted = true
+      indexed = false
+    },
+    {
+      value = "description"
+      highlighted = true
+      indexed = false
+    },
+  ]
+}

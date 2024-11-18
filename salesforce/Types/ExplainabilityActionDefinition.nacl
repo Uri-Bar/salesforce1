@@ -1,0 +1,88 @@
+type salesforce.ExplainabilityActionDefinition {
+  annotations {
+    serviceid metadataType {
+    }
+    boolean hasMetaFile {
+    }
+    string folderType {
+    }
+    string folderContentType {
+    }
+    string suffix {
+    }
+    string dirName {
+    }
+  }
+  serviceid fullName {
+  }
+  string actionLogSchemaType {
+    _restriction = {
+      enforce_value = false
+      values = [
+        "ExpressionSet",
+        "Other",
+      ]
+    }
+  }
+  string applicationSubtype {
+    foreignKeyDomain = [
+      salesforce.ApplicationSubtypeDefinition,
+    ]
+  }
+  string applicationType {
+    _restriction = {
+      enforce_value = false
+      values = [
+        "ActionableEventOrch",
+        "Compliance",
+        "HealthCloud",
+        "IndustriesDroOrderProcess",
+        "IndustriesPricing",
+        "IndustryServiceExcellence",
+        "Loyalty",
+        "OmniAnalytics",
+        "PublicSector",
+      ]
+    }
+  }
+  string description {
+  }
+  boolean internal {
+  }
+  string masterLabel {
+  }
+  string processType {
+    foreignKeyDomain = [
+      salesforce.BusinessProcessTypeDefinition,
+    ]
+  }
+  string internalId {
+    _hidden_value = true
+    localOnly = true
+  }
+  suffix = "explainabilityActionDefinition"
+  dirName = "ExplainabilityActionDefinitions"
+  metadataType = "ExplainabilityActionDefinition"
+  _important_values = [
+    {
+      value = "fullName"
+      highlighted = true
+      indexed = false
+    },
+    {
+      value = "masterLabel"
+      highlighted = true
+      indexed = false
+    },
+    {
+      value = "description"
+      highlighted = true
+      indexed = false
+    },
+    {
+      value = "processType"
+      highlighted = true
+      indexed = false
+    },
+  ]
+}

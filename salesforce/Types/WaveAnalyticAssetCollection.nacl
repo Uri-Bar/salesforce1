@@ -1,0 +1,73 @@
+type salesforce.WaveAnalyticAssetCollection {
+  annotations {
+    serviceid metadataType {
+    }
+    boolean hasMetaFile {
+    }
+    string folderType {
+    }
+    string folderContentType {
+    }
+    string suffix {
+    }
+    string dirName {
+    }
+  }
+  serviceid fullName {
+  }
+  string collectionType {
+    _restriction = {
+      enforce_value = false
+      values = [
+        "fieldServiceIntelligence",
+        "static",
+      ]
+    }
+  }
+  string color {
+  }
+  string description {
+  }
+  string folder {
+    foreignKeyDomain = [
+      "ReportFolder",
+    ]
+  }
+  salesforce.WaveAnalyticAssetCollectionItem items {
+  }
+  string label {
+  }
+  string masterLabel {
+  }
+  salesforce.FolderShare shares {
+  }
+  string internalId {
+    _hidden_value = true
+    localOnly = true
+  }
+  suffix = "collection"
+  dirName = "wave"
+  metadataType = "WaveAnalyticAssetCollection"
+  _important_values = [
+    {
+      value = "fullName"
+      highlighted = true
+      indexed = false
+    },
+    {
+      value = "label"
+      highlighted = true
+      indexed = false
+    },
+    {
+      value = "masterLabel"
+      highlighted = true
+      indexed = false
+    },
+    {
+      value = "description"
+      highlighted = true
+      indexed = false
+    },
+  ]
+}

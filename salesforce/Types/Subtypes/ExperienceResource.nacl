@@ -1,0 +1,25 @@
+type salesforce.ExperienceResource {
+  annotations {
+    serviceid metadataType {
+    }
+    boolean hasMetaFile {
+    }
+    string folderType {
+    }
+    string folderContentType {
+    }
+    string suffix {
+    }
+    string dirName {
+    }
+  }
+  string fileName {
+  }
+  string format {
+  }
+  string source {
+  }
+  string type {
+  }
+  metadataType = "ExperienceResource"
+}

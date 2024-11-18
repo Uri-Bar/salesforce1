@@ -31,8 +31,6 @@ salesforce.Flow Get_Sessions {
       description = "Get Experience Session records based on the Experience Id and the Date."
       name = "Get_Sessions_by_Date"
       label = "Get Sessions by Date"
-      locationX = 176
-      locationY = 134
       assignNullValuesIfNoRecordsFound = false
       filterLogic = "and"
       filters = [
@@ -70,8 +68,6 @@ salesforce.Flow Get_Sessions {
   ]
   runInMode = "SystemModeWithSharing"
   start = {
-    locationX = 50
-    locationY = 0
     connector = {
       targetReference = "Get_Sessions_by_Date"
     }

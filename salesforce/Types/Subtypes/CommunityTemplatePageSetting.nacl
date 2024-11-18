@@ -1,0 +1,27 @@
+type salesforce.CommunityTemplatePageSetting {
+  annotations {
+    serviceid metadataType {
+    }
+    boolean hasMetaFile {
+    }
+    string folderType {
+    }
+    string folderContentType {
+    }
+    string suffix {
+    }
+    string dirName {
+    }
+  }
+  string page {
+    foreignKeyDomain = [
+      salesforce.LightningPage,
+    ]
+  }
+  string themeLayout {
+    foreignKeyDomain = [
+      salesforce.LightningPage,
+    ]
+  }
+  metadataType = "CommunityTemplatePageSetting"
+}

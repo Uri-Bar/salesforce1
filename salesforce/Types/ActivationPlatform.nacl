@@ -1,0 +1,148 @@
+type salesforce.ActivationPlatform {
+  annotations {
+    serviceid metadataType {
+    }
+    boolean hasMetaFile {
+    }
+    string folderType {
+    }
+    string folderContentType {
+    }
+    string suffix {
+    }
+    string dirName {
+    }
+  }
+  serviceid fullName {
+  }
+  string activationFlowType {
+    _restriction = {
+      enforce_value = false
+      values = [
+        "DMO",
+        "SEGMENT",
+      ]
+    }
+  }
+  string activationPlatformAdditionalMetadata {
+  }
+  string activationPlatformConnectorType {
+    _restriction = {
+      enforce_value = false
+      values = [
+        "OAUTH",
+        "S3",
+      ]
+    }
+  }
+  string dataConnector {
+    foreignKeyDomain = [
+      salesforce.ActvPfrmDataConnectorS3,
+      salesforce.ActvPlatformOAuthConnector,
+    ]
+  }
+  string description {
+  }
+  boolean enabled {
+  }
+  boolean includeSegmentNames {
+  }
+  string logoUrl {
+  }
+  string masterLabel {
+  }
+  string notes {
+  }
+  string outputFormat {
+    _restriction = {
+      enforce_value = false
+      values = [
+        "CSV",
+        "JSON",
+        "PARQUET",
+      ]
+    }
+  }
+  string outputGrouping {
+    _restriction = {
+      enforce_value = false
+      values = [
+        "PER_ACCOUNT",
+        "PER_SEGMENT",
+      ]
+    }
+  }
+  string periodicRefreshFrequecy {
+    _restriction = {
+      enforce_value = false
+      values = [
+        "REFRESH_30",
+        "REFRESH_60",
+      ]
+    }
+  }
+  string platformProcessingType {
+    _restriction = {
+      enforce_value = false
+      values = [
+        "Batch",
+        "Streaming",
+      ]
+    }
+  }
+  string platformType {
+    _restriction = {
+      enforce_value = false
+      values = [
+        "Advertising",
+        "Analytics",
+        "Marketing",
+        "Publishing",
+        "Technology",
+      ]
+    }
+  }
+  string refreshFrequency {
+    _restriction = {
+      enforce_value = false
+      values = [
+        "FOUR",
+        "TWELVE",
+        "TWENTY_FOUR",
+      ]
+    }
+  }
+  string refreshMode {
+    _restriction = {
+      enforce_value = false
+      values = [
+        "FULL",
+        "INCREMENTAL",
+      ]
+    }
+  }
+  string internalId {
+    _hidden_value = true
+    localOnly = true
+  }
+  suffix = "activationPlatform"
+  dirName = "activationPlatforms"
+  metadataType = "ActivationPlatform"
+  _important_values = [
+    {
+      value = "fullName"
+      highlighted = true
+      indexed = false
+    },
+    {
+      value = "masterLabel"
+      highlighted = true
+      indexed = false
+    },
+    {
+      value = "description"
+      highlighted = true
+      indexed = false
+    },
+  ]
+}

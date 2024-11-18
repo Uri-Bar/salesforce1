@@ -1,0 +1,141 @@
+type salesforce.DataSourceField {
+  annotations {
+    serviceid metadataType {
+    }
+    boolean hasMetaFile {
+    }
+    string folderType {
+    }
+    string folderContentType {
+    }
+    string suffix {
+    }
+    string dirName {
+    }
+  }
+  serviceid fullName {
+  }
+  string datatype {
+    _restriction = {
+      enforce_value = false
+      values = [
+        "address",
+        "array",
+        "autonumber",
+        "checkbox",
+        "currency",
+        "date",
+        "datetime",
+        "email",
+        "encryptedtext",
+        "enumorid",
+        "externalForeignKey",
+        "file",
+        "foreignKey",
+        "formula",
+        "html",
+        "inetaddress",
+        "location",
+        "longtextarea",
+        "multipicklist",
+        "number",
+        "percent",
+        "phone",
+        "picklist",
+        "sfdcencryptedtext",
+        "summary",
+        "text",
+        "textarea",
+        "time",
+        "url",
+      ]
+    }
+  }
+  string dateFormat {
+  }
+  string definitionCreationType {
+    _restriction = {
+      enforce_value = false
+      values = [
+        "ADG",
+        "Activation_Audience",
+        "Bridge",
+        "CG_Audience",
+        "Calculated_Insight",
+        "Chunk",
+        "Curated",
+        "Custom",
+        "Derived",
+        "Directory_Table",
+        "External",
+        "Ml_Prediction",
+        "Problem_Records",
+        "Segment_Membership",
+        "Semantic",
+        "Standard",
+        "System",
+        "Transform",
+        "Vector_Embedding",
+      ]
+    }
+  }
+  string externalName {
+  }
+  string fieldFormula {
+  }
+  boolean isDataRequired {
+  }
+  boolean isEventDate {
+  }
+  boolean isFormula {
+  }
+  boolean isRecordModified {
+  }
+  string keyQualifierName {
+  }
+  number length {
+  }
+  string masterLabel {
+  }
+  number precision {
+  }
+  number primaryIndexOrder {
+  }
+  number scale {
+  }
+  number sequence {
+  }
+  string srcKeyQualifier {
+    foreignKeyDomain = [
+      salesforce.MktDatalakeSrcKeyQualifier,
+    ]
+  }
+  string usageTag {
+    _restriction = {
+      enforce_value = false
+      values = [
+        "KEY_QUALIFIER",
+        "NONE",
+      ]
+    }
+  }
+  number versionNumber {
+  }
+  string internalId {
+    _hidden_value = true
+    localOnly = true
+  }
+  metadataType = "DataSourceField"
+  _important_values = [
+    {
+      value = "fullName"
+      highlighted = true
+      indexed = false
+    },
+    {
+      value = "masterLabel"
+      highlighted = true
+      indexed = false
+    },
+  ]
+}

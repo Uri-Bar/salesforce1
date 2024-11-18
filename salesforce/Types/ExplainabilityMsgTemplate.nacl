@@ -1,0 +1,108 @@
+type salesforce.ExplainabilityMsgTemplate {
+  annotations {
+    serviceid metadataType {
+    }
+    boolean hasMetaFile {
+    }
+    string folderType {
+    }
+    string folderContentType {
+    }
+    string suffix {
+    }
+    string dirName {
+    }
+  }
+  serviceid fullName {
+  }
+  string evaluationResult {
+    _restriction = {
+      enforce_value = false
+      values = [
+        "Failed",
+        "NoResult",
+        "Passed",
+      ]
+    }
+  }
+  string expressionSetStepType {
+    _restriction = {
+      enforce_value = false
+      values = [
+        "Aggregation",
+        "Branch",
+        "BusinessElement",
+        "Calculation",
+        "Condition",
+        "DecisionTableLookup",
+        "ListEnabledGroup",
+        "ListFilter",
+        "MatrixLookup",
+        "ReferenceProcedure",
+      ]
+    }
+  }
+  string expsSetProcessType {
+    _restriction = {
+      enforce_value = false
+      values = [
+        "AiAcceleratorSubscriberChurnPrediction",
+        "Bre",
+        "CancelVoucher",
+        "ComplianceControl",
+        "Constraint",
+        "CreditPointsToMembers",
+        "CustomLoyalty",
+        "DebitPointsFromMembers",
+        "DefaultPricing",
+        "DefaultRating",
+        "EnrollInPromotion",
+        "EventOrchestration",
+        "FinancialServicesCloud",
+        "GetMemberPromotions",
+        "IssueVoucher",
+        "LoopingProcessing",
+        "OptOutPromotion",
+        "PlanCostCalculation",
+        "PriceProtection",
+        "PricingDiscovery",
+        "ProductCategoryQualification",
+        "ProductQualification",
+        "RatingDiscovery",
+        "RecordAlert",
+        "ShipAndDebit",
+        "TestProcess",
+        "TierProcessing",
+        "TransactionJournal",
+        "UnenrollMember",
+        "UpdateMemberDetails",
+        "WarrantyClaim",
+      ]
+    }
+  }
+  boolean isDefault {
+  }
+  string masterLabel {
+  }
+  string message {
+  }
+  string internalId {
+    _hidden_value = true
+    localOnly = true
+  }
+  suffix = "explainabilityMsgTemplate"
+  dirName = "ExplainabilityMsgTemplates"
+  metadataType = "ExplainabilityMsgTemplate"
+  _important_values = [
+    {
+      value = "fullName"
+      highlighted = true
+      indexed = false
+    },
+    {
+      value = "masterLabel"
+      highlighted = true
+      indexed = false
+    },
+  ]
+}

@@ -1,0 +1,83 @@
+type salesforce.MobSecurityCertPinConfig {
+  annotations {
+    serviceid metadataType {
+    }
+    boolean hasMetaFile {
+    }
+    string folderType {
+    }
+    string folderContentType {
+    }
+    string suffix {
+    }
+    string dirName {
+    }
+  }
+  string certificateHash {
+  }
+  string domainName {
+  }
+  serviceid fullName {
+  }
+  boolean isEnabled {
+  }
+  boolean isProtected {
+  }
+  boolean isSubdomainIncluded {
+  }
+  string masterLabel {
+  }
+  string mobilePlatform {
+    _restriction = {
+      enforce_value = false
+      values = [
+        "Android",
+        "iOS",
+      ]
+    }
+  }
+  string mobileSecurityAssignment {
+    foreignKeyDomain = [
+      salesforce.MobileSecurityAssignment,
+    ]
+  }
+  string severityLevel {
+    _restriction = {
+      enforce_value = false
+      values = [
+        "Critical",
+        "Error",
+        "Info",
+        "Warn",
+      ]
+    }
+  }
+  string type {
+    _restriction = {
+      enforce_value = false
+      values = [
+        "AuthServer",
+        "Resource",
+      ]
+    }
+  }
+  string internalId {
+    _hidden_value = true
+    localOnly = true
+  }
+  suffix = "mobSecurityCertPinConfig"
+  dirName = "mobSecurityCertPinConfigs"
+  metadataType = "MobSecurityCertPinConfig"
+  _important_values = [
+    {
+      value = "fullName"
+      highlighted = true
+      indexed = false
+    },
+    {
+      value = "masterLabel"
+      highlighted = true
+      indexed = false
+    },
+  ]
+}

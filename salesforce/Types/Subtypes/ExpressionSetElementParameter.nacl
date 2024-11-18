@@ -1,0 +1,44 @@
+type salesforce.ExpressionSetElementParameter {
+  annotations {
+    serviceid metadataType {
+    }
+    boolean hasMetaFile {
+    }
+    string folderType {
+    }
+    string folderContentType {
+    }
+    string suffix {
+    }
+    string dirName {
+    }
+  }
+  boolean input {
+  }
+  string name {
+  }
+  boolean output {
+  }
+  string type {
+    _restriction = {
+      enforce_value = false
+      values = [
+        "Formula",
+        "Literal",
+        "Lookup",
+        "Parameter",
+        "PickList",
+      ]
+    }
+  }
+  string value {
+  }
+  metadataType = "ExpressionSetElementParameter"
+  _important_values = [
+    {
+      value = "name"
+      highlighted = true
+      indexed = false
+    },
+  ]
+}

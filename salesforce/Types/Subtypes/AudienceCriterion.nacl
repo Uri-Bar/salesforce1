@@ -1,0 +1,52 @@
+type salesforce.AudienceCriterion {
+  annotations {
+    serviceid metadataType {
+    }
+    boolean hasMetaFile {
+    }
+    string folderType {
+    }
+    string folderContentType {
+    }
+    string suffix {
+    }
+    string dirName {
+    }
+  }
+  number criteriaNumber {
+  }
+  salesforce.AudienceCriteriaValue criterionValue {
+  }
+  string operator {
+    _restriction = {
+      enforce_value = false
+      values = [
+        "Contains",
+        "Equal",
+        "GreaterThan",
+        "GreaterThanOrEqual",
+        "Includes",
+        "LessThan",
+        "LessThanOrEqual",
+        "NotEqual",
+        "NotIncludes",
+        "StartsWith",
+      ]
+    }
+  }
+  string type {
+    _restriction = {
+      enforce_value = false
+      values = [
+        "Audience",
+        "Default",
+        "Domain",
+        "FieldBased",
+        "GeoLocation",
+        "Permission",
+        "Profile",
+      ]
+    }
+  }
+  metadataType = "AudienceCriterion"
+}

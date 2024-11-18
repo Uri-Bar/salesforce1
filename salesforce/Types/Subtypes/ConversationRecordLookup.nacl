@@ -1,0 +1,43 @@
+type salesforce.ConversationRecordLookup {
+  annotations {
+    serviceid metadataType {
+    }
+    boolean hasMetaFile {
+    }
+    string folderType {
+    }
+    string folderContentType {
+    }
+    string suffix {
+    }
+    string dirName {
+    }
+  }
+  string SObjectType {
+  }
+  salesforce.ConversationRecordLookupCondition conditions {
+  }
+  string filterLogic {
+  }
+  salesforce.ConversationRecordLookupField lookupFields {
+  }
+  number maxLookupResults {
+  }
+  string sortFieldName {
+  }
+  string sourceVariableName {
+  }
+  string sourceVariableType {
+    _restriction = {
+      enforce_value = false
+      values = [
+        "ContextVariable",
+        "ConversationVariable",
+        "PageContextVariable",
+      ]
+    }
+  }
+  string targetVariableName {
+  }
+  metadataType = "ConversationRecordLookup"
+}

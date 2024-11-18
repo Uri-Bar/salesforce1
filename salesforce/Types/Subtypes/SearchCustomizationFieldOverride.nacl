@@ -1,0 +1,21 @@
+type salesforce.SearchCustomizationFieldOverride {
+  annotations {
+    serviceid metadataType {
+    }
+    boolean hasMetaFile {
+    }
+    string folderType {
+    }
+    string folderContentType {
+    }
+    string suffix {
+    }
+    string dirName {
+    }
+  }
+  string fieldApiName {
+  }
+  boolean searchable {
+  }
+  metadataType = "SearchCustomizationFieldOverride"
+}

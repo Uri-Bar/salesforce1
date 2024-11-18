@@ -1,0 +1,35 @@
+type salesforce.ExpressionSetAggregation {
+  annotations {
+    serviceid metadataType {
+    }
+    boolean hasMetaFile {
+    }
+    string folderType {
+    }
+    string folderContentType {
+    }
+    string suffix {
+    }
+    string dirName {
+    }
+  }
+  string aggergatedParameter {
+  }
+  string aggregateFunction {
+    _restriction = {
+      enforce_value = false
+      values = [
+        "Avg",
+        "ListAvg",
+        "ListSize",
+        "ListSum",
+        "Max",
+        "Min",
+        "Sum",
+      ]
+    }
+  }
+  string expression {
+  }
+  metadataType = "ExpressionSetAggregation"
+}

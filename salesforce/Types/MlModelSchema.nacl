@@ -1,0 +1,61 @@
+type salesforce.MlModelSchema {
+  annotations {
+    serviceid metadataType {
+    }
+    boolean hasMetaFile {
+    }
+    string folderType {
+    }
+    string folderContentType {
+    }
+    string suffix {
+    }
+    string dirName {
+    }
+  }
+  serviceid fullName {
+  }
+  string format {
+    _restriction = {
+      enforce_value = false
+      values = [
+        "COLUMNAR",
+        "CSV",
+        "DATAFRAME_RECORDS",
+        "DATAFRAME_SPLIT",
+        "JSON",
+        "JSON_DENSE",
+        "JSON_INSTANCES",
+      ]
+    }
+  }
+  boolean isMultiRowPrediction {
+  }
+  string label {
+  }
+  string multiRowPredictionKey {
+  }
+  string multiRowResultKey {
+  }
+  string schema {
+  }
+  string internalId {
+    _hidden_value = true
+    localOnly = true
+  }
+  suffix = "mlModelSchema"
+  dirName = "mlModelSchemas"
+  metadataType = "MlModelSchema"
+  _important_values = [
+    {
+      value = "fullName"
+      highlighted = true
+      indexed = false
+    },
+    {
+      value = "label"
+      highlighted = true
+      indexed = false
+    },
+  ]
+}

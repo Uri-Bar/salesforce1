@@ -1,0 +1,88 @@
+type salesforce.FlowOrchestratedStage {
+  annotations {
+    serviceid metadataType {
+    }
+    boolean hasMetaFile {
+    }
+    string folderType {
+    }
+    string folderContentType {
+    }
+    string suffix {
+    }
+    string dirName {
+    }
+  }
+  salesforce.FlowMetadataValue processMetadataValues {
+  }
+  string description {
+  }
+  string name {
+  }
+  string elementSubtype {
+    _restriction = {
+      enforce_value = false
+      values = [
+        "AddPromptInstructions",
+        "ApprovalStep",
+        "BackgroundStep",
+        "FilterCollectionProcessor",
+        "InteractiveStep",
+        "ManagedContentRoleInteractiveStep",
+        "ManagedContentVariantAutoPublishBackgroundStep",
+        "ManagedContentVariantAutoUnpublishBackgroundStep",
+        "ManagedContentVariantSetLockBackgroundStep",
+        "ManagedContentVariantSetReadyBackgroundStep",
+        "MuleSoftStep",
+        "RecommendationMapCollectionProcessor",
+        "SortCollectionProcessor",
+        "WaitAttribute",
+        "WaitDate",
+        "WaitDuration",
+        "WaitUntilEvent",
+      ]
+    }
+  }
+  string label {
+  }
+  number locationX {
+  }
+  number locationY {
+  }
+  salesforce.FlowConnector connector {
+  }
+  salesforce.FlowStageStepExitActionInputParameter exitActionInputParameters {
+  }
+  string exitActionName {
+  }
+  salesforce.FlowStageStepExitActionOutputParameter exitActionOutputParameters {
+  }
+  string exitActionType {
+  }
+  string exitConditionLogic {
+  }
+  salesforce.FlowCondition exitConditions {
+  }
+  salesforce.FlowConnector faultConnector {
+  }
+  salesforce.FlowStageStep stageSteps {
+  }
+  metadataType = "FlowOrchestratedStage"
+  _important_values = [
+    {
+      value = "label"
+      highlighted = true
+      indexed = false
+    },
+    {
+      value = "name"
+      highlighted = true
+      indexed = false
+    },
+    {
+      value = "description"
+      highlighted = true
+      indexed = false
+    },
+  ]
+}

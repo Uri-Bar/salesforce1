@@ -1,0 +1,45 @@
+type salesforce.DataPackageKitObject {
+  annotations {
+    serviceid metadataType {
+    }
+    boolean hasMetaFile {
+    }
+    string folderType {
+    }
+    string folderContentType {
+    }
+    string suffix {
+    }
+    string dirName {
+    }
+  }
+  serviceid fullName {
+  }
+  string masterLabel {
+  }
+  string parentDataPackageKitDefinitionName {
+  }
+  string referenceObjectName {
+  }
+  string referenceObjectType {
+  }
+  string internalId {
+    _hidden_value = true
+    localOnly = true
+  }
+  suffix = "DataPackageKitObject"
+  dirName = "DataPackageKitObjects"
+  metadataType = "DataPackageKitObject"
+  _important_values = [
+    {
+      value = "fullName"
+      highlighted = true
+      indexed = false
+    },
+    {
+      value = "masterLabel"
+      highlighted = true
+      indexed = false
+    },
+  ]
+}

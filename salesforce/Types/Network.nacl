@@ -1,0 +1,227 @@
+type salesforce.Network {
+  annotations {
+    serviceid metadataType {
+    }
+    boolean hasMetaFile {
+    }
+    string folderType {
+    }
+    string folderContentType {
+    }
+    string suffix {
+    }
+    string dirName {
+    }
+  }
+  boolean allowInternalUserLogin {
+  }
+  boolean allowMembersToFlag {
+  }
+  string allowedExtensions {
+  }
+  string caseCommentEmailTemplate {
+    foreignKeyDomain = [
+      salesforce.EmailTemplate,
+    ]
+  }
+  string changePasswordTemplate {
+  }
+  string chgEmailVerNewTemplate {
+  }
+  string chgEmailVerOldTemplate {
+  }
+  salesforce.CommunityRoles communityRoles {
+  }
+  string description {
+  }
+  string deviceActEmailTemplate {
+    foreignKeyDomain = [
+      salesforce.EmailTemplate,
+    ]
+  }
+  boolean disableReputationRecordConversations {
+  }
+  string emailFooterLogo {
+    foreignKeyDomain = [
+      "Document",
+    ]
+  }
+  string emailFooterText {
+  }
+  string emailSenderAddress {
+  }
+  string emailSenderName {
+  }
+  boolean embeddedLoginEnabled {
+  }
+  boolean enableApexCDNCaching {
+  }
+  boolean enableCustomVFErrorPageOverrides {
+  }
+  boolean enableDirectMessages {
+  }
+  boolean enableExpFriendlyUrlsAsDefault {
+  }
+  boolean enableExperienceBundleBasedSnaOverrideEnabled {
+  }
+  boolean enableGuestChatter {
+  }
+  boolean enableGuestFileAccess {
+  }
+  boolean enableGuestMemberVisibility {
+  }
+  boolean enableImageOptimizationCDN {
+  }
+  boolean enableInvitation {
+  }
+  boolean enableKnowledgeable {
+  }
+  boolean enableLWRExperienceConnectedApp {
+  }
+  boolean enableMemberVisibility {
+  }
+  boolean enableNicknameDisplay {
+  }
+  boolean enablePrivateMessages {
+  }
+  boolean enableReputation {
+  }
+  boolean enableShowAllNetworkSettings {
+  }
+  boolean enableSiteAsContainer {
+  }
+  boolean enableTalkingAboutStats {
+  }
+  boolean enableTopicAssignmentRules {
+  }
+  boolean enableTopicSuggestions {
+  }
+  boolean enableUpDownVote {
+  }
+  string feedChannel {
+    foreignKeyDomain = [
+      "FeedChannel",
+    ]
+  }
+  string forgotPasswordTemplate {
+  }
+  serviceid fullName {
+  }
+  boolean gatherCustomerSentimentData {
+  }
+  string headlessForgotPasswordTemplate {
+    foreignKeyDomain = [
+      salesforce.EmailTemplate,
+    ]
+  }
+  string headlessRegistrationTemplate {
+    foreignKeyDomain = [
+      salesforce.EmailTemplate,
+    ]
+  }
+  string lockoutTemplate {
+  }
+  string logoutUrl {
+  }
+  number maxFileSizeKb {
+  }
+  salesforce.NavigationLinkSet navigationLinkSet {
+  }
+  salesforce.NetworkAuthApiSettings networkAuthApiSettings {
+  }
+  salesforce.NetworkMemberGroup networkMemberGroups {
+  }
+  salesforce.NetworkPageOverride networkPageOverrides {
+  }
+  string newSenderAddress {
+  }
+  string picassoSite {
+    foreignKeyDomain = [
+      salesforce.CustomSite,
+    ]
+  }
+  string pwdlessRegEmailTemplate {
+    foreignKeyDomain = [
+      salesforce.EmailTemplate,
+    ]
+  }
+  salesforce.RecommendationAudience recommendationAudience {
+  }
+  salesforce.RecommendationDefinition recommendationDefinition {
+  }
+  salesforce.ReputationLevelDefinitions reputationLevels {
+  }
+  salesforce.ReputationPointsRules reputationPointsRules {
+  }
+  string selfRegMicroBatchSubErrorEmailTemplate {
+    foreignKeyDomain = [
+      salesforce.EmailTemplate,
+    ]
+  }
+  string selfRegProfile {
+    foreignKeyDomain = [
+      "Profile",
+    ]
+  }
+  boolean selfRegistration {
+  }
+  boolean sendWelcomeEmail {
+  }
+  string site {
+    foreignKeyDomain = [
+      salesforce.CustomSite,
+    ]
+  }
+  string siteArchiveStatus {
+    _restriction = {
+      enforce_value = false
+      values = [
+        "Archived",
+        "NotArchived",
+        "TemporarilyArchived",
+      ]
+    }
+  }
+  string status {
+    _restriction = {
+      enforce_value = false
+      values = [
+        "DownForMaintenance",
+        "Live",
+        "UnderConstruction",
+      ]
+    }
+  }
+  salesforce.NetworkTabSet tabs {
+  }
+  string urlPathPrefix {
+  }
+  string verificationTemplate {
+  }
+  string welcomeTemplate {
+  }
+  string internalId {
+    _hidden_value = true
+    localOnly = true
+  }
+  suffix = "network"
+  dirName = "networks"
+  metadataType = "Network"
+  _important_values = [
+    {
+      value = "fullName"
+      highlighted = true
+      indexed = false
+    },
+    {
+      value = "description"
+      highlighted = true
+      indexed = false
+    },
+    {
+      value = "status"
+      highlighted = true
+      indexed = true
+    },
+  ]
+}

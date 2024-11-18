@@ -1,0 +1,123 @@
+type salesforce.MobileSecurityPolicy {
+  annotations {
+    serviceid metadataType {
+    }
+    boolean hasMetaFile {
+    }
+    string folderType {
+    }
+    string folderContentType {
+    }
+    string suffix {
+    }
+    string dirName {
+    }
+  }
+  string effectiveDate {
+  }
+  serviceid fullName {
+  }
+  boolean isEnabled {
+  }
+  boolean isProtected {
+  }
+  string masterLabel {
+  }
+  string mobilePlatform {
+    _restriction = {
+      enforce_value = false
+      values = [
+        "Android",
+        "iOS",
+      ]
+    }
+  }
+  string mobileSecurityAssignment {
+    foreignKeyDomain = [
+      salesforce.MobileSecurityAssignment,
+    ]
+  }
+  string ruleValue {
+  }
+  string ruleValueType {
+    _restriction = {
+      enforce_value = false
+      values = [
+        "Boolean",
+        "Text",
+        "TextList",
+      ]
+    }
+  }
+  string severityLevel {
+    _restriction = {
+      enforce_value = false
+      values = [
+        "Critical",
+        "Error",
+        "Info",
+        "Warn",
+      ]
+    }
+  }
+  string type {
+    _restriction = {
+      enforce_value = false
+      values = [
+        "AllowedDeviceList",
+        "Block3dTouch",
+        "BlockCalendar",
+        "BlockCamera",
+        "BlockContacts",
+        "BlockCustomKeyboard",
+        "BlockFileBackup",
+        "BlockMicrophone",
+        "BlockOsSharing",
+        "BlockedDeviceList",
+        "BrowserUriScheme",
+        "CheckBiometric",
+        "DevicePasscode",
+        "DisableUrlCaching",
+        "JailbrokenDevice",
+        "LogCertPin",
+        "LogEmail",
+        "LogPhonecall",
+        "LogPolicyResult",
+        "LogScreenshot",
+        "LogTextmessage",
+        "LogoutAfterRestart",
+        "LogoutOnBiometricChange",
+        "MalwareDetection",
+        "ManInMiddle",
+        "MaxOffline",
+        "MaximumAppVersion",
+        "MaximumOsVersion",
+        "MinimumAppVersion",
+        "MinimumOsVersion",
+        "MinimumSecurityPatchVersion",
+        "MininumAppVersion",
+        "PhonecallUriScheme",
+        "Screenshot",
+      ]
+    }
+  }
+  string internalId {
+    _hidden_value = true
+    localOnly = true
+  }
+  suffix = "mobileSecurityPolicy"
+  dirName = "mobileSecurityPolicies"
+  metadataType = "MobileSecurityPolicy"
+  _important_values = [
+    {
+      value = "fullName"
+      highlighted = true
+      indexed = false
+    },
+    {
+      value = "masterLabel"
+      highlighted = true
+      indexed = false
+    },
+  ]
+}

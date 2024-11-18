@@ -1,0 +1,36 @@
+type salesforce.ScheduledRecommendationDetail {
+  annotations {
+    serviceid metadataType {
+    }
+    boolean hasMetaFile {
+    }
+    string folderType {
+    }
+    string folderContentType {
+    }
+    string suffix {
+    }
+    string dirName {
+    }
+  }
+  string channel {
+    _restriction = {
+      enforce_value = false
+      values = [
+        "CustomChannel1",
+        "CustomChannel2",
+        "CustomChannel3",
+        "CustomChannel4",
+        "CustomChannel5",
+        "DefaultChannel",
+      ]
+    }
+  }
+  boolean enabled {
+  }
+  number rank {
+  }
+  string recommendationAudience {
+  }
+  metadataType = "ScheduledRecommendationDetail"
+}

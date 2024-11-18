@@ -1,0 +1,55 @@
+type salesforce.BotBlock {
+  annotations {
+    serviceid metadataType {
+    }
+    boolean hasMetaFile {
+    }
+    string folderType {
+    }
+    string folderContentType {
+    }
+    string suffix {
+    }
+    string dirName {
+    }
+  }
+  serviceid fullName {
+  }
+  salesforce.BotBlockVersion botBlockVersions {
+  }
+  string description {
+  }
+  string icon {
+    foreignKeyDomain = [
+      "ContentAsset",
+    ]
+  }
+  string masterLabel {
+  }
+  boolean richContentEnabled {
+  }
+  string internalId {
+    _hidden_value = true
+    localOnly = true
+  }
+  suffix = "botBlock"
+  dirName = "botBlocks"
+  metadataType = "BotBlock"
+  _important_values = [
+    {
+      value = "fullName"
+      highlighted = true
+      indexed = false
+    },
+    {
+      value = "masterLabel"
+      highlighted = true
+      indexed = false
+    },
+    {
+      value = "description"
+      highlighted = true
+      indexed = false
+    },
+  ]
+}

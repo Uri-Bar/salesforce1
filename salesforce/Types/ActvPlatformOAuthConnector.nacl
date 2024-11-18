@@ -1,0 +1,55 @@
+type salesforce.ActvPlatformOAuthConnector {
+  annotations {
+    serviceid metadataType {
+    }
+    boolean hasMetaFile {
+    }
+    string folderType {
+    }
+    string folderContentType {
+    }
+    string suffix {
+    }
+    string dirName {
+    }
+  }
+  serviceid fullName {
+  }
+  string masterLabel {
+  }
+  string oauthProvider {
+    _restriction = {
+      enforce_value = false
+      values = [
+        "AMAZON",
+        "DV360",
+        "FACEBOOK",
+        "GOOGLE",
+        "LINKEDIN",
+        "META_CAPI",
+        "SNAPCHAT",
+      ]
+    }
+  }
+  string oauthUrl {
+  }
+  string internalId {
+    _hidden_value = true
+    localOnly = true
+  }
+  suffix = "actvPlatformOAuthConnector"
+  dirName = "actvPlatformOAuthConnectors"
+  metadataType = "ActvPlatformOAuthConnector"
+  _important_values = [
+    {
+      value = "fullName"
+      highlighted = true
+      indexed = false
+    },
+    {
+      value = "masterLabel"
+      highlighted = true
+      indexed = false
+    },
+  ]
+}

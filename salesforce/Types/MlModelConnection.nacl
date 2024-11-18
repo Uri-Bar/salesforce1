@@ -1,0 +1,78 @@
+type salesforce.MlModelConnection {
+  annotations {
+    serviceid metadataType {
+    }
+    boolean hasMetaFile {
+    }
+    string folderType {
+    }
+    string folderContentType {
+    }
+    string suffix {
+    }
+    string dirName {
+    }
+  }
+  serviceid fullName {
+  }
+  string deployStatus {
+    _restriction = {
+      enforce_value = false
+      values = [
+        "ACTIVATED",
+        "DEACTIVATED",
+        "DRAFT",
+        "FAILED",
+        "REGISTERED",
+      ]
+    }
+  }
+  salesforce.MlModelEndpoint endpoints {
+  }
+  string externalSystemRegistry {
+  }
+  string foundationalModelName {
+  }
+  string label {
+  }
+  salesforce.MlModelOutput outputFeatures {
+  }
+  string registeredModelApiName {
+  }
+  string type {
+    _restriction = {
+      enforce_value = false
+      values = [
+        "ANTHROPIC",
+        "AZURE_OPEN_AI",
+        "BEDROCK",
+        "DATABRICKS",
+        "GENERIC",
+        "OPEN_AI",
+        "OPEN_CONNECTOR",
+        "SAGEMAKER_DEPLOYED",
+        "SALESFORCE",
+        "VERTEX_AI",
+      ]
+    }
+  }
+  string internalId {
+    _hidden_value = true
+    localOnly = true
+  }
+  suffix = "mlModelConnection"
+  dirName = "mlModelConnections"
+  metadataType = "MlModelConnection"
+  _important_values = [
+    {
+      value = "fullName"
+      highlighted = true
+      indexed = false
+    },
+    {
+      value = "label"
+      highlighted = true
+      indexed = false
+    },
+  ]
+}
