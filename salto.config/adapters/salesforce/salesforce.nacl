@@ -2,7 +2,7 @@ salesforce {
   fetch = {
     optionalFeatures = {
       hideTypesFolder = false
-      genAiReferences = false
+      genAiReferences = true
     }
     metadata = {
       include = [

@@ -5,7 +5,7 @@ salesforce.GenAiPlanner Coral_Cloud_Experience_Agent {
     genAiFunctionName = "EmployeeCopilot__AnswerQuestionsWithKnowledge"
   }
   genAiPlugins = {
-    genAiPluginName = "Experience_Management"
+    genAiPluginName = salesforce.GenAiPlugin.instance.Experience_Management
   }
   masterLabel = "Coral Cloud Experience Agent"
   plannerType = "AiCopilot__ReAct"

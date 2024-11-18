@@ -2,7 +2,7 @@ salesforce.GenAiPlanner EmployeeCopilotPlanner {
   fullName = "EmployeeCopilotPlanner"
   description = "Planner for ReAct-based Employee copilot."
   genAiPlugins = {
-    genAiPluginName = "MigrationDefaultTopic"
+    genAiPluginName = salesforce.GenAiPlugin.instance.MigrationDefaultTopic
   }
   masterLabel = "EmployeeCopilotPlanner"
   plannerType = "AiCopilot__ReAct"

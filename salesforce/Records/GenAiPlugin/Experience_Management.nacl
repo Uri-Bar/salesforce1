@@ -4,19 +4,19 @@ salesforce.GenAiPlugin Experience_Management {
   developerName = "Experience_Management"
   genAiFunctions = [
     {
-      functionName = "Get_Experience_Details"
+      functionName = salesforce.GenAiFunction.instance.Get_Experience_Details
     },
     {
-      functionName = "Generate_Personalized_Schedule"
+      functionName = salesforce.GenAiFunction.instance.Generate_Personalized_Schedule
     },
     {
-      functionName = "Get_Customer_Details"
+      functionName = salesforce.GenAiFunction.instance.Get_Customer_Details
     },
     {
-      functionName = "Get_Sessions"
+      functionName = salesforce.GenAiFunction.instance.Get_Sessions
     },
     {
-      functionName = "Create_Experience_Session_Booking"
+      functionName = salesforce.GenAiFunction.instance.Create_Experience_Session_Booking
     },
   ]
   genAiPluginInstructions = [
