@@ -1,0 +1,6 @@
+salesforce.Group uris {
+  fullName = "uris"
+  doesIncludeBosses = true
+  name = "uris"
+  _alias = "uris"
+}
