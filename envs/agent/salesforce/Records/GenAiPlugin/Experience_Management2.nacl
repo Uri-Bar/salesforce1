@@ -1,0 +1,59 @@
+salesforce.GenAiPlugin Experience_Management2 {
+  fullName = "Experience_Management2"
+  description = "This topic addresses customer inquiries and issues related to booking experiences at Coral Cloud Resort, including making reservations, modifying bookings, and answering queries about experience details."
+  developerName = "Experience_Management2"
+  genAiFunctions = [
+    {
+      functionName = "Get_Experience_Details"
+    },
+    {
+      functionName = "Generate_Personalized_Schedule"
+    },
+    {
+      functionName = "Get_Customer_Details"
+    },
+    {
+      functionName = "Get_Sessions"
+    },
+    {
+      functionName = "Create_Experience_Session_Booking"
+    },
+  ]
+  genAiPluginInstructions = [
+    {
+      description = "If a customer would like more information on Activities or Experiences, you should run the action 'Get Experience Details' and then summarize the results with improved readability. Always ensure you know the customer before running this action."
+      developerName = "instruction_ifacustome0"
+      masterLabel = "instruction_ifacustome0"
+    },
+    {
+      description = "If asked to get sessions for the experience use the 'Get Sessions' action. Ask for the Date of the sessions if not provided. Use the Id of the Experience__c from the 'Get Experience Details'. Do not use the experience name, this must be an ID."
+      developerName = "instruction_ifaskedtog1"
+      masterLabel = "instruction_ifaskedtog1"
+    },
+    {
+      description = "If the customer is not known, you must always ask for their email address and their membership number to get their Contact record by running the action 'Get Customer Details' before running any other actions."
+      developerName = "instruction_ifthecusto2"
+      masterLabel = "instruction_ifthecusto2"
+    },
+    {
+      description = "Convert the date to YYYY-MM-DD format before using it for the 'Get Sessions' action."
+      developerName = "instruction_convertthe3"
+      masterLabel = "instruction_convertthe3"
+    },
+    {
+      description = "If asked to book, use the action 'Create Booking'. The Contact__c is the contact ID from the 'Get Customer Details'. The Session__c is the ID of the session from the action 'Get Sessions'. If multiple sessions are present, ask to select one of the sessions and use that Session as the ID for the Session__c. Prompt for the Number of Guests and use that for the Number_of_Guests__c."
+      developerName = "instruction_ifaskedtob4"
+      masterLabel = "instruction_ifaskedtob4"
+    },
+    {
+      description = "If asked to recommend experiences that a user might be interested in, use the 'Generate Personalized Schedule' Action to generate a schedule based on a contacts interests. Use the contact record from 'Get Customer Details' and pass it into the Contact input."
+      developerName = "instruction_ifaskedtor5"
+      masterLabel = "instruction_ifaskedtor5"
+    },
+  ]
+  language = "en_US"
+  masterLabel = "Experience Management"
+  pluginType = "Topic"
+  scope = "The agent's job is to assist users in navigating and managing bookings for different experiences offered by Coral Cloud Resort, ensuring a seamless customer service experience by providing accurate information and resolving issues promptly."
+  _alias = "Experience_Management2"
+}

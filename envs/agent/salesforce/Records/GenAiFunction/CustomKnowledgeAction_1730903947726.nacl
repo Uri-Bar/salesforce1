@@ -1,6 +1,6 @@
 salesforce.GenAiFunction CustomKnowledgeAction_1730903947726 {
   fullName = "CustomKnowledgeAction_1730903947726"
-  description = "Answers questions about company policies and procedures, troubleshooting steps, or product information. For example: “What is your return policy?” “How do I fix an issue?” or “What features does a product have?”"
+  description = "aaquestions about company policies and procedures, troubleshooting steps, or product information. For example: \"What is your return policy?\" \"How do I fix an issue?\" or \"What features does a product have?\""
   invocationTarget = "knowledgeSearch"
   invocationTargetType = "standardInvocableAction"
   isConfirmationRequired = false

@@ -1,6 +1,6 @@
 salesforce.GenAiPlugin MigrationDefaultTopic {
   fullName = "MigrationDefaultTopic"
-  description = "Engages and interacts with the user about any request that could be CRM data related.  This could be tasks such as identify and summarize records, answer queries, aggregate data, find and query objects, update records, or drafting and refining emails."
+  description = "aEngages and interacts with the user about any request that could be CRM data related.  This could be tasks such as identify and summarize records, answer queries, aggregate data, find and query objects, update records, or drafting and refining emails."
   developerName = "MigrationDefaultTopic"
   genAiFunctions = [
     {

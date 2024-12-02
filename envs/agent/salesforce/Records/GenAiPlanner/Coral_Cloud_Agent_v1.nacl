@@ -1,6 +1,6 @@
 salesforce.GenAiPlanner Coral_Cloud_Agent_v1 {
   fullName = "Coral_Cloud_Agent_v1"
-  description = "This is the Coral Cloud Agent, our Einstein Service Agent, that helps guests"
+  description = "This is the Coral Cloud Agent, our Einstein Service Agent, that helps guests a"
   masterLabel = "Coral Cloud Agent"
   plannerType = "AiCopilot__ReAct"
   _alias = "Coral_Cloud_Agent_v1"
