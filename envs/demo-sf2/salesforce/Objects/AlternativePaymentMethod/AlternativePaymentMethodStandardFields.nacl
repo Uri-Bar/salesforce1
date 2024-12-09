@@ -15,14 +15,6 @@ type salesforce.AlternativePaymentMethod {
     unique = false
     queryable = true
   }
-  salesforce.Unknown BankAccountHolderType {
-    apiName = "AlternativePaymentMethod.BankAccountHolderType"
-    _hidden_value = true
-  }
-  salesforce.Unknown BankAccountType {
-    apiName = "AlternativePaymentMethod.BankAccountType"
-    _hidden_value = true
-  }
   salesforce.Text BillingFirstName {
     apiName = "AlternativePaymentMethod.BillingFirstName"
     length = 255
@@ -194,10 +186,6 @@ type salesforce.AlternativePaymentMethod {
     updateable = false
     queryable = true
   }
-  salesforce.Unknown StandardEntryClassCode {
-    apiName = "AlternativePaymentMethod.StandardEntryClassCode"
-    _hidden_value = true
-  }
   salesforce.Picklist Status {
     apiName = "AlternativePaymentMethod.Status"
     restricted = true
@@ -275,6 +263,35 @@ type salesforce.AlternativePaymentMethod {
   salesforce.Address PaymentMethodAddress {
     apiName = "AlternativePaymentMethod.PaymentMethodAddress"
     label = "Payment Method Address"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Picklist BankAccountHolderType {
+    apiName = "AlternativePaymentMethod.BankAccountHolderType"
+    restricted = true
+    label = "Account Ownership Type"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Text BankAccountType {
+    apiName = "AlternativePaymentMethod.BankAccountType"
+    length = 25
+    label = "Bank Account Type"
+    createable = false
+    updateable = false
+    unique = false
+    caseSensitive = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Picklist StandardEntryClassCode {
+    apiName = "AlternativePaymentMethod.StandardEntryClassCode"
+    restricted = true
+    label = "Standard Entry Class Code (ACH)"
     createable = false
     updateable = false
     queryable = true

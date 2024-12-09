@@ -20,4 +20,8 @@ salesforce.IndustriesSettings {
   enableTopicTimeSlot = "true"
   rlaEditIfAccHasEdit = "false"
   _alias = "Industries"
+  enableDontSharePartyprofWPortalOrgPref = "false"
+  enablePartyProfileParentSharingOrgPref = "false"
+  enablePartyprofParentMultiSharingOrgPref = "false"
+  partyProfMultiShrPrtnrsOrgPref = "false"
 }

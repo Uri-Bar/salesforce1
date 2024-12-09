@@ -38,4 +38,5 @@ salesforce.LightningExperienceSettings {
   isLEXExtensionLinkGrabberOff = false
   isLEXExtensionOff = false
   _alias = "LightningExperience"
+  enableLightningPreviewPref = "false"
 }

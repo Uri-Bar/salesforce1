@@ -71,14 +71,11 @@ type salesforce.DeliveryEstimationSetup {
   }
   salesforce.Lookup LastSyncedById {
     apiName = "DeliveryEstimationSetup.LastSyncedById"
-    _hidden_value = true
-  }
-  salesforce.Unknown LastSyncedDate {
-    apiName = "DeliveryEstimationSetup.LastSyncedDate"
-    _hidden_value = true
-  }
-  salesforce.Unknown LastSyncedMessage {
-    apiName = "DeliveryEstimationSetup.LastSyncedMessage"
+    relationshipName = "LastSyncedBy"
+    label = "User ID"
+    createable = false
+    updateable = false
+    queryable = true
     _hidden_value = true
   }
   salesforce.Lookup LocationGroupId {
@@ -100,10 +97,6 @@ type salesforce.DeliveryEstimationSetup {
     unique = false
     caseSensitive = false
     queryable = true
-  }
-  salesforce.Unknown SyncStatus {
-    apiName = "DeliveryEstimationSetup.SyncStatus"
-    _hidden_value = true
   }
   serviceid Id {
     apiName = "DeliveryEstimationSetup.Id"
@@ -166,6 +159,33 @@ type salesforce.DeliveryEstimationSetup {
   salesforce.DateTime SystemModstamp {
     apiName = "DeliveryEstimationSetup.SystemModstamp"
     label = "System Modstamp"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.DateTime LastSyncedDate {
+    apiName = "DeliveryEstimationSetup.LastSyncedDate"
+    label = "Last Synced Date"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.LongTextArea LastSyncedMessage {
+    apiName = "DeliveryEstimationSetup.LastSyncedMessage"
+    length = 10000
+    label = "Last Synced Message"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Picklist SyncStatus {
+    apiName = "DeliveryEstimationSetup.SyncStatus"
+    restricted = true
+    _required = true
+    label = "Sync Status"
     createable = false
     updateable = false
     queryable = true

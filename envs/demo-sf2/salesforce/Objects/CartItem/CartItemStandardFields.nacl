@@ -35,10 +35,6 @@ type salesforce.CartItem {
     updateable = false
     queryable = true
   }
-  salesforce.Unknown ChildProductCount {
-    apiName = "CartItem.ChildProductCount"
-    _hidden_value = true
-  }
   salesforce.Summary DistributedAdjustmentAmount {
     apiName = "CartItem.DistributedAdjustmentAmount"
     label = "Distributed Promotions Total"
@@ -131,11 +127,11 @@ type salesforce.CartItem {
   }
   salesforce.Lookup ParentCartItemId {
     apiName = "CartItem.ParentCartItemId"
-    _hidden_value = true
-  }
-  salesforce.Unknown PerUnitWeight {
-    apiName = "CartItem.PerUnitWeight"
-    _hidden_value = true
+    relationshipName = "ParentCartItem"
+    label = "Cart Item ID"
+    createable = true
+    updateable = true
+    queryable = true
   }
   salesforce.Lookup Product2Id {
     apiName = "CartItem.Product2Id"
@@ -144,14 +140,6 @@ type salesforce.CartItem {
     createable = true
     updateable = true
     queryable = true
-  }
-  salesforce.Unknown ProductClass {
-    apiName = "CartItem.ProductClass"
-    _hidden_value = true
-  }
-  salesforce.Unknown ProductValidationKey {
-    apiName = "CartItem.ProductValidationKey"
-    _hidden_value = true
   }
   salesforce.Number Quantity {
     apiName = "CartItem.Quantity"
@@ -181,10 +169,6 @@ type salesforce.CartItem {
     unique = false
     caseSensitive = false
     queryable = true
-  }
-  salesforce.Unknown StockCheckMethod {
-    apiName = "CartItem.StockCheckMethod"
-    _hidden_value = true
   }
   salesforce.Currency TotalAdjustmentAmount {
     apiName = "CartItem.TotalAdjustmentAmount"
@@ -308,10 +292,6 @@ type salesforce.CartItem {
     queryable = true
     _hidden_value = true
   }
-  salesforce.Unknown TotalWeight {
-    apiName = "CartItem.TotalWeight"
-    _hidden_value = true
-  }
   salesforce.Currency UnitAdjustedPrice {
     apiName = "CartItem.UnitAdjustedPrice"
     label = "Unit Adjusted Price"
@@ -350,7 +330,10 @@ type salesforce.CartItem {
   }
   salesforce.Picklist WeightUnit {
     apiName = "CartItem.WeightUnit"
-    _hidden_value = true
+    label = "Weight Unit"
+    createable = true
+    updateable = true
+    queryable = true
   }
   serviceid Id {
     apiName = "CartItem.Id"
@@ -416,5 +399,62 @@ type salesforce.CartItem {
     createable = true
     updateable = true
     queryable = true
+  }
+  salesforce.Number ChildProductCount {
+    apiName = "CartItem.ChildProductCount"
+    label = "Child Product Count"
+    precision = 9
+    createable = true
+    updateable = true
+    scale = 0
+    unique = false
+    queryable = true
+  }
+  salesforce.Number PerUnitWeight {
+    apiName = "CartItem.PerUnitWeight"
+    label = "Weight of single cart item"
+    precision = 18
+    scale = 2
+    createable = true
+    updateable = true
+    unique = false
+    queryable = true
+  }
+  salesforce.Picklist ProductClass {
+    apiName = "CartItem.ProductClass"
+    restricted = true
+    label = "Product Class"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Text ProductValidationKey {
+    apiName = "CartItem.ProductValidationKey"
+    length = 255
+    label = "Product Validation Key hash"
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    queryable = true
+  }
+  salesforce.Picklist StockCheckMethod {
+    apiName = "CartItem.StockCheckMethod"
+    restricted = true
+    label = "Stock Check Method"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Number TotalWeight {
+    apiName = "CartItem.TotalWeight"
+    label = "Total Weight of cart item"
+    precision = 18
+    scale = 2
+    createable = false
+    updateable = false
+    unique = false
+    queryable = true
+    _hidden_value = true
   }
 }

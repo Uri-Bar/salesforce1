@@ -21,4 +21,6 @@ salesforce.ContentSettings {
   skipContentAssetTriggers = false
   skipContentAssetTriggersOnDeploy = true
   _alias = "Content"
+  enableFileIngestToDataCloud = "true"
+  enableLWCFileUpload = "false"
 }

@@ -260,6 +260,14 @@ type salesforce.Site {
     queryable = true
     _hidden_value = true
   }
+  salesforce.Checkbox OptionsIsSiteConsentBannerIntegrationMigrated {
+    apiName = "Site.OptionsIsSiteConsentBannerIntegrationMigrated"
+    label = "isSiteConsentBannerIntegrationMigrated"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
   salesforce.LongTextArea Description {
     apiName = "Site.Description"
     length = 1000

@@ -1,11 +1,10 @@
-salesforce.Role uria {
-  fullName = "uria"
+salesforce.Role amit {
+  fullName = "amit"
   caseAccessLevel = "Edit"
   contactAccessLevel = "Edit"
-  description = "sd"
   mayForecastManagerShare = false
-  name = "uria"
+  name = "amit"
   opportunityAccessLevel = "Edit"
   parentRole = salesforce.Role.instance.CEO
-  _alias = "uria"
+  _alias = "amit"
 }

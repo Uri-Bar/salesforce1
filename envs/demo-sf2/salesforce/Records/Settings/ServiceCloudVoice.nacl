@@ -11,4 +11,6 @@ salesforce.ServiceCloudVoiceSettings {
   enableSCVSupportBannerDisplayed = "false"
   enableServiceCloudVoice = "false"
   _alias = "ServiceCloudVoice"
+  enableSCVOpenVCAsNewTabHVS = "false"
+  enableSCVUnifiedRouting = "false"
 }
