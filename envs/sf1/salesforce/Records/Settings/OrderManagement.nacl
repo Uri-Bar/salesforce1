@@ -3,4 +3,5 @@ salesforce.OrderManagementSettings {
   enableHighScaleOrders = "false"
   enableOrderManagement = false
   _alias = "OrderManagement"
+  deliveryEstimationEnabled = "false"
 }

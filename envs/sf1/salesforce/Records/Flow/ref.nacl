@@ -29,8 +29,6 @@ salesforce.Flow ref {
     {
       name = "check"
       label = "check"
-      locationX = 176
-      locationY = 335
       connector = {
         targetReference = "sec"
       }
@@ -60,8 +58,6 @@ salesforce.Flow ref {
     {
       name = "sec"
       label = "sec"
-      locationX = 176
-      locationY = 45
       inputAssignments = [
         {
           field = salesforce.Case.field.ContactId
@@ -99,8 +95,6 @@ salesforce.Flow ref {
     },
   ]
   start = {
-    locationX = 10
-    locationY = 2
     connector = {
       targetReference = "check"
     }

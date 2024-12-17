@@ -3,8 +3,6 @@ salesforce.Flow flowone {
   actionCalls = {
     name = "aa"
     label = "aa"
-    locationX = 171
-    locationY = 158
     actionName = salesforce.QuickAction.instance.CollaborationGroup_NewGroupMember@v
     actionType = "quickAction"
     flowTransactionModel = "CurrentTransaction"
@@ -45,8 +43,6 @@ salesforce.Flow flowone {
   ]
   processType = "Flow"
   start = {
-    locationX = 22
-    locationY = 126
     connector = {
       targetReference = "aa"
     }

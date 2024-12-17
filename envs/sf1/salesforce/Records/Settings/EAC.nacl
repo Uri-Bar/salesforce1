@@ -10,4 +10,5 @@ salesforce.EACSettings {
   provisionProductivityFeatures = false
   syncInternalEvents = "true"
   _alias = "EAC"
+  s2XSvcAccEmail = "false"
 }

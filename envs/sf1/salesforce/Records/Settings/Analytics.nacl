@@ -69,4 +69,9 @@ salesforce.AnalyticsSettings {
   replaceBlankMeasuresWithNulls = false
   turnOnTimeZones = false
   _alias = "Analytics"
+  enableCrtSetupLightningUiPref = "false"
+  enableDateFieldMinMaxAggPref = "false"
+  enableIncludeDisclaimerMessage = "false"
+  enableReportCdnPref = "true"
+  enableReportingOnSDMPref = "false"
 }

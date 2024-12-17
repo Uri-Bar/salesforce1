@@ -23,4 +23,7 @@ salesforce.MyDomainSettings {
   useStabilizedMyDomainHostnames = true
   useStabilizedSandboxMyDomainHostnames = true
   _alias = "MyDomain"
+  enableCrossDomainPreviewCookies = "true"
+  enableExtendedRedirections = "false"
+  enableLegacyRedirections = "false"
 }

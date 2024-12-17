@@ -1,15 +1,15 @@
 salesforce.EmailTemplate unfiled_public_emailtempuri@zcd {
   attachments = {
     github_copy@b = {
-      content = file("salesforce/Records/EmailTemplate/unfiled$public/emailtempuri/github-copy.txt")
+      content = file("salesforce/Records/EmailTemplate/unfiled$public/emailtempuri/0_github-copy.txt")
       name = "github-copy.txt"
     }
     install = {
-      content = file("salesforce/Records/EmailTemplate/unfiled$public/emailtempuri/install.gif")
+      content = file("salesforce/Records/EmailTemplate/unfiled$public/emailtempuri/1_install.gif")
       name = "install.gif"
     }
     test1 = {
-      content = file("salesforce/Records/EmailTemplate/unfiled$public/emailtempuri/test1.xml")
+      content = file("salesforce/Records/EmailTemplate/unfiled$public/emailtempuri/2_test1.xml")
       name = "test1.xml"
     }
   }

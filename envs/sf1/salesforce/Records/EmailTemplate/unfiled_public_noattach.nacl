@@ -1,7 +1,7 @@
 salesforce.EmailTemplate unfiled_public_noattach@zcd {
   attachments = {
     attach2 = {
-      content = file("salesforce/Records/EmailTemplate/unfiled$public/noattach/attach2.rtf")
+      content = file("salesforce/Records/EmailTemplate/unfiled$public/noattach/0_attach2.rtf")
       name = "attach2.rtf"
     }
   }

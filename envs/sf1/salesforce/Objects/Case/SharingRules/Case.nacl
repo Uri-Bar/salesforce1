@@ -1,13 +1,11 @@
 salesforce.SharingRules Case {
-  sharingCriteriaRules = [
-    {
+  sharingCriteriaRules = {
+    asaa = {
       fullName = "asaa"
       accessLevel = "Read"
       label = "asa"
       sharedTo = {
-        role = [
-          salesforce.Role.instance.SVPSalesMarketing,
-        ]
+        role = salesforce.Role.instance.SVPSalesMarketing
       }
       criteriaItems = {
         field = salesforce.Case.field.IsClosed
@@ -15,15 +13,13 @@ salesforce.SharingRules Case {
         value = "False"
       }
       includeRecordsOwnedByAll = true
-    },
-    {
+    }
+    assaa = {
       fullName = "assaa"
       accessLevel = "Read"
       label = "asaa"
       sharedTo = {
-        role = [
-          salesforce.Role.instance.SVPSalesMarketing,
-        ]
+        role = salesforce.Role.instance.SVPSalesMarketing
       }
       criteriaItems = {
         field = salesforce.Case.field.IsClosed
@@ -31,8 +27,8 @@ salesforce.SharingRules Case {
         value = "False"
       }
       includeRecordsOwnedByAll = true
-    },
-  ]
+    }
+  }
   fullName = "Case"
   _parent = [
     salesforce.Case,

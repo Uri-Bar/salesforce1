@@ -343,10 +343,6 @@ type salesforce.ServiceAppointment {
     caseSensitive = false
     queryable = true
   }
-  salesforce.Unknown Transaction {
-    apiName = "ServiceAppointment.Transaction"
-    _hidden_value = true
-  }
   salesforce.Lookup WorkTypeId {
     apiName = "ServiceAppointment.WorkTypeId"
     relationshipName = "WorkType"
@@ -430,5 +426,15 @@ type salesforce.ServiceAppointment {
     unique = false
     queryable = true
     _hidden_value = true
+  }
+  salesforce.Text Transaction {
+    apiName = "ServiceAppointment.Transaction"
+    length = 255
+    label = "Transaction"
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    queryable = true
   }
 }

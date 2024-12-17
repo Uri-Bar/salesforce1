@@ -25,10 +25,6 @@ salesforce.Flow uriflow {
     },
   ]
   processType = "Flow"
-  start = {
-    locationX = 41
-    locationY = 0
-  }
   status = "InvalidDraft"
   _alias = "uriflow"
 }

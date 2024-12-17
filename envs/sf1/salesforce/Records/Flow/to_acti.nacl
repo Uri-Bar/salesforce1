@@ -28,8 +28,6 @@ salesforce.Flow to_acti {
   screens = {
     name = "UniqueName"
     label = "שג"
-    locationX = 171
-    locationY = 123
     allowBack = true
     allowFinish = true
     allowPause = true
@@ -37,8 +35,6 @@ salesforce.Flow to_acti {
     showHeader = true
   }
   start = {
-    locationX = 51
-    locationY = 22
     connector = {
       targetReference = "UniqueName"
     }

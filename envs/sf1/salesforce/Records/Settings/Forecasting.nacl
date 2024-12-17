@@ -2702,4 +2702,7 @@ salesforce.ForecastingSettings {
     showQuotas = false
   }
   _alias = "Forecasting"
+  forecastingSubmissionSettings = {
+    allowForecastingSubmissions = false
+  }
 }

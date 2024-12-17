@@ -3,8 +3,6 @@ salesforce.Flow flowtwo {
   actionCalls = {
     name = "aa"
     label = "aa"
-    locationX = 123
-    locationY = 158
     actionName = "submit"
     actionType = "submit"
     flowTransactionModel = "CurrentTransaction"
@@ -46,8 +44,6 @@ salesforce.Flow flowtwo {
   ]
   processType = "AutoLaunchedFlow"
   start = {
-    locationX = 52
-    locationY = 14
     connector = {
       targetReference = "aa"
     }

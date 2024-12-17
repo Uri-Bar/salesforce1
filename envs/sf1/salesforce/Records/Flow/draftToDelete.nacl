@@ -5,8 +5,6 @@ salesforce.Flow draftToDelete {
     {
       name = "som"
       label = "som"
-      locationX = 176
-      locationY = 158
       assignmentItems = [
         {
           assignToReference = "$Flow.CurrentStage"
@@ -43,8 +41,6 @@ salesforce.Flow draftToDelete {
   ]
   processType = "Flow"
   start = {
-    locationX = 50
-    locationY = 0
     connector = {
       targetReference = "som"
     }

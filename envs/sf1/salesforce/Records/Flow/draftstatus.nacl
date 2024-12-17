@@ -29,8 +29,6 @@ salesforce.Flow draftstatus {
   screens = {
     name = "sa"
     label = "sa"
-    locationX = 131
-    locationY = 158
     allowBack = true
     allowFinish = true
     allowPause = true
@@ -38,8 +36,6 @@ salesforce.Flow draftstatus {
     showHeader = true
   }
   start = {
-    locationX = 54
-    locationY = 12
     connector = {
       targetReference = "sa"
     }

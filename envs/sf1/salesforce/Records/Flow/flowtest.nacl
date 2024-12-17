@@ -3,8 +3,6 @@ salesforce.Flow flowtest {
   actionCalls = {
     name = "aa"
     label = "aa"
-    locationX = 176
-    locationY = 276
     actionName = "submit"
     actionType = "submit"
     connector = {
@@ -49,8 +47,6 @@ salesforce.Flow flowtest {
   ]
   processType = "AutoLaunchedFlow"
   start = {
-    locationX = 50
-    locationY = 0
     connector = {
       targetReference = "aa"
     }
@@ -74,8 +70,6 @@ salesforce.Flow flowtest {
   subflows = {
     name = "aaa"
     label = "aaa"
-    locationX = 176
-    locationY = 396
     flowName = "omnichannel_chat__QueuesChat"
   }
   _alias = "flowtest"

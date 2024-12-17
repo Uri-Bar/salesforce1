@@ -20,4 +20,5 @@ salesforce.UserInterfaceSettings {
   enableRelatedListHovers = "true"
   enableTabOrganizer = "true"
   _alias = "UserInterface"
+  multiColumnSort = "false"
 }
