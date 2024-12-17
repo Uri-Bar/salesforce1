@@ -1,0 +1,7 @@
+salesforce.SharingRules DeliveryEstimationSetup {
+  fullName = "DeliveryEstimationSetup"
+  _parent = [
+    salesforce.DeliveryEstimationSetup,
+  ]
+  _alias = "DeliveryEstimationSetup"
+}

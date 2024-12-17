@@ -1,0 +1,7 @@
+salesforce.SharingRules UpsertTable__c {
+  fullName = "UpsertTable__c"
+  _parent = [
+    salesforce.UpsertTable__c,
+  ]
+  _alias = "UpsertTable__c"
+}

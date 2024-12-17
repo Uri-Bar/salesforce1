@@ -1,0 +1,7 @@
+salesforce.SharingRules MyTestObject__c {
+  fullName = "MyTestObject__c"
+  _parent = [
+    salesforce.MyTestObject__c,
+  ]
+  _alias = "MyTestObject__c"
+}

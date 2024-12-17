@@ -1,0 +1,10 @@
+salesforce.Role amit {
+  fullName = "amit"
+  caseAccessLevel = "Edit"
+  contactAccessLevel = "Edit"
+  mayForecastManagerShare = false
+  name = "amit"
+  opportunityAccessLevel = "Edit"
+  parentRole = salesforce.Role.instance.CEO
+  _alias = "amit"
+}

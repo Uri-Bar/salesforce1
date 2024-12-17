@@ -1,0 +1,124 @@
+type salesforce.DataMaskCustomValueLibrary {
+  salesforce.Picklist ContentType {
+    apiName = "DataMaskCustomValueLibrary.ContentType"
+    restricted = true
+    _required = true
+    label = "Content Type"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Text Description {
+    apiName = "DataMaskCustomValueLibrary.Description"
+    length = 255
+    label = "Description"
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    queryable = true
+  }
+  salesforce.Checkbox IsActive {
+    apiName = "DataMaskCustomValueLibrary.IsActive"
+    defaultValue = false
+    label = "Active"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Text Name {
+    apiName = "DataMaskCustomValueLibrary.Name"
+    length = 255
+    _required = true
+    label = "Name"
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    queryable = true
+  }
+  salesforce.Picklist Type {
+    apiName = "DataMaskCustomValueLibrary.Type"
+    restricted = true
+    _required = true
+    label = "Type"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  serviceid Id {
+    apiName = "DataMaskCustomValueLibrary.Id"
+    label = "Custom Library Id"
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Lookup OwnerId {
+    apiName = "DataMaskCustomValueLibrary.OwnerId"
+    relationshipName = "Owner"
+    label = "Owner ID"
+    createable = true
+    updateable = true
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Checkbox IsDeleted {
+    apiName = "DataMaskCustomValueLibrary.IsDeleted"
+    defaultValue = false
+    label = "Deleted"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.DateTime CreatedDate {
+    apiName = "DataMaskCustomValueLibrary.CreatedDate"
+    label = "Created Date"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Lookup CreatedById {
+    apiName = "DataMaskCustomValueLibrary.CreatedById"
+    relationshipName = "CreatedBy"
+    label = "Created By ID"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.DateTime LastModifiedDate {
+    apiName = "DataMaskCustomValueLibrary.LastModifiedDate"
+    label = "Last Modified Date"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Lookup LastModifiedById {
+    apiName = "DataMaskCustomValueLibrary.LastModifiedById"
+    relationshipName = "LastModifiedBy"
+    label = "Last Modified By ID"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.DateTime SystemModstamp {
+    apiName = "DataMaskCustomValueLibrary.SystemModstamp"
+    label = "System Modstamp"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.LongTextArea Values {
+    apiName = "DataMaskCustomValueLibrary.Values"
+    length = 131072
+    label = "Values"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+}

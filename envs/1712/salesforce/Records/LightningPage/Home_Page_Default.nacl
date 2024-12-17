@@ -1,0 +1,87 @@
+salesforce.LightningPage Home_Page_Default {
+  flexiPageRegions = [
+    {
+      itemInstances = [
+        {
+          componentInstance = {
+            componentName = "home:heroChart"
+            identifier = "home_heroChart"
+          }
+        },
+      ]
+      mode = "Replace"
+      name = "top"
+      type = "Region"
+    },
+    {
+      itemInstances = [
+        {
+          componentInstance = {
+            componentName = "home:eventContainer"
+            identifier = "home_eventContainer"
+          }
+        },
+        {
+          componentInstance = {
+            componentName = "home:recentRecordContainer"
+            identifier = "home_recentRecordContainer"
+          }
+        },
+        {
+          componentInstance = {
+            componentName = "helloWorld"
+            identifier = "c_helloWorld"
+          }
+        },
+      ]
+      mode = "Replace"
+      name = "bottomLeft"
+      type = "Region"
+    },
+    {
+      itemInstances = [
+        {
+          componentInstance = {
+            componentName = "runtime_sales_activities:todayTaskContainer"
+            identifier = "runtime_sales_activities_todayTaskContainer"
+          }
+        },
+        {
+          componentInstance = {
+            componentName = "home:topDealsContainer"
+            identifier = "home_topDealsContainer"
+          }
+        },
+      ]
+      mode = "Replace"
+      name = "bottomRight"
+      type = "Region"
+    },
+    {
+      itemInstances = [
+        {
+          componentInstance = {
+            componentName = "home:assistant"
+            identifier = "home_assistant"
+          }
+        },
+      ]
+      mode = "Replace"
+      name = "sidebar"
+      type = "Region"
+    },
+  ]
+  masterLabel = "Home Page Default"
+  parentFlexiPage = "home__desktopDefault"
+  template = {
+    name = "home:desktopTemplate"
+  }
+  type = "HomePage"
+  fullName = "Home_Page_Default"
+  _generated_dependencies = [
+    {
+      reference = salesforce.LightningComponentBundle.instance.helloWorld
+    },
+  ]
+  _alias = "Home_Page_Default"
+}

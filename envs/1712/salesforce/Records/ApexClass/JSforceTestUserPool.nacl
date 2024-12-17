@@ -1,0 +1,24 @@
+salesforce.ApexClass JSforceTestUserPool {
+  apiVersion = 34
+  status = "Active"
+  fullName = "JSforceTestUserPool"
+  content = file("salesforce/Records/ApexClass/JSforceTestUserPool.cls")
+  _generated_dependencies = [
+    {
+      reference = salesforce.UserPool__c
+    },
+    {
+      reference = salesforce.UserPool__c.field.CheckedOutAt__c
+    },
+    {
+      reference = salesforce.UserPool__c.field.CheckedOutBy__c
+    },
+    {
+      reference = salesforce.UserPool__c.field.IsPooled__c
+    },
+    {
+      reference = salesforce.UserPool__c.field.LastCheckedOutAt__c
+    },
+  ]
+  _alias = "JSforceTestUserPool"
+}

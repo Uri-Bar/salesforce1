@@ -1,0 +1,10 @@
+salesforce.Role bla {
+  fullName = "bla"
+  caseAccessLevel = "Edit"
+  contactAccessLevel = "Edit"
+  mayForecastManagerShare = false
+  name = "bla"
+  opportunityAccessLevel = "Edit"
+  parentRole = salesforce.Role.instance.uri
+  _alias = "bla"
+}

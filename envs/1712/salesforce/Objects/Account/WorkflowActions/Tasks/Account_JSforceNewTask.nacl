@@ -1,0 +1,14 @@
+salesforce.WorkflowTask Account_JSforceNewTask@v {
+  fullName = "Account.JSforceNewTask"
+  assignedToType = "owner"
+  dueDateOffset = 7
+  notifyAssignee = false
+  priority = "Normal"
+  protected = false
+  status = "Not Started"
+  subject = "JSforce New Task"
+  _parent = [
+    salesforce.Account,
+  ]
+  _alias = "Account.JSforceNewTask"
+}
