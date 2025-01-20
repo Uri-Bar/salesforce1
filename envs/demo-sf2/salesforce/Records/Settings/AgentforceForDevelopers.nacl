@@ -1,5 +1,5 @@
 salesforce.AgentforceForDevelopersSettings {
   fullName = "AgentforceForDevelopers"
-  agentforceForDevelopersOptOut = "false"
+  agentforceForDevelopersOptOut = false
   _alias = "AgentforceForDevelopers"
 }
