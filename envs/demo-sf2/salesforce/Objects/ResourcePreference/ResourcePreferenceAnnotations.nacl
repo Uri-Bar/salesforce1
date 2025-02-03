@@ -58,6 +58,7 @@ type salesforce.ResourcePreference {
   apiName = "ResourcePreference"
   metadataType = "CustomObject"
   label = "Resource Preference"
+  description = ""
   actionOverrides = [
     {
       actionName = "CancelEdit"

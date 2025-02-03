@@ -58,6 +58,7 @@ type salesforce.WebCart {
   apiName = "WebCart"
   metadataType = "CustomObject"
   label = "Cart"
+  description = ""
   actionOverrides = [
     {
       actionName = "CancelEdit"

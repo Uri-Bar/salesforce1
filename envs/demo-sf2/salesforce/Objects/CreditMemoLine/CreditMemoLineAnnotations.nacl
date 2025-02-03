@@ -58,6 +58,7 @@ type salesforce.CreditMemoLine {
   apiName = "CreditMemoLine"
   metadataType = "CustomObject"
   label = "Credit Memo Line"
+  description = ""
   actionOverrides = [
     {
       actionName = "CancelEdit"

@@ -58,6 +58,7 @@ type salesforce.AppointmentCategory {
   apiName = "AppointmentCategory"
   metadataType = "CustomObject"
   label = "Appointment Category"
+  description = ""
   actionOverrides = [
     {
       actionName = "CancelEdit"

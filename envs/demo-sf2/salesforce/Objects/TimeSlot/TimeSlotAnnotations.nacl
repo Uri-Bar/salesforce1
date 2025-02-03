@@ -58,6 +58,7 @@ type salesforce.TimeSlot {
   apiName = "TimeSlot"
   metadataType = "CustomObject"
   label = "Time Slot"
+  description = ""
   actionOverrides = [
     {
       actionName = "CancelEdit"

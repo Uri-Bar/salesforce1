@@ -58,6 +58,7 @@ type salesforce.ShippingCarrier {
   apiName = "ShippingCarrier"
   metadataType = "CustomObject"
   label = "Shipping Carrier"
+  description = ""
   actionOverrides = [
     {
       actionName = "CancelEdit"

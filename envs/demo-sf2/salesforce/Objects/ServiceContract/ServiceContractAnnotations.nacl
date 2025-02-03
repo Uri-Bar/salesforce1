@@ -58,6 +58,7 @@ type salesforce.ServiceContract {
   apiName = "ServiceContract"
   metadataType = "CustomObject"
   label = "Service Contract"
+  description = ""
   actionOverrides = [
     {
       actionName = "CancelEdit"

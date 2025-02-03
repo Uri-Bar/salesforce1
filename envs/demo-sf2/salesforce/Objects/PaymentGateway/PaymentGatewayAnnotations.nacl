@@ -58,6 +58,7 @@ type salesforce.PaymentGateway {
   apiName = "PaymentGateway"
   metadataType = "CustomObject"
   label = "Payment Gateway"
+  description = ""
   actionOverrides = [
     {
       actionName = "CancelEdit"

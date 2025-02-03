@@ -58,6 +58,7 @@ type salesforce.CartCheckoutSession {
   apiName = "CartCheckoutSession"
   metadataType = "CustomObject"
   label = "Cart Checkout Session"
+  description = ""
   enableFeeds = false
   externalSharingModel = "ControlledByParent"
   _alias = "Cart Checkout Session"

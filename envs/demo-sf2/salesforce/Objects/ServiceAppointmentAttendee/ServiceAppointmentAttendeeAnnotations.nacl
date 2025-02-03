@@ -58,6 +58,7 @@ type salesforce.ServiceAppointmentAttendee {
   apiName = "ServiceAppointmentAttendee"
   metadataType = "CustomObject"
   label = "Service Appointment Attendee"
+  description = ""
   actionOverrides = [
     {
       actionName = "CancelEdit"

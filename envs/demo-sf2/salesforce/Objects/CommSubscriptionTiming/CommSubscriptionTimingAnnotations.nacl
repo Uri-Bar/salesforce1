@@ -58,6 +58,7 @@ type salesforce.CommSubscriptionTiming {
   apiName = "CommSubscriptionTiming"
   metadataType = "CustomObject"
   label = "Communication Subscription Timing"
+  description = ""
   actionOverrides = [
     {
       actionName = "CancelEdit"

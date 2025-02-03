@@ -58,6 +58,7 @@ type salesforce.FinanceTransaction {
   apiName = "FinanceTransaction"
   metadataType = "CustomObject"
   label = "Finance Transaction"
+  description = ""
   actionOverrides = [
     {
       actionName = "CancelEdit"

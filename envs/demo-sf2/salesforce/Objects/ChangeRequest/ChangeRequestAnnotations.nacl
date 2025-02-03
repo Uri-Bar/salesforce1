@@ -58,6 +58,7 @@ type salesforce.ChangeRequest {
   apiName = "ChangeRequest"
   metadataType = "CustomObject"
   label = "Change Request"
+  description = ""
   actionOverrides = [
     {
       actionName = "CancelEdit"

@@ -58,6 +58,7 @@ type salesforce.EntitlementContact {
   apiName = "EntitlementContact"
   metadataType = "CustomObject"
   label = "Entitlement Contact"
+  description = ""
   actionOverrides = [
     {
       actionName = "Add"

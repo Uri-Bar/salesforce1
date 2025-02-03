@@ -58,6 +58,7 @@ type salesforce.InventoryItemReservation {
   apiName = "InventoryItemReservation"
   metadataType = "CustomObject"
   label = "Inventory Item Reservation"
+  description = ""
   actionOverrides = [
     {
       actionName = "CancelEdit"

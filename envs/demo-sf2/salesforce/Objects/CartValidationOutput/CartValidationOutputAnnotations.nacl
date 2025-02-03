@@ -58,6 +58,7 @@ type salesforce.CartValidationOutput {
   apiName = "CartValidationOutput"
   metadataType = "CustomObject"
   label = "Cart Validation Output"
+  description = ""
   enableFeeds = false
   externalSharingModel = "ControlledByParent"
   _alias = "Cart Validation Output"

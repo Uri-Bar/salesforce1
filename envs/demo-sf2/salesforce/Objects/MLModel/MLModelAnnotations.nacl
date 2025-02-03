@@ -58,6 +58,7 @@ type salesforce.MLModel {
   apiName = "MLModel"
   metadataType = "CustomObject"
   label = "ML Model"
+  description = ""
   enableFeeds = false
   externalSharingModel = "ReadWrite"
   _alias = "ML Model"

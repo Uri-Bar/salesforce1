@@ -58,6 +58,7 @@ type salesforce.CaseRelatedIssue {
   apiName = "CaseRelatedIssue"
   metadataType = "CustomObject"
   label = "Case Related Issue"
+  description = ""
   actionOverrides = [
     {
       actionName = "CancelEdit"

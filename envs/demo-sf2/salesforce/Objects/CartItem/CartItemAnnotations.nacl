@@ -58,6 +58,7 @@ type salesforce.CartItem {
   apiName = "CartItem"
   metadataType = "CustomObject"
   label = "Cart Item"
+  description = ""
   actionOverrides = [
     {
       actionName = "CancelEdit"

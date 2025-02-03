@@ -94,6 +94,7 @@ type salesforce.platformEvent1__e {
   apiName = "platformEvent1__e"
   metadataType = "CustomObject"
   label = "platformEvent1"
+  description = ""
   pluralLabel = "plat1"
   deploymentStatus = "Deployed"
   _alias = "platformEvent1"

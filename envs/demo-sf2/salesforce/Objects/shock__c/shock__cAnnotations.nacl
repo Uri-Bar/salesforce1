@@ -94,6 +94,7 @@ type salesforce.shock__c {
   apiName = "shock__c"
   metadataType = "CustomObject"
   label = "shock"
+  description = ""
   pluralLabel = "shock"
   actionOverrides = [
     {

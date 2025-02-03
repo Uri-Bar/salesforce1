@@ -58,6 +58,7 @@ type salesforce.ShippingRateGroup {
   apiName = "ShippingRateGroup"
   metadataType = "CustomObject"
   label = "Shipping Rate Group"
+  description = ""
   enableFeeds = false
   externalSharingModel = "ControlledByParent"
   _alias = "Shipping Rate Group"

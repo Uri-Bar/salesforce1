@@ -58,6 +58,7 @@ type salesforce.BuyerGroup {
   apiName = "BuyerGroup"
   metadataType = "CustomObject"
   label = "Buyer Group"
+  description = ""
   actionOverrides = [
     {
       actionName = "CancelEdit"

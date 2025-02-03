@@ -58,6 +58,7 @@ type salesforce.DeliveryEstimationSetup {
   apiName = "DeliveryEstimationSetup"
   metadataType = "CustomObject"
   label = "Delivery Estimation Setup"
+  description = ""
   actionOverrides = [
     {
       actionName = "CancelEdit"

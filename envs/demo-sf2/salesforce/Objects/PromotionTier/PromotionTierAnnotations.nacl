@@ -58,6 +58,7 @@ type salesforce.PromotionTier {
   apiName = "PromotionTier"
   metadataType = "CustomObject"
   label = "Promotion Tier"
+  description = ""
   actionOverrides = [
     {
       actionName = "CancelEdit"

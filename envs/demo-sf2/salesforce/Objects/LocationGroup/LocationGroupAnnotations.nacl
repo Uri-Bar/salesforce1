@@ -58,6 +58,7 @@ type salesforce.LocationGroup {
   apiName = "LocationGroup"
   metadataType = "CustomObject"
   label = "Location Group"
+  description = ""
   actionOverrides = [
     {
       actionName = "CancelEdit"

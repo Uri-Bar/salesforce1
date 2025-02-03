@@ -58,6 +58,7 @@ type salesforce.Location {
   apiName = "Location"
   metadataType = "CustomObject"
   label = "Location"
+  description = ""
   actionOverrides = [
     {
       actionName = "CancelEdit"

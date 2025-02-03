@@ -58,6 +58,7 @@ type salesforce.WebCartAdjustmentGroup {
   apiName = "WebCartAdjustmentGroup"
   metadataType = "CustomObject"
   label = "Cart Adjustment Group"
+  description = ""
   compactLayoutAssignment = "SYSTEM"
   enableFeeds = false
   externalSharingModel = "ControlledByParent"

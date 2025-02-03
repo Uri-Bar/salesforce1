@@ -58,6 +58,7 @@ type salesforce.Entitlement {
   apiName = "Entitlement"
   metadataType = "CustomObject"
   label = "Entitlement"
+  description = ""
   actionOverrides = [
     {
       actionName = "CancelEdit"

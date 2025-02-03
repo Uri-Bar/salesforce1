@@ -58,6 +58,7 @@ type salesforce.ShippingRateArea {
   apiName = "ShippingRateArea"
   metadataType = "CustomObject"
   label = "Shipping Rate Area"
+  description = ""
   enableFeeds = false
   externalSharingModel = "ControlledByParent"
   _alias = "Shipping Rate Area"

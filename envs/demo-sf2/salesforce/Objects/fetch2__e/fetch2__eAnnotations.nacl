@@ -94,6 +94,7 @@ type salesforce.fetch2__e {
   apiName = "fetch2__e"
   metadataType = "CustomObject"
   label = "fetch2"
+  description = ""
   pluralLabel = "f"
   deploymentStatus = "Deployed"
   _alias = "fetch2"

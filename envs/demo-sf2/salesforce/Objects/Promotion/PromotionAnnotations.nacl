@@ -58,6 +58,7 @@ type salesforce.Promotion {
   apiName = "Promotion"
   metadataType = "CustomObject"
   label = "Promotion"
+  description = ""
   actionOverrides = [
     {
       actionName = "CancelEdit"

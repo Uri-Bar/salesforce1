@@ -58,6 +58,7 @@ type salesforce.AlternativePaymentMethod {
   apiName = "AlternativePaymentMethod"
   metadataType = "CustomObject"
   label = "Alternative Payment Method"
+  description = ""
   actionOverrides = [
     {
       actionName = "CancelEdit"

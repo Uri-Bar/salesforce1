@@ -58,6 +58,7 @@ type salesforce.ShiftEngagementChannel {
   apiName = "ShiftEngagementChannel"
   metadataType = "CustomObject"
   label = "Shift Engagement Channel"
+  description = ""
   actionOverrides = [
     {
       actionName = "CancelEdit"

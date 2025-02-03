@@ -58,6 +58,7 @@ type salesforce.CreditMemo {
   apiName = "CreditMemo"
   metadataType = "CustomObject"
   label = "Credit Memo"
+  description = ""
   actionOverrides = [
     {
       actionName = "CancelEdit"

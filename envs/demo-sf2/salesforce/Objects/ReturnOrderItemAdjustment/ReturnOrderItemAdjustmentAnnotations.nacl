@@ -58,6 +58,7 @@ type salesforce.ReturnOrderItemAdjustment {
   apiName = "ReturnOrderItemAdjustment"
   metadataType = "CustomObject"
   label = "Return Order Item Adjustment"
+  description = ""
   actionOverrides = [
     {
       actionName = "CancelEdit"

@@ -58,6 +58,7 @@ type salesforce.Problem {
   apiName = "Problem"
   metadataType = "CustomObject"
   label = "Problem"
+  description = ""
   actionOverrides = [
     {
       actionName = "CancelEdit"

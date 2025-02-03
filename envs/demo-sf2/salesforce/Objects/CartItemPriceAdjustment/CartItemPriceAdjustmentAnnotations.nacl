@@ -58,6 +58,7 @@ type salesforce.CartItemPriceAdjustment {
   apiName = "CartItemPriceAdjustment"
   metadataType = "CustomObject"
   label = "Cart Item Price Adjustment"
+  description = ""
   compactLayoutAssignment = "SYSTEM"
   enableFeeds = false
   externalSharingModel = "ControlledByParent"

@@ -58,6 +58,7 @@ type salesforce.PromotionSegmentBuyerGroup {
   apiName = "PromotionSegmentBuyerGroup"
   metadataType = "CustomObject"
   label = "Promotion Segment Buyer Group"
+  description = ""
   actionOverrides = [
     {
       actionName = "CancelEdit"
