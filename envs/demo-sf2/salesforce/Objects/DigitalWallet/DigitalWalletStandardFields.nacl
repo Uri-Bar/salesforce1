@@ -15,6 +15,10 @@ type salesforce.DigitalWallet {
     unique = false
     queryable = true
   }
+  salesforce.Unknown BillingName {
+    apiName = "DigitalWallet.BillingName"
+    _hidden_value = true
+  }
   salesforce.LongTextArea Comments {
     apiName = "DigitalWallet.Comments"
     length = 1000

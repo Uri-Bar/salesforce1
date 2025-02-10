@@ -17,7 +17,7 @@ salesforce.Layout CartValidationOutput_Cart_Validation_Output_Layout@bsss {
               field = salesforce.CartValidationOutput.field.RelatedEntityId
             },
             {
-              behavior = "Required"
+              behavior = "Edit"
               field = salesforce.CartValidationOutput.field.BackgroundOperationId
             },
             {

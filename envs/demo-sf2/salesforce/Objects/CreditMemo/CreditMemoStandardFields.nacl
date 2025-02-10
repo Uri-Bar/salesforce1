@@ -26,6 +26,18 @@ type salesforce.CreditMemo {
     updateable = true
     queryable = true
   }
+  salesforce.Unknown CorpCrcyCnvTotAmtWithTax {
+    apiName = "CreditMemo.CorpCrcyCnvTotAmtWithTax"
+    _hidden_value = true
+  }
+  salesforce.Unknown CorporateCurrencyCvsnDate {
+    apiName = "CreditMemo.CorporateCurrencyCvsnDate"
+    _hidden_value = true
+  }
+  salesforce.Unknown CorporateCurrencyCvsnRate {
+    apiName = "CreditMemo.CorporateCurrencyCvsnRate"
+    _hidden_value = true
+  }
   salesforce.Picklist CreationMode {
     apiName = "CreditMemo.CreationMode"
     restricted = true

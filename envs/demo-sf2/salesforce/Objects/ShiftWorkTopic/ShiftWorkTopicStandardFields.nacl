@@ -13,7 +13,7 @@ type salesforce.ShiftWorkTopic {
   }
   salesforce.Number MaxAppointments {
     apiName = "ShiftWorkTopic.MaxAppointments"
-    label = "Maximum Concurrent Appointment"
+    label = "Maximum Concurrent Appointments"
     precision = 9
     createable = true
     updateable = true

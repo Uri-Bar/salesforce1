@@ -57,6 +57,22 @@ type salesforce.InvoiceLine {
     queryable = true
     _hidden_value = true
   }
+  salesforce.Unknown CorpCurrencyCnvChargeAmt {
+    apiName = "InvoiceLine.CorpCurrencyCnvChargeAmt"
+    _hidden_value = true
+  }
+  salesforce.Unknown CorpCurrencyCnvTotalTaxAmt {
+    apiName = "InvoiceLine.CorpCurrencyCnvTotalTaxAmt"
+    _hidden_value = true
+  }
+  salesforce.Unknown CorporateCurrencyCvsnDate {
+    apiName = "InvoiceLine.CorporateCurrencyCvsnDate"
+    _hidden_value = true
+  }
+  salesforce.Unknown CorporateCurrencyCvsnRate {
+    apiName = "InvoiceLine.CorporateCurrencyCvsnRate"
+    _hidden_value = true
+  }
   salesforce.Text Description {
     apiName = "InvoiceLine.Description"
     length = 255

@@ -193,13 +193,17 @@ type salesforce.Incident {
   searchLayouts = {
     customTabListAdditionalFields = [
       "Subject",
-      "Status",
       "Priority",
+      "Status",
+      "Category",
+      "SubCategory",
     ]
     searchResultsAdditionalFields = [
       "Subject",
-      "Status",
       "Priority",
+      "Status",
+      "Category",
+      "SubCategory",
     ]
   }
   _alias = "Incident"

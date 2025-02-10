@@ -191,7 +191,7 @@ type salesforce.CommSubscriptionConsent {
   salesforce.Text ContactPointValue {
     apiName = "CommSubscriptionConsent.ContactPointValue"
     length = 40
-    label = "Contact Point Value"
+    label = "Communication Subscription Consent Compliance Snapshot"
     createable = true
     updateable = true
     unique = false

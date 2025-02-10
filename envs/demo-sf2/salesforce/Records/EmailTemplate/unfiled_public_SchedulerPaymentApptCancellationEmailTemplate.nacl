@@ -1,0 +1,13 @@
+salesforce.EmailTemplate unfiled_public_SchedulerPaymentApptCancellationEmailTemplate@zcd {
+  available = true
+  description = "Email Template to confirm the cancellation of a paid service appointment."
+  encodingKey = "UTF-8"
+  name = "Scheduler Payments: Service Appointment Cancellation Email"
+  style = "none"
+  subject = "Appointment canceled!"
+  type = "custom"
+  uiType = "Aloha"
+  fullName = "unfiled$public/SchedulerPaymentApptCancellationEmailTemplate"
+  content = file("salesforce/Records/EmailTemplate/unfiled$public/SchedulerPaymentApptCancellationEmailTemplate/SchedulerPaymentApptCancellationEmailTemplate.email")
+  _alias = "unfiled$public/SchedulerPaymentApptCancellationEmailTemplate"
+}

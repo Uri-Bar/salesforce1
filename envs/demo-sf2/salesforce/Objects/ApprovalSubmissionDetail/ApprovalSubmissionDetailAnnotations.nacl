@@ -1,4 +1,4 @@
-type salesforce.SessionHijackingEventStore {
+type salesforce.ApprovalSubmissionDetail {
   annotations {
     serviceid apiName {
     }
@@ -6,13 +6,13 @@ type salesforce.SessionHijackingEventStore {
     }
     string label {
     }
+    string description {
+    }
     hidden_string keyPrefix {
     }
     salesforce.ActionOverride actionOverrides {
     }
     string compactLayoutAssignment {
-    }
-    string description {
     }
     boolean enableDataTranslation {
     }
@@ -55,9 +55,9 @@ type salesforce.SessionHijackingEventStore {
     hidden_string internalId {
     }
   }
-  apiName = "SessionHijackingEventStore"
+  apiName = "ApprovalSubmissionDetail"
   metadataType = "CustomObject"
-  label = "Session Hijacking Event Store"
+  label = "Approval Submission Detail"
   description = ""
   actionOverrides = [
     {
@@ -89,20 +89,6 @@ type salesforce.SessionHijackingEventStore {
       type = "Default"
     },
     {
-      actionName = "ProvideFeedbackAction"
-      type = "Default"
-    },
-    {
-      actionName = "ProvideFeedbackAction"
-      formFactor = "Large"
-      type = "Default"
-    },
-    {
-      actionName = "ProvideFeedbackAction"
-      formFactor = "Small"
-      type = "Default"
-    },
-    {
       actionName = "SaveEdit"
       type = "Default"
     },
@@ -127,12 +113,26 @@ type salesforce.SessionHijackingEventStore {
     },
     {
       actionName = "Tab"
+      formFactor = "Small"
+      type = "Default"
+    },
+    {
+      actionName = "View"
+      type = "Default"
+    },
+    {
+      actionName = "View"
+      formFactor = "Large"
+      type = "Default"
+    },
+    {
+      actionName = "View"
       formFactor = "Small"
       type = "Default"
     },
   ]
   compactLayoutAssignment = "SYSTEM"
   enableFeeds = false
-  externalSharingModel = "ReadWrite"
-  _alias = "Session Hijacking Event Store"
+  externalSharingModel = "ControlledByParent"
+  _alias = "Approval Submission Detail"
 }

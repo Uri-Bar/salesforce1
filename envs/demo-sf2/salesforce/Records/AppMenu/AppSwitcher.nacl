@@ -89,6 +89,14 @@ salesforce.AppMenu AppSwitcher {
       name = salesforce.CustomApplication.instance.standard__FlowsApp
       type = "CustomApplication"
     },
+    {
+      name = salesforce.CustomApplication.instance.standard__Approvals
+      type = "CustomApplication"
+    },
+    {
+      name = salesforce.CustomApplication.instance.standard__MSJApp
+      type = "CustomApplication"
+    },
   ]
   _alias = "AppSwitcher"
 }

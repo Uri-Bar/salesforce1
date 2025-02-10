@@ -26,6 +26,18 @@ type salesforce.Invoice {
     updateable = true
     queryable = true
   }
+  salesforce.Unknown CorpCrcyCnvTotAmtWithTax {
+    apiName = "Invoice.CorpCrcyCnvTotAmtWithTax"
+    _hidden_value = true
+  }
+  salesforce.Unknown CorporateCurrencyCvsnDate {
+    apiName = "Invoice.CorporateCurrencyCvsnDate"
+    _hidden_value = true
+  }
+  salesforce.Unknown CorporateCurrencyCvsnRate {
+    apiName = "Invoice.CorporateCurrencyCvsnRate"
+    _hidden_value = true
+  }
   salesforce.Text Description {
     apiName = "Invoice.Description"
     length = 255

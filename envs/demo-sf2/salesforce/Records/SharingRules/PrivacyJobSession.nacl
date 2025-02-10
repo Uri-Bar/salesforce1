@@ -1,4 +1,7 @@
 salesforce.SharingRules PrivacyJobSession {
   fullName = "PrivacyJobSession"
   _alias = "PrivacyJobSession"
+  _parent = [
+    salesforce.PrivacyJobSession,
+  ]
 }

@@ -192,14 +192,22 @@ type salesforce.Problem {
   externalSharingModel = "Private"
   searchLayouts = {
     customTabListAdditionalFields = [
-      "Subject",
-      "Status",
+      "Description",
+      "Urgency",
+      "Impact",
       "Priority",
+      "Category",
+      "SubCategory",
+      "Status",
     ]
     searchResultsAdditionalFields = [
-      "Subject",
-      "Status",
+      "Description",
+      "Urgency",
+      "Impact",
       "Priority",
+      "Category",
+      "SubCategory",
+      "Status",
     ]
   }
   _alias = "Problem"

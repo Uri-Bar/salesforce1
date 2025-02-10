@@ -7,6 +7,10 @@ type salesforce.MessagingEndUser {
     updateable = true
     queryable = true
   }
+  salesforce.Lookup AuthenticatedEndUserId {
+    apiName = "MessagingEndUser.AuthenticatedEndUserId"
+    _hidden_value = true
+  }
   salesforce.Lookup ContactId {
     apiName = "MessagingEndUser.ContactId"
     relationshipName = "Contact"
@@ -30,6 +34,10 @@ type salesforce.MessagingEndUser {
     createable = false
     updateable = false
     queryable = true
+    _hidden_value = true
+  }
+  salesforce.Unknown Language {
+    apiName = "MessagingEndUser.Language"
     _hidden_value = true
   }
   salesforce.Lookup LeadId {

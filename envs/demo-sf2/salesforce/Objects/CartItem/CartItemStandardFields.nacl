@@ -17,6 +17,10 @@ type salesforce.CartItem {
     precision = 18
     queryable = true
   }
+  salesforce.Unknown BillingFrequency {
+    apiName = "CartItem.BillingFrequency"
+    _hidden_value = true
+  }
   salesforce.Lookup CartDeliveryGroupId {
     apiName = "CartItem.CartDeliveryGroupId"
     relationshipName = "CartDeliveryGroup"
@@ -49,6 +53,14 @@ type salesforce.CartItem {
     createable = false
     updateable = false
     queryable = true
+    _hidden_value = true
+  }
+  salesforce.Unknown FirstPymtPriceAfterAdjustments {
+    apiName = "CartItem.FirstPymtPriceAfterAdjustments"
+    _hidden_value = true
+  }
+  salesforce.Unknown FirstPymtTax {
+    apiName = "CartItem.FirstPymtTax"
     _hidden_value = true
   }
   salesforce.Currency GrossAdjustmentAmount {
@@ -125,6 +137,10 @@ type salesforce.CartItem {
     precision = 18
     queryable = true
   }
+  salesforce.Unknown NetUnitPriceAfterAdjustments {
+    apiName = "CartItem.NetUnitPriceAfterAdjustments"
+    _hidden_value = true
+  }
   salesforce.Lookup ParentCartItemId {
     apiName = "CartItem.ParentCartItemId"
     relationshipName = "ParentCartItem"
@@ -132,6 +148,14 @@ type salesforce.CartItem {
     createable = true
     updateable = true
     queryable = true
+  }
+  salesforce.Lookup PricebookEntryId {
+    apiName = "CartItem.PricebookEntryId"
+    _hidden_value = true
+  }
+  salesforce.Unknown PricingTermCount {
+    apiName = "CartItem.PricingTermCount"
+    _hidden_value = true
   }
   salesforce.Lookup Product2Id {
     apiName = "CartItem.Product2Id"
@@ -160,6 +184,10 @@ type salesforce.CartItem {
     precision = 18
     queryable = true
   }
+  salesforce.Unknown SellingModelType {
+    apiName = "CartItem.SellingModelType"
+    _hidden_value = true
+  }
   salesforce.Text Sku {
     apiName = "CartItem.Sku"
     length = 255
@@ -169,6 +197,10 @@ type salesforce.CartItem {
     unique = false
     caseSensitive = false
     queryable = true
+  }
+  salesforce.Unknown SubscriptionTerm {
+    apiName = "CartItem.SubscriptionTerm"
+    _hidden_value = true
   }
   salesforce.Currency TotalAdjustmentAmount {
     apiName = "CartItem.TotalAdjustmentAmount"
@@ -189,6 +221,18 @@ type salesforce.CartItem {
     queryable = true
     _hidden_value = true
   }
+  salesforce.Unknown TotalFirstPymtAdjAmount {
+    apiName = "CartItem.TotalFirstPymtAdjAmount"
+    _hidden_value = true
+  }
+  salesforce.Unknown TotalFirstPymtListPrice {
+    apiName = "CartItem.TotalFirstPymtListPrice"
+    _hidden_value = true
+  }
+  salesforce.Unknown TotalFirstPymtPrice {
+    apiName = "CartItem.TotalFirstPymtPrice"
+    _hidden_value = true
+  }
   salesforce.Currency TotalLineAmount {
     apiName = "CartItem.TotalLineAmount"
     label = "Total Line Amount"
@@ -197,6 +241,14 @@ type salesforce.CartItem {
     scale = 2
     precision = 18
     queryable = true
+  }
+  salesforce.Unknown TotalLineFirstPymtAmount {
+    apiName = "CartItem.TotalLineFirstPymtAmount"
+    _hidden_value = true
+  }
+  salesforce.Unknown TotalLineFirstPymtTaxAmount {
+    apiName = "CartItem.TotalLineFirstPymtTaxAmount"
+    _hidden_value = true
   }
   salesforce.Currency TotalLineGrossAmount {
     apiName = "CartItem.TotalLineGrossAmount"
@@ -327,6 +379,10 @@ type salesforce.CartItem {
     scale = 2
     precision = 18
     queryable = true
+  }
+  salesforce.Unknown UnitPriceAfterAdjustments {
+    apiName = "CartItem.UnitPriceAfterAdjustments"
+    _hidden_value = true
   }
   salesforce.Picklist WeightUnit {
     apiName = "CartItem.WeightUnit"

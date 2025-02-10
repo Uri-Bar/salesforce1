@@ -1,4 +1,4 @@
-type salesforce.ApiAnomalyEventStore {
+type salesforce.PrivacyJobSession {
   annotations {
     serviceid apiName {
     }
@@ -6,13 +6,13 @@ type salesforce.ApiAnomalyEventStore {
     }
     string label {
     }
+    string description {
+    }
     hidden_string keyPrefix {
     }
     salesforce.ActionOverride actionOverrides {
     }
     string compactLayoutAssignment {
-    }
-    string description {
     }
     boolean enableDataTranslation {
     }
@@ -55,9 +55,9 @@ type salesforce.ApiAnomalyEventStore {
     hidden_string internalId {
     }
   }
-  apiName = "ApiAnomalyEventStore"
+  apiName = "PrivacyJobSession"
   metadataType = "CustomObject"
-  label = "API Anomaly Event Store"
+  label = "Privacy Job Session"
   description = ""
   actionOverrides = [
     {
@@ -75,6 +75,48 @@ type salesforce.ApiAnomalyEventStore {
       type = "Default"
     },
     {
+      actionName = "Clone"
+      type = "Default"
+    },
+    {
+      actionName = "Clone"
+      formFactor = "Large"
+      type = "Default"
+    },
+    {
+      actionName = "Clone"
+      formFactor = "Small"
+      type = "Default"
+    },
+    {
+      actionName = "Delete"
+      type = "Default"
+    },
+    {
+      actionName = "Delete"
+      formFactor = "Large"
+      type = "Default"
+    },
+    {
+      actionName = "Delete"
+      formFactor = "Small"
+      type = "Default"
+    },
+    {
+      actionName = "Edit"
+      type = "Default"
+    },
+    {
+      actionName = "Edit"
+      formFactor = "Large"
+      type = "Default"
+    },
+    {
+      actionName = "Edit"
+      formFactor = "Small"
+      type = "Default"
+    },
+    {
       actionName = "List"
       type = "Default"
     },
@@ -89,16 +131,16 @@ type salesforce.ApiAnomalyEventStore {
       type = "Default"
     },
     {
-      actionName = "ProvideFeedbackAction"
+      actionName = "New"
       type = "Default"
     },
     {
-      actionName = "ProvideFeedbackAction"
+      actionName = "New"
       formFactor = "Large"
       type = "Default"
     },
     {
-      actionName = "ProvideFeedbackAction"
+      actionName = "New"
       formFactor = "Small"
       type = "Default"
     },
@@ -133,6 +175,6 @@ type salesforce.ApiAnomalyEventStore {
   ]
   compactLayoutAssignment = "SYSTEM"
   enableFeeds = false
-  externalSharingModel = "ReadWrite"
-  _alias = "API Anomaly Event Store"
+  externalSharingModel = "Private"
+  _alias = "Privacy Job Session"
 }

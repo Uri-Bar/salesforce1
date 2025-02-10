@@ -89,20 +89,6 @@ type salesforce.ChangeRequest {
       type = "Default"
     },
     {
-      actionName = "Delete"
-      type = "Default"
-    },
-    {
-      actionName = "Delete"
-      formFactor = "Large"
-      type = "Default"
-    },
-    {
-      actionName = "Delete"
-      formFactor = "Small"
-      type = "Default"
-    },
-    {
       actionName = "Edit"
       type = "Default"
     },
@@ -195,11 +181,17 @@ type salesforce.ChangeRequest {
       "Subject",
       "Status",
       "Priority",
+      "ChangeType",
+      "RiskLevel",
+      "Impact",
     ]
     searchResultsAdditionalFields = [
       "Subject",
       "Status",
       "Priority",
+      "ChangeType",
+      "RiskLevel",
+      "Impact",
     ]
   }
   _alias = "Change Request"

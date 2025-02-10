@@ -21,10 +21,6 @@ salesforce.Layout CartTax_Cart_Tax_Layout@bss {
             },
             {
               behavior = "Required"
-              field = salesforce.CartTax.field.CartItemPriceAdjustmentId
-            },
-            {
-              behavior = "Required"
               field = salesforce.CartTax.field.TaxType
             },
             {
@@ -37,15 +33,7 @@ salesforce.Layout CartTax_Cart_Tax_Layout@bss {
             },
             {
               behavior = "Required"
-              field = salesforce.CartTax.field.TaxRate
-            },
-            {
-              behavior = "Required"
               field = salesforce.CartTax.field.Name
-            },
-            {
-              behavior = "Required"
-              field = salesforce.CartTax.field.Description
             },
           ]
         },
@@ -70,13 +58,10 @@ salesforce.Layout CartTax_Cart_Tax_Layout@bss {
       "CartItemId",
       "CartId",
       "CreatedDate",
-      "CartItemPriceAdjustmentId",
       "TaxType",
       "TaxCalculationDate",
       "Amount",
-      "TaxRate",
       "Name",
-      "Description",
     ]
   }
   showEmailCheckbox = false

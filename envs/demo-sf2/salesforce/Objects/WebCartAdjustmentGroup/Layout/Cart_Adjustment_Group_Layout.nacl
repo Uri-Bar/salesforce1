@@ -13,15 +13,15 @@ salesforce.Layout WebCartAdjustmentGroup_Cart_Adjustment_Group_Layout@bsss {
               field = salesforce.WebCartAdjustmentGroup.field.CartId
             },
             {
-              behavior = "Required"
+              behavior = "Edit"
               field = salesforce.WebCartAdjustmentGroup.field.Description
             },
             {
-              behavior = "Required"
+              behavior = "Edit"
               field = salesforce.WebCartAdjustmentGroup.field.TotalAmount
             },
             {
-              behavior = "Required"
+              behavior = "Edit"
               field = salesforce.WebCartAdjustmentGroup.field.TaxAmount
             },
             {
@@ -45,15 +45,15 @@ salesforce.Layout WebCartAdjustmentGroup_Cart_Adjustment_Group_Layout@bsss {
               field = salesforce.WebCartAdjustmentGroup.field.AdjustmentTargetType
             },
             {
-              behavior = "Required"
+              behavior = "Edit"
               field = salesforce.WebCartAdjustmentGroup.field.PriceAdjustmentCauseId
             },
             {
-              behavior = "Required"
+              behavior = "Edit"
               field = salesforce.WebCartAdjustmentGroup.field.AdjustmentBasisReferenceId
             },
             {
-              behavior = "Required"
+              behavior = "Edit"
               field = salesforce.WebCartAdjustmentGroup.field.Priority
             },
           ]

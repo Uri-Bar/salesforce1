@@ -1,7 +1,7 @@
 type salesforce.WebStoreInventorySource {
   salesforce.Number InventoryCacheTtl {
     apiName = "WebStoreInventorySource.InventoryCacheTtl"
-    inlineHelpText = "Enter a value for the Inventory Cache Time To Live that's between 300 and 14400."
+    inlineHelpText = "The Inventory Cache Time To Live must be between 300 and 14,400. The default for a new store is 1,440."
     label = "Inventory Cache Time To Live (Seconds)."
     precision = 9
     createable = true
@@ -12,7 +12,7 @@ type salesforce.WebStoreInventorySource {
   }
   salesforce.Picklist InventoryDimension {
     apiName = "WebStoreInventorySource.InventoryDimension"
-    inlineHelpText = "Fulfillment options."
+    inlineHelpText = "The inventory stock level used to determine product availability. The default for a new store is Available to Order."
     restricted = true
     label = "Inventory Dimension"
     createable = true
@@ -36,7 +36,7 @@ type salesforce.WebStoreInventorySource {
   }
   salesforce.Lookup LocationSourceId {
     apiName = "WebStoreInventorySource.LocationSourceId"
-    inlineHelpText = "Default location or location group for inventory reservations."
+    inlineHelpText = "The default location or location group for inventory reservations."
     relationshipName = "LocationSource"
     _required = true
     label = "Location Source ID"
@@ -46,7 +46,7 @@ type salesforce.WebStoreInventorySource {
   }
   salesforce.Number ReservationDurationInSeconds {
     apiName = "WebStoreInventorySource.ReservationDurationInSeconds"
-    inlineHelpText = "Enter a value for the reservation time limit that's between 300 and 14400."
+    inlineHelpText = "The reservation time limit must be between 300 and 14,400. The default for a new store is 900."
     _required = true
     label = "Reservation Duration (Seconds)"
     precision = 9

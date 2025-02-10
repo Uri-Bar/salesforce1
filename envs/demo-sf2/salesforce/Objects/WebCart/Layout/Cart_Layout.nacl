@@ -9,18 +9,6 @@ salesforce.Layout WebCart_Cart_Layout@bs {
         {
           layoutItems = [
             {
-              behavior = "Readonly"
-              field = salesforce.WebCart.field.TotalProductLineItemCount
-            },
-            {
-              behavior = "Readonly"
-              field = salesforce.WebCart.field.TotalLineItemsWithErrors
-            },
-            {
-              behavior = "Readonly"
-              field = salesforce.WebCart.field.TotalAdjustmentAmount
-            },
-            {
               behavior = "Required"
               field = salesforce.WebCart.field.Name
             },
@@ -33,7 +21,7 @@ salesforce.Layout WebCart_Cart_Layout@bs {
               field = salesforce.WebCart.field.WebStoreId
             },
             {
-              behavior = "Required"
+              behavior = "Edit"
               field = salesforce.WebCart.field.PoNumber
             },
             {
@@ -199,13 +187,6 @@ salesforce.Layout WebCart_Cart_Layout@bs {
       style = "CustomLinks"
     },
   ]
-  miniLayout = {
-    fields = [
-      "TotalProductLineItemCount",
-      "TotalLineItemsWithErrors",
-      "TotalAdjustmentAmount",
-    ]
-  }
   relatedLists = [
     {
       fields = [
