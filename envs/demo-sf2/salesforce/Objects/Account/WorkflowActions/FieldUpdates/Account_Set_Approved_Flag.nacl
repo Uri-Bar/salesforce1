@@ -10,5 +10,10 @@ salesforce.WorkflowFieldUpdate Account_Set_Approved_Flag@vuu {
   _parent = [
     salesforce.Account,
   ]
+  _generated_dependencies = [
+    {
+      reference = salesforce.Account.field.Name
+    },
+  ]
   _alias = "Account.Set_Approved_Flag"
 }
