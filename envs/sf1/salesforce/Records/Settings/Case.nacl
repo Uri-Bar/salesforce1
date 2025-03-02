@@ -8,7 +8,7 @@ salesforce.CaseSettings {
     feedItemType = "EmailMessageEvent"
   }
   caseFeedReadUnreadLtng = false
-  caseMergeInLightning = "false"
+  caseMergeInLightning = false
   closeCaseThroughStatusChange = false
   defaultCaseFeedLayoutOn = true
   defaultCaseOwner = "uri.bar+1@salto.io"
@@ -18,16 +18,16 @@ salesforce.CaseSettings {
     enableEmailToCase = false
   }
   enableCaseFeed = true
-  enableCaseSwarming = "false"
+  enableCaseSwarming = false
   enableCollapseEmailThread = true
   enableEarlyEscalationRuleTriggers = false
   enableEscalateQfiToCaseInternal = false
-  enableMultiLangSolnSrchCSS = "false"
-  enableMultiLangSolnSrchPKB = "false"
-  enableMultiLangSolution = "false"
-  enableSolutionCategory = "false"
-  enableSolutionInlineCategory = "true"
-  enableSolutionShortSummary = "true"
+  enableMultiLangSolnSrchCSS = false
+  enableMultiLangSolnSrchPKB = false
+  enableMultiLangSolution = false
+  enableSolutionCategory = false
+  enableSolutionInlineCategory = true
+  enableSolutionShortSummary = true
   enableSuggestedSolutions = true
   escalateCaseBefore = false
   keepRecordTypeOnAssignmentRule = true

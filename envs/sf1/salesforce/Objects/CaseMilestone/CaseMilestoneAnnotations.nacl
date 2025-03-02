@@ -58,6 +58,7 @@ type salesforce.CaseMilestone {
   apiName = "CaseMilestone"
   metadataType = "CustomObject"
   label = "Case Milestone"
+  description = ""
   actionOverrides = [
     {
       actionName = "CancelEdit"

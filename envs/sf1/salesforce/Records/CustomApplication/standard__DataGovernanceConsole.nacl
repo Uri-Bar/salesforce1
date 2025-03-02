@@ -1,0 +1,18 @@
+salesforce.CustomApplication standard__DataGovernanceConsole {
+  formFactors = [
+    "Large",
+  ]
+  isNavAutoTempTabsDisabled = false
+  isNavPersonalizationDisabled = false
+  isNavTabPersistenceDisabled = false
+  isOmniPinnedViewEnabled = false
+  label = "Policy Center"
+  navType = "Standard"
+  tabs = [
+    "standard-home",
+    "standard-DataMgmtPolicy",
+  ]
+  uiType = "Lightning"
+  fullName = "standard__DataGovernanceConsole"
+  _alias = "Policy Center (standard)"
+}

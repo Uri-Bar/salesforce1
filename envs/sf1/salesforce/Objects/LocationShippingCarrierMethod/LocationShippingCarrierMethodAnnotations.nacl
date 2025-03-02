@@ -58,6 +58,7 @@ type salesforce.LocationShippingCarrierMethod {
   apiName = "LocationShippingCarrierMethod"
   metadataType = "CustomObject"
   label = "Location Shipping Carrier Method"
+  description = ""
   actionOverrides = [
     {
       actionName = "CancelEdit"

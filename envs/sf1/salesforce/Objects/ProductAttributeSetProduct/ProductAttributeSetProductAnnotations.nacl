@@ -58,6 +58,7 @@ type salesforce.ProductAttributeSetProduct {
   apiName = "ProductAttributeSetProduct"
   metadataType = "CustomObject"
   label = "Product Attribute Set Product"
+  description = ""
   compactLayoutAssignment = "SYSTEM"
   enableFeeds = false
   externalSharingModel = "ReadWrite"

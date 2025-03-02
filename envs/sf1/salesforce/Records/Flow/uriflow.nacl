@@ -25,6 +25,32 @@ salesforce.Flow uriflow {
     },
   ]
   processType = "Flow"
-  status = "InvalidDraft"
+  screens = {
+    description = "asd"
+    name = "asdeasd"
+    label = "asde"
+    allowBack = true
+    allowFinish = true
+    allowPause = true
+    fields = {
+      name = "uri"
+      dataType = "Boolean"
+      fieldText = "asd"
+      fieldType = "InputField"
+      inputsOnNextNavToAssocScrn = "UseStoredValues"
+      isDisabled = {
+        booleanValue = false
+      }
+      isRequired = true
+    }
+    showFooter = true
+    showHeader = true
+  }
+  start = {
+    connector = {
+      targetReference = "asdeasd"
+    }
+  }
+  status = "Draft"
   _alias = "uriflow"
 }

@@ -58,6 +58,7 @@ type salesforce.CartRelatedItem {
   apiName = "CartRelatedItem"
   metadataType = "CustomObject"
   label = "Cart Related Item"
+  description = ""
   enableFeeds = false
   externalSharingModel = "ControlledByParent"
   _alias = "Cart Related Item"

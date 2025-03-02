@@ -53,6 +53,7 @@ type salesforce.WebStore {
   }
   salesforce.Unknown ProductGrouping {
     apiName = "WebStore.ProductGrouping"
+    inlineHelpText = "Choose how product variations and parent products display in search results."
     _hidden_value = true
   }
   salesforce.Lookup SortByPricebookId {

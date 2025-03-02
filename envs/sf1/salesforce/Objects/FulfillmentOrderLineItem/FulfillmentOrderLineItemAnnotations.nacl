@@ -58,6 +58,7 @@ type salesforce.FulfillmentOrderLineItem {
   apiName = "FulfillmentOrderLineItem"
   metadataType = "CustomObject"
   label = "Fulfillment Order Product"
+  description = ""
   actionOverrides = [
     {
       actionName = "CancelEdit"

@@ -58,6 +58,7 @@ type salesforce.PromotionQualifier {
   apiName = "PromotionQualifier"
   metadataType = "CustomObject"
   label = "Promotion Qualifier"
+  description = ""
   actionOverrides = [
     {
       actionName = "CancelEdit"

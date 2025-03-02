@@ -1,0 +1,281 @@
+type salesforce.PrivacyJobSession {
+  serviceid Id {
+    apiName = "PrivacyJobSession.Id"
+    label = "Privacy Job Session ID"
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Lookup OwnerId {
+    apiName = "PrivacyJobSession.OwnerId"
+    label = "Owner ID"
+    relationshipName = "Owner"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Checkbox IsDeleted {
+    apiName = "PrivacyJobSession.IsDeleted"
+    label = "Deleted"
+    defaultValue = false
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.AutoNumber Name {
+    apiName = "PrivacyJobSession.Name"
+    label = "Name"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.DateTime CreatedDate {
+    apiName = "PrivacyJobSession.CreatedDate"
+    label = "Created Date"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Lookup CreatedById {
+    apiName = "PrivacyJobSession.CreatedById"
+    label = "Created By ID"
+    relationshipName = "CreatedBy"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.DateTime LastModifiedDate {
+    apiName = "PrivacyJobSession.LastModifiedDate"
+    label = "Last Modified Date"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Lookup LastModifiedById {
+    apiName = "PrivacyJobSession.LastModifiedById"
+    label = "Last Modified By ID"
+    relationshipName = "LastModifiedBy"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.DateTime SystemModstamp {
+    apiName = "PrivacyJobSession.SystemModstamp"
+    label = "System Modstamp"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Picklist JobStatus {
+    apiName = "PrivacyJobSession.JobStatus"
+    label = "Job Status"
+    restricted = true
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.DateTime StartTime {
+    apiName = "PrivacyJobSession.StartTime"
+    label = "Start Time"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.DateTime EndTime {
+    apiName = "PrivacyJobSession.EndTime"
+    label = "End Time"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.DateTime CreationDate {
+    apiName = "PrivacyJobSession.CreationDate"
+    label = "Creation Date"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.LongTextArea SerializedPolicy {
+    apiName = "PrivacyJobSession.SerializedPolicy"
+    label = "Serialized Policy"
+    length = 131072
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.LongTextArea FailureLog {
+    apiName = "PrivacyJobSession.FailureLog"
+    label = "Failure Log"
+    length = 131072
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Text CurrentObject {
+    apiName = "PrivacyJobSession.CurrentObject"
+    label = "Current Object"
+    length = 128
+    unique = false
+    caseSensitive = false
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Lookup PrivacyPolicyDefinitionId {
+    apiName = "PrivacyJobSession.PrivacyPolicyDefinitionId"
+    label = "Privacy Policy Definition ID"
+    relationshipName = "PrivacyPolicyDefinition"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.DateTime ScheduledTime {
+    apiName = "PrivacyJobSession.ScheduledTime"
+    label = "Scheduled Time"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Picklist JobStartType {
+    apiName = "PrivacyJobSession.JobStartType"
+    label = "Job Start Type"
+    restricted = true
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Checkbox OptionsTraversalComplete {
+    apiName = "PrivacyJobSession.OptionsTraversalComplete"
+    label = "TraversalComplete"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Checkbox OptionsTraversalFailed {
+    apiName = "PrivacyJobSession.OptionsTraversalFailed"
+    label = "TraversalFailed"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Checkbox OptionsProcessingFailed {
+    apiName = "PrivacyJobSession.OptionsProcessingFailed"
+    label = "ProcessingFailed"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Checkbox OptionsPreview {
+    apiName = "PrivacyJobSession.OptionsPreview"
+    label = "Preview"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Checkbox OptionsAcknowledged {
+    apiName = "PrivacyJobSession.OptionsAcknowledged"
+    label = "Acknowledged"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Checkbox OptionsErrorBypassOccurred {
+    apiName = "PrivacyJobSession.OptionsErrorBypassOccurred"
+    label = "ErrorBypassOccurred"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Text PolicyName {
+    apiName = "PrivacyJobSession.PolicyName"
+    label = "Policy Name"
+    length = 255
+    unique = false
+    caseSensitive = false
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Text PolicyDescription {
+    apiName = "PrivacyJobSession.PolicyDescription"
+    label = "Policy Description"
+    length = 255
+    unique = false
+    caseSensitive = false
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Picklist PolicyType {
+    apiName = "PrivacyJobSession.PolicyType"
+    label = "Policy Type"
+    restricted = true
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Lookup PrivacyRtbfRequestId {
+    apiName = "PrivacyJobSession.PrivacyRtbfRequestId"
+    label = "Privacy RTBF Request ID"
+    relationshipName = "PrivacyRtbfRequest"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Picklist JobManagementType {
+    apiName = "PrivacyJobSession.JobManagementType"
+    label = "Job Management Type"
+    restricted = true
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Text JobPolicyName {
+    apiName = "PrivacyJobSession.JobPolicyName"
+    label = "Job Policy Name"
+    length = 255
+    unique = false
+    caseSensitive = false
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Checkbox IsPreview {
+    apiName = "PrivacyJobSession.IsPreview"
+    label = "Preview"
+    defaultValue = false
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+}

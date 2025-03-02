@@ -58,6 +58,7 @@ type salesforce.ContractLineItem {
   apiName = "ContractLineItem"
   metadataType = "CustomObject"
   label = "Contract Line Item"
+  description = ""
   actionOverrides = [
     {
       actionName = "AddContractLine"

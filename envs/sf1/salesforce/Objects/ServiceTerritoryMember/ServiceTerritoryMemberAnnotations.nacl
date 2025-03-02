@@ -58,6 +58,7 @@ type salesforce.ServiceTerritoryMember {
   apiName = "ServiceTerritoryMember"
   metadataType = "CustomObject"
   label = "Service Territory Member"
+  description = ""
   actionOverrides = [
     {
       actionName = "CancelEdit"

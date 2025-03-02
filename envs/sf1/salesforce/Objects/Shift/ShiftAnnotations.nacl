@@ -58,6 +58,7 @@ type salesforce.Shift {
   apiName = "Shift"
   metadataType = "CustomObject"
   label = "Shift"
+  description = ""
   actionOverrides = [
     {
       actionName = "CancelEdit"

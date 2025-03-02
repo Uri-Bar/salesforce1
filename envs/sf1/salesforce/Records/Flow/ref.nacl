@@ -103,5 +103,8 @@ salesforce.Flow ref {
     triggerType = "RecordAfterSave"
   }
   status = "Draft"
+  _parent = [
+    salesforce.Opportunity,
+  ]
   _alias = "ref"
 }

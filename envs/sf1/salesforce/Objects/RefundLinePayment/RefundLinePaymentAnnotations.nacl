@@ -58,6 +58,7 @@ type salesforce.RefundLinePayment {
   apiName = "RefundLinePayment"
   metadataType = "CustomObject"
   label = "Refund Line Payment"
+  description = ""
   actionOverrides = [
     {
       actionName = "CancelEdit"

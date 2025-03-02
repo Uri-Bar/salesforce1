@@ -54,5 +54,10 @@ salesforce.QuickAction Case_LogACall@v {
   _parent = [
     salesforce.Case,
   ]
+  _generated_dependencies = [
+    {
+      reference = salesforce.Case.field.ContactId
+    },
+  ]
   _alias = "Case.LogACall"
 }

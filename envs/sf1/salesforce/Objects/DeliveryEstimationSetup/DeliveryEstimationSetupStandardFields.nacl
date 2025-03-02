@@ -181,6 +181,10 @@ type salesforce.DeliveryEstimationSetup {
     queryable = true
     _hidden_value = true
   }
+  salesforce.Unknown ServiceRegion {
+    apiName = "DeliveryEstimationSetup.ServiceRegion"
+    _hidden_value = true
+  }
   salesforce.Picklist SyncStatus {
     apiName = "DeliveryEstimationSetup.SyncStatus"
     restricted = true

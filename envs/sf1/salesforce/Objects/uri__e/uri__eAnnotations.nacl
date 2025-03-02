@@ -94,6 +94,7 @@ type salesforce.uri__e {
   apiName = "uri__e"
   metadataType = "CustomObject"
   label = "uri"
+  description = ""
   pluralLabel = "uris"
   deploymentStatus = "Deployed"
   _alias = "uri"

@@ -58,6 +58,7 @@ type salesforce.CartTax {
   apiName = "CartTax"
   metadataType = "CustomObject"
   label = "Cart Tax"
+  description = ""
   actionOverrides = [
     {
       actionName = "CancelEdit"

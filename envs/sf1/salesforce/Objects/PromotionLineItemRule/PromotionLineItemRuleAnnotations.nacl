@@ -58,6 +58,7 @@ type salesforce.PromotionLineItemRule {
   apiName = "PromotionLineItemRule"
   metadataType = "CustomObject"
   label = "Promotion Line Item Rule"
+  description = ""
   enableFeeds = false
   externalSharingModel = "Private"
   _alias = "Promotion Line Item Rule"

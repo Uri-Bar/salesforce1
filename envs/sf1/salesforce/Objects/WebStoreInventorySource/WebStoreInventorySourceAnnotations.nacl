@@ -58,6 +58,7 @@ type salesforce.WebStoreInventorySource {
   apiName = "WebStoreInventorySource"
   metadataType = "CustomObject"
   label = "Web Store Inventory Source"
+  description = ""
   actionOverrides = [
     {
       actionName = "CancelEdit"

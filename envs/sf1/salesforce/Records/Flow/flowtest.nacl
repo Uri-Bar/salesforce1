@@ -19,7 +19,6 @@ salesforce.Flow flowtest {
     ]
     nameSegment = "submit"
     storeOutputAutomatically = true
-    versionSegment = 1
   }
   apiVersion = 55
   environments = "Default"

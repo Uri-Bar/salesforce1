@@ -58,6 +58,7 @@ type salesforce.FulfillmentOrderItemTax {
   apiName = "FulfillmentOrderItemTax"
   metadataType = "CustomObject"
   label = "Fulfillment Order Item Tax"
+  description = ""
   compactLayoutAssignment = "SYSTEM"
   enableFeeds = false
   externalSharingModel = "ControlledByParent"

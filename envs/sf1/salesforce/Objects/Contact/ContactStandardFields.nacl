@@ -31,6 +31,10 @@ type salesforce.Contact {
     updateable = true
     queryable = true
   }
+  salesforce.Picklist BuyerAttributes {
+    apiName = "Contact.BuyerAttributes"
+    _hidden_value = true
+  }
   salesforce.Picklist CleanStatus {
     apiName = "Contact.CleanStatus"
     restricted = true

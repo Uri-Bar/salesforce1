@@ -58,6 +58,7 @@ type salesforce.Payment {
   apiName = "Payment"
   metadataType = "CustomObject"
   label = "Payment"
+  description = ""
   actionOverrides = [
     {
       actionName = "CancelEdit"

@@ -58,6 +58,7 @@ type salesforce.ResourceAbsence {
   apiName = "ResourceAbsence"
   metadataType = "CustomObject"
   label = "Resource Absence"
+  description = ""
   actionOverrides = [
     {
       actionName = "CancelEdit"

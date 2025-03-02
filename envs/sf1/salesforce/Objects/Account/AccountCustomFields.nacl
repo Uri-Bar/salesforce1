@@ -20,37 +20,6 @@ type salesforce.Account {
     updateable = true
     queryable = true
   }
-  salesforce.Picklist CustomerPriority__c {
-    apiName = "Account.CustomerPriority__c"
-    label = "Customer Priority"
-    valueSet = [
-      {
-        fullName = "High"
-        default = false
-        label = "High"
-      },
-      {
-        fullName = "Low"
-        default = false
-        label = "Low"
-      },
-      {
-        fullName = "Medium"
-        default = false
-        label = "Medium"
-      },
-            {
-        fullName = "bak"
-        default = false
-        label = "bak"
-      },
-    ]
-    sorted = false
-    restricted = false
-    createable = true
-    updateable = true
-    queryable = true
-  }
   salesforce.Number NumberofLocations__c {
     apiName = "Account.NumberofLocations__c"
     externalId = false
@@ -134,6 +103,132 @@ type salesforce.Account {
     ]
     sorted = false
     restricted = false
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Checkbox X30011__c {
+    apiName = "Account.X30011__c"
+    defaultValue = false
+    label = "30011"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Checkbox X30012__c {
+    apiName = "Account.X30012__c"
+    defaultValue = false
+    label = "30012"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Checkbox X30013__c {
+    apiName = "Account.X30013__c"
+    defaultValue = false
+    label = "30013"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Checkbox X30014__c {
+    apiName = "Account.X30014__c"
+    defaultValue = false
+    label = "30014"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Checkbox X30015__c {
+    apiName = "Account.X30015__c"
+    defaultValue = false
+    label = "30015"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Checkbox X30016__c {
+    apiName = "Account.X30016__c"
+    defaultValue = false
+    label = "30016"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Checkbox X30017__c {
+    apiName = "Account.X30017__c"
+    defaultValue = false
+    label = "30017"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Checkbox X97__c {
+    apiName = "Account.X97__c"
+    defaultValue = false
+    description = "asd"
+    label = "07"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Checkbox asd__c {
+    apiName = "Account.asd__c"
+    defaultValue = false
+    label = "asd"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Email asds__c {
+    apiName = "Account.asds__c"
+    externalId = false
+    label = "asds"
+    unique = false
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Checkbox buri__c {
+    apiName = "Account.buri__c"
+    defaultValue = false
+    label = "buri"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Checkbox dfg__c {
+    apiName = "Account.dfg__c"
+    defaultValue = false
+    label = "dfg"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Checkbox eden__c {
+    apiName = "Account.eden__c"
+    defaultValue = false
+    label = "eden"
+    _hidden_value = true
+  }
+  salesforce.Checkbox eu__c {
+    apiName = "Account.eu__c"
+    defaultValue = true
+    label = "euq"
+    _hidden_value = true
+  }
+  salesforce.Checkbox isUfi__c {
+    apiName = "Account.isUfi__c"
+    defaultValue = false
+    label = "isUfi"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Checkbox rty__c {
+    apiName = "Account.rty__c"
+    defaultValue = false
+    label = "rty"
     createable = true
     updateable = true
     queryable = true

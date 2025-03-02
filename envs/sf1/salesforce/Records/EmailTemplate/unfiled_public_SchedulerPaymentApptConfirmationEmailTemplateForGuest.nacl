@@ -1,0 +1,13 @@
+salesforce.EmailTemplate unfiled_public_SchedulerPaymentApptConfirmationEmailTemplateForGuest@zcd {
+  available = false
+  description = "Email Template to confirm scheduling of a paid service appointment for guest users."
+  encodingKey = "UTF-8"
+  name = "Scheduler Payments: Service Appointment Confirmation Email for Guest Users"
+  style = "none"
+  subject = "Appointment scheduled"
+  type = "custom"
+  uiType = "Aloha"
+  fullName = "unfiled$public/SchedulerPaymentApptConfirmationEmailTemplateForGuest"
+  content = file("salesforce/Records/EmailTemplate/unfiled$public/SchedulerPaymentApptConfirmationEmailTemplateForGuest/SchedulerPaymentApptConfirmationEmailTemplateForGuest.email")
+  _alias = "unfiled$public/SchedulerPaymentApptConfirmationEmailTemplateForGuest"
+}

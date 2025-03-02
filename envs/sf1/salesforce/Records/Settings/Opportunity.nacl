@@ -7,13 +7,13 @@ salesforce.OpportunitySettings {
   enableOpportunityFieldHistoryTracking = false
   enableOpportunityInsightsInMobile = false
   enableOpportunityTeam = false
-  enableServiceCaseInsights = "false"
+  enableServiceCaseInsights = false
   enableUpdateReminders = true
-  oppAmountDealMotionEnabled = "true"
-  oppCloseDateDealMotionEnabled = "true"
+  oppAmountDealMotionEnabled = true
+  oppCloseDateDealMotionEnabled = true
   promptToAddProducts = false
-  pushCountEnabled = "true"
-  simpleOppCreateFromContact = "false"
-  simpleOppCreateFromEvent = "false"
+  pushCountEnabled = true
+  simpleOppCreateFromContact = false
+  simpleOppCreateFromEvent = false
   _alias = "Opportunity"
 }

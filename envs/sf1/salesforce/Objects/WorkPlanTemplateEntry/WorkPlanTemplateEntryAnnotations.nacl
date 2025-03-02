@@ -58,6 +58,7 @@ type salesforce.WorkPlanTemplateEntry {
   apiName = "WorkPlanTemplateEntry"
   metadataType = "CustomObject"
   label = "Work Plan Template Entry"
+  description = ""
   actionOverrides = [
     {
       actionName = "CancelEdit"

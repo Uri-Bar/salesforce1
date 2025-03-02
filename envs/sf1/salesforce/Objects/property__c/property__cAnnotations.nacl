@@ -94,6 +94,7 @@ type salesforce.property__c {
   apiName = "property__c"
   metadataType = "CustomObject"
   label = "property"
+  description = ""
   pluralLabel = "properties"
   actionOverrides = [
     {

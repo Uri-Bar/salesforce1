@@ -58,6 +58,7 @@ type salesforce.StreamActivityAccess {
   apiName = "StreamActivityAccess"
   metadataType = "CustomObject"
   label = "StreamActivityAccess"
+  description = ""
   enableFeeds = false
   externalSharingModel = "Private"
   _alias = "StreamActivityAccess"

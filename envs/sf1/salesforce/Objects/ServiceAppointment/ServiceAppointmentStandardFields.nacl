@@ -286,6 +286,10 @@ type salesforce.ServiceAppointment {
     updateable = true
     queryable = true
   }
+  salesforce.Lookup ReceiptOrderId {
+    apiName = "ServiceAppointment.ReceiptOrderId"
+    _hidden_value = true
+  }
   salesforce.DateTime SchedEndTime {
     apiName = "ServiceAppointment.SchedEndTime"
     label = "Scheduled End"

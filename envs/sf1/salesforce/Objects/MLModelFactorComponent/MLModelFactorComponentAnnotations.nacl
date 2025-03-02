@@ -58,6 +58,7 @@ type salesforce.MLModelFactorComponent {
   apiName = "MLModelFactorComponent"
   metadataType = "CustomObject"
   label = "ML Model Factor Component"
+  description = ""
   enableFeeds = false
   externalSharingModel = "ControlledByParent"
   _alias = "ML Model Factor Component"

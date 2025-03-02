@@ -58,6 +58,7 @@ type salesforce.AssociatedLocation {
   apiName = "AssociatedLocation"
   metadataType = "CustomObject"
   label = "Associated Location"
+  description = ""
   actionOverrides = [
     {
       actionName = "CancelEdit"

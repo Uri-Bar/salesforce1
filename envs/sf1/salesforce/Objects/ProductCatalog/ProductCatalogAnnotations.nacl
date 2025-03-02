@@ -58,6 +58,7 @@ type salesforce.ProductCatalog {
   apiName = "ProductCatalog"
   metadataType = "CustomObject"
   label = "Catalog"
+  description = ""
   actionOverrides = [
     {
       actionName = "CancelEdit"

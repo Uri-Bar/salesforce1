@@ -58,6 +58,7 @@ type salesforce.ProcessException {
   apiName = "ProcessException"
   metadataType = "CustomObject"
   label = "Process Exception"
+  description = ""
   actionOverrides = [
     {
       actionName = "CancelEdit"

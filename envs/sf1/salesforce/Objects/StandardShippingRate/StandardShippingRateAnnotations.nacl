@@ -58,6 +58,7 @@ type salesforce.StandardShippingRate {
   apiName = "StandardShippingRate"
   metadataType = "CustomObject"
   label = "Standard Shipping Rate"
+  description = ""
   compactLayoutAssignment = "SYSTEM"
   enableFeeds = false
   externalSharingModel = "ControlledByParent"

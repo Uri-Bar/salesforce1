@@ -58,6 +58,7 @@ type salesforce.PromotionSegment {
   apiName = "PromotionSegment"
   metadataType = "CustomObject"
   label = "Promotion Segment"
+  description = ""
   actionOverrides = [
     {
       actionName = "CancelEdit"

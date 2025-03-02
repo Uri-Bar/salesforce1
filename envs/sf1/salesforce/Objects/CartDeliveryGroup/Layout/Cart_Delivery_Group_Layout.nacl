@@ -19,18 +19,6 @@ salesforce.Layout CartDeliveryGroup_Cart_Delivery_Group_Layout@bsss {
               behavior = "Required"
               field = salesforce.CartDeliveryGroup.field.CreatedDate
             },
-            {
-              behavior = "Required"
-              field = salesforce.CartDeliveryGroup.field.SelectedDeliveryMethodId
-            },
-            {
-              behavior = "Required"
-              field = salesforce.CartDeliveryGroup.field.DesiredDeliveryDate
-            },
-            {
-              behavior = "Required"
-              field = salesforce.CartDeliveryGroup.field.ShippingInstructions
-            },
           ]
         },
         {
@@ -54,9 +42,6 @@ salesforce.Layout CartDeliveryGroup_Cart_Delivery_Group_Layout@bsss {
       "Name",
       "CartId",
       "CreatedDate",
-      "SelectedDeliveryMethodId",
-      "DesiredDeliveryDate",
-      "ShippingInstructions",
     ]
   }
   showEmailCheckbox = false

@@ -58,6 +58,7 @@ type salesforce.ReturnOrderItemTax {
   apiName = "ReturnOrderItemTax"
   metadataType = "CustomObject"
   label = "Return Order Item Tax"
+  description = ""
   actionOverrides = [
     {
       actionName = "CancelEdit"

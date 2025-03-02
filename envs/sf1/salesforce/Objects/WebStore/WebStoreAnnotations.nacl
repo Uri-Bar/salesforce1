@@ -58,6 +58,7 @@ type salesforce.WebStore {
   apiName = "WebStore"
   metadataType = "CustomObject"
   label = "Store"
+  description = ""
   actionOverrides = [
     {
       actionName = "CancelEdit"

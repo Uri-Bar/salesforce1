@@ -127,6 +127,10 @@ type salesforce.WorkType {
     queryable = true
     _hidden_value = true
   }
+  salesforce.Lookup ProductId {
+    apiName = "WorkType.ProductId"
+    _hidden_value = true
+  }
   salesforce.Picklist TimeFrameEndUnit {
     apiName = "WorkType.TimeFrameEndUnit"
     restricted = true

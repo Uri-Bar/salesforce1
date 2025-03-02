@@ -58,6 +58,7 @@ type salesforce.ChangeRequestRelatedIssue {
   apiName = "ChangeRequestRelatedIssue"
   metadataType = "CustomObject"
   label = "Change Request Related Issue"
+  description = ""
   actionOverrides = [
     {
       actionName = "CancelEdit"

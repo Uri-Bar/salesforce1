@@ -58,6 +58,7 @@ type salesforce.ContactPointPhone {
   apiName = "ContactPointPhone"
   metadataType = "CustomObject"
   label = "Contact Point Phone"
+  description = ""
   actionOverrides = [
     {
       actionName = "CancelEdit"

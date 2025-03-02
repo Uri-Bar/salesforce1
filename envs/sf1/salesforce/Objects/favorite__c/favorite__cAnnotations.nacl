@@ -94,6 +94,7 @@ type salesforce.favorite__c {
   apiName = "favorite__c"
   metadataType = "CustomObject"
   label = "favorite"
+  description = ""
   pluralLabel = "favorites"
   actionOverrides = [
     {

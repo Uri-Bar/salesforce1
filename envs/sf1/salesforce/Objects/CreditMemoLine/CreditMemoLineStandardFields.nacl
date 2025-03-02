@@ -57,6 +57,22 @@ type salesforce.CreditMemoLine {
     queryable = true
     _hidden_value = true
   }
+  salesforce.Unknown CorpCurrencyCnvChargeAmt {
+    apiName = "CreditMemoLine.CorpCurrencyCnvChargeAmt"
+    _hidden_value = true
+  }
+  salesforce.Unknown CorpCurrencyCnvTotalTaxAmt {
+    apiName = "CreditMemoLine.CorpCurrencyCnvTotalTaxAmt"
+    _hidden_value = true
+  }
+  salesforce.Unknown CorporateCurrencyCvsnDate {
+    apiName = "CreditMemoLine.CorporateCurrencyCvsnDate"
+    _hidden_value = true
+  }
+  salesforce.Unknown CorporateCurrencyCvsnRate {
+    apiName = "CreditMemoLine.CorporateCurrencyCvsnRate"
+    _hidden_value = true
+  }
   salesforce.MasterDetail CreditMemoId {
     apiName = "CreditMemoLine.CreditMemoId"
     relationshipName = "CreditMemo"

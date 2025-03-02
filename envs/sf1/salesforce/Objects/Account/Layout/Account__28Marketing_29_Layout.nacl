@@ -31,6 +31,70 @@ salesforce.Layout Account_Account__28Marketing_29_Layout@bspps {
               behavior = "Edit"
               field = salesforce.Account.field.Site
             },
+            {
+              behavior = "Edit"
+              field = salesforce.Account.field.isUfi__c
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.Account.field.X97__c
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.Account.field.buri__c
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.Account.field.eden__c
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.Account.field.eu__c
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.Account.field.asd__c
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.Account.field.dfg__c
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.Account.field.rty__c
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.Account.field.asds__c
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.Account.field.X30011__c
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.Account.field.X30012__c
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.Account.field.X30013__c
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.Account.field.X30014__c
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.Account.field.X30015__c
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.Account.field.X30016__c
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.Account.field.X30017__c
+            },
           ]
         },
         {
@@ -96,10 +160,6 @@ salesforce.Layout Account_Account__28Marketing_29_Layout@bspps {
             {
               behavior = "Edit"
               field = salesforce.Account.field.Active__c
-            },
-            {
-              behavior = "Edit"
-              field = salesforce.Account.field.CustomerPriority__c
             },
             {
               behavior = "Required"

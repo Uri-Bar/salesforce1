@@ -58,6 +58,7 @@ type salesforce.ShippingConfigurationSet {
   apiName = "ShippingConfigurationSet"
   metadataType = "CustomObject"
   label = "Shipping Configuration Set"
+  description = ""
   enableFeeds = false
   externalSharingModel = "Private"
   _alias = "Shipping Configuration Set"

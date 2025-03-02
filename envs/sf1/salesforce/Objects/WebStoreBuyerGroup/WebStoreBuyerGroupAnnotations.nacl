@@ -58,6 +58,7 @@ type salesforce.WebStoreBuyerGroup {
   apiName = "WebStoreBuyerGroup"
   metadataType = "CustomObject"
   label = "Store Buyer Group"
+  description = ""
   actionOverrides = [
     {
       actionName = "CancelEdit"

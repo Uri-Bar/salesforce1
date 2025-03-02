@@ -58,6 +58,7 @@ type salesforce.CartDeliveryGroupMethod {
   apiName = "CartDeliveryGroupMethod"
   metadataType = "CustomObject"
   label = "Cart Delivery Group Method"
+  description = ""
   compactLayoutAssignment = "SYSTEM"
   enableFeeds = false
   externalSharingModel = "ControlledByParent"

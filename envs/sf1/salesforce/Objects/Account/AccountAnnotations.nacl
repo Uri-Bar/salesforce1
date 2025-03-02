@@ -58,6 +58,7 @@ type salesforce.Account {
   apiName = "Account"
   metadataType = "CustomObject"
   label = "Account"
+  description = ""
   actionOverrides = [
     {
       actionName = "CallHighlightAction"
@@ -312,6 +313,7 @@ type salesforce.Account {
       "ACCOUNT.SITE",
       "ACCOUNT.PHONE1",
       "CORE.USERS.ALIAS",
+      "ACCOUNT.ADDRESS1_COUNTRY",
     ]
   }
   _alias = "Account"
