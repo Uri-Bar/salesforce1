@@ -18,6 +18,7 @@ salesforce.UserInterfaceSettings {
   enableProfileCustomTabsets = true
   enableQuickCreate = true
   enableRelatedListHovers = true
+  enableSldsV2 = false
   enableTabOrganizer = true
   _alias = "UserInterface"
   multiColumnSort = false
