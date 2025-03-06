@@ -21,7 +21,6 @@ salesforce.Flow DEMO {
       },
     ]
     nameSegment = "CollaborationGroup.NewGroupMember"
-    versionSegment = 1
   }
   apiVersion = 56
   environments = "Default"

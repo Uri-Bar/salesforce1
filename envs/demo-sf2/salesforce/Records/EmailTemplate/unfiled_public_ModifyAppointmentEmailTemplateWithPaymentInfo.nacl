@@ -1,0 +1,13 @@
+salesforce.EmailTemplate unfiled_public_ModifyAppointmentEmailTemplateWithPaymentInfo@zcd {
+  available = true
+  description = "Email Template to confirm the rescheduling of a paid service appointment for authenticated users."
+  encodingKey = "UTF-8"
+  name = "Scheduler Payments: Service Appointment Rescheduled Email - Authenticated Users"
+  style = "none"
+  subject = "Your service appointment is rescheduled!"
+  type = "custom"
+  uiType = "Aloha"
+  fullName = "unfiled$public/ModifyAppointmentEmailTemplateWithPaymentInfo"
+  content = file("salesforce/Records/EmailTemplate/unfiled$public/ModifyAppointmentEmailTemplateWithPaymentInfo/ModifyAppointmentEmailTemplateWithPaymentInfo.email")
+  _alias = "unfiled$public/ModifyAppointmentEmailTemplateWithPaymentInfo"
+}

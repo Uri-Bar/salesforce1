@@ -47,11 +47,6 @@ type salesforce.AssetAction {
   }
   salesforce.Picklist Category {
     apiName = "AssetAction.Category"
-    restricted = false
-    label = "Category (Deprecated)"
-    createable = false
-    updateable = false
-    queryable = true
     _hidden_value = true
   }
   salesforce.Picklist CategoryEnum {

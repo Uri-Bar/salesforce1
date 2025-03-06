@@ -58,6 +58,7 @@ type salesforce.ReturnOrder {
   apiName = "ReturnOrder"
   metadataType = "CustomObject"
   label = "Return Order"
+  description = ""
   actionOverrides = [
     {
       actionName = "CancelEdit"

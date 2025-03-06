@@ -76,6 +76,10 @@ type salesforce.OrderItem {
     unique = false
     queryable = true
   }
+  salesforce.Unknown ReferencePrice {
+    apiName = "OrderItem.ReferencePrice"
+    _hidden_value = true
+  }
   salesforce.Date ServiceDate {
     apiName = "OrderItem.ServiceDate"
     label = "Start Date"

@@ -58,6 +58,7 @@ type salesforce.CouponCodeRedemption {
   apiName = "CouponCodeRedemption"
   metadataType = "CustomObject"
   label = "Coupon Code Redemption"
+  description = ""
   compactLayoutAssignment = "SYSTEM"
   enableFeeds = false
   externalSharingModel = "Private"

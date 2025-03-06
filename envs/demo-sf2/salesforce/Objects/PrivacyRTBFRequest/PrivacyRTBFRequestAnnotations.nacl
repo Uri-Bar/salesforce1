@@ -58,6 +58,7 @@ type salesforce.PrivacyRTBFRequest {
   apiName = "PrivacyRTBFRequest"
   metadataType = "CustomObject"
   label = "Privacy RTBF Request"
+  description = ""
   actionOverrides = [
     {
       actionName = "CancelEdit"

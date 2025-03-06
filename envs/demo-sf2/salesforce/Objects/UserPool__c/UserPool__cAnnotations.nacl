@@ -94,6 +94,7 @@ type salesforce.UserPool__c {
   apiName = "UserPool__c"
   metadataType = "CustomObject"
   label = "User Pool"
+  description = ""
   pluralLabel = "User Pools"
   actionOverrides = [
     {

@@ -110,4 +110,15 @@ type salesforce.PaymentGateway {
     queryable = true
     _hidden_value = true
   }
+  salesforce.Text DefaultTapToPayLocation {
+    apiName = "PaymentGateway.DefaultTapToPayLocation"
+    length = 40
+    label = "Tap To Pay Location"
+    createable = false
+    updateable = false
+    unique = false
+    caseSensitive = false
+    queryable = true
+    _hidden_value = true
+  }
 }

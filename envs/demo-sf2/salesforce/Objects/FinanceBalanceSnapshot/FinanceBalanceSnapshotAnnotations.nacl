@@ -58,6 +58,7 @@ type salesforce.FinanceBalanceSnapshot {
   apiName = "FinanceBalanceSnapshot"
   metadataType = "CustomObject"
   label = "Finance Balance Snapshot"
+  description = ""
   actionOverrides = [
     {
       actionName = "CancelEdit"

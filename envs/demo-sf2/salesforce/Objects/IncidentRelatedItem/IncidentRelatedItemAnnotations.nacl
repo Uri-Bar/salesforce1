@@ -58,6 +58,7 @@ type salesforce.IncidentRelatedItem {
   apiName = "IncidentRelatedItem"
   metadataType = "CustomObject"
   label = "Incident Related Item"
+  description = ""
   actionOverrides = [
     {
       actionName = "CancelEdit"

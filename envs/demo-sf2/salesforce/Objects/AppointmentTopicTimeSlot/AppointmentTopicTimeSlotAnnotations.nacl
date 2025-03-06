@@ -58,6 +58,7 @@ type salesforce.AppointmentTopicTimeSlot {
   apiName = "AppointmentTopicTimeSlot"
   metadataType = "CustomObject"
   label = "Appointment Topic Time Slot"
+  description = ""
   actionOverrides = [
     {
       actionName = "CancelEdit"

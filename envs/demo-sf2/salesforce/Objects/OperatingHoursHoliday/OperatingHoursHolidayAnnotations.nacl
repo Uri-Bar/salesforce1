@@ -58,6 +58,7 @@ type salesforce.OperatingHoursHoliday {
   apiName = "OperatingHoursHoliday"
   metadataType = "CustomObject"
   label = "Operating Hours Holiday"
+  description = ""
   actionOverrides = [
     {
       actionName = "CancelEdit"

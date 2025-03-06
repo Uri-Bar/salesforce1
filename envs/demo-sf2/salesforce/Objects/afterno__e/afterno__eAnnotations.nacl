@@ -94,6 +94,7 @@ type salesforce.afterno__e {
   apiName = "afterno__e"
   metadataType = "CustomObject"
   label = "afterno"
+  description = ""
   pluralLabel = "nos"
   deploymentStatus = "Deployed"
   _alias = "afterno"

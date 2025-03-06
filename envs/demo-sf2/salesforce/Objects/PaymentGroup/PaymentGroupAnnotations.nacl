@@ -58,6 +58,7 @@ type salesforce.PaymentGroup {
   apiName = "PaymentGroup"
   metadataType = "CustomObject"
   label = "Payment Group"
+  description = ""
   compactLayoutAssignment = "SYSTEM"
   enableFeeds = false
   externalSharingModel = "ReadWrite"

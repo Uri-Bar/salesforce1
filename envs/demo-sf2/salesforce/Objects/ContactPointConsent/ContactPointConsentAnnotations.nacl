@@ -58,6 +58,7 @@ type salesforce.ContactPointConsent {
   apiName = "ContactPointConsent"
   metadataType = "CustomObject"
   label = "Contact Point Consent"
+  description = ""
   actionOverrides = [
     {
       actionName = "CancelEdit"

@@ -58,6 +58,7 @@ type salesforce.PromotionTarget {
   apiName = "PromotionTarget"
   metadataType = "CustomObject"
   label = "Promotion Target"
+  description = ""
   actionOverrides = [
     {
       actionName = "CancelEdit"

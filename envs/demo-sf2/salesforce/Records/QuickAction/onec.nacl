@@ -28,7 +28,7 @@ salesforce.QuickAction onec {
     ]
   }
   standardLabel = "LogANote"
-  targetObject = salesforce.ApiAnomalyEventStore
+  targetObject = "ApiAnomalyEventStore"
   type = "Create"
   _alias = "onec"
 }

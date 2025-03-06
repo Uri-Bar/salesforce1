@@ -58,6 +58,7 @@ type salesforce.SkillRequirement {
   apiName = "SkillRequirement"
   metadataType = "CustomObject"
   label = "Skill Requirement"
+  description = ""
   actionOverrides = [
     {
       actionName = "CancelEdit"

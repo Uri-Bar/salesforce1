@@ -58,6 +58,7 @@ type salesforce.DigitalWallet {
   apiName = "DigitalWallet"
   metadataType = "CustomObject"
   label = "Digital Wallet"
+  description = ""
   actionOverrides = [
     {
       actionName = "CancelEdit"

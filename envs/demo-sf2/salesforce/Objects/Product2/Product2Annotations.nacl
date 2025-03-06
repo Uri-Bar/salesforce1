@@ -58,6 +58,7 @@ type salesforce.Product2 {
   apiName = "Product2"
   metadataType = "CustomObject"
   label = "Product"
+  description = ""
   actionOverrides = [
     {
       actionName = "Add"
@@ -112,6 +113,20 @@ type salesforce.Product2 {
     },
     {
       actionName = "Delete"
+      formFactor = "Small"
+      type = "Default"
+    },
+    {
+      actionName = "EcmActivateDeactivateProduct2"
+      type = "Default"
+    },
+    {
+      actionName = "EcmActivateDeactivateProduct2"
+      formFactor = "Large"
+      type = "Default"
+    },
+    {
+      actionName = "EcmActivateDeactivateProduct2"
       formFactor = "Small"
       type = "Default"
     },

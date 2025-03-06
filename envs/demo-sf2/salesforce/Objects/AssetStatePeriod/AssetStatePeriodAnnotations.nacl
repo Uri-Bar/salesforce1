@@ -58,6 +58,7 @@ type salesforce.AssetStatePeriod {
   apiName = "AssetStatePeriod"
   metadataType = "CustomObject"
   label = "Asset State Period"
+  description = ""
   actionOverrides = [
     {
       actionName = "CancelEdit"

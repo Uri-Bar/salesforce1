@@ -286,6 +286,10 @@ type salesforce.ServiceAppointment {
     updateable = true
     queryable = true
   }
+  salesforce.Lookup ReceiptOrderId {
+    apiName = "ServiceAppointment.ReceiptOrderId"
+    _hidden_value = true
+  }
   salesforce.DateTime SchedEndTime {
     apiName = "ServiceAppointment.SchedEndTime"
     label = "Scheduled End"
@@ -342,10 +346,6 @@ type salesforce.ServiceAppointment {
     unique = false
     caseSensitive = false
     queryable = true
-  }
-  salesforce.Unknown Transaction {
-    apiName = "ServiceAppointment.Transaction"
-    _hidden_value = true
   }
   salesforce.Lookup WorkTypeId {
     apiName = "ServiceAppointment.WorkTypeId"
@@ -430,5 +430,15 @@ type salesforce.ServiceAppointment {
     unique = false
     queryable = true
     _hidden_value = true
+  }
+  salesforce.Text Transaction {
+    apiName = "ServiceAppointment.Transaction"
+    length = 255
+    label = "Transaction"
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    queryable = true
   }
 }

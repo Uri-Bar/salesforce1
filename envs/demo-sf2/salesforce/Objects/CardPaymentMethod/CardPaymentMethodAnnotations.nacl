@@ -58,6 +58,7 @@ type salesforce.CardPaymentMethod {
   apiName = "CardPaymentMethod"
   metadataType = "CustomObject"
   label = "Card Payment Method"
+  description = ""
   actionOverrides = [
     {
       actionName = "CancelEdit"

@@ -58,6 +58,7 @@ type salesforce.ProductCategoryProduct {
   apiName = "ProductCategoryProduct"
   metadataType = "CustomObject"
   label = "Product Category Product"
+  description = ""
   actionOverrides = [
     {
       actionName = "AddProductCategoryProduct"

@@ -58,6 +58,7 @@ type salesforce.Refund {
   apiName = "Refund"
   metadataType = "CustomObject"
   label = "Refund"
+  description = ""
   actionOverrides = [
     {
       actionName = "CancelEdit"

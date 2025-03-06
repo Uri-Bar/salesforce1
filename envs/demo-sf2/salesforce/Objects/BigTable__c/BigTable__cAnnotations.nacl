@@ -94,6 +94,7 @@ type salesforce.BigTable__c {
   apiName = "BigTable__c"
   metadataType = "CustomObject"
   label = "BigTable"
+  description = ""
   pluralLabel = "BigTable"
   actionOverrides = [
     {

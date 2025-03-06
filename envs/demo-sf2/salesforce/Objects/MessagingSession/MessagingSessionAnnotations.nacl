@@ -58,6 +58,7 @@ type salesforce.MessagingSession {
   apiName = "MessagingSession"
   metadataType = "CustomObject"
   label = "Messaging Session"
+  description = ""
   actionOverrides = [
     {
       actionName = "CancelEdit"

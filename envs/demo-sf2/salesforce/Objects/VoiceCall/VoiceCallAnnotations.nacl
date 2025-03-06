@@ -58,6 +58,7 @@ type salesforce.VoiceCall {
   apiName = "VoiceCall"
   metadataType = "CustomObject"
   label = "Voice Call"
+  description = ""
   actionOverrides = [
     {
       actionName = "CancelEdit"

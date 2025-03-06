@@ -58,6 +58,7 @@ type salesforce.WorkTypeGroup {
   apiName = "WorkTypeGroup"
   metadataType = "CustomObject"
   label = "Work Type Group"
+  description = ""
   actionOverrides = [
     {
       actionName = "CancelEdit"

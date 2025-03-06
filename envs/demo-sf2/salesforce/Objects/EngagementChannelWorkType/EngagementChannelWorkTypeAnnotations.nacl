@@ -58,6 +58,7 @@ type salesforce.EngagementChannelWorkType {
   apiName = "EngagementChannelWorkType"
   metadataType = "CustomObject"
   label = "Engagement Channel Work Type"
+  description = ""
   actionOverrides = [
     {
       actionName = "CancelEdit"

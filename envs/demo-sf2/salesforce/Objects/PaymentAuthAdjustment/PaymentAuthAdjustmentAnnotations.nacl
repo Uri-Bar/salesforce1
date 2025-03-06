@@ -58,6 +58,7 @@ type salesforce.PaymentAuthAdjustment {
   apiName = "PaymentAuthAdjustment"
   metadataType = "CustomObject"
   label = "Payment Authorization Adjustment"
+  description = ""
   actionOverrides = [
     {
       actionName = "CancelEdit"

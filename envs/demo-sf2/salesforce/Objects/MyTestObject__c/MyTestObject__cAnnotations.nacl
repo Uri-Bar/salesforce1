@@ -94,6 +94,7 @@ type salesforce.MyTestObject__c {
   apiName = "MyTestObject__c"
   metadataType = "CustomObject"
   label = "My Test Object"
+  description = ""
   pluralLabel = "My Test Objects"
   actionOverrides = [
     {

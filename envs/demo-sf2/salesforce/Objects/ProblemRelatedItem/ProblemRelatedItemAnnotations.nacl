@@ -58,6 +58,7 @@ type salesforce.ProblemRelatedItem {
   apiName = "ProblemRelatedItem"
   metadataType = "CustomObject"
   label = "Problem Related Item"
+  description = ""
   actionOverrides = [
     {
       actionName = "CancelEdit"

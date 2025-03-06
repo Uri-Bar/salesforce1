@@ -58,6 +58,7 @@ type salesforce.CreditMemoInvApplication {
   apiName = "CreditMemoInvApplication"
   metadataType = "CustomObject"
   label = "Credit Memo Invoice Application"
+  description = ""
   actionOverrides = [
     {
       actionName = "CancelEdit"

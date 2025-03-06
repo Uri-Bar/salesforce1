@@ -58,6 +58,7 @@ type salesforce.LegalEntity {
   apiName = "LegalEntity"
   metadataType = "CustomObject"
   label = "Legal Entity"
+  description = ""
   actionOverrides = [
     {
       actionName = "CancelEdit"

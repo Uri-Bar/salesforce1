@@ -58,6 +58,7 @@ type salesforce.CommSubscriptionConsent {
   apiName = "CommSubscriptionConsent"
   metadataType = "CustomObject"
   label = "Communication Subscription Consent"
+  description = ""
   actionOverrides = [
     {
       actionName = "CancelEdit"

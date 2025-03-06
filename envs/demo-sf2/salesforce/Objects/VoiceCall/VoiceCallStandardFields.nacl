@@ -90,10 +90,6 @@ type salesforce.VoiceCall {
     queryable = true
     _hidden_value = true
   }
-  salesforce.Unknown CallSubtype {
-    apiName = "VoiceCall.CallSubtype"
-    _hidden_value = true
-  }
   salesforce.Picklist CallType {
     apiName = "VoiceCall.CallType"
     restricted = true
@@ -454,6 +450,15 @@ type salesforce.VoiceCall {
     apiName = "VoiceCall.SourceType"
     restricted = true
     label = "Source Type"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Picklist CallSubtype {
+    apiName = "VoiceCall.CallSubtype"
+    restricted = true
+    label = "Call Subtype"
     createable = false
     updateable = false
     queryable = true

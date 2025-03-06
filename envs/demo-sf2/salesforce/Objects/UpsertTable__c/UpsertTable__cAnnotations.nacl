@@ -94,6 +94,7 @@ type salesforce.UpsertTable__c {
   apiName = "UpsertTable__c"
   metadataType = "CustomObject"
   label = "UpsertTable"
+  description = ""
   pluralLabel = "UpsertTable"
   actionOverrides = [
     {

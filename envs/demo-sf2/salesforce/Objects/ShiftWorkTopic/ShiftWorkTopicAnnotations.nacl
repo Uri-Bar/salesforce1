@@ -58,6 +58,7 @@ type salesforce.ShiftWorkTopic {
   apiName = "ShiftWorkTopic"
   metadataType = "CustomObject"
   label = "Shift Work Topic"
+  description = ""
   actionOverrides = [
     {
       actionName = "CancelEdit"

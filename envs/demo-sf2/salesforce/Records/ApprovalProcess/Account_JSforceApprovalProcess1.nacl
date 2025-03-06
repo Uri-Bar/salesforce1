@@ -29,7 +29,7 @@ salesforce.ApprovalProcess Account_JSforceApprovalProcess1@v {
       approvalActions = {
         action = [
           {
-            name = "Set_Approved_Flag"
+            name = salesforce.WorkflowFieldUpdate.instance.Account_Set_Approved_Flag@vuu
             type = "FieldUpdate"
           },
         ]
@@ -55,5 +55,8 @@ salesforce.ApprovalProcess Account_JSforceApprovalProcess1@v {
   processOrder = 1
   recordEditability = "AdminOnly"
   showApprovalHistory = true
+  _parent = [
+    salesforce.Account,
+  ]
   _alias = "JSforce Approval Process #1"
 }

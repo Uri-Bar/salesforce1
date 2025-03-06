@@ -58,6 +58,7 @@ type salesforce.MessagingEndUser {
   apiName = "MessagingEndUser"
   metadataType = "CustomObject"
   label = "Messaging User"
+  description = ""
   actionOverrides = [
     {
       actionName = "CancelEdit"

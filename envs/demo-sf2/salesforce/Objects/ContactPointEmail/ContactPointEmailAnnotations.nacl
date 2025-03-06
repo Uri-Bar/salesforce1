@@ -58,6 +58,7 @@ type salesforce.ContactPointEmail {
   apiName = "ContactPointEmail"
   metadataType = "CustomObject"
   label = "Contact Point Email"
+  description = ""
   actionOverrides = [
     {
       actionName = "CancelEdit"

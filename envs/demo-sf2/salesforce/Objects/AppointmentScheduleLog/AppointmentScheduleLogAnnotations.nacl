@@ -58,6 +58,7 @@ type salesforce.AppointmentScheduleLog {
   apiName = "AppointmentScheduleLog"
   metadataType = "CustomObject"
   label = "Appointment Schedule Log"
+  description = ""
   enableFeeds = false
   externalSharingModel = "ControlledByParent"
   _alias = "Appointment Schedule Log"

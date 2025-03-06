@@ -58,6 +58,7 @@ type salesforce.OperatingHours {
   apiName = "OperatingHours"
   metadataType = "CustomObject"
   label = "Operating Hours"
+  description = ""
   actionOverrides = [
     {
       actionName = "CancelEdit"

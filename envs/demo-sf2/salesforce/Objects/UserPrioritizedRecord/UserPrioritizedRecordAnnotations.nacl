@@ -58,6 +58,7 @@ type salesforce.UserPrioritizedRecord {
   apiName = "UserPrioritizedRecord"
   metadataType = "CustomObject"
   label = "User Prioritized Record"
+  description = ""
   enableFeeds = false
   externalSharingModel = "Private"
   _alias = "User Prioritized Record"

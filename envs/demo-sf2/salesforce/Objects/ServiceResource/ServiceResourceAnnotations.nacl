@@ -58,6 +58,7 @@ type salesforce.ServiceResource {
   apiName = "ServiceResource"
   metadataType = "CustomObject"
   label = "Service Resource"
+  description = ""
   actionOverrides = [
     {
       actionName = "CancelEdit"

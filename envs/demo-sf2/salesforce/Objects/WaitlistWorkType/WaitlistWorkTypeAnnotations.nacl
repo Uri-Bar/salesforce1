@@ -58,6 +58,7 @@ type salesforce.WaitlistWorkType {
   apiName = "WaitlistWorkType"
   metadataType = "CustomObject"
   label = "Waitlist Work Type"
+  description = ""
   actionOverrides = [
     {
       actionName = "CancelEdit"

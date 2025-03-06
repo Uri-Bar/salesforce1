@@ -58,6 +58,7 @@ type salesforce.WorkStep {
   apiName = "WorkStep"
   metadataType = "CustomObject"
   label = "Work Step"
+  description = ""
   actionOverrides = [
     {
       actionName = "CancelEdit"

@@ -62,6 +62,7 @@ type salesforce.JSforceTestSetting__c {
   apiName = "JSforceTestSetting__c"
   metadataType = "CustomObject"
   label = "JSforce Test Setting"
+  description = ""
   customSettingsType = "Hierarchy"
   enableFeeds = false
   visibility = "Public"

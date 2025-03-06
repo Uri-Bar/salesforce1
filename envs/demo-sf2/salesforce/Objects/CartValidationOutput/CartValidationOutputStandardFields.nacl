@@ -67,15 +67,6 @@ type salesforce.CartValidationOutput {
     queryable = true
     _hidden_value = true
   }
-  salesforce.Lookup CartId {
-    apiName = "CartValidationOutput.CartId"
-    relationshipName = "Cart"
-    _required = true
-    label = "Cart ID"
-    createable = true
-    updateable = false
-    queryable = true
-  }
   salesforce.Lookup RelatedEntityId {
     apiName = "CartValidationOutput.RelatedEntityId"
     relationshipName = "RelatedEntity"
@@ -139,5 +130,14 @@ type salesforce.CartValidationOutput {
     caseSensitive = false
     queryable = true
     _hidden_value = true
+  }
+  salesforce.MasterDetail CartId {
+    apiName = "CartValidationOutput.CartId"
+    relationshipName = "Cart"
+    _required = true
+    label = "Cart ID"
+    createable = true
+    updateable = false
+    queryable = true
   }
 }

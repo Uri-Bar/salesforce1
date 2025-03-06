@@ -58,6 +58,7 @@ type salesforce.FulfillmentOrder {
   apiName = "FulfillmentOrder"
   metadataType = "CustomObject"
   label = "Fulfillment Order"
+  description = ""
   actionOverrides = [
     {
       actionName = "CancelEdit"

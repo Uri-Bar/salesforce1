@@ -58,6 +58,7 @@ type salesforce.CartDeliveryGroup {
   apiName = "CartDeliveryGroup"
   metadataType = "CustomObject"
   label = "Cart Delivery Group"
+  description = ""
   actionOverrides = [
     {
       actionName = "CancelEdit"

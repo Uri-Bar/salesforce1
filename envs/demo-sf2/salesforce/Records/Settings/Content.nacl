@@ -17,8 +17,10 @@ salesforce.ContentSettings {
   enableLibraryManagedFiles = false
   enableSiteGuestUserToUploadFiles = false
   enableUploadFilesOnAttachments = false
-  setValidContentTypeForAtchDocDownload = "false"
+  setValidContentTypeForAtchDocDownload = false
   skipContentAssetTriggers = false
   skipContentAssetTriggersOnDeploy = true
   _alias = "Content"
+  enableFileIngestToDataCloud = true
+  enableLWCFileUpload = false
 }

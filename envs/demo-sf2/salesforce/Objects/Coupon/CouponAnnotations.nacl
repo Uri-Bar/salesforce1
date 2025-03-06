@@ -58,6 +58,7 @@ type salesforce.Coupon {
   apiName = "Coupon"
   metadataType = "CustomObject"
   label = "Coupon"
+  description = ""
   actionOverrides = [
     {
       actionName = "CancelEdit"
