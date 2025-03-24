@@ -9,9 +9,6 @@ type salesforce.ShippingRateGroup {
     apiName = "ShippingRateGroup.IsDeleted"
     defaultValue = false
     label = "Deleted"
-    createable = false
-    updateable = false
-    queryable = true
     _hidden_value = true
   }
   salesforce.Text Name {
@@ -19,52 +16,34 @@ type salesforce.ShippingRateGroup {
     length = 255
     _required = true
     label = "Shipping Rate Group Name"
-    createable = true
-    updateable = true
     unique = false
     caseSensitive = false
-    queryable = true
   }
   salesforce.DateTime CreatedDate {
     apiName = "ShippingRateGroup.CreatedDate"
     label = "Created Date"
-    createable = false
-    updateable = false
-    queryable = true
     _hidden_value = true
   }
   salesforce.Lookup CreatedById {
     apiName = "ShippingRateGroup.CreatedById"
     relationshipName = "CreatedBy"
     label = "Created By ID"
-    createable = false
-    updateable = false
-    queryable = true
     _hidden_value = true
   }
   salesforce.DateTime LastModifiedDate {
     apiName = "ShippingRateGroup.LastModifiedDate"
     label = "Last Modified Date"
-    createable = false
-    updateable = false
-    queryable = true
     _hidden_value = true
   }
   salesforce.Lookup LastModifiedById {
     apiName = "ShippingRateGroup.LastModifiedById"
     relationshipName = "LastModifiedBy"
     label = "Last Modified By ID"
-    createable = false
-    updateable = false
-    queryable = true
     _hidden_value = true
   }
   salesforce.DateTime SystemModstamp {
     apiName = "ShippingRateGroup.SystemModstamp"
     label = "System Modstamp"
-    createable = false
-    updateable = false
-    queryable = true
     _hidden_value = true
   }
   salesforce.Lookup ShippingProfileId {
@@ -72,8 +51,5 @@ type salesforce.ShippingRateGroup {
     relationshipName = "ShippingProfile"
     _required = true
     label = "Shipping Profile ID"
-    createable = true
-    updateable = false
-    queryable = true
   }
 }

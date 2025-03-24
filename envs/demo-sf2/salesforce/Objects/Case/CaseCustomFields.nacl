@@ -6,10 +6,7 @@ type salesforce.Case {
     length = 12
     trackTrending = false
     unique = false
-    createable = true
-    updateable = true
     caseSensitive = false
-    queryable = true
   }
   salesforce.Picklist PotentialLiability__c {
     apiName = "Case.PotentialLiability__c"
@@ -29,9 +26,6 @@ type salesforce.Case {
     ]
     sorted = false
     restricted = false
-    createable = true
-    updateable = true
-    queryable = true
   }
   salesforce.Picklist Product__c {
     apiName = "Case.Product__c"
@@ -86,9 +80,6 @@ type salesforce.Case {
     ]
     sorted = false
     restricted = false
-    createable = true
-    updateable = true
-    queryable = true
   }
   salesforce.Picklist SLAViolation__c {
     apiName = "Case.SLAViolation__c"
@@ -108,8 +99,5 @@ type salesforce.Case {
     ]
     sorted = false
     restricted = false
-    createable = true
-    updateable = true
-    queryable = true
   }
 }

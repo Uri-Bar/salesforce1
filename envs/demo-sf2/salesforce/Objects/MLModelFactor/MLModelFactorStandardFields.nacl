@@ -9,59 +9,38 @@ type salesforce.MLModelFactor {
     apiName = "MLModelFactor.IsDeleted"
     defaultValue = false
     label = "Deleted"
-    createable = false
-    updateable = false
-    queryable = true
     _hidden_value = true
   }
   salesforce.AutoNumber Name {
     apiName = "MLModelFactor.Name"
     label = "Name"
-    createable = false
-    updateable = false
-    queryable = true
     _hidden_value = true
   }
   salesforce.DateTime CreatedDate {
     apiName = "MLModelFactor.CreatedDate"
     label = "Created Date"
-    createable = false
-    updateable = false
-    queryable = true
     _hidden_value = true
   }
   salesforce.Lookup CreatedById {
     apiName = "MLModelFactor.CreatedById"
     relationshipName = "CreatedBy"
     label = "Created By ID"
-    createable = false
-    updateable = false
-    queryable = true
     _hidden_value = true
   }
   salesforce.DateTime LastModifiedDate {
     apiName = "MLModelFactor.LastModifiedDate"
     label = "Last Modified Date"
-    createable = false
-    updateable = false
-    queryable = true
     _hidden_value = true
   }
   salesforce.Lookup LastModifiedById {
     apiName = "MLModelFactor.LastModifiedById"
     relationshipName = "LastModifiedBy"
     label = "Last Modified By ID"
-    createable = false
-    updateable = false
-    queryable = true
     _hidden_value = true
   }
   salesforce.DateTime SystemModstamp {
     apiName = "MLModelFactor.SystemModstamp"
     label = "System Modstamp"
-    createable = false
-    updateable = false
-    queryable = true
     _hidden_value = true
   }
   salesforce.Lookup ModelId {
@@ -69,18 +48,12 @@ type salesforce.MLModelFactor {
     relationshipName = "Model"
     _required = true
     label = "ML Model ID"
-    createable = false
-    updateable = false
-    queryable = true
     _hidden_value = true
   }
   salesforce.Picklist Type {
     apiName = "MLModelFactor.Type"
     restricted = true
     label = "Factor Type"
-    createable = false
-    updateable = false
-    queryable = true
     _hidden_value = true
   }
   salesforce.Number Weight {
@@ -88,10 +61,7 @@ type salesforce.MLModelFactor {
     label = "Weight"
     precision = 18
     scale = 0
-    createable = false
-    updateable = false
     unique = false
-    queryable = true
     _hidden_value = true
   }
   salesforce.Number Importance {
@@ -99,10 +69,7 @@ type salesforce.MLModelFactor {
     label = "Importance"
     precision = 18
     scale = 0
-    createable = false
-    updateable = false
     unique = false
-    queryable = true
     _hidden_value = true
   }
   salesforce.Number Correlation {
@@ -110,19 +77,13 @@ type salesforce.MLModelFactor {
     label = "Correlation"
     precision = 18
     scale = 0
-    createable = false
-    updateable = false
     unique = false
-    queryable = true
     _hidden_value = true
   }
   salesforce.Picklist FactorType {
     apiName = "MLModelFactor.FactorType"
     restricted = true
     label = "Factor Category"
-    createable = false
-    updateable = false
-    queryable = true
     _hidden_value = true
   }
 }

@@ -9,9 +9,6 @@ type salesforce.StandardShippingRate {
     apiName = "StandardShippingRate.IsDeleted"
     defaultValue = false
     label = "Deleted"
-    createable = false
-    updateable = false
-    queryable = true
     _hidden_value = true
   }
   salesforce.Text Name {
@@ -19,52 +16,34 @@ type salesforce.StandardShippingRate {
     length = 255
     _required = true
     label = "Standard Shipping Rate Name"
-    createable = true
-    updateable = true
     unique = false
     caseSensitive = false
-    queryable = true
   }
   salesforce.DateTime CreatedDate {
     apiName = "StandardShippingRate.CreatedDate"
     label = "Created Date"
-    createable = false
-    updateable = false
-    queryable = true
     _hidden_value = true
   }
   salesforce.Lookup CreatedById {
     apiName = "StandardShippingRate.CreatedById"
     relationshipName = "CreatedBy"
     label = "Created By ID"
-    createable = false
-    updateable = false
-    queryable = true
     _hidden_value = true
   }
   salesforce.DateTime LastModifiedDate {
     apiName = "StandardShippingRate.LastModifiedDate"
     label = "Last Modified Date"
-    createable = false
-    updateable = false
-    queryable = true
     _hidden_value = true
   }
   salesforce.Lookup LastModifiedById {
     apiName = "StandardShippingRate.LastModifiedById"
     relationshipName = "LastModifiedBy"
     label = "Last Modified By ID"
-    createable = false
-    updateable = false
-    queryable = true
     _hidden_value = true
   }
   salesforce.DateTime SystemModstamp {
     apiName = "StandardShippingRate.SystemModstamp"
     label = "System Modstamp"
-    createable = false
-    updateable = false
-    queryable = true
     _hidden_value = true
   }
   salesforce.Lookup ShippingZoneId {
@@ -72,90 +51,60 @@ type salesforce.StandardShippingRate {
     relationshipName = "ShippingZone"
     _required = true
     label = "Shipping Zone ID"
-    createable = true
-    updateable = false
-    queryable = true
   }
   salesforce.Currency Price {
     apiName = "StandardShippingRate.Price"
     label = "Price"
-    createable = true
-    updateable = true
     scale = 0
     precision = 18
-    queryable = true
   }
   salesforce.Picklist ConditionFactor {
     apiName = "StandardShippingRate.ConditionFactor"
     restricted = true
     label = "Condition Factor"
-    createable = true
-    updateable = true
-    queryable = true
   }
   salesforce.Number ConditionRangeMin {
     apiName = "StandardShippingRate.ConditionRangeMin"
     label = "Condition Range Min"
     precision = 18
     scale = 0
-    createable = true
-    updateable = true
     unique = false
-    queryable = true
   }
   salesforce.Number ConditionRangeMax {
     apiName = "StandardShippingRate.ConditionRangeMax"
     label = "Condition Range Max"
     precision = 18
     scale = 0
-    createable = true
-    updateable = true
     unique = false
-    queryable = true
   }
   salesforce.Number TransitTimeMin {
     apiName = "StandardShippingRate.TransitTimeMin"
     label = "Minimum Transit Time"
     precision = 9
-    createable = true
-    updateable = true
     scale = 0
     unique = false
-    queryable = true
   }
   salesforce.Number TransitTimeMax {
     apiName = "StandardShippingRate.TransitTimeMax"
     label = "Maximum Transit Time"
     precision = 9
-    createable = true
-    updateable = true
     scale = 0
     unique = false
-    queryable = true
   }
   salesforce.Picklist TransitTimeUnit {
     apiName = "StandardShippingRate.TransitTimeUnit"
     restricted = true
     label = "Unit of Transit Time"
-    createable = true
-    updateable = true
-    queryable = true
   }
   salesforce.Lookup ShippingCarrierMethodId {
     apiName = "StandardShippingRate.ShippingCarrierMethodId"
     relationshipName = "ShippingCarrierMethod"
     label = "Shipping Carrier Method ID"
-    createable = false
-    updateable = false
-    queryable = true
     _hidden_value = true
   }
   salesforce.Picklist WeightUnit {
     apiName = "StandardShippingRate.WeightUnit"
     restricted = true
     label = "Unit of Weight"
-    createable = true
-    updateable = true
-    queryable = true
   }
 }

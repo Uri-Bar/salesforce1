@@ -7,17 +7,11 @@ type salesforce.Promotion {
     apiName = "Promotion.CampaignId"
     relationshipName = "Campaign"
     label = "Campaign ID"
-    createable = true
-    updateable = true
-    queryable = true
   }
   salesforce.LongTextArea Description {
     apiName = "Promotion.Description"
     length = 1000
     label = "Description"
-    createable = true
-    updateable = true
-    queryable = true
   }
   salesforce.Unknown DiscountOrder {
     apiName = "Promotion.DiscountOrder"
@@ -33,18 +27,12 @@ type salesforce.Promotion {
     apiName = "Promotion.DisplayName"
     length = 255
     label = "Display Name"
-    createable = true
-    updateable = true
     unique = false
     caseSensitive = false
-    queryable = true
   }
   salesforce.DateTime EndDateTime {
     apiName = "Promotion.EndDateTime"
     label = "End Datetime"
-    createable = true
-    updateable = true
-    queryable = true
   }
   salesforce.Unknown ExclusivityType {
     apiName = "Promotion.ExclusivityType"
@@ -55,25 +43,16 @@ type salesforce.Promotion {
     apiName = "Promotion.IsActive"
     defaultValue = false
     label = "Active"
-    createable = true
-    updateable = true
-    queryable = true
   }
   salesforce.Checkbox IsAutomatic {
     apiName = "Promotion.IsAutomatic"
     defaultValue = false
     label = "Automatic"
-    createable = true
-    updateable = true
-    queryable = true
   }
   salesforce.Checkbox IsCommercePromotion {
     apiName = "Promotion.IsCommercePromotion"
     defaultValue = false
     label = "Commerce Promotion"
-    createable = true
-    updateable = true
-    queryable = true
   }
   salesforce.Unknown IsQualCriteriaNotRequiredPerApplication {
     apiName = "Promotion.IsQualCriteriaNotRequiredPerApplication"
@@ -89,65 +68,44 @@ type salesforce.Promotion {
     inlineHelpText = "Enter the maximum number of times this promotion can apply to a cart. The default value is 1."
     label = "Maximum Applications Per Cart"
     precision = 9
-    createable = true
-    updateable = true
     scale = 0
     unique = false
-    queryable = true
   }
   salesforce.Text Name {
     apiName = "Promotion.Name"
     length = 255
     _required = true
     label = "Name"
-    createable = true
-    updateable = true
     unique = false
     caseSensitive = false
-    queryable = true
   }
   salesforce.LongTextArea Objective {
     apiName = "Promotion.Objective"
     length = 1000
     label = "Objective"
-    createable = true
-    updateable = true
-    queryable = true
   }
   salesforce.Lookup OwnerId {
     apiName = "Promotion.OwnerId"
     relationshipName = "Owner"
     label = "Owner ID"
-    createable = true
-    updateable = true
-    queryable = true
     _hidden_value = true
   }
   salesforce.Number PriorityNumber {
     apiName = "Promotion.PriorityNumber"
     label = "Priority Number"
     precision = 9
-    createable = true
-    updateable = true
     scale = 0
     unique = false
-    queryable = true
   }
   salesforce.Picklist QualifierCriteria {
     apiName = "Promotion.QualifierCriteria"
     inlineHelpText = "Define whether a cart must meet the criteria for any qualifier or all qualifiers"
     restricted = true
     label = "Qualifier Criteria"
-    createable = true
-    updateable = true
-    queryable = true
   }
   salesforce.DateTime StartDateTime {
     apiName = "Promotion.StartDateTime"
     label = "Start Datetime"
-    createable = true
-    updateable = true
-    queryable = true
   }
   salesforce.Unknown TargetCriteria {
     apiName = "Promotion.TargetCriteria"
@@ -158,9 +116,6 @@ type salesforce.Promotion {
     apiName = "Promotion.TermsAndConditions"
     length = 4000
     label = "Terms and Conditions"
-    createable = true
-    updateable = true
-    queryable = true
   }
   serviceid Id {
     apiName = "Promotion.Id"
@@ -172,51 +127,33 @@ type salesforce.Promotion {
     apiName = "Promotion.IsDeleted"
     defaultValue = false
     label = "Deleted"
-    createable = false
-    updateable = false
-    queryable = true
     _hidden_value = true
   }
   salesforce.DateTime CreatedDate {
     apiName = "Promotion.CreatedDate"
     label = "Created Date"
-    createable = false
-    updateable = false
-    queryable = true
     _hidden_value = true
   }
   salesforce.Lookup CreatedById {
     apiName = "Promotion.CreatedById"
     relationshipName = "CreatedBy"
     label = "Created By ID"
-    createable = false
-    updateable = false
-    queryable = true
     _hidden_value = true
   }
   salesforce.DateTime LastModifiedDate {
     apiName = "Promotion.LastModifiedDate"
     label = "Last Modified Date"
-    createable = false
-    updateable = false
-    queryable = true
     _hidden_value = true
   }
   salesforce.Lookup LastModifiedById {
     apiName = "Promotion.LastModifiedById"
     relationshipName = "LastModifiedBy"
     label = "Last Modified By ID"
-    createable = false
-    updateable = false
-    queryable = true
     _hidden_value = true
   }
   salesforce.DateTime SystemModstamp {
     apiName = "Promotion.SystemModstamp"
     label = "System Modstamp"
-    createable = false
-    updateable = false
-    queryable = true
     _hidden_value = true
   }
 }

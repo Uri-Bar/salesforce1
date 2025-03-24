@@ -6,10 +6,7 @@ type salesforce.Opportunity {
     length = 100
     trackTrending = false
     unique = false
-    createable = true
-    updateable = true
     caseSensitive = false
-    queryable = true
   }
   salesforce.Picklist DeliveryInstallationStatus__c {
     apiName = "Opportunity.DeliveryInstallationStatus__c"
@@ -34,9 +31,6 @@ type salesforce.Opportunity {
     ]
     sorted = false
     restricted = false
-    createable = true
-    updateable = true
-    queryable = true
   }
   salesforce.Text MainCompetitors__c {
     apiName = "Opportunity.MainCompetitors__c"
@@ -45,10 +39,7 @@ type salesforce.Opportunity {
     length = 100
     trackTrending = false
     unique = false
-    createable = true
-    updateable = true
     caseSensitive = false
-    queryable = true
   }
   salesforce.Text OrderNumber__c {
     apiName = "Opportunity.OrderNumber__c"
@@ -57,10 +48,7 @@ type salesforce.Opportunity {
     length = 8
     trackTrending = false
     unique = false
-    createable = true
-    updateable = true
     caseSensitive = false
-    queryable = true
   }
   salesforce.Text TrackingNumber__c {
     apiName = "Opportunity.TrackingNumber__c"
@@ -69,9 +57,6 @@ type salesforce.Opportunity {
     length = 12
     trackTrending = false
     unique = false
-    createable = true
-    updateable = true
     caseSensitive = false
-    queryable = true
   }
 }

@@ -4,17 +4,11 @@ type salesforce.PromotionMarketSegment {
     relationshipName = "Promotion"
     _required = true
     label = "Promotion ID"
-    createable = true
-    updateable = false
-    queryable = true
   }
   salesforce.Lookup PromotionSegmentId {
     apiName = "PromotionMarketSegment.PromotionSegmentId"
     relationshipName = "PromotionSegment"
     label = "Promotion Segment ID"
-    createable = true
-    updateable = true
-    queryable = true
   }
   serviceid Id {
     apiName = "PromotionMarketSegment.Id"
@@ -26,59 +20,38 @@ type salesforce.PromotionMarketSegment {
     apiName = "PromotionMarketSegment.IsDeleted"
     defaultValue = false
     label = "Deleted"
-    createable = false
-    updateable = false
-    queryable = true
     _hidden_value = true
   }
   salesforce.AutoNumber Name {
     apiName = "PromotionMarketSegment.Name"
     label = "Name"
-    createable = false
-    updateable = false
-    queryable = true
     _hidden_value = true
   }
   salesforce.DateTime CreatedDate {
     apiName = "PromotionMarketSegment.CreatedDate"
     label = "Created Date"
-    createable = false
-    updateable = false
-    queryable = true
     _hidden_value = true
   }
   salesforce.Lookup CreatedById {
     apiName = "PromotionMarketSegment.CreatedById"
     relationshipName = "CreatedBy"
     label = "Created By ID"
-    createable = false
-    updateable = false
-    queryable = true
     _hidden_value = true
   }
   salesforce.DateTime LastModifiedDate {
     apiName = "PromotionMarketSegment.LastModifiedDate"
     label = "Last Modified Date"
-    createable = false
-    updateable = false
-    queryable = true
     _hidden_value = true
   }
   salesforce.Lookup LastModifiedById {
     apiName = "PromotionMarketSegment.LastModifiedById"
     relationshipName = "LastModifiedBy"
     label = "Last Modified By ID"
-    createable = false
-    updateable = false
-    queryable = true
     _hidden_value = true
   }
   salesforce.DateTime SystemModstamp {
     apiName = "PromotionMarketSegment.SystemModstamp"
     label = "System Modstamp"
-    createable = false
-    updateable = false
-    queryable = true
     _hidden_value = true
   }
 }

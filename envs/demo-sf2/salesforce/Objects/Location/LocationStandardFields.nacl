@@ -35,11 +35,8 @@ type salesforce.Location {
     apiName = "Location.ExternalReference"
     length = 255
     label = "External Reference"
-    createable = true
-    updateable = true
     unique = false
     caseSensitive = false
-    queryable = true
   }
   salesforce.Lookup FulfillingBusinessHoursId {
     apiName = "Location.FulfillingBusinessHoursId"
@@ -49,17 +46,11 @@ type salesforce.Location {
     apiName = "Location.IsInventoryLocation"
     defaultValue = false
     label = "Inventory Location"
-    createable = true
-    updateable = true
-    queryable = true
   }
   salesforce.Checkbox IsMobile {
     apiName = "Location.IsMobile"
     defaultValue = false
     label = "Mobile Location"
-    createable = true
-    updateable = true
-    queryable = true
   }
   salesforce.Unknown Location {
     apiName = "Location.Location"
@@ -73,28 +64,19 @@ type salesforce.Location {
     apiName = "Location.LocationType"
     _required = true
     label = "Location Type"
-    createable = true
-    updateable = true
-    queryable = true
   }
   salesforce.Lookup LogoId {
     apiName = "Location.LogoId"
     relationshipName = "Logo"
     label = "Asset File ID"
-    createable = true
-    updateable = true
-    queryable = true
   }
   salesforce.Text Name {
     apiName = "Location.Name"
     length = 255
     _required = true
     label = "Location Name"
-    createable = true
-    updateable = true
     unique = false
     caseSensitive = false
-    queryable = true
   }
   salesforce.Unknown OpenDate {
     apiName = "Location.OpenDate"
@@ -104,9 +86,6 @@ type salesforce.Location {
     apiName = "Location.OwnerId"
     relationshipName = "Owner"
     label = "Owner ID"
-    createable = true
-    updateable = true
-    queryable = true
     _hidden_value = true
   }
   salesforce.Hierarchy ParentLocationId {
@@ -129,18 +108,12 @@ type salesforce.Location {
     apiName = "Location.RootLocationId"
     relationshipName = "RootLocation"
     label = "Root Location ID"
-    createable = false
-    updateable = false
-    queryable = true
     _hidden_value = true
   }
   salesforce.Checkbox ShouldSyncWithOci {
     apiName = "Location.ShouldSyncWithOci"
     defaultValue = false
     label = "Sync with OCI"
-    createable = true
-    updateable = true
-    queryable = true
   }
   salesforce.Unknown TimeZone {
     apiName = "Location.TimeZone"
@@ -160,51 +133,33 @@ type salesforce.Location {
     apiName = "Location.IsDeleted"
     defaultValue = false
     label = "Deleted"
-    createable = false
-    updateable = false
-    queryable = true
     _hidden_value = true
   }
   salesforce.DateTime CreatedDate {
     apiName = "Location.CreatedDate"
     label = "Created Date"
-    createable = false
-    updateable = false
-    queryable = true
     _hidden_value = true
   }
   salesforce.Lookup CreatedById {
     apiName = "Location.CreatedById"
     relationshipName = "CreatedBy"
     label = "Created By ID"
-    createable = false
-    updateable = false
-    queryable = true
     _hidden_value = true
   }
   salesforce.DateTime LastModifiedDate {
     apiName = "Location.LastModifiedDate"
     label = "Last Modified Date"
-    createable = false
-    updateable = false
-    queryable = true
     _hidden_value = true
   }
   salesforce.Lookup LastModifiedById {
     apiName = "Location.LastModifiedById"
     relationshipName = "LastModifiedBy"
     label = "Last Modified By ID"
-    createable = false
-    updateable = false
-    queryable = true
     _hidden_value = true
   }
   salesforce.DateTime SystemModstamp {
     apiName = "Location.SystemModstamp"
     label = "System Modstamp"
-    createable = false
-    updateable = false
-    queryable = true
     _hidden_value = true
   }
 }

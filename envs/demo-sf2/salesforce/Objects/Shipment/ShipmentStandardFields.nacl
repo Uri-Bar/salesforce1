@@ -15,9 +15,6 @@ type salesforce.Shipment {
     apiName = "Shipment.DestinationLocationId"
     relationshipName = "DestinationLocation"
     label = "Destination Location ID"
-    createable = true
-    updateable = true
-    queryable = true
   }
   salesforce.Unknown ExpectedDeliveryDate {
     apiName = "Shipment.ExpectedDeliveryDate"
@@ -31,9 +28,6 @@ type salesforce.Shipment {
     apiName = "Shipment.OwnerId"
     relationshipName = "Owner"
     label = "Owner ID"
-    createable = true
-    updateable = true
-    queryable = true
     _hidden_value = true
   }
   salesforce.Picklist Provider {
@@ -57,19 +51,13 @@ type salesforce.Shipment {
     length = 255
     _required = true
     label = "Ship To Name"
-    createable = true
-    updateable = true
     unique = false
     caseSensitive = false
-    queryable = true
   }
   salesforce.Lookup SourceLocationId {
     apiName = "Shipment.SourceLocationId"
     relationshipName = "SourceLocation"
     label = "Source Location ID"
-    createable = true
-    updateable = true
-    queryable = true
   }
   salesforce.Picklist Status {
     apiName = "Shipment.Status"
@@ -80,9 +68,6 @@ type salesforce.Shipment {
     label = "Total Items Quantity"
     precision = 18
     scale = 2
-    createable = false
-    updateable = false
-    queryable = true
     _hidden_value = true
   }
   salesforce.Unknown TrackingNumber {
@@ -103,59 +88,38 @@ type salesforce.Shipment {
     apiName = "Shipment.IsDeleted"
     defaultValue = false
     label = "Deleted"
-    createable = false
-    updateable = false
-    queryable = true
     _hidden_value = true
   }
   salesforce.AutoNumber ShipmentNumber {
     apiName = "Shipment.ShipmentNumber"
     label = "Shipment Number"
-    createable = false
-    updateable = false
-    queryable = true
     _hidden_value = true
   }
   salesforce.DateTime CreatedDate {
     apiName = "Shipment.CreatedDate"
     label = "Created Date"
-    createable = false
-    updateable = false
-    queryable = true
     _hidden_value = true
   }
   salesforce.Lookup CreatedById {
     apiName = "Shipment.CreatedById"
     relationshipName = "CreatedBy"
     label = "Created By ID"
-    createable = false
-    updateable = false
-    queryable = true
     _hidden_value = true
   }
   salesforce.DateTime LastModifiedDate {
     apiName = "Shipment.LastModifiedDate"
     label = "Last Modified Date"
-    createable = false
-    updateable = false
-    queryable = true
     _hidden_value = true
   }
   salesforce.Lookup LastModifiedById {
     apiName = "Shipment.LastModifiedById"
     relationshipName = "LastModifiedBy"
     label = "Last Modified By ID"
-    createable = false
-    updateable = false
-    queryable = true
     _hidden_value = true
   }
   salesforce.DateTime SystemModstamp {
     apiName = "Shipment.SystemModstamp"
     label = "System Modstamp"
-    createable = false
-    updateable = false
-    queryable = true
     _hidden_value = true
   }
 }

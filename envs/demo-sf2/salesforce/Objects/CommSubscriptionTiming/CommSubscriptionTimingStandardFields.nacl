@@ -5,9 +5,6 @@ type salesforce.CommSubscriptionTiming {
     relationshipName = "CommSubscriptionConsent"
     _required = true
     label = "Communication Subscription Consent ID"
-    createable = true
-    updateable = false
-    queryable = true
   }
   salesforce.Unknown Offset {
     apiName = "CommSubscriptionTiming.Offset"
@@ -35,9 +32,6 @@ type salesforce.CommSubscriptionTiming {
     restricted = true
     _required = true
     label = "Unit"
-    createable = true
-    updateable = true
-    queryable = true
   }
   serviceid Id {
     apiName = "CommSubscriptionTiming.Id"
@@ -49,59 +43,38 @@ type salesforce.CommSubscriptionTiming {
     apiName = "CommSubscriptionTiming.IsDeleted"
     defaultValue = false
     label = "Deleted"
-    createable = false
-    updateable = false
-    queryable = true
     _hidden_value = true
   }
   salesforce.AutoNumber Name {
     apiName = "CommSubscriptionTiming.Name"
     label = "Name"
-    createable = false
-    updateable = false
-    queryable = true
     _hidden_value = true
   }
   salesforce.DateTime CreatedDate {
     apiName = "CommSubscriptionTiming.CreatedDate"
     label = "Created Date"
-    createable = false
-    updateable = false
-    queryable = true
     _hidden_value = true
   }
   salesforce.Lookup CreatedById {
     apiName = "CommSubscriptionTiming.CreatedById"
     relationshipName = "CreatedBy"
     label = "Created By ID"
-    createable = false
-    updateable = false
-    queryable = true
     _hidden_value = true
   }
   salesforce.DateTime LastModifiedDate {
     apiName = "CommSubscriptionTiming.LastModifiedDate"
     label = "Last Modified Date"
-    createable = false
-    updateable = false
-    queryable = true
     _hidden_value = true
   }
   salesforce.Lookup LastModifiedById {
     apiName = "CommSubscriptionTiming.LastModifiedById"
     relationshipName = "LastModifiedBy"
     label = "Last Modified By ID"
-    createable = false
-    updateable = false
-    queryable = true
     _hidden_value = true
   }
   salesforce.DateTime SystemModstamp {
     apiName = "CommSubscriptionTiming.SystemModstamp"
     label = "System Modstamp"
-    createable = false
-    updateable = false
-    queryable = true
     _hidden_value = true
   }
 }

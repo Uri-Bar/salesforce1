@@ -5,10 +5,7 @@ type salesforce.Lead {
     label = "Current Generator(s)"
     length = 100
     unique = false
-    createable = true
-    updateable = true
     caseSensitive = false
-    queryable = true
   }
   salesforce.Number NumberofLocations__c {
     apiName = "Lead.NumberofLocations__c"
@@ -17,9 +14,6 @@ type salesforce.Lead {
     precision = 3
     scale = 0
     unique = false
-    createable = true
-    updateable = true
-    queryable = true
   }
   salesforce.Picklist Primary__c {
     apiName = "Lead.Primary__c"
@@ -38,9 +32,6 @@ type salesforce.Lead {
     ]
     sorted = false
     restricted = false
-    createable = true
-    updateable = true
-    queryable = true
   }
   salesforce.Picklist ProductInterest__c {
     apiName = "Lead.ProductInterest__c"
@@ -64,9 +55,6 @@ type salesforce.Lead {
     ]
     sorted = false
     restricted = false
-    createable = true
-    updateable = true
-    queryable = true
   }
   salesforce.Text SICCode__c {
     apiName = "Lead.SICCode__c"
@@ -74,9 +62,6 @@ type salesforce.Lead {
     label = "SIC Code"
     length = 15
     unique = false
-    createable = true
-    updateable = true
     caseSensitive = false
-    queryable = true
   }
 }

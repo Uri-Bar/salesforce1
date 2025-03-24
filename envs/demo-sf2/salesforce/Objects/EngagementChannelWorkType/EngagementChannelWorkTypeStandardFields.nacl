@@ -2,26 +2,17 @@ type salesforce.EngagementChannelWorkType {
   salesforce.Checkbox AreAllEngmtChnlSupported {
     apiName = "EngagementChannelWorkType.AreAllEngmtChnlSupported"
     label = "All Engagement Channels Supported"
-    createable = true
-    updateable = true
-    queryable = true
   }
   salesforce.Lookup EngagementChannelTypeId {
     apiName = "EngagementChannelWorkType.EngagementChannelTypeId"
     relationshipName = "EngagementChannelType"
     label = "Engagement Channel Type ID"
-    createable = true
-    updateable = true
-    queryable = true
   }
   salesforce.MasterDetail WorkTypeId {
     apiName = "EngagementChannelWorkType.WorkTypeId"
     relationshipName = "WorkType"
     _required = true
     label = "Work Type ID"
-    createable = true
-    updateable = false
-    queryable = true
   }
   serviceid Id {
     apiName = "EngagementChannelWorkType.Id"
@@ -33,59 +24,38 @@ type salesforce.EngagementChannelWorkType {
     apiName = "EngagementChannelWorkType.IsDeleted"
     defaultValue = false
     label = "Deleted"
-    createable = false
-    updateable = false
-    queryable = true
     _hidden_value = true
   }
   salesforce.AutoNumber Name {
     apiName = "EngagementChannelWorkType.Name"
     label = "Engagement Channel Work Type Number"
-    createable = false
-    updateable = false
-    queryable = true
     _hidden_value = true
   }
   salesforce.DateTime CreatedDate {
     apiName = "EngagementChannelWorkType.CreatedDate"
     label = "Created Date"
-    createable = false
-    updateable = false
-    queryable = true
     _hidden_value = true
   }
   salesforce.Lookup CreatedById {
     apiName = "EngagementChannelWorkType.CreatedById"
     relationshipName = "CreatedBy"
     label = "Created By ID"
-    createable = false
-    updateable = false
-    queryable = true
     _hidden_value = true
   }
   salesforce.DateTime LastModifiedDate {
     apiName = "EngagementChannelWorkType.LastModifiedDate"
     label = "Last Modified Date"
-    createable = false
-    updateable = false
-    queryable = true
     _hidden_value = true
   }
   salesforce.Lookup LastModifiedById {
     apiName = "EngagementChannelWorkType.LastModifiedById"
     relationshipName = "LastModifiedBy"
     label = "Last Modified By ID"
-    createable = false
-    updateable = false
-    queryable = true
     _hidden_value = true
   }
   salesforce.DateTime SystemModstamp {
     apiName = "EngagementChannelWorkType.SystemModstamp"
     label = "System Modstamp"
-    createable = false
-    updateable = false
-    queryable = true
     _hidden_value = true
   }
 }
