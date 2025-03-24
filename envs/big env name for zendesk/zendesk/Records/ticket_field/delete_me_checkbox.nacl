@@ -1,0 +1,16 @@
+zendesk.ticket_field delete_me_checkbox@su {
+  type = "checkbox"
+  raw_title = "delete me"
+  raw_description = ""
+  active = true
+  required = false
+  collapsed_for_agents = false
+  raw_title_in_portal = "delete me"
+  visible_in_portal = false
+  editable_in_portal = false
+  required_in_portal = false
+  agent_can_edit = true
+  removable = true
+  agent_description = "AS"
+  _alias = "delete me"
+}
