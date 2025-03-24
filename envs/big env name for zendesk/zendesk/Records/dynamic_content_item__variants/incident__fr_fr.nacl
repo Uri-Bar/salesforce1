@@ -1,0 +1,10 @@
+zendesk.dynamic_content_item__variants incident__fr_fr_b@uuum {
+  content = "a"
+  locale_id = zendesk.locale.instance.fr_fr@b
+  active = true
+  default = false
+  _parent = [
+    zendesk.dynamic_content_item.instance.incident,
+  ]
+  _alias = "incident - fr-fr"
+}

@@ -1,0 +1,9 @@
+zendesk.user_field uppercase2 {
+  type = "text"
+  key = "UpperCase2"
+  raw_title = "upperCase2"
+  raw_description = ""
+  active = true
+  system = false
+  _alias = "upperCase2"
+}

@@ -1,0 +1,9 @@
+zendesk.business_hours_schedule__holiday Almog_schedule_s__Almog_valid_expired_holiday@umuusss {
+  name = "Almog valid expired holiday"
+  start_date = "2022-12-04"
+  end_date = "2024-12-03"
+  _parent = [
+    zendesk.business_hours_schedule.instance.Almog_schedule@s,
+  ]
+  _alias = "Almog valid expired holiday"
+}

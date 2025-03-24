@@ -1,0 +1,33 @@
+zendesk.queue Adam_test3@s {
+  name = "Adam test3"
+  description = "new one"
+  definition = {
+    all = [
+      {
+        field = zendesk.ticket_field.instance.TestDecimal2_decimal
+        operator = ""
+        value = ""
+      },
+      {
+        field = "lookup:ticket.ticket_field_${ zendesk.ticket_field.instance.noam_lookup_user_lookup }.custom_fields.${ zendesk.custom_object.instance.missing_undefined }"
+        operator = "is"
+        value = "13906820831251"
+      },
+    ]
+    any = [
+      {
+        field = "lookup:ticket.ticket_field_13080414697363.ticket_field_4847599896339"
+        operator = "not_present"
+        value = ""
+      },
+    ]
+  }
+  priority = 2
+  primary_groups_id = [
+    zendesk.group.instance.Test,
+  ]
+  secondary_groups_id = [
+    zendesk.group.instance.Demo,
+    zendesk.group.instance.edenAudit,
+  ]
+}

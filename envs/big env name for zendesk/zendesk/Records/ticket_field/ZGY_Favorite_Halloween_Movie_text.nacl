@@ -1,0 +1,15 @@
+zendesk.ticket_field ZGY_Favorite_Halloween_Movie_text@sssu {
+  type = "text"
+  raw_title = "ZGY Favorite Halloween Movie"
+  raw_description = ""
+  active = true
+  required = false
+  collapsed_for_agents = false
+  raw_title_in_portal = "ZGY Favorite Halloween Movie"
+  visible_in_portal = false
+  editable_in_portal = false
+  required_in_portal = false
+  agent_can_edit = true
+  removable = true
+  _alias = "ZGY Favorite Halloween Movie"
+}

@@ -1,0 +1,10 @@
+zendesk.dynamic_content_item__variants incident__it {
+  content = "a"
+  locale_id = zendesk.locale.instance.it
+  active = true
+  default = false
+  _parent = [
+    zendesk.dynamic_content_item.instance.incident,
+  ]
+  _alias = "incident - it"
+}

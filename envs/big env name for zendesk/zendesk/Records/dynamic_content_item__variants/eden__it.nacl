@@ -1,0 +1,10 @@
+zendesk.dynamic_content_item__variants eden__it {
+  content = "edenContent changed ... 22"
+  locale_id = zendesk.locale.instance.it
+  active = true
+  default = false
+  _parent = [
+    zendesk.dynamic_content_item.instance.eden,
+  ]
+  _alias = "eden - it"
+}

@@ -1,0 +1,21 @@
+zendesk.ticket_field ZGY_Reasons_tagger@su {
+  type = "tagger"
+  raw_title = "ZGY Reasons"
+  raw_description = ""
+  active = true
+  required = false
+  collapsed_for_agents = false
+  raw_title_in_portal = "ZGY Reasons"
+  visible_in_portal = false
+  editable_in_portal = false
+  required_in_portal = false
+  agent_can_edit = true
+  removable = true
+  custom_field_options = [
+    zendesk.ticket_field__custom_field_options.instance.ZGY_Reasons_tagger__nostalgia@suuu,
+    zendesk.ticket_field__custom_field_options.instance.ZGY_Reasons_tagger__idek@suuu,
+    zendesk.ticket_field__custom_field_options.instance.ZGY_Reasons_tagger__add@suuu,
+    zendesk.ticket_field__custom_field_options.instance.ZGY_Reasons_tagger__something@suuu,
+  ]
+  _alias = "ZGY Reasons"
+}

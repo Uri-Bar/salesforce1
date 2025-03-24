@@ -1,0 +1,9 @@
+zendesk.business_hours_schedule__holiday Almog_schedule_s__Almog_valid_holiday_2@umuusss {
+  name = "Almog valid holiday 2"
+  start_date = "2023-10-25"
+  end_date = "2025-01-23"
+  _parent = [
+    zendesk.business_hours_schedule.instance.Almog_schedule@s,
+  ]
+  _alias = "Almog valid holiday 2"
+}

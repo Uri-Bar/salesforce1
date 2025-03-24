@@ -1,0 +1,9 @@
+zendesk.dynamic_content_item support_slas@s {
+  name = "Support SLAs"
+  placeholder = "{{dc.support_slas}}"
+  default_locale_id = zendesk.locale.instance.en_US@b
+  variants = [
+    zendesk.dynamic_content_item__variants.instance.support_slas_s__en_US_b@umuuum,
+  ]
+  _alias = "Support SLAs"
+}

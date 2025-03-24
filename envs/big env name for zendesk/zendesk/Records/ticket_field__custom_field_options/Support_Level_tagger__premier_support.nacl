@@ -1,0 +1,8 @@
+zendesk.ticket_field__custom_field_options Support_Level_tagger__premier_support@suuuu {
+  raw_name = "Premier Support"
+  value = "premier_support"
+  _parent = [
+    zendesk.ticket_field.instance.Support_Level_tagger@su,
+  ]
+  _alias = "premier_support"
+}

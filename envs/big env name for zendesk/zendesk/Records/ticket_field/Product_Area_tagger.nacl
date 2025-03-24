@@ -1,0 +1,27 @@
+zendesk.ticket_field Product_Area_tagger@su {
+  type = "tagger"
+  raw_title = "Product Area"
+  raw_description = "Tell us what your ticket is about"
+  active = true
+  required = true
+  collapsed_for_agents = false
+  raw_title_in_portal = "What is your ticket about"
+  visible_in_portal = true
+  editable_in_portal = true
+  required_in_portal = true
+  agent_can_edit = true
+  removable = true
+  agent_description = "The high-level product area that this ticket is about"
+  custom_field_options = [
+    zendesk.ticket_field__custom_field_options.instance.Product_Area_tagger__api___integration__rest_api@suuuuuuuuu,
+    zendesk.ticket_field__custom_field_options.instance.Product_Area_tagger__api___integration__soap_api@suuuuuuuuu,
+    zendesk.ticket_field__custom_field_options.instance.Product_Area_tagger__api___integration__webhooks@suuuuuuuu,
+    zendesk.ticket_field__custom_field_options.instance.Product_Area_tagger__configuration_custom_fields_formulas@suuuuuu,
+    zendesk.ticket_field__custom_field_options.instance.Product_Area_tagger__configuration__workflows___triggers@suuuuuuuu,
+    zendesk.ticket_field__custom_field_options.instance.Product_Area_tagger__data_management@suuuu,
+    zendesk.ticket_field__custom_field_options.instance.Product_Area_tagger__development__custom_scripts@suuuuuu,
+    zendesk.ticket_field__custom_field_options.instance.Product_Area_tagger__development__static_code_analysis@suuuuuuu,
+    zendesk.ticket_field__custom_field_options.instance.Product_Area_tagger__development__best_practices@suuuuuu,
+  ]
+  _alias = "Product Area"
+}

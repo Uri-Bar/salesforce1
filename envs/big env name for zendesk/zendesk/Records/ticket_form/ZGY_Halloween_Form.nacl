@@ -1,0 +1,22 @@
+zendesk.ticket_form ZGY_Halloween_Form@s {
+  raw_name = "ZGY Halloween Form"
+  raw_display_name = ""
+  end_user_visible = false
+  ticket_field_ids = [
+    zendesk.ticket_field.instance.Statut_status,
+    zendesk.ticket_field.instance.Groupe_group,
+    zendesk.ticket_field.instance.Assign__assignee@_00233u,
+    zendesk.ticket_field.instance.Ticket_status_custom_status@suu,
+    zendesk.ticket_field.instance.Sujet_subject,
+    zendesk.ticket_field.instance.Description_description,
+    zendesk.ticket_field.instance.ZGY_Explain_Name_text@ssu,
+    zendesk.ticket_field.instance.ZGY_Favorite_Halloween_Movie_text@sssu,
+    zendesk.ticket_field.instance.zgy_list_tagger,
+    zendesk.ticket_field.instance.SRD___Shipping_Delay_Reason_tagger@sbsssu,
+    zendesk.ticket_field.instance.SRD___Test_Custom_Field_tagger@sbsssu,
+  ]
+  active = true
+  default = false
+  in_all_brands = true
+  _alias = "ZGY Halloween Form"
+}

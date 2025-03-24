@@ -1,0 +1,22 @@
+zendesk.ticket_field Customer_Priority_tagger@su {
+  type = "tagger"
+  raw_title = "Customer Priority"
+  raw_description = ""
+  active = true
+  required = false
+  collapsed_for_agents = false
+  raw_title_in_portal = "How urgent is this"
+  visible_in_portal = true
+  editable_in_portal = true
+  required_in_portal = false
+  agent_can_edit = true
+  removable = true
+  custom_field_options = [
+    zendesk.ticket_field__custom_field_options.instance.Customer_Priority_tagger__low@suuu,
+    zendesk.ticket_field__custom_field_options.instance.Customer_Priority_tagger__medium@suuu,
+    zendesk.ticket_field__custom_field_options.instance.Customer_Priority_tagger__high@suuu,
+    zendesk.ticket_field__custom_field_options.instance.Customer_Priority_tagger__very_critical@suuuu,
+    zendesk.ticket_field__custom_field_options.instance.Customer_Priority_tagger__more_critical@suuuu,
+  ]
+  _alias = "Customer Priority"
+}

@@ -1,0 +1,9 @@
+zendesk.locale it {
+  id = 22
+  locale = "it"
+  name = "Italiano"
+  native_name = "italiano"
+  presentation_name = "Italian - italiano"
+  rtl = false
+  _alias = "Italian - italiano"
+}

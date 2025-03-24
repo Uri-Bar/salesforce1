@@ -1,0 +1,8 @@
+zendesk.ticket_field__custom_field_options SRD___Test_Custom_Field_tagger__option_b@sbsssuuuu {
+  raw_name = "Option B"
+  value = "option_b"
+  _parent = [
+    zendesk.ticket_field.instance.SRD___Test_Custom_Field_tagger@sbsssu,
+  ]
+  _alias = "option_b"
+}

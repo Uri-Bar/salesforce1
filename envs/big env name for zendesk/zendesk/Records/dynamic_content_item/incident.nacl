@@ -1,0 +1,18 @@
+zendesk.dynamic_content_item incident {
+  name = "incident"
+  placeholder = "{{dc.incident}}"
+  default_locale_id = zendesk.locale.instance.en_US@b
+  variants = [
+    zendesk.dynamic_content_item__variants.instance.incident__da_dk_b@uuum,
+    zendesk.dynamic_content_item__variants.instance.incident__en_US_b@uuum,
+    zendesk.dynamic_content_item__variants.instance.incident__en_gb_b@uuum,
+    zendesk.dynamic_content_item__variants.instance.incident__es,
+    zendesk.dynamic_content_item__variants.instance.incident__fr_ca_b@uuum,
+    zendesk.dynamic_content_item__variants.instance.incident__fr_fr_b@uuum,
+    zendesk.dynamic_content_item__variants.instance.incident__it,
+    zendesk.dynamic_content_item__variants.instance.incident__nl_nl_b@uuum,
+    zendesk.dynamic_content_item__variants.instance.incident__no,
+    zendesk.dynamic_content_item__variants.instance.incident__sk,
+  ]
+  _alias = "incident"
+}

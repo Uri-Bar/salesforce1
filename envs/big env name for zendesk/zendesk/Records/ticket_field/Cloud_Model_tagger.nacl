@@ -1,0 +1,19 @@
+zendesk.ticket_field Cloud_Model_tagger@su {
+  type = "tagger"
+  raw_title = "Cloud Model"
+  raw_description = "some description"
+  active = true
+  required = false
+  collapsed_for_agents = false
+  raw_title_in_portal = "Cloud Model"
+  visible_in_portal = false
+  editable_in_portal = false
+  required_in_portal = false
+  agent_can_edit = true
+  removable = true
+  custom_field_options = [
+    zendesk.ticket_field__custom_field_options.instance.Cloud_Model_tagger__premier@suuu,
+    zendesk.ticket_field__custom_field_options.instance.Cloud_Model_tagger__standard@suuu,
+  ]
+  _alias = "Cloud Model"
+}

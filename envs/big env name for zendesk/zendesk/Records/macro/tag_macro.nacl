@@ -1,0 +1,17 @@
+zendesk.macro tag_macro@s {
+  title = "tag macro"
+  active = true
+  default = false
+  description = ""
+  actions = [
+    {
+      field = "set_tags"
+      value = [
+        zendesk.tag.instance.new_tag,
+        zendesk.tag.instance.n_tag,
+      ]
+    },
+  ]
+  raw_title = "tag macro"
+  _alias = "tag macro"
+}

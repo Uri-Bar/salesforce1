@@ -1,0 +1,144 @@
+zendesk.view INCIDENT_27300_view@b {
+  active = true
+  default = false
+  description = "View for QA tickets that have had an appeal submitted"
+  execution = {
+    group_by = "status"
+    group_order = "asc"
+    sort_by = "created"
+    sort_order = "asc"
+    group = {
+      id = "status"
+      title = "Status category"
+      filterable = true
+      sortable = true
+      order = "asc"
+    }
+    sort = {
+      id = "created"
+      title = "Requested"
+      filterable = false
+      sortable = true
+      order = "asc"
+    }
+    columns = [
+      {
+        id = "custom_status_id"
+        title = "Ticket status"
+        filterable = true
+        sortable = false
+      },
+      {
+        id = "ticket_id"
+        title = "ID"
+        filterable = true
+        sortable = true
+      },
+      {
+        id = "subject"
+        title = "Subject"
+        filterable = false
+        sortable = false
+      },
+      {
+        id = "assignee"
+        title = "Assignee"
+        filterable = true
+        sortable = true
+      },
+      {
+        id = "created"
+        title = "Requested"
+        filterable = false
+        sortable = true
+      },
+      {
+        id = "requester"
+        title = "Requester"
+        filterable = true
+        sortable = true
+      },
+      {
+        id = zendesk.ticket_field.instance.EdenTest3_tagger
+        title = "EdenTest3"
+        type = "tagger"
+        filterable = true
+        sortable = true
+      },
+    ]
+    fields = [
+      {
+        id = "custom_status_id"
+        title = "Ticket status"
+        filterable = true
+        sortable = false
+      },
+      {
+        id = "ticket_id"
+        title = "ID"
+        filterable = true
+        sortable = true
+      },
+      {
+        id = "subject"
+        title = "Subject"
+        filterable = false
+        sortable = false
+      },
+      {
+        id = "assignee"
+        title = "Assignee"
+        filterable = true
+        sortable = true
+      },
+      {
+        id = "created"
+        title = "Requested"
+        filterable = false
+        sortable = true
+      },
+      {
+        id = "requester"
+        title = "Requester"
+        filterable = true
+        sortable = true
+      },
+    ]
+    custom_fields = [
+      {
+        id = zendesk.ticket_field.instance.EdenTest3_tagger
+        title = "EdenTest3"
+        type = "tagger"
+        filterable = true
+        sortable = true
+      },
+    ]
+  }
+  conditions = {
+    all = [
+      {
+        field = "group_id"
+        operator = "is"
+        value = zendesk.group.instance.Test
+      },
+      {
+        field = "status"
+        operator = "less_than"
+        value = "closed"
+      },
+      {
+        field = "ticket_form_id"
+        operator = "is"
+        value = zendesk.ticket_form.instance.Eden_Test_INCIDENT_27300@ssb
+      },
+    ]
+  }
+  restriction = {
+    type = "Group"
+    ids = [
+      zendesk.group.instance.Test,
+    ]
+  }
+  raw_title = "INCIDENT-27300-view"
+  _alias = "INCIDENT-27300-view"
+}

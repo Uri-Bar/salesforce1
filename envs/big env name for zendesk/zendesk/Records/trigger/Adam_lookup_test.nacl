@@ -1,0 +1,23 @@
+zendesk.trigger Adam_lookup_test@s {
+  title = "Adam lookup test"
+  active = true
+  default = false
+  actions = [
+    {
+      field = "custom_status_id"
+      value = zendesk.custom_status.instance.pending___zd_status_pending__@u_00123_00123vu_00125_00125
+    },
+  ]
+  conditions = {
+    all = [
+      {
+        field = "lookup:ticket.ticket_field_${ zendesk.ticket_field.instance.noam_lookup_user_lookup }.custom_fields.${ zendesk.custom_object.instance.missing_undefined }"
+        operator = "is"
+        value = "31097284390035"
+      },
+    ]
+  }
+  raw_title = "Adam lookup test"
+  category_id = zendesk.trigger_category.instance.Notifications
+  _alias = "Adam lookup test"
+}

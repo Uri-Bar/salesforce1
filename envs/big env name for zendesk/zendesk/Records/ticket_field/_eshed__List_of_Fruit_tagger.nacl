@@ -1,0 +1,26 @@
+zendesk.ticket_field _eshed__List_of_Fruit_tagger@hisssu {
+  type = "tagger"
+  raw_title = "[eshed] List of Fruit"
+  raw_description = ""
+  active = true
+  required = false
+  collapsed_for_agents = false
+  raw_title_in_portal = "[eshed] List of Fruit"
+  visible_in_portal = false
+  editable_in_portal = false
+  required_in_portal = false
+  agent_can_edit = true
+  removable = true
+  agent_description = "List of fruit names"
+  custom_field_options = [
+    zendesk.ticket_field__custom_field_options.instance._eshed__List_of_Fruit_tagger__apple@hisssuuu,
+    zendesk.ticket_field__custom_field_options.instance._eshed__List_of_Fruit_tagger__banana@hisssuuu,
+    zendesk.ticket_field__custom_field_options.instance._eshed__List_of_Fruit_tagger__pineapple@hisssuuu,
+    zendesk.ticket_field__custom_field_options.instance._eshed__List_of_Fruit_tagger__citron@hisssuuu,
+    zendesk.ticket_field__custom_field_options.instance._eshed__List_of_Fruit_tagger__lemon@hisssuuu,
+    zendesk.ticket_field__custom_field_options.instance._eshed__List_of_Fruit_tagger__guava@hisssuuu,
+    zendesk.ticket_field__custom_field_options.instance._eshed__List_of_Fruit_tagger__strawberry@hisssuuu,
+  ]
+  default_custom_field_option = zendesk.ticket_field__custom_field_options.instance._eshed__List_of_Fruit_tagger__pineapple@hisssuuu
+  _alias = "[eshed] List of Fruit"
+}

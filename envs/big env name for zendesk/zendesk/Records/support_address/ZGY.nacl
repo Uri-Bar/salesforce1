@@ -1,0 +1,11 @@
+zendesk.support_address ZGY_support_ZGY_subdomain_zendesk_com@umvvv {
+  brand_id = zendesk.brand.instance.ZGY
+  default = true
+  name = "ZGY"
+  email = "support@${ zendesk.brand.instance.ZGY.subdomain }.zendesk.com"
+  forwarding_status = "verified"
+  spf_status = "verified"
+  cname_status = "verified"
+  domain_verification_status = "verified"
+  _alias = "ZGY"
+}

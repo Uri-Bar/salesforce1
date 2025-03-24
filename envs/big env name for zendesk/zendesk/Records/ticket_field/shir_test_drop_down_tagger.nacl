@@ -1,0 +1,21 @@
+zendesk.ticket_field shir_test_drop_down_tagger@sssu {
+  type = "tagger"
+  raw_title = "shir test drop down"
+  raw_description = ""
+  active = true
+  required = false
+  collapsed_for_agents = false
+  raw_title_in_portal = "shir test drop down"
+  visible_in_portal = false
+  editable_in_portal = false
+  required_in_portal = false
+  agent_can_edit = true
+  removable = true
+  custom_field_options = [
+    zendesk.ticket_field__custom_field_options.instance.shir_test_drop_down_tagger__arcafe@sssuuu,
+    zendesk.ticket_field__custom_field_options.instance.shir_test_drop_down_tagger__aroma@sssuuu,
+    zendesk.ticket_field__custom_field_options.instance.shir_test_drop_down_tagger__pepper@sssuuu,
+  ]
+  default_custom_field_option = zendesk.ticket_field__custom_field_options.instance.shir_test_drop_down_tagger__aroma@sssuuu
+  _alias = "shir test drop down"
+}

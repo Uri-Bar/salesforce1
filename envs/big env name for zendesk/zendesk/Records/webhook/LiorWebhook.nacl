@@ -1,0 +1,13 @@
+zendesk.webhook LiorWebhook {
+  name = "LiorWebhook"
+  description = ""
+  status = "active"
+  subscriptions = [
+    "zen:event-type:article.author_changed",
+    "zen:event-type:omnichannel_config.omnichannel_routing_feature_changed",
+  ]
+  endpoint = "https://prod.salto.io/oy"
+  http_method = "POST"
+  request_format = "json"
+  _alias = "LiorWebhook"
+}

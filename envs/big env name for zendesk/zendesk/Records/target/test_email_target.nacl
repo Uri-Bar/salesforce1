@@ -1,0 +1,8 @@
+zendesk.target test_email_target {
+  type = "email_target"
+  title = "test"
+  active = true
+  email = "sandbox@example.com"
+  subject = "test"
+  _alias = "test"
+}

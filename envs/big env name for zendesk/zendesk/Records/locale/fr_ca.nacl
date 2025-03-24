@@ -1,0 +1,9 @@
+zendesk.locale fr_ca@b {
+  id = 1187
+  locale = "fr-ca"
+  name = "Français (Canada)"
+  native_name = "français (Canada)"
+  presentation_name = "French (Canada) - français (Canada)"
+  rtl = false
+  _alias = "French (Canada) - français (Canada)"
+}

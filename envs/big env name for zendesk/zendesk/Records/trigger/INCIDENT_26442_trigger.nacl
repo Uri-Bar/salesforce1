@@ -1,0 +1,24 @@
+zendesk.trigger INCIDENT_26442_trigger@b {
+  title = "INCIDENT-26442-trigger"
+  active = true
+  default = false
+  actions = [
+    {
+      field = zendesk.organization_field.instance.100@
+      value = "feqf"
+    },
+  ]
+  conditions = {
+    all = [
+      {
+        field = zendesk.ticket_field.instance.INCIDENT_26442_1_ticket_tagger@bubu
+        operator = "is"
+        value = zendesk.ticket_field__custom_field_options.instance.INCIDENT_26442_1_ticket_tagger__26442_1_1@bubuuuub
+      },
+    ]
+  }
+  description = ""
+  raw_title = "INCIDENT-26442-trigger"
+  category_id = zendesk.trigger_category.instance.Notifications
+  _alias = "INCIDENT-26442-trigger"
+}

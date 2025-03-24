@@ -1,0 +1,16 @@
+zendesk.ticket_field Tamir_Lookup_lookup@su {
+  type = "lookup"
+  raw_title = "Tamir Lookup"
+  raw_description = ""
+  active = true
+  required = false
+  collapsed_for_agents = false
+  raw_title_in_portal = "Tamir Lookup"
+  visible_in_portal = false
+  editable_in_portal = false
+  required_in_portal = false
+  agent_can_edit = true
+  removable = true
+  relationship_target_type = zendesk.custom_object.instance.stagingtest1
+  _alias = "Tamir Lookup"
+}

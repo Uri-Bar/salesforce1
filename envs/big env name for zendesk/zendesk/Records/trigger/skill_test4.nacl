@@ -1,0 +1,24 @@
+zendesk.trigger skill_test4@s {
+  title = "skill test4"
+  active = true
+  default = false
+  actions = [
+    {
+      field = "add_skills"
+      value = zendesk.routing_attribute_value.instance.Test__Test12
+    },
+  ]
+  conditions = {
+    all = [
+      {
+        field = "update_type"
+        operator = "is"
+        value = "Create"
+      },
+    ]
+  }
+  description = ""
+  raw_title = "skill test4"
+  category_id = zendesk.trigger_category.instance.Other
+  _alias = "skill test4"
+}

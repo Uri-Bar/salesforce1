@@ -1,0 +1,35 @@
+zendesk.trigger skill_test@s {
+  title = "skill test"
+  active = true
+  default = false
+  actions = [
+    {
+      field = "set_skills"
+      value = zendesk.routing_attribute_value.instance.Test__Test1
+      priority = "optional high"
+    },
+    {
+      field = "set_skills"
+      value = zendesk.routing_attribute_value.instance.Test__Test1222
+      priority = "required"
+    },
+    {
+      field = "add_skills"
+      value = zendesk.routing_attribute_value.instance.Test__Test12
+      priority = "optional medium"
+    },
+  ]
+  conditions = {
+    all = [
+      {
+        field = zendesk.ticket_field.instance.123456_text
+        operator = "present"
+        value = ""
+      },
+    ]
+  }
+  description = ""
+  raw_title = "skill test"
+  category_id = zendesk.trigger_category.instance.Other
+  _alias = "skill test"
+}

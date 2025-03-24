@@ -1,0 +1,9 @@
+zendesk.locale da_dk@b {
+  id = 1437
+  locale = "da-dk"
+  name = "Danish (Denmark)"
+  native_name = "dansk (Danmark)"
+  presentation_name = "Danish (Denmark) - dansk (Danmark)"
+  rtl = false
+  _alias = "Danish (Denmark) - dansk (Danmark)"
+}

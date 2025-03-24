@@ -1,0 +1,8 @@
+zendesk.ticket_field__custom_field_options INCIDENT_28353_add_tagger__add2@bbuuu {
+  raw_name = "add2"
+  value = "add2"
+  _parent = [
+    zendesk.ticket_field.instance.INCIDENT_28353_add_tagger@bbu,
+  ]
+  _alias = "add2"
+}

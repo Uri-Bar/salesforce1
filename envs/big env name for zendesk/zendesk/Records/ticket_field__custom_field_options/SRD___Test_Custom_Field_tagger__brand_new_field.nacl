@@ -1,0 +1,8 @@
+zendesk.ticket_field__custom_field_options SRD___Test_Custom_Field_tagger__brand_new_field@sbsssuuuuu {
+  raw_name = "Brand new field"
+  value = "brand_new_field"
+  _parent = [
+    zendesk.ticket_field.instance.SRD___Test_Custom_Field_tagger@sbsssu,
+  ]
+  _alias = "brand_new_field"
+}

@@ -1,0 +1,13 @@
+zendesk.macro INCIDENT_29151_v2@b {
+  title = "INCIDENT-29151-v2"
+  active = true
+  default = false
+  actions = [
+    {
+      field = "assignee_id"
+      value = "__NULL__"
+    },
+  ]
+  raw_title = "INCIDENT-29151-v2"
+  _alias = "INCIDENT-29151-v2"
+}

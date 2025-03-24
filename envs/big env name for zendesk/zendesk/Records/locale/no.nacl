@@ -1,0 +1,9 @@
+zendesk.locale no {
+  id = 34
+  locale = "no"
+  name = "Norsk"
+  native_name = "norsk"
+  presentation_name = "Norwegian - norsk"
+  rtl = false
+  _alias = "Norwegian - norsk"
+}

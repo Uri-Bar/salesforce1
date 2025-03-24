@@ -1,0 +1,24 @@
+zendesk.trigger skill_test2@s {
+  title = "skill test2"
+  active = true
+  default = false
+  actions = [
+    {
+      field = "set_skills"
+      value = zendesk.routing_attribute_value.instance.Test__Test1
+      priority = "optional high"
+    },
+  ]
+  conditions = {
+    all = [
+      {
+        field = zendesk.ticket_field.instance.123456_text
+        operator = "present"
+        value = ""
+      },
+    ]
+  }
+  raw_title = "skill test2"
+  category_id = zendesk.trigger_category.instance.Other
+  _alias = "skill test2"
+}

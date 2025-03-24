@@ -1,0 +1,21 @@
+zendesk.support_address neta_supportliorbzzt_nms_test_b_subdomain_zendesk_com@umumvvv {
+  brand_id = zendesk.brand.instance.nms_test@b
+  default = true
+  name = "neta"
+  email = "supportliorbzzt@${ zendesk.brand.instance.nms_test@b.subdomain }.zendesk.com"
+  forwarding_status = "verified"
+  spf_status = "verified"
+  cname_status = "verified"
+  domain_verification_status = "verified"
+  _alias = "neta"
+}
+zendesk.support_address neta_support_nms_test_b_subdomain_zendesk_com@umumvvv {
+  brand_id = zendesk.brand.instance.nms_test@b
+  name = "neta"
+  email = "support@${ zendesk.brand.instance.nms_test@b.subdomain }.zendesk.com"
+  forwarding_status = "verified"
+  spf_status = "verified"
+  cname_status = "verified"
+  domain_verification_status = "verified"
+  _alias = "neta"
+}

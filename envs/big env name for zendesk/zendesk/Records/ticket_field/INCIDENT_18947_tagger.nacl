@@ -1,0 +1,19 @@
+zendesk.ticket_field INCIDENT_18947_tagger@bu {
+  type = "tagger"
+  raw_title = "INCIDENT-18947"
+  raw_description = ""
+  active = true
+  required = false
+  collapsed_for_agents = false
+  raw_title_in_portal = "INCIDENT-18947"
+  visible_in_portal = false
+  editable_in_portal = false
+  required_in_portal = false
+  agent_can_edit = true
+  removable = true
+  custom_field_options = [
+    zendesk.ticket_field__custom_field_options.instance.INCIDENT_18947_tagger__q1@buuu,
+    zendesk.ticket_field__custom_field_options.instance.INCIDENT_18947_tagger__q2@buuu,
+  ]
+  _alias = "INCIDENT-18947"
+}

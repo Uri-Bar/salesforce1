@@ -1,0 +1,10 @@
+zendesk.user_field dup_test {
+  type = "checkbox"
+  key = "dup_test"
+  raw_title = "dup test"
+  raw_description = ""
+  active = true
+  system = false
+  tag = zendesk.tag.instance.true
+  _alias = "dup test"
+}

@@ -1,0 +1,16 @@
+zendesk.queue Test_Queue_2@s {
+  name = "Test Queue 2"
+  definition = {
+    all = [
+      {
+        field = zendesk.ticket_field.instance.Technical_Account_Manager_lookup@ssu
+        operator = "is_not"
+        value = ""
+      },
+    ]
+  }
+  priority = 90
+  primary_groups_id = [
+    zendesk.group.instance.Demo,
+  ]
+}

@@ -1,0 +1,16 @@
+zendesk.ticket_field monitoring_test_text@su {
+  type = "text"
+  raw_title = "monitoring test"
+  raw_description = "bla bla5"
+  active = true
+  required = false
+  collapsed_for_agents = false
+  raw_title_in_portal = "monitoring test"
+  visible_in_portal = false
+  editable_in_portal = false
+  required_in_portal = false
+  agent_can_edit = true
+  removable = true
+  agent_description = "hii bla bla112"
+  _alias = "monitoring test"
+}

@@ -1,0 +1,20 @@
+zendesk.ticket_field toDelete2___bla_tagger@sbsu {
+  type = "tagger"
+  raw_title = "toDelete2 - bla"
+  raw_description = ""
+  active = true
+  required = false
+  collapsed_for_agents = false
+  raw_title_in_portal = "toDelete2 - bla"
+  visible_in_portal = false
+  editable_in_portal = false
+  required_in_portal = false
+  agent_can_edit = true
+  removable = true
+  custom_field_options = [
+    zendesk.ticket_field__custom_field_options.instance.toDelete2___bla_tagger__qq@sbsuuu,
+    zendesk.ticket_field__custom_field_options.instance.toDelete2___bla_tagger__q@sbsuuu,
+    zendesk.ticket_field__custom_field_options.instance.toDelete2___bla_tagger__qqq@sbsuuu,
+  ]
+  _alias = "toDelete2 - bla"
+}

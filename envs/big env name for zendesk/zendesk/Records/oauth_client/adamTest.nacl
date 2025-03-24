@@ -1,0 +1,12 @@
+zendesk.oauth_client adamtest {
+  name = "adamTest"
+  identifier = "adamtest"
+  company = "Salto"
+  description = ""
+  redirect_uri = [
+    "http://localhost:5555",
+  ]
+  global = false
+  kind = "confidential"
+  _alias = "adamTest"
+}

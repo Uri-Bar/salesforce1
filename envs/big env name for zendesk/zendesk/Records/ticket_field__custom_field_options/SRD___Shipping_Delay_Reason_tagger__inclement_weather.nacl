@@ -1,0 +1,8 @@
+zendesk.ticket_field__custom_field_options SRD___Shipping_Delay_Reason_tagger__inclement_weather@sbsssuuuu {
+  raw_name = "Inclement Weather"
+  value = "inclement_weather"
+  _parent = [
+    zendesk.ticket_field.instance.SRD___Shipping_Delay_Reason_tagger@sbsssu,
+  ]
+  _alias = "inclement_weather"
+}

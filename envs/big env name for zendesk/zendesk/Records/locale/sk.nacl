@@ -1,0 +1,9 @@
+zendesk.locale sk {
+  id = 1003
+  locale = "sk"
+  name = "Slovak"
+  native_name = "slovenčina"
+  presentation_name = "Slovak - slovenčina"
+  rtl = false
+  _alias = "Slovak - slovenčina"
+}

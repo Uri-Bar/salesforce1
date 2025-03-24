@@ -1,0 +1,8 @@
+zendesk.ticket_field__custom_field_options edenTestForm_clone_tagger__c_clone@suuuu {
+  raw_name = "c"
+  value = "c_clone"
+  _parent = [
+    zendesk.ticket_field.instance.edenTestForm_clone_tagger@su,
+  ]
+  _alias = "c_clone"
+}

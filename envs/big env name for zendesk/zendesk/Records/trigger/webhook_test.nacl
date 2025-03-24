@@ -1,0 +1,68 @@
+zendesk.trigger webhook_test@s {
+  title = "webhook test"
+  active = true
+  default = false
+  actions = [
+    {
+      field = "notification_webhook"
+      value = [
+        zendesk.webhook.instance.test6,
+        '''
+{% assign field_1 = ticket.ticket_field_${ zendesk.ticket_field.instance.delete2_text } | default: "default_na_0" %}
+
+{% assign value_1 = field_1 | split: "_" | last | plus: 0 | times: 1 %}
+
+{% if field_1 contains "_na_0" %}
+  {% assign is_na_1 = true %}
+{% else %}
+  {% assign is_na_1 = false %}
+{% endif %}
+
+{% assign sum_total = 0 %}
+{% assign na_count = 0 %}
+
+{% assign total_questions = 8 %}
+{% assign adjusted_total = total_questions | minus: na_count %}
+
+{% if adjusted_total == 0 %}
+  {% assign section_status = "qa_appeal_communications_na" %}
+{% elsif sum_total == adjusted_total %}
+  {% assign section_status = "qa_appeal_communications_pass" %}
+{% else %}
+  {% assign section_status = "qa_appeal_communications_fail" %}
+{% endif %}
+
+{
+  "ticket": {
+    "custom_fields": [
+        {
+            "id": "29607168675603",
+            "value": "{{client_id_value}}"
+        },
+      { "id": 29607168675603, "value": {{ sum_total }} },
+      {
+            "id": 29607168675603,
+            "value": {{ticket.requester.email}} 
+        }
+      
+    ]}
+}
+
+''',
+      ]
+    },
+  ]
+  conditions = {
+    all = [
+      {
+        field = zendesk.ticket_field.instance._eshed__Categories_of_Newsletter_multiselect@hisssu
+        operator = "not_includes"
+        value = zendesk.ticket_field__custom_field_options.instance._eshed__Categories_of_Newsletter_multiselect__fruit___vegetable@hisssuuuuuu
+      },
+    ]
+  }
+  description = ""
+  raw_title = "webhook test"
+  category_id = zendesk.trigger_category.instance.Notifications
+  _alias = "webhook test"
+}

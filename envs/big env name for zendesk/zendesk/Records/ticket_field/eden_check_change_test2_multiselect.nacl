@@ -1,0 +1,20 @@
+zendesk.ticket_field eden_check_change_test2_multiselect@sssu {
+  type = "multiselect"
+  raw_title = "eden check change test2"
+  raw_description = ""
+  active = true
+  required = false
+  collapsed_for_agents = false
+  raw_title_in_portal = "eden check change test2"
+  visible_in_portal = false
+  editable_in_portal = false
+  required_in_portal = false
+  agent_can_edit = true
+  removable = true
+  custom_field_options = [
+    zendesk.ticket_field__custom_field_options.instance.eden_check_change_test2_multiselect__bla@sssuuu,
+    zendesk.ticket_field__custom_field_options.instance.eden_check_change_test2_multiselect__bla_bla@sssuuuu,
+    zendesk.ticket_field__custom_field_options.instance.eden_check_change_test2_multiselect__bbbla@sssuuu,
+  ]
+  _alias = "eden check change test2"
+}

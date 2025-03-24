@@ -1,0 +1,36 @@
+zendesk.automation LiorAutomation1 {
+  title = "LiorAutomation1"
+  active = true
+  default = false
+  actions = [
+    {
+      field = "notification_user"
+      value = [
+        "la+43@example.org",
+        "bzz",
+        "",
+      ]
+    },
+  ]
+  conditions = {
+    all = [
+      {
+        field = "assignee_id"
+        operator = "is"
+        value = "la+8@example.org"
+      },
+      {
+        field = "requester_id"
+        operator = "is"
+        value = "la+40@example.org"
+      },
+      {
+        field = "NEW"
+        operator = "is"
+        value = "1"
+      },
+    ]
+  }
+  raw_title = "LiorAutomation1"
+  _alias = "LiorAutomation1"
+}

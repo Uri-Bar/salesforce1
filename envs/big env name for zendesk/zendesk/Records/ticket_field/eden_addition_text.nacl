@@ -1,0 +1,15 @@
+zendesk.ticket_field eden_addition_text@su {
+  type = "text"
+  raw_title = "eden addition"
+  raw_description = ""
+  active = true
+  required = false
+  collapsed_for_agents = false
+  raw_title_in_portal = "eden addition"
+  visible_in_portal = false
+  editable_in_portal = false
+  required_in_portal = false
+  agent_can_edit = true
+  removable = true
+  _alias = "eden addition"
+}

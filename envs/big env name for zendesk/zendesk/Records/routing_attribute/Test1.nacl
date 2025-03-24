@@ -1,0 +1,7 @@
+zendesk.routing_attribute Test1 {
+  name = "Test1"
+  values = [
+    zendesk.routing_attribute_value.instance.Test1__Test123,
+  ]
+  _alias = "Test1"
+}

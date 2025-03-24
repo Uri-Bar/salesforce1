@@ -1,0 +1,12 @@
+zendesk.oauth_client shirtest {
+  name = "shirTest"
+  identifier = "shirtest"
+  company = "Salto"
+  description = ""
+  redirect_uri = [
+    "http://localhost:1122",
+  ]
+  global = false
+  kind = "unknown"
+  _alias = "shirTest"
+}

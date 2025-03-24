@@ -1,0 +1,8 @@
+zendesk.ticket_field__custom_field_options toDelete2___bla_tagger__qqq@sbsuuu {
+  raw_name = "qqq"
+  value = "qqq"
+  _parent = [
+    zendesk.ticket_field.instance.toDelete2___bla_tagger@sbsu,
+  ]
+  _alias = "qqq"
+}

@@ -1,0 +1,9 @@
+zendesk.locale en_gb@b {
+  id = 1176
+  locale = "en-gb"
+  name = "English (UK)"
+  native_name = "English (United Kingdom)"
+  presentation_name = "English (United Kingdom)"
+  rtl = false
+  _alias = "English (United Kingdom)"
+}

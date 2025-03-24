@@ -1,0 +1,8 @@
+zendesk.ticket_field__custom_field_options Neta_multiselect_123_multiselect____dc_about_option___late_order___nnn@ssuuuuuvuubuuuuu {
+  raw_name = "{{${ zendesk.dynamic_content_item.instance.about_option___late_order@ssbss }}}_nnn"
+  value = "__dc.about_option_-_late_order___nnn"
+  _parent = [
+    zendesk.ticket_field.instance.Neta_multiselect_123_multiselect@ssu,
+  ]
+  _alias = "__dc.about_option_-_late_order___nnn"
+}

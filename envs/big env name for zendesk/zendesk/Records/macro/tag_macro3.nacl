@@ -1,0 +1,15 @@
+zendesk.macro tag_macro3@s {
+  title = "tag macro3"
+  active = true
+  default = false
+  actions = [
+    {
+      field = "current_tags"
+      value = [
+        zendesk.tag.instance.new_tag3,
+      ]
+    },
+  ]
+  raw_title = "tag macro3"
+  _alias = "tag macro3"
+}

@@ -1,0 +1,8 @@
+zendesk.ticket_field__custom_field_options INCIDENT_26442_1_ticket_tagger__26442_1_1@bubuuuub {
+  raw_name = "26442_1-1"
+  value = "26442_1-1"
+  _parent = [
+    zendesk.ticket_field.instance.INCIDENT_26442_1_ticket_tagger@bubu,
+  ]
+  _alias = "26442_1-1"
+}

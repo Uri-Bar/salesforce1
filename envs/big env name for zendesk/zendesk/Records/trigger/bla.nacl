@@ -1,0 +1,24 @@
+zendesk.trigger bla {
+  title = "bla"
+  active = true
+  default = false
+  actions = [
+    {
+      field = zendesk.organization_field.instance.12@
+      value = "wesf"
+    },
+  ]
+  conditions = {
+    all = [
+      {
+        field = zendesk.ticket_field.instance._eshed__Categories_of_Newsletter_multiselect@hisssu
+        operator = "not_includes"
+        value = zendesk.ticket_field__custom_field_options.instance._eshed__Categories_of_Newsletter_multiselect__fruit___vegetable@hisssuuuuuu
+      },
+    ]
+  }
+  description = ""
+  raw_title = "bla"
+  category_id = zendesk.trigger_category.instance.ZGY
+  _alias = "bla"
+}

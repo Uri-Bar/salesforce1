@@ -1,0 +1,9 @@
+zendesk.user_field system_nps_rating1 {
+  type = "text"
+  key = "system_nps_rating1"
+  raw_title = "txt.nps.internal_api_client.system_nps_rating"
+  raw_description = "txt.nps.internal_api_client.system_nps_rating_description"
+  active = true
+  system = false
+  _alias = "txt.nps.internal_api_client.system_nps_rating"
+}

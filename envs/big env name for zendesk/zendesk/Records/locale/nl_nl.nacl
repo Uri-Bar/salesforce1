@@ -1,0 +1,9 @@
+zendesk.locale nl_nl@b {
+  id = 1493
+  locale = "nl-nl"
+  name = "Dutch (Netherlands)"
+  native_name = "Nederlands (Nederland)"
+  presentation_name = "Dutch (Netherlands) - Nederlands (Nederland)"
+  rtl = false
+  _alias = "Dutch (Netherlands) - Nederlands (Nederland)"
+}

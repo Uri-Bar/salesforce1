@@ -1,0 +1,28 @@
+zendesk.ticket_field SRD___Test_Custom_Field_tagger@sbsssu {
+  type = "tagger"
+  raw_title = "SRD - Test Custom Field"
+  raw_description = ""
+  active = true
+  required = false
+  collapsed_for_agents = false
+  raw_title_in_portal = "SRD - Test Custom Field"
+  visible_in_portal = false
+  editable_in_portal = false
+  required_in_portal = false
+  agent_can_edit = true
+  removable = true
+  agent_description = "testing"
+  custom_field_options = [
+    zendesk.ticket_field__custom_field_options.instance.SRD___Test_Custom_Field_tagger__field_a@sbsssuuuu,
+    zendesk.ticket_field__custom_field_options.instance.SRD___Test_Custom_Field_tagger__option_b@sbsssuuuu,
+    zendesk.ticket_field__custom_field_options.instance.SRD___Test_Custom_Field_tagger__field_c@sbsssuuuu,
+    zendesk.ticket_field__custom_field_options.instance.SRD___Test_Custom_Field_tagger__field_d@sbsssuuuu,
+    zendesk.ticket_field__custom_field_options.instance.SRD___Test_Custom_Field_tagger__fieldd@sbsssuuu,
+    zendesk.ticket_field__custom_field_options.instance.SRD___Test_Custom_Field_tagger__dfield@sbsssuuu,
+    zendesk.ticket_field__custom_field_options.instance.SRD___Test_Custom_Field_tagger__field_ds@sbsssuuuu,
+    zendesk.ticket_field__custom_field_options.instance.SRD___Test_Custom_Field_tagger__another_new_field@sbsssuuuuu,
+    zendesk.ticket_field__custom_field_options.instance.SRD___Test_Custom_Field_tagger__and_another_new_field@sbsssuuuuuu,
+    zendesk.ticket_field__custom_field_options.instance.SRD___Test_Custom_Field_tagger__brand_new_field@sbsssuuuuu,
+  ]
+  _alias = "SRD - Test Custom Field"
+}

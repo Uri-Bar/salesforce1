@@ -1,0 +1,18 @@
+zendesk.macro INCIDENT_28353@b {
+  title = "INCIDENT-28353"
+  active = true
+  default = false
+  description = ""
+  actions = [
+    {
+      field = zendesk.ticket_field.instance.INCIDENT_28353_add_tagger@bbu
+      value = zendesk.ticket_field__custom_field_options.instance.INCIDENT_28353_add_tagger__add1@bbuuu
+    },
+    {
+      field = "ticket_form_id"
+      value = zendesk.ticket_form.instance.INCIDENT_28353@b
+    },
+  ]
+  raw_title = "INCIDENT-28353"
+  _alias = "INCIDENT-28353"
+}

@@ -1,0 +1,10 @@
+zendesk.dynamic_content_item__variants incident__da_dk_b@uuum {
+  content = "a"
+  locale_id = zendesk.locale.instance.da_dk@b
+  active = true
+  default = false
+  _parent = [
+    zendesk.dynamic_content_item.instance.incident,
+  ]
+  _alias = "incident - da-dk"
+}

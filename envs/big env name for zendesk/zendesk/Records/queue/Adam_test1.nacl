@@ -1,0 +1,33 @@
+zendesk.queue Adam_test1@s {
+  name = "Adam test1"
+  description = "short desc"
+  definition = {
+    all = [
+      {
+        field = zendesk.ticket_field.instance.TestDecimal2_decimal
+        operator = ""
+        value = ""
+      },
+      {
+        field = zendesk.ticket_field.instance.Neta_multiselect_123_multiselect@ssu
+        operator = "includes"
+        value = zendesk.ticket_field__custom_field_options.instance.Neta_multiselect_123_multiselect__ccc_modified4@ssuuuu
+      },
+    ]
+    any = [
+      {
+        field = "lookup:ticket.ticket_field_13080414697363.ticket_field_4847599896339"
+        operator = "not_present"
+        value = ""
+      },
+    ]
+  }
+  priority = 2
+  primary_groups_id = [
+    zendesk.group.instance.Test,
+  ]
+  secondary_groups_id = [
+    zendesk.group.instance.Demo,
+    zendesk.group.instance.edenAudit,
+  ]
+}

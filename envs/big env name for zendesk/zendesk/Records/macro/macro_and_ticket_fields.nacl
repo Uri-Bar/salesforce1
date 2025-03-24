@@ -1,0 +1,22 @@
+zendesk.macro macro_and_ticket_fields@s {
+  title = "macro and ticket fields"
+  active = true
+  default = false
+  description = ""
+  actions = [
+    {
+      field = zendesk.ticket_field.instance.EdenTest3_tagger
+      value = zendesk.ticket_field__custom_field_options.instance.EdenTest3_tagger__echeck
+    },
+    {
+      field = zendesk.ticket_field.instance.multiSelectFieldDEL_multiselect
+      value = zendesk.ticket_field__custom_field_options.instance.multiSelectFieldDEL_multiselect__value1
+    },
+    {
+      field = zendesk.ticket_field.instance.eden_del3_tagger@su
+      value = zendesk.ticket_field__custom_field_options.instance.eden_del3_tagger__ll1@suuu
+    },
+  ]
+  raw_title = "macro and ticket fields"
+  _alias = "macro and ticket fields"
+}

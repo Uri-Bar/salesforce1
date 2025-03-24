@@ -1,0 +1,8 @@
+zendesk.ticket_field__custom_field_options Neta_multiselect_123_multiselect__bbb@ssuuu {
+  raw_name = "bbb_mod2"
+  value = "bbb"
+  _parent = [
+    zendesk.ticket_field.instance.Neta_multiselect_123_multiselect@ssu,
+  ]
+  _alias = "bbb"
+}

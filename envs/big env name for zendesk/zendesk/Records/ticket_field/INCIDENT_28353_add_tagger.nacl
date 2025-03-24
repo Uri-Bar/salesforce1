@@ -1,0 +1,19 @@
+zendesk.ticket_field INCIDENT_28353_add_tagger@bbu {
+  type = "tagger"
+  raw_title = "INCIDENT-28353-add"
+  raw_description = ""
+  active = true
+  required = false
+  collapsed_for_agents = false
+  raw_title_in_portal = "INCIDENT-28353-add"
+  visible_in_portal = false
+  editable_in_portal = false
+  required_in_portal = false
+  agent_can_edit = true
+  removable = true
+  custom_field_options = [
+    zendesk.ticket_field__custom_field_options.instance.INCIDENT_28353_add_tagger__add1@bbuuu,
+    zendesk.ticket_field__custom_field_options.instance.INCIDENT_28353_add_tagger__add2@bbuuu,
+  ]
+  _alias = "INCIDENT-28353-add"
+}
