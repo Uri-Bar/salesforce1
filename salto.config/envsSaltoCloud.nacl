@@ -1,0 +1,8 @@
+envs {
+  envsCloud = [
+    {
+      uuid = "a395c32e-33d6-40f6-abf4-998aa97cce3f"
+      folderName = "big env name for zendesk"
+    },
+  ]
+}
