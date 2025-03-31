@@ -5,6 +5,9 @@ type salesforce.FulfillmentOrderItemAdjustment {
     label = "Adjustment"
     scale = 2
     precision = 18
+    createable = true
+    updateable = false
+    queryable = true
   }
   salesforce.Text CampaignName {
     apiName = "FulfillmentOrderItemAdjustment.CampaignName"
@@ -12,6 +15,9 @@ type salesforce.FulfillmentOrderItemAdjustment {
     label = "Campaign Name"
     unique = false
     caseSensitive = false
+    createable = true
+    updateable = true
+    queryable = true
   }
   salesforce.Text CouponName {
     apiName = "FulfillmentOrderItemAdjustment.CouponName"
@@ -19,17 +25,26 @@ type salesforce.FulfillmentOrderItemAdjustment {
     label = "Coupon Name"
     unique = false
     caseSensitive = false
+    createable = true
+    updateable = true
+    queryable = true
   }
   salesforce.LongTextArea Description {
     apiName = "FulfillmentOrderItemAdjustment.Description"
     length = 2000
     label = "Description"
+    createable = true
+    updateable = true
+    queryable = true
   }
   salesforce.MasterDetail FulfillmentOrderLineItemId {
     apiName = "FulfillmentOrderItemAdjustment.FulfillmentOrderLineItemId"
     relationshipName = "FulfillmentOrderLineItem"
     _required = true
     label = "Fulfillment Order Product ID"
+    createable = true
+    updateable = false
+    queryable = true
   }
   salesforce.Text PromotionName {
     apiName = "FulfillmentOrderItemAdjustment.PromotionName"
@@ -37,6 +52,9 @@ type salesforce.FulfillmentOrderItemAdjustment {
     label = "Promotion Name"
     unique = false
     caseSensitive = false
+    createable = true
+    updateable = true
+    queryable = true
   }
   salesforce.Currency TotalAmtWithTax {
     apiName = "FulfillmentOrderItemAdjustment.TotalAmtWithTax"
@@ -44,6 +62,9 @@ type salesforce.FulfillmentOrderItemAdjustment {
     scale = 2
     precision = 18
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.Currency TotalTaxAmount {
     apiName = "FulfillmentOrderItemAdjustment.TotalTaxAmount"
@@ -51,6 +72,9 @@ type salesforce.FulfillmentOrderItemAdjustment {
     scale = 2
     precision = 18
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   serviceid Id {
     apiName = "FulfillmentOrderItemAdjustment.Id"
@@ -63,43 +87,67 @@ type salesforce.FulfillmentOrderItemAdjustment {
     defaultValue = false
     label = "Deleted"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.AutoNumber FulfillmentOrderItemAdjustmentNumber {
     apiName = "FulfillmentOrderItemAdjustment.FulfillmentOrderItemAdjustmentNumber"
     label = "Name"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.DateTime CreatedDate {
     apiName = "FulfillmentOrderItemAdjustment.CreatedDate"
     label = "Created Date"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.Lookup CreatedById {
     apiName = "FulfillmentOrderItemAdjustment.CreatedById"
     relationshipName = "CreatedBy"
     label = "Created By ID"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.DateTime LastModifiedDate {
     apiName = "FulfillmentOrderItemAdjustment.LastModifiedDate"
     label = "Last Modified Date"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.Lookup LastModifiedById {
     apiName = "FulfillmentOrderItemAdjustment.LastModifiedById"
     relationshipName = "LastModifiedBy"
     label = "Last Modified By ID"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.DateTime SystemModstamp {
     apiName = "FulfillmentOrderItemAdjustment.SystemModstamp"
     label = "System Modstamp"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.Lookup FulfillmentOrderId {
     apiName = "FulfillmentOrderItemAdjustment.FulfillmentOrderId"
     relationshipName = "FulfillmentOrder"
     _required = true
     label = "Fulfillment Order ID"
+    createable = true
+    updateable = false
+    queryable = true
   }
 }

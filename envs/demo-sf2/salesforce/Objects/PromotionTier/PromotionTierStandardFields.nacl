@@ -6,12 +6,18 @@ type salesforce.PromotionTier {
     label = "Promotion Tier Name"
     unique = false
     caseSensitive = false
+    createable = true
+    updateable = true
+    queryable = true
   }
   salesforce.MasterDetail PromotionId {
     apiName = "PromotionTier.PromotionId"
     relationshipName = "Promotion"
     _required = true
     label = "Promotion ID"
+    createable = true
+    updateable = false
+    queryable = true
   }
   salesforce.Number Rank {
     apiName = "PromotionTier.Rank"
@@ -19,6 +25,9 @@ type salesforce.PromotionTier {
     precision = 9
     scale = 0
     unique = false
+    createable = true
+    updateable = true
+    queryable = true
   }
   serviceid Id {
     apiName = "PromotionTier.Id"
@@ -31,32 +40,50 @@ type salesforce.PromotionTier {
     defaultValue = false
     label = "Deleted"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.DateTime CreatedDate {
     apiName = "PromotionTier.CreatedDate"
     label = "Created Date"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.Lookup CreatedById {
     apiName = "PromotionTier.CreatedById"
     relationshipName = "CreatedBy"
     label = "Created By ID"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.DateTime LastModifiedDate {
     apiName = "PromotionTier.LastModifiedDate"
     label = "Last Modified Date"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.Lookup LastModifiedById {
     apiName = "PromotionTier.LastModifiedById"
     relationshipName = "LastModifiedBy"
     label = "Last Modified By ID"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.DateTime SystemModstamp {
     apiName = "PromotionTier.SystemModstamp"
     label = "System Modstamp"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
 }

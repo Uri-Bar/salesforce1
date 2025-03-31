@@ -4,35 +4,53 @@ type salesforce.PromotionLineItemRule {
     relationshipName = "AssociatedReference"
     _required = true
     label = "Associated Reference ID"
+    createable = true
+    updateable = false
+    queryable = true
   }
   salesforce.Picklist AssociatedType {
     apiName = "PromotionLineItemRule.AssociatedType"
     restricted = true
     _required = true
     label = "Associated Type"
+    createable = true
+    updateable = false
+    queryable = true
   }
   salesforce.Picklist OperatorType {
     apiName = "PromotionLineItemRule.OperatorType"
     restricted = true
     _required = true
     label = "Operator Type"
+    createable = true
+    updateable = true
+    queryable = true
   }
   salesforce.Lookup OwnerId {
     apiName = "PromotionLineItemRule.OwnerId"
     relationshipName = "Owner"
     label = "Owner ID"
     _hidden_value = true
+    createable = true
+    updateable = true
+    queryable = true
   }
   salesforce.Picklist Type {
     apiName = "PromotionLineItemRule.Type"
     restricted = true
     _required = true
     label = "Type"
+    createable = true
+    updateable = true
+    queryable = true
   }
   salesforce.Lookup TypeReferenceId {
     apiName = "PromotionLineItemRule.TypeReferenceId"
     relationshipName = "TypeReference"
     label = "Type Reference ID"
+    createable = true
+    updateable = true
+    queryable = true
   }
   salesforce.Text TypeValue {
     apiName = "PromotionLineItemRule.TypeValue"
@@ -40,6 +58,9 @@ type salesforce.PromotionLineItemRule {
     label = "Type Value"
     unique = false
     caseSensitive = false
+    createable = true
+    updateable = true
+    queryable = true
   }
   serviceid Id {
     apiName = "PromotionLineItemRule.Id"
@@ -52,37 +73,58 @@ type salesforce.PromotionLineItemRule {
     defaultValue = false
     label = "Deleted"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.AutoNumber Name {
     apiName = "PromotionLineItemRule.Name"
     label = "Promotion Line Item Rule Name"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.DateTime CreatedDate {
     apiName = "PromotionLineItemRule.CreatedDate"
     label = "Created Date"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.Lookup CreatedById {
     apiName = "PromotionLineItemRule.CreatedById"
     relationshipName = "CreatedBy"
     label = "Created By ID"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.DateTime LastModifiedDate {
     apiName = "PromotionLineItemRule.LastModifiedDate"
     label = "Last Modified Date"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.Lookup LastModifiedById {
     apiName = "PromotionLineItemRule.LastModifiedById"
     relationshipName = "LastModifiedBy"
     label = "Last Modified By ID"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.DateTime SystemModstamp {
     apiName = "PromotionLineItemRule.SystemModstamp"
     label = "System Modstamp"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
 }

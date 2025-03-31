@@ -13,6 +13,9 @@ type salesforce.WebStore {
     length = 32000
     label = "External Reference ID"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.Unknown MaxValuesPerFacet {
     apiName = "WebStore.MaxValuesPerFacet"
@@ -26,6 +29,9 @@ type salesforce.WebStore {
     label = "Store Name"
     unique = false
     caseSensitive = false
+    createable = true
+    updateable = true
+    queryable = true
   }
   salesforce.Picklist OrderActivationStatus {
     apiName = "WebStore.OrderActivationStatus"
@@ -76,85 +82,133 @@ type salesforce.WebStore {
     relationshipName = "Owner"
     label = "Owner ID"
     _hidden_value = true
+    createable = true
+    updateable = true
+    queryable = true
   }
   salesforce.Checkbox IsDeleted {
     apiName = "WebStore.IsDeleted"
     defaultValue = false
     label = "Deleted"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.DateTime CreatedDate {
     apiName = "WebStore.CreatedDate"
     label = "Created Date"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.Lookup CreatedById {
     apiName = "WebStore.CreatedById"
     relationshipName = "CreatedBy"
     label = "Created By ID"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.DateTime LastModifiedDate {
     apiName = "WebStore.LastModifiedDate"
     label = "Last Modified Date"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.Lookup LastModifiedById {
     apiName = "WebStore.LastModifiedById"
     relationshipName = "LastModifiedBy"
     label = "Last Modified By ID"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.DateTime SystemModstamp {
     apiName = "WebStore.SystemModstamp"
     label = "System Modstamp"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.Picklist Type {
     apiName = "WebStore.Type"
     restricted = true
     _required = true
     label = "Type"
+    createable = true
+    updateable = false
+    queryable = true
   }
   salesforce.Checkbox OptionsGuestBrowsingEnabled {
     apiName = "WebStore.OptionsGuestBrowsingEnabled"
     label = "Guest Browsing Enabled"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.Checkbox OptionsGuestCartEnabled {
     apiName = "WebStore.OptionsGuestCartEnabled"
     label = "Guest Cart Enabled"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.Checkbox OptionsGuestCheckoutEnabled {
     apiName = "WebStore.OptionsGuestCheckoutEnabled"
     label = "Guest Checkout Enabled"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.Checkbox OptionsCartAsyncProcessingEnabled {
     apiName = "WebStore.OptionsCartAsyncProcessingEnabled"
     label = "Cart Async Processing Enabled"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.Checkbox OptionsDuplicateCartItemsEnabled {
     apiName = "WebStore.OptionsDuplicateCartItemsEnabled"
     label = "Duplicate Cart Items Enabled"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.Checkbox OptionsSkuDetectionEnabled {
     apiName = "WebStore.OptionsSkuDetectionEnabled"
     label = "Sku Detection Enabled"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.Checkbox OptionsPreserveGuestCartEnabled {
     apiName = "WebStore.OptionsPreserveGuestCartEnabled"
     label = "Preserve Guest Cart Enabled"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.Checkbox OptionsSplitShipmentEnabled {
     apiName = "WebStore.OptionsSplitShipmentEnabled"
     label = "Split Shipment Enabled"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.Picklist DefaultTaxLocaleType {
     apiName = "WebStore.DefaultTaxLocaleType"
@@ -163,5 +217,8 @@ type salesforce.WebStore {
     label = "Tax Type"
     inlineHelpText = "Choose Net if the product price doesn’t include tax. Choose Gross if the product price includes tax. Changing the tax type will effect any existing carts. We recommend clearing these carts to avoid any discrepancies."
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
 }

@@ -4,6 +4,9 @@ type salesforce.Opportunity {
     trackTrending = false
     relationshipName = "Account"
     label = "Account ID"
+    createable = true
+    updateable = true
+    queryable = true
   }
   salesforce.Currency Amount {
     apiName = "Opportunity.Amount"
@@ -11,18 +14,27 @@ type salesforce.Opportunity {
     label = "Amount"
     scale = 2
     precision = 18
+    createable = true
+    updateable = true
+    queryable = true
   }
   salesforce.Lookup CampaignId {
     apiName = "Opportunity.CampaignId"
     trackTrending = false
     relationshipName = "Campaign"
     label = "Campaign ID"
+    createable = true
+    updateable = true
+    queryable = true
   }
   salesforce.Date CloseDate {
     apiName = "Opportunity.CloseDate"
     trackTrending = false
     _required = true
     label = "Close Date"
+    createable = true
+    updateable = true
+    queryable = true
   }
   salesforce.Lookup ContractId {
     apiName = "Opportunity.ContractId"
@@ -34,6 +46,9 @@ type salesforce.Opportunity {
     trackTrending = false
     length = 32000
     label = "Description"
+    createable = true
+    updateable = true
+    queryable = true
   }
   salesforce.Currency ExpectedRevenue {
     apiName = "Opportunity.ExpectedRevenue"
@@ -42,6 +57,9 @@ type salesforce.Opportunity {
     scale = 2
     precision = 18
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.Unknown IqScore {
     apiName = "Opportunity.IqScore"
@@ -53,6 +71,9 @@ type salesforce.Opportunity {
     trackTrending = false
     defaultValue = false
     label = "Private"
+    createable = true
+    updateable = true
+    queryable = true
   }
   salesforce.Picklist LeadSource {
     apiName = "Opportunity.LeadSource"
@@ -60,6 +81,9 @@ type salesforce.Opportunity {
     restricted = false
     label = "Lead Source"
     valueSetName = salesforce.StandardValueSet.instance.LeadSource
+    createable = true
+    updateable = true
+    queryable = true
   }
   salesforce.Text Name {
     apiName = "Opportunity.Name"
@@ -69,6 +93,9 @@ type salesforce.Opportunity {
     label = "Name"
     unique = false
     caseSensitive = false
+    createable = true
+    updateable = true
+    queryable = true
   }
   salesforce.Text NextStep {
     apiName = "Opportunity.NextStep"
@@ -77,6 +104,9 @@ type salesforce.Opportunity {
     label = "Next Step"
     unique = false
     caseSensitive = false
+    createable = true
+    updateable = true
+    queryable = true
   }
   salesforce.Lookup OwnerId {
     apiName = "Opportunity.OwnerId"
@@ -84,12 +114,18 @@ type salesforce.Opportunity {
     relationshipName = "Owner"
     label = "Owner ID"
     _hidden_value = true
+    createable = true
+    updateable = true
+    queryable = true
   }
   salesforce.Lookup Pricebook2Id {
     apiName = "Opportunity.Pricebook2Id"
     trackTrending = false
     relationshipName = "Pricebook2"
     label = "Price Book ID"
+    createable = true
+    updateable = true
+    queryable = true
   }
   salesforce.Percent Probability {
     apiName = "Opportunity.Probability"
@@ -97,6 +133,9 @@ type salesforce.Opportunity {
     label = "Probability (%)"
     scale = 0
     precision = 3
+    createable = true
+    updateable = true
+    queryable = true
   }
   salesforce.Picklist StageName {
     apiName = "Opportunity.StageName"
@@ -105,6 +144,9 @@ type salesforce.Opportunity {
     _required = true
     label = "Stage"
     valueSetName = salesforce.StandardValueSet.instance.OpportunityStage
+    createable = true
+    updateable = true
+    queryable = true
   }
   salesforce.Number TotalOpportunityQuantity {
     apiName = "Opportunity.TotalOpportunityQuantity"
@@ -113,6 +155,9 @@ type salesforce.Opportunity {
     precision = 18
     scale = 2
     unique = false
+    createable = true
+    updateable = true
+    queryable = true
   }
   salesforce.Picklist Type {
     apiName = "Opportunity.Type"
@@ -120,6 +165,9 @@ type salesforce.Opportunity {
     restricted = false
     label = "Opportunity Type"
     valueSetName = salesforce.StandardValueSet.instance.OpportunityType
+    createable = true
+    updateable = true
+    queryable = true
   }
   serviceid Id {
     apiName = "Opportunity.Id"
@@ -132,24 +180,36 @@ type salesforce.Opportunity {
     defaultValue = false
     label = "Deleted"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.Lookup RecordTypeId {
     apiName = "Opportunity.RecordTypeId"
     relationshipName = "RecordType"
     label = "Record Type ID"
     _hidden_value = true
+    createable = true
+    updateable = true
+    queryable = true
   }
   salesforce.Checkbox IsClosed {
     apiName = "Opportunity.IsClosed"
     defaultValue = false
     label = "Closed"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.Checkbox IsWon {
     apiName = "Opportunity.IsWon"
     defaultValue = false
     label = "Won"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.Picklist ForecastCategory {
     apiName = "Opportunity.ForecastCategory"
@@ -157,49 +217,76 @@ type salesforce.Opportunity {
     _required = true
     label = "Forecast Category"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.Picklist ForecastCategoryName {
     apiName = "Opportunity.ForecastCategoryName"
     restricted = true
     label = "Forecast Category"
+    createable = true
+    updateable = true
+    queryable = true
   }
   salesforce.Checkbox HasOpportunityLineItem {
     apiName = "Opportunity.HasOpportunityLineItem"
     defaultValue = false
     label = "Has Line Item"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.DateTime CreatedDate {
     apiName = "Opportunity.CreatedDate"
     label = "Created Date"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.Lookup CreatedById {
     apiName = "Opportunity.CreatedById"
     relationshipName = "CreatedBy"
     label = "Created By ID"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.DateTime LastModifiedDate {
     apiName = "Opportunity.LastModifiedDate"
     label = "Last Modified Date"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.Lookup LastModifiedById {
     apiName = "Opportunity.LastModifiedById"
     relationshipName = "LastModifiedBy"
     label = "Last Modified By ID"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.DateTime SystemModstamp {
     apiName = "Opportunity.SystemModstamp"
     label = "System Modstamp"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.Date LastActivityDate {
     apiName = "Opportunity.LastActivityDate"
     label = "Last Activity"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.Number PushCount {
     apiName = "Opportunity.PushCount"
@@ -208,11 +295,17 @@ type salesforce.Opportunity {
     scale = 0
     unique = false
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.DateTime LastStageChangeDate {
     apiName = "Opportunity.LastStageChangeDate"
     label = "Last Stage Change Date"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.Text Fiscal {
     apiName = "Opportunity.Fiscal"
@@ -221,33 +314,51 @@ type salesforce.Opportunity {
     unique = false
     caseSensitive = false
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.Lookup ContactId {
     apiName = "Opportunity.ContactId"
     label = "Contact ID"
+    createable = true
+    updateable = false
+    queryable = true
   }
   salesforce.Checkbox HasOpenActivity {
     apiName = "Opportunity.HasOpenActivity"
     defaultValue = false
     label = "Has Open Activity"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.Checkbox HasOverdueTask {
     apiName = "Opportunity.HasOverdueTask"
     defaultValue = false
     label = "Has Overdue Task"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.Lookup LastAmountChangedHistoryId {
     apiName = "Opportunity.LastAmountChangedHistoryId"
     relationshipName = "LastAmountChangedHistory"
     label = "Opportunity History ID"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.Lookup LastCloseDateChangedHistoryId {
     apiName = "Opportunity.LastCloseDateChangedHistoryId"
     relationshipName = "LastCloseDateChangedHistory"
     label = "Opportunity History ID"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
 }

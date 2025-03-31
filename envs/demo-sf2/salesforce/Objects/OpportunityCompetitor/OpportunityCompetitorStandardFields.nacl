@@ -2,6 +2,9 @@ type salesforce.OpportunityCompetitor {
   salesforce.Picklist CompetitorName {
     apiName = "OpportunityCompetitor.CompetitorName"
     label = "Competitor Name"
+    createable = true
+    updateable = true
+    queryable = true
   }
   serviceid Id {
     apiName = "OpportunityCompetitor.Id"
@@ -14,6 +17,9 @@ type salesforce.OpportunityCompetitor {
     relationshipName = "Opportunity"
     _required = true
     label = "Opportunity ID"
+    createable = true
+    updateable = false
+    queryable = true
   }
   salesforce.Text Strengths {
     apiName = "OpportunityCompetitor.Strengths"
@@ -21,6 +27,9 @@ type salesforce.OpportunityCompetitor {
     label = "Strengths"
     unique = false
     caseSensitive = false
+    createable = true
+    updateable = true
+    queryable = true
   }
   salesforce.Text Weaknesses {
     apiName = "OpportunityCompetitor.Weaknesses"
@@ -28,38 +37,59 @@ type salesforce.OpportunityCompetitor {
     label = "Weaknesses"
     unique = false
     caseSensitive = false
+    createable = true
+    updateable = true
+    queryable = true
   }
   salesforce.Lookup CreatedById {
     apiName = "OpportunityCompetitor.CreatedById"
     relationshipName = "CreatedBy"
     label = "Created By ID"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.DateTime CreatedDate {
     apiName = "OpportunityCompetitor.CreatedDate"
     label = "Created Date"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.Lookup LastModifiedById {
     apiName = "OpportunityCompetitor.LastModifiedById"
     relationshipName = "LastModifiedBy"
     label = "Last Modified By ID"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.DateTime LastModifiedDate {
     apiName = "OpportunityCompetitor.LastModifiedDate"
     label = "Last Modified Date"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.DateTime SystemModstamp {
     apiName = "OpportunityCompetitor.SystemModstamp"
     label = "System Modstamp"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.Checkbox IsDeleted {
     apiName = "OpportunityCompetitor.IsDeleted"
     defaultValue = false
     label = "Deleted"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
 }

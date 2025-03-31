@@ -5,6 +5,9 @@ type salesforce.BuyerGroup {
     label = "Description"
     unique = false
     caseSensitive = false
+    createable = true
+    updateable = true
+    queryable = true
   }
   salesforce.Text Name {
     apiName = "BuyerGroup.Name"
@@ -13,12 +16,18 @@ type salesforce.BuyerGroup {
     label = "Name"
     unique = false
     caseSensitive = false
+    createable = true
+    updateable = true
+    queryable = true
   }
   salesforce.Lookup OwnerId {
     apiName = "BuyerGroup.OwnerId"
     relationshipName = "Owner"
     label = "Owner ID"
     _hidden_value = true
+    createable = true
+    updateable = true
+    queryable = true
   }
   serviceid Id {
     apiName = "BuyerGroup.Id"
@@ -31,32 +40,50 @@ type salesforce.BuyerGroup {
     defaultValue = false
     label = "Deleted"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.DateTime CreatedDate {
     apiName = "BuyerGroup.CreatedDate"
     label = "Created Date"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.Lookup CreatedById {
     apiName = "BuyerGroup.CreatedById"
     relationshipName = "CreatedBy"
     label = "Created By ID"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.DateTime LastModifiedDate {
     apiName = "BuyerGroup.LastModifiedDate"
     label = "Last Modified Date"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.Lookup LastModifiedById {
     apiName = "BuyerGroup.LastModifiedById"
     relationshipName = "LastModifiedBy"
     label = "Last Modified By ID"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.DateTime SystemModstamp {
     apiName = "BuyerGroup.SystemModstamp"
     label = "System Modstamp"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
 }

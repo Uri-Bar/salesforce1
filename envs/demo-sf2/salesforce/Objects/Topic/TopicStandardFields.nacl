@@ -12,6 +12,9 @@ type salesforce.Topic {
     label = "Name"
     unique = false
     caseSensitive = false
+    createable = true
+    updateable = true
+    queryable = true
   }
   salesforce.Text Description {
     apiName = "Topic.Description"
@@ -19,17 +22,26 @@ type salesforce.Topic {
     label = "Description"
     unique = false
     caseSensitive = false
+    createable = true
+    updateable = true
+    queryable = true
   }
   salesforce.DateTime CreatedDate {
     apiName = "Topic.CreatedDate"
     label = "Created Date"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.Lookup CreatedById {
     apiName = "Topic.CreatedById"
     relationshipName = "CreatedBy"
     label = "Created By ID"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.Number TalkingAbout {
     apiName = "Topic.TalkingAbout"
@@ -39,6 +51,9 @@ type salesforce.Topic {
     scale = 0
     unique = false
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.Text ManagedTopicType {
     apiName = "Topic.ManagedTopicType"
@@ -47,10 +62,16 @@ type salesforce.Topic {
     unique = false
     caseSensitive = false
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.DateTime SystemModstamp {
     apiName = "Topic.SystemModstamp"
     label = "System Modstamp"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
 }

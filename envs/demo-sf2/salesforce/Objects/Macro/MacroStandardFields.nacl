@@ -3,18 +3,27 @@ type salesforce.Macro {
     apiName = "Macro.Description"
     length = 4096
     label = "Description"
+    createable = true
+    updateable = true
+    queryable = true
   }
   salesforce.Checkbox IsAlohaSupported {
     apiName = "Macro.IsAlohaSupported"
     defaultValue = false
     label = "Supports Classic"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.Checkbox IsLightningSupported {
     apiName = "Macro.IsLightningSupported"
     defaultValue = false
     label = "Supports Lightning"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.Text Name {
     apiName = "Macro.Name"
@@ -23,17 +32,26 @@ type salesforce.Macro {
     label = "Macro Name"
     unique = false
     caseSensitive = false
+    createable = true
+    updateable = true
+    queryable = true
   }
   salesforce.Lookup OwnerId {
     apiName = "Macro.OwnerId"
     relationshipName = "Owner"
     label = "Owner ID"
     _hidden_value = true
+    createable = true
+    updateable = true
+    queryable = true
   }
   salesforce.Picklist StartingContext {
     apiName = "Macro.StartingContext"
     restricted = true
     label = "Apply To"
+    createable = true
+    updateable = false
+    queryable = true
   }
   serviceid Id {
     apiName = "Macro.Id"
@@ -46,32 +64,50 @@ type salesforce.Macro {
     defaultValue = false
     label = "Deleted"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.DateTime CreatedDate {
     apiName = "Macro.CreatedDate"
     label = "Created Date"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.Lookup CreatedById {
     apiName = "Macro.CreatedById"
     relationshipName = "CreatedBy"
     label = "Created By ID"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.DateTime LastModifiedDate {
     apiName = "Macro.LastModifiedDate"
     label = "Last Modified Date"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.Lookup LastModifiedById {
     apiName = "Macro.LastModifiedById"
     relationshipName = "LastModifiedBy"
     label = "Last Modified By ID"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.DateTime SystemModstamp {
     apiName = "Macro.SystemModstamp"
     label = "System Modstamp"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
 }

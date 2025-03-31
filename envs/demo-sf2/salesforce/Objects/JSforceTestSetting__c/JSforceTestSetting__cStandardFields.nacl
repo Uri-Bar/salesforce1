@@ -10,6 +10,9 @@ type salesforce.JSforceTestSetting__c {
     defaultValue = false
     label = "Deleted"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.Text Name {
     apiName = "JSforceTestSetting__c.Name"
@@ -17,38 +20,59 @@ type salesforce.JSforceTestSetting__c {
     label = "Name"
     unique = false
     caseSensitive = false
+    createable = true
+    updateable = true
+    queryable = true
   }
   salesforce.Lookup SetupOwnerId {
     apiName = "JSforceTestSetting__c.SetupOwnerId"
     relationshipName = "SetupOwner"
     label = "Location"
     _hidden_value = true
+    createable = true
+    updateable = true
+    queryable = true
   }
   salesforce.DateTime CreatedDate {
     apiName = "JSforceTestSetting__c.CreatedDate"
     label = "Created Date"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.Lookup CreatedById {
     apiName = "JSforceTestSetting__c.CreatedById"
     relationshipName = "CreatedBy"
     label = "Created By ID"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.DateTime LastModifiedDate {
     apiName = "JSforceTestSetting__c.LastModifiedDate"
     label = "Last Modified Date"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.Lookup LastModifiedById {
     apiName = "JSforceTestSetting__c.LastModifiedById"
     relationshipName = "LastModifiedBy"
     label = "Last Modified By ID"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.DateTime SystemModstamp {
     apiName = "JSforceTestSetting__c.SystemModstamp"
     label = "System Modstamp"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
 }

@@ -6,11 +6,17 @@ type salesforce.CreditMemoInvApplication {
     scale = 2
     precision = 18
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.DateTime AppliedDate {
     apiName = "CreditMemoInvApplication.AppliedDate"
     label = "Applied Date"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.Lookup AssociatedLineId {
     apiName = "CreditMemoInvApplication.AssociatedLineId"
@@ -18,6 +24,9 @@ type salesforce.CreditMemoInvApplication {
     relationshipName = "AssociatedLine"
     label = "Credit Memo Invoice Application ID"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.Lookup CreditMemoId {
     apiName = "CreditMemoInvApplication.CreditMemoId"
@@ -25,11 +34,17 @@ type salesforce.CreditMemoInvApplication {
     _required = true
     label = "Credit Memo ID"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.DateTime Date {
     apiName = "CreditMemoInvApplication.Date"
     label = "Date"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.Text Description {
     apiName = "CreditMemoInvApplication.Description"
@@ -37,23 +52,35 @@ type salesforce.CreditMemoInvApplication {
     label = "Description"
     unique = false
     caseSensitive = false
+    createable = false
+    updateable = true
+    queryable = true
   }
   salesforce.DateTime EffectiveDate {
     apiName = "CreditMemoInvApplication.EffectiveDate"
     label = "Effective Date"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.Picklist HasBeenUnapplied {
     apiName = "CreditMemoInvApplication.HasBeenUnapplied"
     restricted = true
     label = "Has Been Unapplied"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.Summary ImpactAmount {
     apiName = "CreditMemoInvApplication.ImpactAmount"
     inlineHelpText = "Impact on the balance of the credit memo and invoice. Unapplied-type applications have a negative impact, while Applied-type applications have a positive impact."
     label = "Impact Amount"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.MasterDetail InvoiceId {
     apiName = "CreditMemoInvApplication.InvoiceId"
@@ -61,6 +88,9 @@ type salesforce.CreditMemoInvApplication {
     _required = true
     label = "Invoice ID"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.Picklist Type {
     apiName = "CreditMemoInvApplication.Type"
@@ -68,11 +98,17 @@ type salesforce.CreditMemoInvApplication {
     _required = true
     label = "Type"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.DateTime UnappliedDate {
     apiName = "CreditMemoInvApplication.UnappliedDate"
     label = "Unapplied Date"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   serviceid Id {
     apiName = "CreditMemoInvApplication.Id"
@@ -85,37 +121,58 @@ type salesforce.CreditMemoInvApplication {
     defaultValue = false
     label = "Deleted"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.AutoNumber CreditMemoInvoiceNumber {
     apiName = "CreditMemoInvApplication.CreditMemoInvoiceNumber"
     label = "Name"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.DateTime CreatedDate {
     apiName = "CreditMemoInvApplication.CreatedDate"
     label = "Created Date"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.Lookup CreatedById {
     apiName = "CreditMemoInvApplication.CreatedById"
     relationshipName = "CreatedBy"
     label = "Created By ID"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.DateTime LastModifiedDate {
     apiName = "CreditMemoInvApplication.LastModifiedDate"
     label = "Last Modified Date"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.Lookup LastModifiedById {
     apiName = "CreditMemoInvApplication.LastModifiedById"
     relationshipName = "LastModifiedBy"
     label = "Last Modified By ID"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.DateTime SystemModstamp {
     apiName = "CreditMemoInvApplication.SystemModstamp"
     label = "System Modstamp"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
 }

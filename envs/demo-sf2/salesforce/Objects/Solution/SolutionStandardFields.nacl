@@ -3,11 +3,17 @@ type salesforce.Solution {
     apiName = "Solution.IsPublished"
     defaultValue = false
     label = "Public"
+    createable = true
+    updateable = true
+    queryable = true
   }
   salesforce.Checkbox IsPublishedInPublicKb {
     apiName = "Solution.IsPublishedInPublicKb"
     defaultValue = false
     label = "Visible in Public Knowledge Base"
+    createable = true
+    updateable = true
+    queryable = true
   }
   salesforce.Text SolutionName {
     apiName = "Solution.SolutionName"
@@ -16,11 +22,17 @@ type salesforce.Solution {
     label = "Title"
     unique = false
     caseSensitive = false
+    createable = true
+    updateable = true
+    queryable = true
   }
   salesforce.Html SolutionNote {
     apiName = "Solution.SolutionNote"
     length = 32000
     label = "Description"
+    createable = true
+    updateable = true
+    queryable = true
   }
   salesforce.Picklist Status {
     apiName = "Solution.Status"
@@ -28,6 +40,9 @@ type salesforce.Solution {
     _required = true
     label = "Status"
     valueSetName = salesforce.StandardValueSet.instance.SolutionStatus
+    createable = true
+    updateable = true
+    queryable = true
   }
   serviceid Id {
     apiName = "Solution.Id"
@@ -40,50 +55,77 @@ type salesforce.Solution {
     defaultValue = false
     label = "Deleted"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.AutoNumber SolutionNumber {
     apiName = "Solution.SolutionNumber"
     label = "Solution Number"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.Checkbox IsReviewed {
     apiName = "Solution.IsReviewed"
     defaultValue = false
     label = "Reviewed"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.Lookup OwnerId {
     apiName = "Solution.OwnerId"
     relationshipName = "Owner"
     label = "Owner ID"
     _hidden_value = true
+    createable = true
+    updateable = true
+    queryable = true
   }
   salesforce.DateTime CreatedDate {
     apiName = "Solution.CreatedDate"
     label = "Created Date"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.Lookup CreatedById {
     apiName = "Solution.CreatedById"
     relationshipName = "CreatedBy"
     label = "Created By ID"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.DateTime LastModifiedDate {
     apiName = "Solution.LastModifiedDate"
     label = "Last Modified Date"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.Lookup LastModifiedById {
     apiName = "Solution.LastModifiedById"
     relationshipName = "LastModifiedBy"
     label = "Last Modified By ID"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.DateTime SystemModstamp {
     apiName = "Solution.SystemModstamp"
     label = "System Modstamp"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.Number TimesUsed {
     apiName = "Solution.TimesUsed"
@@ -93,11 +135,17 @@ type salesforce.Solution {
     scale = 0
     unique = false
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.Checkbox IsHtml {
     apiName = "Solution.IsHtml"
     defaultValue = false
     label = "Is Html"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
 }

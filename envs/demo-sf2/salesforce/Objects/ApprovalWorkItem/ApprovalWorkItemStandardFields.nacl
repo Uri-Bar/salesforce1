@@ -6,6 +6,9 @@ type salesforce.ApprovalWorkItem {
     unique = false
     caseSensitive = false
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.MasterDetail ApprovalSubmissionId {
     apiName = "ApprovalWorkItem.ApprovalSubmissionId"
@@ -13,30 +16,45 @@ type salesforce.ApprovalWorkItem {
     _required = true
     label = "Approval Submission ID"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.Lookup AssignedToId {
     apiName = "ApprovalWorkItem.AssignedToId"
     relationshipName = "AssignedTo"
     label = "Assigned To ID"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.Html Comments {
     apiName = "ApprovalWorkItem.Comments"
     length = 32000
     label = "Comments"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.Lookup FlowOrchestrationWorkItemId {
     apiName = "ApprovalWorkItem.FlowOrchestrationWorkItemId"
     relationshipName = "FlowOrchestrationWorkItem"
     label = "Orchestration Work Item ID"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.Lookup RelatedRecordId {
     apiName = "ApprovalWorkItem.RelatedRecordId"
     relationshipName = "RelatedRecord"
     label = "Related Record ID"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.Text RelatedRecordObjectName {
     apiName = "ApprovalWorkItem.RelatedRecordObjectName"
@@ -45,17 +63,26 @@ type salesforce.ApprovalWorkItem {
     unique = false
     caseSensitive = false
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.Lookup ReviewedById {
     apiName = "ApprovalWorkItem.ReviewedById"
     relationshipName = "ReviewedBy"
     label = "User ID"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.DateTime ReviewedDate {
     apiName = "ApprovalWorkItem.ReviewedDate"
     label = "Reviewed Date"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.Picklist Status {
     apiName = "ApprovalWorkItem.Status"
@@ -63,6 +90,9 @@ type salesforce.ApprovalWorkItem {
     _required = true
     label = "Status"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   serviceid Id {
     apiName = "ApprovalWorkItem.Id"
@@ -75,37 +105,58 @@ type salesforce.ApprovalWorkItem {
     defaultValue = false
     label = "Deleted"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.AutoNumber Name {
     apiName = "ApprovalWorkItem.Name"
     label = "Approval Work Item Name"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.DateTime CreatedDate {
     apiName = "ApprovalWorkItem.CreatedDate"
     label = "Created Date"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.Lookup CreatedById {
     apiName = "ApprovalWorkItem.CreatedById"
     relationshipName = "CreatedBy"
     label = "Created By ID"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.DateTime LastModifiedDate {
     apiName = "ApprovalWorkItem.LastModifiedDate"
     label = "Last Modified Date"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.Lookup LastModifiedById {
     apiName = "ApprovalWorkItem.LastModifiedById"
     relationshipName = "LastModifiedBy"
     label = "Last Modified By ID"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.DateTime SystemModstamp {
     apiName = "ApprovalWorkItem.SystemModstamp"
     label = "System Modstamp"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
 }

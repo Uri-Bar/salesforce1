@@ -5,23 +5,35 @@ type salesforce.ReturnOrderItemAdjustment {
     label = "Adjustment"
     scale = 2
     precision = 18
+    createable = true
+    updateable = false
+    queryable = true
   }
   salesforce.LongTextArea Description {
     apiName = "ReturnOrderItemAdjustment.Description"
     length = 1175
     label = "Description"
+    createable = true
+    updateable = true
+    queryable = true
   }
   salesforce.Lookup ReturnOrderId {
     apiName = "ReturnOrderItemAdjustment.ReturnOrderId"
     relationshipName = "ReturnOrder"
     _required = true
     label = "Return Order ID"
+    createable = true
+    updateable = false
+    queryable = true
   }
   salesforce.MasterDetail ReturnOrderLineItemId {
     apiName = "ReturnOrderItemAdjustment.ReturnOrderLineItemId"
     relationshipName = "ReturnOrderLineItem"
     _required = true
     label = "Return Order Line Item ID"
+    createable = true
+    updateable = false
+    queryable = true
   }
   salesforce.Currency TotalAmtWithTax {
     apiName = "ReturnOrderItemAdjustment.TotalAmtWithTax"
@@ -29,6 +41,9 @@ type salesforce.ReturnOrderItemAdjustment {
     scale = 2
     precision = 18
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.Currency TotalTaxAmount {
     apiName = "ReturnOrderItemAdjustment.TotalTaxAmount"
@@ -36,6 +51,9 @@ type salesforce.ReturnOrderItemAdjustment {
     scale = 2
     precision = 18
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   serviceid Id {
     apiName = "ReturnOrderItemAdjustment.Id"
@@ -48,37 +66,58 @@ type salesforce.ReturnOrderItemAdjustment {
     defaultValue = false
     label = "Deleted"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.AutoNumber ReturnOrderItemAdjustmentNumber {
     apiName = "ReturnOrderItemAdjustment.ReturnOrderItemAdjustmentNumber"
     label = "Return Order Item Adjustment Number"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.DateTime CreatedDate {
     apiName = "ReturnOrderItemAdjustment.CreatedDate"
     label = "Created Date"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.Lookup CreatedById {
     apiName = "ReturnOrderItemAdjustment.CreatedById"
     relationshipName = "CreatedBy"
     label = "Created By ID"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.DateTime LastModifiedDate {
     apiName = "ReturnOrderItemAdjustment.LastModifiedDate"
     label = "Last Modified Date"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.Lookup LastModifiedById {
     apiName = "ReturnOrderItemAdjustment.LastModifiedById"
     relationshipName = "LastModifiedBy"
     label = "Last Modified By ID"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.DateTime SystemModstamp {
     apiName = "ReturnOrderItemAdjustment.SystemModstamp"
     label = "System Modstamp"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
 }

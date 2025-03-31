@@ -10,12 +10,18 @@ type salesforce.MacroUsage {
     relationshipName = "Owner"
     label = "Owner ID"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.Checkbox IsDeleted {
     apiName = "MacroUsage.IsDeleted"
     defaultValue = false
     label = "Deleted"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.Text Name {
     apiName = "MacroUsage.Name"
@@ -25,33 +31,51 @@ type salesforce.MacroUsage {
     unique = false
     caseSensitive = false
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.DateTime CreatedDate {
     apiName = "MacroUsage.CreatedDate"
     label = "Created Date"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.Lookup CreatedById {
     apiName = "MacroUsage.CreatedById"
     relationshipName = "CreatedBy"
     label = "Created By ID"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.DateTime LastModifiedDate {
     apiName = "MacroUsage.LastModifiedDate"
     label = "Last Modified Date"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.Lookup LastModifiedById {
     apiName = "MacroUsage.LastModifiedById"
     relationshipName = "LastModifiedBy"
     label = "Last Modified By ID"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.DateTime SystemModstamp {
     apiName = "MacroUsage.SystemModstamp"
     label = "System Modstamp"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.Lookup MacroId {
     apiName = "MacroUsage.MacroId"
@@ -59,6 +83,9 @@ type salesforce.MacroUsage {
     _required = true
     label = "Macro ID"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.Text ContextRecord {
     apiName = "MacroUsage.ContextRecord"
@@ -67,6 +94,9 @@ type salesforce.MacroUsage {
     unique = false
     caseSensitive = false
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.Number ExecutedInstructionCount {
     apiName = "MacroUsage.ExecutedInstructionCount"
@@ -75,6 +105,9 @@ type salesforce.MacroUsage {
     scale = 0
     unique = false
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.Number InstructionCount {
     apiName = "MacroUsage.InstructionCount"
@@ -83,29 +116,44 @@ type salesforce.MacroUsage {
     scale = 0
     unique = false
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.DateTime ExecutionEndTime {
     apiName = "MacroUsage.ExecutionEndTime"
     label = "Execution End Time"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.Lookup UserId {
     apiName = "MacroUsage.UserId"
     relationshipName = "User"
     label = "User ID"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.Checkbox IsFromBulk {
     apiName = "MacroUsage.IsFromBulk"
     defaultValue = false
     label = "From Bulk Execution"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.Picklist AppContext {
     apiName = "MacroUsage.AppContext"
     restricted = true
     label = "App Context"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.Number ConditionCount {
     apiName = "MacroUsage.ConditionCount"
@@ -114,12 +162,18 @@ type salesforce.MacroUsage {
     scale = 0
     unique = false
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.Picklist ExecutionState {
     apiName = "MacroUsage.ExecutionState"
     restricted = true
     label = "Execution State"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.Number DurationInMs {
     apiName = "MacroUsage.DurationInMs"
@@ -128,11 +182,17 @@ type salesforce.MacroUsage {
     scale = 0
     unique = false
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.Picklist FailureReason {
     apiName = "MacroUsage.FailureReason"
     restricted = true
     label = "Failure Reason"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
 }

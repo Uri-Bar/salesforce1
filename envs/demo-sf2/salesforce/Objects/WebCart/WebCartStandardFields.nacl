@@ -3,11 +3,17 @@ type salesforce.WebCart {
     apiName = "WebCart.AccountId"
     relationshipName = "Account"
     label = "Account ID"
+    createable = true
+    updateable = true
+    queryable = true
   }
   salesforce.Address BillingAddress {
     apiName = "WebCart.BillingAddress"
     label = "Billing Address"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.Unknown FirstPymtGrandTotalAmount {
     apiName = "WebCart.FirstPymtGrandTotalAmount"
@@ -23,19 +29,31 @@ type salesforce.WebCart {
     scale = 2
     precision = 18
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.Checkbox IsRepricingNeeded {
     apiName = "WebCart.IsRepricingNeeded"
     defaultValue = false
     label = "Is Repricing Needed"
+    createable = true
+    updateable = true
+    queryable = true
   }
   salesforce.Checkbox IsSecondary {
     apiName = "WebCart.IsSecondary"
     label = "Is Cart Secondary"
+    createable = true
+    updateable = true
+    queryable = true
   }
   salesforce.DateTime LastRepricingDate {
     apiName = "WebCart.LastRepricingDate"
     label = "Last Repricing Date"
+    createable = true
+    updateable = true
+    queryable = true
   }
   salesforce.Text Name {
     apiName = "WebCart.Name"
@@ -44,28 +62,43 @@ type salesforce.WebCart {
     label = "Cart Name"
     unique = false
     caseSensitive = false
+    createable = true
+    updateable = true
+    queryable = true
   }
   salesforce.Lookup OrderOwnerId {
     apiName = "WebCart.OrderOwnerId"
     relationshipName = "OrderOwner"
     label = "User ID"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.Lookup OwnerId {
     apiName = "WebCart.OwnerId"
     relationshipName = "Owner"
     label = "Owner ID"
     _hidden_value = true
+    createable = true
+    updateable = true
+    queryable = true
   }
   salesforce.Lookup PaymentGroupId {
     apiName = "WebCart.PaymentGroupId"
     relationshipName = "PaymentGroup"
     label = "Payment Group ID"
+    createable = true
+    updateable = true
+    queryable = true
   }
   salesforce.Lookup PaymentMethodId {
     apiName = "WebCart.PaymentMethodId"
     relationshipName = "PaymentMethod"
     label = "Payment Method ID"
+    createable = true
+    updateable = true
+    queryable = true
   }
   salesforce.Text PoNumber {
     apiName = "WebCart.PoNumber"
@@ -73,11 +106,17 @@ type salesforce.WebCart {
     label = "Purchase Order Number"
     unique = false
     caseSensitive = false
+    createable = true
+    updateable = true
+    queryable = true
   }
   salesforce.Picklist Status {
     apiName = "WebCart.Status"
     restricted = true
     label = "Status"
+    createable = true
+    updateable = true
+    queryable = true
   }
   salesforce.Unknown TaxLocaleType {
     apiName = "WebCart.TaxLocaleType"
@@ -87,11 +126,17 @@ type salesforce.WebCart {
     apiName = "WebCart.TaxType"
     restricted = true
     label = "Tax Policy for Cart"
+    createable = true
+    updateable = true
+    queryable = true
   }
   salesforce.Summary TotalAdjustmentAmount {
     apiName = "WebCart.TotalAdjustmentAmount"
     label = "Total Quantity Based and Promotional Adjustment Amount in Cart"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.Currency TotalAmount {
     apiName = "WebCart.TotalAmount"
@@ -99,6 +144,9 @@ type salesforce.WebCart {
     scale = 2
     precision = 18
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.Currency TotalAmountAfterAllAdjustments {
     apiName = "WebCart.TotalAmountAfterAllAdjustments"
@@ -106,37 +154,58 @@ type salesforce.WebCart {
     scale = 2
     precision = 18
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.Summary TotalCartLevelAdjAmount {
     apiName = "WebCart.TotalCartLevelAdjAmount"
     label = "Total cart level adjustment amount for all the items in the cart. Includes discount and surcharge."
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.Summary TotalChargeAmount {
     apiName = "WebCart.TotalChargeAmount"
     label = "Total Charge Amount in Cart"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.Summary TotalChargeTaxAmount {
     apiName = "WebCart.TotalChargeTaxAmount"
     label = "Total Charge Tax Amount in Cart"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.Summary TotalLineItemsWithErrors {
     apiName = "WebCart.TotalLineItemsWithErrors"
     label = "Total Line Items with Errors"
     precision = 9
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.Summary TotalListAmount {
     apiName = "WebCart.TotalListAmount"
     label = "Total List Amount in Cart"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.Summary TotalProductAmount {
     apiName = "WebCart.TotalProductAmount"
     label = "Total Product Amount in Cart"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.Summary TotalProductCount {
     apiName = "WebCart.TotalProductCount"
@@ -144,6 +213,9 @@ type salesforce.WebCart {
     precision = 18
     scale = 0
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.Unknown TotalProductFirstPymtTaxAmount {
     apiName = "WebCart.TotalProductFirstPymtTaxAmount"
@@ -153,32 +225,50 @@ type salesforce.WebCart {
     apiName = "WebCart.TotalProductItemAdjAmount"
     label = "Total adjustment amount on a cart item. Includes discount and surcharge."
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.Summary TotalProductLineItemCount {
     apiName = "WebCart.TotalProductLineItemCount"
     label = "Total Product Line Item Count"
     precision = 9
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.Summary TotalProductListAmount {
     apiName = "WebCart.TotalProductListAmount"
     label = "Total Product List Amount in Cart"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.Summary TotalProductTaxAmount {
     apiName = "WebCart.TotalProductTaxAmount"
     label = "Total Product Tax Amount in Cart"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.Summary TotalPromoAdjustmentAmount {
     apiName = "WebCart.TotalPromoAdjustmentAmount"
     label = "Cart Promotions Adjustment"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.Summary TotalPromoAdjustmentTaxAmount {
     apiName = "WebCart.TotalPromoAdjustmentTaxAmount"
     label = "Cart Promotions Tax Adjustment"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.Unknown TotalSubProductCount {
     apiName = "WebCart.TotalSubProductCount"
@@ -190,23 +280,35 @@ type salesforce.WebCart {
     scale = 2
     precision = 18
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.Picklist Type {
     apiName = "WebCart.Type"
     restricted = true
     label = "Type"
+    createable = true
+    updateable = true
+    queryable = true
   }
   salesforce.Summary UniqueProductCount {
     apiName = "WebCart.UniqueProductCount"
     label = "Unique Products (SKUs) in the Cart"
     precision = 9
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.Lookup WebStoreId {
     apiName = "WebCart.WebStoreId"
     relationshipName = "WebStore"
     _required = true
     label = "Store ID"
+    createable = true
+    updateable = true
+    queryable = true
   }
   serviceid Id {
     apiName = "WebCart.Id"
@@ -219,33 +321,51 @@ type salesforce.WebCart {
     defaultValue = false
     label = "Deleted"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.DateTime CreatedDate {
     apiName = "WebCart.CreatedDate"
     label = "Created Date"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.Lookup CreatedById {
     apiName = "WebCart.CreatedById"
     relationshipName = "CreatedBy"
     label = "Created By ID"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.DateTime LastModifiedDate {
     apiName = "WebCart.LastModifiedDate"
     label = "Last Modified Date"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.Lookup LastModifiedById {
     apiName = "WebCart.LastModifiedById"
     relationshipName = "LastModifiedBy"
     label = "Last Modified By ID"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.DateTime SystemModstamp {
     apiName = "WebCart.SystemModstamp"
     label = "System Modstamp"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.Text InitialOrderReferenceNumber {
     apiName = "WebCart.InitialOrderReferenceNumber"
@@ -253,6 +373,9 @@ type salesforce.WebCart {
     label = "Initial Order Reference Number"
     unique = false
     caseSensitive = false
+    createable = true
+    updateable = true
+    queryable = true
   }
   salesforce.Unknown TotalChargeFirstPymtTaxAmount {
     apiName = "WebCart.TotalChargeFirstPymtTaxAmount"
@@ -262,15 +385,24 @@ type salesforce.WebCart {
     apiName = "WebCart.TotalChargeItemAdjAmount"
     label = "Total adjustment amount on a cart item of type charge. Includes discount and surcharge."
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.Phone GuestPhoneNumber {
     apiName = "WebCart.GuestPhoneNumber"
     label = "Phone Number for Guest User"
+    createable = true
+    updateable = true
+    queryable = true
   }
   salesforce.Email GuestEmailAddress {
     apiName = "WebCart.GuestEmailAddress"
     label = "Email address for Guest User"
     unique = false
+    createable = true
+    updateable = true
+    queryable = true
   }
   salesforce.Text GuestFirstName {
     apiName = "WebCart.GuestFirstName"
@@ -278,6 +410,9 @@ type salesforce.WebCart {
     label = "First Name for Guest User"
     unique = false
     caseSensitive = false
+    createable = true
+    updateable = true
+    queryable = true
   }
   salesforce.Text GuestLastName {
     apiName = "WebCart.GuestLastName"
@@ -285,6 +420,9 @@ type salesforce.WebCart {
     label = "Last Name for Guest User"
     unique = false
     caseSensitive = false
+    createable = true
+    updateable = true
+    queryable = true
   }
   salesforce.Text GuestSecondName {
     apiName = "WebCart.GuestSecondName"
@@ -292,6 +430,9 @@ type salesforce.WebCart {
     label = "Second Name for Guest User"
     unique = false
     caseSensitive = false
+    createable = true
+    updateable = true
+    queryable = true
   }
   salesforce.Text GuestCompanyName {
     apiName = "WebCart.GuestCompanyName"
@@ -299,6 +440,9 @@ type salesforce.WebCart {
     label = "Name of the company"
     unique = false
     caseSensitive = false
+    createable = true
+    updateable = true
+    queryable = true
   }
   salesforce.Text InventoryReservationIdentifier {
     apiName = "WebCart.InventoryReservationIdentifier"
@@ -306,5 +450,8 @@ type salesforce.WebCart {
     label = "The inventory reservation identifier."
     unique = false
     caseSensitive = false
+    createable = true
+    updateable = true
+    queryable = true
   }
 }

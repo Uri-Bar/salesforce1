@@ -3,16 +3,25 @@ type salesforce.ServiceTerritory {
     apiName = "ServiceTerritory.Address"
     label = "Address"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.LongTextArea Description {
     apiName = "ServiceTerritory.Description"
     length = 32000
     label = "Description"
+    createable = true
+    updateable = true
+    queryable = true
   }
   salesforce.Checkbox IsActive {
     apiName = "ServiceTerritory.IsActive"
     defaultValue = false
     label = "Active"
+    createable = true
+    updateable = true
+    queryable = true
   }
   salesforce.Text Name {
     apiName = "ServiceTerritory.Name"
@@ -21,23 +30,35 @@ type salesforce.ServiceTerritory {
     label = "Name"
     unique = false
     caseSensitive = false
+    createable = true
+    updateable = true
+    queryable = true
   }
   salesforce.Lookup OperatingHoursId {
     apiName = "ServiceTerritory.OperatingHoursId"
     relationshipName = "OperatingHours"
     _required = true
     label = "Operating Hour ID"
+    createable = true
+    updateable = true
+    queryable = true
   }
   salesforce.Lookup OwnerId {
     apiName = "ServiceTerritory.OwnerId"
     relationshipName = "Owner"
     label = "Owner ID"
     _hidden_value = true
+    createable = true
+    updateable = true
+    queryable = true
   }
   salesforce.Hierarchy ParentTerritoryId {
     apiName = "ServiceTerritory.ParentTerritoryId"
     relationshipName = "ParentTerritory"
     label = "Parent Territory ID"
+    createable = true
+    updateable = true
+    queryable = true
   }
   salesforce.Lookup PricebookId {
     apiName = "ServiceTerritory.PricebookId"
@@ -56,6 +77,9 @@ type salesforce.ServiceTerritory {
     relationshipName = "TopLevelTerritory"
     label = "Top-Level Territory ID"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.Number TypicalInTerritoryTravelTime {
     apiName = "ServiceTerritory.TypicalInTerritoryTravelTime"
@@ -63,6 +87,9 @@ type salesforce.ServiceTerritory {
     precision = 18
     scale = 2
     unique = false
+    createable = true
+    updateable = true
+    queryable = true
   }
   serviceid Id {
     apiName = "ServiceTerritory.Id"
@@ -75,32 +102,50 @@ type salesforce.ServiceTerritory {
     defaultValue = false
     label = "Deleted"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.DateTime CreatedDate {
     apiName = "ServiceTerritory.CreatedDate"
     label = "Created Date"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.Lookup CreatedById {
     apiName = "ServiceTerritory.CreatedById"
     relationshipName = "CreatedBy"
     label = "Created By ID"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.DateTime LastModifiedDate {
     apiName = "ServiceTerritory.LastModifiedDate"
     label = "Last Modified Date"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.Lookup LastModifiedById {
     apiName = "ServiceTerritory.LastModifiedById"
     relationshipName = "LastModifiedBy"
     label = "Last Modified By ID"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.DateTime SystemModstamp {
     apiName = "ServiceTerritory.SystemModstamp"
     label = "System Modstamp"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
 }

@@ -4,12 +4,18 @@ type salesforce.PromotionSegmentSalesStore {
     relationshipName = "PromotionSegment"
     _required = true
     label = "Promotion Segment ID"
+    createable = true
+    updateable = false
+    queryable = true
   }
   salesforce.Lookup SalesStoreId {
     apiName = "PromotionSegmentSalesStore.SalesStoreId"
     relationshipName = "SalesStore"
     _required = true
     label = "Sales Store ID"
+    createable = true
+    updateable = false
+    queryable = true
   }
   serviceid Id {
     apiName = "PromotionSegmentSalesStore.Id"
@@ -22,37 +28,58 @@ type salesforce.PromotionSegmentSalesStore {
     defaultValue = false
     label = "Deleted"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.AutoNumber Name {
     apiName = "PromotionSegmentSalesStore.Name"
     label = "Promotion Segment Sales Store Name"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.DateTime CreatedDate {
     apiName = "PromotionSegmentSalesStore.CreatedDate"
     label = "Created Date"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.Lookup CreatedById {
     apiName = "PromotionSegmentSalesStore.CreatedById"
     relationshipName = "CreatedBy"
     label = "Created By ID"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.DateTime LastModifiedDate {
     apiName = "PromotionSegmentSalesStore.LastModifiedDate"
     label = "Last Modified Date"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.Lookup LastModifiedById {
     apiName = "PromotionSegmentSalesStore.LastModifiedById"
     relationshipName = "LastModifiedBy"
     label = "Last Modified By ID"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.DateTime SystemModstamp {
     apiName = "PromotionSegmentSalesStore.SystemModstamp"
     label = "System Modstamp"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
 }

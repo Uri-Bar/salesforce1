@@ -5,6 +5,9 @@ type salesforce.Image {
     label = "Accessibility Text"
     unique = false
     caseSensitive = false
+    createable = true
+    updateable = true
+    queryable = true
   }
   salesforce.Text CapturedAngle {
     apiName = "Image.CapturedAngle"
@@ -12,21 +15,33 @@ type salesforce.Image {
     label = "Camera Angle"
     unique = false
     caseSensitive = false
+    createable = true
+    updateable = true
+    queryable = true
   }
   salesforce.Lookup ContentDocumentId {
     apiName = "Image.ContentDocumentId"
     relationshipName = "ContentDocument"
     label = "ContentDocument ID"
+    createable = true
+    updateable = true
+    queryable = true
   }
   salesforce.Picklist ImageClass {
     apiName = "Image.ImageClass"
     restricted = true
     label = "Category"
+    createable = true
+    updateable = true
+    queryable = true
   }
   salesforce.Picklist ImageClassObjectType {
     apiName = "Image.ImageClassObjectType"
     restricted = true
     label = "Image Type"
+    createable = true
+    updateable = true
+    queryable = true
   }
   salesforce.Text ImageViewType {
     apiName = "Image.ImageViewType"
@@ -34,11 +49,17 @@ type salesforce.Image {
     label = "Image Orientation"
     unique = false
     caseSensitive = false
+    createable = true
+    updateable = true
+    queryable = true
   }
   salesforce.Checkbox IsActive {
     apiName = "Image.IsActive"
     defaultValue = false
     label = "Active"
+    createable = true
+    updateable = true
+    queryable = true
   }
   salesforce.Text Name {
     apiName = "Image.Name"
@@ -46,6 +67,9 @@ type salesforce.Image {
     label = "Name"
     unique = false
     caseSensitive = false
+    createable = true
+    updateable = true
+    queryable = true
   }
   salesforce.Text Title {
     apiName = "Image.Title"
@@ -53,10 +77,16 @@ type salesforce.Image {
     label = "Title"
     unique = false
     caseSensitive = false
+    createable = true
+    updateable = true
+    queryable = true
   }
   salesforce.Url Url {
     apiName = "Image.Url"
     label = "URL"
+    createable = true
+    updateable = true
+    queryable = true
   }
   serviceid Id {
     apiName = "Image.Id"
@@ -69,38 +99,59 @@ type salesforce.Image {
     relationshipName = "Owner"
     label = "Owner ID"
     _hidden_value = true
+    createable = true
+    updateable = true
+    queryable = true
   }
   salesforce.Checkbox IsDeleted {
     apiName = "Image.IsDeleted"
     defaultValue = false
     label = "Deleted"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.DateTime CreatedDate {
     apiName = "Image.CreatedDate"
     label = "Created Date"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.Lookup CreatedById {
     apiName = "Image.CreatedById"
     relationshipName = "CreatedBy"
     label = "Created By ID"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.DateTime LastModifiedDate {
     apiName = "Image.LastModifiedDate"
     label = "Last Modified Date"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.Lookup LastModifiedById {
     apiName = "Image.LastModifiedById"
     relationshipName = "LastModifiedBy"
     label = "Last Modified By ID"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.DateTime SystemModstamp {
     apiName = "Image.SystemModstamp"
     label = "System Modstamp"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
 }

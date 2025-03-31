@@ -2,17 +2,26 @@ type salesforce.ShiftEngagementChannel {
   salesforce.Checkbox AreAllEngmtChnlSupported {
     apiName = "ShiftEngagementChannel.AreAllEngmtChnlSupported"
     label = "All Engagement Channels Supported"
+    createable = true
+    updateable = true
+    queryable = true
   }
   salesforce.Lookup EngagementChannelTypeId {
     apiName = "ShiftEngagementChannel.EngagementChannelTypeId"
     relationshipName = "EngagementChannelType"
     label = "Engagement Channel Type ID"
+    createable = true
+    updateable = true
+    queryable = true
   }
   salesforce.MasterDetail ShiftId {
     apiName = "ShiftEngagementChannel.ShiftId"
     relationshipName = "Shift"
     _required = true
     label = "Shift ID"
+    createable = true
+    updateable = false
+    queryable = true
   }
   serviceid Id {
     apiName = "ShiftEngagementChannel.Id"
@@ -25,37 +34,58 @@ type salesforce.ShiftEngagementChannel {
     defaultValue = false
     label = "Deleted"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.AutoNumber Name {
     apiName = "ShiftEngagementChannel.Name"
     label = "Shift Engagement Channel Number"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.DateTime CreatedDate {
     apiName = "ShiftEngagementChannel.CreatedDate"
     label = "Created Date"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.Lookup CreatedById {
     apiName = "ShiftEngagementChannel.CreatedById"
     relationshipName = "CreatedBy"
     label = "Created By ID"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.DateTime LastModifiedDate {
     apiName = "ShiftEngagementChannel.LastModifiedDate"
     label = "Last Modified Date"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.Lookup LastModifiedById {
     apiName = "ShiftEngagementChannel.LastModifiedById"
     relationshipName = "LastModifiedBy"
     label = "Last Modified By ID"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.DateTime SystemModstamp {
     apiName = "ShiftEngagementChannel.SystemModstamp"
     label = "System Modstamp"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
 }

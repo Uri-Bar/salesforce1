@@ -12,6 +12,9 @@ type salesforce.CollaborationGroup {
     label = "Name"
     unique = false
     caseSensitive = false
+    createable = true
+    updateable = true
+    queryable = true
   }
   salesforce.Number MemberCount {
     apiName = "CollaborationGroup.MemberCount"
@@ -20,71 +23,110 @@ type salesforce.CollaborationGroup {
     scale = 0
     unique = false
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.Lookup OwnerId {
     apiName = "CollaborationGroup.OwnerId"
     relationshipName = "Owner"
     label = "Owner ID"
     _hidden_value = true
+    createable = true
+    updateable = true
+    queryable = true
   }
   salesforce.Picklist CollaborationType {
     apiName = "CollaborationGroup.CollaborationType"
     restricted = true
     _required = true
     label = "Access Type"
+    createable = true
+    updateable = true
+    queryable = true
   }
   salesforce.LongTextArea Description {
     apiName = "CollaborationGroup.Description"
     length = 1000
     label = "Description"
+    createable = true
+    updateable = true
+    queryable = true
   }
   salesforce.DateTime CreatedDate {
     apiName = "CollaborationGroup.CreatedDate"
     label = "Created Date"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.Lookup CreatedById {
     apiName = "CollaborationGroup.CreatedById"
     relationshipName = "CreatedBy"
     label = "Created By ID"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.DateTime LastModifiedDate {
     apiName = "CollaborationGroup.LastModifiedDate"
     label = "Last Modified Date"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.Lookup LastModifiedById {
     apiName = "CollaborationGroup.LastModifiedById"
     relationshipName = "LastModifiedBy"
     label = "Last Modified By ID"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.DateTime SystemModstamp {
     apiName = "CollaborationGroup.SystemModstamp"
     label = "System Modstamp"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.Url FullPhotoUrl {
     apiName = "CollaborationGroup.FullPhotoUrl"
     label = "Url for full-sized Photo"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.Url MediumPhotoUrl {
     apiName = "CollaborationGroup.MediumPhotoUrl"
     label = "Url for medium profile photo"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.Url SmallPhotoUrl {
     apiName = "CollaborationGroup.SmallPhotoUrl"
     label = "Photo"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.DateTime LastFeedModifiedDate {
     apiName = "CollaborationGroup.LastFeedModifiedDate"
     _required = true
     label = "Last Feed Modified Date"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.Text InformationTitle {
     apiName = "CollaborationGroup.InformationTitle"
@@ -92,52 +134,82 @@ type salesforce.CollaborationGroup {
     label = "Information Title"
     unique = false
     caseSensitive = false
+    createable = true
+    updateable = true
+    queryable = true
   }
   salesforce.Html InformationBody {
     apiName = "CollaborationGroup.InformationBody"
     length = 4000
     label = "Information"
+    createable = true
+    updateable = true
+    queryable = true
   }
   salesforce.Checkbox HasPrivateFieldsAccess {
     apiName = "CollaborationGroup.HasPrivateFieldsAccess"
     defaultValue = false
     label = "Has Private Fields Access"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.Checkbox CanHaveGuests {
     apiName = "CollaborationGroup.CanHaveGuests"
     defaultValue = false
     label = "Allow customers"
+    createable = true
+    updateable = true
+    queryable = true
   }
   salesforce.Checkbox IsArchived {
     apiName = "CollaborationGroup.IsArchived"
     defaultValue = false
     label = "Archive"
+    createable = true
+    updateable = true
+    queryable = true
   }
   salesforce.Checkbox IsAutoArchiveDisabled {
     apiName = "CollaborationGroup.IsAutoArchiveDisabled"
     defaultValue = false
     label = "Disable automatic archiving"
+    createable = true
+    updateable = true
+    queryable = true
   }
   salesforce.Lookup AnnouncementId {
     apiName = "CollaborationGroup.AnnouncementId"
     relationshipName = "Announcement"
     label = "Announcement ID"
+    createable = true
+    updateable = true
+    queryable = true
   }
   salesforce.Email GroupEmail {
     apiName = "CollaborationGroup.GroupEmail"
     label = "Group Email"
     unique = false
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.Url BannerPhotoUrl {
     apiName = "CollaborationGroup.BannerPhotoUrl"
     label = "Banner Photo Url"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.Checkbox IsBroadcast {
     apiName = "CollaborationGroup.IsBroadcast"
     defaultValue = false
     label = "Broadcast Only"
+    createable = true
+    updateable = true
+    queryable = true
   }
 }

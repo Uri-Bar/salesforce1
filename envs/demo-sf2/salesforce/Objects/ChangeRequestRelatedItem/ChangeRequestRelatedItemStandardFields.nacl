@@ -4,34 +4,52 @@ type salesforce.ChangeRequestRelatedItem {
     relationshipName = "Asset"
     _required = true
     label = "Asset ID"
+    createable = true
+    updateable = false
+    queryable = true
   }
   salesforce.MasterDetail ChangeRequestId {
     apiName = "ChangeRequestRelatedItem.ChangeRequestId"
     relationshipName = "ChangeRequest"
     _required = true
     label = "Change Request ID"
+    createable = true
+    updateable = false
+    queryable = true
   }
   salesforce.LongTextArea Comment {
     apiName = "ChangeRequestRelatedItem.Comment"
     length = 32000
     label = "Comment"
+    createable = true
+    updateable = true
+    queryable = true
   }
   salesforce.Picklist ImpactLevel {
     apiName = "ChangeRequestRelatedItem.ImpactLevel"
     restricted = false
     label = "Impact Level"
     valueSetName = salesforce.StandardValueSet.instance.CasePriority
+    createable = true
+    updateable = true
+    queryable = true
   }
   salesforce.AutoNumber Name {
     apiName = "ChangeRequestRelatedItem.Name"
     label = "Change Request Related Item Number"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.Picklist RelationshipType {
     apiName = "ChangeRequestRelatedItem.RelationshipType"
     restricted = false
     _required = true
     label = "Relationship Type"
+    createable = true
+    updateable = true
+    queryable = true
   }
   serviceid Id {
     apiName = "ChangeRequestRelatedItem.Id"
@@ -44,32 +62,50 @@ type salesforce.ChangeRequestRelatedItem {
     defaultValue = false
     label = "Deleted"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.DateTime CreatedDate {
     apiName = "ChangeRequestRelatedItem.CreatedDate"
     label = "Created Date"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.Lookup CreatedById {
     apiName = "ChangeRequestRelatedItem.CreatedById"
     relationshipName = "CreatedBy"
     label = "Created By ID"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.DateTime LastModifiedDate {
     apiName = "ChangeRequestRelatedItem.LastModifiedDate"
     label = "Last Modified Date"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.Lookup LastModifiedById {
     apiName = "ChangeRequestRelatedItem.LastModifiedById"
     relationshipName = "LastModifiedBy"
     label = "Last Modified By ID"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.DateTime SystemModstamp {
     apiName = "ChangeRequestRelatedItem.SystemModstamp"
     label = "System Modstamp"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
 }

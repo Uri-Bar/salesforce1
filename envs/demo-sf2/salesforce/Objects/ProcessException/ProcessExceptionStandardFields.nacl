@@ -4,21 +4,33 @@ type salesforce.ProcessException {
     relationshipName = "AttachedTo"
     _required = true
     label = "Attached To ID"
+    createable = true
+    updateable = true
+    queryable = true
   }
   salesforce.Lookup CaseId {
     apiName = "ProcessException.CaseId"
     relationshipName = "Case"
     label = "Case ID"
+    createable = true
+    updateable = true
+    queryable = true
   }
   salesforce.Picklist Category {
     apiName = "ProcessException.Category"
     restricted = false
     label = "Category"
+    createable = true
+    updateable = true
+    queryable = true
   }
   salesforce.LongTextArea Description {
     apiName = "ProcessException.Description"
     length = 2000
     label = "Description"
+    createable = true
+    updateable = true
+    queryable = true
   }
   salesforce.Text ExternalReference {
     apiName = "ProcessException.ExternalReference"
@@ -26,6 +38,9 @@ type salesforce.ProcessException {
     label = "External Reference"
     unique = false
     caseSensitive = false
+    createable = true
+    updateable = true
+    queryable = true
   }
   salesforce.Text Message {
     apiName = "ProcessException.Message"
@@ -34,28 +49,43 @@ type salesforce.ProcessException {
     label = "Message"
     unique = false
     caseSensitive = false
+    createable = true
+    updateable = true
+    queryable = true
   }
   salesforce.Lookup OwnerId {
     apiName = "ProcessException.OwnerId"
     relationshipName = "Owner"
     label = "Owner ID"
     _hidden_value = true
+    createable = true
+    updateable = true
+    queryable = true
   }
   salesforce.Picklist Priority {
     apiName = "ProcessException.Priority"
     restricted = false
     label = "Priority"
+    createable = true
+    updateable = true
+    queryable = true
   }
   salesforce.Picklist Severity {
     apiName = "ProcessException.Severity"
     restricted = false
     label = "Severity"
+    createable = true
+    updateable = true
+    queryable = true
   }
   salesforce.Picklist Status {
     apiName = "ProcessException.Status"
     restricted = false
     _required = true
     label = "Status"
+    createable = true
+    updateable = true
+    queryable = true
   }
   serviceid Id {
     apiName = "ProcessException.Id"
@@ -68,38 +98,59 @@ type salesforce.ProcessException {
     defaultValue = false
     label = "Deleted"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.AutoNumber ProcessExceptionNumber {
     apiName = "ProcessException.ProcessExceptionNumber"
     label = "Process Exception Number"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.DateTime CreatedDate {
     apiName = "ProcessException.CreatedDate"
     label = "Created Date"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.Lookup CreatedById {
     apiName = "ProcessException.CreatedById"
     relationshipName = "CreatedBy"
     label = "Created By ID"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.DateTime LastModifiedDate {
     apiName = "ProcessException.LastModifiedDate"
     label = "Last Modified Date"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.Lookup LastModifiedById {
     apiName = "ProcessException.LastModifiedById"
     relationshipName = "LastModifiedBy"
     label = "Last Modified By ID"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.DateTime SystemModstamp {
     apiName = "ProcessException.SystemModstamp"
     label = "System Modstamp"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.Picklist StatusCategory {
     apiName = "ProcessException.StatusCategory"
@@ -107,11 +158,17 @@ type salesforce.ProcessException {
     _required = true
     label = "Status Category"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.Picklist SeverityCategory {
     apiName = "ProcessException.SeverityCategory"
     restricted = true
     label = "Severity Category"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
 }

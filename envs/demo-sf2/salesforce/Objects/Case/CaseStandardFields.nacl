@@ -4,12 +4,18 @@ type salesforce.Case {
     trackTrending = false
     relationshipName = "Account"
     label = "Account ID"
+    createable = true
+    updateable = true
+    queryable = true
   }
   salesforce.Lookup AssetId {
     apiName = "Case.AssetId"
     trackTrending = false
     relationshipName = "Asset"
     label = "Asset ID"
+    createable = true
+    updateable = true
+    queryable = true
   }
   salesforce.Lookup BusinessHoursId {
     apiName = "Case.BusinessHoursId"
@@ -21,12 +27,18 @@ type salesforce.Case {
     trackTrending = false
     label = "Closed Date"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.LongTextArea Comments {
     apiName = "Case.Comments"
     trackTrending = false
     length = 4000
     label = "Internal Comments"
+    createable = true
+    updateable = true
+    queryable = true
   }
   salesforce.Email ContactEmail {
     apiName = "Case.ContactEmail"
@@ -34,36 +46,54 @@ type salesforce.Case {
     label = "Contact Email"
     unique = false
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.Phone ContactFax {
     apiName = "Case.ContactFax"
     trackTrending = false
     label = "Contact Fax"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.Lookup ContactId {
     apiName = "Case.ContactId"
     trackTrending = false
     relationshipName = "Contact"
     label = "Contact ID"
+    createable = true
+    updateable = true
+    queryable = true
   }
   salesforce.Phone ContactMobile {
     apiName = "Case.ContactMobile"
     trackTrending = false
     label = "Contact Mobile"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.Phone ContactPhone {
     apiName = "Case.ContactPhone"
     trackTrending = false
     label = "Contact Phone"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.LongTextArea Description {
     apiName = "Case.Description"
     trackTrending = false
     length = 32000
     label = "Description"
+    createable = true
+    updateable = true
+    queryable = true
   }
   salesforce.Lookup EntitlementId {
     apiName = "Case.EntitlementId"
@@ -80,6 +110,9 @@ type salesforce.Case {
     trackTrending = false
     defaultValue = false
     label = "Escalated"
+    createable = true
+    updateable = true
+    queryable = true
   }
   salesforce.Unknown IsStopped {
     apiName = "Case.IsStopped"
@@ -102,6 +135,9 @@ type salesforce.Case {
     restricted = false
     label = "Case Origin"
     valueSetName = salesforce.StandardValueSet.instance.CaseOrigin
+    createable = true
+    updateable = true
+    queryable = true
   }
   salesforce.Lookup OwnerId {
     apiName = "Case.OwnerId"
@@ -109,12 +145,18 @@ type salesforce.Case {
     relationshipName = "Owner"
     label = "Owner ID"
     _hidden_value = true
+    createable = true
+    updateable = true
+    queryable = true
   }
   salesforce.Lookup ParentId {
     apiName = "Case.ParentId"
     trackTrending = false
     relationshipName = "Parent"
     label = "Parent Case ID"
+    createable = true
+    updateable = true
+    queryable = true
   }
   salesforce.Picklist Priority {
     apiName = "Case.Priority"
@@ -122,6 +164,9 @@ type salesforce.Case {
     restricted = false
     label = "Priority"
     valueSetName = salesforce.StandardValueSet.instance.CasePriority
+    createable = true
+    updateable = true
+    queryable = true
   }
   salesforce.Lookup ProductId {
     apiName = "Case.ProductId"
@@ -134,6 +179,9 @@ type salesforce.Case {
     restricted = false
     label = "Case Reason"
     valueSetName = salesforce.StandardValueSet.instance.CaseReason
+    createable = true
+    updateable = true
+    queryable = true
   }
   salesforce.Lookup ServiceContractId {
     apiName = "Case.ServiceContractId"
@@ -155,6 +203,9 @@ type salesforce.Case {
     trackTrending = false
     relationshipName = "Source"
     label = "Case Source ID"
+    createable = true
+    updateable = true
+    queryable = true
   }
   salesforce.Picklist Status {
     apiName = "Case.Status"
@@ -162,6 +213,9 @@ type salesforce.Case {
     restricted = false
     label = "Status"
     valueSetName = salesforce.StandardValueSet.instance.CaseStatus
+    createable = true
+    updateable = true
+    queryable = true
   }
   salesforce.Unknown StopStartDate {
     apiName = "Case.StopStartDate"
@@ -175,6 +229,9 @@ type salesforce.Case {
     label = "Subject"
     unique = false
     caseSensitive = false
+    createable = true
+    updateable = true
+    queryable = true
   }
   salesforce.Text SuppliedCompany {
     apiName = "Case.SuppliedCompany"
@@ -183,12 +240,18 @@ type salesforce.Case {
     label = "Company"
     unique = false
     caseSensitive = false
+    createable = true
+    updateable = true
+    queryable = true
   }
   salesforce.Email SuppliedEmail {
     apiName = "Case.SuppliedEmail"
     trackTrending = false
     label = "Email Address"
     unique = false
+    createable = true
+    updateable = true
+    queryable = true
   }
   salesforce.Text SuppliedName {
     apiName = "Case.SuppliedName"
@@ -197,6 +260,9 @@ type salesforce.Case {
     label = "Name"
     unique = false
     caseSensitive = false
+    createable = true
+    updateable = true
+    queryable = true
   }
   salesforce.Text SuppliedPhone {
     apiName = "Case.SuppliedPhone"
@@ -205,6 +271,9 @@ type salesforce.Case {
     label = "Phone"
     unique = false
     caseSensitive = false
+    createable = true
+    updateable = true
+    queryable = true
   }
   salesforce.Picklist Type {
     apiName = "Case.Type"
@@ -212,6 +281,9 @@ type salesforce.Case {
     restricted = false
     label = "Case Type"
     valueSetName = salesforce.StandardValueSet.instance.CaseType
+    createable = true
+    updateable = true
+    queryable = true
   }
   serviceid Id {
     apiName = "Case.Id"
@@ -224,49 +296,76 @@ type salesforce.Case {
     defaultValue = false
     label = "Deleted"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.Lookup MasterRecordId {
     apiName = "Case.MasterRecordId"
     relationshipName = "MasterRecord"
     label = "Master Record ID"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.AutoNumber CaseNumber {
     apiName = "Case.CaseNumber"
     label = "Case Number"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.Checkbox IsClosed {
     apiName = "Case.IsClosed"
     defaultValue = false
     label = "Closed"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.DateTime CreatedDate {
     apiName = "Case.CreatedDate"
     label = "Created Date"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.Lookup CreatedById {
     apiName = "Case.CreatedById"
     relationshipName = "CreatedBy"
     label = "Created By ID"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.DateTime LastModifiedDate {
     apiName = "Case.LastModifiedDate"
     label = "Last Modified Date"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.Lookup LastModifiedById {
     apiName = "Case.LastModifiedById"
     relationshipName = "LastModifiedBy"
     label = "Last Modified By ID"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.DateTime SystemModstamp {
     apiName = "Case.SystemModstamp"
     label = "System Modstamp"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
 }

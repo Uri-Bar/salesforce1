@@ -5,15 +5,24 @@ type salesforce.LegalEntity {
     label = "Company Name"
     unique = false
     caseSensitive = false
+    createable = true
+    updateable = true
+    queryable = true
   }
   salesforce.TextArea Description {
     apiName = "LegalEntity.Description"
     label = "Description"
+    createable = true
+    updateable = true
+    queryable = true
   }
   salesforce.Address LegalEntityAddress {
     apiName = "LegalEntity.LegalEntityAddress"
     label = "Address"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.Text Name {
     apiName = "LegalEntity.Name"
@@ -22,17 +31,26 @@ type salesforce.LegalEntity {
     label = "Legal Entity Name"
     unique = false
     caseSensitive = false
+    createable = true
+    updateable = true
+    queryable = true
   }
   salesforce.Lookup OwnerId {
     apiName = "LegalEntity.OwnerId"
     relationshipName = "Owner"
     label = "Owner ID"
     _hidden_value = true
+    createable = true
+    updateable = true
+    queryable = true
   }
   salesforce.Picklist Status {
     apiName = "LegalEntity.Status"
     restricted = true
     label = "Status"
+    createable = true
+    updateable = true
+    queryable = true
   }
   serviceid Id {
     apiName = "LegalEntity.Id"
@@ -45,32 +63,50 @@ type salesforce.LegalEntity {
     defaultValue = false
     label = "Deleted"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.DateTime CreatedDate {
     apiName = "LegalEntity.CreatedDate"
     label = "Created Date"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.Lookup CreatedById {
     apiName = "LegalEntity.CreatedById"
     relationshipName = "CreatedBy"
     label = "Created By ID"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.DateTime LastModifiedDate {
     apiName = "LegalEntity.LastModifiedDate"
     label = "Last Modified Date"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.Lookup LastModifiedById {
     apiName = "LegalEntity.LastModifiedById"
     relationshipName = "LastModifiedBy"
     label = "Last Modified By ID"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.DateTime SystemModstamp {
     apiName = "LegalEntity.SystemModstamp"
     label = "System Modstamp"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
 }

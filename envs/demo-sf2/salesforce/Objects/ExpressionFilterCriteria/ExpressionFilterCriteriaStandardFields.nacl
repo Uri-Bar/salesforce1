@@ -10,38 +10,59 @@ type salesforce.ExpressionFilterCriteria {
     defaultValue = false
     label = "Deleted"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.AutoNumber Name {
     apiName = "ExpressionFilterCriteria.Name"
     label = "ExpressionFilterCriteria Name"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.DateTime CreatedDate {
     apiName = "ExpressionFilterCriteria.CreatedDate"
     label = "Created Date"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.Lookup CreatedById {
     apiName = "ExpressionFilterCriteria.CreatedById"
     relationshipName = "CreatedBy"
     label = "Created By ID"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.DateTime LastModifiedDate {
     apiName = "ExpressionFilterCriteria.LastModifiedDate"
     label = "Last Modified Date"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.Lookup LastModifiedById {
     apiName = "ExpressionFilterCriteria.LastModifiedById"
     relationshipName = "LastModifiedBy"
     label = "Last Modified By ID"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.DateTime SystemModstamp {
     apiName = "ExpressionFilterCriteria.SystemModstamp"
     label = "System Modstamp"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.Text FilterTarget {
     apiName = "ExpressionFilterCriteria.FilterTarget"
@@ -49,6 +70,9 @@ type salesforce.ExpressionFilterCriteria {
     label = "Filter Target"
     unique = false
     caseSensitive = false
+    createable = true
+    updateable = true
+    queryable = true
   }
   salesforce.Text FilterTargetValue {
     apiName = "ExpressionFilterCriteria.FilterTargetValue"
@@ -56,11 +80,17 @@ type salesforce.ExpressionFilterCriteria {
     label = "Context"
     unique = false
     caseSensitive = false
+    createable = true
+    updateable = true
+    queryable = true
   }
   salesforce.Picklist Operation {
     apiName = "ExpressionFilterCriteria.Operation"
     _required = true
     label = "Operation"
+    createable = true
+    updateable = true
+    queryable = true
   }
   salesforce.Number SortOrder {
     apiName = "ExpressionFilterCriteria.SortOrder"
@@ -68,11 +98,17 @@ type salesforce.ExpressionFilterCriteria {
     precision = 8
     scale = 0
     unique = false
+    createable = true
+    updateable = true
+    queryable = true
   }
   salesforce.Lookup ExpressionFilterId {
     apiName = "ExpressionFilterCriteria.ExpressionFilterId"
     relationshipName = "ExpressionFilter"
     _required = true
     label = "ExpressionFilter ID"
+    createable = true
+    updateable = false
+    queryable = true
   }
 }

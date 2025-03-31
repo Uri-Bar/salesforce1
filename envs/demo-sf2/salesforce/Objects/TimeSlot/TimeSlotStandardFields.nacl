@@ -4,11 +4,17 @@ type salesforce.TimeSlot {
     restricted = true
     _required = true
     label = "Day of Week"
+    createable = true
+    updateable = true
+    queryable = true
   }
   salesforce.Time EndTime {
     apiName = "TimeSlot.EndTime"
     _required = true
     label = "End Time"
+    createable = true
+    updateable = true
+    queryable = true
   }
   salesforce.Number MaxAppointments {
     apiName = "TimeSlot.MaxAppointments"
@@ -16,33 +22,51 @@ type salesforce.TimeSlot {
     precision = 9
     scale = 0
     unique = false
+    createable = true
+    updateable = true
+    queryable = true
   }
   salesforce.MasterDetail OperatingHoursId {
     apiName = "TimeSlot.OperatingHoursId"
     relationshipName = "OperatingHours"
     _required = true
     label = "Operating Hour ID"
+    createable = true
+    updateable = false
+    queryable = true
   }
   salesforce.Time StartTime {
     apiName = "TimeSlot.StartTime"
     _required = true
     label = "Start Time"
+    createable = true
+    updateable = true
+    queryable = true
   }
   salesforce.AutoNumber TimeSlotNumber {
     apiName = "TimeSlot.TimeSlotNumber"
     label = "Name"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.Picklist Type {
     apiName = "TimeSlot.Type"
     restricted = true
     _required = true
     label = "Type"
+    createable = true
+    updateable = true
+    queryable = true
   }
   salesforce.Lookup WorkTypeGroupId {
     apiName = "TimeSlot.WorkTypeGroupId"
     relationshipName = "WorkTypeGroup"
     label = "Work Type Group ID"
+    createable = true
+    updateable = true
+    queryable = true
   }
   serviceid Id {
     apiName = "TimeSlot.Id"
@@ -55,32 +79,50 @@ type salesforce.TimeSlot {
     defaultValue = false
     label = "Deleted"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.DateTime CreatedDate {
     apiName = "TimeSlot.CreatedDate"
     label = "Created Date"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.Lookup CreatedById {
     apiName = "TimeSlot.CreatedById"
     relationshipName = "CreatedBy"
     label = "Created By ID"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.DateTime LastModifiedDate {
     apiName = "TimeSlot.LastModifiedDate"
     label = "Last Modified Date"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.Lookup LastModifiedById {
     apiName = "TimeSlot.LastModifiedById"
     relationshipName = "LastModifiedBy"
     label = "Last Modified By ID"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.DateTime SystemModstamp {
     apiName = "TimeSlot.SystemModstamp"
     label = "System Modstamp"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
 }

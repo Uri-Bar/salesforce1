@@ -5,17 +5,26 @@ type salesforce.CreditMemo {
     scale = 2
     precision = 18
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.Lookup BillToContactId {
     apiName = "CreditMemo.BillToContactId"
     relationshipName = "BillToContact"
     label = "Contact ID"
+    createable = false
+    updateable = true
+    queryable = true
   }
   salesforce.Lookup BillingAccountId {
     apiName = "CreditMemo.BillingAccountId"
     relationshipName = "BillingAccount"
     _required = true
     label = "Account ID"
+    createable = false
+    updateable = true
+    queryable = true
   }
   salesforce.Unknown CorpCrcyCnvTotAmtWithTax {
     apiName = "CreditMemo.CorpCrcyCnvTotAmtWithTax"
@@ -34,11 +43,17 @@ type salesforce.CreditMemo {
     restricted = true
     label = "Creation Mode"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.Date CreditDate {
     apiName = "CreditMemo.CreditDate"
     _required = true
     label = "Credit Date"
+    createable = false
+    updateable = true
+    queryable = true
   }
   salesforce.Text CreditMemoNumber {
     apiName = "CreditMemo.CreditMemoNumber"
@@ -46,6 +61,9 @@ type salesforce.CreditMemo {
     label = "Credit Memo Number"
     unique = false
     caseSensitive = false
+    createable = false
+    updateable = true
+    queryable = true
   }
   salesforce.Text Description {
     apiName = "CreditMemo.Description"
@@ -53,6 +71,9 @@ type salesforce.CreditMemo {
     label = "Description"
     unique = false
     caseSensitive = false
+    createable = false
+    updateable = true
+    queryable = true
   }
   salesforce.Text ExternalReference {
     apiName = "CreditMemo.ExternalReference"
@@ -60,6 +81,9 @@ type salesforce.CreditMemo {
     label = "External Reference"
     unique = false
     caseSensitive = false
+    createable = false
+    updateable = true
+    queryable = true
   }
   salesforce.Text ExternalReferenceDataSource {
     apiName = "CreditMemo.ExternalReferenceDataSource"
@@ -67,34 +91,52 @@ type salesforce.CreditMemo {
     label = "External Reference Data Source"
     unique = false
     caseSensitive = false
+    createable = false
+    updateable = true
+    queryable = true
   }
   salesforce.Summary NetCreditsApplied {
     apiName = "CreditMemo.NetCreditsApplied"
     inlineHelpText = "Net amount applied from the credit memo."
     label = "Net Credits Applied"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.Lookup OwnerId {
     apiName = "CreditMemo.OwnerId"
     relationshipName = "Owner"
     label = "Owner ID"
     _hidden_value = true
+    createable = false
+    updateable = true
+    queryable = true
   }
   salesforce.Lookup ReferenceEntityId {
     apiName = "CreditMemo.ReferenceEntityId"
     relationshipName = "ReferenceEntity"
     label = "ReferenceEntity ID"
+    createable = false
+    updateable = true
+    queryable = true
   }
   salesforce.Picklist Status {
     apiName = "CreditMemo.Status"
     restricted = true
     _required = true
     label = "Status"
+    createable = false
+    updateable = true
+    queryable = true
   }
   salesforce.Summary TotalAdjustmentAmount {
     apiName = "CreditMemo.TotalAdjustmentAmount"
     label = "Total Adjustment Amount"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.Currency TotalAdjustmentAmountWithTax {
     apiName = "CreditMemo.TotalAdjustmentAmountWithTax"
@@ -102,6 +144,9 @@ type salesforce.CreditMemo {
     scale = 2
     precision = 18
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.Currency TotalAdjustmentTaxAmount {
     apiName = "CreditMemo.TotalAdjustmentTaxAmount"
@@ -109,21 +154,33 @@ type salesforce.CreditMemo {
     scale = 2
     precision = 18
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.Summary TotalAmount {
     apiName = "CreditMemo.TotalAmount"
     label = "Total Amount"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.Summary TotalAmountWithTax {
     apiName = "CreditMemo.TotalAmountWithTax"
     label = "Total with Tax"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.Summary TotalChargeAmount {
     apiName = "CreditMemo.TotalChargeAmount"
     label = "Total Charges"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.Currency TotalChargeAmountWithTax {
     apiName = "CreditMemo.TotalChargeAmountWithTax"
@@ -131,6 +188,9 @@ type salesforce.CreditMemo {
     scale = 2
     precision = 18
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.Currency TotalChargeTaxAmount {
     apiName = "CreditMemo.TotalChargeTaxAmount"
@@ -138,6 +198,9 @@ type salesforce.CreditMemo {
     scale = 2
     precision = 18
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.Currency TotalCreditAmountApplied {
     apiName = "CreditMemo.TotalCreditAmountApplied"
@@ -146,6 +209,9 @@ type salesforce.CreditMemo {
     scale = 2
     precision = 18
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.Currency TotalCreditAmountUnapplied {
     apiName = "CreditMemo.TotalCreditAmountUnapplied"
@@ -154,11 +220,17 @@ type salesforce.CreditMemo {
     scale = 2
     precision = 18
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.Summary TotalTaxAmount {
     apiName = "CreditMemo.TotalTaxAmount"
     label = "Total Tax"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   serviceid Id {
     apiName = "CreditMemo.Id"
@@ -171,37 +243,58 @@ type salesforce.CreditMemo {
     defaultValue = false
     label = "Deleted"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.AutoNumber DocumentNumber {
     apiName = "CreditMemo.DocumentNumber"
     label = "Document Number"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.DateTime CreatedDate {
     apiName = "CreditMemo.CreatedDate"
     label = "Created Date"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.Lookup CreatedById {
     apiName = "CreditMemo.CreatedById"
     relationshipName = "CreatedBy"
     label = "Created By ID"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.DateTime LastModifiedDate {
     apiName = "CreditMemo.LastModifiedDate"
     label = "Last Modified Date"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.Lookup LastModifiedById {
     apiName = "CreditMemo.LastModifiedById"
     relationshipName = "LastModifiedBy"
     label = "Last Modified By ID"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.DateTime SystemModstamp {
     apiName = "CreditMemo.SystemModstamp"
     label = "System Modstamp"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
 }

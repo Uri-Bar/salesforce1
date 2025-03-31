@@ -3,6 +3,9 @@ type salesforce.PaymentAuthorization {
     apiName = "PaymentAuthorization.AccountId"
     relationshipName = "Account"
     label = "Account ID"
+    createable = true
+    updateable = true
+    queryable = true
   }
   salesforce.Currency Amount {
     apiName = "PaymentAuthorization.Amount"
@@ -10,6 +13,9 @@ type salesforce.PaymentAuthorization {
     label = "Amount"
     scale = 2
     precision = 18
+    createable = true
+    updateable = true
+    queryable = true
   }
   salesforce.Currency Balance {
     apiName = "PaymentAuthorization.Balance"
@@ -17,28 +23,46 @@ type salesforce.PaymentAuthorization {
     scale = 2
     precision = 18
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.LongTextArea Comments {
     apiName = "PaymentAuthorization.Comments"
     length = 1000
     label = "Comments"
+    createable = true
+    updateable = true
+    queryable = true
   }
   salesforce.DateTime Date {
     apiName = "PaymentAuthorization.Date"
     label = "Date"
+    createable = true
+    updateable = true
+    queryable = true
   }
   salesforce.DateTime EffectiveDate {
     apiName = "PaymentAuthorization.EffectiveDate"
     label = "Effective Date"
+    createable = true
+    updateable = true
+    queryable = true
   }
   salesforce.Email Email {
     apiName = "PaymentAuthorization.Email"
     label = "Audit Email"
     unique = false
+    createable = true
+    updateable = true
+    queryable = true
   }
   salesforce.DateTime ExpirationDate {
     apiName = "PaymentAuthorization.ExpirationDate"
     label = "Expiration Date"
+    createable = true
+    updateable = true
+    queryable = true
   }
   salesforce.Text GatewayAuthCode {
     apiName = "PaymentAuthorization.GatewayAuthCode"
@@ -46,15 +70,24 @@ type salesforce.PaymentAuthorization {
     label = "Gateway Auth Code"
     unique = false
     caseSensitive = false
+    createable = true
+    updateable = true
+    queryable = true
   }
   salesforce.DateTime GatewayDate {
     apiName = "PaymentAuthorization.GatewayDate"
     label = "Gateway Date"
+    createable = true
+    updateable = true
+    queryable = true
   }
   salesforce.LongTextArea GatewayRefDetails {
     apiName = "PaymentAuthorization.GatewayRefDetails"
     length = 1000
     label = "Gateway Reference Details"
+    createable = true
+    updateable = true
+    queryable = true
   }
   salesforce.Text GatewayRefNumber {
     apiName = "PaymentAuthorization.GatewayRefNumber"
@@ -62,6 +95,9 @@ type salesforce.PaymentAuthorization {
     label = "Gateway Reference Number"
     unique = false
     caseSensitive = false
+    createable = true
+    updateable = true
+    queryable = true
   }
   salesforce.Text GatewayResultCode {
     apiName = "PaymentAuthorization.GatewayResultCode"
@@ -69,6 +105,9 @@ type salesforce.PaymentAuthorization {
     label = "Gateway Result Code"
     unique = false
     caseSensitive = false
+    createable = true
+    updateable = true
+    queryable = true
   }
   salesforce.Text GatewayResultCodeDescription {
     apiName = "PaymentAuthorization.GatewayResultCodeDescription"
@@ -76,6 +115,9 @@ type salesforce.PaymentAuthorization {
     label = "Gateway Result Code Description"
     unique = false
     caseSensitive = false
+    createable = true
+    updateable = true
+    queryable = true
   }
   salesforce.Text IpAddress {
     apiName = "PaymentAuthorization.IpAddress"
@@ -83,6 +125,9 @@ type salesforce.PaymentAuthorization {
     label = "IP Address"
     unique = false
     caseSensitive = false
+    createable = true
+    updateable = true
+    queryable = true
   }
   salesforce.Text MacAddress {
     apiName = "PaymentAuthorization.MacAddress"
@@ -90,47 +135,74 @@ type salesforce.PaymentAuthorization {
     label = "MAC Address"
     unique = false
     caseSensitive = false
+    createable = true
+    updateable = true
+    queryable = true
   }
   salesforce.Lookup PaymentGatewayId {
     apiName = "PaymentAuthorization.PaymentGatewayId"
     relationshipName = "PaymentGateway"
     label = "Payment Gateway ID"
+    createable = true
+    updateable = true
+    queryable = true
   }
   salesforce.Lookup PaymentGroupId {
     apiName = "PaymentAuthorization.PaymentGroupId"
     relationshipName = "PaymentGroup"
     label = "Payment Group ID"
+    createable = true
+    updateable = true
+    queryable = true
   }
   salesforce.Lookup PaymentMethodId {
     apiName = "PaymentAuthorization.PaymentMethodId"
     relationshipName = "PaymentMethod"
     label = "Payment Method ID"
+    createable = true
+    updateable = true
+    queryable = true
   }
   salesforce.Phone Phone {
     apiName = "PaymentAuthorization.Phone"
     label = "Phone"
+    createable = true
+    updateable = true
+    queryable = true
   }
   salesforce.Picklist ProcessingMode {
     apiName = "PaymentAuthorization.ProcessingMode"
     restricted = true
     _required = true
     label = "Processing Mode"
+    createable = true
+    updateable = false
+    queryable = true
   }
   salesforce.Picklist SfResultCode {
     apiName = "PaymentAuthorization.SfResultCode"
     restricted = true
     label = "Salesforce Result Code"
+    createable = true
+    updateable = true
+    queryable = true
   }
   salesforce.Picklist Status {
     apiName = "PaymentAuthorization.Status"
     restricted = true
     _required = true
     label = "Status"
+    createable = true
+    updateable = true
+    queryable = true
   }
   salesforce.Summary TotalAuthReversalAmount {
     apiName = "PaymentAuthorization.TotalAuthReversalAmount"
     label = "Total Payment Auth Reversal Amount"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.Currency TotalPaymentCaptureAmount {
     apiName = "PaymentAuthorization.TotalPaymentCaptureAmount"
@@ -138,6 +210,9 @@ type salesforce.PaymentAuthorization {
     scale = 2
     precision = 18
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   serviceid Id {
     apiName = "PaymentAuthorization.Id"
@@ -150,38 +225,59 @@ type salesforce.PaymentAuthorization {
     defaultValue = false
     label = "Deleted"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.AutoNumber PaymentAuthorizationNumber {
     apiName = "PaymentAuthorization.PaymentAuthorizationNumber"
     label = "Payment Authorization Number"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.DateTime CreatedDate {
     apiName = "PaymentAuthorization.CreatedDate"
     label = "Created Date"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.Lookup CreatedById {
     apiName = "PaymentAuthorization.CreatedById"
     relationshipName = "CreatedBy"
     label = "Created By ID"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.DateTime LastModifiedDate {
     apiName = "PaymentAuthorization.LastModifiedDate"
     label = "Last Modified Date"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.Lookup LastModifiedById {
     apiName = "PaymentAuthorization.LastModifiedById"
     relationshipName = "LastModifiedBy"
     label = "Last Modified By ID"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.DateTime SystemModstamp {
     apiName = "PaymentAuthorization.SystemModstamp"
     label = "System Modstamp"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.Text PaymentIntentGuid {
     apiName = "PaymentAuthorization.PaymentIntentGuid"
@@ -189,5 +285,8 @@ type salesforce.PaymentAuthorization {
     label = "Payment Intent Guid"
     unique = false
     caseSensitive = false
+    createable = true
+    updateable = false
+    queryable = true
   }
 }

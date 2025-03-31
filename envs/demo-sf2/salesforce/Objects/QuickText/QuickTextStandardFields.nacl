@@ -4,6 +4,9 @@ type salesforce.QuickText {
     restricted = false
     label = "Category"
     valueSetName = salesforce.StandardValueSet.instance.QuickTextCategory
+    createable = true
+    updateable = true
+    queryable = true
   }
   salesforce.Picklist Channel {
     apiName = "QuickText.Channel"
@@ -11,16 +14,25 @@ type salesforce.QuickText {
     label = "Channel"
     visibleLines = 0
     valueSetName = salesforce.StandardValueSet.instance.QuickTextChannel
+    createable = true
+    updateable = true
+    queryable = true
   }
   salesforce.Checkbox IsInsertable {
     apiName = "QuickText.IsInsertable"
     defaultValue = false
     label = "Include in selected channels"
+    createable = true
+    updateable = true
+    queryable = true
   }
   salesforce.LongTextArea Message {
     apiName = "QuickText.Message"
     length = 4096
     label = "Message"
+    createable = true
+    updateable = true
+    queryable = true
   }
   salesforce.Text Name {
     apiName = "QuickText.Name"
@@ -29,12 +41,18 @@ type salesforce.QuickText {
     label = "Quick Text Name"
     unique = false
     caseSensitive = false
+    createable = true
+    updateable = true
+    queryable = true
   }
   salesforce.Lookup OwnerId {
     apiName = "QuickText.OwnerId"
     relationshipName = "Owner"
     label = "Owner ID"
     _hidden_value = true
+    createable = true
+    updateable = true
+    queryable = true
   }
   serviceid Id {
     apiName = "QuickText.Id"
@@ -47,37 +65,58 @@ type salesforce.QuickText {
     defaultValue = false
     label = "Deleted"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.DateTime CreatedDate {
     apiName = "QuickText.CreatedDate"
     label = "Created Date"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.Lookup CreatedById {
     apiName = "QuickText.CreatedById"
     relationshipName = "CreatedBy"
     label = "Created By ID"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.DateTime LastModifiedDate {
     apiName = "QuickText.LastModifiedDate"
     label = "Last Modified Date"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.Lookup LastModifiedById {
     apiName = "QuickText.LastModifiedById"
     relationshipName = "LastModifiedBy"
     label = "Last Modified By ID"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.DateTime SystemModstamp {
     apiName = "QuickText.SystemModstamp"
     label = "System Modstamp"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.Picklist SourceType {
     apiName = "QuickText.SourceType"
     restricted = true
     label = "Source Entity Type"
+    createable = true
+    updateable = true
+    queryable = true
   }
 }

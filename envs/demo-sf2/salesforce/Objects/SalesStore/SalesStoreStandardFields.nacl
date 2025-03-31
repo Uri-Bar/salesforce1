@@ -4,6 +4,9 @@ type salesforce.SalesStore {
     length = 1000
     label = "Description"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.Lookup LocationId {
     apiName = "SalesStore.LocationId"
@@ -11,6 +14,9 @@ type salesforce.SalesStore {
     _required = true
     label = "Location ID"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.Text Name {
     apiName = "SalesStore.Name"
@@ -20,6 +26,9 @@ type salesforce.SalesStore {
     unique = false
     caseSensitive = false
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   serviceid Id {
     apiName = "SalesStore.Id"
@@ -34,5 +43,8 @@ type salesforce.SalesStore {
     unique = false
     caseSensitive = false
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
 }

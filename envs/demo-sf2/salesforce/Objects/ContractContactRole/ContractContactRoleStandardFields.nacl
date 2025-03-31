@@ -4,6 +4,9 @@ type salesforce.ContractContactRole {
     restricted = false
     label = "Role"
     valueSetName = salesforce.StandardValueSet.instance.ContractContactRole
+    createable = true
+    updateable = true
+    queryable = true
   }
   serviceid Id {
     apiName = "ContractContactRole.Id"
@@ -16,49 +19,76 @@ type salesforce.ContractContactRole {
     relationshipName = "Contract"
     _required = true
     label = "Contract ID"
+    createable = true
+    updateable = false
+    queryable = true
   }
   salesforce.Lookup ContactId {
     apiName = "ContractContactRole.ContactId"
     relationshipName = "Contact"
     _required = true
     label = "Contact ID"
+    createable = true
+    updateable = true
+    queryable = true
   }
   salesforce.Checkbox IsPrimary {
     apiName = "ContractContactRole.IsPrimary"
     defaultValue = false
     label = "Primary"
+    createable = true
+    updateable = true
+    queryable = true
   }
   salesforce.DateTime CreatedDate {
     apiName = "ContractContactRole.CreatedDate"
     label = "Created Date"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.Lookup CreatedById {
     apiName = "ContractContactRole.CreatedById"
     relationshipName = "CreatedBy"
     label = "Created By ID"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.DateTime LastModifiedDate {
     apiName = "ContractContactRole.LastModifiedDate"
     label = "Last Modified Date"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.Lookup LastModifiedById {
     apiName = "ContractContactRole.LastModifiedById"
     relationshipName = "LastModifiedBy"
     label = "Last Modified By ID"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.DateTime SystemModstamp {
     apiName = "ContractContactRole.SystemModstamp"
     label = "System Modstamp"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.Checkbox IsDeleted {
     apiName = "ContractContactRole.IsDeleted"
     defaultValue = false
     label = "Deleted"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
 }

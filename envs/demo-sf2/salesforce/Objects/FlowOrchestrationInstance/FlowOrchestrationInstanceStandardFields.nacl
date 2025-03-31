@@ -6,6 +6,9 @@ type salesforce.FlowOrchestrationInstance {
     unique = false
     caseSensitive = false
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.Unknown OrchestrationLabel {
     apiName = "FlowOrchestrationInstance.OrchestrationLabel"
@@ -16,12 +19,18 @@ type salesforce.FlowOrchestrationInstance {
     relationshipName = "Owner"
     label = "Owner ID"
     _hidden_value = true
+    createable = false
+    updateable = true
+    queryable = true
   }
   salesforce.Picklist Status {
     apiName = "FlowOrchestrationInstance.Status"
     restricted = true
     _required = true
     label = "Status"
+    createable = false
+    updateable = true
+    queryable = true
   }
   serviceid Id {
     apiName = "FlowOrchestrationInstance.Id"
@@ -34,48 +43,73 @@ type salesforce.FlowOrchestrationInstance {
     defaultValue = false
     label = "Deleted"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.AutoNumber Name {
     apiName = "FlowOrchestrationInstance.Name"
     label = "Name"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.DateTime CreatedDate {
     apiName = "FlowOrchestrationInstance.CreatedDate"
     label = "Created Date"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.Lookup CreatedById {
     apiName = "FlowOrchestrationInstance.CreatedById"
     relationshipName = "CreatedBy"
     label = "Created By ID"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.DateTime LastModifiedDate {
     apiName = "FlowOrchestrationInstance.LastModifiedDate"
     label = "Last Modified Date"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.Lookup LastModifiedById {
     apiName = "FlowOrchestrationInstance.LastModifiedById"
     relationshipName = "LastModifiedBy"
     label = "Last Modified By ID"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.DateTime SystemModstamp {
     apiName = "FlowOrchestrationInstance.SystemModstamp"
     label = "System Modstamp"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.Lookup InterviewId {
     apiName = "FlowOrchestrationInstance.InterviewId"
     relationshipName = "Interview"
     label = "Interview ID"
+    createable = false
+    updateable = true
+    queryable = true
   }
   salesforce.Unknown Duration {
     apiName = "FlowOrchestrationInstance.Duration"
     label = "Duration"
     _hidden_value = true
+    queryable = true
   }
   salesforce.Text CurrentStage {
     apiName = "FlowOrchestrationInstance.CurrentStage"
@@ -84,6 +118,9 @@ type salesforce.FlowOrchestrationInstance {
     unique = false
     caseSensitive = false
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.Text TriggeringRecord {
     apiName = "FlowOrchestrationInstance.TriggeringRecord"
@@ -91,5 +128,8 @@ type salesforce.FlowOrchestrationInstance {
     label = "Triggering Record ID"
     unique = false
     caseSensitive = false
+    createable = false
+    updateable = true
+    queryable = true
   }
 }

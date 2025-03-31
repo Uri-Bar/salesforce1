@@ -4,12 +4,18 @@ type salesforce.LocationGroupAssignment {
     relationshipName = "LocationGroup"
     _required = true
     label = "Location Group ID"
+    createable = true
+    updateable = false
+    queryable = true
   }
   salesforce.MasterDetail LocationId {
     apiName = "LocationGroupAssignment.LocationId"
     relationshipName = "Location"
     _required = true
     label = "Location ID"
+    createable = true
+    updateable = false
+    queryable = true
   }
   serviceid Id {
     apiName = "LocationGroupAssignment.Id"
@@ -22,38 +28,59 @@ type salesforce.LocationGroupAssignment {
     defaultValue = false
     label = "Deleted"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.AutoNumber LocationGroupAssignment {
     apiName = "LocationGroupAssignment.LocationGroupAssignment"
     label = "Location Group Assignment Name"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.DateTime CreatedDate {
     apiName = "LocationGroupAssignment.CreatedDate"
     label = "Created Date"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.Lookup CreatedById {
     apiName = "LocationGroupAssignment.CreatedById"
     relationshipName = "CreatedBy"
     label = "Created By ID"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.DateTime LastModifiedDate {
     apiName = "LocationGroupAssignment.LastModifiedDate"
     label = "Last Modified Date"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.Lookup LastModifiedById {
     apiName = "LocationGroupAssignment.LastModifiedById"
     relationshipName = "LastModifiedBy"
     label = "Last Modified By ID"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.DateTime SystemModstamp {
     apiName = "LocationGroupAssignment.SystemModstamp"
     label = "System Modstamp"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.Text LocationExternalReference {
     apiName = "LocationGroupAssignment.LocationExternalReference"
@@ -62,6 +89,9 @@ type salesforce.LocationGroupAssignment {
     unique = false
     caseSensitive = false
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.Text LocationGroupExternalReference {
     apiName = "LocationGroupAssignment.LocationGroupExternalReference"
@@ -70,6 +100,9 @@ type salesforce.LocationGroupAssignment {
     unique = false
     caseSensitive = false
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.Text LocationName {
     apiName = "LocationGroupAssignment.LocationName"
@@ -78,6 +111,9 @@ type salesforce.LocationGroupAssignment {
     unique = false
     caseSensitive = false
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.Text LocationGroupName {
     apiName = "LocationGroupAssignment.LocationGroupName"
@@ -86,5 +122,8 @@ type salesforce.LocationGroupAssignment {
     unique = false
     caseSensitive = false
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
 }

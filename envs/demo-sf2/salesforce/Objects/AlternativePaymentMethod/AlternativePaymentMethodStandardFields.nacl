@@ -3,11 +3,17 @@ type salesforce.AlternativePaymentMethod {
     apiName = "AlternativePaymentMethod.AccountId"
     relationshipName = "Account"
     label = "Account ID"
+    createable = true
+    updateable = true
+    queryable = true
   }
   salesforce.Email AuditEmail {
     apiName = "AlternativePaymentMethod.AuditEmail"
     label = "Audit Email"
     unique = false
+    createable = true
+    updateable = true
+    queryable = true
   }
   salesforce.Text BillingFirstName {
     apiName = "AlternativePaymentMethod.BillingFirstName"
@@ -15,6 +21,9 @@ type salesforce.AlternativePaymentMethod {
     label = "First name of the person tied to billing address"
     unique = false
     caseSensitive = false
+    createable = true
+    updateable = true
+    queryable = true
   }
   salesforce.Text BillingLastName {
     apiName = "AlternativePaymentMethod.BillingLastName"
@@ -22,6 +31,9 @@ type salesforce.AlternativePaymentMethod {
     label = "Last name of the person tied to billing address"
     unique = false
     caseSensitive = false
+    createable = true
+    updateable = true
+    queryable = true
   }
   salesforce.Text BillingName {
     apiName = "AlternativePaymentMethod.BillingName"
@@ -29,11 +41,17 @@ type salesforce.AlternativePaymentMethod {
     label = "Name of the person tied to billing address"
     unique = false
     caseSensitive = false
+    createable = true
+    updateable = true
+    queryable = true
   }
   salesforce.LongTextArea Comments {
     apiName = "AlternativePaymentMethod.Comments"
     length = 1000
     label = "Comments"
+    createable = true
+    updateable = true
+    queryable = true
   }
   salesforce.Text CompanyName {
     apiName = "AlternativePaymentMethod.CompanyName"
@@ -41,21 +59,33 @@ type salesforce.AlternativePaymentMethod {
     label = "Company Name"
     unique = false
     caseSensitive = false
+    createable = true
+    updateable = true
+    queryable = true
   }
   salesforce.Email Email {
     apiName = "AlternativePaymentMethod.Email"
     label = "Registered Email"
     unique = false
+    createable = true
+    updateable = true
+    queryable = true
   }
   salesforce.EncryptedText GatewayToken {
     apiName = "AlternativePaymentMethod.GatewayToken"
     length = 1000
     label = "Gateway Token"
+    createable = true
+    updateable = true
+    queryable = true
   }
   salesforce.LongTextArea GatewayTokenDetails {
     apiName = "AlternativePaymentMethod.GatewayTokenDetails"
     length = 1000
     label = "Gateway Token Details"
+    createable = true
+    updateable = true
+    queryable = true
   }
   salesforce.Text IpAddress {
     apiName = "AlternativePaymentMethod.IpAddress"
@@ -63,11 +93,17 @@ type salesforce.AlternativePaymentMethod {
     label = "IP Address"
     unique = false
     caseSensitive = false
+    createable = true
+    updateable = true
+    queryable = true
   }
   salesforce.Checkbox IsAutoPayEnabled {
     apiName = "AlternativePaymentMethod.IsAutoPayEnabled"
     defaultValue = false
     label = "Auto Pay"
+    createable = true
+    updateable = true
+    queryable = true
   }
   salesforce.Text MacAddress {
     apiName = "AlternativePaymentMethod.MacAddress"
@@ -75,6 +111,9 @@ type salesforce.AlternativePaymentMethod {
     label = "MAC Address"
     unique = false
     caseSensitive = false
+    createable = true
+    updateable = true
+    queryable = true
   }
   salesforce.Text NickName {
     apiName = "AlternativePaymentMethod.NickName"
@@ -82,17 +121,26 @@ type salesforce.AlternativePaymentMethod {
     label = "Nickname"
     unique = false
     caseSensitive = false
+    createable = true
+    updateable = true
+    queryable = true
   }
   salesforce.Lookup OwnerId {
     apiName = "AlternativePaymentMethod.OwnerId"
     relationshipName = "Owner"
     label = "Owner ID"
     _hidden_value = true
+    createable = true
+    updateable = true
+    queryable = true
   }
   salesforce.Lookup PaymentGatewayId {
     apiName = "AlternativePaymentMethod.PaymentGatewayId"
     relationshipName = "PaymentGateway"
     label = "Payment Gateway ID"
+    createable = true
+    updateable = false
+    queryable = true
   }
   salesforce.Text PaymentMethodDetails {
     apiName = "AlternativePaymentMethod.PaymentMethodDetails"
@@ -100,6 +148,9 @@ type salesforce.AlternativePaymentMethod {
     label = "Payment Method Details"
     unique = false
     caseSensitive = false
+    createable = true
+    updateable = false
+    queryable = true
   }
   salesforce.Text PaymentMethodSubType {
     apiName = "AlternativePaymentMethod.PaymentMethodSubType"
@@ -107,27 +158,42 @@ type salesforce.AlternativePaymentMethod {
     label = "Payment Method Sub Type"
     unique = false
     caseSensitive = false
+    createable = true
+    updateable = false
+    queryable = true
   }
   salesforce.Picklist PaymentMethodType {
     apiName = "AlternativePaymentMethod.PaymentMethodType"
     restricted = true
     label = "Payment Method Type"
+    createable = true
+    updateable = true
+    queryable = true
   }
   salesforce.Phone Phone {
     apiName = "AlternativePaymentMethod.Phone"
     label = "Phone"
+    createable = true
+    updateable = true
+    queryable = true
   }
   salesforce.Picklist ProcessingMode {
     apiName = "AlternativePaymentMethod.ProcessingMode"
     restricted = true
     _required = true
     label = "Processing Mode"
+    createable = true
+    updateable = false
+    queryable = true
   }
   salesforce.Picklist Status {
     apiName = "AlternativePaymentMethod.Status"
     restricted = true
     _required = true
     label = "Status"
+    createable = true
+    updateable = true
+    queryable = true
   }
   serviceid Id {
     apiName = "AlternativePaymentMethod.Id"
@@ -140,49 +206,76 @@ type salesforce.AlternativePaymentMethod {
     defaultValue = false
     label = "Deleted"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.AutoNumber AlternativePaymentMethodNumber {
     apiName = "AlternativePaymentMethod.AlternativePaymentMethodNumber"
     label = "Alternative Payment Method Number"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.DateTime CreatedDate {
     apiName = "AlternativePaymentMethod.CreatedDate"
     label = "Created Date"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.Lookup CreatedById {
     apiName = "AlternativePaymentMethod.CreatedById"
     relationshipName = "CreatedBy"
     label = "Created By ID"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.DateTime LastModifiedDate {
     apiName = "AlternativePaymentMethod.LastModifiedDate"
     label = "Last Modified Date"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.Lookup LastModifiedById {
     apiName = "AlternativePaymentMethod.LastModifiedById"
     relationshipName = "LastModifiedBy"
     label = "Last Modified By ID"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.DateTime SystemModstamp {
     apiName = "AlternativePaymentMethod.SystemModstamp"
     label = "System Modstamp"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.Address PaymentMethodAddress {
     apiName = "AlternativePaymentMethod.PaymentMethodAddress"
     label = "Payment Method Address"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.Picklist BankAccountHolderType {
     apiName = "AlternativePaymentMethod.BankAccountHolderType"
     restricted = true
     label = "Account Ownership Type"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.Text BankAccountType {
     apiName = "AlternativePaymentMethod.BankAccountType"
@@ -191,11 +284,17 @@ type salesforce.AlternativePaymentMethod {
     unique = false
     caseSensitive = false
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.Picklist StandardEntryClassCode {
     apiName = "AlternativePaymentMethod.StandardEntryClassCode"
     restricted = true
     label = "Standard Entry Class Code (ACH)"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
 }

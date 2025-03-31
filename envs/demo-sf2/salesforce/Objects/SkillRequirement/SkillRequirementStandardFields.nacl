@@ -4,12 +4,18 @@ type salesforce.SkillRequirement {
     relationshipName = "RelatedRecord"
     _required = true
     label = "Required For ID"
+    createable = true
+    updateable = false
+    queryable = true
   }
   salesforce.Lookup SkillId {
     apiName = "SkillRequirement.SkillId"
     relationshipName = "Skill"
     _required = true
     label = "Skill ID"
+    createable = true
+    updateable = true
+    queryable = true
   }
   salesforce.Number SkillLevel {
     apiName = "SkillRequirement.SkillLevel"
@@ -17,6 +23,9 @@ type salesforce.SkillRequirement {
     precision = 4
     scale = 2
     unique = false
+    createable = true
+    updateable = true
+    queryable = true
   }
   serviceid Id {
     apiName = "SkillRequirement.Id"
@@ -29,37 +38,58 @@ type salesforce.SkillRequirement {
     defaultValue = false
     label = "Deleted"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.AutoNumber SkillNumber {
     apiName = "SkillRequirement.SkillNumber"
     label = "Skill Requirement Number"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.DateTime CreatedDate {
     apiName = "SkillRequirement.CreatedDate"
     label = "Created Date"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.Lookup CreatedById {
     apiName = "SkillRequirement.CreatedById"
     relationshipName = "CreatedBy"
     label = "Created By ID"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.DateTime LastModifiedDate {
     apiName = "SkillRequirement.LastModifiedDate"
     label = "Last Modified Date"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.Lookup LastModifiedById {
     apiName = "SkillRequirement.LastModifiedById"
     relationshipName = "LastModifiedBy"
     label = "Last Modified By ID"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.DateTime SystemModstamp {
     apiName = "SkillRequirement.SystemModstamp"
     label = "System Modstamp"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
 }

@@ -10,38 +10,59 @@ type salesforce.ExpressionFilter {
     defaultValue = false
     label = "Deleted"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.AutoNumber Name {
     apiName = "ExpressionFilter.Name"
     label = "ExpressionFilter Name"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.DateTime CreatedDate {
     apiName = "ExpressionFilter.CreatedDate"
     label = "Created Date"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.Lookup CreatedById {
     apiName = "ExpressionFilter.CreatedById"
     relationshipName = "CreatedBy"
     label = "Created By ID"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.DateTime LastModifiedDate {
     apiName = "ExpressionFilter.LastModifiedDate"
     label = "Last Modified Date"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.Lookup LastModifiedById {
     apiName = "ExpressionFilter.LastModifiedById"
     relationshipName = "LastModifiedBy"
     label = "Last Modified By ID"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.DateTime SystemModstamp {
     apiName = "ExpressionFilter.SystemModstamp"
     label = "System Modstamp"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.Text FilterConditionLogic {
     apiName = "ExpressionFilter.FilterConditionLogic"
@@ -49,12 +70,18 @@ type salesforce.ExpressionFilter {
     label = "Filter Condition Logic"
     unique = false
     caseSensitive = false
+    createable = true
+    updateable = true
+    queryable = true
   }
   salesforce.Lookup ContextId {
     apiName = "ExpressionFilter.ContextId"
     relationshipName = "Context"
     _required = true
     label = "Macro Instruction ID"
+    createable = true
+    updateable = false
+    queryable = true
   }
   salesforce.Text FilterDescription {
     apiName = "ExpressionFilter.FilterDescription"
@@ -62,5 +89,8 @@ type salesforce.ExpressionFilter {
     label = "Filter Description"
     unique = false
     caseSensitive = false
+    createable = true
+    updateable = true
+    queryable = true
   }
 }

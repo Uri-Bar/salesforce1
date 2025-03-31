@@ -3,6 +3,9 @@ type salesforce.WorkType {
     apiName = "WorkType.AppointmentCategoryId"
     relationshipName = "AppointmentCategory"
     label = "Appointment Category ID"
+    createable = true
+    updateable = true
+    queryable = true
   }
   salesforce.Number ApptStartTimeIntvlInMin {
     apiName = "WorkType.ApptStartTimeIntvlInMin"
@@ -10,6 +13,9 @@ type salesforce.WorkType {
     precision = 9
     scale = 0
     unique = false
+    createable = true
+    updateable = true
+    queryable = true
   }
   salesforce.Number AttendeeLimit {
     apiName = "WorkType.AttendeeLimit"
@@ -18,6 +24,9 @@ type salesforce.WorkType {
     precision = 9
     scale = 0
     unique = false
+    createable = true
+    updateable = true
+    queryable = true
   }
   salesforce.Number BlockTimeAfterAppointment {
     apiName = "WorkType.BlockTimeAfterAppointment"
@@ -25,11 +34,17 @@ type salesforce.WorkType {
     precision = 9
     scale = 0
     unique = false
+    createable = true
+    updateable = true
+    queryable = true
   }
   salesforce.Picklist BlockTimeAfterUnit {
     apiName = "WorkType.BlockTimeAfterUnit"
     restricted = true
     label = "Block Time After Unit"
+    createable = true
+    updateable = true
+    queryable = true
   }
   salesforce.Number BlockTimeBeforeAppointment {
     apiName = "WorkType.BlockTimeBeforeAppointment"
@@ -37,26 +52,41 @@ type salesforce.WorkType {
     precision = 9
     scale = 0
     unique = false
+    createable = true
+    updateable = true
+    queryable = true
   }
   salesforce.Picklist BlockTimeBeforeUnit {
     apiName = "WorkType.BlockTimeBeforeUnit"
     restricted = true
     label = "Block Time Before Unit"
+    createable = true
+    updateable = true
+    queryable = true
   }
   salesforce.Picklist DefaultAppointmentType {
     apiName = "WorkType.DefaultAppointmentType"
     label = "Default Appointment Type"
+    createable = true
+    updateable = true
+    queryable = true
   }
   salesforce.LongTextArea Description {
     apiName = "WorkType.Description"
     length = 32000
     label = "Description"
+    createable = true
+    updateable = true
+    queryable = true
   }
   salesforce.Picklist DurationType {
     apiName = "WorkType.DurationType"
     restricted = true
     _required = true
     label = "Duration Type"
+    createable = true
+    updateable = true
+    queryable = true
   }
   salesforce.Number EstimatedDuration {
     apiName = "WorkType.EstimatedDuration"
@@ -65,6 +95,9 @@ type salesforce.WorkType {
     precision = 18
     scale = 2
     unique = false
+    createable = true
+    updateable = true
+    queryable = true
   }
   salesforce.Text Name {
     apiName = "WorkType.Name"
@@ -73,17 +106,26 @@ type salesforce.WorkType {
     label = "Work Type Name"
     unique = false
     caseSensitive = false
+    createable = true
+    updateable = true
+    queryable = true
   }
   salesforce.Lookup OperatingHoursId {
     apiName = "WorkType.OperatingHoursId"
     relationshipName = "OperatingHours"
     label = "Operating Hour ID"
+    createable = true
+    updateable = true
+    queryable = true
   }
   salesforce.Lookup OwnerId {
     apiName = "WorkType.OwnerId"
     relationshipName = "Owner"
     label = "Owner ID"
     _hidden_value = true
+    createable = true
+    updateable = true
+    queryable = true
   }
   salesforce.Lookup ProductId {
     apiName = "WorkType.ProductId"
@@ -93,11 +135,17 @@ type salesforce.WorkType {
     apiName = "WorkType.TimeFrameEndUnit"
     restricted = true
     label = "Time Frame End Unit"
+    createable = true
+    updateable = true
+    queryable = true
   }
   salesforce.Picklist TimeFrameStartUnit {
     apiName = "WorkType.TimeFrameStartUnit"
     restricted = true
     label = "Time Frame Start Unit"
+    createable = true
+    updateable = true
+    queryable = true
   }
   salesforce.Number TimeframeEnd {
     apiName = "WorkType.TimeframeEnd"
@@ -105,6 +153,9 @@ type salesforce.WorkType {
     precision = 9
     scale = 0
     unique = false
+    createable = true
+    updateable = true
+    queryable = true
   }
   salesforce.Number TimeframeStart {
     apiName = "WorkType.TimeframeStart"
@@ -112,6 +163,9 @@ type salesforce.WorkType {
     precision = 9
     scale = 0
     unique = false
+    createable = true
+    updateable = true
+    queryable = true
   }
   serviceid Id {
     apiName = "WorkType.Id"
@@ -124,33 +178,51 @@ type salesforce.WorkType {
     defaultValue = false
     label = "Deleted"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.DateTime CreatedDate {
     apiName = "WorkType.CreatedDate"
     label = "Created Date"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.Lookup CreatedById {
     apiName = "WorkType.CreatedById"
     relationshipName = "CreatedBy"
     label = "Created By ID"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.DateTime LastModifiedDate {
     apiName = "WorkType.LastModifiedDate"
     label = "Last Modified Date"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.Lookup LastModifiedById {
     apiName = "WorkType.LastModifiedById"
     relationshipName = "LastModifiedBy"
     label = "Last Modified By ID"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.DateTime SystemModstamp {
     apiName = "WorkType.SystemModstamp"
     label = "System Modstamp"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.Number DurationInMinutes {
     apiName = "WorkType.DurationInMinutes"
@@ -159,5 +231,8 @@ type salesforce.WorkType {
     scale = 2
     unique = false
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
 }

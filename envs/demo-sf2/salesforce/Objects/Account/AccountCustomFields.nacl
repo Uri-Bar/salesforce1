@@ -16,6 +16,9 @@ type salesforce.Account {
     ]
     sorted = false
     restricted = false
+    createable = true
+    updateable = true
+    queryable = true
   }
   salesforce.Picklist CustomerPriority__c {
     apiName = "Account.CustomerPriority__c"
@@ -44,6 +47,9 @@ type salesforce.Account {
     ]
     sorted = false
     restricted = false
+    createable = true
+    updateable = true
+    queryable = true
   }
   salesforce.Number NumberofLocations__c {
     apiName = "Account.NumberofLocations__c"
@@ -52,10 +58,16 @@ type salesforce.Account {
     precision = 3
     scale = 0
     unique = false
+    createable = true
+    updateable = true
+    queryable = true
   }
   salesforce.Date SLAExpirationDate__c {
     apiName = "Account.SLAExpirationDate__c"
     label = "SLA Expiration Date"
+    createable = true
+    updateable = true
+    queryable = true
   }
   salesforce.Text SLASerialNumber__c {
     apiName = "Account.SLASerialNumber__c"
@@ -64,6 +76,9 @@ type salesforce.Account {
     length = 10
     unique = false
     caseSensitive = false
+    createable = true
+    updateable = true
+    queryable = true
   }
   salesforce.Picklist SLA__c {
     apiName = "Account.SLA__c"
@@ -92,6 +107,9 @@ type salesforce.Account {
     ]
     sorted = false
     restricted = false
+    createable = true
+    updateable = true
+    queryable = true
   }
   salesforce.Picklist UpsellOpportunity__c {
     apiName = "Account.UpsellOpportunity__c"
@@ -115,5 +133,8 @@ type salesforce.Account {
     ]
     sorted = false
     restricted = false
+    createable = true
+    updateable = true
+    queryable = true
   }
 }

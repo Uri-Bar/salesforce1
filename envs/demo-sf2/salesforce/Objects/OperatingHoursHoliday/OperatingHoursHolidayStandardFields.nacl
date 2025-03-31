@@ -6,18 +6,27 @@ type salesforce.OperatingHoursHoliday {
     unique = false
     caseSensitive = false
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.Lookup HolidayId {
     apiName = "OperatingHoursHoliday.HolidayId"
     relationshipName = "Holiday"
     _required = true
     label = "Holiday ID"
+    createable = true
+    updateable = true
+    queryable = true
   }
   salesforce.MasterDetail OperatingHoursId {
     apiName = "OperatingHoursHoliday.OperatingHoursId"
     relationshipName = "OperatingHours"
     _required = true
     label = "Operating Hour ID"
+    createable = true
+    updateable = false
+    queryable = true
   }
   serviceid Id {
     apiName = "OperatingHoursHoliday.Id"
@@ -30,37 +39,58 @@ type salesforce.OperatingHoursHoliday {
     defaultValue = false
     label = "Deleted"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.AutoNumber OperatingHoursHolidayNumber {
     apiName = "OperatingHoursHoliday.OperatingHoursHolidayNumber"
     label = "Operating Hours Holiday Number"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.DateTime CreatedDate {
     apiName = "OperatingHoursHoliday.CreatedDate"
     label = "Created Date"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.Lookup CreatedById {
     apiName = "OperatingHoursHoliday.CreatedById"
     relationshipName = "CreatedBy"
     label = "Created By ID"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.DateTime LastModifiedDate {
     apiName = "OperatingHoursHoliday.LastModifiedDate"
     label = "Last Modified Date"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.Lookup LastModifiedById {
     apiName = "OperatingHoursHoliday.LastModifiedById"
     relationshipName = "LastModifiedBy"
     label = "Last Modified By ID"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.DateTime SystemModstamp {
     apiName = "OperatingHoursHoliday.SystemModstamp"
     label = "System Modstamp"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
 }

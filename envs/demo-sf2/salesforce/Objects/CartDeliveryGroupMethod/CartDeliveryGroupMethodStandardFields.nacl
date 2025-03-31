@@ -5,35 +5,56 @@ type salesforce.CartDeliveryGroupMethod {
     scale = 2
     precision = 18
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.Picklist Carrier {
     apiName = "CartDeliveryGroupMethod.Carrier"
     label = "Carrier"
+    createable = true
+    updateable = true
+    queryable = true
   }
   salesforce.Lookup CartCheckoutSessionId {
     apiName = "CartDeliveryGroupMethod.CartCheckoutSessionId"
     relationshipName = "CartCheckoutSession"
     label = "Cart Checkout Session ID"
+    createable = true
+    updateable = true
+    queryable = true
   }
   salesforce.Lookup CartDeliveryGroupId {
     apiName = "CartDeliveryGroupMethod.CartDeliveryGroupId"
     relationshipName = "CartDeliveryGroup"
     _required = true
     label = "Cart Delivery Group ID"
+    createable = true
+    updateable = true
+    queryable = true
   }
   salesforce.Picklist ClassOfService {
     apiName = "CartDeliveryGroupMethod.ClassOfService"
     label = "Class Of Service"
+    createable = true
+    updateable = true
+    queryable = true
   }
   salesforce.Checkbox IsActive {
     apiName = "CartDeliveryGroupMethod.IsActive"
     defaultValue = false
     label = "Is Active"
+    createable = true
+    updateable = true
+    queryable = true
   }
   salesforce.Lookup ProductId {
     apiName = "CartDeliveryGroupMethod.ProductId"
     relationshipName = "Product"
     label = "Product ID"
+    createable = true
+    updateable = true
+    queryable = true
   }
   salesforce.Text ReferenceNumber {
     apiName = "CartDeliveryGroupMethod.ReferenceNumber"
@@ -41,6 +62,9 @@ type salesforce.CartDeliveryGroupMethod {
     label = "Reference Number"
     unique = false
     caseSensitive = false
+    createable = true
+    updateable = true
+    queryable = true
   }
   salesforce.Currency ShippingFee {
     apiName = "CartDeliveryGroupMethod.ShippingFee"
@@ -48,17 +72,26 @@ type salesforce.CartDeliveryGroupMethod {
     label = "Shipping Fee"
     scale = 0
     precision = 18
+    createable = true
+    updateable = true
+    queryable = true
   }
   salesforce.Summary TotalAdjustmentAmount {
     apiName = "CartDeliveryGroupMethod.TotalAdjustmentAmount"
     label = "Total Adjustment Amount"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.MasterDetail WebCartId {
     apiName = "CartDeliveryGroupMethod.WebCartId"
     relationshipName = "WebCart"
     _required = true
     label = "Cart ID"
+    createable = true
+    updateable = false
+    queryable = true
   }
   serviceid Id {
     apiName = "CartDeliveryGroupMethod.Id"
@@ -71,6 +104,9 @@ type salesforce.CartDeliveryGroupMethod {
     defaultValue = false
     label = "Deleted"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.Text Name {
     apiName = "CartDeliveryGroupMethod.Name"
@@ -79,33 +115,51 @@ type salesforce.CartDeliveryGroupMethod {
     label = "Name"
     unique = false
     caseSensitive = false
+    createable = true
+    updateable = true
+    queryable = true
   }
   salesforce.DateTime CreatedDate {
     apiName = "CartDeliveryGroupMethod.CreatedDate"
     label = "Created Date"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.Lookup CreatedById {
     apiName = "CartDeliveryGroupMethod.CreatedById"
     relationshipName = "CreatedBy"
     label = "Created By ID"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.DateTime LastModifiedDate {
     apiName = "CartDeliveryGroupMethod.LastModifiedDate"
     label = "Last Modified Date"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.Lookup LastModifiedById {
     apiName = "CartDeliveryGroupMethod.LastModifiedById"
     relationshipName = "LastModifiedBy"
     label = "Last Modified By ID"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.DateTime SystemModstamp {
     apiName = "CartDeliveryGroupMethod.SystemModstamp"
     label = "System Modstamp"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.Text ExternalProvider {
     apiName = "CartDeliveryGroupMethod.ExternalProvider"
@@ -113,6 +167,9 @@ type salesforce.CartDeliveryGroupMethod {
     label = "External Provider"
     unique = false
     caseSensitive = false
+    createable = true
+    updateable = true
+    queryable = true
   }
   salesforce.Number TransitTimeMin {
     apiName = "CartDeliveryGroupMethod.TransitTimeMin"
@@ -120,6 +177,9 @@ type salesforce.CartDeliveryGroupMethod {
     precision = 9
     scale = 0
     unique = false
+    createable = true
+    updateable = true
+    queryable = true
   }
   salesforce.Number TransitTimeMax {
     apiName = "CartDeliveryGroupMethod.TransitTimeMax"
@@ -127,11 +187,17 @@ type salesforce.CartDeliveryGroupMethod {
     precision = 9
     scale = 0
     unique = false
+    createable = true
+    updateable = true
+    queryable = true
   }
   salesforce.Picklist TransitTimeUnit {
     apiName = "CartDeliveryGroupMethod.TransitTimeUnit"
     restricted = true
     label = "Unit of Transit Time"
+    createable = true
+    updateable = true
+    queryable = true
   }
   salesforce.Number ProcessTime {
     apiName = "CartDeliveryGroupMethod.ProcessTime"
@@ -139,10 +205,16 @@ type salesforce.CartDeliveryGroupMethod {
     precision = 9
     scale = 0
     unique = false
+    createable = true
+    updateable = true
+    queryable = true
   }
   salesforce.Picklist ProcessTimeUnit {
     apiName = "CartDeliveryGroupMethod.ProcessTimeUnit"
     restricted = true
     label = "Unit of Order Processing Time"
+    createable = true
+    updateable = true
+    queryable = true
   }
 }

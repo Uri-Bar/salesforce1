@@ -3,29 +3,44 @@ type salesforce.CartItemPriceAdjustment {
     apiName = "CartItemPriceAdjustment.AdjustmentAmountScope"
     restricted = true
     label = "Adjustment Amount Scope"
+    createable = true
+    updateable = true
+    queryable = true
   }
   salesforce.Lookup AdjustmentBasisReferenceId {
     apiName = "CartItemPriceAdjustment.AdjustmentBasisReferenceId"
     relationshipName = "AdjustmentBasisReference"
     label = "Coupon ID"
+    createable = true
+    updateable = true
+    queryable = true
   }
   salesforce.Picklist AdjustmentSource {
     apiName = "CartItemPriceAdjustment.AdjustmentSource"
     restricted = true
     _required = true
     label = "Adjustment Source"
+    createable = true
+    updateable = true
+    queryable = true
   }
   salesforce.Picklist AdjustmentTargetType {
     apiName = "CartItemPriceAdjustment.AdjustmentTargetType"
     restricted = true
     _required = true
     label = "Target Type for the Adjustment"
+    createable = true
+    updateable = true
+    queryable = true
   }
   salesforce.Picklist AdjustmentType {
     apiName = "CartItemPriceAdjustment.AdjustmentType"
     restricted = true
     _required = true
     label = "Adjustment Type"
+    createable = true
+    updateable = true
+    queryable = true
   }
   salesforce.Number AdjustmentValue {
     apiName = "CartItemPriceAdjustment.AdjustmentValue"
@@ -34,27 +49,42 @@ type salesforce.CartItemPriceAdjustment {
     precision = 18
     scale = 2
     unique = false
+    createable = true
+    updateable = true
+    queryable = true
   }
   salesforce.Lookup CartId {
     apiName = "CartItemPriceAdjustment.CartId"
     relationshipName = "Cart"
     label = "Cart ID"
+    createable = true
+    updateable = true
+    queryable = true
   }
   salesforce.MasterDetail CartItemId {
     apiName = "CartItemPriceAdjustment.CartItemId"
     relationshipName = "CartItem"
     _required = true
     label = "Cart Item ID"
+    createable = true
+    updateable = false
+    queryable = true
   }
   salesforce.LongTextArea Description {
     apiName = "CartItemPriceAdjustment.Description"
     length = 32000
     label = "Description"
+    createable = true
+    updateable = true
+    queryable = true
   }
   salesforce.Lookup PriceAdjustmentCauseId {
     apiName = "CartItemPriceAdjustment.PriceAdjustmentCauseId"
     relationshipName = "PriceAdjustmentCause"
     label = "Promotion ID"
+    createable = true
+    updateable = true
+    queryable = true
   }
   salesforce.Number Priority {
     apiName = "CartItemPriceAdjustment.Priority"
@@ -62,6 +92,9 @@ type salesforce.CartItemPriceAdjustment {
     precision = 9
     scale = 0
     unique = false
+    createable = true
+    updateable = true
+    queryable = true
   }
   salesforce.Currency TotalAmount {
     apiName = "CartItemPriceAdjustment.TotalAmount"
@@ -69,6 +102,9 @@ type salesforce.CartItemPriceAdjustment {
     label = "Total Amount"
     scale = 2
     precision = 18
+    createable = true
+    updateable = true
+    queryable = true
   }
   salesforce.Currency TotalGrossAmount {
     apiName = "CartItemPriceAdjustment.TotalGrossAmount"
@@ -76,6 +112,9 @@ type salesforce.CartItemPriceAdjustment {
     scale = 2
     precision = 18
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.Currency TotalNetAmount {
     apiName = "CartItemPriceAdjustment.TotalNetAmount"
@@ -83,6 +122,9 @@ type salesforce.CartItemPriceAdjustment {
     scale = 2
     precision = 18
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.Currency TotalTax {
     apiName = "CartItemPriceAdjustment.TotalTax"
@@ -90,11 +132,17 @@ type salesforce.CartItemPriceAdjustment {
     scale = 2
     precision = 18
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.Lookup WebCartAdjustmentGroupId {
     apiName = "CartItemPriceAdjustment.WebCartAdjustmentGroupId"
     relationshipName = "WebCartAdjustmentGroup"
     label = "Cart Adjustment Group ID"
+    createable = true
+    updateable = true
+    queryable = true
   }
   serviceid Id {
     apiName = "CartItemPriceAdjustment.Id"
@@ -107,6 +155,9 @@ type salesforce.CartItemPriceAdjustment {
     defaultValue = false
     label = "Deleted"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.Text Name {
     apiName = "CartItemPriceAdjustment.Name"
@@ -115,32 +166,50 @@ type salesforce.CartItemPriceAdjustment {
     label = "Cart Item Price Adjustment Name"
     unique = false
     caseSensitive = false
+    createable = true
+    updateable = true
+    queryable = true
   }
   salesforce.DateTime CreatedDate {
     apiName = "CartItemPriceAdjustment.CreatedDate"
     label = "Created Date"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.Lookup CreatedById {
     apiName = "CartItemPriceAdjustment.CreatedById"
     relationshipName = "CreatedBy"
     label = "Created By ID"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.DateTime LastModifiedDate {
     apiName = "CartItemPriceAdjustment.LastModifiedDate"
     label = "Last Modified Date"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.Lookup LastModifiedById {
     apiName = "CartItemPriceAdjustment.LastModifiedById"
     relationshipName = "LastModifiedBy"
     label = "Last Modified By ID"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.DateTime SystemModstamp {
     apiName = "CartItemPriceAdjustment.SystemModstamp"
     label = "System Modstamp"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
 }

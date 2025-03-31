@@ -3,11 +3,17 @@ type salesforce.DigitalWallet {
     apiName = "DigitalWallet.AccountId"
     relationshipName = "Account"
     label = "Account ID"
+    createable = true
+    updateable = true
+    queryable = true
   }
   salesforce.Email AuditEmail {
     apiName = "DigitalWallet.AuditEmail"
     label = "Audit Email"
     unique = false
+    createable = true
+    updateable = true
+    queryable = true
   }
   salesforce.Unknown BillingName {
     apiName = "DigitalWallet.BillingName"
@@ -17,6 +23,9 @@ type salesforce.DigitalWallet {
     apiName = "DigitalWallet.Comments"
     length = 1000
     label = "Comments"
+    createable = true
+    updateable = true
+    queryable = true
   }
   salesforce.Text CompanyName {
     apiName = "DigitalWallet.CompanyName"
@@ -24,6 +33,9 @@ type salesforce.DigitalWallet {
     label = "Company Name"
     unique = false
     caseSensitive = false
+    createable = true
+    updateable = true
+    queryable = true
   }
   salesforce.Text Customer {
     apiName = "DigitalWallet.Customer"
@@ -31,11 +43,17 @@ type salesforce.DigitalWallet {
     label = "Customer ID"
     unique = false
     caseSensitive = false
+    createable = true
+    updateable = false
+    queryable = true
   }
   salesforce.Email Email {
     apiName = "DigitalWallet.Email"
     label = "Registered Email"
     unique = false
+    createable = true
+    updateable = true
+    queryable = true
   }
   salesforce.Text GatewayToken {
     apiName = "DigitalWallet.GatewayToken"
@@ -43,16 +61,25 @@ type salesforce.DigitalWallet {
     label = "Gateway Token"
     unique = false
     caseSensitive = false
+    createable = true
+    updateable = true
+    queryable = true
   }
   salesforce.LongTextArea GatewayTokenDetails {
     apiName = "DigitalWallet.GatewayTokenDetails"
     length = 1000
     label = "Gateway Token Details"
+    createable = true
+    updateable = true
+    queryable = true
   }
   salesforce.EncryptedText GatewayTokenEncrypted {
     apiName = "DigitalWallet.GatewayTokenEncrypted"
     length = 1000
     label = "Gateway Token Encrypted"
+    createable = true
+    updateable = true
+    queryable = true
   }
   salesforce.Text IpAddress {
     apiName = "DigitalWallet.IpAddress"
@@ -60,11 +87,17 @@ type salesforce.DigitalWallet {
     label = "IP Address"
     unique = false
     caseSensitive = false
+    createable = true
+    updateable = true
+    queryable = true
   }
   salesforce.Checkbox IsAutoPayEnabled {
     apiName = "DigitalWallet.IsAutoPayEnabled"
     defaultValue = false
     label = "Auto Pay"
+    createable = true
+    updateable = true
+    queryable = true
   }
   salesforce.Text MacAddress {
     apiName = "DigitalWallet.MacAddress"
@@ -72,6 +105,9 @@ type salesforce.DigitalWallet {
     label = "MAC Address"
     unique = false
     caseSensitive = false
+    createable = true
+    updateable = true
+    queryable = true
   }
   salesforce.Text NickName {
     apiName = "DigitalWallet.NickName"
@@ -79,11 +115,17 @@ type salesforce.DigitalWallet {
     label = "Nickname"
     unique = false
     caseSensitive = false
+    createable = true
+    updateable = true
+    queryable = true
   }
   salesforce.Lookup PaymentGatewayId {
     apiName = "DigitalWallet.PaymentGatewayId"
     relationshipName = "PaymentGateway"
     label = "Payment Gateway ID"
+    createable = true
+    updateable = false
+    queryable = true
   }
   salesforce.Text PaymentMethodDetails {
     apiName = "DigitalWallet.PaymentMethodDetails"
@@ -91,6 +133,9 @@ type salesforce.DigitalWallet {
     label = "Payment Method Details"
     unique = false
     caseSensitive = false
+    createable = true
+    updateable = false
+    queryable = true
   }
   salesforce.Text PaymentMethodSubType {
     apiName = "DigitalWallet.PaymentMethodSubType"
@@ -98,27 +143,42 @@ type salesforce.DigitalWallet {
     label = "Payment Method Sub Type"
     unique = false
     caseSensitive = false
+    createable = true
+    updateable = false
+    queryable = true
   }
   salesforce.Picklist PaymentMethodType {
     apiName = "DigitalWallet.PaymentMethodType"
     restricted = true
     label = "Payment Method Type"
+    createable = true
+    updateable = true
+    queryable = true
   }
   salesforce.Phone Phone {
     apiName = "DigitalWallet.Phone"
     label = "Phone"
+    createable = true
+    updateable = true
+    queryable = true
   }
   salesforce.Picklist ProcessingMode {
     apiName = "DigitalWallet.ProcessingMode"
     restricted = true
     _required = true
     label = "Processing Mode"
+    createable = true
+    updateable = false
+    queryable = true
   }
   salesforce.Picklist Status {
     apiName = "DigitalWallet.Status"
     restricted = true
     _required = true
     label = "Status"
+    createable = true
+    updateable = true
+    queryable = true
   }
   serviceid Id {
     apiName = "DigitalWallet.Id"
@@ -131,42 +191,66 @@ type salesforce.DigitalWallet {
     defaultValue = false
     label = "Deleted"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.AutoNumber DigitalWalletNumber {
     apiName = "DigitalWallet.DigitalWalletNumber"
     label = "Digital Wallet Number"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.DateTime CreatedDate {
     apiName = "DigitalWallet.CreatedDate"
     label = "Created Date"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.Lookup CreatedById {
     apiName = "DigitalWallet.CreatedById"
     relationshipName = "CreatedBy"
     label = "Created By ID"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.DateTime LastModifiedDate {
     apiName = "DigitalWallet.LastModifiedDate"
     label = "Last Modified Date"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.Lookup LastModifiedById {
     apiName = "DigitalWallet.LastModifiedById"
     relationshipName = "LastModifiedBy"
     label = "Last Modified By ID"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.DateTime SystemModstamp {
     apiName = "DigitalWallet.SystemModstamp"
     label = "System Modstamp"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.Address PaymentMethodAddress {
     apiName = "DigitalWallet.PaymentMethodAddress"
     label = "Payment Method Address"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
 }

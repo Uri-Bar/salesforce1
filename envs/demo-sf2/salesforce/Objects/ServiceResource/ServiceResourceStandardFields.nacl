@@ -3,26 +3,41 @@ type salesforce.ServiceResource {
     apiName = "ServiceResource.AccountId"
     relationshipName = "Account"
     label = "Account ID"
+    createable = true
+    updateable = true
+    queryable = true
   }
   salesforce.LongTextArea Description {
     apiName = "ServiceResource.Description"
     length = 32000
     label = "Description"
+    createable = true
+    updateable = true
+    queryable = true
   }
   salesforce.Checkbox IsActive {
     apiName = "ServiceResource.IsActive"
     defaultValue = false
     label = "Active"
+    createable = true
+    updateable = true
+    queryable = true
   }
   salesforce.Checkbox IsPrimary {
     apiName = "ServiceResource.IsPrimary"
     defaultValue = false
     label = "Main"
+    createable = true
+    updateable = true
+    queryable = true
   }
   salesforce.Lookup LocationId {
     apiName = "ServiceResource.LocationId"
     relationshipName = "Location"
     label = "Location ID"
+    createable = true
+    updateable = true
+    queryable = true
   }
   salesforce.Text Name {
     apiName = "ServiceResource.Name"
@@ -31,22 +46,34 @@ type salesforce.ServiceResource {
     label = "Name"
     unique = false
     caseSensitive = false
+    createable = true
+    updateable = true
+    queryable = true
   }
   salesforce.Lookup OwnerId {
     apiName = "ServiceResource.OwnerId"
     relationshipName = "Owner"
     label = "Owner ID"
     _hidden_value = true
+    createable = true
+    updateable = true
+    queryable = true
   }
   salesforce.Lookup RelatedRecordId {
     apiName = "ServiceResource.RelatedRecordId"
     relationshipName = "RelatedRecord"
     label = "User ID"
+    createable = true
+    updateable = true
+    queryable = true
   }
   salesforce.Picklist ResourceType {
     apiName = "ServiceResource.ResourceType"
     restricted = true
     label = "Resource Type"
+    createable = true
+    updateable = true
+    queryable = true
   }
   serviceid Id {
     apiName = "ServiceResource.Id"
@@ -58,27 +85,42 @@ type salesforce.ServiceResource {
     apiName = "ServiceResource.CreatedDate"
     label = "Created Date"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.Lookup CreatedById {
     apiName = "ServiceResource.CreatedById"
     relationshipName = "CreatedBy"
     label = "Created By ID"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.DateTime LastModifiedDate {
     apiName = "ServiceResource.LastModifiedDate"
     label = "Last Modified Date"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.Lookup LastModifiedById {
     apiName = "ServiceResource.LastModifiedById"
     relationshipName = "LastModifiedBy"
     label = "Last Modified By ID"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.DateTime SystemModstamp {
     apiName = "ServiceResource.SystemModstamp"
     label = "System Modstamp"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
 }

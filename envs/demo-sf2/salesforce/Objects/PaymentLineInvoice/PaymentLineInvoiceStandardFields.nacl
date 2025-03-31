@@ -5,55 +5,88 @@ type salesforce.PaymentLineInvoice {
     label = "Amount"
     scale = 2
     precision = 18
+    createable = true
+    updateable = false
+    queryable = true
   }
   salesforce.DateTime AppliedDate {
     apiName = "PaymentLineInvoice.AppliedDate"
     label = "Applied Date"
+    createable = true
+    updateable = false
+    queryable = true
   }
   salesforce.Lookup AssociatedAccountId {
     apiName = "PaymentLineInvoice.AssociatedAccountId"
     relationshipName = "AssociatedAccount"
     label = "Account ID"
+    createable = true
+    updateable = false
+    queryable = true
   }
   salesforce.Lookup AssociatedPaymentLineId {
     apiName = "PaymentLineInvoice.AssociatedPaymentLineId"
     relationshipName = "AssociatedPaymentLine"
     label = "Payment Line Invoice ID"
+    createable = true
+    updateable = false
+    queryable = true
   }
   salesforce.LongTextArea Comments {
     apiName = "PaymentLineInvoice.Comments"
     length = 1000
     label = "Comments"
+    createable = true
+    updateable = true
+    queryable = true
   }
   salesforce.DateTime Date {
     apiName = "PaymentLineInvoice.Date"
     label = "Date"
+    createable = true
+    updateable = false
+    queryable = true
   }
   salesforce.DateTime EffectiveDate {
     apiName = "PaymentLineInvoice.EffectiveDate"
     label = "Effective Date"
+    createable = true
+    updateable = false
+    queryable = true
   }
   salesforce.Summary EffectiveImpactAmount {
     apiName = "PaymentLineInvoice.EffectiveImpactAmount"
     label = "Effective Impact Amount"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.Picklist HasBeenUnapplied {
     apiName = "PaymentLineInvoice.HasBeenUnapplied"
     restricted = true
     _required = true
     label = "Has Been Unapplied"
+    createable = true
+    updateable = false
+    queryable = true
   }
   salesforce.Summary ImpactAmount {
     apiName = "PaymentLineInvoice.ImpactAmount"
     label = "Impact Amount"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.MasterDetail InvoiceId {
     apiName = "PaymentLineInvoice.InvoiceId"
     relationshipName = "Invoice"
     _required = true
     label = "Invoice ID"
+    createable = true
+    updateable = false
+    queryable = true
   }
   salesforce.Currency PaymentBalance {
     apiName = "PaymentLineInvoice.PaymentBalance"
@@ -61,22 +94,34 @@ type salesforce.PaymentLineInvoice {
     scale = 2
     precision = 18
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.Lookup PaymentId {
     apiName = "PaymentLineInvoice.PaymentId"
     relationshipName = "Payment"
     _required = true
     label = "Payment ID"
+    createable = true
+    updateable = false
+    queryable = true
   }
   salesforce.Picklist Type {
     apiName = "PaymentLineInvoice.Type"
     restricted = true
     _required = true
     label = "Type"
+    createable = true
+    updateable = false
+    queryable = true
   }
   salesforce.DateTime UnappliedDate {
     apiName = "PaymentLineInvoice.UnappliedDate"
     label = "Unapplied Date"
+    createable = true
+    updateable = false
+    queryable = true
   }
   serviceid Id {
     apiName = "PaymentLineInvoice.Id"
@@ -89,37 +134,58 @@ type salesforce.PaymentLineInvoice {
     defaultValue = false
     label = "Deleted"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.AutoNumber PaymentLineInvoiceNumber {
     apiName = "PaymentLineInvoice.PaymentLineInvoiceNumber"
     label = "Payment Line Invoice Number"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.DateTime CreatedDate {
     apiName = "PaymentLineInvoice.CreatedDate"
     label = "Created Date"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.Lookup CreatedById {
     apiName = "PaymentLineInvoice.CreatedById"
     relationshipName = "CreatedBy"
     label = "Created By ID"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.DateTime LastModifiedDate {
     apiName = "PaymentLineInvoice.LastModifiedDate"
     label = "Last Modified Date"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.Lookup LastModifiedById {
     apiName = "PaymentLineInvoice.LastModifiedById"
     relationshipName = "LastModifiedBy"
     label = "Last Modified By ID"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.DateTime SystemModstamp {
     apiName = "PaymentLineInvoice.SystemModstamp"
     label = "System Modstamp"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
 }

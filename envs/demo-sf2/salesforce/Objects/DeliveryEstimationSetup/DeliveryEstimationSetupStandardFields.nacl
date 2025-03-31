@@ -4,17 +4,26 @@ type salesforce.DeliveryEstimationSetup {
     relationshipName = "Channel"
     _required = true
     label = "Channel ID"
+    createable = true
+    updateable = true
+    queryable = true
   }
   salesforce.Lookup DefaultBusinessHoursId {
     apiName = "DeliveryEstimationSetup.DefaultBusinessHoursId"
     relationshipName = "DefaultBusinessHours"
     _required = true
     label = "Business Hours ID"
+    createable = true
+    updateable = true
+    queryable = true
   }
   salesforce.Time DefaultPickupTime {
     apiName = "DeliveryEstimationSetup.DefaultPickupTime"
     _required = true
     label = "Default Pickup Time"
+    createable = true
+    updateable = true
+    queryable = true
   }
   salesforce.Number DefaultProcessingTime {
     apiName = "DeliveryEstimationSetup.DefaultProcessingTime"
@@ -23,12 +32,18 @@ type salesforce.DeliveryEstimationSetup {
     precision = 9
     scale = 0
     unique = false
+    createable = true
+    updateable = true
+    queryable = true
   }
   salesforce.Picklist DefaultProcessingTimeUnit {
     apiName = "DeliveryEstimationSetup.DefaultProcessingTimeUnit"
     restricted = true
     _required = true
     label = "Default Processing Time Unit"
+    createable = true
+    updateable = true
+    queryable = true
   }
   salesforce.Text ExternalReference {
     apiName = "DeliveryEstimationSetup.ExternalReference"
@@ -37,6 +52,9 @@ type salesforce.DeliveryEstimationSetup {
     label = "External Reference"
     unique = true
     caseSensitive = true
+    createable = true
+    updateable = true
+    queryable = true
   }
   salesforce.Unknown IsDefault {
     apiName = "DeliveryEstimationSetup.IsDefault"
@@ -47,18 +65,27 @@ type salesforce.DeliveryEstimationSetup {
     defaultValue = false
     label = "Is Enabled"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.Lookup LastSyncedById {
     apiName = "DeliveryEstimationSetup.LastSyncedById"
     relationshipName = "LastSyncedBy"
     label = "User ID"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.Lookup LocationGroupId {
     apiName = "DeliveryEstimationSetup.LocationGroupId"
     relationshipName = "LocationGroup"
     _required = true
     label = "Location Group ID"
+    createable = true
+    updateable = true
+    queryable = true
   }
   salesforce.Text Name {
     apiName = "DeliveryEstimationSetup.Name"
@@ -67,6 +94,9 @@ type salesforce.DeliveryEstimationSetup {
     label = "Name"
     unique = false
     caseSensitive = false
+    createable = true
+    updateable = true
+    queryable = true
   }
   serviceid Id {
     apiName = "DeliveryEstimationSetup.Id"
@@ -79,50 +109,77 @@ type salesforce.DeliveryEstimationSetup {
     relationshipName = "Owner"
     label = "Owner ID"
     _hidden_value = true
+    createable = true
+    updateable = true
+    queryable = true
   }
   salesforce.Checkbox IsDeleted {
     apiName = "DeliveryEstimationSetup.IsDeleted"
     defaultValue = false
     label = "Deleted"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.DateTime CreatedDate {
     apiName = "DeliveryEstimationSetup.CreatedDate"
     label = "Created Date"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.Lookup CreatedById {
     apiName = "DeliveryEstimationSetup.CreatedById"
     relationshipName = "CreatedBy"
     label = "Created By ID"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.DateTime LastModifiedDate {
     apiName = "DeliveryEstimationSetup.LastModifiedDate"
     label = "Last Modified Date"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.Lookup LastModifiedById {
     apiName = "DeliveryEstimationSetup.LastModifiedById"
     relationshipName = "LastModifiedBy"
     label = "Last Modified By ID"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.DateTime SystemModstamp {
     apiName = "DeliveryEstimationSetup.SystemModstamp"
     label = "System Modstamp"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.DateTime LastSyncedDate {
     apiName = "DeliveryEstimationSetup.LastSyncedDate"
     label = "Last Synced Date"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.LongTextArea LastSyncedMessage {
     apiName = "DeliveryEstimationSetup.LastSyncedMessage"
     length = 10000
     label = "Last Synced Message"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.Unknown ServiceRegion {
     apiName = "DeliveryEstimationSetup.ServiceRegion"
@@ -134,5 +191,8 @@ type salesforce.DeliveryEstimationSetup {
     _required = true
     label = "Sync Status"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
 }

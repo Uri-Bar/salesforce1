@@ -10,39 +10,60 @@ type salesforce.UserLocalWebServerIdentity {
     relationshipName = "Owner"
     label = "Owner ID"
     _hidden_value = true
+    createable = true
+    updateable = true
+    queryable = true
   }
   salesforce.Checkbox IsDeleted {
     apiName = "UserLocalWebServerIdentity.IsDeleted"
     defaultValue = false
     label = "Deleted"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.DateTime CreatedDate {
     apiName = "UserLocalWebServerIdentity.CreatedDate"
     label = "Created Date"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.Lookup CreatedById {
     apiName = "UserLocalWebServerIdentity.CreatedById"
     relationshipName = "CreatedBy"
     label = "Created By ID"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.DateTime LastModifiedDate {
     apiName = "UserLocalWebServerIdentity.LastModifiedDate"
     label = "Last Modified Date"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.Lookup LastModifiedById {
     apiName = "UserLocalWebServerIdentity.LastModifiedById"
     relationshipName = "LastModifiedBy"
     label = "Last Modified By ID"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.DateTime SystemModstamp {
     apiName = "UserLocalWebServerIdentity.SystemModstamp"
     label = "System Modstamp"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.Text LocalWebServerIdentityToken {
     apiName = "UserLocalWebServerIdentity.LocalWebServerIdentityToken"
@@ -50,5 +71,8 @@ type salesforce.UserLocalWebServerIdentity {
     label = "Local Web Server Identity Token"
     unique = false
     caseSensitive = false
+    createable = true
+    updateable = true
+    queryable = true
   }
 }

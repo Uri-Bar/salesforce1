@@ -4,29 +4,47 @@ type salesforce.Contract {
     relationshipName = "Account"
     _required = true
     label = "Account ID"
+    createable = true
+    updateable = true
+    queryable = true
   }
   salesforce.Lookup ActivatedById {
     apiName = "Contract.ActivatedById"
     relationshipName = "ActivatedBy"
     label = "Activated By ID"
+    createable = false
+    updateable = true
+    queryable = true
   }
   salesforce.DateTime ActivatedDate {
     apiName = "Contract.ActivatedDate"
     label = "Activated Date"
+    createable = false
+    updateable = true
+    queryable = true
   }
   salesforce.Address BillingAddress {
     apiName = "Contract.BillingAddress"
     label = "Billing Address"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.Date CompanySignedDate {
     apiName = "Contract.CompanySignedDate"
     label = "Company Signed Date"
+    createable = true
+    updateable = true
+    queryable = true
   }
   salesforce.Lookup CompanySignedId {
     apiName = "Contract.CompanySignedId"
     relationshipName = "CompanySigned"
     label = "Company Signed By ID"
+    createable = true
+    updateable = true
+    queryable = true
   }
   salesforce.Number ContractTerm {
     apiName = "Contract.ContractTerm"
@@ -34,15 +52,24 @@ type salesforce.Contract {
     precision = 4
     scale = 0
     unique = false
+    createable = true
+    updateable = true
+    queryable = true
   }
   salesforce.Date CustomerSignedDate {
     apiName = "Contract.CustomerSignedDate"
     label = "Customer Signed Date"
+    createable = true
+    updateable = true
+    queryable = true
   }
   salesforce.Lookup CustomerSignedId {
     apiName = "Contract.CustomerSignedId"
     relationshipName = "CustomerSigned"
     label = "Customer Signed By ID"
+    createable = true
+    updateable = true
+    queryable = true
   }
   salesforce.Text CustomerSignedTitle {
     apiName = "Contract.CustomerSignedTitle"
@@ -50,16 +77,25 @@ type salesforce.Contract {
     label = "Customer Signed Title"
     unique = false
     caseSensitive = false
+    createable = true
+    updateable = true
+    queryable = true
   }
   salesforce.LongTextArea Description {
     apiName = "Contract.Description"
     length = 32000
     label = "Description"
+    createable = true
+    updateable = true
+    queryable = true
   }
   salesforce.Date EndDate {
     apiName = "Contract.EndDate"
     label = "Contract End Date"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.Unknown Name {
     apiName = "Contract.Name"
@@ -69,17 +105,26 @@ type salesforce.Contract {
     apiName = "Contract.OwnerExpirationNotice"
     restricted = true
     label = "Owner Expiration Notice"
+    createable = true
+    updateable = true
+    queryable = true
   }
   salesforce.Lookup OwnerId {
     apiName = "Contract.OwnerId"
     relationshipName = "Owner"
     label = "Owner ID"
     _hidden_value = true
+    createable = true
+    updateable = true
+    queryable = true
   }
   salesforce.Lookup Pricebook2Id {
     apiName = "Contract.Pricebook2Id"
     relationshipName = "Pricebook2"
     label = "Price Book ID"
+    createable = true
+    updateable = true
+    queryable = true
   }
   salesforce.Unknown ShippingAddress {
     apiName = "Contract.ShippingAddress"
@@ -89,10 +134,16 @@ type salesforce.Contract {
     apiName = "Contract.SpecialTerms"
     length = 4000
     label = "Special Terms"
+    createable = true
+    updateable = true
+    queryable = true
   }
   salesforce.Date StartDate {
     apiName = "Contract.StartDate"
     label = "Contract Start Date"
+    createable = true
+    updateable = true
+    queryable = true
   }
   salesforce.Picklist Status {
     apiName = "Contract.Status"
@@ -100,6 +151,9 @@ type salesforce.Contract {
     _required = true
     label = "Status"
     valueSetName = salesforce.StandardValueSet.instance.ContractStatus
+    createable = true
+    updateable = true
+    queryable = true
   }
   serviceid Id {
     apiName = "Contract.Id"
@@ -113,53 +167,83 @@ type salesforce.Contract {
     _required = true
     label = "Status Category"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.Checkbox IsDeleted {
     apiName = "Contract.IsDeleted"
     defaultValue = false
     label = "Deleted"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.AutoNumber ContractNumber {
     apiName = "Contract.ContractNumber"
     label = "Contract Number"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.DateTime LastApprovedDate {
     apiName = "Contract.LastApprovedDate"
     label = "Last Approved Date"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.DateTime CreatedDate {
     apiName = "Contract.CreatedDate"
     label = "Created Date"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.Lookup CreatedById {
     apiName = "Contract.CreatedById"
     relationshipName = "CreatedBy"
     label = "Created By ID"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.DateTime LastModifiedDate {
     apiName = "Contract.LastModifiedDate"
     label = "Last Modified Date"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.Lookup LastModifiedById {
     apiName = "Contract.LastModifiedById"
     relationshipName = "LastModifiedBy"
     label = "Last Modified By ID"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.DateTime SystemModstamp {
     apiName = "Contract.SystemModstamp"
     label = "System Modstamp"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.Date LastActivityDate {
     apiName = "Contract.LastActivityDate"
     label = "Last Activity"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
 }

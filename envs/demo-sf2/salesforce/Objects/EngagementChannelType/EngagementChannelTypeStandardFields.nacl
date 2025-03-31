@@ -4,10 +4,16 @@ type salesforce.EngagementChannelType {
     inlineHelpText = "The contact point type record associated with the engagement channel type."
     restricted = true
     label = "Contact Point Type"
+    createable = true
+    updateable = true
+    queryable = true
   }
   salesforce.Checkbox IsActive {
     apiName = "EngagementChannelType.IsActive"
     label = "Active"
+    createable = true
+    updateable = true
+    queryable = true
   }
   salesforce.Text Name {
     apiName = "EngagementChannelType.Name"
@@ -16,18 +22,27 @@ type salesforce.EngagementChannelType {
     label = "Name"
     unique = false
     caseSensitive = false
+    createable = true
+    updateable = true
+    queryable = true
   }
   salesforce.Lookup OwnerId {
     apiName = "EngagementChannelType.OwnerId"
     relationshipName = "Owner"
     label = "Owner ID"
     _hidden_value = true
+    createable = true
+    updateable = true
+    queryable = true
   }
   salesforce.Picklist UsageType {
     apiName = "EngagementChannelType.UsageType"
     restricted = false
     label = "Usage Type"
     visibleLines = 0
+    createable = true
+    updateable = true
+    queryable = true
   }
   serviceid Id {
     apiName = "EngagementChannelType.Id"
@@ -40,32 +55,50 @@ type salesforce.EngagementChannelType {
     defaultValue = false
     label = "Deleted"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.DateTime CreatedDate {
     apiName = "EngagementChannelType.CreatedDate"
     label = "Created Date"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.Lookup CreatedById {
     apiName = "EngagementChannelType.CreatedById"
     relationshipName = "CreatedBy"
     label = "Created By ID"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.DateTime LastModifiedDate {
     apiName = "EngagementChannelType.LastModifiedDate"
     label = "Last Modified Date"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.Lookup LastModifiedById {
     apiName = "EngagementChannelType.LastModifiedById"
     relationshipName = "LastModifiedBy"
     label = "Last Modified By ID"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.DateTime SystemModstamp {
     apiName = "EngagementChannelType.SystemModstamp"
     label = "System Modstamp"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
 }

@@ -3,6 +3,9 @@ type salesforce.JSforceTestSetting__c {
     apiName = "JSforceTestSetting__c.ExecLatch__c"
     label = "Execution Latch"
     trackTrending = false
+    createable = true
+    updateable = true
+    queryable = true
   }
   salesforce.Text ExecUsername__c {
     apiName = "JSforceTestSetting__c.ExecUsername__c"
@@ -13,6 +16,9 @@ type salesforce.JSforceTestSetting__c {
     trackTrending = false
     unique = false
     caseSensitive = false
+    createable = true
+    updateable = true
+    queryable = true
   }
   salesforce.Text TargetTableNames__c {
     apiName = "JSforceTestSetting__c.TargetTableNames__c"
@@ -22,5 +28,8 @@ type salesforce.JSforceTestSetting__c {
     trackTrending = false
     unique = false
     caseSensitive = false
+    createable = true
+    updateable = true
+    queryable = true
   }
 }

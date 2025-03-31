@@ -5,6 +5,9 @@ type salesforce.LeadCleanInfo {
     label = "Industry"
     valueSetName = salesforce.StandardValueSet.instance.Industry
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   serviceid Id {
     apiName = "LeadCleanInfo.Id"
@@ -17,6 +20,9 @@ type salesforce.LeadCleanInfo {
     defaultValue = false
     label = "Deleted"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.Text Name {
     apiName = "LeadCleanInfo.Name"
@@ -25,33 +31,51 @@ type salesforce.LeadCleanInfo {
     label = "Lead Clean Info Name"
     unique = false
     caseSensitive = false
+    createable = false
+    updateable = true
+    queryable = true
   }
   salesforce.DateTime CreatedDate {
     apiName = "LeadCleanInfo.CreatedDate"
     label = "Created Date"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.Lookup CreatedById {
     apiName = "LeadCleanInfo.CreatedById"
     relationshipName = "CreatedBy"
     label = "Created By ID"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.DateTime LastModifiedDate {
     apiName = "LeadCleanInfo.LastModifiedDate"
     label = "Last Modified Date"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.Lookup LastModifiedById {
     apiName = "LeadCleanInfo.LastModifiedById"
     relationshipName = "LastModifiedBy"
     label = "Last Modified By ID"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.DateTime SystemModstamp {
     apiName = "LeadCleanInfo.SystemModstamp"
     label = "System Modstamp"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.Lookup LeadId {
     apiName = "LeadCleanInfo.LeadId"
@@ -59,28 +83,43 @@ type salesforce.LeadCleanInfo {
     _required = true
     label = "Lead ID"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.DateTime LastMatchedDate {
     apiName = "LeadCleanInfo.LastMatchedDate"
     _required = true
     label = "Last Matched Date"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.DateTime LastStatusChangedDate {
     apiName = "LeadCleanInfo.LastStatusChangedDate"
     label = "Last Status Changed Date"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.Lookup LastStatusChangedById {
     apiName = "LeadCleanInfo.LastStatusChangedById"
     relationshipName = "LastStatusChangedBy"
     label = "User ID"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.Checkbox IsInactive {
     apiName = "LeadCleanInfo.IsInactive"
     defaultValue = false
     label = "Contact Status in Salesforce"
+    createable = false
+    updateable = true
+    queryable = true
   }
   salesforce.Text FirstName {
     apiName = "LeadCleanInfo.FirstName"
@@ -89,6 +128,9 @@ type salesforce.LeadCleanInfo {
     unique = false
     caseSensitive = false
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.Text LastName {
     apiName = "LeadCleanInfo.LastName"
@@ -97,22 +139,34 @@ type salesforce.LeadCleanInfo {
     unique = false
     caseSensitive = false
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.Email Email {
     apiName = "LeadCleanInfo.Email"
     label = "Email"
     unique = false
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.Phone Phone {
     apiName = "LeadCleanInfo.Phone"
     label = "Phone"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.Address Address {
     apiName = "LeadCleanInfo.Address"
     label = "Address"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.Text Title {
     apiName = "LeadCleanInfo.Title"
@@ -121,6 +175,9 @@ type salesforce.LeadCleanInfo {
     unique = false
     caseSensitive = false
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.Currency AnnualRevenue {
     apiName = "LeadCleanInfo.AnnualRevenue"
@@ -128,6 +185,9 @@ type salesforce.LeadCleanInfo {
     scale = 0
     precision = 18
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.Number NumberOfEmployees {
     apiName = "LeadCleanInfo.NumberOfEmployees"
@@ -136,6 +196,9 @@ type salesforce.LeadCleanInfo {
     scale = 0
     unique = false
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.Text CompanyName {
     apiName = "LeadCleanInfo.CompanyName"
@@ -144,6 +207,9 @@ type salesforce.LeadCleanInfo {
     unique = false
     caseSensitive = false
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.Text CompanyDunsNumber {
     apiName = "LeadCleanInfo.CompanyDunsNumber"
@@ -152,156 +218,255 @@ type salesforce.LeadCleanInfo {
     unique = false
     caseSensitive = false
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.Picklist ContactStatusDataDotCom {
     apiName = "LeadCleanInfo.ContactStatusDataDotCom"
     restricted = true
     label = "Contact Status per Data.com"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.Checkbox IsReviewedName {
     apiName = "LeadCleanInfo.IsReviewedName"
     label = "Name is Reviewed"
+    createable = false
+    updateable = true
+    queryable = true
   }
   salesforce.Checkbox IsReviewedEmail {
     apiName = "LeadCleanInfo.IsReviewedEmail"
     label = "Email is Reviewed"
+    createable = false
+    updateable = true
+    queryable = true
   }
   salesforce.Checkbox IsReviewedPhone {
     apiName = "LeadCleanInfo.IsReviewedPhone"
     label = "Phone is Reviewed"
+    createable = false
+    updateable = true
+    queryable = true
   }
   salesforce.Checkbox IsReviewedAddress {
     apiName = "LeadCleanInfo.IsReviewedAddress"
     label = "Address is Reviewed"
+    createable = false
+    updateable = true
+    queryable = true
   }
   salesforce.Checkbox IsReviewedTitle {
     apiName = "LeadCleanInfo.IsReviewedTitle"
     label = "Title is Reviewed"
+    createable = false
+    updateable = true
+    queryable = true
   }
   salesforce.Checkbox IsReviewedAnnualRevenue {
     apiName = "LeadCleanInfo.IsReviewedAnnualRevenue"
     label = "Annual Revenue is Reviewed"
+    createable = false
+    updateable = true
+    queryable = true
   }
   salesforce.Checkbox IsReviewedNumberOfEmployees {
     apiName = "LeadCleanInfo.IsReviewedNumberOfEmployees"
     label = "Number of Employees is Reviewed"
+    createable = false
+    updateable = true
+    queryable = true
   }
   salesforce.Checkbox IsReviewedIndustry {
     apiName = "LeadCleanInfo.IsReviewedIndustry"
     label = "Industry is Reviewed"
+    createable = false
+    updateable = true
+    queryable = true
   }
   salesforce.Checkbox IsReviewedCompanyName {
     apiName = "LeadCleanInfo.IsReviewedCompanyName"
     label = "Company Name is Reviewed"
+    createable = false
+    updateable = true
+    queryable = true
   }
   salesforce.Checkbox IsReviewedCompanyDunsNumber {
     apiName = "LeadCleanInfo.IsReviewedCompanyDunsNumber"
     label = "Company D-U-N-S Number is Reviewed"
+    createable = false
+    updateable = true
+    queryable = true
   }
   salesforce.Checkbox IsReviewedDandBCompanyDunsNumber {
     apiName = "LeadCleanInfo.IsReviewedDandBCompanyDunsNumber"
     label = "D&B Company D-U-N-S Number is Reviewed"
+    createable = false
+    updateable = true
+    queryable = true
   }
   salesforce.Checkbox IsDifferentFirstName {
     apiName = "LeadCleanInfo.IsDifferentFirstName"
     label = "First Name is Different"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.Checkbox IsDifferentLastName {
     apiName = "LeadCleanInfo.IsDifferentLastName"
     label = "Last Name is Different"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.Checkbox IsDifferentEmail {
     apiName = "LeadCleanInfo.IsDifferentEmail"
     label = "Email is Different"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.Checkbox IsDifferentPhone {
     apiName = "LeadCleanInfo.IsDifferentPhone"
     label = "Phone is Different"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.Checkbox IsDifferentStreet {
     apiName = "LeadCleanInfo.IsDifferentStreet"
     label = "Street is Different"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.Checkbox IsDifferentCity {
     apiName = "LeadCleanInfo.IsDifferentCity"
     label = "City is Different"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.Checkbox IsDifferentState {
     apiName = "LeadCleanInfo.IsDifferentState"
     label = "State is Different"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.Checkbox IsDifferentPostalCode {
     apiName = "LeadCleanInfo.IsDifferentPostalCode"
     label = "ZIP is Different"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.Checkbox IsDifferentCountry {
     apiName = "LeadCleanInfo.IsDifferentCountry"
     label = "Country is Different"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.Checkbox IsDifferentTitle {
     apiName = "LeadCleanInfo.IsDifferentTitle"
     label = "Title is Different"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.Checkbox IsDifferentAnnualRevenue {
     apiName = "LeadCleanInfo.IsDifferentAnnualRevenue"
     label = "Annual Revenue is Different"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.Checkbox IsDifferentNumberOfEmployees {
     apiName = "LeadCleanInfo.IsDifferentNumberOfEmployees"
     label = "Number of Employees is Different"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.Checkbox IsDifferentIndustry {
     apiName = "LeadCleanInfo.IsDifferentIndustry"
     label = "Industry is Different"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.Checkbox IsDifferentCompanyName {
     apiName = "LeadCleanInfo.IsDifferentCompanyName"
     label = "Company Name is Different"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.Checkbox IsDifferentCompanyDunsNumber {
     apiName = "LeadCleanInfo.IsDifferentCompanyDunsNumber"
     label = "Company D-U-N-S Number is Different"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.Checkbox IsDifferentDandBCompanyDunsNumber {
     apiName = "LeadCleanInfo.IsDifferentDandBCompanyDunsNumber"
     label = "D&B Company D-U-N-S Number is Different"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.Checkbox IsDifferentStateCode {
     apiName = "LeadCleanInfo.IsDifferentStateCode"
     label = "State Code is Different"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.Checkbox IsDifferentCountryCode {
     apiName = "LeadCleanInfo.IsDifferentCountryCode"
     label = "Country Code is Different"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.Checkbox CleanedByJob {
     apiName = "LeadCleanInfo.CleanedByJob"
     label = "Cleaned by Job"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.Checkbox CleanedByUser {
     apiName = "LeadCleanInfo.CleanedByUser"
     label = "Cleaned by User"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.Text DandBCompanyDunsNumber {
     apiName = "LeadCleanInfo.DandBCompanyDunsNumber"
@@ -310,6 +475,9 @@ type salesforce.LeadCleanInfo {
     unique = false
     caseSensitive = false
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.Text DataDotComCompanyId {
     apiName = "LeadCleanInfo.DataDotComCompanyId"
@@ -318,46 +486,79 @@ type salesforce.LeadCleanInfo {
     unique = false
     caseSensitive = false
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.Checkbox IsFlaggedWrongName {
     apiName = "LeadCleanInfo.IsFlaggedWrongName"
     label = "Name is Flagged Wrong"
+    createable = false
+    updateable = true
+    queryable = true
   }
   salesforce.Checkbox IsFlaggedWrongEmail {
     apiName = "LeadCleanInfo.IsFlaggedWrongEmail"
     label = "Email is Flagged Wrong"
+    createable = false
+    updateable = true
+    queryable = true
   }
   salesforce.Checkbox IsFlaggedWrongPhone {
     apiName = "LeadCleanInfo.IsFlaggedWrongPhone"
     label = "Phone is Flagged Wrong"
+    createable = false
+    updateable = true
+    queryable = true
   }
   salesforce.Checkbox IsFlaggedWrongAddress {
     apiName = "LeadCleanInfo.IsFlaggedWrongAddress"
     label = "Address is Flagged Wrong"
+    createable = false
+    updateable = true
+    queryable = true
   }
   salesforce.Checkbox IsFlaggedWrongTitle {
     apiName = "LeadCleanInfo.IsFlaggedWrongTitle"
     label = "Title is Flagged Wrong"
+    createable = false
+    updateable = true
+    queryable = true
   }
   salesforce.Checkbox IsFlaggedWrongAnnualRevenue {
     apiName = "LeadCleanInfo.IsFlaggedWrongAnnualRevenue"
     label = "Annual Revenue is Flagged Wrong"
+    createable = false
+    updateable = true
+    queryable = true
   }
   salesforce.Checkbox IsFlaggedWrongNumberOfEmployees {
     apiName = "LeadCleanInfo.IsFlaggedWrongNumberOfEmployees"
     label = "Number of Employees is Flagged Wrong"
+    createable = false
+    updateable = true
+    queryable = true
   }
   salesforce.Checkbox IsFlaggedWrongIndustry {
     apiName = "LeadCleanInfo.IsFlaggedWrongIndustry"
     label = "Industry is Flagged Wrong"
+    createable = false
+    updateable = true
+    queryable = true
   }
   salesforce.Checkbox IsFlaggedWrongCompanyName {
     apiName = "LeadCleanInfo.IsFlaggedWrongCompanyName"
     label = "Company Name is Flagged Wrong"
+    createable = false
+    updateable = true
+    queryable = true
   }
   salesforce.Checkbox IsFlaggedWrongCompanyDunsNumber {
     apiName = "LeadCleanInfo.IsFlaggedWrongCompanyDunsNumber"
     label = "Company D-U-N-S Number is Flagged Wrong"
+    createable = false
+    updateable = true
+    queryable = true
   }
   salesforce.Text DataDotComId {
     apiName = "LeadCleanInfo.DataDotComId"
@@ -366,5 +567,8 @@ type salesforce.LeadCleanInfo {
     unique = false
     caseSensitive = false
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
 }

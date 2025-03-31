@@ -4,6 +4,9 @@ type salesforce.AccountContactRole {
     restricted = false
     label = "Role"
     valueSetName = salesforce.StandardValueSet.instance.ContractContactRole
+    createable = true
+    updateable = true
+    queryable = true
   }
   serviceid Id {
     apiName = "AccountContactRole.Id"
@@ -16,49 +19,76 @@ type salesforce.AccountContactRole {
     defaultValue = false
     label = "Deleted"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.DateTime CreatedDate {
     apiName = "AccountContactRole.CreatedDate"
     label = "Created Date"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.Lookup CreatedById {
     apiName = "AccountContactRole.CreatedById"
     relationshipName = "CreatedBy"
     label = "Created By ID"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.DateTime LastModifiedDate {
     apiName = "AccountContactRole.LastModifiedDate"
     label = "Last Modified Date"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.Lookup LastModifiedById {
     apiName = "AccountContactRole.LastModifiedById"
     relationshipName = "LastModifiedBy"
     label = "Last Modified By ID"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.DateTime SystemModstamp {
     apiName = "AccountContactRole.SystemModstamp"
     label = "System Modstamp"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.Lookup AccountId {
     apiName = "AccountContactRole.AccountId"
     relationshipName = "Account"
     _required = true
     label = "Account ID"
+    createable = true
+    updateable = false
+    queryable = true
   }
   salesforce.Lookup ContactId {
     apiName = "AccountContactRole.ContactId"
     relationshipName = "Contact"
     _required = true
     label = "Contact ID"
+    createable = true
+    updateable = true
+    queryable = true
   }
   salesforce.Checkbox IsPrimary {
     apiName = "AccountContactRole.IsPrimary"
     defaultValue = false
     label = "Primary"
+    createable = true
+    updateable = true
+    queryable = true
   }
 }

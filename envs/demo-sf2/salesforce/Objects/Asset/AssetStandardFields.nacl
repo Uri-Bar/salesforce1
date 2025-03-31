@@ -3,11 +3,17 @@ type salesforce.Asset {
     apiName = "Asset.AccountId"
     relationshipName = "Account"
     label = "Account ID"
+    createable = true
+    updateable = true
+    queryable = true
   }
   salesforce.Address Address {
     apiName = "Asset.Address"
     label = "Address"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.Number AssetLevel {
     apiName = "Asset.AssetLevel"
@@ -16,16 +22,25 @@ type salesforce.Asset {
     scale = 0
     unique = false
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.Lookup AssetProvidedById {
     apiName = "Asset.AssetProvidedById"
     relationshipName = "AssetProvidedBy"
     label = "Asset Provided By ID"
+    createable = true
+    updateable = true
+    queryable = true
   }
   salesforce.Lookup AssetServicedById {
     apiName = "Asset.AssetServicedById"
     relationshipName = "AssetServicedBy"
     label = "Asset Serviced By ID"
+    createable = true
+    updateable = true
+    queryable = true
   }
   salesforce.Picklist ConsequenceOfFailure {
     apiName = "Asset.ConsequenceOfFailure"
@@ -35,6 +50,9 @@ type salesforce.Asset {
     apiName = "Asset.ContactId"
     relationshipName = "Contact"
     label = "Contact ID"
+    createable = true
+    updateable = true
+    queryable = true
   }
   salesforce.Currency CurrentAmount {
     apiName = "Asset.CurrentAmount"
@@ -42,11 +60,17 @@ type salesforce.Asset {
     scale = 2
     precision = 18
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.DateTime CurrentLifecycleEndDate {
     apiName = "Asset.CurrentLifecycleEndDate"
     label = "Current Lifecycle End Date"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.Currency CurrentMrr {
     apiName = "Asset.CurrentMrr"
@@ -54,6 +78,9 @@ type salesforce.Asset {
     scale = 2
     precision = 18
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.Number CurrentQuantity {
     apiName = "Asset.CurrentQuantity"
@@ -62,11 +89,17 @@ type salesforce.Asset {
     scale = 2
     unique = false
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.LongTextArea Description {
     apiName = "Asset.Description"
     length = 32000
     label = "Description"
+    createable = true
+    updateable = true
+    queryable = true
   }
   salesforce.Picklist DigitalAssetStatus {
     apiName = "Asset.DigitalAssetStatus"
@@ -82,30 +115,48 @@ type salesforce.Asset {
     defaultValue = false
     label = "Lifecycle-managed asset"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.Date InstallDate {
     apiName = "Asset.InstallDate"
     label = "Install Date"
+    createable = true
+    updateable = true
+    queryable = true
   }
   salesforce.Checkbox IsCompetitorProduct {
     apiName = "Asset.IsCompetitorProduct"
     defaultValue = false
     label = "Competitor Asset"
+    createable = true
+    updateable = true
+    queryable = true
   }
   salesforce.Checkbox IsInternal {
     apiName = "Asset.IsInternal"
     defaultValue = false
     label = "Internal Asset"
+    createable = true
+    updateable = true
+    queryable = true
   }
   salesforce.DateTime LifecycleEndDate {
     apiName = "Asset.LifecycleEndDate"
     label = "Lifecycle End Date"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.DateTime LifecycleStartDate {
     apiName = "Asset.LifecycleStartDate"
     label = "Lifecycle Start Date"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.Lookup LocationId {
     apiName = "Asset.LocationId"
@@ -123,28 +174,43 @@ type salesforce.Asset {
     label = "Asset Name"
     unique = false
     caseSensitive = false
+    createable = true
+    updateable = true
+    queryable = true
   }
   salesforce.Lookup OwnerId {
     apiName = "Asset.OwnerId"
     relationshipName = "Owner"
     label = "Owner ID"
     _hidden_value = true
+    createable = true
+    updateable = true
+    queryable = true
   }
   salesforce.Lookup ParentId {
     apiName = "Asset.ParentId"
     relationshipName = "Parent"
     label = "Parent Asset ID"
+    createable = true
+    updateable = true
+    queryable = true
   }
   salesforce.Currency Price {
     apiName = "Asset.Price"
     label = "Price"
     scale = 2
     precision = 18
+    createable = true
+    updateable = true
+    queryable = true
   }
   salesforce.Lookup Product2Id {
     apiName = "Asset.Product2Id"
     relationshipName = "Product2"
     label = "Product ID"
+    createable = true
+    updateable = true
+    queryable = true
   }
   salesforce.Text ProductCode {
     apiName = "Asset.ProductCode"
@@ -153,6 +219,9 @@ type salesforce.Asset {
     unique = false
     caseSensitive = false
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.Unknown ProductDescription {
     apiName = "Asset.ProductDescription"
@@ -165,6 +234,9 @@ type salesforce.Asset {
   salesforce.Date PurchaseDate {
     apiName = "Asset.PurchaseDate"
     label = "Purchase Date"
+    createable = true
+    updateable = true
+    queryable = true
   }
   salesforce.Number Quantity {
     apiName = "Asset.Quantity"
@@ -172,12 +244,18 @@ type salesforce.Asset {
     precision = 12
     scale = 2
     unique = false
+    createable = true
+    updateable = true
+    queryable = true
   }
   salesforce.Lookup RootAssetId {
     apiName = "Asset.RootAssetId"
     relationshipName = "RootAsset"
     label = "Root Asset ID"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.Text SerialNumber {
     apiName = "Asset.SerialNumber"
@@ -185,12 +263,18 @@ type salesforce.Asset {
     label = "Serial Number"
     unique = false
     caseSensitive = false
+    createable = true
+    updateable = true
+    queryable = true
   }
   salesforce.Picklist Status {
     apiName = "Asset.Status"
     restricted = false
     label = "Status"
     valueSetName = salesforce.StandardValueSet.instance.AssetStatus
+    createable = true
+    updateable = true
+    queryable = true
   }
   salesforce.Picklist StatusReason {
     apiName = "Asset.StatusReason"
@@ -204,6 +288,9 @@ type salesforce.Asset {
     unique = false
     caseSensitive = false
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.Currency TotalLifecycleAmount {
     apiName = "Asset.TotalLifecycleAmount"
@@ -211,10 +298,16 @@ type salesforce.Asset {
     scale = 2
     precision = 18
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.Date UsageEndDate {
     apiName = "Asset.UsageEndDate"
     label = "Usage End Date"
+    createable = true
+    updateable = true
+    queryable = true
   }
   salesforce.Unknown Uuid {
     apiName = "Asset.Uuid"
@@ -231,33 +324,51 @@ type salesforce.Asset {
     apiName = "Asset.CreatedDate"
     label = "Created Date"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.Lookup CreatedById {
     apiName = "Asset.CreatedById"
     relationshipName = "CreatedBy"
     label = "Created By ID"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.DateTime LastModifiedDate {
     apiName = "Asset.LastModifiedDate"
     label = "Last Modified Date"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.Lookup LastModifiedById {
     apiName = "Asset.LastModifiedById"
     relationshipName = "LastModifiedBy"
     label = "Last Modified By ID"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.DateTime SystemModstamp {
     apiName = "Asset.SystemModstamp"
     label = "System Modstamp"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.Checkbox IsDeleted {
     apiName = "Asset.IsDeleted"
     defaultValue = false
     label = "Deleted"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
 }

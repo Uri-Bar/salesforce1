@@ -2,10 +2,16 @@ type salesforce.Seller {
   salesforce.Date ActiveFromDate {
     apiName = "Seller.ActiveFromDate"
     label = "Active From Date"
+    createable = true
+    updateable = true
+    queryable = true
   }
   salesforce.Date ActiveToDate {
     apiName = "Seller.ActiveToDate"
     label = "Active To Date"
+    createable = true
+    updateable = true
+    queryable = true
   }
   salesforce.Text Name {
     apiName = "Seller.Name"
@@ -14,17 +20,26 @@ type salesforce.Seller {
     label = "Name"
     unique = false
     caseSensitive = false
+    createable = true
+    updateable = true
+    queryable = true
   }
   salesforce.Lookup OwnerId {
     apiName = "Seller.OwnerId"
     relationshipName = "Owner"
     label = "Owner ID"
     _hidden_value = true
+    createable = true
+    updateable = true
+    queryable = true
   }
   salesforce.Lookup PartyId {
     apiName = "Seller.PartyId"
     relationshipName = "Party"
     label = "Individual ID"
+    createable = true
+    updateable = true
+    queryable = true
   }
   salesforce.Number SalesAmount {
     apiName = "Seller.SalesAmount"
@@ -32,16 +47,25 @@ type salesforce.Seller {
     precision = 9
     scale = 0
     unique = false
+    createable = true
+    updateable = true
+    queryable = true
   }
   salesforce.Picklist SellerTier {
     apiName = "Seller.SellerTier"
     restricted = true
     label = "Seller Tier"
+    createable = true
+    updateable = true
+    queryable = true
   }
   salesforce.Picklist SellerType {
     apiName = "Seller.SellerType"
     restricted = true
     label = "Seller Type"
+    createable = true
+    updateable = true
+    queryable = true
   }
   serviceid Id {
     apiName = "Seller.Id"
@@ -54,32 +78,50 @@ type salesforce.Seller {
     defaultValue = false
     label = "Deleted"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.DateTime CreatedDate {
     apiName = "Seller.CreatedDate"
     label = "Created Date"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.Lookup CreatedById {
     apiName = "Seller.CreatedById"
     relationshipName = "CreatedBy"
     label = "Created By ID"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.DateTime LastModifiedDate {
     apiName = "Seller.LastModifiedDate"
     label = "Last Modified Date"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.Lookup LastModifiedById {
     apiName = "Seller.LastModifiedById"
     relationshipName = "LastModifiedBy"
     label = "Last Modified By ID"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.DateTime SystemModstamp {
     apiName = "Seller.SystemModstamp"
     label = "System Modstamp"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
 }

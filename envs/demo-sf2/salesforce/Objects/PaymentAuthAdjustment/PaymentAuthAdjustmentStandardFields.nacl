@@ -3,6 +3,9 @@ type salesforce.PaymentAuthAdjustment {
     apiName = "PaymentAuthAdjustment.AccountId"
     relationshipName = "Account"
     label = "Account ID"
+    createable = true
+    updateable = true
+    queryable = true
   }
   salesforce.Currency Amount {
     apiName = "PaymentAuthAdjustment.Amount"
@@ -10,33 +13,54 @@ type salesforce.PaymentAuthAdjustment {
     label = "Amount"
     scale = 2
     precision = 18
+    createable = true
+    updateable = true
+    queryable = true
   }
   salesforce.LongTextArea Comments {
     apiName = "PaymentAuthAdjustment.Comments"
     length = 1000
     label = "Comments"
+    createable = true
+    updateable = true
+    queryable = true
   }
   salesforce.DateTime Date {
     apiName = "PaymentAuthAdjustment.Date"
     label = "Date"
+    createable = true
+    updateable = true
+    queryable = true
   }
   salesforce.DateTime EffectiveDate {
     apiName = "PaymentAuthAdjustment.EffectiveDate"
     label = "Effective Date"
+    createable = true
+    updateable = true
+    queryable = true
   }
   salesforce.Email Email {
     apiName = "PaymentAuthAdjustment.Email"
     label = "Audit Email"
     unique = false
+    createable = true
+    updateable = true
+    queryable = true
   }
   salesforce.DateTime GatewayDate {
     apiName = "PaymentAuthAdjustment.GatewayDate"
     label = "Gateway Date"
+    createable = true
+    updateable = true
+    queryable = true
   }
   salesforce.LongTextArea GatewayRefDetails {
     apiName = "PaymentAuthAdjustment.GatewayRefDetails"
     length = 1000
     label = "Gateway Reference Details"
+    createable = true
+    updateable = true
+    queryable = true
   }
   salesforce.Text GatewayRefNumber {
     apiName = "PaymentAuthAdjustment.GatewayRefNumber"
@@ -44,6 +68,9 @@ type salesforce.PaymentAuthAdjustment {
     label = "Gateway Reference Number"
     unique = false
     caseSensitive = false
+    createable = true
+    updateable = true
+    queryable = true
   }
   salesforce.Text GatewayResultCode {
     apiName = "PaymentAuthAdjustment.GatewayResultCode"
@@ -51,6 +78,9 @@ type salesforce.PaymentAuthAdjustment {
     label = "Gateway Result Code"
     unique = false
     caseSensitive = false
+    createable = true
+    updateable = true
+    queryable = true
   }
   salesforce.Text GatewayResultCodeDescription {
     apiName = "PaymentAuthAdjustment.GatewayResultCodeDescription"
@@ -58,6 +88,9 @@ type salesforce.PaymentAuthAdjustment {
     label = "Gateway Result Code Description"
     unique = false
     caseSensitive = false
+    createable = true
+    updateable = true
+    queryable = true
   }
   salesforce.Text IpAddress {
     apiName = "PaymentAuthAdjustment.IpAddress"
@@ -65,6 +98,9 @@ type salesforce.PaymentAuthAdjustment {
     label = "IP Address"
     unique = false
     caseSensitive = false
+    createable = true
+    updateable = true
+    queryable = true
   }
   salesforce.Text MacAddress {
     apiName = "PaymentAuthAdjustment.MacAddress"
@@ -72,39 +108,60 @@ type salesforce.PaymentAuthAdjustment {
     label = "MAC Address"
     unique = false
     caseSensitive = false
+    createable = true
+    updateable = true
+    queryable = true
   }
   salesforce.MasterDetail PaymentAuthorizationId {
     apiName = "PaymentAuthAdjustment.PaymentAuthorizationId"
     relationshipName = "PaymentAuthorization"
     _required = true
     label = "Payment Authorization ID"
+    createable = true
+    updateable = true
+    queryable = true
   }
   salesforce.Phone Phone {
     apiName = "PaymentAuthAdjustment.Phone"
     label = "Phone"
+    createable = true
+    updateable = true
+    queryable = true
   }
   salesforce.Picklist ProcessingMode {
     apiName = "PaymentAuthAdjustment.ProcessingMode"
     restricted = true
     _required = true
     label = "Processing Mode"
+    createable = true
+    updateable = true
+    queryable = true
   }
   salesforce.Picklist SfResultCode {
     apiName = "PaymentAuthAdjustment.SfResultCode"
     restricted = true
     label = "Salesforce Result Code"
+    createable = true
+    updateable = true
+    queryable = true
   }
   salesforce.Picklist Status {
     apiName = "PaymentAuthAdjustment.Status"
     restricted = true
     _required = true
     label = "Status"
+    createable = true
+    updateable = true
+    queryable = true
   }
   salesforce.Picklist Type {
     apiName = "PaymentAuthAdjustment.Type"
     restricted = true
     _required = true
     label = "Adjustment Type"
+    createable = true
+    updateable = true
+    queryable = true
   }
   serviceid Id {
     apiName = "PaymentAuthAdjustment.Id"
@@ -117,37 +174,58 @@ type salesforce.PaymentAuthAdjustment {
     defaultValue = false
     label = "Deleted"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.AutoNumber PaymentAuthAdjustmentNumber {
     apiName = "PaymentAuthAdjustment.PaymentAuthAdjustmentNumber"
     label = "Payment Authorization Adjustment Number"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.DateTime CreatedDate {
     apiName = "PaymentAuthAdjustment.CreatedDate"
     label = "Created Date"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.Lookup CreatedById {
     apiName = "PaymentAuthAdjustment.CreatedById"
     relationshipName = "CreatedBy"
     label = "Created By ID"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.DateTime LastModifiedDate {
     apiName = "PaymentAuthAdjustment.LastModifiedDate"
     label = "Last Modified Date"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.Lookup LastModifiedById {
     apiName = "PaymentAuthAdjustment.LastModifiedById"
     relationshipName = "LastModifiedBy"
     label = "Last Modified By ID"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.DateTime SystemModstamp {
     apiName = "PaymentAuthAdjustment.SystemModstamp"
     label = "System Modstamp"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
 }

@@ -6,6 +6,9 @@ type salesforce.Recommendation {
     label = "Acceptance Label"
     unique = false
     caseSensitive = false
+    createable = true
+    updateable = true
+    queryable = true
   }
   salesforce.Text ActionReference {
     apiName = "Recommendation.ActionReference"
@@ -14,6 +17,9 @@ type salesforce.Recommendation {
     label = "Action"
     unique = false
     caseSensitive = false
+    createable = true
+    updateable = true
+    queryable = true
   }
   salesforce.Text Description {
     apiName = "Recommendation.Description"
@@ -22,18 +28,27 @@ type salesforce.Recommendation {
     label = "Description"
     unique = false
     caseSensitive = false
+    createable = true
+    updateable = true
+    queryable = true
   }
   salesforce.Lookup ImageId {
     apiName = "Recommendation.ImageId"
     inlineHelpText = "For best results, use a 1000 px x 380 px image at 72 dpi or one with a similar ratio."
     relationshipName = "Image"
     label = "Asset File ID"
+    createable = true
+    updateable = true
+    queryable = true
   }
   salesforce.Checkbox IsActionActive {
     apiName = "Recommendation.IsActionActive"
     defaultValue = false
     label = "Is Action Active"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.Text Name {
     apiName = "Recommendation.Name"
@@ -42,6 +57,9 @@ type salesforce.Recommendation {
     label = "Name"
     unique = false
     caseSensitive = false
+    createable = true
+    updateable = true
+    queryable = true
   }
   salesforce.Text RejectionLabel {
     apiName = "Recommendation.RejectionLabel"
@@ -50,6 +68,9 @@ type salesforce.Recommendation {
     label = "Rejection Label"
     unique = false
     caseSensitive = false
+    createable = true
+    updateable = true
+    queryable = true
   }
   serviceid Id {
     apiName = "Recommendation.Id"
@@ -62,33 +83,51 @@ type salesforce.Recommendation {
     defaultValue = false
     label = "Deleted"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.DateTime CreatedDate {
     apiName = "Recommendation.CreatedDate"
     label = "Created Date"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.Lookup CreatedById {
     apiName = "Recommendation.CreatedById"
     relationshipName = "CreatedBy"
     label = "Created By ID"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.DateTime LastModifiedDate {
     apiName = "Recommendation.LastModifiedDate"
     label = "Last Modified Date"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.Lookup LastModifiedById {
     apiName = "Recommendation.LastModifiedById"
     relationshipName = "LastModifiedBy"
     label = "Last Modified By ID"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.DateTime SystemModstamp {
     apiName = "Recommendation.SystemModstamp"
     label = "System Modstamp"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.Text ExternalId {
     apiName = "Recommendation.ExternalId"
@@ -96,6 +135,9 @@ type salesforce.Recommendation {
     label = "External Id"
     unique = false
     caseSensitive = false
+    createable = true
+    updateable = true
+    queryable = true
   }
   salesforce.Text RecommendationKey {
     apiName = "Recommendation.RecommendationKey"
@@ -103,5 +145,8 @@ type salesforce.Recommendation {
     label = "RecommendationResponse Identifier"
     unique = false
     caseSensitive = false
+    createable = true
+    updateable = true
+    queryable = true
   }
 }

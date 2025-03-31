@@ -10,12 +10,18 @@ type salesforce.CouponCodeRedemption {
     relationshipName = "Owner"
     label = "Owner ID"
     _hidden_value = true
+    createable = true
+    updateable = true
+    queryable = true
   }
   salesforce.Checkbox IsDeleted {
     apiName = "CouponCodeRedemption.IsDeleted"
     defaultValue = false
     label = "Deleted"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.Text Name {
     apiName = "CouponCodeRedemption.Name"
@@ -24,39 +30,60 @@ type salesforce.CouponCodeRedemption {
     label = "Coupon Code Redemption Number"
     unique = false
     caseSensitive = false
+    createable = true
+    updateable = true
+    queryable = true
   }
   salesforce.DateTime CreatedDate {
     apiName = "CouponCodeRedemption.CreatedDate"
     label = "Created Date"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.Lookup CreatedById {
     apiName = "CouponCodeRedemption.CreatedById"
     relationshipName = "CreatedBy"
     label = "Created By ID"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.DateTime LastModifiedDate {
     apiName = "CouponCodeRedemption.LastModifiedDate"
     label = "Last Modified Date"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.Lookup LastModifiedById {
     apiName = "CouponCodeRedemption.LastModifiedById"
     relationshipName = "LastModifiedBy"
     label = "Last Modified By ID"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.DateTime SystemModstamp {
     apiName = "CouponCodeRedemption.SystemModstamp"
     label = "System Modstamp"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.Lookup CouponId {
     apiName = "CouponCodeRedemption.CouponId"
     relationshipName = "Coupon"
     _required = true
     label = "Coupon ID"
+    createable = true
+    updateable = false
+    queryable = true
   }
   salesforce.Text Transaction {
     apiName = "CouponCodeRedemption.Transaction"
@@ -65,6 +92,9 @@ type salesforce.CouponCodeRedemption {
     label = "Transaction"
     unique = false
     caseSensitive = false
+    createable = true
+    updateable = false
+    queryable = true
   }
   salesforce.Text Buyer {
     apiName = "CouponCodeRedemption.Buyer"
@@ -73,5 +103,8 @@ type salesforce.CouponCodeRedemption {
     label = "Buyer"
     unique = false
     caseSensitive = false
+    createable = true
+    updateable = false
+    queryable = true
   }
 }

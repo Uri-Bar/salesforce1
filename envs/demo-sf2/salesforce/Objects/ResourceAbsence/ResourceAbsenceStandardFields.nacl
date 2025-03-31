@@ -3,33 +3,51 @@ type salesforce.ResourceAbsence {
     apiName = "ResourceAbsence.Address"
     label = "Address"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.LongTextArea Description {
     apiName = "ResourceAbsence.Description"
     length = 32000
     label = "Description"
+    createable = true
+    updateable = true
+    queryable = true
   }
   salesforce.DateTime End {
     apiName = "ResourceAbsence.End"
     _required = true
     label = "End Time"
+    createable = true
+    updateable = true
+    queryable = true
   }
   salesforce.MasterDetail ResourceId {
     apiName = "ResourceAbsence.ResourceId"
     relationshipName = "Resource"
     _required = true
     label = "Resource ID"
+    createable = true
+    updateable = true
+    queryable = true
   }
   salesforce.DateTime Start {
     apiName = "ResourceAbsence.Start"
     _required = true
     label = "Start Time"
+    createable = true
+    updateable = true
+    queryable = true
   }
   salesforce.Picklist Type {
     apiName = "ResourceAbsence.Type"
     restricted = false
     _required = true
     label = "Type"
+    createable = true
+    updateable = true
+    queryable = true
   }
   serviceid Id {
     apiName = "ResourceAbsence.Id"
@@ -42,37 +60,58 @@ type salesforce.ResourceAbsence {
     defaultValue = false
     label = "Deleted"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.AutoNumber AbsenceNumber {
     apiName = "ResourceAbsence.AbsenceNumber"
     label = "Absence Number"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.DateTime CreatedDate {
     apiName = "ResourceAbsence.CreatedDate"
     label = "Created Date"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.Lookup CreatedById {
     apiName = "ResourceAbsence.CreatedById"
     relationshipName = "CreatedBy"
     label = "Created By ID"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.DateTime LastModifiedDate {
     apiName = "ResourceAbsence.LastModifiedDate"
     label = "Last Modified Date"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.Lookup LastModifiedById {
     apiName = "ResourceAbsence.LastModifiedById"
     relationshipName = "LastModifiedBy"
     label = "Last Modified By ID"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.DateTime SystemModstamp {
     apiName = "ResourceAbsence.SystemModstamp"
     label = "System Modstamp"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
 }

@@ -2,6 +2,9 @@ type salesforce.OrgMetricScanResult {
   salesforce.Picklist ItemStatus {
     apiName = "OrgMetricScanResult.ItemStatus"
     label = "Status"
+    createable = true
+    updateable = false
+    queryable = true
   }
   serviceid Id {
     apiName = "OrgMetricScanResult.Id"
@@ -14,6 +17,9 @@ type salesforce.OrgMetricScanResult {
     label = "Deleted"
     defaultValue = false
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.Text Name {
     apiName = "OrgMetricScanResult.Name"
@@ -22,43 +28,67 @@ type salesforce.OrgMetricScanResult {
     length = 255
     unique = false
     caseSensitive = false
+    createable = true
+    updateable = false
+    queryable = true
   }
   salesforce.DateTime CreatedDate {
     apiName = "OrgMetricScanResult.CreatedDate"
     label = "Created Date"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.Lookup CreatedById {
     apiName = "OrgMetricScanResult.CreatedById"
     label = "Created By ID"
     relationshipName = "CreatedBy"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.DateTime LastModifiedDate {
     apiName = "OrgMetricScanResult.LastModifiedDate"
     label = "Last Modified Date"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.Lookup LastModifiedById {
     apiName = "OrgMetricScanResult.LastModifiedById"
     label = "Last Modified By ID"
     relationshipName = "LastModifiedBy"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.DateTime SystemModstamp {
     apiName = "OrgMetricScanResult.SystemModstamp"
     label = "System Modstamp"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.Lookup OrgMetricScanSummaryId {
     apiName = "OrgMetricScanResult.OrgMetricScanSummaryId"
     label = "Org Metric Scan ID"
     _required = true
     relationshipName = "OrgMetricScanSummary"
+    createable = true
+    updateable = false
+    queryable = true
   }
   salesforce.Url Url {
     apiName = "OrgMetricScanResult.Url"
     label = "Url"
+    createable = true
+    updateable = false
+    queryable = true
   }
   salesforce.Text Object {
     apiName = "OrgMetricScanResult.Object"
@@ -66,10 +96,16 @@ type salesforce.OrgMetricScanResult {
     length = 255
     unique = false
     caseSensitive = false
+    createable = true
+    updateable = false
+    queryable = true
   }
   salesforce.DateTime Date {
     apiName = "OrgMetricScanResult.Date"
     label = "Date"
+    createable = true
+    updateable = false
+    queryable = true
   }
   salesforce.Text Type {
     apiName = "OrgMetricScanResult.Type"
@@ -77,6 +113,9 @@ type salesforce.OrgMetricScanResult {
     length = 255
     unique = false
     caseSensitive = false
+    createable = true
+    updateable = false
+    queryable = true
   }
   salesforce.Number Profile {
     apiName = "OrgMetricScanResult.Profile"
@@ -84,6 +123,9 @@ type salesforce.OrgMetricScanResult {
     scale = 0
     precision = 9
     unique = false
+    createable = true
+    updateable = false
+    queryable = true
   }
   salesforce.Text User {
     apiName = "OrgMetricScanResult.User"
@@ -91,6 +133,9 @@ type salesforce.OrgMetricScanResult {
     length = 255
     unique = false
     caseSensitive = false
+    createable = true
+    updateable = false
+    queryable = true
   }
   salesforce.Number Quantity {
     apiName = "OrgMetricScanResult.Quantity"
@@ -98,6 +143,9 @@ type salesforce.OrgMetricScanResult {
     scale = 0
     precision = 9
     unique = false
+    createable = true
+    updateable = false
+    queryable = true
   }
   salesforce.Number Flags {
     apiName = "OrgMetricScanResult.Flags"
@@ -105,5 +153,8 @@ type salesforce.OrgMetricScanResult {
     scale = 0
     precision = 9
     unique = false
+    createable = true
+    updateable = false
+    queryable = true
   }
 }

@@ -5,38 +5,59 @@ type salesforce.Account {
     label = "Account Number"
     unique = false
     caseSensitive = false
+    createable = true
+    updateable = true
+    queryable = true
   }
   salesforce.Picklist AccountSource {
     apiName = "Account.AccountSource"
     restricted = false
     label = "Account Source"
     valueSetName = salesforce.StandardValueSet.instance.LeadSource
+    createable = true
+    updateable = true
+    queryable = true
   }
   salesforce.Currency AnnualRevenue {
     apiName = "Account.AnnualRevenue"
     label = "Annual Revenue"
     scale = 0
     precision = 18
+    createable = true
+    updateable = true
+    queryable = true
   }
   salesforce.Address BillingAddress {
     apiName = "Account.BillingAddress"
     label = "Billing Address"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.Picklist CleanStatus {
     apiName = "Account.CleanStatus"
     restricted = true
     label = "Clean Status"
+    createable = true
+    updateable = true
+    queryable = true
   }
   salesforce.Lookup DandbCompanyId {
     apiName = "Account.DandbCompanyId"
     relationshipName = "DandbCompany"
     label = "D&B Company ID"
+    createable = true
+    updateable = true
+    queryable = true
   }
   salesforce.LongTextArea Description {
     apiName = "Account.Description"
     length = 32000
     label = "Account Description"
+    createable = true
+    updateable = true
+    queryable = true
   }
   salesforce.Text DunsNumber {
     apiName = "Account.DunsNumber"
@@ -44,16 +65,25 @@ type salesforce.Account {
     label = "D-U-N-S Number"
     unique = false
     caseSensitive = false
+    createable = true
+    updateable = true
+    queryable = true
   }
   salesforce.Phone Fax {
     apiName = "Account.Fax"
     label = "Account Fax"
+    createable = true
+    updateable = true
+    queryable = true
   }
   salesforce.Picklist Industry {
     apiName = "Account.Industry"
     restricted = false
     label = "Industry"
     valueSetName = salesforce.StandardValueSet.instance.Industry
+    createable = true
+    updateable = true
+    queryable = true
   }
   salesforce.Text Jigsaw {
     apiName = "Account.Jigsaw"
@@ -61,6 +91,9 @@ type salesforce.Account {
     label = "Data.com Key"
     unique = false
     caseSensitive = false
+    createable = true
+    updateable = true
+    queryable = true
   }
   salesforce.Text NaicsCode {
     apiName = "Account.NaicsCode"
@@ -68,6 +101,9 @@ type salesforce.Account {
     label = "NAICS Code"
     unique = false
     caseSensitive = false
+    createable = true
+    updateable = true
+    queryable = true
   }
   salesforce.Text NaicsDesc {
     apiName = "Account.NaicsDesc"
@@ -75,6 +111,9 @@ type salesforce.Account {
     label = "NAICS Description"
     unique = false
     caseSensitive = false
+    createable = true
+    updateable = true
+    queryable = true
   }
   salesforce.Text Name {
     apiName = "Account.Name"
@@ -83,6 +122,9 @@ type salesforce.Account {
     label = "Account Name"
     unique = false
     caseSensitive = false
+    createable = true
+    updateable = true
+    queryable = true
   }
   salesforce.Number NumberOfEmployees {
     apiName = "Account.NumberOfEmployees"
@@ -90,43 +132,67 @@ type salesforce.Account {
     precision = 8
     scale = 0
     unique = false
+    createable = true
+    updateable = true
+    queryable = true
   }
   salesforce.Lookup OperatingHoursId {
     apiName = "Account.OperatingHoursId"
     relationshipName = "OperatingHours"
     label = "Operating Hour ID"
+    createable = true
+    updateable = true
+    queryable = true
   }
   salesforce.Lookup OwnerId {
     apiName = "Account.OwnerId"
     relationshipName = "Owner"
     label = "Owner ID"
     _hidden_value = true
+    createable = true
+    updateable = true
+    queryable = true
   }
   salesforce.Picklist Ownership {
     apiName = "Account.Ownership"
     restricted = false
     label = "Ownership"
     valueSetName = salesforce.StandardValueSet.instance.AccountOwnership
+    createable = true
+    updateable = true
+    queryable = true
   }
   salesforce.Hierarchy ParentId {
     apiName = "Account.ParentId"
     relationshipName = "Parent"
     label = "Parent Account ID"
+    createable = true
+    updateable = true
+    queryable = true
   }
   salesforce.Phone Phone {
     apiName = "Account.Phone"
     label = "Account Phone"
+    createable = true
+    updateable = true
+    queryable = true
   }
   salesforce.Picklist Rating {
     apiName = "Account.Rating"
     restricted = false
     label = "Account Rating"
     valueSetName = salesforce.StandardValueSet.instance.AccountRating
+    createable = true
+    updateable = true
+    queryable = true
   }
   salesforce.Address ShippingAddress {
     apiName = "Account.ShippingAddress"
     label = "Shipping Address"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.Text Sic {
     apiName = "Account.Sic"
@@ -134,6 +200,9 @@ type salesforce.Account {
     label = "SIC Code"
     unique = false
     caseSensitive = false
+    createable = true
+    updateable = true
+    queryable = true
   }
   salesforce.Text SicDesc {
     apiName = "Account.SicDesc"
@@ -141,6 +210,9 @@ type salesforce.Account {
     label = "SIC Description"
     unique = false
     caseSensitive = false
+    createable = true
+    updateable = true
+    queryable = true
   }
   salesforce.Text Site {
     apiName = "Account.Site"
@@ -148,6 +220,9 @@ type salesforce.Account {
     label = "Account Site"
     unique = false
     caseSensitive = false
+    createable = true
+    updateable = true
+    queryable = true
   }
   salesforce.Text TickerSymbol {
     apiName = "Account.TickerSymbol"
@@ -155,6 +230,9 @@ type salesforce.Account {
     label = "Ticker Symbol"
     unique = false
     caseSensitive = false
+    createable = true
+    updateable = true
+    queryable = true
   }
   salesforce.Unknown Tier {
     apiName = "Account.Tier"
@@ -166,16 +244,25 @@ type salesforce.Account {
     label = "Tradestyle"
     unique = false
     caseSensitive = false
+    createable = true
+    updateable = true
+    queryable = true
   }
   salesforce.Picklist Type {
     apiName = "Account.Type"
     restricted = false
     label = "Account Type"
     valueSetName = salesforce.StandardValueSet.instance.AccountType
+    createable = true
+    updateable = true
+    queryable = true
   }
   salesforce.Url Website {
     apiName = "Account.Website"
     label = "Website"
+    createable = true
+    updateable = true
+    queryable = true
   }
   salesforce.Text YearStarted {
     apiName = "Account.YearStarted"
@@ -183,6 +270,9 @@ type salesforce.Account {
     label = "Year Started"
     unique = false
     caseSensitive = false
+    createable = true
+    updateable = true
+    queryable = true
   }
   serviceid Id {
     apiName = "Account.Id"
@@ -195,49 +285,76 @@ type salesforce.Account {
     defaultValue = false
     label = "Deleted"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.Lookup MasterRecordId {
     apiName = "Account.MasterRecordId"
     relationshipName = "MasterRecord"
     label = "Master Record ID"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.Url PhotoUrl {
     apiName = "Account.PhotoUrl"
     label = "Photo URL"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.DateTime CreatedDate {
     apiName = "Account.CreatedDate"
     label = "Created Date"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.Lookup CreatedById {
     apiName = "Account.CreatedById"
     relationshipName = "CreatedBy"
     label = "Created By ID"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.DateTime LastModifiedDate {
     apiName = "Account.LastModifiedDate"
     label = "Last Modified Date"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.Lookup LastModifiedById {
     apiName = "Account.LastModifiedById"
     relationshipName = "LastModifiedBy"
     label = "Last Modified By ID"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.DateTime SystemModstamp {
     apiName = "Account.SystemModstamp"
     label = "System Modstamp"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.Date LastActivityDate {
     apiName = "Account.LastActivityDate"
     label = "Last Activity"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.Text JigsawCompanyId {
     apiName = "Account.JigsawCompanyId"
@@ -246,5 +363,8 @@ type salesforce.Account {
     unique = false
     caseSensitive = false
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
 }

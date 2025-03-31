@@ -5,6 +5,9 @@ type salesforce.CommSubscriptionChannelType {
     relationshipName = "CommunicationSubscription"
     _required = true
     label = "Communication Subscription ID"
+    createable = true
+    updateable = true
+    queryable = true
   }
   salesforce.Lookup EngagementChannelTypeId {
     apiName = "CommSubscriptionChannelType.EngagementChannelTypeId"
@@ -12,16 +15,25 @@ type salesforce.CommSubscriptionChannelType {
     relationshipName = "EngagementChannelType"
     _required = true
     label = "Engagement Channel Type ID"
+    createable = true
+    updateable = true
+    queryable = true
   }
   salesforce.Lookup MessagingChannelId {
     apiName = "CommSubscriptionChannelType.MessagingChannelId"
     relationshipName = "MessagingChannel"
     label = "Messaging Channel ID"
+    createable = true
+    updateable = true
+    queryable = true
   }
   salesforce.Lookup MessagingChannelUsageId {
     apiName = "CommSubscriptionChannelType.MessagingChannelUsageId"
     relationshipName = "MessagingChannelUsage"
     label = "Messaging Channel Usage ID"
+    createable = true
+    updateable = true
+    queryable = true
   }
   salesforce.Text Name {
     apiName = "CommSubscriptionChannelType.Name"
@@ -30,12 +42,18 @@ type salesforce.CommSubscriptionChannelType {
     label = "Name"
     unique = false
     caseSensitive = false
+    createable = true
+    updateable = true
+    queryable = true
   }
   salesforce.Lookup OwnerId {
     apiName = "CommSubscriptionChannelType.OwnerId"
     relationshipName = "Owner"
     label = "Owner ID"
     _hidden_value = true
+    createable = true
+    updateable = true
+    queryable = true
   }
   serviceid Id {
     apiName = "CommSubscriptionChannelType.Id"
@@ -48,38 +66,59 @@ type salesforce.CommSubscriptionChannelType {
     defaultValue = false
     label = "Deleted"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.DateTime CreatedDate {
     apiName = "CommSubscriptionChannelType.CreatedDate"
     label = "Created Date"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.Lookup CreatedById {
     apiName = "CommSubscriptionChannelType.CreatedById"
     relationshipName = "CreatedBy"
     label = "Created By ID"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.DateTime LastModifiedDate {
     apiName = "CommSubscriptionChannelType.LastModifiedDate"
     label = "Last Modified Date"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.Lookup LastModifiedById {
     apiName = "CommSubscriptionChannelType.LastModifiedById"
     relationshipName = "LastModifiedBy"
     label = "Last Modified By ID"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.DateTime SystemModstamp {
     apiName = "CommSubscriptionChannelType.SystemModstamp"
     label = "System Modstamp"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.Lookup DataUsePurposeId {
     apiName = "CommSubscriptionChannelType.DataUsePurposeId"
     relationshipName = "DataUsePurpose"
     label = "Communication Subscription ID"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
 }

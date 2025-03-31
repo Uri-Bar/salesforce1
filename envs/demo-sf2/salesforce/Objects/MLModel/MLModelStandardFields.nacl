@@ -10,50 +10,77 @@ type salesforce.MLModel {
     defaultValue = false
     label = "Deleted"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.AutoNumber Name {
     apiName = "MLModel.Name"
     label = "Name"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.DateTime CreatedDate {
     apiName = "MLModel.CreatedDate"
     label = "Created Date"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.Lookup CreatedById {
     apiName = "MLModel.CreatedById"
     relationshipName = "CreatedBy"
     label = "Created By ID"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.DateTime LastModifiedDate {
     apiName = "MLModel.LastModifiedDate"
     label = "Last Modified Date"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.Lookup LastModifiedById {
     apiName = "MLModel.LastModifiedById"
     relationshipName = "LastModifiedBy"
     label = "Last Modified By ID"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.DateTime SystemModstamp {
     apiName = "MLModel.SystemModstamp"
     label = "System Modstamp"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.Lookup PredictionDefinitionId {
     apiName = "MLModel.PredictionDefinitionId"
     relationshipName = "PredictionDefinition"
     label = "ML Prediction Definition ID"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.Picklist ApprovalStatus {
     apiName = "MLModel.ApprovalStatus"
     restricted = true
     label = "Approval Status"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.Picklist ScoringStatus {
     apiName = "MLModel.ScoringStatus"
@@ -61,22 +88,34 @@ type salesforce.MLModel {
     _required = true
     label = "Scoring Status"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.Picklist ModelType {
     apiName = "MLModel.ModelType"
     restricted = true
     label = "Model Type"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.DateTime TrainingStartTime {
     apiName = "MLModel.TrainingStartTime"
     label = "Training Start Time"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.DateTime TrainingEndTime {
     apiName = "MLModel.TrainingEndTime"
     label = "Training End Time"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.Text Dataset {
     apiName = "MLModel.Dataset"
@@ -85,11 +124,17 @@ type salesforce.MLModel {
     unique = false
     caseSensitive = false
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.Lookup RecommendationDefinitionId {
     apiName = "MLModel.RecommendationDefinitionId"
     relationshipName = "RecommendationDefinition"
     label = "ML Recommendation Definition ID"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
 }

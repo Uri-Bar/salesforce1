@@ -4,21 +4,33 @@ type salesforce.WorkStep {
     inlineHelpText = "Find and select the associated global action, quick action, screen flow, or mobile flow."
     restricted = true
     label = "Action Definition"
+    createable = true
+    updateable = true
+    queryable = true
   }
   salesforce.Picklist ActionType {
     apiName = "WorkStep.ActionType"
     restricted = true
     label = "Action Type"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.LongTextArea Description {
     apiName = "WorkStep.Description"
     length = 500
     label = "Description"
+    createable = true
+    updateable = true
+    queryable = true
   }
   salesforce.DateTime EndTime {
     apiName = "WorkStep.EndTime"
     label = "End Time"
+    createable = true
+    updateable = true
+    queryable = true
   }
   salesforce.Number ExecutionOrder {
     apiName = "WorkStep.ExecutionOrder"
@@ -26,6 +38,9 @@ type salesforce.WorkStep {
     precision = 9
     scale = 0
     unique = false
+    createable = true
+    updateable = true
+    queryable = true
   }
   salesforce.Text Name {
     apiName = "WorkStep.Name"
@@ -34,6 +49,9 @@ type salesforce.WorkStep {
     label = "Name"
     unique = false
     caseSensitive = false
+    createable = true
+    updateable = true
+    queryable = true
   }
   salesforce.Lookup ParentRecordId {
     apiName = "WorkStep.ParentRecordId"
@@ -41,6 +59,9 @@ type salesforce.WorkStep {
     _required = true
     label = "Parent Record ID"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.Text ParentRecordType {
     apiName = "WorkStep.ParentRecordType"
@@ -49,38 +70,59 @@ type salesforce.WorkStep {
     unique = false
     caseSensitive = false
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.Lookup PausedFlowInterviewId {
     apiName = "WorkStep.PausedFlowInterviewId"
     relationshipName = "PausedFlowInterview"
     label = "Paused Flow Interview ID"
+    createable = true
+    updateable = true
+    queryable = true
   }
   salesforce.DateTime StartTime {
     apiName = "WorkStep.StartTime"
     label = "Start Time"
+    createable = true
+    updateable = true
+    queryable = true
   }
   salesforce.Picklist Status {
     apiName = "WorkStep.Status"
     restricted = false
     label = "Status"
+    createable = true
+    updateable = true
+    queryable = true
   }
   salesforce.Picklist StatusCategory {
     apiName = "WorkStep.StatusCategory"
     restricted = true
     label = "Status Category"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.Lookup WorkOrderId {
     apiName = "WorkStep.WorkOrderId"
     relationshipName = "WorkOrder"
     label = "Work Order ID"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.Lookup WorkOrderLineItemId {
     apiName = "WorkStep.WorkOrderLineItemId"
     relationshipName = "WorkOrderLineItem"
     label = "Work Order Line Item ID"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.Number WorkPlanExecutionOrder {
     apiName = "WorkStep.WorkPlanExecutionOrder"
@@ -89,12 +131,18 @@ type salesforce.WorkStep {
     scale = 0
     unique = false
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.MasterDetail WorkPlanId {
     apiName = "WorkStep.WorkPlanId"
     relationshipName = "WorkPlan"
     _required = true
     label = "Work Plan ID"
+    createable = true
+    updateable = false
+    queryable = true
   }
   serviceid Id {
     apiName = "WorkStep.Id"
@@ -107,32 +155,50 @@ type salesforce.WorkStep {
     defaultValue = false
     label = "Deleted"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.DateTime CreatedDate {
     apiName = "WorkStep.CreatedDate"
     label = "Created Date"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.Lookup CreatedById {
     apiName = "WorkStep.CreatedById"
     relationshipName = "CreatedBy"
     label = "Created By ID"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.DateTime LastModifiedDate {
     apiName = "WorkStep.LastModifiedDate"
     label = "Last Modified Date"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.Lookup LastModifiedById {
     apiName = "WorkStep.LastModifiedById"
     relationshipName = "LastModifiedBy"
     label = "Last Modified By ID"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
   salesforce.DateTime SystemModstamp {
     apiName = "WorkStep.SystemModstamp"
     label = "System Modstamp"
     _hidden_value = true
+    createable = false
+    updateable = false
+    queryable = true
   }
 }
