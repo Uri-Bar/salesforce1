@@ -42,7 +42,7 @@ salesforce.Flow ref {
         {
           field = salesforce.Case.field.PotentialLiability__c
           value = {
-            elementReference = "$Record.Id"
+            elementReference = salesforce.Case.field.Id
           }
         },
         {
