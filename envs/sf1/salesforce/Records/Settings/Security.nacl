@@ -15,8 +15,8 @@ salesforce.SecuritySettings {
     complexity = "AlphaNumeric"
     expiration = "NinetyDays"
     historyRestriction = "3"
-    lockoutInterval = "FifteenMinutes"
-    maxLoginAttempts = "TenAttempts"
+    lockoutInterval = "ThirtyMinutes"
+    maxLoginAttempts = "FiveAttempts"
     minimumPasswordLength = "8"
     minimumPasswordLifetime = false
     obscureSecretAnswer = false
