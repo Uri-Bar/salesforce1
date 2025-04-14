@@ -10,9 +10,6 @@ type salesforce.CartRelatedItem {
     defaultValue = false
     label = "Deleted"
     _hidden_value = true
-    createable = false
-    updateable = false
-    queryable = true
   }
   salesforce.Text Name {
     apiName = "CartRelatedItem.Name"
@@ -21,76 +18,49 @@ type salesforce.CartRelatedItem {
     label = "Name"
     unique = false
     caseSensitive = false
-    createable = true
-    updateable = true
-    queryable = true
   }
   salesforce.DateTime CreatedDate {
     apiName = "CartRelatedItem.CreatedDate"
     label = "Created Date"
     _hidden_value = true
-    createable = false
-    updateable = false
-    queryable = true
   }
   salesforce.Lookup CreatedById {
     apiName = "CartRelatedItem.CreatedById"
     relationshipName = "CreatedBy"
     label = "Created By ID"
     _hidden_value = true
-    createable = false
-    updateable = false
-    queryable = true
   }
   salesforce.DateTime LastModifiedDate {
     apiName = "CartRelatedItem.LastModifiedDate"
     label = "Last Modified Date"
     _hidden_value = true
-    createable = false
-    updateable = false
-    queryable = true
   }
   salesforce.Lookup LastModifiedById {
     apiName = "CartRelatedItem.LastModifiedById"
     relationshipName = "LastModifiedBy"
     label = "Last Modified By ID"
     _hidden_value = true
-    createable = false
-    updateable = false
-    queryable = true
   }
   salesforce.DateTime SystemModstamp {
     apiName = "CartRelatedItem.SystemModstamp"
     label = "System Modstamp"
     _hidden_value = true
-    createable = false
-    updateable = false
-    queryable = true
   }
   salesforce.Lookup ParentCartItemId {
     apiName = "CartRelatedItem.ParentCartItemId"
     relationshipName = "ParentCartItem"
     _required = true
     label = "Cart Item ID"
-    createable = true
-    updateable = false
-    queryable = true
   }
   salesforce.Lookup ChildCartItemId {
     apiName = "CartRelatedItem.ChildCartItemId"
     relationshipName = "ChildCartItem"
     _required = true
     label = "Cart Item ID"
-    createable = true
-    updateable = true
-    queryable = true
   }
   salesforce.Picklist RelationshipType {
     apiName = "CartRelatedItem.RelationshipType"
     restricted = true
     label = "Type of relationship between parent and child"
-    createable = true
-    updateable = true
-    queryable = true
   }
 }

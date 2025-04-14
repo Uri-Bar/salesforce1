@@ -4,33 +4,21 @@ type salesforce.WorkStepTemplate {
     inlineHelpText = "Find and select the associated global action, quick action, screen flow, or mobile flow."
     restricted = true
     label = "Action Definition"
-    createable = true
-    updateable = true
-    queryable = true
   }
   salesforce.Picklist ActionType {
     apiName = "WorkStepTemplate.ActionType"
     restricted = true
     label = "Action Type"
     _hidden_value = true
-    createable = false
-    updateable = false
-    queryable = true
   }
   salesforce.LongTextArea Description {
     apiName = "WorkStepTemplate.Description"
     length = 500
     label = "Description"
-    createable = true
-    updateable = true
-    queryable = true
   }
   salesforce.Checkbox IsActive {
     apiName = "WorkStepTemplate.IsActive"
     label = "Active"
-    createable = true
-    updateable = true
-    queryable = true
   }
   salesforce.Text Name {
     apiName = "WorkStepTemplate.Name"
@@ -39,18 +27,12 @@ type salesforce.WorkStepTemplate {
     label = "Name"
     unique = false
     caseSensitive = false
-    createable = true
-    updateable = true
-    queryable = true
   }
   salesforce.Lookup OwnerId {
     apiName = "WorkStepTemplate.OwnerId"
     relationshipName = "Owner"
     label = "Owner ID"
     _hidden_value = true
-    createable = true
-    updateable = true
-    queryable = true
   }
   serviceid Id {
     apiName = "WorkStepTemplate.Id"
@@ -63,50 +45,32 @@ type salesforce.WorkStepTemplate {
     defaultValue = false
     label = "Deleted"
     _hidden_value = true
-    createable = false
-    updateable = false
-    queryable = true
   }
   salesforce.DateTime CreatedDate {
     apiName = "WorkStepTemplate.CreatedDate"
     label = "Created Date"
     _hidden_value = true
-    createable = false
-    updateable = false
-    queryable = true
   }
   salesforce.Lookup CreatedById {
     apiName = "WorkStepTemplate.CreatedById"
     relationshipName = "CreatedBy"
     label = "Created By ID"
     _hidden_value = true
-    createable = false
-    updateable = false
-    queryable = true
   }
   salesforce.DateTime LastModifiedDate {
     apiName = "WorkStepTemplate.LastModifiedDate"
     label = "Last Modified Date"
     _hidden_value = true
-    createable = false
-    updateable = false
-    queryable = true
   }
   salesforce.Lookup LastModifiedById {
     apiName = "WorkStepTemplate.LastModifiedById"
     relationshipName = "LastModifiedBy"
     label = "Last Modified By ID"
     _hidden_value = true
-    createable = false
-    updateable = false
-    queryable = true
   }
   salesforce.DateTime SystemModstamp {
     apiName = "WorkStepTemplate.SystemModstamp"
     label = "System Modstamp"
     _hidden_value = true
-    createable = false
-    updateable = false
-    queryable = true
   }
 }

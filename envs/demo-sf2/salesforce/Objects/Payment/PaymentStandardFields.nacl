@@ -3,9 +3,6 @@ type salesforce.Payment {
     apiName = "Payment.AccountId"
     relationshipName = "Account"
     label = "Account ID"
-    createable = true
-    updateable = true
-    queryable = true
   }
   salesforce.Currency Amount {
     apiName = "Payment.Amount"
@@ -13,9 +10,6 @@ type salesforce.Payment {
     label = "Amount"
     scale = 2
     precision = 18
-    createable = true
-    updateable = true
-    queryable = true
   }
   salesforce.Currency Balance {
     apiName = "Payment.Balance"
@@ -23,30 +17,18 @@ type salesforce.Payment {
     scale = 2
     precision = 18
     _hidden_value = true
-    createable = false
-    updateable = false
-    queryable = true
   }
   salesforce.DateTime CancellationDate {
     apiName = "Payment.CancellationDate"
     label = "Cancellation Date"
-    createable = true
-    updateable = true
-    queryable = true
   }
   salesforce.DateTime CancellationEffectiveDate {
     apiName = "Payment.CancellationEffectiveDate"
     label = "Cancellation Effective Date"
-    createable = true
-    updateable = true
-    queryable = true
   }
   salesforce.DateTime CancellationGatewayDate {
     apiName = "Payment.CancellationGatewayDate"
     label = "Cancellation Gateway Date"
-    createable = true
-    updateable = true
-    queryable = true
   }
   salesforce.Text CancellationGatewayRefNumber {
     apiName = "Payment.CancellationGatewayRefNumber"
@@ -54,9 +36,6 @@ type salesforce.Payment {
     label = "Cancellation Gateway Reference Number"
     unique = false
     caseSensitive = false
-    createable = true
-    updateable = true
-    queryable = true
   }
   salesforce.Text CancellationGatewayResultCode {
     apiName = "Payment.CancellationGatewayResultCode"
@@ -64,9 +43,6 @@ type salesforce.Payment {
     label = "Cancellation Gateway Result Code"
     unique = false
     caseSensitive = false
-    createable = true
-    updateable = true
-    queryable = true
   }
   salesforce.Text CancellationSfResultCode {
     apiName = "Payment.CancellationSfResultCode"
@@ -74,54 +50,33 @@ type salesforce.Payment {
     label = "Cancellation Salesforce Result Code"
     unique = false
     caseSensitive = false
-    createable = true
-    updateable = true
-    queryable = true
   }
   salesforce.LongTextArea Comments {
     apiName = "Payment.Comments"
     length = 1000
     label = "Comments"
-    createable = true
-    updateable = true
-    queryable = true
   }
   salesforce.DateTime Date {
     apiName = "Payment.Date"
     label = "Date"
-    createable = true
-    updateable = true
-    queryable = true
   }
   salesforce.DateTime EffectiveDate {
     apiName = "Payment.EffectiveDate"
     label = "Effective Date"
-    createable = true
-    updateable = true
-    queryable = true
   }
   salesforce.Email Email {
     apiName = "Payment.Email"
     label = "Audit Email"
     unique = false
-    createable = true
-    updateable = true
-    queryable = true
   }
   salesforce.DateTime GatewayDate {
     apiName = "Payment.GatewayDate"
     label = "Gateway Date"
-    createable = true
-    updateable = true
-    queryable = true
   }
   salesforce.LongTextArea GatewayRefDetails {
     apiName = "Payment.GatewayRefDetails"
     length = 1000
     label = "Gateway Reference Details"
-    createable = true
-    updateable = true
-    queryable = true
   }
   salesforce.Text GatewayRefNumber {
     apiName = "Payment.GatewayRefNumber"
@@ -129,9 +84,6 @@ type salesforce.Payment {
     label = "Gateway Reference Number"
     unique = false
     caseSensitive = false
-    createable = true
-    updateable = true
-    queryable = true
   }
   salesforce.Text GatewayResultCode {
     apiName = "Payment.GatewayResultCode"
@@ -139,9 +91,6 @@ type salesforce.Payment {
     label = "Gateway Result Code"
     unique = false
     caseSensitive = false
-    createable = true
-    updateable = true
-    queryable = true
   }
   salesforce.Text GatewayResultCodeDescription {
     apiName = "Payment.GatewayResultCodeDescription"
@@ -149,17 +98,11 @@ type salesforce.Payment {
     label = "Gateway Result Code Description"
     unique = false
     caseSensitive = false
-    createable = true
-    updateable = true
-    queryable = true
   }
   salesforce.Summary ImpactAmount {
     apiName = "Payment.ImpactAmount"
     label = "Impact Amount"
     _hidden_value = true
-    createable = false
-    updateable = false
-    queryable = true
   }
   salesforce.Text IpAddress {
     apiName = "Payment.IpAddress"
@@ -167,9 +110,6 @@ type salesforce.Payment {
     label = "IP Address"
     unique = false
     caseSensitive = false
-    createable = true
-    updateable = true
-    queryable = true
   }
   salesforce.Text MacAddress {
     apiName = "Payment.MacAddress"
@@ -177,9 +117,6 @@ type salesforce.Payment {
     label = "MAC Address"
     unique = false
     caseSensitive = false
-    createable = true
-    updateable = true
-    queryable = true
   }
   salesforce.Currency NetApplied {
     apiName = "Payment.NetApplied"
@@ -187,82 +124,52 @@ type salesforce.Payment {
     scale = 2
     precision = 18
     _hidden_value = true
-    createable = false
-    updateable = false
-    queryable = true
   }
   salesforce.Summary NetRefundApplied {
     apiName = "Payment.NetRefundApplied"
     label = "Net Refund Applied"
     _hidden_value = true
-    createable = false
-    updateable = false
-    queryable = true
   }
   salesforce.Lookup PaymentAuthorizationId {
     apiName = "Payment.PaymentAuthorizationId"
     relationshipName = "PaymentAuthorization"
     label = "Payment Authorization ID"
-    createable = true
-    updateable = true
-    queryable = true
   }
   salesforce.Lookup PaymentGatewayId {
     apiName = "Payment.PaymentGatewayId"
     relationshipName = "PaymentGateway"
     label = "Payment Gateway ID"
-    createable = true
-    updateable = true
-    queryable = true
   }
   salesforce.Lookup PaymentGroupId {
     apiName = "Payment.PaymentGroupId"
     relationshipName = "PaymentGroup"
     label = "Payment Group ID"
-    createable = true
-    updateable = true
-    queryable = true
   }
   salesforce.Lookup PaymentMethodId {
     apiName = "Payment.PaymentMethodId"
     relationshipName = "PaymentMethod"
     label = "Payment Method ID"
-    createable = true
-    updateable = true
-    queryable = true
   }
   salesforce.Phone Phone {
     apiName = "Payment.Phone"
     label = "Phone"
-    createable = true
-    updateable = true
-    queryable = true
   }
   salesforce.Picklist ProcessingMode {
     apiName = "Payment.ProcessingMode"
     restricted = true
     _required = true
     label = "Processing Mode"
-    createable = true
-    updateable = false
-    queryable = true
   }
   salesforce.Picklist SfResultCode {
     apiName = "Payment.SfResultCode"
     restricted = true
     label = "Salesforce Result Code"
-    createable = true
-    updateable = true
-    queryable = true
   }
   salesforce.Picklist Status {
     apiName = "Payment.Status"
     restricted = true
     _required = true
     label = "Status"
-    createable = true
-    updateable = true
-    queryable = true
   }
   salesforce.Currency TotalApplied {
     apiName = "Payment.TotalApplied"
@@ -270,25 +177,16 @@ type salesforce.Payment {
     scale = 2
     precision = 18
     _hidden_value = true
-    createable = false
-    updateable = false
-    queryable = true
   }
   salesforce.Summary TotalRefundApplied {
     apiName = "Payment.TotalRefundApplied"
     label = "Total Refund Applied"
     _hidden_value = true
-    createable = false
-    updateable = false
-    queryable = true
   }
   salesforce.Summary TotalRefundUnapplied {
     apiName = "Payment.TotalRefundUnapplied"
     label = "Total Refund Unapplied"
     _hidden_value = true
-    createable = false
-    updateable = false
-    queryable = true
   }
   salesforce.Currency TotalUnapplied {
     apiName = "Payment.TotalUnapplied"
@@ -296,18 +194,12 @@ type salesforce.Payment {
     scale = 2
     precision = 18
     _hidden_value = true
-    createable = false
-    updateable = false
-    queryable = true
   }
   salesforce.Picklist Type {
     apiName = "Payment.Type"
     restricted = true
     _required = true
     label = "Type"
-    createable = true
-    updateable = true
-    queryable = true
   }
   serviceid Id {
     apiName = "Payment.Id"
@@ -320,68 +212,44 @@ type salesforce.Payment {
     defaultValue = false
     label = "Deleted"
     _hidden_value = true
-    createable = false
-    updateable = false
-    queryable = true
   }
   salesforce.AutoNumber PaymentNumber {
     apiName = "Payment.PaymentNumber"
     label = "Payment Number"
     _hidden_value = true
-    createable = false
-    updateable = false
-    queryable = true
   }
   salesforce.DateTime CreatedDate {
     apiName = "Payment.CreatedDate"
     label = "Created Date"
     _hidden_value = true
-    createable = false
-    updateable = false
-    queryable = true
   }
   salesforce.Lookup CreatedById {
     apiName = "Payment.CreatedById"
     relationshipName = "CreatedBy"
     label = "Created By ID"
     _hidden_value = true
-    createable = false
-    updateable = false
-    queryable = true
   }
   salesforce.DateTime LastModifiedDate {
     apiName = "Payment.LastModifiedDate"
     label = "Last Modified Date"
     _hidden_value = true
-    createable = false
-    updateable = false
-    queryable = true
   }
   salesforce.Lookup LastModifiedById {
     apiName = "Payment.LastModifiedById"
     relationshipName = "LastModifiedBy"
     label = "Last Modified By ID"
     _hidden_value = true
-    createable = false
-    updateable = false
-    queryable = true
   }
   salesforce.DateTime SystemModstamp {
     apiName = "Payment.SystemModstamp"
     label = "System Modstamp"
     _hidden_value = true
-    createable = false
-    updateable = false
-    queryable = true
   }
   salesforce.LongTextArea ClientContext {
     apiName = "Payment.ClientContext"
     length = 2000
     label = "Client Context"
     _hidden_value = true
-    createable = false
-    updateable = false
-    queryable = true
   }
   salesforce.Text PaymentIntentGuid {
     apiName = "Payment.PaymentIntentGuid"
@@ -389,8 +257,5 @@ type salesforce.Payment {
     label = "Payment Intent Guid"
     unique = false
     caseSensitive = false
-    createable = true
-    updateable = false
-    queryable = true
   }
 }

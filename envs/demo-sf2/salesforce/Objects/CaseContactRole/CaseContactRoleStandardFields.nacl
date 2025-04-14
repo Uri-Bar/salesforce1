@@ -4,9 +4,6 @@ type salesforce.CaseContactRole {
     restricted = false
     label = "Role"
     valueSetName = salesforce.StandardValueSet.instance.CaseContactRole
-    createable = true
-    updateable = true
-    queryable = true
   }
   serviceid Id {
     apiName = "CaseContactRole.Id"
@@ -19,68 +16,44 @@ type salesforce.CaseContactRole {
     relationshipName = "Cases"
     _required = true
     label = "Case ID"
-    createable = true
-    updateable = false
-    queryable = true
   }
   salesforce.Lookup ContactId {
     apiName = "CaseContactRole.ContactId"
     relationshipName = "Contact"
     _required = true
     label = "Contact ID"
-    createable = true
-    updateable = true
-    queryable = true
   }
   salesforce.DateTime CreatedDate {
     apiName = "CaseContactRole.CreatedDate"
     label = "Created Date"
     _hidden_value = true
-    createable = false
-    updateable = false
-    queryable = true
   }
   salesforce.Lookup CreatedById {
     apiName = "CaseContactRole.CreatedById"
     relationshipName = "CreatedBy"
     label = "Created By ID"
     _hidden_value = true
-    createable = false
-    updateable = false
-    queryable = true
   }
   salesforce.DateTime LastModifiedDate {
     apiName = "CaseContactRole.LastModifiedDate"
     label = "Last Modified Date"
     _hidden_value = true
-    createable = false
-    updateable = false
-    queryable = true
   }
   salesforce.Lookup LastModifiedById {
     apiName = "CaseContactRole.LastModifiedById"
     relationshipName = "LastModifiedBy"
     label = "Last Modified By ID"
     _hidden_value = true
-    createable = false
-    updateable = false
-    queryable = true
   }
   salesforce.DateTime SystemModstamp {
     apiName = "CaseContactRole.SystemModstamp"
     label = "System Modstamp"
     _hidden_value = true
-    createable = false
-    updateable = false
-    queryable = true
   }
   salesforce.Checkbox IsDeleted {
     apiName = "CaseContactRole.IsDeleted"
     defaultValue = false
     label = "Deleted"
     _hidden_value = true
-    createable = false
-    updateable = false
-    queryable = true
   }
 }

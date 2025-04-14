@@ -4,18 +4,12 @@ type salesforce.EntitlementContact {
     relationshipName = "Contact"
     _required = true
     label = "Contact ID"
-    createable = true
-    updateable = false
-    queryable = true
   }
   salesforce.MasterDetail EntitlementId {
     apiName = "EntitlementContact.EntitlementId"
     relationshipName = "Entitlement"
     _required = true
     label = "Entitlement ID"
-    createable = true
-    updateable = false
-    queryable = true
   }
   serviceid Id {
     apiName = "EntitlementContact.Id"
@@ -28,58 +22,37 @@ type salesforce.EntitlementContact {
     defaultValue = false
     label = "Deleted"
     _hidden_value = true
-    createable = false
-    updateable = false
-    queryable = true
   }
   salesforce.AutoNumber Name {
     apiName = "EntitlementContact.Name"
     label = "Entitlement Contact"
     _hidden_value = true
-    createable = false
-    updateable = false
-    queryable = true
   }
   salesforce.DateTime CreatedDate {
     apiName = "EntitlementContact.CreatedDate"
     label = "Created Date"
     _hidden_value = true
-    createable = false
-    updateable = false
-    queryable = true
   }
   salesforce.Lookup CreatedById {
     apiName = "EntitlementContact.CreatedById"
     relationshipName = "CreatedBy"
     label = "Created By ID"
     _hidden_value = true
-    createable = false
-    updateable = false
-    queryable = true
   }
   salesforce.DateTime LastModifiedDate {
     apiName = "EntitlementContact.LastModifiedDate"
     label = "Last Modified Date"
     _hidden_value = true
-    createable = false
-    updateable = false
-    queryable = true
   }
   salesforce.Lookup LastModifiedById {
     apiName = "EntitlementContact.LastModifiedById"
     relationshipName = "LastModifiedBy"
     label = "Last Modified By ID"
     _hidden_value = true
-    createable = false
-    updateable = false
-    queryable = true
   }
   salesforce.DateTime SystemModstamp {
     apiName = "EntitlementContact.SystemModstamp"
     label = "System Modstamp"
     _hidden_value = true
-    createable = false
-    updateable = false
-    queryable = true
   }
 }

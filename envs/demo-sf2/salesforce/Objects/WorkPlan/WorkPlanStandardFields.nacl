@@ -3,9 +3,6 @@ type salesforce.WorkPlan {
     apiName = "WorkPlan.Description"
     length = 32000
     label = "Description"
-    createable = true
-    updateable = true
-    queryable = true
   }
   salesforce.Number ExecutionOrder {
     apiName = "WorkPlan.ExecutionOrder"
@@ -13,9 +10,6 @@ type salesforce.WorkPlan {
     precision = 9
     scale = 0
     unique = false
-    createable = true
-    updateable = true
-    queryable = true
   }
   salesforce.Text Name {
     apiName = "WorkPlan.Name"
@@ -24,27 +18,18 @@ type salesforce.WorkPlan {
     label = "Name"
     unique = false
     caseSensitive = false
-    createable = true
-    updateable = true
-    queryable = true
   }
   salesforce.Lookup OwnerId {
     apiName = "WorkPlan.OwnerId"
     relationshipName = "Owner"
     label = "Owner ID"
     _hidden_value = true
-    createable = true
-    updateable = true
-    queryable = true
   }
   salesforce.Lookup ParentRecordId {
     apiName = "WorkPlan.ParentRecordId"
     relationshipName = "ParentRecord"
     _required = true
     label = "Parent Record ID"
-    createable = true
-    updateable = false
-    queryable = true
   }
   salesforce.Text ParentRecordType {
     apiName = "WorkPlan.ParentRecordType"
@@ -53,34 +38,22 @@ type salesforce.WorkPlan {
     unique = false
     caseSensitive = false
     _hidden_value = true
-    createable = false
-    updateable = false
-    queryable = true
   }
   salesforce.Lookup WorkOrderId {
     apiName = "WorkPlan.WorkOrderId"
     relationshipName = "WorkOrder"
     label = "Work Order ID"
-    createable = true
-    updateable = true
-    queryable = true
   }
   salesforce.Lookup WorkOrderLineItemId {
     apiName = "WorkPlan.WorkOrderLineItemId"
     relationshipName = "WorkOrderLineItem"
     label = "Work Order Line Item ID"
-    createable = true
-    updateable = true
-    queryable = true
   }
   salesforce.Lookup WorkPlanTemplateId {
     apiName = "WorkPlan.WorkPlanTemplateId"
     relationshipName = "WorkPlanTemplate"
     label = "Work Plan Template ID"
     _hidden_value = true
-    createable = false
-    updateable = false
-    queryable = true
   }
   serviceid Id {
     apiName = "WorkPlan.Id"
@@ -93,50 +66,32 @@ type salesforce.WorkPlan {
     defaultValue = false
     label = "Deleted"
     _hidden_value = true
-    createable = false
-    updateable = false
-    queryable = true
   }
   salesforce.DateTime CreatedDate {
     apiName = "WorkPlan.CreatedDate"
     label = "Created Date"
     _hidden_value = true
-    createable = false
-    updateable = false
-    queryable = true
   }
   salesforce.Lookup CreatedById {
     apiName = "WorkPlan.CreatedById"
     relationshipName = "CreatedBy"
     label = "Created By ID"
     _hidden_value = true
-    createable = false
-    updateable = false
-    queryable = true
   }
   salesforce.DateTime LastModifiedDate {
     apiName = "WorkPlan.LastModifiedDate"
     label = "Last Modified Date"
     _hidden_value = true
-    createable = false
-    updateable = false
-    queryable = true
   }
   salesforce.Lookup LastModifiedById {
     apiName = "WorkPlan.LastModifiedById"
     relationshipName = "LastModifiedBy"
     label = "Last Modified By ID"
     _hidden_value = true
-    createable = false
-    updateable = false
-    queryable = true
   }
   salesforce.DateTime SystemModstamp {
     apiName = "WorkPlan.SystemModstamp"
     label = "System Modstamp"
     _hidden_value = true
-    createable = false
-    updateable = false
-    queryable = true
   }
 }

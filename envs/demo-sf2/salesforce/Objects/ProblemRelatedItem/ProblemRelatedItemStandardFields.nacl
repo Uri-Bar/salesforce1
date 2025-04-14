@@ -4,52 +4,34 @@ type salesforce.ProblemRelatedItem {
     relationshipName = "Asset"
     _required = true
     label = "Asset ID"
-    createable = true
-    updateable = false
-    queryable = true
   }
   salesforce.LongTextArea Comment {
     apiName = "ProblemRelatedItem.Comment"
     length = 32000
     label = "Comment"
-    createable = true
-    updateable = true
-    queryable = true
   }
   salesforce.Picklist ImpactLevel {
     apiName = "ProblemRelatedItem.ImpactLevel"
     restricted = false
     label = "Impact Level"
     valueSetName = salesforce.StandardValueSet.instance.CasePriority
-    createable = true
-    updateable = true
-    queryable = true
   }
   salesforce.Picklist ImpactType {
     apiName = "ProblemRelatedItem.ImpactType"
     restricted = false
     _required = true
     label = "Impact Type"
-    createable = true
-    updateable = true
-    queryable = true
   }
   salesforce.AutoNumber Name {
     apiName = "ProblemRelatedItem.Name"
     label = "Problem Related Item Number"
     _hidden_value = true
-    createable = false
-    updateable = false
-    queryable = true
   }
   salesforce.MasterDetail ProblemId {
     apiName = "ProblemRelatedItem.ProblemId"
     relationshipName = "Problem"
     _required = true
     label = "Problem ID"
-    createable = true
-    updateable = false
-    queryable = true
   }
   serviceid Id {
     apiName = "ProblemRelatedItem.Id"
@@ -62,50 +44,32 @@ type salesforce.ProblemRelatedItem {
     defaultValue = false
     label = "Deleted"
     _hidden_value = true
-    createable = false
-    updateable = false
-    queryable = true
   }
   salesforce.DateTime CreatedDate {
     apiName = "ProblemRelatedItem.CreatedDate"
     label = "Created Date"
     _hidden_value = true
-    createable = false
-    updateable = false
-    queryable = true
   }
   salesforce.Lookup CreatedById {
     apiName = "ProblemRelatedItem.CreatedById"
     relationshipName = "CreatedBy"
     label = "Created By ID"
     _hidden_value = true
-    createable = false
-    updateable = false
-    queryable = true
   }
   salesforce.DateTime LastModifiedDate {
     apiName = "ProblemRelatedItem.LastModifiedDate"
     label = "Last Modified Date"
     _hidden_value = true
-    createable = false
-    updateable = false
-    queryable = true
   }
   salesforce.Lookup LastModifiedById {
     apiName = "ProblemRelatedItem.LastModifiedById"
     relationshipName = "LastModifiedBy"
     label = "Last Modified By ID"
     _hidden_value = true
-    createable = false
-    updateable = false
-    queryable = true
   }
   salesforce.DateTime SystemModstamp {
     apiName = "ProblemRelatedItem.SystemModstamp"
     label = "System Modstamp"
     _hidden_value = true
-    createable = false
-    updateable = false
-    queryable = true
   }
 }

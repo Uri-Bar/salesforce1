@@ -10,9 +10,6 @@ type salesforce.CartValidationOutput {
     defaultValue = false
     label = "Deleted"
     _hidden_value = true
-    createable = false
-    updateable = false
-    queryable = true
   }
   salesforce.Text Name {
     apiName = "CartValidationOutput.Name"
@@ -21,86 +18,56 @@ type salesforce.CartValidationOutput {
     label = "Cart Validation Output"
     unique = false
     caseSensitive = false
-    createable = true
-    updateable = true
-    queryable = true
   }
   salesforce.DateTime CreatedDate {
     apiName = "CartValidationOutput.CreatedDate"
     label = "Created Date"
     _hidden_value = true
-    createable = false
-    updateable = false
-    queryable = true
   }
   salesforce.Lookup CreatedById {
     apiName = "CartValidationOutput.CreatedById"
     relationshipName = "CreatedBy"
     label = "Created By ID"
     _hidden_value = true
-    createable = false
-    updateable = false
-    queryable = true
   }
   salesforce.DateTime LastModifiedDate {
     apiName = "CartValidationOutput.LastModifiedDate"
     label = "Last Modified Date"
     _hidden_value = true
-    createable = false
-    updateable = false
-    queryable = true
   }
   salesforce.Lookup LastModifiedById {
     apiName = "CartValidationOutput.LastModifiedById"
     relationshipName = "LastModifiedBy"
     label = "Last Modified By ID"
     _hidden_value = true
-    createable = false
-    updateable = false
-    queryable = true
   }
   salesforce.DateTime SystemModstamp {
     apiName = "CartValidationOutput.SystemModstamp"
     label = "System Modstamp"
     _hidden_value = true
-    createable = false
-    updateable = false
-    queryable = true
   }
   salesforce.Lookup RelatedEntityId {
     apiName = "CartValidationOutput.RelatedEntityId"
     relationshipName = "RelatedEntity"
     _required = true
     label = "Cart Delivery Group ID or Cart Item ID or Web Cart ID"
-    createable = true
-    updateable = true
-    queryable = true
   }
   salesforce.Lookup BackgroundOperationId {
     apiName = "CartValidationOutput.BackgroundOperationId"
     relationshipName = "BackgroundOperation"
     label = "Background Operation ID"
-    createable = true
-    updateable = true
-    queryable = true
   }
   salesforce.Picklist Type {
     apiName = "CartValidationOutput.Type"
     restricted = true
     _required = true
     label = "Type"
-    createable = true
-    updateable = true
-    queryable = true
   }
   salesforce.Picklist Level {
     apiName = "CartValidationOutput.Level"
     restricted = true
     _required = true
     label = "Level"
-    createable = true
-    updateable = true
-    queryable = true
   }
   salesforce.Text Message {
     apiName = "CartValidationOutput.Message"
@@ -108,17 +75,11 @@ type salesforce.CartValidationOutput {
     label = "Message"
     unique = false
     caseSensitive = false
-    createable = true
-    updateable = true
-    queryable = true
   }
   salesforce.Checkbox IsDismissed {
     apiName = "CartValidationOutput.IsDismissed"
     defaultValue = false
     label = "Is Dismissed"
-    createable = true
-    updateable = true
-    queryable = true
   }
   salesforce.Text RelatedEntityPrefix {
     apiName = "CartValidationOutput.RelatedEntityPrefix"
@@ -127,17 +88,11 @@ type salesforce.CartValidationOutput {
     unique = false
     caseSensitive = false
     _hidden_value = true
-    createable = false
-    updateable = false
-    queryable = true
   }
   salesforce.MasterDetail CartId {
     apiName = "CartValidationOutput.CartId"
     relationshipName = "Cart"
     _required = true
     label = "Cart ID"
-    createable = true
-    updateable = false
-    queryable = true
   }
 }

@@ -4,18 +4,12 @@ type salesforce.ScorecardAssociation {
     relationshipName = "Scorecard"
     _required = true
     label = "Scorecard ID"
-    createable = true
-    updateable = false
-    queryable = true
   }
   salesforce.Lookup TargetEntityId {
     apiName = "ScorecardAssociation.TargetEntityId"
     relationshipName = "TargetEntity"
     _required = true
     label = "Target Entity ID"
-    createable = true
-    updateable = true
-    queryable = true
   }
   serviceid Id {
     apiName = "ScorecardAssociation.Id"
@@ -28,58 +22,37 @@ type salesforce.ScorecardAssociation {
     defaultValue = false
     label = "Deleted"
     _hidden_value = true
-    createable = false
-    updateable = false
-    queryable = true
   }
   salesforce.AutoNumber Name {
     apiName = "ScorecardAssociation.Name"
     label = "Name"
     _hidden_value = true
-    createable = false
-    updateable = false
-    queryable = true
   }
   salesforce.DateTime CreatedDate {
     apiName = "ScorecardAssociation.CreatedDate"
     label = "Created Date"
     _hidden_value = true
-    createable = false
-    updateable = false
-    queryable = true
   }
   salesforce.Lookup CreatedById {
     apiName = "ScorecardAssociation.CreatedById"
     relationshipName = "CreatedBy"
     label = "Created By ID"
     _hidden_value = true
-    createable = false
-    updateable = false
-    queryable = true
   }
   salesforce.DateTime LastModifiedDate {
     apiName = "ScorecardAssociation.LastModifiedDate"
     label = "Last Modified Date"
     _hidden_value = true
-    createable = false
-    updateable = false
-    queryable = true
   }
   salesforce.Lookup LastModifiedById {
     apiName = "ScorecardAssociation.LastModifiedById"
     relationshipName = "LastModifiedBy"
     label = "Last Modified By ID"
     _hidden_value = true
-    createable = false
-    updateable = false
-    queryable = true
   }
   salesforce.DateTime SystemModstamp {
     apiName = "ScorecardAssociation.SystemModstamp"
     label = "System Modstamp"
     _hidden_value = true
-    createable = false
-    updateable = false
-    queryable = true
   }
 }

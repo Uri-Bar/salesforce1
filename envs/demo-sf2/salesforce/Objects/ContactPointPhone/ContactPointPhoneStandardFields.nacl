@@ -2,16 +2,10 @@ type salesforce.ContactPointPhone {
   salesforce.Date ActiveFromDate {
     apiName = "ContactPointPhone.ActiveFromDate"
     label = "Active from Date"
-    createable = true
-    updateable = true
-    queryable = true
   }
   salesforce.Date ActiveToDate {
     apiName = "ContactPointPhone.ActiveToDate"
     label = "Active to Date"
-    createable = true
-    updateable = true
-    queryable = true
   }
   salesforce.Text AreaCode {
     apiName = "ContactPointPhone.AreaCode"
@@ -19,31 +13,19 @@ type salesforce.ContactPointPhone {
     label = "Area code"
     unique = false
     caseSensitive = false
-    createable = true
-    updateable = true
-    queryable = true
   }
   salesforce.Time BestTimeToContactEndTime {
     apiName = "ContactPointPhone.BestTimeToContactEndTime"
     label = "Best time to contact end time"
-    createable = true
-    updateable = true
-    queryable = true
   }
   salesforce.Time BestTimeToContactStartTime {
     apiName = "ContactPointPhone.BestTimeToContactStartTime"
     label = "Best time to contact start time"
-    createable = true
-    updateable = true
-    queryable = true
   }
   salesforce.Picklist BestTimeToContactTimezone {
     apiName = "ContactPointPhone.BestTimeToContactTimezone"
     restricted = true
     label = "Best time to contact time zone"
-    createable = true
-    updateable = true
-    queryable = true
   }
   salesforce.Text ExtensionNumber {
     apiName = "ContactPointPhone.ExtensionNumber"
@@ -51,9 +33,6 @@ type salesforce.ContactPointPhone {
     label = "Extension number"
     unique = false
     caseSensitive = false
-    createable = true
-    updateable = true
-    queryable = true
   }
   salesforce.Text FormattedInternationalPhoneNumber {
     apiName = "ContactPointPhone.FormattedInternationalPhoneNumber"
@@ -61,9 +40,6 @@ type salesforce.ContactPointPhone {
     label = "Formatted international phone number"
     unique = false
     caseSensitive = false
-    createable = true
-    updateable = true
-    queryable = true
   }
   salesforce.Text FormattedNationalPhoneNumber {
     apiName = "ContactPointPhone.FormattedNationalPhoneNumber"
@@ -71,74 +47,47 @@ type salesforce.ContactPointPhone {
     label = "Formatted national phone number"
     unique = false
     caseSensitive = false
-    createable = true
-    updateable = true
-    queryable = true
   }
   salesforce.Checkbox IsBusinessPhone {
     apiName = "ContactPointPhone.IsBusinessPhone"
     defaultValue = false
     label = "Is business phone"
-    createable = true
-    updateable = true
-    queryable = true
   }
   salesforce.Checkbox IsFaxCapable {
     apiName = "ContactPointPhone.IsFaxCapable"
     defaultValue = false
     label = "Is fax capable"
-    createable = true
-    updateable = true
-    queryable = true
   }
   salesforce.Checkbox IsPersonalPhone {
     apiName = "ContactPointPhone.IsPersonalPhone"
     defaultValue = false
     label = "Is personal phone"
-    createable = true
-    updateable = true
-    queryable = true
   }
   salesforce.Checkbox IsPrimary {
     apiName = "ContactPointPhone.IsPrimary"
     defaultValue = false
     label = "Is Primary"
-    createable = true
-    updateable = true
-    queryable = true
   }
   salesforce.Checkbox IsSmsCapable {
     apiName = "ContactPointPhone.IsSmsCapable"
     defaultValue = false
     label = "Is SMS capable"
-    createable = true
-    updateable = true
-    queryable = true
   }
   salesforce.Lookup OwnerId {
     apiName = "ContactPointPhone.OwnerId"
     relationshipName = "Owner"
     label = "Owner ID"
     _hidden_value = true
-    createable = true
-    updateable = true
-    queryable = true
   }
   salesforce.MasterDetail ParentId {
     apiName = "ContactPointPhone.ParentId"
     relationshipName = "Parent"
     label = "Parent ID"
-    createable = true
-    updateable = true
-    queryable = true
   }
   salesforce.Picklist PhoneType {
     apiName = "ContactPointPhone.PhoneType"
     restricted = true
     label = "Phone Type"
-    createable = true
-    updateable = true
-    queryable = true
   }
   salesforce.Number PreferenceRank {
     apiName = "ContactPointPhone.PreferenceRank"
@@ -146,25 +95,16 @@ type salesforce.ContactPointPhone {
     precision = 9
     scale = 0
     unique = false
-    createable = true
-    updateable = true
-    queryable = true
   }
   salesforce.Phone TelephoneNumber {
     apiName = "ContactPointPhone.TelephoneNumber"
     _required = true
     label = "Telephone number"
-    createable = true
-    updateable = true
-    queryable = true
   }
   salesforce.Picklist UsageType {
     apiName = "ContactPointPhone.UsageType"
     restricted = false
     label = "Usage Type"
-    createable = true
-    updateable = true
-    queryable = true
   }
   serviceid Id {
     apiName = "ContactPointPhone.Id"
@@ -177,9 +117,6 @@ type salesforce.ContactPointPhone {
     defaultValue = false
     label = "Deleted"
     _hidden_value = true
-    createable = false
-    updateable = false
-    queryable = true
   }
   salesforce.Text Name {
     apiName = "ContactPointPhone.Name"
@@ -188,50 +125,32 @@ type salesforce.ContactPointPhone {
     unique = false
     caseSensitive = false
     _hidden_value = true
-    createable = false
-    updateable = false
-    queryable = true
   }
   salesforce.DateTime CreatedDate {
     apiName = "ContactPointPhone.CreatedDate"
     label = "Created Date"
     _hidden_value = true
-    createable = false
-    updateable = false
-    queryable = true
   }
   salesforce.Lookup CreatedById {
     apiName = "ContactPointPhone.CreatedById"
     relationshipName = "CreatedBy"
     label = "Created By ID"
     _hidden_value = true
-    createable = false
-    updateable = false
-    queryable = true
   }
   salesforce.DateTime LastModifiedDate {
     apiName = "ContactPointPhone.LastModifiedDate"
     label = "Last Modified Date"
     _hidden_value = true
-    createable = false
-    updateable = false
-    queryable = true
   }
   salesforce.Lookup LastModifiedById {
     apiName = "ContactPointPhone.LastModifiedById"
     relationshipName = "LastModifiedBy"
     label = "Last Modified By ID"
     _hidden_value = true
-    createable = false
-    updateable = false
-    queryable = true
   }
   salesforce.DateTime SystemModstamp {
     apiName = "ContactPointPhone.SystemModstamp"
     label = "System Modstamp"
     _hidden_value = true
-    createable = false
-    updateable = false
-    queryable = true
   }
 }

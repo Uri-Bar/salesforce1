@@ -10,9 +10,6 @@ type salesforce.CartCheckoutSession {
     defaultValue = false
     label = "Deleted"
     _hidden_value = true
-    createable = false
-    updateable = false
-    queryable = true
   }
   salesforce.Text Name {
     apiName = "CartCheckoutSession.Name"
@@ -21,51 +18,33 @@ type salesforce.CartCheckoutSession {
     label = "Name"
     unique = false
     caseSensitive = false
-    createable = false
-    updateable = true
-    queryable = true
   }
   salesforce.DateTime CreatedDate {
     apiName = "CartCheckoutSession.CreatedDate"
     label = "Created Date"
     _hidden_value = true
-    createable = false
-    updateable = false
-    queryable = true
   }
   salesforce.Lookup CreatedById {
     apiName = "CartCheckoutSession.CreatedById"
     relationshipName = "CreatedBy"
     label = "Created By ID"
     _hidden_value = true
-    createable = false
-    updateable = false
-    queryable = true
   }
   salesforce.DateTime LastModifiedDate {
     apiName = "CartCheckoutSession.LastModifiedDate"
     label = "Last Modified Date"
     _hidden_value = true
-    createable = false
-    updateable = false
-    queryable = true
   }
   salesforce.Lookup LastModifiedById {
     apiName = "CartCheckoutSession.LastModifiedById"
     relationshipName = "LastModifiedBy"
     label = "Last Modified By ID"
     _hidden_value = true
-    createable = false
-    updateable = false
-    queryable = true
   }
   salesforce.DateTime SystemModstamp {
     apiName = "CartCheckoutSession.SystemModstamp"
     label = "System Modstamp"
     _hidden_value = true
-    createable = false
-    updateable = false
-    queryable = true
   }
   salesforce.Lookup WebCartId {
     apiName = "CartCheckoutSession.WebCartId"
@@ -73,9 +52,6 @@ type salesforce.CartCheckoutSession {
     _required = true
     label = "Cart ID"
     _hidden_value = true
-    createable = false
-    updateable = false
-    queryable = true
   }
   salesforce.Text State {
     apiName = "CartCheckoutSession.State"
@@ -84,9 +60,6 @@ type salesforce.CartCheckoutSession {
     label = "State"
     unique = false
     caseSensitive = false
-    createable = false
-    updateable = true
-    queryable = true
   }
   salesforce.Text NextState {
     apiName = "CartCheckoutSession.NextState"
@@ -94,49 +67,31 @@ type salesforce.CartCheckoutSession {
     label = "Next State"
     unique = false
     caseSensitive = false
-    createable = false
-    updateable = true
-    queryable = true
   }
   salesforce.Checkbox IsProcessing {
     apiName = "CartCheckoutSession.IsProcessing"
     defaultValue = false
     label = "Is Processing"
-    createable = false
-    updateable = true
-    queryable = true
   }
   salesforce.Lookup BackgroundOperationId {
     apiName = "CartCheckoutSession.BackgroundOperationId"
     relationshipName = "BackgroundOperation"
     label = "Background Operation ID"
-    createable = false
-    updateable = true
-    queryable = true
   }
   salesforce.Checkbox IsArchived {
     apiName = "CartCheckoutSession.IsArchived"
     defaultValue = false
     label = "Is Archived"
-    createable = false
-    updateable = true
-    queryable = true
   }
   salesforce.Lookup OrderId {
     apiName = "CartCheckoutSession.OrderId"
     relationshipName = "Order"
     label = "Order ID"
-    createable = false
-    updateable = true
-    queryable = true
   }
   salesforce.Checkbox IsError {
     apiName = "CartCheckoutSession.IsError"
     defaultValue = false
     label = "Is Error"
-    createable = false
-    updateable = true
-    queryable = true
   }
   salesforce.Text OrderReferenceNumber {
     apiName = "CartCheckoutSession.OrderReferenceNumber"
@@ -144,8 +99,5 @@ type salesforce.CartCheckoutSession {
     label = "Order Reference Number"
     unique = false
     caseSensitive = false
-    createable = false
-    updateable = true
-    queryable = true
   }
 }

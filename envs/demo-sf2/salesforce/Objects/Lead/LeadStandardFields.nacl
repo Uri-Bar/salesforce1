@@ -3,18 +3,12 @@ type salesforce.Lead {
     apiName = "Lead.Address"
     label = "Address"
     _hidden_value = true
-    createable = false
-    updateable = false
-    queryable = true
   }
   salesforce.Currency AnnualRevenue {
     apiName = "Lead.AnnualRevenue"
     label = "Annual Revenue"
     scale = 0
     precision = 18
-    createable = true
-    updateable = true
-    queryable = true
   }
   salesforce.Lookup CampaignId {
     apiName = "Lead.CampaignId"
@@ -24,9 +18,6 @@ type salesforce.Lead {
     apiName = "Lead.CleanStatus"
     restricted = true
     label = "Clean Status"
-    createable = true
-    updateable = true
-    queryable = true
   }
   salesforce.Text Company {
     apiName = "Lead.Company"
@@ -35,9 +26,6 @@ type salesforce.Lead {
     label = "Company"
     unique = false
     caseSensitive = false
-    createable = true
-    updateable = true
-    queryable = true
   }
   salesforce.Text CompanyDunsNumber {
     apiName = "Lead.CompanyDunsNumber"
@@ -45,25 +33,16 @@ type salesforce.Lead {
     label = "Company D-U-N-S Number"
     unique = false
     caseSensitive = false
-    createable = true
-    updateable = true
-    queryable = true
   }
   salesforce.Lookup DandbCompanyId {
     apiName = "Lead.DandbCompanyId"
     relationshipName = "DandbCompany"
     label = "D&B Company ID"
-    createable = true
-    updateable = true
-    queryable = true
   }
   salesforce.LongTextArea Description {
     apiName = "Lead.Description"
     length = 32000
     label = "Description"
-    createable = true
-    updateable = true
-    queryable = true
   }
   salesforce.Unknown DoNotCall {
     apiName = "Lead.DoNotCall"
@@ -73,16 +52,10 @@ type salesforce.Lead {
     apiName = "Lead.Email"
     label = "Email"
     unique = false
-    createable = true
-    updateable = true
-    queryable = true
   }
   salesforce.Phone Fax {
     apiName = "Lead.Fax"
     label = "Fax"
-    createable = true
-    updateable = true
-    queryable = true
   }
   salesforce.Picklist GenderIdentity {
     apiName = "Lead.GenderIdentity"
@@ -100,18 +73,12 @@ type salesforce.Lead {
     apiName = "Lead.IndividualId"
     relationshipName = "Individual"
     label = "Individual ID"
-    createable = true
-    updateable = true
-    queryable = true
   }
   salesforce.Picklist Industry {
     apiName = "Lead.Industry"
     restricted = false
     label = "Industry"
     valueSetName = salesforce.StandardValueSet.instance.Industry
-    createable = true
-    updateable = true
-    queryable = true
   }
   salesforce.Text Jigsaw {
     apiName = "Lead.Jigsaw"
@@ -119,9 +86,6 @@ type salesforce.Lead {
     label = "Data.com Key"
     unique = false
     caseSensitive = false
-    createable = true
-    updateable = true
-    queryable = true
   }
   salesforce.Unknown LastTransferDate {
     apiName = "Lead.LastTransferDate"
@@ -132,25 +96,16 @@ type salesforce.Lead {
     restricted = false
     label = "Lead Source"
     valueSetName = salesforce.StandardValueSet.instance.LeadSource
-    createable = true
-    updateable = true
-    queryable = true
   }
   salesforce.Phone MobilePhone {
     apiName = "Lead.MobilePhone"
     label = "Mobile Phone"
-    createable = true
-    updateable = true
-    queryable = true
   }
   salesforce.Name Name {
     apiName = "Lead.Name"
     _required = true
     label = "Full Name"
     _hidden_value = true
-    createable = false
-    updateable = false
-    queryable = true
   }
   salesforce.Number NumberOfEmployees {
     apiName = "Lead.NumberOfEmployees"
@@ -158,25 +113,16 @@ type salesforce.Lead {
     precision = 8
     scale = 0
     unique = false
-    createable = true
-    updateable = true
-    queryable = true
   }
   salesforce.Lookup OwnerId {
     apiName = "Lead.OwnerId"
     relationshipName = "Owner"
     label = "Owner ID"
     _hidden_value = true
-    createable = true
-    updateable = true
-    queryable = true
   }
   salesforce.Phone Phone {
     apiName = "Lead.Phone"
     label = "Phone"
-    createable = true
-    updateable = true
-    queryable = true
   }
   salesforce.Picklist Pronouns {
     apiName = "Lead.Pronouns"
@@ -187,9 +133,6 @@ type salesforce.Lead {
     restricted = false
     label = "Rating"
     valueSetName = salesforce.StandardValueSet.instance.AccountRating
-    createable = true
-    updateable = true
-    queryable = true
   }
   salesforce.Picklist Status {
     apiName = "Lead.Status"
@@ -197,9 +140,6 @@ type salesforce.Lead {
     _required = true
     label = "Status"
     valueSetName = salesforce.StandardValueSet.instance.LeadStatus
-    createable = true
-    updateable = true
-    queryable = true
   }
   salesforce.Text Title {
     apiName = "Lead.Title"
@@ -207,16 +147,10 @@ type salesforce.Lead {
     label = "Title"
     unique = false
     caseSensitive = false
-    createable = true
-    updateable = true
-    queryable = true
   }
   salesforce.Url Website {
     apiName = "Lead.Website"
     label = "Website"
-    createable = true
-    updateable = true
-    queryable = true
   }
   serviceid Id {
     apiName = "Lead.Id"
@@ -229,127 +163,82 @@ type salesforce.Lead {
     defaultValue = false
     label = "Deleted"
     _hidden_value = true
-    createable = false
-    updateable = false
-    queryable = true
   }
   salesforce.Lookup MasterRecordId {
     apiName = "Lead.MasterRecordId"
     relationshipName = "MasterRecord"
     label = "Master Record ID"
     _hidden_value = true
-    createable = false
-    updateable = false
-    queryable = true
   }
   salesforce.Url PhotoUrl {
     apiName = "Lead.PhotoUrl"
     label = "Photo URL"
     _hidden_value = true
-    createable = false
-    updateable = false
-    queryable = true
   }
   salesforce.Checkbox IsConverted {
     apiName = "Lead.IsConverted"
     defaultValue = false
     label = "Converted"
-    createable = true
-    updateable = false
-    queryable = true
   }
   salesforce.Date ConvertedDate {
     apiName = "Lead.ConvertedDate"
     label = "Converted Date"
     _hidden_value = true
-    createable = false
-    updateable = false
-    queryable = true
   }
   salesforce.Lookup ConvertedAccountId {
     apiName = "Lead.ConvertedAccountId"
     relationshipName = "ConvertedAccount"
     label = "Converted Account ID"
     _hidden_value = true
-    createable = false
-    updateable = false
-    queryable = true
   }
   salesforce.Lookup ConvertedContactId {
     apiName = "Lead.ConvertedContactId"
     relationshipName = "ConvertedContact"
     label = "Converted Contact ID"
     _hidden_value = true
-    createable = false
-    updateable = false
-    queryable = true
   }
   salesforce.Lookup ConvertedOpportunityId {
     apiName = "Lead.ConvertedOpportunityId"
     relationshipName = "ConvertedOpportunity"
     label = "Converted Opportunity ID"
     _hidden_value = true
-    createable = false
-    updateable = false
-    queryable = true
   }
   salesforce.Checkbox IsUnreadByOwner {
     apiName = "Lead.IsUnreadByOwner"
     defaultValue = false
     label = "Unread By Owner"
-    createable = true
-    updateable = true
-    queryable = true
   }
   salesforce.DateTime CreatedDate {
     apiName = "Lead.CreatedDate"
     label = "Created Date"
     _hidden_value = true
-    createable = false
-    updateable = false
-    queryable = true
   }
   salesforce.Lookup CreatedById {
     apiName = "Lead.CreatedById"
     relationshipName = "CreatedBy"
     label = "Created By ID"
     _hidden_value = true
-    createable = false
-    updateable = false
-    queryable = true
   }
   salesforce.DateTime LastModifiedDate {
     apiName = "Lead.LastModifiedDate"
     label = "Last Modified Date"
     _hidden_value = true
-    createable = false
-    updateable = false
-    queryable = true
   }
   salesforce.Lookup LastModifiedById {
     apiName = "Lead.LastModifiedById"
     relationshipName = "LastModifiedBy"
     label = "Last Modified By ID"
     _hidden_value = true
-    createable = false
-    updateable = false
-    queryable = true
   }
   salesforce.DateTime SystemModstamp {
     apiName = "Lead.SystemModstamp"
     label = "System Modstamp"
     _hidden_value = true
-    createable = false
-    updateable = false
-    queryable = true
   }
   salesforce.Date LastActivityDate {
     apiName = "Lead.LastActivityDate"
     label = "Last Activity"
     _hidden_value = true
-    createable = false
-    updateable = false
-    queryable = true
   }
   salesforce.Text JigsawContactId {
     apiName = "Lead.JigsawContactId"
@@ -358,9 +247,6 @@ type salesforce.Lead {
     unique = false
     caseSensitive = false
     _hidden_value = true
-    createable = false
-    updateable = false
-    queryable = true
   }
   salesforce.Text EmailBouncedReason {
     apiName = "Lead.EmailBouncedReason"
@@ -368,24 +254,15 @@ type salesforce.Lead {
     label = "Email Bounced Reason"
     unique = false
     caseSensitive = false
-    createable = false
-    updateable = true
-    queryable = true
   }
   salesforce.DateTime EmailBouncedDate {
     apiName = "Lead.EmailBouncedDate"
     label = "Email Bounced Date"
-    createable = false
-    updateable = true
-    queryable = true
   }
   salesforce.Checkbox IsPriorityRecord {
     apiName = "Lead.IsPriorityRecord"
     defaultValue = false
     label = "Important"
     _hidden_value = true
-    createable = false
-    updateable = false
-    queryable = true
   }
 }

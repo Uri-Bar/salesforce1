@@ -3,24 +3,15 @@ type salesforce.ContactPointTypeConsent {
     apiName = "ContactPointTypeConsent.BusinessBrandId"
     relationshipName = "BusinessBrand"
     label = "Business Brand ID"
-    createable = true
-    updateable = true
-    queryable = true
   }
   salesforce.Picklist CaptureContactPointType {
     apiName = "ContactPointTypeConsent.CaptureContactPointType"
     restricted = true
     label = "Capture Contact Point Type"
-    createable = true
-    updateable = true
-    queryable = true
   }
   salesforce.DateTime CaptureDate {
     apiName = "ContactPointTypeConsent.CaptureDate"
     label = "Capture Date"
-    createable = true
-    updateable = true
-    queryable = true
   }
   salesforce.Text CaptureSource {
     apiName = "ContactPointTypeConsent.CaptureSource"
@@ -28,46 +19,28 @@ type salesforce.ContactPointTypeConsent {
     label = "Capture Source"
     unique = false
     caseSensitive = false
-    createable = true
-    updateable = true
-    queryable = true
   }
   salesforce.Picklist ContactPointType {
     apiName = "ContactPointTypeConsent.ContactPointType"
     restricted = true
     label = "Contact Point Type ID"
-    createable = true
-    updateable = true
-    queryable = true
   }
   salesforce.Lookup DataUsePurposeId {
     apiName = "ContactPointTypeConsent.DataUsePurposeId"
     relationshipName = "DataUsePurpose"
     label = "Data Use Purpose ID"
-    createable = true
-    updateable = true
-    queryable = true
   }
   salesforce.DateTime DoubleConsentCaptureDate {
     apiName = "ContactPointTypeConsent.DoubleConsentCaptureDate"
     label = "Double Consent Capture Date"
-    createable = true
-    updateable = true
-    queryable = true
   }
   salesforce.DateTime EffectiveFrom {
     apiName = "ContactPointTypeConsent.EffectiveFrom"
     label = "Effective From"
-    createable = true
-    updateable = true
-    queryable = true
   }
   salesforce.DateTime EffectiveTo {
     apiName = "ContactPointTypeConsent.EffectiveTo"
     label = "Effective To "
-    createable = true
-    updateable = true
-    queryable = true
   }
   salesforce.Lookup EngagementChannelTypeId {
     apiName = "ContactPointTypeConsent.EngagementChannelTypeId"
@@ -80,44 +53,29 @@ type salesforce.ContactPointTypeConsent {
     label = "Name"
     unique = false
     caseSensitive = false
-    createable = true
-    updateable = true
-    queryable = true
   }
   salesforce.Lookup OwnerId {
     apiName = "ContactPointTypeConsent.OwnerId"
     relationshipName = "Owner"
     label = "Owner ID"
     _hidden_value = true
-    createable = true
-    updateable = true
-    queryable = true
   }
   salesforce.Lookup PartyId {
     apiName = "ContactPointTypeConsent.PartyId"
     relationshipName = "Party"
     _required = true
     label = "Party ID"
-    createable = true
-    updateable = true
-    queryable = true
   }
   salesforce.Lookup PartyRoleId {
     apiName = "ContactPointTypeConsent.PartyRoleId"
     relationshipName = "PartyRole"
     label = "Party Role ID"
-    createable = true
-    updateable = true
-    queryable = true
   }
   salesforce.Picklist PrivacyConsentStatus {
     apiName = "ContactPointTypeConsent.PrivacyConsentStatus"
     restricted = true
     _required = true
     label = "Privacy Consent Status"
-    createable = true
-    updateable = true
-    queryable = true
   }
   serviceid Id {
     apiName = "ContactPointTypeConsent.Id"
@@ -130,50 +88,32 @@ type salesforce.ContactPointTypeConsent {
     defaultValue = false
     label = "Deleted"
     _hidden_value = true
-    createable = false
-    updateable = false
-    queryable = true
   }
   salesforce.DateTime CreatedDate {
     apiName = "ContactPointTypeConsent.CreatedDate"
     label = "Created Date"
     _hidden_value = true
-    createable = false
-    updateable = false
-    queryable = true
   }
   salesforce.Lookup CreatedById {
     apiName = "ContactPointTypeConsent.CreatedById"
     relationshipName = "CreatedBy"
     label = "Created By ID"
     _hidden_value = true
-    createable = false
-    updateable = false
-    queryable = true
   }
   salesforce.DateTime LastModifiedDate {
     apiName = "ContactPointTypeConsent.LastModifiedDate"
     label = "Last Modified Date"
     _hidden_value = true
-    createable = false
-    updateable = false
-    queryable = true
   }
   salesforce.Lookup LastModifiedById {
     apiName = "ContactPointTypeConsent.LastModifiedById"
     relationshipName = "LastModifiedBy"
     label = "Last Modified By ID"
     _hidden_value = true
-    createable = false
-    updateable = false
-    queryable = true
   }
   salesforce.DateTime SystemModstamp {
     apiName = "ContactPointTypeConsent.SystemModstamp"
     label = "System Modstamp"
     _hidden_value = true
-    createable = false
-    updateable = false
-    queryable = true
   }
 }

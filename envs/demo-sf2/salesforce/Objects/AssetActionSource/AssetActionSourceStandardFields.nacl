@@ -5,9 +5,6 @@ type salesforce.AssetActionSource {
     scale = 2
     precision = 18
     _hidden_value = true
-    createable = false
-    updateable = false
-    queryable = true
   }
   salesforce.Currency AdjustmentAmount {
     apiName = "AssetActionSource.AdjustmentAmount"
@@ -15,9 +12,6 @@ type salesforce.AssetActionSource {
     scale = 2
     precision = 18
     _hidden_value = true
-    createable = false
-    updateable = false
-    queryable = true
   }
   salesforce.MasterDetail AssetActionId {
     apiName = "AssetActionSource.AssetActionId"
@@ -25,17 +19,11 @@ type salesforce.AssetActionSource {
     _required = true
     label = "Asset Action ID"
     _hidden_value = true
-    createable = false
-    updateable = false
-    queryable = true
   }
   salesforce.DateTime EndDate {
     apiName = "AssetActionSource.EndDate"
     label = "End Date"
     _hidden_value = true
-    createable = false
-    updateable = false
-    queryable = true
   }
   salesforce.Currency EstimatedTax {
     apiName = "AssetActionSource.EstimatedTax"
@@ -43,9 +31,6 @@ type salesforce.AssetActionSource {
     scale = 2
     precision = 18
     _hidden_value = true
-    createable = false
-    updateable = false
-    queryable = true
   }
   salesforce.Text ExternalReference {
     apiName = "AssetActionSource.ExternalReference"
@@ -54,9 +39,6 @@ type salesforce.AssetActionSource {
     unique = false
     caseSensitive = false
     _hidden_value = true
-    createable = false
-    updateable = false
-    queryable = true
   }
   salesforce.Text ExternalReferenceDataSource {
     apiName = "AssetActionSource.ExternalReferenceDataSource"
@@ -65,9 +47,6 @@ type salesforce.AssetActionSource {
     unique = false
     caseSensitive = false
     _hidden_value = true
-    createable = false
-    updateable = false
-    queryable = true
   }
   salesforce.Currency ProductAmount {
     apiName = "AssetActionSource.ProductAmount"
@@ -75,9 +54,6 @@ type salesforce.AssetActionSource {
     scale = 2
     precision = 18
     _hidden_value = true
-    createable = false
-    updateable = false
-    queryable = true
   }
   salesforce.Number Quantity {
     apiName = "AssetActionSource.Quantity"
@@ -86,42 +62,27 @@ type salesforce.AssetActionSource {
     scale = 2
     unique = false
     _hidden_value = true
-    createable = false
-    updateable = false
-    queryable = true
   }
   salesforce.Lookup ReferenceEntityItemId {
     apiName = "AssetActionSource.ReferenceEntityItemId"
     relationshipName = "ReferenceEntityItem"
     label = "Reference Entity Item ID"
     _hidden_value = true
-    createable = false
-    updateable = false
-    queryable = true
   }
   salesforce.DateTime StartDate {
     apiName = "AssetActionSource.StartDate"
     label = "Start Date"
     _hidden_value = true
-    createable = false
-    updateable = false
-    queryable = true
   }
   salesforce.Summary Subtotal {
     apiName = "AssetActionSource.Subtotal"
     label = "Subtotal"
     _hidden_value = true
-    createable = false
-    updateable = false
-    queryable = true
   }
   salesforce.DateTime TransactionDate {
     apiName = "AssetActionSource.TransactionDate"
     label = "Transaction Date"
     _hidden_value = true
-    createable = false
-    updateable = false
-    queryable = true
   }
   serviceid Id {
     apiName = "AssetActionSource.Id"
@@ -134,58 +95,37 @@ type salesforce.AssetActionSource {
     defaultValue = false
     label = "Deleted"
     _hidden_value = true
-    createable = false
-    updateable = false
-    queryable = true
   }
   salesforce.AutoNumber AssetActionSourceNumber {
     apiName = "AssetActionSource.AssetActionSourceNumber"
     label = "Name"
     _hidden_value = true
-    createable = false
-    updateable = false
-    queryable = true
   }
   salesforce.DateTime CreatedDate {
     apiName = "AssetActionSource.CreatedDate"
     label = "Created Date"
     _hidden_value = true
-    createable = false
-    updateable = false
-    queryable = true
   }
   salesforce.Lookup CreatedById {
     apiName = "AssetActionSource.CreatedById"
     relationshipName = "CreatedBy"
     label = "Created By ID"
     _hidden_value = true
-    createable = false
-    updateable = false
-    queryable = true
   }
   salesforce.DateTime LastModifiedDate {
     apiName = "AssetActionSource.LastModifiedDate"
     label = "Last Modified Date"
     _hidden_value = true
-    createable = false
-    updateable = false
-    queryable = true
   }
   salesforce.Lookup LastModifiedById {
     apiName = "AssetActionSource.LastModifiedById"
     relationshipName = "LastModifiedBy"
     label = "Last Modified By ID"
     _hidden_value = true
-    createable = false
-    updateable = false
-    queryable = true
   }
   salesforce.DateTime SystemModstamp {
     apiName = "AssetActionSource.SystemModstamp"
     label = "System Modstamp"
     _hidden_value = true
-    createable = false
-    updateable = false
-    queryable = true
   }
 }

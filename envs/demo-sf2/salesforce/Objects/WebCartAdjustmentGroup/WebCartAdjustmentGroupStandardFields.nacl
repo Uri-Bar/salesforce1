@@ -3,36 +3,24 @@ type salesforce.WebCartAdjustmentGroup {
     apiName = "WebCartAdjustmentGroup.AdjustmentBasisReferenceId"
     relationshipName = "AdjustmentBasisReference"
     label = "Coupon ID"
-    createable = true
-    updateable = true
-    queryable = true
   }
   salesforce.Picklist AdjustmentSource {
     apiName = "WebCartAdjustmentGroup.AdjustmentSource"
     restricted = true
     _required = true
     label = "Adjustment Source"
-    createable = true
-    updateable = true
-    queryable = true
   }
   salesforce.Picklist AdjustmentTargetType {
     apiName = "WebCartAdjustmentGroup.AdjustmentTargetType"
     restricted = true
     _required = true
     label = "Target Type for the Adjustment"
-    createable = true
-    updateable = true
-    queryable = true
   }
   salesforce.Picklist AdjustmentType {
     apiName = "WebCartAdjustmentGroup.AdjustmentType"
     restricted = true
     _required = true
     label = "Adjustment Type"
-    createable = true
-    updateable = true
-    queryable = true
   }
   salesforce.Number AdjustmentValue {
     apiName = "WebCartAdjustmentGroup.AdjustmentValue"
@@ -41,34 +29,22 @@ type salesforce.WebCartAdjustmentGroup {
     precision = 18
     scale = 2
     unique = false
-    createable = true
-    updateable = true
-    queryable = true
   }
   salesforce.MasterDetail CartId {
     apiName = "WebCartAdjustmentGroup.CartId"
     relationshipName = "Cart"
     _required = true
     label = "Cart ID"
-    createable = true
-    updateable = false
-    queryable = true
   }
   salesforce.LongTextArea Description {
     apiName = "WebCartAdjustmentGroup.Description"
     length = 32000
     label = "Description"
-    createable = true
-    updateable = true
-    queryable = true
   }
   salesforce.Lookup PriceAdjustmentCauseId {
     apiName = "WebCartAdjustmentGroup.PriceAdjustmentCauseId"
     relationshipName = "PriceAdjustmentCause"
     label = "Promotion ID"
-    createable = true
-    updateable = true
-    queryable = true
   }
   salesforce.Number Priority {
     apiName = "WebCartAdjustmentGroup.Priority"
@@ -76,27 +52,18 @@ type salesforce.WebCartAdjustmentGroup {
     precision = 9
     scale = 0
     unique = false
-    createable = true
-    updateable = true
-    queryable = true
   }
   salesforce.Currency TaxAmount {
     apiName = "WebCartAdjustmentGroup.TaxAmount"
     label = "Tax Amount"
     scale = 2
     precision = 18
-    createable = true
-    updateable = true
-    queryable = true
   }
   salesforce.Currency TotalAmount {
     apiName = "WebCartAdjustmentGroup.TotalAmount"
     label = "Total Adjustment Amount"
     scale = 2
     precision = 18
-    createable = true
-    updateable = true
-    queryable = true
   }
   salesforce.Currency TotalAmountWithTax {
     apiName = "WebCartAdjustmentGroup.TotalAmountWithTax"
@@ -104,9 +71,6 @@ type salesforce.WebCartAdjustmentGroup {
     scale = 2
     precision = 18
     _hidden_value = true
-    createable = false
-    updateable = false
-    queryable = true
   }
   serviceid Id {
     apiName = "WebCartAdjustmentGroup.Id"
@@ -119,9 +83,6 @@ type salesforce.WebCartAdjustmentGroup {
     defaultValue = false
     label = "Deleted"
     _hidden_value = true
-    createable = false
-    updateable = false
-    queryable = true
   }
   salesforce.Text Name {
     apiName = "WebCartAdjustmentGroup.Name"
@@ -130,50 +91,32 @@ type salesforce.WebCartAdjustmentGroup {
     label = "Cart Adjustment Group Name"
     unique = false
     caseSensitive = false
-    createable = true
-    updateable = true
-    queryable = true
   }
   salesforce.DateTime CreatedDate {
     apiName = "WebCartAdjustmentGroup.CreatedDate"
     label = "Created Date"
     _hidden_value = true
-    createable = false
-    updateable = false
-    queryable = true
   }
   salesforce.Lookup CreatedById {
     apiName = "WebCartAdjustmentGroup.CreatedById"
     relationshipName = "CreatedBy"
     label = "Created By ID"
     _hidden_value = true
-    createable = false
-    updateable = false
-    queryable = true
   }
   salesforce.DateTime LastModifiedDate {
     apiName = "WebCartAdjustmentGroup.LastModifiedDate"
     label = "Last Modified Date"
     _hidden_value = true
-    createable = false
-    updateable = false
-    queryable = true
   }
   salesforce.Lookup LastModifiedById {
     apiName = "WebCartAdjustmentGroup.LastModifiedById"
     relationshipName = "LastModifiedBy"
     label = "Last Modified By ID"
     _hidden_value = true
-    createable = false
-    updateable = false
-    queryable = true
   }
   salesforce.DateTime SystemModstamp {
     apiName = "WebCartAdjustmentGroup.SystemModstamp"
     label = "System Modstamp"
     _hidden_value = true
-    createable = false
-    updateable = false
-    queryable = true
   }
 }

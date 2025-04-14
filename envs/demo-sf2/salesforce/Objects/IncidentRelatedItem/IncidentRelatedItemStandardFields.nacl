@@ -3,60 +3,39 @@ type salesforce.IncidentRelatedItem {
     apiName = "IncidentRelatedItem.AssetId"
     relationshipName = "Asset"
     label = "Asset ID"
-    createable = true
-    updateable = false
-    queryable = true
   }
   salesforce.LongTextArea Comment {
     apiName = "IncidentRelatedItem.Comment"
     length = 32000
     label = "Comment"
-    createable = true
-    updateable = true
-    queryable = true
   }
   salesforce.Picklist ImpactLevel {
     apiName = "IncidentRelatedItem.ImpactLevel"
     restricted = false
     label = "Impact Level"
     valueSetName = salesforce.StandardValueSet.instance.CasePriority
-    createable = true
-    updateable = true
-    queryable = true
   }
   salesforce.Picklist ImpactType {
     apiName = "IncidentRelatedItem.ImpactType"
     restricted = false
     _required = true
     label = "Impact Type"
-    createable = true
-    updateable = true
-    queryable = true
   }
   salesforce.MasterDetail IncidentId {
     apiName = "IncidentRelatedItem.IncidentId"
     relationshipName = "Incident"
     _required = true
     label = "Incident ID"
-    createable = true
-    updateable = false
-    queryable = true
   }
   salesforce.AutoNumber Name {
     apiName = "IncidentRelatedItem.Name"
     label = "Incident Related Item Number"
     _hidden_value = true
-    createable = false
-    updateable = false
-    queryable = true
   }
   salesforce.Lookup Product2Id {
     apiName = "IncidentRelatedItem.Product2Id"
     relationshipName = "Product2"
     label = "Product ID"
-    createable = true
-    updateable = false
-    queryable = true
   }
   serviceid Id {
     apiName = "IncidentRelatedItem.Id"
@@ -69,50 +48,32 @@ type salesforce.IncidentRelatedItem {
     defaultValue = false
     label = "Deleted"
     _hidden_value = true
-    createable = false
-    updateable = false
-    queryable = true
   }
   salesforce.DateTime CreatedDate {
     apiName = "IncidentRelatedItem.CreatedDate"
     label = "Created Date"
     _hidden_value = true
-    createable = false
-    updateable = false
-    queryable = true
   }
   salesforce.Lookup CreatedById {
     apiName = "IncidentRelatedItem.CreatedById"
     relationshipName = "CreatedBy"
     label = "Created By ID"
     _hidden_value = true
-    createable = false
-    updateable = false
-    queryable = true
   }
   salesforce.DateTime LastModifiedDate {
     apiName = "IncidentRelatedItem.LastModifiedDate"
     label = "Last Modified Date"
     _hidden_value = true
-    createable = false
-    updateable = false
-    queryable = true
   }
   salesforce.Lookup LastModifiedById {
     apiName = "IncidentRelatedItem.LastModifiedById"
     relationshipName = "LastModifiedBy"
     label = "Last Modified By ID"
     _hidden_value = true
-    createable = false
-    updateable = false
-    queryable = true
   }
   salesforce.DateTime SystemModstamp {
     apiName = "IncidentRelatedItem.SystemModstamp"
     label = "System Modstamp"
     _hidden_value = true
-    createable = false
-    updateable = false
-    queryable = true
   }
 }

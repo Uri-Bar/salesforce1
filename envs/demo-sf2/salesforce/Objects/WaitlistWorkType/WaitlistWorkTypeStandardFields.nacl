@@ -4,18 +4,12 @@ type salesforce.WaitlistWorkType {
     relationshipName = "Waitlist"
     _required = true
     label = "Waitlist ID"
-    createable = true
-    updateable = false
-    queryable = true
   }
   salesforce.MasterDetail WorkTypeId {
     apiName = "WaitlistWorkType.WorkTypeId"
     relationshipName = "WorkType"
     _required = true
     label = "Work Type ID"
-    createable = true
-    updateable = false
-    queryable = true
   }
   serviceid Id {
     apiName = "WaitlistWorkType.Id"
@@ -28,58 +22,37 @@ type salesforce.WaitlistWorkType {
     defaultValue = false
     label = "Deleted"
     _hidden_value = true
-    createable = false
-    updateable = false
-    queryable = true
   }
   salesforce.AutoNumber Name {
     apiName = "WaitlistWorkType.Name"
     label = "Name"
     _hidden_value = true
-    createable = false
-    updateable = false
-    queryable = true
   }
   salesforce.DateTime CreatedDate {
     apiName = "WaitlistWorkType.CreatedDate"
     label = "Created Date"
     _hidden_value = true
-    createable = false
-    updateable = false
-    queryable = true
   }
   salesforce.Lookup CreatedById {
     apiName = "WaitlistWorkType.CreatedById"
     relationshipName = "CreatedBy"
     label = "Created By ID"
     _hidden_value = true
-    createable = false
-    updateable = false
-    queryable = true
   }
   salesforce.DateTime LastModifiedDate {
     apiName = "WaitlistWorkType.LastModifiedDate"
     label = "Last Modified Date"
     _hidden_value = true
-    createable = false
-    updateable = false
-    queryable = true
   }
   salesforce.Lookup LastModifiedById {
     apiName = "WaitlistWorkType.LastModifiedById"
     relationshipName = "LastModifiedBy"
     label = "Last Modified By ID"
     _hidden_value = true
-    createable = false
-    updateable = false
-    queryable = true
   }
   salesforce.DateTime SystemModstamp {
     apiName = "WaitlistWorkType.SystemModstamp"
     label = "System Modstamp"
     _hidden_value = true
-    createable = false
-    updateable = false
-    queryable = true
   }
 }

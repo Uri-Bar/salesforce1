@@ -4,9 +4,6 @@ type salesforce.CreditMemoLine {
     label = "Adjustment Amount"
     scale = 2
     precision = 18
-    createable = false
-    updateable = true
-    queryable = true
   }
   salesforce.Currency AdjustmentAmountWithTax {
     apiName = "CreditMemoLine.AdjustmentAmountWithTax"
@@ -14,9 +11,6 @@ type salesforce.CreditMemoLine {
     scale = 2
     precision = 18
     _hidden_value = true
-    createable = false
-    updateable = false
-    queryable = true
   }
   salesforce.Currency AdjustmentTaxAmount {
     apiName = "CreditMemoLine.AdjustmentTaxAmount"
@@ -24,18 +18,12 @@ type salesforce.CreditMemoLine {
     scale = 2
     precision = 18
     _hidden_value = true
-    createable = false
-    updateable = false
-    queryable = true
   }
   salesforce.Currency ChargeAmount {
     apiName = "CreditMemoLine.ChargeAmount"
     label = "Charge Amount"
     scale = 2
     precision = 18
-    createable = false
-    updateable = true
-    queryable = true
   }
   salesforce.Currency ChargeAmountWithTax {
     apiName = "CreditMemoLine.ChargeAmountWithTax"
@@ -43,9 +31,6 @@ type salesforce.CreditMemoLine {
     scale = 2
     precision = 18
     _hidden_value = true
-    createable = false
-    updateable = false
-    queryable = true
   }
   salesforce.Currency ChargeTaxAmount {
     apiName = "CreditMemoLine.ChargeTaxAmount"
@@ -53,9 +38,6 @@ type salesforce.CreditMemoLine {
     scale = 2
     precision = 18
     _hidden_value = true
-    createable = false
-    updateable = false
-    queryable = true
   }
   salesforce.Unknown CorpCurrencyCnvChargeAmt {
     apiName = "CreditMemoLine.CorpCurrencyCnvChargeAmt"
@@ -79,9 +61,6 @@ type salesforce.CreditMemoLine {
     _required = true
     label = "Credit Memo ID"
     _hidden_value = true
-    createable = false
-    updateable = false
-    queryable = true
   }
   salesforce.Text Description {
     apiName = "CreditMemoLine.Description"
@@ -89,24 +68,15 @@ type salesforce.CreditMemoLine {
     label = "Description"
     unique = false
     caseSensitive = false
-    createable = false
-    updateable = true
-    queryable = true
   }
   salesforce.Date EndDate {
     apiName = "CreditMemoLine.EndDate"
     label = "End Date"
-    createable = false
-    updateable = true
-    queryable = true
   }
   salesforce.Summary LineAmount {
     apiName = "CreditMemoLine.LineAmount"
     label = "Line Amount"
     _hidden_value = true
-    createable = false
-    updateable = false
-    queryable = true
   }
   salesforce.Text Name {
     apiName = "CreditMemoLine.Name"
@@ -115,48 +85,30 @@ type salesforce.CreditMemoLine {
     label = "Name"
     unique = false
     caseSensitive = false
-    createable = false
-    updateable = true
-    queryable = true
   }
   salesforce.Lookup Product2Id {
     apiName = "CreditMemoLine.Product2Id"
     relationshipName = "Product2"
     label = "Product ID"
-    createable = false
-    updateable = true
-    queryable = true
   }
   salesforce.Lookup ReferenceEntityItemId {
     apiName = "CreditMemoLine.ReferenceEntityItemId"
     relationshipName = "ReferenceEntityItem"
     label = "ReferenceEntityItem ID"
-    createable = false
-    updateable = true
-    queryable = true
   }
   salesforce.Picklist ReferenceEntityItemTypeCode {
     apiName = "CreditMemoLine.ReferenceEntityItemTypeCode"
     restricted = true
     label = "Reference Entity Item Type Code"
-    createable = false
-    updateable = true
-    queryable = true
   }
   salesforce.Lookup RelatedLineId {
     apiName = "CreditMemoLine.RelatedLineId"
     relationshipName = "RelatedLine"
     label = "Credit Memo Line ID"
-    createable = false
-    updateable = true
-    queryable = true
   }
   salesforce.Date StartDate {
     apiName = "CreditMemoLine.StartDate"
     label = "Start Date"
-    createable = false
-    updateable = true
-    queryable = true
   }
   salesforce.Text Status {
     apiName = "CreditMemoLine.Status"
@@ -165,18 +117,12 @@ type salesforce.CreditMemoLine {
     unique = false
     caseSensitive = false
     _hidden_value = true
-    createable = false
-    updateable = false
-    queryable = true
   }
   salesforce.Currency TaxAmount {
     apiName = "CreditMemoLine.TaxAmount"
     label = "Tax Amount"
     scale = 2
     precision = 18
-    createable = false
-    updateable = true
-    queryable = true
   }
   salesforce.Text TaxCode {
     apiName = "CreditMemoLine.TaxCode"
@@ -184,16 +130,10 @@ type salesforce.CreditMemoLine {
     label = "Tax Code"
     unique = false
     caseSensitive = false
-    createable = false
-    updateable = true
-    queryable = true
   }
   salesforce.Date TaxEffectiveDate {
     apiName = "CreditMemoLine.TaxEffectiveDate"
     label = "Tax Effective Date"
-    createable = false
-    updateable = true
-    queryable = true
   }
   salesforce.Text TaxName {
     apiName = "CreditMemoLine.TaxName"
@@ -201,18 +141,12 @@ type salesforce.CreditMemoLine {
     label = "Tax Name"
     unique = false
     caseSensitive = false
-    createable = false
-    updateable = true
-    queryable = true
   }
   salesforce.Percent TaxRate {
     apiName = "CreditMemoLine.TaxRate"
     label = "Tax Rate"
     scale = 2
     precision = 5
-    createable = false
-    updateable = true
-    queryable = true
   }
   salesforce.Picklist Type {
     apiName = "CreditMemoLine.Type"
@@ -220,9 +154,6 @@ type salesforce.CreditMemoLine {
     _required = true
     label = "Type"
     _hidden_value = true
-    createable = false
-    updateable = false
-    queryable = true
   }
   serviceid Id {
     apiName = "CreditMemoLine.Id"
@@ -235,58 +166,37 @@ type salesforce.CreditMemoLine {
     defaultValue = false
     label = "Deleted"
     _hidden_value = true
-    createable = false
-    updateable = false
-    queryable = true
   }
   salesforce.DateTime CreatedDate {
     apiName = "CreditMemoLine.CreatedDate"
     label = "Created Date"
     _hidden_value = true
-    createable = false
-    updateable = false
-    queryable = true
   }
   salesforce.Lookup CreatedById {
     apiName = "CreditMemoLine.CreatedById"
     relationshipName = "CreatedBy"
     label = "Created By ID"
     _hidden_value = true
-    createable = false
-    updateable = false
-    queryable = true
   }
   salesforce.DateTime LastModifiedDate {
     apiName = "CreditMemoLine.LastModifiedDate"
     label = "Last Modified Date"
     _hidden_value = true
-    createable = false
-    updateable = false
-    queryable = true
   }
   salesforce.Lookup LastModifiedById {
     apiName = "CreditMemoLine.LastModifiedById"
     relationshipName = "LastModifiedBy"
     label = "Last Modified By ID"
     _hidden_value = true
-    createable = false
-    updateable = false
-    queryable = true
   }
   salesforce.DateTime SystemModstamp {
     apiName = "CreditMemoLine.SystemModstamp"
     label = "System Modstamp"
     _hidden_value = true
-    createable = false
-    updateable = false
-    queryable = true
   }
   salesforce.Picklist ReferenceEntityItemType {
     apiName = "CreditMemoLine.ReferenceEntityItemType"
     restricted = true
     label = "Reference Entity Item Type"
-    createable = false
-    updateable = true
-    queryable = true
   }
 }

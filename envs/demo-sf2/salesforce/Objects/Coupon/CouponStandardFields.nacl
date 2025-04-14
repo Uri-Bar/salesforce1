@@ -6,33 +6,21 @@ type salesforce.Coupon {
     label = "Coupon Code"
     unique = false
     caseSensitive = false
-    createable = true
-    updateable = true
-    queryable = true
   }
   salesforce.LongTextArea Description {
     apiName = "Coupon.Description"
     length = 1000
     label = "Description"
-    createable = true
-    updateable = true
-    queryable = true
   }
   salesforce.DateTime EndDateTime {
     apiName = "Coupon.EndDateTime"
     label = "End Date Time"
-    createable = true
-    updateable = true
-    queryable = true
   }
   salesforce.Lookup PromotionId {
     apiName = "Coupon.PromotionId"
     relationshipName = "Promotion"
     _required = true
     label = "Promotion ID"
-    createable = true
-    updateable = false
-    queryable = true
   }
   salesforce.Number RedemptionLimitAllBuyers {
     apiName = "Coupon.RedemptionLimitAllBuyers"
@@ -41,9 +29,6 @@ type salesforce.Coupon {
     precision = 9
     scale = 0
     unique = false
-    createable = true
-    updateable = true
-    queryable = true
   }
   salesforce.Number RedemptionLimitPerBuyer {
     apiName = "Coupon.RedemptionLimitPerBuyer"
@@ -52,25 +37,16 @@ type salesforce.Coupon {
     precision = 9
     scale = 0
     unique = false
-    createable = true
-    updateable = true
-    queryable = true
   }
   salesforce.DateTime StartDateTime {
     apiName = "Coupon.StartDateTime"
     label = "Start Date Time"
-    createable = true
-    updateable = true
-    queryable = true
   }
   salesforce.Picklist Status {
     apiName = "Coupon.Status"
     restricted = true
     _required = true
     label = "Status"
-    createable = true
-    updateable = true
-    queryable = true
   }
   serviceid Id {
     apiName = "Coupon.Id"
@@ -83,67 +59,43 @@ type salesforce.Coupon {
     relationshipName = "Owner"
     label = "Owner ID"
     _hidden_value = true
-    createable = true
-    updateable = true
-    queryable = true
   }
   salesforce.Checkbox IsDeleted {
     apiName = "Coupon.IsDeleted"
     defaultValue = false
     label = "Deleted"
     _hidden_value = true
-    createable = false
-    updateable = false
-    queryable = true
   }
   salesforce.AutoNumber Name {
     apiName = "Coupon.Name"
     label = "Coupon Number"
     _hidden_value = true
-    createable = false
-    updateable = false
-    queryable = true
   }
   salesforce.DateTime CreatedDate {
     apiName = "Coupon.CreatedDate"
     label = "Created Date"
     _hidden_value = true
-    createable = false
-    updateable = false
-    queryable = true
   }
   salesforce.Lookup CreatedById {
     apiName = "Coupon.CreatedById"
     relationshipName = "CreatedBy"
     label = "Created By ID"
     _hidden_value = true
-    createable = false
-    updateable = false
-    queryable = true
   }
   salesforce.DateTime LastModifiedDate {
     apiName = "Coupon.LastModifiedDate"
     label = "Last Modified Date"
     _hidden_value = true
-    createable = false
-    updateable = false
-    queryable = true
   }
   salesforce.Lookup LastModifiedById {
     apiName = "Coupon.LastModifiedById"
     relationshipName = "LastModifiedBy"
     label = "Last Modified By ID"
     _hidden_value = true
-    createable = false
-    updateable = false
-    queryable = true
   }
   salesforce.DateTime SystemModstamp {
     apiName = "Coupon.SystemModstamp"
     label = "System Modstamp"
     _hidden_value = true
-    createable = false
-    updateable = false
-    queryable = true
   }
 }

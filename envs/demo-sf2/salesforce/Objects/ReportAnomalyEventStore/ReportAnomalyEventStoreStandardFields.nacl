@@ -4,9 +4,6 @@ type salesforce.ReportAnomalyEventStore {
     _required = true
     label = "Event Date"
     _hidden_value = true
-    createable = false
-    updateable = false
-    queryable = true
   }
   salesforce.Text EventIdentifier {
     apiName = "ReportAnomalyEventStore.EventIdentifier"
@@ -16,9 +13,6 @@ type salesforce.ReportAnomalyEventStore {
     unique = false
     caseSensitive = false
     _hidden_value = true
-    createable = false
-    updateable = false
-    queryable = true
   }
   salesforce.Text Report {
     apiName = "ReportAnomalyEventStore.Report"
@@ -27,9 +21,6 @@ type salesforce.ReportAnomalyEventStore {
     unique = false
     caseSensitive = false
     _hidden_value = true
-    createable = false
-    updateable = false
-    queryable = true
   }
   salesforce.Number Score {
     apiName = "ReportAnomalyEventStore.Score"
@@ -38,18 +29,12 @@ type salesforce.ReportAnomalyEventStore {
     scale = 6
     unique = false
     _hidden_value = true
-    createable = false
-    updateable = false
-    queryable = true
   }
   salesforce.LongTextArea SecurityEventData {
     apiName = "ReportAnomalyEventStore.SecurityEventData"
     length = 10000
     label = "Event Data"
     _hidden_value = true
-    createable = false
-    updateable = false
-    queryable = true
   }
   salesforce.Text SourceIp {
     apiName = "ReportAnomalyEventStore.SourceIp"
@@ -58,27 +43,18 @@ type salesforce.ReportAnomalyEventStore {
     unique = false
     caseSensitive = false
     _hidden_value = true
-    createable = false
-    updateable = false
-    queryable = true
   }
   salesforce.LongTextArea Summary {
     apiName = "ReportAnomalyEventStore.Summary"
     length = 1000
     label = "Summary"
     _hidden_value = true
-    createable = false
-    updateable = false
-    queryable = true
   }
   salesforce.Lookup UserId {
     apiName = "ReportAnomalyEventStore.UserId"
     relationshipName = "User"
     label = "User ID"
     _hidden_value = true
-    createable = false
-    updateable = false
-    queryable = true
   }
   serviceid Id {
     apiName = "ReportAnomalyEventStore.Id"
@@ -90,33 +66,21 @@ type salesforce.ReportAnomalyEventStore {
     apiName = "ReportAnomalyEventStore.ReportAnomalyEventNumber"
     label = "Event Name"
     _hidden_value = true
-    createable = false
-    updateable = false
-    queryable = true
   }
   salesforce.DateTime CreatedDate {
     apiName = "ReportAnomalyEventStore.CreatedDate"
     label = "Created Date"
     _hidden_value = true
-    createable = false
-    updateable = false
-    queryable = true
   }
   salesforce.DateTime LastModifiedDate {
     apiName = "ReportAnomalyEventStore.LastModifiedDate"
     label = "Last Modified Date"
     _hidden_value = true
-    createable = false
-    updateable = false
-    queryable = true
   }
   salesforce.DateTime SystemModstamp {
     apiName = "ReportAnomalyEventStore.SystemModstamp"
     label = "System Modstamp"
     _hidden_value = true
-    createable = false
-    updateable = false
-    queryable = true
   }
   salesforce.Text Username {
     apiName = "ReportAnomalyEventStore.Username"
@@ -125,9 +89,6 @@ type salesforce.ReportAnomalyEventStore {
     unique = false
     caseSensitive = false
     _hidden_value = true
-    createable = false
-    updateable = false
-    queryable = true
   }
   salesforce.Text SessionKey {
     apiName = "ReportAnomalyEventStore.SessionKey"
@@ -136,9 +97,6 @@ type salesforce.ReportAnomalyEventStore {
     unique = false
     caseSensitive = false
     _hidden_value = true
-    createable = false
-    updateable = false
-    queryable = true
   }
   salesforce.Text LoginKey {
     apiName = "ReportAnomalyEventStore.LoginKey"
@@ -147,27 +105,18 @@ type salesforce.ReportAnomalyEventStore {
     unique = false
     caseSensitive = false
     _hidden_value = true
-    createable = false
-    updateable = false
-    queryable = true
   }
   salesforce.Lookup PolicyId {
     apiName = "ReportAnomalyEventStore.PolicyId"
     relationshipName = "Policy"
     label = "Transaction Security Policy ID"
     _hidden_value = true
-    createable = false
-    updateable = false
-    queryable = true
   }
   salesforce.Picklist PolicyOutcome {
     apiName = "ReportAnomalyEventStore.PolicyOutcome"
     restricted = true
     label = "Policy Outcome"
     _hidden_value = true
-    createable = false
-    updateable = false
-    queryable = true
   }
   salesforce.Number EvaluationTime {
     apiName = "ReportAnomalyEventStore.EvaluationTime"
@@ -176,8 +125,5 @@ type salesforce.ReportAnomalyEventStore {
     scale = 0
     unique = false
     _hidden_value = true
-    createable = false
-    updateable = false
-    queryable = true
   }
 }

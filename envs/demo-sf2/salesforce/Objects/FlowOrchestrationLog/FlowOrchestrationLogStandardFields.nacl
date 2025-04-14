@@ -6,9 +6,6 @@ type salesforce.FlowOrchestrationLog {
     unique = false
     caseSensitive = false
     _hidden_value = true
-    createable = false
-    updateable = false
-    queryable = true
   }
   salesforce.Text Assignee {
     apiName = "FlowOrchestrationLog.Assignee"
@@ -17,18 +14,12 @@ type salesforce.FlowOrchestrationLog {
     unique = false
     caseSensitive = false
     _hidden_value = true
-    createable = false
-    updateable = false
-    queryable = true
   }
   salesforce.Picklist AssigneeType {
     apiName = "FlowOrchestrationLog.AssigneeType"
     restricted = true
     label = "Assignment Type"
     _hidden_value = true
-    createable = false
-    updateable = false
-    queryable = true
   }
   salesforce.Text Comments {
     apiName = "FlowOrchestrationLog.Comments"
@@ -37,9 +28,6 @@ type salesforce.FlowOrchestrationLog {
     unique = false
     caseSensitive = false
     _hidden_value = true
-    createable = false
-    updateable = false
-    queryable = true
   }
   salesforce.Text Context {
     apiName = "FlowOrchestrationLog.Context"
@@ -48,15 +36,11 @@ type salesforce.FlowOrchestrationLog {
     unique = false
     caseSensitive = false
     _hidden_value = true
-    createable = false
-    updateable = false
-    queryable = true
   }
   salesforce.Unknown Duration {
     apiName = "FlowOrchestrationLog.Duration"
     label = "Duration (seconds)"
     _hidden_value = true
-    queryable = true
   }
   salesforce.Picklist Kind {
     apiName = "FlowOrchestrationLog.Kind"
@@ -64,9 +48,6 @@ type salesforce.FlowOrchestrationLog {
     _required = true
     label = "Milestone"
     _hidden_value = true
-    createable = false
-    updateable = false
-    queryable = true
   }
   salesforce.MasterDetail OrchestrationInstanceId {
     apiName = "FlowOrchestrationLog.OrchestrationInstanceId"
@@ -74,9 +55,6 @@ type salesforce.FlowOrchestrationLog {
     _required = true
     label = "Orchestration Run ID"
     _hidden_value = true
-    createable = false
-    updateable = false
-    queryable = true
   }
   salesforce.Text OrchestrationName {
     apiName = "FlowOrchestrationLog.OrchestrationName"
@@ -86,9 +64,6 @@ type salesforce.FlowOrchestrationLog {
     unique = false
     caseSensitive = false
     _hidden_value = true
-    createable = false
-    updateable = false
-    queryable = true
   }
   salesforce.Number OrchestrationVersion {
     apiName = "FlowOrchestrationLog.OrchestrationVersion"
@@ -98,9 +73,6 @@ type salesforce.FlowOrchestrationLog {
     scale = 0
     unique = false
     _hidden_value = true
-    createable = false
-    updateable = false
-    queryable = true
   }
   salesforce.Text StageName {
     apiName = "FlowOrchestrationLog.StageName"
@@ -109,9 +81,6 @@ type salesforce.FlowOrchestrationLog {
     unique = false
     caseSensitive = false
     _hidden_value = true
-    createable = false
-    updateable = false
-    queryable = true
   }
   salesforce.Text StepName {
     apiName = "FlowOrchestrationLog.StepName"
@@ -120,18 +89,12 @@ type salesforce.FlowOrchestrationLog {
     unique = false
     caseSensitive = false
     _hidden_value = true
-    createable = false
-    updateable = false
-    queryable = true
   }
   salesforce.DateTime Timestamp {
     apiName = "FlowOrchestrationLog.Timestamp"
     _required = true
     label = "Timestamp"
     _hidden_value = true
-    createable = false
-    updateable = false
-    queryable = true
   }
   serviceid Id {
     apiName = "FlowOrchestrationLog.Id"
@@ -144,58 +107,37 @@ type salesforce.FlowOrchestrationLog {
     defaultValue = false
     label = "Deleted"
     _hidden_value = true
-    createable = false
-    updateable = false
-    queryable = true
   }
   salesforce.AutoNumber Name {
     apiName = "FlowOrchestrationLog.Name"
     label = "Name"
     _hidden_value = true
-    createable = false
-    updateable = false
-    queryable = true
   }
   salesforce.DateTime CreatedDate {
     apiName = "FlowOrchestrationLog.CreatedDate"
     label = "Created Date"
     _hidden_value = true
-    createable = false
-    updateable = false
-    queryable = true
   }
   salesforce.Lookup CreatedById {
     apiName = "FlowOrchestrationLog.CreatedById"
     relationshipName = "CreatedBy"
     label = "Created By ID"
     _hidden_value = true
-    createable = false
-    updateable = false
-    queryable = true
   }
   salesforce.DateTime LastModifiedDate {
     apiName = "FlowOrchestrationLog.LastModifiedDate"
     label = "Last Modified Date"
     _hidden_value = true
-    createable = false
-    updateable = false
-    queryable = true
   }
   salesforce.Lookup LastModifiedById {
     apiName = "FlowOrchestrationLog.LastModifiedById"
     relationshipName = "LastModifiedBy"
     label = "Last Modified By ID"
     _hidden_value = true
-    createable = false
-    updateable = false
-    queryable = true
   }
   salesforce.DateTime SystemModstamp {
     apiName = "FlowOrchestrationLog.SystemModstamp"
     label = "System Modstamp"
     _hidden_value = true
-    createable = false
-    updateable = false
-    queryable = true
   }
 }

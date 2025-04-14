@@ -10,68 +10,44 @@ type salesforce.TableauHostMapping {
     relationshipName = "Owner"
     label = "Owner ID"
     _hidden_value = true
-    createable = true
-    updateable = true
-    queryable = true
   }
   salesforce.Checkbox IsDeleted {
     apiName = "TableauHostMapping.IsDeleted"
     defaultValue = false
     label = "Deleted"
     _hidden_value = true
-    createable = false
-    updateable = false
-    queryable = true
   }
   salesforce.AutoNumber Name {
     apiName = "TableauHostMapping.Name"
     label = "Tableau Host Mapping Name"
     _hidden_value = true
-    createable = false
-    updateable = false
-    queryable = true
   }
   salesforce.DateTime CreatedDate {
     apiName = "TableauHostMapping.CreatedDate"
     label = "Created Date"
     _hidden_value = true
-    createable = false
-    updateable = false
-    queryable = true
   }
   salesforce.Lookup CreatedById {
     apiName = "TableauHostMapping.CreatedById"
     relationshipName = "CreatedBy"
     label = "Created By ID"
     _hidden_value = true
-    createable = false
-    updateable = false
-    queryable = true
   }
   salesforce.DateTime LastModifiedDate {
     apiName = "TableauHostMapping.LastModifiedDate"
     label = "Last Modified Date"
     _hidden_value = true
-    createable = false
-    updateable = false
-    queryable = true
   }
   salesforce.Lookup LastModifiedById {
     apiName = "TableauHostMapping.LastModifiedById"
     relationshipName = "LastModifiedBy"
     label = "Last Modified By ID"
     _hidden_value = true
-    createable = false
-    updateable = false
-    queryable = true
   }
   salesforce.DateTime SystemModstamp {
     apiName = "TableauHostMapping.SystemModstamp"
     label = "System Modstamp"
     _hidden_value = true
-    createable = false
-    updateable = false
-    queryable = true
   }
   salesforce.Text SiteLuid {
     apiName = "TableauHostMapping.SiteLuid"
@@ -80,9 +56,6 @@ type salesforce.TableauHostMapping {
     label = "Tableau site ID"
     unique = false
     caseSensitive = false
-    createable = true
-    updateable = true
-    queryable = true
   }
   salesforce.Text UrlMatch {
     apiName = "TableauHostMapping.UrlMatch"
@@ -91,17 +64,11 @@ type salesforce.TableauHostMapping {
     label = "Tableau url match"
     unique = false
     caseSensitive = false
-    createable = true
-    updateable = true
-    queryable = true
   }
   salesforce.Picklist HostType {
     apiName = "TableauHostMapping.HostType"
     restricted = true
     _required = true
     label = "Tableau host type"
-    createable = true
-    updateable = true
-    queryable = true
   }
 }

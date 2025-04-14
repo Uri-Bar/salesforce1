@@ -6,17 +6,11 @@ type salesforce.ContentVersion {
     scale = 0
     unique = false
     _hidden_value = true
-    createable = false
-    updateable = false
-    queryable = true
   }
   salesforce.LongTextArea Description {
     apiName = "ContentVersion.Description"
     length = 1000
     label = "Description"
-    createable = true
-    updateable = true
-    queryable = true
   }
   salesforce.Text FileExtension {
     apiName = "ContentVersion.FileExtension"
@@ -25,9 +19,6 @@ type salesforce.ContentVersion {
     unique = false
     caseSensitive = false
     _hidden_value = true
-    createable = false
-    updateable = false
-    queryable = true
   }
   salesforce.Text FileType {
     apiName = "ContentVersion.FileType"
@@ -37,17 +28,11 @@ type salesforce.ContentVersion {
     unique = false
     caseSensitive = false
     _hidden_value = true
-    createable = false
-    updateable = false
-    queryable = true
   }
   salesforce.Checkbox IsAssetEnabled {
     apiName = "ContentVersion.IsAssetEnabled"
     defaultValue = false
     label = "Asset File Enabled"
-    createable = true
-    updateable = false
-    queryable = true
   }
   salesforce.Unknown Language {
     apiName = "ContentVersion.Language"
@@ -58,35 +43,23 @@ type salesforce.ContentVersion {
     relationshipName = "Owner"
     label = "Owner ID"
     _hidden_value = true
-    createable = true
-    updateable = true
-    queryable = true
   }
   salesforce.Picklist SharingOption {
     apiName = "ContentVersion.SharingOption"
     restricted = true
     _required = true
     label = "Prevent others from sharing and unsharing"
-    createable = true
-    updateable = true
-    queryable = true
   }
   salesforce.Picklist SharingPrivacy {
     apiName = "ContentVersion.SharingPrivacy"
     restricted = true
     _required = true
     label = "File Privacy on Records"
-    createable = true
-    updateable = true
-    queryable = true
   }
   salesforce.LongTextArea TagCsv {
     apiName = "ContentVersion.TagCsv"
     length = 2000
     label = "Tags"
-    createable = true
-    updateable = true
-    queryable = true
   }
   salesforce.Text Title {
     apiName = "ContentVersion.Title"
@@ -95,9 +68,6 @@ type salesforce.ContentVersion {
     label = "Title"
     unique = false
     caseSensitive = false
-    createable = true
-    updateable = true
-    queryable = true
   }
   serviceid Id {
     apiName = "ContentVersion.Id"
@@ -110,32 +80,20 @@ type salesforce.ContentVersion {
     relationshipName = "ContentDocument"
     _required = true
     label = "ContentDocument ID"
-    createable = true
-    updateable = false
-    queryable = true
   }
   salesforce.Checkbox IsLatest {
     apiName = "ContentVersion.IsLatest"
     label = "Is Latest"
     _hidden_value = true
-    createable = false
-    updateable = false
-    queryable = true
   }
   salesforce.Url ContentUrl {
     apiName = "ContentVersion.ContentUrl"
     label = "Content URL"
-    createable = true
-    updateable = true
-    queryable = true
   }
   salesforce.Lookup ContentBodyId {
     apiName = "ContentVersion.ContentBodyId"
     relationshipName = "ContentBody"
     label = "Content Body ID"
-    createable = true
-    updateable = false
-    queryable = true
   }
   salesforce.Text VersionNumber {
     apiName = "ContentVersion.VersionNumber"
@@ -144,9 +102,6 @@ type salesforce.ContentVersion {
     unique = false
     caseSensitive = false
     _hidden_value = true
-    createable = false
-    updateable = false
-    queryable = true
   }
   salesforce.Text ReasonForChange {
     apiName = "ContentVersion.ReasonForChange"
@@ -154,9 +109,6 @@ type salesforce.ContentVersion {
     label = "Reason For Change"
     unique = false
     caseSensitive = false
-    createable = true
-    updateable = true
-    queryable = true
   }
   salesforce.Text PathOnClient {
     apiName = "ContentVersion.PathOnClient"
@@ -164,9 +116,6 @@ type salesforce.ContentVersion {
     label = "Path On Client"
     unique = false
     caseSensitive = false
-    createable = true
-    updateable = false
-    queryable = true
   }
   salesforce.Number RatingCount {
     apiName = "ContentVersion.RatingCount"
@@ -175,34 +124,22 @@ type salesforce.ContentVersion {
     scale = 0
     unique = false
     _hidden_value = true
-    createable = false
-    updateable = false
-    queryable = true
   }
   salesforce.Checkbox IsDeleted {
     apiName = "ContentVersion.IsDeleted"
     defaultValue = false
     label = "Is Deleted"
     _hidden_value = true
-    createable = false
-    updateable = false
-    queryable = true
   }
   salesforce.DateTime ContentModifiedDate {
     apiName = "ContentVersion.ContentModifiedDate"
     label = "Content Modified Date"
-    createable = true
-    updateable = false
-    queryable = true
   }
   salesforce.Lookup ContentModifiedById {
     apiName = "ContentVersion.ContentModifiedById"
     relationshipName = "ContentModifiedBy"
     label = "User ID"
     _hidden_value = true
-    createable = false
-    updateable = false
-    queryable = true
   }
   salesforce.Number PositiveRatingCount {
     apiName = "ContentVersion.PositiveRatingCount"
@@ -211,9 +148,6 @@ type salesforce.ContentVersion {
     scale = 0
     unique = false
     _hidden_value = true
-    createable = false
-    updateable = false
-    queryable = true
   }
   salesforce.Number NegativeRatingCount {
     apiName = "ContentVersion.NegativeRatingCount"
@@ -222,9 +156,6 @@ type salesforce.ContentVersion {
     scale = 0
     unique = false
     _hidden_value = true
-    createable = false
-    updateable = false
-    queryable = true
   }
   salesforce.Number FeaturedContentBoost {
     apiName = "ContentVersion.FeaturedContentBoost"
@@ -233,59 +164,38 @@ type salesforce.ContentVersion {
     scale = 0
     unique = false
     _hidden_value = true
-    createable = false
-    updateable = false
-    queryable = true
   }
   salesforce.Date FeaturedContentDate {
     apiName = "ContentVersion.FeaturedContentDate"
     label = "Featured Content Date"
     _hidden_value = true
-    createable = false
-    updateable = false
-    queryable = true
   }
   salesforce.Lookup CreatedById {
     apiName = "ContentVersion.CreatedById"
     relationshipName = "CreatedBy"
     label = "Created By ID"
     _hidden_value = true
-    createable = false
-    updateable = false
-    queryable = true
   }
   salesforce.DateTime CreatedDate {
     apiName = "ContentVersion.CreatedDate"
     label = "Created Date"
     _hidden_value = true
-    createable = false
-    updateable = false
-    queryable = true
   }
   salesforce.Lookup LastModifiedById {
     apiName = "ContentVersion.LastModifiedById"
     relationshipName = "LastModifiedBy"
     label = "Last Modified By ID"
     _hidden_value = true
-    createable = false
-    updateable = false
-    queryable = true
   }
   salesforce.DateTime LastModifiedDate {
     apiName = "ContentVersion.LastModifiedDate"
     label = "Last Modified Date"
     _hidden_value = true
-    createable = false
-    updateable = false
-    queryable = true
   }
   salesforce.DateTime SystemModstamp {
     apiName = "ContentVersion.SystemModstamp"
     label = "System Modstamp"
     _hidden_value = true
-    createable = false
-    updateable = false
-    queryable = true
   }
   salesforce.Picklist PublishStatus {
     apiName = "ContentVersion.PublishStatus"
@@ -293,9 +203,6 @@ type salesforce.ContentVersion {
     _required = true
     label = "Publish Status"
     _hidden_value = true
-    createable = false
-    updateable = false
-    queryable = true
   }
   salesforce.Text VersionData {
     apiName = "ContentVersion.VersionData"
@@ -303,35 +210,23 @@ type salesforce.ContentVersion {
     label = "Version Data"
     unique = false
     caseSensitive = false
-    createable = true
-    updateable = true
-    queryable = true
   }
   salesforce.Lookup FirstPublishLocationId {
     apiName = "ContentVersion.FirstPublishLocationId"
     relationshipName = "FirstPublishLocation"
     label = "First Publish Location ID"
-    createable = true
-    updateable = false
-    queryable = true
   }
   salesforce.Picklist Origin {
     apiName = "ContentVersion.Origin"
     restricted = true
     _required = true
     label = "Content Origin"
-    createable = true
-    updateable = false
-    queryable = true
   }
   salesforce.Picklist ContentLocation {
     apiName = "ContentVersion.ContentLocation"
     restricted = true
     _required = true
     label = "Content Location"
-    createable = true
-    updateable = false
-    queryable = true
   }
   salesforce.Text TextPreview {
     apiName = "ContentVersion.TextPreview"
@@ -340,9 +235,6 @@ type salesforce.ContentVersion {
     unique = false
     caseSensitive = false
     _hidden_value = true
-    createable = false
-    updateable = false
-    queryable = true
   }
   salesforce.Text ExternalDocumentInfo1 {
     apiName = "ContentVersion.ExternalDocumentInfo1"
@@ -350,9 +242,6 @@ type salesforce.ContentVersion {
     label = "External Document Info1"
     unique = false
     caseSensitive = false
-    createable = true
-    updateable = true
-    queryable = true
   }
   salesforce.Text ExternalDocumentInfo2 {
     apiName = "ContentVersion.ExternalDocumentInfo2"
@@ -360,17 +249,11 @@ type salesforce.ContentVersion {
     label = "External Document Info2"
     unique = false
     caseSensitive = false
-    createable = true
-    updateable = true
-    queryable = true
   }
   salesforce.Lookup ExternalDataSourceId {
     apiName = "ContentVersion.ExternalDataSourceId"
     relationshipName = "ExternalDataSource"
     label = "External Data Source ID"
-    createable = true
-    updateable = true
-    queryable = true
   }
   salesforce.Text Checksum {
     apiName = "ContentVersion.Checksum"
@@ -379,17 +262,11 @@ type salesforce.ContentVersion {
     unique = false
     caseSensitive = false
     _hidden_value = true
-    createable = false
-    updateable = false
-    queryable = true
   }
   salesforce.Checkbox IsMajorVersion {
     apiName = "ContentVersion.IsMajorVersion"
     defaultValue = false
     label = "Major Version"
-    createable = true
-    updateable = false
-    queryable = true
   }
   salesforce.Text VersionDataUrl {
     apiName = "ContentVersion.VersionDataUrl"
@@ -398,8 +275,5 @@ type salesforce.ContentVersion {
     unique = false
     caseSensitive = false
     _hidden_value = true
-    createable = false
-    updateable = false
-    queryable = true
   }
 }

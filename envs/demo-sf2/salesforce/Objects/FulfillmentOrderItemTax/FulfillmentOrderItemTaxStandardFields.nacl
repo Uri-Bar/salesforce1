@@ -5,51 +5,33 @@ type salesforce.FulfillmentOrderItemTax {
     label = "Amount"
     scale = 2
     precision = 18
-    createable = true
-    updateable = false
-    queryable = true
   }
   salesforce.LongTextArea Description {
     apiName = "FulfillmentOrderItemTax.Description"
     length = 2000
     label = "Description"
-    createable = true
-    updateable = true
-    queryable = true
   }
   salesforce.Lookup FulfillmentOrderItemAdjustId {
     apiName = "FulfillmentOrderItemTax.FulfillmentOrderItemAdjustId"
     relationshipName = "FulfillmentOrderItemAdjust"
     label = "Fulfillment Order Item Adjustment ID"
-    createable = true
-    updateable = false
-    queryable = true
   }
   salesforce.Percent Rate {
     apiName = "FulfillmentOrderItemTax.Rate"
     label = "Rate"
     scale = 2
     precision = 5
-    createable = true
-    updateable = true
-    queryable = true
   }
   salesforce.Date TaxEffectiveDate {
     apiName = "FulfillmentOrderItemTax.TaxEffectiveDate"
     _required = true
     label = "Tax Effective Date"
-    createable = true
-    updateable = true
-    queryable = true
   }
   salesforce.Picklist Type {
     apiName = "FulfillmentOrderItemTax.Type"
     restricted = true
     _required = true
     label = "Type"
-    createable = true
-    updateable = true
-    queryable = true
   }
   serviceid Id {
     apiName = "FulfillmentOrderItemTax.Id"
@@ -62,76 +44,49 @@ type salesforce.FulfillmentOrderItemTax {
     defaultValue = false
     label = "Deleted"
     _hidden_value = true
-    createable = false
-    updateable = false
-    queryable = true
   }
   salesforce.AutoNumber FulfillmentOrderItemTaxNumber {
     apiName = "FulfillmentOrderItemTax.FulfillmentOrderItemTaxNumber"
     label = "Name"
     _hidden_value = true
-    createable = false
-    updateable = false
-    queryable = true
   }
   salesforce.DateTime CreatedDate {
     apiName = "FulfillmentOrderItemTax.CreatedDate"
     label = "Created Date"
     _hidden_value = true
-    createable = false
-    updateable = false
-    queryable = true
   }
   salesforce.Lookup CreatedById {
     apiName = "FulfillmentOrderItemTax.CreatedById"
     relationshipName = "CreatedBy"
     label = "Created By ID"
     _hidden_value = true
-    createable = false
-    updateable = false
-    queryable = true
   }
   salesforce.DateTime LastModifiedDate {
     apiName = "FulfillmentOrderItemTax.LastModifiedDate"
     label = "Last Modified Date"
     _hidden_value = true
-    createable = false
-    updateable = false
-    queryable = true
   }
   salesforce.Lookup LastModifiedById {
     apiName = "FulfillmentOrderItemTax.LastModifiedById"
     relationshipName = "LastModifiedBy"
     label = "Last Modified By ID"
     _hidden_value = true
-    createable = false
-    updateable = false
-    queryable = true
   }
   salesforce.DateTime SystemModstamp {
     apiName = "FulfillmentOrderItemTax.SystemModstamp"
     label = "System Modstamp"
     _hidden_value = true
-    createable = false
-    updateable = false
-    queryable = true
   }
   salesforce.Lookup FulfillmentOrderLineItemId {
     apiName = "FulfillmentOrderItemTax.FulfillmentOrderLineItemId"
     relationshipName = "FulfillmentOrderLineItem"
     _required = true
     label = "Fulfillment Order Product ID"
-    createable = true
-    updateable = false
-    queryable = true
   }
   salesforce.Lookup FulfillmentOrderId {
     apiName = "FulfillmentOrderItemTax.FulfillmentOrderId"
     relationshipName = "FulfillmentOrder"
     _required = true
     label = "Fulfillment Order ID"
-    createable = true
-    updateable = false
-    queryable = true
   }
 }

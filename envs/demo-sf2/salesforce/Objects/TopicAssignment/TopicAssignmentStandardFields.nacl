@@ -10,18 +10,12 @@ type salesforce.TopicAssignment {
     relationshipName = "Topic"
     _required = true
     label = "Topic ID"
-    createable = true
-    updateable = false
-    queryable = true
   }
   salesforce.Lookup EntityId {
     apiName = "TopicAssignment.EntityId"
     relationshipName = "Entity"
     _required = true
     label = "Entity ID"
-    createable = true
-    updateable = false
-    queryable = true
   }
   salesforce.Text EntityKeyPrefix {
     apiName = "TopicAssignment.EntityKeyPrefix"
@@ -31,9 +25,6 @@ type salesforce.TopicAssignment {
     unique = false
     caseSensitive = false
     _hidden_value = true
-    createable = false
-    updateable = false
-    queryable = true
   }
   salesforce.Text EntityType {
     apiName = "TopicAssignment.EntityType"
@@ -42,42 +33,27 @@ type salesforce.TopicAssignment {
     unique = false
     caseSensitive = false
     _hidden_value = true
-    createable = false
-    updateable = false
-    queryable = true
   }
   salesforce.DateTime CreatedDate {
     apiName = "TopicAssignment.CreatedDate"
     label = "Created Date"
     _hidden_value = true
-    createable = false
-    updateable = false
-    queryable = true
   }
   salesforce.Lookup CreatedById {
     apiName = "TopicAssignment.CreatedById"
     relationshipName = "CreatedBy"
     label = "Created By ID"
     _hidden_value = true
-    createable = false
-    updateable = false
-    queryable = true
   }
   salesforce.Checkbox IsDeleted {
     apiName = "TopicAssignment.IsDeleted"
     defaultValue = false
     label = "Deleted"
     _hidden_value = true
-    createable = false
-    updateable = false
-    queryable = true
   }
   salesforce.DateTime SystemModstamp {
     apiName = "TopicAssignment.SystemModstamp"
     label = "System Modstamp"
     _hidden_value = true
-    createable = false
-    updateable = false
-    queryable = true
   }
 }

@@ -4,18 +4,12 @@ type salesforce.ServiceTerritoryWorkType {
     relationshipName = "ServiceTerritory"
     _required = true
     label = "Territory ID"
-    createable = true
-    updateable = false
-    queryable = true
   }
   salesforce.MasterDetail WorkTypeId {
     apiName = "ServiceTerritoryWorkType.WorkTypeId"
     relationshipName = "WorkType"
     _required = true
     label = "Work Type ID"
-    createable = true
-    updateable = false
-    queryable = true
   }
   serviceid Id {
     apiName = "ServiceTerritoryWorkType.Id"
@@ -28,58 +22,37 @@ type salesforce.ServiceTerritoryWorkType {
     defaultValue = false
     label = "Deleted"
     _hidden_value = true
-    createable = false
-    updateable = false
-    queryable = true
   }
   salesforce.AutoNumber Name {
     apiName = "ServiceTerritoryWorkType.Name"
     label = "Service Territory Work Type Name"
     _hidden_value = true
-    createable = false
-    updateable = false
-    queryable = true
   }
   salesforce.DateTime CreatedDate {
     apiName = "ServiceTerritoryWorkType.CreatedDate"
     label = "Created Date"
     _hidden_value = true
-    createable = false
-    updateable = false
-    queryable = true
   }
   salesforce.Lookup CreatedById {
     apiName = "ServiceTerritoryWorkType.CreatedById"
     relationshipName = "CreatedBy"
     label = "Created By ID"
     _hidden_value = true
-    createable = false
-    updateable = false
-    queryable = true
   }
   salesforce.DateTime LastModifiedDate {
     apiName = "ServiceTerritoryWorkType.LastModifiedDate"
     label = "Last Modified Date"
     _hidden_value = true
-    createable = false
-    updateable = false
-    queryable = true
   }
   salesforce.Lookup LastModifiedById {
     apiName = "ServiceTerritoryWorkType.LastModifiedById"
     relationshipName = "LastModifiedBy"
     label = "Last Modified By ID"
     _hidden_value = true
-    createable = false
-    updateable = false
-    queryable = true
   }
   salesforce.DateTime SystemModstamp {
     apiName = "ServiceTerritoryWorkType.SystemModstamp"
     label = "System Modstamp"
     _hidden_value = true
-    createable = false
-    updateable = false
-    queryable = true
   }
 }

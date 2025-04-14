@@ -10,68 +10,44 @@ type salesforce.ExternalEventMapping {
     relationshipName = "Owner"
     label = "Owner ID"
     _hidden_value = true
-    createable = true
-    updateable = true
-    queryable = true
   }
   salesforce.Checkbox IsDeleted {
     apiName = "ExternalEventMapping.IsDeleted"
     defaultValue = false
     label = "Deleted"
     _hidden_value = true
-    createable = false
-    updateable = false
-    queryable = true
   }
   salesforce.AutoNumber Name {
     apiName = "ExternalEventMapping.Name"
     label = "Name"
     _hidden_value = true
-    createable = false
-    updateable = false
-    queryable = true
   }
   salesforce.DateTime CreatedDate {
     apiName = "ExternalEventMapping.CreatedDate"
     label = "Created Date"
     _hidden_value = true
-    createable = false
-    updateable = false
-    queryable = true
   }
   salesforce.Lookup CreatedById {
     apiName = "ExternalEventMapping.CreatedById"
     relationshipName = "CreatedBy"
     label = "Created By ID"
     _hidden_value = true
-    createable = false
-    updateable = false
-    queryable = true
   }
   salesforce.DateTime LastModifiedDate {
     apiName = "ExternalEventMapping.LastModifiedDate"
     label = "Last Modified Date"
     _hidden_value = true
-    createable = false
-    updateable = false
-    queryable = true
   }
   salesforce.Lookup LastModifiedById {
     apiName = "ExternalEventMapping.LastModifiedById"
     relationshipName = "LastModifiedBy"
     label = "Last Modified By ID"
     _hidden_value = true
-    createable = false
-    updateable = false
-    queryable = true
   }
   salesforce.DateTime SystemModstamp {
     apiName = "ExternalEventMapping.SystemModstamp"
     label = "System Modstamp"
     _hidden_value = true
-    createable = false
-    updateable = false
-    queryable = true
   }
   salesforce.Text ExternalId {
     apiName = "ExternalEventMapping.ExternalId"
@@ -79,38 +55,23 @@ type salesforce.ExternalEventMapping {
     label = "External Id"
     unique = false
     caseSensitive = false
-    createable = true
-    updateable = true
-    queryable = true
   }
   salesforce.Lookup EventId {
     apiName = "ExternalEventMapping.EventId"
     relationshipName = "Event"
     label = "Activity ID"
-    createable = true
-    updateable = true
-    queryable = true
   }
   salesforce.Date StartDate {
     apiName = "ExternalEventMapping.StartDate"
     label = "Start Date"
-    createable = true
-    updateable = true
-    queryable = true
   }
   salesforce.Date EndDate {
     apiName = "ExternalEventMapping.EndDate"
     label = "End Date"
-    createable = true
-    updateable = true
-    queryable = true
   }
   salesforce.Checkbox IsRecurring {
     apiName = "ExternalEventMapping.IsRecurring"
     defaultValue = false
     label = "Is Recurring"
-    createable = true
-    updateable = true
-    queryable = true
   }
 }

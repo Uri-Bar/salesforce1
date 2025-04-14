@@ -3,75 +3,48 @@ type salesforce.ContactRequest {
     apiName = "ContactRequest.IsCallback"
     defaultValue = false
     label = "Is Callback"
-    createable = true
-    updateable = true
-    queryable = true
   }
   salesforce.Lookup OwnerId {
     apiName = "ContactRequest.OwnerId"
     relationshipName = "Owner"
     label = "Owner ID"
     _hidden_value = true
-    createable = true
-    updateable = true
-    queryable = true
   }
   salesforce.Picklist PreferredChannel {
     apiName = "ContactRequest.PreferredChannel"
     restricted = false
     _required = true
     label = "Preferred Channel"
-    createable = true
-    updateable = true
-    queryable = true
   }
   salesforce.Phone PreferredPhone {
     apiName = "ContactRequest.PreferredPhone"
     label = "Preferred Phone Number"
-    createable = true
-    updateable = true
-    queryable = true
   }
   salesforce.LongTextArea RequestDescription {
     apiName = "ContactRequest.RequestDescription"
     length = 32000
     label = "Request Description"
-    createable = true
-    updateable = true
-    queryable = true
   }
   salesforce.Picklist RequestReason {
     apiName = "ContactRequest.RequestReason"
     restricted = false
     label = "Request Reason"
-    createable = true
-    updateable = true
-    queryable = true
   }
   salesforce.Picklist Status {
     apiName = "ContactRequest.Status"
     restricted = false
     _required = true
     label = "Request Status"
-    createable = true
-    updateable = true
-    queryable = true
   }
   salesforce.Lookup WhatId {
     apiName = "ContactRequest.WhatId"
     relationshipName = "What"
     label = "Related To ID"
-    createable = true
-    updateable = true
-    queryable = true
   }
   salesforce.Lookup WhoId {
     apiName = "ContactRequest.WhoId"
     relationshipName = "Who"
     label = "Requestor ID"
-    createable = true
-    updateable = true
-    queryable = true
   }
   serviceid Id {
     apiName = "ContactRequest.Id"
@@ -84,58 +57,37 @@ type salesforce.ContactRequest {
     defaultValue = false
     label = "Deleted"
     _hidden_value = true
-    createable = false
-    updateable = false
-    queryable = true
   }
   salesforce.AutoNumber Name {
     apiName = "ContactRequest.Name"
     label = "Contact Request Number"
     _hidden_value = true
-    createable = false
-    updateable = false
-    queryable = true
   }
   salesforce.DateTime CreatedDate {
     apiName = "ContactRequest.CreatedDate"
     label = "Created Date"
     _hidden_value = true
-    createable = false
-    updateable = false
-    queryable = true
   }
   salesforce.Lookup CreatedById {
     apiName = "ContactRequest.CreatedById"
     relationshipName = "CreatedBy"
     label = "Created By ID"
     _hidden_value = true
-    createable = false
-    updateable = false
-    queryable = true
   }
   salesforce.DateTime LastModifiedDate {
     apiName = "ContactRequest.LastModifiedDate"
     label = "Last Modified Date"
     _hidden_value = true
-    createable = false
-    updateable = false
-    queryable = true
   }
   salesforce.Lookup LastModifiedById {
     apiName = "ContactRequest.LastModifiedById"
     relationshipName = "LastModifiedBy"
     label = "Last Modified By ID"
     _hidden_value = true
-    createable = false
-    updateable = false
-    queryable = true
   }
   salesforce.DateTime SystemModstamp {
     apiName = "ContactRequest.SystemModstamp"
     label = "System Modstamp"
     _hidden_value = true
-    createable = false
-    updateable = false
-    queryable = true
   }
 }

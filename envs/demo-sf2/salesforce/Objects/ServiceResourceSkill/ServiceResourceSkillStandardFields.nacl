@@ -2,35 +2,23 @@ type salesforce.ServiceResourceSkill {
   salesforce.DateTime EffectiveEndDate {
     apiName = "ServiceResourceSkill.EffectiveEndDate"
     label = "End Date"
-    createable = true
-    updateable = true
-    queryable = true
   }
   salesforce.DateTime EffectiveStartDate {
     apiName = "ServiceResourceSkill.EffectiveStartDate"
     _required = true
     label = "Start Date"
-    createable = true
-    updateable = true
-    queryable = true
   }
   salesforce.MasterDetail ServiceResourceId {
     apiName = "ServiceResourceSkill.ServiceResourceId"
     relationshipName = "ServiceResource"
     _required = true
     label = "Resource ID"
-    createable = true
-    updateable = false
-    queryable = true
   }
   salesforce.Lookup SkillId {
     apiName = "ServiceResourceSkill.SkillId"
     relationshipName = "Skill"
     _required = true
     label = "Skill ID"
-    createable = true
-    updateable = true
-    queryable = true
   }
   salesforce.Number SkillLevel {
     apiName = "ServiceResourceSkill.SkillLevel"
@@ -38,9 +26,6 @@ type salesforce.ServiceResourceSkill {
     precision = 4
     scale = 2
     unique = false
-    createable = true
-    updateable = true
-    queryable = true
   }
   serviceid Id {
     apiName = "ServiceResourceSkill.Id"
@@ -53,58 +38,37 @@ type salesforce.ServiceResourceSkill {
     defaultValue = false
     label = "Deleted"
     _hidden_value = true
-    createable = false
-    updateable = false
-    queryable = true
   }
   salesforce.AutoNumber SkillNumber {
     apiName = "ServiceResourceSkill.SkillNumber"
     label = "Resource Skill Number"
     _hidden_value = true
-    createable = false
-    updateable = false
-    queryable = true
   }
   salesforce.DateTime CreatedDate {
     apiName = "ServiceResourceSkill.CreatedDate"
     label = "Created Date"
     _hidden_value = true
-    createable = false
-    updateable = false
-    queryable = true
   }
   salesforce.Lookup CreatedById {
     apiName = "ServiceResourceSkill.CreatedById"
     relationshipName = "CreatedBy"
     label = "Created By ID"
     _hidden_value = true
-    createable = false
-    updateable = false
-    queryable = true
   }
   salesforce.DateTime LastModifiedDate {
     apiName = "ServiceResourceSkill.LastModifiedDate"
     label = "Last Modified Date"
     _hidden_value = true
-    createable = false
-    updateable = false
-    queryable = true
   }
   salesforce.Lookup LastModifiedById {
     apiName = "ServiceResourceSkill.LastModifiedById"
     relationshipName = "LastModifiedBy"
     label = "Last Modified By ID"
     _hidden_value = true
-    createable = false
-    updateable = false
-    queryable = true
   }
   salesforce.DateTime SystemModstamp {
     apiName = "ServiceResourceSkill.SystemModstamp"
     label = "System Modstamp"
     _hidden_value = true
-    createable = false
-    updateable = false
-    queryable = true
   }
 }

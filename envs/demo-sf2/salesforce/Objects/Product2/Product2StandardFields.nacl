@@ -3,23 +3,14 @@ type salesforce.Product2 {
     apiName = "Product2.Description"
     length = 4000
     label = "Product Description"
-    createable = true
-    updateable = true
-    queryable = true
   }
   salesforce.Url DisplayUrl {
     apiName = "Product2.DisplayUrl"
     label = "Display URL"
-    createable = true
-    updateable = true
-    queryable = true
   }
   salesforce.Lookup ExternalDataSourceId {
     apiName = "Product2.ExternalDataSourceId"
     label = "External Data Source ID"
-    createable = true
-    updateable = true
-    queryable = true
   }
   salesforce.Text ExternalId {
     apiName = "Product2.ExternalId"
@@ -27,26 +18,17 @@ type salesforce.Product2 {
     label = "External ID"
     unique = false
     caseSensitive = false
-    createable = true
-    updateable = true
-    queryable = true
   }
   salesforce.Picklist Family {
     apiName = "Product2.Family"
     restricted = false
     label = "Product Family"
     valueSetName = salesforce.StandardValueSet.instance.Product2Family
-    createable = true
-    updateable = true
-    queryable = true
   }
   salesforce.Checkbox IsActive {
     apiName = "Product2.IsActive"
     defaultValue = false
     label = "Active"
-    createable = true
-    updateable = true
-    queryable = true
   }
   salesforce.Text Name {
     apiName = "Product2.Name"
@@ -55,9 +37,6 @@ type salesforce.Product2 {
     label = "Product Name"
     unique = false
     caseSensitive = false
-    createable = true
-    updateable = true
-    queryable = true
   }
   salesforce.Picklist ProductClass {
     apiName = "Product2.ProductClass"
@@ -65,9 +44,6 @@ type salesforce.Product2 {
     _required = true
     label = "Product Class"
     _hidden_value = true
-    createable = false
-    updateable = false
-    queryable = true
   }
   salesforce.Text ProductCode {
     apiName = "Product2.ProductCode"
@@ -75,17 +51,11 @@ type salesforce.Product2 {
     label = "Product Code"
     unique = false
     caseSensitive = false
-    createable = true
-    updateable = true
-    queryable = true
   }
   salesforce.Picklist QuantityUnitOfMeasure {
     apiName = "Product2.QuantityUnitOfMeasure"
     restricted = false
     label = "Quantity Unit Of Measure"
-    createable = true
-    updateable = true
-    queryable = true
   }
   salesforce.Lookup SellerId {
     apiName = "Product2.SellerId"
@@ -101,17 +71,11 @@ type salesforce.Product2 {
     label = "Product SKU"
     unique = false
     caseSensitive = false
-    createable = true
-    updateable = true
-    queryable = true
   }
   salesforce.Picklist Type {
     apiName = "Product2.Type"
     restricted = true
     label = "Product Type"
-    createable = true
-    updateable = false
-    queryable = true
   }
   serviceid Id {
     apiName = "Product2.Id"
@@ -123,60 +87,39 @@ type salesforce.Product2 {
     apiName = "Product2.CreatedDate"
     label = "Created Date"
     _hidden_value = true
-    createable = false
-    updateable = false
-    queryable = true
   }
   salesforce.Lookup CreatedById {
     apiName = "Product2.CreatedById"
     relationshipName = "CreatedBy"
     label = "Created By ID"
     _hidden_value = true
-    createable = false
-    updateable = false
-    queryable = true
   }
   salesforce.DateTime LastModifiedDate {
     apiName = "Product2.LastModifiedDate"
     label = "Last Modified Date"
     _hidden_value = true
-    createable = false
-    updateable = false
-    queryable = true
   }
   salesforce.Lookup LastModifiedById {
     apiName = "Product2.LastModifiedById"
     relationshipName = "LastModifiedBy"
     label = "Last Modified By ID"
     _hidden_value = true
-    createable = false
-    updateable = false
-    queryable = true
   }
   salesforce.DateTime SystemModstamp {
     apiName = "Product2.SystemModstamp"
     label = "System Modstamp"
     _hidden_value = true
-    createable = false
-    updateable = false
-    queryable = true
   }
   salesforce.Checkbox IsDeleted {
     apiName = "Product2.IsDeleted"
     defaultValue = false
     label = "Deleted"
     _hidden_value = true
-    createable = false
-    updateable = false
-    queryable = true
   }
   salesforce.Checkbox IsArchived {
     apiName = "Product2.IsArchived"
     defaultValue = false
     label = "Archived"
     _hidden_value = true
-    createable = false
-    updateable = false
-    queryable = true
   }
 }

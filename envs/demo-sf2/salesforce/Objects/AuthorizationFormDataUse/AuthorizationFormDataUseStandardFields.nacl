@@ -4,18 +4,12 @@ type salesforce.AuthorizationFormDataUse {
     relationshipName = "AuthorizationForm"
     _required = true
     label = "Authorization Form ID"
-    createable = true
-    updateable = true
-    queryable = true
   }
   salesforce.Lookup DataUsePurposeId {
     apiName = "AuthorizationFormDataUse.DataUsePurposeId"
     relationshipName = "DataUsePurpose"
     _required = true
     label = "Data Use Purpose ID"
-    createable = true
-    updateable = true
-    queryable = true
   }
   salesforce.Text Name {
     apiName = "AuthorizationFormDataUse.Name"
@@ -24,18 +18,12 @@ type salesforce.AuthorizationFormDataUse {
     label = "Name"
     unique = false
     caseSensitive = false
-    createable = true
-    updateable = true
-    queryable = true
   }
   salesforce.Lookup OwnerId {
     apiName = "AuthorizationFormDataUse.OwnerId"
     relationshipName = "Owner"
     label = "Owner ID"
     _hidden_value = true
-    createable = true
-    updateable = true
-    queryable = true
   }
   serviceid Id {
     apiName = "AuthorizationFormDataUse.Id"
@@ -48,50 +36,32 @@ type salesforce.AuthorizationFormDataUse {
     defaultValue = false
     label = "Deleted"
     _hidden_value = true
-    createable = false
-    updateable = false
-    queryable = true
   }
   salesforce.DateTime CreatedDate {
     apiName = "AuthorizationFormDataUse.CreatedDate"
     label = "Created Date"
     _hidden_value = true
-    createable = false
-    updateable = false
-    queryable = true
   }
   salesforce.Lookup CreatedById {
     apiName = "AuthorizationFormDataUse.CreatedById"
     relationshipName = "CreatedBy"
     label = "Created By ID"
     _hidden_value = true
-    createable = false
-    updateable = false
-    queryable = true
   }
   salesforce.DateTime LastModifiedDate {
     apiName = "AuthorizationFormDataUse.LastModifiedDate"
     label = "Last Modified Date"
     _hidden_value = true
-    createable = false
-    updateable = false
-    queryable = true
   }
   salesforce.Lookup LastModifiedById {
     apiName = "AuthorizationFormDataUse.LastModifiedById"
     relationshipName = "LastModifiedBy"
     label = "Last Modified By ID"
     _hidden_value = true
-    createable = false
-    updateable = false
-    queryable = true
   }
   salesforce.DateTime SystemModstamp {
     apiName = "AuthorizationFormDataUse.SystemModstamp"
     label = "System Modstamp"
     _hidden_value = true
-    createable = false
-    updateable = false
-    queryable = true
   }
 }

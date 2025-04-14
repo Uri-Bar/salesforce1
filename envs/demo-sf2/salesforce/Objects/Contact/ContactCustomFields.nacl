@@ -6,9 +6,6 @@ type salesforce.Contact {
     length = 100
     unique = false
     caseSensitive = false
-    createable = true
-    updateable = true
-    queryable = true
   }
   salesforce.Picklist Level__c {
     apiName = "Contact.Level__c"
@@ -32,8 +29,5 @@ type salesforce.Contact {
     ]
     sorted = false
     restricted = false
-    createable = true
-    updateable = true
-    queryable = true
   }
 }

@@ -3,25 +3,16 @@ type salesforce.AppointmentCategory {
     apiName = "AppointmentCategory.IsDropIn"
     defaultValue = false
     label = "Drop In"
-    createable = true
-    updateable = false
-    queryable = true
   }
   salesforce.Checkbox IsGroup {
     apiName = "AppointmentCategory.IsGroup"
     defaultValue = false
     label = "Group"
-    createable = true
-    updateable = false
-    queryable = true
   }
   salesforce.Checkbox IsScheduled {
     apiName = "AppointmentCategory.IsScheduled"
     defaultValue = false
     label = "Regular"
-    createable = true
-    updateable = false
-    queryable = true
   }
   salesforce.Text Name {
     apiName = "AppointmentCategory.Name"
@@ -30,9 +21,6 @@ type salesforce.AppointmentCategory {
     label = "Name"
     unique = false
     caseSensitive = false
-    createable = true
-    updateable = true
-    queryable = true
   }
   serviceid Id {
     apiName = "AppointmentCategory.Id"
@@ -45,50 +33,32 @@ type salesforce.AppointmentCategory {
     defaultValue = false
     label = "Deleted"
     _hidden_value = true
-    createable = false
-    updateable = false
-    queryable = true
   }
   salesforce.DateTime CreatedDate {
     apiName = "AppointmentCategory.CreatedDate"
     label = "Created Date"
     _hidden_value = true
-    createable = false
-    updateable = false
-    queryable = true
   }
   salesforce.Lookup CreatedById {
     apiName = "AppointmentCategory.CreatedById"
     relationshipName = "CreatedBy"
     label = "Created By ID"
     _hidden_value = true
-    createable = false
-    updateable = false
-    queryable = true
   }
   salesforce.DateTime LastModifiedDate {
     apiName = "AppointmentCategory.LastModifiedDate"
     label = "Last Modified Date"
     _hidden_value = true
-    createable = false
-    updateable = false
-    queryable = true
   }
   salesforce.Lookup LastModifiedById {
     apiName = "AppointmentCategory.LastModifiedById"
     relationshipName = "LastModifiedBy"
     label = "Last Modified By ID"
     _hidden_value = true
-    createable = false
-    updateable = false
-    queryable = true
   }
   salesforce.DateTime SystemModstamp {
     apiName = "AppointmentCategory.SystemModstamp"
     label = "System Modstamp"
     _hidden_value = true
-    createable = false
-    updateable = false
-    queryable = true
   }
 }

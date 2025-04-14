@@ -2,16 +2,10 @@ type salesforce.Idea {
   salesforce.Picklist Categories {
     apiName = "Idea.Categories"
     label = "Categories"
-    createable = true
-    updateable = true
-    queryable = true
   }
   salesforce.Picklist Status {
     apiName = "Idea.Status"
     label = "Status"
-    createable = true
-    updateable = true
-    queryable = true
   }
   serviceid Id {
     apiName = "Idea.Id"
@@ -24,9 +18,6 @@ type salesforce.Idea {
     defaultValue = false
     label = "Deleted"
     _hidden_value = true
-    createable = false
-    updateable = false
-    queryable = true
   }
   salesforce.Text Title {
     apiName = "Idea.Title"
@@ -35,86 +26,56 @@ type salesforce.Idea {
     label = "Title"
     unique = false
     caseSensitive = false
-    createable = true
-    updateable = true
-    queryable = true
   }
   salesforce.Lookup RecordTypeId {
     apiName = "Idea.RecordTypeId"
     relationshipName = "RecordType"
     label = "Record Type ID"
     _hidden_value = true
-    createable = false
-    updateable = false
-    queryable = true
   }
   salesforce.DateTime CreatedDate {
     apiName = "Idea.CreatedDate"
     label = "Created Date"
     _hidden_value = true
-    createable = false
-    updateable = false
-    queryable = true
   }
   salesforce.Lookup CreatedById {
     apiName = "Idea.CreatedById"
     relationshipName = "CreatedBy"
     label = "Created By ID"
     _hidden_value = true
-    createable = false
-    updateable = false
-    queryable = true
   }
   salesforce.DateTime LastModifiedDate {
     apiName = "Idea.LastModifiedDate"
     label = "Last Modified Date"
     _hidden_value = true
-    createable = false
-    updateable = false
-    queryable = true
   }
   salesforce.Lookup LastModifiedById {
     apiName = "Idea.LastModifiedById"
     relationshipName = "LastModifiedBy"
     label = "Last Modified By ID"
     _hidden_value = true
-    createable = false
-    updateable = false
-    queryable = true
   }
   salesforce.DateTime SystemModstamp {
     apiName = "Idea.SystemModstamp"
     label = "System Modstamp"
     _hidden_value = true
-    createable = false
-    updateable = false
-    queryable = true
   }
   salesforce.Lookup CommunityId {
     apiName = "Idea.CommunityId"
     relationshipName = "Community"
     _required = true
     label = "Zone ID"
-    createable = true
-    updateable = false
-    queryable = true
   }
   salesforce.Html Body {
     apiName = "Idea.Body"
     length = 32000
     label = "Idea Body"
-    createable = true
-    updateable = true
-    queryable = true
   }
   salesforce.Summary NumComments {
     apiName = "Idea.NumComments"
     label = "Number of Comments"
     precision = 9
     _hidden_value = true
-    createable = false
-    updateable = false
-    queryable = true
   }
   salesforce.Number VoteScore {
     apiName = "Idea.VoteScore"
@@ -123,9 +84,6 @@ type salesforce.Idea {
     scale = 4
     unique = false
     _hidden_value = true
-    createable = false
-    updateable = false
-    queryable = true
   }
   salesforce.Number VoteTotal {
     apiName = "Idea.VoteTotal"
@@ -134,53 +92,35 @@ type salesforce.Idea {
     scale = 0
     unique = false
     _hidden_value = true
-    createable = false
-    updateable = false
-    queryable = true
   }
   salesforce.Summary LastCommentDate {
     apiName = "Idea.LastCommentDate"
     label = "Last Idea Comment Date"
     _hidden_value = true
-    createable = false
-    updateable = false
-    queryable = true
   }
   salesforce.Lookup LastCommentId {
     apiName = "Idea.LastCommentId"
     relationshipName = "LastComment"
     label = "Idea Comment ID"
     _hidden_value = true
-    createable = false
-    updateable = false
-    queryable = true
   }
   salesforce.Lookup ParentIdeaId {
     apiName = "Idea.ParentIdeaId"
     relationshipName = "ParentIdea"
     label = "Idea ID"
     _hidden_value = true
-    createable = false
-    updateable = false
-    queryable = true
   }
   salesforce.Checkbox IsHtml {
     apiName = "Idea.IsHtml"
     defaultValue = false
     label = "IsHtml"
     _hidden_value = true
-    createable = false
-    updateable = false
-    queryable = true
   }
   salesforce.Checkbox IsMerged {
     apiName = "Idea.IsMerged"
     defaultValue = false
     label = "Is Merged"
     _hidden_value = true
-    createable = false
-    updateable = false
-    queryable = true
   }
   salesforce.Text CreatorFullPhotoUrl {
     apiName = "Idea.CreatorFullPhotoUrl"
@@ -189,9 +129,6 @@ type salesforce.Idea {
     unique = false
     caseSensitive = false
     _hidden_value = true
-    createable = false
-    updateable = false
-    queryable = true
   }
   salesforce.Text CreatorSmallPhotoUrl {
     apiName = "Idea.CreatorSmallPhotoUrl"
@@ -200,9 +137,6 @@ type salesforce.Idea {
     unique = false
     caseSensitive = false
     _hidden_value = true
-    createable = false
-    updateable = false
-    queryable = true
   }
   salesforce.Text CreatorName {
     apiName = "Idea.CreatorName"
@@ -211,8 +145,5 @@ type salesforce.Idea {
     unique = false
     caseSensitive = false
     _hidden_value = true
-    createable = false
-    updateable = false
-    queryable = true
   }
 }

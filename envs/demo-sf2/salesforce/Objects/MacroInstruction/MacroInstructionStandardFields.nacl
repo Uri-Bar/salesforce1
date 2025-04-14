@@ -10,93 +10,60 @@ type salesforce.MacroInstruction {
     defaultValue = false
     label = "Deleted"
     _hidden_value = true
-    createable = false
-    updateable = false
-    queryable = true
   }
   salesforce.AutoNumber Name {
     apiName = "MacroInstruction.Name"
     label = "Macro Instruction Name"
     _hidden_value = true
-    createable = false
-    updateable = false
-    queryable = true
   }
   salesforce.DateTime CreatedDate {
     apiName = "MacroInstruction.CreatedDate"
     label = "Created Date"
     _hidden_value = true
-    createable = false
-    updateable = false
-    queryable = true
   }
   salesforce.Lookup CreatedById {
     apiName = "MacroInstruction.CreatedById"
     relationshipName = "CreatedBy"
     label = "Created By ID"
     _hidden_value = true
-    createable = false
-    updateable = false
-    queryable = true
   }
   salesforce.DateTime LastModifiedDate {
     apiName = "MacroInstruction.LastModifiedDate"
     label = "Last Modified Date"
     _hidden_value = true
-    createable = false
-    updateable = false
-    queryable = true
   }
   salesforce.Lookup LastModifiedById {
     apiName = "MacroInstruction.LastModifiedById"
     relationshipName = "LastModifiedBy"
     label = "Last Modified By ID"
     _hidden_value = true
-    createable = false
-    updateable = false
-    queryable = true
   }
   salesforce.DateTime SystemModstamp {
     apiName = "MacroInstruction.SystemModstamp"
     label = "System Modstamp"
     _hidden_value = true
-    createable = false
-    updateable = false
-    queryable = true
   }
   salesforce.Lookup MacroId {
     apiName = "MacroInstruction.MacroId"
     relationshipName = "Macro"
     _required = true
     label = "Macro ID"
-    createable = true
-    updateable = false
-    queryable = true
   }
   salesforce.Picklist Operation {
     apiName = "MacroInstruction.Operation"
     restricted = true
     _required = true
     label = "Operation"
-    createable = true
-    updateable = true
-    queryable = true
   }
   salesforce.Picklist Target {
     apiName = "MacroInstruction.Target"
     restricted = true
     label = "Target"
-    createable = true
-    updateable = true
-    queryable = true
   }
   salesforce.LongTextArea Value {
     apiName = "MacroInstruction.Value"
     length = 4000
     label = "Value"
-    createable = true
-    updateable = true
-    queryable = true
   }
   salesforce.Text ValueRecord {
     apiName = "MacroInstruction.ValueRecord"
@@ -104,9 +71,6 @@ type salesforce.MacroInstruction {
     label = "Value Record ID"
     unique = false
     caseSensitive = false
-    createable = true
-    updateable = true
-    queryable = true
   }
   salesforce.Number SortOrder {
     apiName = "MacroInstruction.SortOrder"
@@ -115,8 +79,5 @@ type salesforce.MacroInstruction {
     precision = 9
     scale = 0
     unique = false
-    createable = true
-    updateable = true
-    queryable = true
   }
 }

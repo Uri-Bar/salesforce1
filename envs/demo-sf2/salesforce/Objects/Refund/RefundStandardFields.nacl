@@ -3,9 +3,6 @@ type salesforce.Refund {
     apiName = "Refund.AccountId"
     relationshipName = "Account"
     label = "Account ID"
-    createable = true
-    updateable = true
-    queryable = true
   }
   salesforce.Currency Amount {
     apiName = "Refund.Amount"
@@ -13,9 +10,6 @@ type salesforce.Refund {
     label = "Amount"
     scale = 2
     precision = 18
-    createable = true
-    updateable = true
-    queryable = true
   }
   salesforce.Currency Balance {
     apiName = "Refund.Balance"
@@ -23,30 +17,18 @@ type salesforce.Refund {
     scale = 2
     precision = 18
     _hidden_value = true
-    createable = false
-    updateable = false
-    queryable = true
   }
   salesforce.DateTime CancellationDate {
     apiName = "Refund.CancellationDate"
     label = "Cancellation Date"
-    createable = true
-    updateable = true
-    queryable = true
   }
   salesforce.DateTime CancellationEffectiveDate {
     apiName = "Refund.CancellationEffectiveDate"
     label = "Cancellation Effective Date"
-    createable = true
-    updateable = true
-    queryable = true
   }
   salesforce.DateTime CancellationGatewayDate {
     apiName = "Refund.CancellationGatewayDate"
     label = "Cancellation Gateway Date"
-    createable = true
-    updateable = true
-    queryable = true
   }
   salesforce.Text CancellationGatewayRefNumber {
     apiName = "Refund.CancellationGatewayRefNumber"
@@ -54,9 +36,6 @@ type salesforce.Refund {
     label = "Cancellation Gateway Reference Number"
     unique = false
     caseSensitive = false
-    createable = true
-    updateable = true
-    queryable = true
   }
   salesforce.Text CancellationGatewayResultCode {
     apiName = "Refund.CancellationGatewayResultCode"
@@ -64,9 +43,6 @@ type salesforce.Refund {
     label = "Cancellation Gateway Result Code"
     unique = false
     caseSensitive = false
-    createable = true
-    updateable = true
-    queryable = true
   }
   salesforce.Text CancellationSfResultCode {
     apiName = "Refund.CancellationSfResultCode"
@@ -74,46 +50,28 @@ type salesforce.Refund {
     label = "Cancellation Salesforce Result Code"
     unique = false
     caseSensitive = false
-    createable = true
-    updateable = true
-    queryable = true
   }
   salesforce.LongTextArea Comments {
     apiName = "Refund.Comments"
     length = 1000
     label = "Comments"
-    createable = true
-    updateable = true
-    queryable = true
   }
   salesforce.DateTime Date {
     apiName = "Refund.Date"
     label = "Date"
-    createable = true
-    updateable = true
-    queryable = true
   }
   salesforce.DateTime EffectiveDate {
     apiName = "Refund.EffectiveDate"
     label = "Effective Date"
-    createable = true
-    updateable = true
-    queryable = true
   }
   salesforce.Email Email {
     apiName = "Refund.Email"
     label = "Audit Email"
     unique = false
-    createable = true
-    updateable = true
-    queryable = true
   }
   salesforce.DateTime GatewayDate {
     apiName = "Refund.GatewayDate"
     label = "Gateway Date"
-    createable = true
-    updateable = true
-    queryable = true
   }
   salesforce.Text GatewayRefNumber {
     apiName = "Refund.GatewayRefNumber"
@@ -121,9 +79,6 @@ type salesforce.Refund {
     label = "Gateway Reference Number"
     unique = false
     caseSensitive = false
-    createable = true
-    updateable = true
-    queryable = true
   }
   salesforce.Text GatewayResultCode {
     apiName = "Refund.GatewayResultCode"
@@ -131,9 +86,6 @@ type salesforce.Refund {
     label = "Gateway Result Code"
     unique = false
     caseSensitive = false
-    createable = true
-    updateable = true
-    queryable = true
   }
   salesforce.Text GatewayResultCodeDescription {
     apiName = "Refund.GatewayResultCodeDescription"
@@ -141,17 +93,11 @@ type salesforce.Refund {
     label = "Gateway Result Code Description"
     unique = false
     caseSensitive = false
-    createable = true
-    updateable = true
-    queryable = true
   }
   salesforce.Summary ImpactAmount {
     apiName = "Refund.ImpactAmount"
     label = "Impact Amount"
     _hidden_value = true
-    createable = false
-    updateable = false
-    queryable = true
   }
   salesforce.Text IpAddress {
     apiName = "Refund.IpAddress"
@@ -159,9 +105,6 @@ type salesforce.Refund {
     label = "IP Address"
     unique = false
     caseSensitive = false
-    createable = true
-    updateable = true
-    queryable = true
   }
   salesforce.Text MacAddress {
     apiName = "Refund.MacAddress"
@@ -169,9 +112,6 @@ type salesforce.Refund {
     label = "MAC Address"
     unique = false
     caseSensitive = false
-    createable = true
-    updateable = true
-    queryable = true
   }
   salesforce.Currency NetApplied {
     apiName = "Refund.NetApplied"
@@ -179,66 +119,42 @@ type salesforce.Refund {
     scale = 2
     precision = 18
     _hidden_value = true
-    createable = false
-    updateable = false
-    queryable = true
   }
   salesforce.Lookup PaymentGatewayId {
     apiName = "Refund.PaymentGatewayId"
     relationshipName = "PaymentGateway"
     label = "Payment Gateway ID"
-    createable = true
-    updateable = true
-    queryable = true
   }
   salesforce.Lookup PaymentGroupId {
     apiName = "Refund.PaymentGroupId"
     relationshipName = "PaymentGroup"
     label = "Payment Group ID"
-    createable = true
-    updateable = true
-    queryable = true
   }
   salesforce.Lookup PaymentMethodId {
     apiName = "Refund.PaymentMethodId"
     relationshipName = "PaymentMethod"
     label = "Payment Method ID"
-    createable = true
-    updateable = true
-    queryable = true
   }
   salesforce.Phone Phone {
     apiName = "Refund.Phone"
     label = "Phone"
-    createable = true
-    updateable = true
-    queryable = true
   }
   salesforce.Picklist ProcessingMode {
     apiName = "Refund.ProcessingMode"
     restricted = true
     _required = true
     label = "Processing Mode"
-    createable = true
-    updateable = false
-    queryable = true
   }
   salesforce.Picklist SfResultCode {
     apiName = "Refund.SfResultCode"
     restricted = true
     label = "Salesforce Result Code"
-    createable = true
-    updateable = true
-    queryable = true
   }
   salesforce.Picklist Status {
     apiName = "Refund.Status"
     restricted = true
     _required = true
     label = "Status"
-    createable = true
-    updateable = true
-    queryable = true
   }
   salesforce.Currency TotalApplied {
     apiName = "Refund.TotalApplied"
@@ -246,9 +162,6 @@ type salesforce.Refund {
     scale = 2
     precision = 18
     _hidden_value = true
-    createable = false
-    updateable = false
-    queryable = true
   }
   salesforce.Currency TotalUnapplied {
     apiName = "Refund.TotalUnapplied"
@@ -256,18 +169,12 @@ type salesforce.Refund {
     scale = 2
     precision = 18
     _hidden_value = true
-    createable = false
-    updateable = false
-    queryable = true
   }
   salesforce.Picklist Type {
     apiName = "Refund.Type"
     restricted = true
     _required = true
     label = "Type"
-    createable = true
-    updateable = true
-    queryable = true
   }
   serviceid Id {
     apiName = "Refund.Id"
@@ -280,67 +187,43 @@ type salesforce.Refund {
     defaultValue = false
     label = "Deleted"
     _hidden_value = true
-    createable = false
-    updateable = false
-    queryable = true
   }
   salesforce.AutoNumber RefundNumber {
     apiName = "Refund.RefundNumber"
     label = "Refund Number"
     _hidden_value = true
-    createable = false
-    updateable = false
-    queryable = true
   }
   salesforce.DateTime CreatedDate {
     apiName = "Refund.CreatedDate"
     label = "Created Date"
     _hidden_value = true
-    createable = false
-    updateable = false
-    queryable = true
   }
   salesforce.Lookup CreatedById {
     apiName = "Refund.CreatedById"
     relationshipName = "CreatedBy"
     label = "Created By ID"
     _hidden_value = true
-    createable = false
-    updateable = false
-    queryable = true
   }
   salesforce.DateTime LastModifiedDate {
     apiName = "Refund.LastModifiedDate"
     label = "Last Modified Date"
     _hidden_value = true
-    createable = false
-    updateable = false
-    queryable = true
   }
   salesforce.Lookup LastModifiedById {
     apiName = "Refund.LastModifiedById"
     relationshipName = "LastModifiedBy"
     label = "Last Modified By ID"
     _hidden_value = true
-    createable = false
-    updateable = false
-    queryable = true
   }
   salesforce.DateTime SystemModstamp {
     apiName = "Refund.SystemModstamp"
     label = "System Modstamp"
     _hidden_value = true
-    createable = false
-    updateable = false
-    queryable = true
   }
   salesforce.LongTextArea ClientContext {
     apiName = "Refund.ClientContext"
     length = 2000
     label = "Client Context"
     _hidden_value = true
-    createable = false
-    updateable = false
-    queryable = true
   }
 }

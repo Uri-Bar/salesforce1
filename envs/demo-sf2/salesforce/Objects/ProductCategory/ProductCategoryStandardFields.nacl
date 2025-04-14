@@ -4,24 +4,15 @@ type salesforce.ProductCategory {
     relationshipName = "Catalog"
     _required = true
     label = "Catalog ID"
-    createable = true
-    updateable = false
-    queryable = true
   }
   salesforce.TextArea Description {
     apiName = "ProductCategory.Description"
     label = "Description"
-    createable = true
-    updateable = true
-    queryable = true
   }
   salesforce.Checkbox IsNavigational {
     apiName = "ProductCategory.IsNavigational"
     defaultValue = false
     label = "Show In Menu"
-    createable = true
-    updateable = true
-    queryable = true
   }
   salesforce.Text Name {
     apiName = "ProductCategory.Name"
@@ -30,17 +21,11 @@ type salesforce.ProductCategory {
     label = "Name"
     unique = false
     caseSensitive = false
-    createable = true
-    updateable = true
-    queryable = true
   }
   salesforce.Hierarchy ParentCategoryId {
     apiName = "ProductCategory.ParentCategoryId"
     relationshipName = "ParentCategory"
     label = "Category ID"
-    createable = true
-    updateable = true
-    queryable = true
   }
   salesforce.Number SortOrder {
     apiName = "ProductCategory.SortOrder"
@@ -48,9 +33,6 @@ type salesforce.ProductCategory {
     precision = 9
     scale = 0
     unique = false
-    createable = true
-    updateable = true
-    queryable = true
   }
   serviceid Id {
     apiName = "ProductCategory.Id"
@@ -63,59 +45,38 @@ type salesforce.ProductCategory {
     defaultValue = false
     label = "Deleted"
     _hidden_value = true
-    createable = false
-    updateable = false
-    queryable = true
   }
   salesforce.DateTime CreatedDate {
     apiName = "ProductCategory.CreatedDate"
     label = "Created Date"
     _hidden_value = true
-    createable = false
-    updateable = false
-    queryable = true
   }
   salesforce.Lookup CreatedById {
     apiName = "ProductCategory.CreatedById"
     relationshipName = "CreatedBy"
     label = "Created By ID"
     _hidden_value = true
-    createable = false
-    updateable = false
-    queryable = true
   }
   salesforce.DateTime LastModifiedDate {
     apiName = "ProductCategory.LastModifiedDate"
     label = "Last Modified Date"
     _hidden_value = true
-    createable = false
-    updateable = false
-    queryable = true
   }
   salesforce.Lookup LastModifiedById {
     apiName = "ProductCategory.LastModifiedById"
     relationshipName = "LastModifiedBy"
     label = "Last Modified By ID"
     _hidden_value = true
-    createable = false
-    updateable = false
-    queryable = true
   }
   salesforce.DateTime SystemModstamp {
     apiName = "ProductCategory.SystemModstamp"
     label = "System Modstamp"
     _hidden_value = true
-    createable = false
-    updateable = false
-    queryable = true
   }
   salesforce.Summary NumberOfProducts {
     apiName = "ProductCategory.NumberOfProducts"
     label = "Number of Products"
     precision = 9
     _hidden_value = true
-    createable = false
-    updateable = false
-    queryable = true
   }
 }

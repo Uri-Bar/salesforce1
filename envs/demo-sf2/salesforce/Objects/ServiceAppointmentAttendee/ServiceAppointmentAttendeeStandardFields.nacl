@@ -3,17 +3,11 @@ type salesforce.ServiceAppointmentAttendee {
     apiName = "ServiceAppointmentAttendee.AttendeeId"
     relationshipName = "Attendee"
     label = "Attendee ID"
-    createable = true
-    updateable = false
-    queryable = true
   }
   salesforce.Email Email {
     apiName = "ServiceAppointmentAttendee.Email"
     label = "Email"
     unique = false
-    createable = true
-    updateable = true
-    queryable = true
   }
   salesforce.Unknown HasAttended {
     apiName = "ServiceAppointmentAttendee.HasAttended"
@@ -24,9 +18,6 @@ type salesforce.ServiceAppointmentAttendee {
     relationshipName = "ServiceAppointment"
     _required = true
     label = "Service Appointment ID"
-    createable = true
-    updateable = false
-    queryable = true
   }
   salesforce.Unknown Status {
     apiName = "ServiceAppointmentAttendee.Status"
@@ -43,67 +34,43 @@ type salesforce.ServiceAppointmentAttendee {
     relationshipName = "Owner"
     label = "Owner ID"
     _hidden_value = true
-    createable = true
-    updateable = true
-    queryable = true
   }
   salesforce.Checkbox IsDeleted {
     apiName = "ServiceAppointmentAttendee.IsDeleted"
     defaultValue = false
     label = "Deleted"
     _hidden_value = true
-    createable = false
-    updateable = false
-    queryable = true
   }
   salesforce.AutoNumber AttendeeIdentifier {
     apiName = "ServiceAppointmentAttendee.AttendeeIdentifier"
     label = "Attendee Identifier"
     _hidden_value = true
-    createable = false
-    updateable = false
-    queryable = true
   }
   salesforce.DateTime CreatedDate {
     apiName = "ServiceAppointmentAttendee.CreatedDate"
     label = "Created Date"
     _hidden_value = true
-    createable = false
-    updateable = false
-    queryable = true
   }
   salesforce.Lookup CreatedById {
     apiName = "ServiceAppointmentAttendee.CreatedById"
     relationshipName = "CreatedBy"
     label = "Created By ID"
     _hidden_value = true
-    createable = false
-    updateable = false
-    queryable = true
   }
   salesforce.DateTime LastModifiedDate {
     apiName = "ServiceAppointmentAttendee.LastModifiedDate"
     label = "Last Modified Date"
     _hidden_value = true
-    createable = false
-    updateable = false
-    queryable = true
   }
   salesforce.Lookup LastModifiedById {
     apiName = "ServiceAppointmentAttendee.LastModifiedById"
     relationshipName = "LastModifiedBy"
     label = "Last Modified By ID"
     _hidden_value = true
-    createable = false
-    updateable = false
-    queryable = true
   }
   salesforce.DateTime SystemModstamp {
     apiName = "ServiceAppointmentAttendee.SystemModstamp"
     label = "System Modstamp"
     _hidden_value = true
-    createable = false
-    updateable = false
-    queryable = true
   }
 }

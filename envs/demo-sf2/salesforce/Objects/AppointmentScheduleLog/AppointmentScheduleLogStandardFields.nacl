@@ -10,91 +10,58 @@ type salesforce.AppointmentScheduleLog {
     defaultValue = false
     label = "Deleted"
     _hidden_value = true
-    createable = false
-    updateable = false
-    queryable = true
   }
   salesforce.AutoNumber Name {
     apiName = "AppointmentScheduleLog.Name"
     label = "Name"
     _hidden_value = true
-    createable = false
-    updateable = false
-    queryable = true
   }
   salesforce.DateTime CreatedDate {
     apiName = "AppointmentScheduleLog.CreatedDate"
     label = "Created Date"
     _hidden_value = true
-    createable = false
-    updateable = false
-    queryable = true
   }
   salesforce.Lookup CreatedById {
     apiName = "AppointmentScheduleLog.CreatedById"
     relationshipName = "CreatedBy"
     label = "Created By ID"
     _hidden_value = true
-    createable = false
-    updateable = false
-    queryable = true
   }
   salesforce.DateTime LastModifiedDate {
     apiName = "AppointmentScheduleLog.LastModifiedDate"
     label = "Last Modified Date"
     _hidden_value = true
-    createable = false
-    updateable = false
-    queryable = true
   }
   salesforce.Lookup LastModifiedById {
     apiName = "AppointmentScheduleLog.LastModifiedById"
     relationshipName = "LastModifiedBy"
     label = "Last Modified By ID"
     _hidden_value = true
-    createable = false
-    updateable = false
-    queryable = true
   }
   salesforce.DateTime SystemModstamp {
     apiName = "AppointmentScheduleLog.SystemModstamp"
     label = "System Modstamp"
     _hidden_value = true
-    createable = false
-    updateable = false
-    queryable = true
   }
   salesforce.Lookup AppointmentScheduleAggrId {
     apiName = "AppointmentScheduleLog.AppointmentScheduleAggrId"
     relationshipName = "AppointmentScheduleAggr"
     _required = true
     label = "Appointment Schedule Aggregate ID"
-    createable = true
-    updateable = false
-    queryable = true
   }
   salesforce.Lookup ServiceResourceId {
     apiName = "AppointmentScheduleLog.ServiceResourceId"
     relationshipName = "ServiceResource"
     label = "Resource ID"
-    createable = true
-    updateable = true
-    queryable = true
   }
   salesforce.Date AppointmentDate {
     apiName = "AppointmentScheduleLog.AppointmentDate"
     label = "Appointment Date"
-    createable = true
-    updateable = true
-    queryable = true
   }
   salesforce.Lookup RelatedRecordId {
     apiName = "AppointmentScheduleLog.RelatedRecordId"
     relationshipName = "RelatedRecord"
     label = "Related Record ID"
-    createable = true
-    updateable = true
-    queryable = true
   }
   salesforce.Number ResourceUtilization {
     apiName = "AppointmentScheduleLog.ResourceUtilization"
@@ -102,25 +69,16 @@ type salesforce.AppointmentScheduleLog {
     precision = 18
     scale = 2
     unique = false
-    createable = true
-    updateable = true
-    queryable = true
   }
   salesforce.Checkbox IsUsedForResourceUtilization {
     apiName = "AppointmentScheduleLog.IsUsedForResourceUtilization"
     defaultValue = false
     label = "Used for Resource Utilization"
-    createable = true
-    updateable = true
-    queryable = true
   }
   salesforce.Picklist UsageType {
     apiName = "AppointmentScheduleLog.UsageType"
     restricted = true
     _required = true
     label = "Usage Type"
-    createable = true
-    updateable = true
-    queryable = true
   }
 }

@@ -4,18 +4,12 @@ type salesforce.WebStoreCatalog {
     relationshipName = "ProductCatalog"
     _required = true
     label = "Catalog ID"
-    createable = true
-    updateable = false
-    queryable = true
   }
   salesforce.MasterDetail SalesStoreId {
     apiName = "WebStoreCatalog.SalesStoreId"
     relationshipName = "SalesStore"
     _required = true
     label = "Store ID"
-    createable = true
-    updateable = false
-    queryable = true
   }
   serviceid Id {
     apiName = "WebStoreCatalog.Id"
@@ -28,58 +22,37 @@ type salesforce.WebStoreCatalog {
     defaultValue = false
     label = "Deleted"
     _hidden_value = true
-    createable = false
-    updateable = false
-    queryable = true
   }
   salesforce.AutoNumber Name {
     apiName = "WebStoreCatalog.Name"
     label = "Store Catalog Name"
     _hidden_value = true
-    createable = false
-    updateable = false
-    queryable = true
   }
   salesforce.DateTime CreatedDate {
     apiName = "WebStoreCatalog.CreatedDate"
     label = "Created Date"
     _hidden_value = true
-    createable = false
-    updateable = false
-    queryable = true
   }
   salesforce.Lookup CreatedById {
     apiName = "WebStoreCatalog.CreatedById"
     relationshipName = "CreatedBy"
     label = "Created By ID"
     _hidden_value = true
-    createable = false
-    updateable = false
-    queryable = true
   }
   salesforce.DateTime LastModifiedDate {
     apiName = "WebStoreCatalog.LastModifiedDate"
     label = "Last Modified Date"
     _hidden_value = true
-    createable = false
-    updateable = false
-    queryable = true
   }
   salesforce.Lookup LastModifiedById {
     apiName = "WebStoreCatalog.LastModifiedById"
     relationshipName = "LastModifiedBy"
     label = "Last Modified By ID"
     _hidden_value = true
-    createable = false
-    updateable = false
-    queryable = true
   }
   salesforce.DateTime SystemModstamp {
     apiName = "WebStoreCatalog.SystemModstamp"
     label = "System Modstamp"
     _hidden_value = true
-    createable = false
-    updateable = false
-    queryable = true
   }
 }

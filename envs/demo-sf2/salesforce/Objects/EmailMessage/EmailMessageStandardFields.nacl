@@ -3,9 +3,6 @@ type salesforce.EmailMessage {
     apiName = "EmailMessage.AutomationType"
     restricted = true
     label = "Automation Type"
-    createable = true
-    updateable = false
-    queryable = true
   }
   salesforce.Text BccAddress {
     apiName = "EmailMessage.BccAddress"
@@ -13,9 +10,6 @@ type salesforce.EmailMessage {
     label = "BCC Address"
     unique = false
     caseSensitive = false
-    createable = true
-    updateable = true
-    queryable = true
   }
   salesforce.Text CcAddress {
     apiName = "EmailMessage.CcAddress"
@@ -23,24 +17,15 @@ type salesforce.EmailMessage {
     label = "CC Address"
     unique = false
     caseSensitive = false
-    createable = true
-    updateable = true
-    queryable = true
   }
   salesforce.DateTime FirstOpenedDate {
     apiName = "EmailMessage.FirstOpenedDate"
     label = "First Opened"
-    createable = true
-    updateable = true
-    queryable = true
   }
   salesforce.Email FromAddress {
     apiName = "EmailMessage.FromAddress"
     label = "From Address"
     unique = false
-    createable = true
-    updateable = true
-    queryable = true
   }
   salesforce.Text FromName {
     apiName = "EmailMessage.FromName"
@@ -48,51 +33,33 @@ type salesforce.EmailMessage {
     label = "From Name"
     unique = false
     caseSensitive = false
-    createable = true
-    updateable = true
-    queryable = true
   }
   salesforce.Checkbox HasAttachment {
     apiName = "EmailMessage.HasAttachment"
     defaultValue = false
     label = "Has Attachment"
     _hidden_value = true
-    createable = false
-    updateable = false
-    queryable = true
   }
   salesforce.LongTextArea Headers {
     apiName = "EmailMessage.Headers"
     length = 32000
     label = "Headers"
-    createable = true
-    updateable = true
-    queryable = true
   }
   salesforce.LongTextArea HtmlBody {
     apiName = "EmailMessage.HtmlBody"
     length = 131072
     label = "HTML Body"
-    createable = true
-    updateable = true
-    queryable = true
   }
   salesforce.Checkbox Incoming {
     apiName = "EmailMessage.Incoming"
     defaultValue = false
     label = "Is Incoming"
-    createable = true
-    updateable = false
-    queryable = true
   }
   salesforce.Checkbox IsExternallyVisible {
     apiName = "EmailMessage.IsExternallyVisible"
     defaultValue = false
     label = "Is Externally Visible"
     _hidden_value = true
-    createable = false
-    updateable = false
-    queryable = true
   }
   salesforce.Unknown IsPrivateDraft {
     apiName = "EmailMessage.IsPrivateDraft"
@@ -101,16 +68,10 @@ type salesforce.EmailMessage {
   salesforce.DateTime LastOpenedDate {
     apiName = "EmailMessage.LastOpenedDate"
     label = "Last Opened"
-    createable = true
-    updateable = true
-    queryable = true
   }
   salesforce.DateTime MessageDate {
     apiName = "EmailMessage.MessageDate"
     label = "Message Date"
-    createable = true
-    updateable = true
-    queryable = true
   }
   salesforce.Unknown MessageSize {
     apiName = "EmailMessage.MessageSize"
@@ -120,26 +81,17 @@ type salesforce.EmailMessage {
     apiName = "EmailMessage.ParentId"
     relationshipName = "Parent"
     label = "Case ID"
-    createable = true
-    updateable = false
-    queryable = true
   }
   salesforce.Lookup RelatedToId {
     apiName = "EmailMessage.RelatedToId"
     relationshipName = "RelatedTo"
     label = "Related To ID"
-    createable = true
-    updateable = true
-    queryable = true
   }
   salesforce.Picklist Status {
     apiName = "EmailMessage.Status"
     restricted = true
     _required = true
     label = "Status"
-    createable = true
-    updateable = true
-    queryable = true
   }
   salesforce.Text Subject {
     apiName = "EmailMessage.Subject"
@@ -147,17 +99,11 @@ type salesforce.EmailMessage {
     label = "Subject"
     unique = false
     caseSensitive = false
-    createable = true
-    updateable = true
-    queryable = true
   }
   salesforce.LongTextArea TextBody {
     apiName = "EmailMessage.TextBody"
     length = 131072
     label = "Text Body"
-    createable = true
-    updateable = true
-    queryable = true
   }
   salesforce.Text ToAddress {
     apiName = "EmailMessage.ToAddress"
@@ -165,17 +111,11 @@ type salesforce.EmailMessage {
     label = "To Address"
     unique = false
     caseSensitive = false
-    createable = true
-    updateable = true
-    queryable = true
   }
   salesforce.Picklist ValidatedFromAddress {
     apiName = "EmailMessage.ValidatedFromAddress"
     restricted = true
     label = "From"
-    createable = true
-    updateable = true
-    queryable = true
   }
   serviceid Id {
     apiName = "EmailMessage.Id"
@@ -186,51 +126,33 @@ type salesforce.EmailMessage {
   salesforce.Lookup ActivityId {
     apiName = "EmailMessage.ActivityId"
     label = "Activity ID"
-    createable = true
-    updateable = false
-    queryable = true
   }
   salesforce.Lookup CreatedById {
     apiName = "EmailMessage.CreatedById"
     relationshipName = "CreatedBy"
     label = "Created By ID"
     _hidden_value = true
-    createable = false
-    updateable = false
-    queryable = true
   }
   salesforce.DateTime CreatedDate {
     apiName = "EmailMessage.CreatedDate"
     label = "Created Date"
     _hidden_value = true
-    createable = false
-    updateable = false
-    queryable = true
   }
   salesforce.DateTime LastModifiedDate {
     apiName = "EmailMessage.LastModifiedDate"
     label = "Last Modified Date"
     _hidden_value = true
-    createable = false
-    updateable = false
-    queryable = true
   }
   salesforce.Lookup LastModifiedById {
     apiName = "EmailMessage.LastModifiedById"
     relationshipName = "LastModifiedBy"
     label = "Last Modified By ID"
     _hidden_value = true
-    createable = false
-    updateable = false
-    queryable = true
   }
   salesforce.DateTime SystemModstamp {
     apiName = "EmailMessage.SystemModstamp"
     label = "System Modstamp"
     _hidden_value = true
-    createable = false
-    updateable = false
-    queryable = true
   }
   salesforce.Text Name {
     apiName = "EmailMessage.Name"
@@ -240,26 +162,17 @@ type salesforce.EmailMessage {
     unique = false
     caseSensitive = false
     _hidden_value = true
-    createable = false
-    updateable = false
-    queryable = true
   }
   salesforce.Checkbox IsDeleted {
     apiName = "EmailMessage.IsDeleted"
     defaultValue = false
     label = "Deleted"
     _hidden_value = true
-    createable = false
-    updateable = false
-    queryable = true
   }
   salesforce.Lookup ReplyToEmailMessageId {
     apiName = "EmailMessage.ReplyToEmailMessageId"
     relationshipName = "ReplyToEmailMessage"
     label = "Email Message ID"
-    createable = true
-    updateable = true
-    queryable = true
   }
   salesforce.Text MessageIdentifier {
     apiName = "EmailMessage.MessageIdentifier"
@@ -267,9 +180,6 @@ type salesforce.EmailMessage {
     label = "Message ID"
     unique = false
     caseSensitive = false
-    createable = true
-    updateable = true
-    queryable = true
   }
   salesforce.Text ThreadIdentifier {
     apiName = "EmailMessage.ThreadIdentifier"
@@ -277,9 +187,6 @@ type salesforce.EmailMessage {
     label = "Thread ID"
     unique = false
     caseSensitive = false
-    createable = true
-    updateable = true
-    queryable = true
   }
   salesforce.Text ClientThreadIdentifier {
     apiName = "EmailMessage.ClientThreadIdentifier"
@@ -287,24 +194,15 @@ type salesforce.EmailMessage {
     label = "Client Thread ID"
     unique = false
     caseSensitive = false
-    createable = true
-    updateable = true
-    queryable = true
   }
   salesforce.Lookup FromId {
     apiName = "EmailMessage.FromId"
     label = "From ID"
-    createable = true
-    updateable = false
-    queryable = true
   }
   salesforce.Checkbox IsClientManaged {
     apiName = "EmailMessage.IsClientManaged"
     defaultValue = false
     label = "Is Client Managed"
-    createable = true
-    updateable = false
-    queryable = true
   }
   salesforce.Text AttachmentIds {
     apiName = "EmailMessage.AttachmentIds"
@@ -312,41 +210,26 @@ type salesforce.EmailMessage {
     label = "Attachment Ids"
     unique = false
     caseSensitive = false
-    createable = true
-    updateable = true
-    queryable = true
   }
   salesforce.Checkbox IsTracked {
     apiName = "EmailMessage.IsTracked"
     defaultValue = false
     label = "Is Tracked"
-    createable = true
-    updateable = true
-    queryable = true
   }
   salesforce.Checkbox IsOpened {
     apiName = "EmailMessage.IsOpened"
     defaultValue = false
     label = "Opened?"
     _hidden_value = true
-    createable = false
-    updateable = false
-    queryable = true
   }
   salesforce.Checkbox IsBounced {
     apiName = "EmailMessage.IsBounced"
     defaultValue = false
     label = "Bounced?"
-    createable = true
-    updateable = true
-    queryable = true
   }
   salesforce.Lookup EmailTemplateId {
     apiName = "EmailMessage.EmailTemplateId"
     relationshipName = "EmailTemplate"
     label = "Email Template ID"
-    createable = true
-    updateable = true
-    queryable = true
   }
 }

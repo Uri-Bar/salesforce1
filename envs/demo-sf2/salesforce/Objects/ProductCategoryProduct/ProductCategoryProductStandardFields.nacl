@@ -3,27 +3,18 @@ type salesforce.ProductCategoryProduct {
     apiName = "ProductCategoryProduct.IsPrimaryCategory"
     defaultValue = false
     label = "Is Primary Category"
-    createable = true
-    updateable = true
-    queryable = true
   }
   salesforce.MasterDetail ProductCategoryId {
     apiName = "ProductCategoryProduct.ProductCategoryId"
     relationshipName = "ProductCategory"
     _required = true
     label = "Category ID"
-    createable = true
-    updateable = false
-    queryable = true
   }
   salesforce.Lookup ProductId {
     apiName = "ProductCategoryProduct.ProductId"
     relationshipName = "Product"
     _required = true
     label = "Product ID"
-    createable = true
-    updateable = true
-    queryable = true
   }
   serviceid Id {
     apiName = "ProductCategoryProduct.Id"
@@ -36,59 +27,38 @@ type salesforce.ProductCategoryProduct {
     defaultValue = false
     label = "Deleted"
     _hidden_value = true
-    createable = false
-    updateable = false
-    queryable = true
   }
   salesforce.AutoNumber Name {
     apiName = "ProductCategoryProduct.Name"
     label = "Name"
     _hidden_value = true
-    createable = false
-    updateable = false
-    queryable = true
   }
   salesforce.DateTime CreatedDate {
     apiName = "ProductCategoryProduct.CreatedDate"
     label = "Created Date"
     _hidden_value = true
-    createable = false
-    updateable = false
-    queryable = true
   }
   salesforce.Lookup CreatedById {
     apiName = "ProductCategoryProduct.CreatedById"
     relationshipName = "CreatedBy"
     label = "Created By ID"
     _hidden_value = true
-    createable = false
-    updateable = false
-    queryable = true
   }
   salesforce.DateTime LastModifiedDate {
     apiName = "ProductCategoryProduct.LastModifiedDate"
     label = "Last Modified Date"
     _hidden_value = true
-    createable = false
-    updateable = false
-    queryable = true
   }
   salesforce.Lookup LastModifiedById {
     apiName = "ProductCategoryProduct.LastModifiedById"
     relationshipName = "LastModifiedBy"
     label = "Last Modified By ID"
     _hidden_value = true
-    createable = false
-    updateable = false
-    queryable = true
   }
   salesforce.DateTime SystemModstamp {
     apiName = "ProductCategoryProduct.SystemModstamp"
     label = "System Modstamp"
     _hidden_value = true
-    createable = false
-    updateable = false
-    queryable = true
   }
   salesforce.Lookup CatalogId {
     apiName = "ProductCategoryProduct.CatalogId"
@@ -96,9 +66,6 @@ type salesforce.ProductCategoryProduct {
     _required = true
     label = "Catalog ID"
     _hidden_value = true
-    createable = false
-    updateable = false
-    queryable = true
   }
   salesforce.Text ProductToCategory {
     apiName = "ProductCategoryProduct.ProductToCategory"
@@ -108,8 +75,5 @@ type salesforce.ProductCategoryProduct {
     unique = false
     caseSensitive = false
     _hidden_value = true
-    createable = false
-    updateable = false
-    queryable = true
   }
 }

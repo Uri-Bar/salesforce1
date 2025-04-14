@@ -3,9 +3,6 @@ type salesforce.DataUsePurpose {
     apiName = "DataUsePurpose.CanDataSubjectOptOut"
     defaultValue = false
     label = "Can Data Subject Opt Out"
-    createable = true
-    updateable = true
-    queryable = true
   }
   salesforce.Text Description {
     apiName = "DataUsePurpose.Description"
@@ -13,17 +10,11 @@ type salesforce.DataUsePurpose {
     label = "Description"
     unique = false
     caseSensitive = false
-    createable = true
-    updateable = true
-    queryable = true
   }
   salesforce.Lookup LegalBasisId {
     apiName = "DataUsePurpose.LegalBasisId"
     relationshipName = "LegalBasis"
     label = "Legal Basis ID"
-    createable = true
-    updateable = true
-    queryable = true
   }
   salesforce.Text Name {
     apiName = "DataUsePurpose.Name"
@@ -32,18 +23,12 @@ type salesforce.DataUsePurpose {
     label = "Name"
     unique = false
     caseSensitive = false
-    createable = true
-    updateable = true
-    queryable = true
   }
   salesforce.Lookup OwnerId {
     apiName = "DataUsePurpose.OwnerId"
     relationshipName = "Owner"
     label = "Owner ID"
     _hidden_value = true
-    createable = true
-    updateable = true
-    queryable = true
   }
   serviceid Id {
     apiName = "DataUsePurpose.Id"
@@ -56,50 +41,32 @@ type salesforce.DataUsePurpose {
     defaultValue = false
     label = "Deleted"
     _hidden_value = true
-    createable = false
-    updateable = false
-    queryable = true
   }
   salesforce.DateTime CreatedDate {
     apiName = "DataUsePurpose.CreatedDate"
     label = "Created Date"
     _hidden_value = true
-    createable = false
-    updateable = false
-    queryable = true
   }
   salesforce.Lookup CreatedById {
     apiName = "DataUsePurpose.CreatedById"
     relationshipName = "CreatedBy"
     label = "Created By ID"
     _hidden_value = true
-    createable = false
-    updateable = false
-    queryable = true
   }
   salesforce.DateTime LastModifiedDate {
     apiName = "DataUsePurpose.LastModifiedDate"
     label = "Last Modified Date"
     _hidden_value = true
-    createable = false
-    updateable = false
-    queryable = true
   }
   salesforce.Lookup LastModifiedById {
     apiName = "DataUsePurpose.LastModifiedById"
     relationshipName = "LastModifiedBy"
     label = "Last Modified By ID"
     _hidden_value = true
-    createable = false
-    updateable = false
-    queryable = true
   }
   salesforce.DateTime SystemModstamp {
     apiName = "DataUsePurpose.SystemModstamp"
     label = "System Modstamp"
     _hidden_value = true
-    createable = false
-    updateable = false
-    queryable = true
   }
 }

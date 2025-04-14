@@ -5,26 +5,17 @@ type salesforce.Invoice {
     scale = 2
     precision = 18
     _hidden_value = true
-    createable = false
-    updateable = false
-    queryable = true
   }
   salesforce.Lookup BillToContactId {
     apiName = "Invoice.BillToContactId"
     relationshipName = "BillToContact"
     label = "Contact ID"
-    createable = false
-    updateable = true
-    queryable = true
   }
   salesforce.Lookup BillingAccountId {
     apiName = "Invoice.BillingAccountId"
     relationshipName = "BillingAccount"
     _required = true
     label = "Account ID"
-    createable = false
-    updateable = true
-    queryable = true
   }
   salesforce.Unknown CorpCrcyCnvTotAmtWithTax {
     apiName = "Invoice.CorpCrcyCnvTotAmtWithTax"
@@ -44,34 +35,22 @@ type salesforce.Invoice {
     label = "Description"
     unique = false
     caseSensitive = false
-    createable = false
-    updateable = true
-    queryable = true
   }
   salesforce.Date DueDate {
     apiName = "Invoice.DueDate"
     _required = true
     label = "Due Date"
-    createable = false
-    updateable = true
-    queryable = true
   }
   salesforce.Date InvoiceDate {
     apiName = "Invoice.InvoiceDate"
     _required = true
     label = "Invoice Date"
-    createable = false
-    updateable = true
-    queryable = true
   }
   salesforce.DateTime InvoiceLockedDateTime {
     apiName = "Invoice.InvoiceLockedDateTime"
     inlineHelpText = "The time at which the invoice record was locked."
     label = "Invoice Locked Date Time"
     _hidden_value = true
-    createable = false
-    updateable = false
-    queryable = true
   }
   salesforce.Text InvoiceNumber {
     apiName = "Invoice.InvoiceNumber"
@@ -79,9 +58,6 @@ type salesforce.Invoice {
     label = "Invoice Number"
     unique = false
     caseSensitive = false
-    createable = false
-    updateable = true
-    queryable = true
   }
   salesforce.Checkbox IsInvoiceLocked {
     apiName = "Invoice.IsInvoiceLocked"
@@ -89,42 +65,27 @@ type salesforce.Invoice {
     defaultValue = false
     label = "Invoice Locked"
     _hidden_value = true
-    createable = false
-    updateable = false
-    queryable = true
   }
   salesforce.Summary NetCreditsApplied {
     apiName = "Invoice.NetCreditsApplied"
     label = "Net Credits Applied"
     _hidden_value = true
-    createable = false
-    updateable = false
-    queryable = true
   }
   salesforce.Summary NetPaymentsApplied {
     apiName = "Invoice.NetPaymentsApplied"
     label = "Net Payments Applied"
     _hidden_value = true
-    createable = false
-    updateable = false
-    queryable = true
   }
   salesforce.Lookup OwnerId {
     apiName = "Invoice.OwnerId"
     relationshipName = "Owner"
     label = "Owner ID"
     _hidden_value = true
-    createable = false
-    updateable = true
-    queryable = true
   }
   salesforce.Lookup ReferenceEntityId {
     apiName = "Invoice.ReferenceEntityId"
     relationshipName = "ReferenceEntity"
     label = "ReferenceEntity ID"
-    createable = false
-    updateable = true
-    queryable = true
   }
   salesforce.Picklist Status {
     apiName = "Invoice.Status"
@@ -132,17 +93,11 @@ type salesforce.Invoice {
     _required = true
     label = "Status"
     _hidden_value = true
-    createable = false
-    updateable = false
-    queryable = true
   }
   salesforce.Summary TotalAdjustmentAmount {
     apiName = "Invoice.TotalAdjustmentAmount"
     label = "Total Adjustment Amount"
     _hidden_value = true
-    createable = false
-    updateable = false
-    queryable = true
   }
   salesforce.Currency TotalAdjustmentAmountWithTax {
     apiName = "Invoice.TotalAdjustmentAmountWithTax"
@@ -150,9 +105,6 @@ type salesforce.Invoice {
     scale = 2
     precision = 18
     _hidden_value = true
-    createable = false
-    updateable = false
-    queryable = true
   }
   salesforce.Currency TotalAdjustmentTaxAmount {
     apiName = "Invoice.TotalAdjustmentTaxAmount"
@@ -160,33 +112,21 @@ type salesforce.Invoice {
     scale = 2
     precision = 18
     _hidden_value = true
-    createable = false
-    updateable = false
-    queryable = true
   }
   salesforce.Summary TotalAmount {
     apiName = "Invoice.TotalAmount"
     label = "Total Amount"
     _hidden_value = true
-    createable = false
-    updateable = false
-    queryable = true
   }
   salesforce.Summary TotalAmountWithTax {
     apiName = "Invoice.TotalAmountWithTax"
     label = "Total with Tax"
     _hidden_value = true
-    createable = false
-    updateable = false
-    queryable = true
   }
   salesforce.Summary TotalChargeAmount {
     apiName = "Invoice.TotalChargeAmount"
     label = "Total Charges"
     _hidden_value = true
-    createable = false
-    updateable = false
-    queryable = true
   }
   salesforce.Currency TotalChargeAmountWithTax {
     apiName = "Invoice.TotalChargeAmountWithTax"
@@ -194,9 +134,6 @@ type salesforce.Invoice {
     scale = 2
     precision = 18
     _hidden_value = true
-    createable = false
-    updateable = false
-    queryable = true
   }
   salesforce.Currency TotalChargeTaxAmount {
     apiName = "Invoice.TotalChargeTaxAmount"
@@ -204,17 +141,11 @@ type salesforce.Invoice {
     scale = 2
     precision = 18
     _hidden_value = true
-    createable = false
-    updateable = false
-    queryable = true
   }
   salesforce.Summary TotalTaxAmount {
     apiName = "Invoice.TotalTaxAmount"
     label = "Total Tax"
     _hidden_value = true
-    createable = false
-    updateable = false
-    queryable = true
   }
   serviceid Id {
     apiName = "Invoice.Id"
@@ -227,58 +158,37 @@ type salesforce.Invoice {
     defaultValue = false
     label = "Deleted"
     _hidden_value = true
-    createable = false
-    updateable = false
-    queryable = true
   }
   salesforce.AutoNumber DocumentNumber {
     apiName = "Invoice.DocumentNumber"
     label = "Document Number"
     _hidden_value = true
-    createable = false
-    updateable = false
-    queryable = true
   }
   salesforce.DateTime CreatedDate {
     apiName = "Invoice.CreatedDate"
     label = "Created Date"
     _hidden_value = true
-    createable = false
-    updateable = false
-    queryable = true
   }
   salesforce.Lookup CreatedById {
     apiName = "Invoice.CreatedById"
     relationshipName = "CreatedBy"
     label = "Created By ID"
     _hidden_value = true
-    createable = false
-    updateable = false
-    queryable = true
   }
   salesforce.DateTime LastModifiedDate {
     apiName = "Invoice.LastModifiedDate"
     label = "Last Modified Date"
     _hidden_value = true
-    createable = false
-    updateable = false
-    queryable = true
   }
   salesforce.Lookup LastModifiedById {
     apiName = "Invoice.LastModifiedById"
     relationshipName = "LastModifiedBy"
     label = "Last Modified By ID"
     _hidden_value = true
-    createable = false
-    updateable = false
-    queryable = true
   }
   salesforce.DateTime SystemModstamp {
     apiName = "Invoice.SystemModstamp"
     label = "System Modstamp"
     _hidden_value = true
-    createable = false
-    updateable = false
-    queryable = true
   }
 }
