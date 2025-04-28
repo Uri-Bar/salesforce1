@@ -186,7 +186,8 @@ type salesforce.ServiceAppointment {
   }
   salesforce.Lookup ReceiptOrderId {
     apiName = "ServiceAppointment.ReceiptOrderId"
-    _hidden_value = true
+    label = "Order ID"
+    relationshipName = "ReceiptOrder"
   }
   salesforce.DateTime SchedEndTime {
     apiName = "ServiceAppointment.SchedEndTime"

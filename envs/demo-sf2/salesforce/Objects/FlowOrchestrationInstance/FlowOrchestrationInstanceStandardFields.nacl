@@ -7,10 +7,6 @@ type salesforce.FlowOrchestrationInstance {
     caseSensitive = false
     _hidden_value = true
   }
-  salesforce.Unknown OrchestrationLabel {
-    apiName = "FlowOrchestrationInstance.OrchestrationLabel"
-    _hidden_value = true
-  }
   salesforce.Lookup OwnerId {
     apiName = "FlowOrchestrationInstance.OwnerId"
     relationshipName = "Owner"
@@ -91,5 +87,13 @@ type salesforce.FlowOrchestrationInstance {
     label = "Triggering Record ID"
     unique = false
     caseSensitive = false
+  }
+  salesforce.Text OrchestrationLabel {
+    apiName = "FlowOrchestrationInstance.OrchestrationLabel"
+    label = "Orchestration Name"
+    length = 255
+    unique = false
+    caseSensitive = false
+    _hidden_value = true
   }
 }

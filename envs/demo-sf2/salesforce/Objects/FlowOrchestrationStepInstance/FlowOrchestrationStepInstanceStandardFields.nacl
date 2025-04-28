@@ -89,4 +89,10 @@ type salesforce.FlowOrchestrationStepInstance {
     label = "Step Type"
     _hidden_value = true
   }
+  salesforce.LongTextArea Description {
+    apiName = "FlowOrchestrationStepInstance.Description"
+    label = "Description"
+    length = 32000
+    _hidden_value = true
+  }
 }

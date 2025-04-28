@@ -9,10 +9,6 @@ type salesforce.DigitalWallet {
     label = "Audit Email"
     unique = false
   }
-  salesforce.Unknown BillingName {
-    apiName = "DigitalWallet.BillingName"
-    _hidden_value = true
-  }
   salesforce.LongTextArea Comments {
     apiName = "DigitalWallet.Comments"
     length = 1000
@@ -168,5 +164,12 @@ type salesforce.DigitalWallet {
     apiName = "DigitalWallet.PaymentMethodAddress"
     label = "Payment Method Address"
     _hidden_value = true
+  }
+  salesforce.Text BillingName {
+    apiName = "DigitalWallet.BillingName"
+    label = "Billing Name"
+    length = 255
+    unique = false
+    caseSensitive = false
   }
 }

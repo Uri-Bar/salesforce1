@@ -16,6 +16,7 @@ salesforce.AnalyticsSettings {
   enableAutoCompleteCombo = true
   enableAzureDLGen2OutputConnector = false
   enableCreateLegacyDataflows = true
+  enableDashboardCmpRefreshPref = false
   enableDashboardComponentSnapshot = false
   enableDashboardFlexiTable = true
   enableDataCloudReportingPref = true
@@ -46,6 +47,7 @@ salesforce.AnalyticsSettings {
   enableSFXJoinedReportsEnable = false
   enableSalesforceOutputConnector = false
   enableSecureImageSharing = false
+  enableShowHighContrastChart = false
   enableSnowflakeOutputConnector = false
   enableSummaryFilterOrgPref = false
   enableTableauHyperOutputConnector = false

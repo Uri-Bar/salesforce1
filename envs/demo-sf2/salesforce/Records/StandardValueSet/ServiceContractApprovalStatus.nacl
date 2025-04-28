@@ -1,22 +1,29 @@
 salesforce.StandardValueSet ServiceContractApprovalStatus {
   fullName = "ServiceContractApprovalStatus"
   sorted = false
-  standardValue = [
-    {
-      fullName = "Draft"
-      default = true
-      label = "Draft"
-    },
-    {
-      fullName = "In Approval Process"
-      default = false
-      label = "In Approval Process"
-    },
-    {
-      fullName = "Activated"
-      default = false
-      label = "Activated"
-    },
-  ]
+  standardValue = {
+    values = {
+      Draft = {
+        fullName = "Draft"
+        default = true
+        label = "Draft"
+      }
+      In_Approval_Process@s = {
+        fullName = "In Approval Process"
+        default = false
+        label = "In Approval Process"
+      }
+      Activated = {
+        fullName = "Activated"
+        default = false
+        label = "Activated"
+      }
+    }
+    order = [
+      salesforce.StandardValueSet.instance.ServiceContractApprovalStatus.standardValue.values.Draft,
+      salesforce.StandardValueSet.instance.ServiceContractApprovalStatus.standardValue.values.In_Approval_Process@s,
+      salesforce.StandardValueSet.instance.ServiceContractApprovalStatus.standardValue.values.Activated,
+    ]
+  }
   _alias = "ServiceContractApprovalStatus"
 }

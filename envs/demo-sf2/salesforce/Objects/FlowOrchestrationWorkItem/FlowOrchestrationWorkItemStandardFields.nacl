@@ -102,4 +102,14 @@ type salesforce.FlowOrchestrationWorkItem {
     label = "Screen Flow Inputs"
     _hidden_value = true
   }
+  salesforce.Unknown ElapsedTimeSinceCreationInSec {
+    apiName = "FlowOrchestrationWorkItem.ElapsedTimeSinceCreationInSec"
+    label = "Time Since Creation"
+    _hidden_value = true
+  }
+  salesforce.Unknown ElapsedTimeSinceAsgntInSec {
+    apiName = "FlowOrchestrationWorkItem.ElapsedTimeSinceAsgntInSec"
+    label = "Time Since Assignment"
+    _hidden_value = true
+  }
 }

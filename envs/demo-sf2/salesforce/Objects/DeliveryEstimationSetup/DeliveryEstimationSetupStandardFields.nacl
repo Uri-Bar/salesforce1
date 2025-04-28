@@ -124,15 +124,19 @@ type salesforce.DeliveryEstimationSetup {
     label = "Last Synced Message"
     _hidden_value = true
   }
-  salesforce.Unknown ServiceRegion {
-    apiName = "DeliveryEstimationSetup.ServiceRegion"
-    _hidden_value = true
-  }
   salesforce.Picklist SyncStatus {
     apiName = "DeliveryEstimationSetup.SyncStatus"
     restricted = true
     _required = true
     label = "Sync Status"
+    _hidden_value = true
+  }
+  salesforce.Text ServiceRegion {
+    apiName = "DeliveryEstimationSetup.ServiceRegion"
+    label = "Service Region"
+    length = 256
+    unique = false
+    caseSensitive = false
     _hidden_value = true
   }
 }

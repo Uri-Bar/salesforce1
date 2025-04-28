@@ -1,4 +1,6 @@
 salesforce.UserInterfaceSettings {
+  multiColumnSortLv = false
+  multiColumnSortRl = false
   fullName = "UserInterface"
   alternateAlohaListView = true
   dynamicMruActionsOff = false

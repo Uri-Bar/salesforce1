@@ -694,6 +694,18 @@ type salesforce.User {
     apiName = "User.UserPreferencesShowForecastingRoundedAmounts"
     label = "ShowForecastingRoundedAmounts"
   }
+  salesforce.Checkbox HasUserVerifiedPhone {
+    apiName = "User.HasUserVerifiedPhone"
+    label = "User Verified Mobile Number"
+    defaultValue = false
+    _hidden_value = true
+  }
+  salesforce.Checkbox HasUserVerifiedEmail {
+    apiName = "User.HasUserVerifiedEmail"
+    label = "User Verified Email"
+    defaultValue = false
+    _hidden_value = true
+  }
   salesforce.Lookup ContactId {
     apiName = "User.ContactId"
     relationshipName = "Contact"

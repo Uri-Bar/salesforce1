@@ -185,4 +185,12 @@ type salesforce.PrivacyJobSession {
     label = "Preview"
     _hidden_value = true
   }
+  salesforce.Text PermissionSet {
+    apiName = "PrivacyJobSession.PermissionSet"
+    label = "Permission Set"
+    length = 255
+    unique = false
+    caseSensitive = false
+    _hidden_value = true
+  }
 }

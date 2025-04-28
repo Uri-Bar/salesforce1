@@ -175,6 +175,11 @@ type salesforce.Site {
     label = "isSiteConsentBannerIntegrationMigrated"
     _hidden_value = true
   }
+  salesforce.Checkbox OptionsIsSlashSRemovedSite {
+    apiName = "Site.OptionsIsSlashSRemovedSite"
+    label = "isSlashSRemovedSite"
+    _hidden_value = true
+  }
   salesforce.LongTextArea Description {
     apiName = "Site.Description"
     length = 1000

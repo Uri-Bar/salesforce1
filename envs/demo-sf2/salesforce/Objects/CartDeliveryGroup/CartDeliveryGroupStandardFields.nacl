@@ -171,4 +171,12 @@ type salesforce.CartDeliveryGroup {
     label = "Delivery Address"
     _hidden_value = true
   }
+  salesforce.Number TotalCartItemCount {
+    apiName = "CartDeliveryGroup.TotalCartItemCount"
+    label = "Total Cart Items in Delivery Group"
+    scale = 0
+    precision = 9
+    unique = false
+    _hidden_value = true
+  }
 }

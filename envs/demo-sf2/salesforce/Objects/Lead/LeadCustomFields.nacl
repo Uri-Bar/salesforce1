@@ -18,41 +18,54 @@ type salesforce.Lead {
   salesforce.Picklist Primary__c {
     apiName = "Lead.Primary__c"
     label = "Primary"
-    valueSet = [
-      {
-        fullName = "No"
-        default = false
-        label = "No"
-      },
-      {
-        fullName = "Yes"
-        default = false
-        label = "Yes"
-      },
-    ]
+    valueSet = {
+      values = {
+        No = {
+          fullName = "No"
+          default = false
+          label = "No"
+        }
+        Yes = {
+          fullName = "Yes"
+          default = false
+          label = "Yes"
+        }
+      }
+      order = [
+        salesforce.Lead.field.Primary__c.valueSet.values.No,
+        salesforce.Lead.field.Primary__c.valueSet.values.Yes,
+      ]
+    }
     sorted = false
     restricted = false
   }
   salesforce.Picklist ProductInterest__c {
     apiName = "Lead.ProductInterest__c"
     label = "Product Interest"
-    valueSet = [
-      {
-        fullName = "GC1000 series"
-        default = false
-        label = "GC1000 series"
-      },
-      {
-        fullName = "GC5000 series"
-        default = false
-        label = "GC5000 series"
-      },
-      {
-        fullName = "GC3000 series"
-        default = false
-        label = "GC3000 series"
-      },
-    ]
+    valueSet = {
+      values = {
+        GC1000_series@s = {
+          fullName = "GC1000 series"
+          default = false
+          label = "GC1000 series"
+        }
+        GC5000_series@s = {
+          fullName = "GC5000 series"
+          default = false
+          label = "GC5000 series"
+        }
+        GC3000_series@s = {
+          fullName = "GC3000 series"
+          default = false
+          label = "GC3000 series"
+        }
+      }
+      order = [
+        salesforce.Lead.field.ProductInterest__c.valueSet.values.GC1000_series@s,
+        salesforce.Lead.field.ProductInterest__c.valueSet.values.GC5000_series@s,
+        salesforce.Lead.field.ProductInterest__c.valueSet.values.GC3000_series@s,
+      ]
+    }
     sorted = false
     restricted = false
   }
