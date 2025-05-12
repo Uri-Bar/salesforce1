@@ -10,30 +10,23 @@ type salesforce.Contact {
   salesforce.Picklist Level__c {
     apiName = "Contact.Level__c"
     label = "Level"
-    valueSet = {
-      values = {
-        Secondary = {
-          fullName = "Secondary"
-          default = false
-          label = "Secondary"
-        }
-        Tertiary = {
-          fullName = "Tertiary"
-          default = false
-          label = "Tertiary"
-        }
-        Primary = {
-          fullName = "Primary"
-          default = false
-          label = "Primary"
-        }
-      }
-      order = [
-        salesforce.Contact.field.Level__c.valueSet.values.Secondary,
-        salesforce.Contact.field.Level__c.valueSet.values.Tertiary,
-        salesforce.Contact.field.Level__c.valueSet.values.Primary,
-      ]
-    }
+    valueSet = [
+      {
+        fullName = "Secondary"
+        default = false
+        label = "Secondary"
+      },
+      {
+        fullName = "Tertiary"
+        default = false
+        label = "Tertiary"
+      },
+      {
+        fullName = "Primary"
+        default = false
+        label = "Primary"
+      },
+    ]
     sorted = false
     restricted = false
   }

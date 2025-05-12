@@ -1,7 +1,6 @@
 salesforce.Flow to_acti {
   fullName = "to_acti"
   apiVersion = 56
-  areMetricsLoggedToDataCloud = false
   environments = "Default"
   interviewLabel = "to acti {!$Flow.CurrentDateTime}"
   label = "to acti"

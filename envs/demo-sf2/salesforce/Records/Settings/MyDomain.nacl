@@ -1,6 +1,5 @@
 salesforce.MyDomainSettings {
   fullName = "MyDomain"
-  areLegacyRedirectsMaintained = false
   canOnlyLoginWithMyDomainUrl = false
   doesApiLoginRequireOrgDomain = false
   doesWarnOnForceComRedirect = false

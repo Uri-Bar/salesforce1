@@ -131,12 +131,8 @@ type salesforce.DeliveryEstimationSetup {
     label = "Sync Status"
     _hidden_value = true
   }
-  salesforce.Text ServiceRegion {
+  salesforce.Unknown ServiceRegion {
     apiName = "DeliveryEstimationSetup.ServiceRegion"
-    label = "Service Region"
-    length = 256
-    unique = false
-    caseSensitive = false
     _hidden_value = true
   }
 }

@@ -1,7 +1,6 @@
 salesforce.Flow draftToDelete {
   fullName = "draftToDelete"
   apiVersion = 56
-  areMetricsLoggedToDataCloud = false
   assignments = [
     {
       name = "som"

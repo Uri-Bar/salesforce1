@@ -4,7 +4,6 @@ salesforce.LightningExperienceSettings {
   enableApiUserLtngOutAccessPref = false
   enableAuraCDNPref = true
   enableAuraSecStaticResCRUCPref = false
-  enableDeferRenderingWorkspacePage = false
   enableErrorExperienceEnabled = false
   enableFeedbackInMobile = true
   enableHideOpenInQuip = false

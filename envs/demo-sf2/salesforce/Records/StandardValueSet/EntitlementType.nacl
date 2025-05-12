@@ -1,23 +1,17 @@
 salesforce.StandardValueSet EntitlementType {
   fullName = "EntitlementType"
   sorted = false
-  standardValue = {
-    values = {
-      Phone_Support@s = {
-        fullName = "Phone Support"
-        default = true
-        label = "Phone Support"
-      }
-      Web_Support@s = {
-        fullName = "Web Support"
-        default = false
-        label = "Web Support"
-      }
-    }
-    order = [
-      salesforce.StandardValueSet.instance.EntitlementType.standardValue.values.Phone_Support@s,
-      salesforce.StandardValueSet.instance.EntitlementType.standardValue.values.Web_Support@s,
-    ]
-  }
+  standardValue = [
+    {
+      fullName = "Phone Support"
+      default = true
+      label = "Phone Support"
+    },
+    {
+      fullName = "Web Support"
+      default = false
+      label = "Web Support"
+    },
+  ]
   _alias = "EntitlementType"
 }

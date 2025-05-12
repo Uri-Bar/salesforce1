@@ -30,8 +30,6 @@ type salesforce.FulfillmentOrderLineItem {
   }
   salesforce.Lookup MainFulfillmentOrderLineItemId {
     apiName = "FulfillmentOrderLineItem.MainFulfillmentOrderLineItemId"
-    label = "Fulfillment Order Product ID"
-    relationshipName = "MainFulfillmentOrderLineItem"
     _hidden_value = true
   }
   salesforce.Lookup OrderItemId {

@@ -15,7 +15,6 @@ salesforce.IndustriesSettings {
   enableMultipleTopicsForShiftsOrgPref = false
   enableOverbookingOrgPref = false
   enablePreBookedFallbackMechOrgPref = false
-  enableSchedulerPaymentsPref = false
   enableShareSaWithArOrgPref = false
   enableTopicOrTemplate = false
   enableTopicTimeSlot = true

@@ -88,12 +88,8 @@ type salesforce.FlowOrchestrationInstance {
     unique = false
     caseSensitive = false
   }
-  salesforce.Text OrchestrationLabel {
+  salesforce.Unknown OrchestrationLabel {
     apiName = "FlowOrchestrationInstance.OrchestrationLabel"
-    label = "Orchestration Name"
-    length = 255
-    unique = false
-    caseSensitive = false
     _hidden_value = true
   }
 }

@@ -88,10 +88,8 @@ type salesforce.ApprovalSubmission {
     label = "System Modstamp"
     _hidden_value = true
   }
-  salesforce.Checkbox DoesSendApprovalEmail {
+  salesforce.Unknown DoesSendApprovalEmail {
     apiName = "ApprovalSubmission.DoesSendApprovalEmail"
-    label = "Send Approval Email"
-    defaultValue = false
     _hidden_value = true
   }
 }

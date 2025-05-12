@@ -9,15 +9,15 @@ salesforce.RecordType Opportunity_cecks {
       picklist = salesforce.Opportunity.field.DeliveryInstallationStatus__c
       values = [
         {
-          fullName = salesforce.Opportunity.field.DeliveryInstallationStatus__c.valueSet.values.Completed.fullName
+          fullName = "Completed"
           default = false
         },
         {
-          fullName = salesforce.Opportunity.field.DeliveryInstallationStatus__c.valueSet.values.In_progress@s.fullName
+          fullName = "In progress"
           default = false
         },
         {
-          fullName = salesforce.Opportunity.field.DeliveryInstallationStatus__c.valueSet.values.Yet_to_begin@s.fullName
+          fullName = "Yet to begin"
           default = false
         },
       ]
@@ -51,23 +51,23 @@ salesforce.RecordType Opportunity_cecks {
       picklist = salesforce.Opportunity.field.LeadSource
       values = [
         {
-          fullName = salesforce.StandardValueSet.instance.LeadSource.standardValue.values.Other.fullName
+          fullName = "Other"
           default = false
         },
         {
-          fullName = salesforce.StandardValueSet.instance.LeadSource.standardValue.values.Partner_Referral@s.fullName
+          fullName = "Partner Referral"
           default = false
         },
         {
-          fullName = salesforce.StandardValueSet.instance.LeadSource.standardValue.values.Phone_Inquiry@s.fullName
+          fullName = "Phone Inquiry"
           default = false
         },
         {
-          fullName = salesforce.StandardValueSet.instance.LeadSource.standardValue.values.Purchased_List@s.fullName
+          fullName = "Purchased List"
           default = false
         },
         {
-          fullName = salesforce.StandardValueSet.instance.LeadSource.standardValue.values.Web.fullName
+          fullName = "Web"
           default = false
         },
       ]
@@ -76,19 +76,19 @@ salesforce.RecordType Opportunity_cecks {
       picklist = salesforce.Opportunity.field.Type
       values = [
         {
-          fullName = salesforce.StandardValueSet.instance.OpportunityType.standardValue.values.Existing_Customer___Downgrade@ssbs.fullName
+          fullName = "Existing Customer - Downgrade"
           default = false
         },
         {
-          fullName = salesforce.StandardValueSet.instance.OpportunityType.standardValue.values.Existing_Customer___Replacement@ssbs.fullName
+          fullName = "Existing Customer - Replacement"
           default = false
         },
         {
-          fullName = salesforce.StandardValueSet.instance.OpportunityType.standardValue.values.Existing_Customer___Upgrade@ssbs.fullName
+          fullName = "Existing Customer - Upgrade"
           default = false
         },
         {
-          fullName = salesforce.StandardValueSet.instance.OpportunityType.standardValue.values.New_Customer@s.fullName
+          fullName = "New Customer"
           default = false
         },
       ]

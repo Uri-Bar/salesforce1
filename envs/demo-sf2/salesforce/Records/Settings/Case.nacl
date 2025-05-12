@@ -34,7 +34,6 @@ salesforce.CaseSettings {
   notifyDefaultCaseOwner = false
   notifyOwnerOnCaseComment = false
   notifyOwnerOnCaseOwnerChange = false
-  rtaCaseComment = false
   showEmailAttachmentsInCaseAttachmentsRL = true
   useSystemEmailAddress = true
   useSystemUserAsDefaultCaseUser = false

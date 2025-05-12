@@ -18,7 +18,6 @@ salesforce.Flow flowtwo {
     storeOutputAutomatically = true
   }
   apiVersion = 55
-  areMetricsLoggedToDataCloud = false
   environments = "Default"
   interviewLabel = "flowtwo {!$Flow.CurrentDateTime}"
   label = "flowtwo"

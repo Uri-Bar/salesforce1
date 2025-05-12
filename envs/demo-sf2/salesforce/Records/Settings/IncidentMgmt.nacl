@@ -2,9 +2,6 @@ salesforce.IncidentMgmtSettings {
   fullName = "IncidentMgmt"
   enableAlertBroadcastType = false
   enableEmailBroadcastType = false
-  enableITSMChangeMgmt = false
-  enableITSMIncidentMgmt = false
-  enableITSMProblemMgmt = false
   enableIncidentMgmt = true
   enableSiteBannerBroadcastType = false
   enableSlackBroadcastType = false

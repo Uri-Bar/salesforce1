@@ -23,7 +23,6 @@ salesforce.Flow DEMO {
     nameSegment = "CollaborationGroup.NewGroupMember"
   }
   apiVersion = 56
-  areMetricsLoggedToDataCloud = false
   environments = "Default"
   interviewLabel = "DEMO {!$Flow.CurrentDateTime}"
   label = "DEMO"

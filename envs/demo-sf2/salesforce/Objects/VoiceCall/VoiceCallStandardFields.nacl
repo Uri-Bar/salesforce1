@@ -317,9 +317,4 @@ type salesforce.VoiceCall {
     label = "Call Subtype"
     _hidden_value = true
   }
-  salesforce.Picklist CallStatus {
-    apiName = "VoiceCall.CallStatus"
-    label = "Call Status Internal"
-    _hidden_value = true
-  }
 }
