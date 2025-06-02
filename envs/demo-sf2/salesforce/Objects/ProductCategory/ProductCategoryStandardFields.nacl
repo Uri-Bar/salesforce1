@@ -77,6 +77,5 @@ type salesforce.ProductCategory {
     apiName = "ProductCategory.NumberOfProducts"
     label = "Number of Products"
     precision = 9
-    _hidden_value = true
   }
 }

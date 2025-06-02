@@ -4,7 +4,6 @@ type salesforce.CreditMemo {
     label = "Balance"
     scale = 2
     precision = 18
-    _hidden_value = true
   }
   salesforce.Lookup BillToContactId {
     apiName = "CreditMemo.BillToContactId"
@@ -19,21 +18,17 @@ type salesforce.CreditMemo {
   }
   salesforce.Unknown CorpCrcyCnvTotAmtWithTax {
     apiName = "CreditMemo.CorpCrcyCnvTotAmtWithTax"
-    _hidden_value = true
   }
   salesforce.Unknown CorporateCurrencyCvsnDate {
     apiName = "CreditMemo.CorporateCurrencyCvsnDate"
-    _hidden_value = true
   }
   salesforce.Unknown CorporateCurrencyCvsnRate {
     apiName = "CreditMemo.CorporateCurrencyCvsnRate"
-    _hidden_value = true
   }
   salesforce.Picklist CreationMode {
     apiName = "CreditMemo.CreationMode"
     restricted = true
     label = "Creation Mode"
-    _hidden_value = true
   }
   salesforce.Date CreditDate {
     apiName = "CreditMemo.CreditDate"
@@ -72,7 +67,6 @@ type salesforce.CreditMemo {
     apiName = "CreditMemo.NetCreditsApplied"
     inlineHelpText = "Net amount applied from the credit memo."
     label = "Net Credits Applied"
-    _hidden_value = true
   }
   salesforce.Lookup OwnerId {
     apiName = "CreditMemo.OwnerId"
@@ -94,50 +88,42 @@ type salesforce.CreditMemo {
   salesforce.Summary TotalAdjustmentAmount {
     apiName = "CreditMemo.TotalAdjustmentAmount"
     label = "Total Adjustment Amount"
-    _hidden_value = true
   }
   salesforce.Currency TotalAdjustmentAmountWithTax {
     apiName = "CreditMemo.TotalAdjustmentAmountWithTax"
     label = "Total Adjustment Amount with Tax"
     scale = 2
     precision = 18
-    _hidden_value = true
   }
   salesforce.Currency TotalAdjustmentTaxAmount {
     apiName = "CreditMemo.TotalAdjustmentTaxAmount"
     label = "Total Adjustment Tax Amount"
     scale = 2
     precision = 18
-    _hidden_value = true
   }
   salesforce.Summary TotalAmount {
     apiName = "CreditMemo.TotalAmount"
     label = "Total Amount"
-    _hidden_value = true
   }
   salesforce.Summary TotalAmountWithTax {
     apiName = "CreditMemo.TotalAmountWithTax"
     label = "Total with Tax"
-    _hidden_value = true
   }
   salesforce.Summary TotalChargeAmount {
     apiName = "CreditMemo.TotalChargeAmount"
     label = "Total Charges"
-    _hidden_value = true
   }
   salesforce.Currency TotalChargeAmountWithTax {
     apiName = "CreditMemo.TotalChargeAmountWithTax"
     label = "Total Charge Amount with Tax"
     scale = 2
     precision = 18
-    _hidden_value = true
   }
   salesforce.Currency TotalChargeTaxAmount {
     apiName = "CreditMemo.TotalChargeTaxAmount"
     label = "Total Charge Tax Amount"
     scale = 2
     precision = 18
-    _hidden_value = true
   }
   salesforce.Currency TotalCreditAmountApplied {
     apiName = "CreditMemo.TotalCreditAmountApplied"
@@ -145,7 +131,6 @@ type salesforce.CreditMemo {
     label = "Total Credit Amount Applied"
     scale = 2
     precision = 18
-    _hidden_value = true
   }
   salesforce.Currency TotalCreditAmountUnapplied {
     apiName = "CreditMemo.TotalCreditAmountUnapplied"
@@ -153,12 +138,10 @@ type salesforce.CreditMemo {
     label = "Total Credit Amount Unapplied"
     scale = 2
     precision = 18
-    _hidden_value = true
   }
   salesforce.Summary TotalTaxAmount {
     apiName = "CreditMemo.TotalTaxAmount"
     label = "Total Tax"
-    _hidden_value = true
   }
   serviceid Id {
     apiName = "CreditMemo.Id"

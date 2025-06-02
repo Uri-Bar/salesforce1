@@ -17,6 +17,8 @@ salesforce.UserManagementSettings {
   restrictedProfileCloning = false
   userAccessPoliciesEnabled = false
   _alias = "UserManagement"
+  enhancedPermSetList = false
   enhancedUserListView = false
+  enhancedUserRoleListView = false
   groupSummaryUIEnhancement = true
 }

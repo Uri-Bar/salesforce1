@@ -15,7 +15,6 @@ type salesforce.WebStoreInventorySource {
   }
   salesforce.Unknown IsEnabled {
     apiName = "WebStoreInventorySource.IsEnabled"
-    _hidden_value = true
   }
   salesforce.Text LocationSourceExtRef {
     apiName = "WebStoreInventorySource.LocationSourceExtRef"
@@ -23,7 +22,6 @@ type salesforce.WebStoreInventorySource {
     label = "Location Source External Reference"
     unique = false
     caseSensitive = false
-    _hidden_value = true
   }
   salesforce.Lookup LocationSourceId {
     apiName = "WebStoreInventorySource.LocationSourceId"
@@ -95,12 +93,10 @@ type salesforce.WebStoreInventorySource {
     apiName = "WebStoreInventorySource.IsDefault"
     defaultValue = false
     label = "Default"
-    _hidden_value = true
   }
   salesforce.Checkbox IsBopisEnabled {
     apiName = "WebStoreInventorySource.IsBopisEnabled"
     defaultValue = false
     label = "BOPIS Enabled"
-    _hidden_value = true
   }
 }

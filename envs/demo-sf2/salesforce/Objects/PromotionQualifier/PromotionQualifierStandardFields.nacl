@@ -45,7 +45,6 @@ type salesforce.PromotionQualifier {
     label = "Qualifier Category Name"
     unique = false
     caseSensitive = false
-    _hidden_value = true
   }
   salesforce.Text QualifierProductName {
     apiName = "PromotionQualifier.QualifierProductName"
@@ -53,7 +52,6 @@ type salesforce.PromotionQualifier {
     label = "Qualifier Product Name"
     unique = false
     caseSensitive = false
-    _hidden_value = true
   }
   salesforce.Text QualifierProductSku {
     apiName = "PromotionQualifier.QualifierProductSku"
@@ -61,7 +59,6 @@ type salesforce.PromotionQualifier {
     label = "Qualifier Product SKU"
     unique = false
     caseSensitive = false
-    _hidden_value = true
   }
   salesforce.Picklist QualifierType {
     apiName = "PromotionQualifier.QualifierType"

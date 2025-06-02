@@ -10,11 +10,9 @@ type salesforce.AppointmentInvitation {
     label = "Appointment Topic Type"
     unique = false
     caseSensitive = false
-    _hidden_value = true
   }
   salesforce.Picklist AppointmentType {
     apiName = "AppointmentInvitation.AppointmentType"
-    _hidden_value = true
   }
   salesforce.Date BookingEndDate {
     apiName = "AppointmentInvitation.BookingEndDate"
@@ -35,7 +33,6 @@ type salesforce.AppointmentInvitation {
     label = "Invitation Identifier"
     unique = false
     caseSensitive = false
-    _hidden_value = true
   }
   salesforce.Url InvitationUrl {
     apiName = "AppointmentInvitation.InvitationUrl"

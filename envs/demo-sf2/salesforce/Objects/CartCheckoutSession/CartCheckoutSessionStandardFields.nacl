@@ -51,7 +51,6 @@ type salesforce.CartCheckoutSession {
     relationshipName = "WebCart"
     _required = true
     label = "Cart ID"
-    _hidden_value = true
   }
   salesforce.Text State {
     apiName = "CartCheckoutSession.State"

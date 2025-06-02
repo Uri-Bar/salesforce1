@@ -5,7 +5,6 @@ type salesforce.OperatingHoursHoliday {
     label = "Date and Time"
     unique = false
     caseSensitive = false
-    _hidden_value = true
   }
   salesforce.Lookup HolidayId {
     apiName = "OperatingHoursHoliday.HolidayId"

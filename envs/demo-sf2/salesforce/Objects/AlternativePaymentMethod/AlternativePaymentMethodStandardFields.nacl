@@ -176,13 +176,11 @@ type salesforce.AlternativePaymentMethod {
   salesforce.Address PaymentMethodAddress {
     apiName = "AlternativePaymentMethod.PaymentMethodAddress"
     label = "Payment Method Address"
-    _hidden_value = true
   }
   salesforce.Picklist BankAccountHolderType {
     apiName = "AlternativePaymentMethod.BankAccountHolderType"
     restricted = true
     label = "Account Ownership Type"
-    _hidden_value = true
   }
   salesforce.Text BankAccountType {
     apiName = "AlternativePaymentMethod.BankAccountType"
@@ -190,12 +188,10 @@ type salesforce.AlternativePaymentMethod {
     label = "Bank Account Type"
     unique = false
     caseSensitive = false
-    _hidden_value = true
   }
   salesforce.Picklist StandardEntryClassCode {
     apiName = "AlternativePaymentMethod.StandardEntryClassCode"
     restricted = true
     label = "Standard Entry Class Code (ACH)"
-    _hidden_value = true
   }
 }

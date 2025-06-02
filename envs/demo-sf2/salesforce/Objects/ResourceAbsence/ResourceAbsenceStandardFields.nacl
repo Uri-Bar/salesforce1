@@ -2,7 +2,6 @@ type salesforce.ResourceAbsence {
   salesforce.Address Address {
     apiName = "ResourceAbsence.Address"
     label = "Address"
-    _hidden_value = true
   }
   salesforce.LongTextArea Description {
     apiName = "ResourceAbsence.Description"

@@ -68,7 +68,6 @@ type salesforce.Problem {
     apiName = "Problem.StatusCode"
     restricted = true
     label = "Status Code"
-    _hidden_value = true
   }
   salesforce.Picklist SubCategory {
     apiName = "Problem.SubCategory"

@@ -8,7 +8,6 @@ type salesforce.ChatterActivity {
   salesforce.Lookup ParentId {
     apiName = "ChatterActivity.ParentId"
     label = "Parent ID"
-    _hidden_value = true
   }
   salesforce.Number PostCount {
     apiName = "ChatterActivity.PostCount"
@@ -17,7 +16,6 @@ type salesforce.ChatterActivity {
     precision = 9
     scale = 0
     unique = false
-    _hidden_value = true
   }
   salesforce.Number CommentCount {
     apiName = "ChatterActivity.CommentCount"
@@ -26,7 +24,6 @@ type salesforce.ChatterActivity {
     precision = 9
     scale = 0
     unique = false
-    _hidden_value = true
   }
   salesforce.Number CommentReceivedCount {
     apiName = "ChatterActivity.CommentReceivedCount"
@@ -35,7 +32,6 @@ type salesforce.ChatterActivity {
     precision = 9
     scale = 0
     unique = false
-    _hidden_value = true
   }
   salesforce.Number LikeReceivedCount {
     apiName = "ChatterActivity.LikeReceivedCount"
@@ -44,7 +40,6 @@ type salesforce.ChatterActivity {
     precision = 9
     scale = 0
     unique = false
-    _hidden_value = true
   }
   salesforce.Number InfluenceRawRank {
     apiName = "ChatterActivity.InfluenceRawRank"
@@ -53,7 +48,6 @@ type salesforce.ChatterActivity {
     precision = 9
     scale = 0
     unique = false
-    _hidden_value = true
   }
   salesforce.DateTime SystemModstamp {
     apiName = "ChatterActivity.SystemModstamp"

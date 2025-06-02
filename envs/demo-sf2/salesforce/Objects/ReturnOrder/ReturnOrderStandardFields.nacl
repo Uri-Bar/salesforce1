@@ -35,13 +35,11 @@ type salesforce.ReturnOrder {
   salesforce.Summary GrandTotalAmount {
     apiName = "ReturnOrder.GrandTotalAmount"
     label = "Total with Tax"
-    _hidden_value = true
   }
   salesforce.Picklist LifeCycleType {
     apiName = "ReturnOrder.LifeCycleType"
     restricted = true
     label = "Life Cycle Type"
-    _hidden_value = true
   }
   salesforce.Lookup OrderId {
     apiName = "ReturnOrder.OrderId"
@@ -62,7 +60,6 @@ type salesforce.ReturnOrder {
   salesforce.Address ShipFromAddress {
     apiName = "ReturnOrder.ShipFromAddress"
     label = "Ship From Address"
-    _hidden_value = true
   }
   salesforce.Picklist ShipmentType {
     apiName = "ReturnOrder.ShipmentType"
@@ -83,83 +80,67 @@ type salesforce.ReturnOrder {
     apiName = "ReturnOrder.StatusCategory"
     restricted = true
     label = "Status Category"
-    _hidden_value = true
   }
   salesforce.Picklist TaxLocaleType {
     apiName = "ReturnOrder.TaxLocaleType"
     restricted = true
     label = "Tax Locale Type"
-    _hidden_value = true
   }
   salesforce.Summary TotalAmount {
     apiName = "ReturnOrder.TotalAmount"
     label = "Pretax Total"
-    _hidden_value = true
   }
   salesforce.Summary TotalDeliveryAdjustAmount {
     apiName = "ReturnOrder.TotalDeliveryAdjustAmount"
     label = "Shipping Adjustments"
-    _hidden_value = true
   }
   salesforce.Summary TotalDeliveryAdjustAmtWithTax {
     apiName = "ReturnOrder.TotalDeliveryAdjustAmtWithTax"
     label = "Shipping Adjustments with Tax"
-    _hidden_value = true
   }
   salesforce.Summary TotalDeliveryAdjustTaxAmount {
     apiName = "ReturnOrder.TotalDeliveryAdjustTaxAmount"
     label = "Shipping Adjustments Tax"
-    _hidden_value = true
   }
   salesforce.Summary TotalDeliveryAmount {
     apiName = "ReturnOrder.TotalDeliveryAmount"
     label = "Shipping Subtotal"
-    _hidden_value = true
   }
   salesforce.Summary TotalDeliveryAmtWithTax {
     apiName = "ReturnOrder.TotalDeliveryAmtWithTax"
     label = "Shipping Subtotal with Tax"
-    _hidden_value = true
   }
   salesforce.Summary TotalDeliveryTaxAmount {
     apiName = "ReturnOrder.TotalDeliveryTaxAmount"
     label = "Shipping Subtotal Tax"
-    _hidden_value = true
   }
   salesforce.Summary TotalProductAdjustAmount {
     apiName = "ReturnOrder.TotalProductAdjustAmount"
     label = "Product Adjustments"
-    _hidden_value = true
   }
   salesforce.Summary TotalProductAdjustAmtWithTax {
     apiName = "ReturnOrder.TotalProductAdjustAmtWithTax"
     label = "Product Adjustments with Tax"
-    _hidden_value = true
   }
   salesforce.Summary TotalProductAdjustTaxAmount {
     apiName = "ReturnOrder.TotalProductAdjustTaxAmount"
     label = "Product Adjustments Tax"
-    _hidden_value = true
   }
   salesforce.Summary TotalProductAmount {
     apiName = "ReturnOrder.TotalProductAmount"
     label = "Product Subtotal"
-    _hidden_value = true
   }
   salesforce.Summary TotalProductAmtWithTax {
     apiName = "ReturnOrder.TotalProductAmtWithTax"
     label = "Product Subtotal with Tax"
-    _hidden_value = true
   }
   salesforce.Summary TotalProductTaxAmount {
     apiName = "ReturnOrder.TotalProductTaxAmount"
     label = "Product Subtotal Tax"
-    _hidden_value = true
   }
   salesforce.Summary TotalTaxAmount {
     apiName = "ReturnOrder.TotalTaxAmount"
     label = "Tax"
-    _hidden_value = true
   }
   serviceid Id {
     apiName = "ReturnOrder.Id"
@@ -208,31 +189,25 @@ type salesforce.ReturnOrder {
   salesforce.Summary TotalFeeAmount {
     apiName = "ReturnOrder.TotalFeeAmount"
     label = "Fee Subtotal"
-    _hidden_value = true
   }
   salesforce.Summary TotalFeeTaxAmount {
     apiName = "ReturnOrder.TotalFeeTaxAmount"
     label = "Fee Subtotal Tax"
-    _hidden_value = true
   }
   salesforce.Summary TotalFeeAdjustAmount {
     apiName = "ReturnOrder.TotalFeeAdjustAmount"
     label = "Fee Adjustments"
-    _hidden_value = true
   }
   salesforce.Summary TotalFeeAdjustTaxAmount {
     apiName = "ReturnOrder.TotalFeeAdjustTaxAmount"
     label = "Fee Adjustments Tax"
-    _hidden_value = true
   }
   salesforce.Summary TotalFeeAmtWithTax {
     apiName = "ReturnOrder.TotalFeeAmtWithTax"
     label = "Fee Subtotal with Tax"
-    _hidden_value = true
   }
   salesforce.Summary TotalFeeAdjustAmtWithTax {
     apiName = "ReturnOrder.TotalFeeAdjustAmtWithTax"
     label = "Fee Adjustments with Tax"
-    _hidden_value = true
   }
 }

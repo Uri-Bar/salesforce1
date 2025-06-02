@@ -87,7 +87,6 @@ type salesforce.CartValidationOutput {
     label = "Related Entity Prefix"
     unique = false
     caseSensitive = false
-    _hidden_value = true
   }
   salesforce.MasterDetail CartId {
     apiName = "CartValidationOutput.CartId"

@@ -13,7 +13,6 @@ type salesforce.LegalEntity {
   salesforce.Address LegalEntityAddress {
     apiName = "LegalEntity.LegalEntityAddress"
     label = "Address"
-    _hidden_value = true
   }
   salesforce.Text Name {
     apiName = "LegalEntity.Name"

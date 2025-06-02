@@ -80,6 +80,5 @@ type salesforce.PaymentGateway {
     label = "Tap To Pay Location"
     unique = false
     caseSensitive = false
-    _hidden_value = true
   }
 }

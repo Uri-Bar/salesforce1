@@ -9,7 +9,6 @@ type salesforce.WorkStepTemplate {
     apiName = "WorkStepTemplate.ActionType"
     restricted = true
     label = "Action Type"
-    _hidden_value = true
   }
   salesforce.LongTextArea Description {
     apiName = "WorkStepTemplate.Description"

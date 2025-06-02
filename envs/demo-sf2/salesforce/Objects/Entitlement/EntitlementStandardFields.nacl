@@ -81,11 +81,9 @@ type salesforce.Entitlement {
     apiName = "Entitlement.Status"
     restricted = true
     label = "Status"
-    _hidden_value = true
   }
   salesforce.Unknown StatusIndicator {
     apiName = "Entitlement.StatusIndicator"
-    _hidden_value = true
   }
   salesforce.Lookup SvcApptBookingWindowsId {
     apiName = "Entitlement.SvcApptBookingWindowsId"

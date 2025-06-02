@@ -106,12 +106,10 @@ type salesforce.ProcessException {
     restricted = true
     _required = true
     label = "Status Category"
-    _hidden_value = true
   }
   salesforce.Picklist SeverityCategory {
     apiName = "ProcessException.SeverityCategory"
     restricted = true
     label = "Severity Category"
-    _hidden_value = true
   }
 }

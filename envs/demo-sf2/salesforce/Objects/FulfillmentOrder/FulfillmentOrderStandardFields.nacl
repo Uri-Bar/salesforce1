@@ -7,7 +7,6 @@ type salesforce.FulfillmentOrder {
   salesforce.DateTime ActivatedDate {
     apiName = "FulfillmentOrder.ActivatedDate"
     label = "Activated Date"
-    _hidden_value = true
   }
   salesforce.Lookup BillToContactId {
     apiName = "FulfillmentOrder.BillToContactId"
@@ -17,7 +16,6 @@ type salesforce.FulfillmentOrder {
   salesforce.DateTime ClosedDate {
     apiName = "FulfillmentOrder.ClosedDate"
     label = "Closed Date"
-    _hidden_value = true
   }
   salesforce.Lookup FulfilledFromLocationId {
     apiName = "FulfillmentOrder.FulfilledFromLocationId"
@@ -44,7 +42,6 @@ type salesforce.FulfillmentOrder {
   salesforce.Summary GrandTotalAmount {
     apiName = "FulfillmentOrder.GrandTotalAmount"
     label = "Total with Tax"
-    _hidden_value = true
   }
   salesforce.Lookup InvoiceId {
     apiName = "FulfillmentOrder.InvoiceId"
@@ -66,7 +63,6 @@ type salesforce.FulfillmentOrder {
     label = "Total Quantity"
     precision = 18
     scale = 0
-    _hidden_value = true
   }
   salesforce.Picklist Status {
     apiName = "FulfillmentOrder.Status"
@@ -82,72 +78,58 @@ type salesforce.FulfillmentOrder {
   salesforce.Summary TotalAdjustmentAmount {
     apiName = "FulfillmentOrder.TotalAdjustmentAmount"
     label = "Product Adjustments"
-    _hidden_value = true
   }
   salesforce.Summary TotalAdjustmentAmtWithTax {
     apiName = "FulfillmentOrder.TotalAdjustmentAmtWithTax"
     label = "Product Adjustments with Tax"
-    _hidden_value = true
   }
   salesforce.Summary TotalAdjustmentTaxAmount {
     apiName = "FulfillmentOrder.TotalAdjustmentTaxAmount"
     label = "Product Adjustments Tax"
-    _hidden_value = true
   }
   salesforce.Summary TotalAmount {
     apiName = "FulfillmentOrder.TotalAmount"
     label = "Pretax Total"
-    _hidden_value = true
   }
   salesforce.Summary TotalDeliveryAdjustAmount {
     apiName = "FulfillmentOrder.TotalDeliveryAdjustAmount"
     label = "Shipping Adjustments"
-    _hidden_value = true
   }
   salesforce.Summary TotalDeliveryAdjustAmtWithTax {
     apiName = "FulfillmentOrder.TotalDeliveryAdjustAmtWithTax"
     label = "Shipping Adjustments with Tax"
-    _hidden_value = true
   }
   salesforce.Summary TotalDeliveryAdjustTaxAmount {
     apiName = "FulfillmentOrder.TotalDeliveryAdjustTaxAmount"
     label = "Shipping Adjustments Tax"
-    _hidden_value = true
   }
   salesforce.Summary TotalDeliveryAmount {
     apiName = "FulfillmentOrder.TotalDeliveryAmount"
     label = "Shipping Subtotal"
-    _hidden_value = true
   }
   salesforce.Summary TotalDeliveryAmtWithTax {
     apiName = "FulfillmentOrder.TotalDeliveryAmtWithTax"
     label = "Shipping Subtotal with Tax"
-    _hidden_value = true
   }
   salesforce.Summary TotalDeliveryTaxAmount {
     apiName = "FulfillmentOrder.TotalDeliveryTaxAmount"
     label = "Shipping Subtotal Tax"
-    _hidden_value = true
   }
   salesforce.Summary TotalProductAmount {
     apiName = "FulfillmentOrder.TotalProductAmount"
     label = "Product Subtotal"
-    _hidden_value = true
   }
   salesforce.Summary TotalProductAmtWithTax {
     apiName = "FulfillmentOrder.TotalProductAmtWithTax"
     label = "Product Subtotal with Tax"
-    _hidden_value = true
   }
   salesforce.Summary TotalProductTaxAmount {
     apiName = "FulfillmentOrder.TotalProductTaxAmount"
     label = "Product Subtotal Tax"
-    _hidden_value = true
   }
   salesforce.Summary TotalTaxAmount {
     apiName = "FulfillmentOrder.TotalTaxAmount"
     label = "Tax"
-    _hidden_value = true
   }
   salesforce.Picklist Type {
     apiName = "FulfillmentOrder.Type"
@@ -207,30 +189,25 @@ type salesforce.FulfillmentOrder {
   salesforce.Address FulfilledToAddress {
     apiName = "FulfillmentOrder.FulfilledToAddress"
     label = "Fulfilled To Address"
-    _hidden_value = true
   }
   salesforce.Picklist StatusCategory {
     apiName = "FulfillmentOrder.StatusCategory"
     restricted = true
     _required = true
     label = "Status Category"
-    _hidden_value = true
   }
   salesforce.Picklist TypeCategory {
     apiName = "FulfillmentOrder.TypeCategory"
     restricted = true
     label = "Type Category"
-    _hidden_value = true
   }
   salesforce.Summary TotalFeeAmount {
     apiName = "FulfillmentOrder.TotalFeeAmount"
     label = "Fee Subtotal"
-    _hidden_value = true
   }
   salesforce.Summary TotalFeeTaxAmount {
     apiName = "FulfillmentOrder.TotalFeeTaxAmount"
     label = "Fee Subtotal Tax"
-    _hidden_value = true
   }
   salesforce.Lookup OrderId {
     apiName = "FulfillmentOrder.OrderId"
@@ -240,21 +217,17 @@ type salesforce.FulfillmentOrder {
   salesforce.Summary TotalFeeAdjustAmount {
     apiName = "FulfillmentOrder.TotalFeeAdjustAmount"
     label = "Fee Adjustments"
-    _hidden_value = true
   }
   salesforce.Summary TotalFeeAdjustTaxAmount {
     apiName = "FulfillmentOrder.TotalFeeAdjustTaxAmount"
     label = "Fee Adjustments Tax"
-    _hidden_value = true
   }
   salesforce.Summary TotalFeeAmtWithTax {
     apiName = "FulfillmentOrder.TotalFeeAmtWithTax"
     label = "Fee Subtotal with Tax"
-    _hidden_value = true
   }
   salesforce.Summary TotalFeeAdjustAmtWithTax {
     apiName = "FulfillmentOrder.TotalFeeAdjustAmtWithTax"
     label = "Fee Adjustments with Tax"
-    _hidden_value = true
   }
 }

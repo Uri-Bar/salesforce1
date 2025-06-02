@@ -3,7 +3,6 @@ type salesforce.ServiceAppointment {
     apiName = "ServiceAppointment.AccountId"
     relationshipName = "Account"
     label = "Account ID"
-    _hidden_value = true
   }
   salesforce.Number ActualDuration {
     apiName = "ServiceAppointment.ActualDuration"
@@ -31,7 +30,6 @@ type salesforce.ServiceAppointment {
     apiName = "ServiceAppointment.Address"
     _required = true
     label = "Address"
-    _hidden_value = true
   }
   salesforce.Lookup AppointmentCategoryId {
     apiName = "ServiceAppointment.AppointmentCategoryId"
@@ -71,7 +69,6 @@ type salesforce.ServiceAppointment {
     precision = 9
     scale = 0
     unique = false
-    _hidden_value = true
   }
   salesforce.Number AttendeeLimit {
     apiName = "ServiceAppointment.AttendeeLimit"
@@ -170,7 +167,6 @@ type salesforce.ServiceAppointment {
     apiName = "ServiceAppointment.ParentRecordStatusCategory"
     restricted = true
     label = "Parent Record Status Category"
-    _hidden_value = true
   }
   salesforce.Text ParentRecordType {
     apiName = "ServiceAppointment.ParentRecordType"
@@ -178,7 +174,6 @@ type salesforce.ServiceAppointment {
     label = "Parent Record Type"
     unique = false
     caseSensitive = false
-    _hidden_value = true
   }
   salesforce.Phone Phone {
     apiName = "ServiceAppointment.Phone"
@@ -186,7 +181,8 @@ type salesforce.ServiceAppointment {
   }
   salesforce.Lookup ReceiptOrderId {
     apiName = "ServiceAppointment.ReceiptOrderId"
-    _hidden_value = true
+    label = "Order ID"
+    relationshipName = "ReceiptOrder"
   }
   salesforce.DateTime SchedEndTime {
     apiName = "ServiceAppointment.SchedEndTime"
@@ -215,7 +211,6 @@ type salesforce.ServiceAppointment {
     apiName = "ServiceAppointment.StatusCategory"
     restricted = true
     label = "Status Category"
-    _hidden_value = true
   }
   salesforce.Text Subject {
     apiName = "ServiceAppointment.Subject"
@@ -279,7 +274,6 @@ type salesforce.ServiceAppointment {
     precision = 18
     scale = 2
     unique = false
-    _hidden_value = true
   }
   salesforce.Text Transaction {
     apiName = "ServiceAppointment.Transaction"

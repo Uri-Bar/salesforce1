@@ -124,7 +124,6 @@ type salesforce.ContactPointPhone {
     label = "Name"
     unique = false
     caseSensitive = false
-    _hidden_value = true
   }
   salesforce.DateTime CreatedDate {
     apiName = "ContactPointPhone.CreatedDate"

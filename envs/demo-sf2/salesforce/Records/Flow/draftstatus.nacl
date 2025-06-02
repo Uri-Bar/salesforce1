@@ -1,6 +1,7 @@
 salesforce.Flow draftstatus {
   fullName = "draftstatus"
   apiVersion = 56
+  areMetricsLoggedToDataCloud = false
   environments = "Default"
   interviewLabel = "draftstatus {!$Flow.CurrentDateTime}"
   isAdditionalPermissionRequiredToRun = true

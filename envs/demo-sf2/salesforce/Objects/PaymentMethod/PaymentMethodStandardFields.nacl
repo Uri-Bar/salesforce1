@@ -3,13 +3,11 @@ type salesforce.PaymentMethod {
     apiName = "PaymentMethod.AccountId"
     relationshipName = "Account"
     label = "Account ID"
-    _hidden_value = true
   }
   salesforce.LongTextArea Comments {
     apiName = "PaymentMethod.Comments"
     length = 32000
     label = "Comments"
-    _hidden_value = true
   }
   salesforce.Text CompanyName {
     apiName = "PaymentMethod.CompanyName"
@@ -17,7 +15,6 @@ type salesforce.PaymentMethod {
     label = "Company Name"
     unique = false
     caseSensitive = false
-    _hidden_value = true
   }
   salesforce.Text NickName {
     apiName = "PaymentMethod.NickName"
@@ -25,7 +22,6 @@ type salesforce.PaymentMethod {
     label = "Nickname"
     unique = false
     caseSensitive = false
-    _hidden_value = true
   }
   salesforce.Text PaymentMethodDetails {
     apiName = "PaymentMethod.PaymentMethodDetails"
@@ -33,7 +29,6 @@ type salesforce.PaymentMethod {
     label = "Payment Method Details"
     unique = false
     caseSensitive = false
-    _hidden_value = true
   }
   salesforce.Text PaymentMethodSubType {
     apiName = "PaymentMethod.PaymentMethodSubType"
@@ -41,20 +36,17 @@ type salesforce.PaymentMethod {
     label = "Payment Method Sub Type"
     unique = false
     caseSensitive = false
-    _hidden_value = true
   }
   salesforce.Picklist PaymentMethodType {
     apiName = "PaymentMethod.PaymentMethodType"
     restricted = true
     label = "Payment Method Type"
-    _hidden_value = true
   }
   salesforce.Picklist Status {
     apiName = "PaymentMethod.Status"
     restricted = true
     _required = true
     label = "Status"
-    _hidden_value = true
   }
   serviceid Id {
     apiName = "PaymentMethod.Id"
@@ -68,17 +60,14 @@ type salesforce.PaymentMethod {
     label = "Implementor Type"
     unique = false
     caseSensitive = false
-    _hidden_value = true
   }
   salesforce.Checkbox IsAutoPayEnabled {
     apiName = "PaymentMethod.IsAutoPayEnabled"
     label = "Auto Pay"
-    _hidden_value = true
   }
   salesforce.Address PaymentMethodAddress {
     apiName = "PaymentMethod.PaymentMethodAddress"
     label = "Payment Method Address"
-    _hidden_value = true
   }
   salesforce.Lookup CreatedById {
     apiName = "PaymentMethod.CreatedById"
@@ -120,6 +109,5 @@ type salesforce.PaymentMethod {
     label = "__MISSING LABEL__ PropertyFile - val Name not found in section udd_PaymentMethod"
     unique = false
     caseSensitive = false
-    _hidden_value = true
   }
 }

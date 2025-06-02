@@ -2,7 +2,6 @@ type salesforce.WorkOrderLineItem {
   salesforce.Address Address {
     apiName = "WorkOrderLineItem.Address"
     label = "Address"
-    _hidden_value = true
   }
   salesforce.Lookup AssetId {
     apiName = "WorkOrderLineItem.AssetId"
@@ -40,14 +39,12 @@ type salesforce.WorkOrderLineItem {
     apiName = "WorkOrderLineItem.IsClosed"
     defaultValue = false
     label = "Is Closed"
-    _hidden_value = true
   }
   salesforce.Currency ListPrice {
     apiName = "WorkOrderLineItem.ListPrice"
     label = "List Price"
     scale = 2
     precision = 18
-    _hidden_value = true
   }
   salesforce.Lookup LocationId {
     apiName = "WorkOrderLineItem.LocationId"
@@ -86,7 +83,6 @@ type salesforce.WorkOrderLineItem {
     apiName = "WorkOrderLineItem.RootWorkOrderLineItemId"
     relationshipName = "RootWorkOrderLineItem"
     label = "Root Work Order Line Item ID"
-    _hidden_value = true
   }
   salesforce.Number ServiceAppointmentCount {
     apiName = "WorkOrderLineItem.ServiceAppointmentCount"
@@ -94,7 +90,6 @@ type salesforce.WorkOrderLineItem {
     precision = 9
     scale = 0
     unique = false
-    _hidden_value = true
   }
   salesforce.Lookup ServiceTerritoryId {
     apiName = "WorkOrderLineItem.ServiceTerritoryId"
@@ -115,7 +110,6 @@ type salesforce.WorkOrderLineItem {
     apiName = "WorkOrderLineItem.StatusCategory"
     restricted = true
     label = "Status Category"
-    _hidden_value = true
   }
   salesforce.Text Subject {
     apiName = "WorkOrderLineItem.Subject"
@@ -129,14 +123,12 @@ type salesforce.WorkOrderLineItem {
     label = "Subtotal"
     scale = 2
     precision = 18
-    _hidden_value = true
   }
   salesforce.Currency TotalPrice {
     apiName = "WorkOrderLineItem.TotalPrice"
     label = "Total Price"
     scale = 2
     precision = 18
-    _hidden_value = true
   }
   salesforce.Currency UnitPrice {
     apiName = "WorkOrderLineItem.UnitPrice"
@@ -210,6 +202,5 @@ type salesforce.WorkOrderLineItem {
     precision = 18
     scale = 2
     unique = false
-    _hidden_value = true
   }
 }

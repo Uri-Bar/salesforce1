@@ -37,7 +37,6 @@ type salesforce.Incident {
     apiName = "Incident.IsClosed"
     defaultValue = false
     label = "Incident Closed"
-    _hidden_value = true
   }
   salesforce.Checkbox IsMajorIncident {
     apiName = "Incident.IsMajorIncident"
@@ -55,7 +54,6 @@ type salesforce.Incident {
     label = "Milestone Status"
     unique = false
     caseSensitive = false
-    _hidden_value = true
   }
   salesforce.Lookup OwnerId {
     apiName = "Incident.OwnerId"
@@ -102,7 +100,6 @@ type salesforce.Incident {
   salesforce.DateTime SlaExitDate {
     apiName = "Incident.SlaExitDate"
     label = "Entitlement Process End Time"
-    _hidden_value = true
   }
   salesforce.DateTime SlaStartDate {
     apiName = "Incident.SlaStartDate"
@@ -122,12 +119,10 @@ type salesforce.Incident {
     apiName = "Incident.StatusCode"
     restricted = true
     label = "Status Code"
-    _hidden_value = true
   }
   salesforce.DateTime StopStartDate {
     apiName = "Incident.StopStartDate"
     label = "Incident Paused Since"
-    _hidden_value = true
   }
   salesforce.Picklist SubCategory {
     apiName = "Incident.SubCategory"

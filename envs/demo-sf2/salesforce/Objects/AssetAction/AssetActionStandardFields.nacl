@@ -3,17 +3,14 @@ type salesforce.AssetAction {
     apiName = "AssetAction.ActionDate"
     _required = true
     label = "Action Date"
-    _hidden_value = true
   }
   salesforce.Summary ActualTaxChange {
     apiName = "AssetAction.ActualTaxChange"
     label = "Change in Actual Tax"
-    _hidden_value = true
   }
   salesforce.Summary AdjustmentAmountChange {
     apiName = "AssetAction.AdjustmentAmountChange"
     label = "Change in Adjustment Amount"
-    _hidden_value = true
   }
   salesforce.Currency Amount {
     apiName = "AssetAction.Amount"
@@ -21,30 +18,25 @@ type salesforce.AssetAction {
     label = "Amount"
     scale = 2
     precision = 18
-    _hidden_value = true
   }
   salesforce.MasterDetail AssetId {
     apiName = "AssetAction.AssetId"
     relationshipName = "Asset"
     _required = true
     label = "Asset ID"
-    _hidden_value = true
   }
   salesforce.Picklist Category {
     apiName = "AssetAction.Category"
-    _hidden_value = true
   }
   salesforce.Picklist CategoryEnum {
     apiName = "AssetAction.CategoryEnum"
     restricted = true
     _required = true
     label = "Business Category"
-    _hidden_value = true
   }
   salesforce.Summary EstimatedTaxChange {
     apiName = "AssetAction.EstimatedTaxChange"
     label = "Change in Estimated Tax"
-    _hidden_value = true
   }
   salesforce.Currency MrrChange {
     apiName = "AssetAction.MrrChange"
@@ -52,12 +44,10 @@ type salesforce.AssetAction {
     label = "Change in Monthly Recurring Revenue"
     scale = 2
     precision = 18
-    _hidden_value = true
   }
   salesforce.Summary ProductAmountChange {
     apiName = "AssetAction.ProductAmountChange"
     label = "Change in Product Amount"
-    _hidden_value = true
   }
   salesforce.Number QuantityChange {
     apiName = "AssetAction.QuantityChange"
@@ -66,59 +56,50 @@ type salesforce.AssetAction {
     precision = 14
     scale = 2
     unique = false
-    _hidden_value = true
   }
   salesforce.Summary SubtotalChange {
     apiName = "AssetAction.SubtotalChange"
     label = "Change in Subtotal"
-    _hidden_value = true
   }
   salesforce.Summary TotalAmount {
     apiName = "AssetAction.TotalAmount"
     label = "Total Amount"
-    _hidden_value = true
   }
   salesforce.Currency TotalCancellationsAmount {
     apiName = "AssetAction.TotalCancellationsAmount"
     label = "Total Cancellations Amount"
     scale = 2
     precision = 18
-    _hidden_value = true
   }
   salesforce.Currency TotalCrossSellsAmount {
     apiName = "AssetAction.TotalCrossSellsAmount"
     label = "Total Cross-Sells Amount"
     scale = 2
     precision = 18
-    _hidden_value = true
   }
   salesforce.Currency TotalDownsellsAmount {
     apiName = "AssetAction.TotalDownsellsAmount"
     label = "Total Downsells Amount"
     scale = 2
     precision = 18
-    _hidden_value = true
   }
   salesforce.Currency TotalInitialSaleAmount {
     apiName = "AssetAction.TotalInitialSaleAmount"
     label = "Total Initial Sale Amount"
     scale = 2
     precision = 18
-    _hidden_value = true
   }
   salesforce.Currency TotalMrr {
     apiName = "AssetAction.TotalMrr"
     label = "Total Monthly Recurring Revenue"
     scale = 2
     precision = 18
-    _hidden_value = true
   }
   salesforce.Currency TotalOtherAmount {
     apiName = "AssetAction.TotalOtherAmount"
     label = "Total Other Amount"
     scale = 2
     precision = 18
-    _hidden_value = true
   }
   salesforce.Number TotalQuantity {
     apiName = "AssetAction.TotalQuantity"
@@ -126,42 +107,36 @@ type salesforce.AssetAction {
     precision = 14
     scale = 2
     unique = false
-    _hidden_value = true
   }
   salesforce.Currency TotalRenewalsAmount {
     apiName = "AssetAction.TotalRenewalsAmount"
     label = "Total Renewals Amount"
     scale = 2
     precision = 18
-    _hidden_value = true
   }
   salesforce.Currency TotalTermsAndConditionsAmount {
     apiName = "AssetAction.TotalTermsAndConditionsAmount"
     label = "Total Terms And Conditions Changes Amount"
     scale = 2
     precision = 18
-    _hidden_value = true
   }
   salesforce.Currency TotalTransfersAmount {
     apiName = "AssetAction.TotalTransfersAmount"
     label = "Total Transfers Amount"
     scale = 2
     precision = 18
-    _hidden_value = true
   }
   salesforce.Currency TotalUpsellsAmount {
     apiName = "AssetAction.TotalUpsellsAmount"
     label = "Total Upsells Amount"
     scale = 2
     precision = 18
-    _hidden_value = true
   }
   salesforce.Picklist Type {
     apiName = "AssetAction.Type"
     restricted = true
     _required = true
     label = "Type"
-    _hidden_value = true
   }
   serviceid Id {
     apiName = "AssetAction.Id"

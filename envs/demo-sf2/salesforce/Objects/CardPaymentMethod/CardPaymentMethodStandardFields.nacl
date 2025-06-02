@@ -79,7 +79,6 @@ type salesforce.CardPaymentMethod {
     label = "Display Card Number"
     unique = false
     caseSensitive = false
-    _hidden_value = true
   }
   salesforce.Email Email {
     apiName = "CardPaymentMethod.Email"
@@ -275,11 +274,9 @@ type salesforce.CardPaymentMethod {
     apiName = "CardPaymentMethod.CardTypeCategory"
     restricted = true
     label = "Card Type Category"
-    _hidden_value = true
   }
   salesforce.Address PaymentMethodAddress {
     apiName = "CardPaymentMethod.PaymentMethodAddress"
     label = "Payment Method Address"
-    _hidden_value = true
   }
 }

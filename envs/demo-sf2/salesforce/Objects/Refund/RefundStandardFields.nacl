@@ -16,7 +16,6 @@ type salesforce.Refund {
     label = "Balance"
     scale = 2
     precision = 18
-    _hidden_value = true
   }
   salesforce.DateTime CancellationDate {
     apiName = "Refund.CancellationDate"
@@ -97,7 +96,6 @@ type salesforce.Refund {
   salesforce.Summary ImpactAmount {
     apiName = "Refund.ImpactAmount"
     label = "Impact Amount"
-    _hidden_value = true
   }
   salesforce.Text IpAddress {
     apiName = "Refund.IpAddress"
@@ -118,7 +116,6 @@ type salesforce.Refund {
     label = "Net Applied"
     scale = 2
     precision = 18
-    _hidden_value = true
   }
   salesforce.Lookup PaymentGatewayId {
     apiName = "Refund.PaymentGatewayId"
@@ -161,14 +158,12 @@ type salesforce.Refund {
     label = "Total Applied"
     scale = 2
     precision = 18
-    _hidden_value = true
   }
   salesforce.Currency TotalUnapplied {
     apiName = "Refund.TotalUnapplied"
     label = "Total Unapplied"
     scale = 2
     precision = 18
-    _hidden_value = true
   }
   salesforce.Picklist Type {
     apiName = "Refund.Type"
@@ -224,6 +219,5 @@ type salesforce.Refund {
     apiName = "Refund.ClientContext"
     length = 2000
     label = "Client Context"
-    _hidden_value = true
   }
 }

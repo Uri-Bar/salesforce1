@@ -7,22 +7,18 @@ type salesforce.WebCart {
   salesforce.Address BillingAddress {
     apiName = "WebCart.BillingAddress"
     label = "Billing Address"
-    _hidden_value = true
   }
   salesforce.Unknown FirstPymtGrandTotalAmount {
     apiName = "WebCart.FirstPymtGrandTotalAmount"
-    _hidden_value = true
   }
   salesforce.Unknown FirstPymtTotalTaxAmount {
     apiName = "WebCart.FirstPymtTotalTaxAmount"
-    _hidden_value = true
   }
   salesforce.Currency GrandTotalAmount {
     apiName = "WebCart.GrandTotalAmount"
     label = "Grand Total Amount in Cart"
     scale = 2
     precision = 18
-    _hidden_value = true
   }
   salesforce.Checkbox IsRepricingNeeded {
     apiName = "WebCart.IsRepricingNeeded"
@@ -49,7 +45,6 @@ type salesforce.WebCart {
     apiName = "WebCart.OrderOwnerId"
     relationshipName = "OrderOwner"
     label = "User ID"
-    _hidden_value = true
   }
   salesforce.Lookup OwnerId {
     apiName = "WebCart.OwnerId"
@@ -81,7 +76,6 @@ type salesforce.WebCart {
   }
   salesforce.Unknown TaxLocaleType {
     apiName = "WebCart.TaxLocaleType"
-    _hidden_value = true
   }
   salesforce.Picklist TaxType {
     apiName = "WebCart.TaxType"
@@ -91,105 +85,86 @@ type salesforce.WebCart {
   salesforce.Summary TotalAdjustmentAmount {
     apiName = "WebCart.TotalAdjustmentAmount"
     label = "Total Quantity Based and Promotional Adjustment Amount in Cart"
-    _hidden_value = true
   }
   salesforce.Currency TotalAmount {
     apiName = "WebCart.TotalAmount"
     label = "Total Amount in Cart"
     scale = 2
     precision = 18
-    _hidden_value = true
   }
   salesforce.Currency TotalAmountAfterAllAdjustments {
     apiName = "WebCart.TotalAmountAfterAllAdjustments"
     label = "Cart Total Adjusted Price"
     scale = 2
     precision = 18
-    _hidden_value = true
   }
   salesforce.Summary TotalCartLevelAdjAmount {
     apiName = "WebCart.TotalCartLevelAdjAmount"
     label = "Total cart level adjustment amount for all the items in the cart. Includes discount and surcharge."
-    _hidden_value = true
   }
   salesforce.Summary TotalChargeAmount {
     apiName = "WebCart.TotalChargeAmount"
     label = "Total Charge Amount in Cart"
-    _hidden_value = true
   }
   salesforce.Summary TotalChargeTaxAmount {
     apiName = "WebCart.TotalChargeTaxAmount"
     label = "Total Charge Tax Amount in Cart"
-    _hidden_value = true
   }
   salesforce.Summary TotalLineItemsWithErrors {
     apiName = "WebCart.TotalLineItemsWithErrors"
     label = "Total Line Items with Errors"
     precision = 9
-    _hidden_value = true
   }
   salesforce.Summary TotalListAmount {
     apiName = "WebCart.TotalListAmount"
     label = "Total List Amount in Cart"
-    _hidden_value = true
   }
   salesforce.Summary TotalProductAmount {
     apiName = "WebCart.TotalProductAmount"
     label = "Total Product Amount in Cart"
-    _hidden_value = true
   }
   salesforce.Summary TotalProductCount {
     apiName = "WebCart.TotalProductCount"
     label = "Total Quantity in the Cart"
     precision = 18
     scale = 0
-    _hidden_value = true
   }
   salesforce.Unknown TotalProductFirstPymtTaxAmount {
     apiName = "WebCart.TotalProductFirstPymtTaxAmount"
-    _hidden_value = true
   }
   salesforce.Summary TotalProductItemAdjAmount {
     apiName = "WebCart.TotalProductItemAdjAmount"
     label = "Total adjustment amount on a cart item. Includes discount and surcharge."
-    _hidden_value = true
   }
   salesforce.Summary TotalProductLineItemCount {
     apiName = "WebCart.TotalProductLineItemCount"
     label = "Total Product Line Item Count"
     precision = 9
-    _hidden_value = true
   }
   salesforce.Summary TotalProductListAmount {
     apiName = "WebCart.TotalProductListAmount"
     label = "Total Product List Amount in Cart"
-    _hidden_value = true
   }
   salesforce.Summary TotalProductTaxAmount {
     apiName = "WebCart.TotalProductTaxAmount"
     label = "Total Product Tax Amount in Cart"
-    _hidden_value = true
   }
   salesforce.Summary TotalPromoAdjustmentAmount {
     apiName = "WebCart.TotalPromoAdjustmentAmount"
     label = "Cart Promotions Adjustment"
-    _hidden_value = true
   }
   salesforce.Summary TotalPromoAdjustmentTaxAmount {
     apiName = "WebCart.TotalPromoAdjustmentTaxAmount"
     label = "Cart Promotions Tax Adjustment"
-    _hidden_value = true
   }
   salesforce.Unknown TotalSubProductCount {
     apiName = "WebCart.TotalSubProductCount"
-    _hidden_value = true
   }
   salesforce.Currency TotalTaxAmount {
     apiName = "WebCart.TotalTaxAmount"
     label = "Total Tax Amount in Cart"
     scale = 2
     precision = 18
-    _hidden_value = true
   }
   salesforce.Picklist Type {
     apiName = "WebCart.Type"
@@ -200,7 +175,6 @@ type salesforce.WebCart {
     apiName = "WebCart.UniqueProductCount"
     label = "Unique Products (SKUs) in the Cart"
     precision = 9
-    _hidden_value = true
   }
   salesforce.Lookup WebStoreId {
     apiName = "WebCart.WebStoreId"
@@ -256,12 +230,10 @@ type salesforce.WebCart {
   }
   salesforce.Unknown TotalChargeFirstPymtTaxAmount {
     apiName = "WebCart.TotalChargeFirstPymtTaxAmount"
-    _hidden_value = true
   }
   salesforce.Summary TotalChargeItemAdjAmount {
     apiName = "WebCart.TotalChargeItemAdjAmount"
     label = "Total adjustment amount on a cart item of type charge. Includes discount and surcharge."
-    _hidden_value = true
   }
   salesforce.Phone GuestPhoneNumber {
     apiName = "WebCart.GuestPhoneNumber"

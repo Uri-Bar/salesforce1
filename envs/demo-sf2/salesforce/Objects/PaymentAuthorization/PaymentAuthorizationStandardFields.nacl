@@ -16,7 +16,6 @@ type salesforce.PaymentAuthorization {
     label = "Balance"
     scale = 2
     precision = 18
-    _hidden_value = true
   }
   salesforce.LongTextArea Comments {
     apiName = "PaymentAuthorization.Comments"
@@ -130,14 +129,12 @@ type salesforce.PaymentAuthorization {
   salesforce.Summary TotalAuthReversalAmount {
     apiName = "PaymentAuthorization.TotalAuthReversalAmount"
     label = "Total Payment Auth Reversal Amount"
-    _hidden_value = true
   }
   salesforce.Currency TotalPaymentCaptureAmount {
     apiName = "PaymentAuthorization.TotalPaymentCaptureAmount"
     label = "Total Payment Capture Amount"
     scale = 2
     precision = 18
-    _hidden_value = true
   }
   serviceid Id {
     apiName = "PaymentAuthorization.Id"

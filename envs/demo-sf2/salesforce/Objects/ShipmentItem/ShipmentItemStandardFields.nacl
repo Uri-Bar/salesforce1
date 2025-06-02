@@ -9,11 +9,9 @@ type salesforce.ShipmentItem {
   salesforce.DateTime ExpectedDeliveryDate {
     apiName = "ShipmentItem.ExpectedDeliveryDate"
     label = "Expected Delivery Date"
-    _hidden_value = true
   }
   salesforce.Lookup FulfillmentOrderLineItemId {
     apiName = "ShipmentItem.FulfillmentOrderLineItemId"
-    _hidden_value = true
   }
   salesforce.Lookup Product2Id {
     apiName = "ShipmentItem.Product2Id"
@@ -30,7 +28,6 @@ type salesforce.ShipmentItem {
   }
   salesforce.Lookup ReturnOrderLineItemId {
     apiName = "ShipmentItem.ReturnOrderLineItemId"
-    _hidden_value = true
   }
   salesforce.MasterDetail ShipmentId {
     apiName = "ShipmentItem.ShipmentId"
@@ -49,12 +46,10 @@ type salesforce.ShipmentItem {
     label = "Tracking Number"
     unique = false
     caseSensitive = false
-    _hidden_value = true
   }
   salesforce.Url TrackingUrl {
     apiName = "ShipmentItem.TrackingUrl"
     label = "Tracking URL"
-    _hidden_value = true
   }
   serviceid Id {
     apiName = "ShipmentItem.Id"

@@ -90,7 +90,6 @@ type salesforce.ChangeRequest {
     apiName = "ChangeRequest.StatusCode"
     restricted = true
     label = "Status Code"
-    _hidden_value = true
   }
   salesforce.Text Subject {
     apiName = "ChangeRequest.Subject"

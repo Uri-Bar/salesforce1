@@ -11,7 +11,6 @@ type salesforce.Campaign {
     label = "Value Opportunities in Campaign"
     scale = 0
     precision = 18
-    _hidden_value = true
   }
   salesforce.Currency AmountWonOpportunities {
     apiName = "Campaign.AmountWonOpportunities"
@@ -19,7 +18,6 @@ type salesforce.Campaign {
     label = "Value Won Opportunities in Campaign"
     scale = 0
     precision = 18
-    _hidden_value = true
   }
   salesforce.Currency BudgetedCost {
     apiName = "Campaign.BudgetedCost"
@@ -55,51 +53,39 @@ type salesforce.Campaign {
   }
   salesforce.Unknown HierarchyActualCost {
     apiName = "Campaign.HierarchyActualCost"
-    _hidden_value = true
   }
   salesforce.Unknown HierarchyAmountAllOpportunities {
     apiName = "Campaign.HierarchyAmountAllOpportunities"
-    _hidden_value = true
   }
   salesforce.Unknown HierarchyAmountWonOpportunities {
     apiName = "Campaign.HierarchyAmountWonOpportunities"
-    _hidden_value = true
   }
   salesforce.Unknown HierarchyBudgetedCost {
     apiName = "Campaign.HierarchyBudgetedCost"
-    _hidden_value = true
   }
   salesforce.Unknown HierarchyExpectedRevenue {
     apiName = "Campaign.HierarchyExpectedRevenue"
-    _hidden_value = true
   }
   salesforce.Unknown HierarchyNumberOfContacts {
     apiName = "Campaign.HierarchyNumberOfContacts"
-    _hidden_value = true
   }
   salesforce.Unknown HierarchyNumberOfConvertedLeads {
     apiName = "Campaign.HierarchyNumberOfConvertedLeads"
-    _hidden_value = true
   }
   salesforce.Unknown HierarchyNumberOfLeads {
     apiName = "Campaign.HierarchyNumberOfLeads"
-    _hidden_value = true
   }
   salesforce.Unknown HierarchyNumberOfOpportunities {
     apiName = "Campaign.HierarchyNumberOfOpportunities"
-    _hidden_value = true
   }
   salesforce.Unknown HierarchyNumberOfResponses {
     apiName = "Campaign.HierarchyNumberOfResponses"
-    _hidden_value = true
   }
   salesforce.Unknown HierarchyNumberOfWonOpportunities {
     apiName = "Campaign.HierarchyNumberOfWonOpportunities"
-    _hidden_value = true
   }
   salesforce.Unknown HierarchyNumberSent {
     apiName = "Campaign.HierarchyNumberSent"
-    _hidden_value = true
   }
   salesforce.Checkbox IsActive {
     apiName = "Campaign.IsActive"
@@ -121,7 +107,6 @@ type salesforce.Campaign {
     precision = 9
     scale = 0
     unique = false
-    _hidden_value = true
   }
   salesforce.Number NumberOfConvertedLeads {
     apiName = "Campaign.NumberOfConvertedLeads"
@@ -130,7 +115,6 @@ type salesforce.Campaign {
     precision = 9
     scale = 0
     unique = false
-    _hidden_value = true
   }
   salesforce.Number NumberOfLeads {
     apiName = "Campaign.NumberOfLeads"
@@ -139,7 +123,6 @@ type salesforce.Campaign {
     precision = 9
     scale = 0
     unique = false
-    _hidden_value = true
   }
   salesforce.Number NumberOfOpportunities {
     apiName = "Campaign.NumberOfOpportunities"
@@ -148,7 +131,6 @@ type salesforce.Campaign {
     precision = 9
     scale = 0
     unique = false
-    _hidden_value = true
   }
   salesforce.Number NumberOfResponses {
     apiName = "Campaign.NumberOfResponses"
@@ -157,7 +139,6 @@ type salesforce.Campaign {
     precision = 9
     scale = 0
     unique = false
-    _hidden_value = true
   }
   salesforce.Number NumberOfWonOpportunities {
     apiName = "Campaign.NumberOfWonOpportunities"
@@ -166,7 +147,6 @@ type salesforce.Campaign {
     precision = 9
     scale = 0
     unique = false
-    _hidden_value = true
   }
   salesforce.Number NumberSent {
     apiName = "Campaign.NumberSent"

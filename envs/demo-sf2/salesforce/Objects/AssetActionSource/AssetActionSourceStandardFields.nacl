@@ -4,33 +4,28 @@ type salesforce.AssetActionSource {
     label = "Actual Tax"
     scale = 2
     precision = 18
-    _hidden_value = true
   }
   salesforce.Currency AdjustmentAmount {
     apiName = "AssetActionSource.AdjustmentAmount"
     label = "Adjustment Amount"
     scale = 2
     precision = 18
-    _hidden_value = true
   }
   salesforce.MasterDetail AssetActionId {
     apiName = "AssetActionSource.AssetActionId"
     relationshipName = "AssetAction"
     _required = true
     label = "Asset Action ID"
-    _hidden_value = true
   }
   salesforce.DateTime EndDate {
     apiName = "AssetActionSource.EndDate"
     label = "End Date"
-    _hidden_value = true
   }
   salesforce.Currency EstimatedTax {
     apiName = "AssetActionSource.EstimatedTax"
     label = "Estimated Tax"
     scale = 2
     precision = 18
-    _hidden_value = true
   }
   salesforce.Text ExternalReference {
     apiName = "AssetActionSource.ExternalReference"
@@ -38,7 +33,6 @@ type salesforce.AssetActionSource {
     label = "External Reference"
     unique = false
     caseSensitive = false
-    _hidden_value = true
   }
   salesforce.Text ExternalReferenceDataSource {
     apiName = "AssetActionSource.ExternalReferenceDataSource"
@@ -46,14 +40,12 @@ type salesforce.AssetActionSource {
     label = "External Reference Data Source"
     unique = false
     caseSensitive = false
-    _hidden_value = true
   }
   salesforce.Currency ProductAmount {
     apiName = "AssetActionSource.ProductAmount"
     label = "Product Amount"
     scale = 2
     precision = 18
-    _hidden_value = true
   }
   salesforce.Number Quantity {
     apiName = "AssetActionSource.Quantity"
@@ -61,28 +53,23 @@ type salesforce.AssetActionSource {
     precision = 14
     scale = 2
     unique = false
-    _hidden_value = true
   }
   salesforce.Lookup ReferenceEntityItemId {
     apiName = "AssetActionSource.ReferenceEntityItemId"
     relationshipName = "ReferenceEntityItem"
     label = "Reference Entity Item ID"
-    _hidden_value = true
   }
   salesforce.DateTime StartDate {
     apiName = "AssetActionSource.StartDate"
     label = "Start Date"
-    _hidden_value = true
   }
   salesforce.Summary Subtotal {
     apiName = "AssetActionSource.Subtotal"
     label = "Subtotal"
-    _hidden_value = true
   }
   salesforce.DateTime TransactionDate {
     apiName = "AssetActionSource.TransactionDate"
     label = "Transaction Date"
-    _hidden_value = true
   }
   serviceid Id {
     apiName = "AssetActionSource.Id"

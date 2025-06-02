@@ -16,7 +16,6 @@ type salesforce.ReturnOrderItemTax {
     label = "Rate"
     scale = 2
     precision = 5
-    _hidden_value = true
   }
   salesforce.Lookup ReturnOrderId {
     apiName = "ReturnOrderItemTax.ReturnOrderId"
@@ -38,7 +37,6 @@ type salesforce.ReturnOrderItemTax {
   salesforce.Date TaxEffectiveDate {
     apiName = "ReturnOrderItemTax.TaxEffectiveDate"
     label = "Tax Effective Date"
-    _hidden_value = true
   }
   salesforce.Picklist Type {
     apiName = "ReturnOrderItemTax.Type"

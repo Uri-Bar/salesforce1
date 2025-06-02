@@ -6,7 +6,6 @@ type salesforce.MessagingEndUser {
   }
   salesforce.Lookup AuthenticatedEndUserId {
     apiName = "MessagingEndUser.AuthenticatedEndUserId"
-    _hidden_value = true
   }
   salesforce.Lookup ContactId {
     apiName = "MessagingEndUser.ContactId"
@@ -22,11 +21,9 @@ type salesforce.MessagingEndUser {
     apiName = "MessagingEndUser.IsFullyOptedIn"
     defaultValue = false
     label = "Opted In"
-    _hidden_value = true
   }
   salesforce.Unknown Language {
     apiName = "MessagingEndUser.Language"
-    _hidden_value = true
   }
   salesforce.Lookup LeadId {
     apiName = "MessagingEndUser.LeadId"

@@ -48,13 +48,11 @@ type salesforce.MLModelFactor {
     relationshipName = "Model"
     _required = true
     label = "ML Model ID"
-    _hidden_value = true
   }
   salesforce.Picklist Type {
     apiName = "MLModelFactor.Type"
     restricted = true
     label = "Factor Type"
-    _hidden_value = true
   }
   salesforce.Number Weight {
     apiName = "MLModelFactor.Weight"
@@ -62,7 +60,6 @@ type salesforce.MLModelFactor {
     precision = 18
     scale = 0
     unique = false
-    _hidden_value = true
   }
   salesforce.Number Importance {
     apiName = "MLModelFactor.Importance"
@@ -70,7 +67,6 @@ type salesforce.MLModelFactor {
     precision = 18
     scale = 0
     unique = false
-    _hidden_value = true
   }
   salesforce.Number Correlation {
     apiName = "MLModelFactor.Correlation"
@@ -78,12 +74,10 @@ type salesforce.MLModelFactor {
     precision = 18
     scale = 0
     unique = false
-    _hidden_value = true
   }
   salesforce.Picklist FactorType {
     apiName = "MLModelFactor.FactorType"
     restricted = true
     label = "Factor Category"
-    _hidden_value = true
   }
 }

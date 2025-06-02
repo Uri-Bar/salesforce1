@@ -24,7 +24,6 @@ type salesforce.ContractLineItem {
     label = "List Price"
     scale = 2
     precision = 18
-    _hidden_value = true
   }
   salesforce.Lookup LocationId {
     apiName = "ContractLineItem.LocationId"
@@ -46,7 +45,6 @@ type salesforce.ContractLineItem {
     apiName = "ContractLineItem.Product2Id"
     relationshipName = "Product2"
     label = "Product ID"
-    _hidden_value = true
   }
   salesforce.Number Quantity {
     apiName = "ContractLineItem.Quantity"
@@ -60,7 +58,6 @@ type salesforce.ContractLineItem {
     apiName = "ContractLineItem.RootContractLineItemId"
     relationshipName = "RootContractLineItem"
     label = "Contract Line Item ID"
-    _hidden_value = true
   }
   salesforce.MasterDetail ServiceContractId {
     apiName = "ContractLineItem.ServiceContractId"
@@ -76,25 +73,21 @@ type salesforce.ContractLineItem {
     apiName = "ContractLineItem.Status"
     restricted = true
     label = "Status"
-    _hidden_value = true
   }
   salesforce.Unknown StatusIndicator {
     apiName = "ContractLineItem.StatusIndicator"
-    _hidden_value = true
   }
   salesforce.Currency Subtotal {
     apiName = "ContractLineItem.Subtotal"
     label = "Subtotal "
     scale = 2
     precision = 18
-    _hidden_value = true
   }
   salesforce.Currency TotalPrice {
     apiName = "ContractLineItem.TotalPrice"
     label = "Total Price"
     scale = 2
     precision = 18
-    _hidden_value = true
   }
   salesforce.Currency UnitPrice {
     apiName = "ContractLineItem.UnitPrice"

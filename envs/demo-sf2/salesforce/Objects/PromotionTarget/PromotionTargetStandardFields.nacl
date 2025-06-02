@@ -19,7 +19,6 @@ type salesforce.PromotionTarget {
   }
   salesforce.Unknown IsMinItemCountRequired {
     apiName = "PromotionTarget.IsMinItemCountRequired"
-    _hidden_value = true
   }
   salesforce.AutoNumber Name {
     apiName = "PromotionTarget.Name"
@@ -47,7 +46,6 @@ type salesforce.PromotionTarget {
   }
   salesforce.Unknown RestrictionType {
     apiName = "PromotionTarget.RestrictionType"
-    _hidden_value = true
   }
   salesforce.Lookup TargetId {
     apiName = "PromotionTarget.TargetId"
@@ -66,7 +64,6 @@ type salesforce.PromotionTarget {
     label = "Target Category Name"
     unique = false
     caseSensitive = false
-    _hidden_value = true
   }
   salesforce.Text TargetProductName {
     apiName = "PromotionTarget.TargetProductName"
@@ -74,7 +71,6 @@ type salesforce.PromotionTarget {
     label = "Target Product Name"
     unique = false
     caseSensitive = false
-    _hidden_value = true
   }
   salesforce.Text TargetProductSku {
     apiName = "PromotionTarget.TargetProductSku"
@@ -82,7 +78,6 @@ type salesforce.PromotionTarget {
     label = "Target Product SKU"
     unique = false
     caseSensitive = false
-    _hidden_value = true
   }
   salesforce.Picklist TargetType {
     apiName = "PromotionTarget.TargetType"
@@ -135,7 +130,6 @@ type salesforce.PromotionTarget {
     label = "Target Standard Shipping Rate Name"
     unique = false
     caseSensitive = false
-    _hidden_value = true
   }
   salesforce.Picklist TargetRuleCriteriaType {
     apiName = "PromotionTarget.TargetRuleCriteriaType"

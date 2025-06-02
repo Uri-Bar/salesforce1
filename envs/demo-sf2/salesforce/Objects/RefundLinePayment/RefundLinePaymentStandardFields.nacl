@@ -36,7 +36,6 @@ type salesforce.RefundLinePayment {
   salesforce.Summary EffectiveImpactAmount {
     apiName = "RefundLinePayment.EffectiveImpactAmount"
     label = "Effective Impact Amount"
-    _hidden_value = true
   }
   salesforce.Picklist HasBeenUnapplied {
     apiName = "RefundLinePayment.HasBeenUnapplied"
@@ -47,14 +46,12 @@ type salesforce.RefundLinePayment {
   salesforce.Summary ImpactAmount {
     apiName = "RefundLinePayment.ImpactAmount"
     label = "Impact Amount"
-    _hidden_value = true
   }
   salesforce.Currency PaymentBalance {
     apiName = "RefundLinePayment.PaymentBalance"
     label = "Payment Balance"
     scale = 2
     precision = 18
-    _hidden_value = true
   }
   salesforce.MasterDetail PaymentId {
     apiName = "RefundLinePayment.PaymentId"
@@ -67,7 +64,6 @@ type salesforce.RefundLinePayment {
     label = "Refund Balance"
     scale = 2
     precision = 18
-    _hidden_value = true
   }
   salesforce.Lookup RefundId {
     apiName = "RefundLinePayment.RefundId"

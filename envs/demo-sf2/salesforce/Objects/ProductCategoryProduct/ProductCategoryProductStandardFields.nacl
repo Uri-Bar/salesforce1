@@ -65,7 +65,6 @@ type salesforce.ProductCategoryProduct {
     relationshipName = "Catalog"
     _required = true
     label = "Catalog ID"
-    _hidden_value = true
   }
   salesforce.Text ProductToCategory {
     apiName = "ProductCategoryProduct.ProductToCategory"
@@ -74,6 +73,5 @@ type salesforce.ProductCategoryProduct {
     label = "Product/Category Concatenation"
     unique = false
     caseSensitive = false
-    _hidden_value = true
   }
 }

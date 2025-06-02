@@ -15,7 +15,6 @@ type salesforce.CaseRelatedIssue {
     restricted = true
     _required = true
     label = "Related Issue Type"
-    _hidden_value = true
   }
   salesforce.Lookup RelatedIssueId {
     apiName = "CaseRelatedIssue.RelatedIssueId"

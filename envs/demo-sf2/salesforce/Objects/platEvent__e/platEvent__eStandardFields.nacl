@@ -5,7 +5,6 @@ type salesforce.platEvent__e {
     label = "Replay ID"
     unique = false
     caseSensitive = false
-    _hidden_value = true
   }
   salesforce.DateTime CreatedDate {
     apiName = "platEvent__e.CreatedDate"
@@ -24,6 +23,5 @@ type salesforce.platEvent__e {
     label = "Event UUID"
     unique = false
     caseSensitive = false
-    _hidden_value = true
   }
 }

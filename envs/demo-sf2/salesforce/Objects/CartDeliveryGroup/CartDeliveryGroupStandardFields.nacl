@@ -42,7 +42,6 @@ type salesforce.CartDeliveryGroup {
     label = "Grand Total Amount"
     scale = 2
     precision = 18
-    _hidden_value = true
   }
   salesforce.Checkbox IsDefault {
     apiName = "CartDeliveryGroup.IsDefault"
@@ -76,56 +75,48 @@ type salesforce.CartDeliveryGroup {
     label = "Total Adjustment Amount"
     scale = 2
     precision = 18
-    _hidden_value = true
   }
   salesforce.Currency TotalAdjustmentTaxAmount {
     apiName = "CartDeliveryGroup.TotalAdjustmentTaxAmount"
     label = "Total Adjustment Tax Amount"
     scale = 2
     precision = 18
-    _hidden_value = true
   }
   salesforce.Currency TotalAmount {
     apiName = "CartDeliveryGroup.TotalAmount"
     label = "Total Amount"
     scale = 2
     precision = 18
-    _hidden_value = true
   }
   salesforce.Currency TotalChargeAmount {
     apiName = "CartDeliveryGroup.TotalChargeAmount"
     label = "Total Charge Amount"
     scale = 2
     precision = 18
-    _hidden_value = true
   }
   salesforce.Currency TotalChargeTaxAmount {
     apiName = "CartDeliveryGroup.TotalChargeTaxAmount"
     label = "Total Charge Tax Amount"
     scale = 2
     precision = 18
-    _hidden_value = true
   }
   salesforce.Currency TotalProductAmount {
     apiName = "CartDeliveryGroup.TotalProductAmount"
     label = "Total Product Amount"
     scale = 2
     precision = 18
-    _hidden_value = true
   }
   salesforce.Currency TotalProductTaxAmount {
     apiName = "CartDeliveryGroup.TotalProductTaxAmount"
     label = "Total Product Tax Amount"
     scale = 2
     precision = 18
-    _hidden_value = true
   }
   salesforce.Currency TotalTaxAmount {
     apiName = "CartDeliveryGroup.TotalTaxAmount"
     label = "Total Tax Amount"
     scale = 2
     precision = 18
-    _hidden_value = true
   }
   serviceid Id {
     apiName = "CartDeliveryGroup.Id"
@@ -169,6 +160,12 @@ type salesforce.CartDeliveryGroup {
   salesforce.Address DeliverToAddress {
     apiName = "CartDeliveryGroup.DeliverToAddress"
     label = "Delivery Address"
-    _hidden_value = true
+  }
+  salesforce.Number TotalCartItemCount {
+    apiName = "CartDeliveryGroup.TotalCartItemCount"
+    label = "Total Cart Items in Delivery Group"
+    scale = 0
+    precision = 9
+    unique = false
   }
 }

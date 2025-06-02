@@ -1,7 +1,6 @@
 type salesforce.Promotion {
   salesforce.Unknown AreQualItemsExclFromDiscounts {
     apiName = "Promotion.AreQualItemsExclFromDiscounts"
-    _hidden_value = true
   }
   salesforce.Lookup CampaignId {
     apiName = "Promotion.CampaignId"
@@ -16,12 +15,10 @@ type salesforce.Promotion {
   salesforce.Unknown DiscountOrder {
     apiName = "Promotion.DiscountOrder"
     inlineHelpText = "Select whether to apply discounts to the most expensive or least expensive products first."
-    _hidden_value = true
   }
   salesforce.Unknown DiscountRestriction {
     apiName = "Promotion.DiscountRestriction"
     inlineHelpText = "Restrict which products can be discounted."
-    _hidden_value = true
   }
   salesforce.Text DisplayName {
     apiName = "Promotion.DisplayName"
@@ -37,7 +34,6 @@ type salesforce.Promotion {
   salesforce.Unknown ExclusivityType {
     apiName = "Promotion.ExclusivityType"
     inlineHelpText = "To combine the promotion with other promotions, select No. To prevent combining the promotion with promotions of the same class, select Class. To let it be the only promotion used for an entire order, select Global."
-    _hidden_value = true
   }
   salesforce.Checkbox IsActive {
     apiName = "Promotion.IsActive"
@@ -56,12 +52,10 @@ type salesforce.Promotion {
   }
   salesforce.Unknown IsQualCriteriaNotRequiredPerApplication {
     apiName = "Promotion.IsQualCriteriaNotRequiredPerApplication"
-    _hidden_value = true
   }
   salesforce.Unknown IsTiered {
     apiName = "Promotion.IsTiered"
     inlineHelpText = "This setting is permanent and can't be changed after the promotion is saved. Create a new promotion instead."
-    _hidden_value = true
   }
   salesforce.Number MaximumUsageCount {
     apiName = "Promotion.MaximumUsageCount"
@@ -110,7 +104,6 @@ type salesforce.Promotion {
   salesforce.Unknown TargetCriteria {
     apiName = "Promotion.TargetCriteria"
     inlineHelpText = "Define whether a cart must meet the criteria for any target or all targets."
-    _hidden_value = true
   }
   salesforce.Html TermsAndConditions {
     apiName = "Promotion.TermsAndConditions"

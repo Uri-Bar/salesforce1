@@ -16,7 +16,6 @@ type salesforce.Payment {
     label = "Balance"
     scale = 2
     precision = 18
-    _hidden_value = true
   }
   salesforce.DateTime CancellationDate {
     apiName = "Payment.CancellationDate"
@@ -102,7 +101,6 @@ type salesforce.Payment {
   salesforce.Summary ImpactAmount {
     apiName = "Payment.ImpactAmount"
     label = "Impact Amount"
-    _hidden_value = true
   }
   salesforce.Text IpAddress {
     apiName = "Payment.IpAddress"
@@ -123,12 +121,10 @@ type salesforce.Payment {
     label = "Net Applied"
     scale = 2
     precision = 18
-    _hidden_value = true
   }
   salesforce.Summary NetRefundApplied {
     apiName = "Payment.NetRefundApplied"
     label = "Net Refund Applied"
-    _hidden_value = true
   }
   salesforce.Lookup PaymentAuthorizationId {
     apiName = "Payment.PaymentAuthorizationId"
@@ -176,24 +172,20 @@ type salesforce.Payment {
     label = "Total Applied"
     scale = 2
     precision = 18
-    _hidden_value = true
   }
   salesforce.Summary TotalRefundApplied {
     apiName = "Payment.TotalRefundApplied"
     label = "Total Refund Applied"
-    _hidden_value = true
   }
   salesforce.Summary TotalRefundUnapplied {
     apiName = "Payment.TotalRefundUnapplied"
     label = "Total Refund Unapplied"
-    _hidden_value = true
   }
   salesforce.Currency TotalUnapplied {
     apiName = "Payment.TotalUnapplied"
     label = "Total Unapplied"
     scale = 2
     precision = 18
-    _hidden_value = true
   }
   salesforce.Picklist Type {
     apiName = "Payment.Type"
@@ -249,7 +241,6 @@ type salesforce.Payment {
     apiName = "Payment.ClientContext"
     length = 2000
     label = "Client Context"
-    _hidden_value = true
   }
   salesforce.Text PaymentIntentGuid {
     apiName = "Payment.PaymentIntentGuid"

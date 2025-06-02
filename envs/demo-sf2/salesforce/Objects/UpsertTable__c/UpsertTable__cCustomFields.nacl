@@ -6,6 +6,5 @@ type salesforce.UpsertTable__c {
     length = 50
     trackTrending = false
     unique = false
-    _hidden_value = true
   }
 }

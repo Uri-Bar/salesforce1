@@ -4,7 +4,6 @@ type salesforce.CartDeliveryGroupMethod {
     label = "Adjusted Shipping Fee"
     scale = 2
     precision = 18
-    _hidden_value = true
   }
   salesforce.Picklist Carrier {
     apiName = "CartDeliveryGroupMethod.Carrier"
@@ -52,7 +51,6 @@ type salesforce.CartDeliveryGroupMethod {
   salesforce.Summary TotalAdjustmentAmount {
     apiName = "CartDeliveryGroupMethod.TotalAdjustmentAmount"
     label = "Total Adjustment Amount"
-    _hidden_value = true
   }
   salesforce.MasterDetail WebCartId {
     apiName = "CartDeliveryGroupMethod.WebCartId"

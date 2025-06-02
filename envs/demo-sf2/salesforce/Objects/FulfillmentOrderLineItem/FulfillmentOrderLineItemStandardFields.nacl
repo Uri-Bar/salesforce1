@@ -26,11 +26,11 @@ type salesforce.FulfillmentOrderLineItem {
     apiName = "FulfillmentOrderLineItem.IsReship"
     defaultValue = false
     label = "Reship"
-    _hidden_value = true
   }
   salesforce.Lookup MainFulfillmentOrderLineItemId {
     apiName = "FulfillmentOrderLineItem.MainFulfillmentOrderLineItemId"
-    _hidden_value = true
+    label = "Fulfillment Order Product ID"
+    relationshipName = "MainFulfillmentOrderLineItem"
   }
   salesforce.Lookup OrderItemId {
     apiName = "FulfillmentOrderLineItem.OrderItemId"
@@ -89,22 +89,18 @@ type salesforce.FulfillmentOrderLineItem {
   salesforce.Summary TotalAdjustmentAmount {
     apiName = "FulfillmentOrderLineItem.TotalAdjustmentAmount"
     label = "Adjustments"
-    _hidden_value = true
   }
   salesforce.Summary TotalAdjustmentAmountWithTax {
     apiName = "FulfillmentOrderLineItem.TotalAdjustmentAmountWithTax"
     label = "Adjustments with Tax"
-    _hidden_value = true
   }
   salesforce.Summary TotalAdjustmentTaxAmount {
     apiName = "FulfillmentOrderLineItem.TotalAdjustmentTaxAmount"
     label = "Adjustments Tax"
-    _hidden_value = true
   }
   salesforce.Summary TotalAmount {
     apiName = "FulfillmentOrderLineItem.TotalAmount"
     label = "Total with Tax"
-    _hidden_value = true
   }
   salesforce.Currency TotalLineAmount {
     apiName = "FulfillmentOrderLineItem.TotalLineAmount"
@@ -115,22 +111,18 @@ type salesforce.FulfillmentOrderLineItem {
   salesforce.Summary TotalLineAmountWithTax {
     apiName = "FulfillmentOrderLineItem.TotalLineAmountWithTax"
     label = "Line Subtotal with Tax"
-    _hidden_value = true
   }
   salesforce.Summary TotalLineTaxAmount {
     apiName = "FulfillmentOrderLineItem.TotalLineTaxAmount"
     label = "Line Subtotal Tax"
-    _hidden_value = true
   }
   salesforce.Summary TotalPrice {
     apiName = "FulfillmentOrderLineItem.TotalPrice"
     label = "Pretax Total"
-    _hidden_value = true
   }
   salesforce.Summary TotalTaxAmount {
     apiName = "FulfillmentOrderLineItem.TotalTaxAmount"
     label = "Tax"
-    _hidden_value = true
   }
   salesforce.Currency UnitPrice {
     apiName = "FulfillmentOrderLineItem.UnitPrice"

@@ -60,7 +60,6 @@ type salesforce.FinanceTransaction {
     restricted = true
     _required = true
     label = "Creation Mode"
-    _hidden_value = true
   }
   salesforce.Lookup DestinationEntityId {
     apiName = "FinanceTransaction.DestinationEntityId"
@@ -138,7 +137,6 @@ type salesforce.FinanceTransaction {
     label = "Original Credit GL Account Name"
     unique = false
     caseSensitive = false
-    _hidden_value = true
   }
   salesforce.Text OriginalCreditGlAccountNumber {
     apiName = "FinanceTransaction.OriginalCreditGlAccountNumber"
@@ -147,7 +145,6 @@ type salesforce.FinanceTransaction {
     label = "Original Credit GL Account Number"
     unique = false
     caseSensitive = false
-    _hidden_value = true
   }
   salesforce.Text OriginalDebitGlAccountName {
     apiName = "FinanceTransaction.OriginalDebitGlAccountName"
@@ -156,7 +153,6 @@ type salesforce.FinanceTransaction {
     label = "Original Debit GL Account Name"
     unique = false
     caseSensitive = false
-    _hidden_value = true
   }
   salesforce.Text OriginalDebitGlAccountNumber {
     apiName = "FinanceTransaction.OriginalDebitGlAccountNumber"
@@ -165,7 +161,6 @@ type salesforce.FinanceTransaction {
     label = "Original Debit GL Account Number"
     unique = false
     caseSensitive = false
-    _hidden_value = true
   }
   salesforce.Text OriginalEventAction {
     apiName = "FinanceTransaction.OriginalEventAction"
@@ -174,7 +169,6 @@ type salesforce.FinanceTransaction {
     label = "Original Event Action"
     unique = false
     caseSensitive = false
-    _hidden_value = true
   }
   salesforce.Text OriginalEventType {
     apiName = "FinanceTransaction.OriginalEventType"
@@ -183,7 +177,6 @@ type salesforce.FinanceTransaction {
     label = "Original Event Type"
     unique = false
     caseSensitive = false
-    _hidden_value = true
   }
   salesforce.Text OriginalFinanceBookName {
     apiName = "FinanceTransaction.OriginalFinanceBookName"
@@ -192,7 +185,6 @@ type salesforce.FinanceTransaction {
     label = "Original Finance Book Name"
     unique = false
     caseSensitive = false
-    _hidden_value = true
   }
   salesforce.Text OriginalFinancePeriodEndDate {
     apiName = "FinanceTransaction.OriginalFinancePeriodEndDate"
@@ -201,7 +193,6 @@ type salesforce.FinanceTransaction {
     label = "Original Finance Period End Date"
     unique = false
     caseSensitive = false
-    _hidden_value = true
   }
   salesforce.Text OriginalFinancePeriodName {
     apiName = "FinanceTransaction.OriginalFinancePeriodName"
@@ -210,7 +201,6 @@ type salesforce.FinanceTransaction {
     label = "Original Finance Period Name"
     unique = false
     caseSensitive = false
-    _hidden_value = true
   }
   salesforce.Text OriginalFinancePeriodStartDate {
     apiName = "FinanceTransaction.OriginalFinancePeriodStartDate"
@@ -219,7 +209,6 @@ type salesforce.FinanceTransaction {
     label = "Original Finance Period Start Date"
     unique = false
     caseSensitive = false
-    _hidden_value = true
   }
   salesforce.Text OriginalFinancePeriodStatus {
     apiName = "FinanceTransaction.OriginalFinancePeriodStatus"
@@ -228,7 +217,6 @@ type salesforce.FinanceTransaction {
     label = "Original Finance Period Status"
     unique = false
     caseSensitive = false
-    _hidden_value = true
   }
   salesforce.Text OriginalGlRuleName {
     apiName = "FinanceTransaction.OriginalGlRuleName"
@@ -237,7 +225,6 @@ type salesforce.FinanceTransaction {
     label = "Original GL Rule Name"
     unique = false
     caseSensitive = false
-    _hidden_value = true
   }
   salesforce.Text OriginalGlTreatmentName {
     apiName = "FinanceTransaction.OriginalGlTreatmentName"
@@ -246,7 +233,6 @@ type salesforce.FinanceTransaction {
     label = "Original GL Treatment Name"
     unique = false
     caseSensitive = false
-    _hidden_value = true
   }
   salesforce.Text OriginalReferenceEntityType {
     apiName = "FinanceTransaction.OriginalReferenceEntityType"
@@ -255,7 +241,6 @@ type salesforce.FinanceTransaction {
     label = "Original Reference Entity Type"
     unique = false
     caseSensitive = false
-    _hidden_value = true
   }
   salesforce.Lookup OwnerId {
     apiName = "FinanceTransaction.OwnerId"

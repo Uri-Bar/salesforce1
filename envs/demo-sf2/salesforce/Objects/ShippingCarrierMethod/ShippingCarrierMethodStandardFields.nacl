@@ -32,7 +32,6 @@ type salesforce.ShippingCarrierMethod {
   }
   salesforce.Unknown ShippingAreaType {
     apiName = "ShippingCarrierMethod.ShippingAreaType"
-    _hidden_value = true
   }
   salesforce.Lookup ShippingCarrierId {
     apiName = "ShippingCarrierMethod.ShippingCarrierId"

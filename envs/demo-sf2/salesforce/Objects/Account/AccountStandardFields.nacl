@@ -21,7 +21,6 @@ type salesforce.Account {
   salesforce.Address BillingAddress {
     apiName = "Account.BillingAddress"
     label = "Billing Address"
-    _hidden_value = true
   }
   salesforce.Picklist CleanStatus {
     apiName = "Account.CleanStatus"
@@ -126,7 +125,6 @@ type salesforce.Account {
   salesforce.Address ShippingAddress {
     apiName = "Account.ShippingAddress"
     label = "Shipping Address"
-    _hidden_value = true
   }
   salesforce.Text Sic {
     apiName = "Account.Sic"
@@ -158,7 +156,6 @@ type salesforce.Account {
   }
   salesforce.Unknown Tier {
     apiName = "Account.Tier"
-    _hidden_value = true
   }
   salesforce.Text Tradestyle {
     apiName = "Account.Tradestyle"
@@ -200,12 +197,10 @@ type salesforce.Account {
     apiName = "Account.MasterRecordId"
     relationshipName = "MasterRecord"
     label = "Master Record ID"
-    _hidden_value = true
   }
   salesforce.Url PhotoUrl {
     apiName = "Account.PhotoUrl"
     label = "Photo URL"
-    _hidden_value = true
   }
   salesforce.DateTime CreatedDate {
     apiName = "Account.CreatedDate"
@@ -245,6 +240,5 @@ type salesforce.Account {
     label = "Jigsaw Company ID"
     unique = false
     caseSensitive = false
-    _hidden_value = true
   }
 }

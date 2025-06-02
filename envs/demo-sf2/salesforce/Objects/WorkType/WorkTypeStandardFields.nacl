@@ -87,7 +87,6 @@ type salesforce.WorkType {
   }
   salesforce.Lookup ProductId {
     apiName = "WorkType.ProductId"
-    _hidden_value = true
   }
   salesforce.Picklist TimeFrameEndUnit {
     apiName = "WorkType.TimeFrameEndUnit"
@@ -158,6 +157,5 @@ type salesforce.WorkType {
     precision = 18
     scale = 2
     unique = false
-    _hidden_value = true
   }
 }

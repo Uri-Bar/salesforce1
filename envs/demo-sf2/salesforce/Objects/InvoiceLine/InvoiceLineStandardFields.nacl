@@ -10,14 +10,12 @@ type salesforce.InvoiceLine {
     label = "Adjustment Amount with Tax"
     scale = 2
     precision = 18
-    _hidden_value = true
   }
   salesforce.Currency AdjustmentTaxAmount {
     apiName = "InvoiceLine.AdjustmentTaxAmount"
     label = "Adjustment Tax Amount"
     scale = 2
     precision = 18
-    _hidden_value = true
   }
   salesforce.Currency ChargeAmount {
     apiName = "InvoiceLine.ChargeAmount"
@@ -30,30 +28,24 @@ type salesforce.InvoiceLine {
     label = "Charge Amount with Tax"
     scale = 2
     precision = 18
-    _hidden_value = true
   }
   salesforce.Currency ChargeTaxAmount {
     apiName = "InvoiceLine.ChargeTaxAmount"
     label = "Charge Tax Amount"
     scale = 2
     precision = 18
-    _hidden_value = true
   }
   salesforce.Unknown CorpCurrencyCnvChargeAmt {
     apiName = "InvoiceLine.CorpCurrencyCnvChargeAmt"
-    _hidden_value = true
   }
   salesforce.Unknown CorpCurrencyCnvTotalTaxAmt {
     apiName = "InvoiceLine.CorpCurrencyCnvTotalTaxAmt"
-    _hidden_value = true
   }
   salesforce.Unknown CorporateCurrencyCvsnDate {
     apiName = "InvoiceLine.CorporateCurrencyCvsnDate"
-    _hidden_value = true
   }
   salesforce.Unknown CorporateCurrencyCvsnRate {
     apiName = "InvoiceLine.CorporateCurrencyCvsnRate"
-    _hidden_value = true
   }
   salesforce.Text Description {
     apiName = "InvoiceLine.Description"
@@ -67,7 +59,6 @@ type salesforce.InvoiceLine {
     relationshipName = "Invoice"
     _required = true
     label = "Invoice ID"
-    _hidden_value = true
   }
   salesforce.Date InvoiceLineEndDate {
     apiName = "InvoiceLine.InvoiceLineEndDate"
@@ -85,12 +76,10 @@ type salesforce.InvoiceLine {
     label = "Status"
     unique = false
     caseSensitive = false
-    _hidden_value = true
   }
   salesforce.Summary LineAmount {
     apiName = "InvoiceLine.LineAmount"
     label = "Line Amount"
-    _hidden_value = true
   }
   salesforce.Text Name {
     apiName = "InvoiceLine.Name"
@@ -162,7 +151,6 @@ type salesforce.InvoiceLine {
     restricted = true
     _required = true
     label = "Type"
-    _hidden_value = true
   }
   salesforce.Currency UnitPrice {
     apiName = "InvoiceLine.UnitPrice"

@@ -51,7 +51,6 @@ type salesforce.CommSubscriptionConsent {
   salesforce.Unknown EffectiveToDate {
     apiName = "CommSubscriptionConsent.EffectiveToDate"
     inlineHelpText = "Date when consent ends."
-    _hidden_value = true
   }
   salesforce.Lookup EngagementChannelTypeId {
     apiName = "CommSubscriptionConsent.EngagementChannelTypeId"
@@ -76,7 +75,6 @@ type salesforce.CommSubscriptionConsent {
     apiName = "CommSubscriptionConsent.PartyId"
     relationshipName = "Party"
     label = "Individual ID"
-    _hidden_value = true
   }
   salesforce.Lookup PartyRoleId {
     apiName = "CommSubscriptionConsent.PartyRoleId"

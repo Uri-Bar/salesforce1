@@ -1,27 +1,35 @@
 salesforce.StandardValueSet WorkOrderPriority {
   fullName = "WorkOrderPriority"
   sorted = false
-  standardValue = [
-    {
-      fullName = "Low"
-      default = true
-      label = "Low"
-    },
-    {
-      fullName = "Medium"
-      default = false
-      label = "Medium"
-    },
-    {
-      fullName = "High"
-      default = false
-      label = "High"
-    },
-    {
-      fullName = "Critical"
-      default = false
-      label = "Critical"
-    },
-  ]
+  standardValue = {
+    values = {
+      Low = {
+        fullName = "Low"
+        default = true
+        label = "Low"
+      }
+      Medium = {
+        fullName = "Medium"
+        default = false
+        label = "Medium"
+      }
+      High = {
+        fullName = "High"
+        default = false
+        label = "High"
+      }
+      Critical = {
+        fullName = "Critical"
+        default = false
+        label = "Critical"
+      }
+    }
+    order = [
+      salesforce.StandardValueSet.instance.WorkOrderPriority.standardValue.values.Low,
+      salesforce.StandardValueSet.instance.WorkOrderPriority.standardValue.values.Medium,
+      salesforce.StandardValueSet.instance.WorkOrderPriority.standardValue.values.High,
+      salesforce.StandardValueSet.instance.WorkOrderPriority.standardValue.values.Critical,
+    ]
+  }
   _alias = "WorkOrderPriority"
 }

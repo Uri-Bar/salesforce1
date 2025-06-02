@@ -5,19 +5,16 @@ type salesforce.AssetStatePeriod {
     label = "Amount"
     scale = 2
     precision = 18
-    _hidden_value = true
   }
   salesforce.MasterDetail AssetId {
     apiName = "AssetStatePeriod.AssetId"
     relationshipName = "Asset"
     _required = true
     label = "Asset ID"
-    _hidden_value = true
   }
   salesforce.DateTime EndDate {
     apiName = "AssetStatePeriod.EndDate"
     label = "End Date"
-    _hidden_value = true
   }
   salesforce.Currency Mrr {
     apiName = "AssetStatePeriod.Mrr"
@@ -25,7 +22,6 @@ type salesforce.AssetStatePeriod {
     label = "Monthly Recurring Revenue"
     scale = 2
     precision = 18
-    _hidden_value = true
   }
   salesforce.Number Quantity {
     apiName = "AssetStatePeriod.Quantity"
@@ -34,13 +30,11 @@ type salesforce.AssetStatePeriod {
     precision = 14
     scale = 2
     unique = false
-    _hidden_value = true
   }
   salesforce.DateTime StartDate {
     apiName = "AssetStatePeriod.StartDate"
     _required = true
     label = "Start Date"
-    _hidden_value = true
   }
   serviceid Id {
     apiName = "AssetStatePeriod.Id"

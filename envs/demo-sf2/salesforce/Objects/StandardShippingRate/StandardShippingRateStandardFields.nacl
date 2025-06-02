@@ -100,7 +100,6 @@ type salesforce.StandardShippingRate {
     apiName = "StandardShippingRate.ShippingCarrierMethodId"
     relationshipName = "ShippingCarrierMethod"
     label = "Shipping Carrier Method ID"
-    _hidden_value = true
   }
   salesforce.Picklist WeightUnit {
     apiName = "StandardShippingRate.WeightUnit"

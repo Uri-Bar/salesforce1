@@ -80,6 +80,5 @@ type salesforce.CommSubscriptionChannelType {
     apiName = "CommSubscriptionChannelType.DataUsePurposeId"
     relationshipName = "DataUsePurpose"
     label = "Communication Subscription ID"
-    _hidden_value = true
   }
 }

@@ -70,7 +70,6 @@ type salesforce.Shift {
     apiName = "Shift.StatusCategory"
     restricted = true
     label = "Status Category"
-    _hidden_value = true
   }
   salesforce.Picklist TimeSlotType {
     apiName = "Shift.TimeSlotType"

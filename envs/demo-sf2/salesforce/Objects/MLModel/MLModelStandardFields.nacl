@@ -47,36 +47,30 @@ type salesforce.MLModel {
     apiName = "MLModel.PredictionDefinitionId"
     relationshipName = "PredictionDefinition"
     label = "ML Prediction Definition ID"
-    _hidden_value = true
   }
   salesforce.Picklist ApprovalStatus {
     apiName = "MLModel.ApprovalStatus"
     restricted = true
     label = "Approval Status"
-    _hidden_value = true
   }
   salesforce.Picklist ScoringStatus {
     apiName = "MLModel.ScoringStatus"
     restricted = true
     _required = true
     label = "Scoring Status"
-    _hidden_value = true
   }
   salesforce.Picklist ModelType {
     apiName = "MLModel.ModelType"
     restricted = true
     label = "Model Type"
-    _hidden_value = true
   }
   salesforce.DateTime TrainingStartTime {
     apiName = "MLModel.TrainingStartTime"
     label = "Training Start Time"
-    _hidden_value = true
   }
   salesforce.DateTime TrainingEndTime {
     apiName = "MLModel.TrainingEndTime"
     label = "Training End Time"
-    _hidden_value = true
   }
   salesforce.Text Dataset {
     apiName = "MLModel.Dataset"
@@ -84,12 +78,10 @@ type salesforce.MLModel {
     label = "Dataset Id"
     unique = false
     caseSensitive = false
-    _hidden_value = true
   }
   salesforce.Lookup RecommendationDefinitionId {
     apiName = "MLModel.RecommendationDefinitionId"
     relationshipName = "RecommendationDefinition"
     label = "ML Recommendation Definition ID"
-    _hidden_value = true
   }
 }

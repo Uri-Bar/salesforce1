@@ -1,15 +1,12 @@
 type salesforce.Shipment {
   salesforce.Unknown ActualDeliveryDate {
     apiName = "Shipment.ActualDeliveryDate"
-    _hidden_value = true
   }
   salesforce.Lookup DeliveredToId {
     apiName = "Shipment.DeliveredToId"
-    _hidden_value = true
   }
   salesforce.Unknown Description {
     apiName = "Shipment.Description"
-    _hidden_value = true
   }
   salesforce.Lookup DestinationLocationId {
     apiName = "Shipment.DestinationLocationId"
@@ -18,11 +15,9 @@ type salesforce.Shipment {
   }
   salesforce.Unknown ExpectedDeliveryDate {
     apiName = "Shipment.ExpectedDeliveryDate"
-    _hidden_value = true
   }
   salesforce.Lookup FulfillmentOrderId {
     apiName = "Shipment.FulfillmentOrderId"
-    _hidden_value = true
   }
   salesforce.Lookup OwnerId {
     apiName = "Shipment.OwnerId"
@@ -32,19 +27,15 @@ type salesforce.Shipment {
   }
   salesforce.Picklist Provider {
     apiName = "Shipment.Provider"
-    _hidden_value = true
   }
   salesforce.Lookup ReturnOrderId {
     apiName = "Shipment.ReturnOrderId"
-    _hidden_value = true
   }
   salesforce.Unknown ShipFromAddress {
     apiName = "Shipment.ShipFromAddress"
-    _hidden_value = true
   }
   salesforce.Unknown ShipToAddress {
     apiName = "Shipment.ShipToAddress"
-    _hidden_value = true
   }
   salesforce.Text ShipToName {
     apiName = "Shipment.ShipToName"
@@ -61,22 +52,18 @@ type salesforce.Shipment {
   }
   salesforce.Picklist Status {
     apiName = "Shipment.Status"
-    _hidden_value = true
   }
   salesforce.Summary TotalItemsQuantity {
     apiName = "Shipment.TotalItemsQuantity"
     label = "Total Items Quantity"
     precision = 18
     scale = 2
-    _hidden_value = true
   }
   salesforce.Unknown TrackingNumber {
     apiName = "Shipment.TrackingNumber"
-    _hidden_value = true
   }
   salesforce.Unknown TrackingUrl {
     apiName = "Shipment.TrackingUrl"
-    _hidden_value = true
   }
   serviceid Id {
     apiName = "Shipment.Id"

@@ -3,14 +3,12 @@ type salesforce.SalesStore {
     apiName = "SalesStore.Description"
     length = 1000
     label = "Description"
-    _hidden_value = true
   }
   salesforce.Lookup LocationId {
     apiName = "SalesStore.LocationId"
     relationshipName = "Location"
     _required = true
     label = "Location ID"
-    _hidden_value = true
   }
   salesforce.Text Name {
     apiName = "SalesStore.Name"
@@ -19,7 +17,6 @@ type salesforce.SalesStore {
     label = "__MISSING LABEL__ PropertyFile - val Name not found in section udd_SalesStore"
     unique = false
     caseSensitive = false
-    _hidden_value = true
   }
   serviceid Id {
     apiName = "SalesStore.Id"
@@ -33,6 +30,5 @@ type salesforce.SalesStore {
     label = "Implementor Type"
     unique = false
     caseSensitive = false
-    _hidden_value = true
   }
 }

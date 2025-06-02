@@ -5,7 +5,6 @@ type salesforce.FlowOrchestrationInstance {
     label = "Orchestration Developer Name"
     unique = false
     caseSensitive = false
-    _hidden_value = true
   }
   salesforce.Lookup OwnerId {
     apiName = "FlowOrchestrationInstance.OwnerId"
@@ -71,7 +70,6 @@ type salesforce.FlowOrchestrationInstance {
   salesforce.Unknown Duration {
     apiName = "FlowOrchestrationInstance.Duration"
     label = "Duration"
-    _hidden_value = true
   }
   salesforce.Text CurrentStage {
     apiName = "FlowOrchestrationInstance.CurrentStage"
@@ -79,7 +77,6 @@ type salesforce.FlowOrchestrationInstance {
     label = "Current Stage"
     unique = false
     caseSensitive = false
-    _hidden_value = true
   }
   salesforce.Text TriggeringRecord {
     apiName = "FlowOrchestrationInstance.TriggeringRecord"
@@ -88,8 +85,11 @@ type salesforce.FlowOrchestrationInstance {
     unique = false
     caseSensitive = false
   }
-  salesforce.Unknown OrchestrationLabel {
+  salesforce.Text OrchestrationLabel {
     apiName = "FlowOrchestrationInstance.OrchestrationLabel"
-    _hidden_value = true
+    label = "Orchestration Name"
+    length = 255
+    unique = false
+    caseSensitive = false
   }
 }

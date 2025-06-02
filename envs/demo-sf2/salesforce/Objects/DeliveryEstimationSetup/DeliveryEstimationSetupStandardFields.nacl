@@ -40,19 +40,16 @@ type salesforce.DeliveryEstimationSetup {
   }
   salesforce.Unknown IsDefault {
     apiName = "DeliveryEstimationSetup.IsDefault"
-    _hidden_value = true
   }
   salesforce.Checkbox IsEnabled {
     apiName = "DeliveryEstimationSetup.IsEnabled"
     defaultValue = false
     label = "Is Enabled"
-    _hidden_value = true
   }
   salesforce.Lookup LastSyncedById {
     apiName = "DeliveryEstimationSetup.LastSyncedById"
     relationshipName = "LastSyncedBy"
     label = "User ID"
-    _hidden_value = true
   }
   salesforce.Lookup LocationGroupId {
     apiName = "DeliveryEstimationSetup.LocationGroupId"
@@ -116,23 +113,23 @@ type salesforce.DeliveryEstimationSetup {
   salesforce.DateTime LastSyncedDate {
     apiName = "DeliveryEstimationSetup.LastSyncedDate"
     label = "Last Synced Date"
-    _hidden_value = true
   }
   salesforce.LongTextArea LastSyncedMessage {
     apiName = "DeliveryEstimationSetup.LastSyncedMessage"
     length = 10000
     label = "Last Synced Message"
-    _hidden_value = true
   }
   salesforce.Picklist SyncStatus {
     apiName = "DeliveryEstimationSetup.SyncStatus"
     restricted = true
     _required = true
     label = "Sync Status"
-    _hidden_value = true
   }
-  salesforce.Unknown ServiceRegion {
+  salesforce.Text ServiceRegion {
     apiName = "DeliveryEstimationSetup.ServiceRegion"
-    _hidden_value = true
+    label = "Service Region"
+    length = 256
+    unique = false
+    caseSensitive = false
   }
 }

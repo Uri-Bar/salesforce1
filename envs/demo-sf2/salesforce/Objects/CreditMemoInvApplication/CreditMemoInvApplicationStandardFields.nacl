@@ -5,31 +5,26 @@ type salesforce.CreditMemoInvApplication {
     label = "Amount"
     scale = 2
     precision = 18
-    _hidden_value = true
   }
   salesforce.DateTime AppliedDate {
     apiName = "CreditMemoInvApplication.AppliedDate"
     label = "Applied Date"
-    _hidden_value = true
   }
   salesforce.Lookup AssociatedLineId {
     apiName = "CreditMemoInvApplication.AssociatedLineId"
     inlineHelpText = "The application that this credit memo invoice application has unapplied."
     relationshipName = "AssociatedLine"
     label = "Credit Memo Invoice Application ID"
-    _hidden_value = true
   }
   salesforce.Lookup CreditMemoId {
     apiName = "CreditMemoInvApplication.CreditMemoId"
     relationshipName = "CreditMemo"
     _required = true
     label = "Credit Memo ID"
-    _hidden_value = true
   }
   salesforce.DateTime Date {
     apiName = "CreditMemoInvApplication.Date"
     label = "Date"
-    _hidden_value = true
   }
   salesforce.Text Description {
     apiName = "CreditMemoInvApplication.Description"
@@ -41,38 +36,32 @@ type salesforce.CreditMemoInvApplication {
   salesforce.DateTime EffectiveDate {
     apiName = "CreditMemoInvApplication.EffectiveDate"
     label = "Effective Date"
-    _hidden_value = true
   }
   salesforce.Picklist HasBeenUnapplied {
     apiName = "CreditMemoInvApplication.HasBeenUnapplied"
     restricted = true
     label = "Has Been Unapplied"
-    _hidden_value = true
   }
   salesforce.Summary ImpactAmount {
     apiName = "CreditMemoInvApplication.ImpactAmount"
     inlineHelpText = "Impact on the balance of the credit memo and invoice. Unapplied-type applications have a negative impact, while Applied-type applications have a positive impact."
     label = "Impact Amount"
-    _hidden_value = true
   }
   salesforce.MasterDetail InvoiceId {
     apiName = "CreditMemoInvApplication.InvoiceId"
     relationshipName = "Invoice"
     _required = true
     label = "Invoice ID"
-    _hidden_value = true
   }
   salesforce.Picklist Type {
     apiName = "CreditMemoInvApplication.Type"
     restricted = true
     _required = true
     label = "Type"
-    _hidden_value = true
   }
   salesforce.DateTime UnappliedDate {
     apiName = "CreditMemoInvApplication.UnappliedDate"
     label = "Unapplied Date"
-    _hidden_value = true
   }
   serviceid Id {
     apiName = "CreditMemoInvApplication.Id"

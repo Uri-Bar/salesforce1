@@ -12,23 +12,30 @@ type salesforce.Opportunity {
     apiName = "Opportunity.DeliveryInstallationStatus__c"
     label = "Delivery/Installation Status"
     trackTrending = false
-    valueSet = [
-      {
-        fullName = "In progress"
-        default = false
-        label = "In progress"
-      },
-      {
-        fullName = "Yet to begin"
-        default = false
-        label = "Yet to begin"
-      },
-      {
-        fullName = "Completed"
-        default = false
-        label = "Completed"
-      },
-    ]
+    valueSet = {
+      values = {
+        In_progress@s = {
+          fullName = "In progress"
+          default = false
+          label = "In progress"
+        }
+        Yet_to_begin@s = {
+          fullName = "Yet to begin"
+          default = false
+          label = "Yet to begin"
+        }
+        Completed = {
+          fullName = "Completed"
+          default = false
+          label = "Completed"
+        }
+      }
+      order = [
+        salesforce.Opportunity.field.DeliveryInstallationStatus__c.valueSet.values.In_progress@s,
+        salesforce.Opportunity.field.DeliveryInstallationStatus__c.valueSet.values.Yet_to_begin@s,
+        salesforce.Opportunity.field.DeliveryInstallationStatus__c.valueSet.values.Completed,
+      ]
+    }
     sorted = false
     restricted = false
   }

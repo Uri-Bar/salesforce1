@@ -7,7 +7,6 @@ type salesforce.WorkOrder {
   salesforce.Address Address {
     apiName = "WorkOrder.Address"
     label = "Address"
-    _hidden_value = true
   }
   salesforce.Lookup AssetId {
     apiName = "WorkOrder.AssetId"
@@ -39,7 +38,6 @@ type salesforce.WorkOrder {
     label = "Discount"
     scale = 2
     precision = 5
-    _hidden_value = true
   }
   salesforce.Number Duration {
     apiName = "WorkOrder.Duration"
@@ -67,13 +65,11 @@ type salesforce.WorkOrder {
     label = "Grand Total"
     scale = 2
     precision = 18
-    _hidden_value = true
   }
   salesforce.Checkbox IsClosed {
     apiName = "WorkOrder.IsClosed"
     defaultValue = false
     label = "Is Closed"
-    _hidden_value = true
   }
   salesforce.Checkbox IsStopped {
     apiName = "WorkOrder.IsStopped"
@@ -84,7 +80,6 @@ type salesforce.WorkOrder {
     apiName = "WorkOrder.LineItemCount"
     label = "Line Items"
     precision = 9
-    _hidden_value = true
   }
   salesforce.Lookup LocationId {
     apiName = "WorkOrder.LocationId"
@@ -97,11 +92,9 @@ type salesforce.WorkOrder {
     label = "Milestone Status"
     unique = false
     caseSensitive = false
-    _hidden_value = true
   }
   salesforce.Unknown MilestoneStatusIcon {
     apiName = "WorkOrder.MilestoneStatusIcon"
-    _hidden_value = true
   }
   salesforce.Lookup OwnerId {
     apiName = "WorkOrder.OwnerId"
@@ -129,7 +122,6 @@ type salesforce.WorkOrder {
     apiName = "WorkOrder.RootWorkOrderId"
     relationshipName = "RootWorkOrder"
     label = "Root Work Order ID"
-    _hidden_value = true
   }
   salesforce.Number ServiceAppointmentCount {
     apiName = "WorkOrder.ServiceAppointmentCount"
@@ -137,7 +129,6 @@ type salesforce.WorkOrder {
     precision = 9
     scale = 0
     unique = false
-    _hidden_value = true
   }
   salesforce.Lookup ServiceContractId {
     apiName = "WorkOrder.ServiceContractId"
@@ -152,7 +143,6 @@ type salesforce.WorkOrder {
   salesforce.DateTime SlaExitDate {
     apiName = "WorkOrder.SlaExitDate"
     label = "Entitlement Process End Time"
-    _hidden_value = true
   }
   salesforce.DateTime SlaStartDate {
     apiName = "WorkOrder.SlaStartDate"
@@ -172,12 +162,10 @@ type salesforce.WorkOrder {
     apiName = "WorkOrder.StatusCategory"
     restricted = true
     label = "Status Category"
-    _hidden_value = true
   }
   salesforce.DateTime StopStartDate {
     apiName = "WorkOrder.StopStartDate"
     label = "Stopped Since"
-    _hidden_value = true
   }
   salesforce.Text Subject {
     apiName = "WorkOrder.Subject"
@@ -189,7 +177,6 @@ type salesforce.WorkOrder {
   salesforce.Summary Subtotal {
     apiName = "WorkOrder.Subtotal"
     label = "Subtotal"
-    _hidden_value = true
   }
   salesforce.Currency Tax {
     apiName = "WorkOrder.Tax"
@@ -200,7 +187,6 @@ type salesforce.WorkOrder {
   salesforce.Summary TotalPrice {
     apiName = "WorkOrder.TotalPrice"
     label = "Total Price"
-    _hidden_value = true
   }
   salesforce.Lookup WorkTypeId {
     apiName = "WorkOrder.WorkTypeId"
@@ -257,6 +243,5 @@ type salesforce.WorkOrder {
     precision = 18
     scale = 2
     unique = false
-    _hidden_value = true
   }
 }

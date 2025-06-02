@@ -9,7 +9,6 @@ type salesforce.WorkStep {
     apiName = "WorkStep.ActionType"
     restricted = true
     label = "Action Type"
-    _hidden_value = true
   }
   salesforce.LongTextArea Description {
     apiName = "WorkStep.Description"
@@ -40,7 +39,6 @@ type salesforce.WorkStep {
     relationshipName = "ParentRecord"
     _required = true
     label = "Parent Record ID"
-    _hidden_value = true
   }
   salesforce.Text ParentRecordType {
     apiName = "WorkStep.ParentRecordType"
@@ -48,7 +46,6 @@ type salesforce.WorkStep {
     label = "Parent Record Type"
     unique = false
     caseSensitive = false
-    _hidden_value = true
   }
   salesforce.Lookup PausedFlowInterviewId {
     apiName = "WorkStep.PausedFlowInterviewId"
@@ -68,19 +65,16 @@ type salesforce.WorkStep {
     apiName = "WorkStep.StatusCategory"
     restricted = true
     label = "Status Category"
-    _hidden_value = true
   }
   salesforce.Lookup WorkOrderId {
     apiName = "WorkStep.WorkOrderId"
     relationshipName = "WorkOrder"
     label = "Work Order ID"
-    _hidden_value = true
   }
   salesforce.Lookup WorkOrderLineItemId {
     apiName = "WorkStep.WorkOrderLineItemId"
     relationshipName = "WorkOrderLineItem"
     label = "Work Order Line Item ID"
-    _hidden_value = true
   }
   salesforce.Number WorkPlanExecutionOrder {
     apiName = "WorkStep.WorkPlanExecutionOrder"
@@ -88,7 +82,6 @@ type salesforce.WorkStep {
     precision = 9
     scale = 0
     unique = false
-    _hidden_value = true
   }
   salesforce.MasterDetail WorkPlanId {
     apiName = "WorkStep.WorkPlanId"

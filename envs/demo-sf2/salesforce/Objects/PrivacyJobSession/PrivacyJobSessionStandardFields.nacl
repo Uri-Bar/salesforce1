@@ -53,34 +53,28 @@ type salesforce.PrivacyJobSession {
     apiName = "PrivacyJobSession.JobStatus"
     restricted = true
     label = "Job Status"
-    _hidden_value = true
   }
   salesforce.DateTime StartTime {
     apiName = "PrivacyJobSession.StartTime"
     label = "Start Time"
-    _hidden_value = true
   }
   salesforce.DateTime EndTime {
     apiName = "PrivacyJobSession.EndTime"
     label = "End Time"
-    _hidden_value = true
   }
   salesforce.DateTime CreationDate {
     apiName = "PrivacyJobSession.CreationDate"
     label = "Creation Date"
-    _hidden_value = true
   }
   salesforce.LongTextArea SerializedPolicy {
     apiName = "PrivacyJobSession.SerializedPolicy"
     length = 131072
     label = "Serialized Policy"
-    _hidden_value = true
   }
   salesforce.LongTextArea FailureLog {
     apiName = "PrivacyJobSession.FailureLog"
     length = 131072
     label = "Failure Log"
-    _hidden_value = true
   }
   salesforce.Text CurrentObject {
     apiName = "PrivacyJobSession.CurrentObject"
@@ -88,54 +82,44 @@ type salesforce.PrivacyJobSession {
     label = "Current Object"
     unique = false
     caseSensitive = false
-    _hidden_value = true
   }
   salesforce.Lookup PrivacyPolicyDefinitionId {
     apiName = "PrivacyJobSession.PrivacyPolicyDefinitionId"
     relationshipName = "PrivacyPolicyDefinition"
     label = "Privacy Policy Definition ID"
-    _hidden_value = true
   }
   salesforce.DateTime ScheduledTime {
     apiName = "PrivacyJobSession.ScheduledTime"
     label = "Scheduled Time"
-    _hidden_value = true
   }
   salesforce.Picklist JobStartType {
     apiName = "PrivacyJobSession.JobStartType"
     restricted = true
     label = "Job Start Type"
-    _hidden_value = true
   }
   salesforce.Checkbox OptionsTraversalComplete {
     apiName = "PrivacyJobSession.OptionsTraversalComplete"
     label = "TraversalComplete"
-    _hidden_value = true
   }
   salesforce.Checkbox OptionsTraversalFailed {
     apiName = "PrivacyJobSession.OptionsTraversalFailed"
     label = "TraversalFailed"
-    _hidden_value = true
   }
   salesforce.Checkbox OptionsProcessingFailed {
     apiName = "PrivacyJobSession.OptionsProcessingFailed"
     label = "ProcessingFailed"
-    _hidden_value = true
   }
   salesforce.Checkbox OptionsPreview {
     apiName = "PrivacyJobSession.OptionsPreview"
     label = "Preview"
-    _hidden_value = true
   }
   salesforce.Checkbox OptionsAcknowledged {
     apiName = "PrivacyJobSession.OptionsAcknowledged"
     label = "Acknowledged"
-    _hidden_value = true
   }
   salesforce.Checkbox OptionsErrorBypassOccurred {
     apiName = "PrivacyJobSession.OptionsErrorBypassOccurred"
     label = "ErrorBypassOccurred"
-    _hidden_value = true
   }
   salesforce.Text PolicyName {
     apiName = "PrivacyJobSession.PolicyName"
@@ -143,7 +127,6 @@ type salesforce.PrivacyJobSession {
     label = "Policy Name"
     unique = false
     caseSensitive = false
-    _hidden_value = true
   }
   salesforce.Text PolicyDescription {
     apiName = "PrivacyJobSession.PolicyDescription"
@@ -151,25 +134,21 @@ type salesforce.PrivacyJobSession {
     label = "Policy Description"
     unique = false
     caseSensitive = false
-    _hidden_value = true
   }
   salesforce.Picklist PolicyType {
     apiName = "PrivacyJobSession.PolicyType"
     restricted = true
     label = "Policy Type"
-    _hidden_value = true
   }
   salesforce.Lookup PrivacyRtbfRequestId {
     apiName = "PrivacyJobSession.PrivacyRtbfRequestId"
     relationshipName = "PrivacyRtbfRequest"
     label = "Privacy RTBF Request ID"
-    _hidden_value = true
   }
   salesforce.Picklist JobManagementType {
     apiName = "PrivacyJobSession.JobManagementType"
     restricted = true
     label = "Job Management Type"
-    _hidden_value = true
   }
   salesforce.Text JobPolicyName {
     apiName = "PrivacyJobSession.JobPolicyName"
@@ -177,12 +156,17 @@ type salesforce.PrivacyJobSession {
     label = "Job Policy Name"
     unique = false
     caseSensitive = false
-    _hidden_value = true
   }
   salesforce.Checkbox IsPreview {
     apiName = "PrivacyJobSession.IsPreview"
     defaultValue = false
     label = "Preview"
-    _hidden_value = true
+  }
+  salesforce.Text PermissionSet {
+    apiName = "PrivacyJobSession.PermissionSet"
+    label = "Permission Set"
+    length = 255
+    unique = false
+    caseSensitive = false
   }
 }

@@ -3,17 +3,14 @@ type salesforce.VoiceCall {
     apiName = "VoiceCall.ActivityId"
     relationshipName = "Activity"
     label = "Activity ID"
-    _hidden_value = true
   }
   salesforce.DateTime CallAcceptDateTime {
     apiName = "VoiceCall.CallAcceptDateTime"
     label = "Call Accepted"
-    _hidden_value = true
   }
   salesforce.DateTime CallConnectDateTime {
     apiName = "VoiceCall.CallConnectDateTime"
     label = "Call Connected"
-    _hidden_value = true
   }
   salesforce.Text CallDisposition {
     apiName = "VoiceCall.CallDisposition"
@@ -21,7 +18,6 @@ type salesforce.VoiceCall {
     label = "Call Status"
     unique = false
     caseSensitive = false
-    _hidden_value = true
   }
   salesforce.Number CallDurationInSeconds {
     apiName = "VoiceCall.CallDurationInSeconds"
@@ -29,49 +25,41 @@ type salesforce.VoiceCall {
     precision = 8
     scale = 0
     unique = false
-    _hidden_value = true
   }
   salesforce.DateTime CallEndDateTime {
     apiName = "VoiceCall.CallEndDateTime"
     _required = true
     label = "Call Ended"
-    _hidden_value = true
   }
   salesforce.Picklist CallOrigin {
     apiName = "VoiceCall.CallOrigin"
     restricted = true
     label = "Call Origin"
-    _hidden_value = true
   }
   salesforce.DateTime CallQueuedDateTime {
     apiName = "VoiceCall.CallQueuedDateTime"
     label = "Call Entered Queue"
-    _hidden_value = true
   }
   salesforce.Picklist CallResolution {
     apiName = "VoiceCall.CallResolution"
     restricted = false
     label = "Call Resolution"
-    _hidden_value = true
   }
   salesforce.DateTime CallStartDateTime {
     apiName = "VoiceCall.CallStartDateTime"
     _required = true
     label = "Call Started"
-    _hidden_value = true
   }
   salesforce.Picklist CallType {
     apiName = "VoiceCall.CallType"
     restricted = true
     _required = true
     label = "Call Type"
-    _hidden_value = true
   }
   salesforce.Lookup CallerId {
     apiName = "VoiceCall.CallerId"
     relationshipName = "Caller"
     label = "Caller ID"
-    _hidden_value = true
   }
   salesforce.Number CustomerHoldDuration {
     apiName = "VoiceCall.CustomerHoldDuration"
@@ -79,13 +67,11 @@ type salesforce.VoiceCall {
     precision = 9
     scale = 0
     unique = false
-    _hidden_value = true
   }
   salesforce.LongTextArea Description {
     apiName = "VoiceCall.Description"
     length = 32000
     label = "Description"
-    _hidden_value = true
   }
   salesforce.Text DisconnectReason {
     apiName = "VoiceCall.DisconnectReason"
@@ -93,25 +79,21 @@ type salesforce.VoiceCall {
     label = "Disconnect Reason"
     unique = false
     caseSensitive = false
-    _hidden_value = true
   }
   salesforce.Lookup EndUserId {
     apiName = "VoiceCall.EndUserId"
     relationshipName = "EndUser"
     label = "Messaging User ID"
-    _hidden_value = true
   }
   salesforce.Phone FromPhoneNumber {
     apiName = "VoiceCall.FromPhoneNumber"
     _required = true
     label = "Caller Contact Info"
-    _hidden_value = true
   }
   salesforce.Checkbox IsRecorded {
     apiName = "VoiceCall.IsRecorded"
     defaultValue = false
     label = "Is Call Recorded"
-    _hidden_value = true
   }
   salesforce.Number LongestHoldDuration {
     apiName = "VoiceCall.LongestHoldDuration"
@@ -119,13 +101,11 @@ type salesforce.VoiceCall {
     precision = 9
     scale = 0
     unique = false
-    _hidden_value = true
   }
   salesforce.Lookup NextCallId {
     apiName = "VoiceCall.NextCallId"
     relationshipName = "NextCall"
     label = "Next Call ID"
-    _hidden_value = true
   }
   salesforce.Number NumberOfHolds {
     apiName = "VoiceCall.NumberOfHolds"
@@ -133,7 +113,6 @@ type salesforce.VoiceCall {
     precision = 9
     scale = 0
     unique = false
-    _hidden_value = true
   }
   salesforce.Lookup OwnerId {
     apiName = "VoiceCall.OwnerId"
@@ -145,7 +124,6 @@ type salesforce.VoiceCall {
     apiName = "VoiceCall.PreviousCallId"
     relationshipName = "PreviousCall"
     label = "Previous Call ID"
-    _hidden_value = true
   }
   salesforce.Number QualityScore {
     apiName = "VoiceCall.QualityScore"
@@ -153,7 +131,6 @@ type salesforce.VoiceCall {
     precision = 18
     scale = 2
     unique = false
-    _hidden_value = true
   }
   salesforce.Text QueueName {
     apiName = "VoiceCall.QueueName"
@@ -161,31 +138,26 @@ type salesforce.VoiceCall {
     label = "Queue Name"
     unique = false
     caseSensitive = false
-    _hidden_value = true
   }
   salesforce.Lookup RecipientId {
     apiName = "VoiceCall.RecipientId"
     relationshipName = "Recipient"
     label = "Recipient ID"
-    _hidden_value = true
   }
   salesforce.Lookup RelatedRecordId {
     apiName = "VoiceCall.RelatedRecordId"
     relationshipName = "RelatedRecord"
     label = "RelatedRecord ID"
-    _hidden_value = true
   }
   salesforce.Phone ToPhoneNumber {
     apiName = "VoiceCall.ToPhoneNumber"
     _required = true
     label = "Recipient Contact Info"
-    _hidden_value = true
   }
   salesforce.Lookup UserId {
     apiName = "VoiceCall.UserId"
     relationshipName = "User"
     label = "User ID"
-    _hidden_value = true
   }
   salesforce.Text VendorCallKey {
     apiName = "VoiceCall.VendorCallKey"
@@ -193,7 +165,6 @@ type salesforce.VoiceCall {
     label = "Vendor Call Key"
     unique = false
     caseSensitive = false
-    _hidden_value = true
   }
   salesforce.AutoNumber Name {
     apiName = "VoiceCall.Name"
@@ -245,13 +216,11 @@ type salesforce.VoiceCall {
     precision = 18
     scale = 2
     unique = false
-    _hidden_value = true
   }
   salesforce.Picklist CurrencyCode {
     apiName = "VoiceCall.CurrencyCode"
     restricted = true
     label = "Currency Code"
-    _hidden_value = true
   }
   salesforce.Text VendorParentCallKey {
     apiName = "VoiceCall.VendorParentCallKey"
@@ -259,13 +228,11 @@ type salesforce.VoiceCall {
     label = "Vendor Parent Call Key"
     unique = false
     caseSensitive = false
-    _hidden_value = true
   }
   salesforce.Picklist VendorType {
     apiName = "VoiceCall.VendorType"
     restricted = true
     label = "Vendor Type"
-    _hidden_value = true
   }
   salesforce.Text ConferenceKey {
     apiName = "VoiceCall.ConferenceKey"
@@ -273,48 +240,44 @@ type salesforce.VoiceCall {
     label = "Conference Key"
     unique = false
     caseSensitive = false
-    _hidden_value = true
   }
   salesforce.Lookup CallRecordingId {
     apiName = "VoiceCall.CallRecordingId"
     relationshipName = "CallRecording"
     label = "Voice Call Recording ID"
-    _hidden_value = true
   }
   salesforce.Picklist CallerIdType {
     apiName = "VoiceCall.CallerIdType"
     restricted = true
     label = "Caller Id"
-    _hidden_value = true
   }
   salesforce.Lookup CallCenterId {
     apiName = "VoiceCall.CallCenterId"
     relationshipName = "CallCenter"
     label = "Call Center ID"
-    _hidden_value = true
   }
   salesforce.Lookup ConversationId {
     apiName = "VoiceCall.ConversationId"
     relationshipName = "Conversation"
     label = "Conversation ID"
-    _hidden_value = true
   }
   salesforce.Lookup MediaProviderId {
     apiName = "VoiceCall.MediaProviderId"
     relationshipName = "MediaProvider"
     label = "CallCoachingMediaProvider ID"
-    _hidden_value = true
   }
   salesforce.Picklist SourceType {
     apiName = "VoiceCall.SourceType"
     restricted = true
     label = "Source Type"
-    _hidden_value = true
   }
   salesforce.Picklist CallSubtype {
     apiName = "VoiceCall.CallSubtype"
     restricted = true
     label = "Call Subtype"
-    _hidden_value = true
+  }
+  salesforce.Picklist CallStatus {
+    apiName = "VoiceCall.CallStatus"
+    label = "Call Status Internal"
   }
 }
