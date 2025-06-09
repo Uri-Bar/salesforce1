@@ -1,4 +1,7 @@
 type salesforce.ProcessException {
+  salesforce.Lookup AssetId {
+    apiName = "ProcessException.AssetId"
+  }
   salesforce.Lookup AttachedToId {
     apiName = "ProcessException.AttachedToId"
     relationshipName = "AttachedTo"

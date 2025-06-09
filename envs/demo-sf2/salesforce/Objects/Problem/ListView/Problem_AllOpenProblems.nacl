@@ -1,0 +1,27 @@
+salesforce.ListView Problem_AllOpenProblems {
+  fullName = "Problem.AllOpenProblems"
+  columns = [
+    "Name",
+    salesforce.Problem.field.Description,
+    salesforce.Problem.field.Urgency,
+    salesforce.Problem.field.Impact,
+    salesforce.Problem.field.Priority,
+    "AssignedUser",
+    salesforce.Problem.field.Category,
+    salesforce.Problem.field.SubCategory,
+    salesforce.Problem.field.Status,
+  ]
+  filterScope = "Everything"
+  filters = [
+    {
+      field = "Status"
+      operation = "notEqual"
+      value = "Closed,Resolved,Known Error,Risk Accepted"
+    },
+  ]
+  label = "All Open Problems"
+  _parent = [
+    salesforce.Problem,
+  ]
+  _alias = "All Open Problems"
+}

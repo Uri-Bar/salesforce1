@@ -40,6 +40,10 @@ type salesforce.Promotion {
     defaultValue = false
     label = "Active"
   }
+  salesforce.Unknown IsApproachingDiscountApplicable {
+    apiName = "Promotion.IsApproachingDiscountApplicable"
+    inlineHelpText = "Notifies customers if their cart total is approaching a discount. To add an approaching discount alert, set a threshold value on the promotion qualifier."
+  }
   salesforce.Checkbox IsAutomatic {
     apiName = "Promotion.IsAutomatic"
     defaultValue = false

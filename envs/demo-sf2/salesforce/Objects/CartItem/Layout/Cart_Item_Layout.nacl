@@ -25,7 +25,7 @@ salesforce.Layout CartItem_Cart_Item_Layout@bss {
               field = salesforce.CartItem.field.CreatedDate
             },
             {
-              behavior = "Edit"
+              behavior = "Required"
               field = salesforce.CartItem.field.Product2Id
             },
             {
@@ -33,27 +33,27 @@ salesforce.Layout CartItem_Cart_Item_Layout@bss {
               field = salesforce.CartItem.field.LastModifiedDate
             },
             {
-              behavior = "Edit"
+              behavior = "Required"
               field = salesforce.CartItem.field.ListPrice
             },
             {
-              behavior = "Edit"
+              behavior = "Required"
               field = salesforce.CartItem.field.Quantity
             },
             {
-              behavior = "Edit"
+              behavior = "Required"
               field = salesforce.CartItem.field.SalesPrice
             },
             {
-              behavior = "Edit"
+              behavior = "Required"
               field = salesforce.CartItem.field.Sku
             },
             {
-              behavior = "Edit"
+              behavior = "Required"
               field = salesforce.CartItem.field.AdjustmentAmount
             },
             {
-              behavior = "Edit"
+              behavior = "Required"
               field = salesforce.CartItem.field.AdjustmentTaxAmount
             },
             {
@@ -61,11 +61,11 @@ salesforce.Layout CartItem_Cart_Item_Layout@bss {
               field = salesforce.CartItem.field.TotalAmount
             },
             {
-              behavior = "Edit"
+              behavior = "Required"
               field = salesforce.CartItem.field.TotalAdjustmentAmount
             },
             {
-              behavior = "Edit"
+              behavior = "Required"
               field = salesforce.CartItem.field.TotalPriceAfterAllAdjustments
             },
             {
@@ -93,7 +93,7 @@ salesforce.Layout CartItem_Cart_Item_Layout@bss {
               field = salesforce.CartItem.field.DistributedAdjustmentTaxAmount
             },
             {
-              behavior = "Edit"
+              behavior = "Required"
               field = salesforce.CartItem.field.TotalLineAmount
             },
             {
@@ -101,11 +101,11 @@ salesforce.Layout CartItem_Cart_Item_Layout@bss {
               field = salesforce.CartItem.field.TotalLineTaxAmount
             },
             {
-              behavior = "Edit"
+              behavior = "Required"
               field = salesforce.CartItem.field.TotalListPrice
             },
             {
-              behavior = "Edit"
+              behavior = "Required"
               field = salesforce.CartItem.field.TotalPrice
             },
             {
@@ -113,11 +113,11 @@ salesforce.Layout CartItem_Cart_Item_Layout@bss {
               field = salesforce.CartItem.field.TotalTaxAmount
             },
             {
-              behavior = "Edit"
+              behavior = "Required"
               field = salesforce.CartItem.field.UnitAdjustedPrice
             },
             {
-              behavior = "Edit"
+              behavior = "Required"
               field = salesforce.CartItem.field.UnitAdjustmentAmount
             },
             {

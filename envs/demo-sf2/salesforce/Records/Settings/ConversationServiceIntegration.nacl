@@ -1,0 +1,4 @@
+salesforce.ConversationServiceIntegrationSettings {
+  fullName = "ConversationServiceIntegration"
+  _alias = "ConversationServiceIntegration"
+}

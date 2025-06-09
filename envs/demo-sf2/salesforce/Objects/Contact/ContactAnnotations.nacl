@@ -403,11 +403,13 @@ type salesforce.Contact {
       "ACCOUNT.NAME",
       "ACCOUNT.SITE",
       "CONTACT.PHONE1",
+      "CONTACT.PHONE2",
       "CONTACT.PHONE3",
       "CONTACT.PHONE4",
       "CONTACT.PHONE5",
       "CONTACT.PHONE6",
       "ACCOUNT.PHONE1",
+      "ACCOUNT.PHONE2",
     ]
     searchResultsAdditionalFields = [
       "FULL_NAME",

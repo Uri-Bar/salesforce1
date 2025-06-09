@@ -16,6 +16,9 @@ type salesforce.CreditMemo {
     _required = true
     label = "Account ID"
   }
+  salesforce.Unknown Category {
+    apiName = "CreditMemo.Category"
+  }
   salesforce.Unknown CorpCrcyCnvTotAmtWithTax {
     apiName = "CreditMemo.CorpCrcyCnvTotAmtWithTax"
   }
@@ -73,6 +76,9 @@ type salesforce.CreditMemo {
     relationshipName = "Owner"
     label = "Owner ID"
     _hidden_value = true
+  }
+  salesforce.Picklist ReasonCode {
+    apiName = "CreditMemo.ReasonCode"
   }
   salesforce.Lookup ReferenceEntityId {
     apiName = "CreditMemo.ReferenceEntityId"

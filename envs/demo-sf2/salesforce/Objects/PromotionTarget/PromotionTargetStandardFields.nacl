@@ -38,7 +38,7 @@ type salesforce.PromotionTarget {
   }
   salesforce.Number RestrictionQuantity {
     apiName = "PromotionTarget.RestrictionQuantity"
-    inlineHelpText = "Enter how many products can receive this discount. Leave blank for an unlimited quantity. This field is mandatory if the Adjustment Type is Total Fixed Price."
+    inlineHelpText = "This field is mandatory if the Adjustment Type is Total Fixed Price. If the Adjustment Type is Bonus Product, then this field is limited to 1. For any other Adjustment Type, enter how many products can receive this discount or leave blank for an unlimited quantity."
     label = "Quantity Limit"
     precision = 18
     scale = 0

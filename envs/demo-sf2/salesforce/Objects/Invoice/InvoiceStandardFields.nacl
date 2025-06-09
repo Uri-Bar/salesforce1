@@ -129,6 +129,15 @@ type salesforce.Invoice {
     apiName = "Invoice.TotalTaxAmount"
     label = "Total Tax"
   }
+  salesforce.Unknown WriteOffStatus {
+    apiName = "Invoice.WriteOffStatus"
+  }
+  salesforce.Unknown WriteOffTotalChargeAmount {
+    apiName = "Invoice.WriteOffTotalChargeAmount"
+  }
+  salesforce.Unknown WriteOffTotalTaxAmount {
+    apiName = "Invoice.WriteOffTotalTaxAmount"
+  }
   serviceid Id {
     apiName = "Invoice.Id"
     label = "Invoice ID"

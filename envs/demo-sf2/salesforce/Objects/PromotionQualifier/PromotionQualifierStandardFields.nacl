@@ -1,4 +1,7 @@
 type salesforce.PromotionQualifier {
+  salesforce.Unknown ApproachingDiscountThreshold {
+    apiName = "PromotionQualifier.ApproachingDiscountThreshold"
+  }
   salesforce.Currency MinimumAmount {
     apiName = "PromotionQualifier.MinimumAmount"
     label = "Minimum Amount"

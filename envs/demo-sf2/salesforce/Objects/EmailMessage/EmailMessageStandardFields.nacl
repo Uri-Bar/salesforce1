@@ -83,6 +83,11 @@ type salesforce.EmailMessage {
     relationshipName = "RelatedTo"
     label = "Related To ID"
   }
+  salesforce.Picklist Source {
+    apiName = "EmailMessage.Source"
+    label = "Email Source"
+    restricted = true
+  }
   salesforce.Picklist Status {
     apiName = "EmailMessage.Status"
     restricted = true

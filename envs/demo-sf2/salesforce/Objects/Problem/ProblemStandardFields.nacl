@@ -51,7 +51,7 @@ type salesforce.Problem {
   salesforce.Lookup ResolvedById {
     apiName = "Problem.ResolvedById"
     relationshipName = "ResolvedBy"
-    label = "User ID"
+    label = "Resolved By ID"
   }
   salesforce.LongTextArea RootCauseSummary {
     apiName = "Problem.RootCauseSummary"
@@ -71,7 +71,7 @@ type salesforce.Problem {
   }
   salesforce.Picklist SubCategory {
     apiName = "Problem.SubCategory"
-    label = "Sub-Category"
+    label = "Subcategory"
   }
   salesforce.Text Subject {
     apiName = "Problem.Subject"

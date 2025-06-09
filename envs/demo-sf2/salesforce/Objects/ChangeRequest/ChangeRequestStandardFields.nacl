@@ -66,7 +66,7 @@ type salesforce.ChangeRequest {
   salesforce.Lookup ReviewerId {
     apiName = "ChangeRequest.ReviewerId"
     relationshipName = "Reviewer"
-    label = "User ID"
+    label = "Reviewer ID"
   }
   salesforce.LongTextArea RiskImpactAnalysis {
     apiName = "ChangeRequest.RiskImpactAnalysis"

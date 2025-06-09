@@ -52,6 +52,9 @@ type salesforce.WorkStep {
     relationshipName = "PausedFlowInterview"
     label = "Paused Flow Interview ID"
   }
+  salesforce.Unknown ProcessType {
+    apiName = "WorkStep.ProcessType"
+  }
   salesforce.DateTime StartTime {
     apiName = "WorkStep.StartTime"
     label = "Start Time"

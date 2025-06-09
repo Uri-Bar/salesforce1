@@ -1,4 +1,4 @@
-type salesforce.ExpressionFilter {
+type salesforce.WebCartCredit {
   annotations {
     serviceid apiName {
     }
@@ -6,13 +6,13 @@ type salesforce.ExpressionFilter {
     }
     string label {
     }
+    string description {
+    }
     hidden_string keyPrefix {
     }
     salesforce.ActionOverride actionOverrides {
     }
     string compactLayoutAssignment {
-    }
-    string description {
     }
     boolean enableDataTranslation {
     }
@@ -55,11 +55,12 @@ type salesforce.ExpressionFilter {
     hidden_string internalId {
     }
   }
-  apiName = "ExpressionFilter"
+  apiName = "WebCartCredit"
   metadataType = "CustomObject"
-  label = "Expression Filter"
+  label = "WebCartCredit"
   description = ""
+  compactLayoutAssignment = "SYSTEM"
   enableFeeds = false
   externalSharingModel = "ControlledByParent"
-  _alias = "Expression Filter"
+  _alias = "WebCartCredit"
 }

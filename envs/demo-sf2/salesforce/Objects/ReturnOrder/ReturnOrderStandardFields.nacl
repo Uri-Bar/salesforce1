@@ -52,6 +52,9 @@ type salesforce.ReturnOrder {
     label = "Owner ID"
     _hidden_value = true
   }
+  salesforce.Unknown ProcessType {
+    apiName = "ReturnOrder.ProcessType"
+  }
   salesforce.Lookup ReturnedById {
     apiName = "ReturnOrder.ReturnedById"
     relationshipName = "ReturnedBy"

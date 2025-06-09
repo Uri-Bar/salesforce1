@@ -13,6 +13,10 @@ type salesforce.WebStoreInventorySource {
     restricted = true
     label = "Inventory Dimension"
   }
+  salesforce.Unknown IsChkInvOnActiveCartEnabled {
+    apiName = "WebStoreInventorySource.IsChkInvOnActiveCartEnabled"
+    inlineHelpText = "The inventory will be checked whenever an item in the active cart is added or changed."
+  }
   salesforce.Unknown IsEnabled {
     apiName = "WebStoreInventorySource.IsEnabled"
   }

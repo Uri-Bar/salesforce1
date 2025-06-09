@@ -88,7 +88,7 @@ type salesforce.PaymentMethod {
   }
   salesforce.DateTime LastModifiedDate {
     apiName = "PaymentMethod.LastModifiedDate"
-    label = "__MISSING LABEL__ PropertyFile - val LastModifiedDate not found in section udd_PaymentMethod"
+    label = "Last Modified Date"
     _hidden_value = true
   }
   salesforce.DateTime SystemModstamp {
@@ -106,7 +106,7 @@ type salesforce.PaymentMethod {
     apiName = "PaymentMethod.Name"
     length = 255
     _required = true
-    label = "__MISSING LABEL__ PropertyFile - val Name not found in section udd_PaymentMethod"
+    label = "Payment Method Name"
     unique = false
     caseSensitive = false
   }

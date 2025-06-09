@@ -369,6 +369,7 @@ type salesforce.Account {
       "CORE.USERS.ALIAS",
       "ACCOUNT.TYPE",
       "ACCOUNT.PHONE1",
+      "ACCOUNT.PHONE2",
     ]
     searchResultsAdditionalFields = [
       "ACCOUNT.NAME",

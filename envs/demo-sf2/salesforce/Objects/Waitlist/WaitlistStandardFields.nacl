@@ -29,6 +29,10 @@ type salesforce.Waitlist {
   salesforce.Unknown ShouldAllowSelfCheckIn {
     apiName = "Waitlist.ShouldAllowSelfCheckIn"
   }
+  salesforce.Unknown Type {
+    apiName = "Waitlist.Type"
+    inlineHelpText = "Specifies the appointment type."
+  }
   serviceid Id {
     apiName = "Waitlist.Id"
     label = "Waitlist ID"
