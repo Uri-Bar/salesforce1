@@ -1,0 +1,12 @@
+salesforce.ApexClass TemperatureConverterTest {
+  apiVersion = 56
+  status = "Active"
+  fullName = "TemperatureConverterTest"
+  content = file("salesforce/Records/ApexClass/TemperatureConverterTest.cls")
+  _generated_dependencies = [
+    {
+      reference = salesforce.ApexClass.instance.Uri
+    },
+  ]
+  _alias = "TemperatureConverterTest"
+}

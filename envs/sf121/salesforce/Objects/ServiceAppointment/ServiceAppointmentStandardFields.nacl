@@ -1,0 +1,291 @@
+type salesforce.ServiceAppointment {
+  salesforce.Lookup AccountId {
+    apiName = "ServiceAppointment.AccountId"
+    label = "Account ID"
+    relationshipName = "Account"
+    _hidden_value = true
+  }
+  salesforce.Number ActualDuration {
+    apiName = "ServiceAppointment.ActualDuration"
+    label = "Actual Duration (Minutes)"
+    scale = 2
+    precision = 18
+    unique = false
+  }
+  salesforce.DateTime ActualEndTime {
+    apiName = "ServiceAppointment.ActualEndTime"
+    label = "Actual End"
+  }
+  salesforce.DateTime ActualStartTime {
+    apiName = "ServiceAppointment.ActualStartTime"
+    label = "Actual Start"
+  }
+  salesforce.Text AdditionalInformation {
+    apiName = "ServiceAppointment.AdditionalInformation"
+    label = "Additional Information"
+    length = 255
+    unique = false
+    caseSensitive = false
+  }
+  salesforce.Address Address {
+    apiName = "ServiceAppointment.Address"
+    label = "Address"
+    _required = true
+    _hidden_value = true
+  }
+  salesforce.Lookup AppointmentCategoryId {
+    apiName = "ServiceAppointment.AppointmentCategoryId"
+    label = "Appointment Category ID"
+    relationshipName = "AppointmentCategory"
+  }
+  salesforce.Lookup AppointmentInvitationId {
+    apiName = "ServiceAppointment.AppointmentInvitationId"
+    label = "Appointment Invitation ID"
+    relationshipName = "AppointmentInvitation"
+  }
+  salesforce.Picklist AppointmentMode {
+    apiName = "ServiceAppointment.AppointmentMode"
+    label = "Appointment Mode"
+    restricted = true
+  }
+  salesforce.Picklist AppointmentType {
+    apiName = "ServiceAppointment.AppointmentType"
+    label = "Appointment Type"
+  }
+  salesforce.LongTextArea ApptBookingInfoUrl {
+    apiName = "ServiceAppointment.ApptBookingInfoUrl"
+    label = "Appointment Booking URL"
+    length = 4000
+  }
+  salesforce.DateTime ArrivalWindowEndTime {
+    apiName = "ServiceAppointment.ArrivalWindowEndTime"
+    label = "Arrival Window End"
+  }
+  salesforce.DateTime ArrivalWindowStartTime {
+    apiName = "ServiceAppointment.ArrivalWindowStartTime"
+    label = "Arrival Window Start"
+  }
+  salesforce.Number AttendeeCount {
+    apiName = "ServiceAppointment.AttendeeCount"
+    label = "Attendee Count"
+    scale = 0
+    precision = 9
+    unique = false
+    _hidden_value = true
+  }
+  salesforce.Number AttendeeLimit {
+    apiName = "ServiceAppointment.AttendeeLimit"
+    label = "Attendee Limit"
+    scale = 0
+    precision = 9
+    unique = false
+  }
+  salesforce.Text CancellationReason {
+    apiName = "ServiceAppointment.CancellationReason"
+    label = "Cancellation Reason"
+    length = 255
+    unique = false
+    caseSensitive = false
+  }
+  salesforce.DateTime CheckedInTime {
+    apiName = "ServiceAppointment.CheckedInTime"
+    label = "Checked In Time"
+  }
+  salesforce.Text Comments {
+    apiName = "ServiceAppointment.Comments"
+    label = "Comment"
+    length = 255
+    unique = false
+    caseSensitive = false
+  }
+  salesforce.Lookup ContactId {
+    apiName = "ServiceAppointment.ContactId"
+    label = "Contact ID"
+    relationshipName = "Contact"
+  }
+  salesforce.LongTextArea Description {
+    apiName = "ServiceAppointment.Description"
+    label = "Description"
+    length = 32000
+  }
+  salesforce.DateTime DueDate {
+    apiName = "ServiceAppointment.DueDate"
+    label = "Due Date"
+    _required = true
+  }
+  salesforce.Number Duration {
+    apiName = "ServiceAppointment.Duration"
+    label = "Duration"
+    scale = 2
+    precision = 18
+    unique = false
+  }
+  salesforce.Picklist DurationType {
+    apiName = "ServiceAppointment.DurationType"
+    label = "Duration Type"
+    restricted = true
+  }
+  salesforce.DateTime EarliestStartTime {
+    apiName = "ServiceAppointment.EarliestStartTime"
+    label = "Earliest Start Permitted"
+    _required = true
+  }
+  salesforce.Email Email {
+    apiName = "ServiceAppointment.Email"
+    label = "Email"
+    unique = false
+  }
+  salesforce.Lookup EngagementChannelTypeId {
+    apiName = "ServiceAppointment.EngagementChannelTypeId"
+    label = "Engagement Channel Type ID"
+    relationshipName = "EngagementChannelType"
+  }
+  salesforce.Picklist GroupAppointmentAccessType {
+    apiName = "ServiceAppointment.GroupAppointmentAccessType"
+    label = "Group Appointment Access Type"
+    restricted = true
+  }
+  salesforce.Checkbox IsAnonymousBooking {
+    apiName = "ServiceAppointment.IsAnonymousBooking"
+    label = "Anonymous Booking"
+    defaultValue = false
+  }
+  salesforce.Checkbox IsOffsiteAppointment {
+    apiName = "ServiceAppointment.IsOffsiteAppointment"
+    inlineHelpText = "Any type of work that can be done remotely."
+    label = "Offsite Appointment"
+  }
+  salesforce.Lookup OwnerId {
+    apiName = "ServiceAppointment.OwnerId"
+    label = "Owner ID"
+    relationshipName = "Owner"
+    _hidden_value = true
+  }
+  salesforce.Lookup ParentRecordId {
+    apiName = "ServiceAppointment.ParentRecordId"
+    label = "Parent Record ID"
+    relationshipName = "ParentRecord"
+  }
+  salesforce.Picklist ParentRecordStatusCategory {
+    apiName = "ServiceAppointment.ParentRecordStatusCategory"
+    label = "Parent Record Status Category"
+    restricted = true
+    _hidden_value = true
+  }
+  salesforce.Text ParentRecordType {
+    apiName = "ServiceAppointment.ParentRecordType"
+    label = "Parent Record Type"
+    length = 50
+    unique = false
+    caseSensitive = false
+    _hidden_value = true
+  }
+  salesforce.Phone Phone {
+    apiName = "ServiceAppointment.Phone"
+    label = "Phone"
+  }
+  salesforce.Lookup ReceiptOrderId {
+    apiName = "ServiceAppointment.ReceiptOrderId"
+    _hidden_value = true
+  }
+  salesforce.DateTime SchedEndTime {
+    apiName = "ServiceAppointment.SchedEndTime"
+    label = "Scheduled End"
+  }
+  salesforce.DateTime SchedStartTime {
+    apiName = "ServiceAppointment.SchedStartTime"
+    label = "Scheduled Start"
+  }
+  salesforce.LongTextArea ServiceNote {
+    apiName = "ServiceAppointment.ServiceNote"
+    label = "Service Note"
+    length = 32000
+  }
+  salesforce.Lookup ServiceTerritoryId {
+    apiName = "ServiceAppointment.ServiceTerritoryId"
+    label = "Territory ID"
+    relationshipName = "ServiceTerritory"
+  }
+  salesforce.Picklist Status {
+    apiName = "ServiceAppointment.Status"
+    label = "Status"
+    restricted = false
+  }
+  salesforce.Picklist StatusCategory {
+    apiName = "ServiceAppointment.StatusCategory"
+    label = "Status Category"
+    restricted = true
+    _hidden_value = true
+  }
+  salesforce.Text Subject {
+    apiName = "ServiceAppointment.Subject"
+    label = "Subject"
+    length = 255
+    unique = false
+    caseSensitive = false
+  }
+  salesforce.Text Transaction {
+    apiName = "ServiceAppointment.Transaction"
+    label = "Transaction"
+    length = 255
+    unique = false
+    caseSensitive = false
+  }
+  salesforce.Lookup WorkTypeId {
+    apiName = "ServiceAppointment.WorkTypeId"
+    label = "Work Type ID"
+    relationshipName = "WorkType"
+  }
+  serviceid Id {
+    apiName = "ServiceAppointment.Id"
+    label = "Service Appointment ID"
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Checkbox IsDeleted {
+    apiName = "ServiceAppointment.IsDeleted"
+    label = "Deleted"
+    defaultValue = false
+    _hidden_value = true
+  }
+  salesforce.AutoNumber AppointmentNumber {
+    apiName = "ServiceAppointment.AppointmentNumber"
+    label = "Appointment Number"
+    _hidden_value = true
+  }
+  salesforce.DateTime CreatedDate {
+    apiName = "ServiceAppointment.CreatedDate"
+    label = "Created Date"
+    _hidden_value = true
+  }
+  salesforce.Lookup CreatedById {
+    apiName = "ServiceAppointment.CreatedById"
+    label = "Created By ID"
+    relationshipName = "CreatedBy"
+    _hidden_value = true
+  }
+  salesforce.DateTime LastModifiedDate {
+    apiName = "ServiceAppointment.LastModifiedDate"
+    label = "Last Modified Date"
+    _hidden_value = true
+  }
+  salesforce.Lookup LastModifiedById {
+    apiName = "ServiceAppointment.LastModifiedById"
+    label = "Last Modified By ID"
+    relationshipName = "LastModifiedBy"
+    _hidden_value = true
+  }
+  salesforce.DateTime SystemModstamp {
+    apiName = "ServiceAppointment.SystemModstamp"
+    label = "System Modstamp"
+    _hidden_value = true
+  }
+  salesforce.Number DurationInMinutes {
+    apiName = "ServiceAppointment.DurationInMinutes"
+    label = "Duration in Minutes"
+    scale = 2
+    precision = 18
+    unique = false
+    _hidden_value = true
+  }
+}

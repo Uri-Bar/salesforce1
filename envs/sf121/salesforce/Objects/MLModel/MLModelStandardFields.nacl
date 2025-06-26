@@ -1,0 +1,95 @@
+type salesforce.MLModel {
+  serviceid Id {
+    apiName = "MLModel.Id"
+    label = "ML Model ID"
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Checkbox IsDeleted {
+    apiName = "MLModel.IsDeleted"
+    label = "Deleted"
+    defaultValue = false
+    _hidden_value = true
+  }
+  salesforce.AutoNumber Name {
+    apiName = "MLModel.Name"
+    label = "Name"
+    _hidden_value = true
+  }
+  salesforce.DateTime CreatedDate {
+    apiName = "MLModel.CreatedDate"
+    label = "Created Date"
+    _hidden_value = true
+  }
+  salesforce.Lookup CreatedById {
+    apiName = "MLModel.CreatedById"
+    label = "Created By ID"
+    relationshipName = "CreatedBy"
+    _hidden_value = true
+  }
+  salesforce.DateTime LastModifiedDate {
+    apiName = "MLModel.LastModifiedDate"
+    label = "Last Modified Date"
+    _hidden_value = true
+  }
+  salesforce.Lookup LastModifiedById {
+    apiName = "MLModel.LastModifiedById"
+    label = "Last Modified By ID"
+    relationshipName = "LastModifiedBy"
+    _hidden_value = true
+  }
+  salesforce.DateTime SystemModstamp {
+    apiName = "MLModel.SystemModstamp"
+    label = "System Modstamp"
+    _hidden_value = true
+  }
+  salesforce.Lookup PredictionDefinitionId {
+    apiName = "MLModel.PredictionDefinitionId"
+    label = "ML Prediction Definition ID"
+    relationshipName = "PredictionDefinition"
+    _hidden_value = true
+  }
+  salesforce.Picklist ApprovalStatus {
+    apiName = "MLModel.ApprovalStatus"
+    label = "Approval Status"
+    restricted = true
+    _hidden_value = true
+  }
+  salesforce.Picklist ScoringStatus {
+    apiName = "MLModel.ScoringStatus"
+    label = "Scoring Status"
+    _required = true
+    restricted = true
+    _hidden_value = true
+  }
+  salesforce.Picklist ModelType {
+    apiName = "MLModel.ModelType"
+    label = "Model Type"
+    restricted = true
+    _hidden_value = true
+  }
+  salesforce.DateTime TrainingStartTime {
+    apiName = "MLModel.TrainingStartTime"
+    label = "Training Start Time"
+    _hidden_value = true
+  }
+  salesforce.DateTime TrainingEndTime {
+    apiName = "MLModel.TrainingEndTime"
+    label = "Training End Time"
+    _hidden_value = true
+  }
+  salesforce.Text Dataset {
+    apiName = "MLModel.Dataset"
+    label = "Dataset Id"
+    length = 80
+    unique = false
+    caseSensitive = false
+    _hidden_value = true
+  }
+  salesforce.Lookup RecommendationDefinitionId {
+    apiName = "MLModel.RecommendationDefinitionId"
+    label = "ML Recommendation Definition ID"
+    relationshipName = "RecommendationDefinition"
+    _hidden_value = true
+  }
+}

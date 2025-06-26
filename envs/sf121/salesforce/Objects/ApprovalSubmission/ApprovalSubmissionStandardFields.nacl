@@ -1,0 +1,95 @@
+type salesforce.ApprovalSubmission {
+  salesforce.Html Comments {
+    apiName = "ApprovalSubmission.Comments"
+    label = "Comments"
+    length = 32000
+    _hidden_value = true
+  }
+  salesforce.Unknown DoesSendApprovalEmail {
+    apiName = "ApprovalSubmission.DoesSendApprovalEmail"
+    _hidden_value = true
+  }
+  salesforce.Lookup FlowOrchestrationInstanceId {
+    apiName = "ApprovalSubmission.FlowOrchestrationInstanceId"
+    label = "Orchestration Run ID"
+    relationshipName = "FlowOrchestrationInstance"
+    _hidden_value = true
+  }
+  salesforce.Lookup OwnerId {
+    apiName = "ApprovalSubmission.OwnerId"
+    label = "Owner ID"
+    relationshipName = "Owner"
+    _hidden_value = true
+  }
+  salesforce.Lookup RelatedRecordId {
+    apiName = "ApprovalSubmission.RelatedRecordId"
+    label = "Related Record ID"
+    relationshipName = "RelatedRecord"
+    _hidden_value = true
+  }
+  salesforce.Text RelatedRecordObjectName {
+    apiName = "ApprovalSubmission.RelatedRecordObjectName"
+    label = "Related Record Object Name"
+    length = 255
+    unique = false
+    caseSensitive = false
+    _hidden_value = true
+  }
+  salesforce.Picklist Status {
+    apiName = "ApprovalSubmission.Status"
+    label = "Status"
+    _required = true
+    restricted = true
+    _hidden_value = true
+  }
+  salesforce.Lookup SubmittedById {
+    apiName = "ApprovalSubmission.SubmittedById"
+    label = "User ID"
+    relationshipName = "SubmittedBy"
+    _hidden_value = true
+  }
+  serviceid Id {
+    apiName = "ApprovalSubmission.Id"
+    label = "Approval Submission ID"
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Checkbox IsDeleted {
+    apiName = "ApprovalSubmission.IsDeleted"
+    label = "Deleted"
+    defaultValue = false
+    _hidden_value = true
+  }
+  salesforce.AutoNumber Name {
+    apiName = "ApprovalSubmission.Name"
+    label = "Approval Submission Name"
+    _hidden_value = true
+  }
+  salesforce.DateTime CreatedDate {
+    apiName = "ApprovalSubmission.CreatedDate"
+    label = "Created Date"
+    _hidden_value = true
+  }
+  salesforce.Lookup CreatedById {
+    apiName = "ApprovalSubmission.CreatedById"
+    label = "Created By ID"
+    relationshipName = "CreatedBy"
+    _hidden_value = true
+  }
+  salesforce.DateTime LastModifiedDate {
+    apiName = "ApprovalSubmission.LastModifiedDate"
+    label = "Last Modified Date"
+    _hidden_value = true
+  }
+  salesforce.Lookup LastModifiedById {
+    apiName = "ApprovalSubmission.LastModifiedById"
+    label = "Last Modified By ID"
+    relationshipName = "LastModifiedBy"
+    _hidden_value = true
+  }
+  salesforce.DateTime SystemModstamp {
+    apiName = "ApprovalSubmission.SystemModstamp"
+    label = "System Modstamp"
+    _hidden_value = true
+  }
+}

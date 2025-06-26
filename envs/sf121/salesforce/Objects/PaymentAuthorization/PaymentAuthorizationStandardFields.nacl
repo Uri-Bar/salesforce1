@@ -1,0 +1,193 @@
+type salesforce.PaymentAuthorization {
+  salesforce.Lookup AccountId {
+    apiName = "PaymentAuthorization.AccountId"
+    label = "Account ID"
+    relationshipName = "Account"
+  }
+  salesforce.Currency Amount {
+    apiName = "PaymentAuthorization.Amount"
+    label = "Amount"
+    _required = true
+    scale = 2
+    precision = 18
+  }
+  salesforce.Currency Balance {
+    apiName = "PaymentAuthorization.Balance"
+    label = "Balance"
+    scale = 2
+    precision = 18
+    _hidden_value = true
+  }
+  salesforce.LongTextArea Comments {
+    apiName = "PaymentAuthorization.Comments"
+    label = "Comments"
+    length = 1000
+  }
+  salesforce.DateTime Date {
+    apiName = "PaymentAuthorization.Date"
+    label = "Date"
+  }
+  salesforce.DateTime EffectiveDate {
+    apiName = "PaymentAuthorization.EffectiveDate"
+    label = "Effective Date"
+  }
+  salesforce.Email Email {
+    apiName = "PaymentAuthorization.Email"
+    label = "Audit Email"
+    unique = false
+  }
+  salesforce.DateTime ExpirationDate {
+    apiName = "PaymentAuthorization.ExpirationDate"
+    label = "Expiration Date"
+  }
+  salesforce.Text GatewayAuthCode {
+    apiName = "PaymentAuthorization.GatewayAuthCode"
+    label = "Gateway Auth Code"
+    length = 64
+    unique = false
+    caseSensitive = false
+  }
+  salesforce.DateTime GatewayDate {
+    apiName = "PaymentAuthorization.GatewayDate"
+    label = "Gateway Date"
+  }
+  salesforce.LongTextArea GatewayRefDetails {
+    apiName = "PaymentAuthorization.GatewayRefDetails"
+    label = "Gateway Reference Details"
+    length = 1000
+  }
+  salesforce.Text GatewayRefNumber {
+    apiName = "PaymentAuthorization.GatewayRefNumber"
+    label = "Gateway Reference Number"
+    length = 255
+    unique = false
+    caseSensitive = false
+  }
+  salesforce.Text GatewayResultCode {
+    apiName = "PaymentAuthorization.GatewayResultCode"
+    label = "Gateway Result Code"
+    length = 64
+    unique = false
+    caseSensitive = false
+  }
+  salesforce.Text GatewayResultCodeDescription {
+    apiName = "PaymentAuthorization.GatewayResultCodeDescription"
+    label = "Gateway Result Code Description"
+    length = 255
+    unique = false
+    caseSensitive = false
+  }
+  salesforce.Text IpAddress {
+    apiName = "PaymentAuthorization.IpAddress"
+    label = "IP Address"
+    length = 39
+    unique = false
+    caseSensitive = false
+  }
+  salesforce.Text MacAddress {
+    apiName = "PaymentAuthorization.MacAddress"
+    label = "MAC Address"
+    length = 32
+    unique = false
+    caseSensitive = false
+  }
+  salesforce.Lookup PaymentGatewayId {
+    apiName = "PaymentAuthorization.PaymentGatewayId"
+    label = "Payment Gateway ID"
+    relationshipName = "PaymentGateway"
+  }
+  salesforce.Lookup PaymentGroupId {
+    apiName = "PaymentAuthorization.PaymentGroupId"
+    label = "Payment Group ID"
+    relationshipName = "PaymentGroup"
+  }
+  salesforce.Lookup PaymentMethodId {
+    apiName = "PaymentAuthorization.PaymentMethodId"
+    label = "Payment Method ID"
+    relationshipName = "PaymentMethod"
+  }
+  salesforce.Phone Phone {
+    apiName = "PaymentAuthorization.Phone"
+    label = "Phone"
+  }
+  salesforce.Picklist ProcessingMode {
+    apiName = "PaymentAuthorization.ProcessingMode"
+    label = "Processing Mode"
+    _required = true
+    restricted = true
+  }
+  salesforce.Picklist SfResultCode {
+    apiName = "PaymentAuthorization.SfResultCode"
+    label = "Salesforce Result Code"
+    restricted = true
+  }
+  salesforce.Picklist Status {
+    apiName = "PaymentAuthorization.Status"
+    label = "Status"
+    _required = true
+    restricted = true
+  }
+  salesforce.Summary TotalAuthReversalAmount {
+    apiName = "PaymentAuthorization.TotalAuthReversalAmount"
+    label = "Total Payment Auth Reversal Amount"
+    _hidden_value = true
+  }
+  salesforce.Currency TotalPaymentCaptureAmount {
+    apiName = "PaymentAuthorization.TotalPaymentCaptureAmount"
+    label = "Total Payment Capture Amount"
+    scale = 2
+    precision = 18
+    _hidden_value = true
+  }
+  serviceid Id {
+    apiName = "PaymentAuthorization.Id"
+    label = "Payment Authorization ID"
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Checkbox IsDeleted {
+    apiName = "PaymentAuthorization.IsDeleted"
+    label = "Deleted"
+    defaultValue = false
+    _hidden_value = true
+  }
+  salesforce.AutoNumber PaymentAuthorizationNumber {
+    apiName = "PaymentAuthorization.PaymentAuthorizationNumber"
+    label = "Payment Authorization Number"
+    _hidden_value = true
+  }
+  salesforce.DateTime CreatedDate {
+    apiName = "PaymentAuthorization.CreatedDate"
+    label = "Created Date"
+    _hidden_value = true
+  }
+  salesforce.Lookup CreatedById {
+    apiName = "PaymentAuthorization.CreatedById"
+    label = "Created By ID"
+    relationshipName = "CreatedBy"
+    _hidden_value = true
+  }
+  salesforce.DateTime LastModifiedDate {
+    apiName = "PaymentAuthorization.LastModifiedDate"
+    label = "Last Modified Date"
+    _hidden_value = true
+  }
+  salesforce.Lookup LastModifiedById {
+    apiName = "PaymentAuthorization.LastModifiedById"
+    label = "Last Modified By ID"
+    relationshipName = "LastModifiedBy"
+    _hidden_value = true
+  }
+  salesforce.DateTime SystemModstamp {
+    apiName = "PaymentAuthorization.SystemModstamp"
+    label = "System Modstamp"
+    _hidden_value = true
+  }
+  salesforce.Text PaymentIntentGuid {
+    apiName = "PaymentAuthorization.PaymentIntentGuid"
+    label = "Payment Intent Guid"
+    length = 255
+    unique = false
+    caseSensitive = false
+  }
+}

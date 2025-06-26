@@ -1,0 +1,11 @@
+salesforce.CompactLayout property__c_test {
+  fullName = "property__c.test"
+  fields = [
+    "RecordTypeId",
+  ]
+  label = "test"
+  _parent = [
+    salesforce.property__c,
+  ]
+  _alias = "test"
+}

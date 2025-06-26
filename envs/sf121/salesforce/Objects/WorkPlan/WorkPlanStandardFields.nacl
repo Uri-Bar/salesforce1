@@ -1,0 +1,97 @@
+type salesforce.WorkPlan {
+  salesforce.LongTextArea Description {
+    apiName = "WorkPlan.Description"
+    label = "Description"
+    length = 32000
+  }
+  salesforce.Number ExecutionOrder {
+    apiName = "WorkPlan.ExecutionOrder"
+    label = "Execution Order"
+    scale = 0
+    precision = 9
+    unique = false
+  }
+  salesforce.Text Name {
+    apiName = "WorkPlan.Name"
+    label = "Name"
+    _required = true
+    length = 255
+    unique = false
+    caseSensitive = false
+  }
+  salesforce.Lookup OwnerId {
+    apiName = "WorkPlan.OwnerId"
+    label = "Owner ID"
+    relationshipName = "Owner"
+    _hidden_value = true
+  }
+  salesforce.Lookup ParentRecordId {
+    apiName = "WorkPlan.ParentRecordId"
+    label = "Parent Record ID"
+    _required = true
+    relationshipName = "ParentRecord"
+  }
+  salesforce.Text ParentRecordType {
+    apiName = "WorkPlan.ParentRecordType"
+    label = "Parent Record Type"
+    length = 50
+    unique = false
+    caseSensitive = false
+    _hidden_value = true
+  }
+  salesforce.Lookup WorkOrderId {
+    apiName = "WorkPlan.WorkOrderId"
+    label = "Work Order ID"
+    relationshipName = "WorkOrder"
+  }
+  salesforce.Lookup WorkOrderLineItemId {
+    apiName = "WorkPlan.WorkOrderLineItemId"
+    label = "Work Order Line Item ID"
+    relationshipName = "WorkOrderLineItem"
+  }
+  salesforce.Lookup WorkPlanTemplateId {
+    apiName = "WorkPlan.WorkPlanTemplateId"
+    label = "Work Plan Template ID"
+    relationshipName = "WorkPlanTemplate"
+    _hidden_value = true
+  }
+  serviceid Id {
+    apiName = "WorkPlan.Id"
+    label = "Work Plan ID"
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Checkbox IsDeleted {
+    apiName = "WorkPlan.IsDeleted"
+    label = "Deleted"
+    defaultValue = false
+    _hidden_value = true
+  }
+  salesforce.DateTime CreatedDate {
+    apiName = "WorkPlan.CreatedDate"
+    label = "Created Date"
+    _hidden_value = true
+  }
+  salesforce.Lookup CreatedById {
+    apiName = "WorkPlan.CreatedById"
+    label = "Created By ID"
+    relationshipName = "CreatedBy"
+    _hidden_value = true
+  }
+  salesforce.DateTime LastModifiedDate {
+    apiName = "WorkPlan.LastModifiedDate"
+    label = "Last Modified Date"
+    _hidden_value = true
+  }
+  salesforce.Lookup LastModifiedById {
+    apiName = "WorkPlan.LastModifiedById"
+    label = "Last Modified By ID"
+    relationshipName = "LastModifiedBy"
+    _hidden_value = true
+  }
+  salesforce.DateTime SystemModstamp {
+    apiName = "WorkPlan.SystemModstamp"
+    label = "System Modstamp"
+    _hidden_value = true
+  }
+}

@@ -1,0 +1,310 @@
+type salesforce.WebCart {
+  salesforce.Lookup AccountId {
+    apiName = "WebCart.AccountId"
+    label = "Account ID"
+    relationshipName = "Account"
+  }
+  salesforce.Address BillingAddress {
+    apiName = "WebCart.BillingAddress"
+    label = "Billing Address"
+    _hidden_value = true
+  }
+  salesforce.Unknown FirstPymtGrandTotalAmount {
+    apiName = "WebCart.FirstPymtGrandTotalAmount"
+    _hidden_value = true
+  }
+  salesforce.Unknown FirstPymtTotalTaxAmount {
+    apiName = "WebCart.FirstPymtTotalTaxAmount"
+    _hidden_value = true
+  }
+  salesforce.Currency GrandTotalAmount {
+    apiName = "WebCart.GrandTotalAmount"
+    label = "Grand Total Amount in Cart"
+    scale = 2
+    precision = 18
+    _hidden_value = true
+  }
+  salesforce.Text GuestCompanyName {
+    apiName = "WebCart.GuestCompanyName"
+    label = "Name of the company"
+    length = 255
+    unique = false
+    caseSensitive = false
+  }
+  salesforce.Email GuestEmailAddress {
+    apiName = "WebCart.GuestEmailAddress"
+    label = "Email address for Guest User"
+    unique = false
+  }
+  salesforce.Text GuestFirstName {
+    apiName = "WebCart.GuestFirstName"
+    label = "First Name for Guest User"
+    length = 255
+    unique = false
+    caseSensitive = false
+  }
+  salesforce.Text GuestLastName {
+    apiName = "WebCart.GuestLastName"
+    label = "Last Name for Guest User"
+    length = 255
+    unique = false
+    caseSensitive = false
+  }
+  salesforce.Phone GuestPhoneNumber {
+    apiName = "WebCart.GuestPhoneNumber"
+    label = "Phone Number for Guest User"
+  }
+  salesforce.Text GuestSecondName {
+    apiName = "WebCart.GuestSecondName"
+    label = "Second Name for Guest User"
+    length = 255
+    unique = false
+    caseSensitive = false
+  }
+  salesforce.Text InitialOrderReferenceNumber {
+    apiName = "WebCart.InitialOrderReferenceNumber"
+    label = "Initial Order Reference Number"
+    length = 36
+    unique = false
+    caseSensitive = false
+  }
+  salesforce.Text InventoryReservationIdentifier {
+    apiName = "WebCart.InventoryReservationIdentifier"
+    label = "The inventory reservation identifier."
+    length = 255
+    unique = false
+    caseSensitive = false
+  }
+  salesforce.Checkbox IsRepricingNeeded {
+    apiName = "WebCart.IsRepricingNeeded"
+    label = "Is Repricing Needed"
+    defaultValue = false
+  }
+  salesforce.Checkbox IsSecondary {
+    apiName = "WebCart.IsSecondary"
+    label = "Is Cart Secondary"
+  }
+  salesforce.DateTime LastRepricingDate {
+    apiName = "WebCart.LastRepricingDate"
+    label = "Last Repricing Date"
+  }
+  salesforce.Text Name {
+    apiName = "WebCart.Name"
+    label = "Cart Name"
+    _required = true
+    length = 255
+    unique = false
+    caseSensitive = false
+  }
+  salesforce.Lookup OrderOwnerId {
+    apiName = "WebCart.OrderOwnerId"
+    label = "User ID"
+    relationshipName = "OrderOwner"
+    _hidden_value = true
+  }
+  salesforce.Lookup OwnerId {
+    apiName = "WebCart.OwnerId"
+    label = "Owner ID"
+    relationshipName = "Owner"
+    _hidden_value = true
+  }
+  salesforce.Lookup PaymentGroupId {
+    apiName = "WebCart.PaymentGroupId"
+    label = "Payment Group ID"
+    relationshipName = "PaymentGroup"
+  }
+  salesforce.Lookup PaymentMethodId {
+    apiName = "WebCart.PaymentMethodId"
+    label = "Payment Method ID"
+    relationshipName = "PaymentMethod"
+  }
+  salesforce.Text PoNumber {
+    apiName = "WebCart.PoNumber"
+    label = "Purchase Order Number"
+    length = 80
+    unique = false
+    caseSensitive = false
+  }
+  salesforce.Picklist Status {
+    apiName = "WebCart.Status"
+    label = "Status"
+    restricted = true
+  }
+  salesforce.Unknown TaxLocaleType {
+    apiName = "WebCart.TaxLocaleType"
+    _hidden_value = true
+  }
+  salesforce.Picklist TaxType {
+    apiName = "WebCart.TaxType"
+    label = "Tax Policy for Cart"
+    restricted = true
+  }
+  salesforce.Summary TotalAdjustmentAmount {
+    apiName = "WebCart.TotalAdjustmentAmount"
+    label = "Total Quantity Based and Promotional Adjustment Amount in Cart"
+    _hidden_value = true
+  }
+  salesforce.Currency TotalAmount {
+    apiName = "WebCart.TotalAmount"
+    label = "Total Amount in Cart"
+    scale = 2
+    precision = 18
+    _hidden_value = true
+  }
+  salesforce.Currency TotalAmountAfterAllAdjustments {
+    apiName = "WebCart.TotalAmountAfterAllAdjustments"
+    label = "Cart Total Adjusted Price"
+    scale = 2
+    precision = 18
+    _hidden_value = true
+  }
+  salesforce.Summary TotalCartLevelAdjAmount {
+    apiName = "WebCart.TotalCartLevelAdjAmount"
+    label = "Total cart level adjustment amount for all the items in the cart. Includes discount and surcharge."
+    _hidden_value = true
+  }
+  salesforce.Summary TotalChargeAmount {
+    apiName = "WebCart.TotalChargeAmount"
+    label = "Total Charge Amount in Cart"
+    _hidden_value = true
+  }
+  salesforce.Unknown TotalChargeFirstPymtTaxAmount {
+    apiName = "WebCart.TotalChargeFirstPymtTaxAmount"
+    _hidden_value = true
+  }
+  salesforce.Summary TotalChargeItemAdjAmount {
+    apiName = "WebCart.TotalChargeItemAdjAmount"
+    label = "Total adjustment amount on a cart item of type charge. Includes discount and surcharge."
+    _hidden_value = true
+  }
+  salesforce.Summary TotalChargeTaxAmount {
+    apiName = "WebCart.TotalChargeTaxAmount"
+    label = "Total Charge Tax Amount in Cart"
+    _hidden_value = true
+  }
+  salesforce.Summary TotalLineItemsWithErrors {
+    apiName = "WebCart.TotalLineItemsWithErrors"
+    label = "Total Line Items with Errors"
+    precision = 9
+    _hidden_value = true
+  }
+  salesforce.Summary TotalListAmount {
+    apiName = "WebCart.TotalListAmount"
+    label = "Total List Amount in Cart"
+    _hidden_value = true
+  }
+  salesforce.Summary TotalProductAmount {
+    apiName = "WebCart.TotalProductAmount"
+    label = "Total Product Amount in Cart"
+    _hidden_value = true
+  }
+  salesforce.Summary TotalProductCount {
+    apiName = "WebCart.TotalProductCount"
+    label = "Total Quantity in the Cart"
+    scale = 0
+    precision = 18
+    _hidden_value = true
+  }
+  salesforce.Unknown TotalProductFirstPymtTaxAmount {
+    apiName = "WebCart.TotalProductFirstPymtTaxAmount"
+    _hidden_value = true
+  }
+  salesforce.Summary TotalProductItemAdjAmount {
+    apiName = "WebCart.TotalProductItemAdjAmount"
+    label = "Total adjustment amount on a cart item. Includes discount and surcharge."
+    _hidden_value = true
+  }
+  salesforce.Summary TotalProductLineItemCount {
+    apiName = "WebCart.TotalProductLineItemCount"
+    label = "Total Product Line Item Count"
+    precision = 9
+    _hidden_value = true
+  }
+  salesforce.Summary TotalProductListAmount {
+    apiName = "WebCart.TotalProductListAmount"
+    label = "Total Product List Amount in Cart"
+    _hidden_value = true
+  }
+  salesforce.Summary TotalProductTaxAmount {
+    apiName = "WebCart.TotalProductTaxAmount"
+    label = "Total Product Tax Amount in Cart"
+    _hidden_value = true
+  }
+  salesforce.Summary TotalPromoAdjustmentAmount {
+    apiName = "WebCart.TotalPromoAdjustmentAmount"
+    label = "Cart Promotions Adjustment"
+    _hidden_value = true
+  }
+  salesforce.Summary TotalPromoAdjustmentTaxAmount {
+    apiName = "WebCart.TotalPromoAdjustmentTaxAmount"
+    label = "Cart Promotions Tax Adjustment"
+    _hidden_value = true
+  }
+  salesforce.Unknown TotalSubProductCount {
+    apiName = "WebCart.TotalSubProductCount"
+    _hidden_value = true
+  }
+  salesforce.Currency TotalTaxAmount {
+    apiName = "WebCart.TotalTaxAmount"
+    label = "Total Tax Amount in Cart"
+    scale = 2
+    precision = 18
+    _hidden_value = true
+  }
+  salesforce.Picklist Type {
+    apiName = "WebCart.Type"
+    label = "Type"
+    restricted = true
+  }
+  salesforce.Summary UniqueProductCount {
+    apiName = "WebCart.UniqueProductCount"
+    label = "Unique Products (SKUs) in the Cart"
+    precision = 9
+    _hidden_value = true
+  }
+  salesforce.Lookup WebStoreId {
+    apiName = "WebCart.WebStoreId"
+    label = "Store ID"
+    _required = true
+    relationshipName = "WebStore"
+  }
+  serviceid Id {
+    apiName = "WebCart.Id"
+    label = "Cart ID"
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Checkbox IsDeleted {
+    apiName = "WebCart.IsDeleted"
+    label = "Deleted"
+    defaultValue = false
+    _hidden_value = true
+  }
+  salesforce.DateTime CreatedDate {
+    apiName = "WebCart.CreatedDate"
+    label = "Created Date"
+    _hidden_value = true
+  }
+  salesforce.Lookup CreatedById {
+    apiName = "WebCart.CreatedById"
+    label = "Created By ID"
+    relationshipName = "CreatedBy"
+    _hidden_value = true
+  }
+  salesforce.DateTime LastModifiedDate {
+    apiName = "WebCart.LastModifiedDate"
+    label = "Last Modified Date"
+    _hidden_value = true
+  }
+  salesforce.Lookup LastModifiedById {
+    apiName = "WebCart.LastModifiedById"
+    label = "Last Modified By ID"
+    relationshipName = "LastModifiedBy"
+    _hidden_value = true
+  }
+  salesforce.DateTime SystemModstamp {
+    apiName = "WebCart.SystemModstamp"
+    label = "System Modstamp"
+    _hidden_value = true
+  }
+}

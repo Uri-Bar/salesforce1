@@ -1,0 +1,107 @@
+type salesforce.Recommendation {
+  salesforce.Text AcceptanceLabel {
+    apiName = "Recommendation.AcceptanceLabel"
+    label = "Acceptance Label"
+    _required = true
+    length = 80
+    unique = false
+    caseSensitive = false
+  }
+  salesforce.Text ActionReference {
+    apiName = "Recommendation.ActionReference"
+    label = "Action"
+    _required = true
+    length = 255
+    unique = false
+    caseSensitive = false
+  }
+  salesforce.Text Description {
+    apiName = "Recommendation.Description"
+    label = "Description"
+    _required = true
+    length = 255
+    unique = false
+    caseSensitive = false
+  }
+  salesforce.Lookup ImageId {
+    apiName = "Recommendation.ImageId"
+    inlineHelpText = "For best results, use a 1000 px x 380 px image at 72 dpi or one with a similar ratio."
+    label = "Asset File ID"
+    relationshipName = "Image"
+  }
+  salesforce.Checkbox IsActionActive {
+    apiName = "Recommendation.IsActionActive"
+    label = "Is Action Active"
+    defaultValue = false
+    _hidden_value = true
+  }
+  salesforce.Text Name {
+    apiName = "Recommendation.Name"
+    label = "Name"
+    _required = true
+    length = 80
+    unique = false
+    caseSensitive = false
+  }
+  salesforce.Text RejectionLabel {
+    apiName = "Recommendation.RejectionLabel"
+    label = "Rejection Label"
+    _required = true
+    length = 80
+    unique = false
+    caseSensitive = false
+  }
+  serviceid Id {
+    apiName = "Recommendation.Id"
+    label = "Recommendation ID"
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Checkbox IsDeleted {
+    apiName = "Recommendation.IsDeleted"
+    label = "Deleted"
+    defaultValue = false
+    _hidden_value = true
+  }
+  salesforce.DateTime CreatedDate {
+    apiName = "Recommendation.CreatedDate"
+    label = "Created Date"
+    _hidden_value = true
+  }
+  salesforce.Lookup CreatedById {
+    apiName = "Recommendation.CreatedById"
+    label = "Created By ID"
+    relationshipName = "CreatedBy"
+    _hidden_value = true
+  }
+  salesforce.DateTime LastModifiedDate {
+    apiName = "Recommendation.LastModifiedDate"
+    label = "Last Modified Date"
+    _hidden_value = true
+  }
+  salesforce.Lookup LastModifiedById {
+    apiName = "Recommendation.LastModifiedById"
+    label = "Last Modified By ID"
+    relationshipName = "LastModifiedBy"
+    _hidden_value = true
+  }
+  salesforce.DateTime SystemModstamp {
+    apiName = "Recommendation.SystemModstamp"
+    label = "System Modstamp"
+    _hidden_value = true
+  }
+  salesforce.Text ExternalId {
+    apiName = "Recommendation.ExternalId"
+    label = "External Id"
+    length = 255
+    unique = false
+    caseSensitive = false
+  }
+  salesforce.Text RecommendationKey {
+    apiName = "Recommendation.RecommendationKey"
+    label = "RecommendationResponse Identifier"
+    length = 255
+    unique = false
+    caseSensitive = false
+  }
+}

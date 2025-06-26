@@ -1,0 +1,60 @@
+type salesforce.property__c {
+  serviceid Id {
+    apiName = "property__c.Id"
+    label = "Record ID"
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Lookup OwnerId {
+    apiName = "property__c.OwnerId"
+    label = "Owner ID"
+    relationshipName = "Owner"
+    _hidden_value = true
+  }
+  salesforce.Checkbox IsDeleted {
+    apiName = "property__c.IsDeleted"
+    label = "Deleted"
+    defaultValue = false
+    _hidden_value = true
+  }
+  salesforce.Text Name {
+    apiName = "property__c.Name"
+    label = "property Name"
+    length = 80
+    unique = false
+    caseSensitive = false
+  }
+  salesforce.Lookup RecordTypeId {
+    apiName = "property__c.RecordTypeId"
+    label = "Record Type ID"
+    relationshipName = "RecordType"
+    _hidden_value = true
+  }
+  salesforce.DateTime CreatedDate {
+    apiName = "property__c.CreatedDate"
+    label = "Created Date"
+    _hidden_value = true
+  }
+  salesforce.Lookup CreatedById {
+    apiName = "property__c.CreatedById"
+    label = "Created By ID"
+    relationshipName = "CreatedBy"
+    _hidden_value = true
+  }
+  salesforce.DateTime LastModifiedDate {
+    apiName = "property__c.LastModifiedDate"
+    label = "Last Modified Date"
+    _hidden_value = true
+  }
+  salesforce.Lookup LastModifiedById {
+    apiName = "property__c.LastModifiedById"
+    label = "Last Modified By ID"
+    relationshipName = "LastModifiedBy"
+    _hidden_value = true
+  }
+  salesforce.DateTime SystemModstamp {
+    apiName = "property__c.SystemModstamp"
+    label = "System Modstamp"
+    _hidden_value = true
+  }
+}

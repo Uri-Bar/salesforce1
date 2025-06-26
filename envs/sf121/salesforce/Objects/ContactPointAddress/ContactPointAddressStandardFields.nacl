@@ -1,0 +1,122 @@
+type salesforce.ContactPointAddress {
+  salesforce.Date ActiveFromDate {
+    apiName = "ContactPointAddress.ActiveFromDate"
+    label = "Active from Date"
+  }
+  salesforce.Date ActiveToDate {
+    apiName = "ContactPointAddress.ActiveToDate"
+    label = "Active to Date"
+  }
+  salesforce.Address Address {
+    apiName = "ContactPointAddress.Address"
+    label = "Address"
+    _hidden_value = true
+  }
+  salesforce.Picklist AddressType {
+    apiName = "ContactPointAddress.AddressType"
+    label = "Address Type"
+    restricted = false
+  }
+  salesforce.Time BestTimeToContactEndTime {
+    apiName = "ContactPointAddress.BestTimeToContactEndTime"
+    label = "Best time to contact end time"
+  }
+  salesforce.Time BestTimeToContactStartTime {
+    apiName = "ContactPointAddress.BestTimeToContactStartTime"
+    label = "Best time to contact start time"
+  }
+  salesforce.Picklist BestTimeToContactTimezone {
+    apiName = "ContactPointAddress.BestTimeToContactTimezone"
+    label = "Best time to contact time zone"
+    restricted = true
+  }
+  salesforce.Lookup ContactPointPhoneId {
+    apiName = "ContactPointAddress.ContactPointPhoneId"
+    label = "Contact Point Phone ID"
+    relationshipName = "ContactPointPhone"
+  }
+  salesforce.Checkbox IsDefault {
+    apiName = "ContactPointAddress.IsDefault"
+    label = "Is Default Address"
+    defaultValue = false
+  }
+  salesforce.Checkbox IsPrimary {
+    apiName = "ContactPointAddress.IsPrimary"
+    label = "Is Primary"
+    defaultValue = false
+  }
+  salesforce.Unknown IsThirdPartyAddress {
+    apiName = "ContactPointAddress.IsThirdPartyAddress"
+    _hidden_value = true
+  }
+  salesforce.Text Name {
+    apiName = "ContactPointAddress.Name"
+    label = "Name"
+    _required = true
+    length = 255
+    unique = false
+    caseSensitive = false
+  }
+  salesforce.Lookup OwnerId {
+    apiName = "ContactPointAddress.OwnerId"
+    label = "Owner ID"
+    relationshipName = "Owner"
+    _hidden_value = true
+  }
+  salesforce.MasterDetail ParentId {
+    apiName = "ContactPointAddress.ParentId"
+    label = "Parent ID"
+    relationshipName = "Parent"
+  }
+  salesforce.Number PreferenceRank {
+    apiName = "ContactPointAddress.PreferenceRank"
+    label = "Preference Rank"
+    scale = 0
+    precision = 9
+    unique = false
+  }
+  salesforce.Picklist UsageType {
+    apiName = "ContactPointAddress.UsageType"
+    label = "Usage Type"
+    restricted = false
+  }
+  serviceid Id {
+    apiName = "ContactPointAddress.Id"
+    label = "Contact Point Address ID"
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Checkbox IsDeleted {
+    apiName = "ContactPointAddress.IsDeleted"
+    label = "Deleted"
+    defaultValue = false
+    _hidden_value = true
+  }
+  salesforce.DateTime CreatedDate {
+    apiName = "ContactPointAddress.CreatedDate"
+    label = "Created Date"
+    _hidden_value = true
+  }
+  salesforce.Lookup CreatedById {
+    apiName = "ContactPointAddress.CreatedById"
+    label = "Created By ID"
+    relationshipName = "CreatedBy"
+    _hidden_value = true
+  }
+  salesforce.DateTime LastModifiedDate {
+    apiName = "ContactPointAddress.LastModifiedDate"
+    label = "Last Modified Date"
+    _hidden_value = true
+  }
+  salesforce.Lookup LastModifiedById {
+    apiName = "ContactPointAddress.LastModifiedById"
+    label = "Last Modified By ID"
+    relationshipName = "LastModifiedBy"
+    _hidden_value = true
+  }
+  salesforce.DateTime SystemModstamp {
+    apiName = "ContactPointAddress.SystemModstamp"
+    label = "System Modstamp"
+    _hidden_value = true
+  }
+}

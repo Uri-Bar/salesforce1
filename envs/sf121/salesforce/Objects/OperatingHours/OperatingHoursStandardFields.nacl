@@ -1,0 +1,66 @@
+type salesforce.OperatingHours {
+  salesforce.LongTextArea Description {
+    apiName = "OperatingHours.Description"
+    label = "Description"
+    length = 32000
+  }
+  salesforce.Text Name {
+    apiName = "OperatingHours.Name"
+    label = "Name"
+    _required = true
+    length = 255
+    unique = false
+    caseSensitive = false
+  }
+  salesforce.Lookup OwnerId {
+    apiName = "OperatingHours.OwnerId"
+    label = "Owner ID"
+    relationshipName = "Owner"
+    _hidden_value = true
+  }
+  salesforce.Picklist TimeZone {
+    apiName = "OperatingHours.TimeZone"
+    label = "Time Zone"
+    _required = true
+    restricted = true
+  }
+  serviceid Id {
+    apiName = "OperatingHours.Id"
+    label = "Operating Hour ID"
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Checkbox IsDeleted {
+    apiName = "OperatingHours.IsDeleted"
+    label = "Deleted"
+    defaultValue = false
+    _hidden_value = true
+  }
+  salesforce.DateTime CreatedDate {
+    apiName = "OperatingHours.CreatedDate"
+    label = "Created Date"
+    _hidden_value = true
+  }
+  salesforce.Lookup CreatedById {
+    apiName = "OperatingHours.CreatedById"
+    label = "Created By ID"
+    relationshipName = "CreatedBy"
+    _hidden_value = true
+  }
+  salesforce.DateTime LastModifiedDate {
+    apiName = "OperatingHours.LastModifiedDate"
+    label = "Last Modified Date"
+    _hidden_value = true
+  }
+  salesforce.Lookup LastModifiedById {
+    apiName = "OperatingHours.LastModifiedById"
+    label = "Last Modified By ID"
+    relationshipName = "LastModifiedBy"
+    _hidden_value = true
+  }
+  salesforce.DateTime SystemModstamp {
+    apiName = "OperatingHours.SystemModstamp"
+    label = "System Modstamp"
+    _hidden_value = true
+  }
+}

@@ -1,0 +1,122 @@
+type salesforce.WebCartAdjustmentGroup {
+  salesforce.Lookup AdjustmentBasisReferenceId {
+    apiName = "WebCartAdjustmentGroup.AdjustmentBasisReferenceId"
+    label = "Coupon ID"
+    relationshipName = "AdjustmentBasisReference"
+  }
+  salesforce.Picklist AdjustmentSource {
+    apiName = "WebCartAdjustmentGroup.AdjustmentSource"
+    label = "Adjustment Source"
+    _required = true
+    restricted = true
+  }
+  salesforce.Picklist AdjustmentTargetType {
+    apiName = "WebCartAdjustmentGroup.AdjustmentTargetType"
+    label = "Target Type for the Adjustment"
+    _required = true
+    restricted = true
+  }
+  salesforce.Picklist AdjustmentType {
+    apiName = "WebCartAdjustmentGroup.AdjustmentType"
+    label = "Adjustment Type"
+    _required = true
+    restricted = true
+  }
+  salesforce.Number AdjustmentValue {
+    apiName = "WebCartAdjustmentGroup.AdjustmentValue"
+    label = "Adjustment Value"
+    _required = true
+    scale = 2
+    precision = 18
+    unique = false
+  }
+  salesforce.MasterDetail CartId {
+    apiName = "WebCartAdjustmentGroup.CartId"
+    label = "Cart ID"
+    _required = true
+    relationshipName = "Cart"
+  }
+  salesforce.LongTextArea Description {
+    apiName = "WebCartAdjustmentGroup.Description"
+    label = "Description"
+    length = 32000
+  }
+  salesforce.Lookup PriceAdjustmentCauseId {
+    apiName = "WebCartAdjustmentGroup.PriceAdjustmentCauseId"
+    label = "Promotion ID"
+    relationshipName = "PriceAdjustmentCause"
+  }
+  salesforce.Number Priority {
+    apiName = "WebCartAdjustmentGroup.Priority"
+    label = "Priority Order for Adjustments"
+    scale = 0
+    precision = 9
+    unique = false
+  }
+  salesforce.Currency TaxAmount {
+    apiName = "WebCartAdjustmentGroup.TaxAmount"
+    label = "Tax Amount"
+    scale = 2
+    precision = 18
+  }
+  salesforce.Currency TotalAmount {
+    apiName = "WebCartAdjustmentGroup.TotalAmount"
+    label = "Total Adjustment Amount"
+    scale = 2
+    precision = 18
+  }
+  salesforce.Currency TotalAmountWithTax {
+    apiName = "WebCartAdjustmentGroup.TotalAmountWithTax"
+    label = "Total Adjustment Amount With Tax"
+    scale = 2
+    precision = 18
+    _hidden_value = true
+  }
+  serviceid Id {
+    apiName = "WebCartAdjustmentGroup.Id"
+    label = "Cart Adjustment Group ID"
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Checkbox IsDeleted {
+    apiName = "WebCartAdjustmentGroup.IsDeleted"
+    label = "Deleted"
+    defaultValue = false
+    _hidden_value = true
+  }
+  salesforce.Text Name {
+    apiName = "WebCartAdjustmentGroup.Name"
+    label = "Cart Adjustment Group Name"
+    _required = true
+    length = 255
+    unique = false
+    caseSensitive = false
+  }
+  salesforce.DateTime CreatedDate {
+    apiName = "WebCartAdjustmentGroup.CreatedDate"
+    label = "Created Date"
+    _hidden_value = true
+  }
+  salesforce.Lookup CreatedById {
+    apiName = "WebCartAdjustmentGroup.CreatedById"
+    label = "Created By ID"
+    relationshipName = "CreatedBy"
+    _hidden_value = true
+  }
+  salesforce.DateTime LastModifiedDate {
+    apiName = "WebCartAdjustmentGroup.LastModifiedDate"
+    label = "Last Modified Date"
+    _hidden_value = true
+  }
+  salesforce.Lookup LastModifiedById {
+    apiName = "WebCartAdjustmentGroup.LastModifiedById"
+    label = "Last Modified By ID"
+    relationshipName = "LastModifiedBy"
+    _hidden_value = true
+  }
+  salesforce.DateTime SystemModstamp {
+    apiName = "WebCartAdjustmentGroup.SystemModstamp"
+    label = "System Modstamp"
+    _hidden_value = true
+  }
+}

@@ -1,0 +1,13 @@
+salesforce.EntitlementProcess big_boss@s {
+  fullName = "big boss"
+  SObjectType = salesforce.Incident
+  active = false
+  description = "asda"
+  entryStartDateField = salesforce.Incident.field.CreatedDate
+  exitCriteriaFilterItems = {
+    field = salesforce.Incident.field.IsClosed
+    operation = "equals"
+    value = "true"
+  }
+  _alias = "big boss"
+}

@@ -1,0 +1,171 @@
+salesforce.RecordType Case_asddasdd {
+  fullName = "Case.asddasdd"
+  active = true
+  businessProcess = salesforce.BusinessProcess.instance.Case_asd
+  label = "asdd"
+  picklistValues = [
+    {
+      picklist = salesforce.Case.field.Origin
+      values = [
+        {
+          fullName = "Email"
+          default = false
+        },
+        {
+          fullName = "Phone"
+          default = false
+        },
+        {
+          fullName = "Web"
+          default = false
+        },
+      ]
+    },
+    {
+      picklist = salesforce.Case.field.PotentialLiability__c
+      values = [
+        {
+          fullName = "No"
+          default = false
+        },
+        {
+          fullName = "Yes"
+          default = false
+        },
+      ]
+    },
+    {
+      picklist = salesforce.Case.field.Priority
+      values = [
+        {
+          fullName = "High"
+          default = false
+        },
+        {
+          fullName = "Low"
+          default = false
+        },
+        {
+          fullName = "Medium"
+          default = true
+        },
+      ]
+    },
+    {
+      picklist = salesforce.Case.field.Product__c
+      values = [
+        {
+          fullName = "GC1020"
+          default = false
+        },
+        {
+          fullName = "GC1040"
+          default = false
+        },
+        {
+          fullName = "GC1060"
+          default = false
+        },
+        {
+          fullName = "GC3020"
+          default = false
+        },
+        {
+          fullName = "GC3040"
+          default = false
+        },
+        {
+          fullName = "GC3060"
+          default = false
+        },
+        {
+          fullName = "GC5020"
+          default = false
+        },
+        {
+          fullName = "GC5040"
+          default = false
+        },
+        {
+          fullName = "GC5060"
+          default = false
+        },
+      ]
+    },
+    {
+      picklist = salesforce.Case.field.Reason
+      values = [
+        {
+          fullName = "Breakdown"
+          default = false
+        },
+        {
+          fullName = "Equipment Complexity"
+          default = false
+        },
+        {
+          fullName = "Equipment Design"
+          default = false
+        },
+        {
+          fullName = "Feedback"
+          default = false
+        },
+        {
+          fullName = "Installation"
+          default = false
+        },
+        {
+          fullName = "Other"
+          default = false
+        },
+        {
+          fullName = "Performance"
+          default = false
+        },
+      ]
+    },
+    {
+      picklist = salesforce.Case.field.SLAViolation__c
+      values = [
+        {
+          fullName = "No"
+          default = false
+        },
+        {
+          fullName = "Yes"
+          default = false
+        },
+      ]
+    },
+    {
+      picklist = salesforce.Case.field.Type
+      values = [
+        {
+          fullName = "Electrical"
+          default = false
+        },
+        {
+          fullName = "Electronic"
+          default = false
+        },
+        {
+          fullName = "Mechanical"
+          default = false
+        },
+        {
+          fullName = "Other"
+          default = false
+        },
+        {
+          fullName = "Structural"
+          default = false
+        },
+      ]
+    },
+  ]
+  _parent = [
+    salesforce.Case,
+  ]
+  _alias = "asdd"
+}

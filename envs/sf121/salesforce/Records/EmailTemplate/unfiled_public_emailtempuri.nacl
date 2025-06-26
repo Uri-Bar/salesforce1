@@ -1,0 +1,26 @@
+salesforce.EmailTemplate unfiled_public_emailtempuri@zcd {
+  attachments = {
+    github_copy@b = {
+      content = file("salesforce/Records/EmailTemplate/unfiled$public/emailtempuri/0_github-copy.txt")
+      name = "github-copy.txt"
+    }
+    install = {
+      content = file("salesforce/Records/EmailTemplate/unfiled$public/emailtempuri/1_install.gif")
+      name = "install.gif"
+    }
+    test1 = {
+      content = file("salesforce/Records/EmailTemplate/unfiled$public/emailtempuri/2_test1.xml")
+      name = "test1.xml"
+    }
+  }
+  available = false
+  encodingKey = "UTF-8"
+  name = "emailtempuri"
+  style = "none"
+  subject = "test"
+  type = "text"
+  uiType = "Aloha"
+  fullName = "unfiled$public/emailtempuri"
+  content = file("salesforce/Records/EmailTemplate/unfiled$public/emailtempuri/emailtempuri.email")
+  _alias = "unfiled$public/emailtempuri"
+}

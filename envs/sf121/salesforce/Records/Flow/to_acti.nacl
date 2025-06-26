@@ -1,0 +1,44 @@
+salesforce.Flow to_acti {
+  fullName = "to_acti"
+  apiVersion = 56
+  environments = "Default"
+  interviewLabel = "to acti {!$Flow.CurrentDateTime}"
+  label = "to acti"
+  processMetadataValues = [
+    {
+      name = "BuilderType"
+      value = {
+        stringValue = "LightningFlowBuilder"
+      }
+    },
+    {
+      name = "CanvasMode"
+      value = {
+        stringValue = "AUTO_LAYOUT_CANVAS"
+      }
+    },
+    {
+      name = "OriginBuilderType"
+      value = {
+        stringValue = "LightningFlowBuilder"
+      }
+    },
+  ]
+  processType = "Flow"
+  screens = {
+    name = "UniqueName"
+    label = "שג"
+    allowBack = true
+    allowFinish = true
+    allowPause = true
+    showFooter = true
+    showHeader = true
+  }
+  start = {
+    connector = {
+      targetReference = "UniqueName"
+    }
+  }
+  status = "Draft"
+  _alias = "to acti"
+}

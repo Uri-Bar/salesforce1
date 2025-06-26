@@ -1,0 +1,67 @@
+type salesforce.AuthorizationFormDataUse {
+  salesforce.Lookup AuthorizationFormId {
+    apiName = "AuthorizationFormDataUse.AuthorizationFormId"
+    label = "Authorization Form ID"
+    _required = true
+    relationshipName = "AuthorizationForm"
+  }
+  salesforce.Lookup DataUsePurposeId {
+    apiName = "AuthorizationFormDataUse.DataUsePurposeId"
+    label = "Data Use Purpose ID"
+    _required = true
+    relationshipName = "DataUsePurpose"
+  }
+  salesforce.Text Name {
+    apiName = "AuthorizationFormDataUse.Name"
+    label = "Name"
+    _required = true
+    length = 255
+    unique = false
+    caseSensitive = false
+  }
+  salesforce.Lookup OwnerId {
+    apiName = "AuthorizationFormDataUse.OwnerId"
+    label = "Owner ID"
+    relationshipName = "Owner"
+    _hidden_value = true
+  }
+  serviceid Id {
+    apiName = "AuthorizationFormDataUse.Id"
+    label = "Authorization Form Data Use ID"
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Checkbox IsDeleted {
+    apiName = "AuthorizationFormDataUse.IsDeleted"
+    label = "Deleted"
+    defaultValue = false
+    _hidden_value = true
+  }
+  salesforce.DateTime CreatedDate {
+    apiName = "AuthorizationFormDataUse.CreatedDate"
+    label = "Created Date"
+    _hidden_value = true
+  }
+  salesforce.Lookup CreatedById {
+    apiName = "AuthorizationFormDataUse.CreatedById"
+    label = "Created By ID"
+    relationshipName = "CreatedBy"
+    _hidden_value = true
+  }
+  salesforce.DateTime LastModifiedDate {
+    apiName = "AuthorizationFormDataUse.LastModifiedDate"
+    label = "Last Modified Date"
+    _hidden_value = true
+  }
+  salesforce.Lookup LastModifiedById {
+    apiName = "AuthorizationFormDataUse.LastModifiedById"
+    label = "Last Modified By ID"
+    relationshipName = "LastModifiedBy"
+    _hidden_value = true
+  }
+  salesforce.DateTime SystemModstamp {
+    apiName = "AuthorizationFormDataUse.SystemModstamp"
+    label = "System Modstamp"
+    _hidden_value = true
+  }
+}

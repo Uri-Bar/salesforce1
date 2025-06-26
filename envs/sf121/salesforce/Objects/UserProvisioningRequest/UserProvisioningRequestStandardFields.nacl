@@ -1,0 +1,125 @@
+type salesforce.UserProvisioningRequest {
+  salesforce.Text AppName {
+    apiName = "UserProvisioningRequest.AppName"
+    label = "App Name"
+    length = 150
+    unique = false
+    caseSensitive = false
+  }
+  salesforce.Picklist ApprovalStatus {
+    apiName = "UserProvisioningRequest.ApprovalStatus"
+    label = "Approval Status"
+    _required = true
+    restricted = true
+  }
+  salesforce.Lookup ConnectedAppId {
+    apiName = "UserProvisioningRequest.ConnectedAppId"
+    label = "Connected App ID"
+    relationshipName = "ConnectedApp"
+  }
+  salesforce.Lookup ManagerId {
+    apiName = "UserProvisioningRequest.ManagerId"
+    label = "User ID"
+    relationshipName = "Manager"
+  }
+  salesforce.Picklist Operation {
+    apiName = "UserProvisioningRequest.Operation"
+    label = "Operation"
+    _required = true
+    restricted = true
+  }
+  salesforce.Lookup OwnerId {
+    apiName = "UserProvisioningRequest.OwnerId"
+    label = "Owner ID"
+    relationshipName = "Owner"
+    _hidden_value = true
+  }
+  salesforce.Lookup ParentId {
+    apiName = "UserProvisioningRequest.ParentId"
+    label = "UserProvisioningRequest ID"
+    relationshipName = "Parent"
+  }
+  salesforce.Number RetryCount {
+    apiName = "UserProvisioningRequest.RetryCount"
+    label = "Retry Count"
+    scale = 0
+    precision = 9
+    unique = false
+  }
+  salesforce.Lookup SalesforceUserId {
+    apiName = "UserProvisioningRequest.SalesforceUserId"
+    label = "User ID"
+    relationshipName = "SalesforceUser"
+  }
+  salesforce.Picklist State {
+    apiName = "UserProvisioningRequest.State"
+    label = "State"
+    _required = true
+    restricted = true
+  }
+  salesforce.Lookup UserProvAccountId {
+    apiName = "UserProvisioningRequest.UserProvAccountId"
+    label = "User Provisioning Account ID"
+    relationshipName = "UserProvAccount"
+  }
+  serviceid Id {
+    apiName = "UserProvisioningRequest.Id"
+    label = "UserProvisioningRequest ID"
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Checkbox IsDeleted {
+    apiName = "UserProvisioningRequest.IsDeleted"
+    label = "Deleted"
+    defaultValue = false
+    _hidden_value = true
+  }
+  salesforce.AutoNumber Name {
+    apiName = "UserProvisioningRequest.Name"
+    label = "Name"
+    _hidden_value = true
+  }
+  salesforce.DateTime CreatedDate {
+    apiName = "UserProvisioningRequest.CreatedDate"
+    label = "Created Date"
+    _hidden_value = true
+  }
+  salesforce.Lookup CreatedById {
+    apiName = "UserProvisioningRequest.CreatedById"
+    label = "Created By ID"
+    relationshipName = "CreatedBy"
+    _hidden_value = true
+  }
+  salesforce.DateTime LastModifiedDate {
+    apiName = "UserProvisioningRequest.LastModifiedDate"
+    label = "Last Modified Date"
+    _hidden_value = true
+  }
+  salesforce.Lookup LastModifiedById {
+    apiName = "UserProvisioningRequest.LastModifiedById"
+    label = "Last Modified By ID"
+    relationshipName = "LastModifiedBy"
+    _hidden_value = true
+  }
+  salesforce.DateTime SystemModstamp {
+    apiName = "UserProvisioningRequest.SystemModstamp"
+    label = "System Modstamp"
+    _hidden_value = true
+  }
+  salesforce.Text ExternalUserId {
+    apiName = "UserProvisioningRequest.ExternalUserId"
+    label = "External User Id"
+    length = 150
+    unique = false
+    caseSensitive = false
+  }
+  salesforce.DateTime ScheduleDate {
+    apiName = "UserProvisioningRequest.ScheduleDate"
+    label = "Scheduled Provisioning Time"
+  }
+  salesforce.Lookup UserProvConfigId {
+    apiName = "UserProvisioningRequest.UserProvConfigId"
+    label = "UserProvisioningConfig ID"
+    relationshipName = "UserProvConfig"
+  }
+}

@@ -1,0 +1,66 @@
+type salesforce.CartRelatedItem {
+  serviceid Id {
+    apiName = "CartRelatedItem.Id"
+    label = "Cart Related Item ID"
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Checkbox IsDeleted {
+    apiName = "CartRelatedItem.IsDeleted"
+    label = "Deleted"
+    defaultValue = false
+    _hidden_value = true
+  }
+  salesforce.Text Name {
+    apiName = "CartRelatedItem.Name"
+    label = "Name"
+    _required = true
+    length = 255
+    unique = false
+    caseSensitive = false
+  }
+  salesforce.DateTime CreatedDate {
+    apiName = "CartRelatedItem.CreatedDate"
+    label = "Created Date"
+    _hidden_value = true
+  }
+  salesforce.Lookup CreatedById {
+    apiName = "CartRelatedItem.CreatedById"
+    label = "Created By ID"
+    relationshipName = "CreatedBy"
+    _hidden_value = true
+  }
+  salesforce.DateTime LastModifiedDate {
+    apiName = "CartRelatedItem.LastModifiedDate"
+    label = "Last Modified Date"
+    _hidden_value = true
+  }
+  salesforce.Lookup LastModifiedById {
+    apiName = "CartRelatedItem.LastModifiedById"
+    label = "Last Modified By ID"
+    relationshipName = "LastModifiedBy"
+    _hidden_value = true
+  }
+  salesforce.DateTime SystemModstamp {
+    apiName = "CartRelatedItem.SystemModstamp"
+    label = "System Modstamp"
+    _hidden_value = true
+  }
+  salesforce.Lookup ParentCartItemId {
+    apiName = "CartRelatedItem.ParentCartItemId"
+    label = "Cart Item ID"
+    _required = true
+    relationshipName = "ParentCartItem"
+  }
+  salesforce.Lookup ChildCartItemId {
+    apiName = "CartRelatedItem.ChildCartItemId"
+    label = "Cart Item ID"
+    _required = true
+    relationshipName = "ChildCartItem"
+  }
+  salesforce.Picklist RelationshipType {
+    apiName = "CartRelatedItem.RelationshipType"
+    label = "Type of relationship between parent and child"
+    restricted = true
+  }
+}

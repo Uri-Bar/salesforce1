@@ -1,0 +1,32 @@
+salesforce.RecordType property__c_check {
+  fullName = "property__c.check"
+  active = true
+  label = "check"
+  picklistValues = [
+    {
+      picklist = salesforce.property__c.field.pick__c
+      values = [
+        {
+          fullName = "a"
+          default = false
+        },
+        {
+          fullName = "b"
+          default = false
+        },
+        {
+          fullName = "c"
+          default = false
+        },
+        {
+          fullName = "d"
+          default = false
+        },
+      ]
+    },
+  ]
+  _parent = [
+    salesforce.property__c,
+  ]
+  _alias = "check"
+}

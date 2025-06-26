@@ -1,0 +1,676 @@
+type salesforce.DandBCompany {
+  salesforce.Picklist CompanyCurrencyIsoCode {
+    apiName = "DandBCompany.CompanyCurrencyIsoCode"
+    label = "Local Currency ISO Code"
+    restricted = true
+  }
+  salesforce.Text CountryAccessCode {
+    apiName = "DandBCompany.CountryAccessCode"
+    label = "International Dialing Code"
+    length = 4
+    unique = false
+    caseSensitive = false
+  }
+  salesforce.Picklist CurrencyCode {
+    apiName = "DandBCompany.CurrencyCode"
+    label = "Local Currency Code"
+    restricted = true
+  }
+  salesforce.LongTextArea Description {
+    apiName = "DandBCompany.Description"
+    label = "Company Description"
+    length = 32000
+  }
+  salesforce.Text DomesticUltimateBusinessName {
+    apiName = "DandBCompany.DomesticUltimateBusinessName"
+    label = "Domestic Ultimate Business Name"
+    length = 255
+    unique = false
+    caseSensitive = false
+  }
+  salesforce.Text DomesticUltimateDunsNumber {
+    apiName = "DandBCompany.DomesticUltimateDunsNumber"
+    label = "Domestic Ultimate D-U-N-S Number"
+    length = 9
+    unique = false
+    caseSensitive = false
+  }
+  salesforce.Text DunsNumber {
+    apiName = "DandBCompany.DunsNumber"
+    label = "D-U-N-S Number"
+    _required = true
+    length = 9
+    unique = true
+    caseSensitive = true
+  }
+  salesforce.Number EmployeeQuantityGrowthRate {
+    apiName = "DandBCompany.EmployeeQuantityGrowthRate"
+    label = "Employee Growth"
+    scale = 6
+    precision = 18
+    unique = false
+  }
+  salesforce.Number EmployeesHere {
+    apiName = "DandBCompany.EmployeesHere"
+    label = "Number of Employees - Location"
+    scale = 0
+    precision = 18
+    unique = false
+  }
+  salesforce.Picklist EmployeesHereReliability {
+    apiName = "DandBCompany.EmployeesHereReliability"
+    label = "Number of Employees - Location Indicator"
+    restricted = true
+  }
+  salesforce.Number EmployeesTotal {
+    apiName = "DandBCompany.EmployeesTotal"
+    label = "Number of Employees - Total"
+    scale = 0
+    precision = 18
+    unique = false
+  }
+  salesforce.Picklist EmployeesTotalReliability {
+    apiName = "DandBCompany.EmployeesTotalReliability"
+    label = "Number of Employees - Total Indicator"
+    restricted = true
+  }
+  salesforce.Number FamilyMembers {
+    apiName = "DandBCompany.FamilyMembers"
+    label = "Number of Business Family Members"
+    scale = 0
+    precision = 5
+    unique = false
+  }
+  salesforce.Phone Fax {
+    apiName = "DandBCompany.Fax"
+    label = "Facsimile Number"
+  }
+  salesforce.Text FifthNaics {
+    apiName = "DandBCompany.FifthNaics"
+    label = "Fifth NAICS Code"
+    length = 6
+    unique = false
+    caseSensitive = false
+  }
+  salesforce.Text FifthNaicsDesc {
+    apiName = "DandBCompany.FifthNaicsDesc"
+    label = "Fifth NAICS Description"
+    length = 120
+    unique = false
+    caseSensitive = false
+  }
+  salesforce.Text FifthSic {
+    apiName = "DandBCompany.FifthSic"
+    label = "Fifth SIC Code"
+    length = 4
+    unique = false
+    caseSensitive = false
+  }
+  salesforce.Text FifthSic8 {
+    apiName = "DandBCompany.FifthSic8"
+    label = "Fifth SIC8 Code"
+    length = 8
+    unique = false
+    caseSensitive = false
+  }
+  salesforce.Text FifthSic8Desc {
+    apiName = "DandBCompany.FifthSic8Desc"
+    label = "Fifth SIC8 Description"
+    length = 80
+    unique = false
+    caseSensitive = false
+  }
+  salesforce.Text FifthSicDesc {
+    apiName = "DandBCompany.FifthSicDesc"
+    label = "Fifth SIC Description"
+    length = 80
+    unique = false
+    caseSensitive = false
+  }
+  salesforce.Text FipsMsaCode {
+    apiName = "DandBCompany.FipsMsaCode"
+    label = "FIPS MSA Code"
+    length = 5
+    unique = false
+    caseSensitive = false
+  }
+  salesforce.Text FipsMsaDesc {
+    apiName = "DandBCompany.FipsMsaDesc"
+    label = "FIPS MSA Code Description"
+    length = 255
+    unique = false
+    caseSensitive = false
+  }
+  salesforce.Number FortuneRank {
+    apiName = "DandBCompany.FortuneRank"
+    label = "Fortune 1000 Rank"
+    scale = 0
+    precision = 4
+    unique = false
+  }
+  salesforce.Text FourthNaics {
+    apiName = "DandBCompany.FourthNaics"
+    label = "Fourth NAICS Code"
+    length = 6
+    unique = false
+    caseSensitive = false
+  }
+  salesforce.Text FourthNaicsDesc {
+    apiName = "DandBCompany.FourthNaicsDesc"
+    label = "Fourth NAICS Description"
+    length = 120
+    unique = false
+    caseSensitive = false
+  }
+  salesforce.Text FourthSic {
+    apiName = "DandBCompany.FourthSic"
+    label = "Fourth SIC Code"
+    length = 4
+    unique = false
+    caseSensitive = false
+  }
+  salesforce.Text FourthSic8 {
+    apiName = "DandBCompany.FourthSic8"
+    label = "Fourth SIC8 Code"
+    length = 8
+    unique = false
+    caseSensitive = false
+  }
+  salesforce.Text FourthSic8Desc {
+    apiName = "DandBCompany.FourthSic8Desc"
+    label = "Fourth SIC8 Description"
+    length = 80
+    unique = false
+    caseSensitive = false
+  }
+  salesforce.Text FourthSicDesc {
+    apiName = "DandBCompany.FourthSicDesc"
+    label = "Fourth SIC Description"
+    length = 80
+    unique = false
+    caseSensitive = false
+  }
+  salesforce.Picklist GeoCodeAccuracy {
+    apiName = "DandBCompany.GeoCodeAccuracy"
+    label = "Geocode Accuracy"
+    restricted = true
+  }
+  salesforce.Text GlobalUltimateBusinessName {
+    apiName = "DandBCompany.GlobalUltimateBusinessName"
+    label = "Global Ultimate Business Name"
+    length = 255
+    unique = false
+    caseSensitive = false
+  }
+  salesforce.Text GlobalUltimateDunsNumber {
+    apiName = "DandBCompany.GlobalUltimateDunsNumber"
+    label = "Global Ultimate D-U-N-S Number"
+    length = 9
+    unique = false
+    caseSensitive = false
+  }
+  salesforce.Number GlobalUltimateTotalEmployees {
+    apiName = "DandBCompany.GlobalUltimateTotalEmployees"
+    label = "Number of Employees - Global"
+    scale = 0
+    precision = 18
+    unique = false
+  }
+  salesforce.Picklist ImportExportAgent {
+    apiName = "DandBCompany.ImportExportAgent"
+    label = "Import/Export"
+    restricted = true
+  }
+  salesforce.Text IncludedInSnP500 {
+    apiName = "DandBCompany.IncludedInSnP500"
+    label = "S&P 500"
+    length = 10
+    unique = false
+    caseSensitive = false
+  }
+  salesforce.Text Latitude {
+    apiName = "DandBCompany.Latitude"
+    label = "Latitude"
+    length = 11
+    unique = false
+    caseSensitive = false
+  }
+  salesforce.Picklist LegalStatus {
+    apiName = "DandBCompany.LegalStatus"
+    label = "Legal Structure"
+    restricted = true
+  }
+  salesforce.Picklist LocationStatus {
+    apiName = "DandBCompany.LocationStatus"
+    label = "Location Type"
+    restricted = true
+  }
+  salesforce.Text Longitude {
+    apiName = "DandBCompany.Longitude"
+    label = "Longitude"
+    length = 11
+    unique = false
+    caseSensitive = false
+  }
+  salesforce.Picklist MarketingPreScreen {
+    apiName = "DandBCompany.MarketingPreScreen"
+    label = "Delinquency Risk"
+    restricted = true
+  }
+  salesforce.Picklist MarketingSegmentationCluster {
+    apiName = "DandBCompany.MarketingSegmentationCluster"
+    label = "Marketing Segmentation Cluster"
+    restricted = true
+  }
+  salesforce.Picklist MinorityOwned {
+    apiName = "DandBCompany.MinorityOwned"
+    label = "Minority-Owned Indicator"
+    restricted = true
+  }
+  salesforce.Text Name {
+    apiName = "DandBCompany.Name"
+    label = "Primary Business Name"
+    _required = true
+    length = 255
+    unique = false
+    caseSensitive = false
+  }
+  salesforce.Text NationalId {
+    apiName = "DandBCompany.NationalId"
+    label = "National Identification Number"
+    length = 255
+    unique = false
+    caseSensitive = false
+  }
+  salesforce.Picklist NationalIdType {
+    apiName = "DandBCompany.NationalIdType"
+    label = "National Identification System"
+    restricted = true
+  }
+  salesforce.Picklist OutOfBusiness {
+    apiName = "DandBCompany.OutOfBusiness"
+    label = "Out Of Business Indicator"
+    restricted = true
+  }
+  salesforce.Picklist OwnOrRent {
+    apiName = "DandBCompany.OwnOrRent"
+    label = "Location Ownership Indicator"
+    restricted = true
+  }
+  salesforce.Text ParentOrHqBusinessName {
+    apiName = "DandBCompany.ParentOrHqBusinessName"
+    label = "Parent Company Business Name"
+    length = 255
+    unique = false
+    caseSensitive = false
+  }
+  salesforce.Text ParentOrHqDunsNumber {
+    apiName = "DandBCompany.ParentOrHqDunsNumber"
+    label = "Parent Company D-U-N-S Number"
+    length = 9
+    unique = false
+    caseSensitive = false
+  }
+  salesforce.Phone Phone {
+    apiName = "DandBCompany.Phone"
+    label = "Telephone Number"
+  }
+  salesforce.Number PremisesMeasure {
+    apiName = "DandBCompany.PremisesMeasure"
+    label = "Location Size"
+    scale = 0
+    precision = 9
+    unique = false
+  }
+  salesforce.Text PremisesMeasureReliability {
+    apiName = "DandBCompany.PremisesMeasureReliability"
+    label = "Location Size Accuracy"
+    length = 64
+    unique = false
+    caseSensitive = false
+  }
+  salesforce.Text PremisesMeasureUnit {
+    apiName = "DandBCompany.PremisesMeasureUnit"
+    label = "Location Size Unit of Measure"
+    length = 64
+    unique = false
+    caseSensitive = false
+  }
+  salesforce.Text PrimaryNaics {
+    apiName = "DandBCompany.PrimaryNaics"
+    label = "Primary NAICS Code"
+    length = 6
+    unique = false
+    caseSensitive = false
+  }
+  salesforce.Text PrimaryNaicsDesc {
+    apiName = "DandBCompany.PrimaryNaicsDesc"
+    label = "Primary NAICS Description"
+    length = 120
+    unique = false
+    caseSensitive = false
+  }
+  salesforce.Text PrimarySic {
+    apiName = "DandBCompany.PrimarySic"
+    label = "Primary SIC Code"
+    length = 4
+    unique = false
+    caseSensitive = false
+  }
+  salesforce.Text PrimarySic8 {
+    apiName = "DandBCompany.PrimarySic8"
+    label = "Primary SIC8 Code"
+    length = 8
+    unique = false
+    caseSensitive = false
+  }
+  salesforce.Text PrimarySic8Desc {
+    apiName = "DandBCompany.PrimarySic8Desc"
+    label = "Primary SIC8 Description"
+    length = 80
+    unique = false
+    caseSensitive = false
+  }
+  salesforce.Text PrimarySicDesc {
+    apiName = "DandBCompany.PrimarySicDesc"
+    label = "Primary SIC Description"
+    length = 80
+    unique = false
+    caseSensitive = false
+  }
+  salesforce.Number PriorYearEmployees {
+    apiName = "DandBCompany.PriorYearEmployees"
+    label = "Prior Year Number of Employees - Total"
+    scale = 0
+    precision = 9
+    unique = false
+  }
+  salesforce.Number PriorYearRevenue {
+    apiName = "DandBCompany.PriorYearRevenue"
+    label = "Prior Year Revenue"
+    scale = 0
+    precision = 18
+    unique = false
+  }
+  salesforce.Picklist PublicIndicator {
+    apiName = "DandBCompany.PublicIndicator"
+    label = "Ownership Type Indicator"
+    restricted = true
+  }
+  salesforce.Number SalesTurnoverGrowthRate {
+    apiName = "DandBCompany.SalesTurnoverGrowthRate"
+    label = "Annual Revenue Growth"
+    scale = 6
+    precision = 18
+    unique = false
+  }
+  salesforce.Number SalesVolume {
+    apiName = "DandBCompany.SalesVolume"
+    label = "Annual Sales Volume"
+    scale = 0
+    precision = 18
+    unique = false
+  }
+  salesforce.Picklist SalesVolumeReliability {
+    apiName = "DandBCompany.SalesVolumeReliability"
+    label = "Annual Sales Volume Indicator"
+    restricted = true
+  }
+  salesforce.Text SecondNaics {
+    apiName = "DandBCompany.SecondNaics"
+    label = "Second NAICS Code"
+    length = 6
+    unique = false
+    caseSensitive = false
+  }
+  salesforce.Text SecondNaicsDesc {
+    apiName = "DandBCompany.SecondNaicsDesc"
+    label = "Second NAICS Description"
+    length = 120
+    unique = false
+    caseSensitive = false
+  }
+  salesforce.Text SecondSic {
+    apiName = "DandBCompany.SecondSic"
+    label = "Second SIC Code"
+    length = 4
+    unique = false
+    caseSensitive = false
+  }
+  salesforce.Text SecondSic8 {
+    apiName = "DandBCompany.SecondSic8"
+    label = "Second SIC8 Code"
+    length = 8
+    unique = false
+    caseSensitive = false
+  }
+  salesforce.Text SecondSic8Desc {
+    apiName = "DandBCompany.SecondSic8Desc"
+    label = "Second SIC8 Description "
+    length = 80
+    unique = false
+    caseSensitive = false
+  }
+  salesforce.Text SecondSicDesc {
+    apiName = "DandBCompany.SecondSicDesc"
+    label = "Second SIC Description"
+    length = 80
+    unique = false
+    caseSensitive = false
+  }
+  salesforce.Text SixthNaics {
+    apiName = "DandBCompany.SixthNaics"
+    label = "Sixth NAICS Code"
+    length = 6
+    unique = false
+    caseSensitive = false
+  }
+  salesforce.Text SixthNaicsDesc {
+    apiName = "DandBCompany.SixthNaicsDesc"
+    label = "Sixth NAICS Description"
+    length = 120
+    unique = false
+    caseSensitive = false
+  }
+  salesforce.Text SixthSic {
+    apiName = "DandBCompany.SixthSic"
+    label = "Sixth SIC Code"
+    length = 4
+    unique = false
+    caseSensitive = false
+  }
+  salesforce.Text SixthSic8 {
+    apiName = "DandBCompany.SixthSic8"
+    label = "Sixth SIC8 Code"
+    length = 8
+    unique = false
+    caseSensitive = false
+  }
+  salesforce.Text SixthSic8Desc {
+    apiName = "DandBCompany.SixthSic8Desc"
+    label = "Sixth SIC8 Description"
+    length = 80
+    unique = false
+    caseSensitive = false
+  }
+  salesforce.Text SixthSicDesc {
+    apiName = "DandBCompany.SixthSicDesc"
+    label = "Sixth SIC Description"
+    length = 80
+    unique = false
+    caseSensitive = false
+  }
+  salesforce.Picklist SmallBusiness {
+    apiName = "DandBCompany.SmallBusiness"
+    label = "Small Business Indicator"
+    restricted = true
+  }
+  salesforce.Text StockExchange {
+    apiName = "DandBCompany.StockExchange"
+    label = "Stock Exchange"
+    length = 16
+    unique = false
+    caseSensitive = false
+  }
+  salesforce.Text StockSymbol {
+    apiName = "DandBCompany.StockSymbol"
+    label = "Ticker Symbol"
+    length = 6
+    unique = false
+    caseSensitive = false
+  }
+  salesforce.Picklist Subsidiary {
+    apiName = "DandBCompany.Subsidiary"
+    label = "Subsidiary Indicator"
+    restricted = true
+  }
+  salesforce.Text ThirdNaics {
+    apiName = "DandBCompany.ThirdNaics"
+    label = "Third NAICS Code"
+    length = 6
+    unique = false
+    caseSensitive = false
+  }
+  salesforce.Text ThirdNaicsDesc {
+    apiName = "DandBCompany.ThirdNaicsDesc"
+    label = "Third NAICS Description"
+    length = 120
+    unique = false
+    caseSensitive = false
+  }
+  salesforce.Text ThirdSic {
+    apiName = "DandBCompany.ThirdSic"
+    label = "Third SIC Code"
+    length = 4
+    unique = false
+    caseSensitive = false
+  }
+  salesforce.Text ThirdSic8 {
+    apiName = "DandBCompany.ThirdSic8"
+    label = "Third SIC8 Code"
+    length = 8
+    unique = false
+    caseSensitive = false
+  }
+  salesforce.Text ThirdSic8Desc {
+    apiName = "DandBCompany.ThirdSic8Desc"
+    label = "Third SIC8 Description"
+    length = 80
+    unique = false
+    caseSensitive = false
+  }
+  salesforce.Text ThirdSicDesc {
+    apiName = "DandBCompany.ThirdSicDesc"
+    label = "Third SIC Description"
+    length = 80
+    unique = false
+    caseSensitive = false
+  }
+  salesforce.Text TradeStyle1 {
+    apiName = "DandBCompany.TradeStyle1"
+    label = "Primary Tradestyle"
+    length = 255
+    unique = false
+    caseSensitive = false
+  }
+  salesforce.Text TradeStyle2 {
+    apiName = "DandBCompany.TradeStyle2"
+    label = "Second Tradestyle"
+    length = 255
+    unique = false
+    caseSensitive = false
+  }
+  salesforce.Text TradeStyle3 {
+    apiName = "DandBCompany.TradeStyle3"
+    label = "Third Tradestyle"
+    length = 255
+    unique = false
+    caseSensitive = false
+  }
+  salesforce.Text TradeStyle4 {
+    apiName = "DandBCompany.TradeStyle4"
+    label = "Fourth Tradestyle"
+    length = 255
+    unique = false
+    caseSensitive = false
+  }
+  salesforce.Text TradeStyle5 {
+    apiName = "DandBCompany.TradeStyle5"
+    label = "Fifth Tradestyle"
+    length = 255
+    unique = false
+    caseSensitive = false
+  }
+  salesforce.Url URL {
+    apiName = "DandBCompany.URL"
+    label = "URL"
+  }
+  salesforce.Text UsTaxId {
+    apiName = "DandBCompany.UsTaxId"
+    label = "US Tax ID Number"
+    length = 9
+    unique = false
+    caseSensitive = false
+  }
+  salesforce.Picklist WomenOwned {
+    apiName = "DandBCompany.WomenOwned"
+    label = "Woman-Owned Indicator"
+    restricted = true
+  }
+  salesforce.Text YearStarted {
+    apiName = "DandBCompany.YearStarted"
+    label = "Year Started"
+    length = 4
+    unique = false
+    caseSensitive = false
+  }
+  serviceid Id {
+    apiName = "DandBCompany.Id"
+    label = "D&B Company ID"
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Checkbox IsDeleted {
+    apiName = "DandBCompany.IsDeleted"
+    label = "Deleted"
+    defaultValue = false
+    _hidden_value = true
+  }
+  salesforce.DateTime CreatedDate {
+    apiName = "DandBCompany.CreatedDate"
+    label = "Created Date"
+    _hidden_value = true
+  }
+  salesforce.Lookup CreatedById {
+    apiName = "DandBCompany.CreatedById"
+    label = "Created By ID"
+    relationshipName = "CreatedBy"
+    _hidden_value = true
+  }
+  salesforce.DateTime LastModifiedDate {
+    apiName = "DandBCompany.LastModifiedDate"
+    label = "Last Modified Date"
+    _hidden_value = true
+  }
+  salesforce.Lookup LastModifiedById {
+    apiName = "DandBCompany.LastModifiedById"
+    label = "Last Modified By ID"
+    relationshipName = "LastModifiedBy"
+    _hidden_value = true
+  }
+  salesforce.DateTime SystemModstamp {
+    apiName = "DandBCompany.SystemModstamp"
+    label = "System Modstamp"
+    _hidden_value = true
+  }
+  salesforce.Address Address {
+    apiName = "DandBCompany.Address"
+    label = "Primary Address"
+    _hidden_value = true
+  }
+  salesforce.Address MailingAddress {
+    apiName = "DandBCompany.MailingAddress"
+    label = "Mailing Address"
+    _hidden_value = true
+  }
+}

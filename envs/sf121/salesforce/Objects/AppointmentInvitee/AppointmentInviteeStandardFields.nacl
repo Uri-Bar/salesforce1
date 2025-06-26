@@ -1,0 +1,62 @@
+type salesforce.AppointmentInvitee {
+  salesforce.MasterDetail AppointmentInvitationId {
+    apiName = "AppointmentInvitee.AppointmentInvitationId"
+    label = "Appointment Invitation ID"
+    _required = true
+    relationshipName = "AppointmentInvitation"
+  }
+  salesforce.Checkbox IsRequiredResource {
+    apiName = "AppointmentInvitee.IsRequiredResource"
+    label = "Required Resource"
+    defaultValue = false
+  }
+  salesforce.Lookup ParticipantServiceResourceId {
+    apiName = "AppointmentInvitee.ParticipantServiceResourceId"
+    label = "Resource ID"
+    relationshipName = "ParticipantServiceResource"
+  }
+  serviceid Id {
+    apiName = "AppointmentInvitee.Id"
+    label = "Appointment Invitee ID"
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Checkbox IsDeleted {
+    apiName = "AppointmentInvitee.IsDeleted"
+    label = "Deleted"
+    defaultValue = false
+    _hidden_value = true
+  }
+  salesforce.AutoNumber Name {
+    apiName = "AppointmentInvitee.Name"
+    label = "Appointment Invitee Number"
+    _hidden_value = true
+  }
+  salesforce.DateTime CreatedDate {
+    apiName = "AppointmentInvitee.CreatedDate"
+    label = "Created Date"
+    _hidden_value = true
+  }
+  salesforce.Lookup CreatedById {
+    apiName = "AppointmentInvitee.CreatedById"
+    label = "Created By ID"
+    relationshipName = "CreatedBy"
+    _hidden_value = true
+  }
+  salesforce.DateTime LastModifiedDate {
+    apiName = "AppointmentInvitee.LastModifiedDate"
+    label = "Last Modified Date"
+    _hidden_value = true
+  }
+  salesforce.Lookup LastModifiedById {
+    apiName = "AppointmentInvitee.LastModifiedById"
+    label = "Last Modified By ID"
+    relationshipName = "LastModifiedBy"
+    _hidden_value = true
+  }
+  salesforce.DateTime SystemModstamp {
+    apiName = "AppointmentInvitee.SystemModstamp"
+    label = "System Modstamp"
+    _hidden_value = true
+  }
+}

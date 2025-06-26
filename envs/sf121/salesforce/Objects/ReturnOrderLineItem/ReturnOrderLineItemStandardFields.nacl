@@ -1,0 +1,216 @@
+type salesforce.ReturnOrderLineItem {
+  salesforce.Lookup AssetId {
+    apiName = "ReturnOrderLineItem.AssetId"
+    label = "Asset ID"
+    relationshipName = "Asset"
+  }
+  salesforce.Lookup ChangeOrderItemId {
+    apiName = "ReturnOrderLineItem.ChangeOrderItemId"
+    label = "Order Product ID"
+    relationshipName = "ChangeOrderItem"
+  }
+  salesforce.LongTextArea Description {
+    apiName = "ReturnOrderLineItem.Description"
+    label = "Description"
+    length = 32000
+  }
+  salesforce.Lookup DestinationLocationId {
+    apiName = "ReturnOrderLineItem.DestinationLocationId"
+    label = "Destination Location ID"
+    relationshipName = "DestinationLocation"
+  }
+  salesforce.Currency GrossUnitPrice {
+    apiName = "ReturnOrderLineItem.GrossUnitPrice"
+    label = "Gross Unit Price"
+    scale = 2
+    precision = 18
+  }
+  salesforce.Lookup OrderItemId {
+    apiName = "ReturnOrderLineItem.OrderItemId"
+    label = "Order Product ID"
+    relationshipName = "OrderItem"
+  }
+  salesforce.Picklist ProcessingPlan {
+    apiName = "ReturnOrderLineItem.ProcessingPlan"
+    label = "Processing Plan"
+    restricted = false
+  }
+  salesforce.Lookup Product2Id {
+    apiName = "ReturnOrderLineItem.Product2Id"
+    label = "Product ID"
+    relationshipName = "Product2"
+  }
+  salesforce.Number QuantityExpected {
+    apiName = "ReturnOrderLineItem.QuantityExpected"
+    label = "Quantity Expected"
+    scale = 0
+    precision = 18
+    unique = false
+  }
+  salesforce.Number QuantityReceived {
+    apiName = "ReturnOrderLineItem.QuantityReceived"
+    label = "Quantity Received"
+    scale = 0
+    precision = 18
+    unique = false
+  }
+  salesforce.Number QuantityRejected {
+    apiName = "ReturnOrderLineItem.QuantityRejected"
+    label = "Quantity Rejected"
+    scale = 0
+    precision = 18
+    unique = false
+  }
+  salesforce.Number QuantityReturned {
+    apiName = "ReturnOrderLineItem.QuantityReturned"
+    label = "Quantity Returned"
+    _required = true
+    scale = 2
+    precision = 18
+    unique = false
+  }
+  salesforce.Picklist QuantityUnitOfMeasure {
+    apiName = "ReturnOrderLineItem.QuantityUnitOfMeasure"
+    label = "Quantity Unit Of Measure"
+    restricted = false
+  }
+  salesforce.Text ReasonForChangeText {
+    apiName = "ReturnOrderLineItem.ReasonForChangeText"
+    label = "Reason for Change Text"
+    length = 255
+    unique = false
+    caseSensitive = false
+  }
+  salesforce.Picklist ReasonForRejection {
+    apiName = "ReturnOrderLineItem.ReasonForRejection"
+    label = "Reason for Rejection"
+    restricted = false
+  }
+  salesforce.Picklist ReasonForReturn {
+    apiName = "ReturnOrderLineItem.ReasonForReturn"
+    label = "Reason For Return"
+    restricted = false
+  }
+  salesforce.Picklist RepaymentMethod {
+    apiName = "ReturnOrderLineItem.RepaymentMethod"
+    label = "Repayment Method"
+    restricted = false
+  }
+  salesforce.MasterDetail ReturnOrderId {
+    apiName = "ReturnOrderLineItem.ReturnOrderId"
+    label = "Return Order ID"
+    _required = true
+    relationshipName = "ReturnOrder"
+  }
+  salesforce.Lookup SourceLocationId {
+    apiName = "ReturnOrderLineItem.SourceLocationId"
+    label = "Source Location ID"
+    relationshipName = "SourceLocation"
+  }
+  salesforce.Summary TotalAdjustmentAmount {
+    apiName = "ReturnOrderLineItem.TotalAdjustmentAmount"
+    label = "Adjustments"
+    _hidden_value = true
+  }
+  salesforce.Summary TotalAdjustmentAmountWithTax {
+    apiName = "ReturnOrderLineItem.TotalAdjustmentAmountWithTax"
+    label = "Adjustments with Tax"
+    _hidden_value = true
+  }
+  salesforce.Summary TotalAdjustmentTaxAmount {
+    apiName = "ReturnOrderLineItem.TotalAdjustmentTaxAmount"
+    label = "Adjustments Tax"
+    _hidden_value = true
+  }
+  salesforce.Summary TotalAmount {
+    apiName = "ReturnOrderLineItem.TotalAmount"
+    label = "Total with Tax"
+    _hidden_value = true
+  }
+  salesforce.Currency TotalLineAmount {
+    apiName = "ReturnOrderLineItem.TotalLineAmount"
+    label = "Line Subtotal"
+    scale = 2
+    precision = 18
+  }
+  salesforce.Summary TotalLineAmountWithTax {
+    apiName = "ReturnOrderLineItem.TotalLineAmountWithTax"
+    label = "Line Subtotal with Tax"
+    _hidden_value = true
+  }
+  salesforce.Summary TotalLineTaxAmount {
+    apiName = "ReturnOrderLineItem.TotalLineTaxAmount"
+    label = "Line Subtotal Tax"
+    _hidden_value = true
+  }
+  salesforce.Summary TotalPrice {
+    apiName = "ReturnOrderLineItem.TotalPrice"
+    label = "Pretax Total"
+    _hidden_value = true
+  }
+  salesforce.Summary TotalTaxAmount {
+    apiName = "ReturnOrderLineItem.TotalTaxAmount"
+    label = "Tax"
+    _hidden_value = true
+  }
+  salesforce.Picklist TypeCode {
+    apiName = "ReturnOrderLineItem.TypeCode"
+    label = "Type Code"
+    restricted = true
+  }
+  salesforce.Currency UnitPrice {
+    apiName = "ReturnOrderLineItem.UnitPrice"
+    label = "Unit Price"
+    scale = 2
+    precision = 18
+  }
+  serviceid Id {
+    apiName = "ReturnOrderLineItem.Id"
+    label = "Return Order Line Item ID"
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Checkbox IsDeleted {
+    apiName = "ReturnOrderLineItem.IsDeleted"
+    label = "Deleted"
+    defaultValue = false
+    _hidden_value = true
+  }
+  salesforce.AutoNumber ReturnOrderLineItemNumber {
+    apiName = "ReturnOrderLineItem.ReturnOrderLineItemNumber"
+    label = "Return Order Line Item Number"
+    _hidden_value = true
+  }
+  salesforce.DateTime CreatedDate {
+    apiName = "ReturnOrderLineItem.CreatedDate"
+    label = "Created Date"
+    _hidden_value = true
+  }
+  salesforce.Lookup CreatedById {
+    apiName = "ReturnOrderLineItem.CreatedById"
+    label = "Created By ID"
+    relationshipName = "CreatedBy"
+    _hidden_value = true
+  }
+  salesforce.DateTime LastModifiedDate {
+    apiName = "ReturnOrderLineItem.LastModifiedDate"
+    label = "Last Modified Date"
+    _hidden_value = true
+  }
+  salesforce.Lookup LastModifiedById {
+    apiName = "ReturnOrderLineItem.LastModifiedById"
+    label = "Last Modified By ID"
+    relationshipName = "LastModifiedBy"
+    _hidden_value = true
+  }
+  salesforce.DateTime SystemModstamp {
+    apiName = "ReturnOrderLineItem.SystemModstamp"
+    label = "System Modstamp"
+    _hidden_value = true
+  }
+  salesforce.Picklist Type {
+    apiName = "ReturnOrderLineItem.Type"
+    label = "Type"
+    restricted = true
+  }
+}

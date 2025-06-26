@@ -1,0 +1,58 @@
+type salesforce.ProductAttributeSetProduct {
+  salesforce.Lookup ProductAttributeSetId {
+    apiName = "ProductAttributeSetProduct.ProductAttributeSetId"
+    label = "Product Attribute Set ID"
+    _required = true
+    relationshipName = "ProductAttributeSet"
+  }
+  salesforce.Lookup ProductId {
+    apiName = "ProductAttributeSetProduct.ProductId"
+    label = "Product ID"
+    _required = true
+    relationshipName = "Product"
+  }
+  serviceid Id {
+    apiName = "ProductAttributeSetProduct.Id"
+    label = "Product Attribute Set Product ID"
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Checkbox IsDeleted {
+    apiName = "ProductAttributeSetProduct.IsDeleted"
+    label = "Deleted"
+    defaultValue = false
+    _hidden_value = true
+  }
+  salesforce.AutoNumber Name {
+    apiName = "ProductAttributeSetProduct.Name"
+    label = "Product Attribute Set Product Name"
+    _hidden_value = true
+  }
+  salesforce.DateTime CreatedDate {
+    apiName = "ProductAttributeSetProduct.CreatedDate"
+    label = "Created Date"
+    _hidden_value = true
+  }
+  salesforce.Lookup CreatedById {
+    apiName = "ProductAttributeSetProduct.CreatedById"
+    label = "Created By ID"
+    relationshipName = "CreatedBy"
+    _hidden_value = true
+  }
+  salesforce.DateTime LastModifiedDate {
+    apiName = "ProductAttributeSetProduct.LastModifiedDate"
+    label = "Last Modified Date"
+    _hidden_value = true
+  }
+  salesforce.Lookup LastModifiedById {
+    apiName = "ProductAttributeSetProduct.LastModifiedById"
+    label = "Last Modified By ID"
+    relationshipName = "LastModifiedBy"
+    _hidden_value = true
+  }
+  salesforce.DateTime SystemModstamp {
+    apiName = "ProductAttributeSetProduct.SystemModstamp"
+    label = "System Modstamp"
+    _hidden_value = true
+  }
+}

@@ -1,0 +1,67 @@
+type salesforce.BusinessBrand {
+  salesforce.Text Name {
+    apiName = "BusinessBrand.Name"
+    label = "Name"
+    _required = true
+    length = 255
+    unique = false
+    caseSensitive = false
+  }
+  salesforce.Text OrgId {
+    apiName = "BusinessBrand.OrgId"
+    label = "Org Id"
+    length = 255
+    unique = false
+    caseSensitive = false
+  }
+  salesforce.Lookup OwnerId {
+    apiName = "BusinessBrand.OwnerId"
+    label = "Owner ID"
+    relationshipName = "Owner"
+    _hidden_value = true
+  }
+  salesforce.Lookup ParentId {
+    apiName = "BusinessBrand.ParentId"
+    label = "Business Brand ID"
+    relationshipName = "Parent"
+  }
+  serviceid Id {
+    apiName = "BusinessBrand.Id"
+    label = "Business Brand ID"
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Checkbox IsDeleted {
+    apiName = "BusinessBrand.IsDeleted"
+    label = "Deleted"
+    defaultValue = false
+    _hidden_value = true
+  }
+  salesforce.DateTime CreatedDate {
+    apiName = "BusinessBrand.CreatedDate"
+    label = "Created Date"
+    _hidden_value = true
+  }
+  salesforce.Lookup CreatedById {
+    apiName = "BusinessBrand.CreatedById"
+    label = "Created By ID"
+    relationshipName = "CreatedBy"
+    _hidden_value = true
+  }
+  salesforce.DateTime LastModifiedDate {
+    apiName = "BusinessBrand.LastModifiedDate"
+    label = "Last Modified Date"
+    _hidden_value = true
+  }
+  salesforce.Lookup LastModifiedById {
+    apiName = "BusinessBrand.LastModifiedById"
+    label = "Last Modified By ID"
+    relationshipName = "LastModifiedBy"
+    _hidden_value = true
+  }
+  salesforce.DateTime SystemModstamp {
+    apiName = "BusinessBrand.SystemModstamp"
+    label = "System Modstamp"
+    _hidden_value = true
+  }
+}

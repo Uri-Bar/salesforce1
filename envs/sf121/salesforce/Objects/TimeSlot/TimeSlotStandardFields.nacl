@@ -1,0 +1,86 @@
+type salesforce.TimeSlot {
+  salesforce.Picklist DayOfWeek {
+    apiName = "TimeSlot.DayOfWeek"
+    label = "Day of Week"
+    _required = true
+    restricted = true
+  }
+  salesforce.Time EndTime {
+    apiName = "TimeSlot.EndTime"
+    label = "End Time"
+    _required = true
+  }
+  salesforce.Number MaxAppointments {
+    apiName = "TimeSlot.MaxAppointments"
+    label = "Maximum Appointments"
+    scale = 0
+    precision = 9
+    unique = false
+  }
+  salesforce.MasterDetail OperatingHoursId {
+    apiName = "TimeSlot.OperatingHoursId"
+    label = "Operating Hour ID"
+    _required = true
+    relationshipName = "OperatingHours"
+  }
+  salesforce.Time StartTime {
+    apiName = "TimeSlot.StartTime"
+    label = "Start Time"
+    _required = true
+  }
+  salesforce.AutoNumber TimeSlotNumber {
+    apiName = "TimeSlot.TimeSlotNumber"
+    label = "Name"
+    _hidden_value = true
+  }
+  salesforce.Picklist Type {
+    apiName = "TimeSlot.Type"
+    label = "Type"
+    _required = true
+    restricted = true
+  }
+  salesforce.Lookup WorkTypeGroupId {
+    apiName = "TimeSlot.WorkTypeGroupId"
+    label = "Work Type Group ID"
+    relationshipName = "WorkTypeGroup"
+  }
+  serviceid Id {
+    apiName = "TimeSlot.Id"
+    label = "Time Slot ID"
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Checkbox IsDeleted {
+    apiName = "TimeSlot.IsDeleted"
+    label = "Deleted"
+    defaultValue = false
+    _hidden_value = true
+  }
+  salesforce.DateTime CreatedDate {
+    apiName = "TimeSlot.CreatedDate"
+    label = "Created Date"
+    _hidden_value = true
+  }
+  salesforce.Lookup CreatedById {
+    apiName = "TimeSlot.CreatedById"
+    label = "Created By ID"
+    relationshipName = "CreatedBy"
+    _hidden_value = true
+  }
+  salesforce.DateTime LastModifiedDate {
+    apiName = "TimeSlot.LastModifiedDate"
+    label = "Last Modified Date"
+    _hidden_value = true
+  }
+  salesforce.Lookup LastModifiedById {
+    apiName = "TimeSlot.LastModifiedById"
+    label = "Last Modified By ID"
+    relationshipName = "LastModifiedBy"
+    _hidden_value = true
+  }
+  salesforce.DateTime SystemModstamp {
+    apiName = "TimeSlot.SystemModstamp"
+    label = "System Modstamp"
+    _hidden_value = true
+  }
+}

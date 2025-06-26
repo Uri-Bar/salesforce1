@@ -1,0 +1,75 @@
+type salesforce.ProblemRelatedItem {
+  salesforce.Lookup AssetId {
+    apiName = "ProblemRelatedItem.AssetId"
+    label = "Asset ID"
+    _required = true
+    relationshipName = "Asset"
+  }
+  salesforce.LongTextArea Comment {
+    apiName = "ProblemRelatedItem.Comment"
+    label = "Comment"
+    length = 32000
+  }
+  salesforce.Picklist ImpactLevel {
+    apiName = "ProblemRelatedItem.ImpactLevel"
+    label = "Impact Level"
+    restricted = false
+    valueSetName = salesforce.StandardValueSet.instance.CasePriority
+  }
+  salesforce.Picklist ImpactType {
+    apiName = "ProblemRelatedItem.ImpactType"
+    label = "Impact Type"
+    _required = true
+    restricted = false
+  }
+  salesforce.AutoNumber Name {
+    apiName = "ProblemRelatedItem.Name"
+    label = "Problem Related Item Number"
+    _hidden_value = true
+  }
+  salesforce.MasterDetail ProblemId {
+    apiName = "ProblemRelatedItem.ProblemId"
+    label = "Problem ID"
+    _required = true
+    relationshipName = "Problem"
+  }
+  serviceid Id {
+    apiName = "ProblemRelatedItem.Id"
+    label = "Problem Related Item ID"
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Checkbox IsDeleted {
+    apiName = "ProblemRelatedItem.IsDeleted"
+    label = "Deleted"
+    defaultValue = false
+    _hidden_value = true
+  }
+  salesforce.DateTime CreatedDate {
+    apiName = "ProblemRelatedItem.CreatedDate"
+    label = "Created Date"
+    _hidden_value = true
+  }
+  salesforce.Lookup CreatedById {
+    apiName = "ProblemRelatedItem.CreatedById"
+    label = "Created By ID"
+    relationshipName = "CreatedBy"
+    _hidden_value = true
+  }
+  salesforce.DateTime LastModifiedDate {
+    apiName = "ProblemRelatedItem.LastModifiedDate"
+    label = "Last Modified Date"
+    _hidden_value = true
+  }
+  salesforce.Lookup LastModifiedById {
+    apiName = "ProblemRelatedItem.LastModifiedById"
+    label = "Last Modified By ID"
+    relationshipName = "LastModifiedBy"
+    _hidden_value = true
+  }
+  salesforce.DateTime SystemModstamp {
+    apiName = "ProblemRelatedItem.SystemModstamp"
+    label = "System Modstamp"
+    _hidden_value = true
+  }
+}

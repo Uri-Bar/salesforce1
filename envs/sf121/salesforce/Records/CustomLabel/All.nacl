@@ -1,0 +1,24 @@
+salesforce.CustomLabel check {
+  fullName = "check"
+  language = "en_US"
+  protected = true
+  shortDescription = "check"
+  value = "check"
+  _alias = "check"
+}
+salesforce.CustomLabel second {
+  fullName = "second"
+  language = "en_US"
+  protected = true
+  shortDescription = "second"
+  value = "yep"
+  _alias = "second"
+}
+salesforce.CustomLabel undefined {
+  fullName = "undefined"
+  language = "en_US"
+  protected = true
+  shortDescription = "undefined"
+  value = "undefined"
+  _alias = "undefined"
+}

@@ -1,0 +1,88 @@
+type salesforce.AuthorizationFormText {
+  salesforce.MasterDetail AuthorizationFormId {
+    apiName = "AuthorizationFormText.AuthorizationFormId"
+    label = "Authorization Form ID"
+    _required = true
+    relationshipName = "AuthorizationForm"
+  }
+  salesforce.Lookup ContentDocumentId {
+    apiName = "AuthorizationFormText.ContentDocumentId"
+    label = "Content Document ID"
+    relationshipName = "ContentDocument"
+  }
+  salesforce.Unknown DetailAuthorizationFormText {
+    apiName = "AuthorizationFormText.DetailAuthorizationFormText"
+    _hidden_value = true
+  }
+  salesforce.Text FullAuthorizationFormUrl {
+    apiName = "AuthorizationFormText.FullAuthorizationFormUrl"
+    label = "Full Authorization Form Url"
+    length = 255
+    unique = false
+    caseSensitive = false
+  }
+  salesforce.Picklist Locale {
+    apiName = "AuthorizationFormText.Locale"
+    label = "Locale"
+    restricted = true
+  }
+  salesforce.Text Name {
+    apiName = "AuthorizationFormText.Name"
+    label = "Name"
+    _required = true
+    length = 255
+    unique = false
+    caseSensitive = false
+  }
+  salesforce.Text SummaryAuthFormText {
+    apiName = "AuthorizationFormText.SummaryAuthFormText"
+    label = "Summary Auth Form Text"
+    length = 255
+    unique = false
+    caseSensitive = false
+  }
+  serviceid Id {
+    apiName = "AuthorizationFormText.Id"
+    label = "Authorization Form Text ID"
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Checkbox IsDeleted {
+    apiName = "AuthorizationFormText.IsDeleted"
+    label = "Deleted"
+    defaultValue = false
+    _hidden_value = true
+  }
+  salesforce.DateTime CreatedDate {
+    apiName = "AuthorizationFormText.CreatedDate"
+    label = "Created Date"
+    _hidden_value = true
+  }
+  salesforce.Lookup CreatedById {
+    apiName = "AuthorizationFormText.CreatedById"
+    label = "Created By ID"
+    relationshipName = "CreatedBy"
+    _hidden_value = true
+  }
+  salesforce.DateTime LastModifiedDate {
+    apiName = "AuthorizationFormText.LastModifiedDate"
+    label = "Last Modified Date"
+    _hidden_value = true
+  }
+  salesforce.Lookup LastModifiedById {
+    apiName = "AuthorizationFormText.LastModifiedById"
+    label = "Last Modified By ID"
+    relationshipName = "LastModifiedBy"
+    _hidden_value = true
+  }
+  salesforce.DateTime SystemModstamp {
+    apiName = "AuthorizationFormText.SystemModstamp"
+    label = "System Modstamp"
+    _hidden_value = true
+  }
+  salesforce.Picklist LocaleSelection {
+    apiName = "AuthorizationFormText.LocaleSelection"
+    label = "Locale"
+    restricted = true
+  }
+}

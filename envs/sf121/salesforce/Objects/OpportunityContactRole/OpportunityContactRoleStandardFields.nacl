@@ -1,0 +1,64 @@
+type salesforce.OpportunityContactRole {
+  salesforce.Lookup ContactId {
+    apiName = "OpportunityContactRole.ContactId"
+    label = "Contact ID"
+    _required = true
+    relationshipName = "Contact"
+  }
+  salesforce.Checkbox IsPrimary {
+    apiName = "OpportunityContactRole.IsPrimary"
+    label = "Primary"
+    defaultValue = false
+  }
+  salesforce.Lookup OpportunityId {
+    apiName = "OpportunityContactRole.OpportunityId"
+    label = "Opportunity ID"
+    _required = true
+    relationshipName = "Opportunity"
+  }
+  salesforce.Picklist Role {
+    apiName = "OpportunityContactRole.Role"
+    label = "Role"
+    restricted = false
+    valueSetName = salesforce.StandardValueSet.instance.ContractContactRole
+  }
+  serviceid Id {
+    apiName = "OpportunityContactRole.Id"
+    label = "Contact Role ID"
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.DateTime CreatedDate {
+    apiName = "OpportunityContactRole.CreatedDate"
+    label = "Created Date"
+    _hidden_value = true
+  }
+  salesforce.Lookup CreatedById {
+    apiName = "OpportunityContactRole.CreatedById"
+    label = "Created By ID"
+    relationshipName = "CreatedBy"
+    _hidden_value = true
+  }
+  salesforce.DateTime LastModifiedDate {
+    apiName = "OpportunityContactRole.LastModifiedDate"
+    label = "Last Modified Date"
+    _hidden_value = true
+  }
+  salesforce.Lookup LastModifiedById {
+    apiName = "OpportunityContactRole.LastModifiedById"
+    label = "Last Modified By ID"
+    relationshipName = "LastModifiedBy"
+    _hidden_value = true
+  }
+  salesforce.DateTime SystemModstamp {
+    apiName = "OpportunityContactRole.SystemModstamp"
+    label = "System Modstamp"
+    _hidden_value = true
+  }
+  salesforce.Checkbox IsDeleted {
+    apiName = "OpportunityContactRole.IsDeleted"
+    label = "Deleted"
+    defaultValue = false
+    _hidden_value = true
+  }
+}

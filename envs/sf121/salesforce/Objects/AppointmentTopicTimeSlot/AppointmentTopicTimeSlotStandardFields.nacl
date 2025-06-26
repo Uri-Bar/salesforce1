@@ -1,0 +1,75 @@
+type salesforce.AppointmentTopicTimeSlot {
+  salesforce.Text AppointmentTopicTimeSlotKey {
+    apiName = "AppointmentTopicTimeSlot.AppointmentTopicTimeSlotKey"
+    label = "Appointment Topic Time Slot Key"
+    length = 255
+    unique = true
+    caseSensitive = false
+  }
+  salesforce.AutoNumber Name {
+    apiName = "AppointmentTopicTimeSlot.Name"
+    label = "Name"
+    _hidden_value = true
+  }
+  salesforce.Lookup OperatingHoursId {
+    apiName = "AppointmentTopicTimeSlot.OperatingHoursId"
+    label = "Operating Hour ID"
+    relationshipName = "OperatingHours"
+    _hidden_value = true
+  }
+  salesforce.Lookup TimeSlotId {
+    apiName = "AppointmentTopicTimeSlot.TimeSlotId"
+    label = "Time Slot ID"
+    _required = true
+    relationshipName = "TimeSlot"
+  }
+  salesforce.Lookup WorkTypeGroupId {
+    apiName = "AppointmentTopicTimeSlot.WorkTypeGroupId"
+    label = "Work Type Group ID"
+    relationshipName = "WorkTypeGroup"
+  }
+  salesforce.Lookup WorkTypeId {
+    apiName = "AppointmentTopicTimeSlot.WorkTypeId"
+    label = "Work Type ID"
+    relationshipName = "WorkType"
+  }
+  serviceid Id {
+    apiName = "AppointmentTopicTimeSlot.Id"
+    label = "Appointment Topic Time Slot ID"
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Checkbox IsDeleted {
+    apiName = "AppointmentTopicTimeSlot.IsDeleted"
+    label = "Deleted"
+    defaultValue = false
+    _hidden_value = true
+  }
+  salesforce.DateTime CreatedDate {
+    apiName = "AppointmentTopicTimeSlot.CreatedDate"
+    label = "Created Date"
+    _hidden_value = true
+  }
+  salesforce.Lookup CreatedById {
+    apiName = "AppointmentTopicTimeSlot.CreatedById"
+    label = "Created By ID"
+    relationshipName = "CreatedBy"
+    _hidden_value = true
+  }
+  salesforce.DateTime LastModifiedDate {
+    apiName = "AppointmentTopicTimeSlot.LastModifiedDate"
+    label = "Last Modified Date"
+    _hidden_value = true
+  }
+  salesforce.Lookup LastModifiedById {
+    apiName = "AppointmentTopicTimeSlot.LastModifiedById"
+    label = "Last Modified By ID"
+    relationshipName = "LastModifiedBy"
+    _hidden_value = true
+  }
+  salesforce.DateTime SystemModstamp {
+    apiName = "AppointmentTopicTimeSlot.SystemModstamp"
+    label = "System Modstamp"
+    _hidden_value = true
+  }
+}

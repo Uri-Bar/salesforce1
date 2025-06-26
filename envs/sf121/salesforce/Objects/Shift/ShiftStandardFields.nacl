@@ -1,0 +1,140 @@
+type salesforce.Shift {
+  salesforce.Lookup AppointmentCategoryId {
+    apiName = "Shift.AppointmentCategoryId"
+    label = "Appointment Category ID"
+    relationshipName = "AppointmentCategory"
+  }
+  salesforce.Text BackgroundColor {
+    apiName = "Shift.BackgroundColor"
+    inlineHelpText = "Set a background color to highlight shifts in the schedule view."
+    label = "Background Color"
+    length = 7
+    unique = false
+    caseSensitive = false
+  }
+  salesforce.DateTime EndTime {
+    apiName = "Shift.EndTime"
+    label = "End Time"
+    _required = true
+  }
+  salesforce.Text Label {
+    apiName = "Shift.Label"
+    label = "Label"
+    length = 255
+    unique = false
+    caseSensitive = false
+  }
+  salesforce.Lookup OwnerId {
+    apiName = "Shift.OwnerId"
+    label = "Owner ID"
+    relationshipName = "Owner"
+    _hidden_value = true
+  }
+  salesforce.Date RecurrenceEndDate {
+    apiName = "Shift.RecurrenceEndDate"
+    label = "Recurrence End Date"
+  }
+  salesforce.Text RecurrencePattern {
+    apiName = "Shift.RecurrencePattern"
+    label = "Recurrence Pattern"
+    length = 255
+    unique = false
+    caseSensitive = false
+  }
+  salesforce.Date RecurrenceStartDate {
+    apiName = "Shift.RecurrenceStartDate"
+    label = "Recurrence Start Date"
+  }
+  salesforce.Lookup ServiceResourceId {
+    apiName = "Shift.ServiceResourceId"
+    label = "Service Resource ID"
+    relationshipName = "ServiceResource"
+  }
+  salesforce.Lookup ServiceTerritoryId {
+    apiName = "Shift.ServiceTerritoryId"
+    label = "Service Territory ID"
+    relationshipName = "ServiceTerritory"
+  }
+  salesforce.DateTime StartTime {
+    apiName = "Shift.StartTime"
+    label = "Start Time"
+    _required = true
+  }
+  salesforce.Picklist Status {
+    apiName = "Shift.Status"
+    label = "Status"
+    _required = true
+    restricted = false
+  }
+  salesforce.Picklist StatusCategory {
+    apiName = "Shift.StatusCategory"
+    label = "Status Category"
+    restricted = true
+    _hidden_value = true
+  }
+  salesforce.Picklist TimeSlotType {
+    apiName = "Shift.TimeSlotType"
+    label = "Time Slot Type"
+    _required = true
+    restricted = true
+  }
+  salesforce.Picklist Type {
+    apiName = "Shift.Type"
+    label = "Type"
+    restricted = true
+  }
+  salesforce.Lookup WorkTypeGroupId {
+    apiName = "Shift.WorkTypeGroupId"
+    label = "Work Type Group ID"
+    relationshipName = "WorkTypeGroup"
+  }
+  salesforce.Lookup WorkTypeId {
+    apiName = "Shift.WorkTypeId"
+    label = "Work Type ID"
+    relationshipName = "WorkType"
+  }
+  serviceid Id {
+    apiName = "Shift.Id"
+    label = "Shift ID"
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Checkbox IsDeleted {
+    apiName = "Shift.IsDeleted"
+    label = "Deleted"
+    defaultValue = false
+    _hidden_value = true
+  }
+  salesforce.AutoNumber ShiftNumber {
+    apiName = "Shift.ShiftNumber"
+    label = "Shift Number"
+    _hidden_value = true
+  }
+  salesforce.DateTime CreatedDate {
+    apiName = "Shift.CreatedDate"
+    label = "Created Date"
+    _hidden_value = true
+  }
+  salesforce.Lookup CreatedById {
+    apiName = "Shift.CreatedById"
+    label = "Created By ID"
+    relationshipName = "CreatedBy"
+    _hidden_value = true
+  }
+  salesforce.DateTime LastModifiedDate {
+    apiName = "Shift.LastModifiedDate"
+    label = "Last Modified Date"
+    _hidden_value = true
+  }
+  salesforce.Lookup LastModifiedById {
+    apiName = "Shift.LastModifiedById"
+    label = "Last Modified By ID"
+    relationshipName = "LastModifiedBy"
+    _hidden_value = true
+  }
+  salesforce.DateTime SystemModstamp {
+    apiName = "Shift.SystemModstamp"
+    label = "System Modstamp"
+    _hidden_value = true
+  }
+}

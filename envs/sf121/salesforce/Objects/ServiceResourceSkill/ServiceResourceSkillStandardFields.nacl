@@ -1,0 +1,74 @@
+type salesforce.ServiceResourceSkill {
+  salesforce.DateTime EffectiveEndDate {
+    apiName = "ServiceResourceSkill.EffectiveEndDate"
+    label = "End Date"
+  }
+  salesforce.DateTime EffectiveStartDate {
+    apiName = "ServiceResourceSkill.EffectiveStartDate"
+    label = "Start Date"
+    _required = true
+  }
+  salesforce.MasterDetail ServiceResourceId {
+    apiName = "ServiceResourceSkill.ServiceResourceId"
+    label = "Resource ID"
+    _required = true
+    relationshipName = "ServiceResource"
+  }
+  salesforce.Lookup SkillId {
+    apiName = "ServiceResourceSkill.SkillId"
+    label = "Skill ID"
+    _required = true
+    relationshipName = "Skill"
+  }
+  salesforce.Number SkillLevel {
+    apiName = "ServiceResourceSkill.SkillLevel"
+    label = "Skill Level"
+    scale = 2
+    precision = 4
+    unique = false
+  }
+  serviceid Id {
+    apiName = "ServiceResourceSkill.Id"
+    label = "Resource Skill ID"
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Checkbox IsDeleted {
+    apiName = "ServiceResourceSkill.IsDeleted"
+    label = "Deleted"
+    defaultValue = false
+    _hidden_value = true
+  }
+  salesforce.AutoNumber SkillNumber {
+    apiName = "ServiceResourceSkill.SkillNumber"
+    label = "Resource Skill Number"
+    _hidden_value = true
+  }
+  salesforce.DateTime CreatedDate {
+    apiName = "ServiceResourceSkill.CreatedDate"
+    label = "Created Date"
+    _hidden_value = true
+  }
+  salesforce.Lookup CreatedById {
+    apiName = "ServiceResourceSkill.CreatedById"
+    label = "Created By ID"
+    relationshipName = "CreatedBy"
+    _hidden_value = true
+  }
+  salesforce.DateTime LastModifiedDate {
+    apiName = "ServiceResourceSkill.LastModifiedDate"
+    label = "Last Modified Date"
+    _hidden_value = true
+  }
+  salesforce.Lookup LastModifiedById {
+    apiName = "ServiceResourceSkill.LastModifiedById"
+    label = "Last Modified By ID"
+    relationshipName = "LastModifiedBy"
+    _hidden_value = true
+  }
+  salesforce.DateTime SystemModstamp {
+    apiName = "ServiceResourceSkill.SystemModstamp"
+    label = "System Modstamp"
+    _hidden_value = true
+  }
+}

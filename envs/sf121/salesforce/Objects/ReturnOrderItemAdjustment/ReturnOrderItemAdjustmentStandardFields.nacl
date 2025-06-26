@@ -1,0 +1,84 @@
+type salesforce.ReturnOrderItemAdjustment {
+  salesforce.Currency Amount {
+    apiName = "ReturnOrderItemAdjustment.Amount"
+    label = "Adjustment"
+    _required = true
+    scale = 2
+    precision = 18
+  }
+  salesforce.LongTextArea Description {
+    apiName = "ReturnOrderItemAdjustment.Description"
+    label = "Description"
+    length = 1175
+  }
+  salesforce.Lookup ReturnOrderId {
+    apiName = "ReturnOrderItemAdjustment.ReturnOrderId"
+    label = "Return Order ID"
+    _required = true
+    relationshipName = "ReturnOrder"
+  }
+  salesforce.MasterDetail ReturnOrderLineItemId {
+    apiName = "ReturnOrderItemAdjustment.ReturnOrderLineItemId"
+    label = "Return Order Line Item ID"
+    _required = true
+    relationshipName = "ReturnOrderLineItem"
+  }
+  salesforce.Currency TotalAmtWithTax {
+    apiName = "ReturnOrderItemAdjustment.TotalAmtWithTax"
+    label = "Adjustment with Tax"
+    scale = 2
+    precision = 18
+    _hidden_value = true
+  }
+  salesforce.Currency TotalTaxAmount {
+    apiName = "ReturnOrderItemAdjustment.TotalTaxAmount"
+    label = "Tax"
+    scale = 2
+    precision = 18
+    _hidden_value = true
+  }
+  serviceid Id {
+    apiName = "ReturnOrderItemAdjustment.Id"
+    label = "Return Order Item Adjustment ID"
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Checkbox IsDeleted {
+    apiName = "ReturnOrderItemAdjustment.IsDeleted"
+    label = "Deleted"
+    defaultValue = false
+    _hidden_value = true
+  }
+  salesforce.AutoNumber ReturnOrderItemAdjustmentNumber {
+    apiName = "ReturnOrderItemAdjustment.ReturnOrderItemAdjustmentNumber"
+    label = "Return Order Item Adjustment Number"
+    _hidden_value = true
+  }
+  salesforce.DateTime CreatedDate {
+    apiName = "ReturnOrderItemAdjustment.CreatedDate"
+    label = "Created Date"
+    _hidden_value = true
+  }
+  salesforce.Lookup CreatedById {
+    apiName = "ReturnOrderItemAdjustment.CreatedById"
+    label = "Created By ID"
+    relationshipName = "CreatedBy"
+    _hidden_value = true
+  }
+  salesforce.DateTime LastModifiedDate {
+    apiName = "ReturnOrderItemAdjustment.LastModifiedDate"
+    label = "Last Modified Date"
+    _hidden_value = true
+  }
+  salesforce.Lookup LastModifiedById {
+    apiName = "ReturnOrderItemAdjustment.LastModifiedById"
+    label = "Last Modified By ID"
+    relationshipName = "LastModifiedBy"
+    _hidden_value = true
+  }
+  salesforce.DateTime SystemModstamp {
+    apiName = "ReturnOrderItemAdjustment.SystemModstamp"
+    label = "System Modstamp"
+    _hidden_value = true
+  }
+}

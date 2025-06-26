@@ -1,0 +1,6 @@
+salesforce.PlatformEncryptionSettings {
+  enableEventBusEncryption = false
+  isMEKForEncryptionRequired = false
+  fullName = "PlatformEncryption"
+  _alias = "PlatformEncryption"
+}

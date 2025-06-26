@@ -1,0 +1,11 @@
+salesforce.Role uri {
+  fullName = "uri"
+  caseAccessLevel = "Edit"
+  contactAccessLevel = "Edit"
+  description = "uriss"
+  mayForecastManagerShare = false
+  name = "uri"
+  opportunityAccessLevel = "Edit"
+  parentRole = salesforce.Role.instance.CEO
+  _alias = "uri"
+}

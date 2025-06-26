@@ -1,0 +1,69 @@
+type salesforce.ScorecardMetric {
+  salesforce.Picklist Category {
+    apiName = "ScorecardMetric.Category"
+    label = "Category"
+    restricted = false
+  }
+  salesforce.TextArea Description {
+    apiName = "ScorecardMetric.Description"
+    label = "Description"
+  }
+  salesforce.Text Name {
+    apiName = "ScorecardMetric.Name"
+    label = "Name"
+    _required = true
+    length = 255
+    unique = false
+    caseSensitive = false
+  }
+  salesforce.Lookup ReportId {
+    apiName = "ScorecardMetric.ReportId"
+    label = "Report ID"
+    relationshipName = "Report"
+  }
+  salesforce.MasterDetail ScorecardId {
+    apiName = "ScorecardMetric.ScorecardId"
+    label = "Scorecard ID"
+    _required = true
+    relationshipName = "Scorecard"
+  }
+  serviceid Id {
+    apiName = "ScorecardMetric.Id"
+    label = "Scorecard Metric Id"
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Checkbox IsDeleted {
+    apiName = "ScorecardMetric.IsDeleted"
+    label = "Deleted"
+    defaultValue = false
+    _hidden_value = true
+  }
+  salesforce.DateTime CreatedDate {
+    apiName = "ScorecardMetric.CreatedDate"
+    label = "Created Date"
+    _hidden_value = true
+  }
+  salesforce.Lookup CreatedById {
+    apiName = "ScorecardMetric.CreatedById"
+    label = "Created By ID"
+    relationshipName = "CreatedBy"
+    _hidden_value = true
+  }
+  salesforce.DateTime LastModifiedDate {
+    apiName = "ScorecardMetric.LastModifiedDate"
+    label = "Last Modified Date"
+    _hidden_value = true
+  }
+  salesforce.Lookup LastModifiedById {
+    apiName = "ScorecardMetric.LastModifiedById"
+    label = "Last Modified By ID"
+    relationshipName = "LastModifiedBy"
+    _hidden_value = true
+  }
+  salesforce.DateTime SystemModstamp {
+    apiName = "ScorecardMetric.SystemModstamp"
+    label = "System Modstamp"
+    _hidden_value = true
+  }
+}

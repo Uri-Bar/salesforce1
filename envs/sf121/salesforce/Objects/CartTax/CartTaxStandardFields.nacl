@@ -1,0 +1,101 @@
+type salesforce.CartTax {
+  salesforce.Currency Amount {
+    apiName = "CartTax.Amount"
+    label = "Amount"
+    _required = true
+    scale = 2
+    precision = 18
+  }
+  salesforce.Lookup CartId {
+    apiName = "CartTax.CartId"
+    label = "Cart ID"
+    relationshipName = "Cart"
+    _hidden_value = true
+  }
+  salesforce.MasterDetail CartItemId {
+    apiName = "CartTax.CartItemId"
+    label = "Cart Item ID"
+    _required = true
+    relationshipName = "CartItem"
+  }
+  salesforce.Lookup CartItemPriceAdjustmentId {
+    apiName = "CartTax.CartItemPriceAdjustmentId"
+    label = "Cart Item Price Adjustment ID"
+    relationshipName = "CartItemPriceAdjustment"
+  }
+  salesforce.LongTextArea Description {
+    apiName = "CartTax.Description"
+    label = "Description"
+    length = 2000
+  }
+  salesforce.Text Name {
+    apiName = "CartTax.Name"
+    label = "Cart Tax Name"
+    _required = true
+    length = 255
+    unique = false
+    caseSensitive = false
+  }
+  salesforce.Date TaxCalculationDate {
+    apiName = "CartTax.TaxCalculationDate"
+    label = "Tax Calculation Date"
+    _required = true
+  }
+  salesforce.Percent TaxRate {
+    apiName = "CartTax.TaxRate"
+    label = "Tax Rate"
+    scale = 2
+    precision = 5
+  }
+  salesforce.Picklist TaxType {
+    apiName = "CartTax.TaxType"
+    label = "Tax Type"
+    _required = true
+    restricted = true
+  }
+  serviceid Id {
+    apiName = "CartTax.Id"
+    label = "Cart Tax ID"
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Checkbox IsDeleted {
+    apiName = "CartTax.IsDeleted"
+    label = "Deleted"
+    defaultValue = false
+    _hidden_value = true
+  }
+  salesforce.DateTime CreatedDate {
+    apiName = "CartTax.CreatedDate"
+    label = "Created Date"
+    _hidden_value = true
+  }
+  salesforce.Lookup CreatedById {
+    apiName = "CartTax.CreatedById"
+    label = "Created By ID"
+    relationshipName = "CreatedBy"
+    _hidden_value = true
+  }
+  salesforce.DateTime LastModifiedDate {
+    apiName = "CartTax.LastModifiedDate"
+    label = "Last Modified Date"
+    _hidden_value = true
+  }
+  salesforce.Lookup LastModifiedById {
+    apiName = "CartTax.LastModifiedById"
+    label = "Last Modified By ID"
+    relationshipName = "LastModifiedBy"
+    _hidden_value = true
+  }
+  salesforce.DateTime SystemModstamp {
+    apiName = "CartTax.SystemModstamp"
+    label = "System Modstamp"
+    _hidden_value = true
+  }
+  salesforce.Picklist AdjustmentTargetType {
+    apiName = "CartTax.AdjustmentTargetType"
+    label = "Target Type for the Adjustment"
+    restricted = true
+    _hidden_value = true
+  }
+}

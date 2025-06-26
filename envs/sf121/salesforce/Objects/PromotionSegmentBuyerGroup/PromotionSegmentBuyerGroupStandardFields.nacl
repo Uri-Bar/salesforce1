@@ -1,0 +1,58 @@
+type salesforce.PromotionSegmentBuyerGroup {
+  salesforce.Lookup BuyerGroupId {
+    apiName = "PromotionSegmentBuyerGroup.BuyerGroupId"
+    label = "Buyer Group ID"
+    _required = true
+    relationshipName = "BuyerGroup"
+  }
+  salesforce.MasterDetail PromotionSegmentId {
+    apiName = "PromotionSegmentBuyerGroup.PromotionSegmentId"
+    label = "Promotion Segment ID"
+    _required = true
+    relationshipName = "PromotionSegment"
+  }
+  serviceid Id {
+    apiName = "PromotionSegmentBuyerGroup.Id"
+    label = "Promotion Segment Buyer Group ID"
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Checkbox IsDeleted {
+    apiName = "PromotionSegmentBuyerGroup.IsDeleted"
+    label = "Deleted"
+    defaultValue = false
+    _hidden_value = true
+  }
+  salesforce.AutoNumber Name {
+    apiName = "PromotionSegmentBuyerGroup.Name"
+    label = "Promotion Segment Buyer Group Name"
+    _hidden_value = true
+  }
+  salesforce.DateTime CreatedDate {
+    apiName = "PromotionSegmentBuyerGroup.CreatedDate"
+    label = "Created Date"
+    _hidden_value = true
+  }
+  salesforce.Lookup CreatedById {
+    apiName = "PromotionSegmentBuyerGroup.CreatedById"
+    label = "Created By ID"
+    relationshipName = "CreatedBy"
+    _hidden_value = true
+  }
+  salesforce.DateTime LastModifiedDate {
+    apiName = "PromotionSegmentBuyerGroup.LastModifiedDate"
+    label = "Last Modified Date"
+    _hidden_value = true
+  }
+  salesforce.Lookup LastModifiedById {
+    apiName = "PromotionSegmentBuyerGroup.LastModifiedById"
+    label = "Last Modified By ID"
+    relationshipName = "LastModifiedBy"
+    _hidden_value = true
+  }
+  salesforce.DateTime SystemModstamp {
+    apiName = "PromotionSegmentBuyerGroup.SystemModstamp"
+    label = "System Modstamp"
+    _hidden_value = true
+  }
+}

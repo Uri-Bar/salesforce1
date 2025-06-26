@@ -1,0 +1,16 @@
+salesforce.WorkflowRule Account_acc_test@vu {
+  fullName = "Account.acc_test"
+  active = false
+  criteriaItems = [
+    {
+      field = salesforce.Account.field.OwnerId
+      operation = "equals"
+      value = "uri"
+    },
+  ]
+  triggerType = "onCreateOrTriggeringUpdate"
+  _parent = [
+    salesforce.Account,
+  ]
+  _alias = "Account.acc_test"
+}

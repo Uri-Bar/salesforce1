@@ -1,0 +1,222 @@
+type salesforce.MessagingSession {
+  salesforce.DateTime AcceptTime {
+    apiName = "MessagingSession.AcceptTime"
+    label = "Accept Time"
+  }
+  salesforce.Number AgentMessageCount {
+    apiName = "MessagingSession.AgentMessageCount"
+    label = "Agent Message Count"
+    scale = 0
+    precision = 9
+    unique = false
+    _hidden_value = true
+  }
+  salesforce.Lookup CaseId {
+    apiName = "MessagingSession.CaseId"
+    label = "Case ID"
+    relationshipName = "Case"
+  }
+  salesforce.Text ChannelKey {
+    apiName = "MessagingSession.ChannelKey"
+    label = "Channel Key"
+    length = 150
+    unique = false
+    caseSensitive = false
+    _hidden_value = true
+  }
+  salesforce.Text ChannelName {
+    apiName = "MessagingSession.ChannelName"
+    label = "Channel Name"
+    length = 80
+    unique = false
+    caseSensitive = false
+    _hidden_value = true
+  }
+  salesforce.Picklist ChannelType {
+    apiName = "MessagingSession.ChannelType"
+    label = "Channel Type"
+    restricted = true
+    _hidden_value = true
+  }
+  salesforce.Lookup ConversationId {
+    apiName = "MessagingSession.ConversationId"
+    label = "Conversation ID"
+    relationshipName = "Conversation"
+  }
+  salesforce.DateTime EndTime {
+    apiName = "MessagingSession.EndTime"
+    label = "End Time"
+  }
+  salesforce.Lookup EndUserAccountId {
+    apiName = "MessagingSession.EndUserAccountId"
+    label = "Account ID"
+    relationshipName = "EndUserAccount"
+    _hidden_value = true
+  }
+  salesforce.Lookup EndUserContactId {
+    apiName = "MessagingSession.EndUserContactId"
+    label = "Contact ID"
+    relationshipName = "EndUserContact"
+    _hidden_value = true
+  }
+  salesforce.Unknown EndUserLanguage {
+    apiName = "MessagingSession.EndUserLanguage"
+    _hidden_value = true
+  }
+  salesforce.Number EndUserMessageCount {
+    apiName = "MessagingSession.EndUserMessageCount"
+    label = "End User Message Count"
+    scale = 0
+    precision = 9
+    unique = false
+    _hidden_value = true
+  }
+  salesforce.Picklist EndedByType {
+    apiName = "MessagingSession.EndedByType"
+    label = "Ended By Type"
+    restricted = true
+  }
+  salesforce.Unknown ErrorReason {
+    apiName = "MessagingSession.ErrorReason"
+    _hidden_value = true
+  }
+  salesforce.Lookup LeadId {
+    apiName = "MessagingSession.LeadId"
+    label = "Lead ID"
+    relationshipName = "Lead"
+  }
+  salesforce.Lookup MessagingChannelId {
+    apiName = "MessagingSession.MessagingChannelId"
+    label = "Messaging Channel ID"
+    _required = true
+    relationshipName = "MessagingChannel"
+  }
+  salesforce.Lookup MessagingEndUserId {
+    apiName = "MessagingSession.MessagingEndUserId"
+    label = "Messaging User ID"
+    _required = true
+    relationshipName = "MessagingEndUser"
+  }
+  salesforce.Lookup OpportunityId {
+    apiName = "MessagingSession.OpportunityId"
+    label = "Opportunity ID"
+    relationshipName = "Opportunity"
+  }
+  salesforce.Picklist Origin {
+    apiName = "MessagingSession.Origin"
+    label = "Origin"
+    _required = true
+    restricted = true
+  }
+  salesforce.Lookup OwnerId {
+    apiName = "MessagingSession.OwnerId"
+    label = "Owner ID"
+    relationshipName = "Owner"
+    _hidden_value = true
+  }
+  salesforce.Text PreviewDetails {
+    apiName = "MessagingSession.PreviewDetails"
+    label = "Preview Details"
+    length = 255
+    unique = false
+    caseSensitive = false
+    _hidden_value = true
+  }
+  salesforce.DateTime StartTime {
+    apiName = "MessagingSession.StartTime"
+    label = "Start Time"
+  }
+  salesforce.Picklist Status {
+    apiName = "MessagingSession.Status"
+    label = "Status"
+    _required = true
+    restricted = true
+  }
+  serviceid Id {
+    apiName = "MessagingSession.Id"
+    label = "Messaging Session ID"
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Checkbox IsDeleted {
+    apiName = "MessagingSession.IsDeleted"
+    label = "Deleted"
+    defaultValue = false
+    _hidden_value = true
+  }
+  salesforce.AutoNumber Name {
+    apiName = "MessagingSession.Name"
+    label = "Messaging Session Name"
+    _hidden_value = true
+  }
+  salesforce.DateTime CreatedDate {
+    apiName = "MessagingSession.CreatedDate"
+    label = "Created Date"
+    _hidden_value = true
+  }
+  salesforce.Lookup CreatedById {
+    apiName = "MessagingSession.CreatedById"
+    label = "Created By ID"
+    relationshipName = "CreatedBy"
+    _hidden_value = true
+  }
+  salesforce.DateTime LastModifiedDate {
+    apiName = "MessagingSession.LastModifiedDate"
+    label = "Last Modified Date"
+    _hidden_value = true
+  }
+  salesforce.Lookup LastModifiedById {
+    apiName = "MessagingSession.LastModifiedById"
+    label = "Last Modified By ID"
+    relationshipName = "LastModifiedBy"
+    _hidden_value = true
+  }
+  salesforce.DateTime SystemModstamp {
+    apiName = "MessagingSession.SystemModstamp"
+    label = "System Modstamp"
+    _hidden_value = true
+  }
+  salesforce.Picklist AgentType {
+    apiName = "MessagingSession.AgentType"
+    label = "Agent Type"
+    restricted = true
+  }
+  salesforce.Text SessionKey {
+    apiName = "MessagingSession.SessionKey"
+    label = "Session Key"
+    length = 36
+    unique = false
+    caseSensitive = false
+  }
+  salesforce.Lookup TargetUserId {
+    apiName = "MessagingSession.TargetUserId"
+    label = "User ID"
+    relationshipName = "TargetUser"
+  }
+  salesforce.Text ChannelGroup {
+    apiName = "MessagingSession.ChannelGroup"
+    label = "Group"
+    length = 255
+    unique = false
+    caseSensitive = false
+  }
+  salesforce.Text ChannelIntent {
+    apiName = "MessagingSession.ChannelIntent"
+    label = "Intent"
+    length = 255
+    unique = false
+    caseSensitive = false
+  }
+  salesforce.Text ChannelLocale {
+    apiName = "MessagingSession.ChannelLocale"
+    label = "Locale"
+    length = 255
+    unique = false
+    caseSensitive = false
+  }
+  salesforce.Summary ChannelEndUserFormula {
+    apiName = "MessagingSession.ChannelEndUserFormula"
+    label = "Concatenated Messaging Channel and Messaging User"
+    _hidden_value = true
+  }
+}

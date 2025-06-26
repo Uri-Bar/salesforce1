@@ -1,0 +1,62 @@
+type salesforce.UserPrioritizedRecord {
+  serviceid Id {
+    apiName = "UserPrioritizedRecord.Id"
+    label = "User Prioritized Record ID"
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Lookup OwnerId {
+    apiName = "UserPrioritizedRecord.OwnerId"
+    label = "Owner ID"
+    relationshipName = "Owner"
+    _hidden_value = true
+  }
+  salesforce.Checkbox IsDeleted {
+    apiName = "UserPrioritizedRecord.IsDeleted"
+    label = "Deleted"
+    defaultValue = false
+    _hidden_value = true
+  }
+  salesforce.DateTime CreatedDate {
+    apiName = "UserPrioritizedRecord.CreatedDate"
+    label = "Created Date"
+    _hidden_value = true
+  }
+  salesforce.Lookup CreatedById {
+    apiName = "UserPrioritizedRecord.CreatedById"
+    label = "Created By ID"
+    relationshipName = "CreatedBy"
+    _hidden_value = true
+  }
+  salesforce.DateTime LastModifiedDate {
+    apiName = "UserPrioritizedRecord.LastModifiedDate"
+    label = "Last Modified Date"
+    _hidden_value = true
+  }
+  salesforce.Lookup LastModifiedById {
+    apiName = "UserPrioritizedRecord.LastModifiedById"
+    label = "Last Modified By ID"
+    relationshipName = "LastModifiedBy"
+    _hidden_value = true
+  }
+  salesforce.DateTime SystemModstamp {
+    apiName = "UserPrioritizedRecord.SystemModstamp"
+    label = "System Modstamp"
+    _hidden_value = true
+  }
+  salesforce.Lookup TargetId {
+    apiName = "UserPrioritizedRecord.TargetId"
+    label = "Target ID"
+    _required = true
+    relationshipName = "Target"
+  }
+  salesforce.Text TargetKeyPrefix {
+    apiName = "UserPrioritizedRecord.TargetKeyPrefix"
+    label = "Target Key Prefix"
+    _required = true
+    length = 3
+    unique = false
+    caseSensitive = false
+    _hidden_value = true
+  }
+}

@@ -1,0 +1,19 @@
+salesforce.ListView ChangeRequest_AllChangeRequestsDefault {
+  fullName = "ChangeRequest.AllChangeRequestsDefault"
+  columns = [
+    "Name",
+    salesforce.ChangeRequest.field.Subject,
+    salesforce.ChangeRequest.field.Status,
+    salesforce.ChangeRequest.field.Priority,
+    "AssignedUser",
+    salesforce.ChangeRequest.field.ChangeType,
+    salesforce.ChangeRequest.field.RiskLevel,
+    salesforce.ChangeRequest.field.Impact,
+  ]
+  filterScope = "Everything"
+  label = "All Change Requests (Default)"
+  _parent = [
+    salesforce.ChangeRequest,
+  ]
+  _alias = "All Change Requests (Default)"
+}

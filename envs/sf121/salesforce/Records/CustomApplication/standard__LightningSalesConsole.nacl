@@ -1,0 +1,82 @@
+salesforce.CustomApplication standard__LightningSalesConsole {
+  formFactors = [
+    "Small",
+    "Large",
+  ]
+  isNavAutoTempTabsDisabled = false
+  isNavPersonalizationDisabled = false
+  isNavTabPersistenceDisabled = false
+  isOmniPinnedViewEnabled = false
+  label = "Sales Console"
+  navType = "Console"
+  tabs = [
+    "standard-home",
+    "standard-Lead",
+    "standard-Account",
+    "standard-Contact",
+    "standard-Opportunity",
+    "standard-Campaign",
+    "standard-Task",
+    "standard-Event",
+    "standard-report",
+    "standard-Dashboard",
+    "standard-Feed",
+    "standard-CollaborationGroup",
+    "standard-File",
+    salesforce.CustomTab.instance.property__c,
+    salesforce.CustomTab.instance.favorite__c,
+  ]
+  uiType = "Lightning"
+  utilityBar = "LightningSalesConsole_UtilityBar"
+  workspaceConfig = {
+    mappings = [
+      {
+        tab = salesforce.CustomTab.instance.favorite__c
+      },
+      {
+        tab = salesforce.CustomTab.instance.property__c
+      },
+      {
+        tab = "standard-Account"
+      },
+      {
+        tab = "standard-Campaign"
+      },
+      {
+        tab = "standard-CollaborationGroup"
+      },
+      {
+        tab = "standard-Contact"
+      },
+      {
+        tab = "standard-Dashboard"
+      },
+      {
+        tab = "standard-Event"
+      },
+      {
+        tab = "standard-Feed"
+      },
+      {
+        tab = "standard-File"
+      },
+      {
+        tab = "standard-Lead"
+      },
+      {
+        tab = "standard-Opportunity"
+      },
+      {
+        tab = "standard-Task"
+      },
+      {
+        tab = "standard-home"
+      },
+      {
+        tab = "standard-report"
+      },
+    ]
+  }
+  fullName = "standard__LightningSalesConsole"
+  _alias = "Sales Console (standard)"
+}

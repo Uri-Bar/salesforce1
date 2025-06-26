@@ -1,0 +1,143 @@
+type salesforce.CollaborationGroup {
+  serviceid Id {
+    apiName = "CollaborationGroup.Id"
+    label = "Group Id"
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Text Name {
+    apiName = "CollaborationGroup.Name"
+    label = "Name"
+    _required = true
+    length = 40
+    unique = false
+    caseSensitive = false
+  }
+  salesforce.Number MemberCount {
+    apiName = "CollaborationGroup.MemberCount"
+    label = "Member Count"
+    scale = 0
+    precision = 9
+    unique = false
+    _hidden_value = true
+  }
+  salesforce.Lookup OwnerId {
+    apiName = "CollaborationGroup.OwnerId"
+    label = "Owner ID"
+    relationshipName = "Owner"
+    _hidden_value = true
+  }
+  salesforce.Picklist CollaborationType {
+    apiName = "CollaborationGroup.CollaborationType"
+    label = "Access Type"
+    _required = true
+    restricted = true
+  }
+  salesforce.LongTextArea Description {
+    apiName = "CollaborationGroup.Description"
+    label = "Description"
+    length = 1000
+  }
+  salesforce.DateTime CreatedDate {
+    apiName = "CollaborationGroup.CreatedDate"
+    label = "Created Date"
+    _hidden_value = true
+  }
+  salesforce.Lookup CreatedById {
+    apiName = "CollaborationGroup.CreatedById"
+    label = "Created By ID"
+    relationshipName = "CreatedBy"
+    _hidden_value = true
+  }
+  salesforce.DateTime LastModifiedDate {
+    apiName = "CollaborationGroup.LastModifiedDate"
+    label = "Last Modified Date"
+    _hidden_value = true
+  }
+  salesforce.Lookup LastModifiedById {
+    apiName = "CollaborationGroup.LastModifiedById"
+    label = "Last Modified By ID"
+    relationshipName = "LastModifiedBy"
+    _hidden_value = true
+  }
+  salesforce.DateTime SystemModstamp {
+    apiName = "CollaborationGroup.SystemModstamp"
+    label = "System Modstamp"
+    _hidden_value = true
+  }
+  salesforce.Url FullPhotoUrl {
+    apiName = "CollaborationGroup.FullPhotoUrl"
+    label = "Url for full-sized Photo"
+    _hidden_value = true
+  }
+  salesforce.Url MediumPhotoUrl {
+    apiName = "CollaborationGroup.MediumPhotoUrl"
+    label = "Url for medium profile photo"
+    _hidden_value = true
+  }
+  salesforce.Url SmallPhotoUrl {
+    apiName = "CollaborationGroup.SmallPhotoUrl"
+    label = "Photo"
+    _hidden_value = true
+  }
+  salesforce.DateTime LastFeedModifiedDate {
+    apiName = "CollaborationGroup.LastFeedModifiedDate"
+    label = "Last Feed Modified Date"
+    _required = true
+    _hidden_value = true
+  }
+  salesforce.Text InformationTitle {
+    apiName = "CollaborationGroup.InformationTitle"
+    label = "Information Title"
+    length = 30
+    unique = false
+    caseSensitive = false
+  }
+  salesforce.Html InformationBody {
+    apiName = "CollaborationGroup.InformationBody"
+    label = "Information"
+    length = 4000
+  }
+  salesforce.Checkbox HasPrivateFieldsAccess {
+    apiName = "CollaborationGroup.HasPrivateFieldsAccess"
+    label = "Has Private Fields Access"
+    defaultValue = false
+    _hidden_value = true
+  }
+  salesforce.Checkbox CanHaveGuests {
+    apiName = "CollaborationGroup.CanHaveGuests"
+    label = "Allow customers"
+    defaultValue = false
+  }
+  salesforce.Checkbox IsArchived {
+    apiName = "CollaborationGroup.IsArchived"
+    label = "Archive"
+    defaultValue = false
+  }
+  salesforce.Checkbox IsAutoArchiveDisabled {
+    apiName = "CollaborationGroup.IsAutoArchiveDisabled"
+    label = "Disable automatic archiving"
+    defaultValue = false
+  }
+  salesforce.Lookup AnnouncementId {
+    apiName = "CollaborationGroup.AnnouncementId"
+    label = "Announcement ID"
+    relationshipName = "Announcement"
+  }
+  salesforce.Email GroupEmail {
+    apiName = "CollaborationGroup.GroupEmail"
+    label = "Group Email"
+    unique = false
+    _hidden_value = true
+  }
+  salesforce.Url BannerPhotoUrl {
+    apiName = "CollaborationGroup.BannerPhotoUrl"
+    label = "Banner Photo Url"
+    _hidden_value = true
+  }
+  salesforce.Checkbox IsBroadcast {
+    apiName = "CollaborationGroup.IsBroadcast"
+    label = "Broadcast Only"
+    defaultValue = false
+  }
+}

@@ -1,0 +1,6 @@
+<aura:documentation>
+	<aura:description>Documentation</aura:description>
+	<aura:example name="lwc" ref="tests" label="Label">
+		Example Description
+	</aura:example>
+</aura:documentation>

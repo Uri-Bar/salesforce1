@@ -1,0 +1,80 @@
+type salesforce.AuthorizationForm {
+  salesforce.Lookup DefaultAuthFormTextId {
+    apiName = "AuthorizationForm.DefaultAuthFormTextId"
+    label = "Default Authorization Form Text ID"
+    relationshipName = "DefaultAuthFormText"
+  }
+  salesforce.Date EffectiveFromDate {
+    apiName = "AuthorizationForm.EffectiveFromDate"
+    label = "Effective From Date"
+  }
+  salesforce.Date EffectiveToDate {
+    apiName = "AuthorizationForm.EffectiveToDate"
+    label = "Effective To Date"
+  }
+  salesforce.Checkbox IsSignatureRequired {
+    apiName = "AuthorizationForm.IsSignatureRequired"
+    label = "Is Signature Required"
+    defaultValue = false
+  }
+  salesforce.Text Name {
+    apiName = "AuthorizationForm.Name"
+    label = "Name"
+    _required = true
+    length = 255
+    unique = false
+    caseSensitive = false
+  }
+  salesforce.Lookup OwnerId {
+    apiName = "AuthorizationForm.OwnerId"
+    label = "Owner ID"
+    relationshipName = "Owner"
+    _hidden_value = true
+  }
+  salesforce.Text RevisionNumber {
+    apiName = "AuthorizationForm.RevisionNumber"
+    label = "Revision Number"
+    length = 10
+    unique = false
+    caseSensitive = false
+  }
+  serviceid Id {
+    apiName = "AuthorizationForm.Id"
+    label = "Authorization Form ID"
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Checkbox IsDeleted {
+    apiName = "AuthorizationForm.IsDeleted"
+    label = "Deleted"
+    defaultValue = false
+    _hidden_value = true
+  }
+  salesforce.DateTime CreatedDate {
+    apiName = "AuthorizationForm.CreatedDate"
+    label = "Created Date"
+    _hidden_value = true
+  }
+  salesforce.Lookup CreatedById {
+    apiName = "AuthorizationForm.CreatedById"
+    label = "Created By ID"
+    relationshipName = "CreatedBy"
+    _hidden_value = true
+  }
+  salesforce.DateTime LastModifiedDate {
+    apiName = "AuthorizationForm.LastModifiedDate"
+    label = "Last Modified Date"
+    _hidden_value = true
+  }
+  salesforce.Lookup LastModifiedById {
+    apiName = "AuthorizationForm.LastModifiedById"
+    label = "Last Modified By ID"
+    relationshipName = "LastModifiedBy"
+    _hidden_value = true
+  }
+  salesforce.DateTime SystemModstamp {
+    apiName = "AuthorizationForm.SystemModstamp"
+    label = "System Modstamp"
+    _hidden_value = true
+  }
+}

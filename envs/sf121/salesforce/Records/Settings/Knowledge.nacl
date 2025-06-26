@@ -1,0 +1,5 @@
+salesforce.KnowledgeSettings {
+  enableKnowledge = false
+  fullName = "Knowledge"
+  _alias = "Knowledge"
+}

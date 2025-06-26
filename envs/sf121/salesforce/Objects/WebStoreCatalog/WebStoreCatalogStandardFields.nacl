@@ -1,0 +1,58 @@
+type salesforce.WebStoreCatalog {
+  salesforce.MasterDetail ProductCatalogId {
+    apiName = "WebStoreCatalog.ProductCatalogId"
+    label = "Catalog ID"
+    _required = true
+    relationshipName = "ProductCatalog"
+  }
+  salesforce.MasterDetail SalesStoreId {
+    apiName = "WebStoreCatalog.SalesStoreId"
+    label = "Store ID"
+    _required = true
+    relationshipName = "SalesStore"
+  }
+  serviceid Id {
+    apiName = "WebStoreCatalog.Id"
+    label = "Store Catalog ID"
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Checkbox IsDeleted {
+    apiName = "WebStoreCatalog.IsDeleted"
+    label = "Deleted"
+    defaultValue = false
+    _hidden_value = true
+  }
+  salesforce.AutoNumber Name {
+    apiName = "WebStoreCatalog.Name"
+    label = "Store Catalog Name"
+    _hidden_value = true
+  }
+  salesforce.DateTime CreatedDate {
+    apiName = "WebStoreCatalog.CreatedDate"
+    label = "Created Date"
+    _hidden_value = true
+  }
+  salesforce.Lookup CreatedById {
+    apiName = "WebStoreCatalog.CreatedById"
+    label = "Created By ID"
+    relationshipName = "CreatedBy"
+    _hidden_value = true
+  }
+  salesforce.DateTime LastModifiedDate {
+    apiName = "WebStoreCatalog.LastModifiedDate"
+    label = "Last Modified Date"
+    _hidden_value = true
+  }
+  salesforce.Lookup LastModifiedById {
+    apiName = "WebStoreCatalog.LastModifiedById"
+    label = "Last Modified By ID"
+    relationshipName = "LastModifiedBy"
+    _hidden_value = true
+  }
+  salesforce.DateTime SystemModstamp {
+    apiName = "WebStoreCatalog.SystemModstamp"
+    label = "System Modstamp"
+    _hidden_value = true
+  }
+}

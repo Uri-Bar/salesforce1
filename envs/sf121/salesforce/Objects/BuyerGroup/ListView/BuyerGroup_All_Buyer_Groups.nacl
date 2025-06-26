@@ -1,0 +1,14 @@
+salesforce.ListView BuyerGroup_All_Buyer_Groups {
+  fullName = "BuyerGroup.All_Buyer_Groups"
+  columns = [
+    salesforce.BuyerGroup.field.Name,
+    "Owner",
+    salesforce.BuyerGroup.field.Description,
+  ]
+  filterScope = "Everything"
+  label = "All Buyer Groups"
+  _parent = [
+    salesforce.BuyerGroup,
+  ]
+  _alias = "All Buyer Groups"
+}

@@ -1,0 +1,64 @@
+type salesforce.LocationShippingCarrierMethod {
+  salesforce.Lookup LocationSourceId {
+    apiName = "LocationShippingCarrierMethod.LocationSourceId"
+    label = "Location Source ID"
+    _required = true
+    relationshipName = "LocationSource"
+  }
+  salesforce.Lookup ShippingCarrierMethodId {
+    apiName = "LocationShippingCarrierMethod.ShippingCarrierMethodId"
+    label = "Shipping Carrier Method ID"
+    _required = true
+    relationshipName = "ShippingCarrierMethod"
+  }
+  serviceid Id {
+    apiName = "LocationShippingCarrierMethod.Id"
+    label = "Location Shipping Carrier Method ID"
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Lookup OwnerId {
+    apiName = "LocationShippingCarrierMethod.OwnerId"
+    label = "Owner ID"
+    relationshipName = "Owner"
+    _hidden_value = true
+  }
+  salesforce.Checkbox IsDeleted {
+    apiName = "LocationShippingCarrierMethod.IsDeleted"
+    label = "Deleted"
+    defaultValue = false
+    _hidden_value = true
+  }
+  salesforce.AutoNumber Name {
+    apiName = "LocationShippingCarrierMethod.Name"
+    label = "Name"
+    _hidden_value = true
+  }
+  salesforce.DateTime CreatedDate {
+    apiName = "LocationShippingCarrierMethod.CreatedDate"
+    label = "Created Date"
+    _hidden_value = true
+  }
+  salesforce.Lookup CreatedById {
+    apiName = "LocationShippingCarrierMethod.CreatedById"
+    label = "Created By ID"
+    relationshipName = "CreatedBy"
+    _hidden_value = true
+  }
+  salesforce.DateTime LastModifiedDate {
+    apiName = "LocationShippingCarrierMethod.LastModifiedDate"
+    label = "Last Modified Date"
+    _hidden_value = true
+  }
+  salesforce.Lookup LastModifiedById {
+    apiName = "LocationShippingCarrierMethod.LastModifiedById"
+    label = "Last Modified By ID"
+    relationshipName = "LastModifiedBy"
+    _hidden_value = true
+  }
+  salesforce.DateTime SystemModstamp {
+    apiName = "LocationShippingCarrierMethod.SystemModstamp"
+    label = "System Modstamp"
+    _hidden_value = true
+  }
+}

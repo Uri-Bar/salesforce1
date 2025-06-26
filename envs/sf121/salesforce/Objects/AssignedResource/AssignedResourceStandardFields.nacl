@@ -1,0 +1,73 @@
+type salesforce.AssignedResource {
+  salesforce.AutoNumber AssignedResourceNumber {
+    apiName = "AssignedResource.AssignedResourceNumber"
+    label = "Assigned Resource Number"
+    _hidden_value = true
+  }
+  salesforce.Lookup EventId {
+    apiName = "AssignedResource.EventId"
+    label = "Activity ID"
+    relationshipName = "Event"
+    _hidden_value = true
+  }
+  salesforce.Checkbox IsRequiredResource {
+    apiName = "AssignedResource.IsRequiredResource"
+    label = "Required Resource"
+    defaultValue = false
+  }
+  salesforce.Picklist Role {
+    apiName = "AssignedResource.Role"
+    label = "Role"
+  }
+  salesforce.MasterDetail ServiceAppointmentId {
+    apiName = "AssignedResource.ServiceAppointmentId"
+    label = "Service Appointment ID"
+    _required = true
+    relationshipName = "ServiceAppointment"
+  }
+  salesforce.Lookup ServiceResourceId {
+    apiName = "AssignedResource.ServiceResourceId"
+    label = "Service Resource ID"
+    _required = true
+    relationshipName = "ServiceResource"
+  }
+  serviceid Id {
+    apiName = "AssignedResource.Id"
+    label = "Assigned Resource ID"
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Checkbox IsDeleted {
+    apiName = "AssignedResource.IsDeleted"
+    label = "Deleted"
+    defaultValue = false
+    _hidden_value = true
+  }
+  salesforce.DateTime CreatedDate {
+    apiName = "AssignedResource.CreatedDate"
+    label = "Created Date"
+    _hidden_value = true
+  }
+  salesforce.Lookup CreatedById {
+    apiName = "AssignedResource.CreatedById"
+    label = "Created By ID"
+    relationshipName = "CreatedBy"
+    _hidden_value = true
+  }
+  salesforce.DateTime LastModifiedDate {
+    apiName = "AssignedResource.LastModifiedDate"
+    label = "Last Modified Date"
+    _hidden_value = true
+  }
+  salesforce.Lookup LastModifiedById {
+    apiName = "AssignedResource.LastModifiedById"
+    label = "Last Modified By ID"
+    relationshipName = "LastModifiedBy"
+    _hidden_value = true
+  }
+  salesforce.DateTime SystemModstamp {
+    apiName = "AssignedResource.SystemModstamp"
+    label = "System Modstamp"
+    _hidden_value = true
+  }
+}

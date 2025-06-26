@@ -1,0 +1,16 @@
+salesforce.CommunitiesSettings {
+  applyLoginPageTypeToEmbeddedLogin = false
+  blockEmbeddedLoginUnknownURLRedirect = false
+  enableCspContactVisibilityPref = false
+  enableEnablePRM = false
+  enableExternalAccHierPref = false
+  enableGuestPermDisOptOutCruc = false
+  enableGuestSecurityOptOutCruc = false
+  enableInviteChatterGuestEnabled = true
+  enableNetworksEnabled = false
+  enableOotbProfExtUserOpsEnable = false
+  enablePRMAccRelPref = false
+  enableRelaxPartnerAccountFieldPref = false
+  fullName = "Communities"
+  _alias = "Communities"
+}

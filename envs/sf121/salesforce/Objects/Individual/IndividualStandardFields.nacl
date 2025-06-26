@@ -1,0 +1,168 @@
+type salesforce.Individual {
+  salesforce.Date BirthDate {
+    apiName = "Individual.BirthDate"
+    label = "Birth Date"
+  }
+  salesforce.Checkbox CanStorePiiElsewhere {
+    apiName = "Individual.CanStorePiiElsewhere"
+    label = "OK to Store PII Data Elsewhere"
+    defaultValue = false
+  }
+  salesforce.Number ChildrenCount {
+    apiName = "Individual.ChildrenCount"
+    label = "Number of Children"
+    scale = 0
+    precision = 9
+    unique = false
+  }
+  salesforce.Number ConsumerCreditScore {
+    apiName = "Individual.ConsumerCreditScore"
+    label = "Consumer Credit Score"
+    scale = 0
+    precision = 9
+    unique = false
+  }
+  salesforce.Text ConsumerCreditScoreProviderName {
+    apiName = "Individual.ConsumerCreditScoreProviderName"
+    label = "Consumer Credit Score Provider Name"
+    length = 255
+    unique = false
+    caseSensitive = false
+  }
+  salesforce.Number ConvictionsCount {
+    apiName = "Individual.ConvictionsCount"
+    label = "Conviction Count"
+    scale = 0
+    precision = 9
+    unique = false
+  }
+  salesforce.Date DeathDate {
+    apiName = "Individual.DeathDate"
+    label = "Death Date"
+  }
+  salesforce.Checkbox HasOptedOutGeoTracking {
+    apiName = "Individual.HasOptedOutGeoTracking"
+    label = "Block Geolocation Tracking"
+    defaultValue = false
+  }
+  salesforce.Checkbox HasOptedOutProcessing {
+    apiName = "Individual.HasOptedOutProcessing"
+    label = "Don't Process"
+    defaultValue = false
+  }
+  salesforce.Checkbox HasOptedOutProfiling {
+    apiName = "Individual.HasOptedOutProfiling"
+    label = "Don't Profile"
+    defaultValue = false
+  }
+  salesforce.Checkbox HasOptedOutSolicit {
+    apiName = "Individual.HasOptedOutSolicit"
+    label = "Don't Market"
+    defaultValue = false
+  }
+  salesforce.Checkbox HasOptedOutTracking {
+    apiName = "Individual.HasOptedOutTracking"
+    label = "Don't Track"
+    defaultValue = false
+  }
+  salesforce.Picklist IndividualsAge {
+    apiName = "Individual.IndividualsAge"
+    label = "Individual's Age"
+    restricted = false
+  }
+  salesforce.Number InfluencerRating {
+    apiName = "Individual.InfluencerRating"
+    label = "Influencer Rating"
+    scale = 0
+    precision = 9
+    unique = false
+  }
+  salesforce.Checkbox IsHomeOwner {
+    apiName = "Individual.IsHomeOwner"
+    label = "Is Homeowner"
+    defaultValue = false
+  }
+  salesforce.Picklist MilitaryService {
+    apiName = "Individual.MilitaryService"
+    label = "Military Service"
+    restricted = false
+  }
+  salesforce.Name Name {
+    apiName = "Individual.Name"
+    label = "Name"
+    _required = true
+    _hidden_value = true
+  }
+  salesforce.Text Occupation {
+    apiName = "Individual.Occupation"
+    label = "Occupation"
+    length = 150
+    unique = false
+    caseSensitive = false
+  }
+  salesforce.Lookup OwnerId {
+    apiName = "Individual.OwnerId"
+    label = "Owner ID"
+    relationshipName = "Owner"
+    _hidden_value = true
+  }
+  salesforce.Checkbox SendIndividualData {
+    apiName = "Individual.SendIndividualData"
+    label = "Export Individual's Data"
+    defaultValue = false
+  }
+  salesforce.Checkbox ShouldForget {
+    apiName = "Individual.ShouldForget"
+    label = "Forget this Individual"
+    defaultValue = false
+  }
+  salesforce.Url Website {
+    apiName = "Individual.Website"
+    label = "Website"
+  }
+  serviceid Id {
+    apiName = "Individual.Id"
+    label = "Individual ID"
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Checkbox IsDeleted {
+    apiName = "Individual.IsDeleted"
+    label = "Deleted"
+    defaultValue = false
+    _hidden_value = true
+  }
+  salesforce.Lookup MasterRecordId {
+    apiName = "Individual.MasterRecordId"
+    label = "Master Record ID"
+    relationshipName = "MasterRecord"
+    _hidden_value = true
+  }
+  salesforce.DateTime CreatedDate {
+    apiName = "Individual.CreatedDate"
+    label = "Created Date"
+    _hidden_value = true
+  }
+  salesforce.Lookup CreatedById {
+    apiName = "Individual.CreatedById"
+    label = "Created By ID"
+    relationshipName = "CreatedBy"
+    _hidden_value = true
+  }
+  salesforce.DateTime LastModifiedDate {
+    apiName = "Individual.LastModifiedDate"
+    label = "Last Modified Date"
+    _hidden_value = true
+  }
+  salesforce.Lookup LastModifiedById {
+    apiName = "Individual.LastModifiedById"
+    label = "Last Modified By ID"
+    relationshipName = "LastModifiedBy"
+    _hidden_value = true
+  }
+  salesforce.DateTime SystemModstamp {
+    apiName = "Individual.SystemModstamp"
+    label = "System Modstamp"
+    _hidden_value = true
+  }
+}

@@ -1,0 +1,13 @@
+salesforce.CustomTab lwctest {
+  fullName = "lwctest"
+  description = "Created by Lightning App Builder"
+  flexiPage = "lwctest"
+  label = "lwctest"
+  motif = "Custom26: Flag"
+  _generated_dependencies = [
+    {
+      reference = salesforce.LightningPage.instance.lwctest
+    },
+  ]
+  _alias = "lwctest"
+}

@@ -1,0 +1,320 @@
+type salesforce.VoiceCall {
+  salesforce.Lookup ActivityId {
+    apiName = "VoiceCall.ActivityId"
+    label = "Activity ID"
+    relationshipName = "Activity"
+    _hidden_value = true
+  }
+  salesforce.DateTime CallAcceptDateTime {
+    apiName = "VoiceCall.CallAcceptDateTime"
+    label = "Call Accepted"
+    _hidden_value = true
+  }
+  salesforce.DateTime CallConnectDateTime {
+    apiName = "VoiceCall.CallConnectDateTime"
+    label = "Call Connected"
+    _hidden_value = true
+  }
+  salesforce.Text CallDisposition {
+    apiName = "VoiceCall.CallDisposition"
+    label = "Call Status"
+    length = 255
+    unique = false
+    caseSensitive = false
+    _hidden_value = true
+  }
+  salesforce.Number CallDurationInSeconds {
+    apiName = "VoiceCall.CallDurationInSeconds"
+    label = "Call Duration"
+    scale = 0
+    precision = 8
+    unique = false
+    _hidden_value = true
+  }
+  salesforce.DateTime CallEndDateTime {
+    apiName = "VoiceCall.CallEndDateTime"
+    label = "Call Ended"
+    _required = true
+    _hidden_value = true
+  }
+  salesforce.Picklist CallOrigin {
+    apiName = "VoiceCall.CallOrigin"
+    label = "Call Origin"
+    restricted = true
+    _hidden_value = true
+  }
+  salesforce.DateTime CallQueuedDateTime {
+    apiName = "VoiceCall.CallQueuedDateTime"
+    label = "Call Entered Queue"
+    _hidden_value = true
+  }
+  salesforce.Picklist CallResolution {
+    apiName = "VoiceCall.CallResolution"
+    label = "Call Resolution"
+    restricted = false
+    _hidden_value = true
+  }
+  salesforce.DateTime CallStartDateTime {
+    apiName = "VoiceCall.CallStartDateTime"
+    label = "Call Started"
+    _required = true
+    _hidden_value = true
+  }
+  salesforce.Picklist CallSubtype {
+    apiName = "VoiceCall.CallSubtype"
+    label = "Call Subtype"
+    restricted = true
+    _hidden_value = true
+  }
+  salesforce.Picklist CallType {
+    apiName = "VoiceCall.CallType"
+    label = "Call Type"
+    _required = true
+    restricted = true
+    _hidden_value = true
+  }
+  salesforce.Lookup CallerId {
+    apiName = "VoiceCall.CallerId"
+    label = "Caller ID"
+    relationshipName = "Caller"
+    _hidden_value = true
+  }
+  salesforce.Number CustomerHoldDuration {
+    apiName = "VoiceCall.CustomerHoldDuration"
+    label = "Customer Hold Duration"
+    scale = 0
+    precision = 9
+    unique = false
+    _hidden_value = true
+  }
+  salesforce.LongTextArea Description {
+    apiName = "VoiceCall.Description"
+    label = "Description"
+    length = 32000
+    _hidden_value = true
+  }
+  salesforce.Text DisconnectReason {
+    apiName = "VoiceCall.DisconnectReason"
+    label = "Disconnect Reason"
+    length = 255
+    unique = false
+    caseSensitive = false
+    _hidden_value = true
+  }
+  salesforce.Lookup EndUserId {
+    apiName = "VoiceCall.EndUserId"
+    label = "Messaging User ID"
+    relationshipName = "EndUser"
+    _hidden_value = true
+  }
+  salesforce.Phone FromPhoneNumber {
+    apiName = "VoiceCall.FromPhoneNumber"
+    label = "Caller Contact Info"
+    _required = true
+    _hidden_value = true
+  }
+  salesforce.Checkbox IsRecorded {
+    apiName = "VoiceCall.IsRecorded"
+    label = "Is Call Recorded"
+    defaultValue = false
+    _hidden_value = true
+  }
+  salesforce.Number LongestHoldDuration {
+    apiName = "VoiceCall.LongestHoldDuration"
+    label = "Longest Hold Duration"
+    scale = 0
+    precision = 9
+    unique = false
+    _hidden_value = true
+  }
+  salesforce.Lookup NextCallId {
+    apiName = "VoiceCall.NextCallId"
+    label = "Next Call ID"
+    relationshipName = "NextCall"
+    _hidden_value = true
+  }
+  salesforce.Number NumberOfHolds {
+    apiName = "VoiceCall.NumberOfHolds"
+    label = "Number Of Holds"
+    scale = 0
+    precision = 9
+    unique = false
+    _hidden_value = true
+  }
+  salesforce.Lookup OwnerId {
+    apiName = "VoiceCall.OwnerId"
+    label = "Owner ID"
+    relationshipName = "Owner"
+    _hidden_value = true
+  }
+  salesforce.Lookup PreviousCallId {
+    apiName = "VoiceCall.PreviousCallId"
+    label = "Previous Call ID"
+    relationshipName = "PreviousCall"
+    _hidden_value = true
+  }
+  salesforce.Number QualityScore {
+    apiName = "VoiceCall.QualityScore"
+    label = "Mean Opinion Score"
+    scale = 2
+    precision = 18
+    unique = false
+    _hidden_value = true
+  }
+  salesforce.Text QueueName {
+    apiName = "VoiceCall.QueueName"
+    label = "Queue Name"
+    length = 255
+    unique = false
+    caseSensitive = false
+    _hidden_value = true
+  }
+  salesforce.Lookup RecipientId {
+    apiName = "VoiceCall.RecipientId"
+    label = "Recipient ID"
+    relationshipName = "Recipient"
+    _hidden_value = true
+  }
+  salesforce.Lookup RelatedRecordId {
+    apiName = "VoiceCall.RelatedRecordId"
+    label = "RelatedRecord ID"
+    relationshipName = "RelatedRecord"
+    _hidden_value = true
+  }
+  salesforce.Phone ToPhoneNumber {
+    apiName = "VoiceCall.ToPhoneNumber"
+    label = "Recipient Contact Info"
+    _required = true
+    _hidden_value = true
+  }
+  salesforce.Lookup UserId {
+    apiName = "VoiceCall.UserId"
+    label = "User ID"
+    relationshipName = "User"
+    _hidden_value = true
+  }
+  salesforce.Text VendorCallKey {
+    apiName = "VoiceCall.VendorCallKey"
+    label = "Vendor Call Key"
+    length = 255
+    unique = false
+    caseSensitive = false
+    _hidden_value = true
+  }
+  salesforce.AutoNumber Name {
+    apiName = "VoiceCall.Name"
+    label = "Name"
+    _hidden_value = true
+  }
+  serviceid Id {
+    apiName = "VoiceCall.Id"
+    label = "Voice Call ID"
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Checkbox IsDeleted {
+    apiName = "VoiceCall.IsDeleted"
+    label = "Deleted"
+    defaultValue = false
+    _hidden_value = true
+  }
+  salesforce.Lookup CreatedById {
+    apiName = "VoiceCall.CreatedById"
+    label = "Created By ID"
+    relationshipName = "CreatedBy"
+    _hidden_value = true
+  }
+  salesforce.DateTime CreatedDate {
+    apiName = "VoiceCall.CreatedDate"
+    label = "Created Date"
+    _hidden_value = true
+  }
+  salesforce.DateTime LastModifiedDate {
+    apiName = "VoiceCall.LastModifiedDate"
+    label = "Last Modified Date"
+    _hidden_value = true
+  }
+  salesforce.Lookup LastModifiedById {
+    apiName = "VoiceCall.LastModifiedById"
+    label = "Last Modified By ID"
+    relationshipName = "LastModifiedBy"
+    _hidden_value = true
+  }
+  salesforce.DateTime SystemModstamp {
+    apiName = "VoiceCall.SystemModstamp"
+    label = "System Modstamp"
+    _hidden_value = true
+  }
+  salesforce.Number Price {
+    apiName = "VoiceCall.Price"
+    label = "Price"
+    scale = 2
+    precision = 18
+    unique = false
+    _hidden_value = true
+  }
+  salesforce.Picklist CurrencyCode {
+    apiName = "VoiceCall.CurrencyCode"
+    label = "Currency Code"
+    restricted = true
+    _hidden_value = true
+  }
+  salesforce.Text VendorParentCallKey {
+    apiName = "VoiceCall.VendorParentCallKey"
+    label = "Vendor Parent Call Key"
+    length = 255
+    unique = false
+    caseSensitive = false
+    _hidden_value = true
+  }
+  salesforce.Picklist VendorType {
+    apiName = "VoiceCall.VendorType"
+    label = "Vendor Type"
+    restricted = true
+    _hidden_value = true
+  }
+  salesforce.Text ConferenceKey {
+    apiName = "VoiceCall.ConferenceKey"
+    label = "Conference Key"
+    length = 255
+    unique = false
+    caseSensitive = false
+    _hidden_value = true
+  }
+  salesforce.Lookup CallRecordingId {
+    apiName = "VoiceCall.CallRecordingId"
+    label = "Voice Call Recording ID"
+    relationshipName = "CallRecording"
+    _hidden_value = true
+  }
+  salesforce.Picklist CallerIdType {
+    apiName = "VoiceCall.CallerIdType"
+    label = "Caller Id"
+    restricted = true
+    _hidden_value = true
+  }
+  salesforce.Lookup CallCenterId {
+    apiName = "VoiceCall.CallCenterId"
+    label = "Call Center ID"
+    relationshipName = "CallCenter"
+    _hidden_value = true
+  }
+  salesforce.Lookup ConversationId {
+    apiName = "VoiceCall.ConversationId"
+    label = "Conversation ID"
+    relationshipName = "Conversation"
+    _hidden_value = true
+  }
+  salesforce.Lookup MediaProviderId {
+    apiName = "VoiceCall.MediaProviderId"
+    label = "CallCoachingMediaProvider ID"
+    relationshipName = "MediaProvider"
+    _hidden_value = true
+  }
+  salesforce.Picklist SourceType {
+    apiName = "VoiceCall.SourceType"
+    label = "Source Type"
+    restricted = true
+    _hidden_value = true
+  }
+}

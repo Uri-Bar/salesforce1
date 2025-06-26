@@ -1,0 +1,76 @@
+type salesforce.WorkStepTemplate {
+  salesforce.Picklist ActionDefinition {
+    apiName = "WorkStepTemplate.ActionDefinition"
+    inlineHelpText = "Find and select the associated global action, quick action, screen flow, or mobile flow."
+    label = "Action Definition"
+    restricted = true
+  }
+  salesforce.Picklist ActionType {
+    apiName = "WorkStepTemplate.ActionType"
+    label = "Action Type"
+    restricted = true
+    _hidden_value = true
+  }
+  salesforce.LongTextArea Description {
+    apiName = "WorkStepTemplate.Description"
+    label = "Description"
+    length = 500
+  }
+  salesforce.Checkbox IsActive {
+    apiName = "WorkStepTemplate.IsActive"
+    label = "Active"
+  }
+  salesforce.Text Name {
+    apiName = "WorkStepTemplate.Name"
+    label = "Name"
+    _required = true
+    length = 255
+    unique = false
+    caseSensitive = false
+  }
+  salesforce.Lookup OwnerId {
+    apiName = "WorkStepTemplate.OwnerId"
+    label = "Owner ID"
+    relationshipName = "Owner"
+    _hidden_value = true
+  }
+  serviceid Id {
+    apiName = "WorkStepTemplate.Id"
+    label = "Work Step Template ID"
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Checkbox IsDeleted {
+    apiName = "WorkStepTemplate.IsDeleted"
+    label = "Deleted"
+    defaultValue = false
+    _hidden_value = true
+  }
+  salesforce.DateTime CreatedDate {
+    apiName = "WorkStepTemplate.CreatedDate"
+    label = "Created Date"
+    _hidden_value = true
+  }
+  salesforce.Lookup CreatedById {
+    apiName = "WorkStepTemplate.CreatedById"
+    label = "Created By ID"
+    relationshipName = "CreatedBy"
+    _hidden_value = true
+  }
+  salesforce.DateTime LastModifiedDate {
+    apiName = "WorkStepTemplate.LastModifiedDate"
+    label = "Last Modified Date"
+    _hidden_value = true
+  }
+  salesforce.Lookup LastModifiedById {
+    apiName = "WorkStepTemplate.LastModifiedById"
+    label = "Last Modified By ID"
+    relationshipName = "LastModifiedBy"
+    _hidden_value = true
+  }
+  salesforce.DateTime SystemModstamp {
+    apiName = "WorkStepTemplate.SystemModstamp"
+    label = "System Modstamp"
+    _hidden_value = true
+  }
+}

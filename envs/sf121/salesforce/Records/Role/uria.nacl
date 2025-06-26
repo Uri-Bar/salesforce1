@@ -1,0 +1,11 @@
+salesforce.Role uria {
+  fullName = "uria"
+  caseAccessLevel = "Edit"
+  contactAccessLevel = "Edit"
+  description = "sd"
+  mayForecastManagerShare = false
+  name = "uria"
+  opportunityAccessLevel = "Edit"
+  parentRole = salesforce.Role.instance.CEO
+  _alias = "uria"
+}

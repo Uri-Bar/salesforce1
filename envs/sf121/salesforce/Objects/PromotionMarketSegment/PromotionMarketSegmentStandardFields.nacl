@@ -1,0 +1,57 @@
+type salesforce.PromotionMarketSegment {
+  salesforce.MasterDetail PromotionId {
+    apiName = "PromotionMarketSegment.PromotionId"
+    label = "Promotion ID"
+    _required = true
+    relationshipName = "Promotion"
+  }
+  salesforce.Lookup PromotionSegmentId {
+    apiName = "PromotionMarketSegment.PromotionSegmentId"
+    label = "Promotion Segment ID"
+    relationshipName = "PromotionSegment"
+  }
+  serviceid Id {
+    apiName = "PromotionMarketSegment.Id"
+    label = "Promotion Market Segment ID"
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Checkbox IsDeleted {
+    apiName = "PromotionMarketSegment.IsDeleted"
+    label = "Deleted"
+    defaultValue = false
+    _hidden_value = true
+  }
+  salesforce.AutoNumber Name {
+    apiName = "PromotionMarketSegment.Name"
+    label = "Name"
+    _hidden_value = true
+  }
+  salesforce.DateTime CreatedDate {
+    apiName = "PromotionMarketSegment.CreatedDate"
+    label = "Created Date"
+    _hidden_value = true
+  }
+  salesforce.Lookup CreatedById {
+    apiName = "PromotionMarketSegment.CreatedById"
+    label = "Created By ID"
+    relationshipName = "CreatedBy"
+    _hidden_value = true
+  }
+  salesforce.DateTime LastModifiedDate {
+    apiName = "PromotionMarketSegment.LastModifiedDate"
+    label = "Last Modified Date"
+    _hidden_value = true
+  }
+  salesforce.Lookup LastModifiedById {
+    apiName = "PromotionMarketSegment.LastModifiedById"
+    label = "Last Modified By ID"
+    relationshipName = "LastModifiedBy"
+    _hidden_value = true
+  }
+  salesforce.DateTime SystemModstamp {
+    apiName = "PromotionMarketSegment.SystemModstamp"
+    label = "System Modstamp"
+    _hidden_value = true
+  }
+}

@@ -1,0 +1,185 @@
+type salesforce.FulfillmentOrderLineItem {
+  salesforce.Text Description {
+    apiName = "FulfillmentOrderLineItem.Description"
+    label = "Description"
+    length = 255
+    unique = false
+    caseSensitive = false
+  }
+  salesforce.DateTime EndDate {
+    apiName = "FulfillmentOrderLineItem.EndDate"
+    label = "End Date"
+  }
+  salesforce.MasterDetail FulfillmentOrderId {
+    apiName = "FulfillmentOrderLineItem.FulfillmentOrderId"
+    label = "Fulfillment Order ID"
+    _required = true
+    relationshipName = "FulfillmentOrder"
+  }
+  salesforce.Currency GrossUnitPrice {
+    apiName = "FulfillmentOrderLineItem.GrossUnitPrice"
+    label = "Gross Unit Price"
+    scale = 2
+    precision = 18
+  }
+  salesforce.Checkbox IsReship {
+    apiName = "FulfillmentOrderLineItem.IsReship"
+    label = "Reship"
+    defaultValue = false
+    _hidden_value = true
+  }
+  salesforce.Lookup MainFulfillmentOrderLineItemId {
+    apiName = "FulfillmentOrderLineItem.MainFulfillmentOrderLineItemId"
+    _hidden_value = true
+  }
+  salesforce.Lookup OrderItemId {
+    apiName = "FulfillmentOrderLineItem.OrderItemId"
+    label = "Order Product ID"
+    relationshipName = "OrderItem"
+  }
+  salesforce.Number OriginalQuantity {
+    apiName = "FulfillmentOrderLineItem.OriginalQuantity"
+    label = "Quantity on the Original Order"
+    _required = true
+    scale = 0
+    precision = 18
+    unique = false
+  }
+  salesforce.Lookup Product2Id {
+    apiName = "FulfillmentOrderLineItem.Product2Id"
+    label = "Product ID"
+    relationshipName = "Product2"
+  }
+  salesforce.Number Quantity {
+    apiName = "FulfillmentOrderLineItem.Quantity"
+    label = "Quantity"
+    _required = true
+    scale = 0
+    precision = 18
+    unique = false
+  }
+  salesforce.Text QuantityUnitOfMeasure {
+    apiName = "FulfillmentOrderLineItem.QuantityUnitOfMeasure"
+    label = "Quantity Unit Of Measure"
+    length = 100
+    unique = false
+    caseSensitive = false
+  }
+  salesforce.Picklist RejectReason {
+    apiName = "FulfillmentOrderLineItem.RejectReason"
+    label = "Reject Reason"
+    restricted = true
+  }
+  salesforce.Number RejectedQuantity {
+    apiName = "FulfillmentOrderLineItem.RejectedQuantity"
+    label = "Rejected Quantity"
+    scale = 0
+    precision = 18
+    unique = false
+  }
+  salesforce.Picklist ReshipReason {
+    apiName = "FulfillmentOrderLineItem.ReshipReason"
+    label = "Reship Reason"
+    restricted = false
+  }
+  salesforce.DateTime ServiceDate {
+    apiName = "FulfillmentOrderLineItem.ServiceDate"
+    label = "Start Date"
+  }
+  salesforce.Summary TotalAdjustmentAmount {
+    apiName = "FulfillmentOrderLineItem.TotalAdjustmentAmount"
+    label = "Adjustments"
+    _hidden_value = true
+  }
+  salesforce.Summary TotalAdjustmentAmountWithTax {
+    apiName = "FulfillmentOrderLineItem.TotalAdjustmentAmountWithTax"
+    label = "Adjustments with Tax"
+    _hidden_value = true
+  }
+  salesforce.Summary TotalAdjustmentTaxAmount {
+    apiName = "FulfillmentOrderLineItem.TotalAdjustmentTaxAmount"
+    label = "Adjustments Tax"
+    _hidden_value = true
+  }
+  salesforce.Summary TotalAmount {
+    apiName = "FulfillmentOrderLineItem.TotalAmount"
+    label = "Total with Tax"
+    _hidden_value = true
+  }
+  salesforce.Currency TotalLineAmount {
+    apiName = "FulfillmentOrderLineItem.TotalLineAmount"
+    label = "Line Subtotal"
+    scale = 2
+    precision = 18
+  }
+  salesforce.Summary TotalLineAmountWithTax {
+    apiName = "FulfillmentOrderLineItem.TotalLineAmountWithTax"
+    label = "Line Subtotal with Tax"
+    _hidden_value = true
+  }
+  salesforce.Summary TotalLineTaxAmount {
+    apiName = "FulfillmentOrderLineItem.TotalLineTaxAmount"
+    label = "Line Subtotal Tax"
+    _hidden_value = true
+  }
+  salesforce.Summary TotalPrice {
+    apiName = "FulfillmentOrderLineItem.TotalPrice"
+    label = "Pretax Total"
+    _hidden_value = true
+  }
+  salesforce.Summary TotalTaxAmount {
+    apiName = "FulfillmentOrderLineItem.TotalTaxAmount"
+    label = "Tax"
+    _hidden_value = true
+  }
+  salesforce.Currency UnitPrice {
+    apiName = "FulfillmentOrderLineItem.UnitPrice"
+    label = "Unit Price"
+    scale = 2
+    precision = 18
+  }
+  serviceid Id {
+    apiName = "FulfillmentOrderLineItem.Id"
+    label = "Fulfillment Order Product ID"
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Checkbox IsDeleted {
+    apiName = "FulfillmentOrderLineItem.IsDeleted"
+    label = "Deleted"
+    defaultValue = false
+    _hidden_value = true
+  }
+  salesforce.AutoNumber FulfillmentOrderLineItemNumber {
+    apiName = "FulfillmentOrderLineItem.FulfillmentOrderLineItemNumber"
+    label = "Fulfillment Order Product Number"
+    _hidden_value = true
+  }
+  salesforce.DateTime CreatedDate {
+    apiName = "FulfillmentOrderLineItem.CreatedDate"
+    label = "Created Date"
+    _hidden_value = true
+  }
+  salesforce.Lookup CreatedById {
+    apiName = "FulfillmentOrderLineItem.CreatedById"
+    label = "Created By ID"
+    relationshipName = "CreatedBy"
+    _hidden_value = true
+  }
+  salesforce.DateTime LastModifiedDate {
+    apiName = "FulfillmentOrderLineItem.LastModifiedDate"
+    label = "Last Modified Date"
+    _hidden_value = true
+  }
+  salesforce.Lookup LastModifiedById {
+    apiName = "FulfillmentOrderLineItem.LastModifiedById"
+    label = "Last Modified By ID"
+    relationshipName = "LastModifiedBy"
+    _hidden_value = true
+  }
+  salesforce.DateTime SystemModstamp {
+    apiName = "FulfillmentOrderLineItem.SystemModstamp"
+    label = "System Modstamp"
+    _hidden_value = true
+  }
+}

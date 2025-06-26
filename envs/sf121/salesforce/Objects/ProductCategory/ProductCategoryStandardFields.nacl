@@ -1,0 +1,82 @@
+type salesforce.ProductCategory {
+  salesforce.MasterDetail CatalogId {
+    apiName = "ProductCategory.CatalogId"
+    label = "Catalog ID"
+    _required = true
+    relationshipName = "Catalog"
+  }
+  salesforce.TextArea Description {
+    apiName = "ProductCategory.Description"
+    label = "Description"
+  }
+  salesforce.Checkbox IsNavigational {
+    apiName = "ProductCategory.IsNavigational"
+    label = "Show In Menu"
+    defaultValue = false
+  }
+  salesforce.Text Name {
+    apiName = "ProductCategory.Name"
+    label = "Name"
+    _required = true
+    length = 200
+    unique = false
+    caseSensitive = false
+  }
+  salesforce.Hierarchy ParentCategoryId {
+    apiName = "ProductCategory.ParentCategoryId"
+    label = "Category ID"
+    relationshipName = "ParentCategory"
+  }
+  salesforce.Number SortOrder {
+    apiName = "ProductCategory.SortOrder"
+    label = "Sort Order"
+    scale = 0
+    precision = 9
+    unique = false
+  }
+  serviceid Id {
+    apiName = "ProductCategory.Id"
+    label = "Category ID"
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Checkbox IsDeleted {
+    apiName = "ProductCategory.IsDeleted"
+    label = "Deleted"
+    defaultValue = false
+    _hidden_value = true
+  }
+  salesforce.DateTime CreatedDate {
+    apiName = "ProductCategory.CreatedDate"
+    label = "Created Date"
+    _hidden_value = true
+  }
+  salesforce.Lookup CreatedById {
+    apiName = "ProductCategory.CreatedById"
+    label = "Created By ID"
+    relationshipName = "CreatedBy"
+    _hidden_value = true
+  }
+  salesforce.DateTime LastModifiedDate {
+    apiName = "ProductCategory.LastModifiedDate"
+    label = "Last Modified Date"
+    _hidden_value = true
+  }
+  salesforce.Lookup LastModifiedById {
+    apiName = "ProductCategory.LastModifiedById"
+    label = "Last Modified By ID"
+    relationshipName = "LastModifiedBy"
+    _hidden_value = true
+  }
+  salesforce.DateTime SystemModstamp {
+    apiName = "ProductCategory.SystemModstamp"
+    label = "System Modstamp"
+    _hidden_value = true
+  }
+  salesforce.Summary NumberOfProducts {
+    apiName = "ProductCategory.NumberOfProducts"
+    label = "Number of Products"
+    precision = 9
+    _hidden_value = true
+  }
+}

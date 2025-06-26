@@ -1,0 +1,125 @@
+type salesforce.PaymentLineInvoice {
+  salesforce.Currency Amount {
+    apiName = "PaymentLineInvoice.Amount"
+    label = "Amount"
+    _required = true
+    scale = 2
+    precision = 18
+  }
+  salesforce.DateTime AppliedDate {
+    apiName = "PaymentLineInvoice.AppliedDate"
+    label = "Applied Date"
+  }
+  salesforce.Lookup AssociatedAccountId {
+    apiName = "PaymentLineInvoice.AssociatedAccountId"
+    label = "Account ID"
+    relationshipName = "AssociatedAccount"
+  }
+  salesforce.Lookup AssociatedPaymentLineId {
+    apiName = "PaymentLineInvoice.AssociatedPaymentLineId"
+    label = "Payment Line Invoice ID"
+    relationshipName = "AssociatedPaymentLine"
+  }
+  salesforce.LongTextArea Comments {
+    apiName = "PaymentLineInvoice.Comments"
+    label = "Comments"
+    length = 1000
+  }
+  salesforce.DateTime Date {
+    apiName = "PaymentLineInvoice.Date"
+    label = "Date"
+  }
+  salesforce.DateTime EffectiveDate {
+    apiName = "PaymentLineInvoice.EffectiveDate"
+    label = "Effective Date"
+  }
+  salesforce.Summary EffectiveImpactAmount {
+    apiName = "PaymentLineInvoice.EffectiveImpactAmount"
+    label = "Effective Impact Amount"
+    _hidden_value = true
+  }
+  salesforce.Picklist HasBeenUnapplied {
+    apiName = "PaymentLineInvoice.HasBeenUnapplied"
+    label = "Has Been Unapplied"
+    _required = true
+    restricted = true
+  }
+  salesforce.Summary ImpactAmount {
+    apiName = "PaymentLineInvoice.ImpactAmount"
+    label = "Impact Amount"
+    _hidden_value = true
+  }
+  salesforce.MasterDetail InvoiceId {
+    apiName = "PaymentLineInvoice.InvoiceId"
+    label = "Invoice ID"
+    _required = true
+    relationshipName = "Invoice"
+  }
+  salesforce.Currency PaymentBalance {
+    apiName = "PaymentLineInvoice.PaymentBalance"
+    label = "Payment Balance"
+    scale = 2
+    precision = 18
+    _hidden_value = true
+  }
+  salesforce.Lookup PaymentId {
+    apiName = "PaymentLineInvoice.PaymentId"
+    label = "Payment ID"
+    _required = true
+    relationshipName = "Payment"
+  }
+  salesforce.Picklist Type {
+    apiName = "PaymentLineInvoice.Type"
+    label = "Type"
+    _required = true
+    restricted = true
+  }
+  salesforce.DateTime UnappliedDate {
+    apiName = "PaymentLineInvoice.UnappliedDate"
+    label = "Unapplied Date"
+  }
+  serviceid Id {
+    apiName = "PaymentLineInvoice.Id"
+    label = "Payment Line Invoice ID"
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Checkbox IsDeleted {
+    apiName = "PaymentLineInvoice.IsDeleted"
+    label = "Deleted"
+    defaultValue = false
+    _hidden_value = true
+  }
+  salesforce.AutoNumber PaymentLineInvoiceNumber {
+    apiName = "PaymentLineInvoice.PaymentLineInvoiceNumber"
+    label = "Payment Line Invoice Number"
+    _hidden_value = true
+  }
+  salesforce.DateTime CreatedDate {
+    apiName = "PaymentLineInvoice.CreatedDate"
+    label = "Created Date"
+    _hidden_value = true
+  }
+  salesforce.Lookup CreatedById {
+    apiName = "PaymentLineInvoice.CreatedById"
+    label = "Created By ID"
+    relationshipName = "CreatedBy"
+    _hidden_value = true
+  }
+  salesforce.DateTime LastModifiedDate {
+    apiName = "PaymentLineInvoice.LastModifiedDate"
+    label = "Last Modified Date"
+    _hidden_value = true
+  }
+  salesforce.Lookup LastModifiedById {
+    apiName = "PaymentLineInvoice.LastModifiedById"
+    label = "Last Modified By ID"
+    relationshipName = "LastModifiedBy"
+    _hidden_value = true
+  }
+  salesforce.DateTime SystemModstamp {
+    apiName = "PaymentLineInvoice.SystemModstamp"
+    label = "System Modstamp"
+    _hidden_value = true
+  }
+}

@@ -1,0 +1,123 @@
+salesforce.AssignmentRules Case {
+  assignmentRule = [
+    {
+      fullName = "Standard"
+      active = true
+      ruleEntry = [
+        {
+          assignedTo = "uri.bar+1@salto.io"
+          assignedToType = "User"
+          criteriaItems = [
+            {
+              field = "Account.BillingCountry"
+              operation = "equals"
+              value = "US,USA,United States,United States of America"
+            },
+            {
+              field = salesforce.Account.field.SLA__c
+              operation = "equals"
+              value = "Gold,Platinum"
+            },
+            {
+              field = salesforce.Account.field.Type
+              operation = "contains"
+              value = "Customer"
+            },
+          ]
+        },
+        {
+          assignedTo = "uri.bar+1@salto.io"
+          assignedToType = "User"
+          criteriaItems = [
+            {
+              field = "Account.BillingCountry"
+              operation = "equals"
+              value = "US,USA,United States,United States of America"
+            },
+            {
+              field = salesforce.Account.field.SLA__c
+              operation = "equals"
+              value = "Silver,Bronze"
+            },
+            {
+              field = salesforce.Account.field.Type
+              operation = "contains"
+              value = "Customer"
+            },
+          ]
+        },
+        {
+          assignedTo = "uri.bar+1@salto.io"
+          assignedToType = "User"
+          criteriaItems = [
+            {
+              field = "Account.BillingCountry"
+              operation = "notEqual"
+              value = "US,USA,United States,United States of America"
+            },
+            {
+              field = salesforce.Account.field.SLA__c
+              operation = "equals"
+              value = "Gold,Platinum"
+            },
+            {
+              field = salesforce.Account.field.Type
+              operation = "contains"
+              value = "Customer"
+            },
+          ]
+        },
+        {
+          assignedTo = "uri.bar+1@salto.io"
+          assignedToType = "User"
+          criteriaItems = [
+            {
+              field = "Account.BillingCountry"
+              operation = "notEqual"
+              value = "US,USA,United States,United States of America"
+            },
+            {
+              field = salesforce.Account.field.SLA__c
+              operation = "equals"
+              value = "Silver,Bronze"
+            },
+            {
+              field = salesforce.Account.field.Type
+              operation = "contains"
+              value = "Customer"
+            },
+          ]
+        },
+        {
+          assignedTo = "uri.bar+1@salto.io"
+          assignedToType = "User"
+          criteriaItems = [
+            {
+              field = salesforce.Account.field.Type
+              operation = "contains"
+              value = "Partner"
+            },
+          ]
+        },
+        {
+          assignedTo = "uri.bar+1@salto.io"
+          assignedToType = "User"
+          criteriaItems = [
+            {
+              field = salesforce.Case.field.IsClosed
+              operation = "equals"
+              value = "True"
+            },
+          ]
+          team = "asds"
+          template = salesforce.EmailTemplate.instance.unfiled_public_MarketingProductInquiryResponse@zcd
+        },
+      ]
+    },
+  ]
+  fullName = "Case"
+  _parent = [
+    salesforce.Case,
+  ]
+  _alias = "Case"
+}

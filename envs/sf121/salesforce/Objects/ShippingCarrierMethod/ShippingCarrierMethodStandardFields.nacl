@@ -1,0 +1,93 @@
+type salesforce.ShippingCarrierMethod {
+  salesforce.Text ExternalReference {
+    apiName = "ShippingCarrierMethod.ExternalReference"
+    label = "External Reference"
+    _required = true
+    length = 255
+    unique = false
+    caseSensitive = false
+  }
+  salesforce.Number MaxTransitTime {
+    apiName = "ShippingCarrierMethod.MaxTransitTime"
+    label = "Maximum Transit Time"
+    _required = true
+    scale = 0
+    precision = 9
+    unique = false
+  }
+  salesforce.Number MinTransitTime {
+    apiName = "ShippingCarrierMethod.MinTransitTime"
+    label = "Minimum Transit Time"
+    scale = 0
+    precision = 9
+    unique = false
+  }
+  salesforce.Text Name {
+    apiName = "ShippingCarrierMethod.Name"
+    label = "Name"
+    _required = true
+    length = 255
+    unique = false
+    caseSensitive = false
+  }
+  salesforce.Unknown ShippingAreaType {
+    apiName = "ShippingCarrierMethod.ShippingAreaType"
+    _hidden_value = true
+  }
+  salesforce.Lookup ShippingCarrierId {
+    apiName = "ShippingCarrierMethod.ShippingCarrierId"
+    label = "Shipping Carrier ID"
+    relationshipName = "ShippingCarrier"
+  }
+  salesforce.Picklist TransitTimeUnit {
+    apiName = "ShippingCarrierMethod.TransitTimeUnit"
+    label = "Transit Time Unit"
+    _required = true
+    restricted = true
+  }
+  serviceid Id {
+    apiName = "ShippingCarrierMethod.Id"
+    label = "Shipping Carrier Method ID"
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Lookup OwnerId {
+    apiName = "ShippingCarrierMethod.OwnerId"
+    label = "Owner ID"
+    relationshipName = "Owner"
+    _hidden_value = true
+  }
+  salesforce.Checkbox IsDeleted {
+    apiName = "ShippingCarrierMethod.IsDeleted"
+    label = "Deleted"
+    defaultValue = false
+    _hidden_value = true
+  }
+  salesforce.DateTime CreatedDate {
+    apiName = "ShippingCarrierMethod.CreatedDate"
+    label = "Created Date"
+    _hidden_value = true
+  }
+  salesforce.Lookup CreatedById {
+    apiName = "ShippingCarrierMethod.CreatedById"
+    label = "Created By ID"
+    relationshipName = "CreatedBy"
+    _hidden_value = true
+  }
+  salesforce.DateTime LastModifiedDate {
+    apiName = "ShippingCarrierMethod.LastModifiedDate"
+    label = "Last Modified Date"
+    _hidden_value = true
+  }
+  salesforce.Lookup LastModifiedById {
+    apiName = "ShippingCarrierMethod.LastModifiedById"
+    label = "Last Modified By ID"
+    relationshipName = "LastModifiedBy"
+    _hidden_value = true
+  }
+  salesforce.DateTime SystemModstamp {
+    apiName = "ShippingCarrierMethod.SystemModstamp"
+    label = "System Modstamp"
+    _hidden_value = true
+  }
+}

@@ -1,0 +1,58 @@
+type salesforce.EntitlementContact {
+  salesforce.MasterDetail ContactId {
+    apiName = "EntitlementContact.ContactId"
+    label = "Contact ID"
+    _required = true
+    relationshipName = "Contact"
+  }
+  salesforce.MasterDetail EntitlementId {
+    apiName = "EntitlementContact.EntitlementId"
+    label = "Entitlement ID"
+    _required = true
+    relationshipName = "Entitlement"
+  }
+  serviceid Id {
+    apiName = "EntitlementContact.Id"
+    label = "Entitlement Contact ID"
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Checkbox IsDeleted {
+    apiName = "EntitlementContact.IsDeleted"
+    label = "Deleted"
+    defaultValue = false
+    _hidden_value = true
+  }
+  salesforce.AutoNumber Name {
+    apiName = "EntitlementContact.Name"
+    label = "Entitlement Contact"
+    _hidden_value = true
+  }
+  salesforce.DateTime CreatedDate {
+    apiName = "EntitlementContact.CreatedDate"
+    label = "Created Date"
+    _hidden_value = true
+  }
+  salesforce.Lookup CreatedById {
+    apiName = "EntitlementContact.CreatedById"
+    label = "Created By ID"
+    relationshipName = "CreatedBy"
+    _hidden_value = true
+  }
+  salesforce.DateTime LastModifiedDate {
+    apiName = "EntitlementContact.LastModifiedDate"
+    label = "Last Modified Date"
+    _hidden_value = true
+  }
+  salesforce.Lookup LastModifiedById {
+    apiName = "EntitlementContact.LastModifiedById"
+    label = "Last Modified By ID"
+    relationshipName = "LastModifiedBy"
+    _hidden_value = true
+  }
+  salesforce.DateTime SystemModstamp {
+    apiName = "EntitlementContact.SystemModstamp"
+    label = "System Modstamp"
+    _hidden_value = true
+  }
+}

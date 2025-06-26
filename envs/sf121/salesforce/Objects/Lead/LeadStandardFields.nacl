@@ -1,0 +1,268 @@
+type salesforce.Lead {
+  salesforce.Address Address {
+    apiName = "Lead.Address"
+    label = "Address"
+    _hidden_value = true
+  }
+  salesforce.Currency AnnualRevenue {
+    apiName = "Lead.AnnualRevenue"
+    label = "Annual Revenue"
+    scale = 0
+    precision = 18
+  }
+  salesforce.Lookup CampaignId {
+    apiName = "Lead.CampaignId"
+    _hidden_value = true
+  }
+  salesforce.Picklist CleanStatus {
+    apiName = "Lead.CleanStatus"
+    label = "Clean Status"
+    restricted = true
+  }
+  salesforce.Text Company {
+    apiName = "Lead.Company"
+    label = "Company"
+    _required = true
+    length = 255
+    unique = false
+    caseSensitive = false
+  }
+  salesforce.Text CompanyDunsNumber {
+    apiName = "Lead.CompanyDunsNumber"
+    label = "Company D-U-N-S Number"
+    length = 9
+    unique = false
+    caseSensitive = false
+  }
+  salesforce.Lookup DandbCompanyId {
+    apiName = "Lead.DandbCompanyId"
+    label = "D&B Company ID"
+    relationshipName = "DandbCompany"
+  }
+  salesforce.LongTextArea Description {
+    apiName = "Lead.Description"
+    label = "Description"
+    length = 32000
+  }
+  salesforce.Unknown DoNotCall {
+    apiName = "Lead.DoNotCall"
+    _hidden_value = true
+  }
+  salesforce.Email Email {
+    apiName = "Lead.Email"
+    label = "Email"
+    unique = false
+  }
+  salesforce.Phone Fax {
+    apiName = "Lead.Fax"
+    label = "Fax"
+  }
+  salesforce.Picklist GenderIdentity {
+    apiName = "Lead.GenderIdentity"
+    _hidden_value = true
+  }
+  salesforce.Unknown HasOptedOutOfEmail {
+    apiName = "Lead.HasOptedOutOfEmail"
+    _hidden_value = true
+  }
+  salesforce.Unknown HasOptedOutOfFax {
+    apiName = "Lead.HasOptedOutOfFax"
+    _hidden_value = true
+  }
+  salesforce.Lookup IndividualId {
+    apiName = "Lead.IndividualId"
+    label = "Individual ID"
+    relationshipName = "Individual"
+  }
+  salesforce.Picklist Industry {
+    apiName = "Lead.Industry"
+    label = "Industry"
+    restricted = false
+    valueSetName = salesforce.StandardValueSet.instance.Industry
+  }
+  salesforce.Text Jigsaw {
+    apiName = "Lead.Jigsaw"
+    label = "Data.com Key"
+    length = 20
+    unique = false
+    caseSensitive = false
+  }
+  salesforce.Unknown LastTransferDate {
+    apiName = "Lead.LastTransferDate"
+    _hidden_value = true
+  }
+  salesforce.Picklist LeadSource {
+    apiName = "Lead.LeadSource"
+    label = "Lead Source"
+    restricted = false
+    valueSetName = salesforce.StandardValueSet.instance.LeadSource
+  }
+  salesforce.Phone MobilePhone {
+    apiName = "Lead.MobilePhone"
+    label = "Mobile Phone"
+  }
+  salesforce.Name Name {
+    apiName = "Lead.Name"
+    label = "Full Name"
+    _required = true
+    _hidden_value = true
+  }
+  salesforce.Number NumberOfEmployees {
+    apiName = "Lead.NumberOfEmployees"
+    label = "Employees"
+    scale = 0
+    precision = 8
+    unique = false
+  }
+  salesforce.Lookup OwnerId {
+    apiName = "Lead.OwnerId"
+    label = "Owner ID"
+    relationshipName = "Owner"
+    _hidden_value = true
+  }
+  salesforce.Phone Phone {
+    apiName = "Lead.Phone"
+    label = "Phone"
+  }
+  salesforce.Picklist Pronouns {
+    apiName = "Lead.Pronouns"
+    _hidden_value = true
+  }
+  salesforce.Picklist Rating {
+    apiName = "Lead.Rating"
+    label = "Rating"
+    restricted = false
+    valueSetName = salesforce.StandardValueSet.instance.AccountRating
+  }
+  salesforce.Picklist Status {
+    apiName = "Lead.Status"
+    label = "Status"
+    _required = true
+    restricted = false
+    valueSetName = salesforce.StandardValueSet.instance.LeadStatus
+  }
+  salesforce.Text Title {
+    apiName = "Lead.Title"
+    label = "Title"
+    length = 128
+    unique = false
+    caseSensitive = false
+  }
+  salesforce.Url Website {
+    apiName = "Lead.Website"
+    label = "Website"
+  }
+  serviceid Id {
+    apiName = "Lead.Id"
+    label = "Lead ID"
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Checkbox IsDeleted {
+    apiName = "Lead.IsDeleted"
+    label = "Deleted"
+    defaultValue = false
+    _hidden_value = true
+  }
+  salesforce.Lookup MasterRecordId {
+    apiName = "Lead.MasterRecordId"
+    label = "Master Record ID"
+    relationshipName = "MasterRecord"
+    _hidden_value = true
+  }
+  salesforce.Url PhotoUrl {
+    apiName = "Lead.PhotoUrl"
+    label = "Photo URL"
+    _hidden_value = true
+  }
+  salesforce.Checkbox IsConverted {
+    apiName = "Lead.IsConverted"
+    label = "Converted"
+    defaultValue = false
+  }
+  salesforce.Date ConvertedDate {
+    apiName = "Lead.ConvertedDate"
+    label = "Converted Date"
+    _hidden_value = true
+  }
+  salesforce.Lookup ConvertedAccountId {
+    apiName = "Lead.ConvertedAccountId"
+    label = "Converted Account ID"
+    relationshipName = "ConvertedAccount"
+    _hidden_value = true
+  }
+  salesforce.Lookup ConvertedContactId {
+    apiName = "Lead.ConvertedContactId"
+    label = "Converted Contact ID"
+    relationshipName = "ConvertedContact"
+    _hidden_value = true
+  }
+  salesforce.Lookup ConvertedOpportunityId {
+    apiName = "Lead.ConvertedOpportunityId"
+    label = "Converted Opportunity ID"
+    relationshipName = "ConvertedOpportunity"
+    _hidden_value = true
+  }
+  salesforce.Checkbox IsUnreadByOwner {
+    apiName = "Lead.IsUnreadByOwner"
+    label = "Unread By Owner"
+    defaultValue = false
+  }
+  salesforce.DateTime CreatedDate {
+    apiName = "Lead.CreatedDate"
+    label = "Created Date"
+    _hidden_value = true
+  }
+  salesforce.Lookup CreatedById {
+    apiName = "Lead.CreatedById"
+    label = "Created By ID"
+    relationshipName = "CreatedBy"
+    _hidden_value = true
+  }
+  salesforce.DateTime LastModifiedDate {
+    apiName = "Lead.LastModifiedDate"
+    label = "Last Modified Date"
+    _hidden_value = true
+  }
+  salesforce.Lookup LastModifiedById {
+    apiName = "Lead.LastModifiedById"
+    label = "Last Modified By ID"
+    relationshipName = "LastModifiedBy"
+    _hidden_value = true
+  }
+  salesforce.DateTime SystemModstamp {
+    apiName = "Lead.SystemModstamp"
+    label = "System Modstamp"
+    _hidden_value = true
+  }
+  salesforce.Date LastActivityDate {
+    apiName = "Lead.LastActivityDate"
+    label = "Last Activity"
+    _hidden_value = true
+  }
+  salesforce.Text JigsawContactId {
+    apiName = "Lead.JigsawContactId"
+    label = "Jigsaw Contact ID"
+    length = 20
+    unique = false
+    caseSensitive = false
+    _hidden_value = true
+  }
+  salesforce.Text EmailBouncedReason {
+    apiName = "Lead.EmailBouncedReason"
+    label = "Email Bounced Reason"
+    length = 255
+    unique = false
+    caseSensitive = false
+  }
+  salesforce.DateTime EmailBouncedDate {
+    apiName = "Lead.EmailBouncedDate"
+    label = "Email Bounced Date"
+  }
+  salesforce.Checkbox IsPriorityRecord {
+    apiName = "Lead.IsPriorityRecord"
+    label = "Important"
+    defaultValue = false
+    _hidden_value = true
+  }
+}

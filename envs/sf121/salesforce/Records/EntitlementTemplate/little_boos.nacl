@@ -1,0 +1,8 @@
+salesforce.EntitlementTemplate little_boos@s {
+  fullName = "little boos"
+  businessHours = "Default"
+  entitlementProcess = salesforce.EntitlementProcess.instance.big_boss@s
+  isPerIncident = false
+  type = "Phone Support"
+  _alias = "little boos"
+}

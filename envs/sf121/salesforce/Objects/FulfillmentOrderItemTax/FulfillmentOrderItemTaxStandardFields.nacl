@@ -1,0 +1,92 @@
+type salesforce.FulfillmentOrderItemTax {
+  salesforce.Currency Amount {
+    apiName = "FulfillmentOrderItemTax.Amount"
+    label = "Amount"
+    _required = true
+    scale = 2
+    precision = 18
+  }
+  salesforce.LongTextArea Description {
+    apiName = "FulfillmentOrderItemTax.Description"
+    label = "Description"
+    length = 2000
+  }
+  salesforce.Lookup FulfillmentOrderItemAdjustId {
+    apiName = "FulfillmentOrderItemTax.FulfillmentOrderItemAdjustId"
+    label = "Fulfillment Order Item Adjustment ID"
+    relationshipName = "FulfillmentOrderItemAdjust"
+  }
+  salesforce.Percent Rate {
+    apiName = "FulfillmentOrderItemTax.Rate"
+    label = "Rate"
+    scale = 2
+    precision = 5
+  }
+  salesforce.Date TaxEffectiveDate {
+    apiName = "FulfillmentOrderItemTax.TaxEffectiveDate"
+    label = "Tax Effective Date"
+    _required = true
+  }
+  salesforce.Picklist Type {
+    apiName = "FulfillmentOrderItemTax.Type"
+    label = "Type"
+    _required = true
+    restricted = true
+  }
+  serviceid Id {
+    apiName = "FulfillmentOrderItemTax.Id"
+    label = "Fulfillment Order Item Tax ID"
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Checkbox IsDeleted {
+    apiName = "FulfillmentOrderItemTax.IsDeleted"
+    label = "Deleted"
+    defaultValue = false
+    _hidden_value = true
+  }
+  salesforce.AutoNumber FulfillmentOrderItemTaxNumber {
+    apiName = "FulfillmentOrderItemTax.FulfillmentOrderItemTaxNumber"
+    label = "Name"
+    _hidden_value = true
+  }
+  salesforce.DateTime CreatedDate {
+    apiName = "FulfillmentOrderItemTax.CreatedDate"
+    label = "Created Date"
+    _hidden_value = true
+  }
+  salesforce.Lookup CreatedById {
+    apiName = "FulfillmentOrderItemTax.CreatedById"
+    label = "Created By ID"
+    relationshipName = "CreatedBy"
+    _hidden_value = true
+  }
+  salesforce.DateTime LastModifiedDate {
+    apiName = "FulfillmentOrderItemTax.LastModifiedDate"
+    label = "Last Modified Date"
+    _hidden_value = true
+  }
+  salesforce.Lookup LastModifiedById {
+    apiName = "FulfillmentOrderItemTax.LastModifiedById"
+    label = "Last Modified By ID"
+    relationshipName = "LastModifiedBy"
+    _hidden_value = true
+  }
+  salesforce.DateTime SystemModstamp {
+    apiName = "FulfillmentOrderItemTax.SystemModstamp"
+    label = "System Modstamp"
+    _hidden_value = true
+  }
+  salesforce.Lookup FulfillmentOrderLineItemId {
+    apiName = "FulfillmentOrderItemTax.FulfillmentOrderLineItemId"
+    label = "Fulfillment Order Product ID"
+    _required = true
+    relationshipName = "FulfillmentOrderLineItem"
+  }
+  salesforce.Lookup FulfillmentOrderId {
+    apiName = "FulfillmentOrderItemTax.FulfillmentOrderId"
+    label = "Fulfillment Order ID"
+    _required = true
+    relationshipName = "FulfillmentOrder"
+  }
+}

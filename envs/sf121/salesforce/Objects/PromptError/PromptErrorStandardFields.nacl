@@ -1,0 +1,79 @@
+type salesforce.PromptError {
+  serviceid Id {
+    apiName = "PromptError.Id"
+    label = "Prompt Error ID"
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Lookup OwnerId {
+    apiName = "PromptError.OwnerId"
+    label = "Owner ID"
+    relationshipName = "Owner"
+    _hidden_value = true
+  }
+  salesforce.Checkbox IsDeleted {
+    apiName = "PromptError.IsDeleted"
+    label = "Deleted"
+    defaultValue = false
+    _hidden_value = true
+  }
+  salesforce.Text Name {
+    apiName = "PromptError.Name"
+    label = "Name"
+    _required = true
+    length = 255
+    unique = false
+    caseSensitive = false
+  }
+  salesforce.DateTime CreatedDate {
+    apiName = "PromptError.CreatedDate"
+    label = "Created Date"
+    _hidden_value = true
+  }
+  salesforce.Lookup CreatedById {
+    apiName = "PromptError.CreatedById"
+    label = "Created By ID"
+    relationshipName = "CreatedBy"
+    _hidden_value = true
+  }
+  salesforce.DateTime LastModifiedDate {
+    apiName = "PromptError.LastModifiedDate"
+    label = "Last Modified Date"
+    _hidden_value = true
+  }
+  salesforce.Lookup LastModifiedById {
+    apiName = "PromptError.LastModifiedById"
+    label = "Last Modified By ID"
+    relationshipName = "LastModifiedBy"
+    _hidden_value = true
+  }
+  salesforce.DateTime SystemModstamp {
+    apiName = "PromptError.SystemModstamp"
+    label = "System Modstamp"
+    _hidden_value = true
+  }
+  salesforce.Lookup PromptActionId {
+    apiName = "PromptError.PromptActionId"
+    label = "Prompt Action ID"
+    _required = true
+    relationshipName = "PromptAction"
+  }
+  salesforce.Picklist Type {
+    apiName = "PromptError.Type"
+    label = "Error Type"
+    _required = true
+    restricted = true
+  }
+  salesforce.Number StepNumber {
+    apiName = "PromptError.StepNumber"
+    label = "Error Step Number"
+    scale = 0
+    precision = 9
+    unique = false
+  }
+  salesforce.Checkbox IsError {
+    apiName = "PromptError.IsError"
+    label = "Is Error"
+    defaultValue = false
+  }
+}

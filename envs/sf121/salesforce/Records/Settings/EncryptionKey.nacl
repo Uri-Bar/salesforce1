@@ -1,0 +1,10 @@
+salesforce.EncryptionKeySettings {
+  canEncryptTransactionalDatabase = false
+  canExternalKeyManagement = false
+  canManageDataCloudKeys = false
+  canOptOutOfDerivationWithBYOK = false
+  enableCacheOnlyKeys = false
+  enableReplayDetection = false
+  fullName = "EncryptionKey"
+  _alias = "EncryptionKey"
+}

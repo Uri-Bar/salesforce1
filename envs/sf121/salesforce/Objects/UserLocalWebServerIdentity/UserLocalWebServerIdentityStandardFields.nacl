@@ -1,0 +1,54 @@
+type salesforce.UserLocalWebServerIdentity {
+  serviceid Id {
+    apiName = "UserLocalWebServerIdentity.Id"
+    label = "User Local Web Server Identity ID"
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Lookup OwnerId {
+    apiName = "UserLocalWebServerIdentity.OwnerId"
+    label = "Owner ID"
+    relationshipName = "Owner"
+    _hidden_value = true
+  }
+  salesforce.Checkbox IsDeleted {
+    apiName = "UserLocalWebServerIdentity.IsDeleted"
+    label = "Deleted"
+    defaultValue = false
+    _hidden_value = true
+  }
+  salesforce.DateTime CreatedDate {
+    apiName = "UserLocalWebServerIdentity.CreatedDate"
+    label = "Created Date"
+    _hidden_value = true
+  }
+  salesforce.Lookup CreatedById {
+    apiName = "UserLocalWebServerIdentity.CreatedById"
+    label = "Created By ID"
+    relationshipName = "CreatedBy"
+    _hidden_value = true
+  }
+  salesforce.DateTime LastModifiedDate {
+    apiName = "UserLocalWebServerIdentity.LastModifiedDate"
+    label = "Last Modified Date"
+    _hidden_value = true
+  }
+  salesforce.Lookup LastModifiedById {
+    apiName = "UserLocalWebServerIdentity.LastModifiedById"
+    label = "Last Modified By ID"
+    relationshipName = "LastModifiedBy"
+    _hidden_value = true
+  }
+  salesforce.DateTime SystemModstamp {
+    apiName = "UserLocalWebServerIdentity.SystemModstamp"
+    label = "System Modstamp"
+    _hidden_value = true
+  }
+  salesforce.Text LocalWebServerIdentityToken {
+    apiName = "UserLocalWebServerIdentity.LocalWebServerIdentityToken"
+    label = "Local Web Server Identity Token"
+    length = 255
+    unique = false
+    caseSensitive = false
+  }
+}

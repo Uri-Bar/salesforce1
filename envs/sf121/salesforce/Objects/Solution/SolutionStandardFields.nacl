@@ -1,0 +1,103 @@
+type salesforce.Solution {
+  salesforce.Checkbox IsPublished {
+    apiName = "Solution.IsPublished"
+    label = "Public"
+    defaultValue = false
+  }
+  salesforce.Checkbox IsPublishedInPublicKb {
+    apiName = "Solution.IsPublishedInPublicKb"
+    label = "Visible in Public Knowledge Base"
+    defaultValue = false
+  }
+  salesforce.Text SolutionName {
+    apiName = "Solution.SolutionName"
+    label = "Title"
+    _required = true
+    length = 255
+    unique = false
+    caseSensitive = false
+  }
+  salesforce.Html SolutionNote {
+    apiName = "Solution.SolutionNote"
+    label = "Description"
+    length = 32000
+  }
+  salesforce.Picklist Status {
+    apiName = "Solution.Status"
+    label = "Status"
+    _required = true
+    restricted = false
+    valueSetName = salesforce.StandardValueSet.instance.SolutionStatus
+  }
+  serviceid Id {
+    apiName = "Solution.Id"
+    label = "Solution ID"
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Checkbox IsDeleted {
+    apiName = "Solution.IsDeleted"
+    label = "Deleted"
+    defaultValue = false
+    _hidden_value = true
+  }
+  salesforce.AutoNumber SolutionNumber {
+    apiName = "Solution.SolutionNumber"
+    label = "Solution Number"
+    _hidden_value = true
+  }
+  salesforce.Checkbox IsReviewed {
+    apiName = "Solution.IsReviewed"
+    label = "Reviewed"
+    defaultValue = false
+    _hidden_value = true
+  }
+  salesforce.Lookup OwnerId {
+    apiName = "Solution.OwnerId"
+    label = "Owner ID"
+    relationshipName = "Owner"
+    _hidden_value = true
+  }
+  salesforce.DateTime CreatedDate {
+    apiName = "Solution.CreatedDate"
+    label = "Created Date"
+    _hidden_value = true
+  }
+  salesforce.Lookup CreatedById {
+    apiName = "Solution.CreatedById"
+    label = "Created By ID"
+    relationshipName = "CreatedBy"
+    _hidden_value = true
+  }
+  salesforce.DateTime LastModifiedDate {
+    apiName = "Solution.LastModifiedDate"
+    label = "Last Modified Date"
+    _hidden_value = true
+  }
+  salesforce.Lookup LastModifiedById {
+    apiName = "Solution.LastModifiedById"
+    label = "Last Modified By ID"
+    relationshipName = "LastModifiedBy"
+    _hidden_value = true
+  }
+  salesforce.DateTime SystemModstamp {
+    apiName = "Solution.SystemModstamp"
+    label = "System Modstamp"
+    _hidden_value = true
+  }
+  salesforce.Number TimesUsed {
+    apiName = "Solution.TimesUsed"
+    label = "Num Related Cases"
+    _required = true
+    scale = 0
+    precision = 9
+    unique = false
+    _hidden_value = true
+  }
+  salesforce.Checkbox IsHtml {
+    apiName = "Solution.IsHtml"
+    label = "Is Html"
+    defaultValue = false
+    _hidden_value = true
+  }
+}

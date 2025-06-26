@@ -1,0 +1,71 @@
+type salesforce.ProblemIncident {
+  salesforce.MasterDetail IssueId {
+    apiName = "ProblemIncident.IssueId"
+    label = "Issue ID"
+    _required = true
+    relationshipName = "Issue"
+  }
+  salesforce.AutoNumber Name {
+    apiName = "ProblemIncident.Name"
+    label = "Related Problem and Incident Number"
+    _hidden_value = true
+  }
+  salesforce.Picklist RelatedEntityType {
+    apiName = "ProblemIncident.RelatedEntityType"
+    label = "Related Issue Type"
+    _required = true
+    restricted = true
+    _hidden_value = true
+  }
+  salesforce.Lookup RelatedIssueId {
+    apiName = "ProblemIncident.RelatedIssueId"
+    label = "Related Issue ID"
+    _required = true
+    relationshipName = "RelatedIssue"
+  }
+  salesforce.Picklist RelationshipType {
+    apiName = "ProblemIncident.RelationshipType"
+    label = "Relationship Type"
+    _required = true
+    restricted = false
+  }
+  serviceid Id {
+    apiName = "ProblemIncident.Id"
+    label = "Related Problem and Incident ID"
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Checkbox IsDeleted {
+    apiName = "ProblemIncident.IsDeleted"
+    label = "Deleted"
+    defaultValue = false
+    _hidden_value = true
+  }
+  salesforce.DateTime CreatedDate {
+    apiName = "ProblemIncident.CreatedDate"
+    label = "Created Date"
+    _hidden_value = true
+  }
+  salesforce.Lookup CreatedById {
+    apiName = "ProblemIncident.CreatedById"
+    label = "Created By ID"
+    relationshipName = "CreatedBy"
+    _hidden_value = true
+  }
+  salesforce.DateTime LastModifiedDate {
+    apiName = "ProblemIncident.LastModifiedDate"
+    label = "Last Modified Date"
+    _hidden_value = true
+  }
+  salesforce.Lookup LastModifiedById {
+    apiName = "ProblemIncident.LastModifiedById"
+    label = "Last Modified By ID"
+    relationshipName = "LastModifiedBy"
+    _hidden_value = true
+  }
+  salesforce.DateTime SystemModstamp {
+    apiName = "ProblemIncident.SystemModstamp"
+    label = "System Modstamp"
+    _hidden_value = true
+  }
+}

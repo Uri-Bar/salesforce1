@@ -1,0 +1,205 @@
+type salesforce.Order {
+  salesforce.Lookup AccountId {
+    apiName = "Order.AccountId"
+    label = "Account ID"
+    relationshipName = "Account"
+  }
+  salesforce.Unknown AccountNumber {
+    apiName = "Order.AccountNumber"
+    _hidden_value = true
+  }
+  salesforce.Lookup ActivatedById {
+    apiName = "Order.ActivatedById"
+    label = "Activated By ID"
+    relationshipName = "ActivatedBy"
+  }
+  salesforce.DateTime ActivatedDate {
+    apiName = "Order.ActivatedDate"
+    label = "Activated Date"
+  }
+  salesforce.Lookup BillToContactId {
+    apiName = "Order.BillToContactId"
+    label = "Bill To Contact ID"
+    relationshipName = "BillToContact"
+  }
+  salesforce.Address BillingAddress {
+    apiName = "Order.BillingAddress"
+    label = "Billing Address"
+    _hidden_value = true
+  }
+  salesforce.Lookup CompanyAuthorizedById {
+    apiName = "Order.CompanyAuthorizedById"
+    label = "Company Authorized By ID"
+    relationshipName = "CompanyAuthorizedBy"
+  }
+  salesforce.Date CompanyAuthorizedDate {
+    apiName = "Order.CompanyAuthorizedDate"
+    label = "Company Authorized Date"
+  }
+  salesforce.Unknown ContractEndDate {
+    apiName = "Order.ContractEndDate"
+    _hidden_value = true
+  }
+  salesforce.Lookup ContractId {
+    apiName = "Order.ContractId"
+    label = "Contract ID"
+    relationshipName = "Contract"
+  }
+  salesforce.Unknown ContractName {
+    apiName = "Order.ContractName"
+    _hidden_value = true
+  }
+  salesforce.Lookup CustomerAuthorizedById {
+    apiName = "Order.CustomerAuthorizedById"
+    label = "Customer Authorized By ID"
+    relationshipName = "CustomerAuthorizedBy"
+  }
+  salesforce.Date CustomerAuthorizedDate {
+    apiName = "Order.CustomerAuthorizedDate"
+    label = "Customer Authorized Date"
+  }
+  salesforce.LongTextArea Description {
+    apiName = "Order.Description"
+    label = "Description"
+    length = 32000
+  }
+  salesforce.Date EffectiveDate {
+    apiName = "Order.EffectiveDate"
+    label = "Order Start Date"
+    _required = true
+  }
+  salesforce.Date EndDate {
+    apiName = "Order.EndDate"
+    label = "Order End Date"
+  }
+  salesforce.Checkbox IsReductionOrder {
+    apiName = "Order.IsReductionOrder"
+    label = "Reduction Order"
+    defaultValue = false
+  }
+  salesforce.Text Name {
+    apiName = "Order.Name"
+    label = "Order Name"
+    length = 80
+    unique = false
+    caseSensitive = false
+    _hidden_value = true
+  }
+  salesforce.Lookup OpportunityId {
+    apiName = "Order.OpportunityId"
+    _hidden_value = true
+  }
+  salesforce.Text OrderReferenceNumber {
+    apiName = "Order.OrderReferenceNumber"
+    label = "Order Reference Number"
+    length = 80
+    unique = false
+    caseSensitive = false
+  }
+  salesforce.Lookup OriginalOrderId {
+    apiName = "Order.OriginalOrderId"
+    label = "Order ID"
+    relationshipName = "OriginalOrder"
+  }
+  salesforce.Lookup OwnerId {
+    apiName = "Order.OwnerId"
+    label = "Owner ID"
+    relationshipName = "Owner"
+    _hidden_value = true
+  }
+  salesforce.Date PoDate {
+    apiName = "Order.PoDate"
+    label = "PO Date"
+  }
+  salesforce.Text PoNumber {
+    apiName = "Order.PoNumber"
+    label = "PO Number"
+    length = 80
+    unique = false
+    caseSensitive = false
+  }
+  salesforce.Lookup Pricebook2Id {
+    apiName = "Order.Pricebook2Id"
+    label = "Price Book ID"
+    relationshipName = "Pricebook2"
+  }
+  salesforce.Lookup ShipToContactId {
+    apiName = "Order.ShipToContactId"
+    label = "Ship To Contact ID"
+    relationshipName = "ShipToContact"
+  }
+  salesforce.Address ShippingAddress {
+    apiName = "Order.ShippingAddress"
+    label = "Shipping Address"
+    _hidden_value = true
+  }
+  salesforce.Picklist Status {
+    apiName = "Order.Status"
+    label = "Status"
+    _required = true
+    restricted = true
+    valueSetName = salesforce.StandardValueSet.instance.OrderStatus
+  }
+  salesforce.Currency TotalAmount {
+    apiName = "Order.TotalAmount"
+    label = "Order Amount"
+    _required = true
+    scale = 2
+    precision = 18
+    _hidden_value = true
+  }
+  salesforce.Picklist Type {
+    apiName = "Order.Type"
+    label = "Order Type"
+  }
+  serviceid Id {
+    apiName = "Order.Id"
+    label = "Order ID"
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Picklist StatusCode {
+    apiName = "Order.StatusCode"
+    label = "Status Category"
+    _required = true
+    restricted = true
+  }
+  salesforce.AutoNumber OrderNumber {
+    apiName = "Order.OrderNumber"
+    label = "Order Number"
+    _hidden_value = true
+  }
+  salesforce.DateTime CreatedDate {
+    apiName = "Order.CreatedDate"
+    label = "Created Date"
+    _hidden_value = true
+  }
+  salesforce.Lookup CreatedById {
+    apiName = "Order.CreatedById"
+    label = "Created By ID"
+    relationshipName = "CreatedBy"
+    _hidden_value = true
+  }
+  salesforce.DateTime LastModifiedDate {
+    apiName = "Order.LastModifiedDate"
+    label = "Last Modified Date"
+    _hidden_value = true
+  }
+  salesforce.Lookup LastModifiedById {
+    apiName = "Order.LastModifiedById"
+    label = "Last Modified By ID"
+    relationshipName = "LastModifiedBy"
+    _hidden_value = true
+  }
+  salesforce.Checkbox IsDeleted {
+    apiName = "Order.IsDeleted"
+    label = "Deleted"
+    defaultValue = false
+    _hidden_value = true
+  }
+  salesforce.DateTime SystemModstamp {
+    apiName = "Order.SystemModstamp"
+    label = "System Modstamp"
+    _hidden_value = true
+  }
+}

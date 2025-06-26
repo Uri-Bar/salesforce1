@@ -1,0 +1,76 @@
+type salesforce.ServiceAppointmentAttendee {
+  salesforce.Lookup AttendeeId {
+    apiName = "ServiceAppointmentAttendee.AttendeeId"
+    label = "Attendee ID"
+    relationshipName = "Attendee"
+  }
+  salesforce.Email Email {
+    apiName = "ServiceAppointmentAttendee.Email"
+    label = "Email"
+    unique = false
+  }
+  salesforce.Unknown HasAttended {
+    apiName = "ServiceAppointmentAttendee.HasAttended"
+    _hidden_value = true
+  }
+  salesforce.Lookup ServiceAppointmentId {
+    apiName = "ServiceAppointmentAttendee.ServiceAppointmentId"
+    label = "Service Appointment ID"
+    _required = true
+    relationshipName = "ServiceAppointment"
+  }
+  salesforce.Unknown Status {
+    apiName = "ServiceAppointmentAttendee.Status"
+    _hidden_value = true
+  }
+  serviceid Id {
+    apiName = "ServiceAppointmentAttendee.Id"
+    label = "Service Appointment Attendee ID"
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Lookup OwnerId {
+    apiName = "ServiceAppointmentAttendee.OwnerId"
+    label = "Owner ID"
+    relationshipName = "Owner"
+    _hidden_value = true
+  }
+  salesforce.Checkbox IsDeleted {
+    apiName = "ServiceAppointmentAttendee.IsDeleted"
+    label = "Deleted"
+    defaultValue = false
+    _hidden_value = true
+  }
+  salesforce.AutoNumber AttendeeIdentifier {
+    apiName = "ServiceAppointmentAttendee.AttendeeIdentifier"
+    label = "Attendee Identifier"
+    _hidden_value = true
+  }
+  salesforce.DateTime CreatedDate {
+    apiName = "ServiceAppointmentAttendee.CreatedDate"
+    label = "Created Date"
+    _hidden_value = true
+  }
+  salesforce.Lookup CreatedById {
+    apiName = "ServiceAppointmentAttendee.CreatedById"
+    label = "Created By ID"
+    relationshipName = "CreatedBy"
+    _hidden_value = true
+  }
+  salesforce.DateTime LastModifiedDate {
+    apiName = "ServiceAppointmentAttendee.LastModifiedDate"
+    label = "Last Modified Date"
+    _hidden_value = true
+  }
+  salesforce.Lookup LastModifiedById {
+    apiName = "ServiceAppointmentAttendee.LastModifiedById"
+    label = "Last Modified By ID"
+    relationshipName = "LastModifiedBy"
+    _hidden_value = true
+  }
+  salesforce.DateTime SystemModstamp {
+    apiName = "ServiceAppointmentAttendee.SystemModstamp"
+    label = "System Modstamp"
+    _hidden_value = true
+  }
+}

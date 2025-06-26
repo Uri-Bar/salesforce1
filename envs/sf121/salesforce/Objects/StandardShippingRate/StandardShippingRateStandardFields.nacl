@@ -1,0 +1,110 @@
+type salesforce.StandardShippingRate {
+  serviceid Id {
+    apiName = "StandardShippingRate.Id"
+    label = "Standard Shipping Rate ID"
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Checkbox IsDeleted {
+    apiName = "StandardShippingRate.IsDeleted"
+    label = "Deleted"
+    defaultValue = false
+    _hidden_value = true
+  }
+  salesforce.Text Name {
+    apiName = "StandardShippingRate.Name"
+    label = "Standard Shipping Rate Name"
+    _required = true
+    length = 255
+    unique = false
+    caseSensitive = false
+  }
+  salesforce.DateTime CreatedDate {
+    apiName = "StandardShippingRate.CreatedDate"
+    label = "Created Date"
+    _hidden_value = true
+  }
+  salesforce.Lookup CreatedById {
+    apiName = "StandardShippingRate.CreatedById"
+    label = "Created By ID"
+    relationshipName = "CreatedBy"
+    _hidden_value = true
+  }
+  salesforce.DateTime LastModifiedDate {
+    apiName = "StandardShippingRate.LastModifiedDate"
+    label = "Last Modified Date"
+    _hidden_value = true
+  }
+  salesforce.Lookup LastModifiedById {
+    apiName = "StandardShippingRate.LastModifiedById"
+    label = "Last Modified By ID"
+    relationshipName = "LastModifiedBy"
+    _hidden_value = true
+  }
+  salesforce.DateTime SystemModstamp {
+    apiName = "StandardShippingRate.SystemModstamp"
+    label = "System Modstamp"
+    _hidden_value = true
+  }
+  salesforce.Lookup ShippingZoneId {
+    apiName = "StandardShippingRate.ShippingZoneId"
+    label = "Shipping Zone ID"
+    _required = true
+    relationshipName = "ShippingZone"
+  }
+  salesforce.Currency Price {
+    apiName = "StandardShippingRate.Price"
+    label = "Price"
+    scale = 0
+    precision = 18
+  }
+  salesforce.Picklist ConditionFactor {
+    apiName = "StandardShippingRate.ConditionFactor"
+    label = "Condition Factor"
+    restricted = true
+  }
+  salesforce.Number ConditionRangeMin {
+    apiName = "StandardShippingRate.ConditionRangeMin"
+    label = "Condition Range Min"
+    scale = 0
+    precision = 18
+    unique = false
+  }
+  salesforce.Number ConditionRangeMax {
+    apiName = "StandardShippingRate.ConditionRangeMax"
+    label = "Condition Range Max"
+    scale = 0
+    precision = 18
+    unique = false
+  }
+  salesforce.Number TransitTimeMin {
+    apiName = "StandardShippingRate.TransitTimeMin"
+    label = "Minimum Transit Time"
+    scale = 0
+    precision = 9
+    unique = false
+  }
+  salesforce.Number TransitTimeMax {
+    apiName = "StandardShippingRate.TransitTimeMax"
+    label = "Maximum Transit Time"
+    scale = 0
+    precision = 9
+    unique = false
+  }
+  salesforce.Picklist TransitTimeUnit {
+    apiName = "StandardShippingRate.TransitTimeUnit"
+    label = "Unit of Transit Time"
+    restricted = true
+  }
+  salesforce.Lookup ShippingCarrierMethodId {
+    apiName = "StandardShippingRate.ShippingCarrierMethodId"
+    label = "Shipping Carrier Method ID"
+    relationshipName = "ShippingCarrierMethod"
+    _hidden_value = true
+  }
+  salesforce.Picklist WeightUnit {
+    apiName = "StandardShippingRate.WeightUnit"
+    label = "Unit of Weight"
+    restricted = true
+  }
+}

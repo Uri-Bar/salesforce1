@@ -1,0 +1,7 @@
+salesforce.SharingRules LocationShippingCarrierMethod {
+  fullName = "LocationShippingCarrierMethod"
+  _parent = [
+    salesforce.LocationShippingCarrierMethod,
+  ]
+  _alias = "LocationShippingCarrierMethod"
+}

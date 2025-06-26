@@ -1,0 +1,33 @@
+salesforce.ListView ServiceAppointment_MyScheduledAppointments {
+  fullName = "ServiceAppointment.MyScheduledAppointments"
+  columns = [
+    "Name",
+    salesforce.ServiceAppointment.field.SchedStartTime,
+    salesforce.ServiceAppointment.field.SchedEndTime,
+    "ServiceTerritory",
+    salesforce.ServiceAppointment.field.Status,
+    "WorkTypeName",
+    "WorkType",
+    salesforce.ServiceAppointment.field.AdditionalInformation,
+    "Account",
+    "ParentRecord",
+  ]
+  filterScope = "Mine"
+  filters = [
+    {
+      field = "SchedStartTime"
+      operation = "greaterOrEqual"
+      value = "TODAY"
+    },
+    {
+      field = "StatusCategory"
+      operation = "notEqual"
+      value = "6,4,5"
+    },
+  ]
+  label = "My Scheduled Service Appointments"
+  _parent = [
+    salesforce.ServiceAppointment,
+  ]
+  _alias = "My Scheduled Service Appointments"
+}

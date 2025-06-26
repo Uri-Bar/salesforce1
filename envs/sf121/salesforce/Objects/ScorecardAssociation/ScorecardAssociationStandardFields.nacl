@@ -1,0 +1,58 @@
+type salesforce.ScorecardAssociation {
+  salesforce.MasterDetail ScorecardId {
+    apiName = "ScorecardAssociation.ScorecardId"
+    label = "Scorecard ID"
+    _required = true
+    relationshipName = "Scorecard"
+  }
+  salesforce.Lookup TargetEntityId {
+    apiName = "ScorecardAssociation.TargetEntityId"
+    label = "Target Entity ID"
+    _required = true
+    relationshipName = "TargetEntity"
+  }
+  serviceid Id {
+    apiName = "ScorecardAssociation.Id"
+    label = "Scorecard Association Id"
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Checkbox IsDeleted {
+    apiName = "ScorecardAssociation.IsDeleted"
+    label = "Deleted"
+    defaultValue = false
+    _hidden_value = true
+  }
+  salesforce.AutoNumber Name {
+    apiName = "ScorecardAssociation.Name"
+    label = "Name"
+    _hidden_value = true
+  }
+  salesforce.DateTime CreatedDate {
+    apiName = "ScorecardAssociation.CreatedDate"
+    label = "Created Date"
+    _hidden_value = true
+  }
+  salesforce.Lookup CreatedById {
+    apiName = "ScorecardAssociation.CreatedById"
+    label = "Created By ID"
+    relationshipName = "CreatedBy"
+    _hidden_value = true
+  }
+  salesforce.DateTime LastModifiedDate {
+    apiName = "ScorecardAssociation.LastModifiedDate"
+    label = "Last Modified Date"
+    _hidden_value = true
+  }
+  salesforce.Lookup LastModifiedById {
+    apiName = "ScorecardAssociation.LastModifiedById"
+    label = "Last Modified By ID"
+    relationshipName = "LastModifiedBy"
+    _hidden_value = true
+  }
+  salesforce.DateTime SystemModstamp {
+    apiName = "ScorecardAssociation.SystemModstamp"
+    label = "System Modstamp"
+    _hidden_value = true
+  }
+}

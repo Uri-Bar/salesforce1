@@ -1,0 +1,126 @@
+type salesforce.OpportunityLineItem {
+  salesforce.Text Description {
+    apiName = "OpportunityLineItem.Description"
+    label = "Line Description"
+    length = 255
+    unique = false
+    caseSensitive = false
+  }
+  salesforce.Unknown Discount {
+    apiName = "OpportunityLineItem.Discount"
+    _hidden_value = true
+  }
+  salesforce.Currency ListPrice {
+    apiName = "OpportunityLineItem.ListPrice"
+    label = "List Price"
+    scale = 2
+    precision = 18
+    _hidden_value = true
+  }
+  salesforce.Text Name {
+    apiName = "OpportunityLineItem.Name"
+    label = "Opportunity Product Name"
+    length = 376
+    unique = false
+    caseSensitive = false
+    _hidden_value = true
+  }
+  salesforce.Lookup OpportunityId {
+    apiName = "OpportunityLineItem.OpportunityId"
+    label = "Opportunity ID"
+    _required = true
+    relationshipName = "Opportunity"
+  }
+  salesforce.Lookup Product2Id {
+    apiName = "OpportunityLineItem.Product2Id"
+    label = "Product ID"
+    relationshipName = "Product2"
+  }
+  salesforce.Text ProductCode {
+    apiName = "OpportunityLineItem.ProductCode"
+    label = "Product Code"
+    length = 255
+    unique = false
+    caseSensitive = false
+    _hidden_value = true
+  }
+  salesforce.Number Quantity {
+    apiName = "OpportunityLineItem.Quantity"
+    label = "Quantity"
+    _required = true
+    scale = 2
+    precision = 12
+    unique = false
+  }
+  salesforce.Date ServiceDate {
+    apiName = "OpportunityLineItem.ServiceDate"
+    label = "Date"
+  }
+  salesforce.Unknown Subtotal {
+    apiName = "OpportunityLineItem.Subtotal"
+    _hidden_value = true
+  }
+  salesforce.Currency TotalPrice {
+    apiName = "OpportunityLineItem.TotalPrice"
+    label = "Total Price"
+    scale = 2
+    precision = 18
+  }
+  salesforce.Currency UnitPrice {
+    apiName = "OpportunityLineItem.UnitPrice"
+    label = "Sales Price"
+    scale = 2
+    precision = 18
+  }
+  serviceid Id {
+    apiName = "OpportunityLineItem.Id"
+    label = "Line Item ID"
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Number SortOrder {
+    apiName = "OpportunityLineItem.SortOrder"
+    label = "Sort Order"
+    scale = 0
+    precision = 9
+    unique = false
+  }
+  salesforce.Lookup PricebookEntryId {
+    apiName = "OpportunityLineItem.PricebookEntryId"
+    label = "Price Book Entry ID"
+    relationshipName = "PricebookEntry"
+  }
+  salesforce.DateTime CreatedDate {
+    apiName = "OpportunityLineItem.CreatedDate"
+    label = "Created Date"
+    _hidden_value = true
+  }
+  salesforce.Lookup CreatedById {
+    apiName = "OpportunityLineItem.CreatedById"
+    label = "Created By ID"
+    relationshipName = "CreatedBy"
+    _hidden_value = true
+  }
+  salesforce.DateTime LastModifiedDate {
+    apiName = "OpportunityLineItem.LastModifiedDate"
+    label = "Last Modified Date"
+    _hidden_value = true
+  }
+  salesforce.Lookup LastModifiedById {
+    apiName = "OpportunityLineItem.LastModifiedById"
+    label = "Last Modified By ID"
+    relationshipName = "LastModifiedBy"
+    _hidden_value = true
+  }
+  salesforce.DateTime SystemModstamp {
+    apiName = "OpportunityLineItem.SystemModstamp"
+    label = "System Modstamp"
+    _hidden_value = true
+  }
+  salesforce.Checkbox IsDeleted {
+    apiName = "OpportunityLineItem.IsDeleted"
+    label = "Deleted"
+    defaultValue = false
+    _hidden_value = true
+  }
+}

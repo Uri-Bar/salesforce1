@@ -1,0 +1,98 @@
+type salesforce.CartValidationOutput {
+  salesforce.Lookup BackgroundOperationId {
+    apiName = "CartValidationOutput.BackgroundOperationId"
+    label = "Background Operation ID"
+    relationshipName = "BackgroundOperation"
+  }
+  salesforce.MasterDetail CartId {
+    apiName = "CartValidationOutput.CartId"
+    label = "Cart ID"
+    _required = true
+    relationshipName = "Cart"
+  }
+  salesforce.Checkbox IsDismissed {
+    apiName = "CartValidationOutput.IsDismissed"
+    label = "Is Dismissed"
+    defaultValue = false
+  }
+  salesforce.Picklist Level {
+    apiName = "CartValidationOutput.Level"
+    label = "Level"
+    _required = true
+    restricted = true
+  }
+  salesforce.Text Message {
+    apiName = "CartValidationOutput.Message"
+    label = "Message"
+    length = 255
+    unique = false
+    caseSensitive = false
+  }
+  salesforce.Lookup RelatedEntityId {
+    apiName = "CartValidationOutput.RelatedEntityId"
+    label = "Cart Delivery Group ID or Cart Item ID or Web Cart ID"
+    _required = true
+    relationshipName = "RelatedEntity"
+  }
+  salesforce.Picklist Type {
+    apiName = "CartValidationOutput.Type"
+    label = "Type"
+    _required = true
+    restricted = true
+  }
+  serviceid Id {
+    apiName = "CartValidationOutput.Id"
+    label = "Cart Validation Output ID"
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Checkbox IsDeleted {
+    apiName = "CartValidationOutput.IsDeleted"
+    label = "Deleted"
+    defaultValue = false
+    _hidden_value = true
+  }
+  salesforce.Text Name {
+    apiName = "CartValidationOutput.Name"
+    label = "Cart Validation Output"
+    _required = true
+    length = 255
+    unique = false
+    caseSensitive = false
+  }
+  salesforce.DateTime CreatedDate {
+    apiName = "CartValidationOutput.CreatedDate"
+    label = "Created Date"
+    _hidden_value = true
+  }
+  salesforce.Lookup CreatedById {
+    apiName = "CartValidationOutput.CreatedById"
+    label = "Created By ID"
+    relationshipName = "CreatedBy"
+    _hidden_value = true
+  }
+  salesforce.DateTime LastModifiedDate {
+    apiName = "CartValidationOutput.LastModifiedDate"
+    label = "Last Modified Date"
+    _hidden_value = true
+  }
+  salesforce.Lookup LastModifiedById {
+    apiName = "CartValidationOutput.LastModifiedById"
+    label = "Last Modified By ID"
+    relationshipName = "LastModifiedBy"
+    _hidden_value = true
+  }
+  salesforce.DateTime SystemModstamp {
+    apiName = "CartValidationOutput.SystemModstamp"
+    label = "System Modstamp"
+    _hidden_value = true
+  }
+  salesforce.Text RelatedEntityPrefix {
+    apiName = "CartValidationOutput.RelatedEntityPrefix"
+    label = "Related Entity Prefix"
+    length = 3
+    unique = false
+    caseSensitive = false
+    _hidden_value = true
+  }
+}

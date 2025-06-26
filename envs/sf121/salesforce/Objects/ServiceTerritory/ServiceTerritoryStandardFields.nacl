@@ -1,0 +1,106 @@
+type salesforce.ServiceTerritory {
+  salesforce.Address Address {
+    apiName = "ServiceTerritory.Address"
+    label = "Address"
+    _hidden_value = true
+  }
+  salesforce.LongTextArea Description {
+    apiName = "ServiceTerritory.Description"
+    label = "Description"
+    length = 32000
+  }
+  salesforce.Checkbox IsActive {
+    apiName = "ServiceTerritory.IsActive"
+    label = "Active"
+    defaultValue = false
+  }
+  salesforce.Text Name {
+    apiName = "ServiceTerritory.Name"
+    label = "Name"
+    _required = true
+    length = 255
+    unique = false
+    caseSensitive = false
+  }
+  salesforce.Lookup OperatingHoursId {
+    apiName = "ServiceTerritory.OperatingHoursId"
+    label = "Operating Hour ID"
+    _required = true
+    relationshipName = "OperatingHours"
+  }
+  salesforce.Lookup OwnerId {
+    apiName = "ServiceTerritory.OwnerId"
+    label = "Owner ID"
+    relationshipName = "Owner"
+    _hidden_value = true
+  }
+  salesforce.Hierarchy ParentTerritoryId {
+    apiName = "ServiceTerritory.ParentTerritoryId"
+    label = "Parent Territory ID"
+    relationshipName = "ParentTerritory"
+  }
+  salesforce.Lookup PricebookId {
+    apiName = "ServiceTerritory.PricebookId"
+    _hidden_value = true
+  }
+  salesforce.Unknown SelfCheckInUrl {
+    apiName = "ServiceTerritory.SelfCheckInUrl"
+    _hidden_value = true
+  }
+  salesforce.Unknown ServiceAppointmentLimitType {
+    apiName = "ServiceTerritory.ServiceAppointmentLimitType"
+    _hidden_value = true
+  }
+  salesforce.Lookup TopLevelTerritoryId {
+    apiName = "ServiceTerritory.TopLevelTerritoryId"
+    label = "Top-Level Territory ID"
+    relationshipName = "TopLevelTerritory"
+    _hidden_value = true
+  }
+  salesforce.Number TypicalInTerritoryTravelTime {
+    apiName = "ServiceTerritory.TypicalInTerritoryTravelTime"
+    label = "Typical In-Territory Travel Time (Minutes)"
+    scale = 2
+    precision = 18
+    unique = false
+  }
+  serviceid Id {
+    apiName = "ServiceTerritory.Id"
+    label = "Territory ID"
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Checkbox IsDeleted {
+    apiName = "ServiceTerritory.IsDeleted"
+    label = "Deleted"
+    defaultValue = false
+    _hidden_value = true
+  }
+  salesforce.DateTime CreatedDate {
+    apiName = "ServiceTerritory.CreatedDate"
+    label = "Created Date"
+    _hidden_value = true
+  }
+  salesforce.Lookup CreatedById {
+    apiName = "ServiceTerritory.CreatedById"
+    label = "Created By ID"
+    relationshipName = "CreatedBy"
+    _hidden_value = true
+  }
+  salesforce.DateTime LastModifiedDate {
+    apiName = "ServiceTerritory.LastModifiedDate"
+    label = "Last Modified Date"
+    _hidden_value = true
+  }
+  salesforce.Lookup LastModifiedById {
+    apiName = "ServiceTerritory.LastModifiedById"
+    label = "Last Modified By ID"
+    relationshipName = "LastModifiedBy"
+    _hidden_value = true
+  }
+  salesforce.DateTime SystemModstamp {
+    apiName = "ServiceTerritory.SystemModstamp"
+    label = "System Modstamp"
+    _hidden_value = true
+  }
+}

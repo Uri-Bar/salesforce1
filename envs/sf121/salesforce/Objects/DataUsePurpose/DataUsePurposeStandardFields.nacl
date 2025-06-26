@@ -1,0 +1,72 @@
+type salesforce.DataUsePurpose {
+  salesforce.Checkbox CanDataSubjectOptOut {
+    apiName = "DataUsePurpose.CanDataSubjectOptOut"
+    label = "Can Data Subject Opt Out"
+    defaultValue = false
+  }
+  salesforce.Text Description {
+    apiName = "DataUsePurpose.Description"
+    label = "Description"
+    length = 255
+    unique = false
+    caseSensitive = false
+  }
+  salesforce.Lookup LegalBasisId {
+    apiName = "DataUsePurpose.LegalBasisId"
+    label = "Legal Basis ID"
+    relationshipName = "LegalBasis"
+  }
+  salesforce.Text Name {
+    apiName = "DataUsePurpose.Name"
+    label = "Name"
+    _required = true
+    length = 255
+    unique = false
+    caseSensitive = false
+  }
+  salesforce.Lookup OwnerId {
+    apiName = "DataUsePurpose.OwnerId"
+    label = "Owner ID"
+    relationshipName = "Owner"
+    _hidden_value = true
+  }
+  serviceid Id {
+    apiName = "DataUsePurpose.Id"
+    label = "Data Use Purpose ID"
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Checkbox IsDeleted {
+    apiName = "DataUsePurpose.IsDeleted"
+    label = "Deleted"
+    defaultValue = false
+    _hidden_value = true
+  }
+  salesforce.DateTime CreatedDate {
+    apiName = "DataUsePurpose.CreatedDate"
+    label = "Created Date"
+    _hidden_value = true
+  }
+  salesforce.Lookup CreatedById {
+    apiName = "DataUsePurpose.CreatedById"
+    label = "Created By ID"
+    relationshipName = "CreatedBy"
+    _hidden_value = true
+  }
+  salesforce.DateTime LastModifiedDate {
+    apiName = "DataUsePurpose.LastModifiedDate"
+    label = "Last Modified Date"
+    _hidden_value = true
+  }
+  salesforce.Lookup LastModifiedById {
+    apiName = "DataUsePurpose.LastModifiedById"
+    label = "Last Modified By ID"
+    relationshipName = "LastModifiedBy"
+    _hidden_value = true
+  }
+  salesforce.DateTime SystemModstamp {
+    apiName = "DataUsePurpose.SystemModstamp"
+    label = "System Modstamp"
+    _hidden_value = true
+  }
+}

@@ -1,0 +1,174 @@
+type salesforce.CartDeliveryGroup {
+  salesforce.MasterDetail CartId {
+    apiName = "CartDeliveryGroup.CartId"
+    label = "Cart ID"
+    _required = true
+    relationshipName = "Cart"
+  }
+  salesforce.Text CompanyName {
+    apiName = "CartDeliveryGroup.CompanyName"
+    label = "Name of the company"
+    length = 255
+    unique = false
+    caseSensitive = false
+  }
+  salesforce.Text DeliverToFirstName {
+    apiName = "CartDeliveryGroup.DeliverToFirstName"
+    label = "Deliver To First Name"
+    length = 255
+    unique = false
+    caseSensitive = false
+  }
+  salesforce.Text DeliverToLastName {
+    apiName = "CartDeliveryGroup.DeliverToLastName"
+    label = "Deliver To Last Name"
+    length = 255
+    unique = false
+    caseSensitive = false
+  }
+  salesforce.Text DeliverToName {
+    apiName = "CartDeliveryGroup.DeliverToName"
+    label = "Deliver To Name"
+    length = 255
+    unique = false
+    caseSensitive = false
+  }
+  salesforce.DateTime DesiredDeliveryDate {
+    apiName = "CartDeliveryGroup.DesiredDeliveryDate"
+    label = "Desired Delivery Date"
+  }
+  salesforce.Currency GrandTotalAmount {
+    apiName = "CartDeliveryGroup.GrandTotalAmount"
+    label = "Grand Total Amount"
+    scale = 2
+    precision = 18
+    _hidden_value = true
+  }
+  salesforce.Checkbox IsDefault {
+    apiName = "CartDeliveryGroup.IsDefault"
+    label = "Is Default"
+    defaultValue = false
+  }
+  salesforce.Text Name {
+    apiName = "CartDeliveryGroup.Name"
+    label = "Cart Delivery Group Name"
+    _required = true
+    length = 255
+    unique = false
+    caseSensitive = false
+  }
+  salesforce.Lookup SelectedDeliveryMethodId {
+    apiName = "CartDeliveryGroup.SelectedDeliveryMethodId"
+    label = "Cart Delivery Group Method ID"
+    relationshipName = "SelectedDeliveryMethod"
+  }
+  salesforce.Phone ShipToPhoneNumber {
+    apiName = "CartDeliveryGroup.ShipToPhoneNumber"
+    label = "Phone number given in shipping address"
+  }
+  salesforce.LongTextArea ShippingInstructions {
+    apiName = "CartDeliveryGroup.ShippingInstructions"
+    label = "Shipping Instructions"
+    length = 2000
+  }
+  salesforce.Currency TotalAdjustmentAmount {
+    apiName = "CartDeliveryGroup.TotalAdjustmentAmount"
+    label = "Total Adjustment Amount"
+    scale = 2
+    precision = 18
+    _hidden_value = true
+  }
+  salesforce.Currency TotalAdjustmentTaxAmount {
+    apiName = "CartDeliveryGroup.TotalAdjustmentTaxAmount"
+    label = "Total Adjustment Tax Amount"
+    scale = 2
+    precision = 18
+    _hidden_value = true
+  }
+  salesforce.Currency TotalAmount {
+    apiName = "CartDeliveryGroup.TotalAmount"
+    label = "Total Amount"
+    scale = 2
+    precision = 18
+    _hidden_value = true
+  }
+  salesforce.Currency TotalChargeAmount {
+    apiName = "CartDeliveryGroup.TotalChargeAmount"
+    label = "Total Charge Amount"
+    scale = 2
+    precision = 18
+    _hidden_value = true
+  }
+  salesforce.Currency TotalChargeTaxAmount {
+    apiName = "CartDeliveryGroup.TotalChargeTaxAmount"
+    label = "Total Charge Tax Amount"
+    scale = 2
+    precision = 18
+    _hidden_value = true
+  }
+  salesforce.Currency TotalProductAmount {
+    apiName = "CartDeliveryGroup.TotalProductAmount"
+    label = "Total Product Amount"
+    scale = 2
+    precision = 18
+    _hidden_value = true
+  }
+  salesforce.Currency TotalProductTaxAmount {
+    apiName = "CartDeliveryGroup.TotalProductTaxAmount"
+    label = "Total Product Tax Amount"
+    scale = 2
+    precision = 18
+    _hidden_value = true
+  }
+  salesforce.Currency TotalTaxAmount {
+    apiName = "CartDeliveryGroup.TotalTaxAmount"
+    label = "Total Tax Amount"
+    scale = 2
+    precision = 18
+    _hidden_value = true
+  }
+  serviceid Id {
+    apiName = "CartDeliveryGroup.Id"
+    label = "Cart Delivery Group ID"
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Checkbox IsDeleted {
+    apiName = "CartDeliveryGroup.IsDeleted"
+    label = "Deleted"
+    defaultValue = false
+    _hidden_value = true
+  }
+  salesforce.DateTime CreatedDate {
+    apiName = "CartDeliveryGroup.CreatedDate"
+    label = "Created Date"
+    _hidden_value = true
+  }
+  salesforce.Lookup CreatedById {
+    apiName = "CartDeliveryGroup.CreatedById"
+    label = "Created By ID"
+    relationshipName = "CreatedBy"
+    _hidden_value = true
+  }
+  salesforce.DateTime LastModifiedDate {
+    apiName = "CartDeliveryGroup.LastModifiedDate"
+    label = "Last Modified Date"
+    _hidden_value = true
+  }
+  salesforce.Lookup LastModifiedById {
+    apiName = "CartDeliveryGroup.LastModifiedById"
+    label = "Last Modified By ID"
+    relationshipName = "LastModifiedBy"
+    _hidden_value = true
+  }
+  salesforce.DateTime SystemModstamp {
+    apiName = "CartDeliveryGroup.SystemModstamp"
+    label = "System Modstamp"
+    _hidden_value = true
+  }
+  salesforce.Address DeliverToAddress {
+    apiName = "CartDeliveryGroup.DeliverToAddress"
+    label = "Delivery Address"
+    _hidden_value = true
+  }
+}

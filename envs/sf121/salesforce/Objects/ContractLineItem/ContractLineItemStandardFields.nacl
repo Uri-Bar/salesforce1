@@ -1,0 +1,150 @@
+type salesforce.ContractLineItem {
+  salesforce.Lookup AssetId {
+    apiName = "ContractLineItem.AssetId"
+    label = "Asset ID"
+    relationshipName = "Asset"
+  }
+  salesforce.LongTextArea Description {
+    apiName = "ContractLineItem.Description"
+    label = "Description"
+    length = 32000
+  }
+  salesforce.Percent Discount {
+    apiName = "ContractLineItem.Discount"
+    label = "Discount"
+    scale = 2
+    precision = 5
+  }
+  salesforce.Date EndDate {
+    apiName = "ContractLineItem.EndDate"
+    label = "End Date"
+  }
+  salesforce.Currency ListPrice {
+    apiName = "ContractLineItem.ListPrice"
+    label = "List Price"
+    scale = 2
+    precision = 18
+    _hidden_value = true
+  }
+  salesforce.Lookup LocationId {
+    apiName = "ContractLineItem.LocationId"
+    label = "Location ID"
+    relationshipName = "Location"
+  }
+  salesforce.Lookup ParentContractLineItemId {
+    apiName = "ContractLineItem.ParentContractLineItemId"
+    label = "Contract Line Item ID"
+    relationshipName = "ParentContractLineItem"
+  }
+  salesforce.Lookup PricebookEntryId {
+    apiName = "ContractLineItem.PricebookEntryId"
+    label = "Price Book Entry ID"
+    _required = true
+    relationshipName = "PricebookEntry"
+  }
+  salesforce.Lookup Product2Id {
+    apiName = "ContractLineItem.Product2Id"
+    label = "Product ID"
+    relationshipName = "Product2"
+    _hidden_value = true
+  }
+  salesforce.Number Quantity {
+    apiName = "ContractLineItem.Quantity"
+    label = "Quantity"
+    _required = true
+    scale = 2
+    precision = 12
+    unique = false
+  }
+  salesforce.Lookup RootContractLineItemId {
+    apiName = "ContractLineItem.RootContractLineItemId"
+    label = "Contract Line Item ID"
+    relationshipName = "RootContractLineItem"
+    _hidden_value = true
+  }
+  salesforce.MasterDetail ServiceContractId {
+    apiName = "ContractLineItem.ServiceContractId"
+    label = "Service Contract ID"
+    _required = true
+    relationshipName = "ServiceContract"
+  }
+  salesforce.Date StartDate {
+    apiName = "ContractLineItem.StartDate"
+    label = "Start Date"
+  }
+  salesforce.Picklist Status {
+    apiName = "ContractLineItem.Status"
+    label = "Status"
+    restricted = true
+    _hidden_value = true
+  }
+  salesforce.Unknown StatusIndicator {
+    apiName = "ContractLineItem.StatusIndicator"
+    _hidden_value = true
+  }
+  salesforce.Currency Subtotal {
+    apiName = "ContractLineItem.Subtotal"
+    label = "Subtotal "
+    scale = 2
+    precision = 18
+    _hidden_value = true
+  }
+  salesforce.Currency TotalPrice {
+    apiName = "ContractLineItem.TotalPrice"
+    label = "Total Price"
+    scale = 2
+    precision = 18
+    _hidden_value = true
+  }
+  salesforce.Currency UnitPrice {
+    apiName = "ContractLineItem.UnitPrice"
+    label = "Sales Price"
+    _required = true
+    scale = 2
+    precision = 18
+  }
+  serviceid Id {
+    apiName = "ContractLineItem.Id"
+    label = "Contract Line Item ID"
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Checkbox IsDeleted {
+    apiName = "ContractLineItem.IsDeleted"
+    label = "Deleted"
+    defaultValue = false
+    _hidden_value = true
+  }
+  salesforce.AutoNumber LineItemNumber {
+    apiName = "ContractLineItem.LineItemNumber"
+    label = "Line Item Number"
+    _hidden_value = true
+  }
+  salesforce.DateTime CreatedDate {
+    apiName = "ContractLineItem.CreatedDate"
+    label = "Created Date"
+    _hidden_value = true
+  }
+  salesforce.Lookup CreatedById {
+    apiName = "ContractLineItem.CreatedById"
+    label = "Created By ID"
+    relationshipName = "CreatedBy"
+    _hidden_value = true
+  }
+  salesforce.DateTime LastModifiedDate {
+    apiName = "ContractLineItem.LastModifiedDate"
+    label = "Last Modified Date"
+    _hidden_value = true
+  }
+  salesforce.Lookup LastModifiedById {
+    apiName = "ContractLineItem.LastModifiedById"
+    label = "Last Modified By ID"
+    relationshipName = "LastModifiedBy"
+    _hidden_value = true
+  }
+  salesforce.DateTime SystemModstamp {
+    apiName = "ContractLineItem.SystemModstamp"
+    label = "System Modstamp"
+    _hidden_value = true
+  }
+}

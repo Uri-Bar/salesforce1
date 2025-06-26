@@ -1,0 +1,7 @@
+salesforce.SharingRules ConversationApiLog {
+  fullName = "ConversationApiLog"
+  _parent = [
+    salesforce.ConversationApiLog,
+  ]
+  _alias = "ConversationApiLog"
+}

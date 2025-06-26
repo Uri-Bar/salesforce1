@@ -1,0 +1,117 @@
+type salesforce.ProcessException {
+  salesforce.Lookup AttachedToId {
+    apiName = "ProcessException.AttachedToId"
+    label = "Attached To ID"
+    _required = true
+    relationshipName = "AttachedTo"
+  }
+  salesforce.Lookup CaseId {
+    apiName = "ProcessException.CaseId"
+    label = "Case ID"
+    relationshipName = "Case"
+  }
+  salesforce.Picklist Category {
+    apiName = "ProcessException.Category"
+    label = "Category"
+    restricted = false
+  }
+  salesforce.LongTextArea Description {
+    apiName = "ProcessException.Description"
+    label = "Description"
+    length = 2000
+  }
+  salesforce.Text ExternalReference {
+    apiName = "ProcessException.ExternalReference"
+    label = "External Reference"
+    length = 255
+    unique = false
+    caseSensitive = false
+  }
+  salesforce.Text Message {
+    apiName = "ProcessException.Message"
+    label = "Message"
+    _required = true
+    length = 255
+    unique = false
+    caseSensitive = false
+  }
+  salesforce.Lookup OwnerId {
+    apiName = "ProcessException.OwnerId"
+    label = "Owner ID"
+    relationshipName = "Owner"
+    _hidden_value = true
+  }
+  salesforce.Picklist Priority {
+    apiName = "ProcessException.Priority"
+    label = "Priority"
+    restricted = false
+  }
+  salesforce.Picklist Severity {
+    apiName = "ProcessException.Severity"
+    label = "Severity"
+    restricted = false
+  }
+  salesforce.Picklist Status {
+    apiName = "ProcessException.Status"
+    label = "Status"
+    _required = true
+    restricted = false
+  }
+  serviceid Id {
+    apiName = "ProcessException.Id"
+    label = "Process Exception ID"
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Checkbox IsDeleted {
+    apiName = "ProcessException.IsDeleted"
+    label = "Deleted"
+    defaultValue = false
+    _hidden_value = true
+  }
+  salesforce.AutoNumber ProcessExceptionNumber {
+    apiName = "ProcessException.ProcessExceptionNumber"
+    label = "Process Exception Number"
+    _hidden_value = true
+  }
+  salesforce.DateTime CreatedDate {
+    apiName = "ProcessException.CreatedDate"
+    label = "Created Date"
+    _hidden_value = true
+  }
+  salesforce.Lookup CreatedById {
+    apiName = "ProcessException.CreatedById"
+    label = "Created By ID"
+    relationshipName = "CreatedBy"
+    _hidden_value = true
+  }
+  salesforce.DateTime LastModifiedDate {
+    apiName = "ProcessException.LastModifiedDate"
+    label = "Last Modified Date"
+    _hidden_value = true
+  }
+  salesforce.Lookup LastModifiedById {
+    apiName = "ProcessException.LastModifiedById"
+    label = "Last Modified By ID"
+    relationshipName = "LastModifiedBy"
+    _hidden_value = true
+  }
+  salesforce.DateTime SystemModstamp {
+    apiName = "ProcessException.SystemModstamp"
+    label = "System Modstamp"
+    _hidden_value = true
+  }
+  salesforce.Picklist StatusCategory {
+    apiName = "ProcessException.StatusCategory"
+    label = "Status Category"
+    _required = true
+    restricted = true
+    _hidden_value = true
+  }
+  salesforce.Picklist SeverityCategory {
+    apiName = "ProcessException.SeverityCategory"
+    label = "Severity Category"
+    restricted = true
+    _hidden_value = true
+  }
+}

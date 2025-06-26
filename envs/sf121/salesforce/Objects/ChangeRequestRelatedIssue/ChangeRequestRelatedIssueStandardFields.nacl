@@ -1,0 +1,71 @@
+type salesforce.ChangeRequestRelatedIssue {
+  salesforce.MasterDetail ChangeRequestId {
+    apiName = "ChangeRequestRelatedIssue.ChangeRequestId"
+    label = "Change Request ID"
+    _required = true
+    relationshipName = "ChangeRequest"
+  }
+  salesforce.AutoNumber Name {
+    apiName = "ChangeRequestRelatedIssue.Name"
+    label = "Change Request Related Issue Number"
+    _hidden_value = true
+  }
+  salesforce.Picklist RelatedEntityType {
+    apiName = "ChangeRequestRelatedIssue.RelatedEntityType"
+    label = "Related Issue Type"
+    _required = true
+    restricted = true
+    _hidden_value = true
+  }
+  salesforce.Lookup RelatedIssueId {
+    apiName = "ChangeRequestRelatedIssue.RelatedIssueId"
+    label = "Related Issue ID"
+    _required = true
+    relationshipName = "RelatedIssue"
+  }
+  salesforce.Picklist RelationshipType {
+    apiName = "ChangeRequestRelatedIssue.RelationshipType"
+    label = "Relationship Type"
+    _required = true
+    restricted = false
+  }
+  serviceid Id {
+    apiName = "ChangeRequestRelatedIssue.Id"
+    label = "Change Request Related Issue ID"
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Checkbox IsDeleted {
+    apiName = "ChangeRequestRelatedIssue.IsDeleted"
+    label = "Deleted"
+    defaultValue = false
+    _hidden_value = true
+  }
+  salesforce.DateTime CreatedDate {
+    apiName = "ChangeRequestRelatedIssue.CreatedDate"
+    label = "Created Date"
+    _hidden_value = true
+  }
+  salesforce.Lookup CreatedById {
+    apiName = "ChangeRequestRelatedIssue.CreatedById"
+    label = "Created By ID"
+    relationshipName = "CreatedBy"
+    _hidden_value = true
+  }
+  salesforce.DateTime LastModifiedDate {
+    apiName = "ChangeRequestRelatedIssue.LastModifiedDate"
+    label = "Last Modified Date"
+    _hidden_value = true
+  }
+  salesforce.Lookup LastModifiedById {
+    apiName = "ChangeRequestRelatedIssue.LastModifiedById"
+    label = "Last Modified By ID"
+    relationshipName = "LastModifiedBy"
+    _hidden_value = true
+  }
+  salesforce.DateTime SystemModstamp {
+    apiName = "ChangeRequestRelatedIssue.SystemModstamp"
+    label = "System Modstamp"
+    _hidden_value = true
+  }
+}

@@ -1,0 +1,13 @@
+salesforce.EmailTemplate unfiled_public_SalesforceSchedulerGroupApptEmailTemplate@zcd {
+  available = true
+  description = "Email Template to confirm enrollment of an attendee to a Group service appointment."
+  encodingKey = "UTF-8"
+  name = "Group Service Appointments Enrollment Confirmation Email"
+  style = "none"
+  subject = "You’re enrolled for the service appointment."
+  type = "custom"
+  uiType = "Aloha"
+  fullName = "unfiled$public/SalesforceSchedulerGroupApptEmailTemplate"
+  content = file("salesforce/Records/EmailTemplate/unfiled$public/SalesforceSchedulerGroupApptEmailTemplate/SalesforceSchedulerGroupApptEmailTemplate.email")
+  _alias = "unfiled$public/SalesforceSchedulerGroupApptEmailTemplate"
+}

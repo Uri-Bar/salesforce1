@@ -1,0 +1,105 @@
+type salesforce.FulfillmentOrderItemAdjustment {
+  salesforce.Currency Amount {
+    apiName = "FulfillmentOrderItemAdjustment.Amount"
+    label = "Adjustment"
+    _required = true
+    scale = 2
+    precision = 18
+  }
+  salesforce.Text CampaignName {
+    apiName = "FulfillmentOrderItemAdjustment.CampaignName"
+    label = "Campaign Name"
+    length = 255
+    unique = false
+    caseSensitive = false
+  }
+  salesforce.Text CouponName {
+    apiName = "FulfillmentOrderItemAdjustment.CouponName"
+    label = "Coupon Name"
+    length = 255
+    unique = false
+    caseSensitive = false
+  }
+  salesforce.LongTextArea Description {
+    apiName = "FulfillmentOrderItemAdjustment.Description"
+    label = "Description"
+    length = 2000
+  }
+  salesforce.MasterDetail FulfillmentOrderLineItemId {
+    apiName = "FulfillmentOrderItemAdjustment.FulfillmentOrderLineItemId"
+    label = "Fulfillment Order Product ID"
+    _required = true
+    relationshipName = "FulfillmentOrderLineItem"
+  }
+  salesforce.Text PromotionName {
+    apiName = "FulfillmentOrderItemAdjustment.PromotionName"
+    label = "Promotion Name"
+    length = 255
+    unique = false
+    caseSensitive = false
+  }
+  salesforce.Currency TotalAmtWithTax {
+    apiName = "FulfillmentOrderItemAdjustment.TotalAmtWithTax"
+    label = "Adjustment with Tax"
+    scale = 2
+    precision = 18
+    _hidden_value = true
+  }
+  salesforce.Currency TotalTaxAmount {
+    apiName = "FulfillmentOrderItemAdjustment.TotalTaxAmount"
+    label = "Tax"
+    scale = 2
+    precision = 18
+    _hidden_value = true
+  }
+  serviceid Id {
+    apiName = "FulfillmentOrderItemAdjustment.Id"
+    label = "Fulfillment Order Item Adjustment ID"
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Checkbox IsDeleted {
+    apiName = "FulfillmentOrderItemAdjustment.IsDeleted"
+    label = "Deleted"
+    defaultValue = false
+    _hidden_value = true
+  }
+  salesforce.AutoNumber FulfillmentOrderItemAdjustmentNumber {
+    apiName = "FulfillmentOrderItemAdjustment.FulfillmentOrderItemAdjustmentNumber"
+    label = "Name"
+    _hidden_value = true
+  }
+  salesforce.DateTime CreatedDate {
+    apiName = "FulfillmentOrderItemAdjustment.CreatedDate"
+    label = "Created Date"
+    _hidden_value = true
+  }
+  salesforce.Lookup CreatedById {
+    apiName = "FulfillmentOrderItemAdjustment.CreatedById"
+    label = "Created By ID"
+    relationshipName = "CreatedBy"
+    _hidden_value = true
+  }
+  salesforce.DateTime LastModifiedDate {
+    apiName = "FulfillmentOrderItemAdjustment.LastModifiedDate"
+    label = "Last Modified Date"
+    _hidden_value = true
+  }
+  salesforce.Lookup LastModifiedById {
+    apiName = "FulfillmentOrderItemAdjustment.LastModifiedById"
+    label = "Last Modified By ID"
+    relationshipName = "LastModifiedBy"
+    _hidden_value = true
+  }
+  salesforce.DateTime SystemModstamp {
+    apiName = "FulfillmentOrderItemAdjustment.SystemModstamp"
+    label = "System Modstamp"
+    _hidden_value = true
+  }
+  salesforce.Lookup FulfillmentOrderId {
+    apiName = "FulfillmentOrderItemAdjustment.FulfillmentOrderId"
+    label = "Fulfillment Order ID"
+    _required = true
+    relationshipName = "FulfillmentOrder"
+  }
+}

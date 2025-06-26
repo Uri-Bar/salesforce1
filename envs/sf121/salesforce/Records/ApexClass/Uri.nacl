@@ -1,0 +1,7 @@
+salesforce.ApexClass Uri {
+  apiVersion = 56
+  status = "Active"
+  fullName = "Uri"
+  content = file("salesforce/Records/ApexClass/Uri.cls")
+  _alias = "Uri"
+}

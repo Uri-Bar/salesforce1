@@ -1,0 +1,16 @@
+salesforce.WorkflowRule property__c_deploycheck@uuv {
+  fullName = "property__c.deploycheck"
+  active = false
+  criteriaItems = [
+    {
+      field = salesforce.property__c.field.RecordTypeId
+      operation = "equals"
+      value = salesforce.RecordType.instance.property__c_test
+    },
+  ]
+  triggerType = "onCreateOrTriggeringUpdate"
+  _parent = [
+    salesforce.property__c,
+  ]
+  _alias = "property__c.deploycheck"
+}

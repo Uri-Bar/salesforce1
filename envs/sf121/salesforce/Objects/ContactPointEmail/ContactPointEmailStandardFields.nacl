@@ -1,0 +1,129 @@
+type salesforce.ContactPointEmail {
+  salesforce.Date ActiveFromDate {
+    apiName = "ContactPointEmail.ActiveFromDate"
+    label = "Active from Date"
+  }
+  salesforce.Date ActiveToDate {
+    apiName = "ContactPointEmail.ActiveToDate"
+    label = "Active to Date"
+  }
+  salesforce.Time BestTimeToContactEndTime {
+    apiName = "ContactPointEmail.BestTimeToContactEndTime"
+    label = "Best time to contact end time"
+  }
+  salesforce.Time BestTimeToContactStartTime {
+    apiName = "ContactPointEmail.BestTimeToContactStartTime"
+    label = "Best time to contact start time"
+  }
+  salesforce.Picklist BestTimeToContactTimezone {
+    apiName = "ContactPointEmail.BestTimeToContactTimezone"
+    label = "Best time to contact time zone"
+    restricted = true
+  }
+  salesforce.Email EmailAddress {
+    apiName = "ContactPointEmail.EmailAddress"
+    label = "Email address"
+    _required = true
+    unique = false
+  }
+  salesforce.Text EmailDomain {
+    apiName = "ContactPointEmail.EmailDomain"
+    label = "Email domain"
+    length = 250
+    unique = false
+    caseSensitive = false
+  }
+  salesforce.DateTime EmailLatestBounceDateTime {
+    apiName = "ContactPointEmail.EmailLatestBounceDateTime"
+    label = "Email latest bounce date time"
+  }
+  salesforce.Text EmailLatestBounceReasonText {
+    apiName = "ContactPointEmail.EmailLatestBounceReasonText"
+    label = "Email latest bounce reason text"
+    length = 250
+    unique = false
+    caseSensitive = false
+  }
+  salesforce.Text EmailMailBox {
+    apiName = "ContactPointEmail.EmailMailBox"
+    label = "Email mail box"
+    length = 250
+    unique = false
+    caseSensitive = false
+  }
+  salesforce.Checkbox IsPrimary {
+    apiName = "ContactPointEmail.IsPrimary"
+    label = "Is Primary"
+    defaultValue = false
+  }
+  salesforce.Lookup OwnerId {
+    apiName = "ContactPointEmail.OwnerId"
+    label = "Owner ID"
+    relationshipName = "Owner"
+    _hidden_value = true
+  }
+  salesforce.MasterDetail ParentId {
+    apiName = "ContactPointEmail.ParentId"
+    label = "Parent ID"
+    relationshipName = "Parent"
+  }
+  salesforce.Number PreferenceRank {
+    apiName = "ContactPointEmail.PreferenceRank"
+    label = "Preference Rank"
+    scale = 0
+    precision = 9
+    unique = false
+  }
+  salesforce.Picklist UsageType {
+    apiName = "ContactPointEmail.UsageType"
+    label = "Usage Type"
+    restricted = false
+  }
+  serviceid Id {
+    apiName = "ContactPointEmail.Id"
+    label = "Contact Point Email ID"
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Checkbox IsDeleted {
+    apiName = "ContactPointEmail.IsDeleted"
+    label = "Deleted"
+    defaultValue = false
+    _hidden_value = true
+  }
+  salesforce.Text Name {
+    apiName = "ContactPointEmail.Name"
+    label = "Name"
+    length = 255
+    unique = false
+    caseSensitive = false
+    _hidden_value = true
+  }
+  salesforce.DateTime CreatedDate {
+    apiName = "ContactPointEmail.CreatedDate"
+    label = "Created Date"
+    _hidden_value = true
+  }
+  salesforce.Lookup CreatedById {
+    apiName = "ContactPointEmail.CreatedById"
+    label = "Created By ID"
+    relationshipName = "CreatedBy"
+    _hidden_value = true
+  }
+  salesforce.DateTime LastModifiedDate {
+    apiName = "ContactPointEmail.LastModifiedDate"
+    label = "Last Modified Date"
+    _hidden_value = true
+  }
+  salesforce.Lookup LastModifiedById {
+    apiName = "ContactPointEmail.LastModifiedById"
+    label = "Last Modified By ID"
+    relationshipName = "LastModifiedBy"
+    _hidden_value = true
+  }
+  salesforce.DateTime SystemModstamp {
+    apiName = "ContactPointEmail.SystemModstamp"
+    label = "System Modstamp"
+    _hidden_value = true
+  }
+}

@@ -1,0 +1,58 @@
+type salesforce.WorkTypeGroupMember {
+  salesforce.MasterDetail WorkTypeGroupId {
+    apiName = "WorkTypeGroupMember.WorkTypeGroupId"
+    label = "Work Type Group ID"
+    _required = true
+    relationshipName = "WorkTypeGroup"
+  }
+  salesforce.MasterDetail WorkTypeId {
+    apiName = "WorkTypeGroupMember.WorkTypeId"
+    label = "Work Type ID"
+    _required = true
+    relationshipName = "WorkType"
+  }
+  serviceid Id {
+    apiName = "WorkTypeGroupMember.Id"
+    label = "Work Type Group Member ID"
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Checkbox IsDeleted {
+    apiName = "WorkTypeGroupMember.IsDeleted"
+    label = "Deleted"
+    defaultValue = false
+    _hidden_value = true
+  }
+  salesforce.AutoNumber Name {
+    apiName = "WorkTypeGroupMember.Name"
+    label = "Work Type Group Member Name"
+    _hidden_value = true
+  }
+  salesforce.DateTime CreatedDate {
+    apiName = "WorkTypeGroupMember.CreatedDate"
+    label = "Created Date"
+    _hidden_value = true
+  }
+  salesforce.Lookup CreatedById {
+    apiName = "WorkTypeGroupMember.CreatedById"
+    label = "Created By ID"
+    relationshipName = "CreatedBy"
+    _hidden_value = true
+  }
+  salesforce.DateTime LastModifiedDate {
+    apiName = "WorkTypeGroupMember.LastModifiedDate"
+    label = "Last Modified Date"
+    _hidden_value = true
+  }
+  salesforce.Lookup LastModifiedById {
+    apiName = "WorkTypeGroupMember.LastModifiedById"
+    label = "Last Modified By ID"
+    relationshipName = "LastModifiedBy"
+    _hidden_value = true
+  }
+  salesforce.DateTime SystemModstamp {
+    apiName = "WorkTypeGroupMember.SystemModstamp"
+    label = "System Modstamp"
+    _hidden_value = true
+  }
+}

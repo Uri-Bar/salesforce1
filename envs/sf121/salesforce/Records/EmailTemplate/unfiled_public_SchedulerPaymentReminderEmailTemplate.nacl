@@ -1,0 +1,13 @@
+salesforce.EmailTemplate unfiled_public_SchedulerPaymentReminderEmailTemplate@zcd {
+  available = true
+  description = "Email Template to remind customers to pay for their service appointment."
+  encodingKey = "UTF-8"
+  name = "Scheduler Payments: Payment Reminder for Service Appointment Email"
+  style = "none"
+  subject = "Complete your payment"
+  type = "custom"
+  uiType = "Aloha"
+  fullName = "unfiled$public/SchedulerPaymentReminderEmailTemplate"
+  content = file("salesforce/Records/EmailTemplate/unfiled$public/SchedulerPaymentReminderEmailTemplate/SchedulerPaymentReminderEmailTemplate.email")
+  _alias = "unfiled$public/SchedulerPaymentReminderEmailTemplate"
+}

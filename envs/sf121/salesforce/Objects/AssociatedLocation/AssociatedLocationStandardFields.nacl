@@ -1,0 +1,70 @@
+type salesforce.AssociatedLocation {
+  salesforce.DateTime ActiveFrom {
+    apiName = "AssociatedLocation.ActiveFrom"
+    label = "Active From"
+  }
+  salesforce.DateTime ActiveTo {
+    apiName = "AssociatedLocation.ActiveTo"
+    label = "Active To"
+  }
+  salesforce.AutoNumber AssociatedLocationNumber {
+    apiName = "AssociatedLocation.AssociatedLocationNumber"
+    label = "Associated Location Name"
+    _hidden_value = true
+  }
+  salesforce.Lookup LocationId {
+    apiName = "AssociatedLocation.LocationId"
+    label = "Location ID"
+    _required = true
+    relationshipName = "Location"
+  }
+  salesforce.MasterDetail ParentRecordId {
+    apiName = "AssociatedLocation.ParentRecordId"
+    label = "Account Name ID"
+    _required = true
+    relationshipName = "ParentRecord"
+  }
+  salesforce.Picklist Type {
+    apiName = "AssociatedLocation.Type"
+    label = "Type"
+  }
+  serviceid Id {
+    apiName = "AssociatedLocation.Id"
+    label = "Associated Location ID"
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Checkbox IsDeleted {
+    apiName = "AssociatedLocation.IsDeleted"
+    label = "Deleted"
+    defaultValue = false
+    _hidden_value = true
+  }
+  salesforce.DateTime CreatedDate {
+    apiName = "AssociatedLocation.CreatedDate"
+    label = "Created Date"
+    _hidden_value = true
+  }
+  salesforce.Lookup CreatedById {
+    apiName = "AssociatedLocation.CreatedById"
+    label = "Created By ID"
+    relationshipName = "CreatedBy"
+    _hidden_value = true
+  }
+  salesforce.DateTime LastModifiedDate {
+    apiName = "AssociatedLocation.LastModifiedDate"
+    label = "Last Modified Date"
+    _hidden_value = true
+  }
+  salesforce.Lookup LastModifiedById {
+    apiName = "AssociatedLocation.LastModifiedById"
+    label = "Last Modified By ID"
+    relationshipName = "LastModifiedBy"
+    _hidden_value = true
+  }
+  salesforce.DateTime SystemModstamp {
+    apiName = "AssociatedLocation.SystemModstamp"
+    label = "System Modstamp"
+    _hidden_value = true
+  }
+}

@@ -1,0 +1,13 @@
+salesforce.ListView AuthorizationForm_tesq_AuthorizationForm {
+  fullName = "AuthorizationForm.tesq_AuthorizationForm"
+  filterScope = "Queue"
+  label = "tesq"
+  queue = salesforce.Queue.instance.tesq
+  sharedTo = {
+    allInternalUsers = ""
+  }
+  _parent = [
+    salesforce.AuthorizationForm,
+  ]
+  _alias = "tesq"
+}

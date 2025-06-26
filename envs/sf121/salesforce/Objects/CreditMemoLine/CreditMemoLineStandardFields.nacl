@@ -1,0 +1,202 @@
+type salesforce.CreditMemoLine {
+  salesforce.Currency AdjustmentAmount {
+    apiName = "CreditMemoLine.AdjustmentAmount"
+    label = "Adjustment Amount"
+    scale = 2
+    precision = 18
+  }
+  salesforce.Currency AdjustmentAmountWithTax {
+    apiName = "CreditMemoLine.AdjustmentAmountWithTax"
+    label = "Adjustment Amount with Tax"
+    scale = 2
+    precision = 18
+    _hidden_value = true
+  }
+  salesforce.Currency AdjustmentTaxAmount {
+    apiName = "CreditMemoLine.AdjustmentTaxAmount"
+    label = "Adjustment Tax Amount"
+    scale = 2
+    precision = 18
+    _hidden_value = true
+  }
+  salesforce.Currency ChargeAmount {
+    apiName = "CreditMemoLine.ChargeAmount"
+    label = "Charge Amount"
+    scale = 2
+    precision = 18
+  }
+  salesforce.Currency ChargeAmountWithTax {
+    apiName = "CreditMemoLine.ChargeAmountWithTax"
+    label = "Charge Amount with Tax"
+    scale = 2
+    precision = 18
+    _hidden_value = true
+  }
+  salesforce.Currency ChargeTaxAmount {
+    apiName = "CreditMemoLine.ChargeTaxAmount"
+    label = "Charge Tax Amount"
+    scale = 2
+    precision = 18
+    _hidden_value = true
+  }
+  salesforce.Unknown CorpCurrencyCnvChargeAmt {
+    apiName = "CreditMemoLine.CorpCurrencyCnvChargeAmt"
+    _hidden_value = true
+  }
+  salesforce.Unknown CorpCurrencyCnvTotalTaxAmt {
+    apiName = "CreditMemoLine.CorpCurrencyCnvTotalTaxAmt"
+    _hidden_value = true
+  }
+  salesforce.Unknown CorporateCurrencyCvsnDate {
+    apiName = "CreditMemoLine.CorporateCurrencyCvsnDate"
+    _hidden_value = true
+  }
+  salesforce.Unknown CorporateCurrencyCvsnRate {
+    apiName = "CreditMemoLine.CorporateCurrencyCvsnRate"
+    _hidden_value = true
+  }
+  salesforce.MasterDetail CreditMemoId {
+    apiName = "CreditMemoLine.CreditMemoId"
+    label = "Credit Memo ID"
+    _required = true
+    relationshipName = "CreditMemo"
+    _hidden_value = true
+  }
+  salesforce.Text Description {
+    apiName = "CreditMemoLine.Description"
+    label = "Description"
+    length = 255
+    unique = false
+    caseSensitive = false
+  }
+  salesforce.Date EndDate {
+    apiName = "CreditMemoLine.EndDate"
+    label = "End Date"
+  }
+  salesforce.Summary LineAmount {
+    apiName = "CreditMemoLine.LineAmount"
+    label = "Line Amount"
+    _hidden_value = true
+  }
+  salesforce.Text Name {
+    apiName = "CreditMemoLine.Name"
+    label = "Name"
+    _required = true
+    length = 255
+    unique = false
+    caseSensitive = false
+  }
+  salesforce.Lookup Product2Id {
+    apiName = "CreditMemoLine.Product2Id"
+    label = "Product ID"
+    relationshipName = "Product2"
+  }
+  salesforce.Lookup ReferenceEntityItemId {
+    apiName = "CreditMemoLine.ReferenceEntityItemId"
+    label = "ReferenceEntityItem ID"
+    relationshipName = "ReferenceEntityItem"
+  }
+  salesforce.Picklist ReferenceEntityItemTypeCode {
+    apiName = "CreditMemoLine.ReferenceEntityItemTypeCode"
+    label = "Reference Entity Item Type Code"
+    restricted = true
+  }
+  salesforce.Lookup RelatedLineId {
+    apiName = "CreditMemoLine.RelatedLineId"
+    label = "Credit Memo Line ID"
+    relationshipName = "RelatedLine"
+  }
+  salesforce.Date StartDate {
+    apiName = "CreditMemoLine.StartDate"
+    label = "Start Date"
+  }
+  salesforce.Text Status {
+    apiName = "CreditMemoLine.Status"
+    label = "Status"
+    length = 50
+    unique = false
+    caseSensitive = false
+    _hidden_value = true
+  }
+  salesforce.Currency TaxAmount {
+    apiName = "CreditMemoLine.TaxAmount"
+    label = "Tax Amount"
+    scale = 2
+    precision = 18
+  }
+  salesforce.Text TaxCode {
+    apiName = "CreditMemoLine.TaxCode"
+    label = "Tax Code"
+    length = 255
+    unique = false
+    caseSensitive = false
+  }
+  salesforce.Date TaxEffectiveDate {
+    apiName = "CreditMemoLine.TaxEffectiveDate"
+    label = "Tax Effective Date"
+  }
+  salesforce.Text TaxName {
+    apiName = "CreditMemoLine.TaxName"
+    label = "Tax Name"
+    length = 255
+    unique = false
+    caseSensitive = false
+  }
+  salesforce.Percent TaxRate {
+    apiName = "CreditMemoLine.TaxRate"
+    label = "Tax Rate"
+    scale = 2
+    precision = 5
+  }
+  salesforce.Picklist Type {
+    apiName = "CreditMemoLine.Type"
+    label = "Type"
+    _required = true
+    restricted = true
+    _hidden_value = true
+  }
+  serviceid Id {
+    apiName = "CreditMemoLine.Id"
+    label = "Credit Memo Line ID"
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Checkbox IsDeleted {
+    apiName = "CreditMemoLine.IsDeleted"
+    label = "Deleted"
+    defaultValue = false
+    _hidden_value = true
+  }
+  salesforce.DateTime CreatedDate {
+    apiName = "CreditMemoLine.CreatedDate"
+    label = "Created Date"
+    _hidden_value = true
+  }
+  salesforce.Lookup CreatedById {
+    apiName = "CreditMemoLine.CreatedById"
+    label = "Created By ID"
+    relationshipName = "CreatedBy"
+    _hidden_value = true
+  }
+  salesforce.DateTime LastModifiedDate {
+    apiName = "CreditMemoLine.LastModifiedDate"
+    label = "Last Modified Date"
+    _hidden_value = true
+  }
+  salesforce.Lookup LastModifiedById {
+    apiName = "CreditMemoLine.LastModifiedById"
+    label = "Last Modified By ID"
+    relationshipName = "LastModifiedBy"
+    _hidden_value = true
+  }
+  salesforce.DateTime SystemModstamp {
+    apiName = "CreditMemoLine.SystemModstamp"
+    label = "System Modstamp"
+    _hidden_value = true
+  }
+  salesforce.Picklist ReferenceEntityItemType {
+    apiName = "CreditMemoLine.ReferenceEntityItemType"
+    label = "Reference Entity Item Type"
+    restricted = true
+  }
+}

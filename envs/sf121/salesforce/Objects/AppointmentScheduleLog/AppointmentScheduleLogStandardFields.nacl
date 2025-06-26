@@ -1,0 +1,84 @@
+type salesforce.AppointmentScheduleLog {
+  serviceid Id {
+    apiName = "AppointmentScheduleLog.Id"
+    label = "Appointment Schedule Log ID"
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Checkbox IsDeleted {
+    apiName = "AppointmentScheduleLog.IsDeleted"
+    label = "Deleted"
+    defaultValue = false
+    _hidden_value = true
+  }
+  salesforce.AutoNumber Name {
+    apiName = "AppointmentScheduleLog.Name"
+    label = "Name"
+    _hidden_value = true
+  }
+  salesforce.DateTime CreatedDate {
+    apiName = "AppointmentScheduleLog.CreatedDate"
+    label = "Created Date"
+    _hidden_value = true
+  }
+  salesforce.Lookup CreatedById {
+    apiName = "AppointmentScheduleLog.CreatedById"
+    label = "Created By ID"
+    relationshipName = "CreatedBy"
+    _hidden_value = true
+  }
+  salesforce.DateTime LastModifiedDate {
+    apiName = "AppointmentScheduleLog.LastModifiedDate"
+    label = "Last Modified Date"
+    _hidden_value = true
+  }
+  salesforce.Lookup LastModifiedById {
+    apiName = "AppointmentScheduleLog.LastModifiedById"
+    label = "Last Modified By ID"
+    relationshipName = "LastModifiedBy"
+    _hidden_value = true
+  }
+  salesforce.DateTime SystemModstamp {
+    apiName = "AppointmentScheduleLog.SystemModstamp"
+    label = "System Modstamp"
+    _hidden_value = true
+  }
+  salesforce.Lookup AppointmentScheduleAggrId {
+    apiName = "AppointmentScheduleLog.AppointmentScheduleAggrId"
+    label = "Appointment Schedule Aggregate ID"
+    _required = true
+    relationshipName = "AppointmentScheduleAggr"
+  }
+  salesforce.Lookup ServiceResourceId {
+    apiName = "AppointmentScheduleLog.ServiceResourceId"
+    label = "Resource ID"
+    relationshipName = "ServiceResource"
+  }
+  salesforce.Date AppointmentDate {
+    apiName = "AppointmentScheduleLog.AppointmentDate"
+    label = "Appointment Date"
+  }
+  salesforce.Lookup RelatedRecordId {
+    apiName = "AppointmentScheduleLog.RelatedRecordId"
+    label = "Related Record ID"
+    relationshipName = "RelatedRecord"
+  }
+  salesforce.Number ResourceUtilization {
+    apiName = "AppointmentScheduleLog.ResourceUtilization"
+    label = "Resource Utilization"
+    scale = 2
+    precision = 18
+    unique = false
+  }
+  salesforce.Checkbox IsUsedForResourceUtilization {
+    apiName = "AppointmentScheduleLog.IsUsedForResourceUtilization"
+    label = "Used for Resource Utilization"
+    defaultValue = false
+  }
+  salesforce.Picklist UsageType {
+    apiName = "AppointmentScheduleLog.UsageType"
+    label = "Usage Type"
+    _required = true
+    restricted = true
+  }
+}

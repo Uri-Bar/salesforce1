@@ -1,0 +1,17 @@
+salesforce.Queue tesq {
+  fullName = "tesq"
+  doesSendEmailToMembers = false
+  name = "tesq"
+  queueMembers = {
+    roles = {
+      role = [
+        salesforce.Role.instance.CEO,
+        salesforce.Role.instance.CFO,
+      ]
+    }
+  }
+  queueSobject = {
+    sobjectType = "AuthorizationForm"
+  }
+  _alias = "tesq"
+}

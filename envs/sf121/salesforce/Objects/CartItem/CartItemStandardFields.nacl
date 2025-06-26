@@ -1,0 +1,366 @@
+type salesforce.CartItem {
+  salesforce.Currency AdjustmentAmount {
+    apiName = "CartItem.AdjustmentAmount"
+    label = "Adjustment Amount quantity based"
+    scale = 2
+    precision = 18
+  }
+  salesforce.Currency AdjustmentTaxAmount {
+    apiName = "CartItem.AdjustmentTaxAmount"
+    label = "Adjustment Tax Amount"
+    scale = 2
+    precision = 18
+  }
+  salesforce.Unknown BillingFrequency {
+    apiName = "CartItem.BillingFrequency"
+    _hidden_value = true
+  }
+  salesforce.Lookup CartDeliveryGroupId {
+    apiName = "CartItem.CartDeliveryGroupId"
+    label = "Cart Delivery Group ID"
+    _required = true
+    relationshipName = "CartDeliveryGroup"
+  }
+  salesforce.MasterDetail CartId {
+    apiName = "CartItem.CartId"
+    label = "Cart ID"
+    _required = true
+    relationshipName = "Cart"
+  }
+  salesforce.Number ChildProductCount {
+    apiName = "CartItem.ChildProductCount"
+    label = "Child Product Count"
+    scale = 0
+    precision = 9
+    unique = false
+  }
+  salesforce.Summary DistributedAdjustmentAmount {
+    apiName = "CartItem.DistributedAdjustmentAmount"
+    label = "Distributed Promotions Total"
+    _hidden_value = true
+  }
+  salesforce.Summary DistributedAdjustmentTaxAmount {
+    apiName = "CartItem.DistributedAdjustmentTaxAmount"
+    label = "Distributed Promotions Tax Adjustment"
+    _hidden_value = true
+  }
+  salesforce.Unknown FirstPymtPriceAfterAdjustments {
+    apiName = "CartItem.FirstPymtPriceAfterAdjustments"
+    _hidden_value = true
+  }
+  salesforce.Unknown FirstPymtTax {
+    apiName = "CartItem.FirstPymtTax"
+    _hidden_value = true
+  }
+  salesforce.Currency GrossAdjustmentAmount {
+    apiName = "CartItem.GrossAdjustmentAmount"
+    label = "Gross Adjustment Amount quantity based"
+    scale = 2
+    precision = 18
+    _hidden_value = true
+  }
+  salesforce.Currency GrossUnitPrice {
+    apiName = "CartItem.GrossUnitPrice"
+    label = "Gross Unit Price"
+    scale = 2
+    precision = 18
+  }
+  salesforce.Summary ItemizedAdjustmentAmount {
+    apiName = "CartItem.ItemizedAdjustmentAmount"
+    label = "Item Promotions Total"
+    _hidden_value = true
+  }
+  salesforce.Summary ItemizedAdjustmentTaxAmount {
+    apiName = "CartItem.ItemizedAdjustmentTaxAmount"
+    label = "Item Promotions Tax Adjustment"
+    _hidden_value = true
+  }
+  salesforce.Currency ListPrice {
+    apiName = "CartItem.ListPrice"
+    label = "List Price"
+    scale = 2
+    precision = 18
+  }
+  salesforce.Text Name {
+    apiName = "CartItem.Name"
+    label = "Cart Item Name"
+    _required = true
+    length = 255
+    unique = false
+    caseSensitive = false
+  }
+  salesforce.Currency NetAdjustmentAmount {
+    apiName = "CartItem.NetAdjustmentAmount"
+    label = "Net Adjustment Amount quantity based"
+    scale = 2
+    precision = 18
+    _hidden_value = true
+  }
+  salesforce.Currency NetUnitPrice {
+    apiName = "CartItem.NetUnitPrice"
+    label = "Net Unit Price"
+    scale = 2
+    precision = 18
+  }
+  salesforce.Unknown NetUnitPriceAfterAdjustments {
+    apiName = "CartItem.NetUnitPriceAfterAdjustments"
+    _hidden_value = true
+  }
+  salesforce.Lookup ParentCartItemId {
+    apiName = "CartItem.ParentCartItemId"
+    label = "Cart Item ID"
+    relationshipName = "ParentCartItem"
+  }
+  salesforce.Number PerUnitWeight {
+    apiName = "CartItem.PerUnitWeight"
+    label = "Weight of single cart item"
+    scale = 2
+    precision = 18
+    unique = false
+  }
+  salesforce.Lookup PricebookEntryId {
+    apiName = "CartItem.PricebookEntryId"
+    _hidden_value = true
+  }
+  salesforce.Unknown PricingTermCount {
+    apiName = "CartItem.PricingTermCount"
+    _hidden_value = true
+  }
+  salesforce.Lookup Product2Id {
+    apiName = "CartItem.Product2Id"
+    label = "Product ID"
+    relationshipName = "Product2"
+  }
+  salesforce.Picklist ProductClass {
+    apiName = "CartItem.ProductClass"
+    label = "Product Class"
+    restricted = true
+  }
+  salesforce.Text ProductValidationKey {
+    apiName = "CartItem.ProductValidationKey"
+    label = "Product Validation Key hash"
+    length = 255
+    unique = false
+    caseSensitive = false
+  }
+  salesforce.Number Quantity {
+    apiName = "CartItem.Quantity"
+    label = "Quantity"
+    scale = 0
+    precision = 18
+    unique = false
+  }
+  salesforce.Currency SalesPrice {
+    apiName = "CartItem.SalesPrice"
+    label = "Sales Price"
+    scale = 2
+    precision = 18
+  }
+  salesforce.Unknown SellingModelType {
+    apiName = "CartItem.SellingModelType"
+    _hidden_value = true
+  }
+  salesforce.Text Sku {
+    apiName = "CartItem.Sku"
+    label = "SKU"
+    length = 255
+    unique = false
+    caseSensitive = false
+  }
+  salesforce.Picklist StockCheckMethod {
+    apiName = "CartItem.StockCheckMethod"
+    label = "Stock Check Method"
+    restricted = true
+  }
+  salesforce.Unknown SubscriptionTerm {
+    apiName = "CartItem.SubscriptionTerm"
+    _hidden_value = true
+  }
+  salesforce.Currency TotalAdjustmentAmount {
+    apiName = "CartItem.TotalAdjustmentAmount"
+    label = "All Adjustments Total"
+    scale = 2
+    precision = 18
+  }
+  salesforce.Currency TotalAmount {
+    apiName = "CartItem.TotalAmount"
+    label = "Total Amount"
+    scale = 2
+    precision = 18
+    _hidden_value = true
+  }
+  salesforce.Unknown TotalFirstPymtAdjAmount {
+    apiName = "CartItem.TotalFirstPymtAdjAmount"
+    _hidden_value = true
+  }
+  salesforce.Unknown TotalFirstPymtListPrice {
+    apiName = "CartItem.TotalFirstPymtListPrice"
+    _hidden_value = true
+  }
+  salesforce.Unknown TotalFirstPymtPrice {
+    apiName = "CartItem.TotalFirstPymtPrice"
+    _hidden_value = true
+  }
+  salesforce.Currency TotalLineAmount {
+    apiName = "CartItem.TotalLineAmount"
+    label = "Total Line Amount"
+    scale = 2
+    precision = 18
+  }
+  salesforce.Unknown TotalLineFirstPymtAmount {
+    apiName = "CartItem.TotalLineFirstPymtAmount"
+    _hidden_value = true
+  }
+  salesforce.Unknown TotalLineFirstPymtTaxAmount {
+    apiName = "CartItem.TotalLineFirstPymtTaxAmount"
+    _hidden_value = true
+  }
+  salesforce.Currency TotalLineGrossAmount {
+    apiName = "CartItem.TotalLineGrossAmount"
+    label = "Total Line Gross Amount"
+    scale = 2
+    precision = 18
+    _hidden_value = true
+  }
+  salesforce.Currency TotalLineNetAmount {
+    apiName = "CartItem.TotalLineNetAmount"
+    label = "Total Line Net Amount"
+    scale = 2
+    precision = 18
+    _hidden_value = true
+  }
+  salesforce.Summary TotalLineTaxAmount {
+    apiName = "CartItem.TotalLineTaxAmount"
+    label = "Total Line Tax Amount"
+    _hidden_value = true
+  }
+  salesforce.Currency TotalListPrice {
+    apiName = "CartItem.TotalListPrice"
+    label = "Total List Price"
+    scale = 2
+    precision = 18
+  }
+  salesforce.Currency TotalPrice {
+    apiName = "CartItem.TotalPrice"
+    label = "Total Price"
+    scale = 2
+    precision = 18
+  }
+  salesforce.Currency TotalPriceAfterAllAdjustments {
+    apiName = "CartItem.TotalPriceAfterAllAdjustments"
+    label = "Total Adjusted Price"
+    scale = 2
+    precision = 18
+  }
+  salesforce.Currency TotalPriceTaxAmount {
+    apiName = "CartItem.TotalPriceTaxAmount"
+    label = "Total Price Tax Amount"
+    scale = 2
+    precision = 18
+    _hidden_value = true
+  }
+  salesforce.Currency TotalPromoAdjustmentAmount {
+    apiName = "CartItem.TotalPromoAdjustmentAmount"
+    label = "Item Promotions Plus Distributed Promotions Total"
+    scale = 2
+    precision = 18
+  }
+  salesforce.Currency TotalPromoAdjustmentTaxAmount {
+    apiName = "CartItem.TotalPromoAdjustmentTaxAmount"
+    label = "Item Promotions Tax Adjustment Plus Distributed Tax Adjustment"
+    scale = 2
+    precision = 18
+    _hidden_value = true
+  }
+  salesforce.Currency TotalTaxAmount {
+    apiName = "CartItem.TotalTaxAmount"
+    label = "Total Tax Amount"
+    scale = 2
+    precision = 18
+    _hidden_value = true
+  }
+  salesforce.Number TotalWeight {
+    apiName = "CartItem.TotalWeight"
+    label = "Total Weight of cart item"
+    scale = 2
+    precision = 18
+    unique = false
+    _hidden_value = true
+  }
+  salesforce.Picklist Type {
+    apiName = "CartItem.Type"
+    label = "Type"
+    restricted = true
+  }
+  salesforce.Currency UnitAdjustedPrice {
+    apiName = "CartItem.UnitAdjustedPrice"
+    label = "Unit Adjusted Price"
+    scale = 2
+    precision = 18
+  }
+  salesforce.Currency UnitAdjustedPriceWithItemAdj {
+    apiName = "CartItem.UnitAdjustedPriceWithItemAdj"
+    label = "Unit price that includes both tier and item level discounts for this cart item"
+    scale = 2
+    precision = 18
+  }
+  salesforce.Currency UnitAdjustmentAmount {
+    apiName = "CartItem.UnitAdjustmentAmount"
+    label = "Unit Adjustment Amount"
+    scale = 2
+    precision = 18
+  }
+  salesforce.Currency UnitItemAdjustmentAmount {
+    apiName = "CartItem.UnitItemAdjustmentAmount"
+    label = "Item level discount on a unit level for this cart item"
+    scale = 2
+    precision = 18
+  }
+  salesforce.Unknown UnitPriceAfterAdjustments {
+    apiName = "CartItem.UnitPriceAfterAdjustments"
+    _hidden_value = true
+  }
+  salesforce.Picklist WeightUnit {
+    apiName = "CartItem.WeightUnit"
+    label = "Weight Unit"
+  }
+  serviceid Id {
+    apiName = "CartItem.Id"
+    label = "Cart Item ID"
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Checkbox IsDeleted {
+    apiName = "CartItem.IsDeleted"
+    label = "Deleted"
+    defaultValue = false
+    _hidden_value = true
+  }
+  salesforce.DateTime CreatedDate {
+    apiName = "CartItem.CreatedDate"
+    label = "Created Date"
+    _hidden_value = true
+  }
+  salesforce.Lookup CreatedById {
+    apiName = "CartItem.CreatedById"
+    label = "Created By ID"
+    relationshipName = "CreatedBy"
+    _hidden_value = true
+  }
+  salesforce.DateTime LastModifiedDate {
+    apiName = "CartItem.LastModifiedDate"
+    label = "Last Modified Date"
+    _hidden_value = true
+  }
+  salesforce.Lookup LastModifiedById {
+    apiName = "CartItem.LastModifiedById"
+    label = "Last Modified By ID"
+    relationshipName = "LastModifiedBy"
+    _hidden_value = true
+  }
+  salesforce.DateTime SystemModstamp {
+    apiName = "CartItem.SystemModstamp"
+    label = "System Modstamp"
+    _hidden_value = true
+  }
+}

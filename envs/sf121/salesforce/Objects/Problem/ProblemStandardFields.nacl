@@ -1,0 +1,136 @@
+type salesforce.Problem {
+  salesforce.Picklist Category {
+    apiName = "Problem.Category"
+    label = "Category"
+  }
+  salesforce.LongTextArea Description {
+    apiName = "Problem.Description"
+    label = "Description"
+    length = 32000
+  }
+  salesforce.Picklist Impact {
+    apiName = "Problem.Impact"
+    label = "Impact"
+    _required = true
+    restricted = false
+    valueSetName = salesforce.StandardValueSet.instance.CasePriority
+  }
+  salesforce.Lookup OwnerId {
+    apiName = "Problem.OwnerId"
+    label = "Owner ID"
+    relationshipName = "Owner"
+    _hidden_value = true
+  }
+  salesforce.Hierarchy ParentProblemId {
+    apiName = "Problem.ParentProblemId"
+    label = "Parent Problem ID"
+    relationshipName = "ParentProblem"
+  }
+  salesforce.Picklist Priority {
+    apiName = "Problem.Priority"
+    label = "Priority"
+    _required = true
+    restricted = false
+  }
+  salesforce.Text PriorityOverrideReason {
+    apiName = "Problem.PriorityOverrideReason"
+    label = "Priority Override Reason"
+    length = 255
+    unique = false
+    caseSensitive = false
+  }
+  salesforce.DateTime ResolutionDateTime {
+    apiName = "Problem.ResolutionDateTime"
+    label = "Resolution Date"
+  }
+  salesforce.LongTextArea ResolutionSummary {
+    apiName = "Problem.ResolutionSummary"
+    label = "Resolution Summary"
+    length = 32000
+  }
+  salesforce.Lookup ResolvedById {
+    apiName = "Problem.ResolvedById"
+    label = "User ID"
+    relationshipName = "ResolvedBy"
+  }
+  salesforce.LongTextArea RootCauseSummary {
+    apiName = "Problem.RootCauseSummary"
+    label = "Root Cause Summary"
+    length = 32000
+  }
+  salesforce.Picklist Status {
+    apiName = "Problem.Status"
+    label = "Status"
+    _required = true
+    restricted = false
+  }
+  salesforce.Picklist StatusCode {
+    apiName = "Problem.StatusCode"
+    label = "Status Code"
+    restricted = true
+    _hidden_value = true
+  }
+  salesforce.Picklist SubCategory {
+    apiName = "Problem.SubCategory"
+    label = "Sub-Category"
+  }
+  salesforce.Text Subject {
+    apiName = "Problem.Subject"
+    label = "Subject"
+    _required = true
+    length = 255
+    unique = false
+    caseSensitive = false
+  }
+  salesforce.Picklist Urgency {
+    apiName = "Problem.Urgency"
+    label = "Urgency"
+    _required = true
+    restricted = false
+    valueSetName = salesforce.StandardValueSet.instance.CasePriority
+  }
+  serviceid Id {
+    apiName = "Problem.Id"
+    label = "Problem ID"
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Checkbox IsDeleted {
+    apiName = "Problem.IsDeleted"
+    label = "Deleted"
+    defaultValue = false
+    _hidden_value = true
+  }
+  salesforce.AutoNumber ProblemNumber {
+    apiName = "Problem.ProblemNumber"
+    label = "Problem Number"
+    _hidden_value = true
+  }
+  salesforce.DateTime CreatedDate {
+    apiName = "Problem.CreatedDate"
+    label = "Created On"
+    _hidden_value = true
+  }
+  salesforce.Lookup CreatedById {
+    apiName = "Problem.CreatedById"
+    label = "Created By ID"
+    relationshipName = "CreatedBy"
+    _hidden_value = true
+  }
+  salesforce.DateTime LastModifiedDate {
+    apiName = "Problem.LastModifiedDate"
+    label = "Last Modified On"
+    _hidden_value = true
+  }
+  salesforce.Lookup LastModifiedById {
+    apiName = "Problem.LastModifiedById"
+    label = "Last Modified By ID"
+    relationshipName = "LastModifiedBy"
+    _hidden_value = true
+  }
+  salesforce.DateTime SystemModstamp {
+    apiName = "Problem.SystemModstamp"
+    label = "System Modstamp"
+    _hidden_value = true
+  }
+}

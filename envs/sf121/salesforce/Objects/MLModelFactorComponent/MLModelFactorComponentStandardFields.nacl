@@ -1,0 +1,119 @@
+type salesforce.MLModelFactorComponent {
+  serviceid Id {
+    apiName = "MLModelFactorComponent.Id"
+    label = "ML Model Factor Components ID"
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Checkbox IsDeleted {
+    apiName = "MLModelFactorComponent.IsDeleted"
+    label = "Deleted"
+    defaultValue = false
+    _hidden_value = true
+  }
+  salesforce.AutoNumber Name {
+    apiName = "MLModelFactorComponent.Name"
+    label = "Name"
+    _hidden_value = true
+  }
+  salesforce.DateTime CreatedDate {
+    apiName = "MLModelFactorComponent.CreatedDate"
+    label = "Created Date"
+    _hidden_value = true
+  }
+  salesforce.Lookup CreatedById {
+    apiName = "MLModelFactorComponent.CreatedById"
+    label = "Created By ID"
+    relationshipName = "CreatedBy"
+    _hidden_value = true
+  }
+  salesforce.DateTime LastModifiedDate {
+    apiName = "MLModelFactorComponent.LastModifiedDate"
+    label = "Last Modified Date"
+    _hidden_value = true
+  }
+  salesforce.Lookup LastModifiedById {
+    apiName = "MLModelFactorComponent.LastModifiedById"
+    label = "Last Modified By ID"
+    relationshipName = "LastModifiedBy"
+    _hidden_value = true
+  }
+  salesforce.DateTime SystemModstamp {
+    apiName = "MLModelFactorComponent.SystemModstamp"
+    label = "System Modstamp"
+    _hidden_value = true
+  }
+  salesforce.Lookup ModelFactorId {
+    apiName = "MLModelFactorComponent.ModelFactorId"
+    label = "ML Model Factor ID"
+    _required = true
+    relationshipName = "ModelFactor"
+    _hidden_value = true
+  }
+  salesforce.Lookup ModelId {
+    apiName = "MLModelFactorComponent.ModelId"
+    label = "ML Model ID"
+    relationshipName = "Model"
+    _hidden_value = true
+  }
+  salesforce.Text LeftHandDerivedField {
+    apiName = "MLModelFactorComponent.LeftHandDerivedField"
+    label = "Left Hand Derived Field"
+    length = 120
+    unique = false
+    caseSensitive = false
+    _hidden_value = true
+  }
+  salesforce.Picklist Operator {
+    apiName = "MLModelFactorComponent.Operator"
+    label = "Operator"
+    restricted = true
+    _hidden_value = true
+  }
+  salesforce.Text RightHandDerivedField {
+    apiName = "MLModelFactorComponent.RightHandDerivedField"
+    label = "Right Hand Derived Field"
+    length = 120
+    unique = false
+    caseSensitive = false
+    _hidden_value = true
+  }
+  salesforce.Text Value {
+    apiName = "MLModelFactorComponent.Value"
+    label = "Value"
+    length = 120
+    unique = false
+    caseSensitive = false
+    _hidden_value = true
+  }
+  salesforce.Number SortOrder {
+    apiName = "MLModelFactorComponent.SortOrder"
+    label = "Sort Order"
+    scale = 0
+    precision = 9
+    unique = false
+    _hidden_value = true
+  }
+  salesforce.Picklist FeatureType {
+    apiName = "MLModelFactorComponent.FeatureType"
+    label = "Feature Type"
+    restricted = true
+    _hidden_value = true
+  }
+  salesforce.Text FeatureValue {
+    apiName = "MLModelFactorComponent.FeatureValue"
+    label = "Feature Value"
+    length = 255
+    unique = false
+    caseSensitive = false
+    _hidden_value = true
+  }
+  salesforce.Text FactorLabelKey {
+    apiName = "MLModelFactorComponent.FactorLabelKey"
+    label = "Factor Label Key"
+    length = 255
+    unique = false
+    caseSensitive = false
+    _hidden_value = true
+  }
+}

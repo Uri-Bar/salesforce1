@@ -1,0 +1,176 @@
+type salesforce.Account {
+  salesforce.Picklist Active__c {
+    apiName = "Account.Active__c"
+    label = "Active"
+    valueSet = [
+      {
+        fullName = "No"
+        default = false
+        label = "No"
+      },
+      {
+        fullName = "Yes"
+        default = false
+        label = "Yes"
+      },
+    ]
+    sorted = false
+    restricted = false
+  }
+  salesforce.Number NumberofLocations__c {
+    apiName = "Account.NumberofLocations__c"
+    externalId = false
+    label = "Number of Locations"
+    precision = 3
+    scale = 0
+    unique = false
+  }
+  salesforce.Date SLAExpirationDate__c {
+    apiName = "Account.SLAExpirationDate__c"
+    label = "SLA Expiration Datea"
+  }
+  salesforce.Text SLASerialNumber__c {
+    apiName = "Account.SLASerialNumber__c"
+    externalId = false
+    label = "SLA Serial Number chgange"
+    length = 10
+    unique = false
+    caseSensitive = false
+  }
+  salesforce.Picklist SLA__c {
+    apiName = "Account.SLA__c"
+    label = "SLA"
+    valueSet = [
+      {
+        fullName = "Gold"
+        default = false
+        label = "Gold"
+      },
+      {
+        fullName = "Silver"
+        default = false
+        label = "Silver"
+      },
+      {
+        fullName = "Platinum"
+        default = false
+        label = "Platinum"
+      },
+      {
+        fullName = "Bronze"
+        default = false
+        label = "Bronze"
+      },
+    ]
+    sorted = false
+    restricted = false
+  }
+  salesforce.Picklist UpsellOpportunity__c {
+    apiName = "Account.UpsellOpportunity__c"
+    description = "yes"
+    label = "Upsell Opportunity"
+    valueSet = [
+      {
+        fullName = "Maybe"
+        default = false
+        label = "Maybe"
+      },
+      {
+        fullName = "No"
+        default = false
+        label = "No"
+      },
+      {
+        fullName = "Yes"
+        default = false
+        label = "Yes"
+      },
+    ]
+    sorted = false
+    restricted = false
+  }
+  salesforce.Checkbox X30011__c {
+    apiName = "Account.X30011__c"
+    defaultValue = false
+    label = "30011"
+  }
+  salesforce.Checkbox X30012__c {
+    apiName = "Account.X30012__c"
+    defaultValue = false
+    label = "30012"
+  }
+  salesforce.Checkbox X30013__c {
+    apiName = "Account.X30013__c"
+    defaultValue = false
+    label = "30013"
+  }
+  salesforce.Checkbox X30014__c {
+    apiName = "Account.X30014__c"
+    defaultValue = false
+    label = "30014"
+  }
+  salesforce.Checkbox X30015__c {
+    apiName = "Account.X30015__c"
+    defaultValue = false
+    label = "30015"
+  }
+  salesforce.Checkbox X30016__c {
+    apiName = "Account.X30016__c"
+    defaultValue = false
+    label = "30016"
+  }
+  salesforce.Checkbox X30017__c {
+    apiName = "Account.X30017__c"
+    defaultValue = false
+    label = "30017"
+  }
+  salesforce.Checkbox X97__c {
+    apiName = "Account.X97__c"
+    defaultValue = false
+    description = "asd"
+    label = "07"
+  }
+  salesforce.Checkbox asd__c {
+    apiName = "Account.asd__c"
+    defaultValue = false
+    label = "asd"
+  }
+  salesforce.Email asds__c {
+    apiName = "Account.asds__c"
+    externalId = false
+    label = "asds"
+    unique = false
+  }
+  salesforce.Checkbox buri__c {
+    apiName = "Account.buri__c"
+    defaultValue = false
+    label = "buri"
+  }
+  salesforce.Checkbox dfg__c {
+    apiName = "Account.dfg__c"
+    defaultValue = false
+    label = "dfg"
+  }
+  salesforce.Checkbox eden__c {
+    apiName = "Account.eden__c"
+    defaultValue = false
+    label = "eden"
+    _hidden_value = true
+  }
+  salesforce.Checkbox eu__c {
+    apiName = "Account.eu__c"
+    defaultValue = true
+    label = "euq"
+    _hidden_value = true
+  }
+  salesforce.Checkbox isUfi__c {
+    apiName = "Account.isUfi__c"
+    defaultValue = false
+    label = "isUfi"
+  }
+  salesforce.Checkbox rty__c {
+    apiName = "Account.rty__c"
+    defaultValue = false
+    label = "rty"
+  }
+}

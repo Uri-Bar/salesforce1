@@ -1,0 +1,109 @@
+type salesforce.OrgMetricScanResult {
+  salesforce.Picklist ItemStatus {
+    apiName = "OrgMetricScanResult.ItemStatus"
+    label = "Status"
+  }
+  serviceid Id {
+    apiName = "OrgMetricScanResult.Id"
+    label = "Org Metric Scan Result ID"
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Checkbox IsDeleted {
+    apiName = "OrgMetricScanResult.IsDeleted"
+    label = "Deleted"
+    defaultValue = false
+    _hidden_value = true
+  }
+  salesforce.Text Name {
+    apiName = "OrgMetricScanResult.Name"
+    label = "Org Metric Scan Result"
+    _required = true
+    length = 255
+    unique = false
+    caseSensitive = false
+  }
+  salesforce.DateTime CreatedDate {
+    apiName = "OrgMetricScanResult.CreatedDate"
+    label = "Created Date"
+    _hidden_value = true
+  }
+  salesforce.Lookup CreatedById {
+    apiName = "OrgMetricScanResult.CreatedById"
+    label = "Created By ID"
+    relationshipName = "CreatedBy"
+    _hidden_value = true
+  }
+  salesforce.DateTime LastModifiedDate {
+    apiName = "OrgMetricScanResult.LastModifiedDate"
+    label = "Last Modified Date"
+    _hidden_value = true
+  }
+  salesforce.Lookup LastModifiedById {
+    apiName = "OrgMetricScanResult.LastModifiedById"
+    label = "Last Modified By ID"
+    relationshipName = "LastModifiedBy"
+    _hidden_value = true
+  }
+  salesforce.DateTime SystemModstamp {
+    apiName = "OrgMetricScanResult.SystemModstamp"
+    label = "System Modstamp"
+    _hidden_value = true
+  }
+  salesforce.Lookup OrgMetricScanSummaryId {
+    apiName = "OrgMetricScanResult.OrgMetricScanSummaryId"
+    label = "Org Metric Scan ID"
+    _required = true
+    relationshipName = "OrgMetricScanSummary"
+  }
+  salesforce.Url Url {
+    apiName = "OrgMetricScanResult.Url"
+    label = "Url"
+  }
+  salesforce.Text Object {
+    apiName = "OrgMetricScanResult.Object"
+    label = "Object"
+    length = 255
+    unique = false
+    caseSensitive = false
+  }
+  salesforce.DateTime Date {
+    apiName = "OrgMetricScanResult.Date"
+    label = "Date"
+  }
+  salesforce.Text Type {
+    apiName = "OrgMetricScanResult.Type"
+    label = "Type"
+    length = 255
+    unique = false
+    caseSensitive = false
+  }
+  salesforce.Number Profile {
+    apiName = "OrgMetricScanResult.Profile"
+    label = "Profile"
+    scale = 0
+    precision = 9
+    unique = false
+  }
+  salesforce.Text User {
+    apiName = "OrgMetricScanResult.User"
+    label = "User"
+    length = 255
+    unique = false
+    caseSensitive = false
+  }
+  salesforce.Number Quantity {
+    apiName = "OrgMetricScanResult.Quantity"
+    label = "Quantity"
+    scale = 0
+    precision = 9
+    unique = false
+  }
+  salesforce.Number Flags {
+    apiName = "OrgMetricScanResult.Flags"
+    label = "Flags"
+    scale = 0
+    precision = 9
+    unique = false
+  }
+}

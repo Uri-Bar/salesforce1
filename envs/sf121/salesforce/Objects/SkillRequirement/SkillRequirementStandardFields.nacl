@@ -1,0 +1,65 @@
+type salesforce.SkillRequirement {
+  salesforce.MasterDetail RelatedRecordId {
+    apiName = "SkillRequirement.RelatedRecordId"
+    label = "Required For ID"
+    _required = true
+    relationshipName = "RelatedRecord"
+  }
+  salesforce.Lookup SkillId {
+    apiName = "SkillRequirement.SkillId"
+    label = "Skill ID"
+    _required = true
+    relationshipName = "Skill"
+  }
+  salesforce.Number SkillLevel {
+    apiName = "SkillRequirement.SkillLevel"
+    label = "Skill Level"
+    scale = 2
+    precision = 4
+    unique = false
+  }
+  serviceid Id {
+    apiName = "SkillRequirement.Id"
+    label = "Skill Requirement ID"
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Checkbox IsDeleted {
+    apiName = "SkillRequirement.IsDeleted"
+    label = "Deleted"
+    defaultValue = false
+    _hidden_value = true
+  }
+  salesforce.AutoNumber SkillNumber {
+    apiName = "SkillRequirement.SkillNumber"
+    label = "Skill Requirement Number"
+    _hidden_value = true
+  }
+  salesforce.DateTime CreatedDate {
+    apiName = "SkillRequirement.CreatedDate"
+    label = "Created Date"
+    _hidden_value = true
+  }
+  salesforce.Lookup CreatedById {
+    apiName = "SkillRequirement.CreatedById"
+    label = "Created By ID"
+    relationshipName = "CreatedBy"
+    _hidden_value = true
+  }
+  salesforce.DateTime LastModifiedDate {
+    apiName = "SkillRequirement.LastModifiedDate"
+    label = "Last Modified Date"
+    _hidden_value = true
+  }
+  salesforce.Lookup LastModifiedById {
+    apiName = "SkillRequirement.LastModifiedById"
+    label = "Last Modified By ID"
+    relationshipName = "LastModifiedBy"
+    _hidden_value = true
+  }
+  salesforce.DateTime SystemModstamp {
+    apiName = "SkillRequirement.SystemModstamp"
+    label = "System Modstamp"
+    _hidden_value = true
+  }
+}

@@ -1,0 +1,103 @@
+type salesforce.CartCheckoutSession {
+  serviceid Id {
+    apiName = "CartCheckoutSession.Id"
+    label = "Cart Checkout Session ID"
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Checkbox IsDeleted {
+    apiName = "CartCheckoutSession.IsDeleted"
+    label = "Deleted"
+    defaultValue = false
+    _hidden_value = true
+  }
+  salesforce.Text Name {
+    apiName = "CartCheckoutSession.Name"
+    label = "Name"
+    _required = true
+    length = 255
+    unique = false
+    caseSensitive = false
+  }
+  salesforce.DateTime CreatedDate {
+    apiName = "CartCheckoutSession.CreatedDate"
+    label = "Created Date"
+    _hidden_value = true
+  }
+  salesforce.Lookup CreatedById {
+    apiName = "CartCheckoutSession.CreatedById"
+    label = "Created By ID"
+    relationshipName = "CreatedBy"
+    _hidden_value = true
+  }
+  salesforce.DateTime LastModifiedDate {
+    apiName = "CartCheckoutSession.LastModifiedDate"
+    label = "Last Modified Date"
+    _hidden_value = true
+  }
+  salesforce.Lookup LastModifiedById {
+    apiName = "CartCheckoutSession.LastModifiedById"
+    label = "Last Modified By ID"
+    relationshipName = "LastModifiedBy"
+    _hidden_value = true
+  }
+  salesforce.DateTime SystemModstamp {
+    apiName = "CartCheckoutSession.SystemModstamp"
+    label = "System Modstamp"
+    _hidden_value = true
+  }
+  salesforce.Lookup WebCartId {
+    apiName = "CartCheckoutSession.WebCartId"
+    label = "Cart ID"
+    _required = true
+    relationshipName = "WebCart"
+    _hidden_value = true
+  }
+  salesforce.Text State {
+    apiName = "CartCheckoutSession.State"
+    label = "State"
+    _required = true
+    length = 30
+    unique = false
+    caseSensitive = false
+  }
+  salesforce.Text NextState {
+    apiName = "CartCheckoutSession.NextState"
+    label = "Next State"
+    length = 30
+    unique = false
+    caseSensitive = false
+  }
+  salesforce.Checkbox IsProcessing {
+    apiName = "CartCheckoutSession.IsProcessing"
+    label = "Is Processing"
+    defaultValue = false
+  }
+  salesforce.Lookup BackgroundOperationId {
+    apiName = "CartCheckoutSession.BackgroundOperationId"
+    label = "Background Operation ID"
+    relationshipName = "BackgroundOperation"
+  }
+  salesforce.Checkbox IsArchived {
+    apiName = "CartCheckoutSession.IsArchived"
+    label = "Is Archived"
+    defaultValue = false
+  }
+  salesforce.Lookup OrderId {
+    apiName = "CartCheckoutSession.OrderId"
+    label = "Order ID"
+    relationshipName = "Order"
+  }
+  salesforce.Checkbox IsError {
+    apiName = "CartCheckoutSession.IsError"
+    label = "Is Error"
+    defaultValue = false
+  }
+  salesforce.Text OrderReferenceNumber {
+    apiName = "CartCheckoutSession.OrderReferenceNumber"
+    label = "Order Reference Number"
+    length = 36
+    unique = false
+    caseSensitive = false
+  }
+}

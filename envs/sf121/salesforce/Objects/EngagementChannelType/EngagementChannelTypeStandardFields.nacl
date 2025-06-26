@@ -1,0 +1,71 @@
+type salesforce.EngagementChannelType {
+  salesforce.Picklist ContactPointType {
+    apiName = "EngagementChannelType.ContactPointType"
+    inlineHelpText = "The contact point type record associated with the engagement channel type."
+    label = "Contact Point Type"
+    restricted = true
+  }
+  salesforce.Checkbox IsActive {
+    apiName = "EngagementChannelType.IsActive"
+    label = "Active"
+  }
+  salesforce.Text Name {
+    apiName = "EngagementChannelType.Name"
+    label = "Name"
+    _required = true
+    length = 255
+    unique = false
+    caseSensitive = false
+  }
+  salesforce.Lookup OwnerId {
+    apiName = "EngagementChannelType.OwnerId"
+    label = "Owner ID"
+    relationshipName = "Owner"
+    _hidden_value = true
+  }
+  salesforce.Picklist UsageType {
+    apiName = "EngagementChannelType.UsageType"
+    label = "Usage Type"
+    restricted = false
+    visibleLines = 0
+  }
+  serviceid Id {
+    apiName = "EngagementChannelType.Id"
+    label = "Engagement Channel Type ID"
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Checkbox IsDeleted {
+    apiName = "EngagementChannelType.IsDeleted"
+    label = "Deleted"
+    defaultValue = false
+    _hidden_value = true
+  }
+  salesforce.DateTime CreatedDate {
+    apiName = "EngagementChannelType.CreatedDate"
+    label = "Created Date"
+    _hidden_value = true
+  }
+  salesforce.Lookup CreatedById {
+    apiName = "EngagementChannelType.CreatedById"
+    label = "Created By ID"
+    relationshipName = "CreatedBy"
+    _hidden_value = true
+  }
+  salesforce.DateTime LastModifiedDate {
+    apiName = "EngagementChannelType.LastModifiedDate"
+    label = "Last Modified Date"
+    _hidden_value = true
+  }
+  salesforce.Lookup LastModifiedById {
+    apiName = "EngagementChannelType.LastModifiedById"
+    label = "Last Modified By ID"
+    relationshipName = "LastModifiedBy"
+    _hidden_value = true
+  }
+  salesforce.DateTime SystemModstamp {
+    apiName = "EngagementChannelType.SystemModstamp"
+    label = "System Modstamp"
+    _hidden_value = true
+  }
+}

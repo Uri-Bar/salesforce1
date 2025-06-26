@@ -1,0 +1,227 @@
+type salesforce.InvoiceLine {
+  salesforce.Currency AdjustmentAmount {
+    apiName = "InvoiceLine.AdjustmentAmount"
+    label = "Adjustment Amount"
+    scale = 2
+    precision = 18
+  }
+  salesforce.Currency AdjustmentAmountWithTax {
+    apiName = "InvoiceLine.AdjustmentAmountWithTax"
+    label = "Adjustment Amount with Tax"
+    scale = 2
+    precision = 18
+    _hidden_value = true
+  }
+  salesforce.Currency AdjustmentTaxAmount {
+    apiName = "InvoiceLine.AdjustmentTaxAmount"
+    label = "Adjustment Tax Amount"
+    scale = 2
+    precision = 18
+    _hidden_value = true
+  }
+  salesforce.Currency ChargeAmount {
+    apiName = "InvoiceLine.ChargeAmount"
+    label = "Charge Amount"
+    scale = 2
+    precision = 18
+  }
+  salesforce.Currency ChargeAmountWithTax {
+    apiName = "InvoiceLine.ChargeAmountWithTax"
+    label = "Charge Amount with Tax"
+    scale = 2
+    precision = 18
+    _hidden_value = true
+  }
+  salesforce.Currency ChargeTaxAmount {
+    apiName = "InvoiceLine.ChargeTaxAmount"
+    label = "Charge Tax Amount"
+    scale = 2
+    precision = 18
+    _hidden_value = true
+  }
+  salesforce.Unknown CorpCurrencyCnvChargeAmt {
+    apiName = "InvoiceLine.CorpCurrencyCnvChargeAmt"
+    _hidden_value = true
+  }
+  salesforce.Unknown CorpCurrencyCnvTotalTaxAmt {
+    apiName = "InvoiceLine.CorpCurrencyCnvTotalTaxAmt"
+    _hidden_value = true
+  }
+  salesforce.Unknown CorporateCurrencyCvsnDate {
+    apiName = "InvoiceLine.CorporateCurrencyCvsnDate"
+    _hidden_value = true
+  }
+  salesforce.Unknown CorporateCurrencyCvsnRate {
+    apiName = "InvoiceLine.CorporateCurrencyCvsnRate"
+    _hidden_value = true
+  }
+  salesforce.Text Description {
+    apiName = "InvoiceLine.Description"
+    label = "Description"
+    length = 255
+    unique = false
+    caseSensitive = false
+  }
+  salesforce.MasterDetail InvoiceId {
+    apiName = "InvoiceLine.InvoiceId"
+    label = "Invoice ID"
+    _required = true
+    relationshipName = "Invoice"
+    _hidden_value = true
+  }
+  salesforce.Date InvoiceLineEndDate {
+    apiName = "InvoiceLine.InvoiceLineEndDate"
+    label = "Invoice Line End Date"
+    _required = true
+  }
+  salesforce.Date InvoiceLineStartDate {
+    apiName = "InvoiceLine.InvoiceLineStartDate"
+    label = "Invoice Line Start Date"
+    _required = true
+  }
+  salesforce.Text InvoiceStatus {
+    apiName = "InvoiceLine.InvoiceStatus"
+    label = "Status"
+    length = 50
+    unique = false
+    caseSensitive = false
+    _hidden_value = true
+  }
+  salesforce.Summary LineAmount {
+    apiName = "InvoiceLine.LineAmount"
+    label = "Line Amount"
+    _hidden_value = true
+  }
+  salesforce.Text Name {
+    apiName = "InvoiceLine.Name"
+    label = "Name"
+    _required = true
+    length = 255
+    unique = false
+    caseSensitive = false
+  }
+  salesforce.Lookup Product2Id {
+    apiName = "InvoiceLine.Product2Id"
+    label = "Product ID"
+    relationshipName = "Product2"
+  }
+  salesforce.Number Quantity {
+    apiName = "InvoiceLine.Quantity"
+    label = "Quantity"
+    scale = 2
+    precision = 18
+    unique = false
+  }
+  salesforce.Lookup ReferenceEntityItemId {
+    apiName = "InvoiceLine.ReferenceEntityItemId"
+    label = "ReferenceEntityItem ID"
+    relationshipName = "ReferenceEntityItem"
+  }
+  salesforce.Picklist ReferenceEntityItemTypeCode {
+    apiName = "InvoiceLine.ReferenceEntityItemTypeCode"
+    label = "Reference Entity Item Type Code"
+    restricted = true
+  }
+  salesforce.Lookup RelatedLineId {
+    apiName = "InvoiceLine.RelatedLineId"
+    label = "Invoice Line ID"
+    relationshipName = "RelatedLine"
+  }
+  salesforce.Currency TaxAmount {
+    apiName = "InvoiceLine.TaxAmount"
+    label = "Tax Amount"
+    scale = 2
+    precision = 18
+  }
+  salesforce.Text TaxCode {
+    apiName = "InvoiceLine.TaxCode"
+    label = "Tax Code"
+    length = 255
+    unique = false
+    caseSensitive = false
+  }
+  salesforce.Date TaxEffectiveDate {
+    apiName = "InvoiceLine.TaxEffectiveDate"
+    label = "Tax Effective Date"
+  }
+  salesforce.Text TaxName {
+    apiName = "InvoiceLine.TaxName"
+    label = "Tax Name"
+    length = 255
+    unique = false
+    caseSensitive = false
+  }
+  salesforce.Percent TaxRate {
+    apiName = "InvoiceLine.TaxRate"
+    label = "Tax Rate"
+    scale = 2
+    precision = 5
+  }
+  salesforce.Picklist Type {
+    apiName = "InvoiceLine.Type"
+    label = "Type"
+    _required = true
+    restricted = true
+    _hidden_value = true
+  }
+  salesforce.Currency UnitPrice {
+    apiName = "InvoiceLine.UnitPrice"
+    label = "Unit Price"
+    scale = 2
+    precision = 18
+  }
+  serviceid Id {
+    apiName = "InvoiceLine.Id"
+    label = "Invoice Line ID"
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Checkbox IsDeleted {
+    apiName = "InvoiceLine.IsDeleted"
+    label = "Deleted"
+    defaultValue = false
+    _hidden_value = true
+  }
+  salesforce.DateTime CreatedDate {
+    apiName = "InvoiceLine.CreatedDate"
+    label = "Created Date"
+    _hidden_value = true
+  }
+  salesforce.Lookup CreatedById {
+    apiName = "InvoiceLine.CreatedById"
+    label = "Created By ID"
+    relationshipName = "CreatedBy"
+    _hidden_value = true
+  }
+  salesforce.DateTime LastModifiedDate {
+    apiName = "InvoiceLine.LastModifiedDate"
+    label = "Last Modified Date"
+    _hidden_value = true
+  }
+  salesforce.Lookup LastModifiedById {
+    apiName = "InvoiceLine.LastModifiedById"
+    label = "Last Modified By ID"
+    relationshipName = "LastModifiedBy"
+    _hidden_value = true
+  }
+  salesforce.DateTime SystemModstamp {
+    apiName = "InvoiceLine.SystemModstamp"
+    label = "System Modstamp"
+    _hidden_value = true
+  }
+  salesforce.Lookup GroupReferenceEntityItemId {
+    apiName = "InvoiceLine.GroupReferenceEntityItemId"
+    label = "GroupReferenceEntityItem ID"
+    relationshipName = "GroupReferenceEntityItem"
+  }
+  salesforce.Picklist ReferenceEntityItemType {
+    apiName = "InvoiceLine.ReferenceEntityItemType"
+    label = "Reference Entity Item Type"
+    restricted = true
+  }
+  salesforce.Picklist TaxProcessingStatus {
+    apiName = "InvoiceLine.TaxProcessingStatus"
+    label = "Tax Processing Status"
+    restricted = true
+  }
+}

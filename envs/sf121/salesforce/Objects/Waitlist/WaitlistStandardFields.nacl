@@ -1,0 +1,79 @@
+type salesforce.Waitlist {
+  salesforce.LongTextArea Description {
+    apiName = "Waitlist.Description"
+    label = "Description"
+    length = 32000
+  }
+  salesforce.Checkbox IsActive {
+    apiName = "Waitlist.IsActive"
+    label = "Active"
+    defaultValue = false
+  }
+  salesforce.Unknown Link {
+    apiName = "Waitlist.Link"
+    _hidden_value = true
+  }
+  salesforce.Text Name {
+    apiName = "Waitlist.Name"
+    label = "Name"
+    _required = true
+    length = 255
+    unique = false
+    caseSensitive = false
+  }
+  salesforce.Lookup ServiceTerritoryId {
+    apiName = "Waitlist.ServiceTerritoryId"
+    label = "Territory ID"
+    _required = true
+    relationshipName = "ServiceTerritory"
+  }
+  salesforce.Unknown ShouldAllowSelfCheckIn {
+    apiName = "Waitlist.ShouldAllowSelfCheckIn"
+    _hidden_value = true
+  }
+  serviceid Id {
+    apiName = "Waitlist.Id"
+    label = "Waitlist ID"
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Lookup OwnerId {
+    apiName = "Waitlist.OwnerId"
+    label = "Owner ID"
+    relationshipName = "Owner"
+    _hidden_value = true
+  }
+  salesforce.Checkbox IsDeleted {
+    apiName = "Waitlist.IsDeleted"
+    label = "Deleted"
+    defaultValue = false
+    _hidden_value = true
+  }
+  salesforce.DateTime CreatedDate {
+    apiName = "Waitlist.CreatedDate"
+    label = "Created Date"
+    _hidden_value = true
+  }
+  salesforce.Lookup CreatedById {
+    apiName = "Waitlist.CreatedById"
+    label = "Created By ID"
+    relationshipName = "CreatedBy"
+    _hidden_value = true
+  }
+  salesforce.DateTime LastModifiedDate {
+    apiName = "Waitlist.LastModifiedDate"
+    label = "Last Modified Date"
+    _hidden_value = true
+  }
+  salesforce.Lookup LastModifiedById {
+    apiName = "Waitlist.LastModifiedById"
+    label = "Last Modified By ID"
+    relationshipName = "LastModifiedBy"
+    _hidden_value = true
+  }
+  salesforce.DateTime SystemModstamp {
+    apiName = "Waitlist.SystemModstamp"
+    label = "System Modstamp"
+    _hidden_value = true
+  }
+}

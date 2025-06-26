@@ -1,0 +1,98 @@
+type salesforce.InventoryReservation {
+  salesforce.Text ErrorCode {
+    apiName = "InventoryReservation.ErrorCode"
+    label = "Error Code"
+    length = 255
+    unique = false
+    caseSensitive = false
+  }
+  salesforce.LongTextArea ErrorMessage {
+    apiName = "InventoryReservation.ErrorMessage"
+    label = "Error Message"
+    length = 2000
+  }
+  salesforce.Checkbox IsAsyncOperationInProgress {
+    apiName = "InventoryReservation.IsAsyncOperationInProgress"
+    label = "Async Operation in Progress"
+    defaultValue = false
+  }
+  salesforce.Checkbox IsSuccess {
+    apiName = "InventoryReservation.IsSuccess"
+    label = "Latest Operation Succeeded"
+    defaultValue = false
+  }
+  salesforce.DateTime ReservationDate {
+    apiName = "InventoryReservation.ReservationDate"
+    label = "Reservation Date"
+    _required = true
+  }
+  salesforce.Number ReservationDurationInSeconds {
+    apiName = "InventoryReservation.ReservationDurationInSeconds"
+    label = "Reservation Duration in Seconds"
+    scale = 0
+    precision = 9
+    unique = false
+  }
+  salesforce.Text ReservationIdentifier {
+    apiName = "InventoryReservation.ReservationIdentifier"
+    label = "Reservation Identifier"
+    length = 255
+    unique = true
+    caseSensitive = true
+  }
+  salesforce.Lookup ReservationSourceId {
+    apiName = "InventoryReservation.ReservationSourceId"
+    label = "Reservation Source ID"
+    relationshipName = "ReservationSource"
+  }
+  serviceid Id {
+    apiName = "InventoryReservation.Id"
+    label = "Inventory Reservation ID"
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Lookup OwnerId {
+    apiName = "InventoryReservation.OwnerId"
+    label = "Owner ID"
+    relationshipName = "Owner"
+    _hidden_value = true
+  }
+  salesforce.Checkbox IsDeleted {
+    apiName = "InventoryReservation.IsDeleted"
+    label = "Deleted"
+    defaultValue = false
+    _hidden_value = true
+  }
+  salesforce.AutoNumber InventoryReservationName {
+    apiName = "InventoryReservation.InventoryReservationName"
+    label = "Inventory Reservation Number"
+    _hidden_value = true
+  }
+  salesforce.DateTime CreatedDate {
+    apiName = "InventoryReservation.CreatedDate"
+    label = "Created Date"
+    _hidden_value = true
+  }
+  salesforce.Lookup CreatedById {
+    apiName = "InventoryReservation.CreatedById"
+    label = "Created By ID"
+    relationshipName = "CreatedBy"
+    _hidden_value = true
+  }
+  salesforce.DateTime LastModifiedDate {
+    apiName = "InventoryReservation.LastModifiedDate"
+    label = "Last Modified Date"
+    _hidden_value = true
+  }
+  salesforce.Lookup LastModifiedById {
+    apiName = "InventoryReservation.LastModifiedById"
+    label = "Last Modified By ID"
+    relationshipName = "LastModifiedBy"
+    _hidden_value = true
+  }
+  salesforce.DateTime SystemModstamp {
+    apiName = "InventoryReservation.SystemModstamp"
+    label = "System Modstamp"
+    _hidden_value = true
+  }
+}

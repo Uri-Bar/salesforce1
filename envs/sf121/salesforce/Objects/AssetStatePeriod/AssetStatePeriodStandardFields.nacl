@@ -1,0 +1,89 @@
+type salesforce.AssetStatePeriod {
+  salesforce.Currency Amount {
+    apiName = "AssetStatePeriod.Amount"
+    label = "Amount"
+    _required = true
+    scale = 2
+    precision = 18
+    _hidden_value = true
+  }
+  salesforce.MasterDetail AssetId {
+    apiName = "AssetStatePeriod.AssetId"
+    label = "Asset ID"
+    _required = true
+    relationshipName = "Asset"
+    _hidden_value = true
+  }
+  salesforce.DateTime EndDate {
+    apiName = "AssetStatePeriod.EndDate"
+    label = "End Date"
+    _hidden_value = true
+  }
+  salesforce.Currency Mrr {
+    apiName = "AssetStatePeriod.Mrr"
+    label = "Monthly Recurring Revenue"
+    _required = true
+    scale = 2
+    precision = 18
+    _hidden_value = true
+  }
+  salesforce.Number Quantity {
+    apiName = "AssetStatePeriod.Quantity"
+    label = "Quantity"
+    _required = true
+    scale = 2
+    precision = 14
+    unique = false
+    _hidden_value = true
+  }
+  salesforce.DateTime StartDate {
+    apiName = "AssetStatePeriod.StartDate"
+    label = "Start Date"
+    _required = true
+    _hidden_value = true
+  }
+  serviceid Id {
+    apiName = "AssetStatePeriod.Id"
+    label = "Asset State Period ID"
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Checkbox IsDeleted {
+    apiName = "AssetStatePeriod.IsDeleted"
+    label = "Deleted"
+    defaultValue = false
+    _hidden_value = true
+  }
+  salesforce.AutoNumber AssetStatePeriodNumber {
+    apiName = "AssetStatePeriod.AssetStatePeriodNumber"
+    label = "Name"
+    _hidden_value = true
+  }
+  salesforce.DateTime CreatedDate {
+    apiName = "AssetStatePeriod.CreatedDate"
+    label = "Created Date"
+    _hidden_value = true
+  }
+  salesforce.Lookup CreatedById {
+    apiName = "AssetStatePeriod.CreatedById"
+    label = "Created By ID"
+    relationshipName = "CreatedBy"
+    _hidden_value = true
+  }
+  salesforce.DateTime LastModifiedDate {
+    apiName = "AssetStatePeriod.LastModifiedDate"
+    label = "Last Modified Date"
+    _hidden_value = true
+  }
+  salesforce.Lookup LastModifiedById {
+    apiName = "AssetStatePeriod.LastModifiedById"
+    label = "Last Modified By ID"
+    relationshipName = "LastModifiedBy"
+    _hidden_value = true
+  }
+  salesforce.DateTime SystemModstamp {
+    apiName = "AssetStatePeriod.SystemModstamp"
+    label = "System Modstamp"
+    _hidden_value = true
+  }
+}

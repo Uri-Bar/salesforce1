@@ -1,0 +1,146 @@
+type salesforce.PromotionTarget {
+  salesforce.Currency AdjustmentAmount {
+    apiName = "PromotionTarget.AdjustmentAmount"
+    label = "Adjustment Amount"
+    scale = 2
+    precision = 18
+  }
+  salesforce.Percent AdjustmentPercent {
+    apiName = "PromotionTarget.AdjustmentPercent"
+    label = "Adjustment Percent"
+    scale = 2
+    precision = 5
+  }
+  salesforce.Picklist AdjustmentType {
+    apiName = "PromotionTarget.AdjustmentType"
+    label = "Adjustment Type"
+    _required = true
+    restricted = true
+  }
+  salesforce.Unknown IsMinItemCountRequired {
+    apiName = "PromotionTarget.IsMinItemCountRequired"
+    _hidden_value = true
+  }
+  salesforce.AutoNumber Name {
+    apiName = "PromotionTarget.Name"
+    label = "Promotion Target Name"
+    _hidden_value = true
+  }
+  salesforce.MasterDetail PromotionId {
+    apiName = "PromotionTarget.PromotionId"
+    label = "Promotion ID"
+    _required = true
+    relationshipName = "Promotion"
+  }
+  salesforce.Lookup PromotionTierId {
+    apiName = "PromotionTarget.PromotionTierId"
+    label = "Promotion Tier ID"
+    relationshipName = "PromotionTier"
+  }
+  salesforce.Number RestrictionQuantity {
+    apiName = "PromotionTarget.RestrictionQuantity"
+    inlineHelpText = "Enter how many products can receive this discount. Leave blank for an unlimited quantity. This field is mandatory if the Adjustment Type is Total Fixed Price."
+    label = "Quantity Limit"
+    scale = 0
+    precision = 18
+    unique = false
+  }
+  salesforce.Unknown RestrictionType {
+    apiName = "PromotionTarget.RestrictionType"
+    _hidden_value = true
+  }
+  salesforce.Lookup TargetId {
+    apiName = "PromotionTarget.TargetId"
+    label = "Target ID"
+    relationshipName = "Target"
+  }
+  salesforce.Picklist TargetOperator {
+    apiName = "PromotionTarget.TargetOperator"
+    label = "Target Operator"
+    _required = true
+    restricted = true
+  }
+  salesforce.Text TargetProductCategoryName {
+    apiName = "PromotionTarget.TargetProductCategoryName"
+    label = "Target Category Name"
+    length = 200
+    unique = false
+    caseSensitive = false
+    _hidden_value = true
+  }
+  salesforce.Text TargetProductName {
+    apiName = "PromotionTarget.TargetProductName"
+    label = "Target Product Name"
+    length = 255
+    unique = false
+    caseSensitive = false
+    _hidden_value = true
+  }
+  salesforce.Text TargetProductSku {
+    apiName = "PromotionTarget.TargetProductSku"
+    label = "Target Product SKU"
+    length = 180
+    unique = false
+    caseSensitive = false
+    _hidden_value = true
+  }
+  salesforce.Picklist TargetType {
+    apiName = "PromotionTarget.TargetType"
+    label = "Target Type"
+    _required = true
+    restricted = true
+  }
+  serviceid Id {
+    apiName = "PromotionTarget.Id"
+    label = "Promotion Target ID"
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Checkbox IsDeleted {
+    apiName = "PromotionTarget.IsDeleted"
+    label = "Deleted"
+    defaultValue = false
+    _hidden_value = true
+  }
+  salesforce.DateTime CreatedDate {
+    apiName = "PromotionTarget.CreatedDate"
+    label = "Created Date"
+    _hidden_value = true
+  }
+  salesforce.Lookup CreatedById {
+    apiName = "PromotionTarget.CreatedById"
+    label = "Created By ID"
+    relationshipName = "CreatedBy"
+    _hidden_value = true
+  }
+  salesforce.DateTime LastModifiedDate {
+    apiName = "PromotionTarget.LastModifiedDate"
+    label = "Last Modified Date"
+    _hidden_value = true
+  }
+  salesforce.Lookup LastModifiedById {
+    apiName = "PromotionTarget.LastModifiedById"
+    label = "Last Modified By ID"
+    relationshipName = "LastModifiedBy"
+    _hidden_value = true
+  }
+  salesforce.DateTime SystemModstamp {
+    apiName = "PromotionTarget.SystemModstamp"
+    label = "System Modstamp"
+    _hidden_value = true
+  }
+  salesforce.Text TargetStandardShippingRateName {
+    apiName = "PromotionTarget.TargetStandardShippingRateName"
+    label = "Target Standard Shipping Rate Name"
+    length = 180
+    unique = false
+    caseSensitive = false
+    _hidden_value = true
+  }
+  salesforce.Picklist TargetRuleCriteriaType {
+    apiName = "PromotionTarget.TargetRuleCriteriaType"
+    label = "Target Rule Criteria Type"
+    _required = true
+    restricted = true
+  }
+}

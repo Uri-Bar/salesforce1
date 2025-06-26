@@ -1,0 +1,38 @@
+type salesforce.Contact {
+  salesforce.Text Languages__c {
+    apiName = "Contact.Languages__c"
+    externalId = false
+    label = "Languages"
+    length = 100
+    unique = false
+    caseSensitive = false
+  }
+  salesforce.Picklist Level__c {
+    apiName = "Contact.Level__c"
+    label = "Level"
+    valueSet = [
+      {
+        fullName = "Secondary"
+        default = false
+        label = "Secondary"
+      },
+      {
+        fullName = "Tertiary"
+        default = false
+        label = "Tertiary"
+      },
+      {
+        fullName = "Primary"
+        default = false
+        label = "Primary"
+      },
+    ]
+    sorted = false
+    restricted = false
+  }
+  salesforce.Checkbox Prequalified__c {
+    apiName = "Contact.Prequalified__c"
+    defaultValue = false
+    label = "Prequalified?"
+  }
+}

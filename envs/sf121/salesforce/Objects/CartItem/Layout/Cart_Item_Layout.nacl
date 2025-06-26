@@ -1,0 +1,156 @@
+salesforce.Layout CartItem_Cart_Item_Layout@bss {
+  layoutSections = [
+    {
+      customLabel = false
+      detailHeading = true
+      editHeading = true
+      label = "Information"
+      layoutColumns = [
+        {
+          layoutItems = [
+            {
+              behavior = "Required"
+              field = salesforce.CartItem.field.Name
+            },
+            {
+              behavior = "Required"
+              field = salesforce.CartItem.field.CartId
+            },
+            {
+              behavior = "Required"
+              field = salesforce.CartItem.field.CartDeliveryGroupId
+            },
+            {
+              behavior = "Required"
+              field = salesforce.CartItem.field.CreatedDate
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.CartItem.field.Product2Id
+            },
+            {
+              behavior = "Required"
+              field = salesforce.CartItem.field.LastModifiedDate
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.CartItem.field.ListPrice
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.CartItem.field.Quantity
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.CartItem.field.SalesPrice
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.CartItem.field.Sku
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.CartItem.field.AdjustmentAmount
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.CartItem.field.AdjustmentTaxAmount
+            },
+            {
+              behavior = "Readonly"
+              field = salesforce.CartItem.field.TotalAmount
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.CartItem.field.TotalAdjustmentAmount
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.CartItem.field.TotalPriceAfterAllAdjustments
+            },
+            {
+              behavior = "Readonly"
+              field = salesforce.CartItem.field.TotalPromoAdjustmentAmount
+            },
+            {
+              behavior = "Readonly"
+              field = salesforce.CartItem.field.TotalPromoAdjustmentTaxAmount
+            },
+            {
+              behavior = "Readonly"
+              field = salesforce.CartItem.field.ItemizedAdjustmentAmount
+            },
+            {
+              behavior = "Readonly"
+              field = salesforce.CartItem.field.DistributedAdjustmentAmount
+            },
+            {
+              behavior = "Readonly"
+              field = salesforce.CartItem.field.ItemizedAdjustmentTaxAmount
+            },
+            {
+              behavior = "Readonly"
+              field = salesforce.CartItem.field.DistributedAdjustmentTaxAmount
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.CartItem.field.TotalLineAmount
+            },
+            {
+              behavior = "Readonly"
+              field = salesforce.CartItem.field.TotalLineTaxAmount
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.CartItem.field.TotalListPrice
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.CartItem.field.TotalPrice
+            },
+            {
+              behavior = "Readonly"
+              field = salesforce.CartItem.field.TotalTaxAmount
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.CartItem.field.UnitAdjustedPrice
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.CartItem.field.UnitAdjustmentAmount
+            },
+            {
+              behavior = "Required"
+              field = salesforce.CartItem.field.Type
+            },
+          ]
+        },
+      ]
+      style = "OneColumn"
+    },
+    {
+      customLabel = false
+      detailHeading = false
+      editHeading = false
+      layoutColumns = [
+        {
+        },
+      ]
+      style = "CustomLinks"
+    },
+  ]
+  miniLayout = {
+    fields = [
+      "Type",
+    ]
+  }
+  showEmailCheckbox = false
+  showRunAssignmentRulesCheckbox = false
+  showSubmitAndAttachButton = false
+  fullName = "CartItem-Cart Item Layout"
+  _parent = [
+    salesforce.CartItem,
+  ]
+  _alias = "CartItem-Cart Item Layout"
+}

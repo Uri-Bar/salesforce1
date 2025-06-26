@@ -1,0 +1,6 @@
+salesforce.Group as {
+  fullName = "as"
+  doesIncludeBosses = true
+  name = "as"
+  _alias = "as"
+}

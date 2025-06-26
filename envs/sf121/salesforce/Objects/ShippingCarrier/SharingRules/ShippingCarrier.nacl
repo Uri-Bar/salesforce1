@@ -1,0 +1,7 @@
+salesforce.SharingRules ShippingCarrier {
+  fullName = "ShippingCarrier"
+  _parent = [
+    salesforce.ShippingCarrier,
+  ]
+  _alias = "ShippingCarrier"
+}

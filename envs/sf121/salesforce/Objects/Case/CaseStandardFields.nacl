@@ -1,0 +1,278 @@
+type salesforce.Case {
+  salesforce.Lookup AccountId {
+    apiName = "Case.AccountId"
+    trackTrending = false
+    label = "Account ID"
+    relationshipName = "Account"
+  }
+  salesforce.Lookup AssetId {
+    apiName = "Case.AssetId"
+    trackTrending = false
+    label = "Asset ID"
+    relationshipName = "Asset"
+  }
+  salesforce.Lookup BusinessHoursId {
+    apiName = "Case.BusinessHoursId"
+    trackTrending = false
+    _hidden_value = true
+  }
+  salesforce.DateTime ClosedDate {
+    apiName = "Case.ClosedDate"
+    trackTrending = false
+    label = "Closed Date"
+    _hidden_value = true
+  }
+  salesforce.LongTextArea Comments {
+    apiName = "Case.Comments"
+    trackTrending = false
+    label = "Internal Comments"
+    length = 4000
+  }
+  salesforce.Email ContactEmail {
+    apiName = "Case.ContactEmail"
+    trackTrending = false
+    label = "Contact Email"
+    unique = false
+    _hidden_value = true
+  }
+  salesforce.Phone ContactFax {
+    apiName = "Case.ContactFax"
+    trackTrending = false
+    label = "Contact Fax"
+    _hidden_value = true
+  }
+  salesforce.Lookup ContactId {
+    apiName = "Case.ContactId"
+    trackTrending = false
+    label = "Contact ID"
+    relationshipName = "Contact"
+  }
+  salesforce.Phone ContactMobile {
+    apiName = "Case.ContactMobile"
+    trackTrending = false
+    label = "Contact Mobile"
+    _hidden_value = true
+  }
+  salesforce.Phone ContactPhone {
+    apiName = "Case.ContactPhone"
+    trackTrending = false
+    label = "Contact Phone"
+    _hidden_value = true
+  }
+  salesforce.LongTextArea Description {
+    apiName = "Case.Description"
+    trackTrending = false
+    label = "Description"
+    length = 32000
+  }
+  salesforce.Lookup EntitlementId {
+    apiName = "Case.EntitlementId"
+    trackTrending = false
+    _hidden_value = true
+  }
+  salesforce.Unknown IsClosedOnCreate {
+    apiName = "Case.IsClosedOnCreate"
+    trackTrending = false
+    _hidden_value = true
+  }
+  salesforce.Checkbox IsEscalated {
+    apiName = "Case.IsEscalated"
+    trackTrending = false
+    label = "Escalated"
+    defaultValue = false
+  }
+  salesforce.Unknown IsStopped {
+    apiName = "Case.IsStopped"
+    trackTrending = false
+    _hidden_value = true
+  }
+  salesforce.Unknown MilestoneStatus {
+    apiName = "Case.MilestoneStatus"
+    trackTrending = false
+    _hidden_value = true
+  }
+  salesforce.Unknown MilestoneStatusIcon {
+    apiName = "Case.MilestoneStatusIcon"
+    trackTrending = false
+    _hidden_value = true
+  }
+  salesforce.Picklist Origin {
+    apiName = "Case.Origin"
+    trackTrending = false
+    label = "Case Origin"
+    restricted = false
+    valueSetName = salesforce.StandardValueSet.instance.CaseOrigin
+  }
+  salesforce.Lookup OwnerId {
+    apiName = "Case.OwnerId"
+    trackTrending = false
+    label = "Owner ID"
+    relationshipName = "Owner"
+    _hidden_value = true
+  }
+  salesforce.Lookup ParentId {
+    apiName = "Case.ParentId"
+    trackTrending = false
+    label = "Parent Case ID"
+    relationshipName = "Parent"
+  }
+  salesforce.Picklist Priority {
+    apiName = "Case.Priority"
+    trackTrending = false
+    label = "Priority"
+    restricted = false
+    valueSetName = salesforce.StandardValueSet.instance.CasePriority
+  }
+  salesforce.Lookup ProductId {
+    apiName = "Case.ProductId"
+    trackTrending = false
+    _hidden_value = true
+  }
+  salesforce.Picklist Reason {
+    apiName = "Case.Reason"
+    trackTrending = false
+    label = "Case Reason"
+    restricted = false
+    valueSetName = salesforce.StandardValueSet.instance.CaseReason
+  }
+  salesforce.Lookup ServiceContractId {
+    apiName = "Case.ServiceContractId"
+    trackTrending = false
+    _hidden_value = true
+  }
+  salesforce.Unknown SlaExitDate {
+    apiName = "Case.SlaExitDate"
+    trackTrending = false
+    _hidden_value = true
+  }
+  salesforce.Unknown SlaStartDate {
+    apiName = "Case.SlaStartDate"
+    trackTrending = false
+    _hidden_value = true
+  }
+  salesforce.Lookup SourceId {
+    apiName = "Case.SourceId"
+    trackTrending = false
+    label = "Case Source ID"
+    relationshipName = "Source"
+  }
+  salesforce.Picklist Status {
+    apiName = "Case.Status"
+    trackTrending = false
+    label = "Status"
+    restricted = false
+    valueSetName = salesforce.StandardValueSet.instance.CaseStatus
+  }
+  salesforce.Unknown StopStartDate {
+    apiName = "Case.StopStartDate"
+    trackTrending = false
+    _hidden_value = true
+  }
+  salesforce.Text Subject {
+    apiName = "Case.Subject"
+    trackTrending = false
+    label = "Subject"
+    length = 255
+    unique = false
+    caseSensitive = false
+  }
+  salesforce.Text SuppliedCompany {
+    apiName = "Case.SuppliedCompany"
+    trackTrending = false
+    label = "Company"
+    length = 80
+    unique = false
+    caseSensitive = false
+  }
+  salesforce.Email SuppliedEmail {
+    apiName = "Case.SuppliedEmail"
+    trackTrending = false
+    label = "Email Address"
+    unique = false
+  }
+  salesforce.Text SuppliedName {
+    apiName = "Case.SuppliedName"
+    trackTrending = false
+    label = "Name"
+    length = 80
+    unique = false
+    caseSensitive = false
+  }
+  salesforce.Text SuppliedPhone {
+    apiName = "Case.SuppliedPhone"
+    trackTrending = false
+    label = "Phone"
+    length = 40
+    unique = false
+    caseSensitive = false
+  }
+  salesforce.Picklist Type {
+    apiName = "Case.Type"
+    trackTrending = false
+    label = "Case Type"
+    restricted = false
+    valueSetName = salesforce.StandardValueSet.instance.CaseType
+  }
+  serviceid Id {
+    apiName = "Case.Id"
+    label = "Case ID"
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Checkbox IsDeleted {
+    apiName = "Case.IsDeleted"
+    label = "Deleted"
+    defaultValue = false
+    _hidden_value = true
+  }
+  salesforce.Lookup MasterRecordId {
+    apiName = "Case.MasterRecordId"
+    label = "Master Record ID"
+    relationshipName = "MasterRecord"
+    _hidden_value = true
+  }
+  salesforce.AutoNumber CaseNumber {
+    apiName = "Case.CaseNumber"
+    label = "Case Number"
+    _hidden_value = true
+  }
+  salesforce.Lookup RecordTypeId {
+    apiName = "Case.RecordTypeId"
+    label = "Record Type ID"
+    relationshipName = "RecordType"
+    _hidden_value = true
+  }
+  salesforce.Checkbox IsClosed {
+    apiName = "Case.IsClosed"
+    label = "Closed"
+    defaultValue = false
+    _hidden_value = true
+  }
+  salesforce.DateTime CreatedDate {
+    apiName = "Case.CreatedDate"
+    label = "Created Date"
+    _hidden_value = true
+  }
+  salesforce.Lookup CreatedById {
+    apiName = "Case.CreatedById"
+    label = "Created By ID"
+    relationshipName = "CreatedBy"
+    _hidden_value = true
+  }
+  salesforce.DateTime LastModifiedDate {
+    apiName = "Case.LastModifiedDate"
+    label = "Last Modified Date"
+    _hidden_value = true
+  }
+  salesforce.Lookup LastModifiedById {
+    apiName = "Case.LastModifiedById"
+    label = "Last Modified By ID"
+    relationshipName = "LastModifiedBy"
+    _hidden_value = true
+  }
+  salesforce.DateTime SystemModstamp {
+    apiName = "Case.SystemModstamp"
+    label = "System Modstamp"
+    _hidden_value = true
+  }
+}

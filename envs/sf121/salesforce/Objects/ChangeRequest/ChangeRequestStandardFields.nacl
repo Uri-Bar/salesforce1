@@ -1,0 +1,147 @@
+type salesforce.ChangeRequest {
+  salesforce.LongTextArea BusinessJustification {
+    apiName = "ChangeRequest.BusinessJustification"
+    label = "Business Justification"
+    length = 32000
+  }
+  salesforce.Picklist BusinessReason {
+    apiName = "ChangeRequest.BusinessReason"
+    label = "Business Reason"
+  }
+  salesforce.Picklist Category {
+    apiName = "ChangeRequest.Category"
+    label = "Category"
+  }
+  salesforce.Picklist ChangeType {
+    apiName = "ChangeRequest.ChangeType"
+    label = "Type of Change"
+    restricted = true
+  }
+  salesforce.LongTextArea Description {
+    apiName = "ChangeRequest.Description"
+    label = "Description"
+    length = 32000
+  }
+  salesforce.DateTime EstimatedEndTime {
+    apiName = "ChangeRequest.EstimatedEndTime"
+    label = "End Time (Estimated)"
+  }
+  salesforce.DateTime EstimatedStartTime {
+    apiName = "ChangeRequest.EstimatedStartTime"
+    label = "Start Time (Estimated)"
+  }
+  salesforce.DateTime FinalReviewDateTime {
+    apiName = "ChangeRequest.FinalReviewDateTime"
+    label = "Reviewed On"
+  }
+  salesforce.LongTextArea FinalReviewNotes {
+    apiName = "ChangeRequest.FinalReviewNotes"
+    label = "Final Review Notes"
+    length = 32000
+  }
+  salesforce.Picklist Impact {
+    apiName = "ChangeRequest.Impact"
+    label = "Impact"
+    _required = true
+    restricted = false
+    valueSetName = salesforce.StandardValueSet.instance.CasePriority
+  }
+  salesforce.Lookup OwnerId {
+    apiName = "ChangeRequest.OwnerId"
+    label = "Owner ID"
+    relationshipName = "Owner"
+    _hidden_value = true
+  }
+  salesforce.Picklist Priority {
+    apiName = "ChangeRequest.Priority"
+    label = "Priority"
+    _required = true
+    restricted = false
+  }
+  salesforce.LongTextArea RemediationPlan {
+    apiName = "ChangeRequest.RemediationPlan"
+    label = "Remediation Plan"
+    length = 32000
+  }
+  salesforce.Lookup ReviewerId {
+    apiName = "ChangeRequest.ReviewerId"
+    label = "User ID"
+    relationshipName = "Reviewer"
+  }
+  salesforce.LongTextArea RiskImpactAnalysis {
+    apiName = "ChangeRequest.RiskImpactAnalysis"
+    label = "Impact Analysis"
+    length = 32000
+  }
+  salesforce.Picklist RiskLevel {
+    apiName = "ChangeRequest.RiskLevel"
+    label = "Risk Level"
+    _required = true
+    restricted = false
+    valueSetName = salesforce.StandardValueSet.instance.CasePriority
+  }
+  salesforce.Picklist Status {
+    apiName = "ChangeRequest.Status"
+    label = "Status"
+    _required = true
+    restricted = false
+  }
+  salesforce.Picklist StatusCode {
+    apiName = "ChangeRequest.StatusCode"
+    label = "Status Code"
+    restricted = true
+    _hidden_value = true
+  }
+  salesforce.Text Subject {
+    apiName = "ChangeRequest.Subject"
+    label = "Subject"
+    _required = true
+    length = 255
+    unique = false
+    caseSensitive = false
+  }
+  serviceid Id {
+    apiName = "ChangeRequest.Id"
+    label = "Change Request ID"
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Checkbox IsDeleted {
+    apiName = "ChangeRequest.IsDeleted"
+    label = "Deleted"
+    defaultValue = false
+    _hidden_value = true
+  }
+  salesforce.AutoNumber ChangeRequestNumber {
+    apiName = "ChangeRequest.ChangeRequestNumber"
+    label = "Change Request Number"
+    _hidden_value = true
+  }
+  salesforce.DateTime CreatedDate {
+    apiName = "ChangeRequest.CreatedDate"
+    label = "Created On"
+    _hidden_value = true
+  }
+  salesforce.Lookup CreatedById {
+    apiName = "ChangeRequest.CreatedById"
+    label = "Created By ID"
+    relationshipName = "CreatedBy"
+    _hidden_value = true
+  }
+  salesforce.DateTime LastModifiedDate {
+    apiName = "ChangeRequest.LastModifiedDate"
+    label = "Last Modified On"
+    _hidden_value = true
+  }
+  salesforce.Lookup LastModifiedById {
+    apiName = "ChangeRequest.LastModifiedById"
+    label = "Last Modified By ID"
+    relationshipName = "LastModifiedBy"
+    _hidden_value = true
+  }
+  salesforce.DateTime SystemModstamp {
+    apiName = "ChangeRequest.SystemModstamp"
+    label = "System Modstamp"
+    _hidden_value = true
+  }
+}

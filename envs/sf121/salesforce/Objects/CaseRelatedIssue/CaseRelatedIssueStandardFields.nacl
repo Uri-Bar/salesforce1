@@ -1,0 +1,71 @@
+type salesforce.CaseRelatedIssue {
+  salesforce.MasterDetail CaseId {
+    apiName = "CaseRelatedIssue.CaseId"
+    label = "Case ID"
+    _required = true
+    relationshipName = "Case"
+  }
+  salesforce.AutoNumber Name {
+    apiName = "CaseRelatedIssue.Name"
+    label = "Case Related Issue Number"
+    _hidden_value = true
+  }
+  salesforce.Picklist RelatedEntityType {
+    apiName = "CaseRelatedIssue.RelatedEntityType"
+    label = "Related Issue Type"
+    _required = true
+    restricted = true
+    _hidden_value = true
+  }
+  salesforce.Lookup RelatedIssueId {
+    apiName = "CaseRelatedIssue.RelatedIssueId"
+    label = "Related Issue ID"
+    _required = true
+    relationshipName = "RelatedIssue"
+  }
+  salesforce.Picklist RelationshipType {
+    apiName = "CaseRelatedIssue.RelationshipType"
+    label = "Relationship Type"
+    _required = true
+    restricted = false
+  }
+  serviceid Id {
+    apiName = "CaseRelatedIssue.Id"
+    label = "Case Related Issue ID"
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Checkbox IsDeleted {
+    apiName = "CaseRelatedIssue.IsDeleted"
+    label = "Deleted"
+    defaultValue = false
+    _hidden_value = true
+  }
+  salesforce.DateTime CreatedDate {
+    apiName = "CaseRelatedIssue.CreatedDate"
+    label = "Created Date"
+    _hidden_value = true
+  }
+  salesforce.Lookup CreatedById {
+    apiName = "CaseRelatedIssue.CreatedById"
+    label = "Created By ID"
+    relationshipName = "CreatedBy"
+    _hidden_value = true
+  }
+  salesforce.DateTime LastModifiedDate {
+    apiName = "CaseRelatedIssue.LastModifiedDate"
+    label = "Last Modified Date"
+    _hidden_value = true
+  }
+  salesforce.Lookup LastModifiedById {
+    apiName = "CaseRelatedIssue.LastModifiedById"
+    label = "Last Modified By ID"
+    relationshipName = "LastModifiedBy"
+    _hidden_value = true
+  }
+  salesforce.DateTime SystemModstamp {
+    apiName = "CaseRelatedIssue.SystemModstamp"
+    label = "System Modstamp"
+    _hidden_value = true
+  }
+}

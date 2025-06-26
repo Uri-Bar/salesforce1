@@ -1,0 +1,194 @@
+type salesforce.Invoice {
+  salesforce.Currency Balance {
+    apiName = "Invoice.Balance"
+    label = "Balance"
+    scale = 2
+    precision = 18
+    _hidden_value = true
+  }
+  salesforce.Lookup BillToContactId {
+    apiName = "Invoice.BillToContactId"
+    label = "Contact ID"
+    relationshipName = "BillToContact"
+  }
+  salesforce.Lookup BillingAccountId {
+    apiName = "Invoice.BillingAccountId"
+    label = "Account ID"
+    _required = true
+    relationshipName = "BillingAccount"
+  }
+  salesforce.Unknown CorpCrcyCnvTotAmtWithTax {
+    apiName = "Invoice.CorpCrcyCnvTotAmtWithTax"
+    _hidden_value = true
+  }
+  salesforce.Unknown CorporateCurrencyCvsnDate {
+    apiName = "Invoice.CorporateCurrencyCvsnDate"
+    _hidden_value = true
+  }
+  salesforce.Unknown CorporateCurrencyCvsnRate {
+    apiName = "Invoice.CorporateCurrencyCvsnRate"
+    _hidden_value = true
+  }
+  salesforce.Text Description {
+    apiName = "Invoice.Description"
+    label = "Description"
+    length = 255
+    unique = false
+    caseSensitive = false
+  }
+  salesforce.Date DueDate {
+    apiName = "Invoice.DueDate"
+    label = "Due Date"
+    _required = true
+  }
+  salesforce.Date InvoiceDate {
+    apiName = "Invoice.InvoiceDate"
+    label = "Invoice Date"
+    _required = true
+  }
+  salesforce.DateTime InvoiceLockedDateTime {
+    apiName = "Invoice.InvoiceLockedDateTime"
+    inlineHelpText = "The time at which the invoice record was locked."
+    label = "Invoice Locked Date Time"
+    _hidden_value = true
+  }
+  salesforce.Text InvoiceNumber {
+    apiName = "Invoice.InvoiceNumber"
+    label = "Invoice Number"
+    length = 10
+    unique = false
+    caseSensitive = false
+  }
+  salesforce.Checkbox IsInvoiceLocked {
+    apiName = "Invoice.IsInvoiceLocked"
+    inlineHelpText = "Indicates whether the invoice record is locked or not."
+    label = "Invoice Locked"
+    defaultValue = false
+    _hidden_value = true
+  }
+  salesforce.Summary NetCreditsApplied {
+    apiName = "Invoice.NetCreditsApplied"
+    label = "Net Credits Applied"
+    _hidden_value = true
+  }
+  salesforce.Summary NetPaymentsApplied {
+    apiName = "Invoice.NetPaymentsApplied"
+    label = "Net Payments Applied"
+    _hidden_value = true
+  }
+  salesforce.Lookup OwnerId {
+    apiName = "Invoice.OwnerId"
+    label = "Owner ID"
+    relationshipName = "Owner"
+    _hidden_value = true
+  }
+  salesforce.Lookup ReferenceEntityId {
+    apiName = "Invoice.ReferenceEntityId"
+    label = "ReferenceEntity ID"
+    relationshipName = "ReferenceEntity"
+  }
+  salesforce.Picklist Status {
+    apiName = "Invoice.Status"
+    label = "Status"
+    _required = true
+    restricted = true
+    _hidden_value = true
+  }
+  salesforce.Summary TotalAdjustmentAmount {
+    apiName = "Invoice.TotalAdjustmentAmount"
+    label = "Total Adjustment Amount"
+    _hidden_value = true
+  }
+  salesforce.Currency TotalAdjustmentAmountWithTax {
+    apiName = "Invoice.TotalAdjustmentAmountWithTax"
+    label = "Total Adjustment Amount with Tax"
+    scale = 2
+    precision = 18
+    _hidden_value = true
+  }
+  salesforce.Currency TotalAdjustmentTaxAmount {
+    apiName = "Invoice.TotalAdjustmentTaxAmount"
+    label = "Total Adjustment Tax Amount"
+    scale = 2
+    precision = 18
+    _hidden_value = true
+  }
+  salesforce.Summary TotalAmount {
+    apiName = "Invoice.TotalAmount"
+    label = "Total Amount"
+    _hidden_value = true
+  }
+  salesforce.Summary TotalAmountWithTax {
+    apiName = "Invoice.TotalAmountWithTax"
+    label = "Total with Tax"
+    _hidden_value = true
+  }
+  salesforce.Summary TotalChargeAmount {
+    apiName = "Invoice.TotalChargeAmount"
+    label = "Total Charges"
+    _hidden_value = true
+  }
+  salesforce.Currency TotalChargeAmountWithTax {
+    apiName = "Invoice.TotalChargeAmountWithTax"
+    label = "Total Charge Amount with Tax"
+    scale = 2
+    precision = 18
+    _hidden_value = true
+  }
+  salesforce.Currency TotalChargeTaxAmount {
+    apiName = "Invoice.TotalChargeTaxAmount"
+    label = "Total Charge Tax Amount"
+    scale = 2
+    precision = 18
+    _hidden_value = true
+  }
+  salesforce.Summary TotalTaxAmount {
+    apiName = "Invoice.TotalTaxAmount"
+    label = "Total Tax"
+    _hidden_value = true
+  }
+  serviceid Id {
+    apiName = "Invoice.Id"
+    label = "Invoice ID"
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Checkbox IsDeleted {
+    apiName = "Invoice.IsDeleted"
+    label = "Deleted"
+    defaultValue = false
+    _hidden_value = true
+  }
+  salesforce.AutoNumber DocumentNumber {
+    apiName = "Invoice.DocumentNumber"
+    label = "Document Number"
+    _hidden_value = true
+  }
+  salesforce.DateTime CreatedDate {
+    apiName = "Invoice.CreatedDate"
+    label = "Created Date"
+    _hidden_value = true
+  }
+  salesforce.Lookup CreatedById {
+    apiName = "Invoice.CreatedById"
+    label = "Created By ID"
+    relationshipName = "CreatedBy"
+    _hidden_value = true
+  }
+  salesforce.DateTime LastModifiedDate {
+    apiName = "Invoice.LastModifiedDate"
+    label = "Last Modified Date"
+    _hidden_value = true
+  }
+  salesforce.Lookup LastModifiedById {
+    apiName = "Invoice.LastModifiedById"
+    label = "Last Modified By ID"
+    relationshipName = "LastModifiedBy"
+    _hidden_value = true
+  }
+  salesforce.DateTime SystemModstamp {
+    apiName = "Invoice.SystemModstamp"
+    label = "System Modstamp"
+    _hidden_value = true
+  }
+}

@@ -1,0 +1,38 @@
+type salesforce.SalesStore {
+  salesforce.LongTextArea Description {
+    apiName = "SalesStore.Description"
+    label = "Description"
+    length = 1000
+    _hidden_value = true
+  }
+  salesforce.Lookup LocationId {
+    apiName = "SalesStore.LocationId"
+    label = "Location ID"
+    _required = true
+    relationshipName = "Location"
+    _hidden_value = true
+  }
+  salesforce.Text Name {
+    apiName = "SalesStore.Name"
+    label = "__MISSING LABEL__ PropertyFile - val Name not found in section udd_SalesStore"
+    _required = true
+    length = 255
+    unique = false
+    caseSensitive = false
+    _hidden_value = true
+  }
+  serviceid Id {
+    apiName = "SalesStore.Id"
+    label = "Sales Store ID"
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Text ImplementorType {
+    apiName = "SalesStore.ImplementorType"
+    label = "Implementor Type"
+    length = 255
+    unique = false
+    caseSensitive = false
+    _hidden_value = true
+  }
+}

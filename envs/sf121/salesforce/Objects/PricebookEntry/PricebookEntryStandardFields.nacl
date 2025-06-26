@@ -1,0 +1,96 @@
+type salesforce.PricebookEntry {
+  salesforce.Checkbox IsActive {
+    apiName = "PricebookEntry.IsActive"
+    label = "Active"
+    defaultValue = false
+  }
+  salesforce.Lookup Pricebook2Id {
+    apiName = "PricebookEntry.Pricebook2Id"
+    label = "Price Book ID"
+    _required = true
+    relationshipName = "Pricebook2"
+  }
+  salesforce.Lookup Product2Id {
+    apiName = "PricebookEntry.Product2Id"
+    label = "Product ID"
+    _required = true
+    relationshipName = "Product2"
+  }
+  salesforce.Text ProductCode {
+    apiName = "PricebookEntry.ProductCode"
+    label = "Product Code"
+    length = 255
+    unique = false
+    caseSensitive = false
+    _hidden_value = true
+  }
+  salesforce.Unknown StandardPrice {
+    apiName = "PricebookEntry.StandardPrice"
+    _hidden_value = true
+  }
+  salesforce.Currency UnitPrice {
+    apiName = "PricebookEntry.UnitPrice"
+    label = "List Price"
+    _required = true
+    scale = 2
+    precision = 18
+  }
+  salesforce.Checkbox UseStandardPrice {
+    apiName = "PricebookEntry.UseStandardPrice"
+    label = "Use Standard Price"
+    defaultValue = false
+  }
+  serviceid Id {
+    apiName = "PricebookEntry.Id"
+    label = "Price Book Entry ID"
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Text Name {
+    apiName = "PricebookEntry.Name"
+    label = "Product Name"
+    length = 255
+    unique = false
+    caseSensitive = false
+    _hidden_value = true
+  }
+  salesforce.DateTime CreatedDate {
+    apiName = "PricebookEntry.CreatedDate"
+    label = "Created Date"
+    _hidden_value = true
+  }
+  salesforce.Lookup CreatedById {
+    apiName = "PricebookEntry.CreatedById"
+    label = "Created By ID"
+    relationshipName = "CreatedBy"
+    _hidden_value = true
+  }
+  salesforce.DateTime LastModifiedDate {
+    apiName = "PricebookEntry.LastModifiedDate"
+    label = "Last Modified Date"
+    _hidden_value = true
+  }
+  salesforce.Lookup LastModifiedById {
+    apiName = "PricebookEntry.LastModifiedById"
+    label = "Last Modified By ID"
+    relationshipName = "LastModifiedBy"
+    _hidden_value = true
+  }
+  salesforce.DateTime SystemModstamp {
+    apiName = "PricebookEntry.SystemModstamp"
+    label = "System Modstamp"
+    _hidden_value = true
+  }
+  salesforce.Checkbox IsDeleted {
+    apiName = "PricebookEntry.IsDeleted"
+    label = "Deleted"
+    defaultValue = false
+    _hidden_value = true
+  }
+  salesforce.Checkbox IsArchived {
+    apiName = "PricebookEntry.IsArchived"
+    label = "Archived"
+    defaultValue = false
+    _hidden_value = true
+  }
+}

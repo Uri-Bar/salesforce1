@@ -1,0 +1,85 @@
+type salesforce.DataMaskCustomValueLibrary {
+  salesforce.Picklist ContentType {
+    apiName = "DataMaskCustomValueLibrary.ContentType"
+    label = "Content Type"
+    _required = true
+    restricted = true
+  }
+  salesforce.Text Description {
+    apiName = "DataMaskCustomValueLibrary.Description"
+    label = "Description"
+    length = 255
+    unique = false
+    caseSensitive = false
+  }
+  salesforce.Checkbox IsActive {
+    apiName = "DataMaskCustomValueLibrary.IsActive"
+    label = "Active"
+    defaultValue = false
+  }
+  salesforce.Text Name {
+    apiName = "DataMaskCustomValueLibrary.Name"
+    label = "Name"
+    _required = true
+    length = 255
+    unique = false
+    caseSensitive = false
+  }
+  salesforce.Picklist Type {
+    apiName = "DataMaskCustomValueLibrary.Type"
+    label = "Type"
+    _required = true
+    restricted = true
+    _hidden_value = true
+  }
+  serviceid Id {
+    apiName = "DataMaskCustomValueLibrary.Id"
+    label = "Custom Library Id"
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Lookup OwnerId {
+    apiName = "DataMaskCustomValueLibrary.OwnerId"
+    label = "Owner ID"
+    relationshipName = "Owner"
+    _hidden_value = true
+  }
+  salesforce.Checkbox IsDeleted {
+    apiName = "DataMaskCustomValueLibrary.IsDeleted"
+    label = "Deleted"
+    defaultValue = false
+    _hidden_value = true
+  }
+  salesforce.DateTime CreatedDate {
+    apiName = "DataMaskCustomValueLibrary.CreatedDate"
+    label = "Created Date"
+    _hidden_value = true
+  }
+  salesforce.Lookup CreatedById {
+    apiName = "DataMaskCustomValueLibrary.CreatedById"
+    label = "Created By ID"
+    relationshipName = "CreatedBy"
+    _hidden_value = true
+  }
+  salesforce.DateTime LastModifiedDate {
+    apiName = "DataMaskCustomValueLibrary.LastModifiedDate"
+    label = "Last Modified Date"
+    _hidden_value = true
+  }
+  salesforce.Lookup LastModifiedById {
+    apiName = "DataMaskCustomValueLibrary.LastModifiedById"
+    label = "Last Modified By ID"
+    relationshipName = "LastModifiedBy"
+    _hidden_value = true
+  }
+  salesforce.DateTime SystemModstamp {
+    apiName = "DataMaskCustomValueLibrary.SystemModstamp"
+    label = "System Modstamp"
+    _hidden_value = true
+  }
+  salesforce.LongTextArea Values {
+    apiName = "DataMaskCustomValueLibrary.Values"
+    label = "Values"
+    length = 131072
+  }
+}

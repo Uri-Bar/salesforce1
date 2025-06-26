@@ -1,0 +1,88 @@
+type salesforce.PromotionLineItemRule {
+  salesforce.Lookup AssociatedReferenceId {
+    apiName = "PromotionLineItemRule.AssociatedReferenceId"
+    label = "Associated Reference ID"
+    _required = true
+    relationshipName = "AssociatedReference"
+  }
+  salesforce.Picklist AssociatedType {
+    apiName = "PromotionLineItemRule.AssociatedType"
+    label = "Associated Type"
+    _required = true
+    restricted = true
+  }
+  salesforce.Picklist OperatorType {
+    apiName = "PromotionLineItemRule.OperatorType"
+    label = "Operator Type"
+    _required = true
+    restricted = true
+  }
+  salesforce.Lookup OwnerId {
+    apiName = "PromotionLineItemRule.OwnerId"
+    label = "Owner ID"
+    relationshipName = "Owner"
+    _hidden_value = true
+  }
+  salesforce.Picklist Type {
+    apiName = "PromotionLineItemRule.Type"
+    label = "Type"
+    _required = true
+    restricted = true
+  }
+  salesforce.Lookup TypeReferenceId {
+    apiName = "PromotionLineItemRule.TypeReferenceId"
+    label = "Type Reference ID"
+    relationshipName = "TypeReference"
+  }
+  salesforce.Text TypeValue {
+    apiName = "PromotionLineItemRule.TypeValue"
+    label = "Type Value"
+    length = 255
+    unique = false
+    caseSensitive = false
+  }
+  serviceid Id {
+    apiName = "PromotionLineItemRule.Id"
+    label = "Promotion Line Item Rule ID"
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Checkbox IsDeleted {
+    apiName = "PromotionLineItemRule.IsDeleted"
+    label = "Deleted"
+    defaultValue = false
+    _hidden_value = true
+  }
+  salesforce.AutoNumber Name {
+    apiName = "PromotionLineItemRule.Name"
+    label = "Promotion Line Item Rule Name"
+    _hidden_value = true
+  }
+  salesforce.DateTime CreatedDate {
+    apiName = "PromotionLineItemRule.CreatedDate"
+    label = "Created Date"
+    _hidden_value = true
+  }
+  salesforce.Lookup CreatedById {
+    apiName = "PromotionLineItemRule.CreatedById"
+    label = "Created By ID"
+    relationshipName = "CreatedBy"
+    _hidden_value = true
+  }
+  salesforce.DateTime LastModifiedDate {
+    apiName = "PromotionLineItemRule.LastModifiedDate"
+    label = "Last Modified Date"
+    _hidden_value = true
+  }
+  salesforce.Lookup LastModifiedById {
+    apiName = "PromotionLineItemRule.LastModifiedById"
+    label = "Last Modified By ID"
+    relationshipName = "LastModifiedBy"
+    _hidden_value = true
+  }
+  salesforce.DateTime SystemModstamp {
+    apiName = "PromotionLineItemRule.SystemModstamp"
+    label = "System Modstamp"
+    _hidden_value = true
+  }
+}

@@ -1,0 +1,62 @@
+type salesforce.PromotionTier {
+  salesforce.Text Name {
+    apiName = "PromotionTier.Name"
+    label = "Promotion Tier Name"
+    _required = true
+    length = 255
+    unique = false
+    caseSensitive = false
+  }
+  salesforce.MasterDetail PromotionId {
+    apiName = "PromotionTier.PromotionId"
+    label = "Promotion ID"
+    _required = true
+    relationshipName = "Promotion"
+  }
+  salesforce.Number Rank {
+    apiName = "PromotionTier.Rank"
+    label = "Rank"
+    scale = 0
+    precision = 9
+    unique = false
+  }
+  serviceid Id {
+    apiName = "PromotionTier.Id"
+    label = "Promotion Tier ID"
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Checkbox IsDeleted {
+    apiName = "PromotionTier.IsDeleted"
+    label = "Deleted"
+    defaultValue = false
+    _hidden_value = true
+  }
+  salesforce.DateTime CreatedDate {
+    apiName = "PromotionTier.CreatedDate"
+    label = "Created Date"
+    _hidden_value = true
+  }
+  salesforce.Lookup CreatedById {
+    apiName = "PromotionTier.CreatedById"
+    label = "Created By ID"
+    relationshipName = "CreatedBy"
+    _hidden_value = true
+  }
+  salesforce.DateTime LastModifiedDate {
+    apiName = "PromotionTier.LastModifiedDate"
+    label = "Last Modified Date"
+    _hidden_value = true
+  }
+  salesforce.Lookup LastModifiedById {
+    apiName = "PromotionTier.LastModifiedById"
+    label = "Last Modified By ID"
+    relationshipName = "LastModifiedBy"
+    _hidden_value = true
+  }
+  salesforce.DateTime SystemModstamp {
+    apiName = "PromotionTier.SystemModstamp"
+    label = "System Modstamp"
+    _hidden_value = true
+  }
+}

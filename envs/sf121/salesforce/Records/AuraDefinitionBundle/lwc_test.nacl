@@ -1,0 +1,12 @@
+salesforce.AuraDefinitionBundle lwc_test {
+  apiVersion = 55
+  description = "check this out"
+  fullName = "lwc_test"
+  type = "Component"
+  markup = file("salesforce/Records/AuraDefinitionBundle/lwc_test/lwc_test.cmp")
+  helperContent = file("salesforce/Records/AuraDefinitionBundle/lwc_test/lwc_testHelper.js")
+  documentationContent = file("salesforce/Records/AuraDefinitionBundle/lwc_test/lwc_test.auradoc")
+  controllerContent = file("salesforce/Records/AuraDefinitionBundle/lwc_test/lwc_testController.js")
+  rendererContent = file("salesforce/Records/AuraDefinitionBundle/lwc_test/lwc_testRenderer.js")
+  _alias = "lwc_test"
+}

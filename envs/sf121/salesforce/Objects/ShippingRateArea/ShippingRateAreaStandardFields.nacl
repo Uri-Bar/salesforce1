@@ -1,0 +1,65 @@
+type salesforce.ShippingRateArea {
+  serviceid Id {
+    apiName = "ShippingRateArea.Id"
+    label = "Shipping Zone ID"
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Checkbox IsDeleted {
+    apiName = "ShippingRateArea.IsDeleted"
+    label = "Deleted"
+    defaultValue = false
+    _hidden_value = true
+  }
+  salesforce.Text Name {
+    apiName = "ShippingRateArea.Name"
+    label = "Shipping Zone Name"
+    _required = true
+    length = 255
+    unique = false
+    caseSensitive = false
+  }
+  salesforce.DateTime CreatedDate {
+    apiName = "ShippingRateArea.CreatedDate"
+    label = "Created Date"
+    _hidden_value = true
+  }
+  salesforce.Lookup CreatedById {
+    apiName = "ShippingRateArea.CreatedById"
+    label = "Created By ID"
+    relationshipName = "CreatedBy"
+    _hidden_value = true
+  }
+  salesforce.DateTime LastModifiedDate {
+    apiName = "ShippingRateArea.LastModifiedDate"
+    label = "Last Modified Date"
+    _hidden_value = true
+  }
+  salesforce.Lookup LastModifiedById {
+    apiName = "ShippingRateArea.LastModifiedById"
+    label = "Last Modified By ID"
+    relationshipName = "LastModifiedBy"
+    _hidden_value = true
+  }
+  salesforce.DateTime SystemModstamp {
+    apiName = "ShippingRateArea.SystemModstamp"
+    label = "System Modstamp"
+    _hidden_value = true
+  }
+  salesforce.Lookup ShippingRateGroupId {
+    apiName = "ShippingRateArea.ShippingRateGroupId"
+    label = "Shipping Rate Group ID"
+    _required = true
+    relationshipName = "ShippingRateGroup"
+  }
+  salesforce.LongTextArea Countries {
+    apiName = "ShippingRateArea.Countries"
+    label = "Countries"
+    length = 2000
+  }
+  salesforce.LongTextArea Regions {
+    apiName = "ShippingRateArea.Regions"
+    label = "Regions"
+    length = 8000
+  }
+}

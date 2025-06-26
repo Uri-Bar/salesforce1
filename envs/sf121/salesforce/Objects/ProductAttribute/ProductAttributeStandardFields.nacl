@@ -1,0 +1,64 @@
+type salesforce.ProductAttribute {
+  salesforce.Lookup ProductId {
+    apiName = "ProductAttribute.ProductId"
+    label = "Product ID"
+    _required = true
+    relationshipName = "Product"
+  }
+  salesforce.Number Sequence {
+    apiName = "ProductAttribute.Sequence"
+    label = "Sequence"
+    scale = 0
+    precision = 9
+    unique = false
+  }
+  salesforce.Lookup VariantParentId {
+    apiName = "ProductAttribute.VariantParentId"
+    label = "Product ID"
+    relationshipName = "VariantParent"
+  }
+  serviceid Id {
+    apiName = "ProductAttribute.Id"
+    label = "Product Attribute ID"
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Checkbox IsDeleted {
+    apiName = "ProductAttribute.IsDeleted"
+    label = "Deleted"
+    defaultValue = false
+    _hidden_value = true
+  }
+  salesforce.AutoNumber Name {
+    apiName = "ProductAttribute.Name"
+    label = "Product Attribute Name"
+    _hidden_value = true
+  }
+  salesforce.DateTime CreatedDate {
+    apiName = "ProductAttribute.CreatedDate"
+    label = "Created Date"
+    _hidden_value = true
+  }
+  salesforce.Lookup CreatedById {
+    apiName = "ProductAttribute.CreatedById"
+    label = "Created By ID"
+    relationshipName = "CreatedBy"
+    _hidden_value = true
+  }
+  salesforce.DateTime LastModifiedDate {
+    apiName = "ProductAttribute.LastModifiedDate"
+    label = "Last Modified Date"
+    _hidden_value = true
+  }
+  salesforce.Lookup LastModifiedById {
+    apiName = "ProductAttribute.LastModifiedById"
+    label = "Last Modified By ID"
+    relationshipName = "LastModifiedBy"
+    _hidden_value = true
+  }
+  salesforce.DateTime SystemModstamp {
+    apiName = "ProductAttribute.SystemModstamp"
+    label = "System Modstamp"
+    _hidden_value = true
+  }
+}

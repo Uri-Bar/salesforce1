@@ -1,0 +1,68 @@
+type salesforce.StreamingChannel {
+  serviceid Id {
+    apiName = "StreamingChannel.Id"
+    label = "Streaming Channel Id"
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Lookup OwnerId {
+    apiName = "StreamingChannel.OwnerId"
+    label = "Owner ID"
+    relationshipName = "Owner"
+    _hidden_value = true
+  }
+  salesforce.Checkbox IsDeleted {
+    apiName = "StreamingChannel.IsDeleted"
+    label = "Is Deleted"
+    defaultValue = false
+    _hidden_value = true
+  }
+  salesforce.Text Name {
+    apiName = "StreamingChannel.Name"
+    label = "Streaming Channel Name"
+    _required = true
+    length = 80
+    unique = false
+    caseSensitive = false
+  }
+  salesforce.DateTime CreatedDate {
+    apiName = "StreamingChannel.CreatedDate"
+    label = "Created Date"
+    _hidden_value = true
+  }
+  salesforce.Lookup CreatedById {
+    apiName = "StreamingChannel.CreatedById"
+    label = "Created By ID"
+    relationshipName = "CreatedBy"
+    _hidden_value = true
+  }
+  salesforce.DateTime LastModifiedDate {
+    apiName = "StreamingChannel.LastModifiedDate"
+    label = "Last Modified Date"
+    _hidden_value = true
+  }
+  salesforce.Lookup LastModifiedById {
+    apiName = "StreamingChannel.LastModifiedById"
+    label = "Last Modified By ID"
+    relationshipName = "LastModifiedBy"
+    _hidden_value = true
+  }
+  salesforce.DateTime SystemModstamp {
+    apiName = "StreamingChannel.SystemModstamp"
+    label = "System Modstamp"
+    _hidden_value = true
+  }
+  salesforce.Checkbox IsDynamic {
+    apiName = "StreamingChannel.IsDynamic"
+    label = "Is Dynamically Created"
+    defaultValue = false
+    _hidden_value = true
+  }
+  salesforce.Text Description {
+    apiName = "StreamingChannel.Description"
+    label = "Description"
+    length = 255
+    unique = false
+    caseSensitive = false
+  }
+}

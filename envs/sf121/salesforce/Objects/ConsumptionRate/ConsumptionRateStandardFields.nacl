@@ -1,0 +1,99 @@
+type salesforce.ConsumptionRate {
+  salesforce.MasterDetail ConsumptionScheduleId {
+    apiName = "ConsumptionRate.ConsumptionScheduleId"
+    inlineHelpText = "This rate is a part of of this schedule."
+    label = "Consumption Schedule ID"
+    _required = true
+    relationshipName = "ConsumptionSchedule"
+  }
+  salesforce.LongTextArea Description {
+    apiName = "ConsumptionRate.Description"
+    label = "Description"
+    length = 32000
+  }
+  salesforce.Number LowerBound {
+    apiName = "ConsumptionRate.LowerBound"
+    inlineHelpText = "The lowest quantity of usage for this consumption rate."
+    label = "Lower Bound"
+    _required = true
+    scale = 0
+    precision = 9
+    unique = false
+  }
+  salesforce.AutoNumber Name {
+    apiName = "ConsumptionRate.Name"
+    label = "Consumption Rate Name"
+    _hidden_value = true
+  }
+  salesforce.Currency Price {
+    apiName = "ConsumptionRate.Price"
+    inlineHelpText = "The price for usage that falls within this consumption rate's bounds."
+    label = "Price"
+    _required = true
+    scale = 2
+    precision = 13
+  }
+  salesforce.Picklist PricingMethod {
+    apiName = "ConsumptionRate.PricingMethod"
+    inlineHelpText = "Choose whether the usage is priced per unit or quantity or as a flat fee"
+    label = "Pricing Method"
+    _required = true
+    restricted = true
+  }
+  salesforce.Number ProcessingOrder {
+    apiName = "ConsumptionRate.ProcessingOrder"
+    inlineHelpText = "The order for processing the usage rate across multiple rates. Consumption Rates are evaluated beginning with the lowest processing order."
+    label = "Processing Order"
+    _required = true
+    scale = 0
+    precision = 9
+    unique = false
+  }
+  salesforce.Number UpperBound {
+    apiName = "ConsumptionRate.UpperBound"
+    inlineHelpText = "The highest quantity of usage for this consumption rate."
+    label = "Upper Bound"
+    scale = 0
+    precision = 9
+    unique = false
+  }
+  serviceid Id {
+    apiName = "ConsumptionRate.Id"
+    label = "Consumption Rate ID"
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Checkbox IsDeleted {
+    apiName = "ConsumptionRate.IsDeleted"
+    label = "Deleted"
+    defaultValue = false
+    _hidden_value = true
+  }
+  salesforce.DateTime CreatedDate {
+    apiName = "ConsumptionRate.CreatedDate"
+    label = "Created Date"
+    _hidden_value = true
+  }
+  salesforce.Lookup CreatedById {
+    apiName = "ConsumptionRate.CreatedById"
+    label = "Created By ID"
+    relationshipName = "CreatedBy"
+    _hidden_value = true
+  }
+  salesforce.DateTime LastModifiedDate {
+    apiName = "ConsumptionRate.LastModifiedDate"
+    label = "Last Modified Date"
+    _hidden_value = true
+  }
+  salesforce.Lookup LastModifiedById {
+    apiName = "ConsumptionRate.LastModifiedById"
+    label = "Last Modified By ID"
+    relationshipName = "LastModifiedBy"
+    _hidden_value = true
+  }
+  salesforce.DateTime SystemModstamp {
+    apiName = "ConsumptionRate.SystemModstamp"
+    label = "System Modstamp"
+    _hidden_value = true
+  }
+}

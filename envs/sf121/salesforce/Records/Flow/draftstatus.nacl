@@ -1,0 +1,45 @@
+salesforce.Flow draftstatus {
+  fullName = "draftstatus"
+  apiVersion = 56
+  environments = "Default"
+  interviewLabel = "draftstatus {!$Flow.CurrentDateTime}"
+  isAdditionalPermissionRequiredToRun = true
+  label = "draftstatus"
+  processMetadataValues = [
+    {
+      name = "BuilderType"
+      value = {
+        stringValue = "LightningFlowBuilder"
+      }
+    },
+    {
+      name = "CanvasMode"
+      value = {
+        stringValue = "AUTO_LAYOUT_CANVAS"
+      }
+    },
+    {
+      name = "OriginBuilderType"
+      value = {
+        stringValue = "LightningFlowBuilder"
+      }
+    },
+  ]
+  processType = "Flow"
+  screens = {
+    name = "sa"
+    label = "sa"
+    allowBack = true
+    allowFinish = true
+    allowPause = true
+    showFooter = true
+    showHeader = true
+  }
+  start = {
+    connector = {
+      targetReference = "sa"
+    }
+  }
+  status = "Draft"
+  _alias = "draftstatus"
+}

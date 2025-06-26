@@ -1,0 +1,138 @@
+type salesforce.WorkStep {
+  salesforce.Picklist ActionDefinition {
+    apiName = "WorkStep.ActionDefinition"
+    inlineHelpText = "Find and select the associated global action, quick action, screen flow, or mobile flow."
+    label = "Action Definition"
+    restricted = true
+  }
+  salesforce.Picklist ActionType {
+    apiName = "WorkStep.ActionType"
+    label = "Action Type"
+    restricted = true
+    _hidden_value = true
+  }
+  salesforce.LongTextArea Description {
+    apiName = "WorkStep.Description"
+    label = "Description"
+    length = 500
+  }
+  salesforce.DateTime EndTime {
+    apiName = "WorkStep.EndTime"
+    label = "End Time"
+  }
+  salesforce.Number ExecutionOrder {
+    apiName = "WorkStep.ExecutionOrder"
+    label = "Execution Order"
+    scale = 0
+    precision = 9
+    unique = false
+  }
+  salesforce.Text Name {
+    apiName = "WorkStep.Name"
+    label = "Name"
+    _required = true
+    length = 255
+    unique = false
+    caseSensitive = false
+  }
+  salesforce.Lookup ParentRecordId {
+    apiName = "WorkStep.ParentRecordId"
+    label = "Parent Record ID"
+    _required = true
+    relationshipName = "ParentRecord"
+    _hidden_value = true
+  }
+  salesforce.Text ParentRecordType {
+    apiName = "WorkStep.ParentRecordType"
+    label = "Parent Record Type"
+    length = 50
+    unique = false
+    caseSensitive = false
+    _hidden_value = true
+  }
+  salesforce.Lookup PausedFlowInterviewId {
+    apiName = "WorkStep.PausedFlowInterviewId"
+    label = "Paused Flow Interview ID"
+    relationshipName = "PausedFlowInterview"
+  }
+  salesforce.DateTime StartTime {
+    apiName = "WorkStep.StartTime"
+    label = "Start Time"
+  }
+  salesforce.Picklist Status {
+    apiName = "WorkStep.Status"
+    label = "Status"
+    restricted = false
+  }
+  salesforce.Picklist StatusCategory {
+    apiName = "WorkStep.StatusCategory"
+    label = "Status Category"
+    restricted = true
+    _hidden_value = true
+  }
+  salesforce.Lookup WorkOrderId {
+    apiName = "WorkStep.WorkOrderId"
+    label = "Work Order ID"
+    relationshipName = "WorkOrder"
+    _hidden_value = true
+  }
+  salesforce.Lookup WorkOrderLineItemId {
+    apiName = "WorkStep.WorkOrderLineItemId"
+    label = "Work Order Line Item ID"
+    relationshipName = "WorkOrderLineItem"
+    _hidden_value = true
+  }
+  salesforce.Number WorkPlanExecutionOrder {
+    apiName = "WorkStep.WorkPlanExecutionOrder"
+    label = "Work Plan Execution Order"
+    scale = 0
+    precision = 9
+    unique = false
+    _hidden_value = true
+  }
+  salesforce.MasterDetail WorkPlanId {
+    apiName = "WorkStep.WorkPlanId"
+    label = "Work Plan ID"
+    _required = true
+    relationshipName = "WorkPlan"
+  }
+  serviceid Id {
+    apiName = "WorkStep.Id"
+    label = "Work Step ID"
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Checkbox IsDeleted {
+    apiName = "WorkStep.IsDeleted"
+    label = "Deleted"
+    defaultValue = false
+    _hidden_value = true
+  }
+  salesforce.DateTime CreatedDate {
+    apiName = "WorkStep.CreatedDate"
+    label = "Created Date"
+    _hidden_value = true
+  }
+  salesforce.Lookup CreatedById {
+    apiName = "WorkStep.CreatedById"
+    label = "Created By ID"
+    relationshipName = "CreatedBy"
+    _hidden_value = true
+  }
+  salesforce.DateTime LastModifiedDate {
+    apiName = "WorkStep.LastModifiedDate"
+    label = "Last Modified Date"
+    _hidden_value = true
+  }
+  salesforce.Lookup LastModifiedById {
+    apiName = "WorkStep.LastModifiedById"
+    label = "Last Modified By ID"
+    relationshipName = "LastModifiedBy"
+    _hidden_value = true
+  }
+  salesforce.DateTime SystemModstamp {
+    apiName = "WorkStep.SystemModstamp"
+    label = "System Modstamp"
+    _hidden_value = true
+  }
+}

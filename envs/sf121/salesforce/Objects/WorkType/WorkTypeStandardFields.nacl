@@ -1,0 +1,163 @@
+type salesforce.WorkType {
+  salesforce.Lookup AppointmentCategoryId {
+    apiName = "WorkType.AppointmentCategoryId"
+    label = "Appointment Category ID"
+    relationshipName = "AppointmentCategory"
+  }
+  salesforce.Number ApptStartTimeIntvlInMin {
+    apiName = "WorkType.ApptStartTimeIntvlInMin"
+    label = "Appointment Start Time Interval (Min)"
+    scale = 0
+    precision = 9
+    unique = false
+  }
+  salesforce.Number AttendeeLimit {
+    apiName = "WorkType.AttendeeLimit"
+    inlineHelpText = "Enter the maximum number of service appointment attendees that can attend a group service appointment. This field is mandatory if the appointment category is group."
+    label = "Attendee Limit"
+    scale = 0
+    precision = 9
+    unique = false
+  }
+  salesforce.Number BlockTimeAfterAppointment {
+    apiName = "WorkType.BlockTimeAfterAppointment"
+    label = "Block Time After Appointment"
+    scale = 0
+    precision = 9
+    unique = false
+  }
+  salesforce.Picklist BlockTimeAfterUnit {
+    apiName = "WorkType.BlockTimeAfterUnit"
+    label = "Block Time After Unit"
+    restricted = true
+  }
+  salesforce.Number BlockTimeBeforeAppointment {
+    apiName = "WorkType.BlockTimeBeforeAppointment"
+    label = "Block Time Before Appointment"
+    scale = 0
+    precision = 9
+    unique = false
+  }
+  salesforce.Picklist BlockTimeBeforeUnit {
+    apiName = "WorkType.BlockTimeBeforeUnit"
+    label = "Block Time Before Unit"
+    restricted = true
+  }
+  salesforce.Picklist DefaultAppointmentType {
+    apiName = "WorkType.DefaultAppointmentType"
+    label = "Default Appointment Type"
+  }
+  salesforce.LongTextArea Description {
+    apiName = "WorkType.Description"
+    label = "Description"
+    length = 32000
+  }
+  salesforce.Picklist DurationType {
+    apiName = "WorkType.DurationType"
+    label = "Duration Type"
+    _required = true
+    restricted = true
+  }
+  salesforce.Number EstimatedDuration {
+    apiName = "WorkType.EstimatedDuration"
+    label = "Estimated Duration"
+    _required = true
+    scale = 2
+    precision = 18
+    unique = false
+  }
+  salesforce.Text Name {
+    apiName = "WorkType.Name"
+    label = "Work Type Name"
+    _required = true
+    length = 255
+    unique = false
+    caseSensitive = false
+  }
+  salesforce.Lookup OperatingHoursId {
+    apiName = "WorkType.OperatingHoursId"
+    label = "Operating Hour ID"
+    relationshipName = "OperatingHours"
+  }
+  salesforce.Lookup OwnerId {
+    apiName = "WorkType.OwnerId"
+    label = "Owner ID"
+    relationshipName = "Owner"
+    _hidden_value = true
+  }
+  salesforce.Lookup ProductId {
+    apiName = "WorkType.ProductId"
+    _hidden_value = true
+  }
+  salesforce.Picklist TimeFrameEndUnit {
+    apiName = "WorkType.TimeFrameEndUnit"
+    label = "Time Frame End Unit"
+    restricted = true
+  }
+  salesforce.Picklist TimeFrameStartUnit {
+    apiName = "WorkType.TimeFrameStartUnit"
+    label = "Time Frame Start Unit"
+    restricted = true
+  }
+  salesforce.Number TimeframeEnd {
+    apiName = "WorkType.TimeframeEnd"
+    label = "Timeframe End"
+    scale = 0
+    precision = 9
+    unique = false
+  }
+  salesforce.Number TimeframeStart {
+    apiName = "WorkType.TimeframeStart"
+    label = "Timeframe Start"
+    scale = 0
+    precision = 9
+    unique = false
+  }
+  serviceid Id {
+    apiName = "WorkType.Id"
+    label = "Work Type ID"
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Checkbox IsDeleted {
+    apiName = "WorkType.IsDeleted"
+    label = "Deleted"
+    defaultValue = false
+    _hidden_value = true
+  }
+  salesforce.DateTime CreatedDate {
+    apiName = "WorkType.CreatedDate"
+    label = "Created Date"
+    _hidden_value = true
+  }
+  salesforce.Lookup CreatedById {
+    apiName = "WorkType.CreatedById"
+    label = "Created By ID"
+    relationshipName = "CreatedBy"
+    _hidden_value = true
+  }
+  salesforce.DateTime LastModifiedDate {
+    apiName = "WorkType.LastModifiedDate"
+    label = "Last Modified Date"
+    _hidden_value = true
+  }
+  salesforce.Lookup LastModifiedById {
+    apiName = "WorkType.LastModifiedById"
+    label = "Last Modified By ID"
+    relationshipName = "LastModifiedBy"
+    _hidden_value = true
+  }
+  salesforce.DateTime SystemModstamp {
+    apiName = "WorkType.SystemModstamp"
+    label = "System Modstamp"
+    _hidden_value = true
+  }
+  salesforce.Number DurationInMinutes {
+    apiName = "WorkType.DurationInMinutes"
+    label = "Duration in Minutes"
+    scale = 2
+    precision = 18
+    unique = false
+    _hidden_value = true
+  }
+}

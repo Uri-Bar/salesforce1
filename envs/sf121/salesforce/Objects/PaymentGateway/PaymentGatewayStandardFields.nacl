@@ -1,0 +1,85 @@
+type salesforce.PaymentGateway {
+  salesforce.LongTextArea Comments {
+    apiName = "PaymentGateway.Comments"
+    label = "Comments"
+    length = 1000
+  }
+  salesforce.Text ExternalReference {
+    apiName = "PaymentGateway.ExternalReference"
+    label = "External Reference"
+    length = 255
+    unique = true
+    caseSensitive = false
+  }
+  salesforce.Lookup MerchantCredentialId {
+    apiName = "PaymentGateway.MerchantCredentialId"
+    label = "Named Credential ID"
+    relationshipName = "MerchantCredential"
+  }
+  salesforce.Text PaymentGatewayName {
+    apiName = "PaymentGateway.PaymentGatewayName"
+    label = "Payment Gateway Name"
+    _required = true
+    length = 255
+    unique = false
+    caseSensitive = false
+  }
+  salesforce.Lookup PaymentGatewayProviderId {
+    apiName = "PaymentGateway.PaymentGatewayProviderId"
+    label = "Payment Gateway Provider ID"
+    relationshipName = "PaymentGatewayProvider"
+  }
+  salesforce.Picklist Status {
+    apiName = "PaymentGateway.Status"
+    label = "Status"
+    _required = true
+    restricted = true
+  }
+  serviceid Id {
+    apiName = "PaymentGateway.Id"
+    label = "Payment Gateway ID"
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Checkbox IsDeleted {
+    apiName = "PaymentGateway.IsDeleted"
+    label = "Deleted"
+    defaultValue = false
+    _hidden_value = true
+  }
+  salesforce.DateTime CreatedDate {
+    apiName = "PaymentGateway.CreatedDate"
+    label = "Created Date"
+    _hidden_value = true
+  }
+  salesforce.Lookup CreatedById {
+    apiName = "PaymentGateway.CreatedById"
+    label = "Created By ID"
+    relationshipName = "CreatedBy"
+    _hidden_value = true
+  }
+  salesforce.DateTime LastModifiedDate {
+    apiName = "PaymentGateway.LastModifiedDate"
+    label = "Last Modified Date"
+    _hidden_value = true
+  }
+  salesforce.Lookup LastModifiedById {
+    apiName = "PaymentGateway.LastModifiedById"
+    label = "Last Modified By ID"
+    relationshipName = "LastModifiedBy"
+    _hidden_value = true
+  }
+  salesforce.DateTime SystemModstamp {
+    apiName = "PaymentGateway.SystemModstamp"
+    label = "System Modstamp"
+    _hidden_value = true
+  }
+  salesforce.Text DefaultTapToPayLocation {
+    apiName = "PaymentGateway.DefaultTapToPayLocation"
+    label = "Tap To Pay Location"
+    length = 40
+    unique = false
+    caseSensitive = false
+    _hidden_value = true
+  }
+}

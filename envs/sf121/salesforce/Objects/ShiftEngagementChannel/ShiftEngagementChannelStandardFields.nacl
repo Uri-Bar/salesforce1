@@ -1,0 +1,61 @@
+type salesforce.ShiftEngagementChannel {
+  salesforce.Checkbox AreAllEngmtChnlSupported {
+    apiName = "ShiftEngagementChannel.AreAllEngmtChnlSupported"
+    label = "All Engagement Channels Supported"
+  }
+  salesforce.Lookup EngagementChannelTypeId {
+    apiName = "ShiftEngagementChannel.EngagementChannelTypeId"
+    label = "Engagement Channel Type ID"
+    relationshipName = "EngagementChannelType"
+  }
+  salesforce.MasterDetail ShiftId {
+    apiName = "ShiftEngagementChannel.ShiftId"
+    label = "Shift ID"
+    _required = true
+    relationshipName = "Shift"
+  }
+  serviceid Id {
+    apiName = "ShiftEngagementChannel.Id"
+    label = "Shift Engagement Channel ID"
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Checkbox IsDeleted {
+    apiName = "ShiftEngagementChannel.IsDeleted"
+    label = "Deleted"
+    defaultValue = false
+    _hidden_value = true
+  }
+  salesforce.AutoNumber Name {
+    apiName = "ShiftEngagementChannel.Name"
+    label = "Shift Engagement Channel Number"
+    _hidden_value = true
+  }
+  salesforce.DateTime CreatedDate {
+    apiName = "ShiftEngagementChannel.CreatedDate"
+    label = "Created Date"
+    _hidden_value = true
+  }
+  salesforce.Lookup CreatedById {
+    apiName = "ShiftEngagementChannel.CreatedById"
+    label = "Created By ID"
+    relationshipName = "CreatedBy"
+    _hidden_value = true
+  }
+  salesforce.DateTime LastModifiedDate {
+    apiName = "ShiftEngagementChannel.LastModifiedDate"
+    label = "Last Modified Date"
+    _hidden_value = true
+  }
+  salesforce.Lookup LastModifiedById {
+    apiName = "ShiftEngagementChannel.LastModifiedById"
+    label = "Last Modified By ID"
+    relationshipName = "LastModifiedBy"
+    _hidden_value = true
+  }
+  salesforce.DateTime SystemModstamp {
+    apiName = "ShiftEngagementChannel.SystemModstamp"
+    label = "System Modstamp"
+    _hidden_value = true
+  }
+}

@@ -1,0 +1,77 @@
+type salesforce.LocationGroup {
+  salesforce.LongTextArea Description {
+    apiName = "LocationGroup.Description"
+    label = "Description"
+    length = 2000
+  }
+  salesforce.Text ExternalReference {
+    apiName = "LocationGroup.ExternalReference"
+    label = "External Reference"
+    length = 255
+    unique = false
+    caseSensitive = false
+  }
+  salesforce.Checkbox IsEnabled {
+    apiName = "LocationGroup.IsEnabled"
+    label = "Enabled"
+    defaultValue = false
+  }
+  salesforce.Text LocationGroupName {
+    apiName = "LocationGroup.LocationGroupName"
+    label = "Location Group Number"
+    _required = true
+    length = 255
+    unique = false
+    caseSensitive = false
+  }
+  salesforce.Lookup OwnerId {
+    apiName = "LocationGroup.OwnerId"
+    label = "Owner ID"
+    relationshipName = "Owner"
+    _hidden_value = true
+  }
+  salesforce.Checkbox ShouldSyncWithOci {
+    apiName = "LocationGroup.ShouldSyncWithOci"
+    label = "Sync with OCI"
+    defaultValue = false
+  }
+  serviceid Id {
+    apiName = "LocationGroup.Id"
+    label = "Location Group ID"
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Checkbox IsDeleted {
+    apiName = "LocationGroup.IsDeleted"
+    label = "Deleted"
+    defaultValue = false
+    _hidden_value = true
+  }
+  salesforce.DateTime CreatedDate {
+    apiName = "LocationGroup.CreatedDate"
+    label = "Created Date"
+    _hidden_value = true
+  }
+  salesforce.Lookup CreatedById {
+    apiName = "LocationGroup.CreatedById"
+    label = "Created By ID"
+    relationshipName = "CreatedBy"
+    _hidden_value = true
+  }
+  salesforce.DateTime LastModifiedDate {
+    apiName = "LocationGroup.LastModifiedDate"
+    label = "Last Modified Date"
+    _hidden_value = true
+  }
+  salesforce.Lookup LastModifiedById {
+    apiName = "LocationGroup.LastModifiedById"
+    label = "Last Modified By ID"
+    relationshipName = "LastModifiedBy"
+    _hidden_value = true
+  }
+  salesforce.DateTime SystemModstamp {
+    apiName = "LocationGroup.SystemModstamp"
+    label = "System Modstamp"
+    _hidden_value = true
+  }
+}

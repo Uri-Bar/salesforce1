@@ -1,0 +1,117 @@
+type salesforce.PromotionQualifier {
+  salesforce.Currency MinimumAmount {
+    apiName = "PromotionQualifier.MinimumAmount"
+    label = "Minimum Amount"
+    scale = 2
+    precision = 18
+  }
+  salesforce.Number MinimumQuantity {
+    apiName = "PromotionQualifier.MinimumQuantity"
+    label = "Minimum Quantity"
+    scale = 4
+    precision = 18
+    unique = false
+  }
+  salesforce.AutoNumber Name {
+    apiName = "PromotionQualifier.Name"
+    label = "Promotion Qualifier Name"
+    _hidden_value = true
+  }
+  salesforce.MasterDetail PromotionId {
+    apiName = "PromotionQualifier.PromotionId"
+    label = "Promotion ID"
+    _required = true
+    relationshipName = "Promotion"
+  }
+  salesforce.Lookup PromotionTierId {
+    apiName = "PromotionQualifier.PromotionTierId"
+    label = "Promotion Tier ID"
+    relationshipName = "PromotionTier"
+  }
+  salesforce.Lookup QualifierId {
+    apiName = "PromotionQualifier.QualifierId"
+    label = "Qualifier ID"
+    relationshipName = "Qualifier"
+  }
+  salesforce.Picklist QualifierOperator {
+    apiName = "PromotionQualifier.QualifierOperator"
+    label = "Qualifier Operator"
+    _required = true
+    restricted = true
+  }
+  salesforce.Text QualifierProductCategoryName {
+    apiName = "PromotionQualifier.QualifierProductCategoryName"
+    label = "Qualifier Category Name"
+    length = 200
+    unique = false
+    caseSensitive = false
+    _hidden_value = true
+  }
+  salesforce.Text QualifierProductName {
+    apiName = "PromotionQualifier.QualifierProductName"
+    label = "Qualifier Product Name"
+    length = 255
+    unique = false
+    caseSensitive = false
+    _hidden_value = true
+  }
+  salesforce.Text QualifierProductSku {
+    apiName = "PromotionQualifier.QualifierProductSku"
+    label = "Qualifier Product SKU"
+    length = 180
+    unique = false
+    caseSensitive = false
+    _hidden_value = true
+  }
+  salesforce.Picklist QualifierType {
+    apiName = "PromotionQualifier.QualifierType"
+    label = "Qualifier Type"
+    _required = true
+    restricted = true
+  }
+  serviceid Id {
+    apiName = "PromotionQualifier.Id"
+    label = "Promotion Qualifier ID"
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Checkbox IsDeleted {
+    apiName = "PromotionQualifier.IsDeleted"
+    label = "Deleted"
+    defaultValue = false
+    _hidden_value = true
+  }
+  salesforce.DateTime CreatedDate {
+    apiName = "PromotionQualifier.CreatedDate"
+    label = "Created Date"
+    _hidden_value = true
+  }
+  salesforce.Lookup CreatedById {
+    apiName = "PromotionQualifier.CreatedById"
+    label = "Created By ID"
+    relationshipName = "CreatedBy"
+    _hidden_value = true
+  }
+  salesforce.DateTime LastModifiedDate {
+    apiName = "PromotionQualifier.LastModifiedDate"
+    label = "Last Modified Date"
+    _hidden_value = true
+  }
+  salesforce.Lookup LastModifiedById {
+    apiName = "PromotionQualifier.LastModifiedById"
+    label = "Last Modified By ID"
+    relationshipName = "LastModifiedBy"
+    _hidden_value = true
+  }
+  salesforce.DateTime SystemModstamp {
+    apiName = "PromotionQualifier.SystemModstamp"
+    label = "System Modstamp"
+    _hidden_value = true
+  }
+  salesforce.Picklist QualifierRuleCriteriaType {
+    apiName = "PromotionQualifier.QualifierRuleCriteriaType"
+    label = "Qualifier Rule Criteria Type"
+    _required = true
+    restricted = true
+  }
+}

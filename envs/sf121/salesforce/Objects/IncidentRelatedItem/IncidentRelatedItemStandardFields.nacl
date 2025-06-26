@@ -1,0 +1,79 @@
+type salesforce.IncidentRelatedItem {
+  salesforce.Lookup AssetId {
+    apiName = "IncidentRelatedItem.AssetId"
+    label = "Asset ID"
+    relationshipName = "Asset"
+  }
+  salesforce.LongTextArea Comment {
+    apiName = "IncidentRelatedItem.Comment"
+    label = "Comment"
+    length = 32000
+  }
+  salesforce.Picklist ImpactLevel {
+    apiName = "IncidentRelatedItem.ImpactLevel"
+    label = "Impact Level"
+    restricted = false
+    valueSetName = salesforce.StandardValueSet.instance.CasePriority
+  }
+  salesforce.Picklist ImpactType {
+    apiName = "IncidentRelatedItem.ImpactType"
+    label = "Impact Type"
+    _required = true
+    restricted = false
+  }
+  salesforce.MasterDetail IncidentId {
+    apiName = "IncidentRelatedItem.IncidentId"
+    label = "Incident ID"
+    _required = true
+    relationshipName = "Incident"
+  }
+  salesforce.AutoNumber Name {
+    apiName = "IncidentRelatedItem.Name"
+    label = "Incident Related Item Number"
+    _hidden_value = true
+  }
+  salesforce.Lookup Product2Id {
+    apiName = "IncidentRelatedItem.Product2Id"
+    label = "Product ID"
+    relationshipName = "Product2"
+  }
+  serviceid Id {
+    apiName = "IncidentRelatedItem.Id"
+    label = "Incident Related Item ID"
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Checkbox IsDeleted {
+    apiName = "IncidentRelatedItem.IsDeleted"
+    label = "Deleted"
+    defaultValue = false
+    _hidden_value = true
+  }
+  salesforce.DateTime CreatedDate {
+    apiName = "IncidentRelatedItem.CreatedDate"
+    label = "Created Date"
+    _hidden_value = true
+  }
+  salesforce.Lookup CreatedById {
+    apiName = "IncidentRelatedItem.CreatedById"
+    label = "Created By ID"
+    relationshipName = "CreatedBy"
+    _hidden_value = true
+  }
+  salesforce.DateTime LastModifiedDate {
+    apiName = "IncidentRelatedItem.LastModifiedDate"
+    label = "Last Modified Date"
+    _hidden_value = true
+  }
+  salesforce.Lookup LastModifiedById {
+    apiName = "IncidentRelatedItem.LastModifiedById"
+    label = "Last Modified By ID"
+    relationshipName = "LastModifiedBy"
+    _hidden_value = true
+  }
+  salesforce.DateTime SystemModstamp {
+    apiName = "IncidentRelatedItem.SystemModstamp"
+    label = "System Modstamp"
+    _hidden_value = true
+  }
+}

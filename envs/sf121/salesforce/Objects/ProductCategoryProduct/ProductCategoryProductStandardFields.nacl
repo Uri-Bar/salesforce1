@@ -1,0 +1,79 @@
+type salesforce.ProductCategoryProduct {
+  salesforce.Checkbox IsPrimaryCategory {
+    apiName = "ProductCategoryProduct.IsPrimaryCategory"
+    label = "Is Primary Category"
+    defaultValue = false
+  }
+  salesforce.MasterDetail ProductCategoryId {
+    apiName = "ProductCategoryProduct.ProductCategoryId"
+    label = "Category ID"
+    _required = true
+    relationshipName = "ProductCategory"
+  }
+  salesforce.Lookup ProductId {
+    apiName = "ProductCategoryProduct.ProductId"
+    label = "Product ID"
+    _required = true
+    relationshipName = "Product"
+  }
+  serviceid Id {
+    apiName = "ProductCategoryProduct.Id"
+    label = "Product Category Product ID"
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Checkbox IsDeleted {
+    apiName = "ProductCategoryProduct.IsDeleted"
+    label = "Deleted"
+    defaultValue = false
+    _hidden_value = true
+  }
+  salesforce.AutoNumber Name {
+    apiName = "ProductCategoryProduct.Name"
+    label = "Name"
+    _hidden_value = true
+  }
+  salesforce.DateTime CreatedDate {
+    apiName = "ProductCategoryProduct.CreatedDate"
+    label = "Created Date"
+    _hidden_value = true
+  }
+  salesforce.Lookup CreatedById {
+    apiName = "ProductCategoryProduct.CreatedById"
+    label = "Created By ID"
+    relationshipName = "CreatedBy"
+    _hidden_value = true
+  }
+  salesforce.DateTime LastModifiedDate {
+    apiName = "ProductCategoryProduct.LastModifiedDate"
+    label = "Last Modified Date"
+    _hidden_value = true
+  }
+  salesforce.Lookup LastModifiedById {
+    apiName = "ProductCategoryProduct.LastModifiedById"
+    label = "Last Modified By ID"
+    relationshipName = "LastModifiedBy"
+    _hidden_value = true
+  }
+  salesforce.DateTime SystemModstamp {
+    apiName = "ProductCategoryProduct.SystemModstamp"
+    label = "System Modstamp"
+    _hidden_value = true
+  }
+  salesforce.Lookup CatalogId {
+    apiName = "ProductCategoryProduct.CatalogId"
+    label = "Catalog ID"
+    _required = true
+    relationshipName = "Catalog"
+    _hidden_value = true
+  }
+  salesforce.Text ProductToCategory {
+    apiName = "ProductCategoryProduct.ProductToCategory"
+    label = "Product/Category Concatenation"
+    _required = true
+    length = 30
+    unique = false
+    caseSensitive = false
+    _hidden_value = true
+  }
+}

@@ -1,0 +1,125 @@
+type salesforce.Product2 {
+  salesforce.LongTextArea Description {
+    apiName = "Product2.Description"
+    label = "Product Description"
+    length = 4000
+  }
+  salesforce.Url DisplayUrl {
+    apiName = "Product2.DisplayUrl"
+    label = "Display URL"
+  }
+  salesforce.Lookup ExternalDataSourceId {
+    apiName = "Product2.ExternalDataSourceId"
+    label = "External Data Source ID"
+  }
+  salesforce.Text ExternalId {
+    apiName = "Product2.ExternalId"
+    label = "External ID"
+    length = 255
+    unique = false
+    caseSensitive = false
+  }
+  salesforce.Picklist Family {
+    apiName = "Product2.Family"
+    label = "Product Family"
+    restricted = false
+    valueSetName = salesforce.StandardValueSet.instance.Product2Family
+  }
+  salesforce.Checkbox IsActive {
+    apiName = "Product2.IsActive"
+    label = "Active"
+    defaultValue = false
+  }
+  salesforce.Text Name {
+    apiName = "Product2.Name"
+    label = "Product Name"
+    _required = true
+    length = 255
+    unique = false
+    caseSensitive = false
+  }
+  salesforce.Picklist ProductClass {
+    apiName = "Product2.ProductClass"
+    label = "Product Class"
+    _required = true
+    restricted = true
+    _hidden_value = true
+  }
+  salesforce.Text ProductCode {
+    apiName = "Product2.ProductCode"
+    label = "Product Code"
+    length = 255
+    unique = false
+    caseSensitive = false
+  }
+  salesforce.Picklist QuantityUnitOfMeasure {
+    apiName = "Product2.QuantityUnitOfMeasure"
+    label = "Quantity Unit Of Measure"
+    restricted = false
+  }
+  salesforce.Lookup SellerId {
+    apiName = "Product2.SellerId"
+    _hidden_value = true
+  }
+  salesforce.Lookup SourceProductId {
+    apiName = "Product2.SourceProductId"
+    _hidden_value = true
+  }
+  salesforce.Text StockKeepingUnit {
+    apiName = "Product2.StockKeepingUnit"
+    label = "Product SKU"
+    length = 180
+    unique = false
+    caseSensitive = false
+  }
+  salesforce.Picklist Type {
+    apiName = "Product2.Type"
+    label = "Product Type"
+    restricted = true
+  }
+  serviceid Id {
+    apiName = "Product2.Id"
+    label = "Product ID"
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.DateTime CreatedDate {
+    apiName = "Product2.CreatedDate"
+    label = "Created Date"
+    _hidden_value = true
+  }
+  salesforce.Lookup CreatedById {
+    apiName = "Product2.CreatedById"
+    label = "Created By ID"
+    relationshipName = "CreatedBy"
+    _hidden_value = true
+  }
+  salesforce.DateTime LastModifiedDate {
+    apiName = "Product2.LastModifiedDate"
+    label = "Last Modified Date"
+    _hidden_value = true
+  }
+  salesforce.Lookup LastModifiedById {
+    apiName = "Product2.LastModifiedById"
+    label = "Last Modified By ID"
+    relationshipName = "LastModifiedBy"
+    _hidden_value = true
+  }
+  salesforce.DateTime SystemModstamp {
+    apiName = "Product2.SystemModstamp"
+    label = "System Modstamp"
+    _hidden_value = true
+  }
+  salesforce.Checkbox IsDeleted {
+    apiName = "Product2.IsDeleted"
+    label = "Deleted"
+    defaultValue = false
+    _hidden_value = true
+  }
+  salesforce.Checkbox IsArchived {
+    apiName = "Product2.IsArchived"
+    label = "Archived"
+    defaultValue = false
+    _hidden_value = true
+  }
+}

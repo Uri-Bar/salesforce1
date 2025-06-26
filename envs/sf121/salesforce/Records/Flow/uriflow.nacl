@@ -1,0 +1,56 @@
+salesforce.Flow uriflow {
+  fullName = "uriflow"
+  apiVersion = 55
+  environments = "Default"
+  interviewLabel = "uriflow {!$Flow.CurrentDateTime}"
+  label = "uriflow"
+  processMetadataValues = [
+    {
+      name = "BuilderType"
+      value = {
+        stringValue = "LightningFlowBuilder"
+      }
+    },
+    {
+      name = "CanvasMode"
+      value = {
+        stringValue = "AUTO_LAYOUT_CANVAS"
+      }
+    },
+    {
+      name = "OriginBuilderType"
+      value = {
+        stringValue = "LightningFlowBuilder"
+      }
+    },
+  ]
+  processType = "Flow"
+  screens = {
+    description = "asd"
+    name = "asdeasd"
+    label = "asde"
+    allowBack = true
+    allowFinish = true
+    allowPause = true
+    fields = {
+      name = "uri"
+      dataType = "Boolean"
+      fieldText = "asd"
+      fieldType = "InputField"
+      inputsOnNextNavToAssocScrn = "UseStoredValues"
+      isDisabled = {
+        booleanValue = false
+      }
+      isRequired = true
+    }
+    showFooter = true
+    showHeader = true
+  }
+  start = {
+    connector = {
+      targetReference = "asdeasd"
+    }
+  }
+  status = "Draft"
+  _alias = "uriflow"
+}

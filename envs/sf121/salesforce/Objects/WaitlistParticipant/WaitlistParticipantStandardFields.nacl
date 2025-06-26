@@ -1,0 +1,88 @@
+type salesforce.WaitlistParticipant {
+  salesforce.DateTime AcceptanceTime {
+    apiName = "WaitlistParticipant.AcceptanceTime"
+    label = "Acceptance Time"
+  }
+  salesforce.LongTextArea Description {
+    apiName = "WaitlistParticipant.Description"
+    label = "Description"
+    length = 1000
+  }
+  salesforce.Lookup ParticipantId {
+    apiName = "WaitlistParticipant.ParticipantId"
+    label = "Participant ID"
+    _required = true
+    relationshipName = "Participant"
+  }
+  salesforce.Lookup ServiceAppointmentId {
+    apiName = "WaitlistParticipant.ServiceAppointmentId"
+    label = "Service Appointment ID"
+    relationshipName = "ServiceAppointment"
+  }
+  salesforce.Lookup ServiceResourceId {
+    apiName = "WaitlistParticipant.ServiceResourceId"
+    label = "Resource ID"
+    relationshipName = "ServiceResource"
+  }
+  salesforce.Picklist Status {
+    apiName = "WaitlistParticipant.Status"
+    label = "Status"
+    _required = true
+    restricted = true
+  }
+  salesforce.MasterDetail WaitlistId {
+    apiName = "WaitlistParticipant.WaitlistId"
+    label = "Waitlist ID"
+    _required = true
+    relationshipName = "Waitlist"
+  }
+  salesforce.Lookup WorkTypeId {
+    apiName = "WaitlistParticipant.WorkTypeId"
+    label = "Work Type ID"
+    relationshipName = "WorkType"
+  }
+  serviceid Id {
+    apiName = "WaitlistParticipant.Id"
+    label = "Waitlist Participant ID"
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Checkbox IsDeleted {
+    apiName = "WaitlistParticipant.IsDeleted"
+    label = "Deleted"
+    defaultValue = false
+    _hidden_value = true
+  }
+  salesforce.AutoNumber ParticipantIdentifier {
+    apiName = "WaitlistParticipant.ParticipantIdentifier"
+    label = "Participant Identifier"
+    _hidden_value = true
+  }
+  salesforce.DateTime CreatedDate {
+    apiName = "WaitlistParticipant.CreatedDate"
+    label = "Created Date"
+    _hidden_value = true
+  }
+  salesforce.Lookup CreatedById {
+    apiName = "WaitlistParticipant.CreatedById"
+    label = "Created By ID"
+    relationshipName = "CreatedBy"
+    _hidden_value = true
+  }
+  salesforce.DateTime LastModifiedDate {
+    apiName = "WaitlistParticipant.LastModifiedDate"
+    label = "Last Modified Date"
+    _hidden_value = true
+  }
+  salesforce.Lookup LastModifiedById {
+    apiName = "WaitlistParticipant.LastModifiedById"
+    label = "Last Modified By ID"
+    relationshipName = "LastModifiedBy"
+    _hidden_value = true
+  }
+  salesforce.DateTime SystemModstamp {
+    apiName = "WaitlistParticipant.SystemModstamp"
+    label = "System Modstamp"
+    _hidden_value = true
+  }
+}

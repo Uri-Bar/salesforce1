@@ -1,0 +1,58 @@
+type salesforce.ServiceTerritoryWorkType {
+  salesforce.MasterDetail ServiceTerritoryId {
+    apiName = "ServiceTerritoryWorkType.ServiceTerritoryId"
+    label = "Territory ID"
+    _required = true
+    relationshipName = "ServiceTerritory"
+  }
+  salesforce.MasterDetail WorkTypeId {
+    apiName = "ServiceTerritoryWorkType.WorkTypeId"
+    label = "Work Type ID"
+    _required = true
+    relationshipName = "WorkType"
+  }
+  serviceid Id {
+    apiName = "ServiceTerritoryWorkType.Id"
+    label = "Service Territory Work Type ID"
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Checkbox IsDeleted {
+    apiName = "ServiceTerritoryWorkType.IsDeleted"
+    label = "Deleted"
+    defaultValue = false
+    _hidden_value = true
+  }
+  salesforce.AutoNumber Name {
+    apiName = "ServiceTerritoryWorkType.Name"
+    label = "Service Territory Work Type Name"
+    _hidden_value = true
+  }
+  salesforce.DateTime CreatedDate {
+    apiName = "ServiceTerritoryWorkType.CreatedDate"
+    label = "Created Date"
+    _hidden_value = true
+  }
+  salesforce.Lookup CreatedById {
+    apiName = "ServiceTerritoryWorkType.CreatedById"
+    label = "Created By ID"
+    relationshipName = "CreatedBy"
+    _hidden_value = true
+  }
+  salesforce.DateTime LastModifiedDate {
+    apiName = "ServiceTerritoryWorkType.LastModifiedDate"
+    label = "Last Modified Date"
+    _hidden_value = true
+  }
+  salesforce.Lookup LastModifiedById {
+    apiName = "ServiceTerritoryWorkType.LastModifiedById"
+    label = "Last Modified By ID"
+    relationshipName = "LastModifiedBy"
+    _hidden_value = true
+  }
+  salesforce.DateTime SystemModstamp {
+    apiName = "ServiceTerritoryWorkType.SystemModstamp"
+    label = "System Modstamp"
+    _hidden_value = true
+  }
+}

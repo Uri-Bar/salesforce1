@@ -1,0 +1,138 @@
+type salesforce.DeliveryEstimationSetup {
+  salesforce.Lookup ChannelId {
+    apiName = "DeliveryEstimationSetup.ChannelId"
+    label = "Channel ID"
+    _required = true
+    relationshipName = "Channel"
+  }
+  salesforce.Lookup DefaultBusinessHoursId {
+    apiName = "DeliveryEstimationSetup.DefaultBusinessHoursId"
+    label = "Business Hours ID"
+    _required = true
+    relationshipName = "DefaultBusinessHours"
+  }
+  salesforce.Time DefaultPickupTime {
+    apiName = "DeliveryEstimationSetup.DefaultPickupTime"
+    label = "Default Pickup Time"
+    _required = true
+  }
+  salesforce.Number DefaultProcessingTime {
+    apiName = "DeliveryEstimationSetup.DefaultProcessingTime"
+    label = "Default Processing Time"
+    _required = true
+    scale = 0
+    precision = 9
+    unique = false
+  }
+  salesforce.Picklist DefaultProcessingTimeUnit {
+    apiName = "DeliveryEstimationSetup.DefaultProcessingTimeUnit"
+    label = "Default Processing Time Unit"
+    _required = true
+    restricted = true
+  }
+  salesforce.Text ExternalReference {
+    apiName = "DeliveryEstimationSetup.ExternalReference"
+    label = "External Reference"
+    _required = true
+    length = 255
+    unique = true
+    caseSensitive = true
+  }
+  salesforce.Unknown IsDefault {
+    apiName = "DeliveryEstimationSetup.IsDefault"
+    _hidden_value = true
+  }
+  salesforce.Checkbox IsEnabled {
+    apiName = "DeliveryEstimationSetup.IsEnabled"
+    label = "Is Enabled"
+    defaultValue = false
+    _hidden_value = true
+  }
+  salesforce.Lookup LastSyncedById {
+    apiName = "DeliveryEstimationSetup.LastSyncedById"
+    label = "User ID"
+    relationshipName = "LastSyncedBy"
+    _hidden_value = true
+  }
+  salesforce.DateTime LastSyncedDate {
+    apiName = "DeliveryEstimationSetup.LastSyncedDate"
+    label = "Last Synced Date"
+    _hidden_value = true
+  }
+  salesforce.LongTextArea LastSyncedMessage {
+    apiName = "DeliveryEstimationSetup.LastSyncedMessage"
+    label = "Last Synced Message"
+    length = 10000
+    _hidden_value = true
+  }
+  salesforce.Lookup LocationGroupId {
+    apiName = "DeliveryEstimationSetup.LocationGroupId"
+    label = "Location Group ID"
+    _required = true
+    relationshipName = "LocationGroup"
+  }
+  salesforce.Text Name {
+    apiName = "DeliveryEstimationSetup.Name"
+    label = "Name"
+    _required = true
+    length = 255
+    unique = false
+    caseSensitive = false
+  }
+  salesforce.Unknown ServiceRegion {
+    apiName = "DeliveryEstimationSetup.ServiceRegion"
+    _hidden_value = true
+  }
+  salesforce.Picklist SyncStatus {
+    apiName = "DeliveryEstimationSetup.SyncStatus"
+    label = "Sync Status"
+    _required = true
+    restricted = true
+    _hidden_value = true
+  }
+  serviceid Id {
+    apiName = "DeliveryEstimationSetup.Id"
+    label = "Delivery Estimation Setup ID"
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Lookup OwnerId {
+    apiName = "DeliveryEstimationSetup.OwnerId"
+    label = "Owner ID"
+    relationshipName = "Owner"
+    _hidden_value = true
+  }
+  salesforce.Checkbox IsDeleted {
+    apiName = "DeliveryEstimationSetup.IsDeleted"
+    label = "Deleted"
+    defaultValue = false
+    _hidden_value = true
+  }
+  salesforce.DateTime CreatedDate {
+    apiName = "DeliveryEstimationSetup.CreatedDate"
+    label = "Created Date"
+    _hidden_value = true
+  }
+  salesforce.Lookup CreatedById {
+    apiName = "DeliveryEstimationSetup.CreatedById"
+    label = "Created By ID"
+    relationshipName = "CreatedBy"
+    _hidden_value = true
+  }
+  salesforce.DateTime LastModifiedDate {
+    apiName = "DeliveryEstimationSetup.LastModifiedDate"
+    label = "Last Modified Date"
+    _hidden_value = true
+  }
+  salesforce.Lookup LastModifiedById {
+    apiName = "DeliveryEstimationSetup.LastModifiedById"
+    label = "Last Modified By ID"
+    relationshipName = "LastModifiedBy"
+    _hidden_value = true
+  }
+  salesforce.DateTime SystemModstamp {
+    apiName = "DeliveryEstimationSetup.SystemModstamp"
+    label = "System Modstamp"
+    _hidden_value = true
+  }
+}

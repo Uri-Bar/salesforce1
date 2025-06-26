@@ -1,0 +1,261 @@
+type salesforce.Payment {
+  salesforce.Lookup AccountId {
+    apiName = "Payment.AccountId"
+    label = "Account ID"
+    relationshipName = "Account"
+  }
+  salesforce.Currency Amount {
+    apiName = "Payment.Amount"
+    label = "Amount"
+    _required = true
+    scale = 2
+    precision = 18
+  }
+  salesforce.Currency Balance {
+    apiName = "Payment.Balance"
+    label = "Balance"
+    scale = 2
+    precision = 18
+    _hidden_value = true
+  }
+  salesforce.DateTime CancellationDate {
+    apiName = "Payment.CancellationDate"
+    label = "Cancellation Date"
+  }
+  salesforce.DateTime CancellationEffectiveDate {
+    apiName = "Payment.CancellationEffectiveDate"
+    label = "Cancellation Effective Date"
+  }
+  salesforce.DateTime CancellationGatewayDate {
+    apiName = "Payment.CancellationGatewayDate"
+    label = "Cancellation Gateway Date"
+  }
+  salesforce.Text CancellationGatewayRefNumber {
+    apiName = "Payment.CancellationGatewayRefNumber"
+    label = "Cancellation Gateway Reference Number"
+    length = 255
+    unique = false
+    caseSensitive = false
+  }
+  salesforce.Text CancellationGatewayResultCode {
+    apiName = "Payment.CancellationGatewayResultCode"
+    label = "Cancellation Gateway Result Code"
+    length = 64
+    unique = false
+    caseSensitive = false
+  }
+  salesforce.Text CancellationSfResultCode {
+    apiName = "Payment.CancellationSfResultCode"
+    label = "Cancellation Salesforce Result Code"
+    length = 64
+    unique = false
+    caseSensitive = false
+  }
+  salesforce.LongTextArea Comments {
+    apiName = "Payment.Comments"
+    label = "Comments"
+    length = 1000
+  }
+  salesforce.DateTime Date {
+    apiName = "Payment.Date"
+    label = "Date"
+  }
+  salesforce.DateTime EffectiveDate {
+    apiName = "Payment.EffectiveDate"
+    label = "Effective Date"
+  }
+  salesforce.Email Email {
+    apiName = "Payment.Email"
+    label = "Audit Email"
+    unique = false
+  }
+  salesforce.DateTime GatewayDate {
+    apiName = "Payment.GatewayDate"
+    label = "Gateway Date"
+  }
+  salesforce.LongTextArea GatewayRefDetails {
+    apiName = "Payment.GatewayRefDetails"
+    label = "Gateway Reference Details"
+    length = 1000
+  }
+  salesforce.Text GatewayRefNumber {
+    apiName = "Payment.GatewayRefNumber"
+    label = "Gateway Reference Number"
+    length = 255
+    unique = false
+    caseSensitive = false
+  }
+  salesforce.Text GatewayResultCode {
+    apiName = "Payment.GatewayResultCode"
+    label = "Gateway Result Code"
+    length = 64
+    unique = false
+    caseSensitive = false
+  }
+  salesforce.Text GatewayResultCodeDescription {
+    apiName = "Payment.GatewayResultCodeDescription"
+    label = "Gateway Result Code Description"
+    length = 255
+    unique = false
+    caseSensitive = false
+  }
+  salesforce.Summary ImpactAmount {
+    apiName = "Payment.ImpactAmount"
+    label = "Impact Amount"
+    _hidden_value = true
+  }
+  salesforce.Text IpAddress {
+    apiName = "Payment.IpAddress"
+    label = "IP Address"
+    length = 39
+    unique = false
+    caseSensitive = false
+  }
+  salesforce.Text MacAddress {
+    apiName = "Payment.MacAddress"
+    label = "MAC Address"
+    length = 32
+    unique = false
+    caseSensitive = false
+  }
+  salesforce.Currency NetApplied {
+    apiName = "Payment.NetApplied"
+    label = "Net Applied"
+    scale = 2
+    precision = 18
+    _hidden_value = true
+  }
+  salesforce.Summary NetRefundApplied {
+    apiName = "Payment.NetRefundApplied"
+    label = "Net Refund Applied"
+    _hidden_value = true
+  }
+  salesforce.Lookup PaymentAuthorizationId {
+    apiName = "Payment.PaymentAuthorizationId"
+    label = "Payment Authorization ID"
+    relationshipName = "PaymentAuthorization"
+  }
+  salesforce.Lookup PaymentGatewayId {
+    apiName = "Payment.PaymentGatewayId"
+    label = "Payment Gateway ID"
+    relationshipName = "PaymentGateway"
+  }
+  salesforce.Lookup PaymentGroupId {
+    apiName = "Payment.PaymentGroupId"
+    label = "Payment Group ID"
+    relationshipName = "PaymentGroup"
+  }
+  salesforce.Lookup PaymentMethodId {
+    apiName = "Payment.PaymentMethodId"
+    label = "Payment Method ID"
+    relationshipName = "PaymentMethod"
+  }
+  salesforce.Phone Phone {
+    apiName = "Payment.Phone"
+    label = "Phone"
+  }
+  salesforce.Picklist ProcessingMode {
+    apiName = "Payment.ProcessingMode"
+    label = "Processing Mode"
+    _required = true
+    restricted = true
+  }
+  salesforce.Picklist SfResultCode {
+    apiName = "Payment.SfResultCode"
+    label = "Salesforce Result Code"
+    restricted = true
+  }
+  salesforce.Picklist Status {
+    apiName = "Payment.Status"
+    label = "Status"
+    _required = true
+    restricted = true
+  }
+  salesforce.Currency TotalApplied {
+    apiName = "Payment.TotalApplied"
+    label = "Total Applied"
+    scale = 2
+    precision = 18
+    _hidden_value = true
+  }
+  salesforce.Summary TotalRefundApplied {
+    apiName = "Payment.TotalRefundApplied"
+    label = "Total Refund Applied"
+    _hidden_value = true
+  }
+  salesforce.Summary TotalRefundUnapplied {
+    apiName = "Payment.TotalRefundUnapplied"
+    label = "Total Refund Unapplied"
+    _hidden_value = true
+  }
+  salesforce.Currency TotalUnapplied {
+    apiName = "Payment.TotalUnapplied"
+    label = "Total Unapplied"
+    scale = 2
+    precision = 18
+    _hidden_value = true
+  }
+  salesforce.Picklist Type {
+    apiName = "Payment.Type"
+    label = "Type"
+    _required = true
+    restricted = true
+  }
+  serviceid Id {
+    apiName = "Payment.Id"
+    label = "Payment ID"
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Checkbox IsDeleted {
+    apiName = "Payment.IsDeleted"
+    label = "Deleted"
+    defaultValue = false
+    _hidden_value = true
+  }
+  salesforce.AutoNumber PaymentNumber {
+    apiName = "Payment.PaymentNumber"
+    label = "Payment Number"
+    _hidden_value = true
+  }
+  salesforce.DateTime CreatedDate {
+    apiName = "Payment.CreatedDate"
+    label = "Created Date"
+    _hidden_value = true
+  }
+  salesforce.Lookup CreatedById {
+    apiName = "Payment.CreatedById"
+    label = "Created By ID"
+    relationshipName = "CreatedBy"
+    _hidden_value = true
+  }
+  salesforce.DateTime LastModifiedDate {
+    apiName = "Payment.LastModifiedDate"
+    label = "Last Modified Date"
+    _hidden_value = true
+  }
+  salesforce.Lookup LastModifiedById {
+    apiName = "Payment.LastModifiedById"
+    label = "Last Modified By ID"
+    relationshipName = "LastModifiedBy"
+    _hidden_value = true
+  }
+  salesforce.DateTime SystemModstamp {
+    apiName = "Payment.SystemModstamp"
+    label = "System Modstamp"
+    _hidden_value = true
+  }
+  salesforce.LongTextArea ClientContext {
+    apiName = "Payment.ClientContext"
+    label = "Client Context"
+    length = 2000
+    _hidden_value = true
+  }
+  salesforce.Text PaymentIntentGuid {
+    apiName = "Payment.PaymentIntentGuid"
+    label = "Payment Intent Guid"
+    length = 255
+    unique = false
+    caseSensitive = false
+  }
+}

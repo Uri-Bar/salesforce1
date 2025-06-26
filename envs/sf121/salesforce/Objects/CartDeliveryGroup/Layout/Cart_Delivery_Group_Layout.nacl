@@ -1,0 +1,55 @@
+salesforce.Layout CartDeliveryGroup_Cart_Delivery_Group_Layout@bsss {
+  layoutSections = [
+    {
+      customLabel = false
+      detailHeading = false
+      editHeading = false
+      layoutColumns = [
+        {
+          layoutItems = [
+            {
+              behavior = "Required"
+              field = salesforce.CartDeliveryGroup.field.Name
+            },
+            {
+              behavior = "Required"
+              field = salesforce.CartDeliveryGroup.field.CartId
+            },
+            {
+              behavior = "Required"
+              field = salesforce.CartDeliveryGroup.field.CreatedDate
+            },
+          ]
+        },
+        {
+        },
+      ]
+      style = "TwoColumnsLeftToRight"
+    },
+    {
+      customLabel = false
+      detailHeading = false
+      editHeading = false
+      layoutColumns = [
+        {
+        },
+      ]
+      style = "CustomLinks"
+    },
+  ]
+  miniLayout = {
+    fields = [
+      "Name",
+      "CartId",
+      "CreatedDate",
+    ]
+  }
+  showEmailCheckbox = false
+  showRunAssignmentRulesCheckbox = false
+  showSubmitAndAttachButton = false
+  fullName = "CartDeliveryGroup-Cart Delivery Group Layout"
+  _parent = [
+    salesforce.CartDeliveryGroup,
+  ]
+  _alias = "CartDeliveryGroup-Cart Delivery Group Layout"
+}

@@ -1,0 +1,51 @@
+type salesforce.PaymentGroup {
+  salesforce.Lookup SourceObjectId {
+    apiName = "PaymentGroup.SourceObjectId"
+    label = "Order ID"
+    relationshipName = "SourceObject"
+  }
+  serviceid Id {
+    apiName = "PaymentGroup.Id"
+    label = "Payment Group ID"
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Checkbox IsDeleted {
+    apiName = "PaymentGroup.IsDeleted"
+    label = "Deleted"
+    defaultValue = false
+    _hidden_value = true
+  }
+  salesforce.AutoNumber PaymentGroupNumber {
+    apiName = "PaymentGroup.PaymentGroupNumber"
+    label = "Payment Group Number"
+    _hidden_value = true
+  }
+  salesforce.DateTime CreatedDate {
+    apiName = "PaymentGroup.CreatedDate"
+    label = "Created Date"
+    _hidden_value = true
+  }
+  salesforce.Lookup CreatedById {
+    apiName = "PaymentGroup.CreatedById"
+    label = "Created By ID"
+    relationshipName = "CreatedBy"
+    _hidden_value = true
+  }
+  salesforce.DateTime LastModifiedDate {
+    apiName = "PaymentGroup.LastModifiedDate"
+    label = "Last Modified Date"
+    _hidden_value = true
+  }
+  salesforce.Lookup LastModifiedById {
+    apiName = "PaymentGroup.LastModifiedById"
+    label = "Last Modified By ID"
+    relationshipName = "LastModifiedBy"
+    _hidden_value = true
+  }
+  salesforce.DateTime SystemModstamp {
+    apiName = "PaymentGroup.SystemModstamp"
+    label = "System Modstamp"
+    _hidden_value = true
+  }
+}

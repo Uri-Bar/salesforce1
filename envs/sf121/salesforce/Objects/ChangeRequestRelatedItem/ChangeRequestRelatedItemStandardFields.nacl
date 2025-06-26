@@ -1,0 +1,75 @@
+type salesforce.ChangeRequestRelatedItem {
+  salesforce.Lookup AssetId {
+    apiName = "ChangeRequestRelatedItem.AssetId"
+    label = "Asset ID"
+    _required = true
+    relationshipName = "Asset"
+  }
+  salesforce.MasterDetail ChangeRequestId {
+    apiName = "ChangeRequestRelatedItem.ChangeRequestId"
+    label = "Change Request ID"
+    _required = true
+    relationshipName = "ChangeRequest"
+  }
+  salesforce.LongTextArea Comment {
+    apiName = "ChangeRequestRelatedItem.Comment"
+    label = "Comment"
+    length = 32000
+  }
+  salesforce.Picklist ImpactLevel {
+    apiName = "ChangeRequestRelatedItem.ImpactLevel"
+    label = "Impact Level"
+    restricted = false
+    valueSetName = salesforce.StandardValueSet.instance.CasePriority
+  }
+  salesforce.AutoNumber Name {
+    apiName = "ChangeRequestRelatedItem.Name"
+    label = "Change Request Related Item Number"
+    _hidden_value = true
+  }
+  salesforce.Picklist RelationshipType {
+    apiName = "ChangeRequestRelatedItem.RelationshipType"
+    label = "Relationship Type"
+    _required = true
+    restricted = false
+  }
+  serviceid Id {
+    apiName = "ChangeRequestRelatedItem.Id"
+    label = "Change Request Related Item ID"
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Checkbox IsDeleted {
+    apiName = "ChangeRequestRelatedItem.IsDeleted"
+    label = "Deleted"
+    defaultValue = false
+    _hidden_value = true
+  }
+  salesforce.DateTime CreatedDate {
+    apiName = "ChangeRequestRelatedItem.CreatedDate"
+    label = "Created Date"
+    _hidden_value = true
+  }
+  salesforce.Lookup CreatedById {
+    apiName = "ChangeRequestRelatedItem.CreatedById"
+    label = "Created By ID"
+    relationshipName = "CreatedBy"
+    _hidden_value = true
+  }
+  salesforce.DateTime LastModifiedDate {
+    apiName = "ChangeRequestRelatedItem.LastModifiedDate"
+    label = "Last Modified Date"
+    _hidden_value = true
+  }
+  salesforce.Lookup LastModifiedById {
+    apiName = "ChangeRequestRelatedItem.LastModifiedById"
+    label = "Last Modified By ID"
+    relationshipName = "LastModifiedBy"
+    _hidden_value = true
+  }
+  salesforce.DateTime SystemModstamp {
+    apiName = "ChangeRequestRelatedItem.SystemModstamp"
+    label = "System Modstamp"
+    _hidden_value = true
+  }
+}

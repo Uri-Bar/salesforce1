@@ -1,0 +1,6 @@
+salesforce.Group test {
+  fullName = "test"
+  doesIncludeBosses = true
+  name = "test"
+  _alias = "test"
+}

@@ -1,0 +1,77 @@
+type salesforce.PrivacyRTBFRequest {
+  salesforce.Text JobRecord {
+    apiName = "PrivacyRTBFRequest.JobRecord"
+    label = "Job Record"
+    _required = true
+    length = 255
+    unique = false
+    caseSensitive = false
+  }
+  salesforce.Lookup OwnerId {
+    apiName = "PrivacyRTBFRequest.OwnerId"
+    label = "Owner ID"
+    relationshipName = "Owner"
+    _hidden_value = true
+  }
+  salesforce.Lookup PolicyNameId {
+    apiName = "PrivacyRTBFRequest.PolicyNameId"
+    label = "Privacy Policy Definition ID"
+    relationshipName = "PolicyName"
+  }
+  salesforce.Picklist Status {
+    apiName = "PrivacyRTBFRequest.Status"
+    label = "Status"
+    restricted = true
+  }
+  serviceid Id {
+    apiName = "PrivacyRTBFRequest.Id"
+    label = "Privacy RTBF Request ID"
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Checkbox IsDeleted {
+    apiName = "PrivacyRTBFRequest.IsDeleted"
+    label = "Deleted"
+    defaultValue = false
+    _hidden_value = true
+  }
+  salesforce.AutoNumber Name {
+    apiName = "PrivacyRTBFRequest.Name"
+    label = "Request Name"
+    _hidden_value = true
+  }
+  salesforce.DateTime CreatedDate {
+    apiName = "PrivacyRTBFRequest.CreatedDate"
+    label = "Created Date"
+    _hidden_value = true
+  }
+  salesforce.Lookup CreatedById {
+    apiName = "PrivacyRTBFRequest.CreatedById"
+    label = "Created By ID"
+    relationshipName = "CreatedBy"
+    _hidden_value = true
+  }
+  salesforce.DateTime LastModifiedDate {
+    apiName = "PrivacyRTBFRequest.LastModifiedDate"
+    label = "Last Modified Date"
+    _hidden_value = true
+  }
+  salesforce.Lookup LastModifiedById {
+    apiName = "PrivacyRTBFRequest.LastModifiedById"
+    label = "Last Modified By ID"
+    relationshipName = "LastModifiedBy"
+    _hidden_value = true
+  }
+  salesforce.DateTime SystemModstamp {
+    apiName = "PrivacyRTBFRequest.SystemModstamp"
+    label = "System Modstamp"
+    _hidden_value = true
+  }
+  salesforce.Text Description {
+    apiName = "PrivacyRTBFRequest.Description"
+    label = "Description"
+    length = 255
+    unique = false
+    caseSensitive = false
+  }
+}

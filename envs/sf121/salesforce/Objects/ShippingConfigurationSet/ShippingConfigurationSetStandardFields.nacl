@@ -1,0 +1,77 @@
+type salesforce.ShippingConfigurationSet {
+  serviceid Id {
+    apiName = "ShippingConfigurationSet.Id"
+    label = "Shipping Profile ID"
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Lookup OwnerId {
+    apiName = "ShippingConfigurationSet.OwnerId"
+    label = "Owner ID"
+    relationshipName = "Owner"
+    _hidden_value = true
+  }
+  salesforce.Checkbox IsDeleted {
+    apiName = "ShippingConfigurationSet.IsDeleted"
+    label = "Deleted"
+    defaultValue = false
+    _hidden_value = true
+  }
+  salesforce.Text Name {
+    apiName = "ShippingConfigurationSet.Name"
+    label = "Shipping Profile Name"
+    _required = true
+    length = 255
+    unique = false
+    caseSensitive = false
+  }
+  salesforce.DateTime CreatedDate {
+    apiName = "ShippingConfigurationSet.CreatedDate"
+    label = "Created Date"
+    _hidden_value = true
+  }
+  salesforce.Lookup CreatedById {
+    apiName = "ShippingConfigurationSet.CreatedById"
+    label = "Created By ID"
+    relationshipName = "CreatedBy"
+    _hidden_value = true
+  }
+  salesforce.DateTime LastModifiedDate {
+    apiName = "ShippingConfigurationSet.LastModifiedDate"
+    label = "Last Modified Date"
+    _hidden_value = true
+  }
+  salesforce.Lookup LastModifiedById {
+    apiName = "ShippingConfigurationSet.LastModifiedById"
+    label = "Last Modified By ID"
+    relationshipName = "LastModifiedBy"
+    _hidden_value = true
+  }
+  salesforce.DateTime SystemModstamp {
+    apiName = "ShippingConfigurationSet.SystemModstamp"
+    label = "System Modstamp"
+    _hidden_value = true
+  }
+  salesforce.Lookup TargetRecordId {
+    apiName = "ShippingConfigurationSet.TargetRecordId"
+    label = "Store ID"
+    relationshipName = "TargetRecord"
+  }
+  salesforce.Checkbox IsDefault {
+    apiName = "ShippingConfigurationSet.IsDefault"
+    label = "Is Default"
+    defaultValue = false
+  }
+  salesforce.Number ProcessTime {
+    apiName = "ShippingConfigurationSet.ProcessTime"
+    label = "Order Processing Time"
+    scale = 0
+    precision = 9
+    unique = false
+  }
+  salesforce.Picklist ProcessTimeUnit {
+    apiName = "ShippingConfigurationSet.ProcessTimeUnit"
+    label = "Unit of Order Processing Time"
+    restricted = true
+  }
+}

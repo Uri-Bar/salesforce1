@@ -1,0 +1,61 @@
+type salesforce.EngagementChannelWorkType {
+  salesforce.Checkbox AreAllEngmtChnlSupported {
+    apiName = "EngagementChannelWorkType.AreAllEngmtChnlSupported"
+    label = "All Engagement Channels Supported"
+  }
+  salesforce.Lookup EngagementChannelTypeId {
+    apiName = "EngagementChannelWorkType.EngagementChannelTypeId"
+    label = "Engagement Channel Type ID"
+    relationshipName = "EngagementChannelType"
+  }
+  salesforce.MasterDetail WorkTypeId {
+    apiName = "EngagementChannelWorkType.WorkTypeId"
+    label = "Work Type ID"
+    _required = true
+    relationshipName = "WorkType"
+  }
+  serviceid Id {
+    apiName = "EngagementChannelWorkType.Id"
+    label = "Engagement Channel Work Type ID"
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Checkbox IsDeleted {
+    apiName = "EngagementChannelWorkType.IsDeleted"
+    label = "Deleted"
+    defaultValue = false
+    _hidden_value = true
+  }
+  salesforce.AutoNumber Name {
+    apiName = "EngagementChannelWorkType.Name"
+    label = "Engagement Channel Work Type Number"
+    _hidden_value = true
+  }
+  salesforce.DateTime CreatedDate {
+    apiName = "EngagementChannelWorkType.CreatedDate"
+    label = "Created Date"
+    _hidden_value = true
+  }
+  salesforce.Lookup CreatedById {
+    apiName = "EngagementChannelWorkType.CreatedById"
+    label = "Created By ID"
+    relationshipName = "CreatedBy"
+    _hidden_value = true
+  }
+  salesforce.DateTime LastModifiedDate {
+    apiName = "EngagementChannelWorkType.LastModifiedDate"
+    label = "Last Modified Date"
+    _hidden_value = true
+  }
+  salesforce.Lookup LastModifiedById {
+    apiName = "EngagementChannelWorkType.LastModifiedById"
+    label = "Last Modified By ID"
+    relationshipName = "LastModifiedBy"
+    _hidden_value = true
+  }
+  salesforce.DateTime SystemModstamp {
+    apiName = "EngagementChannelWorkType.SystemModstamp"
+    label = "System Modstamp"
+    _hidden_value = true
+  }
+}

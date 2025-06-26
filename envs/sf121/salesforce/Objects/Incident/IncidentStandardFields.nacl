@@ -1,0 +1,199 @@
+type salesforce.Incident {
+  salesforce.Lookup BusinessHoursId {
+    apiName = "Incident.BusinessHoursId"
+    label = "Business Hours ID"
+    relationshipName = "BusinessHours"
+  }
+  salesforce.Picklist Category {
+    apiName = "Incident.Category"
+    label = "Category"
+  }
+  salesforce.LongTextArea Description {
+    apiName = "Incident.Description"
+    label = "Description"
+    length = 32000
+  }
+  salesforce.DateTime DetectedDateTime {
+    apiName = "Incident.DetectedDateTime"
+    label = "Detected Date Time"
+  }
+  salesforce.DateTime EndDateTime {
+    apiName = "Incident.EndDateTime"
+    label = "End Date Time"
+  }
+  salesforce.Lookup EntitlementId {
+    apiName = "Incident.EntitlementId"
+    label = "Entitlement ID"
+    relationshipName = "Entitlement"
+  }
+  salesforce.Picklist Impact {
+    apiName = "Incident.Impact"
+    label = "Impact"
+    _required = true
+    restricted = false
+    valueSetName = salesforce.StandardValueSet.instance.CasePriority
+  }
+  salesforce.Checkbox IsClosed {
+    apiName = "Incident.IsClosed"
+    label = "Incident Closed"
+    defaultValue = false
+    _hidden_value = true
+  }
+  salesforce.Checkbox IsMajorIncident {
+    apiName = "Incident.IsMajorIncident"
+    label = "Major Incident"
+    defaultValue = false
+  }
+  salesforce.Checkbox IsStopped {
+    apiName = "Incident.IsStopped"
+    label = "Incident Paused"
+    defaultValue = false
+  }
+  salesforce.Text MilestoneStatus {
+    apiName = "Incident.MilestoneStatus"
+    label = "Milestone Status"
+    length = 30
+    unique = false
+    caseSensitive = false
+    _hidden_value = true
+  }
+  salesforce.Lookup OwnerId {
+    apiName = "Incident.OwnerId"
+    label = "Owner ID"
+    relationshipName = "Owner"
+    _hidden_value = true
+  }
+  salesforce.Hierarchy ParentIncidentId {
+    apiName = "Incident.ParentIncidentId"
+    label = "Parent Incident ID"
+    relationshipName = "ParentIncident"
+  }
+  salesforce.Picklist Priority {
+    apiName = "Incident.Priority"
+    label = "Priority"
+    _required = true
+    restricted = false
+  }
+  salesforce.Text PriorityOverrideReason {
+    apiName = "Incident.PriorityOverrideReason"
+    label = "Priority Override Reason"
+    length = 255
+    unique = false
+    caseSensitive = false
+  }
+  salesforce.Picklist ReportedMethod {
+    apiName = "Incident.ReportedMethod"
+    label = "Reported Method"
+  }
+  salesforce.DateTime ResolutionDateTime {
+    apiName = "Incident.ResolutionDateTime"
+    label = "Resolution Date Time"
+  }
+  salesforce.LongTextArea ResolutionSummary {
+    apiName = "Incident.ResolutionSummary"
+    label = "Resolution Summary"
+    length = 32000
+  }
+  salesforce.Lookup ResolvedById {
+    apiName = "Incident.ResolvedById"
+    label = "User ID"
+    relationshipName = "ResolvedBy"
+  }
+  salesforce.DateTime SlaExitDate {
+    apiName = "Incident.SlaExitDate"
+    label = "Entitlement Process End Time"
+    _hidden_value = true
+  }
+  salesforce.DateTime SlaStartDate {
+    apiName = "Incident.SlaStartDate"
+    label = "Entitlement Process Start Time"
+  }
+  salesforce.DateTime StartDateTime {
+    apiName = "Incident.StartDateTime"
+    label = "Start Date Time"
+  }
+  salesforce.Picklist Status {
+    apiName = "Incident.Status"
+    label = "Status"
+    _required = true
+    restricted = false
+  }
+  salesforce.Picklist StatusCode {
+    apiName = "Incident.StatusCode"
+    label = "Status Code"
+    restricted = true
+    _hidden_value = true
+  }
+  salesforce.DateTime StopStartDate {
+    apiName = "Incident.StopStartDate"
+    label = "Incident Paused Since"
+    _hidden_value = true
+  }
+  salesforce.Picklist SubCategory {
+    apiName = "Incident.SubCategory"
+    label = "Sub Category"
+  }
+  salesforce.Text Subject {
+    apiName = "Incident.Subject"
+    label = "Subject"
+    _required = true
+    length = 255
+    unique = false
+    caseSensitive = false
+  }
+  salesforce.Picklist Type {
+    apiName = "Incident.Type"
+    label = "Type"
+  }
+  salesforce.Picklist Urgency {
+    apiName = "Incident.Urgency"
+    label = "Urgency"
+    _required = true
+    restricted = false
+    valueSetName = salesforce.StandardValueSet.instance.CasePriority
+  }
+  serviceid Id {
+    apiName = "Incident.Id"
+    label = "Incident ID"
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Checkbox IsDeleted {
+    apiName = "Incident.IsDeleted"
+    label = "Deleted"
+    defaultValue = false
+    _hidden_value = true
+  }
+  salesforce.AutoNumber IncidentNumber {
+    apiName = "Incident.IncidentNumber"
+    label = "Incident Number"
+    _hidden_value = true
+  }
+  salesforce.DateTime CreatedDate {
+    apiName = "Incident.CreatedDate"
+    label = "Created Date"
+    _hidden_value = true
+  }
+  salesforce.Lookup CreatedById {
+    apiName = "Incident.CreatedById"
+    label = "Created By ID"
+    relationshipName = "CreatedBy"
+    _hidden_value = true
+  }
+  salesforce.DateTime LastModifiedDate {
+    apiName = "Incident.LastModifiedDate"
+    label = "Last Modified Date"
+    _hidden_value = true
+  }
+  salesforce.Lookup LastModifiedById {
+    apiName = "Incident.LastModifiedById"
+    label = "Last Modified By ID"
+    relationshipName = "LastModifiedBy"
+    _hidden_value = true
+  }
+  salesforce.DateTime SystemModstamp {
+    apiName = "Incident.SystemModstamp"
+    label = "System Modstamp"
+    _hidden_value = true
+  }
+}

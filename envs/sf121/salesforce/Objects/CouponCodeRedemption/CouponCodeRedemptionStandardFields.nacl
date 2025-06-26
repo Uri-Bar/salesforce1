@@ -1,0 +1,77 @@
+type salesforce.CouponCodeRedemption {
+  serviceid Id {
+    apiName = "CouponCodeRedemption.Id"
+    label = "Coupon Code Redemption ID"
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Lookup OwnerId {
+    apiName = "CouponCodeRedemption.OwnerId"
+    label = "Owner ID"
+    relationshipName = "Owner"
+    _hidden_value = true
+  }
+  salesforce.Checkbox IsDeleted {
+    apiName = "CouponCodeRedemption.IsDeleted"
+    label = "Deleted"
+    defaultValue = false
+    _hidden_value = true
+  }
+  salesforce.Text Name {
+    apiName = "CouponCodeRedemption.Name"
+    label = "Coupon Code Redemption Number"
+    _required = true
+    length = 255
+    unique = false
+    caseSensitive = false
+  }
+  salesforce.DateTime CreatedDate {
+    apiName = "CouponCodeRedemption.CreatedDate"
+    label = "Created Date"
+    _hidden_value = true
+  }
+  salesforce.Lookup CreatedById {
+    apiName = "CouponCodeRedemption.CreatedById"
+    label = "Created By ID"
+    relationshipName = "CreatedBy"
+    _hidden_value = true
+  }
+  salesforce.DateTime LastModifiedDate {
+    apiName = "CouponCodeRedemption.LastModifiedDate"
+    label = "Last Modified Date"
+    _hidden_value = true
+  }
+  salesforce.Lookup LastModifiedById {
+    apiName = "CouponCodeRedemption.LastModifiedById"
+    label = "Last Modified By ID"
+    relationshipName = "LastModifiedBy"
+    _hidden_value = true
+  }
+  salesforce.DateTime SystemModstamp {
+    apiName = "CouponCodeRedemption.SystemModstamp"
+    label = "System Modstamp"
+    _hidden_value = true
+  }
+  salesforce.Lookup CouponId {
+    apiName = "CouponCodeRedemption.CouponId"
+    label = "Coupon ID"
+    _required = true
+    relationshipName = "Coupon"
+  }
+  salesforce.Text Transaction {
+    apiName = "CouponCodeRedemption.Transaction"
+    label = "Transaction"
+    _required = true
+    length = 255
+    unique = false
+    caseSensitive = false
+  }
+  salesforce.Text Buyer {
+    apiName = "CouponCodeRedemption.Buyer"
+    label = "Buyer"
+    _required = true
+    length = 255
+    unique = false
+    caseSensitive = false
+  }
+}

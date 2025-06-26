@@ -1,0 +1,129 @@
+type salesforce.ReportAnomalyEventStore {
+  salesforce.DateTime EventDate {
+    apiName = "ReportAnomalyEventStore.EventDate"
+    label = "Event Date"
+    _required = true
+    _hidden_value = true
+  }
+  salesforce.Text EventIdentifier {
+    apiName = "ReportAnomalyEventStore.EventIdentifier"
+    label = "Event ID"
+    _required = true
+    length = 80
+    unique = false
+    caseSensitive = false
+    _hidden_value = true
+  }
+  salesforce.Text Report {
+    apiName = "ReportAnomalyEventStore.Report"
+    label = "Report ID"
+    length = 18
+    unique = false
+    caseSensitive = false
+    _hidden_value = true
+  }
+  salesforce.Number Score {
+    apiName = "ReportAnomalyEventStore.Score"
+    label = "Score"
+    scale = 6
+    precision = 12
+    unique = false
+    _hidden_value = true
+  }
+  salesforce.LongTextArea SecurityEventData {
+    apiName = "ReportAnomalyEventStore.SecurityEventData"
+    label = "Event Data"
+    length = 10000
+    _hidden_value = true
+  }
+  salesforce.Text SourceIp {
+    apiName = "ReportAnomalyEventStore.SourceIp"
+    label = "Source IP Address"
+    length = 255
+    unique = false
+    caseSensitive = false
+    _hidden_value = true
+  }
+  salesforce.LongTextArea Summary {
+    apiName = "ReportAnomalyEventStore.Summary"
+    label = "Summary"
+    length = 1000
+    _hidden_value = true
+  }
+  salesforce.Lookup UserId {
+    apiName = "ReportAnomalyEventStore.UserId"
+    label = "User ID"
+    relationshipName = "User"
+    _hidden_value = true
+  }
+  serviceid Id {
+    apiName = "ReportAnomalyEventStore.Id"
+    label = "Report Anomaly Event Store ID"
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.AutoNumber ReportAnomalyEventNumber {
+    apiName = "ReportAnomalyEventStore.ReportAnomalyEventNumber"
+    label = "Event Name"
+    _hidden_value = true
+  }
+  salesforce.DateTime CreatedDate {
+    apiName = "ReportAnomalyEventStore.CreatedDate"
+    label = "Created Date"
+    _hidden_value = true
+  }
+  salesforce.DateTime LastModifiedDate {
+    apiName = "ReportAnomalyEventStore.LastModifiedDate"
+    label = "Last Modified Date"
+    _hidden_value = true
+  }
+  salesforce.DateTime SystemModstamp {
+    apiName = "ReportAnomalyEventStore.SystemModstamp"
+    label = "System Modstamp"
+    _hidden_value = true
+  }
+  salesforce.Text Username {
+    apiName = "ReportAnomalyEventStore.Username"
+    label = "Username"
+    length = 255
+    unique = false
+    caseSensitive = false
+    _hidden_value = true
+  }
+  salesforce.Text SessionKey {
+    apiName = "ReportAnomalyEventStore.SessionKey"
+    label = "Session Key"
+    length = 24
+    unique = false
+    caseSensitive = false
+    _hidden_value = true
+  }
+  salesforce.Text LoginKey {
+    apiName = "ReportAnomalyEventStore.LoginKey"
+    label = "Login Key"
+    length = 24
+    unique = false
+    caseSensitive = false
+    _hidden_value = true
+  }
+  salesforce.Lookup PolicyId {
+    apiName = "ReportAnomalyEventStore.PolicyId"
+    label = "Transaction Security Policy ID"
+    relationshipName = "Policy"
+    _hidden_value = true
+  }
+  salesforce.Picklist PolicyOutcome {
+    apiName = "ReportAnomalyEventStore.PolicyOutcome"
+    label = "Policy Outcome"
+    restricted = true
+    _hidden_value = true
+  }
+  salesforce.Number EvaluationTime {
+    apiName = "ReportAnomalyEventStore.EvaluationTime"
+    label = "Evaluation Time"
+    scale = 0
+    precision = 18
+    unique = false
+    _hidden_value = true
+  }
+}

@@ -1,0 +1,242 @@
+type salesforce.ContactCleanInfo {
+  serviceid Id {
+    apiName = "ContactCleanInfo.Id"
+    label = "Contact Clean Info ID"
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Checkbox IsDeleted {
+    apiName = "ContactCleanInfo.IsDeleted"
+    label = "Deleted"
+    defaultValue = false
+    _hidden_value = true
+  }
+  salesforce.Text Name {
+    apiName = "ContactCleanInfo.Name"
+    label = "Contact Clean Info Name"
+    _required = true
+    length = 255
+    unique = false
+    caseSensitive = false
+  }
+  salesforce.DateTime CreatedDate {
+    apiName = "ContactCleanInfo.CreatedDate"
+    label = "Created Date"
+    _hidden_value = true
+  }
+  salesforce.Lookup CreatedById {
+    apiName = "ContactCleanInfo.CreatedById"
+    label = "Created By ID"
+    relationshipName = "CreatedBy"
+    _hidden_value = true
+  }
+  salesforce.DateTime LastModifiedDate {
+    apiName = "ContactCleanInfo.LastModifiedDate"
+    label = "Last Modified Date"
+    _hidden_value = true
+  }
+  salesforce.Lookup LastModifiedById {
+    apiName = "ContactCleanInfo.LastModifiedById"
+    label = "Last Modified By ID"
+    relationshipName = "LastModifiedBy"
+    _hidden_value = true
+  }
+  salesforce.DateTime SystemModstamp {
+    apiName = "ContactCleanInfo.SystemModstamp"
+    label = "System Modstamp"
+    _hidden_value = true
+  }
+  salesforce.Lookup ContactId {
+    apiName = "ContactCleanInfo.ContactId"
+    label = "Contact ID"
+    _required = true
+    relationshipName = "Contact"
+    _hidden_value = true
+  }
+  salesforce.DateTime LastMatchedDate {
+    apiName = "ContactCleanInfo.LastMatchedDate"
+    label = "Last Matched Date"
+    _required = true
+    _hidden_value = true
+  }
+  salesforce.DateTime LastStatusChangedDate {
+    apiName = "ContactCleanInfo.LastStatusChangedDate"
+    label = "Last Status Changed Date"
+    _hidden_value = true
+  }
+  salesforce.Lookup LastStatusChangedById {
+    apiName = "ContactCleanInfo.LastStatusChangedById"
+    label = "User ID"
+    relationshipName = "LastStatusChangedBy"
+    _hidden_value = true
+  }
+  salesforce.Checkbox IsInactive {
+    apiName = "ContactCleanInfo.IsInactive"
+    label = "Contact Status in Salesforce"
+    defaultValue = false
+  }
+  salesforce.Text FirstName {
+    apiName = "ContactCleanInfo.FirstName"
+    label = "First Name"
+    length = 255
+    unique = false
+    caseSensitive = false
+    _hidden_value = true
+  }
+  salesforce.Text LastName {
+    apiName = "ContactCleanInfo.LastName"
+    label = "Last Name"
+    length = 255
+    unique = false
+    caseSensitive = false
+    _hidden_value = true
+  }
+  salesforce.Email Email {
+    apiName = "ContactCleanInfo.Email"
+    label = "Email"
+    unique = false
+    _hidden_value = true
+  }
+  salesforce.Phone Phone {
+    apiName = "ContactCleanInfo.Phone"
+    label = "Phone"
+    _hidden_value = true
+  }
+  salesforce.Address Address {
+    apiName = "ContactCleanInfo.Address"
+    label = "Address"
+    _hidden_value = true
+  }
+  salesforce.Text Title {
+    apiName = "ContactCleanInfo.Title"
+    label = "Title"
+    length = 128
+    unique = false
+    caseSensitive = false
+    _hidden_value = true
+  }
+  salesforce.Picklist ContactStatusDataDotCom {
+    apiName = "ContactCleanInfo.ContactStatusDataDotCom"
+    label = "Contact Status per Data.com"
+    restricted = true
+    _hidden_value = true
+  }
+  salesforce.Checkbox IsReviewedName {
+    apiName = "ContactCleanInfo.IsReviewedName"
+    label = "Name is Reviewed"
+  }
+  salesforce.Checkbox IsReviewedEmail {
+    apiName = "ContactCleanInfo.IsReviewedEmail"
+    label = "Email is Reviewed"
+  }
+  salesforce.Checkbox IsReviewedPhone {
+    apiName = "ContactCleanInfo.IsReviewedPhone"
+    label = "Phone is Reviewed"
+  }
+  salesforce.Checkbox IsReviewedAddress {
+    apiName = "ContactCleanInfo.IsReviewedAddress"
+    label = "Address is Reviewed"
+  }
+  salesforce.Checkbox IsReviewedTitle {
+    apiName = "ContactCleanInfo.IsReviewedTitle"
+    label = "Title is Reviewed"
+  }
+  salesforce.Checkbox IsDifferentFirstName {
+    apiName = "ContactCleanInfo.IsDifferentFirstName"
+    label = "First Name is Different"
+    _hidden_value = true
+  }
+  salesforce.Checkbox IsDifferentLastName {
+    apiName = "ContactCleanInfo.IsDifferentLastName"
+    label = "Last Name is Different"
+    _hidden_value = true
+  }
+  salesforce.Checkbox IsDifferentEmail {
+    apiName = "ContactCleanInfo.IsDifferentEmail"
+    label = "Email is Different"
+    _hidden_value = true
+  }
+  salesforce.Checkbox IsDifferentPhone {
+    apiName = "ContactCleanInfo.IsDifferentPhone"
+    label = "Phone is Different"
+    _hidden_value = true
+  }
+  salesforce.Checkbox IsDifferentStreet {
+    apiName = "ContactCleanInfo.IsDifferentStreet"
+    label = "Street is Different"
+    _hidden_value = true
+  }
+  salesforce.Checkbox IsDifferentCity {
+    apiName = "ContactCleanInfo.IsDifferentCity"
+    label = "City is Different"
+    _hidden_value = true
+  }
+  salesforce.Checkbox IsDifferentState {
+    apiName = "ContactCleanInfo.IsDifferentState"
+    label = "State is Different"
+    _hidden_value = true
+  }
+  salesforce.Checkbox IsDifferentPostalCode {
+    apiName = "ContactCleanInfo.IsDifferentPostalCode"
+    label = "ZIP is Different"
+    _hidden_value = true
+  }
+  salesforce.Checkbox IsDifferentCountry {
+    apiName = "ContactCleanInfo.IsDifferentCountry"
+    label = "Country is Different"
+    _hidden_value = true
+  }
+  salesforce.Checkbox IsDifferentTitle {
+    apiName = "ContactCleanInfo.IsDifferentTitle"
+    label = "Title is Different"
+    _hidden_value = true
+  }
+  salesforce.Checkbox IsDifferentStateCode {
+    apiName = "ContactCleanInfo.IsDifferentStateCode"
+    label = "State Code is Different"
+    _hidden_value = true
+  }
+  salesforce.Checkbox IsDifferentCountryCode {
+    apiName = "ContactCleanInfo.IsDifferentCountryCode"
+    label = "Country Code is Different"
+    _hidden_value = true
+  }
+  salesforce.Checkbox CleanedByJob {
+    apiName = "ContactCleanInfo.CleanedByJob"
+    label = "Cleaned by Job"
+    _hidden_value = true
+  }
+  salesforce.Checkbox CleanedByUser {
+    apiName = "ContactCleanInfo.CleanedByUser"
+    label = "Cleaned by User"
+    _hidden_value = true
+  }
+  salesforce.Checkbox IsFlaggedWrongName {
+    apiName = "ContactCleanInfo.IsFlaggedWrongName"
+    label = "Name is Flagged Wrong"
+  }
+  salesforce.Checkbox IsFlaggedWrongEmail {
+    apiName = "ContactCleanInfo.IsFlaggedWrongEmail"
+    label = "Email is Flagged Wrong"
+  }
+  salesforce.Checkbox IsFlaggedWrongPhone {
+    apiName = "ContactCleanInfo.IsFlaggedWrongPhone"
+    label = "Phone is Flagged Wrong"
+  }
+  salesforce.Checkbox IsFlaggedWrongAddress {
+    apiName = "ContactCleanInfo.IsFlaggedWrongAddress"
+    label = "Address is Flagged Wrong"
+  }
+  salesforce.Checkbox IsFlaggedWrongTitle {
+    apiName = "ContactCleanInfo.IsFlaggedWrongTitle"
+    label = "Title is Flagged Wrong"
+  }
+  salesforce.Text DataDotComId {
+    apiName = "ContactCleanInfo.DataDotComId"
+    label = "Data.com ID"
+    length = 20
+    unique = false
+    caseSensitive = false
+    _hidden_value = true
+  }
+}

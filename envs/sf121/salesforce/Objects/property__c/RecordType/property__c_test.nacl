@@ -1,0 +1,33 @@
+salesforce.RecordType property__c_test {
+  fullName = "property__c.test"
+  active = true
+  compactLayoutAssignment = salesforce.CompactLayout.instance.property__c_test
+  label = "test"
+  picklistValues = [
+    {
+      picklist = salesforce.property__c.field.pick__c
+      values = [
+        {
+          fullName = "a"
+          default = false
+        },
+        {
+          fullName = "b"
+          default = false
+        },
+        {
+          fullName = "c"
+          default = false
+        },
+        {
+          fullName = "d"
+          default = false
+        },
+      ]
+    },
+  ]
+  _parent = [
+    salesforce.property__c,
+  ]
+  _alias = "test"
+}

@@ -1,0 +1,19 @@
+salesforce.CustomApplication standard__QueueManagement {
+  formFactors = [
+    "Large",
+  ]
+  isNavAutoTempTabsDisabled = false
+  isNavPersonalizationDisabled = false
+  isNavTabPersistenceDisabled = false
+  isOmniPinnedViewEnabled = false
+  label = "Queue Management"
+  navType = "Standard"
+  tabs = [
+    "standard-Location",
+    salesforce.CustomTab.instance.property__c,
+    salesforce.CustomTab.instance.favorite__c,
+  ]
+  uiType = "Lightning"
+  fullName = "standard__QueueManagement"
+  _alias = "Queue Management (standard)"
+}

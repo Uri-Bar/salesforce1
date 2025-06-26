@@ -1,0 +1,5 @@
+salesforce.LiveMessageSettings {
+  enableLiveMessage = false
+  fullName = "LiveMessage"
+  _alias = "LiveMessage"
+}

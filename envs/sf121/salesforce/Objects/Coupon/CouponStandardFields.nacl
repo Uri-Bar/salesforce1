@@ -1,0 +1,101 @@
+type salesforce.Coupon {
+  salesforce.Text CouponCode {
+    apiName = "Coupon.CouponCode"
+    label = "Coupon Code"
+    _required = true
+    length = 255
+    unique = false
+    caseSensitive = false
+  }
+  salesforce.LongTextArea Description {
+    apiName = "Coupon.Description"
+    label = "Description"
+    length = 1000
+  }
+  salesforce.DateTime EndDateTime {
+    apiName = "Coupon.EndDateTime"
+    label = "End Date Time"
+  }
+  salesforce.Lookup PromotionId {
+    apiName = "Coupon.PromotionId"
+    label = "Promotion ID"
+    _required = true
+    relationshipName = "Promotion"
+  }
+  salesforce.Number RedemptionLimitAllBuyers {
+    apiName = "Coupon.RedemptionLimitAllBuyers"
+    inlineHelpText = "Number of times this coupon can be used in total."
+    label = "Redemption Limit All Buyers"
+    scale = 0
+    precision = 9
+    unique = false
+  }
+  salesforce.Number RedemptionLimitPerBuyer {
+    apiName = "Coupon.RedemptionLimitPerBuyer"
+    inlineHelpText = "Number of times this coupon can be used per customer."
+    label = "Redemption Limit Per Buyer"
+    scale = 0
+    precision = 9
+    unique = false
+  }
+  salesforce.DateTime StartDateTime {
+    apiName = "Coupon.StartDateTime"
+    label = "Start Date Time"
+  }
+  salesforce.Picklist Status {
+    apiName = "Coupon.Status"
+    label = "Status"
+    _required = true
+    restricted = true
+  }
+  serviceid Id {
+    apiName = "Coupon.Id"
+    label = "Coupon ID"
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Lookup OwnerId {
+    apiName = "Coupon.OwnerId"
+    label = "Owner ID"
+    relationshipName = "Owner"
+    _hidden_value = true
+  }
+  salesforce.Checkbox IsDeleted {
+    apiName = "Coupon.IsDeleted"
+    label = "Deleted"
+    defaultValue = false
+    _hidden_value = true
+  }
+  salesforce.AutoNumber Name {
+    apiName = "Coupon.Name"
+    label = "Coupon Number"
+    _hidden_value = true
+  }
+  salesforce.DateTime CreatedDate {
+    apiName = "Coupon.CreatedDate"
+    label = "Created Date"
+    _hidden_value = true
+  }
+  salesforce.Lookup CreatedById {
+    apiName = "Coupon.CreatedById"
+    label = "Created By ID"
+    relationshipName = "CreatedBy"
+    _hidden_value = true
+  }
+  salesforce.DateTime LastModifiedDate {
+    apiName = "Coupon.LastModifiedDate"
+    label = "Last Modified Date"
+    _hidden_value = true
+  }
+  salesforce.Lookup LastModifiedById {
+    apiName = "Coupon.LastModifiedById"
+    label = "Last Modified By ID"
+    relationshipName = "LastModifiedBy"
+    _hidden_value = true
+  }
+  salesforce.DateTime SystemModstamp {
+    apiName = "Coupon.SystemModstamp"
+    label = "System Modstamp"
+    _hidden_value = true
+  }
+}

@@ -1,0 +1,77 @@
+type salesforce.ExternalEventMapping {
+  serviceid Id {
+    apiName = "ExternalEventMapping.Id"
+    label = "External Event Mapping ID"
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Lookup OwnerId {
+    apiName = "ExternalEventMapping.OwnerId"
+    label = "Owner ID"
+    relationshipName = "Owner"
+    _hidden_value = true
+  }
+  salesforce.Checkbox IsDeleted {
+    apiName = "ExternalEventMapping.IsDeleted"
+    label = "Deleted"
+    defaultValue = false
+    _hidden_value = true
+  }
+  salesforce.AutoNumber Name {
+    apiName = "ExternalEventMapping.Name"
+    label = "Name"
+    _hidden_value = true
+  }
+  salesforce.DateTime CreatedDate {
+    apiName = "ExternalEventMapping.CreatedDate"
+    label = "Created Date"
+    _hidden_value = true
+  }
+  salesforce.Lookup CreatedById {
+    apiName = "ExternalEventMapping.CreatedById"
+    label = "Created By ID"
+    relationshipName = "CreatedBy"
+    _hidden_value = true
+  }
+  salesforce.DateTime LastModifiedDate {
+    apiName = "ExternalEventMapping.LastModifiedDate"
+    label = "Last Modified Date"
+    _hidden_value = true
+  }
+  salesforce.Lookup LastModifiedById {
+    apiName = "ExternalEventMapping.LastModifiedById"
+    label = "Last Modified By ID"
+    relationshipName = "LastModifiedBy"
+    _hidden_value = true
+  }
+  salesforce.DateTime SystemModstamp {
+    apiName = "ExternalEventMapping.SystemModstamp"
+    label = "System Modstamp"
+    _hidden_value = true
+  }
+  salesforce.Text ExternalId {
+    apiName = "ExternalEventMapping.ExternalId"
+    label = "External Id"
+    length = 255
+    unique = false
+    caseSensitive = false
+  }
+  salesforce.Lookup EventId {
+    apiName = "ExternalEventMapping.EventId"
+    label = "Activity ID"
+    relationshipName = "Event"
+  }
+  salesforce.Date StartDate {
+    apiName = "ExternalEventMapping.StartDate"
+    label = "Start Date"
+  }
+  salesforce.Date EndDate {
+    apiName = "ExternalEventMapping.EndDate"
+    label = "End Date"
+  }
+  salesforce.Checkbox IsRecurring {
+    apiName = "ExternalEventMapping.IsRecurring"
+    label = "Is Recurring"
+    defaultValue = false
+  }
+}

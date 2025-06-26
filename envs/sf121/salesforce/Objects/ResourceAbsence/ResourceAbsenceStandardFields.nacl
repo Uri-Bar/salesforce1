@@ -1,0 +1,78 @@
+type salesforce.ResourceAbsence {
+  salesforce.Address Address {
+    apiName = "ResourceAbsence.Address"
+    label = "Address"
+    _hidden_value = true
+  }
+  salesforce.LongTextArea Description {
+    apiName = "ResourceAbsence.Description"
+    label = "Description"
+    length = 32000
+  }
+  salesforce.DateTime End {
+    apiName = "ResourceAbsence.End"
+    label = "End Time"
+    _required = true
+  }
+  salesforce.MasterDetail ResourceId {
+    apiName = "ResourceAbsence.ResourceId"
+    label = "Resource ID"
+    _required = true
+    relationshipName = "Resource"
+  }
+  salesforce.DateTime Start {
+    apiName = "ResourceAbsence.Start"
+    label = "Start Time"
+    _required = true
+  }
+  salesforce.Picklist Type {
+    apiName = "ResourceAbsence.Type"
+    label = "Type"
+    _required = true
+    restricted = false
+  }
+  serviceid Id {
+    apiName = "ResourceAbsence.Id"
+    label = "Absence ID"
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Checkbox IsDeleted {
+    apiName = "ResourceAbsence.IsDeleted"
+    label = "Deleted"
+    defaultValue = false
+    _hidden_value = true
+  }
+  salesforce.AutoNumber AbsenceNumber {
+    apiName = "ResourceAbsence.AbsenceNumber"
+    label = "Absence Number"
+    _hidden_value = true
+  }
+  salesforce.DateTime CreatedDate {
+    apiName = "ResourceAbsence.CreatedDate"
+    label = "Created Date"
+    _hidden_value = true
+  }
+  salesforce.Lookup CreatedById {
+    apiName = "ResourceAbsence.CreatedById"
+    label = "Created By ID"
+    relationshipName = "CreatedBy"
+    _hidden_value = true
+  }
+  salesforce.DateTime LastModifiedDate {
+    apiName = "ResourceAbsence.LastModifiedDate"
+    label = "Last Modified Date"
+    _hidden_value = true
+  }
+  salesforce.Lookup LastModifiedById {
+    apiName = "ResourceAbsence.LastModifiedById"
+    label = "Last Modified By ID"
+    relationshipName = "LastModifiedBy"
+    _hidden_value = true
+  }
+  salesforce.DateTime SystemModstamp {
+    apiName = "ResourceAbsence.SystemModstamp"
+    label = "System Modstamp"
+    _hidden_value = true
+  }
+}

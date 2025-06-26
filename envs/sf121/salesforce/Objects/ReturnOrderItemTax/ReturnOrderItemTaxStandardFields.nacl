@@ -1,0 +1,93 @@
+type salesforce.ReturnOrderItemTax {
+  salesforce.Currency Amount {
+    apiName = "ReturnOrderItemTax.Amount"
+    label = "Amount"
+    _required = true
+    scale = 2
+    precision = 18
+  }
+  salesforce.LongTextArea Description {
+    apiName = "ReturnOrderItemTax.Description"
+    label = "Description"
+    length = 2000
+  }
+  salesforce.Percent Rate {
+    apiName = "ReturnOrderItemTax.Rate"
+    label = "Rate"
+    scale = 2
+    precision = 5
+    _hidden_value = true
+  }
+  salesforce.Lookup ReturnOrderId {
+    apiName = "ReturnOrderItemTax.ReturnOrderId"
+    label = "Return Order ID"
+    _required = true
+    relationshipName = "ReturnOrder"
+  }
+  salesforce.Lookup ReturnOrderItemAdjustmentId {
+    apiName = "ReturnOrderItemTax.ReturnOrderItemAdjustmentId"
+    label = "Return Order Item Adjustment ID"
+    relationshipName = "ReturnOrderItemAdjustment"
+  }
+  salesforce.MasterDetail ReturnOrderLineItemId {
+    apiName = "ReturnOrderItemTax.ReturnOrderLineItemId"
+    label = "Return Order Line Item ID"
+    _required = true
+    relationshipName = "ReturnOrderLineItem"
+  }
+  salesforce.Date TaxEffectiveDate {
+    apiName = "ReturnOrderItemTax.TaxEffectiveDate"
+    label = "Tax Effective Date"
+    _hidden_value = true
+  }
+  salesforce.Picklist Type {
+    apiName = "ReturnOrderItemTax.Type"
+    label = "Type"
+    _required = true
+    restricted = true
+  }
+  serviceid Id {
+    apiName = "ReturnOrderItemTax.Id"
+    label = "Return Order Item Tax ID"
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Checkbox IsDeleted {
+    apiName = "ReturnOrderItemTax.IsDeleted"
+    label = "Deleted"
+    defaultValue = false
+    _hidden_value = true
+  }
+  salesforce.AutoNumber ReturnOrderItemTaxNumber {
+    apiName = "ReturnOrderItemTax.ReturnOrderItemTaxNumber"
+    label = "Return Order Item Tax Number"
+    _hidden_value = true
+  }
+  salesforce.DateTime CreatedDate {
+    apiName = "ReturnOrderItemTax.CreatedDate"
+    label = "Created Date"
+    _hidden_value = true
+  }
+  salesforce.Lookup CreatedById {
+    apiName = "ReturnOrderItemTax.CreatedById"
+    label = "Created By ID"
+    relationshipName = "CreatedBy"
+    _hidden_value = true
+  }
+  salesforce.DateTime LastModifiedDate {
+    apiName = "ReturnOrderItemTax.LastModifiedDate"
+    label = "Last Modified Date"
+    _hidden_value = true
+  }
+  salesforce.Lookup LastModifiedById {
+    apiName = "ReturnOrderItemTax.LastModifiedById"
+    label = "Last Modified By ID"
+    relationshipName = "LastModifiedBy"
+    _hidden_value = true
+  }
+  salesforce.DateTime SystemModstamp {
+    apiName = "ReturnOrderItemTax.SystemModstamp"
+    label = "System Modstamp"
+    _hidden_value = true
+  }
+}

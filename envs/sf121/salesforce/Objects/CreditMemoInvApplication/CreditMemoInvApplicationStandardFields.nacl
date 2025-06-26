@@ -1,0 +1,121 @@
+type salesforce.CreditMemoInvApplication {
+  salesforce.Currency Amount {
+    apiName = "CreditMemoInvApplication.Amount"
+    label = "Amount"
+    _required = true
+    scale = 2
+    precision = 18
+    _hidden_value = true
+  }
+  salesforce.DateTime AppliedDate {
+    apiName = "CreditMemoInvApplication.AppliedDate"
+    label = "Applied Date"
+    _hidden_value = true
+  }
+  salesforce.Lookup AssociatedLineId {
+    apiName = "CreditMemoInvApplication.AssociatedLineId"
+    inlineHelpText = "The application that this credit memo invoice application has unapplied."
+    label = "Credit Memo Invoice Application ID"
+    relationshipName = "AssociatedLine"
+    _hidden_value = true
+  }
+  salesforce.Lookup CreditMemoId {
+    apiName = "CreditMemoInvApplication.CreditMemoId"
+    label = "Credit Memo ID"
+    _required = true
+    relationshipName = "CreditMemo"
+    _hidden_value = true
+  }
+  salesforce.DateTime Date {
+    apiName = "CreditMemoInvApplication.Date"
+    label = "Date"
+    _hidden_value = true
+  }
+  salesforce.Text Description {
+    apiName = "CreditMemoInvApplication.Description"
+    label = "Description"
+    length = 255
+    unique = false
+    caseSensitive = false
+  }
+  salesforce.DateTime EffectiveDate {
+    apiName = "CreditMemoInvApplication.EffectiveDate"
+    label = "Effective Date"
+    _hidden_value = true
+  }
+  salesforce.Picklist HasBeenUnapplied {
+    apiName = "CreditMemoInvApplication.HasBeenUnapplied"
+    label = "Has Been Unapplied"
+    restricted = true
+    _hidden_value = true
+  }
+  salesforce.Summary ImpactAmount {
+    apiName = "CreditMemoInvApplication.ImpactAmount"
+    inlineHelpText = "Impact on the balance of the credit memo and invoice. Unapplied-type applications have a negative impact, while Applied-type applications have a positive impact."
+    label = "Impact Amount"
+    _hidden_value = true
+  }
+  salesforce.MasterDetail InvoiceId {
+    apiName = "CreditMemoInvApplication.InvoiceId"
+    label = "Invoice ID"
+    _required = true
+    relationshipName = "Invoice"
+    _hidden_value = true
+  }
+  salesforce.Picklist Type {
+    apiName = "CreditMemoInvApplication.Type"
+    label = "Type"
+    _required = true
+    restricted = true
+    _hidden_value = true
+  }
+  salesforce.DateTime UnappliedDate {
+    apiName = "CreditMemoInvApplication.UnappliedDate"
+    label = "Unapplied Date"
+    _hidden_value = true
+  }
+  serviceid Id {
+    apiName = "CreditMemoInvApplication.Id"
+    label = "Credit Memo Invoice Application ID"
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Checkbox IsDeleted {
+    apiName = "CreditMemoInvApplication.IsDeleted"
+    label = "Deleted"
+    defaultValue = false
+    _hidden_value = true
+  }
+  salesforce.AutoNumber CreditMemoInvoiceNumber {
+    apiName = "CreditMemoInvApplication.CreditMemoInvoiceNumber"
+    label = "Name"
+    _hidden_value = true
+  }
+  salesforce.DateTime CreatedDate {
+    apiName = "CreditMemoInvApplication.CreatedDate"
+    label = "Created Date"
+    _hidden_value = true
+  }
+  salesforce.Lookup CreatedById {
+    apiName = "CreditMemoInvApplication.CreatedById"
+    label = "Created By ID"
+    relationshipName = "CreatedBy"
+    _hidden_value = true
+  }
+  salesforce.DateTime LastModifiedDate {
+    apiName = "CreditMemoInvApplication.LastModifiedDate"
+    label = "Last Modified Date"
+    _hidden_value = true
+  }
+  salesforce.Lookup LastModifiedById {
+    apiName = "CreditMemoInvApplication.LastModifiedById"
+    label = "Last Modified By ID"
+    relationshipName = "LastModifiedBy"
+    _hidden_value = true
+  }
+  salesforce.DateTime SystemModstamp {
+    apiName = "CreditMemoInvApplication.SystemModstamp"
+    label = "System Modstamp"
+    _hidden_value = true
+  }
+}

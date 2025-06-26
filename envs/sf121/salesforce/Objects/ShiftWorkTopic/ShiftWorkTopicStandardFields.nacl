@@ -1,0 +1,82 @@
+type salesforce.ShiftWorkTopic {
+  salesforce.Checkbox AreAllTopicsSupported {
+    apiName = "ShiftWorkTopic.AreAllTopicsSupported"
+    label = "All Topics Supported"
+    defaultValue = false
+  }
+  salesforce.Unknown AttendeeLimit {
+    apiName = "ShiftWorkTopic.AttendeeLimit"
+    _hidden_value = true
+  }
+  salesforce.Number MaxAppointments {
+    apiName = "ShiftWorkTopic.MaxAppointments"
+    label = "Maximum Concurrent Appointments"
+    scale = 0
+    precision = 9
+    unique = false
+  }
+  salesforce.Unknown ServiceAppointmentLimit {
+    apiName = "ShiftWorkTopic.ServiceAppointmentLimit"
+    _hidden_value = true
+  }
+  salesforce.MasterDetail ShiftId {
+    apiName = "ShiftWorkTopic.ShiftId"
+    label = "Shift ID"
+    _required = true
+    relationshipName = "Shift"
+  }
+  salesforce.Lookup WorkTypeGroupId {
+    apiName = "ShiftWorkTopic.WorkTypeGroupId"
+    label = "Work Type Group ID"
+    relationshipName = "WorkTypeGroup"
+  }
+  salesforce.Lookup WorkTypeId {
+    apiName = "ShiftWorkTopic.WorkTypeId"
+    label = "Work Type ID"
+    relationshipName = "WorkType"
+  }
+  serviceid Id {
+    apiName = "ShiftWorkTopic.Id"
+    label = "Shift Work Topic ID"
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Checkbox IsDeleted {
+    apiName = "ShiftWorkTopic.IsDeleted"
+    label = "Deleted"
+    defaultValue = false
+    _hidden_value = true
+  }
+  salesforce.AutoNumber Name {
+    apiName = "ShiftWorkTopic.Name"
+    label = "Name"
+    _hidden_value = true
+  }
+  salesforce.DateTime CreatedDate {
+    apiName = "ShiftWorkTopic.CreatedDate"
+    label = "Created Date"
+    _hidden_value = true
+  }
+  salesforce.Lookup CreatedById {
+    apiName = "ShiftWorkTopic.CreatedById"
+    label = "Created By ID"
+    relationshipName = "CreatedBy"
+    _hidden_value = true
+  }
+  salesforce.DateTime LastModifiedDate {
+    apiName = "ShiftWorkTopic.LastModifiedDate"
+    label = "Last Modified Date"
+    _hidden_value = true
+  }
+  salesforce.Lookup LastModifiedById {
+    apiName = "ShiftWorkTopic.LastModifiedById"
+    label = "Last Modified By ID"
+    relationshipName = "LastModifiedBy"
+    _hidden_value = true
+  }
+  salesforce.DateTime SystemModstamp {
+    apiName = "ShiftWorkTopic.SystemModstamp"
+    label = "System Modstamp"
+    _hidden_value = true
+  }
+}

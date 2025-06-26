@@ -1,0 +1,210 @@
+type salesforce.AssetAction {
+  salesforce.DateTime ActionDate {
+    apiName = "AssetAction.ActionDate"
+    label = "Action Date"
+    _required = true
+    _hidden_value = true
+  }
+  salesforce.Summary ActualTaxChange {
+    apiName = "AssetAction.ActualTaxChange"
+    label = "Change in Actual Tax"
+    _hidden_value = true
+  }
+  salesforce.Summary AdjustmentAmountChange {
+    apiName = "AssetAction.AdjustmentAmountChange"
+    label = "Change in Adjustment Amount"
+    _hidden_value = true
+  }
+  salesforce.Currency Amount {
+    apiName = "AssetAction.Amount"
+    label = "Amount"
+    _required = true
+    scale = 2
+    precision = 18
+    _hidden_value = true
+  }
+  salesforce.MasterDetail AssetId {
+    apiName = "AssetAction.AssetId"
+    label = "Asset ID"
+    _required = true
+    relationshipName = "Asset"
+    _hidden_value = true
+  }
+  salesforce.Picklist Category {
+    apiName = "AssetAction.Category"
+    _hidden_value = true
+  }
+  salesforce.Picklist CategoryEnum {
+    apiName = "AssetAction.CategoryEnum"
+    label = "Business Category"
+    _required = true
+    restricted = true
+    _hidden_value = true
+  }
+  salesforce.Summary EstimatedTaxChange {
+    apiName = "AssetAction.EstimatedTaxChange"
+    label = "Change in Estimated Tax"
+    _hidden_value = true
+  }
+  salesforce.Currency MrrChange {
+    apiName = "AssetAction.MrrChange"
+    label = "Change in Monthly Recurring Revenue"
+    _required = true
+    scale = 2
+    precision = 18
+    _hidden_value = true
+  }
+  salesforce.Summary ProductAmountChange {
+    apiName = "AssetAction.ProductAmountChange"
+    label = "Change in Product Amount"
+    _hidden_value = true
+  }
+  salesforce.Number QuantityChange {
+    apiName = "AssetAction.QuantityChange"
+    label = "Change in Quantity"
+    _required = true
+    scale = 2
+    precision = 14
+    unique = false
+    _hidden_value = true
+  }
+  salesforce.Summary SubtotalChange {
+    apiName = "AssetAction.SubtotalChange"
+    label = "Change in Subtotal"
+    _hidden_value = true
+  }
+  salesforce.Summary TotalAmount {
+    apiName = "AssetAction.TotalAmount"
+    label = "Total Amount"
+    _hidden_value = true
+  }
+  salesforce.Currency TotalCancellationsAmount {
+    apiName = "AssetAction.TotalCancellationsAmount"
+    label = "Total Cancellations Amount"
+    scale = 2
+    precision = 18
+    _hidden_value = true
+  }
+  salesforce.Currency TotalCrossSellsAmount {
+    apiName = "AssetAction.TotalCrossSellsAmount"
+    label = "Total Cross-Sells Amount"
+    scale = 2
+    precision = 18
+    _hidden_value = true
+  }
+  salesforce.Currency TotalDownsellsAmount {
+    apiName = "AssetAction.TotalDownsellsAmount"
+    label = "Total Downsells Amount"
+    scale = 2
+    precision = 18
+    _hidden_value = true
+  }
+  salesforce.Currency TotalInitialSaleAmount {
+    apiName = "AssetAction.TotalInitialSaleAmount"
+    label = "Total Initial Sale Amount"
+    scale = 2
+    precision = 18
+    _hidden_value = true
+  }
+  salesforce.Currency TotalMrr {
+    apiName = "AssetAction.TotalMrr"
+    label = "Total Monthly Recurring Revenue"
+    scale = 2
+    precision = 18
+    _hidden_value = true
+  }
+  salesforce.Currency TotalOtherAmount {
+    apiName = "AssetAction.TotalOtherAmount"
+    label = "Total Other Amount"
+    scale = 2
+    precision = 18
+    _hidden_value = true
+  }
+  salesforce.Number TotalQuantity {
+    apiName = "AssetAction.TotalQuantity"
+    label = "Total Quantity"
+    scale = 2
+    precision = 14
+    unique = false
+    _hidden_value = true
+  }
+  salesforce.Currency TotalRenewalsAmount {
+    apiName = "AssetAction.TotalRenewalsAmount"
+    label = "Total Renewals Amount"
+    scale = 2
+    precision = 18
+    _hidden_value = true
+  }
+  salesforce.Currency TotalTermsAndConditionsAmount {
+    apiName = "AssetAction.TotalTermsAndConditionsAmount"
+    label = "Total Terms And Conditions Changes Amount"
+    scale = 2
+    precision = 18
+    _hidden_value = true
+  }
+  salesforce.Currency TotalTransfersAmount {
+    apiName = "AssetAction.TotalTransfersAmount"
+    label = "Total Transfers Amount"
+    scale = 2
+    precision = 18
+    _hidden_value = true
+  }
+  salesforce.Currency TotalUpsellsAmount {
+    apiName = "AssetAction.TotalUpsellsAmount"
+    label = "Total Upsells Amount"
+    scale = 2
+    precision = 18
+    _hidden_value = true
+  }
+  salesforce.Picklist Type {
+    apiName = "AssetAction.Type"
+    label = "Type"
+    _required = true
+    restricted = true
+    _hidden_value = true
+  }
+  serviceid Id {
+    apiName = "AssetAction.Id"
+    label = "Asset Action ID"
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Checkbox IsDeleted {
+    apiName = "AssetAction.IsDeleted"
+    label = "Deleted"
+    defaultValue = false
+    _hidden_value = true
+  }
+  salesforce.AutoNumber AssetActionNumber {
+    apiName = "AssetAction.AssetActionNumber"
+    label = "Name"
+    _hidden_value = true
+  }
+  salesforce.DateTime CreatedDate {
+    apiName = "AssetAction.CreatedDate"
+    label = "Created Date"
+    _hidden_value = true
+  }
+  salesforce.Lookup CreatedById {
+    apiName = "AssetAction.CreatedById"
+    label = "Created By ID"
+    relationshipName = "CreatedBy"
+    _hidden_value = true
+  }
+  salesforce.DateTime LastModifiedDate {
+    apiName = "AssetAction.LastModifiedDate"
+    label = "Last Modified Date"
+    _hidden_value = true
+  }
+  salesforce.Lookup LastModifiedById {
+    apiName = "AssetAction.LastModifiedById"
+    label = "Last Modified By ID"
+    relationshipName = "LastModifiedBy"
+    _hidden_value = true
+  }
+  salesforce.DateTime SystemModstamp {
+    apiName = "AssetAction.SystemModstamp"
+    label = "System Modstamp"
+    _hidden_value = true
+  }
+}

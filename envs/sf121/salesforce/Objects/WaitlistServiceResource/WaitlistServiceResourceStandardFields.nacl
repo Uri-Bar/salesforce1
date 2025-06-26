@@ -1,0 +1,69 @@
+type salesforce.WaitlistServiceResource {
+  salesforce.Picklist AccessLevel {
+    apiName = "WaitlistServiceResource.AccessLevel"
+    label = "Access Level"
+    _required = true
+    restricted = true
+  }
+  salesforce.Checkbox IsAvailable {
+    apiName = "WaitlistServiceResource.IsAvailable"
+    label = "Available"
+    defaultValue = false
+  }
+  salesforce.MasterDetail ServiceResourceId {
+    apiName = "WaitlistServiceResource.ServiceResourceId"
+    label = "Resource ID"
+    _required = true
+    relationshipName = "ServiceResource"
+  }
+  salesforce.MasterDetail WaitlistId {
+    apiName = "WaitlistServiceResource.WaitlistId"
+    label = "Waitlist ID"
+    _required = true
+    relationshipName = "Waitlist"
+  }
+  serviceid Id {
+    apiName = "WaitlistServiceResource.Id"
+    label = "Waitlist Service Resource ID"
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Checkbox IsDeleted {
+    apiName = "WaitlistServiceResource.IsDeleted"
+    label = "Deleted"
+    defaultValue = false
+    _hidden_value = true
+  }
+  salesforce.AutoNumber Name {
+    apiName = "WaitlistServiceResource.Name"
+    label = "Name"
+    _hidden_value = true
+  }
+  salesforce.DateTime CreatedDate {
+    apiName = "WaitlistServiceResource.CreatedDate"
+    label = "Created Date"
+    _hidden_value = true
+  }
+  salesforce.Lookup CreatedById {
+    apiName = "WaitlistServiceResource.CreatedById"
+    label = "Created By ID"
+    relationshipName = "CreatedBy"
+    _hidden_value = true
+  }
+  salesforce.DateTime LastModifiedDate {
+    apiName = "WaitlistServiceResource.LastModifiedDate"
+    label = "Last Modified Date"
+    _hidden_value = true
+  }
+  salesforce.Lookup LastModifiedById {
+    apiName = "WaitlistServiceResource.LastModifiedById"
+    label = "Last Modified By ID"
+    relationshipName = "LastModifiedBy"
+    _hidden_value = true
+  }
+  salesforce.DateTime SystemModstamp {
+    apiName = "WaitlistServiceResource.SystemModstamp"
+    label = "System Modstamp"
+    _hidden_value = true
+  }
+}
