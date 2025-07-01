@@ -1,27 +1,35 @@
 salesforce.StandardValueSet CampaignMemberStatus {
   fullName = "CampaignMemberStatus"
   sorted = true
-  standardValue = [
-    {
-      fullName = "Planned"
-      default = false
-      label = "Planned"
-    },
-    {
-      fullName = "Received"
-      default = false
-      label = "Received"
-    },
-    {
-      fullName = "Responded"
-      default = false
-      label = "Responded"
-    },
-    {
-      fullName = "Sent"
-      default = false
-      label = "Sent"
-    },
-  ]
+  standardValue = {
+    values = {
+      Planned = {
+        fullName = "Planned"
+        default = false
+        label = "Planned"
+      }
+      Received = {
+        fullName = "Received"
+        default = false
+        label = "Received"
+      }
+      Responded = {
+        fullName = "Responded"
+        default = false
+        label = "Responded"
+      }
+      Sent = {
+        fullName = "Sent"
+        default = false
+        label = "Sent"
+      }
+    }
+    order = [
+      salesforce.StandardValueSet.instance.CampaignMemberStatus.standardValue.values.Planned,
+      salesforce.StandardValueSet.instance.CampaignMemberStatus.standardValue.values.Received,
+      salesforce.StandardValueSet.instance.CampaignMemberStatus.standardValue.values.Responded,
+      salesforce.StandardValueSet.instance.CampaignMemberStatus.standardValue.values.Sent,
+    ]
+  }
   _alias = "CampaignMemberStatus"
 }

@@ -2,7 +2,6 @@ type salesforce.ServiceTerritoryMember {
   salesforce.Address Address {
     apiName = "ServiceTerritoryMember.Address"
     label = "Address"
-    _hidden_value = true
   }
   salesforce.DateTime EffectiveEndDate {
     apiName = "ServiceTerritoryMember.EffectiveEndDate"

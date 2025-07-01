@@ -4,15 +4,15 @@ salesforce.BusinessProcess Case_asd {
   isActive = true
   values = [
     {
-      fullName = "Closed"
+      fullName = salesforce.StandardValueSet.instance.CaseStatus.standardValue.values.Closed.fullName
       default = false
     },
     {
-      fullName = "Escalated"
+      fullName = salesforce.StandardValueSet.instance.CaseStatus.standardValue.values.Escalated.fullName
       default = false
     },
     {
-      fullName = "Working"
+      fullName = salesforce.StandardValueSet.instance.CaseStatus.standardValue.values.Working.fullName
       default = true
     },
   ]

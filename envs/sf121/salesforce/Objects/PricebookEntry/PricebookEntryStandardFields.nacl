@@ -22,11 +22,9 @@ type salesforce.PricebookEntry {
     length = 255
     unique = false
     caseSensitive = false
-    _hidden_value = true
   }
   salesforce.Unknown StandardPrice {
     apiName = "PricebookEntry.StandardPrice"
-    _hidden_value = true
   }
   salesforce.Currency UnitPrice {
     apiName = "PricebookEntry.UnitPrice"
@@ -52,7 +50,6 @@ type salesforce.PricebookEntry {
     length = 255
     unique = false
     caseSensitive = false
-    _hidden_value = true
   }
   salesforce.DateTime CreatedDate {
     apiName = "PricebookEntry.CreatedDate"
@@ -91,6 +88,5 @@ type salesforce.PricebookEntry {
     apiName = "PricebookEntry.IsArchived"
     label = "Archived"
     defaultValue = false
-    _hidden_value = true
   }
 }

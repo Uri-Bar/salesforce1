@@ -10,7 +10,6 @@ type salesforce.CartTax {
     apiName = "CartTax.CartId"
     label = "Cart ID"
     relationshipName = "Cart"
-    _hidden_value = true
   }
   salesforce.MasterDetail CartItemId {
     apiName = "CartTax.CartItemId"
@@ -96,6 +95,5 @@ type salesforce.CartTax {
     apiName = "CartTax.AdjustmentTargetType"
     label = "Target Type for the Adjustment"
     restricted = true
-    _hidden_value = true
   }
 }

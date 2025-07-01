@@ -43,14 +43,12 @@ type salesforce.FulfillmentOrderItemAdjustment {
     label = "Adjustment with Tax"
     scale = 2
     precision = 18
-    _hidden_value = true
   }
   salesforce.Currency TotalTaxAmount {
     apiName = "FulfillmentOrderItemAdjustment.TotalTaxAmount"
     label = "Tax"
     scale = 2
     precision = 18
-    _hidden_value = true
   }
   serviceid Id {
     apiName = "FulfillmentOrderItemAdjustment.Id"

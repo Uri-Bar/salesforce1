@@ -50,7 +50,6 @@ type salesforce.Solution {
     apiName = "Solution.IsReviewed"
     label = "Reviewed"
     defaultValue = false
-    _hidden_value = true
   }
   salesforce.Lookup OwnerId {
     apiName = "Solution.OwnerId"
@@ -92,12 +91,10 @@ type salesforce.Solution {
     scale = 0
     precision = 9
     unique = false
-    _hidden_value = true
   }
   salesforce.Checkbox IsHtml {
     apiName = "Solution.IsHtml"
     label = "Is Html"
     defaultValue = false
-    _hidden_value = true
   }
 }

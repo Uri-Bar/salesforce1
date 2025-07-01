@@ -15,7 +15,6 @@ type salesforce.ProblemIncident {
     label = "Related Issue Type"
     _required = true
     restricted = true
-    _hidden_value = true
   }
   salesforce.Lookup RelatedIssueId {
     apiName = "ProblemIncident.RelatedIssueId"

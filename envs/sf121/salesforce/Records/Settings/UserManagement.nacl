@@ -11,7 +11,9 @@ salesforce.UserManagementSettings {
   enableRestrictEmailDomains = false
   enableScrambleUserData = false
   enableUserSelfDeactivate = false
+  enhancedPermSetList = false
   enhancedUserListView = false
+  enhancedUserRoleListView = false
   groupSummaryUIEnhancement = true
   permsetsInFieldCreation = false
   psaExpirationUIEnabled = true

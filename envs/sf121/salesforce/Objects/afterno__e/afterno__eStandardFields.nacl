@@ -5,7 +5,6 @@ type salesforce.afterno__e {
     length = 1000
     unique = false
     caseSensitive = false
-    _hidden_value = true
   }
   salesforce.DateTime CreatedDate {
     apiName = "afterno__e.CreatedDate"
@@ -24,6 +23,5 @@ type salesforce.afterno__e {
     length = 36
     unique = false
     caseSensitive = false
-    _hidden_value = true
   }
 }

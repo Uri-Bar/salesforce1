@@ -37,7 +37,6 @@ type salesforce.WorkPlan {
     length = 50
     unique = false
     caseSensitive = false
-    _hidden_value = true
   }
   salesforce.Lookup WorkOrderId {
     apiName = "WorkPlan.WorkOrderId"
@@ -53,7 +52,6 @@ type salesforce.WorkPlan {
     apiName = "WorkPlan.WorkPlanTemplateId"
     label = "Work Plan Template ID"
     relationshipName = "WorkPlanTemplate"
-    _hidden_value = true
   }
   serviceid Id {
     apiName = "WorkPlan.Id"

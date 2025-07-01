@@ -3,14 +3,12 @@ type salesforce.SalesStore {
     apiName = "SalesStore.Description"
     label = "Description"
     length = 1000
-    _hidden_value = true
   }
   salesforce.Lookup LocationId {
     apiName = "SalesStore.LocationId"
     label = "Location ID"
     _required = true
     relationshipName = "Location"
-    _hidden_value = true
   }
   salesforce.Text Name {
     apiName = "SalesStore.Name"
@@ -19,7 +17,6 @@ type salesforce.SalesStore {
     length = 255
     unique = false
     caseSensitive = false
-    _hidden_value = true
   }
   serviceid Id {
     apiName = "SalesStore.Id"
@@ -33,6 +30,5 @@ type salesforce.SalesStore {
     length = 255
     unique = false
     caseSensitive = false
-    _hidden_value = true
   }
 }

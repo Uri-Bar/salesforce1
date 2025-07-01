@@ -28,14 +28,12 @@ type salesforce.ReturnOrderItemAdjustment {
     label = "Adjustment with Tax"
     scale = 2
     precision = 18
-    _hidden_value = true
   }
   salesforce.Currency TotalTaxAmount {
     apiName = "ReturnOrderItemAdjustment.TotalTaxAmount"
     label = "Tax"
     scale = 2
     precision = 18
-    _hidden_value = true
   }
   serviceid Id {
     apiName = "ReturnOrderItemAdjustment.Id"

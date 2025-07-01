@@ -21,6 +21,7 @@ salesforce.Flow flowtest {
     storeOutputAutomatically = true
   }
   apiVersion = 55
+  areMetricsLoggedToDataCloud = false
   environments = "Default"
   interviewLabel = "flowtest {!$Flow.CurrentDateTime}"
   label = "flowtest"

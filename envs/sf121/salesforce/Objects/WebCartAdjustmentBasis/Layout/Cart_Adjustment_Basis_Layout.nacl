@@ -13,11 +13,11 @@ salesforce.Layout WebCartAdjustmentBasis_Cart_Adjustment_Basis_Layout@bsss {
               field = salesforce.WebCartAdjustmentBasis.field.WebCartId
             },
             {
-              behavior = "Edit"
+              behavior = "Required"
               field = salesforce.WebCartAdjustmentBasis.field.AdjustmentBasisDetail
             },
             {
-              behavior = "Edit"
+              behavior = "Required"
               field = salesforce.WebCartAdjustmentBasis.field.AdjustmentBasisReferenceId
             },
           ]

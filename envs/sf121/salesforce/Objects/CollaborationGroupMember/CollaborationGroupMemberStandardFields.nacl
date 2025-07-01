@@ -57,6 +57,5 @@ type salesforce.CollaborationGroupMember {
   salesforce.DateTime LastFeedAccessDate {
     apiName = "CollaborationGroupMember.LastFeedAccessDate"
     label = "Last Feed Access Date"
-    _hidden_value = true
   }
 }

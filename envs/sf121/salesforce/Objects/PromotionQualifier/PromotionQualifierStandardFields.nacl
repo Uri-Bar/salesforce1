@@ -1,4 +1,7 @@
 type salesforce.PromotionQualifier {
+  salesforce.Unknown ApproachingDiscountThreshold {
+    apiName = "PromotionQualifier.ApproachingDiscountThreshold"
+  }
   salesforce.Currency MinimumAmount {
     apiName = "PromotionQualifier.MinimumAmount"
     label = "Minimum Amount"
@@ -45,7 +48,6 @@ type salesforce.PromotionQualifier {
     length = 200
     unique = false
     caseSensitive = false
-    _hidden_value = true
   }
   salesforce.Text QualifierProductName {
     apiName = "PromotionQualifier.QualifierProductName"
@@ -53,7 +55,6 @@ type salesforce.PromotionQualifier {
     length = 255
     unique = false
     caseSensitive = false
-    _hidden_value = true
   }
   salesforce.Text QualifierProductSku {
     apiName = "PromotionQualifier.QualifierProductSku"
@@ -61,7 +62,6 @@ type salesforce.PromotionQualifier {
     length = 180
     unique = false
     caseSensitive = false
-    _hidden_value = true
   }
   salesforce.Picklist QualifierType {
     apiName = "PromotionQualifier.QualifierType"

@@ -1,0 +1,90 @@
+type salesforce.ConversationApiLogObjSum {
+  serviceid Id {
+    apiName = "ConversationApiLogObjSum.Id"
+    label = "Conversation Api Log Object Summary ID"
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Checkbox IsDeleted {
+    apiName = "ConversationApiLogObjSum.IsDeleted"
+    label = "Deleted"
+    defaultValue = false
+    _hidden_value = true
+  }
+  salesforce.Text Name {
+    apiName = "ConversationApiLogObjSum.Name"
+    label = "Conversation Api Log Object Summary Name"
+    _required = true
+    length = 255
+    unique = false
+    caseSensitive = false
+  }
+  salesforce.DateTime CreatedDate {
+    apiName = "ConversationApiLogObjSum.CreatedDate"
+    label = "Created Date"
+    _hidden_value = true
+  }
+  salesforce.Lookup CreatedById {
+    apiName = "ConversationApiLogObjSum.CreatedById"
+    label = "Created By ID"
+    relationshipName = "CreatedBy"
+    _hidden_value = true
+  }
+  salesforce.DateTime LastModifiedDate {
+    apiName = "ConversationApiLogObjSum.LastModifiedDate"
+    label = "Last Modified Date"
+    _hidden_value = true
+  }
+  salesforce.Lookup LastModifiedById {
+    apiName = "ConversationApiLogObjSum.LastModifiedById"
+    label = "Last Modified By ID"
+    relationshipName = "LastModifiedBy"
+    _hidden_value = true
+  }
+  salesforce.DateTime SystemModstamp {
+    apiName = "ConversationApiLogObjSum.SystemModstamp"
+    label = "System Modstamp"
+    _hidden_value = true
+  }
+  salesforce.Lookup ConversationApiLogId {
+    apiName = "ConversationApiLogObjSum.ConversationApiLogId"
+    label = "Conversation Api Log ID"
+    _required = true
+    relationshipName = "ConversationApiLog"
+  }
+  salesforce.Text EntityKeyPrefix {
+    apiName = "ConversationApiLogObjSum.EntityKeyPrefix"
+    label = "Entity Key Prefix"
+    _required = true
+    length = 3
+    unique = false
+    caseSensitive = false
+  }
+  salesforce.Picklist StorageSystem {
+    apiName = "ConversationApiLogObjSum.StorageSystem"
+    label = "Storage System"
+    _required = true
+    restricted = true
+  }
+  salesforce.Number RecordCountTotal {
+    apiName = "ConversationApiLogObjSum.RecordCountTotal"
+    label = "Record Count Total"
+    scale = 0
+    precision = 9
+    unique = false
+  }
+  salesforce.Number RecordCountSuccess {
+    apiName = "ConversationApiLogObjSum.RecordCountSuccess"
+    label = "Record Count Success"
+    scale = 0
+    precision = 9
+    unique = false
+  }
+  salesforce.Number RecordCountFailed {
+    apiName = "ConversationApiLogObjSum.RecordCountFailed"
+    label = "Record Count Failed"
+    scale = 0
+    precision = 9
+    unique = false
+  }
+}

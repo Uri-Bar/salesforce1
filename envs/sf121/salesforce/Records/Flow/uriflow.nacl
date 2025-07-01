@@ -1,6 +1,7 @@
 salesforce.Flow uriflow {
   fullName = "uriflow"
   apiVersion = 55
+  areMetricsLoggedToDataCloud = false
   environments = "Default"
   interviewLabel = "uriflow {!$Flow.CurrentDateTime}"
   label = "uriflow"

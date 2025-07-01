@@ -17,6 +17,7 @@ salesforce.IndustriesSettings {
   enablePartyProfileParentSharingOrgPref = false
   enablePartyprofParentMultiSharingOrgPref = false
   enablePreBookedFallbackMechOrgPref = false
+  enableSchedulerPaymentsPref = false
   enableShareSaWithArOrgPref = false
   enableTopicOrTemplate = false
   enableTopicTimeSlot = true

@@ -70,7 +70,6 @@ type salesforce.WebCartAdjustmentGroup {
     label = "Total Adjustment Amount With Tax"
     scale = 2
     precision = 18
-    _hidden_value = true
   }
   serviceid Id {
     apiName = "WebCartAdjustmentGroup.Id"

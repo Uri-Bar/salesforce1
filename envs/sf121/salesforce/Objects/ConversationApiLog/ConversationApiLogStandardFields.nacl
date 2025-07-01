@@ -1,0 +1,120 @@
+type salesforce.ConversationApiLog {
+  serviceid Id {
+    apiName = "ConversationApiLog.Id"
+    label = "Conversation Api Log ID"
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Lookup OwnerId {
+    apiName = "ConversationApiLog.OwnerId"
+    label = "Owner ID"
+    relationshipName = "Owner"
+    _hidden_value = true
+  }
+  salesforce.Checkbox IsDeleted {
+    apiName = "ConversationApiLog.IsDeleted"
+    label = "Deleted"
+    defaultValue = false
+    _hidden_value = true
+  }
+  salesforce.Text Name {
+    apiName = "ConversationApiLog.Name"
+    label = "Conversation Api Log Name"
+    _required = true
+    length = 255
+    unique = false
+    caseSensitive = false
+  }
+  salesforce.DateTime CreatedDate {
+    apiName = "ConversationApiLog.CreatedDate"
+    label = "Created Date"
+    _hidden_value = true
+  }
+  salesforce.Lookup CreatedById {
+    apiName = "ConversationApiLog.CreatedById"
+    label = "Created By ID"
+    relationshipName = "CreatedBy"
+    _hidden_value = true
+  }
+  salesforce.DateTime LastModifiedDate {
+    apiName = "ConversationApiLog.LastModifiedDate"
+    label = "Last Modified Date"
+    _hidden_value = true
+  }
+  salesforce.Lookup LastModifiedById {
+    apiName = "ConversationApiLog.LastModifiedById"
+    label = "Last Modified By ID"
+    relationshipName = "LastModifiedBy"
+    _hidden_value = true
+  }
+  salesforce.DateTime SystemModstamp {
+    apiName = "ConversationApiLog.SystemModstamp"
+    label = "System Modstamp"
+    _hidden_value = true
+  }
+  salesforce.Lookup RequestedById {
+    apiName = "ConversationApiLog.RequestedById"
+    label = "User ID"
+    relationshipName = "RequestedBy"
+  }
+  salesforce.DateTime RequestedDate {
+    apiName = "ConversationApiLog.RequestedDate"
+    label = "Requested Date"
+    _required = true
+  }
+  salesforce.Picklist RequestedEntityType {
+    apiName = "ConversationApiLog.RequestedEntityType"
+    label = "Requested Entity Type"
+    _required = true
+    restricted = true
+  }
+  salesforce.Text RequestedEntityIdentifier {
+    apiName = "ConversationApiLog.RequestedEntityIdentifier"
+    label = "Requested Entity Identifier"
+    _required = true
+    length = 15
+    unique = false
+    caseSensitive = false
+  }
+  salesforce.Picklist Action {
+    apiName = "ConversationApiLog.Action"
+    label = "Action"
+    _required = true
+    restricted = true
+  }
+  salesforce.Text Operation {
+    apiName = "ConversationApiLog.Operation"
+    label = "Operation"
+    _required = true
+    length = 100
+    unique = false
+    caseSensitive = false
+  }
+  salesforce.Picklist Status {
+    apiName = "ConversationApiLog.Status"
+    label = "Status"
+    _required = true
+    restricted = true
+  }
+  salesforce.Text Parameter {
+    apiName = "ConversationApiLog.Parameter"
+    label = "Parameter"
+    length = 4000
+    unique = false
+    caseSensitive = false
+  }
+  salesforce.Text StatusHistory {
+    apiName = "ConversationApiLog.StatusHistory"
+    label = "Status History"
+    length = 4000
+    unique = false
+    caseSensitive = false
+  }
+  salesforce.Text Context {
+    apiName = "ConversationApiLog.Context"
+    label = "Context"
+    length = 4000
+    unique = false
+    caseSensitive = false
+  }
+}

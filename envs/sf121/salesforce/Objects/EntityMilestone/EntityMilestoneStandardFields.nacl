@@ -3,7 +3,6 @@ type salesforce.EntityMilestone {
     apiName = "EntityMilestone.BusinessHoursId"
     label = "Business Hours ID"
     relationshipName = "BusinessHours"
-    _hidden_value = true
   }
   salesforce.DateTime CompletionDate {
     apiName = "EntityMilestone.CompletionDate"
@@ -15,7 +14,6 @@ type salesforce.EntityMilestone {
     scale = 2
     precision = 6
     unique = false
-    _hidden_value = true
   }
   salesforce.Number ElapsedTimeInHrs {
     apiName = "EntityMilestone.ElapsedTimeInHrs"
@@ -23,7 +21,6 @@ type salesforce.EntityMilestone {
     scale = 2
     precision = 6
     unique = false
-    _hidden_value = true
   }
   salesforce.Number ElapsedTimeInMins {
     apiName = "EntityMilestone.ElapsedTimeInMins"
@@ -31,36 +28,30 @@ type salesforce.EntityMilestone {
     scale = 0
     precision = 9
     unique = false
-    _hidden_value = true
   }
   salesforce.Checkbox IsCompleted {
     apiName = "EntityMilestone.IsCompleted"
     label = "Completed"
     defaultValue = false
-    _hidden_value = true
   }
   salesforce.Checkbox IsViolated {
     apiName = "EntityMilestone.IsViolated"
     label = "Violation"
     defaultValue = false
-    _hidden_value = true
   }
   salesforce.Lookup MilestoneId {
     apiName = "EntityMilestone.MilestoneId"
-    _hidden_value = true
   }
   salesforce.Lookup ParentEntityId {
     apiName = "EntityMilestone.ParentEntityId"
     label = " ID"
     _required = true
     relationshipName = "ParentEntity"
-    _hidden_value = true
   }
   salesforce.Lookup SlaProcessId {
     apiName = "EntityMilestone.SlaProcessId"
     label = "Entitlement Process ID"
     relationshipName = "SlaProcess"
-    _hidden_value = true
   }
   salesforce.DateTime StartDate {
     apiName = "EntityMilestone.StartDate"
@@ -69,7 +60,6 @@ type salesforce.EntityMilestone {
   salesforce.DateTime TargetDate {
     apiName = "EntityMilestone.TargetDate"
     label = "Target Date"
-    _hidden_value = true
   }
   salesforce.Number TargetResponseInDays {
     apiName = "EntityMilestone.TargetResponseInDays"
@@ -77,7 +67,6 @@ type salesforce.EntityMilestone {
     scale = 2
     precision = 6
     unique = false
-    _hidden_value = true
   }
   salesforce.Number TargetResponseInHrs {
     apiName = "EntityMilestone.TargetResponseInHrs"
@@ -85,7 +74,6 @@ type salesforce.EntityMilestone {
     scale = 2
     precision = 6
     unique = false
-    _hidden_value = true
   }
   salesforce.Number TargetResponseInMins {
     apiName = "EntityMilestone.TargetResponseInMins"
@@ -93,7 +81,6 @@ type salesforce.EntityMilestone {
     scale = 0
     precision = 9
     unique = false
-    _hidden_value = true
   }
   salesforce.Number TimeRemainingInDays {
     apiName = "EntityMilestone.TimeRemainingInDays"
@@ -101,7 +88,6 @@ type salesforce.EntityMilestone {
     scale = 2
     precision = 6
     unique = false
-    _hidden_value = true
   }
   salesforce.Text TimeRemainingInHrs {
     apiName = "EntityMilestone.TimeRemainingInHrs"
@@ -109,7 +95,6 @@ type salesforce.EntityMilestone {
     length = 10
     unique = false
     caseSensitive = false
-    _hidden_value = true
   }
   salesforce.Text TimeRemainingInMins {
     apiName = "EntityMilestone.TimeRemainingInMins"
@@ -117,7 +102,6 @@ type salesforce.EntityMilestone {
     length = 10
     unique = false
     caseSensitive = false
-    _hidden_value = true
   }
   salesforce.Number TimeSinceTargetInDays {
     apiName = "EntityMilestone.TimeSinceTargetInDays"
@@ -125,7 +109,6 @@ type salesforce.EntityMilestone {
     scale = 2
     precision = 6
     unique = false
-    _hidden_value = true
   }
   salesforce.Text TimeSinceTargetInHrs {
     apiName = "EntityMilestone.TimeSinceTargetInHrs"
@@ -133,7 +116,6 @@ type salesforce.EntityMilestone {
     length = 10
     unique = false
     caseSensitive = false
-    _hidden_value = true
   }
   salesforce.Text TimeSinceTargetInMins {
     apiName = "EntityMilestone.TimeSinceTargetInMins"
@@ -141,7 +123,6 @@ type salesforce.EntityMilestone {
     length = 10
     unique = false
     caseSensitive = false
-    _hidden_value = true
   }
   serviceid Id {
     apiName = "EntityMilestone.Id"
@@ -194,6 +175,5 @@ type salesforce.EntityMilestone {
     apiName = "EntityMilestone.MilestoneTypeId"
     label = "Milestone Type ID"
     relationshipName = "MilestoneType"
-    _hidden_value = true
   }
 }

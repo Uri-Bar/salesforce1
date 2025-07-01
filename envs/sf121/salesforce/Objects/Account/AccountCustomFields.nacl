@@ -2,18 +2,24 @@ type salesforce.Account {
   salesforce.Picklist Active__c {
     apiName = "Account.Active__c"
     label = "Active"
-    valueSet = [
-      {
-        fullName = "No"
-        default = false
-        label = "No"
-      },
-      {
-        fullName = "Yes"
-        default = false
-        label = "Yes"
-      },
-    ]
+    valueSet = {
+      values = {
+        No = {
+          fullName = "No"
+          default = false
+          label = "No"
+        }
+        Yes = {
+          fullName = "Yes"
+          default = false
+          label = "Yes"
+        }
+      }
+      order = [
+        salesforce.Account.field.Active__c.valueSet.values.No,
+        salesforce.Account.field.Active__c.valueSet.values.Yes,
+      ]
+    }
     sorted = false
     restricted = false
   }
@@ -40,28 +46,36 @@ type salesforce.Account {
   salesforce.Picklist SLA__c {
     apiName = "Account.SLA__c"
     label = "SLA"
-    valueSet = [
-      {
-        fullName = "Gold"
-        default = false
-        label = "Gold"
-      },
-      {
-        fullName = "Silver"
-        default = false
-        label = "Silver"
-      },
-      {
-        fullName = "Platinum"
-        default = false
-        label = "Platinum"
-      },
-      {
-        fullName = "Bronze"
-        default = false
-        label = "Bronze"
-      },
-    ]
+    valueSet = {
+      values = {
+        Gold = {
+          fullName = "Gold"
+          default = false
+          label = "Gold"
+        }
+        Silver = {
+          fullName = "Silver"
+          default = false
+          label = "Silver"
+        }
+        Platinum = {
+          fullName = "Platinum"
+          default = false
+          label = "Platinum"
+        }
+        Bronze = {
+          fullName = "Bronze"
+          default = false
+          label = "Bronze"
+        }
+      }
+      order = [
+        salesforce.Account.field.SLA__c.valueSet.values.Gold,
+        salesforce.Account.field.SLA__c.valueSet.values.Silver,
+        salesforce.Account.field.SLA__c.valueSet.values.Platinum,
+        salesforce.Account.field.SLA__c.valueSet.values.Bronze,
+      ]
+    }
     sorted = false
     restricted = false
   }
@@ -69,23 +83,30 @@ type salesforce.Account {
     apiName = "Account.UpsellOpportunity__c"
     description = "yes"
     label = "Upsell Opportunity"
-    valueSet = [
-      {
-        fullName = "Maybe"
-        default = false
-        label = "Maybe"
-      },
-      {
-        fullName = "No"
-        default = false
-        label = "No"
-      },
-      {
-        fullName = "Yes"
-        default = false
-        label = "Yes"
-      },
-    ]
+    valueSet = {
+      values = {
+        Maybe = {
+          fullName = "Maybe"
+          default = false
+          label = "Maybe"
+        }
+        No = {
+          fullName = "No"
+          default = false
+          label = "No"
+        }
+        Yes = {
+          fullName = "Yes"
+          default = false
+          label = "Yes"
+        }
+      }
+      order = [
+        salesforce.Account.field.UpsellOpportunity__c.valueSet.values.Maybe,
+        salesforce.Account.field.UpsellOpportunity__c.valueSet.values.No,
+        salesforce.Account.field.UpsellOpportunity__c.valueSet.values.Yes,
+      ]
+    }
     sorted = false
     restricted = false
   }
@@ -155,13 +176,11 @@ type salesforce.Account {
     apiName = "Account.eden__c"
     defaultValue = false
     label = "eden"
-    _hidden_value = true
   }
   salesforce.Checkbox eu__c {
     apiName = "Account.eu__c"
     defaultValue = true
     label = "euq"
-    _hidden_value = true
   }
   salesforce.Checkbox isUfi__c {
     apiName = "Account.isUfi__c"

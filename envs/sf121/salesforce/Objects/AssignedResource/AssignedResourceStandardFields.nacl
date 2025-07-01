@@ -8,7 +8,6 @@ type salesforce.AssignedResource {
     apiName = "AssignedResource.EventId"
     label = "Activity ID"
     relationshipName = "Event"
-    _hidden_value = true
   }
   salesforce.Checkbox IsRequiredResource {
     apiName = "AssignedResource.IsRequiredResource"

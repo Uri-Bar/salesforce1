@@ -91,7 +91,6 @@ type salesforce.Individual {
     apiName = "Individual.Name"
     label = "Name"
     _required = true
-    _hidden_value = true
   }
   salesforce.Text Occupation {
     apiName = "Individual.Occupation"
@@ -136,7 +135,6 @@ type salesforce.Individual {
     apiName = "Individual.MasterRecordId"
     label = "Master Record ID"
     relationshipName = "MasterRecord"
-    _hidden_value = true
   }
   salesforce.DateTime CreatedDate {
     apiName = "Individual.CreatedDate"

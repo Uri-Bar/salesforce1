@@ -5,7 +5,9 @@ salesforce.SharingRules Case {
       accessLevel = "Read"
       label = "asa"
       sharedTo = {
-        role = salesforce.Role.instance.SVPSalesMarketing
+        role = [
+          salesforce.Role.instance.SVPSalesMarketing,
+        ]
       }
       criteriaItems = {
         field = salesforce.Case.field.IsClosed
@@ -19,7 +21,9 @@ salesforce.SharingRules Case {
       accessLevel = "Read"
       label = "asaa"
       sharedTo = {
-        role = salesforce.Role.instance.SVPSalesMarketing
+        role = [
+          salesforce.Role.instance.SVPSalesMarketing,
+        ]
       }
       criteriaItems = {
         field = salesforce.Case.field.IsClosed

@@ -27,7 +27,6 @@ type salesforce.Opportunity {
   salesforce.Lookup ContractId {
     apiName = "Opportunity.ContractId"
     trackTrending = false
-    _hidden_value = true
   }
   salesforce.LongTextArea Description {
     apiName = "Opportunity.Description"
@@ -41,12 +40,10 @@ type salesforce.Opportunity {
     label = "Expected Amount"
     scale = 2
     precision = 18
-    _hidden_value = true
   }
   salesforce.Unknown IqScore {
     apiName = "Opportunity.IqScore"
     trackTrending = false
-    _hidden_value = true
   }
   salesforce.Checkbox IsPrivate {
     apiName = "Opportunity.IsPrivate"
@@ -137,20 +134,17 @@ type salesforce.Opportunity {
     apiName = "Opportunity.IsClosed"
     label = "Closed"
     defaultValue = false
-    _hidden_value = true
   }
   salesforce.Checkbox IsWon {
     apiName = "Opportunity.IsWon"
     label = "Won"
     defaultValue = false
-    _hidden_value = true
   }
   salesforce.Picklist ForecastCategory {
     apiName = "Opportunity.ForecastCategory"
     label = "Forecast Category"
     _required = true
     restricted = true
-    _hidden_value = true
   }
   salesforce.Picklist ForecastCategoryName {
     apiName = "Opportunity.ForecastCategoryName"
@@ -161,7 +155,6 @@ type salesforce.Opportunity {
     apiName = "Opportunity.HasOpportunityLineItem"
     label = "Has Line Item"
     defaultValue = false
-    _hidden_value = true
   }
   salesforce.DateTime CreatedDate {
     apiName = "Opportunity.CreatedDate"
@@ -201,12 +194,10 @@ type salesforce.Opportunity {
     scale = 0
     precision = 9
     unique = false
-    _hidden_value = true
   }
   salesforce.DateTime LastStageChangeDate {
     apiName = "Opportunity.LastStageChangeDate"
     label = "Last Stage Change Date"
-    _hidden_value = true
   }
   salesforce.Text Fiscal {
     apiName = "Opportunity.Fiscal"
@@ -214,7 +205,6 @@ type salesforce.Opportunity {
     length = 6
     unique = false
     caseSensitive = false
-    _hidden_value = true
   }
   salesforce.Lookup ContactId {
     apiName = "Opportunity.ContactId"
@@ -224,24 +214,20 @@ type salesforce.Opportunity {
     apiName = "Opportunity.HasOpenActivity"
     label = "Has Open Activity"
     defaultValue = false
-    _hidden_value = true
   }
   salesforce.Checkbox HasOverdueTask {
     apiName = "Opportunity.HasOverdueTask"
     label = "Has Overdue Task"
     defaultValue = false
-    _hidden_value = true
   }
   salesforce.Lookup LastAmountChangedHistoryId {
     apiName = "Opportunity.LastAmountChangedHistoryId"
     label = "Opportunity History ID"
     relationshipName = "LastAmountChangedHistory"
-    _hidden_value = true
   }
   salesforce.Lookup LastCloseDateChangedHistoryId {
     apiName = "Opportunity.LastCloseDateChangedHistoryId"
     label = "Opportunity History ID"
     relationshipName = "LastCloseDateChangedHistory"
-    _hidden_value = true
   }
 }

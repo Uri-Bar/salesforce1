@@ -6,7 +6,6 @@ type salesforce.ShiftWorkTopic {
   }
   salesforce.Unknown AttendeeLimit {
     apiName = "ShiftWorkTopic.AttendeeLimit"
-    _hidden_value = true
   }
   salesforce.Number MaxAppointments {
     apiName = "ShiftWorkTopic.MaxAppointments"
@@ -17,7 +16,6 @@ type salesforce.ShiftWorkTopic {
   }
   salesforce.Unknown ServiceAppointmentLimit {
     apiName = "ShiftWorkTopic.ServiceAppointmentLimit"
-    _hidden_value = true
   }
   salesforce.MasterDetail ShiftId {
     apiName = "ShiftWorkTopic.ShiftId"

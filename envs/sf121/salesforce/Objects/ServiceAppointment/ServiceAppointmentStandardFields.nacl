@@ -3,7 +3,6 @@ type salesforce.ServiceAppointment {
     apiName = "ServiceAppointment.AccountId"
     label = "Account ID"
     relationshipName = "Account"
-    _hidden_value = true
   }
   salesforce.Number ActualDuration {
     apiName = "ServiceAppointment.ActualDuration"
@@ -31,7 +30,6 @@ type salesforce.ServiceAppointment {
     apiName = "ServiceAppointment.Address"
     label = "Address"
     _required = true
-    _hidden_value = true
   }
   salesforce.Lookup AppointmentCategoryId {
     apiName = "ServiceAppointment.AppointmentCategoryId"
@@ -71,7 +69,6 @@ type salesforce.ServiceAppointment {
     scale = 0
     precision = 9
     unique = false
-    _hidden_value = true
   }
   salesforce.Number AttendeeLimit {
     apiName = "ServiceAppointment.AttendeeLimit"
@@ -170,7 +167,6 @@ type salesforce.ServiceAppointment {
     apiName = "ServiceAppointment.ParentRecordStatusCategory"
     label = "Parent Record Status Category"
     restricted = true
-    _hidden_value = true
   }
   salesforce.Text ParentRecordType {
     apiName = "ServiceAppointment.ParentRecordType"
@@ -178,7 +174,6 @@ type salesforce.ServiceAppointment {
     length = 50
     unique = false
     caseSensitive = false
-    _hidden_value = true
   }
   salesforce.Phone Phone {
     apiName = "ServiceAppointment.Phone"
@@ -186,7 +181,8 @@ type salesforce.ServiceAppointment {
   }
   salesforce.Lookup ReceiptOrderId {
     apiName = "ServiceAppointment.ReceiptOrderId"
-    _hidden_value = true
+    label = "Order ID"
+    relationshipName = "ReceiptOrder"
   }
   salesforce.DateTime SchedEndTime {
     apiName = "ServiceAppointment.SchedEndTime"
@@ -215,7 +211,6 @@ type salesforce.ServiceAppointment {
     apiName = "ServiceAppointment.StatusCategory"
     label = "Status Category"
     restricted = true
-    _hidden_value = true
   }
   salesforce.Text Subject {
     apiName = "ServiceAppointment.Subject"
@@ -223,6 +218,10 @@ type salesforce.ServiceAppointment {
     length = 255
     unique = false
     caseSensitive = false
+  }
+  salesforce.Unknown TimeZone {
+    apiName = "ServiceAppointment.TimeZone"
+    inlineHelpText = "Specifies the time zone recorded when the appointment was booked or last modified (typically this is the patient's time zone). This may differ from the time zone used in the service appointment's scheduled start and end times, which reflect the logged in user’s time zone."
   }
   salesforce.Text Transaction {
     apiName = "ServiceAppointment.Transaction"
@@ -286,6 +285,5 @@ type salesforce.ServiceAppointment {
     scale = 2
     precision = 18
     unique = false
-    _hidden_value = true
   }
 }

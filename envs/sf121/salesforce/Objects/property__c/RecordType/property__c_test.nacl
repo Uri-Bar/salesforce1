@@ -8,19 +8,19 @@ salesforce.RecordType property__c_test {
       picklist = salesforce.property__c.field.pick__c
       values = [
         {
-          fullName = "a"
+          fullName = salesforce.property__c.field.pick__c.valueSet.values.a.fullName
           default = false
         },
         {
-          fullName = "b"
+          fullName = salesforce.property__c.field.pick__c.valueSet.values.b.fullName
           default = false
         },
         {
-          fullName = "c"
+          fullName = salesforce.property__c.field.pick__c.valueSet.values.c.fullName
           default = false
         },
         {
-          fullName = "d"
+          fullName = salesforce.property__c.field.pick__c.valueSet.values.d.fullName
           default = false
         },
       ]

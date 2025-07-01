@@ -3,28 +3,36 @@ type salesforce.property__c {
     apiName = "property__c.pick__c"
     label = "pick"
     trackTrending = false
-    valueSet = [
-      {
-        fullName = "a"
-        default = false
-        label = "a"
-      },
-      {
-        fullName = "b"
-        default = false
-        label = "b"
-      },
-      {
-        fullName = "c"
-        default = false
-        label = "c"
-      },
-      {
-        fullName = "d"
-        default = false
-        label = "d"
-      },
-    ]
+    valueSet = {
+      values = {
+        a = {
+          fullName = "a"
+          default = false
+          label = "a"
+        }
+        b = {
+          fullName = "b"
+          default = false
+          label = "b"
+        }
+        c = {
+          fullName = "c"
+          default = false
+          label = "c"
+        }
+        d = {
+          fullName = "d"
+          default = false
+          label = "d"
+        }
+      }
+      order = [
+        salesforce.property__c.field.pick__c.valueSet.values.a,
+        salesforce.property__c.field.pick__c.valueSet.values.b,
+        salesforce.property__c.field.pick__c.valueSet.values.c,
+        salesforce.property__c.field.pick__c.valueSet.values.d,
+      ]
+    }
     sorted = false
     restricted = true
     visibleLines = 4

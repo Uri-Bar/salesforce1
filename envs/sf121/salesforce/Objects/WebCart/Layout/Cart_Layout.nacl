@@ -21,7 +21,7 @@ salesforce.Layout WebCart_Cart_Layout@bs {
               field = salesforce.WebCart.field.WebStoreId
             },
             {
-              behavior = "Edit"
+              behavior = "Required"
               field = salesforce.WebCart.field.PoNumber
             },
             {

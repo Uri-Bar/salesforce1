@@ -9,7 +9,6 @@ type salesforce.MessagingSession {
     scale = 0
     precision = 9
     unique = false
-    _hidden_value = true
   }
   salesforce.Lookup CaseId {
     apiName = "MessagingSession.CaseId"
@@ -22,7 +21,6 @@ type salesforce.MessagingSession {
     length = 150
     unique = false
     caseSensitive = false
-    _hidden_value = true
   }
   salesforce.Text ChannelName {
     apiName = "MessagingSession.ChannelName"
@@ -30,13 +28,11 @@ type salesforce.MessagingSession {
     length = 80
     unique = false
     caseSensitive = false
-    _hidden_value = true
   }
   salesforce.Picklist ChannelType {
     apiName = "MessagingSession.ChannelType"
     label = "Channel Type"
     restricted = true
-    _hidden_value = true
   }
   salesforce.Lookup ConversationId {
     apiName = "MessagingSession.ConversationId"
@@ -51,17 +47,14 @@ type salesforce.MessagingSession {
     apiName = "MessagingSession.EndUserAccountId"
     label = "Account ID"
     relationshipName = "EndUserAccount"
-    _hidden_value = true
   }
   salesforce.Lookup EndUserContactId {
     apiName = "MessagingSession.EndUserContactId"
     label = "Contact ID"
     relationshipName = "EndUserContact"
-    _hidden_value = true
   }
   salesforce.Unknown EndUserLanguage {
     apiName = "MessagingSession.EndUserLanguage"
-    _hidden_value = true
   }
   salesforce.Number EndUserMessageCount {
     apiName = "MessagingSession.EndUserMessageCount"
@@ -69,7 +62,6 @@ type salesforce.MessagingSession {
     scale = 0
     precision = 9
     unique = false
-    _hidden_value = true
   }
   salesforce.Picklist EndedByType {
     apiName = "MessagingSession.EndedByType"
@@ -78,7 +70,6 @@ type salesforce.MessagingSession {
   }
   salesforce.Unknown ErrorReason {
     apiName = "MessagingSession.ErrorReason"
-    _hidden_value = true
   }
   salesforce.Lookup LeadId {
     apiName = "MessagingSession.LeadId"
@@ -120,7 +111,6 @@ type salesforce.MessagingSession {
     length = 255
     unique = false
     caseSensitive = false
-    _hidden_value = true
   }
   salesforce.DateTime StartTime {
     apiName = "MessagingSession.StartTime"
@@ -217,6 +207,5 @@ type salesforce.MessagingSession {
   salesforce.Summary ChannelEndUserFormula {
     apiName = "MessagingSession.ChannelEndUserFormula"
     label = "Concatenated Messaging Channel and Messaging User"
-    _hidden_value = true
   }
 }

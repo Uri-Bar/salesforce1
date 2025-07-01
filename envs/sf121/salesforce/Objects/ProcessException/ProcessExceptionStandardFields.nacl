@@ -1,4 +1,7 @@
 type salesforce.ProcessException {
+  salesforce.Lookup AssetId {
+    apiName = "ProcessException.AssetId"
+  }
   salesforce.Lookup AttachedToId {
     apiName = "ProcessException.AttachedToId"
     label = "Attached To ID"
@@ -106,12 +109,10 @@ type salesforce.ProcessException {
     label = "Status Category"
     _required = true
     restricted = true
-    _hidden_value = true
   }
   salesforce.Picklist SeverityCategory {
     apiName = "ProcessException.SeverityCategory"
     label = "Severity Category"
     restricted = true
-    _hidden_value = true
   }
 }

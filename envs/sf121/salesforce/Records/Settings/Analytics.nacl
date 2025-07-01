@@ -49,6 +49,7 @@ salesforce.AnalyticsSettings {
   enableSFXJoinedReportsEnable = false
   enableSalesforceOutputConnector = false
   enableSecureImageSharing = false
+  enableShowHighContrastChart = false
   enableSnowflakeOutputConnector = false
   enableSummaryFilterOrgPref = false
   enableTableauHyperOutputConnector = false

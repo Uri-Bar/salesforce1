@@ -1,6 +1,7 @@
 salesforce.Flow ref {
   fullName = "ref"
   apiVersion = 56
+  areMetricsLoggedToDataCloud = false
   environments = "Default"
   interviewLabel = "ref {!$Flow.CurrentDateTime}"
   label = "ref"

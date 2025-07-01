@@ -75,21 +75,18 @@ type salesforce.CartItemPriceAdjustment {
     label = "Total Gross Amount"
     scale = 2
     precision = 18
-    _hidden_value = true
   }
   salesforce.Currency TotalNetAmount {
     apiName = "CartItemPriceAdjustment.TotalNetAmount"
     label = "Total Net Amount"
     scale = 2
     precision = 18
-    _hidden_value = true
   }
   salesforce.Currency TotalTax {
     apiName = "CartItemPriceAdjustment.TotalTax"
     label = "Total Tax"
     scale = 2
     precision = 18
-    _hidden_value = true
   }
   salesforce.Lookup WebCartAdjustmentGroupId {
     apiName = "CartItemPriceAdjustment.WebCartAdjustmentGroupId"

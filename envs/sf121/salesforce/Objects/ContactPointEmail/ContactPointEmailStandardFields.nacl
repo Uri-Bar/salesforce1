@@ -97,7 +97,6 @@ type salesforce.ContactPointEmail {
     length = 255
     unique = false
     caseSensitive = false
-    _hidden_value = true
   }
   salesforce.DateTime CreatedDate {
     apiName = "ContactPointEmail.CreatedDate"

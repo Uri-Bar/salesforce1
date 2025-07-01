@@ -75,7 +75,6 @@ type salesforce.Idea {
     apiName = "Idea.NumComments"
     label = "Number of Comments"
     precision = 9
-    _hidden_value = true
   }
   salesforce.Number VoteScore {
     apiName = "Idea.VoteScore"
@@ -83,7 +82,6 @@ type salesforce.Idea {
     scale = 4
     precision = 18
     unique = false
-    _hidden_value = true
   }
   salesforce.Number VoteTotal {
     apiName = "Idea.VoteTotal"
@@ -91,36 +89,30 @@ type salesforce.Idea {
     scale = 0
     precision = 18
     unique = false
-    _hidden_value = true
   }
   salesforce.Summary LastCommentDate {
     apiName = "Idea.LastCommentDate"
     label = "Last Idea Comment Date"
-    _hidden_value = true
   }
   salesforce.Lookup LastCommentId {
     apiName = "Idea.LastCommentId"
     label = "Idea Comment ID"
     relationshipName = "LastComment"
-    _hidden_value = true
   }
   salesforce.Lookup ParentIdeaId {
     apiName = "Idea.ParentIdeaId"
     label = "Idea ID"
     relationshipName = "ParentIdea"
-    _hidden_value = true
   }
   salesforce.Checkbox IsHtml {
     apiName = "Idea.IsHtml"
     label = "IsHtml"
     defaultValue = false
-    _hidden_value = true
   }
   salesforce.Checkbox IsMerged {
     apiName = "Idea.IsMerged"
     label = "Is Merged"
     defaultValue = false
-    _hidden_value = true
   }
   salesforce.Text CreatorFullPhotoUrl {
     apiName = "Idea.CreatorFullPhotoUrl"
@@ -128,7 +120,6 @@ type salesforce.Idea {
     length = 255
     unique = false
     caseSensitive = false
-    _hidden_value = true
   }
   salesforce.Text CreatorSmallPhotoUrl {
     apiName = "Idea.CreatorSmallPhotoUrl"
@@ -136,7 +127,6 @@ type salesforce.Idea {
     length = 255
     unique = false
     caseSensitive = false
-    _hidden_value = true
   }
   salesforce.Text CreatorName {
     apiName = "Idea.CreatorName"
@@ -144,6 +134,5 @@ type salesforce.Idea {
     length = 121
     unique = false
     caseSensitive = false
-    _hidden_value = true
   }
 }

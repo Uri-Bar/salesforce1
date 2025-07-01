@@ -57,6 +57,5 @@ type salesforce.UserPrioritizedRecord {
     length = 3
     unique = false
     caseSensitive = false
-    _hidden_value = true
   }
 }

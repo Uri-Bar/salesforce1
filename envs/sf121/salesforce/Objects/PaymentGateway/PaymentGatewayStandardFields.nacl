@@ -80,6 +80,5 @@ type salesforce.PaymentGateway {
     length = 40
     unique = false
     caseSensitive = false
-    _hidden_value = true
   }
 }

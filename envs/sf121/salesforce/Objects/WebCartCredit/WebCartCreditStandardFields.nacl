@@ -1,0 +1,17 @@
+type salesforce.WebCartCredit {
+  salesforce.Unknown AppliedAmount {
+    apiName = "WebCartCredit.AppliedAmount"
+  }
+  salesforce.Unknown CreditReference {
+    apiName = "WebCartCredit.CreditReference"
+  }
+  salesforce.Unknown CreditType {
+    apiName = "WebCartCredit.CreditType"
+  }
+  salesforce.Unknown LastFour {
+    apiName = "WebCartCredit.LastFour"
+  }
+  salesforce.MasterDetail WebCartId {
+    apiName = "WebCartCredit.WebCartId"
+  }
+}

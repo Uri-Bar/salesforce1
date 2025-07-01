@@ -56,7 +56,6 @@ type salesforce.StreamingChannel {
     apiName = "StreamingChannel.IsDynamic"
     label = "Is Dynamically Created"
     defaultValue = false
-    _hidden_value = true
   }
   salesforce.Text Description {
     apiName = "StreamingChannel.Description"

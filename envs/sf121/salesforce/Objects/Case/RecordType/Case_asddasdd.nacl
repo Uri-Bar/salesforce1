@@ -8,15 +8,15 @@ salesforce.RecordType Case_asddasdd {
       picklist = salesforce.Case.field.Origin
       values = [
         {
-          fullName = "Email"
+          fullName = salesforce.StandardValueSet.instance.CaseOrigin.standardValue.values.Email.fullName
           default = false
         },
         {
-          fullName = "Phone"
+          fullName = salesforce.StandardValueSet.instance.CaseOrigin.standardValue.values.Phone.fullName
           default = false
         },
         {
-          fullName = "Web"
+          fullName = salesforce.StandardValueSet.instance.CaseOrigin.standardValue.values.Web.fullName
           default = false
         },
       ]
@@ -25,11 +25,11 @@ salesforce.RecordType Case_asddasdd {
       picklist = salesforce.Case.field.PotentialLiability__c
       values = [
         {
-          fullName = "No"
+          fullName = salesforce.Case.field.PotentialLiability__c.valueSet.values.No.fullName
           default = false
         },
         {
-          fullName = "Yes"
+          fullName = salesforce.Case.field.PotentialLiability__c.valueSet.values.Yes.fullName
           default = false
         },
       ]
@@ -38,15 +38,15 @@ salesforce.RecordType Case_asddasdd {
       picklist = salesforce.Case.field.Priority
       values = [
         {
-          fullName = "High"
+          fullName = salesforce.StandardValueSet.instance.CasePriority.standardValue.values.High.fullName
           default = false
         },
         {
-          fullName = "Low"
+          fullName = salesforce.StandardValueSet.instance.CasePriority.standardValue.values.Low.fullName
           default = false
         },
         {
-          fullName = "Medium"
+          fullName = salesforce.StandardValueSet.instance.CasePriority.standardValue.values.Medium.fullName
           default = true
         },
       ]
@@ -55,39 +55,39 @@ salesforce.RecordType Case_asddasdd {
       picklist = salesforce.Case.field.Product__c
       values = [
         {
-          fullName = "GC1020"
+          fullName = salesforce.Case.field.Product__c.valueSet.values.GC1020.fullName
           default = false
         },
         {
-          fullName = "GC1040"
+          fullName = salesforce.Case.field.Product__c.valueSet.values.GC1040.fullName
           default = false
         },
         {
-          fullName = "GC1060"
+          fullName = salesforce.Case.field.Product__c.valueSet.values.GC1060.fullName
           default = false
         },
         {
-          fullName = "GC3020"
+          fullName = salesforce.Case.field.Product__c.valueSet.values.GC3020.fullName
           default = false
         },
         {
-          fullName = "GC3040"
+          fullName = salesforce.Case.field.Product__c.valueSet.values.GC3040.fullName
           default = false
         },
         {
-          fullName = "GC3060"
+          fullName = salesforce.Case.field.Product__c.valueSet.values.GC3060.fullName
           default = false
         },
         {
-          fullName = "GC5020"
+          fullName = salesforce.Case.field.Product__c.valueSet.values.GC5020.fullName
           default = false
         },
         {
-          fullName = "GC5040"
+          fullName = salesforce.Case.field.Product__c.valueSet.values.GC5040.fullName
           default = false
         },
         {
-          fullName = "GC5060"
+          fullName = salesforce.Case.field.Product__c.valueSet.values.GC5060.fullName
           default = false
         },
       ]
@@ -96,31 +96,31 @@ salesforce.RecordType Case_asddasdd {
       picklist = salesforce.Case.field.Reason
       values = [
         {
-          fullName = "Breakdown"
+          fullName = salesforce.StandardValueSet.instance.CaseReason.standardValue.values.Breakdown.fullName
           default = false
         },
         {
-          fullName = "Equipment Complexity"
+          fullName = salesforce.StandardValueSet.instance.CaseReason.standardValue.values.Equipment_Complexity@s.fullName
           default = false
         },
         {
-          fullName = "Equipment Design"
+          fullName = salesforce.StandardValueSet.instance.CaseReason.standardValue.values.Equipment_Design@s.fullName
           default = false
         },
         {
-          fullName = "Feedback"
+          fullName = salesforce.StandardValueSet.instance.CaseReason.standardValue.values.Feedback.fullName
           default = false
         },
         {
-          fullName = "Installation"
+          fullName = salesforce.StandardValueSet.instance.CaseReason.standardValue.values.Installation.fullName
           default = false
         },
         {
-          fullName = "Other"
+          fullName = salesforce.StandardValueSet.instance.CaseReason.standardValue.values.Other.fullName
           default = false
         },
         {
-          fullName = "Performance"
+          fullName = salesforce.StandardValueSet.instance.CaseReason.standardValue.values.Performance.fullName
           default = false
         },
       ]
@@ -129,11 +129,11 @@ salesforce.RecordType Case_asddasdd {
       picklist = salesforce.Case.field.SLAViolation__c
       values = [
         {
-          fullName = "No"
+          fullName = salesforce.Case.field.SLAViolation__c.valueSet.values.No.fullName
           default = false
         },
         {
-          fullName = "Yes"
+          fullName = salesforce.Case.field.SLAViolation__c.valueSet.values.Yes.fullName
           default = false
         },
       ]
@@ -142,23 +142,23 @@ salesforce.RecordType Case_asddasdd {
       picklist = salesforce.Case.field.Type
       values = [
         {
-          fullName = "Electrical"
+          fullName = salesforce.StandardValueSet.instance.CaseType.standardValue.values.Electrical.fullName
           default = false
         },
         {
-          fullName = "Electronic"
+          fullName = salesforce.StandardValueSet.instance.CaseType.standardValue.values.Electronic.fullName
           default = false
         },
         {
-          fullName = "Mechanical"
+          fullName = salesforce.StandardValueSet.instance.CaseType.standardValue.values.Mechanical.fullName
           default = false
         },
         {
-          fullName = "Other"
+          fullName = salesforce.StandardValueSet.instance.CaseType.standardValue.values.Other.fullName
           default = false
         },
         {
-          fullName = "Structural"
+          fullName = salesforce.StandardValueSet.instance.CaseType.standardValue.values.Structural.fullName
           default = false
         },
       ]

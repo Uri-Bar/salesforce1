@@ -36,7 +36,6 @@ type salesforce.PaymentLineInvoice {
   salesforce.Summary EffectiveImpactAmount {
     apiName = "PaymentLineInvoice.EffectiveImpactAmount"
     label = "Effective Impact Amount"
-    _hidden_value = true
   }
   salesforce.Picklist HasBeenUnapplied {
     apiName = "PaymentLineInvoice.HasBeenUnapplied"
@@ -47,7 +46,6 @@ type salesforce.PaymentLineInvoice {
   salesforce.Summary ImpactAmount {
     apiName = "PaymentLineInvoice.ImpactAmount"
     label = "Impact Amount"
-    _hidden_value = true
   }
   salesforce.MasterDetail InvoiceId {
     apiName = "PaymentLineInvoice.InvoiceId"
@@ -60,7 +58,6 @@ type salesforce.PaymentLineInvoice {
     label = "Payment Balance"
     scale = 2
     precision = 18
-    _hidden_value = true
   }
   salesforce.Lookup PaymentId {
     apiName = "PaymentLineInvoice.PaymentId"

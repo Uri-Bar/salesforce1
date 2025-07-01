@@ -20,6 +20,8 @@ salesforce.UserInterfaceSettings {
   enableSldsV2 = false
   enableTabOrganizer = true
   multiColumnSort = false
+  multiColumnSortLv = true
+  multiColumnSortRl = true
   fullName = "UserInterface"
   _alias = "UserInterface"
 }

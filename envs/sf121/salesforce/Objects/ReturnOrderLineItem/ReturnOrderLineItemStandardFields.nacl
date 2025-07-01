@@ -110,22 +110,18 @@ type salesforce.ReturnOrderLineItem {
   salesforce.Summary TotalAdjustmentAmount {
     apiName = "ReturnOrderLineItem.TotalAdjustmentAmount"
     label = "Adjustments"
-    _hidden_value = true
   }
   salesforce.Summary TotalAdjustmentAmountWithTax {
     apiName = "ReturnOrderLineItem.TotalAdjustmentAmountWithTax"
     label = "Adjustments with Tax"
-    _hidden_value = true
   }
   salesforce.Summary TotalAdjustmentTaxAmount {
     apiName = "ReturnOrderLineItem.TotalAdjustmentTaxAmount"
     label = "Adjustments Tax"
-    _hidden_value = true
   }
   salesforce.Summary TotalAmount {
     apiName = "ReturnOrderLineItem.TotalAmount"
     label = "Total with Tax"
-    _hidden_value = true
   }
   salesforce.Currency TotalLineAmount {
     apiName = "ReturnOrderLineItem.TotalLineAmount"
@@ -136,22 +132,18 @@ type salesforce.ReturnOrderLineItem {
   salesforce.Summary TotalLineAmountWithTax {
     apiName = "ReturnOrderLineItem.TotalLineAmountWithTax"
     label = "Line Subtotal with Tax"
-    _hidden_value = true
   }
   salesforce.Summary TotalLineTaxAmount {
     apiName = "ReturnOrderLineItem.TotalLineTaxAmount"
     label = "Line Subtotal Tax"
-    _hidden_value = true
   }
   salesforce.Summary TotalPrice {
     apiName = "ReturnOrderLineItem.TotalPrice"
     label = "Pretax Total"
-    _hidden_value = true
   }
   salesforce.Summary TotalTaxAmount {
     apiName = "ReturnOrderLineItem.TotalTaxAmount"
     label = "Tax"
-    _hidden_value = true
   }
   salesforce.Picklist TypeCode {
     apiName = "ReturnOrderLineItem.TypeCode"

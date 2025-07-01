@@ -24,7 +24,6 @@ type salesforce.QuickTextUsage {
     length = 255
     unique = false
     caseSensitive = false
-    _hidden_value = true
   }
   salesforce.DateTime CreatedDate {
     apiName = "QuickTextUsage.CreatedDate"
@@ -58,35 +57,29 @@ type salesforce.QuickTextUsage {
     label = "Quick Text ID"
     _required = true
     relationshipName = "QuickText"
-    _hidden_value = true
   }
   salesforce.Picklist Channel {
     apiName = "QuickTextUsage.Channel"
     label = "Channel"
     restricted = true
-    _hidden_value = true
   }
   salesforce.Picklist LaunchSource {
     apiName = "QuickTextUsage.LaunchSource"
     label = "Launch Source"
     restricted = true
-    _hidden_value = true
   }
   salesforce.DateTime LoggedTime {
     apiName = "QuickTextUsage.LoggedTime"
     label = "Logged Time"
-    _hidden_value = true
   }
   salesforce.Lookup UserId {
     apiName = "QuickTextUsage.UserId"
     label = "User ID"
     relationshipName = "User"
-    _hidden_value = true
   }
   salesforce.Picklist AppContext {
     apiName = "QuickTextUsage.AppContext"
     label = "App Context"
     restricted = true
-    _hidden_value = true
   }
 }
