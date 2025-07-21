@@ -1,6 +1,0 @@
-salesforce.Group p4 {
-  fullName = "p4"
-  doesIncludeBosses = true
-  name = "p4"
-  _alias = "p4"
-}
