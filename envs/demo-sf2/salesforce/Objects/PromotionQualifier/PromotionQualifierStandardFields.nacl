@@ -1,7 +1,4 @@
 type salesforce.PromotionQualifier {
-  salesforce.Unknown ApproachingDiscountThreshold {
-    apiName = "PromotionQualifier.ApproachingDiscountThreshold"
-  }
   salesforce.Currency MinimumAmount {
     apiName = "PromotionQualifier.MinimumAmount"
     label = "Minimum Amount"
@@ -113,5 +110,11 @@ type salesforce.PromotionQualifier {
     restricted = true
     _required = true
     label = "Qualifier Rule Criteria Type"
+  }
+  salesforce.Currency ApproachingDiscountThreshold {
+    apiName = "PromotionQualifier.ApproachingDiscountThreshold"
+    label = "Approaching Discount Threshold"
+    scale = 2
+    precision = 18
   }
 }

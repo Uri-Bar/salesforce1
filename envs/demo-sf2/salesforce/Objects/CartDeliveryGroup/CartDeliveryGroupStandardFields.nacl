@@ -37,12 +37,6 @@ type salesforce.CartDeliveryGroup {
     apiName = "CartDeliveryGroup.DesiredDeliveryDate"
     label = "Desired Delivery Date"
   }
-  salesforce.Unknown GiftMessage {
-    apiName = "CartDeliveryGroup.GiftMessage"
-  }
-  salesforce.Unknown GiftToName {
-    apiName = "CartDeliveryGroup.GiftToName"
-  }
   salesforce.Currency GrandTotalAmount {
     apiName = "CartDeliveryGroup.GrandTotalAmount"
     label = "Grand Total Amount"
@@ -53,9 +47,6 @@ type salesforce.CartDeliveryGroup {
     apiName = "CartDeliveryGroup.IsDefault"
     defaultValue = false
     label = "Is Default"
-  }
-  salesforce.Unknown IsGift {
-    apiName = "CartDeliveryGroup.IsGift"
   }
   salesforce.Text Name {
     apiName = "CartDeliveryGroup.Name"
@@ -176,5 +167,22 @@ type salesforce.CartDeliveryGroup {
     scale = 0
     precision = 9
     unique = false
+  }
+  salesforce.LongTextArea GiftMessage {
+    apiName = "CartDeliveryGroup.GiftMessage"
+    label = "Gift message"
+    length = 2000
+  }
+  salesforce.Text GiftToName {
+    apiName = "CartDeliveryGroup.GiftToName"
+    label = "Gift recipient name"
+    length = 255
+    unique = false
+    caseSensitive = false
+  }
+  salesforce.Checkbox IsGift {
+    apiName = "CartDeliveryGroup.IsGift"
+    label = "Is this is a gift?"
+    defaultValue = false
   }
 }

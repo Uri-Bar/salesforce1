@@ -675,9 +675,17 @@ type salesforce.User {
     apiName = "User.UserPreferencesHasSentWarningEmail240"
     label = "HasSentWarningEmail240"
   }
+  salesforce.Checkbox UserPreferencesDismissPersonalSpaceLegalMessage {
+    apiName = "User.UserPreferencesDismissPersonalSpaceLegalMessage"
+    label = "DismissPersonalSpaceLegalMessage"
+  }
   salesforce.Checkbox UserPreferencesNativeEmailClient {
     apiName = "User.UserPreferencesNativeEmailClient"
     label = "NativeEmailClient"
+  }
+  salesforce.Checkbox UserPreferencesHideManagedEcaMobilePubModal {
+    apiName = "User.UserPreferencesHideManagedEcaMobilePubModal"
+    label = "HideManagedEcaMobilePubModal"
   }
   salesforce.Checkbox UserPreferencesShowForecastingRoundedAmounts {
     apiName = "User.UserPreferencesShowForecastingRoundedAmounts"

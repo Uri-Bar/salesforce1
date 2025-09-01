@@ -129,15 +129,6 @@ type salesforce.Invoice {
     apiName = "Invoice.TotalTaxAmount"
     label = "Total Tax"
   }
-  salesforce.Unknown WriteOffStatus {
-    apiName = "Invoice.WriteOffStatus"
-  }
-  salesforce.Unknown WriteOffTotalChargeAmount {
-    apiName = "Invoice.WriteOffTotalChargeAmount"
-  }
-  salesforce.Unknown WriteOffTotalTaxAmount {
-    apiName = "Invoice.WriteOffTotalTaxAmount"
-  }
   serviceid Id {
     apiName = "Invoice.Id"
     label = "Invoice ID"
@@ -181,5 +172,22 @@ type salesforce.Invoice {
     apiName = "Invoice.SystemModstamp"
     label = "System Modstamp"
     _hidden_value = true
+  }
+  salesforce.Picklist WriteOffStatus {
+    apiName = "Invoice.WriteOffStatus"
+    label = "Write Off Status"
+    restricted = true
+  }
+  salesforce.Currency WriteOffTotalChargeAmount {
+    apiName = "Invoice.WriteOffTotalChargeAmount"
+    label = "Write Off Total Charge Amount"
+    scale = 2
+    precision = 18
+  }
+  salesforce.Currency WriteOffTotalTaxAmount {
+    apiName = "Invoice.WriteOffTotalTaxAmount"
+    label = "Write Off Total Tax Amount"
+    scale = 2
+    precision = 18
   }
 }

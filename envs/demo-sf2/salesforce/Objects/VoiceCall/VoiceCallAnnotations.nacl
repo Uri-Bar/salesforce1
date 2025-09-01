@@ -75,6 +75,20 @@ type salesforce.VoiceCall {
       type = "Default"
     },
     {
+      actionName = "CreateIncident"
+      type = "Default"
+    },
+    {
+      actionName = "CreateIncident"
+      formFactor = "Large"
+      type = "Default"
+    },
+    {
+      actionName = "CreateIncident"
+      formFactor = "Small"
+      type = "Default"
+    },
+    {
       actionName = "Edit"
       type = "Default"
     },

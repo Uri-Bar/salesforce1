@@ -1,11 +1,24 @@
 salesforce.IncidentMgmtSettings {
   fullName = "IncidentMgmt"
   enableAlertBroadcastType = false
+  enableAutoClosureOfChildIncident = false
+  enableAutoCreationOfProblem = false
+  enableChangeRequestValidations = false
+  enableChatToIncidentAi = false
+  enableCommonPriorityMatrix = false
+  enableDedupE2IncidentAttachment = false
   enableEmailBroadcastType = false
+  enableEmailToIncident = false
+  enableEmailToIncidentAi = false
   enableITSMChangeMgmt = false
   enableITSMIncidentMgmt = false
+  enableITSMMajorIncParent = false
   enableITSMProblemMgmt = false
   enableIncidentMgmt = true
+  enableIncidentValidations = false
+  enableProblemValidations = false
+  enableRiskAssessment = false
+  enableSaveE2IncidentAttachment = false
   enableSiteBannerBroadcastType = false
   enableSlackBroadcastType = false
   _alias = "IncidentMgmt"

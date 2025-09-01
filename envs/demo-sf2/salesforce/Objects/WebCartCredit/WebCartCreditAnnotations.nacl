@@ -57,10 +57,10 @@ type salesforce.WebCartCredit {
   }
   apiName = "WebCartCredit"
   metadataType = "CustomObject"
-  label = "WebCartCredit"
+  label = "Web Cart Credit"
   description = ""
   compactLayoutAssignment = "SYSTEM"
   enableFeeds = false
   externalSharingModel = "ControlledByParent"
-  _alias = "WebCartCredit"
+  _alias = "Web Cart Credit"
 }

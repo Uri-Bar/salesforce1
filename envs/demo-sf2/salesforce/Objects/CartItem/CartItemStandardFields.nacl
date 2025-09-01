@@ -52,9 +52,6 @@ type salesforce.CartItem {
     scale = 2
     precision = 18
   }
-  salesforce.Unknown IsShippingChargeNotApplicable {
-    apiName = "CartItem.IsShippingChargeNotApplicable"
-  }
   salesforce.Summary ItemizedAdjustmentAmount {
     apiName = "CartItem.ItemizedAdjustmentAmount"
     label = "Item Promotions Total"
@@ -130,9 +127,6 @@ type salesforce.CartItem {
     label = "SKU"
     unique = false
     caseSensitive = false
-  }
-  salesforce.Unknown SubType {
-    apiName = "CartItem.SubType"
   }
   salesforce.Unknown SubscriptionTerm {
     apiName = "CartItem.SubscriptionTerm"
@@ -340,5 +334,15 @@ type salesforce.CartItem {
     precision = 18
     scale = 2
     unique = false
+  }
+  salesforce.Checkbox IsShippingChargeNotApplicable {
+    apiName = "CartItem.IsShippingChargeNotApplicable"
+    label = "Is Shipping Charge Not Applicable"
+    defaultValue = false
+  }
+  salesforce.Picklist SubType {
+    apiName = "CartItem.SubType"
+    label = "SubType"
+    restricted = true
   }
 }

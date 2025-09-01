@@ -16,9 +16,6 @@ type salesforce.CreditMemo {
     _required = true
     label = "Account ID"
   }
-  salesforce.Unknown Category {
-    apiName = "CreditMemo.Category"
-  }
   salesforce.Unknown CorpCrcyCnvTotAmtWithTax {
     apiName = "CreditMemo.CorpCrcyCnvTotAmtWithTax"
   }
@@ -79,6 +76,7 @@ type salesforce.CreditMemo {
   }
   salesforce.Picklist ReasonCode {
     apiName = "CreditMemo.ReasonCode"
+    label = "Reason Code"
   }
   salesforce.Lookup ReferenceEntityId {
     apiName = "CreditMemo.ReferenceEntityId"
@@ -192,5 +190,10 @@ type salesforce.CreditMemo {
     apiName = "CreditMemo.SystemModstamp"
     label = "System Modstamp"
     _hidden_value = true
+  }
+  salesforce.Picklist Category {
+    apiName = "CreditMemo.Category"
+    label = "Category"
+    restricted = true
   }
 }
