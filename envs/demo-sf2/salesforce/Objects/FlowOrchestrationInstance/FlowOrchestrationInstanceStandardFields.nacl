@@ -67,9 +67,19 @@ type salesforce.FlowOrchestrationInstance {
     relationshipName = "Interview"
     label = "Interview ID"
   }
+  salesforce.Unknown AuxiliaryTriggeringRecord {
+    apiName = "FlowOrchestrationInstance.AuxiliaryTriggeringRecord"
+  }
   salesforce.Unknown Duration {
     apiName = "FlowOrchestrationInstance.Duration"
     label = "Duration"
+  }
+  salesforce.Text OrchestrationName {
+    apiName = "FlowOrchestrationInstance.OrchestrationName"
+    label = "Orchestration Developer Name"
+    length = 80
+    unique = false
+    caseSensitive = false
   }
   salesforce.Text CurrentStage {
     apiName = "FlowOrchestrationInstance.CurrentStage"
@@ -98,5 +108,15 @@ type salesforce.FlowOrchestrationInstance {
     length = 40
     unique = false
     caseSensitive = false
+  }
+  salesforce.Picklist FlowType {
+    apiName = "FlowOrchestrationInstance.FlowType"
+    label = "Flow Type"
+    restricted = true
+  }
+  salesforce.Picklist FlowDefinitionVersionName {
+    apiName = "FlowOrchestrationInstance.FlowDefinitionVersionName"
+    label = "Flow Definition Version Name"
+    restricted = true
   }
 }

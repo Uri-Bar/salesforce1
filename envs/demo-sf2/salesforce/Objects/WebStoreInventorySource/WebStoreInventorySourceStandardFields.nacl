@@ -1,4 +1,8 @@
 type salesforce.WebStoreInventorySource {
+  salesforce.Unknown DoesAllowGuestInventoryLevel {
+    apiName = "WebStoreInventorySource.DoesAllowGuestInventoryLevel"
+    inlineHelpText = "Allows guest user access to inventory level."
+  }
   salesforce.Number InventoryCacheTtl {
     apiName = "WebStoreInventorySource.InventoryCacheTtl"
     inlineHelpText = "The Inventory Cache Time To Live must be between 300 and 14,400. The default for a new store is 1,440."

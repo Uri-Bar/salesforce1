@@ -32,7 +32,6 @@ type salesforce.CreditMemo {
   }
   salesforce.Date CreditDate {
     apiName = "CreditMemo.CreditDate"
-    _required = true
     label = "Credit Date"
   }
   salesforce.Text CreditMemoNumber {

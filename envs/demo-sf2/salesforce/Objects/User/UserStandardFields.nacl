@@ -4,6 +4,9 @@ type salesforce.User {
     relationshipName = "Manager"
     label = "Manager ID"
   }
+  salesforce.Lookup WorkspaceId {
+    apiName = "User.WorkspaceId"
+  }
   serviceid Id {
     apiName = "User.Id"
     label = "User ID"
@@ -766,6 +769,9 @@ type salesforce.User {
     restricted = true
     _required = true
     label = "Default Notification Frequency when Joining Groups"
+  }
+  salesforce.Unknown IsSystemControlled {
+    apiName = "User.IsSystemControlled"
   }
   salesforce.Number JigsawImportLimitOverride {
     apiName = "User.JigsawImportLimitOverride"

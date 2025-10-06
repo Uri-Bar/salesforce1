@@ -1,0 +1,36 @@
+salesforce.LightningPage AcademicOperations_UtilityBar {
+  description = "The default utility bar for the Academic Operations application."
+  flexiPageRegions = [
+    {
+      itemInstances = [
+        {
+          componentInstance = {
+            componentName = "opencti:softPhone"
+            identifier = "opencti_softphone"
+          }
+        },
+        {
+          componentInstance = {
+            componentName = "notes:utilityBarNoteList"
+            identifier = "notes_utilityBarNoteList"
+          }
+        },
+        {
+          componentInstance = {
+            componentName = "console:history"
+            identifier = "console_history"
+          }
+        },
+      ]
+      name = "utilityItems"
+      type = "Region"
+    },
+  ]
+  masterLabel = "Academic Operations App Utility Bar"
+  template = {
+    name = "one:utilityBarTemplateDesktop"
+  }
+  type = "UtilityBar"
+  fullName = "AcademicOperations_UtilityBar"
+  _alias = "AcademicOperations_UtilityBar"
+}

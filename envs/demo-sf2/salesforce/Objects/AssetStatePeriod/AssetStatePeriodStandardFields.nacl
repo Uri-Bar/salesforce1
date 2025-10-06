@@ -12,9 +12,21 @@ type salesforce.AssetStatePeriod {
     _required = true
     label = "Asset ID"
   }
+  salesforce.Unknown BillingFrequency {
+    apiName = "AssetStatePeriod.BillingFrequency"
+  }
+  salesforce.Unknown Discount {
+    apiName = "AssetStatePeriod.Discount"
+  }
+  salesforce.Unknown DiscountAmount {
+    apiName = "AssetStatePeriod.DiscountAmount"
+  }
   salesforce.DateTime EndDate {
     apiName = "AssetStatePeriod.EndDate"
     label = "End Date"
+  }
+  salesforce.Lookup LegalEntityId {
+    apiName = "AssetStatePeriod.LegalEntityId"
   }
   salesforce.Currency Mrr {
     apiName = "AssetStatePeriod.Mrr"
@@ -35,6 +47,12 @@ type salesforce.AssetStatePeriod {
     apiName = "AssetStatePeriod.StartDate"
     _required = true
     label = "Start Date"
+  }
+  salesforce.Unknown UnitPrice {
+    apiName = "AssetStatePeriod.UnitPrice"
+  }
+  salesforce.Unknown UnitPriceUplift {
+    apiName = "AssetStatePeriod.UnitPriceUplift"
   }
   serviceid Id {
     apiName = "AssetStatePeriod.Id"

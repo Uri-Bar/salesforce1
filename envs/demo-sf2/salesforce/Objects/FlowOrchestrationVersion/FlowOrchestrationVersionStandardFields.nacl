@@ -1,0 +1,130 @@
+type salesforce.FlowOrchestrationVersion {
+  serviceid Id {
+    apiName = "FlowOrchestrationVersion.Id"
+    label = "Orchestration Version ID"
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Checkbox IsDeleted {
+    apiName = "FlowOrchestrationVersion.IsDeleted"
+    label = "Deleted"
+    defaultValue = false
+    _hidden_value = true
+  }
+  salesforce.Text Name {
+    apiName = "FlowOrchestrationVersion.Name"
+    label = "Orchestration Version Name"
+    _required = true
+    length = 255
+    unique = false
+    caseSensitive = false
+  }
+  salesforce.DateTime CreatedDate {
+    apiName = "FlowOrchestrationVersion.CreatedDate"
+    label = "Created Date"
+    _hidden_value = true
+  }
+  salesforce.Lookup CreatedById {
+    apiName = "FlowOrchestrationVersion.CreatedById"
+    label = "Created By ID"
+    relationshipName = "CreatedBy"
+    _hidden_value = true
+  }
+  salesforce.DateTime LastModifiedDate {
+    apiName = "FlowOrchestrationVersion.LastModifiedDate"
+    label = "Last Modified Date"
+    _hidden_value = true
+  }
+  salesforce.Lookup LastModifiedById {
+    apiName = "FlowOrchestrationVersion.LastModifiedById"
+    label = "Last Modified By ID"
+    relationshipName = "LastModifiedBy"
+    _hidden_value = true
+  }
+  salesforce.DateTime SystemModstamp {
+    apiName = "FlowOrchestrationVersion.SystemModstamp"
+    label = "System Modstamp"
+    _hidden_value = true
+  }
+  salesforce.Lookup FlowOrchestrationId {
+    apiName = "FlowOrchestrationVersion.FlowOrchestrationId"
+    label = "Orchestration ID"
+    _required = true
+    relationshipName = "FlowOrchestration"
+  }
+  salesforce.Number VersionNumber {
+    apiName = "FlowOrchestrationVersion.VersionNumber"
+    label = "Version Number"
+    scale = 0
+    precision = 9
+    unique = false
+  }
+  salesforce.Lookup ActivatedById {
+    apiName = "FlowOrchestrationVersion.ActivatedById"
+    label = "User ID"
+    relationshipName = "ActivatedBy"
+  }
+  salesforce.DateTime ActivatedDate {
+    apiName = "FlowOrchestrationVersion.ActivatedDate"
+    label = "Activated Date"
+  }
+  salesforce.Picklist OrchestrationType {
+    apiName = "FlowOrchestrationVersion.OrchestrationType"
+    label = "Orchestration Type"
+    restricted = true
+  }
+  salesforce.Picklist Status {
+    apiName = "FlowOrchestrationVersion.Status"
+    label = "Status"
+    restricted = true
+  }
+  salesforce.LongTextArea Description {
+    apiName = "FlowOrchestrationVersion.Description"
+    label = "Description"
+    length = 65535
+  }
+  salesforce.Picklist RunInMode {
+    apiName = "FlowOrchestrationVersion.RunInMode"
+    label = "Run in Mode"
+    restricted = true
+  }
+  salesforce.Number ApiVersion {
+    apiName = "FlowOrchestrationVersion.ApiVersion"
+    label = "API Version"
+    scale = 1
+    precision = 18
+    unique = false
+  }
+  salesforce.Checkbox IsTemplate {
+    apiName = "FlowOrchestrationVersion.IsTemplate"
+    label = "Template"
+    defaultValue = false
+  }
+  salesforce.Text TriggerObjectOrEventLabel {
+    apiName = "FlowOrchestrationVersion.TriggerObjectOrEventLabel"
+    label = "Triggering Object or Platform Event Label"
+    length = 255
+    unique = false
+    caseSensitive = false
+  }
+  salesforce.Lookup SourceTemplateId {
+    apiName = "FlowOrchestrationVersion.SourceTemplateId"
+    label = "Orchestration ID"
+    relationshipName = "SourceTemplate"
+  }
+  salesforce.Checkbox IsOverridable {
+    apiName = "FlowOrchestrationVersion.IsOverridable"
+    label = "Overridable"
+    defaultValue = false
+  }
+  salesforce.Lookup OverriddenById {
+    apiName = "FlowOrchestrationVersion.OverriddenById"
+    label = "Orchestration ID"
+    relationshipName = "OverriddenBy"
+  }
+  salesforce.Lookup OverriddenOrchestrationId {
+    apiName = "FlowOrchestrationVersion.OverriddenOrchestrationId"
+    label = "Orchestration ID"
+    relationshipName = "OverriddenOrchestration"
+  }
+}

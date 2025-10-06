@@ -80,4 +80,11 @@ type salesforce.FlowOrchestrationStageInstance {
     scale = 0
     unique = false
   }
+  salesforce.Text OrchestrationName {
+    apiName = "FlowOrchestrationStageInstance.OrchestrationName"
+    label = "Orchestration Developer Name"
+    length = 80
+    unique = false
+    caseSensitive = false
+  }
 }

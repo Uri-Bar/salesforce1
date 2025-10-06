@@ -95,6 +95,18 @@ type salesforce.FlowOrchestrationWorkItem {
     length = 32768
     label = "Screen Flow Inputs"
   }
+  salesforce.Text OrchestrationName {
+    apiName = "FlowOrchestrationWorkItem.OrchestrationName"
+    label = "Orchestration Developer Name"
+    length = 80
+    unique = false
+    caseSensitive = false
+  }
+  salesforce.Picklist FlowType {
+    apiName = "FlowOrchestrationWorkItem.FlowType"
+    label = "Flow Type"
+    restricted = true
+  }
   salesforce.Unknown ElapsedTimeSinceCreationInSec {
     apiName = "FlowOrchestrationWorkItem.ElapsedTimeSinceCreationInSec"
     label = "Time Since Creation"

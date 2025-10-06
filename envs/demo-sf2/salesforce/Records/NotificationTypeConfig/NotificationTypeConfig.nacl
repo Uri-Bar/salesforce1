@@ -10,6 +10,13 @@ salesforce.NotificationTypeConfig NotificationTypeConfig {
     },
     {
       notificationChannels = {
+        desktopEnabled = true
+        mobileEnabled = false
+      }
+      notificationType = "ads_notification"
+    },
+    {
+      notificationChannels = {
         desktopEnabled = false
         mobileEnabled = false
       }
@@ -181,6 +188,13 @@ salesforce.NotificationTypeConfig NotificationTypeConfig {
         desktopEnabled = true
         mobileEnabled = false
       }
+      notificationType = "invoice_payment_status"
+    },
+    {
+      notificationChannels = {
+        desktopEnabled = true
+        mobileEnabled = false
+      }
       notificationType = "mailapp_alert"
     },
     {
@@ -221,6 +235,13 @@ salesforce.NotificationTypeConfig NotificationTypeConfig {
     {
       notificationChannels = {
         desktopEnabled = true
+        mobileEnabled = false
+      }
+      notificationType = "personal_org_transfer"
+    },
+    {
+      notificationChannels = {
+        desktopEnabled = true
         mobileEnabled = true
       }
       notificationType = "profile_post"
@@ -231,6 +252,13 @@ salesforce.NotificationTypeConfig NotificationTypeConfig {
         mobileEnabled = true
       }
       notificationType = "quote_to_order"
+    },
+    {
+      notificationChannels = {
+        desktopEnabled = true
+        mobileEnabled = true
+      }
+      notificationType = "quote_to_order_async"
     },
     {
       notificationChannels = {

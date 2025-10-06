@@ -27,6 +27,7 @@ salesforce.SecuritySettings {
   sessionSettings = {
     allowUserAuthenticationByCertificate = false
     allowUserCertBasedAuthenticationWithOcspValidation = false
+    auraBoxcarReductionPref = false
     canConfirmEmailChangeInLightningCommunities = true
     canConfirmIdentityBySmsOnly = true
     disableTimeoutWarning = false
@@ -68,7 +69,7 @@ salesforce.SecuritySettings {
     redirectBlockModeEnabled = false
     redirectionWarning = true
     referrerPolicy = true
-    referrerPolicyDirective = "origin-when-cross-origin"
+    referrerPolicyDirective = "strict-origin-when-cross-origin"
     requireHttpOnly = false
     sendCspForUncommonClients = false
     sessionTimeout = "TwoHours"

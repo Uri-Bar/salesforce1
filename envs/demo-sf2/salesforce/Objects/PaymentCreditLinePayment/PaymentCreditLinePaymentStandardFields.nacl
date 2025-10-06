@@ -1,0 +1,32 @@
+type salesforce.PaymentCreditLinePayment {
+  salesforce.Unknown Amount {
+    apiName = "PaymentCreditLinePayment.Amount"
+  }
+  salesforce.Unknown AppliedDate {
+    apiName = "PaymentCreditLinePayment.AppliedDate"
+  }
+  salesforce.Lookup AssociatedAccountId {
+    apiName = "PaymentCreditLinePayment.AssociatedAccountId"
+  }
+  salesforce.Lookup AssociatedLineId {
+    apiName = "PaymentCreditLinePayment.AssociatedLineId"
+  }
+  salesforce.Unknown Description {
+    apiName = "PaymentCreditLinePayment.Description"
+  }
+  salesforce.Unknown HasBeenUnapplied {
+    apiName = "PaymentCreditLinePayment.HasBeenUnapplied"
+  }
+  salesforce.Lookup PaymentCreditId {
+    apiName = "PaymentCreditLinePayment.PaymentCreditId"
+  }
+  salesforce.MasterDetail PaymentId {
+    apiName = "PaymentCreditLinePayment.PaymentId"
+  }
+  salesforce.Unknown Type {
+    apiName = "PaymentCreditLinePayment.Type"
+  }
+  salesforce.Unknown UnappliedDate {
+    apiName = "PaymentCreditLinePayment.UnappliedDate"
+  }
+}

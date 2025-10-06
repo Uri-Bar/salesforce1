@@ -6,6 +6,9 @@ type salesforce.ContentVersion {
     scale = 0
     unique = false
   }
+  salesforce.Unknown ContentSizeLong {
+    apiName = "ContentVersion.ContentSizeLong"
+  }
   salesforce.LongTextArea Description {
     apiName = "ContentVersion.Description"
     length = 1000

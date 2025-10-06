@@ -61,6 +61,11 @@ type salesforce.AssetAction {
     apiName = "AssetAction.SubtotalChange"
     label = "Change in Subtotal"
   }
+  salesforce.Picklist Subtype {
+    apiName = "AssetAction.Subtype"
+    label = "Subtype"
+    restricted = true
+  }
   salesforce.Summary TotalAmount {
     apiName = "AssetAction.TotalAmount"
     label = "Total Amount"

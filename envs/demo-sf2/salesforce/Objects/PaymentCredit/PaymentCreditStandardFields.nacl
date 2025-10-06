@@ -1,0 +1,44 @@
+type salesforce.PaymentCredit {
+  salesforce.Lookup AccountId {
+    apiName = "PaymentCredit.AccountId"
+  }
+  salesforce.Unknown Amount {
+    apiName = "PaymentCredit.Amount"
+  }
+  salesforce.Unknown Balance {
+    apiName = "PaymentCredit.Balance"
+  }
+  salesforce.Lookup CreditMemoId {
+    apiName = "PaymentCredit.CreditMemoId"
+  }
+  salesforce.Picklist CreditType {
+    apiName = "PaymentCredit.CreditType"
+  }
+  salesforce.Unknown CreditTypeCategory {
+    apiName = "PaymentCredit.CreditTypeCategory"
+  }
+  salesforce.Unknown EffectiveDate {
+    apiName = "PaymentCredit.EffectiveDate"
+  }
+  salesforce.Unknown NetApplied {
+    apiName = "PaymentCredit.NetApplied"
+  }
+  salesforce.Lookup PaymentId {
+    apiName = "PaymentCredit.PaymentId"
+  }
+  salesforce.Lookup ReturnOrderId {
+    apiName = "PaymentCredit.ReturnOrderId"
+  }
+  salesforce.Unknown TotalApplied {
+    apiName = "PaymentCredit.TotalApplied"
+  }
+  salesforce.Unknown TotalCreditPendingTxnAmt {
+    apiName = "PaymentCredit.TotalCreditPendingTxnAmt"
+  }
+  salesforce.Unknown TotalCreditTxnAmt {
+    apiName = "PaymentCredit.TotalCreditTxnAmt"
+  }
+  salesforce.Unknown TotalUnapplied {
+    apiName = "PaymentCredit.TotalUnapplied"
+  }
+}

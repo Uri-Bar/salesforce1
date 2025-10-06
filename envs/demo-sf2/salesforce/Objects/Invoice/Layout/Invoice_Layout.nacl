@@ -13,7 +13,7 @@ salesforce.Layout Invoice_Invoice_Layout@bs {
               field = salesforce.Invoice.field.DocumentNumber
             },
             {
-              behavior = "Edit"
+              behavior = "Readonly"
               field = salesforce.Invoice.field.InvoiceNumber
             },
             {

@@ -1,0 +1,7 @@
+salesforce.SharingRules WorkflowSLAAction {
+  fullName = "WorkflowSLAAction"
+  _parent = [
+    salesforce.WorkflowSLAAction,
+  ]
+  _alias = "WorkflowSLAAction"
+}

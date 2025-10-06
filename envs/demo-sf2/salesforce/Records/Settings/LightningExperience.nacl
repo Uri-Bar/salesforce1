@@ -2,6 +2,7 @@ salesforce.LightningExperienceSettings {
   fullName = "LightningExperience"
   enableAccessCheckCrucPref = false
   enableApiUserLtngOutAccessPref = false
+  enableAuraBoxcarReductionPref = false
   enableAuraCDNPref = true
   enableAuraSecStaticResCRUCPref = false
   enableDeferRenderingWorkspacePage = false

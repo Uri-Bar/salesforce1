@@ -1,0 +1,24 @@
+salesforce.WebLink Incident_IncidentSource {
+  fullName = "Incident.IncidentSource"
+  availability = "online"
+  displayType = "link"
+  encodingKey = "UTF-8"
+  hasMenubar = false
+  hasScrollbars = false
+  hasToolbar = false
+  height = 600
+  isResizable = true
+  linkType = "url"
+  masterLabel = "Incident Source"
+  openType = "newWindow"
+  position = "none"
+  protected = false
+  showsLocation = false
+  showsStatus = false
+  url = "/lightning/r/{!Incident.ReportedMethodIdentifier}/view"
+  width = 600
+  _parent = [
+    salesforce.Incident,
+  ]
+  _alias = "Incident.IncidentSource"
+}

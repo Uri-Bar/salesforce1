@@ -142,11 +142,11 @@ type salesforce.WorkOrder {
   }
   salesforce.DateTime SlaExitDate {
     apiName = "WorkOrder.SlaExitDate"
-    label = "Entitlement Process End Time"
+    label = "Sla Policy End Time"
   }
   salesforce.DateTime SlaStartDate {
     apiName = "WorkOrder.SlaStartDate"
-    label = "Entitlement Process Start Time"
+    label = "Sla Policy Start Time"
   }
   salesforce.DateTime StartDate {
     apiName = "WorkOrder.StartDate"

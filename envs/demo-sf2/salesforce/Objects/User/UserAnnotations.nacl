@@ -131,6 +131,20 @@ type salesforce.User {
       type = "Default"
     },
     {
+      actionName = "EnableUnifiedEmployeeUserAction"
+      type = "Default"
+    },
+    {
+      actionName = "EnableUnifiedEmployeeUserAction"
+      formFactor = "Large"
+      type = "Default"
+    },
+    {
+      actionName = "EnableUnifiedEmployeeUserAction"
+      formFactor = "Small"
+      type = "Default"
+    },
+    {
       actionName = "FreezeUserAction"
       type = "Default"
     },
@@ -253,6 +267,20 @@ type salesforce.User {
     },
     {
       actionName = "UserActivationAction"
+      formFactor = "Small"
+      type = "Default"
+    },
+    {
+      actionName = "ViewUnifiedEmployeeUserAction"
+      type = "Default"
+    },
+    {
+      actionName = "ViewUnifiedEmployeeUserAction"
+      formFactor = "Large"
+      type = "Default"
+    },
+    {
+      actionName = "ViewUnifiedEmployeeUserAction"
       formFactor = "Small"
       type = "Default"
     },
@@ -282,6 +310,11 @@ type salesforce.User {
   }
   _alias = "User"
   feedHistoryTrackedFields = {
+    AboutMe = salesforce.User.field.AboutMe
+    Address = salesforce.User.field.Address
+    Email = salesforce.User.field.Email
     ManagerId = salesforce.User.field.ManagerId
+    Phone = salesforce.User.field.Phone
+    Title = salesforce.User.field.Title
   }
 }

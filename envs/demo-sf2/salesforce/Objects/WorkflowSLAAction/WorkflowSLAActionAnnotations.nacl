@@ -1,4 +1,4 @@
-type salesforce.Site {
+type salesforce.WorkflowSLAAction {
   annotations {
     serviceid apiName {
     }
@@ -6,13 +6,13 @@ type salesforce.Site {
     }
     string label {
     }
+    string description {
+    }
     hidden_string keyPrefix {
     }
     salesforce.ActionOverride actionOverrides {
     }
     string compactLayoutAssignment {
-    }
-    string description {
     }
     boolean enableDataTranslation {
     }
@@ -55,42 +55,11 @@ type salesforce.Site {
     hidden_string internalId {
     }
   }
-  apiName = "Site"
+  apiName = "WorkflowSLAAction"
   metadataType = "CustomObject"
-  label = "Site"
+  label = "WorkflowSLAAction"
   description = ""
-  actionOverrides = [
-    {
-      actionName = "List"
-      type = "Default"
-    },
-    {
-      actionName = "List"
-      formFactor = "Large"
-      type = "Default"
-    },
-    {
-      actionName = "List"
-      formFactor = "Small"
-      type = "Default"
-    },
-    {
-      actionName = "View"
-      type = "Default"
-    },
-    {
-      actionName = "View"
-      formFactor = "Large"
-      type = "Default"
-    },
-    {
-      actionName = "View"
-      formFactor = "Small"
-      type = "Default"
-    },
-  ]
-  enableFeeds = true
-  _alias = "Site"
-  feedHistoryTrackedFields = {
-  }
+  enableFeeds = false
+  externalSharingModel = "Private"
+  _alias = "WorkflowSLAAction"
 }

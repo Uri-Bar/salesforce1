@@ -122,6 +122,9 @@ type salesforce.Payment {
     scale = 2
     precision = 18
   }
+  salesforce.Unknown NetPaymentCreditApplied {
+    apiName = "Payment.NetPaymentCreditApplied"
+  }
   salesforce.Summary NetRefundApplied {
     apiName = "Payment.NetRefundApplied"
     label = "Net Refund Applied"
@@ -172,6 +175,12 @@ type salesforce.Payment {
     label = "Total Applied"
     scale = 2
     precision = 18
+  }
+  salesforce.Unknown TotalPaymentCreditApplied {
+    apiName = "Payment.TotalPaymentCreditApplied"
+  }
+  salesforce.Unknown TotalPaymentCreditUnapplied {
+    apiName = "Payment.TotalPaymentCreditUnapplied"
   }
   salesforce.Summary TotalRefundApplied {
     apiName = "Payment.TotalRefundApplied"

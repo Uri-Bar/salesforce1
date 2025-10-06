@@ -49,10 +49,10 @@ type salesforce.Invoice {
   }
   salesforce.Text InvoiceNumber {
     apiName = "Invoice.InvoiceNumber"
-    length = 10
+    length = 255
     label = "Invoice Number"
-    unique = false
-    caseSensitive = false
+    unique = true
+    caseSensitive = true
   }
   salesforce.Checkbox IsInvoiceLocked {
     apiName = "Invoice.IsInvoiceLocked"

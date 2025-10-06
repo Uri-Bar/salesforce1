@@ -5,7 +5,6 @@ salesforce.IncidentMgmtSettings {
   enableAutoCreationOfProblem = false
   enableChangeRequestValidations = false
   enableChatToIncidentAi = false
-  enableCommonPriorityMatrix = false
   enableDedupE2IncidentAttachment = false
   enableEmailBroadcastType = false
   enableEmailToIncident = false

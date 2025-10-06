@@ -83,6 +83,32 @@ type salesforce.FlowOrchestrationStepInstance {
     _required = true
     label = "Step Type"
   }
+  salesforce.Text OrchestrationName {
+    apiName = "FlowOrchestrationStepInstance.OrchestrationName"
+    label = "Orchestration Developer Name"
+    length = 80
+    unique = false
+    caseSensitive = false
+  }
+  salesforce.Text OrchestrationStageName {
+    apiName = "FlowOrchestrationStepInstance.OrchestrationStageName"
+    label = "Orchestration Stage Run Name"
+    length = 80
+    unique = false
+    caseSensitive = false
+  }
+  salesforce.LongTextArea InProgressStepOutputs {
+    apiName = "FlowOrchestrationStepInstance.InProgressStepOutputs"
+    label = "In-Progress Step Outputs"
+    length = 100000
+  }
+  salesforce.Text RelatedRecord {
+    apiName = "FlowOrchestrationStepInstance.RelatedRecord"
+    label = "Context Record ID"
+    length = 40
+    unique = false
+    caseSensitive = false
+  }
   salesforce.LongTextArea Description {
     apiName = "FlowOrchestrationStepInstance.Description"
     label = "Description"

@@ -121,6 +121,10 @@ type salesforce.PrivacyJobSession {
     apiName = "PrivacyJobSession.OptionsErrorBypassOccurred"
     label = "ErrorBypassOccurred"
   }
+  salesforce.Checkbox OptionsTopLevelErrorBypass {
+    apiName = "PrivacyJobSession.OptionsTopLevelErrorBypass"
+    label = "TopLevelErrorBypass"
+  }
   salesforce.Text PolicyName {
     apiName = "PrivacyJobSession.PolicyName"
     length = 255

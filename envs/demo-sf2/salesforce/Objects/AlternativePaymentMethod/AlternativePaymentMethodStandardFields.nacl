@@ -9,6 +9,9 @@ type salesforce.AlternativePaymentMethod {
     label = "Audit Email"
     unique = false
   }
+  salesforce.Unknown BankCode {
+    apiName = "AlternativePaymentMethod.BankCode"
+  }
   salesforce.Text BillingFirstName {
     apiName = "AlternativePaymentMethod.BillingFirstName"
     length = 255
@@ -75,6 +78,9 @@ type salesforce.AlternativePaymentMethod {
     label = "MAC Address"
     unique = false
     caseSensitive = false
+  }
+  salesforce.Unknown Mandate {
+    apiName = "AlternativePaymentMethod.Mandate"
   }
   salesforce.Text NickName {
     apiName = "AlternativePaymentMethod.NickName"

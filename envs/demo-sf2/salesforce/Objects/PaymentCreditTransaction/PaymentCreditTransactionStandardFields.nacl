@@ -1,0 +1,26 @@
+type salesforce.PaymentCreditTransaction {
+  salesforce.Unknown Amount {
+    apiName = "PaymentCreditTransaction.Amount"
+  }
+  salesforce.Lookup AssociatedAccountId {
+    apiName = "PaymentCreditTransaction.AssociatedAccountId"
+  }
+  salesforce.Unknown ClientContext {
+    apiName = "PaymentCreditTransaction.ClientContext"
+  }
+  salesforce.Unknown ExternalReference {
+    apiName = "PaymentCreditTransaction.ExternalReference"
+  }
+  salesforce.MasterDetail PaymentCreditId {
+    apiName = "PaymentCreditTransaction.PaymentCreditId"
+  }
+  salesforce.Unknown ProcessingMode {
+    apiName = "PaymentCreditTransaction.ProcessingMode"
+  }
+  salesforce.Unknown Status {
+    apiName = "PaymentCreditTransaction.Status"
+  }
+  salesforce.Unknown TransactionMessage {
+    apiName = "PaymentCreditTransaction.TransactionMessage"
+  }
+}
