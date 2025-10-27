@@ -131,6 +131,20 @@ type salesforce.Incident {
       type = "Default"
     },
     {
+      actionName = "New"
+      type = "Default"
+    },
+    {
+      actionName = "New"
+      formFactor = "Large"
+      type = "Default"
+    },
+    {
+      actionName = "New"
+      formFactor = "Small"
+      type = "Default"
+    },
+    {
       actionName = "SaveEdit"
       type = "Default"
     },

@@ -17,6 +17,9 @@ type salesforce.FulfillmentOrder {
     apiName = "FulfillmentOrder.ClosedDate"
     label = "Closed Date"
   }
+  salesforce.Unknown DeliveryDate {
+    apiName = "FulfillmentOrder.DeliveryDate"
+  }
   salesforce.Lookup FulfilledFromLocationId {
     apiName = "FulfillmentOrder.FulfilledFromLocationId"
     relationshipName = "FulfilledFromLocation"
@@ -63,6 +66,12 @@ type salesforce.FulfillmentOrder {
     label = "Total Quantity"
     precision = 18
     scale = 0
+  }
+  salesforce.Unknown ProcessingTimeInMinutes {
+    apiName = "FulfillmentOrder.ProcessingTimeInMinutes"
+  }
+  salesforce.Unknown StartFulfillmentDate {
+    apiName = "FulfillmentOrder.StartFulfillmentDate"
   }
   salesforce.Picklist Status {
     apiName = "FulfillmentOrder.Status"
