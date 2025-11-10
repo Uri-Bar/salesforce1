@@ -201,6 +201,20 @@ type salesforce.Order {
       type = "Default"
     },
     {
+      actionName = "OrderAdjustment"
+      type = "Default"
+    },
+    {
+      actionName = "OrderAdjustment"
+      formFactor = "Large"
+      type = "Default"
+    },
+    {
+      actionName = "OrderAdjustment"
+      formFactor = "Small"
+      type = "Default"
+    },
+    {
       actionName = "ReduceOrder"
       type = "Default"
     },

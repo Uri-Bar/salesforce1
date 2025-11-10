@@ -30,11 +30,13 @@ salesforce.CaseSettings {
   enableSolutionShortSummary = true
   enableSuggestedSolutions = true
   escalateCaseBefore = false
+  hidePublicInCaseComment = false
   notifyContactOnCaseComment = false
   notifyDefaultCaseOwner = false
   notifyOwnerOnCaseComment = false
   notifyOwnerOnCaseOwnerChange = false
   rtaCaseComment = false
+  rtaCaseDescription = false
   showEmailAttachmentsInCaseAttachmentsRL = true
   useSystemEmailAddress = true
   useSystemUserAsDefaultCaseUser = false

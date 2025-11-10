@@ -1,0 +1,5 @@
+salesforce.SecurityHubSettings {
+  aiGatewayUsageMetric = false
+  fullName = "SecurityHub"
+  _alias = "SecurityHub"
+}

@@ -1,0 +1,67 @@
+type salesforce.SlackChannelRelatedRecord {
+  serviceid Id {
+    apiName = "SlackChannelRelatedRecord.Id"
+    label = "Slack Channel Related Record ID"
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Checkbox IsDeleted {
+    apiName = "SlackChannelRelatedRecord.IsDeleted"
+    label = "Deleted"
+    defaultValue = false
+    _hidden_value = true
+  }
+  salesforce.AutoNumber Name {
+    apiName = "SlackChannelRelatedRecord.Name"
+    label = "Name"
+    _hidden_value = true
+  }
+  salesforce.DateTime CreatedDate {
+    apiName = "SlackChannelRelatedRecord.CreatedDate"
+    label = "Created Date"
+    _hidden_value = true
+  }
+  salesforce.Lookup CreatedById {
+    apiName = "SlackChannelRelatedRecord.CreatedById"
+    label = "Created By ID"
+    relationshipName = "CreatedBy"
+    _hidden_value = true
+  }
+  salesforce.DateTime LastModifiedDate {
+    apiName = "SlackChannelRelatedRecord.LastModifiedDate"
+    label = "Last Modified Date"
+    _hidden_value = true
+  }
+  salesforce.Lookup LastModifiedById {
+    apiName = "SlackChannelRelatedRecord.LastModifiedById"
+    label = "Last Modified By ID"
+    relationshipName = "LastModifiedBy"
+    _hidden_value = true
+  }
+  salesforce.DateTime SystemModstamp {
+    apiName = "SlackChannelRelatedRecord.SystemModstamp"
+    label = "System Modstamp"
+    _hidden_value = true
+  }
+  salesforce.Text RelatedRecord {
+    apiName = "SlackChannelRelatedRecord.RelatedRecord"
+    label = "Related Record ID"
+    length = 255
+    unique = true
+    caseSensitive = true
+  }
+  salesforce.Text SlackChannel {
+    apiName = "SlackChannelRelatedRecord.SlackChannel"
+    label = "Slack Channel ID"
+    length = 255
+    unique = true
+    caseSensitive = true
+  }
+  salesforce.Text TopLevelTeam {
+    apiName = "SlackChannelRelatedRecord.TopLevelTeam"
+    label = "Top Level Team ID"
+    length = 255
+    unique = false
+    caseSensitive = false
+  }
+}

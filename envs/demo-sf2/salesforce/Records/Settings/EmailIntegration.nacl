@@ -10,6 +10,7 @@ salesforce.EmailIntegrationSettings {
   enableGmailIntegration = true
   enableInboxInternalEmailTracking = false
   enableInboxMobileIntune = false
+  enableInboxUseGraphApi = false
   enableOutlookIntegration = false
   enableProductivityFeatures = false
   enableSupplementalContactInfoInMobile = false

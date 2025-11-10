@@ -1,44 +1,130 @@
 type salesforce.PaymentCredit {
   salesforce.Lookup AccountId {
     apiName = "PaymentCredit.AccountId"
-  }
-  salesforce.Unknown Amount {
-    apiName = "PaymentCredit.Amount"
-  }
-  salesforce.Unknown Balance {
-    apiName = "PaymentCredit.Balance"
+    label = "Account ID"
+    relationshipName = "Account"
   }
   salesforce.Lookup CreditMemoId {
     apiName = "PaymentCredit.CreditMemoId"
+    label = "Credit Memo ID"
+    relationshipName = "CreditMemo"
   }
   salesforce.Picklist CreditType {
     apiName = "PaymentCredit.CreditType"
-  }
-  salesforce.Unknown CreditTypeCategory {
-    apiName = "PaymentCredit.CreditTypeCategory"
-  }
-  salesforce.Unknown EffectiveDate {
-    apiName = "PaymentCredit.EffectiveDate"
-  }
-  salesforce.Unknown NetApplied {
-    apiName = "PaymentCredit.NetApplied"
+    label = "Credit Type"
+    _required = true
   }
   salesforce.Lookup PaymentId {
     apiName = "PaymentCredit.PaymentId"
+    label = "Payment ID"
+    _required = true
+    relationshipName = "Payment"
   }
   salesforce.Lookup ReturnOrderId {
     apiName = "PaymentCredit.ReturnOrderId"
+    label = "Return Order ID"
+    relationshipName = "ReturnOrder"
   }
-  salesforce.Unknown TotalApplied {
+  salesforce.Currency Amount {
+    apiName = "PaymentCredit.Amount"
+    label = "Amount"
+    _required = true
+    scale = 2
+    precision = 18
+  }
+  salesforce.Currency Balance {
+    apiName = "PaymentCredit.Balance"
+    label = "Balance"
+    scale = 2
+    precision = 18
+  }
+  salesforce.Picklist CreditTypeCategory {
+    apiName = "PaymentCredit.CreditTypeCategory"
+    label = "Credit Type Category"
+    _required = true
+    restricted = true
+  }
+  salesforce.DateTime EffectiveDate {
+    apiName = "PaymentCredit.EffectiveDate"
+    label = "Effective Date"
+    _required = true
+  }
+  salesforce.Currency NetApplied {
+    apiName = "PaymentCredit.NetApplied"
+    label = "Net Applied"
+    scale = 2
+    precision = 18
+  }
+  salesforce.Currency TotalApplied {
     apiName = "PaymentCredit.TotalApplied"
+    label = "Total Applied"
+    scale = 2
+    precision = 18
   }
-  salesforce.Unknown TotalCreditPendingTxnAmt {
+  salesforce.Currency TotalCreditPendingTxnAmt {
     apiName = "PaymentCredit.TotalCreditPendingTxnAmt"
+    label = "Total Credit Pending Transaction Amount"
+    scale = 2
+    precision = 18
   }
-  salesforce.Unknown TotalCreditTxnAmt {
+  salesforce.Currency TotalCreditTxnAmt {
     apiName = "PaymentCredit.TotalCreditTxnAmt"
+    label = "Total Credit Transaction Amount"
+    scale = 2
+    precision = 18
   }
-  salesforce.Unknown TotalUnapplied {
+  salesforce.Currency TotalUnapplied {
     apiName = "PaymentCredit.TotalUnapplied"
+    label = "Total Unapplied"
+    scale = 2
+    precision = 18
+  }
+  serviceid Id {
+    apiName = "PaymentCredit.Id"
+    label = "Payment Credit ID"
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Checkbox IsDeleted {
+    apiName = "PaymentCredit.IsDeleted"
+    label = "Deleted"
+    defaultValue = false
+    _hidden_value = true
+  }
+  salesforce.AutoNumber PaymentCreditNumber {
+    apiName = "PaymentCredit.PaymentCreditNumber"
+    label = "Payment Credit Number"
+    _hidden_value = true
+  }
+  salesforce.DateTime CreatedDate {
+    apiName = "PaymentCredit.CreatedDate"
+    label = "Created Date"
+    _hidden_value = true
+  }
+  salesforce.Lookup CreatedById {
+    apiName = "PaymentCredit.CreatedById"
+    label = "Created By ID"
+    relationshipName = "CreatedBy"
+    _hidden_value = true
+  }
+  salesforce.DateTime LastModifiedDate {
+    apiName = "PaymentCredit.LastModifiedDate"
+    label = "Last Modified Date"
+    _hidden_value = true
+  }
+  salesforce.Lookup LastModifiedById {
+    apiName = "PaymentCredit.LastModifiedById"
+    label = "Last Modified By ID"
+    relationshipName = "LastModifiedBy"
+    _hidden_value = true
+  }
+  salesforce.DateTime SystemModstamp {
+    apiName = "PaymentCredit.SystemModstamp"
+    label = "System Modstamp"
+    _hidden_value = true
+  }
+  salesforce.TextArea Comments {
+    apiName = "PaymentCredit.Comments"
+    label = "Comments"
   }
 }

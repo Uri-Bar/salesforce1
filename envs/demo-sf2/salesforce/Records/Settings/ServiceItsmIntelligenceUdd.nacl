@@ -1,0 +1,16 @@
+salesforce.ServiceItsmIntelligenceUddSettings {
+  enableCheckIncAttrProactvAsst = false
+  enableEinsteinAssignGrpInc = false
+  enableEinsteinProbmCreationInc = false
+  enableIncAsgntProactvAsst = false
+  enableIncPrpsRsolSumProactvAsst = false
+  enableIncRootCseSumProactvAsst = false
+  enableIncSmlrRecProactvAsst = false
+  enableIncSrvcPlanProactvAsst = false
+  enableIncSummaryProactvAsst = false
+  enableItSrvcsEmployeeAgent = false
+  enableItSrvcsFulfillerAgent = false
+  enableProactvAsstforItSrvcs = false
+  fullName = "ServiceItsmIntelligenceUdd"
+  _alias = "ServiceItsmIntelligenceUdd"
+}

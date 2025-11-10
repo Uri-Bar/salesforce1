@@ -1,0 +1,68 @@
+type salesforce.ObjectMilestonePauseTime {
+  serviceid Id {
+    apiName = "ObjectMilestonePauseTime.Id"
+    label = "Milestone Pause Time Item ID"
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Checkbox IsDeleted {
+    apiName = "ObjectMilestonePauseTime.IsDeleted"
+    label = "Deleted"
+    defaultValue = false
+    _hidden_value = true
+  }
+  salesforce.AutoNumber Name {
+    apiName = "ObjectMilestonePauseTime.Name"
+    label = "Object Milestone Name"
+    _hidden_value = true
+  }
+  salesforce.DateTime CreatedDate {
+    apiName = "ObjectMilestonePauseTime.CreatedDate"
+    label = "Created Date"
+    _hidden_value = true
+  }
+  salesforce.Lookup CreatedById {
+    apiName = "ObjectMilestonePauseTime.CreatedById"
+    label = "Created By ID"
+    relationshipName = "CreatedBy"
+    _hidden_value = true
+  }
+  salesforce.DateTime LastModifiedDate {
+    apiName = "ObjectMilestonePauseTime.LastModifiedDate"
+    label = "Last Modified Date"
+    _hidden_value = true
+  }
+  salesforce.Lookup LastModifiedById {
+    apiName = "ObjectMilestonePauseTime.LastModifiedById"
+    label = "Last Modified By ID"
+    relationshipName = "LastModifiedBy"
+    _hidden_value = true
+  }
+  salesforce.DateTime SystemModstamp {
+    apiName = "ObjectMilestonePauseTime.SystemModstamp"
+    label = "System Modstamp"
+    _hidden_value = true
+  }
+  salesforce.Lookup EntityMilestoneId {
+    apiName = "ObjectMilestonePauseTime.EntityMilestoneId"
+    label = "Object Milestone ID"
+    _required = true
+    relationshipName = "EntityMilestone"
+  }
+  salesforce.DateTime PauseStartTime {
+    apiName = "ObjectMilestonePauseTime.PauseStartTime"
+    label = "Pause Start Time"
+    _required = true
+  }
+  salesforce.DateTime PauseEndTime {
+    apiName = "ObjectMilestonePauseTime.PauseEndTime"
+    label = "Pause End Time"
+  }
+  salesforce.Number PauseDurationInSecs {
+    apiName = "ObjectMilestonePauseTime.PauseDurationInSecs"
+    label = "Pause Duration In Secs"
+    scale = 0
+    precision = 9
+    unique = false
+  }
+}

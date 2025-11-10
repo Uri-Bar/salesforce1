@@ -1,26 +1,95 @@
 type salesforce.PaymentCreditTransaction {
-  salesforce.Unknown Amount {
-    apiName = "PaymentCreditTransaction.Amount"
-  }
   salesforce.Lookup AssociatedAccountId {
     apiName = "PaymentCreditTransaction.AssociatedAccountId"
-  }
-  salesforce.Unknown ClientContext {
-    apiName = "PaymentCreditTransaction.ClientContext"
-  }
-  salesforce.Unknown ExternalReference {
-    apiName = "PaymentCreditTransaction.ExternalReference"
+    label = "Account ID"
+    relationshipName = "AssociatedAccount"
   }
   salesforce.MasterDetail PaymentCreditId {
     apiName = "PaymentCreditTransaction.PaymentCreditId"
+    label = "Payment Credit ID"
+    _required = true
+    relationshipName = "PaymentCredit"
   }
-  salesforce.Unknown ProcessingMode {
+  salesforce.Currency Amount {
+    apiName = "PaymentCreditTransaction.Amount"
+    label = "Amount"
+    _required = true
+    scale = 2
+    precision = 18
+  }
+  salesforce.LongTextArea ClientContext {
+    apiName = "PaymentCreditTransaction.ClientContext"
+    label = "Client Context"
+    length = 2000
+  }
+  salesforce.Text ExternalReference {
+    apiName = "PaymentCreditTransaction.ExternalReference"
+    label = "External Reference"
+    length = 255
+    unique = false
+    caseSensitive = false
+  }
+  salesforce.Picklist ProcessingMode {
     apiName = "PaymentCreditTransaction.ProcessingMode"
+    label = "Processing Mode"
+    _required = true
+    restricted = true
   }
-  salesforce.Unknown Status {
+  salesforce.Picklist Status {
     apiName = "PaymentCreditTransaction.Status"
+    label = "Status"
+    _required = true
+    restricted = true
   }
-  salesforce.Unknown TransactionMessage {
+  salesforce.Text TransactionMessage {
     apiName = "PaymentCreditTransaction.TransactionMessage"
+    label = "Transaction Message"
+    length = 255
+    unique = false
+    caseSensitive = false
+  }
+  serviceid Id {
+    apiName = "PaymentCreditTransaction.Id"
+    label = "Payment Credit Transaction ID"
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Checkbox IsDeleted {
+    apiName = "PaymentCreditTransaction.IsDeleted"
+    label = "Deleted"
+    defaultValue = false
+    _hidden_value = true
+  }
+  salesforce.AutoNumber PaymentCreditTransactionNumber {
+    apiName = "PaymentCreditTransaction.PaymentCreditTransactionNumber"
+    label = "Payment Credit Transaction Number"
+    _hidden_value = true
+  }
+  salesforce.DateTime CreatedDate {
+    apiName = "PaymentCreditTransaction.CreatedDate"
+    label = "Created Date"
+    _hidden_value = true
+  }
+  salesforce.Lookup CreatedById {
+    apiName = "PaymentCreditTransaction.CreatedById"
+    label = "Created By ID"
+    relationshipName = "CreatedBy"
+    _hidden_value = true
+  }
+  salesforce.DateTime LastModifiedDate {
+    apiName = "PaymentCreditTransaction.LastModifiedDate"
+    label = "Last Modified Date"
+    _hidden_value = true
+  }
+  salesforce.Lookup LastModifiedById {
+    apiName = "PaymentCreditTransaction.LastModifiedById"
+    label = "Last Modified By ID"
+    relationshipName = "LastModifiedBy"
+    _hidden_value = true
+  }
+  salesforce.DateTime SystemModstamp {
+    apiName = "PaymentCreditTransaction.SystemModstamp"
+    label = "System Modstamp"
+    _hidden_value = true
   }
 }

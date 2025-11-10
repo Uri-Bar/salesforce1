@@ -14,6 +14,7 @@ salesforce.MyDomainSettings {
   enableShareBrowserSessionIOSForAuth = false
   instancedUrlRedirectHandling = "NoRedirect"
   isFirstPartyCookieUseRequired = false
+  isIcorInstApiTrafficBlocked = false
   isInstancedApiTrafficBlocked = false
   logRedirections = false
   myDomainName = "saltolabs7-dev-ed"
@@ -27,6 +28,7 @@ salesforce.MyDomainSettings {
   useStabilizedMyDomainHostnames = true
   useStabilizedSandboxMyDomainHostnames = true
   _alias = "MyDomain"
+  edgeRoutingMethod = "global"
   enableCrossDomainPreviewCookies = true
   enableExtendedRedirections = false
   enableLegacyRedirections = false

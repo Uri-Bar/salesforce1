@@ -1,32 +1,100 @@
 type salesforce.PaymentCreditLinePayment {
-  salesforce.Unknown Amount {
-    apiName = "PaymentCreditLinePayment.Amount"
-  }
-  salesforce.Unknown AppliedDate {
-    apiName = "PaymentCreditLinePayment.AppliedDate"
-  }
   salesforce.Lookup AssociatedAccountId {
     apiName = "PaymentCreditLinePayment.AssociatedAccountId"
+    label = "Account ID"
+    relationshipName = "AssociatedAccount"
   }
   salesforce.Lookup AssociatedLineId {
     apiName = "PaymentCreditLinePayment.AssociatedLineId"
-  }
-  salesforce.Unknown Description {
-    apiName = "PaymentCreditLinePayment.Description"
-  }
-  salesforce.Unknown HasBeenUnapplied {
-    apiName = "PaymentCreditLinePayment.HasBeenUnapplied"
+    label = "Payment Credit Line Payment ID"
+    relationshipName = "AssociatedLine"
   }
   salesforce.Lookup PaymentCreditId {
     apiName = "PaymentCreditLinePayment.PaymentCreditId"
+    label = "Payment Credit ID"
+    _required = true
+    relationshipName = "PaymentCredit"
   }
   salesforce.MasterDetail PaymentId {
     apiName = "PaymentCreditLinePayment.PaymentId"
+    label = "Payment ID"
+    _required = true
+    relationshipName = "Payment"
   }
-  salesforce.Unknown Type {
+  salesforce.Currency Amount {
+    apiName = "PaymentCreditLinePayment.Amount"
+    label = "Amount"
+    _required = true
+    scale = 2
+    precision = 18
+  }
+  salesforce.DateTime AppliedDate {
+    apiName = "PaymentCreditLinePayment.AppliedDate"
+    label = "Applied Date"
+  }
+  salesforce.Text Description {
+    apiName = "PaymentCreditLinePayment.Description"
+    label = "Description"
+    length = 255
+    unique = false
+    caseSensitive = false
+  }
+  salesforce.Checkbox HasBeenUnapplied {
+    apiName = "PaymentCreditLinePayment.HasBeenUnapplied"
+    label = "Has Been Unapplied"
+  }
+  salesforce.Picklist Type {
     apiName = "PaymentCreditLinePayment.Type"
+    label = "Type"
+    _required = true
+    restricted = true
   }
-  salesforce.Unknown UnappliedDate {
+  salesforce.DateTime UnappliedDate {
     apiName = "PaymentCreditLinePayment.UnappliedDate"
+    label = "Unapplied Date"
+  }
+  serviceid Id {
+    apiName = "PaymentCreditLinePayment.Id"
+    label = "Payment Credit Line Payment ID"
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Checkbox IsDeleted {
+    apiName = "PaymentCreditLinePayment.IsDeleted"
+    label = "Deleted"
+    defaultValue = false
+    _hidden_value = true
+  }
+  salesforce.AutoNumber PaymentCreditLinePaymentNumber {
+    apiName = "PaymentCreditLinePayment.PaymentCreditLinePaymentNumber"
+    label = "Payment Credit Line Payment Number"
+    _hidden_value = true
+  }
+  salesforce.DateTime CreatedDate {
+    apiName = "PaymentCreditLinePayment.CreatedDate"
+    label = "Created Date"
+    _hidden_value = true
+  }
+  salesforce.Lookup CreatedById {
+    apiName = "PaymentCreditLinePayment.CreatedById"
+    label = "Created By ID"
+    relationshipName = "CreatedBy"
+    _hidden_value = true
+  }
+  salesforce.DateTime LastModifiedDate {
+    apiName = "PaymentCreditLinePayment.LastModifiedDate"
+    label = "Last Modified Date"
+    _hidden_value = true
+  }
+  salesforce.Lookup LastModifiedById {
+    apiName = "PaymentCreditLinePayment.LastModifiedById"
+    label = "Last Modified By ID"
+    relationshipName = "LastModifiedBy"
+    _hidden_value = true
+  }
+  salesforce.DateTime SystemModstamp {
+    apiName = "PaymentCreditLinePayment.SystemModstamp"
+    label = "System Modstamp"
+    _hidden_value = true
   }
 }

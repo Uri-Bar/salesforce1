@@ -17,9 +17,6 @@ type salesforce.FulfillmentOrder {
     apiName = "FulfillmentOrder.ClosedDate"
     label = "Closed Date"
   }
-  salesforce.Unknown DeliveryDate {
-    apiName = "FulfillmentOrder.DeliveryDate"
-  }
   salesforce.Lookup FulfilledFromLocationId {
     apiName = "FulfillmentOrder.FulfilledFromLocationId"
     relationshipName = "FulfilledFromLocation"
@@ -69,9 +66,7 @@ type salesforce.FulfillmentOrder {
   }
   salesforce.Unknown ProcessingTimeInMinutes {
     apiName = "FulfillmentOrder.ProcessingTimeInMinutes"
-  }
-  salesforce.Unknown StartFulfillmentDate {
-    apiName = "FulfillmentOrder.StartFulfillmentDate"
+    label = "Processing Time In Minutes"
   }
   salesforce.Picklist Status {
     apiName = "FulfillmentOrder.Status"
@@ -238,5 +233,13 @@ type salesforce.FulfillmentOrder {
   salesforce.Summary TotalFeeAdjustAmtWithTax {
     apiName = "FulfillmentOrder.TotalFeeAdjustAmtWithTax"
     label = "Fee Adjustments with Tax"
+  }
+  salesforce.DateTime DeliveryDate {
+    apiName = "FulfillmentOrder.DeliveryDate"
+    label = "Delivery Date"
+  }
+  salesforce.DateTime StartFulfillmentDate {
+    apiName = "FulfillmentOrder.StartFulfillmentDate"
+    label = "Start Fulfillment Date"
   }
 }

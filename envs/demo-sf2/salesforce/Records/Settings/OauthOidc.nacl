@@ -1,5 +1,6 @@
 salesforce.OauthOidcSettings {
   fullName = "OauthOidc"
+  agentAuthLinking = true
   blockOAuthUnPwFlow = false
   blockOAuthUsrAgtFlow = false
   isPkceRequired = false

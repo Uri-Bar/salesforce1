@@ -57,7 +57,7 @@ type salesforce.PaymentCreditTransaction {
   }
   apiName = "PaymentCreditTransaction"
   metadataType = "CustomObject"
-  label = "PaymentCreditTransaction"
+  label = "Payment Credit Transaction"
   description = ""
   actionOverrides = [
     {
@@ -162,5 +162,5 @@ type salesforce.PaymentCreditTransaction {
   compactLayoutAssignment = "SYSTEM"
   enableFeeds = false
   externalSharingModel = "ControlledByParent"
-  _alias = "PaymentCreditTransaction"
+  _alias = "Payment Credit Transaction"
 }

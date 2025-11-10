@@ -1,10 +1,14 @@
 salesforce.IncidentMgmtSettings {
   fullName = "IncidentMgmt"
+  enableAiKnowledgeCreation = false
   enableAlertBroadcastType = false
   enableAutoClosureOfChildIncident = false
   enableAutoCreationOfProblem = false
+  enableChangePriorityMatrix = false
+  enableChangePriorityOverride = false
   enableChangeRequestValidations = false
   enableChatToIncidentAi = false
+  enableCnfgItemCopyForRecords = false
   enableDedupE2IncidentAttachment = false
   enableEmailBroadcastType = false
   enableEmailToIncident = false
@@ -13,8 +17,12 @@ salesforce.IncidentMgmtSettings {
   enableITSMIncidentMgmt = false
   enableITSMMajorIncParent = false
   enableITSMProblemMgmt = false
+  enableIncPriorityMatrix = false
+  enableIncPriorityOverride = false
   enableIncidentMgmt = true
   enableIncidentValidations = false
+  enableProbPriorityMatrix = false
+  enableProbPriorityOverride = false
   enableProblemValidations = false
   enableRiskAssessment = false
   enableSaveE2IncidentAttachment = false

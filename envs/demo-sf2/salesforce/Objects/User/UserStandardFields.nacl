@@ -430,6 +430,10 @@ type salesforce.User {
     apiName = "User.UserPreferencesDisableMessageEmail"
     label = "DisableMessageEmail"
   }
+  salesforce.Checkbox UserPreferencesDismissRecordChannelsSuggestedObjects {
+    apiName = "User.UserPreferencesDismissRecordChannelsSuggestedObjects"
+    label = "DismissRecordChannelsSuggestedObjects"
+  }
   salesforce.Checkbox UserPreferencesJigsawListUser {
     apiName = "User.UserPreferencesJigsawListUser"
     label = "JigsawListUser"
@@ -457,6 +461,10 @@ type salesforce.User {
   salesforce.Checkbox UserPreferencesDisableFileShareNotificationsForApi {
     apiName = "User.UserPreferencesDisableFileShareNotificationsForApi"
     label = "DisableFileShareNotificationsForApi"
+  }
+  salesforce.Checkbox UserPreferencesEnableLwrLexPilot {
+    apiName = "User.UserPreferencesEnableLwrLexPilot"
+    label = "EnableLwrLexPilot"
   }
   salesforce.Checkbox UserPreferencesShowTitleToExternalUsers {
     apiName = "User.UserPreferencesShowTitleToExternalUsers"
@@ -685,6 +693,10 @@ type salesforce.User {
   salesforce.Checkbox UserPreferencesNativeEmailClient {
     apiName = "User.UserPreferencesNativeEmailClient"
     label = "NativeEmailClient"
+  }
+  salesforce.Checkbox UserPreferencesDismissReuseUpdateReminderModal {
+    apiName = "User.UserPreferencesDismissReuseUpdateReminderModal"
+    label = "DismissReuseUpdateReminderModal"
   }
   salesforce.Checkbox UserPreferencesHideManagedEcaMobilePubModal {
     apiName = "User.UserPreferencesHideManagedEcaMobilePubModal"

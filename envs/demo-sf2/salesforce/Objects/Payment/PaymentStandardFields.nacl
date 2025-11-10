@@ -122,9 +122,6 @@ type salesforce.Payment {
     scale = 2
     precision = 18
   }
-  salesforce.Unknown NetPaymentCreditApplied {
-    apiName = "Payment.NetPaymentCreditApplied"
-  }
   salesforce.Summary NetRefundApplied {
     apiName = "Payment.NetRefundApplied"
     label = "Net Refund Applied"
@@ -175,12 +172,6 @@ type salesforce.Payment {
     label = "Total Applied"
     scale = 2
     precision = 18
-  }
-  salesforce.Unknown TotalPaymentCreditApplied {
-    apiName = "Payment.TotalPaymentCreditApplied"
-  }
-  salesforce.Unknown TotalPaymentCreditUnapplied {
-    apiName = "Payment.TotalPaymentCreditUnapplied"
   }
   salesforce.Summary TotalRefundApplied {
     apiName = "Payment.TotalRefundApplied"
@@ -257,5 +248,17 @@ type salesforce.Payment {
     label = "Payment Intent Guid"
     unique = false
     caseSensitive = false
+  }
+  salesforce.Summary NetPaymentCreditApplied {
+    apiName = "Payment.NetPaymentCreditApplied"
+    label = "Net Payment Credit Applied"
+  }
+  salesforce.Summary TotalPaymentCreditApplied {
+    apiName = "Payment.TotalPaymentCreditApplied"
+    label = "Total Payment Credit Applied"
+  }
+  salesforce.Summary TotalPaymentCreditUnapplied {
+    apiName = "Payment.TotalPaymentCreditUnapplied"
+    label = "Total Payment Credit Unapplied"
   }
 }
