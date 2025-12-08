@@ -1,0 +1,4 @@
+salesforce.SharingRules RetentionStoreUsage {
+  fullName = "RetentionStoreUsage"
+  _alias = "RetentionStoreUsage"
+}

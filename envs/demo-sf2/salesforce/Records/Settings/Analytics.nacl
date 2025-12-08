@@ -67,6 +67,7 @@ salesforce.AnalyticsSettings {
   enableWaveSharingInheritance = false
   enableWaveSqlCFIndexing = false
   enableWaveTrendedDatasetCleanup = false
+  enableWriteToDataCloud = false
   isDiscoveryOptimizationEnabled = false
   isHighVolumePushbackEnabled = false
   maxHoursAppInProgress = 48
