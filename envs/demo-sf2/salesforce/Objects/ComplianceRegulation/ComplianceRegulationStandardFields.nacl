@@ -1,0 +1,17 @@
+type salesforce.ComplianceRegulation {
+  salesforce.Lookup ActiveVersionId {
+    apiName = "ComplianceRegulation.ActiveVersionId"
+  }
+  salesforce.Unknown IsActive {
+    apiName = "ComplianceRegulation.IsActive"
+  }
+  salesforce.Unknown Name {
+    apiName = "ComplianceRegulation.Name"
+  }
+  salesforce.Unknown ShortName {
+    apiName = "ComplianceRegulation.ShortName"
+  }
+  salesforce.Unknown Summary {
+    apiName = "ComplianceRegulation.Summary"
+  }
+}

@@ -1,0 +1,11 @@
+type salesforce.ComplianceRemediationStep {
+  salesforce.Lookup ActionPlanId {
+    apiName = "ComplianceRemediationStep.ActionPlanId"
+  }
+  salesforce.Lookup ExecutedById {
+    apiName = "ComplianceRemediationStep.ExecutedById"
+  }
+  salesforce.Unknown StepType {
+    apiName = "ComplianceRemediationStep.StepType"
+  }
+}

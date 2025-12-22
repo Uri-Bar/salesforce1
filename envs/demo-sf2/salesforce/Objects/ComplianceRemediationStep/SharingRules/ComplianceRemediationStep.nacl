@@ -1,0 +1,7 @@
+salesforce.SharingRules ComplianceRemediationStep {
+  fullName = "ComplianceRemediationStep"
+  _parent = [
+    salesforce.ComplianceRemediationStep,
+  ]
+  _alias = "ComplianceRemediationStep"
+}

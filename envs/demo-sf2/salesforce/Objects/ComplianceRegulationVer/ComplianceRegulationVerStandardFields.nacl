@@ -1,0 +1,20 @@
+type salesforce.ComplianceRegulationVer {
+  salesforce.Lookup ComplianceRegulationId {
+    apiName = "ComplianceRegulationVer.ComplianceRegulationId"
+  }
+  salesforce.Lookup ContentDocumentVersionId {
+    apiName = "ComplianceRegulationVer.ContentDocumentVersionId"
+  }
+  salesforce.Unknown Country {
+    apiName = "ComplianceRegulationVer.Country"
+  }
+  salesforce.Unknown Region {
+    apiName = "ComplianceRegulationVer.Region"
+  }
+  salesforce.Unknown SourceType {
+    apiName = "ComplianceRegulationVer.SourceType"
+  }
+  salesforce.Unknown Version {
+    apiName = "ComplianceRegulationVer.Version"
+  }
+}

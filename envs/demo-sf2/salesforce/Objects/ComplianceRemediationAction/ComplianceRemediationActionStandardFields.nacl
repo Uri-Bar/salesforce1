@@ -1,0 +1,26 @@
+type salesforce.ComplianceRemediationAction {
+  salesforce.Unknown AffectedObjects {
+    apiName = "ComplianceRemediationAction.AffectedObjects"
+  }
+  salesforce.Unknown ExecutedBy {
+    apiName = "ComplianceRemediationAction.ExecutedBy"
+  }
+  salesforce.Unknown Name {
+    apiName = "ComplianceRemediationAction.Name"
+  }
+  salesforce.Unknown RiskLevel {
+    apiName = "ComplianceRemediationAction.RiskLevel"
+  }
+  salesforce.Unknown Status {
+    apiName = "ComplianceRemediationAction.Status"
+  }
+  salesforce.Unknown SuggestedAction {
+    apiName = "ComplianceRemediationAction.SuggestedAction"
+  }
+  salesforce.Unknown Timestamp {
+    apiName = "ComplianceRemediationAction.Timestamp"
+  }
+  salesforce.Unknown TriggeringRule {
+    apiName = "ComplianceRemediationAction.TriggeringRule"
+  }
+}

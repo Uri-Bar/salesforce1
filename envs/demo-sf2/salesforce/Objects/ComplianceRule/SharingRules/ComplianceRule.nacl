@@ -1,0 +1,7 @@
+salesforce.SharingRules ComplianceRule {
+  fullName = "ComplianceRule"
+  _parent = [
+    salesforce.ComplianceRule,
+  ]
+  _alias = "ComplianceRule"
+}

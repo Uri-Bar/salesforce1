@@ -1,0 +1,35 @@
+type salesforce.ComplianceRemediationPlan {
+  salesforce.Unknown AffectedObjects {
+    apiName = "ComplianceRemediationPlan.AffectedObjects"
+  }
+  salesforce.Lookup ComplianceIssueId {
+    apiName = "ComplianceRemediationPlan.ComplianceIssueId"
+  }
+  salesforce.Unknown Description {
+    apiName = "ComplianceRemediationPlan.Description"
+  }
+  salesforce.Unknown Detail {
+    apiName = "ComplianceRemediationPlan.Detail"
+  }
+  salesforce.Lookup IgnoreActionUserId {
+    apiName = "ComplianceRemediationPlan.IgnoreActionUserId"
+  }
+  salesforce.Unknown PlanScore {
+    apiName = "ComplianceRemediationPlan.PlanScore"
+  }
+  salesforce.Unknown RiskLevel {
+    apiName = "ComplianceRemediationPlan.RiskLevel"
+  }
+  salesforce.Unknown Status {
+    apiName = "ComplianceRemediationPlan.Status"
+  }
+  salesforce.Unknown SuggestedAction {
+    apiName = "ComplianceRemediationPlan.SuggestedAction"
+  }
+  salesforce.Unknown Timestamp {
+    apiName = "ComplianceRemediationPlan.Timestamp"
+  }
+  salesforce.Lookup TriggeringRuleId {
+    apiName = "ComplianceRemediationPlan.TriggeringRuleId"
+  }
+}
