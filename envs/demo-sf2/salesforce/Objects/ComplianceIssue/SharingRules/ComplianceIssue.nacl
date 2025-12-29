@@ -1,7 +1,0 @@
-salesforce.SharingRules ComplianceIssue {
-  fullName = "ComplianceIssue"
-  _parent = [
-    salesforce.ComplianceIssue,
-  ]
-  _alias = "ComplianceIssue"
-}

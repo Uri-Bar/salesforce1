@@ -1,7 +1,0 @@
-salesforce.SharingRules ComplianceAuditLog {
-  fullName = "ComplianceAuditLog"
-  _parent = [
-    salesforce.ComplianceAuditLog,
-  ]
-  _alias = "ComplianceAuditLog"
-}

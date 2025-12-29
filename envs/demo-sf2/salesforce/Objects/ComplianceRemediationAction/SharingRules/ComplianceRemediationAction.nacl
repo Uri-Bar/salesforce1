@@ -1,7 +1,0 @@
-salesforce.SharingRules ComplianceRemediationAction {
-  fullName = "ComplianceRemediationAction"
-  _parent = [
-    salesforce.ComplianceRemediationAction,
-  ]
-  _alias = "ComplianceRemediationAction"
-}
