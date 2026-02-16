@@ -1,7 +1,7 @@
 type salesforce.ConsumptionRate {
   salesforce.MasterDetail ConsumptionScheduleId {
     apiName = "ConsumptionRate.ConsumptionScheduleId"
-    inlineHelpText = "This rate is a part of of this schedule."
+    inlineHelpText = "This rate is a part of this schedule."
     relationshipName = "ConsumptionSchedule"
     _required = true
     label = "Consumption Schedule ID"

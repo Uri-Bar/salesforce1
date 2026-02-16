@@ -1,0 +1,7 @@
+salesforce.SharingRules AiJobRun {
+  fullName = "AiJobRun"
+  _parent = [
+    salesforce.AiJobRun,
+  ]
+  _alias = "AiJobRun"
+}

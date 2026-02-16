@@ -64,6 +64,18 @@ type salesforce.CreditMemoLine {
     apiName = "CreditMemoLine.EndDate"
     label = "End Date"
   }
+  salesforce.Unknown FuncCrcyCnvTotalTaxAmt {
+    apiName = "CreditMemoLine.FuncCrcyCnvTotalTaxAmt"
+  }
+  salesforce.Unknown FuncCurrencyCnvChargeAmt {
+    apiName = "CreditMemoLine.FuncCurrencyCnvChargeAmt"
+  }
+  salesforce.Unknown FunctionalCurrencyCvsnDate {
+    apiName = "CreditMemoLine.FunctionalCurrencyCvsnDate"
+  }
+  salesforce.Unknown FunctionalCurrencyCvsnRate {
+    apiName = "CreditMemoLine.FunctionalCurrencyCvsnRate"
+  }
   salesforce.Summary LineAmount {
     apiName = "CreditMemoLine.LineAmount"
     label = "Line Amount"

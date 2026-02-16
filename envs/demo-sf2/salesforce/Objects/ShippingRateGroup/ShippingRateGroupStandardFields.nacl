@@ -50,6 +50,6 @@ type salesforce.ShippingRateGroup {
     apiName = "ShippingRateGroup.ShippingProfileId"
     relationshipName = "ShippingProfile"
     _required = true
-    label = "Shipping Profile ID"
+    label = "Shipping Configuration Set ID"
   }
 }

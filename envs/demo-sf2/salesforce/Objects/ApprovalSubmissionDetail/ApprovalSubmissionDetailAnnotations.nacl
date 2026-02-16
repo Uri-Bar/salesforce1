@@ -75,6 +75,20 @@ type salesforce.ApprovalSubmissionDetail {
       type = "Default"
     },
     {
+      actionName = "Edit"
+      type = "Default"
+    },
+    {
+      actionName = "Edit"
+      formFactor = "Large"
+      type = "Default"
+    },
+    {
+      actionName = "Edit"
+      formFactor = "Small"
+      type = "Default"
+    },
+    {
       actionName = "List"
       type = "Default"
     },

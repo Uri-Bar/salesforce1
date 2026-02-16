@@ -1,0 +1,9 @@
+salesforce.ListView ContentDocument_OwnedContentDocuments {
+  fullName = "ContentDocument.OwnedContentDocuments"
+  filterScope = "Mine"
+  label = "ENCODED:{!FilterNames.ContentDocument_OwnedbyMe}"
+  _parent = [
+    salesforce.ContentDocument,
+  ]
+  _alias = "ENCODED:{!FilterNames.ContentDocument_OwnedbyMe}"
+}

@@ -16,7 +16,7 @@ type salesforce.Image {
   salesforce.Lookup ContentDocumentId {
     apiName = "Image.ContentDocumentId"
     relationshipName = "ContentDocument"
-    label = "ContentDocument ID"
+    label = "Content Document ID"
   }
   salesforce.Picklist ImageClass {
     apiName = "Image.ImageClass"

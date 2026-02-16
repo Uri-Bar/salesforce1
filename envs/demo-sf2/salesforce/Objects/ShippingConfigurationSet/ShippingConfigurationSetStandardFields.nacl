@@ -1,7 +1,7 @@
 type salesforce.ShippingConfigurationSet {
   serviceid Id {
     apiName = "ShippingConfigurationSet.Id"
-    label = "Shipping Profile ID"
+    label = "Shipping Configuration Set ID"
     queryable = true
     _hidden_value = true
   }

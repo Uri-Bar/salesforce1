@@ -70,7 +70,7 @@ type salesforce.ContentVersion {
   }
   serviceid Id {
     apiName = "ContentVersion.Id"
-    label = "ContentVersion ID"
+    label = "Content Version ID"
     queryable = true
     _hidden_value = true
   }
@@ -78,7 +78,7 @@ type salesforce.ContentVersion {
     apiName = "ContentVersion.ContentDocumentId"
     relationshipName = "ContentDocument"
     _required = true
-    label = "ContentDocument ID"
+    label = "Content Document ID"
   }
   salesforce.Checkbox IsLatest {
     apiName = "ContentVersion.IsLatest"

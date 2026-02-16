@@ -22,7 +22,7 @@ type salesforce.PartnerRole {
     apiName = "PartnerRole.ApiName"
     length = 255
     _required = true
-    label = "Api Name"
+    label = "API Name"
     unique = false
     caseSensitive = false
   }

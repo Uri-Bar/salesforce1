@@ -52,13 +52,13 @@ type salesforce.OrgMetricScanResult {
   }
   salesforce.Lookup OrgMetricScanSummaryId {
     apiName = "OrgMetricScanResult.OrgMetricScanSummaryId"
-    label = "Org Metric Scan ID"
+    label = "Org Metric Scan Summary ID"
     _required = true
     relationshipName = "OrgMetricScanSummary"
   }
   salesforce.Url Url {
     apiName = "OrgMetricScanResult.Url"
-    label = "Url"
+    label = "URL"
   }
   salesforce.Text Object {
     apiName = "OrgMetricScanResult.Object"

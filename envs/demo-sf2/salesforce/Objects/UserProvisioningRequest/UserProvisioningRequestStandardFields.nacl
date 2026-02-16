@@ -37,7 +37,7 @@ type salesforce.UserProvisioningRequest {
   salesforce.Lookup ParentId {
     apiName = "UserProvisioningRequest.ParentId"
     relationshipName = "Parent"
-    label = "UserProvisioningRequest ID"
+    label = "User Provisioning Request ID"
   }
   salesforce.Number RetryCount {
     apiName = "UserProvisioningRequest.RetryCount"
@@ -64,7 +64,7 @@ type salesforce.UserProvisioningRequest {
   }
   serviceid Id {
     apiName = "UserProvisioningRequest.Id"
-    label = "UserProvisioningRequest ID"
+    label = "User Provisioning Request ID"
     queryable = true
     _hidden_value = true
   }
@@ -120,6 +120,6 @@ type salesforce.UserProvisioningRequest {
   salesforce.Lookup UserProvConfigId {
     apiName = "UserProvisioningRequest.UserProvConfigId"
     relationshipName = "UserProvConfig"
-    label = "UserProvisioningConfig ID"
+    label = "User Provisioning Configuration ID"
   }
 }

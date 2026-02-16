@@ -64,10 +64,6 @@ type salesforce.FulfillmentOrder {
     precision = 18
     scale = 0
   }
-  salesforce.Unknown ProcessingTimeInMinutes {
-    apiName = "FulfillmentOrder.ProcessingTimeInMinutes"
-    label = "Processing Time In Minutes"
-  }
   salesforce.Picklist Status {
     apiName = "FulfillmentOrder.Status"
     restricted = false
@@ -241,5 +237,12 @@ type salesforce.FulfillmentOrder {
   salesforce.DateTime StartFulfillmentDate {
     apiName = "FulfillmentOrder.StartFulfillmentDate"
     label = "Start Fulfillment Date"
+  }
+  salesforce.Number ProcessingTimeInMinutes {
+    apiName = "FulfillmentOrder.ProcessingTimeInMinutes"
+    label = "Processing Time In Minutes"
+    scale = 0
+    precision = 9
+    unique = false
   }
 }

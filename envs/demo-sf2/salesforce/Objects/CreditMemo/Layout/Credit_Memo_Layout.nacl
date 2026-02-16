@@ -9,7 +9,7 @@ salesforce.Layout CreditMemo_Credit_Memo_Layout@bss {
         {
           layoutItems = [
             {
-              behavior = "Edit"
+              behavior = "Readonly"
               field = salesforce.CreditMemo.field.CreditMemoNumber
             },
             {

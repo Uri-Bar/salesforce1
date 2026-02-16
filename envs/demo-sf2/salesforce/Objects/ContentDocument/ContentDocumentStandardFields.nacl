@@ -1,0 +1,143 @@
+type salesforce.ContentDocument {
+  salesforce.Lookup ArchivedById {
+    apiName = "ContentDocument.ArchivedById"
+    label = "User ID"
+  }
+  salesforce.Date ArchivedDate {
+    apiName = "ContentDocument.ArchivedDate"
+    label = "Archived Date"
+  }
+  salesforce.Lookup ContentAssetId {
+    apiName = "ContentDocument.ContentAssetId"
+    label = "Asset File ID"
+    relationshipName = "ContentAsset"
+  }
+  salesforce.Lookup DeletedById {
+    apiName = "ContentDocument.DeletedById"
+  }
+  salesforce.Unknown DeletedDate {
+    apiName = "ContentDocument.DeletedDate"
+  }
+  salesforce.Checkbox IsArchived {
+    apiName = "ContentDocument.IsArchived"
+    label = "Is Archived"
+    defaultValue = false
+  }
+  salesforce.Checkbox IsInternalOnly {
+    apiName = "ContentDocument.IsInternalOnly"
+    label = "Is Internal Only"
+    defaultValue = false
+  }
+  salesforce.Lookup OwnerId {
+    apiName = "ContentDocument.OwnerId"
+    label = "Owner ID"
+    relationshipName = "Owner"
+    _hidden_value = true
+  }
+  salesforce.Lookup ParentId {
+    apiName = "ContentDocument.ParentId"
+    label = "Parent ID"
+  }
+  salesforce.Picklist PublishStatus {
+    apiName = "ContentDocument.PublishStatus"
+    label = "Publish Status"
+    _required = true
+    restricted = true
+  }
+  salesforce.Text Title {
+    apiName = "ContentDocument.Title"
+    label = "Title"
+    _required = true
+    length = 255
+    unique = false
+    caseSensitive = false
+  }
+  serviceid Id {
+    apiName = "ContentDocument.Id"
+    label = "Content Document ID"
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Lookup CreatedById {
+    apiName = "ContentDocument.CreatedById"
+    label = "Created By ID"
+    relationshipName = "CreatedBy"
+    _hidden_value = true
+  }
+  salesforce.DateTime CreatedDate {
+    apiName = "ContentDocument.CreatedDate"
+    label = "Created"
+    _hidden_value = true
+  }
+  salesforce.Lookup LastModifiedById {
+    apiName = "ContentDocument.LastModifiedById"
+    label = "Last Modified By ID"
+    relationshipName = "LastModifiedBy"
+    _hidden_value = true
+  }
+  salesforce.DateTime LastModifiedDate {
+    apiName = "ContentDocument.LastModifiedDate"
+    label = "Last Modified Date"
+    _hidden_value = true
+  }
+  salesforce.Checkbox IsDeleted {
+    apiName = "ContentDocument.IsDeleted"
+    label = "Is Deleted"
+    defaultValue = false
+    _hidden_value = true
+  }
+  salesforce.DateTime SystemModstamp {
+    apiName = "ContentDocument.SystemModstamp"
+    label = "System Modstamp"
+    _hidden_value = true
+  }
+  salesforce.Lookup LatestPublishedVersionId {
+    apiName = "ContentDocument.LatestPublishedVersionId"
+    label = "Latest Published Version ID"
+    relationshipName = "LatestPublishedVersion"
+  }
+  salesforce.LongTextArea Description {
+    apiName = "ContentDocument.Description"
+    label = "Description"
+    length = 1000
+  }
+  salesforce.Number ContentSize {
+    apiName = "ContentDocument.ContentSize"
+    label = "Size"
+    scale = 0
+    precision = 9
+    unique = false
+  }
+  salesforce.Unknown ContentSizeLong {
+    apiName = "ContentDocument.ContentSizeLong"
+    label = "Size"
+  }
+  salesforce.Text FileType {
+    apiName = "ContentDocument.FileType"
+    label = "File Type"
+    length = 20
+    unique = false
+    caseSensitive = false
+  }
+  salesforce.Text FileExtension {
+    apiName = "ContentDocument.FileExtension"
+    label = "File Extension"
+    length = 40
+    unique = false
+    caseSensitive = false
+  }
+  salesforce.Picklist SharingOption {
+    apiName = "ContentDocument.SharingOption"
+    label = "Prevent others from sharing and unsharing"
+    restricted = true
+  }
+  salesforce.Picklist SharingPrivacy {
+    apiName = "ContentDocument.SharingPrivacy"
+    label = "File Privacy on Records"
+    restricted = true
+  }
+  salesforce.DateTime ContentModifiedDate {
+    apiName = "ContentDocument.ContentModifiedDate"
+    label = "Content Modified Date"
+  }
+}

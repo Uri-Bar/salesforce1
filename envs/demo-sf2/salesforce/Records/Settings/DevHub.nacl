@@ -1,5 +1,6 @@
 salesforce.DevHubSettings {
   fullName = "DevHub"
+  enableALMDevopsCorePref = false
   enableDevOpsCenter = false
   enableDevOpsCenterGA = false
   enableScratchOrgManagementPref = false

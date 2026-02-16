@@ -132,7 +132,7 @@ type salesforce.CaseMilestone {
   salesforce.Lookup MilestoneTypeId {
     apiName = "CaseMilestone.MilestoneTypeId"
     relationshipName = "MilestoneType"
-    label = "Milestone Type ID"
+    label = "Milestone ID"
   }
   salesforce.DateTime SystemModstamp {
     apiName = "CaseMilestone.SystemModstamp"

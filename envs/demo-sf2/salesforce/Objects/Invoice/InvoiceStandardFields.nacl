@@ -37,6 +37,15 @@ type salesforce.Invoice {
     _required = true
     label = "Due Date"
   }
+  salesforce.Unknown FuncCrcyCnvTotAmtWithTax {
+    apiName = "Invoice.FuncCrcyCnvTotAmtWithTax"
+  }
+  salesforce.Unknown FunctionalCurrencyCvsnDate {
+    apiName = "Invoice.FunctionalCurrencyCvsnDate"
+  }
+  salesforce.Unknown FunctionalCurrencyCvsnRate {
+    apiName = "Invoice.FunctionalCurrencyCvsnRate"
+  }
   salesforce.Date InvoiceDate {
     apiName = "Invoice.InvoiceDate"
     _required = true
@@ -127,6 +136,7 @@ type salesforce.Invoice {
   }
   salesforce.Summary TotalTaxAmount {
     apiName = "Invoice.TotalTaxAmount"
+    inlineHelpText = "The rollup of taxes from all line items in the transaction."
     label = "Total Tax"
   }
   serviceid Id {
@@ -172,6 +182,10 @@ type salesforce.Invoice {
     apiName = "Invoice.SystemModstamp"
     label = "System Modstamp"
     _hidden_value = true
+  }
+  salesforce.Unknown TotalTaxesCapturedAtHeader {
+    apiName = "Invoice.TotalTaxesCapturedAtHeader"
+    inlineHelpText = "The total tax calculated at the transaction header level."
   }
   salesforce.Picklist WriteOffStatus {
     apiName = "Invoice.WriteOffStatus"

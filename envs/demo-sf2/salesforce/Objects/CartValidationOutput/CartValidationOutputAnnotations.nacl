@@ -57,7 +57,7 @@ type salesforce.CartValidationOutput {
   }
   apiName = "CartValidationOutput"
   metadataType = "CustomObject"
-  label = "Cart Validation Output"
+  label = "Cart Message"
   description = ""
   actionOverrides = [
     {
@@ -134,5 +134,5 @@ type salesforce.CartValidationOutput {
   compactLayoutAssignment = "SYSTEM"
   enableFeeds = false
   externalSharingModel = "ControlledByParent"
-  _alias = "Cart Validation Output"
+  _alias = "Cart Message"
 }

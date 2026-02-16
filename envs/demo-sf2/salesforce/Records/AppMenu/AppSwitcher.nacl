@@ -101,6 +101,10 @@ salesforce.AppMenu AppSwitcher {
       name = salesforce.CustomApplication.instance.standard__MSJApp
       type = "CustomApplication"
     },
+    {
+      name = salesforce.CustomApplication.instance.standard__Shield
+      type = "CustomApplication"
+    },
   ]
   _alias = "AppSwitcher"
 }

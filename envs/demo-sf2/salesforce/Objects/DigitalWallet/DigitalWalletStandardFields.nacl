@@ -33,6 +33,9 @@ type salesforce.DigitalWallet {
     label = "Registered Email"
     unique = false
   }
+  salesforce.Unknown ExtendedPaymentMethodType {
+    apiName = "DigitalWallet.ExtendedPaymentMethodType"
+  }
   salesforce.Text GatewayToken {
     apiName = "DigitalWallet.GatewayToken"
     length = 255

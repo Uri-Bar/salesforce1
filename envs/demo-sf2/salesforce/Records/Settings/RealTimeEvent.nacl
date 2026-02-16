@@ -142,6 +142,14 @@ salesforce.RealTimeEventSettings {
       isEnabled = false
     },
     {
+      entityName = "UniversalAnomalyEventStore"
+      isEnabled = false
+    },
+    {
+      entityName = "UniversalAnomalyEvent"
+      isEnabled = false
+    },
+    {
       entityName = "UriEvent"
       isEnabled = false
     },

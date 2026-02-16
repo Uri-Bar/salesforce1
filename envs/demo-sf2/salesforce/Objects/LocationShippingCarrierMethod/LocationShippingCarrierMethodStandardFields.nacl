@@ -5,6 +5,9 @@ type salesforce.LocationShippingCarrierMethod {
     _required = true
     label = "Location Source ID"
   }
+  salesforce.Unknown PickupTime {
+    apiName = "LocationShippingCarrierMethod.PickupTime"
+  }
   salesforce.Lookup ShippingCarrierMethodId {
     apiName = "LocationShippingCarrierMethod.ShippingCarrierMethodId"
     relationshipName = "ShippingCarrierMethod"

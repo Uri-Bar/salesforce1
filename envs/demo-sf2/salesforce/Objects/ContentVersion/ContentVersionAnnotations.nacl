@@ -95,6 +95,7 @@ type salesforce.ContentVersion {
     searchResultsAdditionalFields = [
       "VERSION.TITLE",
       "VERSION.CONTENT_SIZE",
+      "VERSION.CONTENT_SIZE_LONG",
       "VERSION.FILE_EXTENSION",
       "VERSION.LAST_UPDATE",
       "VERSION.OWNER",

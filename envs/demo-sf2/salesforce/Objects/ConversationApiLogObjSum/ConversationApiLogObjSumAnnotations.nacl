@@ -57,9 +57,9 @@ type salesforce.ConversationApiLogObjSum {
   }
   apiName = "ConversationApiLogObjSum"
   metadataType = "CustomObject"
-  label = "Conversation Api Log Object Summary"
+  label = "Conversation API Log Object Summary"
   description = ""
   enableFeeds = false
   externalSharingModel = "ControlledByParent"
-  _alias = "Conversation Api Log Object Summary"
+  _alias = "Conversation API Log Object Summary"
 }

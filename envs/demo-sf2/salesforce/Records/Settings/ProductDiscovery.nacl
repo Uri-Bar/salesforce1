@@ -1,4 +1,5 @@
 salesforce.ProductDiscoverySettings {
+  promoContextMappingNameOrgValue = "ProductDiscoveryPromoMapping"
   fullName = "ProductDiscovery"
   discoverProductsFlowNameOrgValue = "revenue_products__DiscoverProducts"
   prodDiscBrowseContextDefOrgValue = "ProductDiscoveryContext__stdctx"

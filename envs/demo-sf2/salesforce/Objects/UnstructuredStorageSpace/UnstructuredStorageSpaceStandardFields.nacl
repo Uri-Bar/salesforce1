@@ -1,0 +1,116 @@
+type salesforce.UnstructuredStorageSpace {
+  salesforce.Text ApplicationName {
+    apiName = "UnstructuredStorageSpace.ApplicationName"
+    label = "Application Name"
+    _required = true
+    length = 255
+    unique = false
+    caseSensitive = false
+  }
+  salesforce.Text Attribute1 {
+    apiName = "UnstructuredStorageSpace.Attribute1"
+    label = "Attribute1"
+    length = 255
+    unique = false
+    caseSensitive = false
+  }
+  salesforce.Text DerivedFolderLocation {
+    apiName = "UnstructuredStorageSpace.DerivedFolderLocation"
+    label = "Derived Folder Location"
+    length = 255
+    unique = false
+    caseSensitive = false
+  }
+  salesforce.Picklist ExpirationPolicyType {
+    apiName = "UnstructuredStorageSpace.ExpirationPolicyType"
+    label = "Expiration Policy Type"
+  }
+  salesforce.Lookup FolderId {
+    apiName = "UnstructuredStorageSpace.FolderId"
+    label = "Folder ID"
+    _required = true
+    relationshipName = "Folder"
+  }
+  salesforce.Text SpaceName {
+    apiName = "UnstructuredStorageSpace.SpaceName"
+    label = "Space Name"
+    _required = true
+    length = 255
+    unique = false
+    caseSensitive = false
+  }
+  salesforce.Text StorageLocation {
+    apiName = "UnstructuredStorageSpace.StorageLocation"
+    label = "Storage Location"
+    _required = true
+    length = 255
+    unique = false
+    caseSensitive = false
+  }
+  salesforce.Text StorageReference {
+    apiName = "UnstructuredStorageSpace.StorageReference"
+    label = "Storage Reference"
+    _required = true
+    length = 255
+    unique = false
+    caseSensitive = false
+  }
+  salesforce.Picklist StorageTierType {
+    apiName = "UnstructuredStorageSpace.StorageTierType"
+    label = "Storage Tier Type"
+  }
+  serviceid Id {
+    apiName = "UnstructuredStorageSpace.Id"
+    label = "UnstructuredStorageSpace ID"
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Lookup OwnerId {
+    apiName = "UnstructuredStorageSpace.OwnerId"
+    label = "Owner ID"
+    relationshipName = "Owner"
+    _hidden_value = true
+  }
+  salesforce.Checkbox IsDeleted {
+    apiName = "UnstructuredStorageSpace.IsDeleted"
+    label = "Deleted"
+    defaultValue = false
+    _hidden_value = true
+  }
+  salesforce.AutoNumber Name {
+    apiName = "UnstructuredStorageSpace.Name"
+    label = "Name"
+    _hidden_value = true
+  }
+  salesforce.DateTime CreatedDate {
+    apiName = "UnstructuredStorageSpace.CreatedDate"
+    label = "Created Date"
+    _hidden_value = true
+  }
+  salesforce.Lookup CreatedById {
+    apiName = "UnstructuredStorageSpace.CreatedById"
+    label = "Created By ID"
+    relationshipName = "CreatedBy"
+    _hidden_value = true
+  }
+  salesforce.DateTime LastModifiedDate {
+    apiName = "UnstructuredStorageSpace.LastModifiedDate"
+    label = "Last Modified Date"
+    _hidden_value = true
+  }
+  salesforce.Lookup LastModifiedById {
+    apiName = "UnstructuredStorageSpace.LastModifiedById"
+    label = "Last Modified By ID"
+    relationshipName = "LastModifiedBy"
+    _hidden_value = true
+  }
+  salesforce.DateTime SystemModstamp {
+    apiName = "UnstructuredStorageSpace.SystemModstamp"
+    label = "System Modstamp"
+    _hidden_value = true
+  }
+  salesforce.Picklist SpaceType {
+    apiName = "UnstructuredStorageSpace.SpaceType"
+    label = "Space Type"
+  }
+}

@@ -1,0 +1,98 @@
+type salesforce.AiJobRun {
+  serviceid Id {
+    apiName = "AiJobRun.Id"
+    label = "AI Job Run ID"
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Lookup OwnerId {
+    apiName = "AiJobRun.OwnerId"
+    label = "Owner ID"
+    relationshipName = "Owner"
+    _hidden_value = true
+  }
+  salesforce.Checkbox IsDeleted {
+    apiName = "AiJobRun.IsDeleted"
+    label = "Deleted"
+    defaultValue = false
+    _hidden_value = true
+  }
+  salesforce.AutoNumber Name {
+    apiName = "AiJobRun.Name"
+    label = "Name"
+    _hidden_value = true
+  }
+  salesforce.DateTime CreatedDate {
+    apiName = "AiJobRun.CreatedDate"
+    label = "Created Date"
+    _hidden_value = true
+  }
+  salesforce.Lookup CreatedById {
+    apiName = "AiJobRun.CreatedById"
+    label = "Created By ID"
+    relationshipName = "CreatedBy"
+    _hidden_value = true
+  }
+  salesforce.DateTime LastModifiedDate {
+    apiName = "AiJobRun.LastModifiedDate"
+    label = "Last Modified Date"
+    _hidden_value = true
+  }
+  salesforce.Lookup LastModifiedById {
+    apiName = "AiJobRun.LastModifiedById"
+    label = "Last Modified By ID"
+    relationshipName = "LastModifiedBy"
+    _hidden_value = true
+  }
+  salesforce.DateTime SystemModstamp {
+    apiName = "AiJobRun.SystemModstamp"
+    label = "System Modstamp"
+    _hidden_value = true
+  }
+  salesforce.Picklist JobType {
+    apiName = "AiJobRun.JobType"
+    label = "Job Type"
+    restricted = true
+  }
+  salesforce.Text Target {
+    apiName = "AiJobRun.Target"
+    label = "Target"
+    length = 255
+    unique = false
+    caseSensitive = false
+  }
+  salesforce.Picklist Status {
+    apiName = "AiJobRun.Status"
+    label = "Status"
+    _required = true
+  }
+  salesforce.DateTime StartTime {
+    apiName = "AiJobRun.StartTime"
+    label = "Start Time"
+  }
+  salesforce.DateTime EndTime {
+    apiName = "AiJobRun.EndTime"
+    label = "End Time"
+  }
+  salesforce.Text ErrorCode {
+    apiName = "AiJobRun.ErrorCode"
+    label = "Error Code"
+    length = 40
+    unique = false
+    caseSensitive = false
+  }
+  salesforce.Text ErrorMessage {
+    apiName = "AiJobRun.ErrorMessage"
+    label = "Error Message"
+    length = 255
+    unique = false
+    caseSensitive = false
+  }
+  salesforce.Text Label {
+    apiName = "AiJobRun.Label"
+    label = "Label"
+    length = 255
+    unique = false
+    caseSensitive = false
+  }
+}

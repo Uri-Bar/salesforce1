@@ -117,14 +117,14 @@ type salesforce.Idea {
   salesforce.Text CreatorFullPhotoUrl {
     apiName = "Idea.CreatorFullPhotoUrl"
     length = 255
-    label = "Url of Creator's Profile Photo"
+    label = "URL of Creator's Profile Photo"
     unique = false
     caseSensitive = false
   }
   salesforce.Text CreatorSmallPhotoUrl {
     apiName = "Idea.CreatorSmallPhotoUrl"
     length = 255
-    label = "Url of Creator's Thumbnail Photo"
+    label = "URL of Creator's Thumbnail Photo"
     unique = false
     caseSensitive = false
   }

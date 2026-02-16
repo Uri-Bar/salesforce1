@@ -1,7 +1,7 @@
 type salesforce.ConversationApiLogObjSum {
   serviceid Id {
     apiName = "ConversationApiLogObjSum.Id"
-    label = "Conversation Api Log Object Summary ID"
+    label = "Conversation API Log Object Summary ID"
     queryable = true
     _hidden_value = true
   }
@@ -13,7 +13,7 @@ type salesforce.ConversationApiLogObjSum {
   }
   salesforce.Text Name {
     apiName = "ConversationApiLogObjSum.Name"
-    label = "Conversation Api Log Object Summary Name"
+    label = "Conversation API Log Object Summary Name"
     _required = true
     length = 255
     unique = false
@@ -48,7 +48,7 @@ type salesforce.ConversationApiLogObjSum {
   }
   salesforce.Lookup ConversationApiLogId {
     apiName = "ConversationApiLogObjSum.ConversationApiLogId"
-    label = "Conversation Api Log ID"
+    label = "Conversation API Log ID"
     _required = true
     relationshipName = "ConversationApiLog"
   }

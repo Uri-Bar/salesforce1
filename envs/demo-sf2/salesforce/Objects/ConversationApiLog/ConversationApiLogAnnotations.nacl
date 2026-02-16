@@ -57,9 +57,9 @@ type salesforce.ConversationApiLog {
   }
   apiName = "ConversationApiLog"
   metadataType = "CustomObject"
-  label = "Conversation Api Log"
+  label = "Conversation API Log"
   description = ""
   enableFeeds = false
   externalSharingModel = "Private"
-  _alias = "Conversation Api Log"
+  _alias = "Conversation API Log"
 }

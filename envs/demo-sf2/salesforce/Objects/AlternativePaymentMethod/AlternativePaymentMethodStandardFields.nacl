@@ -47,6 +47,9 @@ type salesforce.AlternativePaymentMethod {
     label = "Registered Email"
     unique = false
   }
+  salesforce.Unknown ExtendedPaymentMethodType {
+    apiName = "AlternativePaymentMethod.ExtendedPaymentMethodType"
+  }
   salesforce.EncryptedText GatewayToken {
     apiName = "AlternativePaymentMethod.GatewayToken"
     length = 1000

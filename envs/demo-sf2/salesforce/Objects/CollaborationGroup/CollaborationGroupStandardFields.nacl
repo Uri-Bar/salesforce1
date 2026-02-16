@@ -70,7 +70,7 @@ type salesforce.CollaborationGroup {
   }
   salesforce.Url MediumPhotoUrl {
     apiName = "CollaborationGroup.MediumPhotoUrl"
-    label = "Url for medium profile photo"
+    label = "URL for medium profile photo"
   }
   salesforce.Url SmallPhotoUrl {
     apiName = "CollaborationGroup.SmallPhotoUrl"
@@ -125,7 +125,7 @@ type salesforce.CollaborationGroup {
   }
   salesforce.Url BannerPhotoUrl {
     apiName = "CollaborationGroup.BannerPhotoUrl"
-    label = "Banner Photo Url"
+    label = "Banner Photo URL"
   }
   salesforce.Checkbox IsBroadcast {
     apiName = "CollaborationGroup.IsBroadcast"

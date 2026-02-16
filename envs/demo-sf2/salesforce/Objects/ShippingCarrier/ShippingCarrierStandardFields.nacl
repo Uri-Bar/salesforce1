@@ -7,6 +7,12 @@ type salesforce.ShippingCarrier {
     unique = true
     caseSensitive = true
   }
+  salesforce.Picklist ManagedShippingCarrier {
+    apiName = "ShippingCarrier.ManagedShippingCarrier"
+    inlineHelpText = "Salesforce managed shipping carrier information that provides estimated transit times."
+    label = "Managed Shipping Carrier"
+    restricted = true
+  }
   salesforce.Text Name {
     apiName = "ShippingCarrier.Name"
     length = 255
@@ -14,6 +20,12 @@ type salesforce.ShippingCarrier {
     label = "Name"
     unique = false
     caseSensitive = false
+  }
+  salesforce.Picklist ShipFromCountry {
+    apiName = "ShippingCarrier.ShipFromCountry"
+    inlineHelpText = "Country where the shipment originates."
+    label = "Ship From Country"
+    restricted = true
   }
   serviceid Id {
     apiName = "ShippingCarrier.Id"

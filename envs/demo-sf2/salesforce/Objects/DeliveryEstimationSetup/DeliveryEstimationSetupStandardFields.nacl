@@ -125,6 +125,11 @@ type salesforce.DeliveryEstimationSetup {
     _required = true
     label = "Sync Status"
   }
+  salesforce.Picklist RoutingType {
+    apiName = "DeliveryEstimationSetup.RoutingType"
+    label = "Routing Type"
+    restricted = true
+  }
   salesforce.Text ServiceRegion {
     apiName = "DeliveryEstimationSetup.ServiceRegion"
     label = "Service Region"

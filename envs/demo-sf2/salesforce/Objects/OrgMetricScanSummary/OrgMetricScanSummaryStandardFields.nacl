@@ -13,7 +13,7 @@ type salesforce.OrgMetricScanSummary {
   }
   serviceid Id {
     apiName = "OrgMetricScanSummary.Id"
-    label = "Org Metric Scan ID"
+    label = "Org Metric Scan Summary ID"
     queryable = true
     _hidden_value = true
   }

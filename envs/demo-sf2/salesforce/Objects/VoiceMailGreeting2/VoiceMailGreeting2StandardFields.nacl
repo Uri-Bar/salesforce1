@@ -1,0 +1,20 @@
+type salesforce.VoiceMailGreeting2 {
+  salesforce.Unknown Duration {
+    apiName = "VoiceMailGreeting2.Duration"
+  }
+  salesforce.Unknown GreetingUrl {
+    apiName = "VoiceMailGreeting2.GreetingUrl"
+  }
+  salesforce.Unknown Language {
+    apiName = "VoiceMailGreeting2.Language"
+  }
+  salesforce.Unknown Name {
+    apiName = "VoiceMailGreeting2.Name"
+  }
+  salesforce.Lookup OwnerId {
+    apiName = "VoiceMailGreeting2.OwnerId"
+  }
+  salesforce.Unknown Type {
+    apiName = "VoiceMailGreeting2.Type"
+  }
+}

@@ -50,7 +50,7 @@ type salesforce.StandardShippingRate {
     apiName = "StandardShippingRate.ShippingZoneId"
     relationshipName = "ShippingZone"
     _required = true
-    label = "Shipping Zone ID"
+    label = "Shipping Rate Area ID"
   }
   salesforce.Currency Price {
     apiName = "StandardShippingRate.Price"

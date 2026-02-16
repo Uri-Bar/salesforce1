@@ -16,7 +16,7 @@ type salesforce.AuthorizationFormText {
   salesforce.Text FullAuthorizationFormUrl {
     apiName = "AuthorizationFormText.FullAuthorizationFormUrl"
     length = 255
-    label = "Full Authorization Form Url"
+    label = "Full Authorization Form URL"
     unique = false
     caseSensitive = false
   }

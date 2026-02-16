@@ -23,6 +23,12 @@ type salesforce.Location {
   salesforce.Unknown DrivingDirections {
     apiName = "Location.DrivingDirections"
   }
+  salesforce.Unknown EarliestPickupTimeOffset {
+    apiName = "Location.EarliestPickupTimeOffset"
+  }
+  salesforce.Unknown Email {
+    apiName = "Location.Email"
+  }
   salesforce.Text ExternalReference {
     apiName = "Location.ExternalReference"
     length = 255
@@ -30,8 +36,14 @@ type salesforce.Location {
     unique = false
     caseSensitive = false
   }
+  salesforce.Unknown Fax {
+    apiName = "Location.Fax"
+  }
   salesforce.Lookup FulfillingBusinessHoursId {
     apiName = "Location.FulfillingBusinessHoursId"
+  }
+  salesforce.Unknown IsEligibleForPickup {
+    apiName = "Location.IsEligibleForPickup"
   }
   salesforce.Checkbox IsInventoryLocation {
     apiName = "Location.IsInventoryLocation"
@@ -42,6 +54,9 @@ type salesforce.Location {
     apiName = "Location.IsMobile"
     defaultValue = false
     label = "Mobile Location"
+  }
+  salesforce.Unknown LatestPickupTimeOffset {
+    apiName = "Location.LatestPickupTimeOffset"
   }
   salesforce.Unknown Location {
     apiName = "Location.Location"
@@ -58,6 +73,9 @@ type salesforce.Location {
     apiName = "Location.LogoId"
     relationshipName = "Logo"
     label = "Asset File ID"
+  }
+  salesforce.Unknown Mobile {
+    apiName = "Location.Mobile"
   }
   salesforce.Text Name {
     apiName = "Location.Name"
@@ -78,6 +96,15 @@ type salesforce.Location {
   }
   salesforce.Hierarchy ParentLocationId {
     apiName = "Location.ParentLocationId"
+  }
+  salesforce.Unknown Phone {
+    apiName = "Location.Phone"
+  }
+  salesforce.Unknown PickupProcessingTime {
+    apiName = "Location.PickupProcessingTime"
+  }
+  salesforce.Unknown PickupProcessingTimeUnit {
+    apiName = "Location.PickupProcessingTimeUnit"
   }
   salesforce.Unknown PossessionDate {
     apiName = "Location.PossessionDate"

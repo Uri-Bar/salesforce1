@@ -1,7 +1,7 @@
 type salesforce.CartValidationOutput {
   serviceid Id {
     apiName = "CartValidationOutput.Id"
-    label = "Cart Validation Output ID"
+    label = "Cart Message ID"
     queryable = true
     _hidden_value = true
   }

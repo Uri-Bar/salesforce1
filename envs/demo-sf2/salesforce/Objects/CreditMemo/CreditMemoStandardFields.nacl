@@ -36,10 +36,10 @@ type salesforce.CreditMemo {
   }
   salesforce.Text CreditMemoNumber {
     apiName = "CreditMemo.CreditMemoNumber"
-    length = 10
+    length = 255
     label = "Credit Memo Number"
-    unique = false
-    caseSensitive = false
+    unique = true
+    caseSensitive = true
   }
   salesforce.Text Description {
     apiName = "CreditMemo.Description"
@@ -61,6 +61,15 @@ type salesforce.CreditMemo {
     label = "External Reference Data Source"
     unique = false
     caseSensitive = false
+  }
+  salesforce.Unknown FuncCrcyCnvTotAmtWithTax {
+    apiName = "CreditMemo.FuncCrcyCnvTotAmtWithTax"
+  }
+  salesforce.Unknown FunctionalCurrencyCvsnDate {
+    apiName = "CreditMemo.FunctionalCurrencyCvsnDate"
+  }
+  salesforce.Unknown FunctionalCurrencyCvsnRate {
+    apiName = "CreditMemo.FunctionalCurrencyCvsnRate"
   }
   salesforce.Summary NetCreditsApplied {
     apiName = "CreditMemo.NetCreditsApplied"
@@ -144,7 +153,12 @@ type salesforce.CreditMemo {
   }
   salesforce.Summary TotalTaxAmount {
     apiName = "CreditMemo.TotalTaxAmount"
+    inlineHelpText = "The rollup of taxes from all line items in the transaction."
     label = "Total Tax"
+  }
+  salesforce.Unknown TotalTaxesCapturedAtHeader {
+    apiName = "CreditMemo.TotalTaxesCapturedAtHeader"
+    inlineHelpText = "The total tax calculated at the transaction header level."
   }
   serviceid Id {
     apiName = "CreditMemo.Id"

@@ -13,6 +13,13 @@ salesforce.NotificationTypeConfig NotificationTypeConfig {
         desktopEnabled = true
         mobileEnabled = false
       }
+      notificationType = "admin_graph_api_migration"
+    },
+    {
+      notificationChannels = {
+        desktopEnabled = true
+        mobileEnabled = false
+      }
       notificationType = "ads_notification"
     },
     {
@@ -272,6 +279,13 @@ salesforce.NotificationTypeConfig NotificationTypeConfig {
         desktopEnabled = true
         mobileEnabled = false
       }
+      notificationType = "rtf_payment_status"
+    },
+    {
+      notificationChannels = {
+        desktopEnabled = true
+        mobileEnabled = false
+      }
       notificationType = "security_center_alert"
     },
     {
@@ -298,6 +312,13 @@ salesforce.NotificationTypeConfig NotificationTypeConfig {
     {
       notificationChannels = {
         desktopEnabled = true
+        mobileEnabled = false
+      }
+      notificationType = "suites_agent_enablement"
+    },
+    {
+      notificationChannels = {
+        desktopEnabled = true
         mobileEnabled = true
       }
       notificationType = "task_delegated_to"
@@ -315,6 +336,13 @@ salesforce.NotificationTypeConfig NotificationTypeConfig {
         mobileEnabled = false
       }
       notificationType = "task_reminder"
+    },
+    {
+      notificationChannels = {
+        desktopEnabled = true
+        mobileEnabled = false
+      }
+      notificationType = "user_graph_api_migration"
     },
     {
       notificationChannels = {

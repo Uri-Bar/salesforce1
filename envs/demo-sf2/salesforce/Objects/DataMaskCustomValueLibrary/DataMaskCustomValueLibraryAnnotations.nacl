@@ -103,20 +103,6 @@ type salesforce.DataMaskCustomValueLibrary {
       type = "Default"
     },
     {
-      actionName = "Edit"
-      type = "Default"
-    },
-    {
-      actionName = "Edit"
-      formFactor = "Large"
-      type = "Default"
-    },
-    {
-      actionName = "Edit"
-      formFactor = "Small"
-      type = "Default"
-    },
-    {
       actionName = "List"
       type = "Default"
     },
@@ -193,8 +179,6 @@ type salesforce.DataMaskCustomValueLibrary {
   searchLayouts = {
     customTabListAdditionalFields = [
       "Description",
-      "Values",
-      "Type",
       "ContentType",
       "IsActive",
       "LastModifiedDate",
@@ -202,8 +186,6 @@ type salesforce.DataMaskCustomValueLibrary {
     ]
     lookupDialogsAdditionalFields = [
       "Description",
-      "Values",
-      "Type",
       "ContentType",
       "IsActive",
       "LastModifiedDate",
@@ -211,8 +193,6 @@ type salesforce.DataMaskCustomValueLibrary {
     ]
     lookupPhoneDialogsAdditionalFields = [
       "Description",
-      "Values",
-      "Type",
       "ContentType",
       "IsActive",
       "LastModifiedDate",
@@ -220,8 +200,6 @@ type salesforce.DataMaskCustomValueLibrary {
     ]
     searchResultsAdditionalFields = [
       "Description",
-      "Values",
-      "Type",
       "ContentType",
       "IsActive",
       "LastModifiedDate",

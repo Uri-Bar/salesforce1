@@ -82,6 +82,9 @@ type salesforce.AssetAction {
     scale = 2
     precision = 18
   }
+  salesforce.Unknown TotalDowngradesAmount {
+    apiName = "AssetAction.TotalDowngradesAmount"
+  }
   salesforce.Currency TotalDownsellsAmount {
     apiName = "AssetAction.TotalDownsellsAmount"
     label = "Total Downsells Amount"
@@ -119,6 +122,9 @@ type salesforce.AssetAction {
     scale = 2
     precision = 18
   }
+  salesforce.Unknown TotalSwapsAmount {
+    apiName = "AssetAction.TotalSwapsAmount"
+  }
   salesforce.Currency TotalTermsAndConditionsAmount {
     apiName = "AssetAction.TotalTermsAndConditionsAmount"
     label = "Total Terms And Conditions Changes Amount"
@@ -130,6 +136,9 @@ type salesforce.AssetAction {
     label = "Total Transfers Amount"
     scale = 2
     precision = 18
+  }
+  salesforce.Unknown TotalUpgradesAmount {
+    apiName = "AssetAction.TotalUpgradesAmount"
   }
   salesforce.Currency TotalUpsellsAmount {
     apiName = "AssetAction.TotalUpsellsAmount"

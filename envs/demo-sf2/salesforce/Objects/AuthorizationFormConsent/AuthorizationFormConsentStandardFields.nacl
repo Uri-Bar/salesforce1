@@ -29,7 +29,7 @@ type salesforce.AuthorizationFormConsent {
   salesforce.Lookup DocumentVersionId {
     apiName = "AuthorizationFormConsent.DocumentVersionId"
     relationshipName = "DocumentVersion"
-    label = "ContentVersion ID"
+    label = "Content Version ID"
   }
   salesforce.Text Name {
     apiName = "AuthorizationFormConsent.Name"

@@ -34,6 +34,9 @@ type salesforce.CartItem {
     apiName = "CartItem.DistributedAdjustmentTaxAmount"
     label = "Distributed Promotions Tax Adjustment"
   }
+  salesforce.Unknown EndDate {
+    apiName = "CartItem.EndDate"
+  }
   salesforce.Unknown FirstPymtPriceAfterAdjustments {
     apiName = "CartItem.FirstPymtPriceAfterAdjustments"
   }
@@ -322,6 +325,9 @@ type salesforce.CartItem {
     label = "Product Validation Key hash"
     unique = false
     caseSensitive = false
+  }
+  salesforce.Unknown StartDate {
+    apiName = "CartItem.StartDate"
   }
   salesforce.Picklist StockCheckMethod {
     apiName = "CartItem.StockCheckMethod"

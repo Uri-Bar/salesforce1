@@ -54,6 +54,18 @@ type salesforce.InvoiceLine {
     unique = false
     caseSensitive = false
   }
+  salesforce.Unknown FuncCrcyCnvTotalTaxAmt {
+    apiName = "InvoiceLine.FuncCrcyCnvTotalTaxAmt"
+  }
+  salesforce.Unknown FuncCurrencyCnvChargeAmt {
+    apiName = "InvoiceLine.FuncCurrencyCnvChargeAmt"
+  }
+  salesforce.Unknown FunctionalCurrencyCvsnDate {
+    apiName = "InvoiceLine.FunctionalCurrencyCvsnDate"
+  }
+  salesforce.Unknown FunctionalCurrencyCvsnRate {
+    apiName = "InvoiceLine.FunctionalCurrencyCvsnRate"
+  }
   salesforce.MasterDetail InvoiceId {
     apiName = "InvoiceLine.InvoiceId"
     relationshipName = "Invoice"

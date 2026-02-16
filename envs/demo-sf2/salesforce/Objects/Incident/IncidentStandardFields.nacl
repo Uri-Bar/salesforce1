@@ -55,6 +55,9 @@ type salesforce.Incident {
     unique = false
     caseSensitive = false
   }
+  salesforce.Unknown MilestoneTimer {
+    apiName = "Incident.MilestoneTimer"
+  }
   salesforce.Lookup OwnerId {
     apiName = "Incident.OwnerId"
     relationshipName = "Owner"

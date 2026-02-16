@@ -768,7 +768,7 @@ type salesforce.User {
   }
   salesforce.Url MediumPhotoUrl {
     apiName = "User.MediumPhotoUrl"
-    label = "Url for medium profile photo"
+    label = "URL for medium profile photo"
   }
   salesforce.Picklist DigestFrequency {
     apiName = "User.DigestFrequency"
@@ -794,15 +794,15 @@ type salesforce.User {
   }
   salesforce.Url BannerPhotoUrl {
     apiName = "User.BannerPhotoUrl"
-    label = "Url for banner photo"
+    label = "URL for banner photo"
   }
   salesforce.Url SmallBannerPhotoUrl {
     apiName = "User.SmallBannerPhotoUrl"
-    label = "Url for IOS banner photo"
+    label = "URL for IOS banner photo"
   }
   salesforce.Url MediumBannerPhotoUrl {
     apiName = "User.MediumBannerPhotoUrl"
-    label = "Url for Android banner photo"
+    label = "URL for Android banner photo"
   }
   salesforce.Checkbox IsProfilePhotoActive {
     apiName = "User.IsProfilePhotoActive"

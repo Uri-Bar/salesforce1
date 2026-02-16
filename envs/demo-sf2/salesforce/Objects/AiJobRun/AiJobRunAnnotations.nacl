@@ -1,4 +1,4 @@
-type salesforce.ObjectMilestonePauseTime {
+type salesforce.AiJobRun {
   annotations {
     serviceid apiName {
     }
@@ -55,11 +55,11 @@ type salesforce.ObjectMilestonePauseTime {
     hidden_string internalId {
     }
   }
-  apiName = "ObjectMilestonePauseTime"
+  apiName = "AiJobRun"
   metadataType = "CustomObject"
-  label = "Milestone Pause Time Item"
+  label = "AI Job Run"
   description = ""
   enableFeeds = false
-  externalSharingModel = "ControlledByParent"
-  _alias = "Milestone Pause Time Item"
+  externalSharingModel = "Private"
+  _alias = "AI Job Run"
 }

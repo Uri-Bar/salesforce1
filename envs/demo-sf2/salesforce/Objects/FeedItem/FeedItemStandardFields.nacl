@@ -88,7 +88,7 @@ type salesforce.FeedItem {
   }
   salesforce.Url LinkUrl {
     apiName = "FeedItem.LinkUrl"
-    label = "Link Url"
+    label = "Link URL"
   }
   salesforce.Checkbox IsRichText {
     apiName = "FeedItem.IsRichText"

@@ -61,7 +61,7 @@ type salesforce.TableauHostMapping {
     apiName = "TableauHostMapping.UrlMatch"
     length = 120
     _required = true
-    label = "Tableau url match"
+    label = "Tableau URL match"
     unique = false
     caseSensitive = false
   }

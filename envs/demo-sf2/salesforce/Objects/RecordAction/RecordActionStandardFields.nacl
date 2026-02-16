@@ -12,12 +12,12 @@ type salesforce.RecordAction {
   salesforce.Picklist FlowDefinition {
     apiName = "RecordAction.FlowDefinition"
     restricted = true
-    label = "Interaction Definition ID"
+    label = "Flow Definition ID"
   }
   salesforce.Lookup FlowInterviewId {
     apiName = "RecordAction.FlowInterviewId"
     relationshipName = "FlowInterview"
-    label = "FlowInterview ID"
+    label = "Flow Interview ID"
   }
   salesforce.Checkbox IsMandatory {
     apiName = "RecordAction.IsMandatory"

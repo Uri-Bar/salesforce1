@@ -10,6 +10,9 @@ type salesforce.MessagingSession {
     scale = 0
     unique = false
   }
+  salesforce.Lookup CampaignId {
+    apiName = "MessagingSession.CampaignId"
+  }
   salesforce.Lookup CaseId {
     apiName = "MessagingSession.CaseId"
     relationshipName = "Case"

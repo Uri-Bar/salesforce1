@@ -1,0 +1,21 @@
+salesforce.CustomApplication standard__Shield {
+  formFactors = [
+    "Large",
+  ]
+  isNavAutoTempTabsDisabled = false
+  isNavPersonalizationDisabled = false
+  isNavTabPersistenceDisabled = false
+  isOmniPinnedViewEnabled = false
+  label = "Shield"
+  navType = "Standard"
+  tabs = [
+    "standard-ShieldHome",
+    "standard-DataDetect",
+    "standard-FieldAuditTrail",
+    "standard-EventMonitoring",
+    "standard-PlatformEncryption",
+  ]
+  uiType = "Lightning"
+  fullName = "standard__Shield"
+  _alias = "Shield (standard)"
+}

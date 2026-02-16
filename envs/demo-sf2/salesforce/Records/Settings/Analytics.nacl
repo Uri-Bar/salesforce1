@@ -42,6 +42,7 @@ salesforce.AnalyticsSettings {
   enableQueryLiveConnectors = true
   enableRemoveFooterForRepDisplay = false
   enableRemoveFooterFromRepExp = false
+  enableReportCustomTextExportPref = false
   enableReportEscapeCharsPref = false
   enableReportHideXlsExportPref = false
   enableReportInlineEditPref = true
@@ -58,7 +59,6 @@ salesforce.AnalyticsSettings {
   enableSummaryFilterOrgPref = false
   enableTableauHyperOutputConnector = false
   enableUseOldChartsLookAndFeel = false
-  enableUseReportTableSettingPref = false
   enableWaveAssetsNewDateVersion = false
   enableWaveIndexMVDim = true
   enableWaveIndexMVDimV2 = false

@@ -1,7 +1,7 @@
 type salesforce.StreamingChannel {
   serviceid Id {
     apiName = "StreamingChannel.Id"
-    label = "Streaming Channel Id"
+    label = "Streaming Channel ID"
     queryable = true
     _hidden_value = true
   }

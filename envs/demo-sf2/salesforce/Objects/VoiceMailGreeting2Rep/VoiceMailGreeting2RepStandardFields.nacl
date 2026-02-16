@@ -1,0 +1,23 @@
+type salesforce.VoiceMailGreeting2Rep {
+  salesforce.Unknown IsDefault {
+    apiName = "VoiceMailGreeting2Rep.IsDefault"
+  }
+  salesforce.Unknown Name {
+    apiName = "VoiceMailGreeting2Rep.Name"
+  }
+  salesforce.Lookup OwnerId {
+    apiName = "VoiceMailGreeting2Rep.OwnerId"
+  }
+  salesforce.Unknown OwnerType {
+    apiName = "VoiceMailGreeting2Rep.OwnerType"
+  }
+  salesforce.Lookup RepId {
+    apiName = "VoiceMailGreeting2Rep.RepId"
+  }
+  salesforce.Unknown Sequence {
+    apiName = "VoiceMailGreeting2Rep.Sequence"
+  }
+  salesforce.Lookup VoiceMailGreeting2Id {
+    apiName = "VoiceMailGreeting2Rep.VoiceMailGreeting2Id"
+  }
+}

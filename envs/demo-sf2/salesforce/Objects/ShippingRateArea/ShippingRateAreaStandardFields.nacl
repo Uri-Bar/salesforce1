@@ -1,7 +1,7 @@
 type salesforce.ShippingRateArea {
   serviceid Id {
     apiName = "ShippingRateArea.Id"
-    label = "Shipping Zone ID"
+    label = "Shipping Rate Area ID"
     queryable = true
     _hidden_value = true
   }

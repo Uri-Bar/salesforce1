@@ -45,7 +45,7 @@ type salesforce.WebCartCredit {
   }
   salesforce.Text Name {
     apiName = "WebCartCredit.Name"
-    label = "Web Cart CreditName"
+    label = "Web Cart Credit Name"
     _required = true
     length = 255
     unique = false
