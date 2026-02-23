@@ -13,7 +13,6 @@ salesforce.CustomApplication standard__FlowsApp {
     "standard-FlowRecord",
     "standard-ActionHub",
     "standard-FlowLogs",
-    "standard-DocumentProcessing",
   ]
   uiType = "Lightning"
   utilityBar = "FlowsApp_UtilityBar"
