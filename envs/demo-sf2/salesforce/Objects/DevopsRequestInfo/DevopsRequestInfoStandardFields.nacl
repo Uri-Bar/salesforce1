@@ -1,0 +1,87 @@
+type salesforce.DevopsRequestInfo {
+  salesforce.LongTextArea ErrorDetails {
+    apiName = "DevopsRequestInfo.ErrorDetails"
+    label = "Error Details"
+    length = 32768
+  }
+  salesforce.Text Message {
+    apiName = "DevopsRequestInfo.Message"
+    label = "Message"
+    length = 255
+    unique = false
+    caseSensitive = false
+  }
+  salesforce.Picklist OperationType {
+    apiName = "DevopsRequestInfo.OperationType"
+    label = "Operation Type"
+    _required = true
+    restricted = true
+  }
+  salesforce.DateTime RequestCompletionDate {
+    apiName = "DevopsRequestInfo.RequestCompletionDate"
+    label = "Request Completion Date"
+  }
+  salesforce.Text RequestToken {
+    apiName = "DevopsRequestInfo.RequestToken"
+    label = "Request Id"
+    length = 255
+    unique = false
+    caseSensitive = false
+  }
+  salesforce.Picklist Status {
+    apiName = "DevopsRequestInfo.Status"
+    label = "Status"
+    _required = true
+    restricted = true
+  }
+  serviceid Id {
+    apiName = "DevopsRequestInfo.Id"
+    label = "DevOps Request Info ID"
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Lookup OwnerId {
+    apiName = "DevopsRequestInfo.OwnerId"
+    label = "Owner ID"
+    relationshipName = "Owner"
+    _hidden_value = true
+  }
+  salesforce.Checkbox IsDeleted {
+    apiName = "DevopsRequestInfo.IsDeleted"
+    label = "Deleted"
+    defaultValue = false
+    _hidden_value = true
+  }
+  salesforce.AutoNumber Name {
+    apiName = "DevopsRequestInfo.Name"
+    label = "Name"
+    _hidden_value = true
+  }
+  salesforce.DateTime CreatedDate {
+    apiName = "DevopsRequestInfo.CreatedDate"
+    label = "Created Date"
+    _hidden_value = true
+  }
+  salesforce.Lookup CreatedById {
+    apiName = "DevopsRequestInfo.CreatedById"
+    label = "Created By ID"
+    relationshipName = "CreatedBy"
+    _hidden_value = true
+  }
+  salesforce.DateTime LastModifiedDate {
+    apiName = "DevopsRequestInfo.LastModifiedDate"
+    label = "Last Modified Date"
+    _hidden_value = true
+  }
+  salesforce.Lookup LastModifiedById {
+    apiName = "DevopsRequestInfo.LastModifiedById"
+    label = "Last Modified By ID"
+    relationshipName = "LastModifiedBy"
+    _hidden_value = true
+  }
+  salesforce.DateTime SystemModstamp {
+    apiName = "DevopsRequestInfo.SystemModstamp"
+    label = "System Modstamp"
+    _hidden_value = true
+  }
+}

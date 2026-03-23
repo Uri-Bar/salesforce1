@@ -1,0 +1,7 @@
+salesforce.SharingRules DevopsActivityLog {
+  fullName = "DevopsActivityLog"
+  _parent = [
+    salesforce.DevopsActivityLog,
+  ]
+  _alias = "DevopsActivityLog"
+}

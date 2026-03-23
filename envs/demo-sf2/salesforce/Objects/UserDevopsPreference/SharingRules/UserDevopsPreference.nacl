@@ -1,0 +1,7 @@
+salesforce.SharingRules UserDevopsPreference {
+  fullName = "UserDevopsPreference"
+  _parent = [
+    salesforce.UserDevopsPreference,
+  ]
+  _alias = "UserDevopsPreference"
+}

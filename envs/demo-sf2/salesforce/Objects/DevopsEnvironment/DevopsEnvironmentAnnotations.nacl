@@ -1,4 +1,4 @@
-type salesforce.DataMaskCustomValueLibrary {
+type salesforce.DevopsEnvironment {
   annotations {
     serviceid apiName {
     }
@@ -6,13 +6,13 @@ type salesforce.DataMaskCustomValueLibrary {
     }
     string label {
     }
+    string description {
+    }
     hidden_string keyPrefix {
     }
     salesforce.ActionOverride actionOverrides {
     }
     string compactLayoutAssignment {
-    }
-    string description {
     }
     boolean enableDataTranslation {
     }
@@ -55,9 +55,9 @@ type salesforce.DataMaskCustomValueLibrary {
     hidden_string internalId {
     }
   }
-  apiName = "DataMaskCustomValueLibrary"
+  apiName = "DevopsEnvironment"
   metadataType = "CustomObject"
-  label = "Custom Library"
+  label = "Environment"
   description = ""
   actionOverrides = [
     {
@@ -192,33 +192,33 @@ type salesforce.DataMaskCustomValueLibrary {
   externalSharingModel = "Private"
   searchLayouts = {
     customTabListAdditionalFields = [
-      "Description",
-      "ContentType",
-      "IsActive",
-      "LastModifiedDate",
-      "LastModifiedBy",
-    ]
-    lookupDialogsAdditionalFields = [
-      "Description",
-      "ContentType",
-      "IsActive",
-      "LastModifiedDate",
-      "LastModifiedBy",
-    ]
-    lookupPhoneDialogsAdditionalFields = [
-      "Description",
-      "ContentType",
-      "IsActive",
-      "LastModifiedDate",
-      "LastModifiedBy",
+      "CanTrackChanges",
+      "IsExpired",
+      "LastRevisionCounter",
+      "NamedCredential",
+      "OrgIdentifier",
+      "RefreshDate",
+      "RefreshSource",
+      "IsTestEnvironment",
+      "IsDevEnvironment",
+      "OrgType",
+      "OrgUrl",
+      "Replaces",
     ]
     searchResultsAdditionalFields = [
-      "Description",
-      "ContentType",
-      "IsActive",
-      "LastModifiedDate",
-      "LastModifiedBy",
+      "CanTrackChanges",
+      "IsExpired",
+      "LastRevisionCounter",
+      "NamedCredential",
+      "OrgIdentifier",
+      "RefreshDate",
+      "RefreshSource",
+      "IsTestEnvironment",
+      "IsDevEnvironment",
+      "OrgType",
+      "OrgUrl",
+      "Replaces",
     ]
   }
-  _alias = "Custom Library"
+  _alias = "Environment"
 }

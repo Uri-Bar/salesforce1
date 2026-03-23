@@ -1,0 +1,129 @@
+type salesforce.DevopsEnvironment {
+  salesforce.Checkbox CanTrackChanges {
+    apiName = "DevopsEnvironment.CanTrackChanges"
+    label = "Can Track Changes"
+    defaultValue = false
+  }
+  salesforce.Picklist DoceHubType {
+    apiName = "DevopsEnvironment.DoceHubType"
+    label = "Doce Hub Type"
+    restricted = true
+  }
+  salesforce.Checkbox IsDevEnvironment {
+    apiName = "DevopsEnvironment.IsDevEnvironment"
+    label = "Is Dev Environment"
+    defaultValue = false
+  }
+  salesforce.Checkbox IsExpired {
+    apiName = "DevopsEnvironment.IsExpired"
+    label = "Is Expired"
+    defaultValue = false
+  }
+  salesforce.Checkbox IsTestEnvironment {
+    apiName = "DevopsEnvironment.IsTestEnvironment"
+    label = "Is Test Environment"
+    defaultValue = false
+  }
+  salesforce.Checkbox IsVibeEnvironment {
+    apiName = "DevopsEnvironment.IsVibeEnvironment"
+    label = "Is Vibe Environment"
+    defaultValue = false
+  }
+  salesforce.Number LastRevisionCounter {
+    apiName = "DevopsEnvironment.LastRevisionCounter"
+    label = "Last Revision Counter"
+    scale = 0
+    precision = 9
+    unique = false
+  }
+  salesforce.Text Name {
+    apiName = "DevopsEnvironment.Name"
+    label = "Name"
+    _required = true
+    length = 255
+    unique = false
+    caseSensitive = false
+  }
+  salesforce.Text NamedCredential {
+    apiName = "DevopsEnvironment.NamedCredential"
+    label = "Named Credential"
+    length = 255
+    unique = false
+    caseSensitive = false
+  }
+  salesforce.Text OrgIdentifier {
+    apiName = "DevopsEnvironment.OrgIdentifier"
+    label = "Org ID"
+    length = 18
+    unique = false
+    caseSensitive = false
+  }
+  salesforce.Picklist OrgType {
+    apiName = "DevopsEnvironment.OrgType"
+    label = "Org Type"
+    restricted = true
+  }
+  salesforce.Url OrgUrl {
+    apiName = "DevopsEnvironment.OrgUrl"
+    label = "Org URL"
+  }
+  salesforce.DateTime RefreshDate {
+    apiName = "DevopsEnvironment.RefreshDate"
+    label = "Refresh Date"
+  }
+  salesforce.Lookup RefreshSourceId {
+    apiName = "DevopsEnvironment.RefreshSourceId"
+    label = "RefreshSource ID"
+    relationshipName = "RefreshSource"
+  }
+  salesforce.Lookup ReplacesId {
+    apiName = "DevopsEnvironment.ReplacesId"
+    label = "DevOps Environment ID"
+    relationshipName = "Replaces"
+  }
+  serviceid Id {
+    apiName = "DevopsEnvironment.Id"
+    label = "DevOps Environment ID"
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Lookup OwnerId {
+    apiName = "DevopsEnvironment.OwnerId"
+    label = "Owner ID"
+    relationshipName = "Owner"
+    _hidden_value = true
+  }
+  salesforce.Checkbox IsDeleted {
+    apiName = "DevopsEnvironment.IsDeleted"
+    label = "Deleted"
+    defaultValue = false
+    _hidden_value = true
+  }
+  salesforce.DateTime CreatedDate {
+    apiName = "DevopsEnvironment.CreatedDate"
+    label = "Created Date"
+    _hidden_value = true
+  }
+  salesforce.Lookup CreatedById {
+    apiName = "DevopsEnvironment.CreatedById"
+    label = "Created By ID"
+    relationshipName = "CreatedBy"
+    _hidden_value = true
+  }
+  salesforce.DateTime LastModifiedDate {
+    apiName = "DevopsEnvironment.LastModifiedDate"
+    label = "Last Modified Date"
+    _hidden_value = true
+  }
+  salesforce.Lookup LastModifiedById {
+    apiName = "DevopsEnvironment.LastModifiedById"
+    label = "Last Modified By ID"
+    relationshipName = "LastModifiedBy"
+    _hidden_value = true
+  }
+  salesforce.DateTime SystemModstamp {
+    apiName = "DevopsEnvironment.SystemModstamp"
+    label = "System Modstamp"
+    _hidden_value = true
+  }
+}

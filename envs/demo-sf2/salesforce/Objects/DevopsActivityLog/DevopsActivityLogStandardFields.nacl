@@ -1,0 +1,102 @@
+type salesforce.DevopsActivityLog {
+  salesforce.Text Activity {
+    apiName = "DevopsActivityLog.Activity"
+    label = "Activity"
+    length = 1000
+    unique = false
+    caseSensitive = false
+  }
+  salesforce.DateTime ActivityDate {
+    apiName = "DevopsActivityLog.ActivityDate"
+    label = "Activity Date"
+    _required = true
+  }
+  salesforce.Picklist ActivityType {
+    apiName = "DevopsActivityLog.ActivityType"
+    label = "Activity Type"
+    _required = true
+    restricted = true
+  }
+  salesforce.LongTextArea Description {
+    apiName = "DevopsActivityLog.Description"
+    label = "Description"
+    length = 5000
+  }
+  salesforce.Lookup DevopsRequestInfoId {
+    apiName = "DevopsActivityLog.DevopsRequestInfoId"
+    label = "DevOps Request Info ID"
+    relationshipName = "DevopsRequestInfo"
+  }
+  salesforce.AutoNumber Name {
+    apiName = "DevopsActivityLog.Name"
+    label = "Name"
+    _hidden_value = true
+  }
+  salesforce.Lookup ParentActivityId {
+    apiName = "DevopsActivityLog.ParentActivityId"
+    label = "DevOps Activity Log ID"
+    relationshipName = "ParentActivity"
+  }
+  salesforce.Lookup PerformedById {
+    apiName = "DevopsActivityLog.PerformedById"
+    label = "User ID"
+    relationshipName = "PerformedBy"
+  }
+  salesforce.Text RequestInfoErrorDetails {
+    apiName = "DevopsActivityLog.RequestInfoErrorDetails"
+    label = "Error Details"
+    length = 1333
+    unique = false
+    caseSensitive = false
+  }
+  salesforce.Picklist Status {
+    apiName = "DevopsActivityLog.Status"
+    label = "Status"
+    restricted = true
+  }
+  serviceid Id {
+    apiName = "DevopsActivityLog.Id"
+    label = "DevOps Activity Log ID"
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Lookup OwnerId {
+    apiName = "DevopsActivityLog.OwnerId"
+    label = "Owner ID"
+    relationshipName = "Owner"
+    _hidden_value = true
+  }
+  salesforce.Checkbox IsDeleted {
+    apiName = "DevopsActivityLog.IsDeleted"
+    label = "Deleted"
+    defaultValue = false
+    _hidden_value = true
+  }
+  salesforce.DateTime CreatedDate {
+    apiName = "DevopsActivityLog.CreatedDate"
+    label = "Created Date"
+    _hidden_value = true
+  }
+  salesforce.Lookup CreatedById {
+    apiName = "DevopsActivityLog.CreatedById"
+    label = "Created By ID"
+    relationshipName = "CreatedBy"
+    _hidden_value = true
+  }
+  salesforce.DateTime LastModifiedDate {
+    apiName = "DevopsActivityLog.LastModifiedDate"
+    label = "Last Modified Date"
+    _hidden_value = true
+  }
+  salesforce.Lookup LastModifiedById {
+    apiName = "DevopsActivityLog.LastModifiedById"
+    label = "Last Modified By ID"
+    relationshipName = "LastModifiedBy"
+    _hidden_value = true
+  }
+  salesforce.DateTime SystemModstamp {
+    apiName = "DevopsActivityLog.SystemModstamp"
+    label = "System Modstamp"
+    _hidden_value = true
+  }
+}
