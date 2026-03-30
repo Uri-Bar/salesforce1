@@ -60,6 +60,6 @@ type salesforce.ConvEntryRelatedRecordCopy {
   label = "ConvEntryRelatedRecordCopy"
   description = ""
   enableFeeds = false
-  externalSharingModel = "ReadWrite"
+  externalSharingModel = "Private"
   _alias = "ConvEntryRelatedRecordCopy"
 }

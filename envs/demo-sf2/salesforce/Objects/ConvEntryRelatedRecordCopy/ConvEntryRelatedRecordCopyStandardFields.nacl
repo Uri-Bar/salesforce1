@@ -5,6 +5,9 @@ type salesforce.ConvEntryRelatedRecordCopy {
   salesforce.Unknown Name {
     apiName = "ConvEntryRelatedRecordCopy.Name"
   }
+  salesforce.Lookup OwnerId {
+    apiName = "ConvEntryRelatedRecordCopy.OwnerId"
+  }
   salesforce.Lookup RelatedRecordId {
     apiName = "ConvEntryRelatedRecordCopy.RelatedRecordId"
   }

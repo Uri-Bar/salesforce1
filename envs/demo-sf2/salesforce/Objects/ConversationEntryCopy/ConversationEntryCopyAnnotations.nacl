@@ -60,6 +60,6 @@ type salesforce.ConversationEntryCopy {
   label = "ConversationEntryCopy"
   description = ""
   enableFeeds = false
-  externalSharingModel = "ReadWrite"
+  externalSharingModel = "Private"
   _alias = "ConversationEntryCopy"
 }
