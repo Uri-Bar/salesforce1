@@ -42,13 +42,6 @@ type salesforce.DevopsActivityLog {
     label = "User ID"
     relationshipName = "PerformedBy"
   }
-  salesforce.Text RequestInfoErrorDetails {
-    apiName = "DevopsActivityLog.RequestInfoErrorDetails"
-    label = "Error Details"
-    length = 1333
-    unique = false
-    caseSensitive = false
-  }
   salesforce.Picklist Status {
     apiName = "DevopsActivityLog.Status"
     label = "Status"
@@ -98,5 +91,8 @@ type salesforce.DevopsActivityLog {
     apiName = "DevopsActivityLog.SystemModstamp"
     label = "System Modstamp"
     _hidden_value = true
+  }
+  salesforce.Unknown RequestInfoErrorDetails {
+    apiName = "DevopsActivityLog.RequestInfoErrorDetails"
   }
 }
