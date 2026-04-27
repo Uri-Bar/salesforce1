@@ -189,6 +189,6 @@ type salesforce.UnstructuredStorageSpace {
   ]
   compactLayoutAssignment = "SYSTEM"
   enableFeeds = false
-  externalSharingModel = "Read"
+  externalSharingModel = "Private"
   _alias = "UnstructuredStorageSpace"
 }
