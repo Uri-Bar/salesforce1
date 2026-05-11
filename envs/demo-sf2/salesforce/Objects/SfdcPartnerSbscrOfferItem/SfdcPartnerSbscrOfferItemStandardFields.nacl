@@ -1,0 +1,91 @@
+type salesforce.SfdcPartnerSbscrOfferItem {
+  serviceid Id {
+    apiName = "SfdcPartnerSbscrOfferItem.Id"
+    label = "Partner Subscriber Offer Item ID"
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Checkbox IsDeleted {
+    apiName = "SfdcPartnerSbscrOfferItem.IsDeleted"
+    label = "Deleted"
+    defaultValue = false
+    _hidden_value = true
+  }
+  salesforce.Text Name {
+    apiName = "SfdcPartnerSbscrOfferItem.Name"
+    label = "Offer Item Number"
+    _required = true
+    length = 255
+    unique = false
+    caseSensitive = false
+  }
+  salesforce.DateTime CreatedDate {
+    apiName = "SfdcPartnerSbscrOfferItem.CreatedDate"
+    label = "Created Date"
+    _hidden_value = true
+  }
+  salesforce.Lookup CreatedById {
+    apiName = "SfdcPartnerSbscrOfferItem.CreatedById"
+    label = "Created By ID"
+    relationshipName = "CreatedBy"
+    _hidden_value = true
+  }
+  salesforce.DateTime LastModifiedDate {
+    apiName = "SfdcPartnerSbscrOfferItem.LastModifiedDate"
+    label = "Last Modified Date"
+    _hidden_value = true
+  }
+  salesforce.Lookup LastModifiedById {
+    apiName = "SfdcPartnerSbscrOfferItem.LastModifiedById"
+    label = "Last Modified By ID"
+    relationshipName = "LastModifiedBy"
+    _hidden_value = true
+  }
+  salesforce.DateTime SystemModstamp {
+    apiName = "SfdcPartnerSbscrOfferItem.SystemModstamp"
+    label = "System Modstamp"
+    _hidden_value = true
+  }
+  salesforce.Lookup PartnerSubscriberOfferId {
+    apiName = "SfdcPartnerSbscrOfferItem.PartnerSubscriberOfferId"
+    label = "Partner Subscriber Offer ID"
+    _required = true
+    relationshipName = "PartnerSubscriberOffer"
+  }
+  salesforce.Text PartnerProvisionProductName {
+    apiName = "SfdcPartnerSbscrOfferItem.PartnerProvisionProductName"
+    label = "Product Name"
+    length = 255
+    unique = false
+    caseSensitive = false
+  }
+  salesforce.Number Quantity {
+    apiName = "SfdcPartnerSbscrOfferItem.Quantity"
+    label = "Product Quantity"
+    scale = 0
+    precision = 9
+    unique = false
+  }
+  salesforce.Currency CustomerUnitPricePerMonth {
+    apiName = "SfdcPartnerSbscrOfferItem.CustomerUnitPricePerMonth"
+    label = "Unit Price Per Month"
+    scale = 2
+    precision = 18
+  }
+  salesforce.Currency LineItemPeriodTotal {
+    apiName = "SfdcPartnerSbscrOfferItem.LineItemPeriodTotal"
+    label = "Line Item Period Total"
+    scale = 2
+    precision = 18
+  }
+  salesforce.Currency LineItemTotal {
+    apiName = "SfdcPartnerSbscrOfferItem.LineItemTotal"
+    label = "Line Item Total"
+    scale = 2
+    precision = 18
+  }
+  salesforce.Date ServiceStartDate {
+    apiName = "SfdcPartnerSbscrOfferItem.ServiceStartDate"
+    label = "Service Start Date"
+  }
+}

@@ -1,0 +1,7 @@
+salesforce.SharingRules SfdcPartnerSbscrOffer {
+  fullName = "SfdcPartnerSbscrOffer"
+  _parent = [
+    salesforce.SfdcPartnerSbscrOffer,
+  ]
+  _alias = "SfdcPartnerSbscrOffer"
+}

@@ -1,0 +1,199 @@
+type salesforce.SfdcPartnerSbscrOffer {
+  salesforce.Picklist BillingFrequency {
+    apiName = "SfdcPartnerSbscrOffer.BillingFrequency"
+    label = "Billing Frequency (Months)"
+    restricted = true
+  }
+  salesforce.Number ContractTerm {
+    apiName = "SfdcPartnerSbscrOffer.ContractTerm"
+    inlineHelpText = "Term duration, with a max of 12 months."
+    label = "Contract Term (Months)"
+    scale = 0
+    precision = 9
+    unique = false
+  }
+  salesforce.Address CustBillingAddress {
+    apiName = "SfdcPartnerSbscrOffer.CustBillingAddress"
+    label = "Customer Billing Address"
+  }
+  salesforce.Address CustShippingAddress {
+    apiName = "SfdcPartnerSbscrOffer.CustShippingAddress"
+    label = "Customer Shipping Address"
+  }
+  salesforce.Email CustomerBillingEmailAddress {
+    apiName = "SfdcPartnerSbscrOffer.CustomerBillingEmailAddress"
+    inlineHelpText = "Recipient of the invoice and a copy of the offer. Typically, this person is in the finance department."
+    label = "Billing Email Address"
+    unique = false
+  }
+  salesforce.Email CustomerEmailAddress {
+    apiName = "SfdcPartnerSbscrOffer.CustomerEmailAddress"
+    inlineHelpText = "Offer Recipient who can approve or reject the offer."
+    label = "Offer Recipient Email Address"
+    unique = false
+  }
+  salesforce.Text CustomerName {
+    apiName = "SfdcPartnerSbscrOffer.CustomerName"
+    label = "Customer Name"
+    length = 255
+    unique = false
+    caseSensitive = false
+  }
+  salesforce.Picklist CustomerPaymentTerms {
+    apiName = "SfdcPartnerSbscrOffer.CustomerPaymentTerms"
+    inlineHelpText = "Indicates that the customer has 30 days from the invoice date to pay for services."
+    label = "Customer Payment Terms"
+    restricted = true
+  }
+  salesforce.Text CustomerPurchaseOrderNumber {
+    apiName = "SfdcPartnerSbscrOffer.CustomerPurchaseOrderNumber"
+    label = "Customer PO Number"
+    length = 255
+    unique = false
+    caseSensitive = false
+  }
+  salesforce.Date ExpirationDate {
+    apiName = "SfdcPartnerSbscrOffer.ExpirationDate"
+    label = "Valid Until"
+  }
+  salesforce.Text Name {
+    apiName = "SfdcPartnerSbscrOffer.Name"
+    label = "Offer Number"
+    _required = true
+    length = 255
+    unique = false
+    caseSensitive = false
+  }
+  salesforce.Picklist OfferType {
+    apiName = "SfdcPartnerSbscrOffer.OfferType"
+    label = "Offer Type"
+    _required = true
+    restricted = true
+  }
+  salesforce.Number OrderPrebillDays {
+    apiName = "SfdcPartnerSbscrOffer.OrderPrebillDays"
+    inlineHelpText = "Represents the number of days before the service date that an invoice is sent to the customer."
+    label = "Billing Lead Time (Days)"
+    scale = 0
+    precision = 9
+    unique = false
+  }
+  salesforce.Text PartnerCompanyName {
+    apiName = "SfdcPartnerSbscrOffer.PartnerCompanyName"
+    label = "Provider Name"
+    length = 255
+    unique = false
+    caseSensitive = false
+  }
+  salesforce.Text PartnerOffer {
+    apiName = "SfdcPartnerSbscrOffer.PartnerOffer"
+    label = "Partner Offer"
+    length = 18
+    unique = false
+    caseSensitive = false
+  }
+  salesforce.Picklist PaymentMethod {
+    apiName = "SfdcPartnerSbscrOffer.PaymentMethod"
+    label = "Payment Method"
+    restricted = true
+  }
+  salesforce.Lookup RespondingUserId {
+    apiName = "SfdcPartnerSbscrOffer.RespondingUserId"
+    label = "User ID"
+    relationshipName = "RespondingUser"
+  }
+  salesforce.Date ServiceEndDate {
+    apiName = "SfdcPartnerSbscrOffer.ServiceEndDate"
+    label = "Service End Date"
+  }
+  salesforce.Date ServiceStartDate {
+    apiName = "SfdcPartnerSbscrOffer.ServiceStartDate"
+    label = "Service Start Date"
+  }
+  salesforce.Number ServiceTerm {
+    apiName = "SfdcPartnerSbscrOffer.ServiceTerm"
+    label = "Service Term"
+    scale = 2
+    precision = 18
+    unique = false
+  }
+  salesforce.Picklist Status {
+    apiName = "SfdcPartnerSbscrOffer.Status"
+    label = "Status"
+    restricted = true
+  }
+  salesforce.Currency SubTotal {
+    apiName = "SfdcPartnerSbscrOffer.SubTotal"
+    inlineHelpText = "The subtotal of the offer, excluding applicable taxes."
+    label = "Subtotal"
+    scale = 2
+    precision = 18
+  }
+  salesforce.Text SyncToPboError {
+    apiName = "SfdcPartnerSbscrOffer.SyncToPboError"
+    label = "Sync To PBO Error"
+    length = 1333
+    unique = false
+    caseSensitive = false
+  }
+  salesforce.DateTime SyncToPboLastUpdate {
+    apiName = "SfdcPartnerSbscrOffer.SyncToPboLastUpdate"
+    label = "Sync To PBO Last Updated"
+  }
+  salesforce.Picklist SyncToPboStatus {
+    apiName = "SfdcPartnerSbscrOffer.SyncToPboStatus"
+    label = "Sync To PBO Status"
+    restricted = true
+  }
+  salesforce.LongTextArea TermsAndConditions {
+    apiName = "SfdcPartnerSbscrOffer.TermsAndConditions"
+    label = "Terms and Conditions"
+    length = 32000
+  }
+  serviceid Id {
+    apiName = "SfdcPartnerSbscrOffer.Id"
+    label = "Partner Subscriber Offer ID"
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Checkbox IsDeleted {
+    apiName = "SfdcPartnerSbscrOffer.IsDeleted"
+    label = "Deleted"
+    defaultValue = false
+    _hidden_value = true
+  }
+  salesforce.DateTime CreatedDate {
+    apiName = "SfdcPartnerSbscrOffer.CreatedDate"
+    label = "Created Date"
+    _hidden_value = true
+  }
+  salesforce.Lookup CreatedById {
+    apiName = "SfdcPartnerSbscrOffer.CreatedById"
+    label = "Created By ID"
+    relationshipName = "CreatedBy"
+    _hidden_value = true
+  }
+  salesforce.DateTime LastModifiedDate {
+    apiName = "SfdcPartnerSbscrOffer.LastModifiedDate"
+    label = "Last Modified Date"
+    _hidden_value = true
+  }
+  salesforce.Lookup LastModifiedById {
+    apiName = "SfdcPartnerSbscrOffer.LastModifiedById"
+    label = "Last Modified By ID"
+    relationshipName = "LastModifiedBy"
+    _hidden_value = true
+  }
+  salesforce.DateTime SystemModstamp {
+    apiName = "SfdcPartnerSbscrOffer.SystemModstamp"
+    label = "System Modstamp"
+    _hidden_value = true
+  }
+  salesforce.Text PartnerOrg {
+    apiName = "SfdcPartnerSbscrOffer.PartnerOrg"
+    label = "Partner Org"
+    length = 18
+    unique = false
+    caseSensitive = false
+  }
+}
