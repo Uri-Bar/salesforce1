@@ -1,18 +1,45 @@
 type salesforce.LocationShippingCarrierMethod {
+  salesforce.Unknown FridayPickUpTime {
+    apiName = "LocationShippingCarrierMethod.FridayPickUpTime"
+  }
   salesforce.Lookup LocationSourceId {
     apiName = "LocationShippingCarrierMethod.LocationSourceId"
     relationshipName = "LocationSource"
     _required = true
     label = "Location Source ID"
   }
+  salesforce.Unknown MondayPickUpTime {
+    apiName = "LocationShippingCarrierMethod.MondayPickUpTime"
+  }
   salesforce.Unknown PickupTime {
     apiName = "LocationShippingCarrierMethod.PickupTime"
+  }
+  salesforce.Unknown ProcessingTime {
+    apiName = "LocationShippingCarrierMethod.ProcessingTime"
+  }
+  salesforce.Unknown ProcessingTimeUnit {
+    apiName = "LocationShippingCarrierMethod.ProcessingTimeUnit"
+  }
+  salesforce.Unknown SaturdayPickUpTime {
+    apiName = "LocationShippingCarrierMethod.SaturdayPickUpTime"
   }
   salesforce.Lookup ShippingCarrierMethodId {
     apiName = "LocationShippingCarrierMethod.ShippingCarrierMethodId"
     relationshipName = "ShippingCarrierMethod"
     _required = true
     label = "Shipping Carrier Method ID"
+  }
+  salesforce.Unknown SundayPickUpTime {
+    apiName = "LocationShippingCarrierMethod.SundayPickUpTime"
+  }
+  salesforce.Unknown ThursdayPickUpTime {
+    apiName = "LocationShippingCarrierMethod.ThursdayPickUpTime"
+  }
+  salesforce.Unknown TuesdayPickUpTime {
+    apiName = "LocationShippingCarrierMethod.TuesdayPickUpTime"
+  }
+  salesforce.Unknown WednesdayPickUpTime {
+    apiName = "LocationShippingCarrierMethod.WednesdayPickUpTime"
   }
   serviceid Id {
     apiName = "LocationShippingCarrierMethod.Id"

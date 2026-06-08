@@ -23,11 +23,17 @@ type salesforce.ConversationEntryCopy {
   salesforce.Unknown Language {
     apiName = "ConversationEntryCopy.Language"
   }
+  salesforce.Unknown Modality {
+    apiName = "ConversationEntryCopy.Modality"
+  }
   salesforce.Unknown Name {
     apiName = "ConversationEntryCopy.Name"
   }
   salesforce.Lookup OwnerId {
     apiName = "ConversationEntryCopy.OwnerId"
+  }
+  salesforce.Lookup ParentConvEntryCopyId {
+    apiName = "ConversationEntryCopy.ParentConvEntryCopyId"
   }
   salesforce.Unknown TranscriptedTimestamp {
     apiName = "ConversationEntryCopy.TranscriptedTimestamp"

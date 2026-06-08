@@ -148,5 +148,25 @@ type salesforce.ApprovalSubmission {
   compactLayoutAssignment = "SYSTEM"
   enableFeeds = false
   externalSharingModel = "Private"
+  searchLayouts = {
+    lookupDialogsAdditionalFields = [
+      "RelatedRecord",
+      "RelatedRecordObjectName",
+      "CreatedDate",
+      "Status",
+    ]
+    lookupPhoneDialogsAdditionalFields = [
+      "RelatedRecord",
+      "RelatedRecordObjectName",
+      "CreatedDate",
+      "Status",
+    ]
+    searchResultsAdditionalFields = [
+      "RelatedRecord",
+      "RelatedRecordObjectName",
+      "CreatedDate",
+      "Status",
+    ]
+  }
   _alias = "Approval Submission"
 }

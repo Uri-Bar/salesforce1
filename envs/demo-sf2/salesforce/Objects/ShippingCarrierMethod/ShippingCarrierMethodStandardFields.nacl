@@ -36,6 +36,12 @@ type salesforce.ShippingCarrierMethod {
     unique = false
     caseSensitive = false
   }
+  salesforce.Unknown ProcessingTime {
+    apiName = "ShippingCarrierMethod.ProcessingTime"
+  }
+  salesforce.Unknown ProcessingTimeUnit {
+    apiName = "ShippingCarrierMethod.ProcessingTimeUnit"
+  }
   salesforce.Unknown ShippingAreaType {
     apiName = "ShippingCarrierMethod.ShippingAreaType"
   }

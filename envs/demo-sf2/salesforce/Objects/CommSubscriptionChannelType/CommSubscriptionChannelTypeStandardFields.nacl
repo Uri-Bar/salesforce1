@@ -1,14 +1,14 @@
 type salesforce.CommSubscriptionChannelType {
   salesforce.Lookup CommunicationSubscriptionId {
     apiName = "CommSubscriptionChannelType.CommunicationSubscriptionId"
-    inlineHelpText = "The communication subscription record associated with the communication subscription channel type."
+    inlineHelpText = "The communication subscription record associated with the Communication Subscription Channel Type."
     relationshipName = "CommunicationSubscription"
     _required = true
     label = "Communication Subscription ID"
   }
   salesforce.Lookup EngagementChannelTypeId {
     apiName = "CommSubscriptionChannelType.EngagementChannelTypeId"
-    inlineHelpText = "The engagement channel type record associated with the communication subscription channel type."
+    inlineHelpText = "The engagement channel type record associated with the Communication Subscription Channel Type."
     relationshipName = "EngagementChannelType"
     _required = true
     label = "Engagement Channel Type ID"

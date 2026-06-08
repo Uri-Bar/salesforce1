@@ -65,7 +65,6 @@ type salesforce.CartItemPriceAdjustment {
   }
   salesforce.Currency TotalAmount {
     apiName = "CartItemPriceAdjustment.TotalAmount"
-    _required = true
     label = "Total Amount"
     scale = 2
     precision = 18

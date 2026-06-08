@@ -1,0 +1,104 @@
+salesforce.Flow sfdc_default_ReportExport_Protection_Flow {
+  fullName = "sfdc_default_ReportExport_Protection_Flow"
+  areMetricsLoggedToDataCloud = false
+  assignments = [
+    {
+      name = "EvaluationOutcomeAssignment"
+      label = "EvaluationOutcomeAssignment"
+      locationX = 0
+      locationY = 0
+      assignmentItems = [
+        {
+          assignToReference = "EvaluationOutcome"
+          operator = "Assign"
+          value = {
+            booleanValue = true
+          }
+        },
+      ]
+    },
+    {
+      name = "EvaluationOutcomeAssignmentFalse"
+      label = "EvaluationOutcomeAssignmentFalse"
+      locationX = 0
+      locationY = 0
+      assignmentItems = [
+        {
+          assignToReference = "EvaluationOutcome"
+          operator = "Assign"
+          value = {
+            booleanValue = false
+          }
+        },
+      ]
+    },
+  ]
+  decisions = [
+    {
+      name = "ConditionBuilder"
+      label = "ConditionBuilder"
+      locationX = 0
+      locationY = 0
+      defaultConnector = {
+        targetReference = "EvaluationOutcomeAssignmentFalse"
+      }
+      defaultConnectorLabel = "EvaluationOutcomeAssignmentFalse"
+      rules = [
+        {
+          name = "MatchAll"
+          conditionLogic = "(1 OR 2) AND 3"
+          conditions = [
+            {
+              leftValueReference = "myVariable_myEvent.Operation"
+              operator = "EqualTo"
+              rightValue = {
+                stringValue = "ReportExported"
+              }
+            },
+            {
+              leftValueReference = "myVariable_myEvent.Operation"
+              operator = "EqualTo"
+              rightValue = {
+                stringValue = "ReportExportedUsingExcelConnector"
+              }
+            },
+            {
+              leftValueReference = "myVariable_myEvent.RowsProcessed"
+              operator = "GreaterThan"
+              rightValue = {
+                numberValue = 10000
+              }
+            },
+          ]
+          connector = {
+            targetReference = "EvaluationOutcomeAssignment"
+          }
+          label = "MatchAll"
+        },
+      ]
+    },
+  ]
+  description = "The default Condition Builder flow for the default ReportEvent Transaction Security Policy."
+  label = "The default Report Export Policy Flow."
+  processType = "TransactionSecurityFlow"
+  startElementReference = "ConditionBuilder"
+  status = "Draft"
+  variables = [
+    {
+      name = "EvaluationOutcome"
+      dataType = "Boolean"
+      isCollection = false
+      isInput = false
+      isOutput = true
+    },
+    {
+      name = "myVariable_myEvent"
+      dataType = "SObject"
+      isCollection = false
+      isInput = true
+      isOutput = false
+      objectType = "ReportEvent"
+    },
+  ]
+  _alias = "The default Report Export Policy Flow."
+}

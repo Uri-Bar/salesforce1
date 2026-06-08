@@ -134,6 +134,7 @@ salesforce.Layout ServiceResource_Service_Resource_Layout@bss {
     },
     {
       fields = [
+        "Name",
         "Start",
         "End",
         "Type",

@@ -27,6 +27,9 @@ type salesforce.ApprovalWorkItem {
     relationshipName = "FlowOrchestrationWorkItem"
     label = "Orchestration Work Item ID"
   }
+  salesforce.Lookup ParentWorkItemId {
+    apiName = "ApprovalWorkItem.ParentWorkItemId"
+  }
   salesforce.Lookup RelatedRecordId {
     apiName = "ApprovalWorkItem.RelatedRecordId"
     relationshipName = "RelatedRecord"

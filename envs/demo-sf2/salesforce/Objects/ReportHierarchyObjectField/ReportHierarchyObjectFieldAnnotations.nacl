@@ -1,4 +1,4 @@
-type salesforce.VoiceMailGreeting2 {
+type salesforce.ReportHierarchyObjectField {
   annotations {
     serviceid apiName {
     }
@@ -55,11 +55,11 @@ type salesforce.VoiceMailGreeting2 {
     hidden_string internalId {
     }
   }
-  apiName = "VoiceMailGreeting2"
+  apiName = "ReportHierarchyObjectField"
   metadataType = "CustomObject"
-  label = "VoiceMailGreeting2"
+  label = "ReportHierarchyObjectField"
   description = ""
   enableFeeds = false
-  externalSharingModel = "Private"
-  _alias = "VoiceMailGreeting2"
+  externalSharingModel = "ReadWrite"
+  _alias = "ReportHierarchyObjectField"
 }

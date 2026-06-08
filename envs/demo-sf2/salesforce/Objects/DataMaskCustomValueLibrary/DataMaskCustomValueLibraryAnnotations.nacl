@@ -193,6 +193,7 @@ type salesforce.DataMaskCustomValueLibrary {
   searchLayouts = {
     customTabListAdditionalFields = [
       "Description",
+      "Type",
       "ContentType",
       "IsActive",
       "LastModifiedDate",
@@ -200,6 +201,7 @@ type salesforce.DataMaskCustomValueLibrary {
     ]
     lookupDialogsAdditionalFields = [
       "Description",
+      "Type",
       "ContentType",
       "IsActive",
       "LastModifiedDate",
@@ -207,6 +209,7 @@ type salesforce.DataMaskCustomValueLibrary {
     ]
     lookupPhoneDialogsAdditionalFields = [
       "Description",
+      "Type",
       "ContentType",
       "IsActive",
       "LastModifiedDate",
@@ -214,6 +217,7 @@ type salesforce.DataMaskCustomValueLibrary {
     ]
     searchResultsAdditionalFields = [
       "Description",
+      "Type",
       "ContentType",
       "IsActive",
       "LastModifiedDate",

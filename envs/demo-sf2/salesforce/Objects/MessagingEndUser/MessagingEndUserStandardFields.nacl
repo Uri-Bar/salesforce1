@@ -54,6 +54,9 @@ type salesforce.MessagingEndUser {
     restricted = true
     label = "Messaging Consent Status"
   }
+  salesforce.Unknown MessagingExternalUserKey {
+    apiName = "MessagingEndUser.MessagingExternalUserKey"
+  }
   salesforce.Text MessagingPlatformKey {
     apiName = "MessagingEndUser.MessagingPlatformKey"
     length = 255

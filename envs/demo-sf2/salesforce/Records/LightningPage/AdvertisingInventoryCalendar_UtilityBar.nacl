@@ -1,0 +1,30 @@
+salesforce.LightningPage AdvertisingInventoryCalendar_UtilityBar {
+  description = "The default utility bar for the Advertising Inventory Calendar application."
+  flexiPageRegions = [
+    {
+      itemInstances = [
+        {
+          componentInstance = {
+            componentName = "console:history"
+            identifier = "console_history"
+          }
+        },
+        {
+          componentInstance = {
+            componentName = "notes:utilityBarNoteList"
+            identifier = "notes_utilityBarNoteList"
+          }
+        },
+      ]
+      name = "utilityItems"
+      type = "Region"
+    },
+  ]
+  masterLabel = "Advertising Inventory Calendar App Utility Bar"
+  template = {
+    name = "one:utilityBarTemplateDesktop"
+  }
+  type = "UtilityBar"
+  fullName = "AdvertisingInventoryCalendar_UtilityBar"
+  _alias = "AdvertisingInventoryCalendar_UtilityBar"
+}

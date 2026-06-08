@@ -64,7 +64,6 @@ type salesforce.DataMaskCustomValueLibrary {
   }
   salesforce.Checkbox IsActive {
     apiName = "DataMaskCustomValueLibrary.IsActive"
-    defaultValue = false
     label = "Active"
   }
   salesforce.Text Name {

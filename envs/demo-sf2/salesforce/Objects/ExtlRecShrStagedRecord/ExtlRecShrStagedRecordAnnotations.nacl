@@ -1,4 +1,4 @@
-type salesforce.VoiceMailGreeting2Rep {
+type salesforce.ExtlRecShrStagedRecord {
   annotations {
     serviceid apiName {
     }
@@ -55,11 +55,11 @@ type salesforce.VoiceMailGreeting2Rep {
     hidden_string internalId {
     }
   }
-  apiName = "VoiceMailGreeting2Rep"
+  apiName = "ExtlRecShrStagedRecord"
   metadataType = "CustomObject"
-  label = "VoiceMailGreeting2Rep"
+  label = "ExtlRecShrStagedRecord"
   description = ""
   enableFeeds = false
-  externalSharingModel = "Private"
-  _alias = "VoiceMailGreeting2Rep"
+  externalSharingModel = "ReadWrite"
+  _alias = "ExtlRecShrStagedRecord"
 }

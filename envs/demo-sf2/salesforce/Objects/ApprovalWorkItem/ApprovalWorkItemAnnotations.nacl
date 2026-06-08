@@ -148,5 +148,28 @@ type salesforce.ApprovalWorkItem {
   compactLayoutAssignment = "SYSTEM"
   enableFeeds = false
   externalSharingModel = "ControlledByParent"
+  searchLayouts = {
+    lookupDialogsAdditionalFields = [
+      "RelatedRecord",
+      "RelatedRecordObjectName",
+      "ApprovalConditionName",
+      "CreatedDate",
+      "Status",
+    ]
+    lookupPhoneDialogsAdditionalFields = [
+      "RelatedRecord",
+      "RelatedRecordObjectName",
+      "ApprovalConditionName",
+      "CreatedDate",
+      "Status",
+    ]
+    searchResultsAdditionalFields = [
+      "RelatedRecord",
+      "RelatedRecordObjectName",
+      "ApprovalConditionName",
+      "CreatedDate",
+      "Status",
+    ]
+  }
   _alias = "Approval Work Item"
 }

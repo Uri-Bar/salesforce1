@@ -38,6 +38,9 @@ type salesforce.DeliveryEstimationSetup {
     unique = true
     caseSensitive = true
   }
+  salesforce.Unknown FridayPickUpTime {
+    apiName = "DeliveryEstimationSetup.FridayPickUpTime"
+  }
   salesforce.Unknown IsDefault {
     apiName = "DeliveryEstimationSetup.IsDefault"
   }
@@ -57,6 +60,9 @@ type salesforce.DeliveryEstimationSetup {
     _required = true
     label = "Location Group ID"
   }
+  salesforce.Unknown MondayPickUpTime {
+    apiName = "DeliveryEstimationSetup.MondayPickUpTime"
+  }
   salesforce.Text Name {
     apiName = "DeliveryEstimationSetup.Name"
     length = 255
@@ -64,6 +70,15 @@ type salesforce.DeliveryEstimationSetup {
     label = "Name"
     unique = false
     caseSensitive = false
+  }
+  salesforce.Unknown ThursdayPickUpTime {
+    apiName = "DeliveryEstimationSetup.ThursdayPickUpTime"
+  }
+  salesforce.Unknown TuesdayPickUpTime {
+    apiName = "DeliveryEstimationSetup.TuesdayPickUpTime"
+  }
+  salesforce.Unknown WednesdayPickUpTime {
+    apiName = "DeliveryEstimationSetup.WednesdayPickUpTime"
   }
   serviceid Id {
     apiName = "DeliveryEstimationSetup.Id"
@@ -119,6 +134,9 @@ type salesforce.DeliveryEstimationSetup {
     length = 10000
     label = "Last Synced Message"
   }
+  salesforce.Unknown SundayPickUpTime {
+    apiName = "DeliveryEstimationSetup.SundayPickUpTime"
+  }
   salesforce.Picklist SyncStatus {
     apiName = "DeliveryEstimationSetup.SyncStatus"
     restricted = true
@@ -129,6 +147,9 @@ type salesforce.DeliveryEstimationSetup {
     apiName = "DeliveryEstimationSetup.RoutingType"
     label = "Routing Type"
     restricted = true
+  }
+  salesforce.Unknown SaturdayPickUpTime {
+    apiName = "DeliveryEstimationSetup.SaturdayPickUpTime"
   }
   salesforce.Text ServiceRegion {
     apiName = "DeliveryEstimationSetup.ServiceRegion"

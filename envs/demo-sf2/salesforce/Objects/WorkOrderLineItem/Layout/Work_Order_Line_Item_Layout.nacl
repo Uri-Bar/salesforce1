@@ -39,6 +39,10 @@ salesforce.Layout WorkOrderLineItem_Work_Order_Line_Item_Layout@bssss {
               behavior = "Edit"
               field = salesforce.WorkOrderLineItem.field.OrderId
             },
+            {
+              behavior = "Readonly"
+              field = salesforce.WorkOrderLineItem.field.Product2Id
+            },
           ]
         },
       ]

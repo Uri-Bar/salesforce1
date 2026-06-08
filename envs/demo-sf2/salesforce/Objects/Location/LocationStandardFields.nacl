@@ -8,23 +8,11 @@ type salesforce.Location {
   salesforce.Unknown ConstructionStartDate {
     apiName = "Location.ConstructionStartDate"
   }
-  salesforce.Unknown DefaultPickupTime {
-    apiName = "Location.DefaultPickupTime"
-  }
-  salesforce.Unknown DefaultProcessingTime {
-    apiName = "Location.DefaultProcessingTime"
-  }
-  salesforce.Unknown DefaultProcessingTimeUnit {
-    apiName = "Location.DefaultProcessingTimeUnit"
-  }
   salesforce.Unknown Description {
     apiName = "Location.Description"
   }
   salesforce.Unknown DrivingDirections {
     apiName = "Location.DrivingDirections"
-  }
-  salesforce.Unknown EarliestPickupTimeOffset {
-    apiName = "Location.EarliestPickupTimeOffset"
   }
   salesforce.Unknown Email {
     apiName = "Location.Email"
@@ -41,10 +29,13 @@ type salesforce.Location {
   }
   salesforce.Lookup FulfillingBusinessHoursId {
     apiName = "Location.FulfillingBusinessHoursId"
+    label = "Business Hours ID"
+    relationshipName = "FulfillingBusinessHours"
   }
-  salesforce.Unknown IsEligibleForPickup {
-    apiName = "Location.IsEligibleForPickup"
+  salesforce.Lookup FulfillingOperationalHoursId {
+    apiName = "Location.FulfillingOperationalHoursId"
   }
+  
   salesforce.Checkbox IsInventoryLocation {
     apiName = "Location.IsInventoryLocation"
     defaultValue = false
@@ -54,9 +45,6 @@ type salesforce.Location {
     apiName = "Location.IsMobile"
     defaultValue = false
     label = "Mobile Location"
-  }
-  salesforce.Unknown LatestPickupTimeOffset {
-    apiName = "Location.LatestPickupTimeOffset"
   }
   salesforce.Unknown Location {
     apiName = "Location.Location"
@@ -99,12 +87,6 @@ type salesforce.Location {
   }
   salesforce.Unknown Phone {
     apiName = "Location.Phone"
-  }
-  salesforce.Unknown PickupProcessingTime {
-    apiName = "Location.PickupProcessingTime"
-  }
-  salesforce.Unknown PickupProcessingTimeUnit {
-    apiName = "Location.PickupProcessingTimeUnit"
   }
   salesforce.Unknown PossessionDate {
     apiName = "Location.PossessionDate"
@@ -169,5 +151,52 @@ type salesforce.Location {
     apiName = "Location.SystemModstamp"
     label = "System Modstamp"
     _hidden_value = true
+  }
+  salesforce.Time DefaultPickupTime {
+    apiName = "Location.DefaultPickupTime"
+    label = "Default Pickup Time"
+  }
+  salesforce.Number DefaultProcessingTime {
+    apiName = "Location.DefaultProcessingTime"
+    label = "Default Processing Time"
+    scale = 0
+    precision = 9
+    unique = false
+  }
+  salesforce.Picklist DefaultProcessingTimeUnit {
+    apiName = "Location.DefaultProcessingTimeUnit"
+    label = "Default Processing Time Unit"
+    restricted = true
+  }
+  salesforce.Number EarliestPickupTimeOffset {
+    apiName = "Location.EarliestPickupTimeOffset"
+    label = "Earliest Pickup Time Offset"
+    scale = 0
+    precision = 9
+    unique = false
+  }
+  salesforce.Checkbox IsEligibleForPickup {
+    apiName = "Location.IsEligibleForPickup"
+    label = "Is Eligible For Pickup"
+    defaultValue = false
+  }
+  salesforce.Number LatestPickupTimeOffset {
+    apiName = "Location.LatestPickupTimeOffset"
+    label = "Latest Pickup Time Offset"
+    scale = 0
+    precision = 9
+    unique = false
+  }
+  salesforce.Number PickupProcessingTime {
+    apiName = "Location.PickupProcessingTime"
+    label = "Pickup Processing Time"
+    scale = 0
+    precision = 9
+    unique = false
+  }
+  salesforce.Picklist PickupProcessingTimeUnit {
+    apiName = "Location.PickupProcessingTimeUnit"
+    label = "Pickup Processing Time Unit"
+    restricted = true
   }
 }

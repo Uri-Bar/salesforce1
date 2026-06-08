@@ -6,7 +6,7 @@ type salesforce.CommSubscriptionConsent {
   }
   salesforce.Lookup CommSubscriptionChannelTypeId {
     apiName = "CommSubscriptionConsent.CommSubscriptionChannelTypeId"
-    inlineHelpText = "The communication subscription channel type record associated with the communication subscription consent."
+    inlineHelpText = "The Communication Subscription Channel Type record associated with the Communication Subscription Consent."
     relationshipName = "CommSubscriptionChannelType"
     _required = true
     label = "Communication Subscription Channel Type ID"
@@ -32,7 +32,7 @@ type salesforce.CommSubscriptionConsent {
   }
   salesforce.Lookup ContactPointId {
     apiName = "CommSubscriptionConsent.ContactPointId"
-    inlineHelpText = "The contact point record associated with the communication subscription consent."
+    inlineHelpText = "The contact point record associated with the Communication Subscription Consent."
     relationshipName = "ContactPoint"
     _required = true
     label = "Contact Point ID"

@@ -148,5 +148,34 @@ type salesforce.ApprovalSubmissionDetail {
   compactLayoutAssignment = "SYSTEM"
   enableFeeds = false
   externalSharingModel = "ControlledByParent"
+  searchLayouts = {
+    lookupDialogsAdditionalFields = [
+      "ActionPerformedBy",
+      "ActionPerformerRole",
+      "ActionChannelName",
+      "ActionName",
+      "ActionContext",
+      "Comments",
+      "CreatedDate",
+    ]
+    lookupPhoneDialogsAdditionalFields = [
+      "ActionPerformedBy",
+      "ActionPerformerRole",
+      "ActionChannelName",
+      "ActionName",
+      "ActionContext",
+      "Comments",
+      "CreatedDate",
+    ]
+    searchResultsAdditionalFields = [
+      "ActionPerformedBy",
+      "ActionPerformerRole",
+      "ActionChannelName",
+      "ActionName",
+      "ActionContext",
+      "Comments",
+      "CreatedDate",
+    ]
+  }
   _alias = "Approval Submission Detail"
 }

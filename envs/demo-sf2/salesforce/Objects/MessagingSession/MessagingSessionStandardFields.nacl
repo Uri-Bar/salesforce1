@@ -125,6 +125,9 @@ type salesforce.MessagingSession {
     _required = true
     label = "Status"
   }
+  salesforce.Unknown SuspendedByType {
+    apiName = "MessagingSession.SuspendedByType"
+  }
   serviceid Id {
     apiName = "MessagingSession.Id"
     label = "Messaging Session ID"

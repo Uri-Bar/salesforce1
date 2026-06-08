@@ -54,8 +54,8 @@ type salesforce.SlackChannelRelatedRecord {
     apiName = "SlackChannelRelatedRecord.SlackChannel"
     label = "Slack Channel ID"
     length = 255
-    unique = true
-    caseSensitive = true
+    unique = false
+    caseSensitive = false
   }
   salesforce.Text TopLevelTeam {
     apiName = "SlackChannelRelatedRecord.TopLevelTeam"

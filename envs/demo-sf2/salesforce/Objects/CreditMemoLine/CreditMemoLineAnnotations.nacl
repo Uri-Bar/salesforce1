@@ -190,12 +190,5 @@ type salesforce.CreditMemoLine {
   compactLayoutAssignment = "SYSTEM"
   enableFeeds = false
   externalSharingModel = "ControlledByParent"
-  searchLayouts = {
-    searchResultsAdditionalFields = [
-      "Type",
-      "RelatedLine",
-      "LineAmount",
-    ]
-  }
   _alias = "Credit Memo Line"
 }

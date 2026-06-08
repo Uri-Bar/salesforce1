@@ -126,4 +126,11 @@ type salesforce.DevopsEnvironment {
     label = "System Modstamp"
     _hidden_value = true
   }
+  salesforce.Text ExternalId {
+    apiName = "DevopsEnvironment.ExternalId"
+    label = "External Id"
+    length = 255
+    unique = false
+    caseSensitive = false
+  }
 }

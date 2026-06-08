@@ -1,0 +1,4 @@
+salesforce.SharingRules FlowVersionMilestone {
+  fullName = "FlowVersionMilestone"
+  _alias = "FlowVersionMilestone"
+}

@@ -17,6 +17,11 @@ type salesforce.DevopsRequestInfo {
     _required = true
     restricted = true
   }
+  salesforce.Lookup ParentRequestInfoId {
+    apiName = "DevopsRequestInfo.ParentRequestInfoId"
+    label = "DevOps Request Info ID"
+    relationshipName = "ParentRequestInfo"
+  }
   salesforce.DateTime RequestCompletionDate {
     apiName = "DevopsRequestInfo.RequestCompletionDate"
     label = "Request Completion Date"

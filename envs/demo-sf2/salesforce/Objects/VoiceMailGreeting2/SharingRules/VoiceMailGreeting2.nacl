@@ -1,7 +1,0 @@
-salesforce.SharingRules VoiceMailGreeting2 {
-  fullName = "VoiceMailGreeting2"
-  _parent = [
-    salesforce.VoiceMailGreeting2,
-  ]
-  _alias = "VoiceMailGreeting2"
-}

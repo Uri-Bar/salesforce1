@@ -1,5 +1,6 @@
 salesforce.Queue tesq {
   fullName = "tesq"
+  doesIncludeBosses = true
   doesSendEmailToMembers = false
   name = "tesq"
   queueMembers = {

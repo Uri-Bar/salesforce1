@@ -1,7 +1,7 @@
 type salesforce.CommSubscriptionTiming {
   salesforce.MasterDetail CommSubscriptionConsentId {
     apiName = "CommSubscriptionTiming.CommSubscriptionConsentId"
-    inlineHelpText = "The communication subscription consent record associated with the communication subscription timing."
+    inlineHelpText = "The Communication Subscription Consent record associated with the Communication Subscription Timing."
     relationshipName = "CommSubscriptionConsent"
     _required = true
     label = "Communication Subscription Consent ID"

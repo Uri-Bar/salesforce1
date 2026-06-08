@@ -148,13 +148,5 @@ type salesforce.CreditMemoInvApplication {
   compactLayoutAssignment = "SYSTEM"
   enableFeeds = false
   externalSharingModel = "ControlledByParent"
-  searchLayouts = {
-    searchResultsAdditionalFields = [
-      "Amount",
-      "Type",
-      "AppliedDate",
-      "UnappliedDate",
-    ]
-  }
   _alias = "Credit Memo Invoice Application"
 }
