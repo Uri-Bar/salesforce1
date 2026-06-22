@@ -1,7 +1,7 @@
 type salesforce.ConversationApiLog {
   serviceid Id {
     apiName = "ConversationApiLog.Id"
-    label = "Conversation API Log ID"
+    label = "Conversation Api Log ID"
     queryable = true
     _hidden_value = true
   }
@@ -19,7 +19,7 @@ type salesforce.ConversationApiLog {
   }
   salesforce.Text Name {
     apiName = "ConversationApiLog.Name"
-    label = "Conversation API Log Name"
+    label = "Conversation Api Log Name"
     _required = true
     length = 255
     unique = false

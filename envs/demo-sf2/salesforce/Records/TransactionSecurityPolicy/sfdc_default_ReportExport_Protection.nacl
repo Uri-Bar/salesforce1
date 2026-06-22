@@ -1,0 +1,17 @@
+salesforce.TransactionSecurityPolicy sfdc_default_ReportExport_Protection {
+  action = {
+    block = false
+    endSession = false
+    freezeUser = false
+    twoFactorAuthentication = true
+  }
+  active = false
+  description = "The default policy to restrict large report exports by enforcing Step-Up Auth."
+  developerName = "sfdc_default_ReportExport_Protection"
+  eventName = "ReportEvent"
+  flow = salesforce.Flow.instance.sfdc_default_ReportExport_Protection_Flow
+  masterLabel = "Default Report Export Transaction Security Policy"
+  type = "CustomConditionBuilderPolicy"
+  fullName = "sfdc_default_ReportExport_Protection"
+  _alias = "sfdc_default_ReportExport_Protection"
+}

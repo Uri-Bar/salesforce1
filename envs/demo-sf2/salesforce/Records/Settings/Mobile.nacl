@@ -1,9 +1,16 @@
 salesforce.MobileSettings {
+  enableUserCustomizationMH = false
   fullName = "Mobile"
   dashboardMobile = {
     enableDashboardIPadApp = true
   }
+  enableConfigureMobileHome = false
+  enableEnhancedContactsOnMobile = false
+  enableEnhancedReportsOnMobile = true
+  enableEnhancedSalesMobileBuilder = true
+  enableEnhancedSalesMobileExp = true
   enableImportContactFromDevice = true
+  enableLandscapeSupportOnPhone = false
   enableOfflineDraftsEnabled = true
   enablePopulateNameManuallyInToday = false
   enableS1EncryptedStoragePref2 = true
