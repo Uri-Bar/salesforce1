@@ -223,6 +223,13 @@ salesforce.NotificationTypeConfig NotificationTypeConfig {
         desktopEnabled = true
         mobileEnabled = false
       }
+      notificationType = "integration_hub"
+    },
+    {
+      notificationChannels = {
+        desktopEnabled = true
+        mobileEnabled = false
+      }
       notificationType = "invoice_generation"
     },
     {

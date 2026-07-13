@@ -1,4 +1,6 @@
 salesforce.SceGlobalModelOptOutSettings {
+  enableConfigurableSceGlobalModelOptOut = false
+  sceGlobalModelOptOut = false
   fullName = "SceGlobalModelOptOut"
   _alias = "SceGlobalModelOptOut"
 }

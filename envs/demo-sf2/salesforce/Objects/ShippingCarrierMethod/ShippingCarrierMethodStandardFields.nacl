@@ -7,6 +7,9 @@ type salesforce.ShippingCarrierMethod {
     unique = false
     caseSensitive = false
   }
+  salesforce.Unknown FridayPickUpTime {
+    apiName = "ShippingCarrierMethod.FridayPickUpTime"
+  }
   salesforce.Picklist ManagedShippingCarrierMethod {
     apiName = "ShippingCarrierMethod.ManagedShippingCarrierMethod"
     inlineHelpText = "Salesforce managed shipping carrier method information that provides estimated transit times."
@@ -28,6 +31,9 @@ type salesforce.ShippingCarrierMethod {
     scale = 0
     unique = false
   }
+  salesforce.Unknown MondayPickUpTime {
+    apiName = "ShippingCarrierMethod.MondayPickUpTime"
+  }
   salesforce.Text Name {
     apiName = "ShippingCarrierMethod.Name"
     length = 255
@@ -41,6 +47,9 @@ type salesforce.ShippingCarrierMethod {
   }
   salesforce.Unknown ProcessingTimeUnit {
     apiName = "ShippingCarrierMethod.ProcessingTimeUnit"
+  }
+  salesforce.Unknown SaturdayPickUpTime {
+    apiName = "ShippingCarrierMethod.SaturdayPickUpTime"
   }
   salesforce.Unknown ShippingAreaType {
     apiName = "ShippingCarrierMethod.ShippingAreaType"
@@ -56,11 +65,23 @@ type salesforce.ShippingCarrierMethod {
     label = "Shipping Scope"
     restricted = true
   }
+  salesforce.Unknown SundayPickUpTime {
+    apiName = "ShippingCarrierMethod.SundayPickUpTime"
+  }
+  salesforce.Unknown ThursdayPickUpTime {
+    apiName = "ShippingCarrierMethod.ThursdayPickUpTime"
+  }
   salesforce.Picklist TransitTimeUnit {
     apiName = "ShippingCarrierMethod.TransitTimeUnit"
     restricted = true
     _required = true
     label = "Transit Time Unit"
+  }
+  salesforce.Unknown TuesdayPickUpTime {
+    apiName = "ShippingCarrierMethod.TuesdayPickUpTime"
+  }
+  salesforce.Unknown WednesdayPickUpTime {
+    apiName = "ShippingCarrierMethod.WednesdayPickUpTime"
   }
   serviceid Id {
     apiName = "ShippingCarrierMethod.Id"
