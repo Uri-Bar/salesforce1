@@ -234,6 +234,9 @@ type salesforce.FulfillmentOrder {
     apiName = "FulfillmentOrder.DeliveryDate"
     label = "Delivery Date"
   }
+  salesforce.Unknown RoutingReference {
+    apiName = "FulfillmentOrder.RoutingReference"
+  }
   salesforce.DateTime StartFulfillmentDate {
     apiName = "FulfillmentOrder.StartFulfillmentDate"
     label = "Start Fulfillment Date"

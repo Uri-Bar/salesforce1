@@ -146,6 +146,13 @@ salesforce.NotificationTypeConfig NotificationTypeConfig {
         desktopEnabled = true
         mobileEnabled = false
       }
+      notificationType = "dr_completion_notify"
+    },
+    {
+      notificationChannels = {
+        desktopEnabled = true
+        mobileEnabled = false
+      }
       notificationType = "eacforfsc_async_notify"
     },
     {

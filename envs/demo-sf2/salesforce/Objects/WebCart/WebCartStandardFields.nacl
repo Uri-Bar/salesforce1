@@ -69,6 +69,9 @@ type salesforce.WebCart {
     unique = false
     caseSensitive = false
   }
+  salesforce.Unknown QuoteLineItemCount {
+    apiName = "WebCart.QuoteLineItemCount"
+  }
   salesforce.Picklist Status {
     apiName = "WebCart.Status"
     restricted = true

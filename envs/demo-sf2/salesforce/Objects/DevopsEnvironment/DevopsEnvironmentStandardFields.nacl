@@ -81,6 +81,11 @@ type salesforce.DevopsEnvironment {
     label = "DevOps Environment ID"
     relationshipName = "Replaces"
   }
+  salesforce.Picklist Status {
+    apiName = "DevopsEnvironment.Status"
+    label = "Status"
+    restricted = true
+  }
   serviceid Id {
     apiName = "DevopsEnvironment.Id"
     label = "DevOps Environment ID"
