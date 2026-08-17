@@ -20,6 +20,10 @@ type salesforce.PromotionTier {
     scale = 0
     unique = false
   }
+  salesforce.Unknown TierLabel {
+    apiName = "PromotionTier.TierLabel"
+    inlineHelpText = "The name buyers see when this promotion tier is applied to a cart."
+  }
   serviceid Id {
     apiName = "PromotionTier.Id"
     label = "Promotion Tier ID"

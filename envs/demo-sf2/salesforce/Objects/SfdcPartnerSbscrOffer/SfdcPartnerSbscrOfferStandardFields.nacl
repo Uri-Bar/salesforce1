@@ -54,6 +54,7 @@ type salesforce.SfdcPartnerSbscrOffer {
   }
   salesforce.Date ExpirationDate {
     apiName = "SfdcPartnerSbscrOffer.ExpirationDate"
+    inlineHelpText = "The date the offer becomes invalid at 12:00 AM UTC"
     label = "Valid Until"
   }
   salesforce.Text Name {
@@ -104,10 +105,12 @@ type salesforce.SfdcPartnerSbscrOffer {
   }
   salesforce.Date ServiceEndDate {
     apiName = "SfdcPartnerSbscrOffer.ServiceEndDate"
+    inlineHelpText = "The date the service ends at 12:00 AM UTC"
     label = "Service End Date"
   }
   salesforce.Date ServiceStartDate {
     apiName = "SfdcPartnerSbscrOffer.ServiceStartDate"
+    inlineHelpText = "The date the service starts at 12:00 AM UTC"
     label = "Service Start Date"
   }
   salesforce.Number ServiceTerm {
