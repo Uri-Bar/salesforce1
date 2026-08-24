@@ -41,6 +41,13 @@ salesforce.NotificationTypeConfig NotificationTypeConfig {
         desktopEnabled = true
         mobileEnabled = true
       }
+      notificationType = "analyze_tableau_next"
+    },
+    {
+      notificationChannels = {
+        desktopEnabled = true
+        mobileEnabled = true
+      }
       notificationType = "approval_request"
     },
     {

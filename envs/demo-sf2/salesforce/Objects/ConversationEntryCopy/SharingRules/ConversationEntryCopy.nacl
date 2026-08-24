@@ -1,7 +1,4 @@
 salesforce.SharingRules ConversationEntryCopy {
   fullName = "ConversationEntryCopy"
-  _parent = [
-    salesforce.ConversationEntryCopy,
-  ]
   _alias = "ConversationEntryCopy"
 }

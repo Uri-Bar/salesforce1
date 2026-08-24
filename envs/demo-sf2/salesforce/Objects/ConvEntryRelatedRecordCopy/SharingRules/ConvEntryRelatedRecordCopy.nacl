@@ -1,7 +1,4 @@
 salesforce.SharingRules ConvEntryRelatedRecordCopy {
   fullName = "ConvEntryRelatedRecordCopy"
-  _parent = [
-    salesforce.ConvEntryRelatedRecordCopy,
-  ]
   _alias = "ConvEntryRelatedRecordCopy"
 }

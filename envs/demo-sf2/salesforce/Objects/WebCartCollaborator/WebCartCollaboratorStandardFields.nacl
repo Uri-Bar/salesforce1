@@ -1,0 +1,20 @@
+type salesforce.WebCartCollaborator {
+  salesforce.Unknown AccessLevel {
+    apiName = "WebCartCollaborator.AccessLevel"
+  }
+  salesforce.Lookup CollaboratorId {
+    apiName = "WebCartCollaborator.CollaboratorId"
+  }
+  salesforce.Unknown Name {
+    apiName = "WebCartCollaborator.Name"
+  }
+  salesforce.Lookup SharedById {
+    apiName = "WebCartCollaborator.SharedById"
+  }
+  salesforce.Unknown SharedDate {
+    apiName = "WebCartCollaborator.SharedDate"
+  }
+  salesforce.MasterDetail WebCartId {
+    apiName = "WebCartCollaborator.WebCartId"
+  }
+}

@@ -1,0 +1,26 @@
+type salesforce.WebCartActivityLog {
+  salesforce.Lookup CartItemId {
+    apiName = "WebCartActivityLog.CartItemId"
+  }
+  salesforce.Lookup InitiatedById {
+    apiName = "WebCartActivityLog.InitiatedById"
+  }
+  salesforce.Unknown OperationSummary {
+    apiName = "WebCartActivityLog.OperationSummary"
+  }
+  salesforce.Unknown OperationType {
+    apiName = "WebCartActivityLog.OperationType"
+  }
+  salesforce.Lookup ProductId {
+    apiName = "WebCartActivityLog.ProductId"
+  }
+  salesforce.Lookup SourceCartId {
+    apiName = "WebCartActivityLog.SourceCartId"
+  }
+  salesforce.Unknown Status {
+    apiName = "WebCartActivityLog.Status"
+  }
+  salesforce.MasterDetail WebCartId {
+    apiName = "WebCartActivityLog.WebCartId"
+  }
+}

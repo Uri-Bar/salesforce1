@@ -1,4 +1,4 @@
-type salesforce.SfdcPartnerSbscrOffer {
+type salesforce.WebCartCollaborator {
   annotations {
     serviceid apiName {
     }
@@ -55,9 +55,9 @@ type salesforce.SfdcPartnerSbscrOffer {
     hidden_string internalId {
     }
   }
-  apiName = "SfdcPartnerSbscrOffer"
+  apiName = "WebCartCollaborator"
   metadataType = "CustomObject"
-  label = "Partner Subscriber Offer"
+  label = "WebCartCollaborator"
   description = ""
   actionOverrides = [
     {
@@ -75,48 +75,6 @@ type salesforce.SfdcPartnerSbscrOffer {
       type = "Default"
     },
     {
-      actionName = "Clone"
-      type = "Default"
-    },
-    {
-      actionName = "Clone"
-      formFactor = "Large"
-      type = "Default"
-    },
-    {
-      actionName = "Clone"
-      formFactor = "Small"
-      type = "Default"
-    },
-    {
-      actionName = "Delete"
-      type = "Default"
-    },
-    {
-      actionName = "Delete"
-      formFactor = "Large"
-      type = "Default"
-    },
-    {
-      actionName = "Delete"
-      formFactor = "Small"
-      type = "Default"
-    },
-    {
-      actionName = "Edit"
-      type = "Default"
-    },
-    {
-      actionName = "Edit"
-      formFactor = "Large"
-      type = "Default"
-    },
-    {
-      actionName = "Edit"
-      formFactor = "Small"
-      type = "Default"
-    },
-    {
       actionName = "List"
       type = "Default"
     },
@@ -127,20 +85,6 @@ type salesforce.SfdcPartnerSbscrOffer {
     },
     {
       actionName = "List"
-      formFactor = "Small"
-      type = "Default"
-    },
-    {
-      actionName = "New"
-      type = "Default"
-    },
-    {
-      actionName = "New"
-      formFactor = "Large"
-      type = "Default"
-    },
-    {
-      actionName = "New"
       formFactor = "Small"
       type = "Default"
     },
@@ -189,40 +133,6 @@ type salesforce.SfdcPartnerSbscrOffer {
   ]
   compactLayoutAssignment = "SYSTEM"
   enableFeeds = false
-  externalSharingModel = "Private"
-  searchLayouts = {
-    customTabListAdditionalFields = [
-      "PartnerCompanyName",
-      "OfferType",
-      "ServiceStartDate",
-      "ServiceEndDate",
-      "ExpirationDate",
-      "Status",
-    ]
-    lookupDialogsAdditionalFields = [
-      "PartnerCompanyName",
-      "OfferType",
-      "ServiceStartDate",
-      "ServiceEndDate",
-      "ExpirationDate",
-      "Status",
-    ]
-    lookupPhoneDialogsAdditionalFields = [
-      "PartnerCompanyName",
-      "OfferType",
-      "ServiceStartDate",
-      "ServiceEndDate",
-      "ExpirationDate",
-      "Status",
-    ]
-    searchResultsAdditionalFields = [
-      "PartnerCompanyName",
-      "OfferType",
-      "ServiceStartDate",
-      "ServiceEndDate",
-      "ExpirationDate",
-      "Status",
-    ]
-  }
-  _alias = "Partner Subscriber Offer"
+  externalSharingModel = "ControlledByParent"
+  _alias = "WebCartCollaborator"
 }

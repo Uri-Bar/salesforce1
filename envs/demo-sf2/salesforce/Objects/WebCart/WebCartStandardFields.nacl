@@ -8,6 +8,15 @@ type salesforce.WebCart {
     apiName = "WebCart.BillingAddress"
     label = "Billing Address"
   }
+  salesforce.Unknown CollaborationLockedAt {
+    apiName = "WebCart.CollaborationLockedAt"
+  }
+  salesforce.Lookup CollaborationLockedById {
+    apiName = "WebCart.CollaborationLockedById"
+  }
+  salesforce.Unknown CollaborationStatus {
+    apiName = "WebCart.CollaborationStatus"
+  }
   salesforce.Unknown FirstPymtGrandTotalAmount {
     apiName = "WebCart.FirstPymtGrandTotalAmount"
   }
@@ -28,6 +37,9 @@ type salesforce.WebCart {
   salesforce.Checkbox IsSecondary {
     apiName = "WebCart.IsSecondary"
     label = "Is Cart Secondary"
+  }
+  salesforce.Lookup LastOperationJobId {
+    apiName = "WebCart.LastOperationJobId"
   }
   salesforce.DateTime LastRepricingDate {
     apiName = "WebCart.LastRepricingDate"
