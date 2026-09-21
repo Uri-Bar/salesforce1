@@ -21,6 +21,9 @@ type salesforce.CartItemPriceAdjustment {
     _required = true
     label = "Target Type for the Adjustment"
   }
+  salesforce.Lookup AdjustmentTierId {
+    apiName = "CartItemPriceAdjustment.AdjustmentTierId"
+  }
   salesforce.Picklist AdjustmentType {
     apiName = "CartItemPriceAdjustment.AdjustmentType"
     restricted = true

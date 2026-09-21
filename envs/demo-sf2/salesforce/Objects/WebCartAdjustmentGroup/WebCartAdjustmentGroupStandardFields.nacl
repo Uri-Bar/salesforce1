@@ -16,6 +16,9 @@ type salesforce.WebCartAdjustmentGroup {
     _required = true
     label = "Target Type for the Adjustment"
   }
+  salesforce.Lookup AdjustmentTierId {
+    apiName = "WebCartAdjustmentGroup.AdjustmentTierId"
+  }
   salesforce.Picklist AdjustmentType {
     apiName = "WebCartAdjustmentGroup.AdjustmentType"
     restricted = true
