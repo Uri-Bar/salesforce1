@@ -190,5 +190,22 @@ type salesforce.AssociatedLocation {
   compactLayoutAssignment = "SYSTEM"
   enableFeeds = false
   externalSharingModel = "ControlledByParent"
+  searchLayouts = {
+    customTabListAdditionalFields = [
+      "Location",
+      "Type",
+      "ActiveFrom",
+      "ActiveTo",
+    ]
+    searchResultsAdditionalFields = [
+      "Location",
+      "Type",
+      "ActiveFrom",
+      "ActiveTo",
+    ]
+  }
   _alias = "Associated Location"
+  topicsForObjects = {
+    enableTopics = false
+  }
 }

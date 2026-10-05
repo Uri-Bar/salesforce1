@@ -1,5 +1,6 @@
 salesforce.FieldServiceSettings {
   fullName = "FieldService"
+  enableDataCaptureControlByParent = false
   enableWorkOrders = true
   fieldServiceOrgPref = false
   _alias = "FieldService"

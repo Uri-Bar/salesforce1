@@ -1,0 +1,70 @@
+type salesforce.DevopsProjectPipeline {
+  salesforce.Lookup DevopsPipelineId {
+    apiName = "DevopsProjectPipeline.DevopsPipelineId"
+    label = "DevopsPipeline ID"
+    _required = true
+    relationshipName = "DevopsPipeline"
+  }
+  salesforce.MasterDetail DevopsProjectId {
+    apiName = "DevopsProjectPipeline.DevopsProjectId"
+    label = "DevopsProject ID"
+    _required = true
+    relationshipName = "DevopsProject"
+  }
+  serviceid Id {
+    apiName = "DevopsProjectPipeline.Id"
+    label = "DevOps Project Pipeline ID"
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Checkbox IsDeleted {
+    apiName = "DevopsProjectPipeline.IsDeleted"
+    label = "Deleted"
+    defaultValue = false
+    _hidden_value = true
+  }
+  salesforce.AutoNumber Name {
+    apiName = "DevopsProjectPipeline.Name"
+    label = "Name"
+    _hidden_value = true
+  }
+  salesforce.DateTime CreatedDate {
+    apiName = "DevopsProjectPipeline.CreatedDate"
+    label = "Created Date"
+    _hidden_value = true
+  }
+  salesforce.Lookup CreatedById {
+    apiName = "DevopsProjectPipeline.CreatedById"
+    label = "Created By ID"
+    relationshipName = "CreatedBy"
+    _hidden_value = true
+  }
+  salesforce.DateTime LastModifiedDate {
+    apiName = "DevopsProjectPipeline.LastModifiedDate"
+    label = "Last Modified Date"
+    _hidden_value = true
+  }
+  salesforce.Lookup LastModifiedById {
+    apiName = "DevopsProjectPipeline.LastModifiedById"
+    label = "Last Modified By ID"
+    relationshipName = "LastModifiedBy"
+    _hidden_value = true
+  }
+  salesforce.DateTime SystemModstamp {
+    apiName = "DevopsProjectPipeline.SystemModstamp"
+    label = "System Modstamp"
+    _hidden_value = true
+  }
+  salesforce.Checkbox IsActive {
+    apiName = "DevopsProjectPipeline.IsActive"
+    label = "Is Active"
+    defaultValue = false
+  }
+  salesforce.Text ExternalId {
+    apiName = "DevopsProjectPipeline.ExternalId"
+    label = "External Id"
+    length = 255
+    unique = true
+    caseSensitive = false
+  }
+}

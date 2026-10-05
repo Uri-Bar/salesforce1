@@ -34,6 +34,10 @@ type salesforce.CreditMemo {
     apiName = "CreditMemo.CreditDate"
     label = "Credit Date"
   }
+  salesforce.Unknown CreditMemoLockedDateTime {
+    apiName = "CreditMemo.CreditMemoLockedDateTime"
+    inlineHelpText = "The time at which the credit memo record was locked."
+  }
   salesforce.Text CreditMemoNumber {
     apiName = "CreditMemo.CreditMemoNumber"
     length = 255
@@ -71,10 +75,17 @@ type salesforce.CreditMemo {
   salesforce.Unknown FunctionalCurrencyCvsnRate {
     apiName = "CreditMemo.FunctionalCurrencyCvsnRate"
   }
+  salesforce.Unknown IsCreditMemoLocked {
+    apiName = "CreditMemo.IsCreditMemoLocked"
+    inlineHelpText = "Indicates whether the credit memo record is locked or not."
+  }
   salesforce.Summary NetCreditsApplied {
     apiName = "CreditMemo.NetCreditsApplied"
     inlineHelpText = "Net amount applied from the credit memo."
     label = "Net Credits Applied"
+  }
+  salesforce.Unknown NetRefundsApplied {
+    apiName = "CreditMemo.NetRefundsApplied"
   }
   salesforce.Lookup OwnerId {
     apiName = "CreditMemo.OwnerId"
@@ -150,6 +161,18 @@ type salesforce.CreditMemo {
     label = "Total Credit Amount Unapplied"
     scale = 2
     precision = 18
+  }
+  salesforce.Unknown TotalHeaderRefundApplied {
+    apiName = "CreditMemo.TotalHeaderRefundApplied"
+  }
+  salesforce.Unknown TotalHeaderRefundUnapplied {
+    apiName = "CreditMemo.TotalHeaderRefundUnapplied"
+  }
+  salesforce.Unknown TotalLineRefundApplied {
+    apiName = "CreditMemo.TotalLineRefundApplied"
+  }
+  salesforce.Unknown TotalLineRefundUnapplied {
+    apiName = "CreditMemo.TotalLineRefundUnapplied"
   }
   salesforce.Summary TotalTaxAmount {
     apiName = "CreditMemo.TotalTaxAmount"

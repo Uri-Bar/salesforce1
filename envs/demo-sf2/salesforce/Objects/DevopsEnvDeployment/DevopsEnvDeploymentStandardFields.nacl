@@ -1,0 +1,157 @@
+type salesforce.DevopsEnvDeployment {
+  salesforce.Lookup BackSyncStageId {
+    apiName = "DevopsEnvDeployment.BackSyncStageId"
+    label = "BackSyncStage ID"
+    relationshipName = "BackSyncStage"
+  }
+  salesforce.DateTime CheckDeployCompletionDate {
+    apiName = "DevopsEnvDeployment.CheckDeployCompletionDate"
+    label = "Check Deploy Completion Date"
+  }
+  salesforce.DateTime CheckDeployDate {
+    apiName = "DevopsEnvDeployment.CheckDeployDate"
+    label = "Check Deploy Date"
+  }
+  salesforce.Unknown CheckDeployIdentifier {
+    apiName = "DevopsEnvDeployment.CheckDeployIdentifier"
+  }
+  salesforce.Lookup CheckDeployRequestInfoId {
+    apiName = "DevopsEnvDeployment.CheckDeployRequestInfoId"
+    label = "DevOps Request Info ID"
+    relationshipName = "CheckDeployRequestInfo"
+  }
+  salesforce.DateTime DeployCompletionDate {
+    apiName = "DevopsEnvDeployment.DeployCompletionDate"
+    label = "Deploy Completion Date"
+  }
+  salesforce.Lookup DeployRequestInfoId {
+    apiName = "DevopsEnvDeployment.DeployRequestInfoId"
+    label = "DeployRequestInfo ID"
+    relationshipName = "DeployRequestInfo"
+  }
+  salesforce.Picklist DeployStatus {
+    apiName = "DevopsEnvDeployment.DeployStatus"
+    label = "Deploy Status"
+    restricted = true
+  }
+  salesforce.DateTime DeploymentDate {
+    apiName = "DevopsEnvDeployment.DeploymentDate"
+    label = "Deployment Date"
+  }
+  salesforce.Text DeploymentIdentifier {
+    apiName = "DevopsEnvDeployment.DeploymentIdentifier"
+    label = "Deployment Id"
+    length = 255
+    unique = true
+    caseSensitive = false
+  }
+  salesforce.Lookup DevopsPipelnStgPromId {
+    apiName = "DevopsEnvDeployment.DevopsPipelnStgPromId"
+    label = "DevopsPipelnStgProm ID"
+    relationshipName = "DevopsPipelnStgProm"
+  }
+  salesforce.Number EndRevisionCounter {
+    apiName = "DevopsEnvDeployment.EndRevisionCounter"
+    label = "End Revision Counter"
+    scale = 0
+    precision = 9
+    unique = false
+  }
+  salesforce.Checkbox IsCheckDeploy {
+    apiName = "DevopsEnvDeployment.IsCheckDeploy"
+    label = "Is Check Deploy"
+    defaultValue = false
+  }
+  salesforce.Checkbox IsFullDeploy {
+    apiName = "DevopsEnvDeployment.IsFullDeploy"
+    label = "Is Full Deploy"
+    defaultValue = false
+  }
+  salesforce.LongTextArea RunTests {
+    apiName = "DevopsEnvDeployment.RunTests"
+    label = "Run Tests"
+    length = 32768
+  }
+  salesforce.LongTextArea SelectedWorkItemIds {
+    apiName = "DevopsEnvDeployment.SelectedWorkItemIds"
+    label = "Selected Work Item IDs"
+    length = 32768
+  }
+  salesforce.Number StartRevisionCounter {
+    apiName = "DevopsEnvDeployment.StartRevisionCounter"
+    label = "Start Revision Counter"
+    scale = 0
+    precision = 9
+    unique = false
+  }
+  salesforce.Picklist Status {
+    apiName = "DevopsEnvDeployment.Status"
+    label = "Status"
+    restricted = true
+  }
+  salesforce.Lookup SwapStageId {
+    apiName = "DevopsEnvDeployment.SwapStageId"
+    label = "SwapStage ID"
+    relationshipName = "SwapStage"
+  }
+  salesforce.MasterDetail TargetDeployOrgId {
+    apiName = "DevopsEnvDeployment.TargetDeployOrgId"
+    label = "TargetDeployOrg ID"
+    _required = true
+    relationshipName = "TargetDeployOrg"
+  }
+  salesforce.Picklist TestLevel {
+    apiName = "DevopsEnvDeployment.TestLevel"
+    label = "Test Level"
+    restricted = true
+  }
+  serviceid Id {
+    apiName = "DevopsEnvDeployment.Id"
+    label = "DevOps Env Deployment ID"
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Checkbox IsDeleted {
+    apiName = "DevopsEnvDeployment.IsDeleted"
+    label = "Deleted"
+    defaultValue = false
+    _hidden_value = true
+  }
+  salesforce.AutoNumber Name {
+    apiName = "DevopsEnvDeployment.Name"
+    label = "Name"
+    _hidden_value = true
+  }
+  salesforce.DateTime CreatedDate {
+    apiName = "DevopsEnvDeployment.CreatedDate"
+    label = "Created Date"
+    _hidden_value = true
+  }
+  salesforce.Lookup CreatedById {
+    apiName = "DevopsEnvDeployment.CreatedById"
+    label = "Created By ID"
+    relationshipName = "CreatedBy"
+    _hidden_value = true
+  }
+  salesforce.DateTime LastModifiedDate {
+    apiName = "DevopsEnvDeployment.LastModifiedDate"
+    label = "Last Modified Date"
+    _hidden_value = true
+  }
+  salesforce.Lookup LastModifiedById {
+    apiName = "DevopsEnvDeployment.LastModifiedById"
+    label = "Last Modified By ID"
+    relationshipName = "LastModifiedBy"
+    _hidden_value = true
+  }
+  salesforce.DateTime SystemModstamp {
+    apiName = "DevopsEnvDeployment.SystemModstamp"
+    label = "System Modstamp"
+    _hidden_value = true
+  }
+  salesforce.Picklist CheckDeployStatus {
+    apiName = "DevopsEnvDeployment.CheckDeployStatus"
+    label = "Check Deploy Status"
+    restricted = true
+  }
+}

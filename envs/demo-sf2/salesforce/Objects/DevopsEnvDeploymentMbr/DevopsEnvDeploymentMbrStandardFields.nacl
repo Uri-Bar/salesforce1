@@ -1,0 +1,100 @@
+type salesforce.DevopsEnvDeploymentMbr {
+  salesforce.Picklist ChangeType {
+    apiName = "DevopsEnvDeploymentMbr.ChangeType"
+    label = "Change Type"
+    _required = true
+    restricted = true
+  }
+  salesforce.Lookup ChangedById {
+    apiName = "DevopsEnvDeploymentMbr.ChangedById"
+    label = "ChangedBy ID"
+    relationshipName = "ChangedBy"
+  }
+  salesforce.DateTime ChangedOn {
+    apiName = "DevopsEnvDeploymentMbr.ChangedOn"
+    label = "Changed On"
+  }
+  salesforce.Unknown DataConfig {
+    apiName = "DevopsEnvDeploymentMbr.DataConfig"
+  }
+  salesforce.MasterDetail DevopsEnvDeploymentId {
+    apiName = "DevopsEnvDeploymentMbr.DevopsEnvDeploymentId"
+    label = "DevopsEnvDeployment ID"
+    _required = true
+    relationshipName = "DevopsEnvDeployment"
+  }
+  salesforce.Text MemberName {
+    apiName = "DevopsEnvDeploymentMbr.MemberName"
+    label = "Member Name"
+    _required = true
+    length = 255
+    unique = false
+    caseSensitive = false
+  }
+  salesforce.Text MemberType {
+    apiName = "DevopsEnvDeploymentMbr.MemberType"
+    label = "Member Type"
+    _required = true
+    length = 255
+    unique = false
+    caseSensitive = false
+  }
+  salesforce.Number NumberOfRecords {
+    apiName = "DevopsEnvDeploymentMbr.NumberOfRecords"
+    label = "Number of Records"
+    scale = 0
+    precision = 9
+    unique = false
+  }
+  salesforce.Number VersionNumber {
+    apiName = "DevopsEnvDeploymentMbr.VersionNumber"
+    label = "Version Number"
+    scale = 0
+    precision = 9
+    unique = false
+  }
+  serviceid Id {
+    apiName = "DevopsEnvDeploymentMbr.Id"
+    label = "DevOps Env Deployment Member ID"
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Checkbox IsDeleted {
+    apiName = "DevopsEnvDeploymentMbr.IsDeleted"
+    label = "Deleted"
+    defaultValue = false
+    _hidden_value = true
+  }
+  salesforce.AutoNumber Name {
+    apiName = "DevopsEnvDeploymentMbr.Name"
+    label = "Name"
+    _hidden_value = true
+  }
+  salesforce.DateTime CreatedDate {
+    apiName = "DevopsEnvDeploymentMbr.CreatedDate"
+    label = "Created Date"
+    _hidden_value = true
+  }
+  salesforce.Lookup CreatedById {
+    apiName = "DevopsEnvDeploymentMbr.CreatedById"
+    label = "Created By ID"
+    relationshipName = "CreatedBy"
+    _hidden_value = true
+  }
+  salesforce.DateTime LastModifiedDate {
+    apiName = "DevopsEnvDeploymentMbr.LastModifiedDate"
+    label = "Last Modified Date"
+    _hidden_value = true
+  }
+  salesforce.Lookup LastModifiedById {
+    apiName = "DevopsEnvDeploymentMbr.LastModifiedById"
+    label = "Last Modified By ID"
+    relationshipName = "LastModifiedBy"
+    _hidden_value = true
+  }
+  salesforce.DateTime SystemModstamp {
+    apiName = "DevopsEnvDeploymentMbr.SystemModstamp"
+    label = "System Modstamp"
+    _hidden_value = true
+  }
+}

@@ -1,0 +1,7 @@
+salesforce.SharingRules DevopsPipelineStageTrigger {
+  fullName = "DevopsPipelineStageTrigger"
+  _parent = [
+    salesforce.DevopsPipelineStageTrigger,
+  ]
+  _alias = "DevopsPipelineStageTrigger"
+}

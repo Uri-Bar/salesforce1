@@ -1,0 +1,7 @@
+salesforce.SharingRules DevopsTestSuiteGroupExec {
+  fullName = "DevopsTestSuiteGroupExec"
+  _parent = [
+    salesforce.DevopsTestSuiteGroupExec,
+  ]
+  _alias = "DevopsTestSuiteGroupExec"
+}

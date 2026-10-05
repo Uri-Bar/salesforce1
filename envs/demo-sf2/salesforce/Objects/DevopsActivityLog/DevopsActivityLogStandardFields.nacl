@@ -47,6 +47,14 @@ type salesforce.DevopsActivityLog {
     label = "Status"
     restricted = true
   }
+  salesforce.Lookup TestSuiteGroupExecId {
+    apiName = "DevopsActivityLog.TestSuiteGroupExecId"
+  }
+  salesforce.Lookup WorkItemId {
+    apiName = "DevopsActivityLog.WorkItemId"
+    label = "Work Item ID"
+    relationshipName = "WorkItem"
+  }
   serviceid Id {
     apiName = "DevopsActivityLog.Id"
     label = "DevOps Activity Log ID"
@@ -91,6 +99,21 @@ type salesforce.DevopsActivityLog {
     apiName = "DevopsActivityLog.SystemModstamp"
     label = "System Modstamp"
     _hidden_value = true
+  }
+  salesforce.Lookup PipelineId {
+    apiName = "DevopsActivityLog.PipelineId"
+    label = "DevOps Pipeline ID"
+    relationshipName = "Pipeline"
+  }
+  salesforce.Lookup PipelineStageId {
+    apiName = "DevopsActivityLog.PipelineStageId"
+    label = "DevOps Pipeline Stage ID"
+    relationshipName = "PipelineStage"
+  }
+  salesforce.Lookup ProjectId {
+    apiName = "DevopsActivityLog.ProjectId"
+    label = "DevOps Project ID"
+    relationshipName = "Project"
   }
   salesforce.Unknown RequestInfoErrorDetails {
     apiName = "DevopsActivityLog.RequestInfoErrorDetails"

@@ -1,9 +1,0 @@
-salesforce.ListView WorkType_My_WorkTypes {
-  fullName = "WorkType.My_WorkTypes"
-  filterScope = "Mine"
-  label = "My Work Types"
-  _parent = [
-    salesforce.WorkType,
-  ]
-  _alias = "My Work Types"
-}

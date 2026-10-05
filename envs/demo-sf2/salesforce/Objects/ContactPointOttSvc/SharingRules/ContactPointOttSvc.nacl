@@ -1,0 +1,7 @@
+salesforce.SharingRules ContactPointOttSvc {
+  fullName = "ContactPointOttSvc"
+  _parent = [
+    salesforce.ContactPointOttSvc,
+  ]
+  _alias = "ContactPointOttSvc"
+}

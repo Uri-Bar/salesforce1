@@ -6,7 +6,7 @@ type salesforce.SfdcPartnerSbscrOffer {
   }
   salesforce.Number ContractTerm {
     apiName = "SfdcPartnerSbscrOffer.ContractTerm"
-    inlineHelpText = "Term duration, with a max of 12 months."
+    inlineHelpText = "Term duration."
     label = "Contract Term (Months)"
     scale = 0
     precision = 9

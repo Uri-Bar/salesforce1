@@ -1,0 +1,7 @@
+salesforce.SharingRules DevopsPipeline {
+  fullName = "DevopsPipeline"
+  _parent = [
+    salesforce.DevopsPipeline,
+  ]
+  _alias = "DevopsPipeline"
+}

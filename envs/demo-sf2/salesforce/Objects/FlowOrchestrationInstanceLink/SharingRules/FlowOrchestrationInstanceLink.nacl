@@ -1,0 +1,7 @@
+salesforce.SharingRules FlowOrchestrationInstanceLink {
+  fullName = "FlowOrchestrationInstanceLink"
+  _parent = [
+    salesforce.FlowOrchestrationInstanceLink,
+  ]
+  _alias = "FlowOrchestrationInstanceLink"
+}

@@ -1,0 +1,23 @@
+type salesforce.MessagingSessionClient {
+  salesforce.Unknown BrowserLanguage {
+    apiName = "MessagingSessionClient.BrowserLanguage"
+  }
+  salesforce.Unknown BrowserName {
+    apiName = "MessagingSessionClient.BrowserName"
+  }
+  salesforce.Unknown ClientIdentifier {
+    apiName = "MessagingSessionClient.ClientIdentifier"
+  }
+  salesforce.Unknown IpAddress {
+    apiName = "MessagingSessionClient.IpAddress"
+  }
+  salesforce.MasterDetail MessagingSessionId {
+    apiName = "MessagingSessionClient.MessagingSessionId"
+  }
+  salesforce.Unknown OperatingSystemName {
+    apiName = "MessagingSessionClient.OperatingSystemName"
+  }
+  salesforce.Unknown UserAgent {
+    apiName = "MessagingSessionClient.UserAgent"
+  }
+}

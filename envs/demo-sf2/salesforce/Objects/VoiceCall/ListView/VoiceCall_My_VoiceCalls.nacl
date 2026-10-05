@@ -1,9 +1,0 @@
-salesforce.ListView VoiceCall_My_VoiceCalls {
-  fullName = "VoiceCall.My_VoiceCalls"
-  filterScope = "Mine"
-  label = "MyVoiceCalls"
-  _parent = [
-    salesforce.VoiceCall,
-  ]
-  _alias = "MyVoiceCalls"
-}

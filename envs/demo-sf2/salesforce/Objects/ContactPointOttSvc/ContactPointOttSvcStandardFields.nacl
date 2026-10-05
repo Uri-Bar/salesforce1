@@ -1,0 +1,65 @@
+type salesforce.ContactPointOttSvc {
+  salesforce.Unknown ActiveFromDateTime {
+    apiName = "ContactPointOttSvc.ActiveFromDateTime"
+  }
+  salesforce.Unknown ActiveToDateTime {
+    apiName = "ContactPointOttSvc.ActiveToDateTime"
+  }
+  salesforce.Unknown BestTimeToContactEndTime {
+    apiName = "ContactPointOttSvc.BestTimeToContactEndTime"
+  }
+  salesforce.Unknown BestTimeToContactStartTime {
+    apiName = "ContactPointOttSvc.BestTimeToContactStartTime"
+  }
+  salesforce.Unknown BestTimeToContactTimeZone {
+    apiName = "ContactPointOttSvc.BestTimeToContactTimeZone"
+  }
+  salesforce.Unknown BusinessPortfolioIdentifier {
+    apiName = "ContactPointOttSvc.BusinessPortfolioIdentifier"
+  }
+  salesforce.Unknown ChannelSenderCode {
+    apiName = "ContactPointOttSvc.ChannelSenderCode"
+  }
+  salesforce.Unknown Country {
+    apiName = "ContactPointOttSvc.Country"
+  }
+  salesforce.Lookup EngagementChannelTypeId {
+    apiName = "ContactPointOttSvc.EngagementChannelTypeId"
+  }
+  salesforce.Unknown IsPrimary {
+    apiName = "ContactPointOttSvc.IsPrimary"
+  }
+  salesforce.Unknown IsUndeliverable {
+    apiName = "ContactPointOttSvc.IsUndeliverable"
+  }
+  salesforce.Unknown IsVerified {
+    apiName = "ContactPointOttSvc.IsVerified"
+  }
+  salesforce.Lookup ParentId {
+    apiName = "ContactPointOttSvc.ParentId"
+  }
+  salesforce.Unknown PhoneNumber {
+    apiName = "ContactPointOttSvc.PhoneNumber"
+  }
+  salesforce.Unknown PreferenceRank {
+    apiName = "ContactPointOttSvc.PreferenceRank"
+  }
+  salesforce.Unknown ProfileFirstCreatedDateTime {
+    apiName = "ContactPointOttSvc.ProfileFirstCreatedDateTime"
+  }
+  salesforce.Unknown ProfileLastUpdatedDateTime {
+    apiName = "ContactPointOttSvc.ProfileLastUpdatedDateTime"
+  }
+  salesforce.Unknown ProfileOccurrenceCount {
+    apiName = "ContactPointOttSvc.ProfileOccurrenceCount"
+  }
+  salesforce.Picklist UsageType {
+    apiName = "ContactPointOttSvc.UsageType"
+  }
+  salesforce.Unknown UserIdentifier {
+    apiName = "ContactPointOttSvc.UserIdentifier"
+  }
+  salesforce.Unknown UserName {
+    apiName = "ContactPointOttSvc.UserName"
+  }
+}

@@ -1,0 +1,61 @@
+type salesforce.DevopsProjectEnvironment {
+  salesforce.Lookup DevopsEnvironmentId {
+    apiName = "DevopsProjectEnvironment.DevopsEnvironmentId"
+    label = "DevopsEnvironment ID"
+    relationshipName = "DevopsEnvironment"
+  }
+  salesforce.MasterDetail DevopsProjectId {
+    apiName = "DevopsProjectEnvironment.DevopsProjectId"
+    label = "DevopsProject ID"
+    _required = true
+    relationshipName = "DevopsProject"
+  }
+  salesforce.DateTime RemovedOn {
+    apiName = "DevopsProjectEnvironment.RemovedOn"
+    label = "Removed On"
+  }
+  serviceid Id {
+    apiName = "DevopsProjectEnvironment.Id"
+    label = "DevOps Project Environment ID"
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Checkbox IsDeleted {
+    apiName = "DevopsProjectEnvironment.IsDeleted"
+    label = "Deleted"
+    defaultValue = false
+    _hidden_value = true
+  }
+  salesforce.AutoNumber Name {
+    apiName = "DevopsProjectEnvironment.Name"
+    label = "Name"
+    _hidden_value = true
+  }
+  salesforce.DateTime CreatedDate {
+    apiName = "DevopsProjectEnvironment.CreatedDate"
+    label = "Created Date"
+    _hidden_value = true
+  }
+  salesforce.Lookup CreatedById {
+    apiName = "DevopsProjectEnvironment.CreatedById"
+    label = "Created By ID"
+    relationshipName = "CreatedBy"
+    _hidden_value = true
+  }
+  salesforce.DateTime LastModifiedDate {
+    apiName = "DevopsProjectEnvironment.LastModifiedDate"
+    label = "Last Modified Date"
+    _hidden_value = true
+  }
+  salesforce.Lookup LastModifiedById {
+    apiName = "DevopsProjectEnvironment.LastModifiedById"
+    label = "Last Modified By ID"
+    relationshipName = "LastModifiedBy"
+    _hidden_value = true
+  }
+  salesforce.DateTime SystemModstamp {
+    apiName = "DevopsProjectEnvironment.SystemModstamp"
+    label = "System Modstamp"
+    _hidden_value = true
+  }
+}

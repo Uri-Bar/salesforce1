@@ -9,7 +9,7 @@ salesforce.UserManagementSettings {
   enableEnhancedProfileMgmt = true
   enableEnhcUiUserAccessPolicies = false
   enableNewProfileUI = false
-  enableProfileFiltering = false
+  enableProfileFiltering = true
   enableRestrictEmailDomains = false
   enableScrambleUserData = false
   enableUserSelfDeactivate = false

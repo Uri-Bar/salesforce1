@@ -1,0 +1,94 @@
+type salesforce.WorkItemComponentList {
+  salesforce.DateTime CommitDate {
+    apiName = "WorkItemComponentList.CommitDate"
+    label = "Commit Date"
+  }
+  salesforce.LongTextArea CommitMessage {
+    apiName = "WorkItemComponentList.CommitMessage"
+    label = "Commit Message"
+    length = 32768
+  }
+  salesforce.Text CommitReference {
+    apiName = "WorkItemComponentList.CommitReference"
+    label = "Commit Reference"
+    length = 255
+    unique = true
+    caseSensitive = false
+  }
+  salesforce.Lookup CurrentEnvironmentId {
+    apiName = "WorkItemComponentList.CurrentEnvironmentId"
+  }
+  salesforce.Lookup DevelopmentEnvironmentId {
+    apiName = "WorkItemComponentList.DevelopmentEnvironmentId"
+  }
+  salesforce.Lookup DevopsPipelineStageId {
+    apiName = "WorkItemComponentList.DevopsPipelineStageId"
+  }
+  salesforce.Unknown IsBundled {
+    apiName = "WorkItemComponentList.IsBundled"
+  }
+  salesforce.Lookup PromotedFromEnvironmentId {
+    apiName = "WorkItemComponentList.PromotedFromEnvironmentId"
+  }
+  salesforce.Lookup RebaseBranchId {
+    apiName = "WorkItemComponentList.RebaseBranchId"
+  }
+  salesforce.Lookup RequestInfoId {
+    apiName = "WorkItemComponentList.RequestInfoId"
+    label = "RequestInfo ID"
+    relationshipName = "RequestInfo"
+  }
+  salesforce.Unknown VersionName {
+    apiName = "WorkItemComponentList.VersionName"
+  }
+  salesforce.MasterDetail WorkItemId {
+    apiName = "WorkItemComponentList.WorkItemId"
+    label = "WorkItem ID"
+    _required = true
+    relationshipName = "WorkItem"
+  }
+  serviceid Id {
+    apiName = "WorkItemComponentList.Id"
+    label = "Work Item Component List ID"
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Checkbox IsDeleted {
+    apiName = "WorkItemComponentList.IsDeleted"
+    label = "Deleted"
+    defaultValue = false
+    _hidden_value = true
+  }
+  salesforce.AutoNumber Name {
+    apiName = "WorkItemComponentList.Name"
+    label = "Name"
+    _hidden_value = true
+  }
+  salesforce.DateTime CreatedDate {
+    apiName = "WorkItemComponentList.CreatedDate"
+    label = "Created Date"
+    _hidden_value = true
+  }
+  salesforce.Lookup CreatedById {
+    apiName = "WorkItemComponentList.CreatedById"
+    label = "Created By ID"
+    relationshipName = "CreatedBy"
+    _hidden_value = true
+  }
+  salesforce.DateTime LastModifiedDate {
+    apiName = "WorkItemComponentList.LastModifiedDate"
+    label = "Last Modified Date"
+    _hidden_value = true
+  }
+  salesforce.Lookup LastModifiedById {
+    apiName = "WorkItemComponentList.LastModifiedById"
+    label = "Last Modified By ID"
+    relationshipName = "LastModifiedBy"
+    _hidden_value = true
+  }
+  salesforce.DateTime SystemModstamp {
+    apiName = "WorkItemComponentList.SystemModstamp"
+    label = "System Modstamp"
+    _hidden_value = true
+  }
+}

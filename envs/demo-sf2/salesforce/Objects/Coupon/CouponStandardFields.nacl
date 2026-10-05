@@ -2,7 +2,6 @@ type salesforce.Coupon {
   salesforce.Text CouponCode {
     apiName = "Coupon.CouponCode"
     length = 255
-    _required = true
     label = "Coupon Code"
     unique = false
     caseSensitive = false
@@ -19,7 +18,6 @@ type salesforce.Coupon {
   salesforce.Lookup PromotionId {
     apiName = "Coupon.PromotionId"
     relationshipName = "Promotion"
-    _required = true
     label = "Promotion ID"
   }
   salesforce.Number RedemptionLimitAllBuyers {

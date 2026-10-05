@@ -6,6 +6,9 @@ type salesforce.AssetStatePeriod {
     scale = 2
     precision = 18
   }
+  salesforce.Unknown ApplUnitPriceUpliftPct {
+    apiName = "AssetStatePeriod.ApplUnitPriceUpliftPct"
+  }
   salesforce.MasterDetail AssetId {
     apiName = "AssetStatePeriod.AssetId"
     relationshipName = "Asset"
@@ -35,6 +38,9 @@ type salesforce.AssetStatePeriod {
     precision = 14
     scale = 2
     unique = false
+  }
+  salesforce.Unknown RampUpliftType {
+    apiName = "AssetStatePeriod.RampUpliftType"
   }
   salesforce.DateTime StartDate {
     apiName = "AssetStatePeriod.StartDate"

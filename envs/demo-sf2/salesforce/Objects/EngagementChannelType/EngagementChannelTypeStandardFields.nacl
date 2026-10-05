@@ -1,4 +1,7 @@
 type salesforce.EngagementChannelType {
+  salesforce.Unknown ChannelTypeCode {
+    apiName = "EngagementChannelType.ChannelTypeCode"
+  }
   salesforce.Picklist ContactPointType {
     apiName = "EngagementChannelType.ContactPointType"
     inlineHelpText = "The contact point type record associated with the engagement channel type."

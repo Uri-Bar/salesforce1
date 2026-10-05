@@ -1,9 +1,0 @@
-salesforce.ListView ServiceTerritory_My_ServiceTerritories {
-  fullName = "ServiceTerritory.My_ServiceTerritories"
-  filterScope = "Mine"
-  label = "My Service Territories"
-  _parent = [
-    salesforce.ServiceTerritory,
-  ]
-  _alias = "My Service Territories"
-}

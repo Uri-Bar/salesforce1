@@ -1,0 +1,70 @@
+type salesforce.DevopsPipelineEnvironment {
+  salesforce.Lookup DevopsEnvironmentId {
+    apiName = "DevopsPipelineEnvironment.DevopsEnvironmentId"
+    label = "DevopsEnvironment ID"
+    _required = true
+    relationshipName = "DevopsEnvironment"
+  }
+  salesforce.MasterDetail DevopsPipelineId {
+    apiName = "DevopsPipelineEnvironment.DevopsPipelineId"
+    label = "DevopsPipeline ID"
+    _required = true
+    relationshipName = "DevopsPipeline"
+  }
+  salesforce.Checkbox IsActive {
+    apiName = "DevopsPipelineEnvironment.IsActive"
+    label = "Is Active"
+    defaultValue = false
+  }
+  serviceid Id {
+    apiName = "DevopsPipelineEnvironment.Id"
+    label = "DevOps Pipeline Environment ID"
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Checkbox IsDeleted {
+    apiName = "DevopsPipelineEnvironment.IsDeleted"
+    label = "Deleted"
+    defaultValue = false
+    _hidden_value = true
+  }
+  salesforce.AutoNumber Name {
+    apiName = "DevopsPipelineEnvironment.Name"
+    label = "Name"
+    _hidden_value = true
+  }
+  salesforce.DateTime CreatedDate {
+    apiName = "DevopsPipelineEnvironment.CreatedDate"
+    label = "Created Date"
+    _hidden_value = true
+  }
+  salesforce.Lookup CreatedById {
+    apiName = "DevopsPipelineEnvironment.CreatedById"
+    label = "Created By ID"
+    relationshipName = "CreatedBy"
+    _hidden_value = true
+  }
+  salesforce.DateTime LastModifiedDate {
+    apiName = "DevopsPipelineEnvironment.LastModifiedDate"
+    label = "Last Modified Date"
+    _hidden_value = true
+  }
+  salesforce.Lookup LastModifiedById {
+    apiName = "DevopsPipelineEnvironment.LastModifiedById"
+    label = "Last Modified By ID"
+    relationshipName = "LastModifiedBy"
+    _hidden_value = true
+  }
+  salesforce.DateTime SystemModstamp {
+    apiName = "DevopsPipelineEnvironment.SystemModstamp"
+    label = "System Modstamp"
+    _hidden_value = true
+  }
+  salesforce.Text ExternalId {
+    apiName = "DevopsPipelineEnvironment.ExternalId"
+    label = "External Id"
+    length = 255
+    unique = true
+    caseSensitive = false
+  }
+}

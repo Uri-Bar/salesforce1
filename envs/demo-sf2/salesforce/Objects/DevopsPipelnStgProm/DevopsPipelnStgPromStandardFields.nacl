@@ -1,0 +1,66 @@
+type salesforce.DevopsPipelnStgProm {
+  salesforce.DateTime CompletionDate {
+    apiName = "DevopsPipelnStgProm.CompletionDate"
+    label = "Completion Date"
+  }
+  salesforce.MasterDetail PipelineStageId {
+    apiName = "DevopsPipelnStgProm.PipelineStageId"
+    label = "PipelineStage ID"
+    _required = true
+    relationshipName = "PipelineStage"
+  }
+  salesforce.Lookup RequestInfoId {
+    apiName = "DevopsPipelnStgProm.RequestInfoId"
+    label = "RequestInfo ID"
+    relationshipName = "RequestInfo"
+  }
+  serviceid Id {
+    apiName = "DevopsPipelnStgProm.Id"
+    label = "Devops Pipeline Stage Promotion ID"
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Checkbox IsDeleted {
+    apiName = "DevopsPipelnStgProm.IsDeleted"
+    label = "Deleted"
+    defaultValue = false
+    _hidden_value = true
+  }
+  salesforce.AutoNumber Name {
+    apiName = "DevopsPipelnStgProm.Name"
+    label = "Name"
+    _hidden_value = true
+  }
+  salesforce.DateTime CreatedDate {
+    apiName = "DevopsPipelnStgProm.CreatedDate"
+    label = "Created Date"
+    _hidden_value = true
+  }
+  salesforce.Lookup CreatedById {
+    apiName = "DevopsPipelnStgProm.CreatedById"
+    label = "Created By ID"
+    relationshipName = "CreatedBy"
+    _hidden_value = true
+  }
+  salesforce.DateTime LastModifiedDate {
+    apiName = "DevopsPipelnStgProm.LastModifiedDate"
+    label = "Last Modified Date"
+    _hidden_value = true
+  }
+  salesforce.Lookup LastModifiedById {
+    apiName = "DevopsPipelnStgProm.LastModifiedById"
+    label = "Last Modified By ID"
+    relationshipName = "LastModifiedBy"
+    _hidden_value = true
+  }
+  salesforce.DateTime SystemModstamp {
+    apiName = "DevopsPipelnStgProm.SystemModstamp"
+    label = "System Modstamp"
+    _hidden_value = true
+  }
+  salesforce.Picklist Status {
+    apiName = "DevopsPipelnStgProm.Status"
+    label = "Status"
+    restricted = true
+  }
+}

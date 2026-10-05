@@ -161,6 +161,34 @@ type salesforce.OrderItem {
   ]
   compactLayoutAssignment = "SYSTEM"
   enableFeeds = false
+  searchLayouts = {
+    lookupDialogsAdditionalFields = [
+      "Product2",
+      "Quantity",
+      "UnitPrice",
+      "ListPrice",
+      "TotalPrice",
+      "ODER_ITEM.START_DATE",
+      "ODER_ITEM.END_DATE",
+      "OriginalOrderItem",
+    ]
+    lookupPhoneDialogsAdditionalFields = [
+      "Product2",
+      "Quantity",
+      "UnitPrice",
+      "ListPrice",
+      "TotalPrice",
+      "ODER_ITEM.START_DATE",
+      "ODER_ITEM.END_DATE",
+      "OriginalOrderItem",
+    ]
+    searchResultsAdditionalFields = [
+      "Product2",
+      "UnitPrice",
+      "Quantity",
+      "TotalPrice",
+    ]
+  }
   _alias = "Order Product"
   historyTrackedFields = {
   }

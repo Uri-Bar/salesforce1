@@ -1,0 +1,7 @@
+salesforce.SharingRules DevopsProject {
+  fullName = "DevopsProject"
+  _parent = [
+    salesforce.DevopsProject,
+  ]
+  _alias = "DevopsProject"
+}

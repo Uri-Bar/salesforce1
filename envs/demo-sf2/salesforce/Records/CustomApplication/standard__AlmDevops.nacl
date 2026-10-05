@@ -1,0 +1,22 @@
+salesforce.CustomApplication standard__AlmDevops {
+  formFactors = [
+    "Small",
+    "Large",
+  ]
+  isNavAutoTempTabsDisabled = false
+  isNavPersonalizationDisabled = false
+  isNavTabPersistenceDisabled = false
+  isOmniPinnedViewEnabled = false
+  label = "Lifecycle Center (DevOps Center)"
+  navType = "Standard"
+  tabs = [
+    "standard-home",
+    "standard-DevopsProject",
+    "standard-DevopsPipeline",
+    "standard-WorkItem",
+    "standard-DevopsActivityLog",
+  ]
+  uiType = "Lightning"
+  fullName = "standard__AlmDevops"
+  _alias = "Lifecycle Center (DevOps Center) (standard)"
+}

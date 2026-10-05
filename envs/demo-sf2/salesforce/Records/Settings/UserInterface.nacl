@@ -20,7 +20,6 @@ salesforce.UserInterfaceSettings {
   enableProfileCustomTabsets = true
   enableQuickCreate = true
   enableRelatedListHovers = true
-  enableSldsV2 = false
   enableSldsV2DarkModeInCosmos = false
   enableTabOrganizer = true
   _alias = "UserInterface"

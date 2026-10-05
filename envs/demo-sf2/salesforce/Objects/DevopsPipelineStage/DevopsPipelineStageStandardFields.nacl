@@ -1,0 +1,98 @@
+type salesforce.DevopsPipelineStage {
+  salesforce.Lookup DevOpsEnvironmentId {
+    apiName = "DevopsPipelineStage.DevOpsEnvironmentId"
+    label = "DevOpsEnvironment ID"
+    relationshipName = "DevOpsEnvironment"
+  }
+  salesforce.MasterDetail DevopsPipelineId {
+    apiName = "DevopsPipelineStage.DevopsPipelineId"
+    label = "DevopsPipeline ID"
+    _required = true
+    relationshipName = "DevopsPipeline"
+  }
+  salesforce.Checkbox IsBundled {
+    apiName = "DevopsPipelineStage.IsBundled"
+    label = "Is Bundled"
+    defaultValue = false
+  }
+  salesforce.Unknown IsPreRelease {
+    apiName = "DevopsPipelineStage.IsPreRelease"
+  }
+  salesforce.Unknown LastSyncDate {
+    apiName = "DevopsPipelineStage.LastSyncDate"
+  }
+  salesforce.Text Name {
+    apiName = "DevopsPipelineStage.Name"
+    label = "Name"
+    _required = true
+    length = 255
+    unique = false
+    caseSensitive = false
+  }
+  salesforce.Lookup NextStageId {
+    apiName = "DevopsPipelineStage.NextStageId"
+    label = "NextStage ID"
+    relationshipName = "NextStage"
+  }
+  salesforce.Text ReviewRemoteReference {
+    apiName = "DevopsPipelineStage.ReviewRemoteReference"
+    label = "Review Remote Reference"
+    length = 255
+    unique = false
+    caseSensitive = false
+  }
+  salesforce.Lookup SourceCodeRepositoryBranchId {
+    apiName = "DevopsPipelineStage.SourceCodeRepositoryBranchId"
+    label = "SourceCodeRepositoryBranch ID"
+    relationshipName = "SourceCodeRepositoryBranch"
+  }
+  salesforce.Unknown Status {
+    apiName = "DevopsPipelineStage.Status"
+  }
+  serviceid Id {
+    apiName = "DevopsPipelineStage.Id"
+    label = "DevOps Pipeline Stage ID"
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Checkbox IsDeleted {
+    apiName = "DevopsPipelineStage.IsDeleted"
+    label = "Deleted"
+    defaultValue = false
+    _hidden_value = true
+  }
+  salesforce.DateTime CreatedDate {
+    apiName = "DevopsPipelineStage.CreatedDate"
+    label = "Created Date"
+    _hidden_value = true
+  }
+  salesforce.Lookup CreatedById {
+    apiName = "DevopsPipelineStage.CreatedById"
+    label = "Created By ID"
+    relationshipName = "CreatedBy"
+    _hidden_value = true
+  }
+  salesforce.DateTime LastModifiedDate {
+    apiName = "DevopsPipelineStage.LastModifiedDate"
+    label = "Last Modified Date"
+    _hidden_value = true
+  }
+  salesforce.Lookup LastModifiedById {
+    apiName = "DevopsPipelineStage.LastModifiedById"
+    label = "Last Modified By ID"
+    relationshipName = "LastModifiedBy"
+    _hidden_value = true
+  }
+  salesforce.DateTime SystemModstamp {
+    apiName = "DevopsPipelineStage.SystemModstamp"
+    label = "System Modstamp"
+    _hidden_value = true
+  }
+  salesforce.Text ExternalId {
+    apiName = "DevopsPipelineStage.ExternalId"
+    label = "External Id"
+    length = 255
+    unique = true
+    caseSensitive = false
+  }
+}

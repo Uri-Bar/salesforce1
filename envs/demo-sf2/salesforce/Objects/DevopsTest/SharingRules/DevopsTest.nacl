@@ -1,0 +1,7 @@
+salesforce.SharingRules DevopsTest {
+  fullName = "DevopsTest"
+  _parent = [
+    salesforce.DevopsTest,
+  ]
+  _alias = "DevopsTest"
+}

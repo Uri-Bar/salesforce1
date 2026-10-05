@@ -1,0 +1,7 @@
+salesforce.SharingRules SourceCodeRepository {
+  fullName = "SourceCodeRepository"
+  _parent = [
+    salesforce.SourceCodeRepository,
+  ]
+  _alias = "SourceCodeRepository"
+}

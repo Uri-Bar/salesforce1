@@ -1,0 +1,87 @@
+type salesforce.OutboundEngmtContentRsrc {
+  salesforce.Text Description {
+    apiName = "OutboundEngmtContentRsrc.Description"
+    label = "Description"
+    length = 255
+    unique = false
+    caseSensitive = false
+  }
+  salesforce.Text Name {
+    apiName = "OutboundEngmtContentRsrc.Name"
+    label = "Name"
+    _required = true
+    length = 255
+    unique = false
+    caseSensitive = false
+  }
+  salesforce.Lookup OutboundEngagementTmplViewId {
+    apiName = "OutboundEngmtContentRsrc.OutboundEngagementTmplViewId"
+    label = "Outbound Engagement Template View ID"
+    _required = true
+    relationshipName = "OutboundEngagementTmplView"
+  }
+  salesforce.Lookup ResourceReferenceRecordId {
+    apiName = "OutboundEngmtContentRsrc.ResourceReferenceRecordId"
+    label = "Resource Reference Record ID"
+    relationshipName = "ResourceReferenceRecord"
+  }
+  salesforce.Picklist Status {
+    apiName = "OutboundEngmtContentRsrc.Status"
+    label = "Status"
+    restricted = true
+  }
+  salesforce.TextArea StatusReason {
+    apiName = "OutboundEngmtContentRsrc.StatusReason"
+    label = "Status Reason"
+  }
+  salesforce.Lookup TargetReferenceRecordId {
+    apiName = "OutboundEngmtContentRsrc.TargetReferenceRecordId"
+    label = "Target Reference Record ID"
+    relationshipName = "TargetReferenceRecord"
+  }
+  serviceid Id {
+    apiName = "OutboundEngmtContentRsrc.Id"
+    label = "Outbound Engagement Content Resource ID"
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Lookup OwnerId {
+    apiName = "OutboundEngmtContentRsrc.OwnerId"
+    label = "Owner ID"
+    relationshipName = "Owner"
+    _hidden_value = true
+  }
+  salesforce.Checkbox IsDeleted {
+    apiName = "OutboundEngmtContentRsrc.IsDeleted"
+    label = "Deleted"
+    defaultValue = false
+    _hidden_value = true
+  }
+  salesforce.DateTime CreatedDate {
+    apiName = "OutboundEngmtContentRsrc.CreatedDate"
+    label = "Created Date"
+    _hidden_value = true
+  }
+  salesforce.Lookup CreatedById {
+    apiName = "OutboundEngmtContentRsrc.CreatedById"
+    label = "Created By ID"
+    relationshipName = "CreatedBy"
+    _hidden_value = true
+  }
+  salesforce.DateTime LastModifiedDate {
+    apiName = "OutboundEngmtContentRsrc.LastModifiedDate"
+    label = "Last Modified Date"
+    _hidden_value = true
+  }
+  salesforce.Lookup LastModifiedById {
+    apiName = "OutboundEngmtContentRsrc.LastModifiedById"
+    label = "Last Modified By ID"
+    relationshipName = "LastModifiedBy"
+    _hidden_value = true
+  }
+  salesforce.DateTime SystemModstamp {
+    apiName = "OutboundEngmtContentRsrc.SystemModstamp"
+    label = "System Modstamp"
+    _hidden_value = true
+  }
+}

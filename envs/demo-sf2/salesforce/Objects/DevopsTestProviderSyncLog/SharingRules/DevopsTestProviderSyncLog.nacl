@@ -1,0 +1,7 @@
+salesforce.SharingRules DevopsTestProviderSyncLog {
+  fullName = "DevopsTestProviderSyncLog"
+  _parent = [
+    salesforce.DevopsTestProviderSyncLog,
+  ]
+  _alias = "DevopsTestProviderSyncLog"
+}

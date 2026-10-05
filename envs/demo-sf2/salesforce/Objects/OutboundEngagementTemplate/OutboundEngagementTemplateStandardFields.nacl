@@ -1,0 +1,41 @@
+type salesforce.OutboundEngagementTemplate {
+  salesforce.Picklist BusinessArea {
+    apiName = "OutboundEngagementTemplate.BusinessArea"
+  }
+  salesforce.Picklist Purpose {
+    apiName = "OutboundEngagementTemplate.Purpose"
+  }
+  salesforce.Unknown Status {
+    apiName = "OutboundEngagementTemplate.Status"
+  }
+  salesforce.Unknown TargetName {
+    apiName = "OutboundEngagementTemplate.TargetName"
+  }
+  salesforce.Unknown TargetType {
+    apiName = "OutboundEngagementTemplate.TargetType"
+  }
+  salesforce.Unknown TemplateCategory {
+    apiName = "OutboundEngagementTemplate.TemplateCategory"
+  }
+  salesforce.Unknown TemplateDescription {
+    apiName = "OutboundEngagementTemplate.TemplateDescription"
+  }
+  salesforce.Unknown TemplateDeveloperName {
+    apiName = "OutboundEngagementTemplate.TemplateDeveloperName"
+  }
+  salesforce.Unknown TemplateName {
+    apiName = "OutboundEngagementTemplate.TemplateName"
+  }
+  salesforce.Lookup TemplateReferenceRecordId {
+    apiName = "OutboundEngagementTemplate.TemplateReferenceRecordId"
+  }
+  salesforce.Unknown TemplateSubcategory {
+    apiName = "OutboundEngagementTemplate.TemplateSubcategory"
+  }
+  salesforce.Unknown TemplateType {
+    apiName = "OutboundEngagementTemplate.TemplateType"
+  }
+  salesforce.Unknown UsageType {
+    apiName = "OutboundEngagementTemplate.UsageType"
+  }
+}

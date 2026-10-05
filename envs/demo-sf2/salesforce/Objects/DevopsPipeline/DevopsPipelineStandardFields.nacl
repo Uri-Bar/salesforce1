@@ -1,0 +1,85 @@
+type salesforce.DevopsPipeline {
+  salesforce.Text Description {
+    apiName = "DevopsPipeline.Description"
+    label = "Description"
+    length = 255
+    unique = false
+    caseSensitive = false
+  }
+  salesforce.Checkbox IsActive {
+    apiName = "DevopsPipeline.IsActive"
+    label = "Is Active"
+    defaultValue = false
+  }
+  salesforce.Text Name {
+    apiName = "DevopsPipeline.Name"
+    label = "Name"
+    _required = true
+    length = 255
+    unique = false
+    caseSensitive = false
+  }
+  salesforce.LongTextArea PackageDirectories {
+    apiName = "DevopsPipeline.PackageDirectories"
+    label = "Package Directories"
+    length = 25000
+  }
+  salesforce.Lookup SourceCodeRepositoryId {
+    apiName = "DevopsPipeline.SourceCodeRepositoryId"
+    label = "SourceCodeRepository ID"
+    _required = true
+    relationshipName = "SourceCodeRepository"
+  }
+  serviceid Id {
+    apiName = "DevopsPipeline.Id"
+    label = "DevOps Pipeline ID"
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Lookup OwnerId {
+    apiName = "DevopsPipeline.OwnerId"
+    label = "Owner ID"
+    relationshipName = "Owner"
+    _hidden_value = true
+  }
+  salesforce.Checkbox IsDeleted {
+    apiName = "DevopsPipeline.IsDeleted"
+    label = "Deleted"
+    defaultValue = false
+    _hidden_value = true
+  }
+  salesforce.DateTime CreatedDate {
+    apiName = "DevopsPipeline.CreatedDate"
+    label = "Created Date"
+    _hidden_value = true
+  }
+  salesforce.Lookup CreatedById {
+    apiName = "DevopsPipeline.CreatedById"
+    label = "Created By ID"
+    relationshipName = "CreatedBy"
+    _hidden_value = true
+  }
+  salesforce.DateTime LastModifiedDate {
+    apiName = "DevopsPipeline.LastModifiedDate"
+    label = "Last Modified Date"
+    _hidden_value = true
+  }
+  salesforce.Lookup LastModifiedById {
+    apiName = "DevopsPipeline.LastModifiedById"
+    label = "Last Modified By ID"
+    relationshipName = "LastModifiedBy"
+    _hidden_value = true
+  }
+  salesforce.DateTime SystemModstamp {
+    apiName = "DevopsPipeline.SystemModstamp"
+    label = "System Modstamp"
+    _hidden_value = true
+  }
+  salesforce.Text ExternalId {
+    apiName = "DevopsPipeline.ExternalId"
+    label = "External Id"
+    length = 255
+    unique = true
+    caseSensitive = false
+  }
+}

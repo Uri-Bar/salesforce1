@@ -9,6 +9,9 @@ type salesforce.OpportunityLineItem {
   salesforce.Unknown Discount {
     apiName = "OpportunityLineItem.Discount"
   }
+  salesforce.Unknown LastSyncTime {
+    apiName = "OpportunityLineItem.LastSyncTime"
+  }
   salesforce.Currency ListPrice {
     apiName = "OpportunityLineItem.ListPrice"
     label = "List Price"

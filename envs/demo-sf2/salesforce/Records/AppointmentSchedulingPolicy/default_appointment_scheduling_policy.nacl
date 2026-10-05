@@ -1,6 +1,7 @@
 salesforce.AppointmentSchedulingPolicy default_appointment_scheduling_policy {
   fullName = "default_appointment_scheduling_policy"
   appointmentStartTimeInterval = "15"
+  isExtlCalendarIntegEnabled = false
   isSvcTerrOpHoursWithShiftsUsed = false
   isSvcTerritoryMemberShiftUsed = false
   masterLabel = "Default Appointment Scheduling Policy"

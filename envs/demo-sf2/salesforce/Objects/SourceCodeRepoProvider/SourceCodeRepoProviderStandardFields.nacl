@@ -1,0 +1,77 @@
+type salesforce.SourceCodeRepoProvider {
+  salesforce.Text BaseUrl {
+    apiName = "SourceCodeRepoProvider.BaseUrl"
+    label = "Base URL"
+    _required = true
+    length = 255
+    unique = false
+    caseSensitive = false
+  }
+  salesforce.Text Name {
+    apiName = "SourceCodeRepoProvider.Name"
+    label = "Name"
+    _required = true
+    length = 255
+    unique = false
+    caseSensitive = false
+  }
+  salesforce.Text NamedCredential {
+    apiName = "SourceCodeRepoProvider.NamedCredential"
+    label = "Named Credential"
+    _required = true
+    length = 255
+    unique = false
+    caseSensitive = false
+  }
+  salesforce.Picklist Provider {
+    apiName = "SourceCodeRepoProvider.Provider"
+    label = "Provider"
+    _required = true
+    restricted = true
+  }
+  serviceid Id {
+    apiName = "SourceCodeRepoProvider.Id"
+    label = "Source Code Repository Provider ID"
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Lookup OwnerId {
+    apiName = "SourceCodeRepoProvider.OwnerId"
+    label = "Owner ID"
+    relationshipName = "Owner"
+    _hidden_value = true
+  }
+  salesforce.Checkbox IsDeleted {
+    apiName = "SourceCodeRepoProvider.IsDeleted"
+    label = "Deleted"
+    defaultValue = false
+    _hidden_value = true
+  }
+  salesforce.DateTime CreatedDate {
+    apiName = "SourceCodeRepoProvider.CreatedDate"
+    label = "Created Date"
+    _hidden_value = true
+  }
+  salesforce.Lookup CreatedById {
+    apiName = "SourceCodeRepoProvider.CreatedById"
+    label = "Created By ID"
+    relationshipName = "CreatedBy"
+    _hidden_value = true
+  }
+  salesforce.DateTime LastModifiedDate {
+    apiName = "SourceCodeRepoProvider.LastModifiedDate"
+    label = "Last Modified Date"
+    _hidden_value = true
+  }
+  salesforce.Lookup LastModifiedById {
+    apiName = "SourceCodeRepoProvider.LastModifiedById"
+    label = "Last Modified By ID"
+    relationshipName = "LastModifiedBy"
+    _hidden_value = true
+  }
+  salesforce.DateTime SystemModstamp {
+    apiName = "SourceCodeRepoProvider.SystemModstamp"
+    label = "System Modstamp"
+    _hidden_value = true
+  }
+}

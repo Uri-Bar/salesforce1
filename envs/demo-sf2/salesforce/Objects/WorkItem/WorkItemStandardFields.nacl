@@ -1,0 +1,142 @@
+type salesforce.WorkItem {
+  salesforce.Lookup AssignedToId {
+    apiName = "WorkItem.AssignedToId"
+    label = "User ID"
+    relationshipName = "AssignedTo"
+  }
+  salesforce.Html Description {
+    apiName = "WorkItem.Description"
+    label = "Description"
+    length = 32768
+  }
+  salesforce.Lookup DevelopmentApprovedById {
+    apiName = "WorkItem.DevelopmentApprovedById"
+    label = "User ID"
+    relationshipName = "DevelopmentApprovedBy"
+  }
+  salesforce.Lookup DevelopmentEnvironmentId {
+    apiName = "WorkItem.DevelopmentEnvironmentId"
+    label = "DevelopmentEnvironment ID"
+    relationshipName = "DevelopmentEnvironment"
+  }
+  salesforce.Lookup DevopsPipelineStageId {
+    apiName = "WorkItem.DevopsPipelineStageId"
+    label = "DevopsPipelineStage ID"
+    relationshipName = "DevopsPipelineStage"
+  }
+  salesforce.Lookup DevopsProjectId {
+    apiName = "WorkItem.DevopsProjectId"
+    label = "DevopsProject ID"
+    _required = true
+    relationshipName = "DevopsProject"
+  }
+  salesforce.Checkbox IsDevelopmentApproved {
+    apiName = "WorkItem.IsDevelopmentApproved"
+    label = "Is Development Approved?"
+    defaultValue = false
+  }
+  salesforce.Unknown JiraExternalReference {
+    apiName = "WorkItem.JiraExternalReference"
+  }
+  salesforce.Unknown LastSyncDate {
+    apiName = "WorkItem.LastSyncDate"
+  }
+  salesforce.Lookup ParentWorkItemId {
+    apiName = "WorkItem.ParentWorkItemId"
+    label = "ParentWorkItem ID"
+    relationshipName = "ParentWorkItem"
+  }
+  salesforce.Lookup RebaseBranchId {
+    apiName = "WorkItem.RebaseBranchId"
+    label = "RebaseBranch ID"
+    relationshipName = "RebaseBranch"
+  }
+  salesforce.Lookup RebaseStatusId {
+    apiName = "WorkItem.RebaseStatusId"
+    label = "DevOps Request Info ID"
+    relationshipName = "RebaseStatus"
+  }
+  salesforce.Text ReviewRemoteReference {
+    apiName = "WorkItem.ReviewRemoteReference"
+    label = "Review Remote Reference"
+    length = 255
+    unique = false
+    caseSensitive = false
+  }
+  salesforce.Lookup SourceCodeRepositoryBranchId {
+    apiName = "WorkItem.SourceCodeRepositoryBranchId"
+    label = "SourceCodeRepositoryBranch ID"
+    relationshipName = "SourceCodeRepositoryBranch"
+  }
+  salesforce.Picklist Status {
+    apiName = "WorkItem.Status"
+    label = "Status"
+    _required = true
+    restricted = true
+  }
+  salesforce.Text Subject {
+    apiName = "WorkItem.Subject"
+    label = "Subject"
+    _required = true
+    length = 255
+    unique = false
+    caseSensitive = false
+  }
+  serviceid Id {
+    apiName = "WorkItem.Id"
+    label = "Work Item ID"
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Lookup OwnerId {
+    apiName = "WorkItem.OwnerId"
+    label = "Owner ID"
+    relationshipName = "Owner"
+    _hidden_value = true
+  }
+  salesforce.Checkbox IsDeleted {
+    apiName = "WorkItem.IsDeleted"
+    label = "Deleted"
+    defaultValue = false
+    _hidden_value = true
+  }
+  salesforce.AutoNumber Name {
+    apiName = "WorkItem.Name"
+    label = "Work Item ID"
+    _hidden_value = true
+  }
+  salesforce.DateTime CreatedDate {
+    apiName = "WorkItem.CreatedDate"
+    label = "Created Date"
+    _hidden_value = true
+  }
+  salesforce.Lookup CreatedById {
+    apiName = "WorkItem.CreatedById"
+    label = "Created By ID"
+    relationshipName = "CreatedBy"
+    _hidden_value = true
+  }
+  salesforce.DateTime LastModifiedDate {
+    apiName = "WorkItem.LastModifiedDate"
+    label = "Last Modified Date"
+    _hidden_value = true
+  }
+  salesforce.Lookup LastModifiedById {
+    apiName = "WorkItem.LastModifiedById"
+    label = "Last Modified By ID"
+    relationshipName = "LastModifiedBy"
+    _hidden_value = true
+  }
+  salesforce.DateTime SystemModstamp {
+    apiName = "WorkItem.SystemModstamp"
+    label = "System Modstamp"
+    _hidden_value = true
+  }
+  salesforce.Text ExternalId {
+    apiName = "WorkItem.ExternalId"
+    label = "External Id"
+    length = 255
+    unique = true
+    caseSensitive = false
+  }
+}

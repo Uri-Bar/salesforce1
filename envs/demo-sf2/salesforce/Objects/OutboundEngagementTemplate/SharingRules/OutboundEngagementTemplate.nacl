@@ -1,0 +1,7 @@
+salesforce.SharingRules OutboundEngagementTemplate {
+  fullName = "OutboundEngagementTemplate"
+  _parent = [
+    salesforce.OutboundEngagementTemplate,
+  ]
+  _alias = "OutboundEngagementTemplate"
+}

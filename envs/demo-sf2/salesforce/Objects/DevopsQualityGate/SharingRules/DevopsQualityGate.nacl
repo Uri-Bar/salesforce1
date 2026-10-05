@@ -1,0 +1,7 @@
+salesforce.SharingRules DevopsQualityGate {
+  fullName = "DevopsQualityGate"
+  _parent = [
+    salesforce.DevopsQualityGate,
+  ]
+  _alias = "DevopsQualityGate"
+}

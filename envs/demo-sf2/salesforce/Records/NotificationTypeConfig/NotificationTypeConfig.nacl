@@ -31,6 +31,34 @@ salesforce.NotificationTypeConfig NotificationTypeConfig {
     },
     {
       notificationChannels = {
+        desktopEnabled = true
+        mobileEnabled = false
+      }
+      notificationType = "agent_memory_import"
+    },
+    {
+      notificationChannels = {
+        desktopEnabled = true
+        mobileEnabled = false
+      }
+      notificationType = "agentexch_install_req_admin"
+    },
+    {
+      notificationChannels = {
+        desktopEnabled = true
+        mobileEnabled = false
+      }
+      notificationType = "agentexch_install_req_user"
+    },
+    {
+      notificationChannels = {
+        desktopEnabled = true
+        mobileEnabled = false
+      }
+      notificationType = "agentexch_install_succ_user"
+    },
+    {
+      notificationChannels = {
         desktopEnabled = false
         mobileEnabled = false
       }
@@ -55,7 +83,28 @@ salesforce.NotificationTypeConfig NotificationTypeConfig {
         desktopEnabled = true
         mobileEnabled = false
       }
+      notificationType = "bar_audit_log_export"
+    },
+    {
+      notificationChannels = {
+        desktopEnabled = true
+        mobileEnabled = false
+      }
+      notificationType = "bar_backup_status"
+    },
+    {
+      notificationChannels = {
+        desktopEnabled = true
+        mobileEnabled = false
+      }
       notificationType = "bar_recover_activity_status"
+    },
+    {
+      notificationChannels = {
+        desktopEnabled = true
+        mobileEnabled = false
+      }
+      notificationType = "bar_settings_change"
     },
     {
       notificationChannels = {
@@ -70,6 +119,13 @@ salesforce.NotificationTypeConfig NotificationTypeConfig {
         mobileEnabled = false
       }
       notificationType = "bulk_action_plan_save"
+    },
+    {
+      notificationChannels = {
+        desktopEnabled = true
+        mobileEnabled = true
+      }
+      notificationType = "bulk_create_timesheet_result"
     },
     {
       notificationChannels = {
@@ -126,6 +182,13 @@ salesforce.NotificationTypeConfig NotificationTypeConfig {
         mobileEnabled = false
       }
       notificationType = "credit_memo_generation"
+    },
+    {
+      notificationChannels = {
+        desktopEnabled = true
+        mobileEnabled = false
+      }
+      notificationType = "csi_score_notification"
     },
     {
       notificationChannels = {
@@ -189,6 +252,27 @@ salesforce.NotificationTypeConfig NotificationTypeConfig {
         mobileEnabled = false
       }
       notificationType = "event_reminder"
+    },
+    {
+      notificationChannels = {
+        desktopEnabled = true
+        mobileEnabled = false
+      }
+      notificationType = "fh_creation_job_run_completed"
+    },
+    {
+      notificationChannels = {
+        desktopEnabled = true
+        mobileEnabled = false
+      }
+      notificationType = "fh_root_filter_invalidated"
+    },
+    {
+      notificationChannels = {
+        desktopEnabled = true
+        mobileEnabled = false
+      }
+      notificationType = "fh_sync_check_job_run_completed"
     },
     {
       notificationChannels = {
@@ -308,6 +392,13 @@ salesforce.NotificationTypeConfig NotificationTypeConfig {
         mobileEnabled = false
       }
       notificationType = "personal_org_transfer"
+    },
+    {
+      notificationChannels = {
+        desktopEnabled = true
+        mobileEnabled = false
+      }
+      notificationType = "pkg_vrfy_trust_request"
     },
     {
       notificationChannels = {

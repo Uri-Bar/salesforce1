@@ -1,4 +1,7 @@
 type salesforce.PromotionLineItemRule {
+  salesforce.Unknown AreSubcategoriesIncluded {
+    apiName = "PromotionLineItemRule.AreSubcategoriesIncluded"
+  }
   salesforce.Lookup AssociatedReferenceId {
     apiName = "PromotionLineItemRule.AssociatedReferenceId"
     relationshipName = "AssociatedReference"

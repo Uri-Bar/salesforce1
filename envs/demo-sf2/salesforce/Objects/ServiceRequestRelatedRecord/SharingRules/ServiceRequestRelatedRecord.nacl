@@ -1,0 +1,7 @@
+salesforce.SharingRules ServiceRequestRelatedRecord {
+  fullName = "ServiceRequestRelatedRecord"
+  _parent = [
+    salesforce.ServiceRequestRelatedRecord,
+  ]
+  _alias = "ServiceRequestRelatedRecord"
+}

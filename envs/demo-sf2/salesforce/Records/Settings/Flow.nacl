@@ -23,6 +23,5 @@ salesforce.FlowSettings {
   isEnhancedFlowListViewVisible = true
   isFlowBlockAccessToSessionIDEnabled = true
   isManageFlowRequiredForAutomationCharts = false
-  isSupportRollbackOnErrorForApexInvocableActionsEnabled = false
   _alias = "Flow"
 }

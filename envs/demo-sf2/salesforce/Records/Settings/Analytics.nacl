@@ -25,14 +25,12 @@ salesforce.AnalyticsSettings {
   enableEmailReportsToPortalUsers = false
   enableFirebirdEditor = false
   enableFloatingReportHeaders = true
-  enableIncrementalUpsert = false
   enableInsights = true
   enableLightningReportBuilder = false
   enableLotusNotesImages = false
   enableMassEnableReportBuilder = true
   enableNewChartsEngine = true
   enableNullDimension = false
-  enableOrgCanSeeLivePreviews = false
   enableOrgCanViewTableau = false
   enableOrgCanViewThumbnailForOA = false
   enableOrgHasMobileOfflineEnabled = true

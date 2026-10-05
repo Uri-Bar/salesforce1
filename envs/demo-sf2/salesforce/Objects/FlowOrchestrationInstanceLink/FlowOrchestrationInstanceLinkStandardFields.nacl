@@ -1,0 +1,11 @@
+type salesforce.FlowOrchestrationInstanceLink {
+  salesforce.Lookup FlowOrchestrationInstanceId {
+    apiName = "FlowOrchestrationInstanceLink.FlowOrchestrationInstanceId"
+  }
+  salesforce.Lookup OwnerId {
+    apiName = "FlowOrchestrationInstanceLink.OwnerId"
+  }
+  salesforce.Lookup ReferenceRecordId {
+    apiName = "FlowOrchestrationInstanceLink.ReferenceRecordId"
+  }
+}

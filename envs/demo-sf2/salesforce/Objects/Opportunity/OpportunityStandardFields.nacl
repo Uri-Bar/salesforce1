@@ -51,6 +51,10 @@ type salesforce.Opportunity {
     defaultValue = false
     label = "Private"
   }
+  salesforce.Unknown LastSyncTime {
+    apiName = "Opportunity.LastSyncTime"
+    trackTrending = false
+  }
   salesforce.Picklist LeadSource {
     apiName = "Opportunity.LeadSource"
     trackTrending = false

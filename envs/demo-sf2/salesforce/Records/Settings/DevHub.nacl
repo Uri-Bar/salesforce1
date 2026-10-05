@@ -1,6 +1,6 @@
 salesforce.DevHubSettings {
   fullName = "DevHub"
-  enableALMDevopsCorePref = false
+  enableALMDevopsCorePref = true
   enableALMSimpleDeployDataPref = false
   enableALMSimpleDeployPref = false
   enableDevOpsCenter = false

@@ -134,6 +134,10 @@ salesforce.RealTimeEventSettings {
       isEnabled = false
     },
     {
+      entityName = "SecurityDefenseActionEvent"
+      isEnabled = false
+    },
+    {
       entityName = "SessionHijackingEventStore"
       isEnabled = true
     },

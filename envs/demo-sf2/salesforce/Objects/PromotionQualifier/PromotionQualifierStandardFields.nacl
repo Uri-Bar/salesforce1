@@ -1,4 +1,7 @@
 type salesforce.PromotionQualifier {
+  salesforce.Unknown AreSubcategoriesIncluded {
+    apiName = "PromotionQualifier.AreSubcategoriesIncluded"
+  }
   salesforce.Currency MinimumAmount {
     apiName = "PromotionQualifier.MinimumAmount"
     label = "Minimum Amount"

@@ -149,6 +149,12 @@ type salesforce.CreditMemoLine {
     scale = 2
     precision = 5
   }
+  salesforce.Unknown TotalAppliedRefundAmount {
+    apiName = "CreditMemoLine.TotalAppliedRefundAmount"
+  }
+  salesforce.Unknown TotalUnappliedRefundAmount {
+    apiName = "CreditMemoLine.TotalUnappliedRefundAmount"
+  }
   salesforce.Picklist Type {
     apiName = "CreditMemoLine.Type"
     restricted = true

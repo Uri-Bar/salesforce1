@@ -22,6 +22,9 @@ type salesforce.FulfillmentOrderLineItem {
     scale = 2
     precision = 18
   }
+  salesforce.Lookup InvoiceId {
+    apiName = "FulfillmentOrderLineItem.InvoiceId"
+  }
   salesforce.Checkbox IsReship {
     apiName = "FulfillmentOrderLineItem.IsReship"
     defaultValue = false

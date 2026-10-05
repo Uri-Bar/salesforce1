@@ -17,6 +17,9 @@ type salesforce.PromotionTarget {
     _required = true
     label = "Adjustment Type"
   }
+  salesforce.Unknown AreSubcategoriesIncluded {
+    apiName = "PromotionTarget.AreSubcategoriesIncluded"
+  }
   salesforce.Unknown IsMinItemCountRequired {
     apiName = "PromotionTarget.IsMinItemCountRequired"
   }

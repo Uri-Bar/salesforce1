@@ -1,0 +1,7 @@
+salesforce.SharingRules DevopsTestSuiteExecution {
+  fullName = "DevopsTestSuiteExecution"
+  _parent = [
+    salesforce.DevopsTestSuiteExecution,
+  ]
+  _alias = "DevopsTestSuiteExecution"
+}

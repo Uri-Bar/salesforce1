@@ -1,0 +1,4 @@
+salesforce.MatchingRules ContactPointPhone {
+  fullName = "ContactPointPhone"
+  _alias = "ContactPointPhone"
+}

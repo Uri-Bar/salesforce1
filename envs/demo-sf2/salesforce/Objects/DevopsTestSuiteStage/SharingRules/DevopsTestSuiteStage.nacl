@@ -1,0 +1,7 @@
+salesforce.SharingRules DevopsTestSuiteStage {
+  fullName = "DevopsTestSuiteStage"
+  _parent = [
+    salesforce.DevopsTestSuiteStage,
+  ]
+  _alias = "DevopsTestSuiteStage"
+}

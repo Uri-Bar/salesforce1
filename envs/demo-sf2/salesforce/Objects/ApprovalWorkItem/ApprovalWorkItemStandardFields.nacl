@@ -27,6 +27,12 @@ type salesforce.ApprovalWorkItem {
     relationshipName = "FlowOrchestrationWorkItem"
     label = "Orchestration Work Item ID"
   }
+  salesforce.Lookup OwnerId {
+    apiName = "ApprovalWorkItem.OwnerId"
+    label = "Owner ID"
+    relationshipName = "Owner"
+    _hidden_value = true
+  }
   salesforce.Lookup ParentWorkItemId {
     apiName = "ApprovalWorkItem.ParentWorkItemId"
   }

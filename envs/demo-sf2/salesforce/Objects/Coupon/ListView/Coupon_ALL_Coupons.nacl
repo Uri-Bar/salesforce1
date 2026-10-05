@@ -1,9 +1,0 @@
-salesforce.ListView Coupon_ALL_Coupons {
-  fullName = "Coupon.ALL_Coupons"
-  filterScope = "Everything"
-  label = "All Coupons"
-  _parent = [
-    salesforce.Coupon,
-  ]
-  _alias = "All Coupons"
-}

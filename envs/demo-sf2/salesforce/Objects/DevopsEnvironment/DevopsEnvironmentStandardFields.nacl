@@ -135,7 +135,7 @@ type salesforce.DevopsEnvironment {
     apiName = "DevopsEnvironment.ExternalId"
     label = "External Id"
     length = 255
-    unique = false
+    unique = true
     caseSensitive = false
   }
 }

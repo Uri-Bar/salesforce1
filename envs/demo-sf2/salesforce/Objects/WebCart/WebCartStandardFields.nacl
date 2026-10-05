@@ -89,6 +89,9 @@ type salesforce.WebCart {
     restricted = true
     label = "Status"
   }
+  salesforce.Picklist SubStatus {
+    apiName = "WebCart.SubStatus"
+  }
   salesforce.Unknown TaxLocaleType {
     apiName = "WebCart.TaxLocaleType"
   }
@@ -150,6 +153,9 @@ type salesforce.WebCart {
   salesforce.Summary TotalProductItemAdjAmount {
     apiName = "WebCart.TotalProductItemAdjAmount"
     label = "Total adjustment amount on a cart item. Includes discount and surcharge."
+  }
+  salesforce.Unknown TotalProductItemAdjTaxAmount {
+    apiName = "WebCart.TotalProductItemAdjTaxAmount"
   }
   salesforce.Summary TotalProductLineItemCount {
     apiName = "WebCart.TotalProductLineItemCount"

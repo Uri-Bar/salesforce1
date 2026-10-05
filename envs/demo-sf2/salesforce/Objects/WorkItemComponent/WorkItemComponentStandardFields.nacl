@@ -1,0 +1,99 @@
+type salesforce.WorkItemComponent {
+  salesforce.Picklist ChangeType {
+    apiName = "WorkItemComponent.ChangeType"
+    label = "Change Type"
+    _required = true
+    restricted = true
+  }
+  salesforce.Text ChangedBy {
+    apiName = "WorkItemComponent.ChangedBy"
+    label = "Changed By"
+    length = 255
+    unique = false
+    caseSensitive = false
+  }
+  salesforce.DateTime ChangedOn {
+    apiName = "WorkItemComponent.ChangedOn"
+    label = "Changed On"
+  }
+  salesforce.Text MemberName {
+    apiName = "WorkItemComponent.MemberName"
+    label = "Member Name"
+    _required = true
+    length = 255
+    unique = false
+    caseSensitive = false
+  }
+  salesforce.Text MemberType {
+    apiName = "WorkItemComponent.MemberType"
+    label = "Member Type"
+    _required = true
+    length = 255
+    unique = false
+    caseSensitive = false
+  }
+  salesforce.Number NumberOfRecords {
+    apiName = "WorkItemComponent.NumberOfRecords"
+    label = "Number of Records"
+    scale = 0
+    precision = 9
+    unique = false
+  }
+  salesforce.Number VersionNumber {
+    apiName = "WorkItemComponent.VersionNumber"
+    label = "Version Number"
+    scale = 0
+    precision = 9
+    unique = false
+  }
+  salesforce.MasterDetail WorkItemComponentListId {
+    apiName = "WorkItemComponent.WorkItemComponentListId"
+    label = "WorkItemComponentList ID"
+    _required = true
+    relationshipName = "WorkItemComponentList"
+  }
+  serviceid Id {
+    apiName = "WorkItemComponent.Id"
+    label = "Work Item Component ID"
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Checkbox IsDeleted {
+    apiName = "WorkItemComponent.IsDeleted"
+    label = "Deleted"
+    defaultValue = false
+    _hidden_value = true
+  }
+  salesforce.AutoNumber Name {
+    apiName = "WorkItemComponent.Name"
+    label = "Name"
+    _hidden_value = true
+  }
+  salesforce.DateTime CreatedDate {
+    apiName = "WorkItemComponent.CreatedDate"
+    label = "Created Date"
+    _hidden_value = true
+  }
+  salesforce.Lookup CreatedById {
+    apiName = "WorkItemComponent.CreatedById"
+    label = "Created By ID"
+    relationshipName = "CreatedBy"
+    _hidden_value = true
+  }
+  salesforce.DateTime LastModifiedDate {
+    apiName = "WorkItemComponent.LastModifiedDate"
+    label = "Last Modified Date"
+    _hidden_value = true
+  }
+  salesforce.Lookup LastModifiedById {
+    apiName = "WorkItemComponent.LastModifiedById"
+    label = "Last Modified By ID"
+    relationshipName = "LastModifiedBy"
+    _hidden_value = true
+  }
+  salesforce.DateTime SystemModstamp {
+    apiName = "WorkItemComponent.SystemModstamp"
+    label = "System Modstamp"
+    _hidden_value = true
+  }
+}

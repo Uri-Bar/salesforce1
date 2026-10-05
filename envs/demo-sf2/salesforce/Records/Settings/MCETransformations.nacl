@@ -1,0 +1,4 @@
+salesforce.MCETransformationsSettings {
+  fullName = "MCETransformations"
+  _alias = "MCETransformations"
+}

@@ -1,0 +1,7 @@
+salesforce.SharingRules DevopsWkItmTstSteGrpExec {
+  fullName = "DevopsWkItmTstSteGrpExec"
+  _parent = [
+    salesforce.DevopsWkItmTstSteGrpExec,
+  ]
+  _alias = "DevopsWkItmTstSteGrpExec"
+}

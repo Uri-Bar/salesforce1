@@ -1,0 +1,8 @@
+type salesforce.ServiceRequestRelatedRecord {
+  salesforce.Lookup RelatedRecordId {
+    apiName = "ServiceRequestRelatedRecord.RelatedRecordId"
+  }
+  salesforce.Unknown RelationshipType {
+    apiName = "ServiceRequestRelatedRecord.RelationshipType"
+  }
+}

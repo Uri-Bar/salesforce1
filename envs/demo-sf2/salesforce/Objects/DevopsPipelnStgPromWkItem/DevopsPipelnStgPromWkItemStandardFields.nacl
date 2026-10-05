@@ -1,0 +1,74 @@
+type salesforce.DevopsPipelnStgPromWkItem {
+  salesforce.MasterDetail DevopsPipelnStgPromId {
+    apiName = "DevopsPipelnStgPromWkItem.DevopsPipelnStgPromId"
+    label = "DevopsPipelnStgProm ID"
+    _required = true
+    relationshipName = "DevopsPipelnStgProm"
+  }
+  salesforce.DateTime MergeCompletionDate {
+    apiName = "DevopsPipelnStgPromWkItem.MergeCompletionDate"
+    label = "Merge Completion Date"
+  }
+  salesforce.Text MergeRemoteReference {
+    apiName = "DevopsPipelnStgPromWkItem.MergeRemoteReference"
+    label = "Merge Remote Reference"
+    length = 255
+    unique = false
+    caseSensitive = false
+  }
+  salesforce.Lookup MergeSourceBranchId {
+    apiName = "DevopsPipelnStgPromWkItem.MergeSourceBranchId"
+    label = "Source Code Repository Branch ID"
+    relationshipName = "MergeSourceBranch"
+  }
+  salesforce.Lookup WorkItemId {
+    apiName = "DevopsPipelnStgPromWkItem.WorkItemId"
+    label = "WorkItem ID"
+    _required = true
+    relationshipName = "WorkItem"
+  }
+  serviceid Id {
+    apiName = "DevopsPipelnStgPromWkItem.Id"
+    label = "DevOps Pipeln Stg Prom Wk Item ID"
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Checkbox IsDeleted {
+    apiName = "DevopsPipelnStgPromWkItem.IsDeleted"
+    label = "Deleted"
+    defaultValue = false
+    _hidden_value = true
+  }
+  salesforce.AutoNumber Name {
+    apiName = "DevopsPipelnStgPromWkItem.Name"
+    label = "Name"
+    _hidden_value = true
+  }
+  salesforce.DateTime CreatedDate {
+    apiName = "DevopsPipelnStgPromWkItem.CreatedDate"
+    label = "Created Date"
+    _hidden_value = true
+  }
+  salesforce.Lookup CreatedById {
+    apiName = "DevopsPipelnStgPromWkItem.CreatedById"
+    label = "Created By ID"
+    relationshipName = "CreatedBy"
+    _hidden_value = true
+  }
+  salesforce.DateTime LastModifiedDate {
+    apiName = "DevopsPipelnStgPromWkItem.LastModifiedDate"
+    label = "Last Modified Date"
+    _hidden_value = true
+  }
+  salesforce.Lookup LastModifiedById {
+    apiName = "DevopsPipelnStgPromWkItem.LastModifiedById"
+    label = "Last Modified By ID"
+    relationshipName = "LastModifiedBy"
+    _hidden_value = true
+  }
+  salesforce.DateTime SystemModstamp {
+    apiName = "DevopsPipelnStgPromWkItem.SystemModstamp"
+    label = "System Modstamp"
+    _hidden_value = true
+  }
+}

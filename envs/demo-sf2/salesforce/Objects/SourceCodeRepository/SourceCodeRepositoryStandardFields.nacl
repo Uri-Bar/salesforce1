@@ -1,0 +1,96 @@
+type salesforce.SourceCodeRepository {
+  salesforce.Text DefaultBranch {
+    apiName = "SourceCodeRepository.DefaultBranch"
+    label = "Default Branch"
+    length = 255
+    unique = false
+    caseSensitive = false
+  }
+  salesforce.Text ExternalRepositoryName {
+    apiName = "SourceCodeRepository.ExternalRepositoryName"
+    label = "External Repository Name"
+    length = 255
+    unique = false
+    caseSensitive = false
+  }
+  salesforce.Text Name {
+    apiName = "SourceCodeRepository.Name"
+    label = "Name"
+    _required = true
+    length = 255
+    unique = false
+    caseSensitive = false
+  }
+  salesforce.Picklist Provider {
+    apiName = "SourceCodeRepository.Provider"
+    label = "Provider"
+    restricted = true
+  }
+  salesforce.Unknown ProviderInfo {
+    apiName = "SourceCodeRepository.ProviderInfo"
+  }
+  salesforce.Text RepositoryOwner {
+    apiName = "SourceCodeRepository.RepositoryOwner"
+    label = "Repository Owner"
+    length = 255
+    unique = false
+    caseSensitive = false
+  }
+  salesforce.Lookup SourceCodeRepoProviderId {
+    apiName = "SourceCodeRepository.SourceCodeRepoProviderId"
+    label = "Source Code Repository Provider ID"
+    relationshipName = "SourceCodeRepoProvider"
+  }
+  serviceid Id {
+    apiName = "SourceCodeRepository.Id"
+    label = "Source Code Repository ID"
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Lookup OwnerId {
+    apiName = "SourceCodeRepository.OwnerId"
+    label = "Owner ID"
+    relationshipName = "Owner"
+    _hidden_value = true
+  }
+  salesforce.Checkbox IsDeleted {
+    apiName = "SourceCodeRepository.IsDeleted"
+    label = "Deleted"
+    defaultValue = false
+    _hidden_value = true
+  }
+  salesforce.DateTime CreatedDate {
+    apiName = "SourceCodeRepository.CreatedDate"
+    label = "Created Date"
+    _hidden_value = true
+  }
+  salesforce.Lookup CreatedById {
+    apiName = "SourceCodeRepository.CreatedById"
+    label = "Created By ID"
+    relationshipName = "CreatedBy"
+    _hidden_value = true
+  }
+  salesforce.DateTime LastModifiedDate {
+    apiName = "SourceCodeRepository.LastModifiedDate"
+    label = "Last Modified Date"
+    _hidden_value = true
+  }
+  salesforce.Lookup LastModifiedById {
+    apiName = "SourceCodeRepository.LastModifiedById"
+    label = "Last Modified By ID"
+    relationshipName = "LastModifiedBy"
+    _hidden_value = true
+  }
+  salesforce.DateTime SystemModstamp {
+    apiName = "SourceCodeRepository.SystemModstamp"
+    label = "System Modstamp"
+    _hidden_value = true
+  }
+  salesforce.Text ExternalId {
+    apiName = "SourceCodeRepository.ExternalId"
+    label = "External Id"
+    length = 255
+    unique = true
+    caseSensitive = false
+  }
+}

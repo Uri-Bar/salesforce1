@@ -1,9 +1,0 @@
-salesforce.ListView DigitalWallet_DigitalWallet {
-  fullName = "DigitalWallet.DigitalWallet"
-  filterScope = "Everything"
-  label = "All"
-  _parent = [
-    salesforce.DigitalWallet,
-  ]
-  _alias = "All"
-}

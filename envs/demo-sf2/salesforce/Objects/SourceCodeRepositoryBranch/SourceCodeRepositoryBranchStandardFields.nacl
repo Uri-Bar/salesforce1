@@ -1,0 +1,90 @@
+type salesforce.SourceCodeRepositoryBranch {
+  salesforce.LongTextArea IgnoreRules {
+    apiName = "SourceCodeRepositoryBranch.IgnoreRules"
+    label = "Ignore Rules"
+    length = 5000
+  }
+  salesforce.Text Name {
+    apiName = "SourceCodeRepositoryBranch.Name"
+    label = "Name"
+    _required = true
+    length = 255
+    unique = false
+    caseSensitive = false
+  }
+  salesforce.Text ParentRemoteReference {
+    apiName = "SourceCodeRepositoryBranch.ParentRemoteReference"
+    label = "Parent Remote Reference"
+    length = 255
+    unique = false
+    caseSensitive = false
+  }
+  salesforce.Text RemoteReference {
+    apiName = "SourceCodeRepositoryBranch.RemoteReference"
+    label = "Remote Reference"
+    length = 255
+    unique = false
+    caseSensitive = false
+  }
+  salesforce.DateTime RemoteReferenceDate {
+    apiName = "SourceCodeRepositoryBranch.RemoteReferenceDate"
+    label = "Remote Reference Date"
+  }
+  salesforce.MasterDetail SourceCodeRepositoryId {
+    apiName = "SourceCodeRepositoryBranch.SourceCodeRepositoryId"
+    label = "SourceCodeRepository ID"
+    _required = true
+    relationshipName = "SourceCodeRepository"
+  }
+  salesforce.Picklist Status {
+    apiName = "SourceCodeRepositoryBranch.Status"
+    label = "Status"
+    restricted = true
+  }
+  serviceid Id {
+    apiName = "SourceCodeRepositoryBranch.Id"
+    label = "Source Code Repository Branch ID"
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Checkbox IsDeleted {
+    apiName = "SourceCodeRepositoryBranch.IsDeleted"
+    label = "Deleted"
+    defaultValue = false
+    _hidden_value = true
+  }
+  salesforce.DateTime CreatedDate {
+    apiName = "SourceCodeRepositoryBranch.CreatedDate"
+    label = "Created Date"
+    _hidden_value = true
+  }
+  salesforce.Lookup CreatedById {
+    apiName = "SourceCodeRepositoryBranch.CreatedById"
+    label = "Created By ID"
+    relationshipName = "CreatedBy"
+    _hidden_value = true
+  }
+  salesforce.DateTime LastModifiedDate {
+    apiName = "SourceCodeRepositoryBranch.LastModifiedDate"
+    label = "Last Modified Date"
+    _hidden_value = true
+  }
+  salesforce.Lookup LastModifiedById {
+    apiName = "SourceCodeRepositoryBranch.LastModifiedById"
+    label = "Last Modified By ID"
+    relationshipName = "LastModifiedBy"
+    _hidden_value = true
+  }
+  salesforce.DateTime SystemModstamp {
+    apiName = "SourceCodeRepositoryBranch.SystemModstamp"
+    label = "System Modstamp"
+    _hidden_value = true
+  }
+  salesforce.Text ExternalId {
+    apiName = "SourceCodeRepositoryBranch.ExternalId"
+    label = "External Id"
+    length = 255
+    unique = true
+    caseSensitive = false
+  }
+}
