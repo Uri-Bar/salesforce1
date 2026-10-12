@@ -79,6 +79,9 @@ type salesforce.SfdcPartnerSbscrOffer {
     precision = 9
     unique = false
   }
+  salesforce.Lookup ParentOfferId {
+    apiName = "SfdcPartnerSbscrOffer.ParentOfferId"
+  }
   salesforce.Text PartnerCompanyName {
     apiName = "SfdcPartnerSbscrOffer.PartnerCompanyName"
     label = "Provider Name"

@@ -66,9 +66,9 @@ type salesforce.SfdcPartnerSbscrOfferItem {
     precision = 9
     unique = false
   }
-  salesforce.Currency CustomerUnitPricePerMonth {
-    apiName = "SfdcPartnerSbscrOfferItem.CustomerUnitPricePerMonth"
-    label = "Unit Price Per Month"
+  salesforce.Currency CustomerUnitPricePerPeriod {
+    apiName = "SfdcPartnerSbscrOfferItem.CustomerUnitPricePerPeriod"
+    label = "Unit Price"
     scale = 2
     precision = 18
   }
