@@ -1,0 +1,7 @@
+salesforce.SharingRules LiveAgentSession {
+  fullName = "LiveAgentSession"
+  _parent = [
+    salesforce.LiveAgentSession,
+  ]
+  _alias = "LiveAgentSession"
+}

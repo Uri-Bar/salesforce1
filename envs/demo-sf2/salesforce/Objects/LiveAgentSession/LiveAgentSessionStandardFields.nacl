@@ -1,0 +1,104 @@
+type salesforce.LiveAgentSession {
+  salesforce.Lookup AgentId {
+    apiName = "LiveAgentSession.AgentId"
+    label = "User ID"
+    _required = true
+    relationshipName = "Agent"
+  }
+  salesforce.Unknown ChatReqAssigned {
+    apiName = "LiveAgentSession.ChatReqAssigned"
+  }
+  salesforce.Unknown ChatReqDeclined {
+    apiName = "LiveAgentSession.ChatReqDeclined"
+  }
+  salesforce.Unknown ChatReqEngaged {
+    apiName = "LiveAgentSession.ChatReqEngaged"
+  }
+  salesforce.Unknown ChatReqTimedOut {
+    apiName = "LiveAgentSession.ChatReqTimedOut"
+  }
+  salesforce.DateTime LoginTime {
+    apiName = "LiveAgentSession.LoginTime"
+    label = "Login Time"
+    _required = true
+  }
+  salesforce.DateTime LogoutTime {
+    apiName = "LiveAgentSession.LogoutTime"
+    label = "Logout Time"
+    _required = true
+  }
+  salesforce.Unknown NumFlagLoweredAgent {
+    apiName = "LiveAgentSession.NumFlagLoweredAgent"
+  }
+  salesforce.Unknown NumFlagLoweredSupervisor {
+    apiName = "LiveAgentSession.NumFlagLoweredSupervisor"
+  }
+  salesforce.Unknown NumFlagRaised {
+    apiName = "LiveAgentSession.NumFlagRaised"
+  }
+  salesforce.Lookup OwnerId {
+    apiName = "LiveAgentSession.OwnerId"
+    label = "Owner ID"
+    relationshipName = "Owner"
+    _hidden_value = true
+  }
+  salesforce.Unknown TimeAtCapacity {
+    apiName = "LiveAgentSession.TimeAtCapacity"
+  }
+  salesforce.Unknown TimeIdle {
+    apiName = "LiveAgentSession.TimeIdle"
+  }
+  salesforce.Unknown TimeInAwayStatus {
+    apiName = "LiveAgentSession.TimeInAwayStatus"
+  }
+  salesforce.Unknown TimeInChats {
+    apiName = "LiveAgentSession.TimeInChats"
+  }
+  salesforce.Unknown TimeInOnlineStatus {
+    apiName = "LiveAgentSession.TimeInOnlineStatus"
+  }
+  serviceid Id {
+    apiName = "LiveAgentSession.Id"
+    label = "Chat Session ID"
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Checkbox IsDeleted {
+    apiName = "LiveAgentSession.IsDeleted"
+    label = "Deleted"
+    defaultValue = false
+    _hidden_value = true
+  }
+  salesforce.AutoNumber Name {
+    apiName = "LiveAgentSession.Name"
+    label = "Chat Session Name"
+    _hidden_value = true
+  }
+  salesforce.DateTime CreatedDate {
+    apiName = "LiveAgentSession.CreatedDate"
+    label = "Created Date"
+    _hidden_value = true
+  }
+  salesforce.Lookup CreatedById {
+    apiName = "LiveAgentSession.CreatedById"
+    label = "Created By ID"
+    relationshipName = "CreatedBy"
+    _hidden_value = true
+  }
+  salesforce.DateTime LastModifiedDate {
+    apiName = "LiveAgentSession.LastModifiedDate"
+    label = "Last Modified Date"
+    _hidden_value = true
+  }
+  salesforce.Lookup LastModifiedById {
+    apiName = "LiveAgentSession.LastModifiedById"
+    label = "Last Modified By ID"
+    relationshipName = "LastModifiedBy"
+    _hidden_value = true
+  }
+  salesforce.DateTime SystemModstamp {
+    apiName = "LiveAgentSession.SystemModstamp"
+    label = "System Modstamp"
+    _hidden_value = true
+  }
+}

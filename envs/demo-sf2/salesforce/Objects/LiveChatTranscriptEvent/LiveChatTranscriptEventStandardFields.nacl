@@ -1,0 +1,75 @@
+type salesforce.LiveChatTranscriptEvent {
+  salesforce.Lookup AgentId {
+    apiName = "LiveChatTranscriptEvent.AgentId"
+    label = "User ID"
+    relationshipName = "Agent"
+  }
+  salesforce.Text Detail {
+    apiName = "LiveChatTranscriptEvent.Detail"
+    label = "Detail"
+    length = 255
+    unique = false
+    caseSensitive = false
+  }
+  salesforce.MasterDetail LiveChatTranscriptId {
+    apiName = "LiveChatTranscriptEvent.LiveChatTranscriptId"
+    label = "Chat Transcript ID"
+    _required = true
+    relationshipName = "LiveChatTranscript"
+  }
+  salesforce.DateTime Time {
+    apiName = "LiveChatTranscriptEvent.Time"
+    label = "Time"
+    _required = true
+  }
+  salesforce.Picklist Type {
+    apiName = "LiveChatTranscriptEvent.Type"
+    label = "Type"
+    _required = true
+    restricted = true
+  }
+  serviceid Id {
+    apiName = "LiveChatTranscriptEvent.Id"
+    label = "Chat Transcript Event ID"
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Checkbox IsDeleted {
+    apiName = "LiveChatTranscriptEvent.IsDeleted"
+    label = "Deleted"
+    defaultValue = false
+    _hidden_value = true
+  }
+  salesforce.AutoNumber Name {
+    apiName = "LiveChatTranscriptEvent.Name"
+    label = "Chat Transcript Event Name"
+    _hidden_value = true
+  }
+  salesforce.DateTime CreatedDate {
+    apiName = "LiveChatTranscriptEvent.CreatedDate"
+    label = "Created Date"
+    _hidden_value = true
+  }
+  salesforce.Lookup CreatedById {
+    apiName = "LiveChatTranscriptEvent.CreatedById"
+    label = "Created By ID"
+    relationshipName = "CreatedBy"
+    _hidden_value = true
+  }
+  salesforce.DateTime LastModifiedDate {
+    apiName = "LiveChatTranscriptEvent.LastModifiedDate"
+    label = "Last Modified Date"
+    _hidden_value = true
+  }
+  salesforce.Lookup LastModifiedById {
+    apiName = "LiveChatTranscriptEvent.LastModifiedById"
+    label = "Last Modified By ID"
+    relationshipName = "LastModifiedBy"
+    _hidden_value = true
+  }
+  salesforce.DateTime SystemModstamp {
+    apiName = "LiveChatTranscriptEvent.SystemModstamp"
+    label = "System Modstamp"
+    _hidden_value = true
+  }
+}

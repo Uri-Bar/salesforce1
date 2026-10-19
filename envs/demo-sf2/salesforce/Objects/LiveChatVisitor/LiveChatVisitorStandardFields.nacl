@@ -1,0 +1,53 @@
+type salesforce.LiveChatVisitor {
+  salesforce.Text SessionKey {
+    apiName = "LiveChatVisitor.SessionKey"
+    label = "Session Key"
+    length = 200
+    unique = false
+    caseSensitive = false
+  }
+  serviceid Id {
+    apiName = "LiveChatVisitor.Id"
+    label = "Chat Visitor ID"
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Checkbox IsDeleted {
+    apiName = "LiveChatVisitor.IsDeleted"
+    label = "Deleted"
+    defaultValue = false
+    _hidden_value = true
+  }
+  salesforce.AutoNumber Name {
+    apiName = "LiveChatVisitor.Name"
+    label = "Chat Visitor Name"
+    _hidden_value = true
+  }
+  salesforce.DateTime CreatedDate {
+    apiName = "LiveChatVisitor.CreatedDate"
+    label = "Created Date"
+    _hidden_value = true
+  }
+  salesforce.Lookup CreatedById {
+    apiName = "LiveChatVisitor.CreatedById"
+    label = "Created By ID"
+    relationshipName = "CreatedBy"
+    _hidden_value = true
+  }
+  salesforce.DateTime LastModifiedDate {
+    apiName = "LiveChatVisitor.LastModifiedDate"
+    label = "Last Modified Date"
+    _hidden_value = true
+  }
+  salesforce.Lookup LastModifiedById {
+    apiName = "LiveChatVisitor.LastModifiedById"
+    label = "Last Modified By ID"
+    relationshipName = "LastModifiedBy"
+    _hidden_value = true
+  }
+  salesforce.DateTime SystemModstamp {
+    apiName = "LiveChatVisitor.SystemModstamp"
+    label = "System Modstamp"
+    _hidden_value = true
+  }
+}

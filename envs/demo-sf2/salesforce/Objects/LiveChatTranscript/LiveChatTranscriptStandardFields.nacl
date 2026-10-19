@@ -1,0 +1,153 @@
+type salesforce.LiveChatTranscript {
+  salesforce.Unknown Abandoned {
+    apiName = "LiveChatTranscript.Abandoned"
+  }
+  salesforce.Lookup AccountId {
+    apiName = "LiveChatTranscript.AccountId"
+  }
+  salesforce.Unknown AverageResponseTimeOperator {
+    apiName = "LiveChatTranscript.AverageResponseTimeOperator"
+  }
+  salesforce.Unknown AverageResponseTimeVisitor {
+    apiName = "LiveChatTranscript.AverageResponseTimeVisitor"
+  }
+  salesforce.Unknown Body {
+    apiName = "LiveChatTranscript.Body"
+  }
+  salesforce.Unknown Browser {
+    apiName = "LiveChatTranscript.Browser"
+  }
+  salesforce.Unknown BrowserLanguage {
+    apiName = "LiveChatTranscript.BrowserLanguage"
+  }
+  salesforce.Lookup CaseId {
+    apiName = "LiveChatTranscript.CaseId"
+  }
+  salesforce.Unknown ChatDuration {
+    apiName = "LiveChatTranscript.ChatDuration"
+  }
+  salesforce.Lookup ContactId {
+    apiName = "LiveChatTranscript.ContactId"
+  }
+  salesforce.Unknown EndTime {
+    apiName = "LiveChatTranscript.EndTime"
+  }
+  salesforce.Unknown EndedBy {
+    apiName = "LiveChatTranscript.EndedBy"
+  }
+  salesforce.Unknown IpAddress {
+    apiName = "LiveChatTranscript.IpAddress"
+  }
+  salesforce.Lookup LeadId {
+    apiName = "LiveChatTranscript.LeadId"
+  }
+  salesforce.Lookup LiveChatVisitorId {
+    apiName = "LiveChatTranscript.LiveChatVisitorId"
+    label = "Chat Visitor ID"
+    _required = true
+    relationshipName = "LiveChatVisitor"
+  }
+  salesforce.Unknown Location {
+    apiName = "LiveChatTranscript.Location"
+  }
+  salesforce.Unknown MaxResponseTimeOperator {
+    apiName = "LiveChatTranscript.MaxResponseTimeOperator"
+  }
+  salesforce.Unknown MaxResponseTimeVisitor {
+    apiName = "LiveChatTranscript.MaxResponseTimeVisitor"
+  }
+  salesforce.Unknown OperatorMessageCount {
+    apiName = "LiveChatTranscript.OperatorMessageCount"
+  }
+  salesforce.Lookup OwnerId {
+    apiName = "LiveChatTranscript.OwnerId"
+    label = "Owner ID"
+    relationshipName = "Owner"
+    _hidden_value = true
+  }
+  salesforce.Unknown Platform {
+    apiName = "LiveChatTranscript.Platform"
+  }
+  salesforce.Unknown ReferrerUri {
+    apiName = "LiveChatTranscript.ReferrerUri"
+  }
+  salesforce.Unknown RequestTime {
+    apiName = "LiveChatTranscript.RequestTime"
+  }
+  salesforce.Unknown ScreenResolution {
+    apiName = "LiveChatTranscript.ScreenResolution"
+  }
+  salesforce.Lookup SkillId {
+    apiName = "LiveChatTranscript.SkillId"
+  }
+  salesforce.Unknown StartTime {
+    apiName = "LiveChatTranscript.StartTime"
+  }
+  salesforce.Unknown Status {
+    apiName = "LiveChatTranscript.Status"
+  }
+  salesforce.Unknown SupervisorTranscriptBody {
+    apiName = "LiveChatTranscript.SupervisorTranscriptBody"
+  }
+  salesforce.Unknown UserAgent {
+    apiName = "LiveChatTranscript.UserAgent"
+  }
+  salesforce.Unknown VisitorMessageCount {
+    apiName = "LiveChatTranscript.VisitorMessageCount"
+  }
+  salesforce.Unknown VisitorNetwork {
+    apiName = "LiveChatTranscript.VisitorNetwork"
+  }
+  salesforce.Unknown WaitTime {
+    apiName = "LiveChatTranscript.WaitTime"
+  }
+  serviceid Id {
+    apiName = "LiveChatTranscript.Id"
+    label = "Chat Transcript ID"
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Checkbox IsDeleted {
+    apiName = "LiveChatTranscript.IsDeleted"
+    label = "Deleted"
+    defaultValue = false
+    _hidden_value = true
+  }
+  salesforce.AutoNumber Name {
+    apiName = "LiveChatTranscript.Name"
+    label = "Chat Transcript Name"
+    _hidden_value = true
+  }
+  salesforce.DateTime CreatedDate {
+    apiName = "LiveChatTranscript.CreatedDate"
+    label = "Created Date"
+    _hidden_value = true
+  }
+  salesforce.Lookup CreatedById {
+    apiName = "LiveChatTranscript.CreatedById"
+    label = "Created By ID"
+    relationshipName = "CreatedBy"
+    _hidden_value = true
+  }
+  salesforce.DateTime LastModifiedDate {
+    apiName = "LiveChatTranscript.LastModifiedDate"
+    label = "Last Modified Date"
+    _hidden_value = true
+  }
+  salesforce.Lookup LastModifiedById {
+    apiName = "LiveChatTranscript.LastModifiedById"
+    label = "Last Modified By ID"
+    relationshipName = "LastModifiedBy"
+    _hidden_value = true
+  }
+  salesforce.DateTime SystemModstamp {
+    apiName = "LiveChatTranscript.SystemModstamp"
+    label = "System Modstamp"
+    _hidden_value = true
+  }
+  salesforce.Checkbox IsChatbotSession {
+    apiName = "LiveChatTranscript.IsChatbotSession"
+    label = "Is Chatbot Session"
+    defaultValue = false
+  }
+}
