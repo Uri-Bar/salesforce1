@@ -1,0 +1,7 @@
+salesforce.SharingRules UiPageAuthoringConv {
+  fullName = "UiPageAuthoringConv"
+  _parent = [
+    salesforce.UiPageAuthoringConv,
+  ]
+  _alias = "UiPageAuthoringConv"
+}

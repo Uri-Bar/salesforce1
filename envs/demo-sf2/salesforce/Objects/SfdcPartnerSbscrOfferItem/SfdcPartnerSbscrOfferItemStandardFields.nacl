@@ -88,4 +88,9 @@ type salesforce.SfdcPartnerSbscrOfferItem {
     apiName = "SfdcPartnerSbscrOfferItem.ServiceStartDate"
     label = "Service Start Date"
   }
+  salesforce.Picklist PricingPeriod {
+    apiName = "SfdcPartnerSbscrOfferItem.PricingPeriod"
+    label = "Pricing Period"
+    restricted = true
+  }
 }

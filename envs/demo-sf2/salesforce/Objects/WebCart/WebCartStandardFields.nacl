@@ -17,6 +17,9 @@ type salesforce.WebCart {
   salesforce.Unknown CollaborationStatus {
     apiName = "WebCart.CollaborationStatus"
   }
+  salesforce.Unknown Description {
+    apiName = "WebCart.Description"
+  }
   salesforce.Unknown FirstPymtGrandTotalAmount {
     apiName = "WebCart.FirstPymtGrandTotalAmount"
   }

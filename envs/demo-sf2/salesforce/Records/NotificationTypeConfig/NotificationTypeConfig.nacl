@@ -272,7 +272,7 @@ salesforce.NotificationTypeConfig NotificationTypeConfig {
         desktopEnabled = true
         mobileEnabled = false
       }
-      notificationType = "fh_sync_check_job_run_completed"
+      notificationType = "fh_sync_chk_job_run_completed"
     },
     {
       notificationChannels = {
