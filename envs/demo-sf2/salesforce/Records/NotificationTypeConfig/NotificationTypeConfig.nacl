@@ -83,34 +83,6 @@ salesforce.NotificationTypeConfig NotificationTypeConfig {
         desktopEnabled = true
         mobileEnabled = false
       }
-      notificationType = "bar_audit_log_export"
-    },
-    {
-      notificationChannels = {
-        desktopEnabled = true
-        mobileEnabled = false
-      }
-      notificationType = "bar_backup_status"
-    },
-    {
-      notificationChannels = {
-        desktopEnabled = true
-        mobileEnabled = false
-      }
-      notificationType = "bar_recover_activity_status"
-    },
-    {
-      notificationChannels = {
-        desktopEnabled = true
-        mobileEnabled = false
-      }
-      notificationType = "bar_settings_change"
-    },
-    {
-      notificationChannels = {
-        desktopEnabled = true
-        mobileEnabled = false
-      }
       notificationType = "billing_case_creation"
     },
     {
