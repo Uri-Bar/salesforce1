@@ -1,4 +1,10 @@
 type salesforce.SfdcPartnerSbscrOfferItem {
+  salesforce.Lookup SourceSbscrOfferItemId {
+    apiName = "SfdcPartnerSbscrOfferItem.SourceSbscrOfferItemId"
+  }
+  salesforce.Unknown Unit {
+    apiName = "SfdcPartnerSbscrOfferItem.Unit"
+  }
   serviceid Id {
     apiName = "SfdcPartnerSbscrOfferItem.Id"
     label = "Partner Subscriber Offer Item ID"
@@ -46,18 +52,15 @@ type salesforce.SfdcPartnerSbscrOfferItem {
     label = "System Modstamp"
     _hidden_value = true
   }
-  salesforce.Lookup PartnerSubscriberOfferId {
-    apiName = "SfdcPartnerSbscrOfferItem.PartnerSubscriberOfferId"
-    label = "Partner Subscriber Offer ID"
-    _required = true
-    relationshipName = "PartnerSubscriberOffer"
-  }
   salesforce.Text PartnerProvisionProductName {
     apiName = "SfdcPartnerSbscrOfferItem.PartnerProvisionProductName"
     label = "Product Name"
     length = 255
     unique = false
     caseSensitive = false
+  }
+  salesforce.Unknown ProductType {
+    apiName = "SfdcPartnerSbscrOfferItem.ProductType"
   }
   salesforce.Number Quantity {
     apiName = "SfdcPartnerSbscrOfferItem.Quantity"
@@ -66,11 +69,17 @@ type salesforce.SfdcPartnerSbscrOfferItem {
     precision = 9
     unique = false
   }
+  salesforce.Unknown ChargeType {
+    apiName = "SfdcPartnerSbscrOfferItem.ChargeType"
+  }
   salesforce.Currency CustomerUnitPricePerPeriod {
     apiName = "SfdcPartnerSbscrOfferItem.CustomerUnitPricePerPeriod"
     label = "Unit Price"
     scale = 2
     precision = 18
+  }
+  salesforce.Unknown ExternalProductDescription {
+    apiName = "SfdcPartnerSbscrOfferItem.ExternalProductDescription"
   }
   salesforce.Currency LineItemPeriodTotal {
     apiName = "SfdcPartnerSbscrOfferItem.LineItemPeriodTotal"
@@ -84,6 +93,9 @@ type salesforce.SfdcPartnerSbscrOfferItem {
     scale = 2
     precision = 18
   }
+  salesforce.Unknown ServiceEndDate {
+    apiName = "SfdcPartnerSbscrOfferItem.ServiceEndDate"
+  }
   salesforce.Date ServiceStartDate {
     apiName = "SfdcPartnerSbscrOfferItem.ServiceStartDate"
     label = "Service Start Date"
@@ -92,5 +104,11 @@ type salesforce.SfdcPartnerSbscrOfferItem {
     apiName = "SfdcPartnerSbscrOfferItem.PricingPeriod"
     label = "Pricing Period"
     restricted = true
+  }
+  salesforce.MasterDetail PartnerSubscriberOfferId {
+    apiName = "SfdcPartnerSbscrOfferItem.PartnerSubscriberOfferId"
+    label = "Partner Subscriber Offer ID"
+    _required = true
+    relationshipName = "PartnerSubscriberOffer"
   }
 }
